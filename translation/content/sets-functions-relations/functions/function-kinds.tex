@@ -1,0 +1,139 @@
+% SEGMENT OLP-0022-S01
+% Part: sets-functions-relations
+% Chapter: functions
+% Section: kinds
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{fun}{kin}
+\olsection{சார்புகளின் வகைகள்}
+
+\begin{explain}
+நாம் அடிக்கடி காணும் சில வகைச் சார்புகளுக்கு ஒரு வகைப்பாட்டை
+அறிமுகப்படுத்துவது பயனுள்ளதாக இருக்கும்.
+
+முதலில், துணைச்சார்பகத்தின் ஒவ்வோர் உறுப்பும் சார்பின் ஒரு மதிப்பாக
+அமையும் பண்பைக் கொண்ட சார்புகளைக் கருதலாம். இத்தகைய சார்புகள்
+!!{surjective} சார்புகள் எனப்படும். அவற்றை \olref{fig:surjective}
+இல் உள்ளதுபோலப் படமாகக் காட்டலாம்.
+
+\begin{figure}
+  \olasset{assets/diagrams/surjective.tikz}
+  \caption{!!^a{surjective} சார்பு, துணைச்சார்பகத்தின் ஒவ்வொரு
+    !!{element}[acc]யும் ஒரு மதிப்பாகக் கொண்டிருக்கும்.}
+  \ollabel{fig:surjective}
+\end{figure}
+\end{explain}
+
+% SEGMENT OLP-0022-S02
+\begin{defn}[!!^{surjective} சார்பு]
+$f \colon A \rightarrow B$ என்ற சார்புக்கு, $f$ இன் வீச்சகமும் $B$ ஆக
+இருக்கும்போது, அப்போதும் அப்போது மட்டுமே, அது
+\emph{!!{surjective}} பண்புடையது எனப்படும்.
+அதாவது, ஒவ்வொரு $y \in B$ க்கும் $f(x) = y$ என அமையும் குறைந்தது
+ஓர் $x \in A$ இருக்க வேண்டும். குறியீடுகளில்:
+\[
+  (\forall y \in B)(\exists x \in A)f(x) = y.
+\]
+இத்தகைய சார்பை $A$ இலிருந்து $B$ க்குச் செல்லும்
+!!a{surjection} என்கிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0022-S03
+\begin{explain}
+$f$ என்பது !!a{surjection} எனக் காட்ட வேண்டுமெனில், $f$ இன்
+துணைச்சார்பகத்தில் உள்ள ஒவ்வொரு பொருளும் ஏதாவது ஓர் உள்ளீடு $x$ க்கான
+$f(x)$ இன் மதிப்பாக அமைகிறது எனக் காட்ட வேண்டும்.
+
+எந்தச் சார்பும் !!a{surjection} ஐ \emph{உருவாக்குகிறது} என்பதைக்
+கவனிக்கவும். ஏனெனில் $f \colon A \to B$ என்ற சார்பு தரப்பட்டால்,
+$f' \colon A \to \ran{f}$ என்பதை $f'(x) = f(x)$ என வரையறுப்போம்.
+$\ran{f}$ என்பது $\Setabs{f(x) \in B}{x \in A}$ எனவே
+\emph{வரையறுக்கப்பட்டுள்ளதால்}, இந்தச் சார்பு $f'$ நிச்சயமாக
+!!a{surjection} ஆகும்.
+\end{explain}
+
+% SEGMENT OLP-0022-S04
+\begin{explain}
+எந்தச் சார்பும் சாத்தியமான ஒவ்வொரு உள்ளீட்டையும் ஒரே ஒரு வெளியீட்டுடன்
+இணைக்கிறது. ஆனால் வெவ்வேறு உள்ளீடுகளை ஒரே வெளியீட்டுடன் ஒருபோதும்
+இணைக்காத சார்புகளும் உள்ளன. அவை !!{injective} சார்புகள் எனப்படும்.
+அவற்றை \olref{fig:injective} இல் உள்ளதுபோலப் படமாகக் காட்டலாம்.
+\begin{figure}
+  \olasset{assets/diagrams/injective.tikz}
+  \caption{!!^a{injective} சார்பு இரண்டு வெவ்வேறு உள்ளீட்டுறுப்புகளை
+    ஒரே மதிப்புடன் ஒருபோதும் இணைக்காது.}
+  \ollabel{fig:injective}
+\end{figure}
+\end{explain}
+
+% SEGMENT OLP-0022-S05
+\begin{defn}[!!^{injective} சார்பு]
+ஒவ்வொரு $y \in B$ க்கும், $f(x) = y$ என அமையும் $x \in A$
+அதிகபட்சம் ஒன்று மட்டுமே இருக்கும்போது, அப்போதும் அப்போது மட்டுமே,
+$f \colon A \rightarrow B$ என்ற சார்பு \emph{!!{injective}}
+பண்புடையது எனப்படும். இத்தகைய சார்பை $A$ இலிருந்து $B$ க்குச்
+செல்லும் !!a{injection} என்கிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0022-S06
+\begin{explain}
+$f$ என்பது !!a{injection} எனக் காட்ட வேண்டுமெனில், $f$ இன்
+சார்பகத்தைச் சேர்ந்த எந்த !!{element}s ஆன $x$, $y$ க்கும்,
+$f(x)=f(y)$ எனில் $x=y$ எனக் காட்ட வேண்டும்.
+\end{explain}
+
+% SEGMENT OLP-0022-S07
+\begin{ex}
+$f(x) = 1$ எனக் கொடுக்கப்படும் மாறிலிச் சார்பு
+$f\colon \Nat \to \Nat$ என்பது !!{injective} பண்பையும்
+!!{surjective} பண்பையும் கொண்டிருக்கவில்லை.
+
+$f(x) = x$ எனக் கொடுக்கப்படும் ஒன்றாதல் சார்பு
+$f\colon \Nat \to \Nat$ என்பது !!{injective} பண்பையும்
+!!{surjective} பண்பையும் கொண்டுள்ளது.
+
+$f(x) = x+1$ எனக் கொடுக்கப்படும் தொடரிச் சார்பு
+$f \colon \Nat \to \Nat$ என்பது !!{injective} பண்புடையது;
+ஆனால் !!{surjective} பண்புடையதல்ல.
+
+பின்வருமாறு வரையறுக்கப்படும் $f \colon \Nat \to \Nat$ என்ற சார்பு:
+\[
+  f(x) =
+  \begin{cases}
+    \frac{x}{2} & \text{$x$ இரட்டை எனில்} \\
+    \frac{x+1}{2} & \text{$x$ ஒற்றை எனில்.}
+  \end{cases}
+\]
+!!{surjective} பண்புடையது; ஆனால் !!{injective} பண்புடையதல்ல.
+\end{ex}
+
+% SEGMENT OLP-0022-S08
+\begin{explain}
+பல நேரங்களில் !!{injective}, !!{surjective} ஆகிய இரண்டு
+பண்புகளையும் கொண்ட சார்புகளைக் கருத விரும்புகிறோம்.
+இத்தகைய சார்புகளை !!{bijective} சார்புகள் என்கிறோம்.
+அவை \olref{fig:bijective} இல் காட்டப்பட்டுள்ள சார்பைப் போலிருக்கும்.
+!!^{bijection}s சில சமயங்களில் \emph{ஒன்றுக்கொன்று ஒத்திசைவுகள்}
+என்றும் அழைக்கப்படுகின்றன. ஏனெனில் அவை துணைச்சார்பகத்தின் உறுப்புகளைச்
+சார்பகத்தின் உறுப்புகளுடன் தனித்தனியாக இணைக்கின்றன.
+\begin{figure}
+  \olasset{assets/diagrams/bijective.tikz}
+  \caption{!!^a{bijective} சார்பு துணைச்சார்பகத்தின் உறுப்புகளைச்
+    சார்பகத்தின் உறுப்புகளுடன் தனித்தனியாக இணைக்கிறது.}
+  \ollabel{fig:bijective}
+\end{figure}
+\end{explain}
+
+% SEGMENT OLP-0022-S09
+\begin{defn}[!!^{bijection}]
+$f \colon A \to B$ என்ற சார்பு !!{surjective}, !!{injective}
+ஆகிய இரு பண்புகளையும் கொண்டிருக்கும்போது, அப்போதும் அப்போது மட்டுமே,
+அது \emph{!!{bijective}} பண்புடையது எனப்படும்.
+இத்தகைய சார்பை $A$ இலிருந்து $B$ க்குச் செல்லும் (அல்லது $A$,
+$B$ ஆகியவற்றுக்கு இடையிலுள்ள) !!a{bijection} என்கிறோம்.
+\end{defn}
+
+\end{document}

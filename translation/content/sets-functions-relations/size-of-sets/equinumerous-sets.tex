@@ -1,0 +1,152 @@
+% SEGMENT OLP-0035-S01
+% Part:sets-functions-relations
+% Chapter: size-of-sets
+% Section: equinumerous-sets
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{siz}{equ}
+
+\olsection{எண்ணொத்த தன்மை}
+
+கணங்களின் “அளவு” பற்றிய ஓர் உள்ளுணர்வுக் கருத்து நம்மிடம் உள்ளது;
+அது முடிவுறு கணங்களுக்கு நன்றாகச் செயல்படுகிறது.
+ஆனால் முடிவுறாத கணங்களின் நிலை என்ன?
+\emph{எந்த} அளவைக் கொண்ட இரண்டு கணங்களின் அளவுகளையும் ஒப்பிடுவதற்கான
+முறையான ஒரு வழியை உருவாக்க வேண்டுமானால்,
+கணங்கள் எப்போது ஒரே அளவைக் கொண்டுள்ளன என்பதை வரையறுப்பதிலிருந்து
+தொடங்குவது நல்லது. ஃப்ரேகே கூறுவது இதோ:
+\begin{quote}
+ஒரு பணியாளர், மேசையில் தட்டுகளின் எண்ணிக்கைக்குச் சரியாகச் சமமான
+எண்ணிக்கையில் கத்திகளை வைத்திருக்கிறாரா என்பதை உறுதிசெய்ய விரும்பினால்,
+அவற்றில் எதையும் அவர் எண்ண வேண்டியதில்லை.
+ஒவ்வொரு தட்டின் வலப்புறத்திலும் ஒரு கத்தியை வைத்து,
+மேசையின் ஒவ்வொரு கத்தியும் ஏதாவது ஒரு தட்டின் வலப்புறத்தில்
+இருக்குமாறு செய்தால் போதும்.
+இவ்வாறு தட்டுகளும் கத்திகளும் ஒன்றுடன் ஒன்று தனித்தனியாகத்
+தொடர்புபடுத்தப்படுகின்றன; அதுவும் அதே இடம்சார் தொடர்பின் வழியாகவே.
+\citep[\S70]{Frege1884}
+\end{quote}
+இந்தப் பத்தியின் உட்பார்வையை ஒரு முறையான வரையறையின் மூலம்
+வெளிப்படுத்தலாம்:
+
+% SEGMENT OLP-0035-S02
+\begin{defn}\ollabel{comparisondef}
+!!a{bijection} $f \colon A \to B$ இருக்கும்போது,
+அப்போதும் அப்போது மட்டுமே, $A$ ஆனது $B$ உடன்
+\emph{எண்ணொத்தது} எனப்படும்; இதனை $\cardeq{A}{B}$ என எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0035-S03
+\begin{prop}\ollabel{equinumerosityisequi}
+எண்ணொத்த தன்மை ஒரு சமானத் தொடர்பாகும்.
+\end{prop}
+
+% SEGMENT OLP-0035-S04
+\begin{proof}
+எண்ணொத்த தன்மை தற்சுட்டு, சமச்சீர், கடப்பு ஆகிய பண்புகளைக்
+கொண்டுள்ளது எனக் காட்ட வேண்டும்.
+$A, B$, $C$ ஆகியவை கணங்களாக இருக்கட்டும்.
+
+\emph{தற்சுட்டுப் பண்பு.}
+அனைத்து $x \in A$ க்கும் $\Id{A} (x) = x$ என அமையும்
+ஒன்றாதல் சார்பு $\Id{A} \colon A \to A$ என்பது !!a{bijection}.
+எனவே $\cardeq{A}{A}$.
+
+\emph{சமச்சீர்ப் பண்பு.}
+$\cardeq{A}{B}$ எனக் கொள்வோம்;
+அதாவது !!a{bijection} $f\colon A \to B$ உள்ளது.
+$f$ என்பது !!{bijective} பண்புடையதால்,
+அதன் நேர்மாறு $f^{-1}$ உள்ளது; அதுவும் !!{bijective} பண்புடையது.
+எனவே $f^{-1}\colon B \to A$ என்பது !!a{bijection};
+ஆகவே $\cardeq{B}{A}$.
+
+\emph{கடப்புப் பண்பு.}
+$\cardeq{A}{B}$, $\cardeq{B}{C}$ எனக் கொள்வோம்.
+அதாவது, !!{bijection}s $f\colon A \to B$,
+$g\colon B \to
+C$ ஆகியவை உள்ளன.
+அப்போது சேர்ப்பு $\comp{f}{g}\colon A \to C$ என்பது
+!!{bijective} பண்புடையது; ஆகவே $\cardeq{A}{C}$.
+\end{proof}
+
+% SEGMENT OLP-0035-S05
+\begin{prop}
+$\cardeq{A}{B}$ எனில், $A$ என்பது !!{enumerable} ஆக இருக்கும்போது,
+அப்போதும் அப்போது மட்டுமே, $B$ உம் அவ்வாறு இருக்கும்.
+\end{prop}
+
+% SEGMENT OLP-0035-S06
+\begin{editorial}
+பின்வரும் நிறுவல் \olref[enm]{defn:enumerable} ஐப் பயன்படுத்துகிறது,
+\olref[enm]{sec} சேர்க்கப்பட்டிருந்தால்;
+இல்லையெனில் \olref[enm-alt]{defn:enumerable} ஐப் பயன்படுத்துகிறது.
+\end{editorial}
+
+% SEGMENT OLP-0035-S07
+\begin{proof}
+$\cardeq{A}{B}$ எனக் கொள்வோம்.
+எனவே ஏதோ ஒரு !!{bijection} $f \colon A
+\to B$ உள்ளது; மேலும் $A$ என்பது !!{enumerable} எனக் கொள்வோம்.
+% SOURCE CORRECTION OLSIZ-006; both branches use f; see translation/size-notes.tex.
+\oliflabeldef{sfr:siz:enm:defn:enumerable}{
+  அப்போது $A = \emptyset$ அல்லது
+  !!a{surjective} சார்பு $g\colon \PosInt \to A$ உள்ளது.
+  $A = \emptyset$ எனில், $B = \emptyset$ உம் ஆகும்.
+  ஏனெனில் அவ்வாறு இல்லையெனில், ஏதாவது ஓர் !!a{element}
+  $y \in B$ இருக்கும்; ஆனால் $f(x) = y$ என அமையும்
+  $x \in A$ இருக்காது.
+  மறுபுறம், $g\colon \PosInt \to A$ என்பது !!{surjective}
+  பண்புடையது எனில்,
+  $\comp{g}{f} \colon \PosInt \to B$ என்பதும் !!{surjective}
+  பண்புடையது.
+  இதைக் காண, $y \in B$ எனக் கொள்க.
+  $f$ என்பது !!{surjective} பண்புடையதால்,
+  $f(x) = y$ என அமையும் ஒரு $x \in A$ உள்ளது.
+  $g$ என்பது !!{surjective} பண்புடையதால்,
+  $g(n) =
+  x$ என அமையும் ஒரு $n \in \PosInt$ உள்ளது. எனவே,
+\[
+(\comp{g}{f})(n) = f(g(n)) = f(x) = y
+\]
+  ஆகவே $\comp{g}{f}$ என்பது !!{surjective} பண்புடையது.
+  $\comp{g}{f}$ என்பது $B$ இன் ஒரு பட்டியலாக்கம்;
+  எனவே $B$ என்பது !!{enumerable}.}
+{
+  அப்போது $A = \emptyset$ அல்லது,
+  !!a{bijection} $g$ ஒன்று உள்ளது.
+  அதன் வீச்சகம் $A$; அதன் சார்பகம் $\Nat$ அல்லது இயல் எண்களின்
+  ஒரு தொடக்கத் தொடராகும்.
+  $A = \emptyset$ எனில், $B =
+  \emptyset$ உம் ஆகும்.
+  ஏனெனில் அவ்வாறு இல்லையெனில், $f(x) = y$ என அமையும்
+  $x \in A$ இல்லாத ஏதாவது ஒரு $y \in B$ இருக்கும்.
+  ஆகவே நமது !!{bijection} $g$ இருப்பதாகக் கொள்வோம்.
+  அப்போது $\comp{g}{f}$ என்பது !!a{bijection}.
+  அதன் வீச்சகம் $B$; அதன் சார்பகம் $g$ இன் சார்பகமே
+  (அதாவது $\Nat$ அல்லது அதன் ஒரு தொடக்கத் துண்டு).
+  எனவே $B$ என்பது !!{enumerable}.}
+
+$B$ என்பது !!{enumerable} எனில்,
+$f$ என்பதற்குப் பதிலாக !!{bijection}
+$f^{-1}\colon B \to A$ ஐப் பயன்படுத்தி அதே வாதத்தை மீண்டும் செய்வதால்,
+$A$ என்பது !!{enumerable} எனப் பெறுகிறோம்.
+\end{proof}
+
+% SEGMENT OLP-0035-S08
+\begin{prob}
+$\cardeq{A}{C}$, $\cardeq{B}{D}$ எனவும்,
+$A \cap B =
+C \cap D = \emptyset$ எனவும் இருந்தால்,
+$\cardeq{A \cup B}{C \cup D}$ எனக் காட்டுக.
+\end{prob}
+
+% SEGMENT OLP-0035-S09
+\begin{prob}
+$A$ முடிவுறாததாகவும் !!{enumerable} ஆகவும் இருந்தால்,
+$\cardeq{A}{\Nat}$ எனக் காட்டுக.
+\end{prob}
+
+\end{document}

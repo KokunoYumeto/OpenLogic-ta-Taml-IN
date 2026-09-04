@@ -1,0 +1,223 @@
+{
+  "schema": "openlogic-shared-source-audit/1.0.0",
+  "audit_id": "OLSIZ-20260904",
+  "created_utc": "2026-09-04T18:34:01.6895775Z",
+  "status": "confirmed_against_frozen_source_and_immediate_controlling_context",
+  "scope": {
+    "chapter": "Size of Sets",
+    "unit_ids": [
+      "OLP-0029",
+      "OLP-0031",
+      "OLP-0032",
+      "OLP-0034",
+      "OLP-0035",
+      "OLP-0036",
+      "OLP-0039",
+      "OLP-0040"
+    ],
+    "finding_count": 10
+  },
+  "source_authority": {
+    "repository": "https://github.com/OpenLogicProject/OpenLogic",
+    "revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+    "archive": "C:\\interlanguage-task-state\\openlogic-internationalization\\new-language-lanes\\source\\OpenLogic-upstream-raw.zip",
+    "archive_bytes": 1806644,
+    "archive_sha256": "80b484b1a87076fbdb207d69f97930ca946ce1716dbd905906b29e4a74077357",
+    "manifest": "C:\\interlanguage-task-state\\openlogic-internationalization\\new-language-lanes\\source\\SOURCE_MANIFEST.jsonl",
+    "manifest_sha256": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155"
+  },
+  "method": [
+    "Read the exact frozen source bytes, not a current checkout or translated paraphrase.",
+    "Compare each suspect expression with the immediately controlling formula, table, definition, proof variable scope, or displayed construction.",
+    "Classify only deterministic defects whose intended reading is fixed by that context.",
+    "Require every translation lane to preserve the frozen source identity, repair the translated body, and add an adjacent keyed note plus a machine-readable correction record."
+  ],
+  "findings": [
+    {
+      "finding_id": "OLSIZ-001",
+      "unit_id": "OLP-0029",
+      "classification": "confirmed_tabular_value_omission",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/enumerability.tex",
+        "bytes": 12006,
+        "sha256": "bf6be35c0e393cb6e1d227f8e9024df4216792e663f23beb7277045487acfa67",
+        "locator": "lines 145-153"
+      },
+      "finding": "The header and formula rows include f(7), whose value is -3, but the final value row stops at 3 and omits -3.",
+      "controlling_evidence": "At f(7), the preceding formula row is -ceil(6/2), hence -3.",
+      "required_translation_handling": "Add -3 in the value row and an adjacent OLSIZ-001 source-correction note.",
+      "mathematical_delta": {"display_value_added": "-3"}
+    },
+    {
+      "finding_id": "OLSIZ-002",
+      "unit_id": "OLP-0031",
+      "classification": "confirmed_grammatical_defect_clarified_by_following_formula",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/pairing.tex",
+        "bytes": 4056,
+        "sha256": "fb6cc1176e91e56cea5f5b9708723c59191813f8fe256aac8ed0457a0119a9bf",
+        "locator": "lines 91-96"
+      },
+      "finding": "The phrase 'complement of a finite set Nat' is malformed and omits the relation between the finite set and Nat.",
+      "controlling_evidence": "The following equivalence says A is cofinite iff Nat\\setminus A is finite.",
+      "required_translation_handling": "State 'the complement in Nat of a finite subset of Nat' (or an exact language-equivalent) and add an adjacent OLSIZ-002 note.",
+      "mathematical_delta": null
+    },
+    {
+      "finding_id": "OLSIZ-003",
+      "unit_id": "OLP-0032",
+      "classification": "confirmed_typographical_duplication",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/pairing-alt.tex",
+        "bytes": 4592,
+        "sha256": "c26b4e0da9e2e0b0ec839470ddd1d0d5eb1b3d3922d3b6986c9a795f34328797",
+        "locator": "lines 39-45"
+      },
+      "finding": "The prose repeats the family (2,m) where it is enumerating successive rows.",
+      "controlling_evidence": "The immediately following table contains rows/families (2,m), (3,m), and onward; the second prose occurrence must be (3,m).",
+      "required_translation_handling": "Replace the second (2,m) by (3,m) and add an adjacent OLSIZ-003 note.",
+      "mathematical_delta": {"removed": "\\tuple{2,m}", "added": "\\tuple{3,m}"}
+    },
+    {
+      "finding_id": "OLSIZ-004",
+      "unit_id": "OLP-0034",
+      "classification": "confirmed_undefined_index_in_function_definition",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/reduction.tex",
+        "bytes": 5540,
+        "sha256": "0d6d2e3280698668b837cef6dcf3134b86d2a4b48831ae516e6e33e42898c79a",
+        "locator": "lines 47-69"
+      },
+      "finding": "The definition calls f(Z) the sequence s_k although k is never bound or determined.",
+      "controlling_evidence": "The component equation uniquely defines the characteristic sequence of Z, and the surjectivity argument later denotes an arbitrary output sequence by s.",
+      "required_translation_handling": "Use one bound output name, such as s, consistently in the characteristic-sequence definition and add an adjacent OLSIZ-004 note.",
+      "mathematical_delta": {"removed": ["s_k", "s_k(n)"], "added": ["s", "s(n)"]}
+    },
+    {
+      "finding_id": "OLSIZ-005",
+      "unit_id": "OLP-0034",
+      "classification": "confirmed_codomain_error_finite_string_used_as_infinite_sequence",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/reduction.tex",
+        "bytes": 5540,
+        "sha256": "0d6d2e3280698668b837cef6dcf3134b86d2a4b48831ae516e6e33e42898c79a",
+        "locator": "lines 85-100"
+      },
+      "finding": "The displayed h(n) is explicitly a finite string of n zeros, but h is declared to map into the set of infinite binary sequences.",
+      "controlling_evidence": "Membership in Bin^omega requires an infinite binary sequence; appending an infinite tail, for example n zeros followed by ones forever, supplies the intended non-surjective example.",
+      "required_translation_handling": "Use a valid infinite binary output and add an adjacent OLSIZ-005 note.",
+      "mathematical_delta": {"display_tail_added": "an explicit infinite tail"}
+    },
+    {
+      "finding_id": "OLSIZ-006",
+      "unit_id": "OLP-0035",
+      "classification": "confirmed_undefined_function_in_empty_set_branch",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/equinumerous-sets.tex",
+        "bytes": 4141,
+        "sha256": "025a3fc368d6873825effcb07631913762edbf2d3f9a0711d57dcd9575361251",
+        "locator": "lines 68-94"
+      },
+      "finding": "Two conditional variants refer to g(x)=y before g is introduced, although the bijection in scope is f.",
+      "controlling_evidence": "The proof has fixed f:A to B; g is introduced only later as an enumeration of A.",
+      "required_translation_handling": "Replace both premature g(x)=y occurrences by f(x)=y and add an adjacent OLSIZ-006 note.",
+      "mathematical_delta": {"occurrences": 2, "removed": "g(x)=y", "added": "f(x)=y"}
+    },
+    {
+      "finding_id": "OLSIZ-007",
+      "unit_id": "OLP-0036",
+      "classification": "confirmed_wrong_domain_in_arbitrary_element_conclusion",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/comparing-size.tex",
+        "bytes": 6677,
+        "sha256": "075810b1cf1c8b54266518523d4665d3deae4a4937f4e19a66a09cc0e1aaebf7",
+        "locator": "lines 74-90"
+      },
+      "finding": "After choosing arbitrary x in A, the source says the conclusion holds for each x in overline(A).",
+      "controlling_evidence": "To prove the diagonal set is outside the range, the argument needs g(x) different from overline(A) for every x in A; both preceding cases concern arbitrary x in A.",
+      "required_translation_handling": "Quantify the conclusion over x in A and add an adjacent OLSIZ-007 note.",
+      "mathematical_delta": {"removed": "x in overline(A)", "added": "x in A"}
+    },
+    {
+      "finding_id": "OLSIZ-008",
+      "unit_id": "OLP-0039",
+      "classification": "confirmed_reversed_index_description_vs_array",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex",
+        "bytes": 6574,
+        "sha256": "a075f6c63879101314fb20fa493acfb38d78ff24095bb55914f2af4527e1ad3e",
+        "locator": "lines 61-75"
+      },
+      "finding": "The prose calls s_n(m) the nth digit of the mth string, reversing the indices.",
+      "controlling_evidence": "The next sentence and array place s_n(m) in row n and column m, so it is the mth digit of the nth string.",
+      "required_translation_handling": "Use the row/column-consistent description and add an adjacent OLSIZ-008 note.",
+      "mathematical_delta": null
+    },
+    {
+      "finding_id": "OLSIZ-009",
+      "unit_id": "OLP-0039",
+      "classification": "confirmed_duplicated_bit_flip_instruction",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex",
+        "bytes": 6574,
+        "sha256": "a075f6c63879101314fb20fa493acfb38d78ff24095bb55914f2af4527e1ad3e",
+        "locator": "lines 77-84"
+      },
+      "finding": "The intuitive diagonal instruction says to change every 1 to 0 twice.",
+      "controlling_evidence": "The immediately following cases define complementary flips: diagonal 1 becomes 0 and diagonal 0 becomes 1.",
+      "required_translation_handling": "State both complementary bit flips and add an adjacent OLSIZ-009 note.",
+      "mathematical_delta": {"missing_prose_case_added": "0 to 1"}
+    },
+    {
+      "finding_id": "OLSIZ-010",
+      "unit_id": "OLP-0040",
+      "classification": "confirmed_undefined_index_in_function_definition",
+      "source": {
+        "path": "content/sets-functions-relations/size-of-sets/reduction-alt.tex",
+        "bytes": 5500,
+        "sha256": "f7717d8394048096cf7a65bc87a1a1ed15861cdfb8c7edb23429d5256d954d11",
+        "locator": "lines 48-58"
+      },
+      "finding": "The alternate proof again calls f(N) the string s_k although k is never bound or determined.",
+      "controlling_evidence": "The component equation uniquely defines the characteristic sequence of N.",
+      "required_translation_handling": "Use one bound output name consistently and add an adjacent OLSIZ-010 note.",
+      "mathematical_delta": {"removed": ["s_k", "s_k(n)"], "added": ["s", "s(n)"]}
+    }
+  ],
+  "bengali_cross_lane_check": {
+    "repository": "https://github.com/KokunoYumeto/OpenLogic-bn-Beng-IN",
+    "public_source_commit": "1ec7fa885f6cf8cd2f01bc07cd051d63f79216ba",
+    "exact_commit_archive": "C:\\interlanguage-task-state\\openlogic-internationalization\\lane-audits\\2026-09-04\\bn-Beng-IN-source39-1ec7fa8.zip",
+    "archive_bytes": 344283,
+    "archive_sha256": "502142dd917f43747d54bda37cea2beeeb3bd9c337a3379ab5fcd651ebec09db",
+    "source_units_at_checkpoint": 39,
+    "segment_rows_replayed": 537,
+    "translated_segments": 479,
+    "formal_segments": 58,
+    "canon_passages_used_and_resolved": 27,
+    "hash_range_or_locator_failures": 0,
+    "existing_correction_ledger_sha256": "509a937ff5ac75ef66758e5e0aa8524a40691b058b0cc5b7c363d309c01e4e2c",
+    "finding_state": {
+      "OLSIZ-001": "unrepaired: Bengali values row still omits -3",
+      "OLSIZ-002": "body meaning repaired but no adjacent keyed provenance note or correction record",
+      "OLSIZ-003": "unrepaired: Bengali prose still repeats (2,m)",
+      "OLSIZ-004": "unrepaired: Bengali primary reduction still uses unbound s_k",
+      "OLSIZ-005": "unrepaired: Bengali primary reduction still maps to a finite n-zero string",
+      "OLSIZ-006": "repaired and disclosed as BN-SRC-001",
+      "OLSIZ-007": "repaired and disclosed as BN-SRC-002",
+      "OLSIZ-008": "repaired and disclosed as BN-SRC-003",
+      "OLSIZ-009": "repaired and disclosed as BN-SRC-004",
+      "OLSIZ-010": "clarified and disclosed as BN-SRC-005; formula itself retained for parity"
+    },
+    "target_file_sha256": {
+      "enumerability.tex": "0eeb40db9ce4ac5fd861cf672d5320628c6314301af219d93f1be71114fa74ab",
+      "pairing.tex": "8a6b4a6f682faf6843b5b705845853ab6ddff2b39c84507814be7d1c2837f962",
+      "pairing-alt.tex": "52cea995391e99660fc74d0ed62cee086602209d70a32073d46f5008a67ff82d",
+      "reduction.tex": "305291969148e1dc06c2105387b3eeef4aaf9cc42c106031cabf916695fd2d7a",
+      "equinumerous-sets.tex": "12b8fcd1c66de0f2b406cd64b2ee4194eafe3f4f6e9f9a1efd03640e718e0366",
+      "comparing-size.tex": "bfec957d2b8f45992a0d4f2c4a06606eed3adf3c407c346dda8d8fd463aecd45",
+      "non-enumerability-alt.tex": "646a4071043f33a6270b88260ad406f4c6e3ad6d323906234995a92bbd441f18",
+      "reduction-alt.tex": "cec085fa755dfbaaf9b52ea265f28c043bf0bfecdc336f1b054e3dadd131474c"
+    }
+  }
+}

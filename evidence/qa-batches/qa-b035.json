@@ -1,0 +1,50 @@
+{
+  "batch_id": "TA-B035",
+  "units": [
+    {
+      "unit_id": "OLP-0053",
+      "source_sha256": "a7c41cebb6b7b0e2bed0d187777be4ba69fecdb17baa070975a0ca5c5c55b8bf",
+      "translation_sha256": "badf643f73c683a8b5e1c2f53b8b821b99b82fd870cb4e647a607ebda65f2614",
+      "source_bytes": 5886,
+      "translation_bytes": 15912,
+      "source_coverage_complete": true,
+      "segments": 13,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Theorems",
+        "arith",
+        "dedekind",
+        "include",
+        "infinite",
+        "logic",
+        "open",
+        "preface",
+        "ref",
+        "section",
+        "sfr"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,7 @@
+# Source/target and evidence hashes bind exact bytes. Do not let checkout or
+# commit-time line-ending conversion silently invalidate segment offsets.
+upstream/** -text
+translation/** -text
+evidence/** -text
+README.md -text
+build/** -text

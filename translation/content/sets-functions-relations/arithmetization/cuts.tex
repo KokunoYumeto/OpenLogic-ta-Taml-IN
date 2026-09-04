@@ -1,0 +1,153 @@
+% SEGMENT OLP-0045-S01
+% Part: sets-functions-relations
+% Chapter: arithmetization
+% Section: cuts
+%
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{arith}{cuts}
+\olsection{$\Rat$ இலிருந்து $\Real$ க்கு}
+
+சாரத்தில், மெய்யெண் கோட்டின் எந்தப் புள்ளி $\alpha$ உம்
+அந்தக் கோட்டை மிகச்சரியாக இரு பாதிகளாகப் பிரிக்கிறது என்பதை
+முழுமைப் பண்பு காட்டுகிறது: ஒன்றிற்கு $\alpha$ மீச்சிறு மேல்வரம்பாகவும்,
+மற்றொன்றிற்கு $\alpha$ மீப்பெரு கீழ்வரம்பாகவும் உள்ளது.
+விகிதமுறு எண்களிலிருந்து மெய்யெண்களைக் \emph{கட்டமைக்க},
+விகிதமுறு எண்களைப் பிரிக்கும் \emph{வெட்டுகளாகவே} மெய்யெண்களைக்
+கருதலாம் என்று டெடெகிண்ட் முன்மொழிந்தார்.
+அதாவது, $< \sqrt{2}$ என அமையும் விகிதமுறு எண்களை
+$> \sqrt{2}$ என அமையும் விகிதமுறு எண்களிலிருந்து பிரிக்கும்
+\emph{வெட்டுடன்} $\sqrt{2}$ ஐ அடையாளப்படுத்துகிறோம்.
+
+இதனை ஒழுங்குபடுத்துவோம்.
+விகிதமுறு எண்களை இரு பாதிகளாக வெட்டினால்,
+நாம் உருவாக்கிய பிரிப்பை அதன் \emph{கீழ்ப்} பாதியை மட்டும் கொண்டு
+தனித்துவமாக அடையாளப்படுத்தலாம்.
+எனவே இதனைத் துல்லியமாகப் பின்வருமாறு வரையறுக்கிறோம்:
+
+% SEGMENT OLP-0045-S02
+\begin{defn}[வெட்டு]
+ஒரு \emph{வெட்டு} $\alpha$ என்பது,
+மீப்பெரு உறுப்பு இல்லாத, விகிதமுறு எண்களின் எந்தவொரு
+வெற்றற்ற தகு தொடக்கத் துண்டும் ஆகும்.
+அதாவது, $\alpha$ ஒரு வெட்டாக இருக்கும்போது,
+அப்போதும் அப்போது மட்டுமே:
+\begin{enumerate}
+	\item \emph{வெற்றற்றது, தகுவானது}: $\emptyset \neq \alpha \subsetneq \Rat$
+	\item \emph{தொடக்கத் துண்டு}: அனைத்து $p,q \in \Rat$ க்கும்,
+    $p < q \in \alpha$ எனில் $p \in \alpha$
+	\item \emph{மீப்பெரு உறுப்பு இல்லை}: அனைத்து $p \in \alpha$ க்கும்,
+    $p < q$ என அமையும் ஒரு $q \in \alpha$ உள்ளது
+\end{enumerate}
+பின்னர் $\Real$ என்பது வெட்டுகளின் கணமாகும்.
+\end{defn}
+
+% SEGMENT OLP-0045-S03
+இப்போது $\sqrt{2} = \Setabs{p \in \Rat}{p^2 < 2\text{
+அல்லது }p < 0}$ என்று கூறலாம்.
+நிச்சயமாக, இது \emph{ஒரு வெட்டுதான்} எனச் சரிபார்க்க வேண்டும்;
+அதனை \olref[check]{sec} இல் தருகிறோம்.
+
+% SEGMENT OLP-0045-S04
+முன்புபோல, சில பொருள்களை வரையறுத்த பிறகு,
+அவற்றின் மீதான அடிப்படைச் சார்புகளையும் தொடர்புகளையும்
+அடுத்து வரையறுக்க வேண்டும். எளிய ஒன்றிலிருந்து தொடங்குகிறோம்:
+\begin{align*}
+	\alpha \leq \beta \text{ ஆக இருக்கும்போது, அப்போதும் அப்போது மட்டுமே, }\alpha \subseteq \beta
+\end{align*}
+வரிசையின் இந்த வரையறை, வெட்டுகளின் கணம் முழுமைப் பண்பைக் கொண்டுள்ளது
+என்ற மைய முடிவைக் \emph{கூற} அனுமதிக்கிறது.
+முழுமையாக விரித்தால், கூற்றின் வடிவம் இதுவாகும்.
+$S$ என்பது மேல்வரம்பைக் கொண்ட வெற்றற்ற வெட்டுகளின் கணம் எனில்,
+$S$ ஒரு மீச்சிறு மேல்வரம்பைக் கொண்டுள்ளது.
+மேலும் விரிவாக: $S$ இன் மேல்வரம்பாக உள்ள ஒரு வெட்டு $\lambda$ உள்ளது;
+அதாவது $(\forall \alpha \in S)\alpha \subseteq
+\lambda$; மேலும் $\lambda$ இத்தகைய மீச்சிறு வெட்டு;
+அதாவது $(\forall \beta \in \Real)((\forall \alpha \in S)\alpha
+\subseteq \beta \lif \lambda \subseteq \beta)$.
+இந்த முடிவின் நிறுவல் இதோ:
+
+% SEGMENT OLP-0045-S05
+\begin{thm}\ollabel{realcompleteness}
+வெட்டுகளின் கணம் முழுமைப் பண்பைக் கொண்டுள்ளது.
+\end{thm}
+
+% SEGMENT OLP-0045-S06
+\begin{proof}
+$S$ என்பது மேல்வரம்பைக் கொண்ட எந்தவொரு வெற்றற்ற வெட்டுகளின்
+கணமாகவும் இருக்கட்டும். $\lambda = \bigcup S$ என்க.
+%\Setabs{p \in \Rat}{(\exists \alpha \in S)p \in \alpha}$$
+முதலில் $\lambda$ ஒரு வெட்டு என வாதிடுகிறோம்:
+\begin{enumerate}
+\item $S$ வெற்றற்றதால், குறைந்தது ஒரு வெட்டு $S$ இல் உள்ளது;
+எனவே $\emptyset \neq \lambda$.
+$S$ என்பது வெட்டுகளின் கணம் என்பதால், $\lambda \subseteq \Rat$.
+$S$ க்கு ஒரு மேல்வரம்பு இருப்பதால்,
+ஒவ்வொரு வெட்டு $\alpha \in S$ இலிருந்தும் விடுபட்ட ஏதோ ஒரு
+$p \in \Rat$ உள்ளது.
+எனவே $p\notin \lambda$; ஆதலால் $\lambda \subsetneq \Rat$.
+\item $p < q \in \lambda$ எனக் கொள்க.
+அப்போது $q \in \alpha$ என அமையும் ஏதோ ஒரு $\alpha \in S$ உள்ளது.
+$\alpha$ ஒரு வெட்டு என்பதால், $p \in \alpha$.
+எனவே $p \in \lambda$.
+\item $p \in \lambda$ எனக் கொள்க.
+அப்போது $p \in \alpha$ என அமையும் ஏதோ ஒரு $\alpha \in S$ உள்ளது.
+$\alpha$ ஒரு வெட்டு என்பதால், $p < q$ என அமையும் ஏதோ ஒரு
+$q \in \alpha$ உள்ளது. எனவே $q \in \lambda$.
+\end{enumerate}
+இது வாதத்தை நிறுவுகிறது.
+மேலும், $(\forall \alpha \in S)\alpha
+\subseteq \bigcup S = \lambda$ என்பது தெளிவு;
+அதாவது $\lambda$ என்பது $S$ இன் ஒரு மேல்வரம்பு.
+இப்போது $\beta \in \mathbb{R}$ உம் ஒரு மேல்வரம்பு எனக் கொள்க;
+அதாவது $(\forall \alpha \in S)\alpha \subseteq \beta$.
+எந்த $p \in \Rat$ க்கும், $p \in \lambda$ எனில்,
+$p \in \alpha$ என அமையும் ஒரு $\alpha \in S$ உள்ளது;
+எனவே $p \in \beta$.
+பொதுமைப்படுத்தினால், $\lambda \subseteq \beta$.
+ஆகவே $\lambda$ என்பது $S$ இன் \emph{மீச்சிறு} மேல்வரம்பு.
+\end{proof}
+
+% SEGMENT OLP-0045-S07
+எனவே முழுமைப் பண்பை நிறைவேற்றும் பல பொருள்கள் நமக்குக் கிடைத்துள்ளன.
+இதனை மற்றொரு வகையில் சொன்னால், நமது வெட்டுகளில் ``இடைவெளிகள்'' இல்லை.
+(எனவே, விகிதமுறு எண்களுக்குப் பதிலாக மெய்யெண்களில் மேலும்
+``வெட்டுகளை'' எடுத்தால், சுவையான புதிய பொருள்கள் எதுவும் கிடைக்காது.)
+
+% SEGMENT OLP-0045-S08
+அடுத்து, மெய்யெண்களின் மீது சில செயல்களை வரையறுக்க வேண்டும்.
+ஒவ்வொரு $p \in \Rat$ க்கும் $p_\Real =
+\Setabs{q \in \Rat}{q < p}$ என நிர்ணயித்து,
+விகிதமுறு எண்களை மெய்யெண்களுக்குள் பதிப்பதிலிருந்து தொடங்குகிறோம்.
+பின்னர் பின்வருமாறு வரையறுக்கிறோம்:
+\begin{align*}
+	\alpha + \beta &= \Setabs{p + q}{p \in \alpha \land q \in \beta}\\
+%	\alpha - \beta &\defis \Setabs{p - q}{p \in \alpha \land q \in \Rat \setminus \beta}\\
+	\alpha \times \beta &=
+	\Setabs{p \times q}{0 \leq p \in \alpha \land 0 \leq q \in \beta} \cup 0^\mathbb{R} & \text{எனில் }\alpha, \beta \geq 0_\Real
+%	\alpha \div \beta &\defis
+%	\Setabs{\nicefrac{p}{q}}{p \in \alpha \land q \in \Rat \setminus \beta}  & \text{எனில் }\alpha \geq 0_\Real, \beta > 0_\Real
+\end{align*}
+பிற பெருக்கல் நிலைகளைக் கையாள, முதலில் பின்வருமாறு அமைக்க:
+%$0_\Real \times \alpha = 0_\Real = \alpha \times 0_\Real$ எனவும், மேலும் பின்வருமாறும் அமைக்க:
+\begin{align*}
+	-\alpha &= \Setabs{p - q}{p < 0 \land q \notin \alpha}
+\end{align*}
+பின்னர் பின்வருமாறு நிர்ணயிக்க:
+\begin{align*}
+	\alpha \times \beta &\defis
+	\begin{cases}
+		\mathord{-}\alpha \times \mathord{-}\beta &\text{எனில் }\alpha < 0_\Real\text{ மற்றும் }\beta < 0_\Real\\
+		\mathord{-}(\mathord{-}\alpha \times \beta) &\text{எனில் }\alpha < 0_\Real \text{ மற்றும் }\beta > 0_\Real\\
+		\mathord{-}(\alpha \times \mathord{-}\beta) &\text{எனில் }\alpha > 0_\Real \text{ மற்றும் }\beta < 0_\Real
+	\end{cases}
+\end{align*}
+இந்த வரையறைகள் ஒவ்வொன்றும் எப்போதும் ஒரு வெட்டைத் தருகின்றனவா
+எனப் பின்னர் சரிபார்க்க வேண்டும்.
+இறுதியாக, இவ்வாறு வரையறுக்கப்பட்ட வெட்டுகள்,
+அவை செயல்பட வேண்டியவாறே செயல்படுகின்றன என்பதை எளிய
+(ஆனால் நீண்ட) விளக்கத்தின் மூலம் சரிபார்க்க வேண்டும்.
+இவை அனைத்தையும் \olref[check]{sec} இல் தருகிறோம்.
+\end{document}

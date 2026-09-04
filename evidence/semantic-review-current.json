@@ -1,0 +1,926 @@
+{
+  "schema": "openlogic-tamil-semantic-review/1",
+  "date_utc": "2026-09-04T20:56:03.735917+00:00",
+  "reviewer": "Translation agent; no independent human/native review claimed",
+  "unit_bindings": [
+    {
+      "unit_id": "OLP-0004",
+      "source_sha256": "98a8964a95d72ab3004decdef3ee74f1dd1f221dd06dfc0e6d44eff52104f277",
+      "translation_sha256": "83e6eb0b4f1fe18338c34e4762150a5a7d4f8de32883b68febfa54f405494a44"
+    },
+    {
+      "unit_id": "OLP-0005",
+      "source_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+      "translation_sha256": "6292339c2df9599e0cb82ecd1a7dfc761152e7175b5bd822a669cd8b929a9d10"
+    },
+    {
+      "unit_id": "OLP-0006",
+      "source_sha256": "63d819c246577b3bfd8ba2a933f114b58c6549bdc4fa6ea8ffa8ab07c7fed4b7",
+      "translation_sha256": "87b24c903c4c44b4a4caa0f570e4121eb0d667cd56b221edb9e3ce2675093399"
+    },
+    {
+      "unit_id": "OLP-0007",
+      "source_sha256": "ec2115fa48ea6c6684a65bdf2f504102ca0a74b40cf88293dfc12f4ab97ada02",
+      "translation_sha256": "65fa7f1388ab2b604af79f7ca6bfaf42125e7f39fe24ddc5983ea018731c4adb"
+    },
+    {
+      "unit_id": "OLP-0010",
+      "source_sha256": "aa8e94675f56112d8952b81d17968545b54c33393bfc466745edcaca30f4453a",
+      "translation_sha256": "51eb7c07fb4ad23c336f0a5eb1249e49c7ef00c31a5fd0b74a66db89b3f348fc"
+    },
+    {
+      "unit_id": "OLP-0008",
+      "source_sha256": "e556ac6add69b1e6d41123eb05be4adb15f2dc120a3782a721caeab42dbc4529",
+      "translation_sha256": "d815e9f2cb9fd84e49b6a781ee84ccbe80a988cefdf665fc012b4a9992eaa41c"
+    },
+    {
+      "unit_id": "OLP-0009",
+      "source_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
+      "translation_sha256": "02fbb8f168a2106fd0b40b8fb8fc8f00b868356cfb51b321e3437dbf02f5f120"
+    },
+    {
+      "unit_id": "OLP-0011",
+      "source_sha256": "9720780fcf56a05f8f18c26234d7bebc24024116bb6549a151e0905845b41ef5",
+      "translation_sha256": "f9ba3f67a9b4316b0a85bbb47b8fa93819526d0f70391cfc0636e53fa8c26556"
+    },
+    {
+      "unit_id": "OLP-0012",
+      "source_sha256": "2a67c6fb4846155e8e7cd8172fd1fb8214db96d508ceae5d70dec95d5dfcc1ff",
+      "translation_sha256": "e627c7b02b07e134c4df8db98896ab084bd39a93e40c1816942a29a5470ad3be"
+    },
+    {
+      "unit_id": "OLP-0014",
+      "source_sha256": "006f2ea0d65e5069ef1509de94dd35a477ea835c19962da22f4bef48caffbee7",
+      "translation_sha256": "84cddf69fa27cd7b152351fb37caf890d2e9b487f5831573666de293a00c93a6"
+    },
+    {
+      "unit_id": "OLP-0013",
+      "source_sha256": "75047e8806a58c0a0c07ae2e55554d9ad2affb9d5297b1d5585ebe0b2f3de651",
+      "translation_sha256": "ab422f305bdaf05e9ed28968e4a329b75237a33c6818c9e6fee3c664d3240048"
+    },
+    {
+      "unit_id": "OLP-0015",
+      "source_sha256": "d9531aa5cd774c12090fbd5c9fb289181e93cf7e9a96ecf7d4fd3fcdf5d250c7",
+      "translation_sha256": "ce164cce8a95d9e2d99d337cc3b38757e3138f33557350b48664b1f91a74e06c"
+    },
+    {
+      "unit_id": "OLP-0016",
+      "source_sha256": "79593789022fef31c0609b9c94856e2aef5cd5e88e92864e782bb6e6e5f4bce4",
+      "translation_sha256": "04139c1175dde4abec30319a14b4188befbe62c8e0f5822dbb97a668246f1989"
+    },
+    {
+      "unit_id": "OLP-0017",
+      "source_sha256": "dec624ef4e71903b72a9f0b5fcc6a15a2e0f897f9ebe881dd9c9e21333aeee75",
+      "translation_sha256": "f9ec31e242fcb2d1eda7df01ef9bf97efea8d6dece8a5dbb5a1178df6b75f53a"
+    },
+    {
+      "unit_id": "OLP-0018",
+      "source_sha256": "a158f1ce5b84c8c3f681dd6347b22491d1b67a91e110138b9cb6833e3d9dc23c",
+      "translation_sha256": "2bf2740542b0f6f4d8ba75adb46bb027d6effafcd5d10b2529e06b7efc8353a2"
+    },
+    {
+      "unit_id": "OLP-0019",
+      "source_sha256": "73c8bdb301aca93f687a06a045533d75d30088ae711f5e1dfd577b7864f8d3d5",
+      "translation_sha256": "c147683a6c2ec8c795c3b53f00312eb448a2e9fa8e3d965d48ce013f1951a22f"
+    },
+    {
+      "unit_id": "OLP-0020",
+      "source_sha256": "d68bba27e593df2c17e2dc93b34256d829361b04134b4a962b997d5f4a230a59",
+      "translation_sha256": "f7a7ba39e713d59e2eb993cabf6e61e8efa6d5bfaf3b9b534f2a695d06385e42"
+    },
+    {
+      "unit_id": "OLP-0021",
+      "source_sha256": "d1fa0923e303fc49a88d4e476c319d6e91a8088de44c232dcfba5878325faea3",
+      "translation_sha256": "aad1c03fd6159f409eed2606538c8537fe181829c0cd8d56a4d20ab5a9f3a2e3"
+    },
+    {
+      "unit_id": "OLP-0022",
+      "source_sha256": "4d30902b7c66720afabb8b079294106a685aefba0dc02ca10d9921bb554db0ac",
+      "translation_sha256": "8a495041a746bd59b05a33903966e9a091e19fb9ffcb76b540ff2dadbcc1dcbc"
+    },
+    {
+      "unit_id": "OLP-0023",
+      "source_sha256": "e2e46c0270c44b6f54861a4565f3829b1b5f91a7f72dca84046361e5abf622c3",
+      "translation_sha256": "543cc3836a812964e07c6280a0a77b3d0d59128a5ed7c06d2821b5153995d870"
+    },
+    {
+      "unit_id": "OLP-0024",
+      "source_sha256": "96e36d8cd8dc4ec0e73e9507147ecfe33d7e4f368ecf46de92efb423a7d409c1",
+      "translation_sha256": "0d352976706bba2b7c018e74dfb902c01afb5d40e268c6b9a20ac74d481b5ed1"
+    },
+    {
+      "unit_id": "OLP-0025",
+      "source_sha256": "1733e9f6b7f1009f7d36cb47b3f11ec8cccc28ef173a379e4d69c3de352fcf28",
+      "translation_sha256": "95637ec04cd0a27f40c62397a31b700f94c11114b1975d52d358417c670d27c6"
+    },
+    {
+      "unit_id": "OLP-0026",
+      "source_sha256": "0f638e25ad1f565b9256846fb8b293c03663072b69a2adc5f2cfea1e94d00933",
+      "translation_sha256": "21c2d70c911829665c9cb73c83a9a15c4f189e000a6992d9e4e985730e9ac9cc"
+    },
+    {
+      "unit_id": "OLP-0027",
+      "source_sha256": "bce6978871cb87871f8fbae0d51c9e260ba26c6c63ebefaad30d83c89ad1eae0",
+      "translation_sha256": "72efa08a421e646ba339595a9421c6ac3bc92c6c9fadbe9ba9860406aa02a3f9"
+    },
+    {
+      "unit_id": "OLP-0028",
+      "source_sha256": "bb5010906c4b4b95ef652f372efc49c44ca9feebbca1e50fecbb29b3ff6ce8aa",
+      "translation_sha256": "76bffd78b24e6059c421ea44cad2f657f019de815081ea7e62d997b78c89dfba"
+    },
+    {
+      "unit_id": "OLP-0029",
+      "source_sha256": "bf6be35c0e393cb6e1d227f8e9024df4216792e663f23beb7277045487acfa67",
+      "translation_sha256": "05594eb5cae8fff6d0c8f864d4d6fb8866c7b739e8f64b859e8890936f7868b8"
+    },
+    {
+      "unit_id": "OLP-0030",
+      "source_sha256": "514c709d325dd5496ee321828b0c4a0e7eea089a58d3f2ecde05128b9e7daf26",
+      "translation_sha256": "69a6658892e46a1ccc1b821ba0d52333a54462a000b497b6dce31cceb21a29a6"
+    },
+    {
+      "unit_id": "OLP-0031",
+      "source_sha256": "fb6cc1176e91e56cea5f5b9708723c59191813f8fe256aac8ed0457a0119a9bf",
+      "translation_sha256": "572780a86fdad55bd531233b8c1fd17ca82e5ddfc37dbc34c93c8b1975bb717e"
+    },
+    {
+      "unit_id": "OLP-0032",
+      "source_sha256": "c26b4e0da9e2e0b0ec839470ddd1d0d5eb1b3d3922d3b6986c9a795f34328797",
+      "translation_sha256": "7ca1ac5af48fd82d1728064432eac67b0483b2696bc2840ea528b5ffe7351732"
+    },
+    {
+      "unit_id": "OLP-0033",
+      "source_sha256": "4471def29c2da48dcb01635adf692cd0bc89cb6885636db149f4b2d86ff4e9fa",
+      "translation_sha256": "e54078883c5cde11d24244ab8efa57fb780b397f2eb2706a12551776d07a6dfb"
+    },
+    {
+      "unit_id": "OLP-0034",
+      "source_sha256": "0d6d2e3280698668b837cef6dcf3134b86d2a4b48831ae516e6e33e42898c79a",
+      "translation_sha256": "49dd8f3030a1921a36d9b6552b21ecfa671ef3d6f65be5a11f9d07d4233620fa"
+    },
+    {
+      "unit_id": "OLP-0035",
+      "source_sha256": "025a3fc368d6873825effcb07631913762edbf2d3f9a0711d57dcd9575361251",
+      "translation_sha256": "61d270a4227bed44e652661245e3a9457ba79fb6558d54473ae0ab7e5a2c698d"
+    },
+    {
+      "unit_id": "OLP-0036",
+      "source_sha256": "075810b1cf1c8b54266518523d4665d3deae4a4937f4e19a66a09cc0e1aaebf7",
+      "translation_sha256": "52938e79100c8f388398299baf29e8df52db0163b1d4a2a553798a6e22261d0b"
+    },
+    {
+      "unit_id": "OLP-0037",
+      "source_sha256": "7b99b3e032e24e425383734ce80ad9a5cc37d018c09205e02f37b927d50bb56a",
+      "translation_sha256": "91f7850a9f38b495656b20a531dfa4d747c9838b0c3831b94fff027133bae055"
+    },
+    {
+      "unit_id": "OLP-0038",
+      "source_sha256": "9a9060e57403586c0f8a81353c1d9c81049869e486b4dc032fbf32542023ba8f",
+      "translation_sha256": "f30a4cf2bc1d7290f521a87037b7f248991c36a07aedfaa39c0efc305ac74fae"
+    },
+    {
+      "unit_id": "OLP-0039",
+      "source_sha256": "a075f6c63879101314fb20fa493acfb38d78ff24095bb55914f2af4527e1ad3e",
+      "translation_sha256": "850ae1c53d16df56ce4f63024ade6ce779fe8aeb5e6082e91ca431955c5e8ea8"
+    },
+    {
+      "unit_id": "OLP-0040",
+      "source_sha256": "f7717d8394048096cf7a65bc87a1a1ed15861cdfb8c7edb23429d5256d954d11",
+      "translation_sha256": "21f61344c3d62949d9638a76f3c42be950bc009974fea4dcdff96210410ec7b2"
+    },
+    {
+      "unit_id": "OLP-0041",
+      "source_sha256": "66101685650a7c53c6bdd3913ec5211699b0c747857882953e3413ef5f305331",
+      "translation_sha256": "21c117956e52039d1f32404ff025399094817b1f918da346813808bdcda517ff"
+    },
+    {
+      "unit_id": "OLP-0042",
+      "source_sha256": "f93b142146b9527128437355d7e3922204eede2ca9c75a941d3c09a9a848ce77",
+      "translation_sha256": "a4d7ff2bea15f9255cd8eda7acdf02a7bbe498af75a60e3e87e52f185f5f83f0"
+    },
+    {
+      "unit_id": "OLP-0043",
+      "source_sha256": "7140495368042fcbc55907e6ee568c5bc8b7066e44a01a50cbf4202acebe71d2",
+      "translation_sha256": "f1e3f35899682ae6f89c3c536d2a3b852dde3a6513c3412777948152412147b1"
+    },
+    {
+      "unit_id": "OLP-0044",
+      "source_sha256": "3df30161417b836178ff701aa3d778b9ec7c1ba8e3a8a54f98b5584a7960f453",
+      "translation_sha256": "d73cb6355ef03c2b95178919cb8945b802929215b55f65447e37f2eab18249b1"
+    },
+    {
+      "unit_id": "OLP-0045",
+      "source_sha256": "e7cb1029bcb0f0f1ac677c005af8d4e6a10df84bfff50c7483447b972324b44c",
+      "translation_sha256": "9c80cbe1d294b26750573ae7fd53d59e84898e110dc98a0ffa1bc0a83bd0cc82"
+    },
+    {
+      "unit_id": "OLP-0046",
+      "source_sha256": "01032be342b6892c970733acf0b553216c39c5e864c0378d25fea8c5eaa11ead",
+      "translation_sha256": "425ff00b227c720a06bb5291b44812a7b85df08ef7e078cfa04bc50b99ecb83b"
+    },
+    {
+      "unit_id": "OLP-0047",
+      "source_sha256": "d791c146f159c8e43368c12cd1a10e61a53f501baf9f3d2c606c7bd589c0ae01",
+      "translation_sha256": "0f42bf8b99c135dd4ec4766dc89cfb0ef3fcc72e536960e5ac7989b87d7d6a08"
+    },
+    {
+      "unit_id": "OLP-0048",
+      "source_sha256": "35d0a39913340eadcab7fb9d7742b56aef0d0f29868cd65eeca9dc53694e8ac2",
+      "translation_sha256": "125ae258ee6a506c47bfeb4a308897d461fc2f4720e3c502879ae559b8a63b71"
+    },
+    {
+      "unit_id": "OLP-0049",
+      "source_sha256": "6ea6bff5ac4f128338bfa6b1cb5b7c8bed6121210257e06f6aaa7b27d5cc4bbb",
+      "translation_sha256": "611ab8eca2f3e1114a8d3a61e06fc02544d5f08675705b637f93b1514f717874"
+    },
+    {
+      "unit_id": "OLP-0050",
+      "source_sha256": "e9a73caefcc496d7074251a3ac15f66fd577415bd3a531dd23f79375502ee0ed",
+      "translation_sha256": "8d046f4a4e76faacdd44f347ec5f6a10210e551e1d9b3f918e49900cf8073087"
+    },
+    {
+      "unit_id": "OLP-0051",
+      "source_sha256": "9cee716bb8cb3bfd507ed5c17bbd4477d05995af6f8f8d411087793bdaa86036",
+      "translation_sha256": "2318ef85ef56791ffd40cc9bebf56b344be1981fb0d6f4957b54c5ce8ce53c78"
+    },
+    {
+      "unit_id": "OLP-0052",
+      "source_sha256": "ea5f6c80d70abca6f5598de3e221c2f60524c40cbf533ae8a5336d5bb7186537",
+      "translation_sha256": "636496512f70e595add569d0d21a7c9035bbc82d24142fa66671e613f30eb4b1"
+    },
+    {
+      "unit_id": "OLP-0053",
+      "source_sha256": "a7c41cebb6b7b0e2bed0d187777be4ba69fecdb17baa070975a0ca5c5c55b8bf",
+      "translation_sha256": "badf643f73c683a8b5e1c2f53b8b821b99b82fd870cb4e647a607ebda65f2614"
+    },
+    {
+      "unit_id": "OLP-0054",
+      "source_sha256": "88534a3f2be736a704ab31343e45933edb9712fa5b4411eb102c0f4a12d656e9",
+      "translation_sha256": "37877cbcb2538c4e44b42ca5c664146d4f762d105d1de0791f3ad234a73349b9"
+    }
+  ],
+  "samples": [
+    {
+      "segment_id": "OLP-0012-S05",
+      "reverse_paraphrase": "A binary relation on A is any subset of A squared; Rxy abbreviates ordered-pair membership. Empty A is permitted.",
+      "assessment": "Source generality preserved despite SCERT nonempty-set convention.",
+      "translation_segment_sha256": "4b40edfa0c62c12ebdb67d4a8b94cb91db2aca1e82b2d85ca7ab6926119d9235",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0013-S02",
+      "reverse_paraphrase": "Two equally adequate encodings of ordered pairs yield different representing sets, so representation is not a discovered metaphysical identity.",
+      "assessment": "Both alternative constructions and Benacerraf citation retained.",
+      "translation_segment_sha256": "25630ae020b4732423def3268d0aeac299ee72bdc0e79cb7eb30bad2b4b60381",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0013-S03",
+      "reverse_paraphrase": "The universal membership relation cannot be a set in the later axiom theory; the conditional reference and footnote branches remain intact.",
+      "assessment": "No unqualified claim that every relation is a set.",
+      "translation_segment_sha256": "a8111cb8673cd1a2864a70680f8b203362692a4e259ff07b5d0527be9cf61f06",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0013-S04",
+      "reverse_paraphrase": "Treating membership as a predicate differs from making it a name for a set; a list of three names does not express a proposition.",
+      "assessment": "Predicate/term distinction retained; exact advanced Tamil terms remain provisional.",
+      "translation_segment_sha256": "2c281b8bfc83943079642ddd638f9d75086f057d77d56dcc4ae9e4b1735ae304",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0014-S06",
+      "reverse_paraphrase": "Antisymmetry permits but does not require self-relatedness; it is compatible with symmetry and differs from mere nonsymmetry.",
+      "assessment": "Quantifier and negation scope reviewed.",
+      "translation_segment_sha256": "6c0c84bf5d8e3c917617e62cbbdb726ac30943914aea7e1220428d99ca08e1d1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0014-S11",
+      "reverse_paraphrase": "Irreflexivity and non-reflexivity differ; the nonempty-domain qualification remains.",
+      "assessment": "Empty-domain vacuity preserved.",
+      "translation_segment_sha256": "6e49084695dc6925ecc19056bb675d41ea8c40c0798ee9725191f04b7df2ef3b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0015-S06",
+      "reverse_paraphrase": "From Rxy, symmetry gives Ryx; with Rxz transitivity gives Ryz. Both inclusions establish equal equivalence classes.",
+      "assessment": "Proposition presents Rxy first so the stated left-to-right direction is correct.",
+      "translation_segment_sha256": "69bc5a1289e47b243d46eb0b20cf4edc9fcb0866a9db9dd2238a9fb1bf83e632",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0015-S07",
+      "reverse_paraphrase": "Equal classes and Ryy yield y in its own class, hence y in the x class and Rxy.",
+      "assessment": "Reflexivity used in the reverse direction.",
+      "translation_segment_sha256": "d2905afc2d5b14b3f25f9d602e6e76475c719f0ba7fe9d96eb4f51d55b0ace02",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0016-S08",
+      "reverse_paraphrase": "Divisibility is a partial order on natural numbers but only a preorder on integers because 1 and minus 1 divide each other.",
+      "assessment": "No silent domain restriction; integer terminology revised using recovered canon.",
+      "translation_segment_sha256": "392d73e85ae27b8cbcb870e4ae18331c71e02761b2f9f6ba8c31ba37f42facb7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0016-S16",
+      "reverse_paraphrase": "If two unequal objects stand in R-plus in both directions, neither diagonal pair applies, so both directions lie in R, violating asymmetry.",
+      "assessment": "Antisymmetry proof preserves the contradiction and distinctness assumption.",
+      "translation_segment_sha256": "e7f8cce4619738712ab4bb8cdf7ebb51f308ba7e6dbb667a0450fe82499acf66",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0016-S17",
+      "reverse_paraphrase": "Transitivity of R-plus follows either from two R edges or by replacing an equal endpoint when one edge is diagonal.",
+      "assessment": "Both cases retained.",
+      "translation_segment_sha256": "f87d4dadaee01019088496193b98523fbc325508275bc2b69f3e42a345f43fec",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0017-S04",
+      "reverse_paraphrase": "Adding an isolated fourth vertex changes the graph even though its edge set is unchanged.",
+      "assessment": "Both TikZ graphs preserve every node, arrow and self-loop.",
+      "translation_segment_sha256": "e9b41d06d832c74f918baf883a77241bad389b80800e0188acc60c4475ff580a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0018-S07",
+      "reverse_paraphrase": "A non-root vertex has at most one immediate predecessor, not necessarily exactly one in an infinite tree.",
+      "assessment": "Finite picture does not override general theorem.",
+      "translation_segment_sha256": "1a31e2fb4500fa3caad9eb25f16375e1a228097ceac1f01075805b4857e53d34",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0018-S10",
+      "reverse_paraphrase": "A branch is an inclusion-maximal chain, and an outside point is incomparable to some branch point.",
+      "assessment": "Retained source undeclared X; separate editorial note identifies issue.",
+      "translation_segment_sha256": "5c544b8f6ee3fd26e1f9b79841695bf06aeed5d7865d9c64c3f90c719d09ee0f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0018-S13",
+      "reverse_paraphrase": "Every finitely branching infinite rooted tree has an infinite branch.",
+      "assessment": "Both finiteness-of-branching and infinitude hypotheses retained.",
+      "translation_segment_sha256": "f38f2dee24d6fccbc276432cf802f166a0099b0096ae7d7de13b0d2e24e08bbe",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0019-S02",
+      "reverse_paraphrase": "R relative-product S follows an R edge and then an S edge; restriction uses A squared; image may have many values.",
+      "assessment": "Composition direction and relation-versus-function distinction checked.",
+      "translation_segment_sha256": "9077434a560cbbcbd5b2f06daa958a2e3a806ce3efdb7599816cb141e213b137",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0019-S05",
+      "reverse_paraphrase": "Positive finite iterations of integer successor yield strict less-than; adding the identity yields less-than-or-equal.",
+      "assessment": "Local R-plus notation differs intentionally from the orders section.",
+      "translation_segment_sha256": "30ee41532622e3a67513e438eecbd6a3f7563e5b5034fefcd851b469927933e8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0007-S01",
+      "reverse_paraphrase": "Natural numbers include zero under OpenLogic convention; integers also include negatives.",
+      "assessment": "Recovered school-text convention is explained separately, not substituted into source.",
+      "translation_segment_sha256": "37e510bcc412862343d25d82f168ce9b017a9d0e0b13988ab3c255c78cd2a197",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0021-S02",
+      "reverse_paraphrase": "A function assigns every domain element exactly one codomain value; its range consists of values actually attained.",
+      "assessment": "Domain, codomain and range remain distinct. Argument is a function input, not a logical argument.",
+      "translation_segment_sha256": "55d7650f5295b230cfaf821d3d51c7b51cfc181f6bc5ad4fc5cf9c60a96c12c5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0021-S08",
+      "reverse_paraphrase": "Natural-number successor has positive integers as range, excluding zero, though its codomain is all natural numbers.",
+      "assessment": "Source natural-number convention preserved; recovered numeric successor term used in its attested sense.",
+      "translation_segment_sha256": "e154766c38cec60dd12797c667a5b90782c7c511f8198e6df6d2643eb8fcdeaf",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0021-S10",
+      "reverse_paraphrase": "Different defining formulas give the same function when all values agree and the domain and codomain agree.",
+      "assessment": "Function extensionality expressed through values, distinct from set-member equality.",
+      "translation_segment_sha256": "c83e319313111060c2de9350c5cdc68af9690069e1700fe24e43694fe94ef38b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0021-S11",
+      "reverse_paraphrase": "A definition by cases must assign every input to exactly one case, sometimes requiring proof of exhaustiveness and exclusiveness.",
+      "assessment": "Neither totality nor uniqueness requirement omitted.",
+      "translation_segment_sha256": "d349a86c04ee4a265b8c3393c9172b9500f1ba16ad9be52fc46c1989aeb9cbdf",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0022-S03",
+      "reverse_paraphrase": "Restricting the target of a function to its attained range produces a surjection.",
+      "assessment": "Only the codomain is changed; pointwise rule and domain are preserved.",
+      "translation_segment_sha256": "48310372becc770a3e172c18498adc2f29ada4a0b24d0aefd4b228735041cbde",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0022-S05",
+      "reverse_paraphrase": "Injectivity requires at most one preimage per codomain element; it does not require that a preimage exist.",
+      "assessment": "The at-most/at-least distinction from surjectivity remains explicit.",
+      "translation_segment_sha256": "f1a4d22690fff61987e01ba46e301624c5426bc77c6b0d0892783ccb025a3d44",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0022-S07",
+      "reverse_paraphrase": "Constant natural-number function is neither kind, identity is both, successor is injective only, and the parity-based halving function is surjective only.",
+      "assessment": "Zero is included; two inputs 1 and 2 share output1 in the final example.",
+      "translation_segment_sha256": "b1650e8d6a88510e87f6dcab33ecd27a222c7909bfc0f5aedfcd9afc9e55dcc6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0023-S04",
+      "reverse_paraphrase": "A relation is a function graph when each input has exactly one output; both existence and uniqueness conditions are retained.",
+      "assessment": "The proof uses uniqueness; existence remains an explicit hypothesis.",
+      "translation_segment_sha256": "c246e20e6e0c0233ee38236ac8996d8dffd13a267166770489a153affc77dd29",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0023-S07",
+      "reverse_paraphrase": "Restricting a function changes only its domain; applying it to a set yields the set of all attained values.",
+      "assessment": "Source formulas retained. Separate note identifies the mismatch with the earlier relation restriction that limits both coordinates.",
+      "translation_segment_sha256": "9b72f7162573cd8abe18dee61af47bdd6e40098ff513ed5e0db401131e21d7c2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0023-S08",
+      "reverse_paraphrase": "The range is the image of the domain; conditional cross-references to inverse and relative product remain.",
+      "assessment": "Source claim that the restrictions agree is qualified only in a separate edition note.",
+      "translation_segment_sha256": "2f6151cefbb9100157531f7c85fd82616fecbf775d57a0361b89a2c50878b8c0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0024-S01",
+      "reverse_paraphrase": "Subtracting one reverses successor on integers but is not a natural-to-natural function because zero maps outside the natural numbers.",
+      "assessment": "Domain and codomain determine whether the proposed inverse is a function.",
+      "translation_segment_sha256": "188de84a2ad118bc873ebe6e1d92c6765dc2862f912b742cadba676c1bc05a9c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0024-S04",
+      "reverse_paraphrase": "The source claims every injection has a left inverse. Its proof selects an element of A.",
+      "assessment": "Source exception: empty A and nonempty B refute the unrestricted statement. A separate Tamil edition note supplies the missing qualification without changing source mathematics.",
+      "translation_segment_sha256": "4ee316f60f8e9d60ba379a8fbbfc97240a01b212b2d5b4de96fc4248a8a7140b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0024-S08",
+      "reverse_paraphrase": "A surjection has a right inverse by selecting one preimage of each output; the general proof assumes Choice.",
+      "assessment": "Footnote preserves finite/natural domain and bijective exceptions, as well as both conditional branches. No hidden Choice assumption introduced into the unique-preimage case.",
+      "translation_segment_sha256": "3c1b989dfab4948c92f5c3b7c05d2bedb7a47657d9a020d42d8ca49cd0ebd749",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0024-S14",
+      "reverse_paraphrase": "An injection is bijective onto its attained range and therefore has an inverse with that smaller domain.",
+      "assessment": "This is explicitly a minor abuse when called the inverse of the original function; codomain change retained.",
+      "translation_segment_sha256": "a36fc7b7cb805b585227fa86b81d8cfe3549a98c8635da14fece5e973c0d5ee0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0024-S19",
+      "reverse_paraphrase": "Two two-sided inverses agree because any left inverse equals any right inverse.",
+      "assessment": "At-most-one assertion does not imply every function is invertible.",
+      "translation_segment_sha256": "026d7d836fa3fc9d825ef56803ea506391f72eb3667bd2df033291f5953c707c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0025-S02",
+      "reverse_paraphrase": "The composition of f with g applies f first and then g; range inclusion in the next domain is sufficient.",
+      "assessment": "Source comp macro order, diagram, caption and three exercises preserved.",
+      "translation_segment_sha256": "b918f6f491c72f4a0226da8dee364266317872e1992a547583a75ae15e277802",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0026-S02",
+      "reverse_paraphrase": "A partial function assigns at most one output to each possible input. Its actual domain is the subset where an output exists.",
+      "assessment": "Possible input set A distinguished from dom(f); undefined does not mean several outputs.",
+      "translation_segment_sha256": "d768d20b4330eae4a1523ada64affc9878b91608f284d4326b4d8f21819a4808",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0026-S05",
+      "reverse_paraphrase": "For an injective partial function, the proposed inverse recovers every defined input and every attained output.",
+      "assessment": "Both assertions have explicit dom/range bounds, not all A/B.",
+      "translation_segment_sha256": "be31961c3f5983f45cf419ad15bb5d78f5a73c11e04aa62f4527cf9c6347ef83",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0026-S07",
+      "reverse_paraphrase": "Single-valued relations are partial-function graphs; additionally serial relations give total functions.",
+      "assessment": "Serial is explicitly existence of an output for every input, distinct from transitivity.",
+      "translation_segment_sha256": "aff706c7c2ea19bfeabf8cc8ac69dfb7400215a45ae950cd6f9b355930b0b00a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0027-S02",
+      "reverse_paraphrase": "The alternate sections define enumeration using a bijection with the natural numbers or an initial segment, rather than the primary chapter definition using a surjection from positive integers.",
+      "assessment": "Both variants remain explicitly identified and are imported once; their definitions are not blended.",
+      "translation_segment_sha256": "ae5f7932c05fd72c703333b7a1640812169d5fd3f9c437fb4d8805bc628caa4f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0028-S02",
+      "reverse_paraphrase": "Some infinite sets can be listed with every member at a finite position, while Cantor showed that other infinite sets cannot be so listed.",
+      "assessment": "The introduction does not equate infinitude with non-enumerability.",
+      "translation_segment_sha256": "d3811d62bd436a86abf09f0f8113da8e3b7071ed1b790646318ef1b9cb6c0238",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0029-S07",
+      "reverse_paraphrase": "A formal enumeration of a nonempty set A is a surjection from the positive integers onto A.",
+      "assessment": "Nonemptiness and surjectivity are both retained; the empty set is handled separately.",
+      "translation_segment_sha256": "df77d563dc379335d4472dad48035d4ee2691116163a9c33e03c9a86bc694c3c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0029-S24",
+      "reverse_paraphrase": "A set is enumerable exactly when it is empty or bijective with the natural numbers or one of their finite initial segments.",
+      "assessment": "The zero-based endpoint convention and empty-set disjunct remain explicit.",
+      "translation_segment_sha256": "109e769b069061bd58651d4e48cc9af7b96164523dfdd2c8dd417d387a6f9cbc",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0030-S03",
+      "reverse_paraphrase": "Cantor zig-zag enumerates each natural-number pair by the unique table position bearing its natural-number label.",
+      "assessment": "Row and column coordinates are not interchanged.",
+      "translation_segment_sha256": "296fc6b5d816b2f9f599e97c894c5dfebd81b54be740bbfc32b2753ce28392d2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0030-S04",
+      "reverse_paraphrase": "The two-dimensional enumeration can be iterated: enumerate one axis by natural numbers and the other by already enumerated pairs, yielding enumerations of every finite natural power.",
+      "assessment": "Nested ordered-pair representation and all displayed arrays are retained.",
+      "translation_segment_sha256": "954c55bc9de0fc04355c43b98ce0178879e140b09370a6395205b08443f4b872",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0031-S02",
+      "reverse_paraphrase": "A pairing function is an injection from A times B into the natural numbers; its value is a code for exactly one ordered pair.",
+      "assessment": "Encoding is injective rather than merely a general map, and decoding is explained through the inverse.",
+      "translation_segment_sha256": "35327685a0ce2e0ed26742c7d8545a91af3ff79ffbec81e0cd7854301e4f71b3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0032-S01",
+      "reverse_paraphrase": "The alternate pairing construction fills successively remaining positions with rows zero, one, two, three, and so on.",
+      "assessment": "Two frozen-source pair labels are corrected to (0,1) and (3,m), matching both tables and the completed list; TA-SIZ-LOCAL-002 and OLSIZ-003 record the changes.",
+      "translation_segment_sha256": "e8548c0cd875f87bb20d59c13c2ccea3bd228ab769f56050e4a4a3573d8bc0ee",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0033-S04",
+      "reverse_paraphrase": "The diagonal string flips the nth bit of the nth listed string, so it differs from every listed string in at least one coordinate.",
+      "assessment": "Quantifier scope and the coordinate-specific inequality are preserved.",
+      "translation_segment_sha256": "bb7dd84ad656499435d5867808cc281911cc85d79a843d28127b0f44486fa712",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0034-S03",
+      "reverse_paraphrase": "A surjection from the power set of positive integers to binary sequences converts any enumeration of the former into one of the latter.",
+      "assessment": "The reduction direction is explicit and supports the contrapositive non-enumerability conclusion.",
+      "translation_segment_sha256": "a41834ac02f9edece95d096f71f250a627626bff4ae05ab9a20e108d2cee5b78",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0035-S04",
+      "reverse_paraphrase": "Equinumerosity is reflexive by identity, symmetric by inverse, and transitive by composition.",
+      "assessment": "All three relation properties are proved with the correct function directions.",
+      "translation_segment_sha256": "2671ff5ae065290eae584ccb14f80a71156d12d4baf6e5a7c76e2a9e375c44e8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0035-S07",
+      "reverse_paraphrase": "A bijection transports an enumeration in either direction, including the empty-set branch.",
+      "assessment": "The source g/f typo is corrected to f in both branches; OLSIZ-006 records the change.",
+      "translation_segment_sha256": "8b470fcec129e25086d45f37aae805632332de792a50c28e55a1d1ff05efcf5a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0036-S06",
+      "reverse_paraphrase": "Cantor maps each x to its singleton for the injection and uses the diagonal subset to rule out every surjection onto the power set.",
+      "assessment": "The arbitrary input is quantified over A, correcting the frozen source overline-A typo recorded as OLSIZ-007.",
+      "translation_segment_sha256": "d072d8c5584d4684f9f2c6d70cb96556dbf60b02bb49aee35f65dd6c336f9d38",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0037-S02",
+      "reverse_paraphrase": "If A injects into B and B injects into A, then A and B are equinumerous.",
+      "assessment": "The Schroder-Bernstein statement retains both hypotheses and the bijection conclusion.",
+      "translation_segment_sha256": "5e55544f0dd916036cd73a936748823dd9500bd13b20d358cefeed5c1e6193b9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0038-S04",
+      "reverse_paraphrase": "Under the set-theoretic alternate definition, a set is enumerable when empty or when it has an enumeration; non-enumerable means not enumerable.",
+      "assessment": "The empty-set exception remains separate from the bijection-based enumeration definition.",
+      "translation_segment_sha256": "e9f47236a12e80e212ee07cff6c136b2986dcb94f318297ce370cfe22d3e4fc4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0039-S04",
+      "reverse_paraphrase": "For a list of infinite binary strings, s_n(m) is the mth digit of the nth string and d flips s_n(n).",
+      "assessment": "OLSIZ-008 and OLSIZ-009 repair the two prose defects. The source table already tokenizes correctly as row breaks followed by hline commands.",
+      "translation_segment_sha256": "4544d7fd53201b841ee378c8e8525d31e400c469f7ff16f2d5ba84df4dda018a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0039-S07",
+      "reverse_paraphrase": "The subset D contains exactly the natural numbers absent from the correspondingly indexed N_n, hence differs from every listed subset.",
+      "assessment": "The biconditional and all quantifiers are retained.",
+      "translation_segment_sha256": "fea8b3eca8141342cc2f5b848ff8ae11a5454f3f3b002d2b95685a1b9ebcfeaa",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0040-S04",
+      "reverse_paraphrase": "The characteristic binary string of each subset defines a surjection from the power set of naturals to infinite binary strings; an enumeration would therefore transfer across it.",
+      "assessment": "The reduction direction, constructed function, and contradiction are preserved.",
+      "translation_segment_sha256": "2175a205608f7cd72eceec0a73ba38dc9751eb69dbf2960bd213fca035b35d30",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0041-S01",
+      "reverse_paraphrase": "The chapter constructs integer, rational and real number systems inside naive set theory and attributes the material to Tim Button.",
+      "assessment": "All seven chapter imports and the attribution remain intact.",
+      "translation_segment_sha256": "1b4a19d57c958e1d69f7cfa517946aa3a06a4a68aa0760089b80304df53eb4e3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0042-S02",
+      "reverse_paraphrase": "Pairs (a,b) and (c,d) represent the same integer exactly when a+d equals c+b.",
+      "assessment": "The cross-sum equivalence is retained and is proved reflexive, symmetric and transitive.",
+      "translation_segment_sha256": "9cf347fbc50ea5873061c37ee6a462b8f77340a9da007fd29e0bce97b6cc2ecc",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0042-S04",
+      "reverse_paraphrase": "Transitivity combines a+d=c+b and c+n=m+d, then cancels common terms to obtain a+n=m+b.",
+      "assessment": "The middle representatives and both equalities keep their original order.",
+      "translation_segment_sha256": "565d163bd10e31f8d3d529442296e6e0867dfa9ef01c1465bc2dc237a0bccd62",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0042-S07",
+      "reverse_paraphrase": "Natural n is embedded as the integer class of (n,0), and this embedding preserves addition, multiplication and order.",
+      "assessment": "The construction distinguishes literal natural objects from their integer representatives.",
+      "translation_segment_sha256": "35cb0c3008a8059568f113e859dbf9d4e9a80678d01be1536091dfc90679d087",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0043-S04",
+      "reverse_paraphrase": "Rational order is defined by requiring s-r to have a nonnegative numerator and positive denominator.",
+      "assessment": "The source prose reversal r-s is corrected to s-r under TA-ARI-001, matching the displayed equation.",
+      "translation_segment_sha256": "ff3f2c6190b78068c9726ad4128e3b4146ffc76f7c58d313275bb25a0260d3d4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0044-S03",
+      "reverse_paraphrase": "The irrationality proof derives a smaller geometric representation and, independently, derives that numerator and denominator are both even.",
+      "assessment": "Both geometric and formal branches, their diagram, citation and parity steps are retained.",
+      "translation_segment_sha256": "a57455c8d698177e527f7dfa5000bb110d0b60d40da1474e0b4be45b79cd728b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0044-S05",
+      "reverse_paraphrase": "Completeness says every nonempty bounded-above set of reals has a least upper bound.",
+      "assessment": "Upper bound and least upper bound remain distinct; no completeness claim is made for the rationals.",
+      "translation_segment_sha256": "6d509a09a78f54fabb1e021eb3a5975b76d1672192c40754d8608da1e3197304",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0045-S02",
+      "reverse_paraphrase": "A Dedekind cut is a nonempty proper downward-closed subset of the rationals with no greatest element.",
+      "assessment": "All four conditions are explicit despite provisional Tamil headwords.",
+      "translation_segment_sha256": "53ae64517c3367a21af9ed0807279746d6336222786ef945a9b8af5d01b24cee",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0045-S06",
+      "reverse_paraphrase": "The union of a nonempty bounded family of cuts is itself a proper cut and is contained in every other upper bound.",
+      "assessment": "Nonemptiness supplies a member of S; the source attribution to the upper-bound hypothesis is corrected under TA-ARI-002.",
+      "translation_segment_sha256": "78ddf02cc0ce51970dade5b983e07487b9ab0a05f3db5059fba55f895f7159f2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0046-S05",
+      "reverse_paraphrase": "Rival equally adequate set constructions undermine a claim that numbers are metaphysically identical with one chosen construction.",
+      "assessment": "The Benacerraf citation and ordered-pair alternative remain part of the argument.",
+      "translation_segment_sha256": "413d35a368284225696b800cea09d2117eb1609ec7d91b92fd7017e69db9eb9a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0046-S06",
+      "reverse_paraphrase": "Under the literal construction, natural zero differs from the integer representative of zero, so natural numbers are not themselves the constructed integers.",
+      "assessment": "The distinction between representation and identity is not suppressed.",
+      "translation_segment_sha256": "50c41bec825f088334b36d0c00222dfc58e145454a7c0bb6301187fbf6bc3ee0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0047-S02",
+      "reverse_paraphrase": "A commutative ring satisfies two associativity laws, two commutativity laws, additive and multiplicative identities, additive inverses, and distributivity.",
+      "assessment": "All eight displayed axioms and their implicit universal quantification over S are retained.",
+      "translation_segment_sha256": "df57d00c4d592fbd28a24ba15c88cd851ff8caec168f1c5b9dc466b4e0c7e186",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0047-S08",
+      "reverse_paraphrase": "An ordered ring has a total order preserved by addition and by multiplication with a nonnegative factor.",
+      "assessment": "Both one-way compatibility implications are preserved.",
+      "translation_segment_sha256": "4330ca2529ab3cfe8fc3b8a3786c28d1decf323c2c4a1fd276e5f52adcb47307",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0047-S16",
+      "reverse_paraphrase": "For positive rational p with p squared below two, q=(2p+2)/(p+2) is larger than p while q squared remains below two.",
+      "assessment": "Every inequality step used to show the square-root cut has no maximum is retained.",
+      "translation_segment_sha256": "7f8ab3df91f11e5a70af1c2dc0905b65dd10b6d3a941d35d9faa1e246ca5f1e6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0048-S05",
+      "reverse_paraphrase": "A Cauchy sequence of rationals eventually makes every pair of tail values epsilon-close for each positive rational epsilon.",
+      "assessment": "Quantifier order is epsilon, then a tail index, then all two tail positions.",
+      "translation_segment_sha256": "28b4817588a265b03fbb9a8a295dcf96588dc10466dfed5b28d1971f3d55b7e0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0048-S07",
+      "reverse_paraphrase": "Two Cauchy sequences represent the same real when their pointwise difference tends to zero.",
+      "assessment": "The source slip from equivalence classes to equivalence relations is corrected under TA-ARI-003.",
+      "translation_segment_sha256": "ca6c06a599bc04acb3d7fe38936190087824ce56db7a9166db2f2e95c7606ed8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0048-S10",
+      "reverse_paraphrase": "A real quotient class is positive when it is nonzero and its representative is eventually positive.",
+      "assessment": "The wrong rational-zero subscript is corrected to real zero under TA-ARI-004; representative independence remains an explicit obligation.",
+      "translation_segment_sha256": "185ed408b344814255995c1f1f85d1e375558d2a35d397d3ee2a1dc0571c2c8f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0048-S11",
+      "reverse_paraphrase": "The quotient classes of Cauchy sequences, rather than raw sequences under ordinary equality, form the ordered field.",
+      "assessment": "The source shorthand is type-corrected under TA-ARI-005.",
+      "translation_segment_sha256": "d81c0a77c0bb77fac4b17ac99e7c0941d12c63f1839aa1f65671409877ba3908",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0048-S16",
+      "reverse_paraphrase": "Nested rational intervals are defined recursively from a lower and upper rational bound, their widths halve, and the common Cauchy class is shown to be the least upper bound.",
+      "assessment": "The proof-sketch status, recursive-definition caveat, upper-bound contradiction and leastness argument are all retained.",
+      "translation_segment_sha256": "b8b17b83b249d57c10fd61ff1a18e25dc7ab20754064d469b7440232a368009f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0049-S01",
+      "reverse_paraphrase": "The Infinite Sets chapter imports Hilbert hotel, Dedekind algebra, induction, Dedekind’s proposed existence proof and the Schröder–Bernstein appendix.",
+      "assessment": "The chapter attribution and all five imports remain present and in source order.",
+      "translation_segment_sha256": "6b4865c8558905d3e1fb68a4538de868ed181713c14b0df8006ae95c39c79783",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0050-S03",
+      "reverse_paraphrase": "A set is Dedekind infinite exactly when it injects into a proper subset of itself, equivalently via an injection A to A omitting some o in A.",
+      "assessment": "The hotel story is not substituted for the formal definition; properness, injectivity and the omitted point are all retained.",
+      "translation_segment_sha256": "262d770668901fd49da6490e4fd5fd54f71fa99a9105f1555cacd1f525888bbf",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0051-S03",
+      "reverse_paraphrase": "The closure of o under f is the intersection of all f-closed sets containing o and is therefore the least such set.",
+      "assessment": "The element, closure and minimality clauses remain distinct.",
+      "translation_segment_sha256": "a9730b3ca63a35a5238ce98b36ccf1a1b2947573a75236a50019a3ad652572ce",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0051-S08",
+      "reverse_paraphrase": "A Dedekind-infinite set yields a Dedekind algebra by closing an omitted point under a restricted injection.",
+      "assessment": "TA-INF-001 makes the endofunction ambient set required by the closure lemma explicit; it does not alter the later two inclusions.",
+      "translation_segment_sha256": "e0af48dcfbd5cd74a3db02e7d3ddc9f0918f16b3875028f686a58caf7a20bcb5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0052-S02",
+      "reverse_paraphrase": "Induction in a Dedekind algebra follows because N is the least s-closed set containing o.",
+      "assessment": "The base case, successor-closure hypothesis and conclusion N subset X preserve their quantifier domains.",
+      "translation_segment_sha256": "096a55e0406153dc52ebd2f6b6aea9d4b511997ef0da5a6c8535fee505afe43f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0052-S07",
+      "reverse_paraphrase": "Addition, multiplication and exponentiation are to be defined recursively from o and successor s.",
+      "assessment": "All six displayed recursion equations and the deferred-justification citation remain present.",
+      "translation_segment_sha256": "ebc2a87a4b076a58090d4fb89c70546b1f0fc5a7d7d2257bef1c64ef88840546",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0053-S04",
+      "reverse_paraphrase": "Any Dedekind algebra has the desired natural-number structure, without identifying one particular underlying set as the metaphysical natural numbers.",
+      "assessment": "The isomorphism and structuralist point remains separate from the later existence question.",
+      "translation_segment_sha256": "81386d5cc1ae7027138f55bd3887e061348f993939c22d00254b9e95830a528e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0053-S12",
+      "reverse_paraphrase": "Dedekind’s thought-domain argument may establish infinitely many things but does not by itself establish one set containing them.",
+      "assessment": "The mathematical and set-existence objections remain separate, along with the warning about naïve set formation and Russell’s paradox.",
+      "translation_segment_sha256": "1760a4fa3dddc525874e2586b557a96225e6b78171a08f0a377d19f4837236d0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0054-S06",
+      "reverse_paraphrase": "For A subset B subset C with A equinumerous to C, closure under a bijection supplies a piecewise bijection from C onto B.",
+      "assessment": "The proof separately establishes cross-piece separation, injectivity within both pieces and range equal to B.",
+      "translation_segment_sha256": "f94e71dfbd2f71cb8013a9acb4fd67b858b5531815114ccb05393f7d26955b42",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0054-S11",
+      "reverse_paraphrase": "Given injections A to B and B to A, the image inclusions and helper proposition produce a bijection to g[B], followed by g inverse to B.",
+      "assessment": "Function directions, image domains and the final composition are retained exactly as in the frozen source.",
+      "translation_segment_sha256": "c1e49b29349f1e559e6a16f340cecc208d10b3b2b8ca5b93aad826c55ee14335",
+      "status": "author-reviewed"
+    }
+  ],
+  "source_issues": [
+    {
+      "unit_id": "OLP-0012",
+      "issue": "Informal I is used after identity is introduced with Id(A). Source notation retained."
+    },
+    {
+      "unit_id": "OLP-0018",
+      "issue": "Branch definition uses undeclared X; subtree example needs nonempty A for the rooted-tree definition.",
+      "editorial_note": "translation/relations-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0021",
+      "issue": "Square-root example says positive although zero belongs to the domain; g example switches from given n to x. Tamil corrects the former to nonnegative principal square root and removes the stray prose variable under OLFUN-002 and OLFUN-003.",
+      "editorial_note": "translation/functions-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0023",
+      "issue": "Source calls the graph a relation on A times B and later equates input-only function restriction with a prior two-coordinate relation restriction. Tamil repairs the graph wording and states the distinction under OLFUN-004 and OLFUN-005.",
+      "editorial_note": "translation/functions-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0024",
+      "issue": "Injection-left-inverse proposition requires nonempty A, apart from the empty-to-empty case. Tamil adds the nonempty-domain hypothesis; the exact disjunctive condition and counterexample are recorded under OLFUN-001.",
+      "editorial_note": "translation/functions-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0032",
+      "issue": "Two pair labels conflict with the immediately adjacent construction tables. Tamil corrects (0,2) to (0,1) under TA-SIZ-LOCAL-002 and the repeated (2,m) to (3,m) under OLSIZ-003.",
+      "editorial_note": "translation/size-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0035",
+      "issue": "Both conditional branches use undefined g(x)=y where the governing bijection is f. Tamil uses f(x)=y under OLSIZ-006.",
+      "editorial_note": "translation/size-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0036",
+      "issue": "Cantor proof quantifies over x in overline A after choosing arbitrary x in A. Tamil quantifies over A under OLSIZ-007.",
+      "editorial_note": "translation/size-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0039",
+      "issue": "Alternate diagonal proof reverses s_n(m) and repeats the same bit flip. Tamil repairs these under OLSIZ-008 and OLSIZ-009. A later proposed hline defect was retracted after byte-level review showed three backslashes at every row ending: row break followed by a valid hline command.",
+      "editorial_note": "translation/size-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0051",
+      "issue": "Closure lemma uses an undeclared ambient A and requires f:A→A for the displayed closure argument. Tamil makes the endofunction hypothesis explicit under TA-INF-001.",
+      "editorial_note": "translation/infinite-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0043",
+      "issue": "Rational-order prose uses r-s where its preceding statement and displayed definition use s-r. Tamil repairs the subtraction under TA-ARI-001.",
+      "editorial_note": "translation/arithmetization-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0045",
+      "issue": "Completeness proof attributes existence of a cut in nonempty S to the upper-bound hypothesis. Tamil attributes it to nonemptiness under TA-ARI-002.",
+      "editorial_note": "translation/arithmetization-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0047",
+      "issue": "The checking appendix asks readers to verify subtraction and division of cuts although the corresponding source definitions are commented out. Tamil preserves both states and records TA-ARI-006 rather than inventing definitions.",
+      "editorial_note": "translation/arithmetization-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0048",
+      "issue": "Cauchy construction says equivalence relations instead of classes, uses rational zero in a real positivity definition, and names raw sequences rather than quotient classes as the field. Tamil repairs these under TA-ARI-003 through TA-ARI-005; later representative shorthand remains explicit.",
+      "editorial_note": "translation/arithmetization-notes.tex"
+    }
+  ],
+  "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; the integer-label changes are covered here and by rerun structural QA",
+  "release_ready": false,
+  "remaining": "Final rendered reader and all remaining source units must still be verified."
+}

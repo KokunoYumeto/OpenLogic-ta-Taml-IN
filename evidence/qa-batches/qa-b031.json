@@ -1,0 +1,88 @@
+{
+  "batch_id": "TA-B031",
+  "units": [
+    {
+      "unit_id": "OLP-0048",
+      "source_sha256": "35d0a39913340eadcab7fb9d7742b56aef0d0f29868cd65eeca9dc53694e8ac2",
+      "translation_sha256": "125ae258ee6a506c47bfeb4a308897d461fc2f4720e3c502879ae559b8a63b71",
+      "source_bytes": 10928,
+      "translation_bytes": 25262,
+      "source_coverage_complete": true,
+      "segments": 16,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\equivrep{f}{}\\neq0_\\Rat$"
+      ],
+      "extra_math": [
+        "$\\equivrep{f}{}\\neq0_\\Real$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "cuts",
+        "his",
+        "include",
+        "limits",
+        "logic",
+        "open",
+        "section",
+        "set"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-ARI-003",
+          "kind": "equivalence-relations-instead-of-classes",
+          "action": "Corrected identification with equivalence relations to identification with equivalence classes, matching the immediately following construction.",
+          "expected_missing_math": [],
+          "expected_extra_math": []
+        },
+        {
+          "audit_id": "TA-ARI-004",
+          "kind": "wrong-number-system-zero",
+          "action": "Corrected 0_Rat to 0_Real in the positivity definition for a real equivalence class.",
+          "expected_missing_math": [
+            "$\\equivrep{f}{}\\neq0_\\Rat$"
+          ],
+          "expected_extra_math": [
+            "$\\equivrep{f}{}\\neq0_\\Real$"
+          ],
+          "expected_missing_commands": [
+            "\\Rat"
+          ],
+          "expected_extra_commands": [
+            "\\Real"
+          ]
+        },
+        {
+          "audit_id": "TA-ARI-005",
+          "kind": "raw-sequences-instead-of-quotient-classes",
+          "action": "Clarified in the ordered-field theorem and exercise that the equivalence classes of Cauchy sequences, rather than raw sequences with ordinary equality, constitute the field.",
+          "expected_missing_math": [],
+          "expected_extra_math": []
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Rat"
+      ],
+      "extra_commands": [
+        "\\Real"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

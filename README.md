@@ -3,9 +3,9 @@
 India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
 Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
 
-The full edition is in progress. **16 of 722 frozen content units are drafted.**
-The first reader contains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
-The Relations chapter's 9 source units are drafted but have not yet received reader-layout verification.
+The full edition is in progress. **51 of 722 frozen content units are drafted, source-aligned and textually audited** (Sets through Infinite Sets).
+The first published reader remains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
+The wider 51-unit source checkpoint has not yet replaced that tagged reader; its combined-reader layout and copy/search checks remain in progress.
 
 ## Read and edit
 
@@ -13,6 +13,7 @@ The Relations chapter's 9 source units are drafted but have not yet received rea
 - Editable Tamil: translation/content/sets-functions-relations/.
 - Frozen, unchanged English sources and original components: upstream/.
 - Reader master: build/tamil-batch001.tex.
+- Combined 51-unit checkpoint master: build/tamil-sfr.tex.
 
 This is machine translation with source comparison and author semantic review. Independent human or native-speaker approval is not claimed.
 The reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All seven units pass mathematical, citation, identifier and structural parity checks.
@@ -29,7 +30,7 @@ Run build/build-tamil.ps1 on Windows. It holds Global\InterlanguageTeXSlotV1 ove
 English revision: 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 of [OpenLogicProject/OpenLogic](https://github.com/OpenLogicProject/OpenLogic/tree/9620cc73f9c8e0ad003c514a5d3748f29611c4c0).
 All 722 content-file hashes were checked against the frozen manifest. Stable OLP identifiers and original paths remain in the evidence.
 
-The evidence folder contains the source manifest, actual per-segment canon-use records, terminology decisions and scoped QA. Tamil Nadu SCERT, Tamil Virtual Academy and university originals informed the work. Direct technical attestation, general scholarly register and provisional choices are distinguished. Recovered laptop canon led to a newly verified integer/whole-number distinction; historical QA was not inherited.
+The evidence folder contains the source manifest, actual per-segment canon-use records, terminology decisions and scoped QA. Its maintained translation-decisions.jsonl ledger gives experts exact review anchors, authorities checked, rationale, alternatives, uncertainty and concrete questions for every current substantive decision. Tamil Nadu SCERT, Tamil Virtual Academy and university originals informed the work. Direct technical attestation, general scholarly register and provisional choices are distinguished. Recovered laptop canon led to a newly verified integer/whole-number distinction; historical QA was not inherited.
 
 OpenLogic's natural numbers include zero. The source convention is retained and explained in a separate Tamil edition note, because the consulted school text uses a different convention. New editorial or learner material is kept separate from the faithful source.
 

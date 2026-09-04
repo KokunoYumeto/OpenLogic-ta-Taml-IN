@@ -1,0 +1,87 @@
+{
+  "batch_id": "TA-B022",
+  "units": [
+    {
+      "unit_id": "OLP-0039",
+      "source_sha256": "a075f6c63879101314fb20fa493acfb38d78ff24095bb55914f2af4527e1ad3e",
+      "translation_sha256": "850ae1c53d16df56ce4f63024ade6ce779fe8aeb5e6082e91ca431955c5e8ea8",
+      "source_bytes": 6574,
+      "translation_bytes": 15538,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "acc",
+        "alt",
+        "arithmetic",
+        "card",
+        "enm",
+        "include",
+        "logic",
+        "open",
+        "opps",
+        "rrrrrrr",
+        "section",
+        "sfr",
+        "siz"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "OLSIZ-008",
+          "historical_alias": "TA-SIZ-005",
+          "unit_id": "OLP-0039",
+          "kind": "confirmed_reversed_index_description_vs_array",
+          "action": "Corrected s_n(m) to the mth digit of the nth string.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The prose reverses the string and digit indices relative to the following array.",
+          "chosen_treatment": "தமிழ் உடல் இதனை n ஆவது தொடரின் m ஆவது இலக்கம் எனத் திருத்துகிறது.",
+          "alternatives_considered": "மூலச் சொல்லாக்கத்தை அப்படியே வைத்தல்",
+          "rationale": "The array places s_n(m) in row n and column m.",
+          "precise_review_question": "Does the repaired prose now agree with every array entry and the later diagonal s_n(n)?",
+          "location_needle": "இந்தப் பட்டியலில் உள்ள $n$ ஆவது தொடரின்"
+        },
+        {
+          "audit_id": "OLSIZ-009",
+          "historical_alias": "TA-SIZ-006",
+          "unit_id": "OLP-0039",
+          "kind": "confirmed_duplicated_bit_flip_instruction",
+          "action": "Corrected the second repeated 1-to-0 instruction to 0-to-1.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The intuitive diagonal instruction repeats 1-to-0 instead of stating both complementary flips.",
+          "chosen_treatment": "தமிழ் உடல் இரண்டாவது மாற்றத்தை 0 இலிருந்து 1 ஆகத் திருத்துகிறது.",
+          "alternatives_considered": "ஒரே 1→0 மாற்றத்தை இருமுறை மொழிபெயர்த்தல்",
+          "rationale": "The immediately following cases define both complementary flips.",
+          "precise_review_question": "Does the repaired instruction match both branches of the displayed definition?",
+          "location_needle": "ஒவ்வொரு $1$ ஐயும் $0$ ஆகவும்"
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

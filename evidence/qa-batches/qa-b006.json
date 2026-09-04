@@ -1,0 +1,92 @@
+{
+  "batch_id": "TA-B006",
+  "units": [
+    {
+      "unit_id": "OLP-0020",
+      "source_sha256": "d68bba27e593df2c17e2dc93b34256d829361b04134b4a962b997d5f4a230a59",
+      "translation_sha256": "f7a7ba39e713d59e2eb993cabf6e61e8efa6d5bfaf3b9b534f2a695d06385e42",
+      "source_bytes": 399,
+      "translation_bytes": 440,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0021",
+      "source_sha256": "d1fa0923e303fc49a88d4e476c319d6e91a8088de44c232dcfba5878325faea3",
+      "translation_sha256": "aad1c03fd6159f409eed2606538c8537fe181829c0cd8d56a4d20ab5a9f3a2e3",
+      "source_bytes": 5443,
+      "translation_bytes": 14024,
+      "source_coverage_complete": true,
+      "segments": 11,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$n$"
+      ],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "acc",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "OLFUN-002",
+          "kind": "wording",
+          "action": "Corrected positive selector on all naturals to nonnegative principal square root; displayed function preserved."
+        },
+        {
+          "audit_id": "OLFUN-003",
+          "kind": "alpha-equivalent-prose-normalization",
+          "action": "Removed source prose variable n; g(x) formula and mathematical input meaning preserved.",
+          "expected_missing_math": [
+            "$n$"
+          ],
+          "expected_extra_math": []
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

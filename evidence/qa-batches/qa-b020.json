@@ -1,0 +1,46 @@
+{
+  "batch_id": "TA-B020",
+  "units": [
+    {
+      "unit_id": "OLP-0037",
+      "source_sha256": "7b99b3e032e24e425383734ce80ad9a5cc37d018c09205e02f37b927d50bb56a",
+      "translation_sha256": "91f7850a9f38b495656b20a531dfa4d747c9838b0c3831b94fff027133bae055",
+      "source_bytes": 1998,
+      "translation_bytes": 4750,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "card",
+        "cardinals",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "sfr"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

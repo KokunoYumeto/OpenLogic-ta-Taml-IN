@@ -1,0 +1,36 @@
+{
+  "schema": "openlogic-shared-source-audit-supplement/1.1.0",
+  "audit_id": "OLSIZ-011",
+  "parent_audit_id": "OLSIZ-20260904",
+  "status": "RETRACTED_FALSE_POSITIVE_DO_NOT_APPLY",
+  "retracted_utc": "2026-09-04T20:52:00Z",
+  "initial_artifact_sha256": "c1734efa1c1b6e7a82f98b4ccd49031346907fac4dae91082abde539659e8307",
+  "source_authority": {
+    "revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+    "unit_id": "OLP-0039",
+    "path": "content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex",
+    "bytes": 6574,
+    "sha256": "a075f6c63879101314fb20fa493acfb38d78ff24095bb55914f2af4527e1ad3e",
+    "locator": "lines 68-74"
+  },
+  "retraction_reason": "The initial check counted an overlapping two-backslash substring inside a three-backslash token. Exact byte inspection shows three consecutive backslashes before every hline, not two.",
+  "byte_recheck": {
+    "hline_offsets": [2812, 2882, 2949, 3016, 3083],
+    "token_hex_at_every_offset": "5c5c5c686c696e65",
+    "backslash_count_before_hline": 3,
+    "tex_tokenization": "The first two backslashes form the row-break control symbol; the third introduces the genuine hline control word.",
+    "valid_rowbreak_then_hline_occurrences": 5,
+    "invalid_two_backslashes_then_literal_hline_occurrences": 0
+  },
+  "initial_claim": "False: the source was alleged to leave hline as literal text.",
+  "corrected_finding": "No source defect exists at these five row endings. No translation correction or adjacent source-error note is warranted.",
+  "required_translation_handling": "Preserve any valid row-break-plus-hline spelling already present. Revert only changes made solely because of the retracted alert.",
+  "identifier_warning": "Do not use OLSIZ-011 as a shared correction ID. At least one lane already used that ID for an unrelated local finding; this attempted shared allocation is void.",
+  "manager_tamil_disposition": "The Tamil target already used an equivalent separated spelling: two backslashes, whitespace, then the hline control word. The unnecessary marker, note and machine record were removed.",
+  "independent_confirmation": {
+    "gujarati_task": "01a06cce-71c8-7d33-87ca-cb727cb5482c",
+    "bengali_task": "01a06ccd-16bd-7573-8c04-f1093c74a168",
+    "bengali_bounded_xelatex_smoke_test": "PASS; the exact five-row three-backslash construction compiled under the required global TeX mutex."
+  },
+  "external_upstream_issue_submitted": false
+}

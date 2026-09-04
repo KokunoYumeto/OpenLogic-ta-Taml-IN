@@ -1,0 +1,89 @@
+% SEGMENT OLP-0025-S01
+% Part: sets-functions-relations
+% Chapter: functions
+% Section: composition
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{fun}{cmp}
+\olsection{சார்புகளின் சேர்ப்பு}
+
+\begin{explain}
+\oliflabeldef{sfr:fun:inv:sec}{!!a{bijection} $f$ இன்
+நேர்மாறு $f^{-1}$ உம் ஒரு சார்பே என்பதை \olref[inv]{sec} இல் கண்டோம்.
+சார்புகளின் மீதான மற்றொரு செயல் சேர்ப்பு ஆகும்.}{}
+$f$, $g$ ஆகிய இரண்டு சார்புகளைச் சேர்ப்பதன் மூலம்,
+அதாவது முதலில் $f$ ஐயும் பின்னர் $g$ ஐயும் செயல்படுத்துவதன் மூலம்,
+ஒரு புதிய சார்பை வரையறுக்கலாம்.
+வீச்சகங்களும் சார்பகங்களும் பொருந்தினால் மட்டுமே இது சாத்தியம்:
+அதாவது, $f$ இன் வீச்சகம் $g$ இன் சார்பகத்தின் ஓர் உட்கணமாக
+இருக்க வேண்டும்.
+\oliflabeldef{sfr:rel:ops:sec}{சார்புகளின் மீதான இந்தச் செயல்,
+\olref[rel][ops]{sec} இல் கண்ட தொடர்புகளின் சார்புப் பெருக்கம்
+என்ற செயலுக்கு ஒப்பானதாகும்.}{}
+
+சேர்ப்பு என்ற கருத்தை விளக்க ஒரு படம் உதவும்.
+\olref{fig:composition} இல் $f \colon A \to B$,
+$g \colon B \to C$ ஆகிய இரண்டு சார்புகளையும் அவற்றின்
+சேர்ப்பான $(\comp{f}{g})$ ஐயும் காட்டுகிறோம்.
+$(\comp{f}{g}) \colon A \to C$ என்ற சார்பு,
+$A$ இன் ஒவ்வோர் !!{element}[acc] $C$ இன் !!a{element} உடன்
+இணைக்கிறது. $A$ இன் !!a{element} ஆனது $C$ இன் எந்த
+!!{element} உடன் இணைக்கப்படுகிறது என்பதைப் பின்வருமாறு
+குறிப்பிடுகிறோம்: $x \in
+A$ என்ற உள்ளீடு தரப்பட்டால், முதலில் $x$ மீது $f$ என்ற
+சார்பைச் செயல்படுத்துகிறோம். அது ஏதாவது ஒரு
+$f(x)
+= y \in B$ ஐ வெளியீடாகத் தருகிறது.
+பின்னர் $y$ மீது $g$ என்ற சார்பைச் செயல்படுத்துகிறோம்.
+அது ஏதாவது ஒரு $g(f(x)) = g(y) = z \in C$ ஐ வெளியீடாகத் தருகிறது.
+\begin{figure}
+  \olasset[2\olphotowidth]{assets/diagrams/composition.tikz}
+  \caption{$f$, $g$ ஆகிய இரண்டு சார்புகளின் சேர்ப்பு $g \circ f$.}
+  \ollabel{fig:composition}
+\end{figure}
+\end{explain}
+
+% SEGMENT OLP-0025-S02
+\begin{defn}[சேர்ப்பு]
+$f\colon A \to B$, $g\colon B \to C$ ஆகியவை சார்புகளாக இருக்கட்டும்.
+$f$ ஐ $g$ உடன் \emph{சேர்ப்பதால்} கிடைப்பது
+$\comp{f}{g} \colon A \to C$ ஆகும்;
+இங்கு $(\comp{f}{g})(x) = g(f(x))$.
+\end{defn}
+
+% SEGMENT OLP-0025-S03
+\begin{ex}
+$f(x) = x + 1$, $g(x) = 2x$ ஆகிய சார்புகளைக் கருதுவோம்.
+$(\comp{f}{g})(x) = g(f(x))$ என்பதால்,
+ஒவ்வோர் உள்ளீடு $x$ க்கும் முதலில் அதன் தொடரியை எடுத்துக்கொண்டு,
+பின்னர் கிடைப்பதை இரண்டால் பெருக்க வேண்டும்.
+ஆகவே அவற்றின் சேர்ப்பு $(\comp{f}{g})(x) = 2(x+1)$ எனக்
+கொடுக்கப்படுகிறது.
+\end{ex}
+
+% SEGMENT OLP-0025-S04
+\begin{prob}
+$f \colon A \to B$, $g \colon B \to C$ ஆகிய இரண்டும்
+!!{injective} பண்புடையவை எனில்,
+$\comp{f}{g}\colon A \to C$ என்பதும் !!{injective} பண்புடையது
+எனக் காட்டுக.
+\end{prob}
+
+% SEGMENT OLP-0025-S05
+\begin{prob}
+$f \colon A \to B$, $g \colon B \to C$ ஆகிய இரண்டும்
+!!{surjective} பண்புடையவை எனில்,
+$\comp{f}{g}\colon A \to C$ என்பதும் !!{surjective} பண்புடையது
+எனக் காட்டுக.
+\end{prob}
+
+% SEGMENT OLP-0025-S06
+\begin{prob}
+$f \colon A \to B$, $g \colon B \to C$ எனக் கொள்வோம்.
+$\comp{f}{g}$ இன் கோட்டுரு $R_f \mid R_g$ எனக் காட்டுக.
+\end{prob}
+
+\end{document}

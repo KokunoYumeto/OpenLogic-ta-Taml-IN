@@ -1,0 +1,92 @@
+{
+  "batch_id": "TA-B015",
+  "units": [
+    {
+      "unit_id": "OLP-0032",
+      "source_sha256": "c26b4e0da9e2e0b0ec839470ddd1d0d5eb1b3d3922d3b6986c9a795f34328797",
+      "translation_sha256": "7ca1ac5af48fd82d1728064432eac67b0483b2696bc2840ea528b5ffe7351732",
+      "source_bytes": 4592,
+      "translation_bytes": 9272,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\tuple{0,2}$",
+        "$\\tuple{2,m}$"
+      ],
+      "extra_math": [
+        "$\\tuple{0,1}$",
+        "$\\tuple{3,m}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SIZ-LOCAL-002",
+          "historical_alias": "TA-SIZ-001",
+          "unit_id": "OLP-0032",
+          "kind": "sequence-index-typo",
+          "action": "Corrected the prose name of the second row-zero pair from (0,2) to (0,1), matching the adjacent array.",
+          "expected_missing_math": [
+            "$\\tuple{0,2}$"
+          ],
+          "expected_extra_math": [
+            "$\\tuple{0,1}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Pairing-alt prose gives the second pair as (0,2), contradicting its table and sequence.",
+          "chosen_treatment": "தமிழ் உடல் இரண்டாவது ஜோடியை (0,1) எனத் திருத்துகிறது.",
+          "alternatives_considered": "(0,2) ஐ அப்படியே வைத்தல்",
+          "rationale": "The adjacent pair positions are (0,0), (0,1), (0,2), and the table agrees.",
+          "precise_review_question": "Does correcting the prose to (0,1) best preserve the stated construction?",
+          "location_needle": "இரண்டாவதை (அதாவது $\\tuple{0,1}$"
+        },
+        {
+          "audit_id": "OLSIZ-003",
+          "historical_alias": "TA-SIZ-002",
+          "unit_id": "OLP-0032",
+          "kind": "confirmed_typographical_duplication",
+          "action": "Corrected the second repeated (2,m) family to (3,m), matching the completed array.",
+          "expected_missing_math": [
+            "$\\tuple{2,m}$"
+          ],
+          "expected_extra_math": [
+            "$\\tuple{3,m}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Pairing-alt repeats the family (2,m) while enumerating successive rows.",
+          "chosen_treatment": "தமிழ் உடல் இரண்டாவது வரிசையை (3,m) எனத் திருத்துகிறது.",
+          "alternatives_considered": "(2,m) ஐ இருமுறை வைத்தல்",
+          "rationale": "The following table contains rows (2,m), (3,m), and onward.",
+          "precise_review_question": "Is (3,m) the unique correction consistent with the completed array?",
+          "location_needle": "$\\tuple{2,m}$, $\\tuple{3,m}$"
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

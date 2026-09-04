@@ -1,0 +1,56 @@
+{
+  "batch_id": "TA-B033",
+  "units": [
+    {
+      "unit_id": "OLP-0051",
+      "source_sha256": "9cee716bb8cb3bfd507ed5c17bbd4477d05995af6f8f8d411087793bdaa86036",
+      "translation_sha256": "2318ef85ef56791ffd40cc9bebf56b344be1981fb0d6f4957b54c5ce8ce53c78",
+      "source_bytes": 5072,
+      "translation_bytes": 10814,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [],
+      "extra_math": [
+        "$A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "acc",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INF-001",
+          "kind": "undeclared-ambient-set-and-endofunction-hypothesis",
+          "action": "Made explicit that f has the same ambient set A as domain and codomain before quantifying o in A, which is required by the closure proof and later application.",
+          "expected_missing_math": [],
+          "expected_extra_math": [
+            "$A$"
+          ]
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

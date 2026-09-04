@@ -1,0 +1,53 @@
+{
+  "batch_id": "TA-B028",
+  "units": [
+    {
+      "unit_id": "OLP-0045",
+      "source_sha256": "e7cb1029bcb0f0f1ac677c005af8d4e6a10df84bfff50c7483447b972324b44c",
+      "translation_sha256": "9c80cbe1d294b26750573ae7fd53d59e84898e110dc98a0ffa1bc0a83bd0cc82",
+      "source_bytes": 5825,
+      "translation_bytes": 12268,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "check",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-ARI-002",
+          "kind": "wrong-causal-hypothesis-in-completeness-proof",
+          "action": "Attributed existence of a cut in S to the stated nonemptiness of S, rather than to the unrelated existence of an upper bound; the later use of the upper bound is preserved.",
+          "expected_missing_math": [],
+          "expected_extra_math": []
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

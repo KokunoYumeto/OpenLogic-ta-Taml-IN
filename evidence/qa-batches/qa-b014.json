@@ -1,0 +1,76 @@
+{
+  "batch_id": "TA-B014",
+  "units": [
+    {
+      "unit_id": "OLP-0031",
+      "source_sha256": "fb6cc1176e91e56cea5f5b9708723c59191813f8fe256aac8ed0457a0119a9bf",
+      "translation_sha256": "572780a86fdad55bd531233b8c1fd17ca82e5ddfc37dbc34c93c8b1975bb717e",
+      "source_bytes": 4056,
+      "translation_bytes": 10412,
+      "source_coverage_complete": true,
+      "segments": 12,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SIZ-LOCAL-001",
+          "unit_id": "OLP-0031",
+          "kind": "source-wording-formula-inconsistency-retained",
+          "action": "Retained the frozen source's triangular-number wording and formula; documented that 'sum of naturals below k' would be k(k-1)/2 under the edition's zero-based convention.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source calls k(k+1)/2 the sum of natural numbers below k although this edition starts naturals at zero.",
+          "chosen_treatment": "மூலச் சொற்றொடரும் வாய்பாடும் உடலில் வைக்கப்பட்டு, குறியீட்டு முரண்பாடு பதிப்புக் குறிப்பில் வெளிப்படையாகப் பதிவு செய்யப்படுகிறது.",
+          "alternatives_considered": "வாய்பாட்டை k(k-1)/2 ஆக அமைதியாக மாற்றுதல்",
+          "rationale": "The displayed sequence and pairing formula use the standard zero-based triangular-number indexing; silently changing the formula would alter the construction.",
+          "precise_review_question": "Should a future corrected source revise the wording while preserving the displayed pairing formula?",
+          "location_needle": "TA-SIZ-LOCAL-001."
+        },
+        {
+          "audit_id": "OLSIZ-002",
+          "unit_id": "OLP-0031",
+          "kind": "confirmed_grammatical_defect_clarified_by_following_formula",
+          "action": "Clarified that the cofinite set is the complement in Nat of a finite subset of Nat.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The cofinite-set prose omits the relation between the finite set and Nat.",
+          "chosen_treatment": "தமிழ் உடல் அதனை இயல் எண்களின் கணத்திற்குள்ளான ஒரு முடிவுறு உட்கணத்தின் நிரப்பி எனத் தெளிவாக்குகிறது.",
+          "alternatives_considered": "இலக்கணமற்ற மூலச் சொற்றொடரை நேரடியாக மொழிபெயர்த்தல்",
+          "rationale": "The immediately following equivalence says Nat\\A is finite.",
+          "precise_review_question": "Does the clarification agree exactly with the following equivalence?",
+          "location_needle": "SOURCE CORRECTION OLSIZ-002"
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

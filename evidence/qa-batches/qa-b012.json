@@ -1,0 +1,74 @@
+{
+  "batch_id": "TA-B012",
+  "units": [
+    {
+      "unit_id": "OLP-0029",
+      "source_sha256": "bf6be35c0e393cb6e1d227f8e9024df4216792e663f23beb7277045487acfa67",
+      "translation_sha256": "05594eb5cae8fff6d0c8f864d4d6fb8866c7b739e8f64b859e8890936f7868b8",
+      "source_bytes": 12006,
+      "translation_bytes": 30087,
+      "source_coverage_complete": true,
+      "segments": 26,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\begin{array}{cccccccc}f(1)&f(2)&f(3)&f(4)&f(5)&f(6)&f(7)&\\dots\\\\\\\\-\\lceil\\tfrac{0}{2}\\rceil&\\lceil\\tfrac{1}{2}\\rceil&-\\lceil\\tfrac{2}{2}\\rceil&\\lceil\\tfrac{3}{2}\\rceil&-\\lceil\\tfrac{4}{2}\\rceil&\\lceil\\tfrac{5}{2}\\rceil&-\\lceil\\tfrac{6}{2}\\rceil&\\dots\\\\\\\\0&1&-1&2&-2&3&\\dots\\end{array}\\]"
+      ],
+      "extra_math": [
+        "\\[\\begin{array}{cccccccc}f(1)&f(2)&f(3)&f(4)&f(5)&f(6)&f(7)&\\dots\\\\\\\\-\\lceil\\tfrac{0}{2}\\rceil&\\lceil\\tfrac{1}{2}\\rceil&-\\lceil\\tfrac{2}{2}\\rceil&\\lceil\\tfrac{3}{2}\\rceil&-\\lceil\\tfrac{4}{2}\\rceil&\\lceil\\tfrac{5}{2}\\rceil&-\\lceil\\tfrac{6}{2}\\rceil&\\dots\\\\\\\\0&1&-1&2&-2&3&-3&\\dots\\end{array}\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "acc",
+        "align",
+        "alt",
+        "enm",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "sfr",
+        "siz"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "OLSIZ-001",
+          "unit_id": "OLP-0029",
+          "kind": "confirmed_tabular_value_omission",
+          "action": "Added -3 as the value of f(7) and retained an adjacent keyed note.",
+          "expected_missing_math": [
+            "\\[\\begin{array}{cccccccc}f(1)&f(2)&f(3)&f(4)&f(5)&f(6)&f(7)&\\dots\\\\\\\\-\\lceil\\tfrac{0}{2}\\rceil&\\lceil\\tfrac{1}{2}\\rceil&-\\lceil\\tfrac{2}{2}\\rceil&\\lceil\\tfrac{3}{2}\\rceil&-\\lceil\\tfrac{4}{2}\\rceil&\\lceil\\tfrac{5}{2}\\rceil&-\\lceil\\tfrac{6}{2}\\rceil&\\dots\\\\\\\\0&1&-1&2&-2&3&\\dots\\end{array}\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\begin{array}{cccccccc}f(1)&f(2)&f(3)&f(4)&f(5)&f(6)&f(7)&\\dots\\\\\\\\-\\lceil\\tfrac{0}{2}\\rceil&\\lceil\\tfrac{1}{2}\\rceil&-\\lceil\\tfrac{2}{2}\\rceil&\\lceil\\tfrac{3}{2}\\rceil&-\\lceil\\tfrac{4}{2}\\rceil&\\lceil\\tfrac{5}{2}\\rceil&-\\lceil\\tfrac{6}{2}\\rceil&\\dots\\\\\\\\0&1&-1&2&-2&3&-3&\\dots\\end{array}\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The f(1) through f(7) table omits the final value -3.",
+          "chosen_treatment": "தமிழ் அட்டவணை f(7) இன் மதிப்பாக -3 ஐச் சேர்க்கிறது.",
+          "alternatives_considered": "முழுமையற்ற மதிப்பு வரிசையை அப்படியே வைத்தல்",
+          "rationale": "The preceding formula fixes f(7) as -ceil(6/2)=-3.",
+          "precise_review_question": "Does the repaired value row now correspond one-to-one with all seven headers?",
+          "location_needle": "SOURCE CORRECTION OLSIZ-001"
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "batch_id": "TA-B008",
+  "units": [
+    {
+      "unit_id": "OLP-0023",
+      "source_sha256": "e2e46c0270c44b6f54861a4565f3829b1b5f91a7f72dca84046361e5abf622c3",
+      "translation_sha256": "543cc3836a812964e07c6280a0a77b3d0d59128a5ed7c06d2821b5153995d870",
+      "source_bytes": 3881,
+      "translation_bytes": 9828,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Rxy",
+        "Rxz",
+        "acc",
+        "cmp",
+        "include",
+        "inv",
+        "logic",
+        "open",
+        "ops",
+        "ref",
+        "rel",
+        "section",
+        "sfr"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "OLFUN-004",
+          "kind": "terminology",
+          "action": "Rephrased graph as relation contained in A times B."
+        },
+        {
+          "audit_id": "OLFUN-005",
+          "kind": "explanatory-qualification",
+          "action": "Preserved function restriction formula and explicitly distinguished its domain-only operation from two-coordinate relation restriction."
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

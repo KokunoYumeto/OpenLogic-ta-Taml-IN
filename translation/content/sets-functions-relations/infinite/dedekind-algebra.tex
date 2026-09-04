@@ -1,0 +1,155 @@
+% SEGMENT OLP-0051-S01
+% Part: sets-functions-relations
+% Chapter: infinite
+% Section: dedekind
+%
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{infinite}{dedekind}
+\olsection{டெடெகிண்ட் இயற்கணிதங்கள்}
+
+இயல் எண்கள் முடிவுறாதவையாக மட்டும் இருக்க வேண்டும் என்று விரும்பவில்லை;
+அவை சில (இயற்கணித) பண்புகளையும் கொண்டிருக்க வேண்டும் என்று விரும்புகிறோம்:
+கூட்டல், பெருக்கல் முதலியவற்றின் கீழ் அவை ஒழுங்காகச் செயல்பட வேண்டும்.
+
+\emph{தொடரிச் சார்பு} என்ற கருத்தை அடிப்படையாக எடுத்துக்கொண்டு,
+பின்வரும் பண்புகளைக் கொண்டவையாக எண்களைப் பண்புரைப்பதே
+டெடெகிண்டின் கருத்து:
+\begin{enumerate}
+	\item எந்த எண்ணின் தொடரியும் அல்லாத $0$ என்ற ஓர் எண் உள்ளது
+	\\ அதாவது, $0 \notin \ran{s}$
+	\\ அதாவது, $\forall x\ s(x) \neq 0$
+	\item வெவ்வேறு எண்களுக்கு வெவ்வேறு தொடரிகள் உள்ளன
+	\\ அதாவது, $s$ ஓர் !!a{injection}
+	\\ அதாவது, $\forall x \forall y (s(x) = s(y) \lif x = y)$
+	\item\ollabel{repeatedapplication} தொடரிச் சார்பை $0$ மீது
+    மீண்டும் மீண்டும் பயன்படுத்துவதன் மூலம் ஒவ்வோர் எண்ணும் பெறப்படுகிறது.
+\end{enumerate}
+முதலிரண்டு நிபந்தனைகளையும் முதல்தரத் தருக்கவியலைப் பயன்படுத்தி
+எளிதாகக் கையாளலாம் (மேலே பார்க்கவும்).
+ஆனால் முதல்தரத் தருக்கவியலை மட்டும் கொண்டு
+\olref{repeatedapplication} ஐக் கையாள முடியாது.
+\olref{repeatedapplication} என்ற நிபந்தனையைப் பின்வருமாறு
+கணக்கோட்பாட்டு முறையில் மறுவடிவமைத்ததே டெடெகிண்டின் முன்னேற்றம்:
+\begin{enumerate}
+	\item[3$'$.] இயல் எண்கள், தொடரிச் சார்பின் கீழ்
+	\emph{மூடப்பட்டுள்ள} மீச்சிறு கணம்;
+    அதாவது, அந்தக் கணத்தின் எந்த !!{element} மீதும் $s$ ஐப்
+    பயன்படுத்தினால், அந்தக் கணத்தின் மற்றோர் !!{element}[acc]ப் பெறுகிறோம்.
+\end{enumerate}
+ஆனால் இதனை மெதுவாக விரித்துரைக்க வேண்டும்.
+
+% SEGMENT OLP-0051-S02
+\begin{defn}\ollabel{Closure}
+	எந்தச் சார்பு $f$ க்கும், $(\forall x \in X)f(x) \in X$ என
+    இருக்கும்போது, அப்போதும் அப்போது மட்டுமே, கணம் $X$ ஆனது
+    $f$-\emph{மூடப்பட்டது} ஆகும்.
+    இப்போது எந்த $o$ க்கும் பின்வருமாறு வரையறுக்க:
+	$$\closureofunder{f}{o} = \bigcap\Setabs{X}{o \in X\text{ மற்றும் }X
+\text{ ஆனது $f$-மூடப்பட்டது}}$$
+\end{defn}
+
+% SEGMENT OLP-0051-S03
+எனவே $\closureofunder{f}{o}$ என்பது, $o$ ஐ ஓர் !!a{element} ஆகக்
+கொண்ட எல்லா $f$-மூடிய கணங்களின் வெட்டாகும்.
+அப்படியானால், உள்ளுணர்வின்படி, $\closureofunder{f}{o}$ என்பது
+$o$ ஐ ஓர் !!a{element} ஆகக் கொண்ட \emph{மீச்சிறு} $f$-மூடிய கணம்.
+பின்வரும் முடிவு அந்த உள்ளுணர்வைத் துல்லியமாக்குகிறது:
+\begin{lem}\ollabel{closureproperties}
+	எந்தச் சார்பு $f$ க்கும், அதன் சார்பகமும் வீச்சகமும் ஒரே கணம்
+    $A$ ஆகவும், எந்த $o \in A$ க்கும்:
+	\begin{enumerate}
+		\item\ollabel{closurehaselem} $o \in \closureofunder{f}{o}$; மேலும்
+		\item\ollabel{closureclosed} $\closureofunder{f}{o}$ ஆனது $f$-மூடப்பட்டது; மேலும்
+		\item\ollabel{closuresmallest} $X$ ஆனது $f$-மூடப்பட்டும் $o \in
+		X$ எனவும் இருந்தால், $\closureofunder{f}{o} \subseteq X$
+	\end{enumerate}
+\end{lem}
+
+% SEGMENT OLP-0051-S04
+\begin{proof}
+$o$ ஐ ஓர் !!a{element} ஆகக் கொண்ட குறைந்தது ஒரு $f$-மூடிய கணம்
+உள்ளது என்பதை கவனிக்கவும்; அது $\ran{f}\cup \{o\}$.
+எனவே இத்தகைய கணங்கள் \emph{அனைத்தின்} வெட்டான
+$\closureofunder{f}{o}$ உள்ளது.
+இப்போது \olref{closurehaselem}--\olref{closuresmallest} ஐச்
+சரிபார்க்க வேண்டும்.
+
+\olref{closurehaselem} ஐப் பொறுத்தவரை:
+$o$ ஐ ஓர் !!a{element} ஆகக் கொண்ட கணங்களின் வெட்டாக இருப்பதால்,
+$o \in \closureofunder{f}{o}$.
+
+\olref{closureclosed} ஐப் பொறுத்தவரை:
+$x \in \closureofunder{f}{o}$ எனக் கொள்க.
+எனவே $o \in X$ என்றும் $X$ ஆனது $f$-மூடப்பட்டது என்றும் இருந்தால்,
+$x \in X$; மேலும் $X$ ஆனது $f$-மூடப்பட்டது என்பதால் $f(x) \in X$.
+ஆகவே $f(x) \in \closureofunder{f}{o}$.
+
+\olref{closuresmallest} ஐப் பொறுத்தவரை:
+பொதுவாகவே, $X \in C$ எனில் $\bigcap C \subseteq X$.
+\end{proof}
+
+% SEGMENT OLP-0051-S05
+இதனைப் பயன்படுத்தி பின்வருமாறு கூறலாம்:
+
+\begin{defn}
+ஒரு \emph{டெடெகிண்ட் இயற்கணிதம்} என்பது,
+$f \colon A \to A$ என்ற ஒரு சார்பையும் ஏதோ ஓர் $o \in A$ ஐயும்
+கொண்ட ஒரு கணம் $A$; அது பின்வருவனவற்றை நிறைவேற்றுகிறது:
+	\begin{enumerate}
+		\item \ollabel{ded:proper} $o \notin \ran{f}$
+		\item \ollabel{ded:injection} $f$ ஓர் !!a{injection}
+		\item \ollabel{ded:closure} $A = \closureofunder{f}{o}$
+	\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0051-S06
+$A = \closureofunder{f}{o}$ என்பதால், $A$ என்பது $o$ ஐ ஓர்
+!!a{element} ஆகக் கொண்ட மீச்சிறு $f$-மூடிய கணம் என நமது முந்தைய
+முடிவு கூறுகிறது.
+ஒரு டெடெகிண்ட் இயற்கணிதம் டெடெகிண்ட்-முடிவுறாதது என்பது தெளிவு;
+வரையறையின் \olref{ded:proper}, \olref{ded:injection} என்ற
+கூறுகளை மட்டும் பார்க்கவும்.
+ஆனால் எந்த டெடெகிண்ட்-முடிவுறாத கணத்தையும் ஒரு டெடெகிண்ட்
+இயற்கணிதமாக மாற்றலாம் என்பது மேலும் சுவையான உண்மை.
+
+% SEGMENT OLP-0051-S07
+\begin{thm}\ollabel{thm:DedekindInfiniteAlgebra}
+ஒரு டெடெகிண்ட்-முடிவுறாத கணம் இருக்குமானால்,
+ஒரு டெடெகிண்ட் இயற்கணிதம் உள்ளது.
+\end{thm}
+
+% SEGMENT OLP-0051-S08
+\begin{proof}
+$D$ டெடெகிண்ட்-முடிவுறாததாக இருக்கட்டும்.
+எனவே $g \colon D \to D$ என்ற ஓர் உட்செலுத்தலும்
+$o  \in D \setminus \ran{g}$ என்ற ஓர் உறுப்பும் உள்ளன.
+இப்போது $A = \closureofunder{g}{o}$ என்க;
+\olref{closureproperties} இன்படி $A$ உள்ளது, $o \in A$.
+$f = \funrestrictionto{g}{A}$ என்க.
+$A, f, o$ ஆகியவை ஒரு டெடெகிண்ட் இயற்கணிதத்தை அமைக்கின்றன
+எனக் காட்டுவோம்.
+
+\olref{ded:proper} ஐப் பொறுத்தவரை:
+$o \notin \ran{g}$, $\ran{f} \subseteq \ran{g}$;
+எனவே $o\notin \ran{f}$.
+
+\olref{ded:injection} ஐப் பொறுத்தவரை:
+$g$ என்பது $D$ மீதான ஓர் உட்செலுத்தல்;
+எனவே $f \subseteq g$ உம் ஓர் உட்செலுத்தலாக இருக்க வேண்டும்.
+
+\olref{ded:closure} ஐப் பொறுத்தவரை:
+\olref{closureproperties} இன்படி $A$ ஆனது $g$-மூடப்பட்டது;
+எனவே இன்னும் வலுவாக, $A$ ஆனது $f$-மூடப்பட்டது.
+ஆகவே \olref{closureproperties} இன்படி
+$\closureofunder{f}{o} \subseteq A$.
+மேலும் $\closureofunder{f}{o}$ ஆனது $f$-மூடப்பட்டது;
+$f = \funrestrictionto{g}{A}$ என்பதால்,
+$\closureofunder{f}{o}$ ஆனது $g$-மூடப்பட்டது எனப் பின்தொடரும்.
+எனவே \olref{closureproperties} இன்படி
+$A \subseteq \closureofunder{f}{o}$.
+\end{proof}
+
+\end{document}

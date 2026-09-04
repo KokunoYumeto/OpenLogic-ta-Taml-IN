@@ -1,0 +1,55 @@
+{
+  "batch_id": "TA-B009",
+  "units": [
+    {
+      "unit_id": "OLP-0024",
+      "source_sha256": "96e36d8cd8dc4ec0e73e9507147ecfe33d7e4f368ecf46de92efb423a7d409c1",
+      "translation_sha256": "0d352976706bba2b7c018e74dfb902c01afb5d40e268c6b9a20ac74d481b5ed1",
+      "source_bytes": 6747,
+      "translation_bytes": 16500,
+      "source_coverage_complete": true,
+      "segments": 19,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "choice",
+        "fun",
+        "include",
+        "inv",
+        "kin",
+        "logic",
+        "open",
+        "section",
+        "sfr",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "OLFUN-001",
+          "kind": "mathematical-condition",
+          "action": "Added nonempty-domain hypothesis to translated theorem and proof; exact general condition and counterexample recorded in adjacent edition note."
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

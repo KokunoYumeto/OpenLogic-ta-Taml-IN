@@ -1,0 +1,145 @@
+% SEGMENT OLP-0030-S01
+% Part:sets-functions-relations
+% Chapter: size-of-sets
+% Section: zig-zag
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{siz}{zigzag}
+
+\olsection{காண்டோரின் வளைவழி முறை}
+
+\begin{explain}
+சில “எளிய” பட்டியலாக்கங்களை ஏற்கெனவே கருதினோம்.
+இப்போது சற்றுக் கடினமான ஒன்றைக் கருதுவோம்.
+இயல் எண்களின் ஜோடிகளைக் கொண்ட கணத்தைக் கருதுக.
+\oliflabeldef{sfr:set:pai:sec}{இதனை \olref[set][pai]{sec} இல்
+பின்வருமாறு வரையறுத்தோம்:}{இதன் வரையறை:}
+\[
+\Nat \times \Nat = \Setabs{\tuple{n,m}}{n,m \in \Nat}
+\]
+இந்த வரிசைப்படுத்தப்பட்ட ஜோடிகளைப் பின்வருமாறு ஓர்
+\emph{அட்டவணையில்} அமைக்கலாம்:
+\[
+\begin{array}{ c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \dots \\
+\hline
+\mathbf 0 & \tuple{0,0} & \tuple{0,1} & \tuple{0,2} & \tuple{0,3} & \dots \\
+\hline
+\mathbf 1 & \tuple{1,0} & \tuple{1,1} & \tuple{1,2} & \tuple{1,3} & \dots \\
+\hline
+\mathbf 2 & \tuple{2,0} & \tuple{2,1} & \tuple{2,2} & \tuple{2,3} & \dots \\
+\hline
+\mathbf 3 & \tuple{3,0} & \tuple{3,1} & \tuple{3,2} & \tuple{3,3} & \dots \\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+\end{array}
+\]
+$\Nat \times \Nat$ இல் உள்ள ஒவ்வொரு வரிசைப்படுத்தப்பட்ட ஜோடியும்
+அட்டவணையில் சரியாக ஒருமுறை இடம்பெறும் என்பது தெளிவு.
+குறிப்பாக, $\tuple{n,m}$ என்பது $n$ ஆவது கிடைவரிசையிலும்
+$m$ ஆவது நெடுவரிசையிலும் இடம்பெறும்.
+ஆனால் இத்தகைய அட்டவணையின் உறுப்புகளை “ஒருபரிமாணப்”
+பட்டியலாக எவ்வாறு அமைப்பது?
+கீழுள்ள அட்டவணையின் முறை இதைச் செய்வதற்கான ஒரு வழியைக் காட்டுகிறது
+(வேறு பல வழிகளும் உள்ளன):
+\[
+\begin{array}{ c | c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \mathbf 4 &\dots \\
+\hline
+\mathbf 0 & 0  & 1& 3 & 6& 10 &\ldots \\
+\hline
+\mathbf 1 &2 & 4& 7 & 11 & \dots &\ldots \\
+\hline
+\mathbf 2 & 5 & 8 & 12 & \ldots & \dots&\ldots \\
+\hline
+\mathbf 3 & 9 & 13 & \ldots & \ldots & \dots & \ldots \\
+\hline
+\mathbf 4 & 14 & \ldots & \ldots & \ldots & \dots & \ldots \\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots&\ldots & \ddots\\
+\end{array}
+\]\noindent
+இந்த முறை \emph{காண்டோரின் வளைவழி முறை} எனப்படுகிறது.
+அது $\Nat \times \Nat$ ஐப் பின்வருமாறு பட்டியலாக்குகிறது:
+\[
+\tuple{0,0}, \tuple{0,1}, \tuple{1,0}, \tuple{0,2}, \tuple{1,1},
+\tuple{2,0}, \tuple{0,3}, \tuple{1,2}, \tuple{2,1}, \tuple{3,0}, \dots
+\]
+இது பின்வரும் முடிவை நிறுவுகிறது:
+\end{explain}
+
+% SEGMENT OLP-0030-S02
+\begin{prop}\ollabel{natsquaredenumerable}
+$\Nat \times \Nat$ என்பது !!{enumerable}.
+\end{prop}
+
+% SEGMENT OLP-0030-S03
+\begin{proof}
+$f \colon \Nat \to \Nat\times\Nat$ என்பது,
+ஒவ்வொரு $k \in \Nat$ ஐயும் காண்டோரின் வளைவழி அட்டவணையில்
+$n$ ஆவது கிடைவரிசை, $m$ ஆவது நெடுவரிசை ஆகியவற்றின் மதிப்பாக
+$k$ அமையும் $\tuple{n,m} \in \Nat \times \Nat$ உடன் இணைக்கட்டும்.
+\end{proof}
+
+% SEGMENT OLP-0030-S04
+\begin{explain}
+இந்த உத்தியை நேர்த்தியாகப் பொதுமைப்படுத்தவும் முடியும்.
+எடுத்துக்காட்டாக, இயல் எண்களின் வரிசைப்படுத்தப்பட்ட மும்மடிகளைக்
+கொண்ட பின்வரும் கணத்தைப் பட்டியலாக்க இதைப் பயன்படுத்தலாம்:
+\[
+\Nat \times \Nat \times \Nat = \Setabs{\tuple{n,m,k}}{n,m,k \in \Nat}
+\]
+$\Nat \times \Nat \times \Nat$ என்பதை,
+$\Nat \times \Nat$ உடன் $\Nat$ இன் கார்டீசியன் பெருக்கமாகக்
+கருதுகிறோம்; அதாவது,
+\[
+\Nat^3 = (\Nat \times \Nat) \times \Nat =
+\Setabs{\tuple{\tuple{n,m},k}}{n, m, k
+  \in \Nat }
+\]
+ஆகவே ஒரு அச்சை $\Nat$ இன் பட்டியலாக்கத்தாலும்,
+மற்றொரு அச்சை $\Nat^2$ இன் பட்டியலாக்கத்தாலும் குறியிடுவதன் மூலம்,
+ஓர் அட்டவணையைக் கொண்டு $\Nat^3$ ஐப் பட்டியலாக்கலாம்:
+\[
+\begin{array}{ c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \dots \\
+\hline
+\mathbf{\tuple{0,0}} & \tuple{0,0,0} & \tuple{0,0,1} & \tuple{0,0,2} & \tuple{0,0,3} & \dots \\
+\hline
+\mathbf{\tuple{0,1}} & \tuple{0,1,0} & \tuple{0,1,1} & \tuple{0,1,2} & \tuple{0,1,3} & \dots \\
+\hline
+\mathbf{\tuple{1,0}} & \tuple{1,0,0} & \tuple{1,0,1} & \tuple{1,0,2} & \tuple{1,0,3} & \dots \\
+\hline
+\mathbf{\tuple{0,2}} & \tuple{0,2,0} & \tuple{0,2,1} & \tuple{0,2,2} & \tuple{0,2,3} & \dots\\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots \\
+\end{array}
+\]
+இவ்வாறு, காண்டோரின் வளைவழி முறை போன்ற ஒன்றைப் பயன்படுத்தி,
+$\Nat^3$ இன் ஒரு பட்டியலாக்கத்தைப் பெறலாம்.
+இதைத் தொடர்ந்து செய்து, எந்த இயல் எண் $n$ க்கும்
+$\Nat^n$ இன் பட்டியலாக்கங்களைப் பெறலாம்.
+எனவே பின்வரும் முடிவைப் பெறுகிறோம்:
+\end{explain}
+
+% SEGMENT OLP-0030-S05
+\begin{prop}
+ஒவ்வொரு $n \in \Nat$ க்கும் $\Nat^n$ என்பது !!{enumerable}.
+\end{prop}
+
+% SEGMENT OLP-0030-S06
+\begin{prob}\label{sfr:siz:zigzag:prob:posint-n}
+ஒவ்வொரு $n \in \Nat$ க்கும் $(\PosInt)^n$ என்பது
+!!{enumerable} எனக் காட்டுக.
+\end{prob}
+
+% SEGMENT OLP-0030-S07
+\begin{prob}\label{sfr:siz:zigzag:prob:posint-star}
+$(\PosInt)^*$ என்பது !!{enumerable} எனக் காட்டுக.
+\cref{sfr:siz:zigzag:prob:posint-n} ஐ நீங்கள் முன்கொள்ளலாம்.
+\end{prob}
+
+\end{document}

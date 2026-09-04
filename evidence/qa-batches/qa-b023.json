@@ -1,0 +1,79 @@
+{
+  "batch_id": "TA-B023",
+  "units": [
+    {
+      "unit_id": "OLP-0040",
+      "source_sha256": "f7717d8394048096cf7a65bc87a1a1ed15861cdfb8c7edb23429d5256d954d11",
+      "translation_sha256": "21f61344c3d62949d9638a76f3c42be950bc009974fea4dcdff96210410ec7b2",
+      "source_bytes": 5500,
+      "translation_bytes": 12737,
+      "source_coverage_complete": true,
+      "segments": 11,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$s_{k}$",
+        "$s_{k}(n)=1$",
+        "$s_k(n)=0$"
+      ],
+      "extra_math": [
+        "$s$",
+        "$s(n)=1$",
+        "$s(n)=0$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "alt",
+        "include",
+        "logic",
+        "nen",
+        "open",
+        "red",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "OLSIZ-010",
+          "unit_id": "OLP-0040",
+          "kind": "confirmed_undefined_index_in_function_definition",
+          "action": "Replaced the unbound output name s_k and s_k(n) by one bound sequence name s and s(n).",
+          "expected_missing_math": [
+            "$s_{k}$",
+            "$s_{k}(n)=1$",
+            "$s_k(n)=0$"
+          ],
+          "expected_extra_math": [
+            "$s$",
+            "$s(n)=1$",
+            "$s(n)=0$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The alternate reduction again defines f(N) as s_k although k is unbound.",
+          "chosen_treatment": "தமிழ் உடல் வெளியீட்டையும் அதன் உறுப்புகளையும் s, s(n) என்ற ஒரே கட்டுப்பட்ட பெயரால் குறிக்கிறது.",
+          "alternatives_considered": "கட்டுப்படாத k குறியீட்டை வைத்தல்",
+          "rationale": "The component condition uniquely determines the characteristic sequence of N.",
+          "precise_review_question": "Is the single bound name s used consistently throughout the alternate reduction?",
+          "location_needle": "SOURCE CORRECTION OLSIZ-010"
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

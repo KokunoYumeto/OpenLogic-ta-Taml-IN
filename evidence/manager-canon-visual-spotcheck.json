@@ -1,0 +1,57 @@
+{
+  "schema": "openlogic-manager-canon-visual-spotcheck/1",
+  "lane": "ta-Taml-IN",
+  "date": "2026-09-04",
+  "method": "Direct visual inspection of three already-rendered pages selected from three distinct canon sources, after the independent hash replay. Observations are bounded to visibly printed terminology; they do not substitute the canon source for the frozen English mathematical authority.",
+  "checks": [
+    {
+      "passage_id": "TA-SC11-P19",
+      "source_id": "TA-SCERT-11-MATH",
+      "source_sha256": "ccef58a03210f0c43fea52ad641351383b6672b7a2efa45a072106ac6025f997",
+      "render_path": "canon/renders/scert11-p027.png",
+      "render_sha256": "9472b81b944f98cadb5ccbd67dedbad62a128967260efb6b3178b3dea37aa6bd",
+      "visible_evidence": [
+        "தற்சுட்டுத் தொடர்பு (reflexive)",
+        "சமச்சீர் தொடர்பு (symmetric)",
+        "கடப்புத் தொடர்பு (transitive)",
+        "சமானத் தொடர்பு (equivalence relation)"
+      ],
+      "ledger_claim_supported": true,
+      "scope": "Modern relation-property terminology and textbook mathematical register."
+    },
+    {
+      "passage_id": "TA-SC6-P169-GLOSSARY",
+      "source_id": "TA-SCERT-6-2018-RECOVERED",
+      "source_sha256": "277fd1e9c72c129d02448c237fa7b106bfd50ba97ac4dce8f117e404321eb618",
+      "render_path": "canon/renders/scert6-p175.png",
+      "render_sha256": "acdf84baff9bccb262adef8641f0f84dc0d209aa6d861c956383a3c0d8a246cb",
+      "visible_evidence": [
+        "இயல் எண்கள் — Natural Numbers",
+        "முழு எண்கள் — Whole Numbers",
+        "முழுக்கள் — Integers",
+        "தொடரி — Successor",
+        "முன்னி — Predecessor"
+      ],
+      "ledger_claim_supported": true,
+      "scope": "Exact number-domain and successor/predecessor distinctions; OpenLogic's own zero-inclusion convention still governs content."
+    },
+    {
+      "passage_id": "TA-AU-ANALYSIS-COUNTABLE-Q1",
+      "source_id": "TA-ALAGAPPA-BSC-2021",
+      "source_sha256": "8d2a4268d59e436da0b237f9a449876a97da0ae22d566af0f638ad540059b63d",
+      "render_path": "canon/renders/alagappa-p048.png",
+      "render_sha256": "a8a257e1a59e7d1bb4ee9cc1aad743ee3d7d637279b0e3af4cff6d23a9007be1",
+      "visible_evidence": [
+        "எண்ணக்கூடிய கணம் — countable set"
+      ],
+      "ledger_claim_supported": true,
+      "scope": "Direct university-examination attestation for countable set; it supports the term, not a complete expository style guide."
+    }
+  ],
+  "result": "PASS",
+  "limitations": [
+    "Three-page spot-check only; deterministic replay separately checked all 39 passage records and 37 render hashes.",
+    "No independent native-speaker or human approval is claimed or required for this checkpoint.",
+    "The 51-unit Tamil source checkpoint remains incomplete relative to the 722-unit edition."
+  ]
+}

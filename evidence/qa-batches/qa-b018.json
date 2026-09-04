@@ -1,0 +1,75 @@
+{
+  "batch_id": "TA-B018",
+  "units": [
+    {
+      "unit_id": "OLP-0035",
+      "source_sha256": "025a3fc368d6873825effcb07631913762edbf2d3f9a0711d57dcd9575361251",
+      "translation_sha256": "61d270a4227bed44e652661245e3a9457ba79fb6558d54473ae0ab7e5a2c698d",
+      "source_bytes": 4141,
+      "translation_bytes": 9414,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$g(x)=y$",
+        "$g(x)=y$"
+      ],
+      "extra_math": [
+        "$f(x)=y$",
+        "$f(x)=y$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "alt",
+        "enm",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "OLSIZ-006",
+          "historical_alias": "TA-SIZ-003",
+          "unit_id": "OLP-0035",
+          "kind": "confirmed_undefined_function_in_empty_set_branch",
+          "action": "Replaced both premature g(x)=y occurrences by f(x)=y.",
+          "expected_missing_math": [
+            "$g(x)=y$",
+            "$g(x)=y$"
+          ],
+          "expected_extra_math": [
+            "$f(x)=y$",
+            "$f(x)=y$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The empty-set branch uses undefined g although the bijection in scope is f.",
+          "chosen_treatment": "தமிழ் உடல் இரண்டு இடங்களிலும் f(x)=y எனத் திருத்துகிறது.",
+          "alternatives_considered": "g(x)=y ஐ அப்படியே வைத்தல்",
+          "rationale": "The proof has fixed f:A to B; g is introduced only later as an enumeration.",
+          "precise_review_question": "Is replacing both occurrences by f(x)=y the complete repair?",
+          "location_needle": "$f(x) = y$"
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,125 @@
+% SEGMENT OLP-0054-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{infinite}{card-sb}
+
+\olsection{இணைப்பு: ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றத்தை நிறுவுதல்}
+
+முறைசாராத கணக்கோட்பாட்டிலிருந்து விடைபெறும்முன், கடைசியாக ஒரு
+முறைசாராத (ஆனால் நுணுக்கமான!{}) நிறுவலைக் கருத வேண்டும்.
+இது ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றத்தின்
+(\olref[sfr][siz][sb]{thm:schroder-bernstein}) நிறுவல்:
+$\cardle{A}{B}$ மற்றும் $\cardle{B}{A}$ எனில் $\cardeq{A}{B}$;
+அதாவது, $f \colon A \to B$, $g \colon B \to A$ என்ற
+!!{injection}s கொடுக்கப்பட்டால், $h \colon A \to B$ என்ற
+!!a{bijection} உள்ளது.
+
+இந்த அத்தியாயத்தில் டெடெகிண்டின் \emph{மூடல்கள்} என்ற கருத்தைப்
+பின்பற்றினோம். உண்மையில், இந்தக் கருத்தைப் பயன்படுத்தி டெடெகிண்ட்
+ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றத்திற்கு ஓர் அழகிய நிறுவலைத் தந்தார்;
+அதனை இங்கு வழங்குவோம். சற்றே வேறுபட்டாலும் சாரத்தில் இதே போன்ற
+விளக்கம் வேண்டுமெனில், இந்த நிறுவல் \citet[pp.~157--8]{Potter2004} ஐ
+நெருக்கமாகப் பின்பற்றுகிறது. இணையத்தில் சிறிது தேடுவதும்கூட,
+$\sqrt{2}$ இன் விகிதமுறாமையைப் போலவே, \emph{பல} சுவையான,
+வேறுபட்ட நிறுவல்கள் உள்ள ஒரு தேற்றம் இது என்று உங்களை நம்பவைக்கும்.
+
+% SEGMENT OLP-0054-S02
+\olref[sfr][infinite][dedekind]{Closure} இல் உள்ளதுபோன்ற குறியீட்டைப்
+பயன்படுத்தி, ஒவ்வொரு கணம் $B$ க்கும் சார்பு~$f$ க்கும்
+பின்வருமாறு கொள்க:
+\[
+\Closureofunder{f}{B} = \bigcap \Setabs{X}{B \subseteq X
+\text{ மற்றும் $X$ ஆனது $f$-மூடப்பட்டது}}
+\]
+இவ்வாறு வரையறுக்கப்படும் $\Closureofunder{f}{B}$ என்பது $B$ ஐக்
+கொண்ட மீச்சிறு $f$-மூடிய கணம்; அதாவது:
+
+% SEGMENT OLP-0054-S03
+\begin{lem}\ollabel{Closureprops}
+	எந்தச் சார்பு $f$ க்கும், எந்த $B$ க்கும்:
+	\begin{enumerate}
+		\item\ollabel{Closurehaselem} $B \subseteq \Closureofunder{f}{B}$; மேலும்
+		\item\ollabel{Closureclosed} $\Closureofunder{f}{B}$ ஆனது $f$-மூடப்பட்டது; மேலும்
+		\item\ollabel{Closuresmallest} $X$ ஆனது $f$-மூடப்பட்டும் $B
+		\subseteq X$ எனவும் இருந்தால், $\Closureofunder{f}{B} \subseteq X$.
+	\end{enumerate}
+\end{lem}
+
+% SEGMENT OLP-0054-S04
+\begin{proof}
+\olref[sfr][infinite][dedekind]{closureproperties} இல் உள்ளதைப்
+போலவே நிறுவலாம்.
+\end{proof}
+
+ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றத்தை அடைவதற்கு இன்னும் ஒரு உண்மை தேவை:
+
+% SEGMENT OLP-0054-S05
+\begin{prop}\ollabel{sbhelper}
+$A \subseteq B \subseteq C$ மற்றும் $A \approx C$ எனில்,
+$\cardeq{\cardeq{A}{B}}{C}$.
+\end{prop}
+
+% SEGMENT OLP-0054-S06
+\begin{proof}
+$f \colon C \to A$ என்ற !!a{bijection} கொடுக்கப்பட்டுள்ளதாகக் கொள்க.
+$F = \Closureofunder{f}{C \setminus B}$ என வைத்து, சார்பகம் $C$ ஆகக்
+கொண்ட ஒரு சார்பு $g$ ஐப் பின்வருமாறு வரையறுக்க:
+\[
+	g(x) =
+	\begin{cases}
+			f(x) &\text{$x \in F$ எனில்}\\
+			x & \text{மற்றபடி}
+	\end{cases}
+\]
+$g$ ஆனது $C \to B$ என்ற !!a{bijection} எனக் காட்டுவோம்.
+அதிலிருந்து $\comp{f^{-1}}{g} \colon A \to B$ என்பது
+!!a{bijection} எனப் பின்தொடரும்; இது நிறுவலை நிறைவுசெய்யும்.
+
+% SEGMENT OLP-0054-S07
+முதலில், $x \in F$ ஆனால் $y\notin F$ எனில் $g(x) \neq g(y)$ என்று
+கூறுகிறோம். இதற்கு மாறாக இருப்பதாக முரண்வழியாகக் கொள்க; அப்போது
+$y = g(y) = g(x) = f(x)$. $x \in F$ என்பதாலும்,
+\olref{Closureprops} இன்படி $F$ ஆனது $f$-மூடப்பட்டது என்பதாலும்,
+$y = f(x) \in F$; இது ஒரு முரண்.
+
+% SEGMENT OLP-0054-S08
+இப்போது $g(x) = g(y)$ எனக் கொள்க. மேலுள்ளதன்படி,
+$x \in F$ எனின், அப்போதும் அப்போது மட்டுமே, $y \in F$.
+$x, y \in F$ எனில், $f(x) = g (x) = g(y) = f(y)$;
+$f$ ஒரு !!a{bijection} என்பதால் $x = y$.
+$x, y \notin F$ எனில், $x = g(x) = g(y) = y$.
+ஆகவே $g$ ஓர் !!a{injection}.
+
+% SEGMENT OLP-0054-S09
+$\ran{g} = B$ என இன்னும் காட்ட வேண்டும். ஆகவே
+$x \in B \subseteq C$ ஐ நிலைநிறுத்துக. $x \notin F$ எனில்,
+$g(x) = x$. $x \in F$ எனில், ஏதோ $y \in F$ க்கு $x = f(y)$;
+ஏனெனில் அவ்வாறு இல்லாவிட்டால் $F \setminus \{x\}$ ஆனது
+$f$-மூடப்பட்டு $C\setminus B$ ஐ உள்ளடக்கியிருக்கும்; இது
+\olref{Closureprops} இன்படி இயலாதது. இப்போது $g(y) = f(y) = x$.
+\end{proof}
+
+% SEGMENT OLP-0054-S10
+இறுதியாக, முதன்மை முடிவின் நிறுவல் இதோ. ஒரு சார்பு $h$ உம் கணம்
+$D$ உம் கொடுக்கப்பட்டால், $\funimage{h}{D} = \Setabs{h(x)}{x
+\in D}$ என வரையறுக்கிறோம் என்பதை நினைவுகூர்க.
+
+% SEGMENT OLP-0054-S11
+\begin{proof}[ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றத்தின் நிறுவல்]
+$f \colon A \to B$, $g \colon B \to A$ ஆகியவை !!{injection}s
+ஆக இருக்கட்டும். $\funimage{f}{A} \subseteq B$ என்பதால்,
+$\funimage{g}{\funimage{f}{A}} \subseteq g[B] \subseteq A$.
+மேலும் $g$, $f$ இரண்டும் உட்செலுத்தல்கள் என்பதால்,
+$\comp{f}{g} \colon A \to \funimage{g}{\funimage{f}{A}}$ ஆனதும்
+ஓர் !!{injection}; உண்மையில், அதன் வீச்சகத்தை நாம் வரையறுத்த
+விதத்தினாலேயே $\comp{f}{g}$ ஓர் !!a{bijection}.
+ஆகவே $\cardeq{\funimage{g}{\funimage{f}{A}}}{A}$;
+எனவே \olref{sbhelper} இன்படி $h \colon A \to \funimage{g}{B}$ என்ற
+!!a{bijection} உள்ளது. மேலும் $g^{-1}$ ஆனது
+$\funimage{g}{B} \to B$ என்ற !!a{bijection}.
+ஆகவே $\comp{h}{g^{-1}} \colon A \to B$ ஓர் !!a{bijection}.
+\end{proof}
+
+\end{document}

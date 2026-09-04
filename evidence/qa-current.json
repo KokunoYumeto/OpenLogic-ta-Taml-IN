@@ -1,0 +1,33 @@
+{
+  "schema": "openlogic-tamil-qa/1",
+  "source_archive": {
+    "bytes": 1806644,
+    "sha256": "80b484b1a87076fbdb207d69f97930ca946ce1716dbd905906b29e4a74077357",
+    "pass": true
+  },
+  "source_manifest": {
+    "sha256": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155",
+    "pass": true
+  },
+  "translation_coverage": {
+    "drafted": 51,
+    "textual_invariants_pass": 51,
+    "release_verified": 7,
+    "published_sources": 16,
+    "total": 722
+  },
+  "release_complete": false,
+  "source_content_hashes_verified": 722,
+  "canon_sources": 6,
+  "canon_passages": 39,
+  "term_decisions": 76,
+  "aligned_segments": 456,
+  "semantic_review": "SEMANTIC_REVIEW-CURRENT.json",
+  "build_qa": "TEX-B001-RECEIPT.json",
+  "current_checkpoint": "CHECKPOINT-CURRENT.json",
+  "laptop_reconciliation": "LAPTOP-CANON-RECONCILIATION.md",
+  "publication_readback": "PUBLICATION-READBACK.json",
+  "pdf_scope": "Visually verified chapter; documented copy-extraction limitations",
+  "translation_decision_log": "TRANSLATION_DECISIONS.jsonl",
+  "combined_build_attempt": "TEX-SFR-RECEIPT.json"
+}

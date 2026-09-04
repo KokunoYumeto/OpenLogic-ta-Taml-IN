@@ -1,0 +1,64 @@
+{
+  "batch_id": "TA-B026",
+  "units": [
+    {
+      "unit_id": "OLP-0043",
+      "source_sha256": "7140495368042fcbc55907e6ee568c5bc8b7066e44a01a50cbf4202acebe71d2",
+      "translation_sha256": "f1e3f35899682ae6f89c3c536d2a3b852dde3a6513c3412777948152412147b1",
+      "source_bytes": 3255,
+      "translation_bytes": 7200,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\equivrep{a,b}{\\Ratequiv}+\\equivrep{c,d}{\\Ratequiv}&=\\equivrep{ad+bc,bd}{\\Ratequiv}\\\\\\equivrep{a,b}{\\Ratequiv}\\times\\equivrep{c,d}{\\Ratequiv}&=\\equivrep{ac,bd}{\\Ratequiv}.$r\\leqs$$r\\les$$s-r$$r-s$$\\nicefrac{i}{j}$$i$$j$\\equivrep{a,b}{\\Ratequiv}\\leq\\equivrep{c,d}{\\Ratequiv}&\\equivrep{c,d}{\\Ratequiv}-\\equivrep{a,b}{\\Ratequiv}=\\equivrep{i_\\Int,j_\\Int}{\\Ratequiv}\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\equivrep{a,b}{\\Ratequiv}+\\equivrep{c,d}{\\Ratequiv}&=\\equivrep{ad+bc,bd}{\\Ratequiv}\\\\\\equivrep{a,b}{\\Ratequiv}\\times\\equivrep{c,d}{\\Ratequiv}&=\\equivrep{ac,bd}{\\Ratequiv}.$r\\leqs$$r\\les$$s-r$$s-r$$\\nicefrac{i}{j}$$i$$j$\\equivrep{a,b}{\\Ratequiv}\\leq\\equivrep{c,d}{\\Ratequiv}&\\equivrep{c,d}{\\Ratequiv}-\\equivrep{a,b}{\\Ratequiv}=\\equivrep{i_\\Int,j_\\Int}{\\Ratequiv}\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "check",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-ARI-001",
+          "kind": "reversed-subtraction-in-order-explanation",
+          "action": "Corrected r-s to s-r in the prose inside the aligned definition, matching both the preceding equivalence and the displayed rational-order equation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$r-s$",
+              "to": "$s-r$",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

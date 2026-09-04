@@ -1,0 +1,106 @@
+{
+  "batch_id": "TA-B017",
+  "units": [
+    {
+      "unit_id": "OLP-0034",
+      "source_sha256": "0d6d2e3280698668b837cef6dcf3134b86d2a4b48831ae516e6e33e42898c79a",
+      "translation_sha256": "49dd8f3030a1921a36d9b6552b21ecfa671ef3d6f65be5a11f9d07d4233620fa",
+      "source_bytes": 5540,
+      "translation_bytes": 12970,
+      "source_coverage_complete": true,
+      "segments": 10,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$s_{k}$",
+        "$s_{k}(n)=1$",
+        "$s_k(n)=0$",
+        "\\[h(n)=\\underbrace{000\\dots0}_{$n$$0$}\\]"
+      ],
+      "extra_math": [
+        "$s$",
+        "$s(n)=1$",
+        "$s(n)=0$",
+        "\\[h(n)=\\underbrace{000\\dots0}_{$n$$0$}111\\dots\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "acc",
+        "alt",
+        "include",
+        "logic",
+        "nen",
+        "open",
+        "red",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "OLSIZ-004",
+          "unit_id": "OLP-0034",
+          "kind": "confirmed_undefined_index_in_function_definition",
+          "action": "Replaced the unbound output name s_k and s_k(n) by one bound sequence name s and s(n).",
+          "expected_missing_math": [
+            "$s_{k}$",
+            "$s_{k}(n)=1$",
+            "$s_k(n)=0$"
+          ],
+          "expected_extra_math": [
+            "$s$",
+            "$s(n)=1$",
+            "$s(n)=0$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The reduction defines f(Z) as s_k although k is unbound.",
+          "chosen_treatment": "தமிழ் உடல் வெளியீட்டையும் அதன் உறுப்புகளையும் s, s(n) என்ற ஒரே கட்டுப்பட்ட பெயரால் குறிக்கிறது.",
+          "alternatives_considered": "கட்டுப்படாத k குறியீட்டை வைத்தல்",
+          "rationale": "The component condition uniquely determines the characteristic sequence of Z.",
+          "precise_review_question": "Is the single bound name s used consistently throughout the definition and surjectivity proof?",
+          "location_needle": "SOURCE CORRECTION OLSIZ-004"
+        },
+        {
+          "audit_id": "OLSIZ-005",
+          "unit_id": "OLP-0034",
+          "kind": "confirmed_codomain_error_finite_string_used_as_infinite_sequence",
+          "action": "Added an infinite tail of ones after the n initial zeros so every h(n) lies in Bin^omega.",
+          "expected_missing_math": [
+            "\\[h(n)=\\underbrace{000\\dots0}_{$n$$0$}\\]"
+          ],
+          "expected_extra_math": [
+            "\\[h(n)=\\underbrace{000\\dots0}_{$n$$0$}111\\dots\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\dots"
+          ],
+          "source_issue_or_choice": "The declared codomain contains infinite binary sequences, but the displayed h(n) is finite.",
+          "chosen_treatment": "தமிழ் உடல் n பூச்சியங்களுக்குப் பின் முடிவுறாமல் ஒன்றுகள் வரும் தொடரைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "முடிவுறு வெளியீட்டை அப்படியே வைத்தல்; சார்பின் இலக்கை மாற்றுதல்",
+          "rationale": "The intended counterexample needs a genuine map into Bin^omega.",
+          "precise_review_question": "Does the infinite-tail repair preserve non-surjectivity while making the codomain declaration true?",
+          "location_needle": "SOURCE CORRECTION OLSIZ-005"
+        }
+      ],
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\dots"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}
