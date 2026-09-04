@@ -1,0 +1,203 @@
+% SEGMENT OLP-0008-S01
+% Part: sets-functions-relations
+% Chapter: sets
+% Section: unions-and-intersections
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sfr}{set}{uni}
+\olsection{சேர்ப்புகளும் வெட்டுகளும்}
+
+\begin{explain}
+\olref[sfr][set][bas]{sec} இல், பண்பைக் கொண்டு கணங்களை வரையறுக்கும் முறையை,
+அதாவது $\Setabs{x}{\phi(x)}$ என்ற வடிவிலான வரையறைகளை அறிமுகப்படுத்தினோம்.
+இங்கு ஒரு பண்பு $\phi$ ஐப் பயன்படுத்துகிறோம்; அந்தப் பண்பு நாம் ஏற்கெனவே
+வரையறுத்த கணங்களைக் குறிப்பிடலாம். எடுத்துக்காட்டாக, $A$, $B$ ஆகியவை
+கணங்கள் எனில், $\Setabs{x}{x \in A \lor x \in B}$ என்னும் கணத்தில்,
+$A$ அல்லது $B$ இன் !!{element}s ஆக உள்ள அனைத்துப் பொருள்களும் அடங்கும்.
+அதாவது, இது $A$, $B$ ஆகியவற்றின் !!{element}s[acc] ஒன்றுசேர்க்கும் கணமாகும்.
+\olref{fig:union} இல் காட்டியுள்ளபடி இதனைக் காட்சிப்படுத்தலாம்;
+அங்கு சிறப்பித்துக் காட்டப்பட்டுள்ள பகுதி, $A$, $B$ என்னும் இரு கணங்களின்
+!!{element}s[acc] ஒன்றாகக் குறிக்கிறது.
+
+\begin{figure}
+  \olasset{assets/diagrams/union.tikz}
+  \caption{இரு கணங்களின் சேர்ப்பான $A \cup B$ என்பது, $A$ இன்
+  !!{element}s உடன் $B$ இன் உறுப்புகளையும் கொண்ட கணமாகும்.}
+  \ollabel{fig:union}
+\end{figure}
+
+கணங்களை ஒன்றுசேர்க்கும் இந்தச் செயல் மிகவும் பயனுள்ளதும் பொதுவானதும் ஆகும்.
+எனவே அதற்கு முறையான பெயரும் குறியீடும் தருகிறோம்.
+\end{explain}
+
+% SEGMENT OLP-0008-S02
+\begin{defn}[சேர்ப்பு]
+$A$, $B$ என்னும் இரு கணங்களின் \emph{சேர்ப்பு} $A \cup B$ என எழுதப்படும்.
+இது $A$ இன் அல்லது $B$ இன் அல்லது இரண்டின் !!{element}s ஆக உள்ள
+அனைத்துப் பொருள்களின் கணமாகும்.
+\[
+A \cup B = \Setabs{x}{x \in A \lor x \in B}
+\]
+\end{defn}
+
+% SEGMENT OLP-0008-S03
+\begin{ex}
+!!{element}s மீண்டும் மீண்டும் இடம்பெறுவது பொருட்டல்ல.
+எனவே, பொதுவான !!a{element}[acc]க் கொண்ட இரு கணங்களின் சேர்ப்பில்
+அந்த !!{element} ஒருமுறை மட்டுமே இடம்பெறும். எடுத்துக்காட்டாக,
+$\{ a, b, c\} \cup \{ a, 0, 1\} = \{a, b, c, 0, 1\}$.
+
+ஒரு கணத்தையும் அதன் உட்கணங்களில் ஒன்றையும் சேர்த்தால்,
+பெரிய கணமே கிடைக்கும்:
+$\{a, b, c \} \cup \{a \} = \{a, b, c\}$.
+
+ஒரு கணத்தை வெற்றுக் கணத்துடன் சேர்த்தால், அதே கணமே கிடைக்கும்:
+$\{a, b, c \} \cup \emptyset = \{a, b, c \}$.
+\end{ex}
+
+% SEGMENT OLP-0008-S04
+\begin{prob}
+$A \subseteq B$ எனில் $A \cup B = B$ என நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0008-S05
+\begin{explain}
+சேர்ப்புக்கு ``இருமையான'' ஒரு செயலையும் கருதலாம்.
+$A$ இன் !!{element}s ஆகவும் $B$ இன் !!{element}s ஆகவும் உள்ள
+அனைத்து !!{element}s[acc] கொண்டு கணம் அமைக்கும் செயலே அது.
+இந்தச் செயல் \emph{வெட்டு} எனப்படும்;
+இதனை \olref{fig:intersection} இல் காட்டியுள்ளபடி சித்தரிக்கலாம்.
+\begin{figure}
+  \olasset{assets/diagrams/intersection.tikz}
+  \caption{இரு கணங்களின் வெட்டான $A \cap B$ என்பது,
+  அவற்றுக்குப் பொதுவான !!{element}s கொண்ட கணமாகும்.}
+  \ollabel{fig:intersection}
+\end{figure}
+\end{explain}
+
+% SEGMENT OLP-0008-S06
+\begin{defn}[வெட்டு]
+$A$, $B$ என்னும் இரு கணங்களின் \emph{வெட்டு} $A \cap B$ என எழுதப்படும்.
+இது $A$, $B$ ஆகிய இரண்டின் !!{element}s ஆக உள்ள அனைத்துப் பொருள்களின் கணமாகும்.
+\[
+A \cap B = \Setabs{x}{x \in A \land x \in B}
+\]
+இரு கணங்களின் வெட்டு வெற்றாக இருந்தால், அவை \emph{வெட்டாக் கணங்கள்} எனப்படும்.
+அதாவது, அவற்றுக்குப் பொதுவான !!{element}s எதுவும் இல்லை.
+\end{defn}
+
+% SEGMENT OLP-0008-S07
+\begin{ex}
+இரு கணங்களுக்குப் பொதுவான !!{element}s எதுவும் இல்லையெனில்,
+அவற்றின் வெட்டு வெற்றாகும்:
+$\{ a, b, c\} \cap \{ 0, 1\} = \emptyset$.
+
+இரு கணங்களுக்குப் பொதுவான !!{element}s இருந்தால்,
+அவை அனைத்தையும் கொண்ட கணமே அவற்றின் வெட்டாகும்:
+$\{a, b, c \} \cap \{a, b, d \} = \{a, b\}$.
+
+ஒரு கணத்திற்கும் அதன் உட்கணங்களில் ஒன்றிற்கும் இடையிலான வெட்டு,
+சிறிய கணமே ஆகும்:
+$\{a, b, c\} \cap \{a, b\} = \{a, b\}$.
+
+எந்த ஒரு கணத்திற்கும் வெற்றுக் கணத்திற்கும் இடையிலான வெட்டு வெற்றாகும்:
+$\{a, b, c \} \cap \emptyset = \emptyset$.
+\end{ex}
+
+% SEGMENT OLP-0008-S08
+\begin{prob}
+$A \subseteq B$ எனில் $A \cap B = A$ எனத் துல்லியமாக நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0008-S09
+\begin{explain}
+இரண்டுக்கும் மேற்பட்ட கணங்களின் சேர்ப்பையோ வெட்டையோ அமைக்கலாம்.
+இதனைப் பொதுவாகக் கையாள ஓர் அழகிய வழி பின்வருமாறு:
+சேர்ப்பையோ வெட்டையோ காண விரும்பும் கணங்கள் அனைத்தையும் ஒரே கணமாகத் திரட்டுக.
+அப்போது, முதலில் இருந்த அனைத்துக் கணங்களின் சேர்ப்பை,
+திரட்டிய கணத்தின் குறைந்தபட்சம் ஓர் !!{element} கொண்டிருக்கும் அனைத்துப்
+பொருள்களின் கணமாக வரையறுக்கலாம். வெட்டை, அக்கணத்தின் ஒவ்வோர்
+!!{element} கொண்டிருக்கும் அனைத்துப் பொருள்களின் கணமாக வரையறுக்கலாம்.
+\end{explain}
+
+% SEGMENT OLP-0008-S10
+\begin{defn}
+$A$ என்பது கணங்களின் கணம் எனில், $\bigcup A$ என்பது
+$A$ இன் !!{element}s கொண்டிருக்கும் !!{element}s அனைத்தையும் திரட்டிய கணமாகும்:
+\begin{align*}
+\bigcup A & = \Setabs{x}{x \text{ என்பது } A\text{ இன் !!a{element} கொண்டிருக்கும் பொருள்}},
+\text{ அதாவது,}\\
+& = \Setabs{x}{\text{ஒரு } B \in A
+  \text{ உள்ளது; அதற்கு } x \in B}
+\end{align*}
+\end{defn}
+
+% SEGMENT OLP-0008-S11
+\begin{defn}
+$A$ என்பது கணங்களின் கணம் எனில், $\bigcap A$ என்பது
+$A$ இன் அனைத்து உறுப்புகளுக்கும் பொதுவான பொருள்களின் கணமாகும்:
+\begin{align*}
+\bigcap A & = \Setabs{x}{x \text{ என்பது } A\text{ இன் ஒவ்வொரு !!{element}[um] கொண்டிருக்கும் பொருள்}},
+\text{ அதாவது,}\\
+ & = \Setabs{x}{\text{ஒவ்வொரு } B \in A, x \in B}
+\end{align*}
+\end{defn}
+
+% SEGMENT OLP-0008-S12
+\begin{ex}
+$A = \{ \{ a, b \}, \{ a, d, e \}, \{ a, d \} \}$ என்க.
+அப்போது $\bigcup A = \{ a, b, d, e \}$;
+மேலும் $\bigcap A = \{ a \}$.
+\end{ex}
+\begin{prob}
+$A$ ஒரு கணமாகவும் $A \in B$ ஆகவும் இருந்தால்,
+$A \subseteq \bigcup B$ எனக் காட்டுக.
+\end{prob}
+
+% SEGMENT OLP-0008-S13
+$A_1$, $A_2$, \dots என்னும் கணங்களின் தொடர்முறைக்கும் இதையே செய்யலாம்:
+\begin{align*}
+\bigcup_i A_i & = \Setabs{x}{x \text{ இருப்பது } A_i\text{ கணங்களில் ஒன்றில்}}\\
+\bigcap_i A_i & = \Setabs{x}{x \text{ இருப்பது ஒவ்வொரு } A_i\text{ இலும்}}.
+\end{align*}
+
+% SEGMENT OLP-0008-S14
+கணங்களுக்கான ஓர் \emph{குறியீட்டுக் கணம்} நம்மிடம் இருக்கும்போது,
+அதாவது, ஒரு கணம் $I$ தரப்பட்டு ஒவ்வொரு $i \in I$ க்கும்
+$A_i$ என்பதைக் கருதும்போது, பின்வரும் சுருக்கங்களையும் பயன்படுத்தலாம்:
+\begin{align*}
+	\bigcup_{i \in I} A_i & = \bigcup \Setabs{A_i }{i \in I}\\
+	\bigcap_{i \in I} A_i & = \bigcap\Setabs{A_i}{i \in I}
+\end{align*}
+
+% SEGMENT OLP-0008-S15
+இறுதியாக, $A$ இல் உள்ள, ஆனால் $B$ இல் இல்லாத அனைத்து
+!!{element}s கொண்ட கணத்தைக் கருத விரும்பலாம்.
+இதனை \olref{difference} இல் காட்டியுள்ளபடி சித்தரிக்கலாம்.
+
+\begin{figure}
+  \olasset{assets/diagrams/difference.tikz}
+  \caption{இரு கணங்களின் வேறுபாடான $A \setminus B$ என்பது,
+  $A$ இன் !!{element}s ஆக இருந்தும் $B$ இன் !!{element}s ஆக இல்லாதவற்றின் கணமாகும்.}
+  \ollabel{difference}
+\end{figure}
+
+% SEGMENT OLP-0008-S16
+\begin{defn}[வேறுபாடு]
+\emph{கண வேறுபாடான} $A \setminus B$ என்பது,
+$A$ இன் !!{element}s ஆக இருந்தும் $B$ இன் !!{element}s ஆக இல்லாத
+அனைத்தையும் கொண்ட கணமாகும். அதாவது,
+\[
+A\setminus B = \Setabs{x}{x\in A \text{ மற்றும் } x \notin B}.
+\]
+\end{defn}
+
+% SEGMENT OLP-0008-S17
+\begin{prob}
+$A \subsetneq B$ எனில் $B \setminus A \neq \emptyset$ என நிறுவுக.
+\end{prob}
+
+\end{document}

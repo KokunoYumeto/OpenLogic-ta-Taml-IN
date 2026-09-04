@@ -1,0 +1,26 @@
+% Tamil noun inflection retains the upstream token key and plural/article flags.
+% Optional case follows the token: !!{element}[um], !!{element}s[pred].
+\settexttoken{element}{உறுப்பு}{உறுப்புகள்}[உறுப்பு][உறுப்புகள்]
+\settexttoken{formula}{வாய்பாடு}{வாய்பாடுகள்}[வாய்பாடு][வாய்பாடுகள்]
+\settexttoken{derivation}{வருவித்தல்}{வருவித்தல்கள்}[வருவித்தல்][வருவித்தல்கள்]
+\definetoken{a}{element}{ஓர்}
+\definetoken{A}{element}{ஓர்}
+\definetoken{s-um}{element}{உறுப்பும்}
+\definetoken{p-um}{element}{உறுப்புகளும்}
+\definetoken{s-pred}{element}{உறுப்பாக}
+\definetoken{p-pred}{element}{உறுப்புகளாக}
+\definetoken{s-acc}{element}{உறுப்பை}
+\definetoken{p-acc}{element}{உறுப்புகளை}
+\definetoken{s-gen}{element}{உறுப்பின்}
+\definetoken{p-gen}{element}{உறுப்புகளின்}
+\definetoken{s-loc}{element}{உறுப்பில்}
+\definetoken{p-loc}{element}{உறுப்புகளில்}
+\makeatletter
+\RenewDocumentCommand \@printtoken { t^ ta m !ts O{} }{%
+  \begingroup
+  \IfBooleanTF{#4}{\def\TAForm{p}}{\def\TAForm{s}}%
+  \ifstrempty{#5}{}{\edef\TAForm{\TAForm-#5}}%
+  \IfBooleanT{#2}{\article{#3}~}%
+  \printtoken{\TAForm}{#3}%
+  \endgroup}
+\makeatother

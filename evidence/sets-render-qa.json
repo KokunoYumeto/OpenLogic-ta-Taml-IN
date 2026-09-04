@@ -1,0 +1,107 @@
+{
+  "pdf": {
+    "path": "build/tamil-batch001.pdf",
+    "bytes": 165170,
+    "sha256": "ecebe31c960e8ebca7aab97d6f6d6ee86cbca7e991d5a647f586a873cf4b8e03",
+    "pages": 13
+  },
+  "renders": [
+    {
+      "page": 1,
+      "path": "qa\\sets-final\\page-01.png",
+      "sha256": "c52fe3b727f30b731e3866c350a1d19f5378a457e16b909b22f7631ff68202bc"
+    },
+    {
+      "page": 2,
+      "path": "qa\\sets-final\\page-02.png",
+      "sha256": "09a24a28dc1c2642025a0b7848296e882f0566244cb57a74dbddb8d26cb9d0c3"
+    },
+    {
+      "page": 3,
+      "path": "qa\\sets-final\\page-03.png",
+      "sha256": "a4a652ec67cb857381c932c5d7d16f7bc9eeacb20d16d885d075bb54076aecf7"
+    },
+    {
+      "page": 4,
+      "path": "qa\\sets-final\\page-04.png",
+      "sha256": "74227731247e11102eac1623d4e86c3604e2a6a7bf8246aecfb72d0c8129091c"
+    },
+    {
+      "page": 5,
+      "path": "qa\\sets-final\\page-05.png",
+      "sha256": "ad3b943918ce55c79e5f07b7d1b68392ee6dccdc838f5f2391a9ffc149862476"
+    },
+    {
+      "page": 6,
+      "path": "qa\\sets-final\\page-06.png",
+      "sha256": "129f96d0451f59b7ed890e2b4689fb03daa7604ccc17701448096ec3e39a13ac"
+    },
+    {
+      "page": 7,
+      "path": "qa\\sets-final\\page-07.png",
+      "sha256": "a423a4b26d9e371f0f919b49a8712784ae0f2f7d755db078eb297efc3dc31d8a"
+    },
+    {
+      "page": 8,
+      "path": "qa\\sets-final\\page-08.png",
+      "sha256": "6d2c927ccccd9489bcaceaf2b927ca3dd8c49a55bbea3e18bd1a283290b0b299"
+    },
+    {
+      "page": 9,
+      "path": "qa\\sets-final\\page-09.png",
+      "sha256": "7a12080f036cbf4fa666d2693dc932aae23f9dc14341d545f50eeba71e358b2f"
+    },
+    {
+      "page": 10,
+      "path": "qa\\sets-final\\page-10.png",
+      "sha256": "0e27dd4ebf714603b800240847eef467a1d99997af487b7aff56cff5bbfa4145"
+    },
+    {
+      "page": 11,
+      "path": "qa\\sets-final\\page-11.png",
+      "sha256": "576e5f17eba4f003f6cf82e64c44d9ba7709584b73888038211aee4584634a69"
+    },
+    {
+      "page": 12,
+      "path": "qa\\sets-final\\page-12.png",
+      "sha256": "5f442c6723f2f4668ec7da90c7dfdeb8794e0e0e43b0a7f8a0c37316ba6a3215"
+    },
+    {
+      "page": 13,
+      "path": "qa\\sets-final\\page-13.png",
+      "sha256": "df7c087b028e0259c2a6f707fbe77d8710ab3d8a6cd5d6aa4ace57e13b59e5f2"
+    }
+  ],
+  "poppler_sha256": "56f5807dac71ba1e00a74a21405e292a42fbf4f950048e583e5a80ecf56b9afd",
+  "poppler_phrase_checks": {
+    "பொருள்களின்": true,
+    "அடுக்குக் கணம்": true,
+    "உறுப்புசார் சமத்துவம்": true,
+    "முழுக்கள்": true,
+    "ஒவ்வொரு உறுப்பும்": true
+  },
+  "pymupdf_phrase_checks": {
+    "பொருள்களின்": true,
+    "அடுக்குக் கணம்": false,
+    "உறுப்புசார் சமத்துவம்": false,
+    "முழுக்கள்": true,
+    "ஒவ்வொரு உறுப்பும்": false
+  },
+  "english_automatic_labels": [],
+  "replacement_char_absent": true,
+  "visual_review_complete": true,
+  "reader_limitations": [
+    "PyMuPDF and Poppler differ in interpretation of XeTeX ActualText; Poppler checks do not prove every PDF reader behavior."
+  ],
+  "visual_review_date": "2026-09-04",
+  "visual_review_basis": "All 13 page images directly inspected before math ActualText patch. Twelve final pages are pixel-identical; changed final page 9 directly reinspected. Tamil shaping/pulli, text, formulas, all three original diagrams, captions and page edges checked.",
+  "visual_reading_verified": true,
+  "universal_copy_accessibility_verified": false,
+  "measured_formula_copy": {
+    "union": true,
+    "intersection": true,
+    "cartesian_product": true,
+    "composite_negation": "Some contexts improved; others still split in extraction. Not certified for exact PDF formula reuse.",
+    "blackboard_letters": "May extract as ordinary letters."
+  }
+}

@@ -1,0 +1,8 @@
+% Preserve extraction of composite negated relation glyphs without changing source formulas.
+\usepackage{accsupp}
+\let\TAOriginalNotin\notin
+\let\TAOriginalNeq\neq
+\let\TAOriginalNsubseteq\nsubseteq
+\renewcommand{\notin}{\mathrel{\BeginAccSupp{method=hex,unicode,ActualText=2209}\TAOriginalNotin\EndAccSupp{}}}
+\renewcommand{\neq}{\mathrel{\BeginAccSupp{method=hex,unicode,ActualText=2260}\TAOriginalNeq\EndAccSupp{}}}
+\renewcommand{\nsubseteq}{\mathrel{\BeginAccSupp{method=hex,unicode,ActualText=2288}\TAOriginalNsubseteq\EndAccSupp{}}}

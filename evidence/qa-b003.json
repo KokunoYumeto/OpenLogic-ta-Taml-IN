@@ -1,0 +1,77 @@
+{
+  "batch_id": "TA-B003",
+  "units": [
+    {
+      "unit_id": "OLP-0008",
+      "source_sha256": "e556ac6add69b1e6d41123eb05be4adb15f2dc120a3782a721caeab42dbc4529",
+      "translation_sha256": "d815e9f2cb9fd84e49b6a781ee84ccbe80a988cefdf665fc012b4a9992eaa41c",
+      "source_bytes": 5901,
+      "translation_bytes": 12543,
+      "source_coverage_complete": true,
+      "segments": 17,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "acc",
+        "align",
+        "bas",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "set",
+        "sfr"
+      ],
+      "visual_review_complete": false,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": []
+    },
+    {
+      "unit_id": "OLP-0009",
+      "source_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
+      "translation_sha256": "02fbb8f168a2106fd0b40b8fb8fc8f00b868356cfb51b321e3437dbf02f5f120",
+      "source_bytes": 4516,
+      "translation_bytes": 10414,
+      "source_coverage_complete": true,
+      "segments": 13,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "acc",
+        "align",
+        "bac",
+        "include",
+        "logic",
+        "open",
+        "pai",
+        "section",
+        "set",
+        "sfr"
+      ],
+      "visual_review_complete": false,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": []
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

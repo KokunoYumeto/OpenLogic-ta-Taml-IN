@@ -1,0 +1,49 @@
+{
+  "schema": "openlogic-tamil-laptop-intake-check/1",
+  "locale": "ta-Taml-IN",
+  "index_sha256": "c3eb2e024728b57d170c10f800970cd897630a75cfe1635055abaf97cc0aa6fd",
+  "recovered_entry_points": [
+    {
+      "path": "canon/README.md",
+      "bytes": 5666,
+      "sha256": "17f40c5af3483a905992fdb6a7de0d868713f945ff2d0aa59bd722bdce19ca8d"
+    },
+    {
+      "path": "canon/CONSULTATION_LOG.md",
+      "bytes": 16944,
+      "sha256": "f7e0736661505fbd1c7065ee2a2b1c5f23f13d385042455f2e82b85c1edb02d1"
+    },
+    {
+      "path": "terminology.tsv",
+      "bytes": 10163,
+      "sha256": "146aa8aada794680dd78f44029cd51e794cb5279bf00c7a451f3b96760378062"
+    },
+    {
+      "path": "sources.lock.json",
+      "bytes": 10576,
+      "sha256": "5cd6c02999fbd2041b27540f9bd53a9bf30ca8b968c7515afa58e08e485fd036"
+    },
+    {
+      "path": "GOAL.md",
+      "bytes": 4684,
+      "sha256": "7d2c52ec3da3c6842c9085111246d8c9937a16703aaeb04d4d952ceeaefa1c69"
+    }
+  ],
+  "original_pdf_in_locale_index": false,
+  "exact_original_path_exists": false,
+  "acquisition": "Reacquired from the exact school-hosted URL in recovered sources.lock.json; exact old byte/hash identity verified, no historical consultation inherited.",
+  "pdf": {
+    "local_path": "canon\\originals\\scert-6-term1-maths-2018.pdf",
+    "url": "https://www.kulikaraighss.in/books/6t1all/6t1maths.pdf",
+    "bytes": 26400507,
+    "sha256": "277fd1e9c72c129d02448c237fa7b106bfd50ba97ac4dce8f117e404321eb618",
+    "pages": 176
+  },
+  "rendered_pages": [
+    1,
+    2,
+    8,
+    35,
+    175
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "schema": "openlogic-tamil-semantic-review/1",
+  "date_utc": "2026-09-04T15:55:49.648418+00:00",
+  "reviewer": "Translation agent; no independent human/native review claimed",
+  "unit_bindings": [
+    {
+      "unit_id": "OLP-0004",
+      "source_sha256": "98a8964a95d72ab3004decdef3ee74f1dd1f221dd06dfc0e6d44eff52104f277",
+      "translation_sha256": "83e6eb0b4f1fe18338c34e4762150a5a7d4f8de32883b68febfa54f405494a44"
+    },
+    {
+      "unit_id": "OLP-0005",
+      "source_sha256": "232ff51f51e74fcfee836650f3c597b54bf10ba5363c648a0c05fe8222e4a865",
+      "translation_sha256": "6292339c2df9599e0cb82ecd1a7dfc761152e7175b5bd822a669cd8b929a9d10"
+    },
+    {
+      "unit_id": "OLP-0006",
+      "source_sha256": "63d819c246577b3bfd8ba2a933f114b58c6549bdc4fa6ea8ffa8ab07c7fed4b7",
+      "translation_sha256": "87b24c903c4c44b4a4caa0f570e4121eb0d667cd56b221edb9e3ce2675093399"
+    },
+    {
+      "unit_id": "OLP-0007",
+      "source_sha256": "ec2115fa48ea6c6684a65bdf2f504102ca0a74b40cf88293dfc12f4ab97ada02",
+      "translation_sha256": "65fa7f1388ab2b604af79f7ca6bfaf42125e7f39fe24ddc5983ea018731c4adb"
+    },
+    {
+      "unit_id": "OLP-0010",
+      "source_sha256": "aa8e94675f56112d8952b81d17968545b54c33393bfc466745edcaca30f4453a",
+      "translation_sha256": "51eb7c07fb4ad23c336f0a5eb1249e49c7ef00c31a5fd0b74a66db89b3f348fc"
+    },
+    {
+      "unit_id": "OLP-0008",
+      "source_sha256": "e556ac6add69b1e6d41123eb05be4adb15f2dc120a3782a721caeab42dbc4529",
+      "translation_sha256": "d815e9f2cb9fd84e49b6a781ee84ccbe80a988cefdf665fc012b4a9992eaa41c"
+    },
+    {
+      "unit_id": "OLP-0009",
+      "source_sha256": "935f1e0e90dc783a1d5cb3298a38aa8df49af8b424e7282b27dc2ab4e9d85610",
+      "translation_sha256": "02fbb8f168a2106fd0b40b8fb8fc8f00b868356cfb51b321e3437dbf02f5f120"
+    },
+    {
+      "unit_id": "OLP-0011",
+      "source_sha256": "9720780fcf56a05f8f18c26234d7bebc24024116bb6549a151e0905845b41ef5",
+      "translation_sha256": "f9ba3f67a9b4316b0a85bbb47b8fa93819526d0f70391cfc0636e53fa8c26556"
+    },
+    {
+      "unit_id": "OLP-0012",
+      "source_sha256": "2a67c6fb4846155e8e7cd8172fd1fb8214db96d508ceae5d70dec95d5dfcc1ff",
+      "translation_sha256": "e627c7b02b07e134c4df8db98896ab084bd39a93e40c1816942a29a5470ad3be"
+    },
+    {
+      "unit_id": "OLP-0014",
+      "source_sha256": "006f2ea0d65e5069ef1509de94dd35a477ea835c19962da22f4bef48caffbee7",
+      "translation_sha256": "84cddf69fa27cd7b152351fb37caf890d2e9b487f5831573666de293a00c93a6"
+    },
+    {
+      "unit_id": "OLP-0013",
+      "source_sha256": "75047e8806a58c0a0c07ae2e55554d9ad2affb9d5297b1d5585ebe0b2f3de651",
+      "translation_sha256": "ab422f305bdaf05e9ed28968e4a329b75237a33c6818c9e6fee3c664d3240048"
+    },
+    {
+      "unit_id": "OLP-0015",
+      "source_sha256": "d9531aa5cd774c12090fbd5c9fb289181e93cf7e9a96ecf7d4fd3fcdf5d250c7",
+      "translation_sha256": "ce164cce8a95d9e2d99d337cc3b38757e3138f33557350b48664b1f91a74e06c"
+    },
+    {
+      "unit_id": "OLP-0016",
+      "source_sha256": "79593789022fef31c0609b9c94856e2aef5cd5e88e92864e782bb6e6e5f4bce4",
+      "translation_sha256": "04139c1175dde4abec30319a14b4188befbe62c8e0f5822dbb97a668246f1989"
+    },
+    {
+      "unit_id": "OLP-0017",
+      "source_sha256": "dec624ef4e71903b72a9f0b5fcc6a15a2e0f897f9ebe881dd9c9e21333aeee75",
+      "translation_sha256": "f9ec31e242fcb2d1eda7df01ef9bf97efea8d6dece8a5dbb5a1178df6b75f53a"
+    },
+    {
+      "unit_id": "OLP-0018",
+      "source_sha256": "a158f1ce5b84c8c3f681dd6347b22491d1b67a91e110138b9cb6833e3d9dc23c",
+      "translation_sha256": "2bf2740542b0f6f4d8ba75adb46bb027d6effafcd5d10b2529e06b7efc8353a2"
+    },
+    {
+      "unit_id": "OLP-0019",
+      "source_sha256": "73c8bdb301aca93f687a06a045533d75d30088ae711f5e1dfd577b7864f8d3d5",
+      "translation_sha256": "c147683a6c2ec8c795c3b53f00312eb448a2e9fa8e3d965d48ce013f1951a22f"
+    }
+  ],
+  "samples": [
+    {
+      "segment_id": "OLP-0012-S05",
+      "reverse_paraphrase": "A binary relation on A is any subset of A squared; Rxy abbreviates ordered-pair membership. Empty A is permitted.",
+      "assessment": "Source generality preserved despite SCERT nonempty-set convention.",
+      "translation_segment_sha256": "4b40edfa0c62c12ebdb67d4a8b94cb91db2aca1e82b2d85ca7ab6926119d9235",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0013-S02",
+      "reverse_paraphrase": "Two equally adequate encodings of ordered pairs yield different representing sets, so representation is not a discovered metaphysical identity.",
+      "assessment": "Both alternative constructions and Benacerraf citation retained.",
+      "translation_segment_sha256": "25630ae020b4732423def3268d0aeac299ee72bdc0e79cb7eb30bad2b4b60381",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0013-S03",
+      "reverse_paraphrase": "The universal membership relation cannot be a set in the later axiom theory; the conditional reference and footnote branches remain intact.",
+      "assessment": "No unqualified claim that every relation is a set.",
+      "translation_segment_sha256": "a8111cb8673cd1a2864a70680f8b203362692a4e259ff07b5d0527be9cf61f06",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0013-S04",
+      "reverse_paraphrase": "Treating membership as a predicate differs from making it a name for a set; a list of three names does not express a proposition.",
+      "assessment": "Predicate/term distinction retained; exact advanced Tamil terms remain provisional.",
+      "translation_segment_sha256": "2c281b8bfc83943079642ddd638f9d75086f057d77d56dcc4ae9e4b1735ae304",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0014-S06",
+      "reverse_paraphrase": "Antisymmetry permits but does not require self-relatedness; it is compatible with symmetry and differs from mere nonsymmetry.",
+      "assessment": "Quantifier and negation scope reviewed.",
+      "translation_segment_sha256": "6c0c84bf5d8e3c917617e62cbbdb726ac30943914aea7e1220428d99ca08e1d1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0014-S11",
+      "reverse_paraphrase": "Irreflexivity and non-reflexivity differ; the nonempty-domain qualification remains.",
+      "assessment": "Empty-domain vacuity preserved.",
+      "translation_segment_sha256": "6e49084695dc6925ecc19056bb675d41ea8c40c0798ee9725191f04b7df2ef3b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0015-S06",
+      "reverse_paraphrase": "From Rxy, symmetry gives Ryx; with Rxz transitivity gives Ryz. Both inclusions establish equal equivalence classes.",
+      "assessment": "Proposition presents Rxy first so the stated left-to-right direction is correct.",
+      "translation_segment_sha256": "69bc5a1289e47b243d46eb0b20cf4edc9fcb0866a9db9dd2238a9fb1bf83e632",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0015-S07",
+      "reverse_paraphrase": "Equal classes and Ryy yield y in its own class, hence y in the x class and Rxy.",
+      "assessment": "Reflexivity used in the reverse direction.",
+      "translation_segment_sha256": "d2905afc2d5b14b3f25f9d602e6e76475c719f0ba7fe9d96eb4f51d55b0ace02",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0016-S08",
+      "reverse_paraphrase": "Divisibility is a partial order on natural numbers but only a preorder on integers because 1 and minus 1 divide each other.",
+      "assessment": "No silent domain restriction; integer terminology revised using recovered canon.",
+      "translation_segment_sha256": "392d73e85ae27b8cbcb870e4ae18331c71e02761b2f9f6ba8c31ba37f42facb7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0016-S16",
+      "reverse_paraphrase": "If two unequal objects stand in R-plus in both directions, neither diagonal pair applies, so both directions lie in R, violating asymmetry.",
+      "assessment": "Antisymmetry proof preserves the contradiction and distinctness assumption.",
+      "translation_segment_sha256": "e7f8cce4619738712ab4bb8cdf7ebb51f308ba7e6dbb667a0450fe82499acf66",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0016-S17",
+      "reverse_paraphrase": "Transitivity of R-plus follows either from two R edges or by replacing an equal endpoint when one edge is diagonal.",
+      "assessment": "Both cases retained.",
+      "translation_segment_sha256": "f87d4dadaee01019088496193b98523fbc325508275bc2b69f3e42a345f43fec",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0017-S04",
+      "reverse_paraphrase": "Adding an isolated fourth vertex changes the graph even though its edge set is unchanged.",
+      "assessment": "Both TikZ graphs preserve every node, arrow and self-loop.",
+      "translation_segment_sha256": "e9b41d06d832c74f918baf883a77241bad389b80800e0188acc60c4475ff580a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0018-S07",
+      "reverse_paraphrase": "A non-root vertex has at most one immediate predecessor, not necessarily exactly one in an infinite tree.",
+      "assessment": "Finite picture does not override general theorem.",
+      "translation_segment_sha256": "1a31e2fb4500fa3caad9eb25f16375e1a228097ceac1f01075805b4857e53d34",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0018-S10",
+      "reverse_paraphrase": "A branch is an inclusion-maximal chain, and an outside point is incomparable to some branch point.",
+      "assessment": "Retained source undeclared X; separate editorial note identifies issue.",
+      "translation_segment_sha256": "5c544b8f6ee3fd26e1f9b79841695bf06aeed5d7865d9c64c3f90c719d09ee0f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0018-S13",
+      "reverse_paraphrase": "Every finitely branching infinite rooted tree has an infinite branch.",
+      "assessment": "Both finiteness-of-branching and infinitude hypotheses retained.",
+      "translation_segment_sha256": "f38f2dee24d6fccbc276432cf802f166a0099b0096ae7d7de13b0d2e24e08bbe",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0019-S02",
+      "reverse_paraphrase": "R relative-product S follows an R edge and then an S edge; restriction uses A squared; image may have many values.",
+      "assessment": "Composition direction and relation-versus-function distinction checked.",
+      "translation_segment_sha256": "9077434a560cbbcbd5b2f06daa958a2e3a806ce3efdb7599816cb141e213b137",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0019-S05",
+      "reverse_paraphrase": "Positive finite iterations of integer successor yield strict less-than; adding the identity yields less-than-or-equal.",
+      "assessment": "Local R-plus notation differs intentionally from the orders section.",
+      "translation_segment_sha256": "30ee41532622e3a67513e438eecbd6a3f7563e5b5034fefcd851b469927933e8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0007-S01",
+      "reverse_paraphrase": "Natural numbers include zero under OpenLogic convention; integers also include negatives.",
+      "assessment": "Recovered school-text convention is explained separately, not substituted into source.",
+      "translation_segment_sha256": "37e510bcc412862343d25d82f168ce9b017a9d0e0b13988ab3c255c78cd2a197",
+      "status": "author-reviewed"
+    }
+  ],
+  "source_issues": [
+    {
+      "unit_id": "OLP-0012",
+      "issue": "Informal I is used after identity is introduced with Id(A). Source notation retained."
+    },
+    {
+      "unit_id": "OLP-0018",
+      "issue": "Branch definition uses undeclared X; subtree example needs nonempty A for the rooted-tree definition.",
+      "editorial_note": "translation/relations-notes.tex"
+    }
+  ],
+  "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; the integer-label changes are covered here and by rerun structural QA",
+  "release_ready": false,
+  "remaining": "Final rendered reader and all remaining source units must still be verified."
+}

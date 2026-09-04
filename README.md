@@ -1,0 +1,42 @@
+# OpenLogic — தமிழ் (ta-Taml-IN)
+
+India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
+Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
+
+The full edition is in progress. **16 of 722 frozen content units are drafted.**
+The first reader contains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
+The Relations chapter's 9 source units are drafted but have not yet received reader-layout verification.
+
+## Read and edit
+
+- [கணங்கள் — Tamil Sets chapter PDF](readers/sets-ta-Taml-IN.pdf): 13 pages including attribution and a separate edition note.
+- Editable Tamil: translation/content/sets-functions-relations/.
+- Frozen, unchanged English sources and original components: upstream/.
+- Reader master: build/tamil-batch001.tex.
+
+This is machine translation with source comparison and author semantic review. Independent human or native-speaker approval is not claimed.
+The reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All seven units pass mathematical, citation, identifier and structural parity checks.
+
+PDF text reuse has measured limitations. Poppler correctly extracts five tested Tamil phrases and representative union, intersection and Cartesian-product formulas. PyMuPDF duplicates some Tamil syllables or loses spacing. Composite negation symbols may still split during extraction in some contexts; blackboard number-set letters may extract as ordinary letters. Use the editable formulas for exact mathematical reuse. This is not a claim of tagged-PDF or universal screen-reader accessibility. A semantic reader remains part of the continuing full-edition work.
+
+## Build
+
+Use a Unicode-capable TeX distribution with XeLaTeX, memoir, the upstream dependencies, fontspec and accsupp. This first reader uses the Windows system fonts Nirmala UI and Consolas; font files are not redistributed.
+Run build/build-tamil.ps1 on Windows. It holds Global\InterlanguageTeXSlotV1 over the captured TeX process tree, both passes and log checks. A busy slot returns without starting an engine. The output is build/tamil-batch001.pdf.
+
+## Source and evidence
+
+English revision: 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 of [OpenLogicProject/OpenLogic](https://github.com/OpenLogicProject/OpenLogic/tree/9620cc73f9c8e0ad003c514a5d3748f29611c4c0).
+All 722 content-file hashes were checked against the frozen manifest. Stable OLP identifiers and original paths remain in the evidence.
+
+The evidence folder contains the source manifest, actual per-segment canon-use records, terminology decisions and scoped QA. Tamil Nadu SCERT, Tamil Virtual Academy and university originals informed the work. Direct technical attestation, general scholarly register and provisional choices are distinguished. Recovered laptop canon led to a newly verified integer/whole-number distinction; historical QA was not inherited.
+
+OpenLogic's natural numbers include zero. The source convention is retained and explained in a separate Tamil edition note, because the consulted school text uses a different convention. New editorial or learner material is kept separate from the faithful source.
+
+The ordinary reader graph and remaining wrappers, all remaining translation, full reader integration, ongoing terminology review and final publication verification are unfinished. A chapter release does not complete the programme.
+
+## Attribution and license
+
+Original text: The Open Logic Project, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Tamil translation and new edition notes: OpenLogic Tamil translation programme, CC BY 4.0.
+Changes include translation, Tamil inflection support, layout and PDF extraction support. The original English source and component notices are preserved. See [NOTICE.md](NOTICE.md) and [the original license](upstream/LICENSE.md).
