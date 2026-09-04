@@ -25,6 +25,8 @@
       ],
       "visual_review_complete": false,
       "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -74,6 +76,8 @@
           "expected_extra_math": []
         }
       ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,

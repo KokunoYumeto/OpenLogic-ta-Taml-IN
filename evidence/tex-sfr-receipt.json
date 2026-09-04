@@ -1,0 +1,64 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 15000,
+  "master": "tamil-sfr.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-04T21:45:19.0310800Z",
+  "passes": [
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Reference `his:set:mythology:sec' on page 1 undefined on input l",
+        "LaTeX Warning: Reference `his:set:limits:sec' on page 1 undefined on input line",
+        "LaTeX Warning: Reference `his:set:limits:sec' on page 1 undefined on input line",
+        "LaTeX Warning: Reference `sth:::part' on page 1 undefined on input line 75.",
+        "LaTeX Warning: Reference `sth:ord-arithmetic::chap' on page 1 undefined on inpu",
+        "LaTeX Warning: There were undefined references."
+      ],
+      "pass": 1,
+      "exit_code": 0
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Reference `his:set:mythology:sec' on page 1 undefined on input l",
+        "LaTeX Warning: Reference `his:set:limits:sec' on page 1 undefined on input line",
+        "LaTeX Warning: Reference `his:set:limits:sec' on page 1 undefined on input line",
+        "LaTeX Warning: Reference `sth:::part' on page 1 undefined on input line 75.",
+        "LaTeX Warning: Reference `sth:ord-arithmetic::chap' on page 1 undefined on inpu",
+        "LaTeX Warning: There were undefined references."
+      ],
+      "pass": 2,
+      "exit_code": 0
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Reference `his:set:mythology:sec' on page 1 undefined on input l",
+        "LaTeX Warning: Reference `his:set:limits:sec' on page 1 undefined on input line",
+        "LaTeX Warning: Reference `his:set:limits:sec' on page 1 undefined on input line",
+        "LaTeX Warning: Reference `sth:::part' on page 1 undefined on input line 75.",
+        "LaTeX Warning: Reference `sth:ord-arithmetic::chap' on page 1 undefined on inpu",
+        "LaTeX Warning: There were undefined references."
+      ],
+      "pass": 3,
+      "exit_code": 0
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "bibliography": {
+    "issues": [
+      "Warning--can't use both author and editor fields in Frege1953\r",
+      "Warning--can't use both author and editor fields in EwaldSieg2013\r",
+      "Warning--empty journal in OConnorRobertson:RN\r"
+    ],
+    "exit_code": 0,
+    "engine": "bibtex"
+  },
+  "finished_utc": "2026-09-04T21:45:43.2070421Z"
+}

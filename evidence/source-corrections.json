@@ -5,7 +5,12 @@
   "shared_audits": [
     {
       "audit_id": "OLSIZ-20260904",
-      "findings_sha256": "9b6e836c8432eb75d331913983603796d6557da6ec3ad71b846b2a248374cd07"
+      "findings_path": "C:\\interlanguage-task-state\\openlogic-internationalization\\source-audits\\2026-09-04-size-of-sets\\FINDINGS.json",
+      "findings_bytes": 12592,
+      "findings_sha256": "9b6e836c8432eb75d331913983603796d6557da6ec3ad71b846b2a248374cd07",
+      "review_path": "C:\\interlanguage-task-state\\openlogic-internationalization\\source-audits\\2026-09-04-size-of-sets\\REVIEW.md",
+      "review_bytes": 4417,
+      "review_sha256": "26913176baacbda5ae8a47bcc82ccf0366b0763313e6eeeb45df59e64249a1f9"
     }
   ],
   "records": [
@@ -206,6 +211,29 @@
       "rationale": "The component condition uniquely determines the characteristic sequence of N.",
       "precise_review_question": "Is the single bound name s used consistently throughout the alternate reduction?",
       "location_needle": "SOURCE CORRECTION OLSIZ-010"
+    },
+    {
+      "audit_id": "TA-SIZ-LOCAL-003",
+      "unit_id": "OLP-0040",
+      "kind": "duplicate-explicit-label-across-primary-and-alternate-sections",
+      "action": "Moved the alternate exercise's explicit label from the primary red namespace to the red-alt namespace.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {
+          "from": "\\label{sfr:siz:red:prob:nat-nat}",
+          "to": "\\label{sfr:siz:red-alt:prob:nat-nat}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The primary and alternate reduction exercises carry the same full explicit label and become multiply defined in the source-complete reader.",
+      "chosen_treatment": "தமிழ் மாற்றுப் பயிற்சியின் அடையாளம் red-alt பெயரிடைவெளிக்கு மாற்றப்படுகிறது; முதன்மைப் பயிற்சியின் அடையாளம் மாறாது.",
+      "alternatives_considered": "இரட்டை அடையாளத்தை வைத்தல்; மாற்றுப் பயிற்சியின் அடையாளத்தை முழுவதும் நீக்குதல்",
+      "rationale": "The alternate unit's olfileid already establishes section id red-alt; changing only this explicit label yields a unique, predictable identifier without removing the anchor.",
+      "precise_review_question": "Does the corrected red-alt namespace preserve the intended anchor while eliminating the only duplicate full label?",
+      "location_needle": "LOCAL SOURCE CORRECTION TA-SIZ-LOCAL-003"
     }
   ],
   "by_unit": {
@@ -216,6 +244,6 @@
     "OLP-0035": ["OLSIZ-006"],
     "OLP-0036": ["OLSIZ-007"],
     "OLP-0039": ["OLSIZ-008", "OLSIZ-009"],
-    "OLP-0040": ["OLSIZ-010"]
+    "OLP-0040": ["OLSIZ-010", "TA-SIZ-LOCAL-003"]
   }
 }

@@ -1,7 +1,8 @@
-param([string]$Master='tamil-batch001.tex',[int]$Passes=2,[ValidateSet('xelatex','lualatex')][string]$Engine='xelatex',[ValidateRange(1000,60000)][int]$AcquisitionTimeoutMs=60000,[switch]$BibTeX,[string]$ReceiptName='TEX-B001-RECEIPT')
+param([string]$Master='tamil-batch001.tex',[int]$Passes=2,[ValidateSet('xelatex','lualatex')][string]$Engine='xelatex',[ValidateRange(1000,60000)][int]$AcquisitionTimeoutMs=60000,[switch]$BibTeX,[string]$ReceiptName='TEX-B001-RECEIPT',[string]$StateDirectory=$PSScriptRoot)
 $ErrorActionPreference='Stop'
 $build=$PSScriptRoot
-$state=$PSScriptRoot
+$state=[IO.Path]::GetFullPath($StateDirectory)
+if(-not (Test-Path -LiteralPath $state -PathType Container)){throw 'State directory does not exist'}
 if ($Master -notmatch '^[a-zA-Z0-9_-]+\.tex$') { throw 'Unsafe master filename' }
 if ($Passes -lt 1 -or $Passes -gt 4) { throw 'Invalid pass count' }
 if ($ReceiptName -notmatch '^[a-zA-Z0-9_-]+$') { throw 'Unsafe receipt name' }

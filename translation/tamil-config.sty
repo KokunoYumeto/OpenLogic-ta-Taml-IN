@@ -1,5 +1,10 @@
 % Tamil noun inflection retains the upstream token key and plural/article flags.
 % Optional case follows the token: !!{element}[um], !!{element}s[pred].
+% Nirmala UI lacks the combining double-acute used by K\H{o}nig.
+% Keep the source accent command and render that glyph with a Latin fallback.
+\newfontfamily\ollatinaccentfont{Times New Roman}
+\let\oloriginaldoubleacute\H
+\RenewDocumentCommand\H{m}{{\ollatinaccentfont\oloriginaldoubleacute{#1}}}
 \settexttoken{element}{உறுப்பு}{உறுப்புகள்}[உறுப்பு][உறுப்புகள்]
 \settexttoken{formula}{வாய்பாடு}{வாய்பாடுகள்}[வாய்பாடு][வாய்பாடுகள்]
 \settexttoken{derivation}{வருவித்தல்}{வருவித்தல்கள்}[வருவித்தல்][வருவித்தல்கள்]

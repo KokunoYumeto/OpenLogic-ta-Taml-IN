@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0048",
       "source_sha256": "35d0a39913340eadcab7fb9d7742b56aef0d0f29868cd65eeca9dc53694e8ac2",
-      "translation_sha256": "125ae258ee6a506c47bfeb4a308897d461fc2f4720e3c502879ae559b8a63b71",
+      "translation_sha256": "c793b875e5c715adbe0499d92fa3ccd4d2cfd2853ac8743240ecac0a78d9198f",
       "source_bytes": 10928,
-      "translation_bytes": 25262,
+      "translation_bytes": 25189,
       "source_coverage_complete": true,
       "segments": 16,
       "math_multiset_parity": false,
@@ -66,6 +66,8 @@
           "expected_extra_math": []
         }
       ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": false,

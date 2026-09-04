@@ -12,6 +12,7 @@
   "translation_coverage": {
     "drafted": 51,
     "textual_invariants_pass": 51,
+    "combined_reader_verified": 51,
     "release_verified": 7,
     "published_sources": 16,
     "total": 722
@@ -27,7 +28,9 @@
   "current_checkpoint": "CHECKPOINT-CURRENT.json",
   "laptop_reconciliation": "LAPTOP-CANON-RECONCILIATION.md",
   "publication_readback": "PUBLICATION-READBACK.json",
-  "pdf_scope": "Visually verified chapter; documented copy-extraction limitations",
+  "pdf_scope": "Exact 51-unit combined reader passed protected build, font, copy/search and all-page visual QA; tagged public release remains the seven-unit Sets reader.",
   "translation_decision_log": "TRANSLATION_DECISIONS.jsonl",
-  "combined_build_attempt": "TEX-SFR-RECEIPT.json"
+  "combined_build_attempt": "TEX-SFR-RECEIPT.json",
+  "combined_build_qa": "TEX-SFR-RECEIPT.json",
+  "combined_render_qa": "SFR-RENDER-QA.json"
 }

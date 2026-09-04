@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-04T20:56:03.735917+00:00",
+  "date_utc": "2026-09-04T22:08:19.810173+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -156,7 +156,7 @@
     {
       "unit_id": "OLP-0034",
       "source_sha256": "0d6d2e3280698668b837cef6dcf3134b86d2a4b48831ae516e6e33e42898c79a",
-      "translation_sha256": "49dd8f3030a1921a36d9b6552b21ecfa671ef3d6f65be5a11f9d07d4233620fa"
+      "translation_sha256": "70c5498c3491c66150026302bd1cf5791d2a50d2177e49581ae675c2afc5df47"
     },
     {
       "unit_id": "OLP-0035",
@@ -186,7 +186,7 @@
     {
       "unit_id": "OLP-0040",
       "source_sha256": "f7717d8394048096cf7a65bc87a1a1ed15861cdfb8c7edb23429d5256d954d11",
-      "translation_sha256": "21f61344c3d62949d9638a76f3c42be950bc009974fea4dcdff96210410ec7b2"
+      "translation_sha256": "52870e87c86afa4b07255a38915a7aaafc2dce57e1d0d8a532ac086ddae129f6"
     },
     {
       "unit_id": "OLP-0041",
@@ -226,7 +226,7 @@
     {
       "unit_id": "OLP-0048",
       "source_sha256": "35d0a39913340eadcab7fb9d7742b56aef0d0f29868cd65eeca9dc53694e8ac2",
-      "translation_sha256": "125ae258ee6a506c47bfeb4a308897d461fc2f4720e3c502879ae559b8a63b71"
+      "translation_sha256": "c793b875e5c715adbe0499d92fa3ccd4d2cfd2853ac8743240ecac0a78d9198f"
     },
     {
       "unit_id": "OLP-0049",
@@ -586,7 +586,7 @@
       "segment_id": "OLP-0034-S03",
       "reverse_paraphrase": "A surjection from the power set of positive integers to binary sequences converts any enumeration of the former into one of the latter.",
       "assessment": "The reduction direction is explicit and supports the contrapositive non-enumerability conclusion.",
-      "translation_segment_sha256": "a41834ac02f9edece95d096f71f250a627626bff4ae05ab9a20e108d2cee5b78",
+      "translation_segment_sha256": "b38b57377efdc260bee37646505278ead5e8cb87da306145411b856acb610415",
       "status": "author-reviewed"
     },
     {
@@ -642,7 +642,7 @@
       "segment_id": "OLP-0040-S04",
       "reverse_paraphrase": "The characteristic binary string of each subset defines a surjection from the power set of naturals to infinite binary strings; an enumeration would therefore transfer across it.",
       "assessment": "The reduction direction, constructed function, and contradiction are preserved.",
-      "translation_segment_sha256": "2175a205608f7cd72eceec0a73ba38dc9751eb69dbf2960bd213fca035b35d30",
+      "translation_segment_sha256": "fce03e4824c988149a1476f8a888aee46c5bc7d4e1b7d4b2587f872d89162533",
       "status": "author-reviewed"
     },
     {
@@ -754,7 +754,7 @@
       "segment_id": "OLP-0048-S07",
       "reverse_paraphrase": "Two Cauchy sequences represent the same real when their pointwise difference tends to zero.",
       "assessment": "The source slip from equivalence classes to equivalence relations is corrected under TA-ARI-003.",
-      "translation_segment_sha256": "ca6c06a599bc04acb3d7fe38936190087824ce56db7a9166db2f2e95c7606ed8",
+      "translation_segment_sha256": "5b19a02005681ce6ecd1e70afc07665dbaa38776640d9362ae3ebc02204a56dd",
       "status": "author-reviewed"
     },
     {
@@ -895,6 +895,11 @@
       "editorial_note": "translation/size-notes.tex"
     },
     {
+      "unit_id": "OLP-0040",
+      "issue": "The primary and alternate reduction exercises share one explicit label in the frozen source. Tamil keeps the primary label and gives the alternate exercise the branch-specific label sfr:siz:red-alt:prob:nat-nat under TA-SIZ-LOCAL-003.",
+      "editorial_note": "translation/size-notes.tex"
+    },
+    {
       "unit_id": "OLP-0051",
       "issue": "Closure lemma uses an undeclared ambient A and requires f:A→A for the displayed closure argument. Tamil makes the endofunction hypothesis explicit under TA-INF-001.",
       "editorial_note": "translation/infinite-notes.tex"
@@ -922,5 +927,5 @@
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; the integer-label changes are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "Final rendered reader and all remaining source units must still be verified."
+  "remaining": "The exact 51-unit reader passed protected build, text extraction, font and all-page visual QA; all remaining source units and the final full-edition reader still require verification."
 }

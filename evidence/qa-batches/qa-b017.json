@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0034",
       "source_sha256": "0d6d2e3280698668b837cef6dcf3134b86d2a4b48831ae516e6e33e42898c79a",
-      "translation_sha256": "49dd8f3030a1921a36d9b6552b21ecfa671ef3d6f65be5a11f9d07d4233620fa",
+      "translation_sha256": "70c5498c3491c66150026302bd1cf5791d2a50d2177e49581ae675c2afc5df47",
       "source_bytes": 5540,
-      "translation_bytes": 12970,
+      "translation_bytes": 12972,
       "source_coverage_complete": true,
       "segments": 10,
       "math_multiset_parity": false,
@@ -86,6 +86,8 @@
           "location_needle": "SOURCE CORRECTION OLSIZ-005"
         }
       ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": false,

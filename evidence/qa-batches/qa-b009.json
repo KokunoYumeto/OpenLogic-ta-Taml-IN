@@ -37,6 +37,8 @@
           "action": "Added nonempty-domain hypothesis to translated theorem and proof; exact general condition and counterexample recorded in adjacent edition note."
         }
       ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,

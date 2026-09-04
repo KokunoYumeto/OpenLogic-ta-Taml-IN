@@ -23,22 +23,72 @@
 \input{../translation/tamil-config.sty}
 \input{../translation/tamil-pdf-math.sty}
 \tagtrue{novice,math,compsci}
-\addto\captionsenglish{\renewcommand{\chaptername}{அத்தியாயம்}}
+\addto\captionsenglish{%
+  \renewcommand{\chaptername}{அத்தியாயம்}%
+  \renewcommand{\partname}{பகுதி}%
+  \renewcommand{\appendixname}{இணைப்பு}%
+  \renewcommand{\tablename}{அட்டவணை}%
+}
+\setlocalecaption{english}{photocredits}{படங்களுக்கான நன்றியுரை}
+\setlocalecaption{english}{history}{வரலாற்றுக் குறிப்புகள்}
+\setlocalecaption{english}{reading}{மேலும் படிக்க}
+\setlocalecaption{english}{appendix}{இணைப்பு}
+\setlocalecaption{english}{appendices}{இணைப்புகள்}
 \setlocalecaption{english}{definition}{வரையறை}
 \setlocalecaption{english}{example}{எடுத்துக்காட்டு}
+\setlocalecaption{english}{lemma}{துணைத்தேற்றம்}
 \setlocalecaption{english}{proposition}{கூற்று}
+\setlocalecaption{english}{corollary}{தொடர்விளைவு}
 \setlocalecaption{english}{problem}{பயிற்சி}
+\setlocalecaption{english}{problems}{பயிற்சிகள்}
 \setlocalecaption{english}{theorem}{தேற்றம்}
+\setlocalecaption{english}{remark}{குறிப்பு}
+\setlocalecaption{english}{axiom}{அடிக்கோள்}
+\setlocalecaption{english}{note}{குறிப்பு}
+\setlocalecaption{english}{case}{நிலை}
+\setlocalecaption{english}{convention}{மரபு}
 \addto\captionsenglish{\renewcommand{\proofname}{நிறுவல்}}
 \addto\captionsenglish{\renewcommand{\figurename}{படம்}}
+\crefname{page}{பக்கம்}{பக்கங்கள்}
+\Crefname{page}{பக்கம்}{பக்கங்கள்}
+\crefname{part}{பகுதி}{பகுதிகள்}
+\Crefname{part}{பகுதி}{பகுதிகள்}
+\crefname{chapter}{அத்தியாயம்}{அத்தியாயங்கள்}
+\Crefname{chapter}{அத்தியாயம்}{அத்தியாயங்கள்}
 \crefname{section}{பிரிவு}{பிரிவுகள்}
 \Crefname{section}{பிரிவு}{பிரிவுகள்}
+\crefname{subsection}{பிரிவு}{பிரிவுகள்}
+\Crefname{subsection}{பிரிவு}{பிரிவுகள்}
 \crefname{figure}{படம்}{படங்கள்}
 \Crefname{figure}{படம்}{படங்கள்}
+\crefname{table}{அட்டவணை}{அட்டவணைகள்}
+\Crefname{table}{அட்டவணை}{அட்டவணைகள்}
+\crefname{equation}{சமன்பாடு}{சமன்பாடுகள்}
+\Crefname{equation}{சமன்பாடு}{சமன்பாடுகள்}
 \crefname{defn}{வரையறை}{வரையறைகள்}
 \Crefname{defn}{வரையறை}{வரையறைகள்}
 \crefname{thm}{தேற்றம்}{தேற்றங்கள்}
 \Crefname{thm}{தேற்றம்}{தேற்றங்கள்}
+\crefname{ex}{எடுத்துக்காட்டு}{எடுத்துக்காட்டுகள்}
+\Crefname{ex}{எடுத்துக்காட்டு}{எடுத்துக்காட்டுகள்}
+\crefname{lem}{துணைத்தேற்றம்}{துணைத்தேற்றங்கள்}
+\Crefname{lem}{துணைத்தேற்றம்}{துணைத்தேற்றங்கள்}
+\crefname{prop}{கூற்று}{கூற்றுகள்}
+\Crefname{prop}{கூற்று}{கூற்றுகள்}
+\crefname{prob}{பயிற்சி}{பயிற்சிகள்}
+\Crefname{prob}{பயிற்சி}{பயிற்சிகள்}
+\crefname{rem}{குறிப்பு}{குறிப்புகள்}
+\Crefname{rem}{குறிப்பு}{குறிப்புகள்}
+\crefname{cor}{தொடர்விளைவு}{தொடர்விளைவுகள்}
+\Crefname{cor}{தொடர்விளைவு}{தொடர்விளைவுகள்}
+\crefname{axiom}{அடிக்கோள்}{அடிக்கோள்கள்}
+\Crefname{axiom}{அடிக்கோள்}{அடிக்கோள்கள்}
+\crefname{note}{குறிப்பு}{குறிப்புகள்}
+\Crefname{note}{குறிப்பு}{குறிப்புகள்}
+\crefname{case}{நிலை}{நிலைகள்}
+\Crefname{case}{நிலை}{நிலைகள்}
+\crefname{conv}{மரபு}{மரபுகள்}
+\Crefname{conv}{மரபு}{மரபுகள்}
 \AtBeginEnvironment{align*}{\fontsize{9.5}{12}\selectfont}
 \hypersetup{pdftitle={OpenLogic: Tamil sets, relations, functions, size, number-system construction and infinite sets},pdfauthor={OpenLogic Tamil translation programme},pdfsubject={Machine translation; OLP-0004 through OLP-0054; 51 of 722 source units}}
 \addto\captionsenglish{\renewcommand{\contentsname}{பொருளடக்கம்}\renewcommand{\bibname}{மேற்கோள் நூல்}}
@@ -78,6 +128,9 @@
 \input{../translation/arithmetization-notes.tex}
 \subfile{../translation/content/sets-functions-relations/infinite/infinite.tex}
 \input{../translation/infinite-notes.tex}
+% Frege1884's bibliography note cites this translation; BibTeX does not
+% discover citations emitted only from a generated .bbl.
+\nocite{Frege1953}
 \bibliographystyle{../upstream/bib/natbib-oup}
 \bibliography{../upstream/bib/open-logic}
 \end{document}

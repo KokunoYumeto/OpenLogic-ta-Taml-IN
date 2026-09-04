@@ -15,8 +15,9 @@ The current 51-unit checkpoint is bound by:
 - `source-corrections.json`: the canonical source-error/correction ledger, including shared `OLSIZ-001` through `OLSIZ-010`;
 - `translation-decisions.jsonl`: terminology, semantic and source-correction decisions with review anchors;
 - `qa-batches/`: all 36 current deterministic textual-QA receipts;
-- `checkpoint-current.json`, `qa-current.json`, and `semantic-review-current.json`: the bounded 51/722 status and semantic samples.
+- `checkpoint-current.json`, `qa-current.json`, and `semantic-review-current.json`: the bounded 51/722 status and semantic samples;
+- `tex-sfr-receipt.json` and `sfr-render-qa.json`: the exact guarded three-pass/BibTeX build receipt, copy/search and embedded-font checks, and visual inspection record for all 99 pages of the 51-unit reader.
 - `manager-canon-visual-spotcheck.json`: an independent three-source visual check that the cited printed terminology is actually present on the hashed canon renders.
 - `shared-source-audit-olsiz-011-retracted.json` and `shared-source-audit-olsiz-011-retraction.json`: the explicit tombstone and correction for a manager false positive. Exact byte inspection showed a valid three-backslash row-break-plus-`hline` token; no source correction was applied. They are retained so downstream editions cannot silently inherit the withdrawn claim.
 
-Canon originals are not redistributed here where their reuse license is unestablished. Their public URLs, exact local-byte hashes, locators, rendered-page hashes and evidence limitations remain in the ledgers so the consultation can be independently reconstructed. The public tagged reader still covers only the seven-unit Sets chapter; this evidence does not mislabel the wider source checkpoint as a complete edition.
+Canon originals are not redistributed here where their reuse license is unestablished. Their public URLs, exact local-byte hashes, locators, rendered-page hashes and evidence limitations remain in the ledgers so the consultation can be independently reconstructed. The earlier tagged reader covers seven Sets units; the newer 51-unit reader is explicitly an interim edition and is not described as the complete 722-unit edition.

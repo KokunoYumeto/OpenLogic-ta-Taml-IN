@@ -69,6 +69,8 @@
           "location_needle": "ஒவ்வொரு $1$ ஐயும் $0$ ஆகவும்"
         }
       ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
