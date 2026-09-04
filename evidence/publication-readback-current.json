@@ -1,57 +1,85 @@
 {
-  "schema": "openlogic-tamil-publication-readback/2",
+  "schema": "openlogic-tamil-publication-readback/3",
   "anonymous": true,
   "authorization_header_sent": false,
   "repository_public": true,
   "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
-  "commit": "efa6b7982b5a60c83dab0d37359f8f43a82b99c1",
-  "release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.0-sets-functions-relations",
-  "release_api_http_status": 200,
-  "release_api_final_url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tags/v0.2.0-sets-functions-relations",
+  "commit": "8a7d5ff8f78c75a41c9e1d58e8fc49be3ce34b2d",
+  "tag_ref_commit": "8a7d5ff8f78c75a41c9e1d58e8fc49be3ce34b2d",
+  "release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.1-sets-functions-relations",
+  "release_page_http_status": 200,
+  "release_page_final_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.1-sets-functions-relations",
+  "expanded_assets_http_status": 200,
+  "expanded_assets_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/expanded_assets/v0.2.1-sets-functions-relations",
   "assets": [
     {
-      "filename": "openlogic-ta-Taml-IN-v0.2.0-sets-functions-relations-source.zip",
-      "bytes": 3216010,
-      "sha256": "27724c89751c2c6e87141b5ba07203784aa5c87c88bfd8e25ede5b0fe942ec26",
+      "filename": "openlogic-ta-Taml-IN-v0.2.1-sets-functions-relations-source.zip",
+      "bytes": 3225898,
+      "sha256": "ce4f467363442aed05dac82948a21b3dee9c46710307dd7df5346ca6e6b9c162",
       "http_status": 200,
-      "download_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v0.2.0-sets-functions-relations/openlogic-ta-Taml-IN-v0.2.0-sets-functions-relations-source.zip",
+      "download_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v0.2.1-sets-functions-relations/openlogic-ta-Taml-IN-v0.2.1-sets-functions-relations-source.zip",
       "final_url_host": "release-assets.githubusercontent.com"
     },
     {
       "filename": "sets-functions-relations-ta-Taml-IN.pdf",
-      "bytes": 810148,
-      "sha256": "a3dec2a9cd6be53511dbd6d1fff4956d70f5454762f3897292e65b16e632a86b",
+      "bytes": 810122,
+      "sha256": "e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83",
       "http_status": 200,
-      "download_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v0.2.0-sets-functions-relations/sets-functions-relations-ta-Taml-IN.pdf",
+      "download_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v0.2.1-sets-functions-relations/sets-functions-relations-ta-Taml-IN.pdf",
       "final_url_host": "release-assets.githubusercontent.com"
     }
   ],
   "anonymous_repository_archive": {
     "http_status": 200,
-    "final_url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/efa6b7982b5a60c83dab0d37359f8f43a82b99c1",
-    "bytes": 3385228,
-    "sha256": "be20ab57b589412e1747eb8c9a23ff1928fc5a63a562e94cef5942fcd5bc0355",
-    "verified_files": 924,
-    "candidate_bytes": 186119,
-    "candidate_sha256": "15e1c6304fca539a98a150177ff28a57363cae478d812727722ca3e657ed3f54"
+    "final_url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/8a7d5ff8f78c75a41c9e1d58e8fc49be3ce34b2d",
+    "bytes": 3395542,
+    "sha256": "7a5e36aa026d6f952116f6bccf7d021002658f6601f68ef41ef05f0c0985d037",
+    "verified_files": 927,
+    "candidate_bytes": 182255,
+    "candidate_sha256": "371502eed98cac4811b216641405aebb4e49145b8d4b405220b2741685fb313d"
   },
-  "prior_release_unchanged": {
-    "tag": "v0.1.0-sets",
-    "assets": [
-      {
-        "filename": "openlogic-ta-Taml-IN-v0.1.0-sets-source.zip",
-        "bytes": 2127666,
-        "sha256": "7d590863652fd14e9541b62be573463b017153d2336c1fc8275fddb49ae780ef",
-        "http_status": 200
-      },
-      {
-        "filename": "sets-ta-Taml-IN.pdf",
-        "bytes": 165170,
-        "sha256": "ecebe31c960e8ebca7aab97d6f6d6ee86cbca7e991d5a647f586a873cf4b8e03",
-        "http_status": 200
-      }
-    ]
-  },
+  "prior_releases_unchanged": [
+    {
+      "tag": "v0.1.0-sets",
+      "commit": "0cd67f05f2ae68538525c9ea1d7b81a7b9fc052f",
+      "expanded_assets_http_status": 200,
+      "expanded_assets_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/expanded_assets/v0.1.0-sets",
+      "assets": [
+        {
+          "filename": "openlogic-ta-Taml-IN-v0.1.0-sets-source.zip",
+          "bytes": 2127666,
+          "sha256": "7d590863652fd14e9541b62be573463b017153d2336c1fc8275fddb49ae780ef",
+          "http_status": 200
+        },
+        {
+          "filename": "sets-ta-Taml-IN.pdf",
+          "bytes": 165170,
+          "sha256": "ecebe31c960e8ebca7aab97d6f6d6ee86cbca7e991d5a647f586a873cf4b8e03",
+          "http_status": 200
+        }
+      ]
+    },
+    {
+      "tag": "v0.2.0-sets-functions-relations",
+      "commit": "efa6b7982b5a60c83dab0d37359f8f43a82b99c1",
+      "expanded_assets_http_status": 200,
+      "expanded_assets_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/expanded_assets/v0.2.0-sets-functions-relations",
+      "assets": [
+        {
+          "filename": "openlogic-ta-Taml-IN-v0.2.0-sets-functions-relations-source.zip",
+          "bytes": 3216010,
+          "sha256": "27724c89751c2c6e87141b5ba07203784aa5c87c88bfd8e25ede5b0fe942ec26",
+          "http_status": 200
+        },
+        {
+          "filename": "sets-functions-relations-ta-Taml-IN.pdf",
+          "bytes": 810148,
+          "sha256": "a3dec2a9cd6be53511dbd6d1fff4956d70f5454762f3897292e65b16e632a86b",
+          "http_status": 200
+        }
+      ]
+    }
+  ],
   "scope": {
     "drafted_units": 51,
     "visually_verified_reader_units": 51,

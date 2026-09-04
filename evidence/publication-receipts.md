@@ -1,6 +1,15 @@
 # Public artifact receipts
 
-Current public release: https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.0-sets-functions-relations . This is a verified 51-unit interim edition, not the complete 722-unit edition. Earlier entries below are historical.
+Current public release: https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.1-sets-functions-relations . This is a verified 51-unit interim edition, not the complete 722-unit edition. Earlier entries below are historical.
+
+2026-09-04 23:06 UTC patch publication: public commit 8a7d5ff8f78c75a41c9e1d58e8fc49be3ce34b2d and release v0.2.1-sets-functions-relations. Five references to chapters outside this 99-page reader now render descriptive Tamil fallbacks while retaining their original live-reference branches. PUBLICATION-READBACK-SFR-PATCH.json is authoritative, 3923 bytes, SHA256 aaac9730075fe36a57473ff9b6489027e281fe83463a747d44beba34b4acfe90.
+
+- sets-functions-relations-ta-Taml-IN.pdf: 810122 bytes, SHA256 e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83; anonymous HTTP 200.
+- openlogic-ta-Taml-IN-v0.2.1-sets-functions-relations-source.zip: 3225898 bytes, SHA256 ce4f467363442aed05dac82948a21b3dee9c46710307dd7df5346ca6e6b9c162; anonymous HTTP 200; 927 unique safe entries matched by filename, byte count and SHA256.
+- Anonymous archive of the exact release commit: 3395542 bytes, SHA256 7a5e36aa026d6f952116f6bccf7d021002658f6601f68ef41ef05f0c0985d037; all 927 committed files matched the candidate inventory.
+- The four assets from v0.1.0-sets and v0.2.0-sets-functions-relations were downloaded again without authorization and remain byte-for-byte unchanged.
+
+The readback used public release pages, expanded asset listings, direct asset URLs, a codeload archive and credential-disabled tag queries. It sent no authorization header. No Figshare record was created.
 
 2026-09-04 22:14 UTC publication: public commit efa6b7982b5a60c83dab0d37359f8f43a82b99c1 and release v0.2.0-sets-functions-relations. The reader covers 51 units and six complete chapters in 99 pages; 456 aligned source/translation segments are represented. PUBLICATION-READBACK-SFR.json is authoritative, 2671 bytes, SHA256 25053cc497d31b19ce691012788b6920e9d0e1a59dae51efc873ade194032567.
 
