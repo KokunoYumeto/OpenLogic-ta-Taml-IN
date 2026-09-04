@@ -4,16 +4,16 @@
     {
       "unit_id": "OLP-0052",
       "source_sha256": "ea5f6c80d70abca6f5598de3e221c2f60524c40cbf533ae8a5336d5bb7186537",
-      "translation_sha256": "636496512f70e595add569d0d21a7c9035bbc82d24142fa66671e613f30eb4b1",
+      "translation_sha256": "c590efcf2c4d5d85dcacc9a42dd10c63c27b0deed5a758510cafff107baf44ba",
       "source_bytes": 3486,
-      "translation_bytes": 7242,
+      "translation_bytes": 7670,
       "source_coverage_complete": true,
       "segments": 7,
       "math_multiset_parity": true,
       "missing_math": [],
       "extra_math": [],
       "token_key_parity": true,
-      "identifier_parity": true,
+      "identifier_parity": false,
       "environment_parity": true,
       "unicode_nfc": true,
       "replacement_char_absent": true,
@@ -28,14 +28,49 @@
         "sth"
       ],
       "visual_review_complete": false,
-      "audited_source_corrections": [],
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-READER-REF-003",
+          "unit_id": "OLP-0052",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped the absent set-theory part and ordinal-arithmetic chapter references in oliflabeldef with descriptive Tamil fallbacks.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[sth][][]{part}",
+              "to": "\\oliflabeldef{sth:::part}{\\olref[sth][][]{part}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[sth][ord-arithmetic][]{chap}",
+              "to": "\\oliflabeldef{sth:ord-arithmetic::chap}{\\olref[sth][ord-arithmetic][]{chap}}{}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The cumulative 51-unit reader omits both referenced set-theory destinations, producing two literal question-mark pairs.",
+          "chosen_treatment": "கணக்கோட்பாடு பற்றிய பின்னைய பகுதி மற்றும் வரிசை எண்கணிதம் பற்றிய பின்னைய அத்தியாயம் எனத் துல்லியமான விளக்கத் தொடர்கள் தரப்படுகின்றன.",
+          "alternatives_considered": "Literal question marks; deleting the references; inventing unavailable numbers.",
+          "rationale": "The conditional branches retain the frozen reference identities and give the present reader meaningful prose without fictitious numbering.",
+          "precise_review_question": "Do the two fallback descriptions identify the future destinations precisely enough for current readers?",
+          "location_needle": "READER FALLBACK TA-READER-REF-003"
+        }
+      ],
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
-      "command_multiset_parity": true,
+      "command_multiset_parity": false,
       "missing_commands": [],
-      "extra_commands": [],
+      "extra_commands": [
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
       "command_parity_or_audited_correction": true
     }
   ],

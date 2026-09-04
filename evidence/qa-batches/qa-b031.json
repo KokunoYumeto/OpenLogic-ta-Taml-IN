@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0048",
       "source_sha256": "35d0a39913340eadcab7fb9d7742b56aef0d0f29868cd65eeca9dc53694e8ac2",
-      "translation_sha256": "c793b875e5c715adbe0499d92fa3ccd4d2cfd2853ac8743240ecac0a78d9198f",
+      "translation_sha256": "553ac5511a18533ae36b923779b55d929df20f8b00332099fe2c66eafee6b439",
       "source_bytes": 10928,
-      "translation_bytes": 25189,
+      "translation_bytes": 25561,
       "source_coverage_complete": true,
       "segments": 16,
       "math_multiset_parity": false,
@@ -17,7 +17,7 @@
         "$\\equivrep{f}{}\\neq0_\\Real$"
       ],
       "token_key_parity": true,
-      "identifier_parity": true,
+      "identifier_parity": false,
       "environment_parity": true,
       "unicode_nfc": true,
       "replacement_char_absent": true,
@@ -36,13 +36,23 @@
       "audited_source_corrections": [
         {
           "audit_id": "TA-ARI-003",
+          "unit_id": "OLP-0048",
           "kind": "equivalence-relations-instead-of-classes",
           "action": "Corrected identification with equivalence relations to identification with equivalence classes, matching the immediately following construction.",
           "expected_missing_math": [],
-          "expected_extra_math": []
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Cauchy construction says to identify reals with equivalence relations.",
+          "chosen_treatment": "தமிழ் உடல் சமான வகுப்புகளுடன் அடையாளப்படுத்துகிறது.",
+          "alternatives_considered": "சமானத் தொடர்புகளுடன் என வைத்தல்",
+          "rationale": "The surrounding construction takes equivalence classes under Realequiv as the real numbers.",
+          "precise_review_question": "Is equivalence classes the unambiguous intended object here?",
+          "location_needle": "சமான வகுப்புகளுடன் அடையாளப்படுத்த வேண்டும்"
         },
         {
           "audit_id": "TA-ARI-004",
+          "unit_id": "OLP-0048",
           "kind": "wrong-number-system-zero",
           "action": "Corrected 0_Rat to 0_Real in the positivity definition for a real equivalence class.",
           "expected_missing_math": [
@@ -56,14 +66,55 @@
           ],
           "expected_extra_commands": [
             "\\Real"
-          ]
+          ],
+          "source_issue_or_choice": "Positivity definition compares a real equivalence class with rational zero.",
+          "chosen_treatment": "தமிழ் உடல் 0_Real எனத் திருத்துகிறது.",
+          "alternatives_considered": "0_Rat ஐ வைத்தல்",
+          "rationale": "equivrep{f} is a real quotient class and the order being defined is the real order.",
+          "precise_review_question": "Is changing only the subscript to Real sufficient and type-correct?",
+          "location_needle": "$\\equivrep{f}{} \\neq 0_\\Real$"
         },
         {
           "audit_id": "TA-ARI-005",
+          "unit_id": "OLP-0048",
           "kind": "raw-sequences-instead-of-quotient-classes",
           "action": "Clarified in the ordered-field theorem and exercise that the equivalence classes of Cauchy sequences, rather than raw sequences with ordinary equality, constitute the field.",
           "expected_missing_math": [],
-          "expected_extra_math": []
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Field theorem and exercise name raw Cauchy sequences rather than their quotient classes.",
+          "chosen_treatment": "தமிழ் தேற்றமும் பயிற்சியும் கோஷி தொடர்களின் சமான வகுப்புகள் எனத் தெளிவாக்குகின்றன.",
+          "alternatives_considered": "மூலச் சுருக்கத்தை வைத்தல்",
+          "rationale": "Raw sequences with ordinary equality do not form the constructed real field; the preceding definition takes Realequiv classes.",
+          "precise_review_question": "Should the theorem statement also name the quotient relation explicitly?",
+          "location_needle": "கோஷி தொடர்களின் சமான வகுப்புகளின் கணம்"
+        },
+        {
+          "audit_id": "TA-READER-REF-002",
+          "unit_id": "OLP-0048",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped both absent limits-section references in oliflabeldef with contextual Tamil fallbacks; each live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[his][set][limits]{sec}",
+              "to": "\\oliflabeldef{his:set:limits:sec}{\\olref[his][set][limits]{sec}}{}",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "The cumulative 51-unit reader omits the target limits section, so two frozen cross-references rendered as literal question-mark pairs.",
+          "chosen_treatment": "முதன்மை உரையிலும் அடிக்குறிப்பிலும் இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் எல்லைக் கருத்தைச் சூழலுடன் விளக்கும் தொடர்.",
+          "alternatives_considered": "Literal question marks; deleting both references; permanently replacing the live links.",
+          "rationale": "The two conditional fallbacks preserve the conceptual comparison and regain live links when the history material is included.",
+          "precise_review_question": "Do both fallbacks preserve the distinction between the earlier general limit discussion and the present Cauchy construction?",
+          "location_needle": "READER FALLBACK TA-READER-REF-002"
         }
       ],
       "identifier_replacements_valid": true,
@@ -75,6 +126,8 @@
         "\\Rat"
       ],
       "extra_commands": [
+        "\\oliflabeldef",
+        "\\oliflabeldef",
         "\\Real"
       ],
       "command_parity_or_audited_correction": true

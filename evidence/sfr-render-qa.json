@@ -1,16 +1,17 @@
 {
-  "schema": "openlogic-tamil-reader-render-qa/1",
-  "checked_utc": "2026-09-04T21:51:12.9601588Z",
+  "schema": "openlogic-tamil-reader-render-qa/2",
+  "checked_utc": "2026-09-04T22:52:07.447573+00:00",
   "scope": {
     "completed_units": 51,
     "first_unit": "OLP-0004",
     "last_unit": "OLP-0054",
-    "total_frozen_units": 722
+    "total_frozen_units": 722,
+    "patch_purpose": "Conditional Tamil fallbacks for five out-of-scope cross-references"
   },
   "pdf": {
-    "path": "build/tamil-sfr.pdf",
-    "bytes": 810148,
-    "sha256": "a3dec2a9cd6be53511dbd6d1fff4956d70f5454762f3897292e65b16e632a86b",
+    "path": "readers/sets-functions-relations-ta-Taml-IN.pdf",
+    "bytes": 810122,
+    "sha256": "e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83",
     "pages": 99,
     "page_size": "A4",
     "encrypted": false,
@@ -21,90 +22,79 @@
     "master_bytes": 9455,
     "master_sha256": "e6066cafde3ffbd8952fb8fa07bc4a1a0da6fe2a59ca217cd5fc24282c54249f",
     "build_script_path": "build/build-tamil.ps1",
-    "build_script_bytes": 7342,
     "build_script_sha256": "ea26c1cf97f2b881c679e2fff6d7e719b5f22e66aaecab3b8f8a628628adcdeb",
     "config_path": "translation/tamil-config.sty",
-    "config_bytes": 4130,
     "config_sha256": "e886f4ae7576e82782c226d5065294cb36af1b6cae8563f5e15f0456d32a7024",
-    "receipt_path": "TEX-SFR-RECEIPT.json",
-    "receipt_bytes": 2790,
-    "receipt_sha256": "0d8da3b49c2525be20400fccb8cc0ff3e5902de50d9d9dfe6f809a7d646a5624",
+    "receipt_path": "TEX-SFR-PATCH-RECEIPT.json",
+    "receipt_sha256": "06f084e3e806f5a9ff5335c5b7a5cc7eb05eb02ec351050f8f208173bff28bf1",
     "mutex": "Global\\InterlanguageTeXSlotV1",
     "mutex_acquired": true,
     "abandoned_mutex": false,
     "engine": "xelatex",
     "passes": 3,
-    "pass_exit_codes": [0, 0, 0],
+    "pass_exit_codes": [
+      0,
+      0,
+      0
+    ],
     "bibtex_exit_code": 0,
     "missing_character_warnings": 0,
     "overfull_box_warnings": 0,
     "multiply_defined_labels": 0,
-    "undefined_citations": 0,
-    "remaining_out_of_scope_reference_occurrences": 5,
-    "remaining_out_of_scope_reference_ids": [
-      "his:set:mythology:sec",
-      "his:set:limits:sec",
-      "sth:::part",
-      "sth:ord-arithmetic::chap"
-    ],
+    "undefined_references": 0,
     "inherited_file_request_warnings_per_pass": 2,
     "inherited_bibtex_metadata_warnings": [
-      "Frege1953 has both author and editor fields",
-      "EwaldSieg2013 has both author and editor fields",
-      "OConnorRobertson:RN has an empty journal field"
+      "Warning--can't use both author and editor fields in Frege1953\r",
+      "Warning--can't use both author and editor fields in EwaldSieg2013\r",
+      "Warning--empty journal in OConnorRobertson:RN\r"
     ]
   },
   "text_extraction": {
-    "path": "tamil-sfr-a3dec2a9.txt",
-    "bytes": 514611,
-    "sha256": "6660baeb2a179157c67618d57afdf4b1d2870b51b33a61ea73cdb88d03bb2798",
+    "path": "tamil-sfr-e845fd5f.txt",
+    "bytes": 515023,
+    "sha256": "62758ff267c661692c88b6f89fb742c6c4b5d74e6b737d078e9329d4fe2258f1",
     "replacement_character_count": 0,
-    "english_numbered_environment_or_cross_reference_labels": 0,
-    "required_searches": {
-      "அத்தியாயம் 4": true,
-      "அத்தியாயம் 5": true,
-      "தொடர்விளைவு 4.11": true,
-      "துணைத்தேற்றம் 6.3": true,
-      "பயிற்சி 4.6": true,
-      "கூற்று 2.25": true,
-      "Kőnig": true,
-      "டெடெகிண்ட்": true,
-      "f (7)": true,
-      "−3": true
-    },
-    "corrected_f_7_table_value_searchable": true
+    "literal_question_pair_count": 0,
+    "required_fallback_searches": {
+      "கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவின் உள்ளடக்கத்தை": true,
+      "எல்லை என்ற கருத்தை முன்பே விவாதித்துள்ளோம்": true,
+      "பின்னைய எல்லைகள் பிரிவில் வரும்": true,
+      "கணக்கோட்பாடு பற்றிய பின்னைய பகுதியில்": true,
+      "வரிசை எண்கணிதம் பற்றிய பின்னைய அத்தியாயத்திற்குப் பிறகு": true
+    }
   },
   "fonts": {
     "font_rows": 28,
     "all_embedded": true,
-    "primary_tamil_font": "Nirmala UI",
-    "latin_accent_fallback": "Times New Roman",
-    "unicode_mappings_present_for_tamil_fonts": true
+    "pdffonts_output_sha256": "aac44409880f6f861d7065f9427d65f2ff0b45b512428d922c2d189c5b728fe7"
   },
   "render": {
-    "directory": "renders-sfr-a3dec2a9",
+    "directory": "renders-sfr-e845fd5f",
     "resolution_dpi": 110,
     "page_png_count": 99,
-    "page_png_total_bytes": 30709742,
+    "page_png_total_bytes": 24361913,
     "contact_sheet_count": 11,
-    "contact_sheet_total_bytes": 36978983,
+    "contact_sheet_total_bytes": 30438287,
     "contact_sheet_layout": "3x3",
     "visually_inspected_page_range": "1-99",
-    "focused_label_pages": [47, 48, 50, 92, 93, 97, 98]
+    "focused_fallback_pages": [
+      76,
+      86,
+      94
+    ]
   },
   "visual_findings": {
+    "visual_review_complete": true,
     "clipped_text": 0,
     "overlapping_text": 0,
     "unreadable_glyphs": 0,
     "broken_tables": 0,
     "broken_figures": 0,
     "margin_overflows": 0,
-    "localized_labels_clipped": 0,
+    "fallbacks_legible": true,
     "notes": [
-      "All 99 pages were inspected through 11 contact sheets generated from this exact PDF.",
-      "Pages containing the longest newly localized labels were also inspected individually at original render detail.",
-      "Page 42 has intentional white space after a short continuation and no clipped or missing content.",
-      "Dense source-correction notes on pages 70-71 remain within the page margins and are legible."
+      "All pages were inspected through generated 3x3 contact sheets from this exact PDF.",
+      "The three pages containing the five repaired references were also inspected individually at original render detail."
     ]
   },
   "result": "pass"

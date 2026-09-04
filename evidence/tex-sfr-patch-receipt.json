@@ -1,0 +1,46 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-sfr.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-04T22:48:33.5450598Z",
+  "passes": [
+    {
+      "exit_code": 0,
+      "pass": 1,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "pass": 2,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "pass": 3,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "bibliography": {
+    "exit_code": 0,
+    "issues": [
+      "Warning--can't use both author and editor fields in Frege1953\r",
+      "Warning--can't use both author and editor fields in EwaldSieg2013\r",
+      "Warning--empty journal in OConnorRobertson:RN\r"
+    ],
+    "engine": "bibtex"
+  },
+  "finished_utc": "2026-09-04T22:49:09.7756429Z"
+}

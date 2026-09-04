@@ -15,6 +15,128 @@
   ],
   "records": [
     {
+      "audit_id": "TA-ARI-003",
+      "unit_id": "OLP-0048",
+      "kind": "equivalence-relations-instead-of-classes",
+      "action": "Corrected identification with equivalence relations to identification with equivalence classes, matching the immediately following construction.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "Cauchy construction says to identify reals with equivalence relations.",
+      "chosen_treatment": "தமிழ் உடல் சமான வகுப்புகளுடன் அடையாளப்படுத்துகிறது.",
+      "alternatives_considered": "சமானத் தொடர்புகளுடன் என வைத்தல்",
+      "rationale": "The surrounding construction takes equivalence classes under Realequiv as the real numbers.",
+      "precise_review_question": "Is equivalence classes the unambiguous intended object here?",
+      "location_needle": "சமான வகுப்புகளுடன் அடையாளப்படுத்த வேண்டும்"
+    },
+    {
+      "audit_id": "TA-ARI-004",
+      "unit_id": "OLP-0048",
+      "kind": "wrong-number-system-zero",
+      "action": "Corrected 0_Rat to 0_Real in the positivity definition for a real equivalence class.",
+      "expected_missing_math": ["$\\equivrep{f}{}\\neq0_\\Rat$"],
+      "expected_extra_math": ["$\\equivrep{f}{}\\neq0_\\Real$"],
+      "expected_missing_commands": ["\\Rat"],
+      "expected_extra_commands": ["\\Real"],
+      "source_issue_or_choice": "Positivity definition compares a real equivalence class with rational zero.",
+      "chosen_treatment": "தமிழ் உடல் 0_Real எனத் திருத்துகிறது.",
+      "alternatives_considered": "0_Rat ஐ வைத்தல்",
+      "rationale": "equivrep{f} is a real quotient class and the order being defined is the real order.",
+      "precise_review_question": "Is changing only the subscript to Real sufficient and type-correct?",
+      "location_needle": "$\\equivrep{f}{} \\neq 0_\\Real$"
+    },
+    {
+      "audit_id": "TA-ARI-005",
+      "unit_id": "OLP-0048",
+      "kind": "raw-sequences-instead-of-quotient-classes",
+      "action": "Clarified in the ordered-field theorem and exercise that the equivalence classes of Cauchy sequences, rather than raw sequences with ordinary equality, constitute the field.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "Field theorem and exercise name raw Cauchy sequences rather than their quotient classes.",
+      "chosen_treatment": "தமிழ் தேற்றமும் பயிற்சியும் கோஷி தொடர்களின் சமான வகுப்புகள் எனத் தெளிவாக்குகின்றன.",
+      "alternatives_considered": "மூலச் சுருக்கத்தை வைத்தல்",
+      "rationale": "Raw sequences with ordinary equality do not form the constructed real field; the preceding definition takes Realequiv classes.",
+      "precise_review_question": "Should the theorem statement also name the quotient relation explicitly?",
+      "location_needle": "கோஷி தொடர்களின் சமான வகுப்புகளின் கணம்"
+    },
+    {
+      "audit_id": "TA-READER-REF-001",
+      "unit_id": "OLP-0044",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped the absent history-of-set-theory reference in oliflabeldef with a descriptive Tamil fallback; the live reference remains the preferred branch when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[his][set][mythology]{sec}",
+          "to": "\\oliflabeldef{his:set:mythology:sec}{\\olref[his][set][mythology]{sec}}{}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The cumulative 51-unit reader omits the target history chapter, so the frozen cross-reference rendered as a literal question-mark pair.",
+      "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவு என்ற விளக்கத் தொடர்.",
+      "alternatives_considered": "Literal question marks; deleting the reference; permanently replacing the live link.",
+      "rationale": "The conditional fallback makes the current tranche intelligible while automatically restoring the live reference in a later complete reader.",
+      "precise_review_question": "Does the fallback identify the omitted topic without asserting a section number that is unavailable in this reader?",
+      "location_needle": "READER FALLBACK TA-READER-REF-001"
+    },
+    {
+      "audit_id": "TA-READER-REF-002",
+      "unit_id": "OLP-0048",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped both absent limits-section references in oliflabeldef with contextual Tamil fallbacks; each live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[his][set][limits]{sec}",
+          "to": "\\oliflabeldef{his:set:limits:sec}{\\olref[his][set][limits]{sec}}{}",
+          "count": 2
+        }
+      ],
+      "source_issue_or_choice": "The cumulative 51-unit reader omits the target limits section, so two frozen cross-references rendered as literal question-mark pairs.",
+      "chosen_treatment": "முதன்மை உரையிலும் அடிக்குறிப்பிலும் இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் எல்லைக் கருத்தைச் சூழலுடன் விளக்கும் தொடர்.",
+      "alternatives_considered": "Literal question marks; deleting both references; permanently replacing the live links.",
+      "rationale": "The two conditional fallbacks preserve the conceptual comparison and regain live links when the history material is included.",
+      "precise_review_question": "Do both fallbacks preserve the distinction between the earlier general limit discussion and the present Cauchy construction?",
+      "location_needle": "READER FALLBACK TA-READER-REF-002"
+    },
+    {
+      "audit_id": "TA-READER-REF-003",
+      "unit_id": "OLP-0052",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped the absent set-theory part and ordinal-arithmetic chapter references in oliflabeldef with descriptive Tamil fallbacks.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[sth][][]{part}",
+          "to": "\\oliflabeldef{sth:::part}{\\olref[sth][][]{part}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[sth][ord-arithmetic][]{chap}",
+          "to": "\\oliflabeldef{sth:ord-arithmetic::chap}{\\olref[sth][ord-arithmetic][]{chap}}{}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The cumulative 51-unit reader omits both referenced set-theory destinations, producing two literal question-mark pairs.",
+      "chosen_treatment": "கணக்கோட்பாடு பற்றிய பின்னைய பகுதி மற்றும் வரிசை எண்கணிதம் பற்றிய பின்னைய அத்தியாயம் எனத் துல்லியமான விளக்கத் தொடர்கள் தரப்படுகின்றன.",
+      "alternatives_considered": "Literal question marks; deleting the references; inventing unavailable numbers.",
+      "rationale": "The conditional branches retain the frozen reference identities and give the present reader meaningful prose without fictitious numbering.",
+      "precise_review_question": "Do the two fallback descriptions identify the future destinations precisely enough for current readers?",
+      "location_needle": "READER FALLBACK TA-READER-REF-003"
+    },
+    {
       "audit_id": "TA-SIZ-LOCAL-001",
       "unit_id": "OLP-0031",
       "kind": "source-wording-formula-inconsistency-retained",
@@ -237,6 +359,9 @@
     }
   ],
   "by_unit": {
+    "OLP-0044": ["TA-READER-REF-001"],
+    "OLP-0048": ["TA-ARI-003", "TA-ARI-004", "TA-ARI-005", "TA-READER-REF-002"],
+    "OLP-0052": ["TA-READER-REF-003"],
     "OLP-0029": ["OLSIZ-001"],
     "OLP-0031": ["TA-SIZ-LOCAL-001", "OLSIZ-002"],
     "OLP-0032": ["TA-SIZ-LOCAL-002", "OLSIZ-003"],

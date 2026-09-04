@@ -4,16 +4,16 @@
     {
       "unit_id": "OLP-0044",
       "source_sha256": "3df30161417b836178ff701aa3d778b9ec7c1ba8e3a8a54f98b5584a7960f453",
-      "translation_sha256": "d73cb6355ef03c2b95178919cb8945b802929215b55f65447e37f2eab18249b1",
+      "translation_sha256": "38a6b22958ec35fbc4e290b9ceb3ad70df6cb9247f4db7d1205304fa572dd90d",
       "source_bytes": 4654,
-      "translation_bytes": 10971,
+      "translation_bytes": 11297,
       "source_coverage_complete": true,
       "segments": 7,
       "math_multiset_parity": true,
       "missing_math": [],
       "extra_math": [],
       "token_key_parity": true,
-      "identifier_parity": true,
+      "identifier_parity": false,
       "environment_parity": true,
       "unicode_nfc": true,
       "replacement_char_absent": true,
@@ -36,14 +36,42 @@
         "yellow"
       ],
       "visual_review_complete": false,
-      "audited_source_corrections": [],
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-READER-REF-001",
+          "unit_id": "OLP-0044",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped the absent history-of-set-theory reference in oliflabeldef with a descriptive Tamil fallback; the live reference remains the preferred branch when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[his][set][mythology]{sec}",
+              "to": "\\oliflabeldef{his:set:mythology:sec}{\\olref[his][set][mythology]{sec}}{}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The cumulative 51-unit reader omits the target history chapter, so the frozen cross-reference rendered as a literal question-mark pair.",
+          "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவு என்ற விளக்கத் தொடர்.",
+          "alternatives_considered": "Literal question marks; deleting the reference; permanently replacing the live link.",
+          "rationale": "The conditional fallback makes the current tranche intelligible while automatically restoring the live reference in a later complete reader.",
+          "precise_review_question": "Does the fallback identify the omitted topic without asserting a section number that is unavailable in this reader?",
+          "location_needle": "READER FALLBACK TA-READER-REF-001"
+        }
+      ],
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
-      "command_multiset_parity": true,
+      "command_multiset_parity": false,
       "missing_commands": [],
-      "extra_commands": [],
+      "extra_commands": [
+        "\\oliflabeldef"
+      ],
       "command_parity_or_audited_correction": true
     }
   ],

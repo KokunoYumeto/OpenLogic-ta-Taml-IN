@@ -5,7 +5,7 @@ Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/Op
 
 The full edition is in progress. **51 of 722 frozen content units are drafted, source-aligned and textually audited** (Sets through Infinite Sets).
 The first tagged reader remains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
-The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Sets, Relations, Functions, Size of Sets, number-system construction and Infinite Sets. It passed a three-pass guarded XeLaTeX/BibTeX build, font embedding and copy/search checks, plus visual inspection of every rendered page.
+The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Sets, Relations, Functions, Size of Sets, number-system construction and Infinite Sets. Patch release v0.2.1 replaces five references to chapters outside this reader with descriptive Tamil fallbacks; the live references return automatically when those destinations are included in a later complete edition. It passed a three-pass guarded XeLaTeX/BibTeX build, font embedding and copy/search checks, plus visual inspection of every rendered page.
 
 ## Read and edit
 
@@ -17,7 +17,7 @@ The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Set
 - Combined 51-unit checkpoint master: build/tamil-sfr.tex.
 
 This is machine translation with source comparison and author semantic review. Independent human or native-speaker approval is not claimed.
-Both readers were checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 51 current units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 456 aligned segments and the exact 99-page PDF hash.
+Both readers were checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 51 current units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The patched combined reader has no undefined references or literal `??` markers. The evidence records 456 aligned segments and the exact 99-page PDF hash.
 
 PDF text reuse has measured limitations. Poppler correctly extracts five tested Tamil phrases and representative union, intersection and Cartesian-product formulas. PyMuPDF duplicates some Tamil syllables or loses spacing. Composite negation symbols may still split during extraction in some contexts; blackboard number-set letters may extract as ordinary letters. Use the editable formulas for exact mathematical reuse. This is not a claim of tagged-PDF or universal screen-reader accessibility. A semantic reader remains part of the continuing full-edition work.
 

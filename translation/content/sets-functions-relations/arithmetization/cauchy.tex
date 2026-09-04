@@ -85,7 +85,10 @@ $\sqrt{2}$ ஐ மேன்மேலும் துல்லியமாகத�
 நமது கவனத்தை வரம்பிட வேண்டும்.
 
 % SEGMENT OLP-0048-S05
-\olref[his][set][limits]{sec} இல் எல்லை என்ற கருத்தை ஏற்கெனவே கண்டுள்ளோம்.
+% READER FALLBACK TA-READER-REF-002; absent limits section gets descriptive text.
+\oliflabeldef{his:set:limits:sec}{%
+  \olref[his][set][limits]{sec} இல் எல்லை என்ற கருத்தை ஏற்கெனவே கண்டுள்ளோம்.}{%
+  எல்லை என்ற கருத்தை முன்பே விவாதித்துள்ளோம்.}
 ஆனால் அங்கு பயன்படுத்திய அதே வரையறையை \emph{முற்றிலும்}
 பயன்படுத்த முடியாது.
 அங்குள்ள ``$(\forall \epsilon>0)$'' என்ற கோவை,
@@ -133,7 +136,8 @@ $f$ ஐ மிகச்சரியாக ஒத்த அதே சார்ப
 எந்த நேர்ம $\epsilon \in \Rat$ க்கும் $(\exists \ell \in
 \Nat)(\forall n > \ell)|h(n)| < \epsilon$ என இருக்கும்போது,
 அப்போதும் அப்போது மட்டுமே, \emph{$h$ ஆனது $0$ ஐ அணுகுகிறது} என்க.
-\footnote{இதனை \olref[his][set][limits]{sec} இல் உள்ள
+\footnote{இதனை \oliflabeldef{his:set:limits:sec}{%
+\olref[his][set][limits]{sec} இல் உள்ள}{பின்னைய எல்லைகள் பிரிவில் வரும்}
 $\lim_{x \mathord{\rightarrow}\infty}f(x) = 0$ என்ற வரையறையுடன் ஒப்பிடுக.}
 மேலும், $f$, $g$ என்பவை $\Nat \to \Rat$ என்ற சார்புகளாக இருக்கும்போது,
 $(f-g)(n) = f(n) - g(n)$ என்க. இப்போது பின்வருமாறு வரையறுக்க:
