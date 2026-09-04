@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-checkpoint/3",
-  "date_utc": "2026-09-04T22:09:22.745427+00:00",
+  "date_utc": "2026-09-04T22:20:16.161579+00:00",
   "previous_goal_turn_classification": "progress",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified": 722,
@@ -22,9 +22,9 @@
     "pdf_version": "1.7"
   },
   "combined_reader_qa": "SFR-RENDER-QA.json",
-  "release_verified_units": 7,
-  "published_units": 7,
-  "published_source_units": 16,
+  "release_verified_units": 51,
+  "published_units": 51,
+  "published_source_units": 51,
   "edition_complete": false,
   "unit_artifacts": [
     {
@@ -2372,7 +2372,7 @@
     "SETS-RENDER-QA.json": "d21053405c28d2f1102db50c7d2ee548efff28df150e8c2bc1fe7408d13df1b4",
     "TEX-SFR-RECEIPT.json": "0d8da3b49c2525be20400fccb8cc0ff3e5902de50d9d9dfe6f809a7d646a5624",
     "SFR-RENDER-QA.json": "4b69f7e757762a8e7eb8e2f89499059c043e997ca6da6f20c272a72e1da013a5",
-    "PUBLICATION-READBACK.json": "e6bb4a682d0a41a10a028376e4779ab1b6804696131ed45a3cc9d1feb3596bc5",
+    "PUBLICATION-READBACK.json": "25053cc497d31b19ce691012788b6920e9d0e1a59dae51efc873ade194032567",
     "QA-B001.json": "3346eb20708f475474f6f04da8d68514bf43f41e56edd4a9cc20ff92a6db8b23",
     "QA-B002.json": "22831e877a5b17793ebfa60caef76a1756c4b301c4c4b231f21ace49f4de172e",
     "QA-B003.json": "83ff416ea4a5a9cc1f30cfba6ed20602612bb8450a57239392206c300949bf38",
@@ -2424,8 +2424,8 @@
     "translation/arithmetization-notes.tex": "776511b0d009e9c9955c6ae5ebd9d2955182e0920e32f4869004b6d9a7cee209",
     "translation/infinite-notes.tex": "4884ef927177f9efcf446b4fa7274db1ffcd9f9853e4bebeee812a4dd46c7818"
   },
-  "publication": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.1.0-sets",
-  "release_verification_scope": "The tagged public Sets reader remains the seven-unit release. The local 51-unit reader separately passed protected build, copy/search, font and all-page visual QA; the full edition remains incomplete.",
+  "publication": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.0-sets-functions-relations",
+  "release_verification_scope": "The 51-unit interim reader is publicly released and anonymously verified by asset and repository bytes. The full 722-unit edition remains incomplete.",
   "unresolved": [
     "671 source units remain untranslated",
     "The verified 51-unit reader is an interim checkpoint, not the full edition",
