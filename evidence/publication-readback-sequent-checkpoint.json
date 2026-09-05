@@ -1,0 +1,125 @@
+{
+  "schema": "openlogic-tamil-sequent-checkpoint-public-readback/1",
+  "verified_utc": "2026-09-05T15:48:29.922821+00:00",
+  "anonymous": true,
+  "authorization_header_sent": false,
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "commit": "c730e42613094cb324e040facae5de454b7d98ee",
+  "main_ref_commit": "c730e42613094cb324e040facae5de454b7d98ee",
+  "prior_release_tags_unchanged": {
+    "v0.1.0-sets": "0cd67f05f2ae68538525c9ea1d7b81a7b9fc052f",
+    "v0.2.0-sets-functions-relations": "efa6b7982b5a60c83dab0d37359f8f43a82b99c1",
+    "v0.2.1-sets-functions-relations": "8a7d5ff8f78c75a41c9e1d58e8fc49be3ce34b2d"
+  },
+  "codeload": {
+    "url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/c730e42613094cb324e040facae5de454b7d98ee",
+    "http_status": 200,
+    "bytes": 4652427,
+    "sha256": "70a21cb0b917d9ec8f1b0415d3ddf514597fb6f6e8d2f344f09675cf387722f5",
+    "root": "OpenLogic-ta-Taml-IN-c730e42613094cb324e040facae5de454b7d98ee",
+    "files": 977
+  },
+  "local_git_archive": {
+    "bytes": 4514693,
+    "sha256": "7a15299cec29b9d7c547a3d4cc2eea52f534212401f97e1762fd3e018e929a67",
+    "files": 977
+  },
+  "comparison": {
+    "local_only_paths": 0,
+    "remote_only_paths": 0,
+    "content_mismatches": 0,
+    "verified_files": 977
+  },
+  "key_public_hashes": {
+    "README.md": {
+      "bytes": 6237,
+      "sha256": "d7d7a1726dd34570d5417d8e59ca19cc3f51e59ad7e03cc5089b76e061b9a86f"
+    },
+    "evidence/checkpoint-current.json": {
+      "bytes": 154690,
+      "sha256": "3b1e0049c2549e1c63d9ce13bc5193ff40c96e6bb1f7d8dd15ae83d42576f63a"
+    },
+    "evidence/cursor-current.json": {
+      "bytes": 3087,
+      "sha256": "0525bf922cce35cc1276e1cba902cd5d8ca61497e40c027dfdc2176626addc06"
+    },
+    "evidence/qa-current.json": {
+      "bytes": 1386,
+      "sha256": "c5a325afacaec85987aa5f062f8e56ee8f0e1042a700dcdf9688c45ebdbf33ad"
+    },
+    "evidence/qa-batches/qa-b039.json": {
+      "bytes": 7307,
+      "sha256": "6f8dd5c4af38cf826fbdc2358fdbf8fbc4940e5fc3071a566aa76aeea63e5b65"
+    },
+    "evidence/qa-batches/qa-b040.json": {
+      "bytes": 8903,
+      "sha256": "a3e0743e860310518ad2c0d3dc46b5ad3c34404bfbe5a9ef0d4aec7be9ffb1ac"
+    },
+    "evidence/qa-batches/qa-b041.json": {
+      "bytes": 13047,
+      "sha256": "23864562b785e3df860c0e90a9de6c4faffc52982c910ba82af0482bb38519a8"
+    },
+    "evidence/translation-decisions/START_HERE.md": {
+      "bytes": 913,
+      "sha256": "c3631d016e0e9a0a10394936af341721622fdb421b69935cf86c149ca9e89c4d"
+    },
+    "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md": {
+      "bytes": 1284642,
+      "sha256": "fed2a2235186a986c02614255e531d50751541bf9a3adee21e1302c76fc9b150"
+    },
+    "evidence/translation-decisions/PRIORITY_REVIEW.md": {
+      "bytes": 623680,
+      "sha256": "23cbf6ab99d39c9ff63be033825477a3bca0a713b6f08850de977c090575018b"
+    },
+    "evidence/translation-decisions/DECISION_OCCURRENCES.csv": {
+      "bytes": 3487462,
+      "sha256": "ed2bdcaf7b9572d7d90dbcf1a2a29854cbc5702ad585793c5ecd1d5976ab9d4f"
+    },
+    "evidence/translation-decisions/DECISIONS.json": {
+      "bytes": 15065106,
+      "sha256": "fd2b270f7494bf1d4e904747c9ffe122ca2f80f7c9f94d717d40ad16e8ab8356"
+    },
+    "evidence/translation-decisions/translation-decision.schema.json": {
+      "bytes": 10787,
+      "sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90"
+    },
+    "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": {
+      "bytes": 2937,
+      "sha256": "a0246d231e4127b8c65cd3edec3df31d9a340b2303d2951b672023124b114a0d"
+    },
+    "evidence/translation-decisions/VARIANT_ASSESSMENT.md": {
+      "bytes": 4374,
+      "sha256": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d"
+    },
+    "readers/sets-functions-relations-ta-Taml-IN.pdf": {
+      "bytes": 810122,
+      "sha256": "e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83"
+    }
+  },
+  "scope": {
+    "drafted_units": 80,
+    "aligned_segments": 599,
+    "reader_verified_units": 51,
+    "new_source_units": [
+      "OLP-0069",
+      "OLP-0070",
+      "OLP-0071",
+      "OLP-0072",
+      "OLP-0073",
+      "OLP-0074",
+      "OLP-0075",
+      "OLP-0076",
+      "OLP-0077",
+      "OLP-0078",
+      "OLP-0079",
+      "OLP-0080",
+      "OLP-0081",
+      "OLP-0082",
+      "OLP-0083"
+    ],
+    "decision_records": 140,
+    "decision_occurrences": 4794,
+    "next_contiguous_unit": "OLP-0084"
+  },
+  "result": "pass"
+}

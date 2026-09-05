@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-checkpoint/3",
-  "date_utc": "2026-09-05T15:46:12.559613+00:00",
+  "date_utc": "2026-09-05T15:49:18.450127+00:00",
   "previous_goal_turn_classification": "progress",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified": 722,
@@ -3736,6 +3736,7 @@
     "TEX-PROOF-SYSTEMS-SEQUENT-RECEIPT.json": "f746029beca6678257e5c6f37f49f3528bf48ef5f089735ae4cc1fe05d5ec34e",
     "SFR-RENDER-QA.json": "bc4310da73bd3e8131778ff092692b180250e3b0065c838f9a637bddcdfdacb9",
     "PUBLICATION-READBACK.json": "aaac9730075fe36a57473ff9b6489027e281fe83463a747d44beba34b4acfe90",
+    "PUBLICATION-READBACK-SEQUENT-CHECKPOINT.json": "5fd9395fd476319689adbc8a3630da640766ddd3af8520457dc17dfafb898eee",
     "QA-B001.json": "3346eb20708f475474f6f04da8d68514bf43f41e56edd4a9cc20ff92a6db8b23",
     "QA-B002.json": "22831e877a5b17793ebfa60caef76a1756c4b301c4c4b231f21ace49f4de172e",
     "QA-B003.json": "83ff416ea4a5a9cc1f30cfba6ed20602612bb8450a57239392206c300949bf38",
