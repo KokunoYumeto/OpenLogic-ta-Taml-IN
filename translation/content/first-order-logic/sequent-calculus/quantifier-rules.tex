@@ -1,0 +1,110 @@
+% SEGMENT OLP-0072-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: quantifier-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{qrl}
+
+\olsection{அளவையடை விதிகள்}
+
+\subsection{$\lforall$ க்கான விதிகள்}
+
+\begin{defish}
+\Axiom$ !A(t), \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+\hfill
+\Axiom$ \Gamma \fCenter \Delta, !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0072-S02
+\LeftR{\lforall} இல், $t$ என்பது ஒரு மூடிய சொல் (அதாவது, மாறிகள் இல்லாத
+சொல்). \RightR{\lforall} இல், $a$ என்பது \RightR{\lforall} விதியின் கீழ்த்
+தொடரணியில் எங்கும் இடம்பெறக் கூடாத !!a{constant}. \RightR{\forall} அனுமானத்தின் $a$ ஐ
+\emph{தனிமாறி} என்கிறோம்.\footnote{மேலுள்ள விதியில் $a$ என்பது
+!!a{constant} ஆக இருந்தாலும், வரலாற்றுக் காரணங்களால் ``தனிமாறி'' என்ற
+சொல்லையே பயன்படுத்துகிறோம்.}
+
+% SEGMENT OLP-0072-S03
+\subsection{$\lexists$ க்கான விதிகள்}
+
+\begin{defish}
+\Axiom$ !A(a), \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][!A(x)], \Gamma \fCenter \Delta$
+\DisplayProof
+\hfill
+\Axiom$ \Gamma \fCenter \Delta, !A(t) $
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lexists[x][!A(x)]$
+\DisplayProof
+\end{defish}
+
+இங்கும் $t$ என்பது ஒரு மூடிய சொல்; $a$ என்பது \LeftR{\lexists} விதியின்
+கீழ்த் தொடரணியில் இடம்பெறாத !!a{constant}. \LeftR{\lexists} அனுமானத்தின்
+$a$ ஐ \emph{தனிமாறி} என்கிறோம்.
+
+\RightR{\lforall} அல்லது \LeftR{\lexists} அனுமானத்தின் தனிமாறி கீழ்த்
+தொடரணியில் இடம்பெறக் கூடாது என்ற நிபந்தனை \emph{தனிமாறி நிபந்தனை}
+எனப்படுகிறது.
+
+% SEGMENT OLP-0072-S04
+\begin{explain}
+$!A$ என்பது !!{variable}~$x$ கட்டின்றி இடம்பெறும் !!a{formula} எனில்,
+அதை~$!A(x)$ என்று எழுதுகிறோம் என்ற மரபை நினைவுகூர்க. அதே சூழலில், $!A(t)$
+என்பது~$\Subst{!A}{t}{x}$ என்பதன் சுருக்கம். ஆகவே \RightR{\lexists} விதியை
+இவ்வாறும் எழுதலாம்:
+\begin{prooftree}
+  \Axiom$\Gamma \fCenter \Delta, \Subst{!A}{t}{x}$
+  \RightLabel{\RightR{\lexists}}
+  \UnaryInf$\Gamma \fCenter \Delta, \lexists[x][!A]$
+\end{prooftree}
+$t$ ஏற்கெனவே~$!A$ இல் இடம்பெறலாம் என்பதைக் கவனிக்க; எடுத்துக்காட்டாக,
+$!A$ என்பது~$\Atom{\Obj P}{t,x}$ ஆக இருக்கலாம். ஆகவே, $\Gamma \Sequent
+\Delta, \Atom{\Obj P}{t,t}$ இலிருந்து~$\Gamma \Sequent \Delta,
+\lexists[x][\Atom{\Obj P}{t,x}]$ ஐ அனுமானிப்பது \RightR{\lexists} இன்
+சரியான பயன்பாடு. முன்கோளில் இடம்பெறும்~$t$ இன் ஒன்று அல்லது அதற்கு மேற்பட்ட
+இடங்களை, கட்டுண்ட !!{variable}~$x$ ஆல் ``பிரதியிடலாம்''; எல்லா இடங்களையும்
+அவ்வாறு பிரதியிட வேண்டியதில்லை. ஆனால் \RightR{\lforall} மற்றும்
+\LeftR{\lexists} இன் தனிமாறி நிபந்தனைகள், !!{constant}~$a$ என்பது~$!A$ இல்
+இடம்பெறக் கூடாது எனக் கோருகின்றன. ஆகவே~$\Gamma \Sequent \Delta,
+\Atom{\Obj P}{a,a}$ இலிருந்து $\Gamma \Sequent \Delta,
+\lforall[x][\Atom{\Obj P}{a,x}]$ ஐ~$\RightR{\lforall}$ கொண்டு சரியாக
+அனுமானிக்க முடியாது.
+\end{explain}
+
+% SEGMENT OLP-0072-S05
+\begin{explain}
+\RightR{\lexists} மற்றும் \LeftR{\lforall} இல் சொல்~$t$ மீது எந்தக்
+கட்டுப்பாடும் இல்லை. மறுபுறம், \LeftR{\lexists} மற்றும்
+\RightR{\lforall} விதிகளில், மேல்த் தொடரணியிலுள்ள~$!A(a)$ க்கு வெளியே
+!!{constant}~$a$ எங்கும் இடம்பெறக் கூடாது எனத் தனிமாறி நிபந்தனை கோருகிறது.
+முறைமை சரித்தன்மையுடையதாக, அதாவது செல்லுபடித் தொடரணிகளை மட்டுமே
+!!{derive} இயலுமாறு இருப்பதை உறுதிசெய்ய இது தேவை. இந்த நிபந்தனை இல்லாவிட்டால்,
+பின்வருவன அனுமதிக்கப்படும்:
+\begin{prooftree}
+  \Axiom$!A(a) \fCenter !A(a)$
+  \RightLabel{*\LeftR{\lexists}}
+  \UnaryInf$\lexists[x][!A(x)] \fCenter !A(a)$
+  \RightLabel{\RightR{\lforall}}
+  \UnaryInf$\lexists[x][!A(x)] \fCenter \lforall[x][!A(x)]$
+  \DisplayProof\bottomAlignProof
+  \qquad
+  \Axiom$!A(a) \fCenter !A(a)$
+  \RightLabel{*\RightR{\lforall}}
+  \UnaryInf$!A(a) \fCenter \lforall[x][!A(x)]$
+  \RightLabel{\LeftR{\lexists}}
+  \UnaryInf$\lexists[x][!A(x)] \fCenter \lforall[x][!A(x)]$
+\end{prooftree}
+ஆனால் $\lexists[x][!A(x)] \Sequent \lforall[x][!A(x)]$ செல்லுபடியாகாது.
+\end{explain}
+
+\end{document}

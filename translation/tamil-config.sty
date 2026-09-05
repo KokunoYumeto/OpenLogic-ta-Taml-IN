@@ -9,7 +9,30 @@
 \settexttoken{formula}{வாய்பாடு}{வாய்பாடுகள்}[வாய்பாடு][வாய்பாடுகள்]
 \settexttoken{derivation}{வருவித்தல்}{வருவித்தல்கள்}[வருவித்தல்][வருவித்தல்கள்]
 \settexttoken{derivability}{வருவிக்கத்தக்கதன்மை}{வருவிக்கத்தக்கதன்மை}[வருவிக்கத்தக்கதன்மை][வருவிக்கத்தக்கதன்மை]
+\settexttoken{nonderivability}{வருவிக்கவியலாமை}{வருவிக்கவியலாமை}[வருவிக்கவியலாமை][வருவிக்கவியலாமை]
 \settexttoken{sentence}{வாக்கியம்}{வாக்கியங்கள்}[வாக்கியம்][வாக்கியங்கள்]
+\definetoken{s-acc}{sentence}{வாக்கியத்தை}
+\definetoken{p-acc}{sentence}{வாக்கியங்களை}
+\definetoken{s-accum}{sentence}{வாக்கியத்தையும்}
+\definetoken{p-accum}{sentence}{வாக்கியங்களையும்}
+\definetoken{s-gen}{sentence}{வாக்கியத்தின்}
+\definetoken{p-gen}{sentence}{வாக்கியங்களின்}
+\definetoken{s-dat}{sentence}{வாக்கியத்திற்கு}
+\definetoken{p-dat}{sentence}{வாக்கியங்களுக்கு}
+\definetoken{s-loc}{sentence}{வாக்கியத்தில்}
+\definetoken{p-loc}{sentence}{வாக்கியங்களில்}
+\definetoken{s-abl}{sentence}{வாக்கியத்திலிருந்து}
+\definetoken{p-abl}{sentence}{வாக்கியங்களிலிருந்து}
+\definetoken{s-ins}{sentence}{வாக்கியத்தால்}
+\definetoken{p-ins}{sentence}{வாக்கியங்களால்}
+\definetoken{s-com}{sentence}{வாக்கியத்துடன்}
+\definetoken{p-com}{sentence}{வாக்கியங்களுடன்}
+\definetoken{s-acc}{derivation}{வருவித்தலை}
+\definetoken{p-acc}{derivation}{வருவித்தல்களை}
+\definetoken{s-gen}{derivation}{வருவித்தலின்}
+\definetoken{p-gen}{derivation}{வருவித்தல்களின்}
+\definetoken{s-loc}{derivation}{வருவித்தலில்}
+\definetoken{p-loc}{derivation}{வருவித்தல்களில்}
 \settexttoken{derive}{வருவிக்க}{வருவிக்க}[வருவிக்க][வருவிக்க]
 \settexttoken{derivable}{வருவிக்கத்தக்க}{வருவிக்கத்தக்க}[வருவிக்கத்தக்க][வருவிக்கத்தக்க]
 \settexttoken{tableau}{அட்டவணை மரம்}{அட்டவணை மரங்கள்}[அட்டவணை மரம்][அட்டவணை மரங்கள்]
@@ -17,6 +40,9 @@
 \settexttoken{discharge}{விடுவித்தல்}{விடுவித்தல்கள்}[விடுவித்தல்][விடுவித்தல்கள்]
 \settexttoken{discharged}{விடுவிக்கப்பட்ட}{விடுவிக்கப்பட்ட}[விடுவிக்கப்பட்ட][விடுவிக்கப்பட்ட]
 \settexttoken{undischarged}{விடுவிக்கப்படாத}{விடுவிக்கப்படாத}[விடுவிக்கப்படாத][விடுவிக்கப்படாத]
+\settexttoken{variable}{மாறி}{மாறிகள்}[மாறி][மாறிகள்]
+\settexttoken{constant}{மாறிலிக் குறி}{மாறிலிக் குறிகள்}[மாறிலிக் குறி][மாறிலிக் குறிகள்]
+\settexttoken{main operator}{முதன்மைச் செயலி}{முதன்மைச் செயலிகள்}[முதன்மைச் செயலி][முதன்மைச் செயலிகள்]
 \settexttoken{propositional variable}{கூற்று மாறி}{கூற்று மாறிகள்}[கூற்று மாறி][கூற்று மாறிகள்]
 \settexttoken{valuation}{மெய்மதிப்பு ஒதுக்கீடு}{மெய்மதிப்பு ஒதுக்கீடுகள்}[மெய்மதிப்பு ஒதுக்கீடு][மெய்மதிப்பு ஒதுக்கீடுகள்]
 \settexttoken{conditional}{நிபந்தனைக் கூற்று}{நிபந்தனைக் கூற்றுகள்}[நிபந்தனைக் கூற்று][நிபந்தனைக் கூற்றுகள்]
@@ -25,6 +51,7 @@
 \settexttoken{truth}{மெய்மை}{மெய்மைகள்}[மெய்மை][மெய்மைகள்]
 \settexttoken{operator}{செயலி}{செயலிகள்}[செயலி][செயலிகள்]
 \settexttoken{structure}{கட்டமைப்பு}{கட்டமைப்புகள்}[கட்டமைப்பு][கட்டமைப்புகள்]
+\settexttoken{identity}{ஒன்றாதல்}{ஒன்றாதல்கள்}[ஒன்றாதல்][ஒன்றாதல்கள்]
 \settexttoken{denumerable}{எண்ணிடத்தக்க}{எண்ணிடத்தக்க}[எண்ணிடத்தக்க][எண்ணிடத்தக்க]
 \definetoken{a}{propositional variable}{ஒரு}
 \definetoken{A}{propositional variable}{ஒரு}
@@ -46,6 +73,10 @@
 \definetoken{A}{tableau}{ஓர்}
 \definetoken{a}{signed formula}{ஒரு}
 \definetoken{A}{signed formula}{ஒரு}
+\definetoken{a}{variable}{ஒரு}
+\definetoken{A}{variable}{ஒரு}
+\definetoken{a}{constant}{ஒரு}
+\definetoken{A}{constant}{ஒரு}
 \settexttoken{injective}{ஒன்றுக்கொன்றான}{ஒன்றுக்கொன்றான}[ஒன்றுக்கொன்றான][ஒன்றுக்கொன்றான]
 \settexttoken{surjective}{மேற்கோர்த்தல்}{மேற்கோர்த்தல்}[மேற்கோர்த்தல்][மேற்கோர்த்தல்]
 \settexttoken{enumerable}{எண்ணிடத்தக்க}{எண்ணிடத்தக்க}[எண்ணிடத்தக்க][எண்ணிடத்தக்க]

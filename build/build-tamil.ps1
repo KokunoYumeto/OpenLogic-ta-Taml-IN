@@ -1,4 +1,4 @@
-param([string]$Master='tamil-batch001.tex',[int]$Passes=2,[ValidateSet('xelatex','lualatex')][string]$Engine='xelatex',[ValidateRange(1000,60000)][int]$AcquisitionTimeoutMs=60000,[switch]$BibTeX,[string]$ReceiptName='TEX-B001-RECEIPT',[string]$StateDirectory=$PSScriptRoot)
+param([string]$Master='tamil-batch001.tex',[int]$Passes=2,[ValidateSet('xelatex','lualatex')][string]$Engine='xelatex',[ValidateSet('batchmode','nonstopmode')][string]$Interaction='batchmode',[ValidateRange(1000,60000)][int]$AcquisitionTimeoutMs=60000,[switch]$BibTeX,[string]$ReceiptName='TEX-B001-RECEIPT',[string]$StateDirectory=$PSScriptRoot)
 $ErrorActionPreference='Stop'
 $build=$PSScriptRoot
 $state=[IO.Path]::GetFullPath($StateDirectory)
@@ -67,7 +67,7 @@ public class TamilTeXJob {
 '@
  $enginePath=(Get-Command $Engine -ErrorAction Stop).Source
  for($pass=1;$pass -le $Passes;$pass++) {
-  $code=[TamilTeXJob]::Run($enginePath,('-no-shell-escape -interaction=nonstopmode -halt-on-error "'+$Master+'"'),$build)
+  $code=[TamilTeXJob]::Run($enginePath,('-no-shell-escape -synctex=1 -interaction='+$Interaction+' -halt-on-error "'+$Master+'"'),$build)
   $log=Join-Path $build ([IO.Path]::GetFileNameWithoutExtension($Master)+'.log')
   $content=if(Test-Path -LiteralPath $log){Get-Content -Raw -LiteralPath $log}else{''}
   $issues=@($content -split "`n" | Where-Object {$_ -match '^!|Missing character:|Overfull|undefined references|LaTeX Warning'})

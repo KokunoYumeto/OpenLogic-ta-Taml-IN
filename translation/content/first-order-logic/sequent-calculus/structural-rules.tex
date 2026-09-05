@@ -1,0 +1,85 @@
+% SEGMENT OLP-0073-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: structural-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{srl}}
+      {\olfileid{pl}{seq}{srl}}
+
+\olsection{கட்டமைப்பு விதிகள்}
+
+ஒரு தொடரணியின் இடப்புறத்திலும் வலப்புறத்திலும் உள்ள !!{sentence}s[acc]
+மறுவரிசைப்படுத்த மேலும் சில விதிகள் தேவை. ஒரு தருக்க விதி செயல்படும்
+முன்கோளிலுள்ள !!{sentence}s முற்றிலும் இடது முனையிலோ வலது முனையிலோ இருக்க
+வேண்டும் என்பதால், !!{sentence}s[acc] தேவையான இடத்திற்கு நகர்த்தும்
+``இடமாற்ற'' விதி தேவை. சிலவேளைகளில் ஒரே மாதிரியான இரண்டு !!{sentence}s[acc]
+ஒன்றாகச் சுருக்கவும், இரு புறங்களில் எதிலாவது !!a{sentence} ஒன்றைச்
+சேர்க்கவும் இயல்வதும் முக்கியம்.
+
+% SEGMENT OLP-0073-S02
+\subsection{தளர்த்தல்}
+
+\begin{defish}
+\Axiom$ \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\DisplayProof
+\hfill
+\Axiom$ \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A$
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0073-S03
+\subsection{சுருக்கல்}
+
+\begin{defish}
+\Axiom$ !A, !A, \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Contraction}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\DisplayProof
+\hfill
+\Axiom$ \Gamma \fCenter \Delta, !A, !A$
+\RightLabel{\RightR{\Contraction}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A$
+\DisplayProof
+\end{defish}
+
+\subsection{இடமாற்றம்}
+
+\begin{defish}
+\Axiom$ \Gamma, !A, !B, \Pi \fCenter \Delta $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ \Gamma, !B, !A, \Pi \fCenter \Delta$
+\DisplayProof
+\hfill
+\Axiom$ \Gamma \fCenter \Delta, !A, !B, \Lambda$
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ \Gamma \fCenter \Delta, !B, !A, \Lambda$
+\DisplayProof
+\end{defish}
+
+தளர்த்தல், சுருக்கல், இடமாற்றம் ஆகிய அனுமானங்களின் தொடர் பெரும்பாலும்
+இரட்டை அனுமானக் கோடுகளால் குறிக்கப்படும்.
+
+% SEGMENT OLP-0073-S04
+``வெட்டு'' எனப்படும் பின்வரும் விதி கண்டிப்பாகத் தேவைப்படுவதில்லை; ஆனால்
+!!{derivation}s[acc] மீண்டும் பயன்படுத்துவதையும் இணைப்பதையும் மிகவும்
+எளிதாக்குகிறது.
+\begin{defish}
+\[
+\Axiom$ \Gamma \fCenter \Delta, !A$
+\Axiom$ !A, \Pi \fCenter \Lambda $
+\RightLabel{\Cut}
+\BinaryInf$ \Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+\end{defish}
+
+\end{document}

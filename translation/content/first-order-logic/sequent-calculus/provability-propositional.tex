@@ -1,0 +1,142 @@
+% SEGMENT OLP-0079-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: provability-propositional
+
+% verification of properties of provability needed for maximally
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{ppr}}
+      {\olfileid{pl}{seq}{ppr}}
+
+\olsection{\usetoken{S}{derivability} மற்றும் கூற்று இணைப்புகள்}
+
+\begin{explain}
+  தொடரணிக் கணியத்தின் !!{derivability} உறவு~$\Proves$, கூற்று இணைப்புகள்
+  தொடர்பான சில அடிப்படை உண்மைகளை நிறுவும் அளவுக்கு வலிமையானது என்பதை
+  நிறுவுகிறோம். எடுத்துக்காட்டாக, $!A \land !B \Proves !A$ மற்றும் $!A,
+  !A \lif !B \Proves !B$ (முன்நிலையுறுத்தல்). நிறைவுத் தேற்றத்தின்
+  நிறுவலுக்கு இந்த உண்மைகள் தேவை.
+\end{explain}
+
+% SEGMENT OLP-0079-S02
+\begin{prop}\ollabel{prop:provability-land}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-land-left} $!A \land !B \Proves !A$,
+    $!A \land !B \Proves !B$ ஆகிய இரண்டும்.
+  \item \ollabel{prop:provability-land-right} $!A, !B \Proves !A \land
+    !B$.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item $!A \land !B \Sequent !A$, $!A \land !B \Sequent !B$ ஆகிய இரு
+    தொடரணிகளும் !!{derivable}:
+    \begin{prooftree}
+      \Axiom$!A \fCenter !A$
+      \RightLabel{\LeftR{\land}}
+      \UnaryInf$!A \land !B \fCenter !A$
+      \DisplayProof\qquad\bottomAlignProof
+      \Axiom$!B \fCenter !B$
+      \RightLabel{\LeftR{\land}}
+      \UnaryInf$!A \land !B \fCenter !B$
+    \end{prooftree}
+    \item $!A, !B \Sequent !A \land !B$ தொடரணியின் !!a{derivation} இதோ:
+    \begin{prooftree}
+      \Axiom$!A \fCenter !A$
+      \Axiom$!B \fCenter !B$
+      \RightLabel{\RightR{\land}}
+      \BinaryInf$!A, !B \fCenter !A \land !B$
+    \end{prooftree}
+  \end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0079-S03
+\begin{prop}\ollabel{prop:provability-lor}
+  \begin{enumerate}
+  \item $!A \lor !B, \lnot !A, \lnot !B$ முரணுடையது.
+  \item $!A \Proves !A \lor !B$, $!B \Proves !A \lor !B$ ஆகிய இரண்டும்.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item $!A \lor !B, \lnot !A, \lnot !B \Sequent$ தொடரணியின்
+    !!a{derivation} ஒன்றைத் தருகிறோம்:
+    \begin{prooftree}
+      \Axiom$!A \fCenter !A$
+      \RightLabel{\LeftR{\lnot}}
+      \UnaryInf$\lnot !A, !A \fCenter$
+      \doubleLine
+      \UnaryInf$!A, \lnot !A, \lnot !B \fCenter$
+      \Axiom$!B \fCenter !B$
+      \RightLabel{\LeftR{\lnot}}
+      \UnaryInf$\lnot !B, !B \fCenter$
+      \doubleLine
+      \UnaryInf$!B, \lnot !A, \lnot !B \fCenter$
+      \RightLabel{\LeftR{\lor}}
+      \BinaryInf$ !A \lor !B, \lnot !A, \lnot !B \fCenter $
+    \end{prooftree}
+    (இரட்டைப் அனுமானக் கோடுகள் பல தளர்த்தல், சுருக்கல், இடமாற்ற
+    அனுமானங்களைக் குறிக்கின்றன என்பதை நினைவில் கொள்க.)
+  \item $!A \Sequent !A \lor !B$, $!B \Sequent !A \lor !B$ ஆகிய இரு
+    தொடரணிகளுக்கும் !!{derivation}s உள்ளன:
+    \begin{prooftree}
+      \Axiom$!A \fCenter !A$
+      \RightLabel{\RightR{\lor}}
+      \UnaryInf$!A \fCenter !A \lor !B$
+      \DisplayProof\qquad\bottomAlignProof
+      \Axiom$!B \fCenter !B$
+      \RightLabel{\RightR{\lor}}
+      \UnaryInf$!B \fCenter !A \lor !B$
+    \end{prooftree}
+  \end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0079-S04
+\begin{prop}\ollabel{prop:provability-lif}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-lif-left} $!A, !A \lif !B \Proves !B$.
+  \item \ollabel{prop:provability-lif-right}
+    $\lnot !A \Proves !A \lif !B$, $!B \Proves !A \lif !B$ ஆகிய இரண்டும்.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $!A \lif !B, !A \Sequent !B$ தொடரணி !!{derivable}:
+      \begin{prooftree}
+        \Axiom$!A \fCenter !A$
+        \Axiom$!B \fCenter !B$
+        \RightLabel{\LeftR{\lif}}
+        \BinaryInf$!A \lif !B, !A  \fCenter !B$
+      \end{prooftree}
+    \item $\lnot !A \Sequent !A \lif !B$, $!B \Sequent !A \lif !B$
+      ஆகிய இரு தொடரணிகளும் !!{derivable}:
+      \begin{prooftree}
+        \Axiom$!A \fCenter !A$
+        \RightLabel{\LeftR{\lnot}}
+        \UnaryInf$\lnot !A, !A \fCenter$
+        \RightLabel{\LeftR{\Exchange}}
+        \UnaryInf$!A, \lnot !A \fCenter$
+        \RightLabel{\RightR{\Weakening}}
+        \UnaryInf$!A, \lnot !A \fCenter !B$
+        \RightLabel{\RightR{\lif}}
+        \UnaryInf$\lnot !A \fCenter !A \lif !B$
+        \DisplayProof\qquad\bottomAlignProof
+        \Axiom$!B \fCenter !B$
+        \RightLabel{\LeftR{\Weakening}}
+        \UnaryInf$!A, !B \fCenter !B$
+        \RightLabel{\RightR{\lif}}
+        \UnaryInf$!B \fCenter !A \lif !B$
+      \end{prooftree}
+  \end{enumerate}
+\end{proof}
+
+\end{document}

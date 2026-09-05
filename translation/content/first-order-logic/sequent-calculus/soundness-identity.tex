@@ -1,0 +1,55 @@
+% SEGMENT OLP-0083-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: soundness-identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{sid}
+
+\olsection{\usetoken{S}{identity} உடன் சரித்தன்மை}
+
+\begin{prop}
+ஒன்றாதலுக்கான தொடக்கத் தொடரணிகளையும் விதிகளையும் கொண்ட $\Log{LK}$
+சரித்தன்மையுடையது.
+\end{prop}
+
+% SEGMENT OLP-0083-S02
+\begin{proof}
+${} \Sequent \eq[t][t]$ என்ற வடிவிலான தொடக்கத் தொடரணிகள் செல்லுபடியாகும்;
+ஏனெனில் ஒவ்வொரு !!{structure}~$\Struct M$ க்கும்
+$\Sat{M}{\eq[t][t]}$. ($t$ என்ற சொல் மூடியது, அதாவது அதில் மாறிகள் இல்லை,
+என்று கருதுகிறோம்; எனவே மாறி ஒதுக்கீடுகள் பொருட்டல்ல என்பதைக் கவனிக்கவும்.)
+
+!!a{derivation} ஒன்றின் கடைசி அனுமானம் $=$ என்க. அப்போது அதன் முன்கோள்
+$\eq[t_1][t_2], \Gamma \Sequent \Delta, !A(t_1)$; அதன் முடிவு
+$\eq[t_1][t_2], \Gamma \Sequent \Delta, !A(t_2)$. !!a{structure}~$\Struct M$
+ஒன்றைக் கருதுக. முடிவு செல்லுபடியாகும் என்று காட்ட வேண்டும். அதாவது,
+$\Sat{M}{\eq[t_1][t_2]}$, $\Sat{M}{\Gamma}$ எனில், ஏதோவொரு $!C \in
+\Delta$ க்கு $\Sat{M}{!C}$ அல்லது $\Sat{M}{!A(t_2)}$.
+
+தொகுத்தறிதல் கருதுகோளால் முன்கோள் செல்லுபடியாகும். இதன் பொருள்,
+$\Sat{M}{\eq[t_1][t_2]}$, $\Sat{M}{\Gamma}$ எனில், (a) ஏதோவொரு $!C \in
+\Delta$ க்கு $\Sat{M}{!C}$ அல்லது (b) $\Sat{M}{!A(t_1)}$. (a) நேர்வில்
+முடிந்தது. (b) நேர்வைக் கருதுக. $s(x) = \Value{t_1}{M}$ என்ற மாறி ஒதுக்கீடு
+$s$ ஒன்றைக் கொள்க.
+% READER FALLBACK TA-READER-REF-005; absent semantics results get descriptive text.
+\oliflabeldef{syn:ass:prop:sentence-sat-true}{\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு
+வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு} படி,
+$\Sat{M}{!A(t_1)}[s]$. $\varAssign{s}{s}{x}$ என்பதால்,
+\oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு} படி
+$\Sat{M}{!A(x)}[s]$.
+$\Sat{M}{\eq[t_1][t_2]}$ என்பதால், $\Value{t_1}{M} = \Value{t_2}{M}$;
+ஆகவே $s(x) = \Value{t_2}{M}$.
+\oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவை} மீண்டும்
+பயன்படுத்தினால் $\Sat{M}{!A(t_2)}[s]$ உம் கிடைக்கிறது.
+\oliflabeldef{syn:ass:prop:sentence-sat-true}{\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு
+வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு} படி
+$\Sat{M}{!A(t_2)}$.
+\end{proof}
+
+\end{document}

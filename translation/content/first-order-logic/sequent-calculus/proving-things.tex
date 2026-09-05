@@ -1,0 +1,345 @@
+% SEGMENT OLP-0075-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: proving-things
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{pro}}
+      {\olfileid{pl}{seq}{pro}}
+
+\olsection{\usetoken{P}{derivation} எடுத்துக்காட்டுகள்}
+
+\begin{ex}
+$!A \land !B \Sequent !A$ என்ற தொடரணிக்கு ஓர் $\Log{LK}$-!!{derivation}
+தருக.
+
+விரும்பிய இறுதித் தொடரணியை !!{derivation}[gen] அடியில் எழுதுவதிலிருந்து
+தொடங்குகிறோம்.
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$!A\land !B \fCenter !A$
+\end{prooftree}
+அடுத்து, இந்த வடிவிலான கீழ்த் தொடரணியைக் கொண்டிருக்கக்கூடிய அனுமான வகை எது
+என்பதைக் கண்டறிய வேண்டும். அது ஒரு கட்டமைப்பு விதியாக இருக்கலாம்; எனினும்
+முதலில் ஒரு தருக்க விதியைத் தேடுவது நல்லது. கீழ்த் தொடரணியில் இடம்பெறும் ஒரே
+தருக்க இணைப்பு $\land$. ஆகவே நாம் ஓர் $\land$ விதியைத் தேடுகிறோம்; மேலும்
+$\land$ குறி முன்தொடரில் இருப்பதால் \LeftR{\land} விதியைப் பார்க்கிறோம்.
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A\land !B \fCenter !A$
+\end{prooftree}
+\LeftR{\land} அனுமானத்தின் மேல்த் தொடரணி எதுவாக இருக்கலாம் என்பதற்கு இரண்டு
+வாய்ப்புகள் உள்ளன: $!A \Sequent !A$ அல்லது $!B \Sequent !A$. தெளிவாக,
+$!A \Sequent !A$ ஒரு தொடக்கத் தொடரணி; இது நமக்கு வேண்டிய நல்ல முடிவு. ஆனால்
+$!B \Sequent !A$ பொதுவாக வருவிக்கத்தக்கதல்ல. மேல்த் தொடரணியை நிரப்புகிறோம்:
+\begin{prooftree}
+\Axiom$!A \fCenter !A$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A\land !B \fCenter !A$
+\end{prooftree}
+இப்போது $!A \land !B \Sequent !A$ தொடரணிக்குச் சரியான
+$\Log{LK}$-!!{derivation} கிடைத்துவிட்டது.
+\end{ex}
+
+% SEGMENT OLP-0075-S02
+\begin{ex}
+$\lnot !A \lor !B \Sequent !A \lif !B$ தொடரணிக்கு ஓர்
+$\Log{LK}$-!!{derivation} தருக.
+
+விரும்பிய இறுதித் தொடரணியை !!{derivation}[gen] அடியில் எழுதுவதிலிருந்து
+தொடங்குக.
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lnot !A \lor !B \fCenter !A \lif !B$
+\end{prooftree}
+இந்த இறுதித் தொடரணியைத் தரக்கூடிய ஒரு தருக்க விதியைக் கண்டறிய, அதிலுள்ள
+$\lnot$, $\lor$, $\lif$ ஆகிய தருக்க இணைப்புகளைப் பார்க்கிறோம். இப்போது
+$\lor$, $\lif$ ஆகியவற்றை மட்டுமே கவனிக்கிறோம்; ஏனெனில் அவை இறுதித்
+தொடரணியிலுள்ள !!{sentence}s[gen] !!{main operator}s. $\lnot$ மற்றோர்
+இணைப்பின் எல்லைக்குள் இருப்பதால் அதை பிறகு கையாளலாம். ஆகவே இறுதி
+அனுமானத்திற்கான தருக்க விதிகளாக \LeftR{\lor}, \RightR{\lif} ஆகியவை நமக்கு
+உள்ளன. உண்மையில் எதையும் தேர்ந்தெடுக்கலாம்; ஆனால் இரண்டு கிளைகளாகப் பிரிவதைச்
+சற்றுத் தள்ளிப்போட உதவுகிறது என்பதற்காகவேனும் \RightR{\lif} விதியைத்
+தேர்ந்தெடுப்போம். இந்தக் கீழ்த் தொடரணியை விளைவிக்கக்கூடிய
+\RightR{\lif} அனுமானங்களின் வடிவத்தின்படி, அது பின்வருமாறு இருக்க வேண்டும்:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}} \UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+
+$\lnot !A \lor !B$ ஐ முன்தொடரின் வெளி முனைக்கு நகர்த்தினால்,
+\LeftR{\lor} விதியைப் பயன்படுத்தலாம். அதன் படிவத்தின்படி இது பின்வருமாறு
+இரண்டு மேல்த் தொடரணிகளாகப் பிரிய வேண்டும்:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lnot !A, !A \fCenter !B$
+\AxiomC{}
+\UnaryInf$!B, !A \fCenter !B$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$ \lnot !A \lor !B, !A \fCenter !B $
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+தொடக்கத் தொடரணிகளை நோக்கி மேலே செல்ல முயல்கிறோம் என்பதை நினைவில் கொள்க;
+நாம் அவற்றுக்கு மிக அருகில் வந்துவிட்டோம்!{} வலது கிளை, ஒரு தொடக்கத்
+தொடரணியிலிருந்து ஒரு தளர்த்தலும் ஓர் இடமாற்றமும் செய்தால் போதும்; அத்துடன்
+அது முடிந்துவிடும்:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lnot !A, !A \fCenter !B$
+\Axiom$!B \fCenter !B$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!A, !B \fCenter !B$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!B, !A \fCenter !B$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor !B, !A \fCenter !B $
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+
+இப்போது இடது கிளையைப் பார்ப்போம். எந்தவொரு !!{sentence}[loc] இடம்பெறும் ஒரே
+தருக்க இணைப்பு, முன்தொடர் !!{sentence}s[loc] உள்ள $\lnot$ குறியே. எனவே
+\LeftR{\lnot} விதியின் ஒரு நேர்வைத் தேடுகிறோம்.
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ !A \fCenter !B, !A$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, !A \fCenter !B$
+\Axiom$!B \fCenter !B$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!A, !B \fCenter !B$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!B, !A \fCenter !B$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor !B, !A \fCenter !B $
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+வலது கிளையை முடித்ததைப் போலவே, இந்த இடது கிளையையும் முடிக்க ஒரு தளர்த்தலும்
+ஓர் இடமாற்றமும் மட்டுமே தேவை.
+\begin{prooftree}
+\Axiom$!A \fCenter !A$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$ !A \fCenter !A, !B$
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ !A \fCenter !B, !A$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, !A \fCenter !B$
+\Axiom$!B \fCenter !B$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!A, !B \fCenter !B$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!B, !A \fCenter !B$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor !B, !A \fCenter !B $
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ !A, \lnot !A \lor !B \fCenter !B $
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \lnot !A \lor !B \fCenter !A \lif !B $
+\end{prooftree}
+\end{ex}
+
+% SEGMENT OLP-0075-S03
+\begin{ex}
+$\lnot !A \lor \lnot !B \Sequent \lnot (!A \land !B)$ தொடரணிக்கு ஓர்
+$\Log{LK}$-!!{derivation} தருக.
+
+மேலே பயன்படுத்திய முறைகளைப் பின்பற்றி, விரும்பிய இறுதித் தொடரணியை அடியில்
+எழுதுவதிலிருந்து தொடங்குகிறோம்.
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ \lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B) $
+\end{prooftree}
+இறுதித் தொடரணியிலுள்ள !!{sentence}s[gen] பயன்படுத்தத்தக்க முதன்மை இணைப்புகள்
+$\lor$ குறியும் $\lnot$ குறியும். இங்கு \LeftR{\lor} அல்லது
+\RightR{\lnot} விதிகளில் எதைப் பயன்படுத்தினாலும் இயலும்; ஆனால் உடனே இரண்டு
+கிளைகளாகப் பிரிவதைத் தவிர்க்க \RightR{\lnot} விதியிலிருந்து தொடங்குகிறோம்:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+இப்போது \LeftR{\land}, \LeftR{\lor} ஆகியவற்றில் எதைப் பார்ப்பது என்ற தேர்வு
+உள்ளது. \LeftR{\land} விதியைப் பயன்படுத்தினால் என்ன நிகழ்கிறது என்று
+பார்ப்போம்: $!A, \lnot !A \lor !B \Sequent \quad$ தொடரணியிலிருந்தோ
+$!B, \lnot !A \lor !B \Sequent \quad$ தொடரணியிலிருந்தோ தொடங்கலாம்.
+இந்த !!{derivation} $!A$, $!B$ ஆகியவற்றைப் பொறுத்தவரை சமச்சீராக இருப்பதால்,
+முந்தையதைத் தேர்ந்தெடுப்போம்:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$!A, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+!!{derivation}[acc] தொடர்ந்து நிரப்பும்போது ஒரு சிக்கல் தோன்றுகிறது:
+\begin{prooftree}
+\Axiom$!A \fCenter !A$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$ \lnot !A, !A \fCenter$
+\AxiomC{}
+\RightLabel{?}
+\UnaryInf$!A \fCenter !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$ \lnot !B, !A \fCenter$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor \lnot !B, !A \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!A, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+வலது கிளையின் உச்சியை மேலும் குறைக்க இயலாது; கட்டமைப்பு அனுமானங்கள் வழியாகவும்
+அதை ஒரு தொடக்கத் தொடரணியாக மாற்ற இயலாது. ஆகவே இது சரியான பாதையல்ல. எனவே
+மேலே \LeftR{\land} விதியைப் பயன்படுத்தியது பிழை. அதற்கு முந்தைய நிலைக்குத்
+திரும்பி, அதற்கு மாற்றாக \LeftR{\lor} விதியைச் செயல்படுத்தினால் கிடைப்பது:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lnot !A, !A \land !B \fCenter $
+
+\AxiomC{}
+\UnaryInf$\lnot !B, !A \land !B \fCenter $
+
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor \lnot !B, !A \land !B \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+முன்பு செய்ததுபோல் ஒவ்வொரு கிளையையும் நிறைவுசெய்தால் கிடைப்பது:
+\begin{prooftree}
+\Axiom$ !A \fCenter!A$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B \fCenter !A$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, !A \land !B \fCenter $
+
+\Axiom$ !B \fCenter !B$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B \fCenter !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !B, !A \land !B \fCenter $
+
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$\lnot !A \lor \lnot !B, !A \land !B \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$!A \land !B, \lnot !A \lor \lnot !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !A \lor \lnot !B \fCenter \lnot (!A \land !B)$
+\end{prooftree}
+(இந்தப் படிகளில் $\land$ விதிகளை $\lnot$ விதிகளுக்குக் கீழே
+செயல்படுத்தியிருந்தாலும் சரியான !!{derivation} ஒன்றைப் பெற்றிருப்போம்.)
+\end{ex}
+
+% SEGMENT OLP-0075-S04
+\begin{ex}
+இதுவரை சுருக்கல் விதியைப் பயன்படுத்தவில்லை; ஆனால் சில நேரங்களில் அது தேவை.
+அதற்கான எடுத்துக்காட்டு இதோ. $\quad \Sequent !A \lor \lnot !A$ ஐ நிறுவ
+விரும்புகிறோம் என்க. $\RightR{\lor}$ ஐ எதிர்த்திசையில் பயன்படுத்தினால்
+பின்வரும் இரண்டு !!{derivation}s[loc] ஒன்று கிடைக்கும்:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ \fCenter !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \fCenter !A \lor \lnot !A$
+\DisplayProof\qquad\bottomAlignProof
+\AxiomC{}
+\UnaryInf$!A \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \fCenter \lnot !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \fCenter !A \lor \lnot !A$
+\end{prooftree}
+இவற்றில் எதுவும் தொடக்கத் தொடரணியில் முடிவதில்லை. !!a{sentence} ஒன்றின்
+இரண்டு படிகளை ஒன்றாக இணைக்கச் சுருக்கல் விதி உதவுகிறது என்பதை உணர்வதே உத்தி.
+ஒரு நிறுவலைத் தேடும்போது, அதாவது அடியிலிருந்து உச்சிக்குச் செல்லும்போது,
+முன்கோளில் $!A \lor \lnot !A$ இன் ஒரு படியைத் தக்கவைக்கலாம்; எடுத்துக்காட்டாக,
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ \fCenter !A \lor \lnot !A, !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \fCenter !A \lor \lnot !A, !A \lor \lnot !A$
+\RightLabel{\RightR{\Contraction}}
+\UnaryInf$ \fCenter !A \lor \lnot !A$
+\end{prooftree}
+இப்போது $\RightR{\lor}$ ஐ இரண்டாவது முறையாகப் பயன்படுத்தி~$\lnot !A$ ஐயும்
+பெறலாம்; இது முழுமையான !!{derivation} ஒன்றுக்கு இட்டுச்செல்கிறது.
+\begin{prooftree}
+\Axiom$!A \fCenter !A$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\fCenter !A, \lnot !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$\fCenter !A, !A \lor \lnot !A$
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ \fCenter !A \lor \lnot !A, !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \fCenter !A \lor \lnot !A, !A \lor \lnot !A$
+\RightLabel{\RightR{\Contraction}}
+\UnaryInf$ \fCenter !A \lor \lnot !A$
+\end{prooftree}
+\end{ex}
+
+% SEGMENT OLP-0075-S05
+\begin{prob}
+பின்வரும் தொடரணிகளுக்கு !!{derivation}s தருக:
+\begin{enumerate}
+\item $!A \land (!B \land !C) \Sequent (!A \land !B) \land !C$.
+\item $!A \lor (!B \lor !C) \Sequent (!A \lor !B) \lor !C$.
+\item $!A \lif (!B \lif !C) \Sequent !B \lif (!A \lif !C)$.
+\item $!A \Sequent \lnot\lnot !A$.
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0075-S06
+\begin{prob}
+பின்வரும் தொடரணிகளுக்கு !!{derivation}s தருக:
+\begin{enumerate}
+\item $(!A \lor !B) \lif !C \Sequent !A \lif !C$.
+\item $(!A \lif !C) \land (!B \lif !C) \Sequent (!A \lor !B) \lif !C$.
+\item $\Sequent \lnot(!A \land \lnot !A)$.
+\item $!B \lif !A \Sequent \lnot !A \lif \lnot !B$.
+\item $\Sequent (!A \lif \lnot !A) \lif \lnot !A$.
+\item $\Sequent \lnot(!A \lif !B) \lif \lnot !B$.
+\item $!A \lif !C \Sequent \lnot (!A \land \lnot !C)$.
+\item $!A \land \lnot !C \Sequent \lnot (!A \lif !C)$.
+\item $!A \lor !B, \lnot !B \Sequent !A$.
+\item $\lnot !A \lor \lnot !B \Sequent \lnot(!A \land !B)$.
+\item $\Sequent (\lnot !A \land \lnot !B) \lif\lnot(!A \lor !B)$.
+\item $\Sequent \lnot(!A \lor !B) \lif (\lnot !A \land \lnot !B)$.
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0075-S07
+\begin{prob}
+பின்வரும் தொடரணிகளுக்கு !!{derivation}s தருக:
+\begin{enumerate}
+\item $\lnot(!A \lif !B) \Sequent !A$.
+\item $\lnot(!A \land !B) \Sequent \lnot !A \lor \lnot !B$.
+\item $!A \lif !B \Sequent \lnot !A \lor !B$.
+\item $\Sequent \lnot \lnot !A \lif !A$.
+\item $!A \lif !B, \lnot !A \lif !B \Sequent !B$.
+\item $(!A \land !B) \lif !C \Sequent (!A \lif !C) \lor (!B \lif !C)$.
+\item $(!A \lif !B) \lif !A \Sequent !A$.
+\item $\Sequent (!A \lif !B) \lor (!B \lif !C)$.
+\end{enumerate}
+(இவை அனைத்திற்கும் $\RightR{\Contraction}$~விதி தேவை.)
+\end{prob}
+\end{document}

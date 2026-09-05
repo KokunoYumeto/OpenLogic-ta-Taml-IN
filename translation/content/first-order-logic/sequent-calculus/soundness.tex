@@ -1,0 +1,415 @@
+% SEGMENT OLP-0081-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: soundness.tex
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{sou}}
+      {\olfileid{pl}{seq}{sou}}
+
+\olsection{சரித்தன்மை}
+
+\begin{explain}
+தொடரணிக் கணியம் போன்ற !!^a{derivation} முறைமை, உண்மையில் நிலவாதவற்றை
+!!{derive} இயலாது எனில் \emph{சரித்தன்மையுடையது}. ஆகவே சரித்தன்மை என்பது
+!!{derivation} முறைமைகளுக்கான உத்தரவாதப் பாதுகாப்புப் பண்பாகும். எந்த நிறுவல்
+கோட்பாட்டுப் பண்பைக் குறித்துப் பேசுகிறோம் என்பதைப் பொறுத்து, எடுத்துக்காட்டாகப்
+பின்வருவனவற்றை அறிய விரும்புகிறோம்:
+\begin{enumerate}
+\item !!{derivable} ஒவ்வொரு~$!A$ உம் \iftag{FOL}{செல்லுபடியாகும்}{ஒரு
+  மெய்மம்};
+\item !!a{sentence} வேறு சிலவற்றிலிருந்து !!{derivable} எனில், அது அவற்றின்
+  பின்விளைவும் ஆகும்;
+\item !!{sentence}s கொண்ட ஒரு கணம் முரணுடையது எனில், அது நிறைவுறத்தகாதது.
+\end{enumerate}
+இவை !!a{derivation} முறைமையின் முக்கியமான பண்புகள். இவற்றில் ஏதேனும் ஒன்று
+நிலவாவிட்டால், அந்த !!{derivation} முறைமை குறைபாடுடையது; அது அளவுக்கு மீறி
+!!{derive} செய்யும். எனவே !!a{derivation} முறைமையின் சரித்தன்மையை நிறுவுவது
+மிகவும் இன்றியமையாதது.
+
+இந்த நிறுவல்-கோட்பாட்டுப் பண்புகள் அனைத்தும் குறிப்பிட்ட தொடரணிகளின் தொடரணிக்
+கணிய !!{derivability} வழியாக வரையறுக்கப்பட்டுள்ளன. எனவே மேலுள்ள (1)--(3) ஐ
+நிறுவ, !!{derivable} தொடரணிகளின் பொருண்மைப் பண்புகள் குறித்த ஒன்றை நிறுவ
+வேண்டும். ஒரு தொடரணி \emph{செல்லுபடியாகும்} என்பதன் பொருளை முதலில் வரையறுத்து,
+ஒவ்வொரு !!{derivable} தொடரணியும் செல்லுபடியாகும் என்பதைக் காட்டுவோம். பின்னர்
+இந்த முடிவிலிருந்து (1)--(3) துணைவிளைவுகளாகப் பின்வரும்.
+\end{explain}
+
+% SEGMENT OLP-0081-S02
+\begin{defn}
+\iftag{FOL}{!!^a{structure}~$\Struct
+  M$}{!!^a{valuation}~$\pAssign{v}$} ஆனது $\Gamma \Sequent \Delta$ என்ற
+தொடரணியை \emph{நிறைவுறுத்துகிறது} என்பது, ஏதோவொரு $!A \in \Gamma$ க்கு
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ அல்லது ஏதோவொரு $!A \in \Delta$ க்கு
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ என்பதாகும்.
+
+ஒவ்வொரு \iftag{FOL}{!!{structure}~$\Struct
+  M$}{!!{valuation}~$\pAssign{v}$} உம் ஒரு தொடரணியை நிறைவுறுத்தினால், அந்தத்
+தொடரணி \emph{செல்லுபடியாகும்}.
+\end{defn}
+
+% SEGMENT OLP-0081-S03
+\begin{thm}[சரித்தன்மை]
+\ollabel{thm:sequent-soundness} $\Log{LK}$ ஆனது $\Theta \Sequent \Xi$ ஐ
+!!{derive}s எனில், $\Theta \Sequent \Xi$ செல்லுபடியாகும்.
+\end{thm}
+
+\begin{proof}
+$\Theta \Sequent \Xi$ இன் !!a{derivation} ஒன்றை $\pi$ என்க. $\pi$ இலுள்ள
+அனுமானங்களின் எண்ணிக்கை~$n$ மீது தொகுத்தறிகிறோம்.
+
+அனுமானங்களின் எண்ணிக்கை~$0$ எனில், $\pi$ ஒரு தொடக்கத் தொடரணியை மட்டுமே
+கொண்டிருக்கும். ஒவ்வொரு தொடக்கத் தொடரணி $!A \Sequent !A$ உம் வெளிப்படையாகச்
+செல்லுபடியாகும். ஏனெனில் ஒவ்வொரு \iftag{FOL}{$\Struct M$}{$\pAssign{v}$}
+க்கும், $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ அல்லது
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
+
+அனுமானங்களின் எண்ணிக்கை~0 ஐவிடப் பெரியது எனில், அடிமட்ட அனுமானத்தின் வகைக்கு
+ஏற்ப நேர்வுகளைப் பிரிக்கிறோம். எந்த முன்கோளின் !!{derivation}[loc] உள்ள
+அனுமானங்களின் எண்ணிக்கையும்~$n$ ஐவிடச் சிறியது. ஆகவே தொகுத்தறிதல் கருதுகோளால்,
+அந்த அனுமானத்தின் முன்கோள்கள் செல்லுபடியாகும் என்று கொள்ளலாம்.
+
+முதலில் ஒரே முன்கோளைக் கொண்டிருக்கக்கூடிய அனுமானங்களைப் பார்ப்போம்.
+\begin{enumerate}
+% SEGMENT OLP-0081-S04
+\item கடைசி அனுமானம் ஒரு தளர்த்தல். அப்போது $\Theta \Sequent \Xi$ என்பது,
+  கடைசி அனுமானம் \LeftR{\Weakening} எனில் $!A, \Gamma \Sequent \Delta$;
+  அது \RightR{\Weakening} எனில் $\Gamma \Sequent \Delta, !A$. மேலும்
+  !!{derivation} பின்வருவனவற்றில் ஒன்றில் முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\Weakening}}
+    \UnaryInf$!A, \Gamma \fCenter \Delta$
+    \DisplayProof\qquad\bottomAlignProof
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta$
+    \RightLabel{\RightR{\Weakening}}
+    \UnaryInf$\Gamma \fCenter \Delta, !A$
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால் $\Gamma \Sequent \Delta$ செல்லுபடியாகும். அதாவது,
+  ஒவ்வொரு
+  \iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$}
+  க்கும், $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனுமாறு ஏதோவொரு $!C \in
+  \Gamma$ உள்ளது, அல்லது $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனுமாறு
+  ஏதோவொரு $!C \in \Delta$ உள்ளது.
+  
+  ஏதோவொரு $!C \in \Gamma$ க்கு
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனில், $\Theta = !A, \Gamma$
+  என்பதால் $!C \in \Theta$ உம் ஆகும்; எனவே ஏதோவொரு $!C \in \Theta$ க்கு
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$. அதேபோல், ஏதோவொரு $!C \in
+  \Delta$ க்கு $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனில், $!C \in \Xi$
+  என்பதால் ஏதோவொரு $!C \in \Xi$ க்கு
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$. எனவே $\Theta \Sequent \Xi$
+  செல்லுபடியாகும்.
+% SEGMENT OLP-0081-S05
+\item கடைசி அனுமானம் \LeftR{\lnot}: அப்போது கடைசி அனுமானத்தின் முன்கோள்
+  $\Gamma \Sequent \Delta, !A$; அதன் முடிவு $\lnot !A, \Gamma \Sequent
+  \Delta$. அதாவது, !!{derivation} பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \RightLabel{\LeftR{\lnot}}
+    \UnaryInf$\lnot !A, \Gamma \fCenter \Delta$
+  \end{prooftree}
+  மேலும் $\Theta = \lnot !A, \Gamma$, $\Xi = \Delta$.
+
+  தொகுத்தறிதல் கருதுகோளின்படி $\Gamma \Sequent \Delta, !A$
+  செல்லுபடியாகும். அதாவது ஒவ்வொரு \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
+  க்கும், (a) ஏதோவொரு $!C \in \Gamma$ க்கு
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$, அல்லது (b) ஏதோவொரு $!C \in
+  \Delta$ க்கு $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$, அல்லது (c)
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. $\Theta \Sequent \Xi$ உம்
+  செல்லுபடியாகும் என்று காட்ட வேண்டும். \iftag{FOL}{$\Struct{M}$ என்ற
+    !!a{structure}}{$\pAssign{v}$ என்ற !!a{valuation}} ஒன்றைக் கொள்க. (a)
+  நிலவினால், $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனுமாறு $!C \in
+  \Gamma$ உள்ளது; ஆனால் $!C \in \Theta$ உம் ஆகும். (b) நிலவினால்,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனுமாறு $!C \in \Delta$ உள்ளது;
+  ஆனால் $!C \in \Xi$ உம் ஆகும். இறுதியாக,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ எனில்,
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{\lnot !A}$. $\lnot !A \in \Theta$
+  என்பதால், $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனுமாறு $!C \in
+  \Theta$ உள்ளது. எனவே $\Theta \Sequent \Xi$ செல்லுபடியாகும்.
+% SEGMENT OLP-0081-S06
+\item கடைசி அனுமானம் \RightR{\lnot}: பயிற்சி.
+\item கடைசி அனுமானம் \LeftR{\land}: இதில் இரண்டு வடிவங்கள் உள்ளன. முன்கோளின்
+  இடப்புறத்திலுள்ள $!A$ இலிருந்தோ $!B$ இலிருந்தோ இடப்புறத்தில் $!A \land !B$
+  ஐ அனுமானிக்கலாம். முதல் நேர்வில் $\pi$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$!A, \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\land}}
+    \UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+  \end{prooftree}
+  இங்கு $\Theta = !A \land !B, \Gamma$, $\Xi = \Delta$.
+  \iftag{FOL}{!!a{structure}~$\Struct
+    M$}{!!a{valuation}~$\pAssign{v}$} ஒன்றைக் கருதுக. தொகுத்தறிதல்
+  கருதுகோளின்படி $!A, \Gamma \Sequent \Delta$ செல்லுபடியாகும் என்பதால்,
+  (a) $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$, அல்லது (b) ஏதோவொரு $!C \in
+  \Gamma$ க்கு $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$, அல்லது (c)
+  ஏதோவொரு $!C \in \Delta$ க்கு
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$.
+  (a) நேர்வில் $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \land !B}$; ஆகவே
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனுமாறு $!C \in \Theta$ உள்ளது;
+  அந்த வாக்கியம் $!A \land !B$. (b) நேர்வில்,
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனுமாறு $!C \in \Gamma$ உள்ளது;
+  மேலும் $!C \in \Theta$ உம் ஆகும். (c) நேர்வில்,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனுமாறு $!C \in \Delta$ உள்ளது;
+  $\Xi = \Delta$ என்பதால் $!C \in \Xi$ உம் ஆகும். ஆகவே ஒவ்வொரு நேர்விலும்,
+  \iftag{FOL}{$\Struct M$}{$\pAssign{v}$} ஆனது $!A \land !B, \Gamma
+  \Sequent \Delta$ ஐ நிறைவுறுத்துகிறது. \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
+  தன்னிச்சையாகத் தேர்ந்தெடுக்கப்பட்டதால், $!A \land !B, \Gamma \Sequent
+  \Delta$ செல்லுபடியாகும். $!B$ இலிருந்து $!A \land !B$ அனுமானிக்கப்படும் நேர்வும்
+  இதேபோல் கையாளப்படுகிறது; $!A$ க்குப் பதிலாக $!B$ வருகிறது.
+% SEGMENT OLP-0081-S07
+\item கடைசி அனுமானம் \RightR{\lor}: இதில் இரண்டு வடிவங்கள் உள்ளன. முன்கோளின்
+  வலப்புறத்திலுள்ள $!A$ இலிருந்தோ $!B$ இலிருந்தோ வலப்புறத்தில் $!A \lor !B$
+  ஐ அனுமானிக்கலாம். முதல் நேர்வில் $\pi$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \RightLabel{\RightR{\lor}}
+    \UnaryInf$\Gamma \fCenter \Delta, !A \lor !B$
+  \end{prooftree}
+  இப்போது $\Theta = \Gamma$, $\Xi = \Delta, !A \lor !B$.
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ஒன்றைக் கருதுக. $\Gamma \Sequent \Delta, !A$ செல்லுபடியாகும் என்பதால்,
+  (a) $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$, அல்லது (b)
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனுமாறு ஏதோவொரு $!C \in
+  \Gamma$ உள்ளது, அல்லது (c)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனுமாறு
+  ஏதோவொரு $!C \in \Delta$ உள்ளது. (a) நேர்வில்,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lor !B}$. (b) நேர்வில்,
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனுமாறு $!C \in \Gamma$ உள்ளது.
+  (c) நேர்வில், $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனுமாறு $!C \in
+  \Delta$ உள்ளது. ஆகவே ஒவ்வொரு நேர்விலும்,
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஆனது $\Gamma \Sequent \Delta,
+  !A \lor !B$ ஐ, அதாவது $\Theta \Sequent \Xi$ ஐ, நிறைவுறுத்துகிறது.
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} தன்னிச்சையாகத்
+  தேர்ந்தெடுக்கப்பட்டதால், $\Theta \Sequent \Xi$ செல்லுபடியாகும். $!B$
+  இலிருந்து $!A \lor !B$ அனுமானிக்கப்படும் நேர்வும் இதேபோல் கையாளப்படுகிறது;
+  $!A$ க்குப் பதிலாக $!B$ வருகிறது.
+% SEGMENT OLP-0081-S08
+\item கடைசி அனுமானம் \RightR{\lif}: அப்போது $\pi$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$!A, \Gamma \fCenter \Delta, !B$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\Gamma \fCenter \Delta, !A \lif !B$
+  \end{prooftree}
+  மீண்டும், முன்கோள் செல்லுபடியாகும் என்று தொகுத்தறிதல் கருதுகோள் கூறுகிறது;
+  முடிவும் செல்லுபடியாகும் என்று காட்ட வேண்டும். தன்னிச்சையான
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஒன்றைக் கொள்க. $!A, \Gamma
+  \Sequent \Delta, !B$ செல்லுபடியாகும் என்பதால், பின்வரும் நேர்வுகளில்
+  குறைந்தது ஒன்று நிலவும்: (a) $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$,
+  (b) $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$, (c) ஏதோவொரு~$~!C \in
+  \Gamma$ க்கு $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$, அல்லது (d)
+  ஏதோவொரு $!C \in \Delta$ க்கு $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$.
+  (a), (b) நேர்வுகளில் $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$;
+  ஆகவே $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனுமாறு $!C \in \Delta,
+  !A \lif !B$ உள்ளது. (c) நேர்வில் ஏதோவொரு $!C \in \Gamma$ க்கு
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$. (d) நேர்வில் ஏதோவொரு $!C \in
+  \Delta$ க்கு $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$. ஒவ்வொரு நேர்விலும்,
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஆனது $\Gamma \Sequent \Delta,
+  !A \lif !B$ ஐ நிறைவுறுத்துகிறது. \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
+  தன்னிச்சையாகத் தேர்ந்தெடுக்கப்பட்டதால், $\Gamma \Sequent \Delta, !A \lif
+  !B$ செல்லுபடியாகும். \iftag{FOL}{%
+% SEGMENT OLP-0081-S09
+\item கடைசி அனுமானம் \LeftR{\lforall}: அப்போது !!a{formula}~$!A(x)$ உம்
+  மூடிய சொல்~$t$ உம் இருந்து, $\pi$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$!A(t), \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\lforall}}
+    \UnaryInf$\lforall[x][!A(x)], \Gamma \fCenter \Delta$
+  \end{prooftree}
+  $\lforall[x][!A(x)], \Gamma \Sequent \Delta$ என்ற முடிவு செல்லுபடியாகும்
+  என்று காட்ட வேண்டும். !!a{structure}~$\Struct M$ ஒன்றைக் கருதுக. முன்கோள்
+  $!A(t), \Gamma \Sequent \Delta$ செல்லுபடியாகும் என்பதால், (a)
+  $\Sat/{M}{!A(t)}$, அல்லது (b) ஏதோவொரு $!C \in \Gamma$ க்கு
+  $\Sat/{M}{!C}$, அல்லது (c)~ஏதோவொரு $!C \in \Delta$ க்கு
+  $\Sat{M}{!C}$. (a) நேர்வில்
+  % READER FALLBACK TA-READER-REF-004; absent semantics results get descriptive text.
+  \oliflabeldef{syn:sem:prop:quant-terms}{\olref[syn][sem]{prop:quant-terms}}{மூடிய
+  சொல் இடைநிறுத்தலுக்கான அளவையடை மெய்ப்பொருளியல் விதி} படி,
+  $\Sat{M}{\lforall[x][!A(x)]}$ எனில் $\Sat{M}{!A(t)}$. ஆனால்
+  $\Sat/{M}{!A(t)}$ என்பதால், $\Sat/{M}{\lforall[x][!A(x)]}$ . (b), (c)
+  நேர்வுகளிலும் $\Struct{M}$ ஆனது $\lforall[x][!A(x)], \Gamma \Sequent
+  \Delta$ ஐ நிறைவுறுத்துகிறது. $\Struct M$ தன்னிச்சையாகத்
+  தேர்ந்தெடுக்கப்பட்டதால், $\lforall[x][!A(x)], \Gamma \Sequent \Delta$
+  செல்லுபடியாகும்.
+\item கடைசி அனுமானம் \RightR{\lexists}: பயிற்சி.
+% SEGMENT OLP-0081-S10
+\item கடைசி அனுமானம் \RightR{\lforall}: அப்போது !!a{formula}~$!A(x)$ உம்
+  !!a{constant}~$a$ உம் இருந்து, $\pi$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A(a)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+  \end{prooftree}
+  இங்கு தனிமாறி நிபந்தனை நிறைவுறுகிறது; அதாவது $a$ ஆனது $!A(x)$,
+  $\Gamma$, $\Delta$ ஆகியவற்றில் இடம்பெறாது. தொகுத்தறிதல் கருதுகோளால் கடைசி
+  அனுமானத்தின் முன்கோள் செல்லுபடியாகும். முடிவும் செல்லுபடியாகும் என்று காட்ட
+  வேண்டும். அதாவது எந்த !!{structure}~$\Struct M$ க்கும், (a)
+  $\Sat{M}{\lforall[x][!A(x)]}$, அல்லது (b) ஏதோவொரு $!C \in \Gamma$ க்கு
+  $\Sat/{M}{!C}$, அல்லது (c)~ஏதோவொரு $!C \in \Delta$ க்கு
+  $\Sat{M}{!C}$ என்று காட்ட வேண்டும்.
+
+  $\Struct{M}$ தன்னிச்சையான !!{structure} என்க. (b) அல்லது (c) நிலவினால்
+  முடிந்தது. இரண்டும் நிலவவில்லை என்க: ஒவ்வொரு $!C \in \Gamma$ க்கும்
+  $\Sat{M}{!C}$; ஒவ்வொரு $!C \in \Delta$ க்கும் $\Sat/{M}{!C}$. (a),
+  அதாவது $\Sat{M}{\lforall[x][!A(x)]}$, நிலவுகிறது என்று காட்ட வேண்டும்.
+  \oliflabeldef{syn:ass:prop:sat-quant}{\olref[syn][ass]{prop:sat-quant}}{அளவையடைகளுக்கான
+  நிறைவுறுத்தல் விதி} படி, ஒவ்வொரு மாறி ஒதுக்கீடு~$s$ க்கும்
+  $\Sat{M}{!A(x)}[s]$ என்று காட்டினால் போதும். ஆகவே தன்னிச்சையான மாறி
+  ஒதுக்கீடு $s$ ஒன்றைக் கொள்க. $\Assign{a}{M'} = s(x)$ என்பதைத்தவிர
+  $\Struct{M}$ போலவே இருக்கும் கட்டமைப்பு~$\Struct{M'}$ ஐக் கருதுக.
+  \oliflabeldef{syn:ext:cor:extensionality-sent}{\olref[syn][ext]{cor:extensionality-sent}}{ஒரு
+  வாக்கியத்தின் மெய்மை அதில் வரும் குறிகளின் விளக்கங்களை மட்டுமே சாரும் என்ற
+  துணைவிளைவு} படி, $a$ ஆனது~$\Gamma$ வில்
+  இடம்பெறாததால் ஒவ்வொரு $!C \in \Gamma$ க்கும் $\Sat{M'}{!C}$; மேலும்
+  ஒவ்வொரு $!C \in \Delta$ க்கும் $\Sat/{M'}{!C}$. ஆனால் முன்கோள்
+  செல்லுபடியாகும்; ஆகவே $\Sat{M'}{!A(a)}$. $!A(a)$ ஒரு வாக்கியம் என்பதால்,
+  \oliflabeldef{syn:ass:prop:sentence-sat-true}{\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு
+  வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு} படி
+  $\Sat{M'}{!A(a)}[s]$.
+  $\Struct{M'}$ ஐ இவ்வாறே வரையறுத்துள்ளதால், $s(x) = \Value{a}{M'}[s]$
+  உடன் $\varAssign{s}{s}{x}$. ஆகவே
+  \oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+  இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு}
+  பொருந்துகிறது; $\Sat{M'}{!A(x)}[s]$ கிடைக்கிறது. $a$ ஆனது~$!A(x)$ இல்
+  இடம்பெறாததால்,
+  \oliflabeldef{syn:ext:prop:extensionality}{\olref[syn][ext]{prop:extensionality}}{ஒரு
+  வாய்பாட்டின் மெய்மை அதில் வரும் மொழிக் குறிகளின் விளக்கங்களை மட்டுமே சாரும்
+  என்ற முன்மொழிவு} படி
+  $\Sat{M}{!A(x)}[s]$. $s$ தன்னிச்சையாகத் தேர்ந்தெடுக்கப்பட்டதால், ஒவ்வொரு
+  மாறி ஒதுக்கீட்டிற்கும் $\Sat{M}{!A(x)}[s]$ என்பதை நிறுவிவிட்டோம்.
+\item கடைசி அனுமானம் \LeftR{\lexists}: பயிற்சி.
+}{}
+\end{enumerate}
+% SEGMENT OLP-0081-S11
+இப்போது இரண்டு முன்கோள்களைக் கொண்டிருக்கக்கூடிய அனுமானங்களைப் பார்ப்போம்.
+\begin{enumerate}
+% SEGMENT OLP-0081-S12
+\item கடைசி அனுமானம் ஒரு வெட்டு: அப்போது $\pi$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \AxiomC{}
+    \Deduce$!A, \Pi \fCenter \Lambda$
+    \RightLabel{\Cut}
+    \BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda$
+  \end{prooftree}
+  \iftag{FOL}{$\Struct{M}$ என்ற !!a{structure}}{$\pAssign{v}$ என்ற
+    !!a{valuation}} ஒன்றைக் கொள்க. தொகுத்தறிதல் கருதுகோளால் முன்கோள்கள்
+  செல்லுபடியாகும்; ஆகவே \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} அவை
+  இரண்டையும் நிறைவுறுத்துகிறது. இரண்டு நேர்வுகளைப் பிரிக்கிறோம்: (a)
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$, (b)
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. (a) நேர்வில், இடது முன்கோளை
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} நிறைவுறுத்த வேண்டுமெனில் அது
+  $\Gamma \Sequent \Delta$ ஐ நிறைவுறுத்த வேண்டும். அப்போது அது முடிவையும்
+  நிறைவுறுத்துகிறது. (b) நேர்வில், வலது முன்கோளை
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} நிறைவுறுத்த வேண்டுமெனில் அது
+  $\Pi \Sequent \Lambda$ ஐ நிறைவுறுத்த வேண்டும். மீண்டும்,
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} முடிவை நிறைவுறுத்துகிறது.
+% SEGMENT OLP-0081-S13
+\item கடைசி அனுமானம் \RightR{\land}. அப்போது $\pi$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !B$
+    \RightLabel{\RightR{\land}}
+    \BinaryInf$\Gamma \fCenter \Delta, !A \land !B$
+  \end{prooftree}
+  \iftag{FOL}{!!a{structure}~$\Struct
+    M$}{!!a{valuation}~$\pAssign{v}$} ஒன்றைக் கருதுக.
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஆனது $\Gamma \Sequent \Delta$
+  ஐ நிறைவுறுத்தினால் முடிந்தது. அது நிறைவுறுத்தவில்லை என்க. தொகுத்தறிதல்
+  கருதுகோளால் $\Gamma \fCenter \Delta, !A$ செல்லுபடியாகும் என்பதால்,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. அதேபோல் $\Gamma \Sequent \Delta,
+  !B$ செல்லுபடியாகும் என்பதால் $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$. எனவே
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$.
+% SEGMENT OLP-0081-S14
+\item கடைசி அனுமானம் \LeftR{\lor}: பயிற்சி.
+\item கடைசி அனுமானம் \LeftR{\lif}. அப்போது $\pi$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+    \AxiomC{}
+    \Deduce$!B, \Pi \fCenter \Lambda$
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$!A \lif !B, \Gamma, \Pi \fCenter \Delta, \Lambda$
+  \end{prooftree}
+  மீண்டும்,
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ஒன்றைக் கருதி, \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஆனது $\Gamma,
+  \Pi \Sequent \Delta, \Lambda$ ஐ நிறைவுறுத்தவில்லை என்க. அப்போது
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \lif !B}$ என்று காட்ட வேண்டும்.
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஆனது $\Gamma, \Pi \Sequent
+  \Delta, \Lambda$ ஐ நிறைவுறுத்தவில்லை எனில், $\Gamma \Sequent \Delta$,
+  $\Pi \Sequent \Lambda$ ஆகிய இரண்டையும் நிறைவுறுத்தாது. $\Gamma \Sequent
+  \Delta, !A$ செல்லுபடியாகும் என்பதால்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. $!B, \Pi \Sequent \Lambda$
+  செல்லுபடியாகும் என்பதால் $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$. ஆகவே
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \lif !B}$; இதையே காட்ட வேண்டியிருந்தது.
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0081-S15
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][seq][sou]{thm:sequent-soundness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][seq][sou]{thm:sequent-soundness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+$\Proves !A$ எனில், $!A$ ஒரு \iftag{FOL}{செல்லுபடியான வாக்கியம்}{மெய்மம்}.
+\end{cor}
+
+% SEGMENT OLP-0081-S16
+\begin{cor}
+\ollabel{cor:entailment-soundness}
+$\Gamma \Proves !A$ எனில், $\Gamma \Entails !A$.
+\end{cor}
+
+\begin{proof}
+$\Gamma \Proves !A$ எனில், ஏதோவொரு முடிவுறு உட்கணம் $\Gamma_0 \subseteq
+\Gamma$ க்கு $\Gamma_0 \Sequent !A$ இன் !!a{derivation} உள்ளது.
+\olref{thm:sequent-soundness} படி, ஒவ்வொரு
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$} உம்
+ஏதோவொரு $!B \in \Gamma_0$ ஐப் பொய்யாக்குகிறது அல்லது $!A$ ஐ மெய்யாக்குகிறது.
+எனவே $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ எனில்,
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ உம் ஆகும்.
+\end{proof}
+
+% SEGMENT OLP-0081-S17
+\begin{cor}
+\ollabel{cor:consistency-soundness}
+$\Gamma$ நிறைவுறத்தக்கது எனில், அது முரணற்றது.
+\end{cor}
+
+\begin{proof}
+எதிர்மாற்றத்தை நிறுவுகிறோம். $\Gamma$ முரணற்றதல்ல என்க. அப்போது முடிவுறு
+$\Gamma_0 \subseteq \Gamma$ ஒன்றும், $\Gamma_0 \Sequent \quad$ இன்
+!!a{derivation} ஒன்றும் உள்ளன. \olref{thm:sequent-soundness} படி,
+$\Gamma_0 \Sequent \quad$ செல்லுபடியாகும். வேறு சொற்களில், ஒவ்வொரு
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$} க்கும்,
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$ எனுமாறு $!C \in \Gamma_0$ ஒன்று
+உள்ளது; $\Gamma_0 \subseteq \Gamma$ என்பதால் அந்த $!C$ ஆனது~$\Gamma$ விலும்
+உள்ளது. எனவே எந்த \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} உம்~$\Gamma$ ஐ
+நிறைவுறுத்தாது; ஆகவே $\Gamma$ நிறைவுறத்தக்கதல்ல.
+\end{proof}
+
+\end{document}

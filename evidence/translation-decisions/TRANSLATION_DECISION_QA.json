@@ -1,0 +1,78 @@
+{
+  "schema": "openlogic-translation-decision-qa/1.0.0",
+  "generated_utc": "2026-09-05T15:45:28.618652+00:00",
+  "status": "PASS",
+  "edition_id": "openlogic-ta-Taml-IN",
+  "coverage_state": "partial",
+  "counts": {
+    "decisions": 140,
+    "occurrences": 4794,
+    "source_units": 80,
+    "reader_units_with_mapped_pages": 0,
+    "available_reader_occurrences": 0,
+    "pending_reader_occurrences": 4794
+  },
+  "normative_schema": {
+    "bytes": 10787,
+    "sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
+    "draft": "2020-12"
+  },
+  "checks": {
+    "canonical_schema_validation": true,
+    "unique_decision_ids": true,
+    "unique_occurrence_ids": true,
+    "one_occurrence_per_exact_decision_locus": true,
+    "all_legacy_decisions_projected": true,
+    "all_occurrences_projected_to_csv": true,
+    "all_source_target_spans_available": true,
+    "accepted_terminology_links_term_and_canon_use": true,
+    "all_textual_batch_qa_passes": true,
+    "formula_parity_or_audited_source_correction": true,
+    "citation_identifier_link_parity_or_audited_correction": true,
+    "tex_command_parity_or_audited_correction": true,
+    "hierarchy_environment_parity": true,
+    "unicode_nfc_and_replacement_character_gates": true,
+    "script_and_bidi_profile_consistent": true,
+    "tamil_script_present_in_every_chosen_rendering": true,
+    "markdown_csv_json_projection_counts_agree": true,
+    "state_public_byte_identity": true,
+    "canonical_schema_byte_identity": true,
+    "pending_reader_pages_are_explicit": true
+  },
+  "schema_errors": [],
+  "surfaces": {
+    "START_HERE.md": {
+      "bytes": 913,
+      "sha256": "c3631d016e0e9a0a10394936af341721622fdb421b69935cf86c149ca9e89c4d"
+    },
+    "TRANSLATION_DECISIONS_FULL.md": {
+      "bytes": 1284642,
+      "sha256": "fed2a2235186a986c02614255e531d50751541bf9a3adee21e1302c76fc9b150"
+    },
+    "PRIORITY_REVIEW.md": {
+      "bytes": 623680,
+      "sha256": "23cbf6ab99d39c9ff63be033825477a3bca0a713b6f08850de977c090575018b"
+    },
+    "DECISION_OCCURRENCES.csv": {
+      "bytes": 3487462,
+      "sha256": "ed2bdcaf7b9572d7d90dbcf1a2a29854cbc5702ad585793c5ecd1d5976ab9d4f"
+    },
+    "DECISIONS.json": {
+      "bytes": 15065106,
+      "sha256": "fd2b270f7494bf1d4e904747c9ffe122ca2f80f7c9f94d717d40ad16e8ab8356"
+    },
+    "translation-decision.schema.json": {
+      "bytes": 10787,
+      "sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90"
+    },
+    "VARIANT_ASSESSMENT.md": {
+      "bytes": 4374,
+      "sha256": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d"
+    }
+  },
+  "limitations": [
+    "The edition is partial, so pending reader pages are permitted and explicitly recorded.",
+    "Source spans marked as a segment-boundary fallback identify the exact audited semantic segment when a source lexeme cannot be paired mechanically.",
+    "No independent Tamil specialist review is claimed."
+  ]
+}

@@ -356,6 +356,130 @@
       "rationale": "The alternate unit's olfileid already establishes section id red-alt; changing only this explicit label yields a unique, predictable identifier without removing the anchor.",
       "precise_review_question": "Does the corrected red-alt namespace preserve the intended anchor while eliminating the only duplicate full label?",
       "location_needle": "LOCAL SOURCE CORRECTION TA-SIZ-LOCAL-003"
+    },
+    {
+      "audit_id": "TA-SEQ-001",
+      "unit_id": "OLP-0077",
+      "kind": "copied-editorial-wrong-proof-system",
+      "action": "Corrected the editorial description from natural deduction to sequent calculus, matching the section's LK definitions and chapter location.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The editorial says the section collects definitions for natural deduction although every definition uses LK sequent derivations.",
+      "chosen_treatment": "தமிழ் பதிப்புரை இதனைத் தொடரணிக் கணியத்திற்கான வரையறைகள் எனத் திருத்துகிறது.",
+      "alternatives_considered": "பொருந்தாத இயல்பான வருவித்தல் என்ற குறிப்பை வைத்தல்",
+      "rationale": "The unit is inside the sequent-calculus chapter and defines theoremhood, derivability and consistency exclusively through LK sequents.",
+      "precise_review_question": "Does sequent calculus uniquely identify the intended proof system in this editorial sentence?",
+      "location_needle": "இந்தப் பிரிவு தொடரணிக் கணியத்திற்கான வருவிக்கத்தக்கதன்மை உறவு"
+    },
+    {
+      "audit_id": "TA-SEQ-002",
+      "unit_id": "OLP-0081",
+      "kind": "soundness-proof-dropped-principal-formula",
+      "action": "Restored the full conclusion of the left-conjunction inference in the validity conclusion.",
+      "expected_missing_math": ["$\\Gamma\\Sequent\\Delta$"],
+      "expected_extra_math": ["$!A\\land!B,\\Gamma\\Sequent\\Delta$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\land"],
+      "source_issue_or_choice": "After showing that every arbitrary interpretation satisfies A-and-B, Gamma sequent Delta, the source concludes only that Gamma sequent Delta is valid.",
+      "chosen_treatment": "தமிழ் நிறுவல் முதன்மை வாய்பாட்டைக் கொண்ட முழு முடிவுத் தொடரணியே செல்லுபடியாகும் எனத் திருத்துகிறது.",
+      "alternatives_considered": "முதன்மை வாய்பாட்டை இழந்த மூல முடிவை வைத்தல்",
+      "rationale": "The induction step must establish validity of the actual lower sequent of the left-conjunction inference.",
+      "precise_review_question": "Is A-and-B, Gamma sequent Delta the exact conclusion required by this induction case?",
+      "location_needle": "$!A \\land !B, \\Gamma \\Sequent"
+    },
+    {
+      "audit_id": "TA-SEQ-003",
+      "unit_id": "OLP-0081",
+      "kind": "cut-proof-set-difference-for-sequent",
+      "action": "Replaced a set-difference symbol by the sequent sign in the right-premise residue of the cut soundness case.",
+      "expected_missing_math": ["$\\Pi\\setminus\\Lambda$"],
+      "expected_extra_math": ["$\\Pi\\Sequent\\Lambda$"],
+      "expected_missing_commands": ["\\setminus"],
+      "expected_extra_commands": ["\\Sequent"],
+      "source_issue_or_choice": "The cut case says that the interpretation must satisfy Pi set-minus Lambda, which is neither a sequent nor the right premise with the cut formula removed.",
+      "chosen_treatment": "தமிழ் நிறுவல் இதனை $\\Pi \\Sequent \\Lambda$ எனத் திருத்துகிறது.",
+      "alternatives_considered": "பொருளற்ற கண வேறுபாட்டுக் குறியை வைத்தல்",
+      "rationale": "When the cut formula is true, satisfaction of the right premise requires satisfaction of its remaining sequent Pi sequent Lambda.",
+      "precise_review_question": "Does Pi sequent Lambda state exactly the residue needed for the cut conclusion?",
+      "location_needle": "$\\Pi \\Sequent \\Lambda$ ஐ நிறைவுறுத்த வேண்டும்"
+    },
+    {
+      "audit_id": "TA-READER-REF-004",
+      "unit_id": "OLP-0081",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped six absent first-order semantics references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[syn][sem]{prop:quant-terms}",
+          "to": "\\oliflabeldef{syn:sem:prop:quant-terms}{\\olref[syn][sem]{prop:quant-terms}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ass]{prop:sat-quant}",
+          "to": "\\oliflabeldef{syn:ass:prop:sat-quant}{\\olref[syn][ass]{prop:sat-quant}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{cor:extensionality-sent}",
+          "to": "\\oliflabeldef{syn:ext:cor:extensionality-sent}{\\olref[syn][ext]{cor:extensionality-sent}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+          "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:ext-formulas}",
+          "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:extensionality}",
+          "to": "\\oliflabeldef{syn:ext:prop:extensionality}{\\olref[syn][ext]{prop:extensionality}}{}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The proof-systems reader omits the six referenced syntax-and-semantics results, which would otherwise render as literal question-mark pairs.",
+      "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் அந்த அளவையடை, வாக்கியம், சொல்-இடைநிறுத்தல் அல்லது குறி-சார்பு முடிவைச் சுருக்கமாகச் சொல்லும் தமிழ் தொடர்.",
+      "alternatives_considered": "Literal question marks; deleting the logical dependencies; permanently replacing the live links.",
+      "rationale": "The conditional branches keep the exact frozen reference identities, make the standalone proof readable, and restore numbered links automatically in a complete future reader.",
+      "precise_review_question": "Do the six Tamil fallbacks state the exact semantic dependency at each proof step without overstating the omitted propositions?",
+      "location_needle": "READER FALLBACK TA-READER-REF-004"
+    },
+    {
+      "audit_id": "TA-READER-REF-005",
+      "unit_id": "OLP-0083",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped four absent first-order semantics references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+          "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{}",
+          "count": 2
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:ext-formulas}",
+          "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{}",
+          "count": 2
+        }
+      ],
+      "source_issue_or_choice": "The identity-soundness proof depends on two syntax-and-semantics propositions that are not included in the proof-systems reader, producing four unresolved references.",
+      "chosen_treatment": "ஒவ்வொரு பயன்பாட்டிலும் இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் வாக்கிய நிறைவுறுத்தல் அல்லது சொல் இடைநிறுத்தல் முடிவை விளக்கும் தமிழ் தொடர்.",
+      "alternatives_considered": "Literal question marks; deleting the dependencies; permanently replacing the live links.",
+      "rationale": "The conditional fallbacks preserve the formal proof dependencies and remain reversible when the omitted chapters join the reader.",
+      "precise_review_question": "Do both repeated fallback descriptions remain grammatically and mathematically exact in the forward and reverse substitution steps?",
+      "location_needle": "READER FALLBACK TA-READER-REF-005"
     }
   ],
   "by_unit": {
@@ -369,6 +493,9 @@
     "OLP-0035": ["OLSIZ-006"],
     "OLP-0036": ["OLSIZ-007"],
     "OLP-0039": ["OLSIZ-008", "OLSIZ-009"],
-    "OLP-0040": ["OLSIZ-010", "TA-SIZ-LOCAL-003"]
+    "OLP-0040": ["OLSIZ-010", "TA-SIZ-LOCAL-003"],
+    "OLP-0077": ["TA-SEQ-001"],
+    "OLP-0081": ["TA-SEQ-002", "TA-SEQ-003", "TA-READER-REF-004"],
+    "OLP-0083": ["TA-READER-REF-005"]
   }
 }

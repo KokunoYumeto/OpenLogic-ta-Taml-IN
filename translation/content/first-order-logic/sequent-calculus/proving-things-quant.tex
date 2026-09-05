@@ -1,0 +1,110 @@
+% SEGMENT OLP-0076-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: proving-things-quant
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{prq}
+
+\olsection{அளவையடைகளைக் கொண்ட \usetoken{P}{derivation}}
+
+\begin{ex}
+$\lexists[x][\lnot !A(x)] \Sequent \lnot \lforall[x][!A(x)]$
+தொடரணிக்கு ஓர் $\Log{LK}$-!!{derivation} தருக.
+
+அளவையடைகளைக் கையாளும்போது தனிமாறி நிபந்தனையை மீறாமல் இருப்பதை உறுதிசெய்ய
+வேண்டும்; சில நேரங்களில் குறிப்பிட்ட அனுமானங்களைச் செயல்படுத்தும் வரிசையை
+மாற்றிப் பார்க்க வேண்டியிருக்கும். பொதுவாகத் தனிமாறி நிபந்தனைக்குட்பட்ட விதிகளை
+முதலில் கையாள முயல்வது உதவும்; முடிக்கப்பட்ட நிறுவலில் அவை கீழே இருக்கும்.
+மேலும், அடுத்து வருவதை முன்கூட்டியே பார்த்து, தொடக்கத் தொடரணி எவ்வாறு இருக்கும்
+என்று ஊகிக்க முயல்வதும் நல்லது. நமது நேர்வில் அது $!A(a) \Sequent !A(a)$
+போன்று இருக்க வேண்டும். ஆகவே அளவையடை விதிகளை ``எதிர்த்திசையில்''
+பயன்படுத்தும்போது, $\lforall$ விதிக்கும் $\lexists$ விதிக்கும் ஒரே சொல்லைத்
+தேர்ந்தெடுக்க வேண்டும்; அதை $a$ என்று அழைப்போம். ஒவ்வொரு விதிக்கும் வேறு
+சொற்களைத் தேர்ந்தெடுத்தால் $!A(a) \Sequent !A(b)$ போன்ற ஒன்று கிடைக்கும்;
+அது வருவிக்கத்தக்கதல்ல என்பது தெளிவு.
+
+வழக்கம்போல் பின்வருமாறு எழுதத் தொடங்குகிறோம்:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lexists[x][\lnot !A(x)] \fCenter \lnot \lforall[x][!A(x)]$
+\end{prooftree}
+\LeftR{\exists} விதியையோ \RightR{\lnot} விதியையோ செயல்படுத்தலாம்.
+\LeftR{\exists} விதி தனிமாறி நிபந்தனைக்குட்பட்டது என்பதால் அதைத் தாமதிக்காமல்
+கையாள்வது நல்லது; ஆகவே முதலில் அதையே செய்வோம்.
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$ \lnot !A(a) \fCenter \lnot \lforall[x][!A(x)]$
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][\lnot !A(x)] \fCenter \lnot \lforall[x][!A(x)]$
+\end{prooftree}
+\LeftR{\lnot}, \RightR{\lnot} விதிகளை எதிர்த்திசையில் பயன்படுத்தினால்
+கிடைப்பது:
+\begin{prooftree}
+\AxiomC{}
+\UnaryInf$\lforall[x][!A(x)] \fCenter !A(a)$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A(a), \lforall[x][!A(x)] \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$\lforall[x][!A(x)], \lnot !A(a) \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \lnot !A(a) \fCenter \lnot \lforall[x] !A(x)$
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x] \lnot !A(x) \fCenter \lnot \lforall[x] !A(x)$
+\end{prooftree}
+இப்போது நமக்குள்ள ஒரே தேர்வு \LeftR{\forall} விதியைச் செயல்படுத்துவதுதான்.
+இந்த விதி தனிமாறிக் கட்டுப்பாட்டுக்கு உட்படாததால் எந்தத் தடையும் இல்லை.
+$!A(a) \Sequent !A(a)$ என்ற வடிவிலான ஒரு தொடக்கத் தொடரணியைப் பெற
+முயல்கிறோம் என்பதை நினைவில் கொள்க. ஆகவே விதியைப் பயன்படுத்தும்போது $!A$ இன்
+இடுமதிப்பாக $a$ ஐத் தேர்ந்தெடுக்க வேண்டும்.
+\begin{prooftree}
+\Axiom$!A(a) \fCenter !A(a)$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$\lforall[x][!A(x)] \fCenter !A(a)$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A(a), \lforall[x][!A(x)] \fCenter $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$\lforall[x][!A(x)], \lnot !A(a) \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \lnot !A(a) \fCenter \lnot \lforall[x][!A(x)]$
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][ \lnot !A(x)] \fCenter \lnot \lforall[x][!A(x)]$
+\end{prooftree}
+குறிப்பாக அளவையடைகளைக் கையாளும்போது, இந்த நிலையில் தனிமாறி நிபந்தனை
+மீறப்படவில்லை என்பதை இருமுறை சரிபார்ப்பது அவசியம். நாம் பயன்படுத்திய விதிகளில்
+\LeftR{\exists} மட்டுமே தனிமாறி நிபந்தனைக்குட்பட்டது; மேலும் அதன்
+தனிமாறி~$a$ அதன் கீழ்த் தொடரணியில், அதாவது இறுதித் தொடரணியில், இடம்பெறவில்லை.
+எனவே இது சரியான !!{derivation}.
+\end{ex}
+
+% SEGMENT OLP-0076-S02
+\begin{prob}
+பின்வரும் தொடரணிகளுக்கு !!{derivation}s தருக:
+\begin{enumerate}
+\item $\Sequent (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) \lif
+\lforall[z][(!A(z) \land !B(z))]$.
+\item $\Sequent (\lexists[x][!A(x)] \lor \lexists[y][!B(y)]) \lif
+\lexists[z][(!A(z) \lor !B(z))]$.
+\item $\lforall[x][(!A(x) \lif !B)] \Sequent \lexists[y][!A(y)] \lif !B$.
+\item $\lforall[x][\lnot !A(x)] \Sequent \lnot\lexists[x][!A(x)]$.
+\item $\Sequent \lnot\lexists[x][!A(x)] \lif \lforall[x][\lnot !A(x)]$.
+\item $\Sequent \lnot\lexists[x][\lforall[y][((!A(x,y) \lif \lnot
+!A(y,y)) \land (\lnot !A(y,y) \lif !A(x,y)))]]$.
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0076-S03
+\begin{prob}
+பின்வரும் தொடரணிகளுக்கு !!{derivation}s தருக:
+\begin{enumerate}
+\item $\Sequent \lnot\lforall[x][!A(x)] \lif \lexists[x][\lnot!A(x)]$.
+\item $(\lforall[x][!A(x)] \lif !B) \Sequent \lexists[y][(!A(y) \lif !B)]$.
+\item $\Sequent \lexists[x][(!A(x) \lif \lforall[y][!A(y)])]$.
+\end{enumerate}
+(இவை அனைத்திற்கும் $\RightR{\Contraction}$~விதி தேவை.)
+\end{prob}
+
+\end{document}

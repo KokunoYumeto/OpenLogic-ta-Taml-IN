@@ -1,0 +1,61 @@
+% SEGMENT OLP-0080-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: provability-quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{qpr}
+\olsection{\usetoken{S}{derivability} மற்றும் அளவையடைகள்}
+
+\begin{explain}
+  இந்தப் பிரிவில் நிறுவப்படும்~$\Proves$ தொடர்பான உண்மைகளைத் தொடரணிக் கணிய
+  விதிகள் தர வேண்டும் என்பதும் நிறைவுத் தேற்றத்திற்குத் தேவை.
+\end{explain}
+
+% SEGMENT OLP-0080-S02
+\begin{thm}
+\ollabel{thm:strong-generalization} $c$ என்பது $\Gamma$ அல்லது $!A(x)$ இல்
+இடம்பெறாத ஒரு மாறிலிக் குறி என்றும், $\Gamma \Proves !A(c)$ என்றும் இருந்தால்,
+$\Gamma \Proves \lforall[x][!A(x)]$.
+\end{thm}
+
+\begin{proof}
+ஏதோவொரு முடிவுறு $\Gamma_0 \subseteq \Gamma$ க்கு $\Gamma_0 \Sequent
+!A(c)$ இன் $\Log{LK}$-!!{derivation} ஒன்றை $\pi_0$ என்க. ஒரு
+$\RightR{\lforall}$ அனுமானத்தைச் சேர்ப்பதன் மூலம் $\Gamma_0 \Sequent
+\lforall[x][!A(x)]$ இன் !!a{derivation} ஒன்றைப் பெறுகிறோம். ஏனெனில் $c$ ஆனது
+$\Gamma$ அல்லது $!A(x)$ இல் இடம்பெறாததால் தனிமாறி நிபந்தனை நிறைவுறுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0080-S03
+\begin{prop}
+\ollabel{prop:provability-quantifiers}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$!A(t) \Proves \lexists[x][!A(x)]$.}{}
+\tagitem{prvAll}{$\lforall[x][!A(x)] \Proves !A(t)$.}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$!A(t) \Sequent \lexists[x][!A(x)]$ தொடரணி
+  !!{derivable}:
+  \begin{prooftree}
+    \Axiom$!A(t) \fCenter !A(t)$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$!A(t) \fCenter \lexists[x][!A(x)]$
+    \end{prooftree}}{}
+\tagitem{prvAll}{$\lforall[x][!A(x)] \Sequent !A(t)$ தொடரணி
+  !!{derivable}:
+  \begin{prooftree}
+    \Axiom$!A(t) \fCenter !A(t)$
+    \RightLabel{\LeftR{\lforall}}
+    \UnaryInf$\lforall[x][!A(x)] \fCenter !A(t)$
+    \end{prooftree}}{}
+\end{tagenumerate}
+\end{proof}
+
+\end{document}

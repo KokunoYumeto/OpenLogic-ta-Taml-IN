@@ -1,0 +1,136 @@
+% SEGMENT OLP-0078-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: provability-consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{prv}}
+      {\olfileid{pl}{seq}{prv}}
+
+\olsection{\usetoken{S}{derivability} மற்றும் முரணின்மை}
+
+!!{derivability} உறவின் பல பண்புகளை இப்போது நிறுவுவோம். அவை தனித்தும்
+சுவையானவை; மேலும் அவை ஒவ்வொன்றும் நிறைவுத் தேற்றத்தின் நிறுவலில் ஒரு பங்கு
+வகிக்கும்.
+
+% SEGMENT OLP-0078-S02
+\begin{prop}\ollabel{prop:provability-contr}
+  $\Gamma \Proves !A$ என்றும், $\Gamma \cup \{!A\}$ முரணுடையது என்றும்
+  இருந்தால், $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+$\Log{LK}$ ஆனது $\Gamma_0 \Sequent !A$, $!A, \Gamma_1 \Sequent \quad$
+ஆகியவற்றை !!{derive}s எனுமாறு முடிவுறு $\Gamma_0$, $\Gamma_1 \subseteq
+\Gamma$ உள்ளன. $\Gamma_0 \Sequent !A$ இன் $\Log{LK}$-!!{derivation}[acc]
+~$\pi_0$ என்றும், $\Gamma_1, !A \Sequent \quad$ இன்
+$\Log{LK}$-!!{derivation}[acc]~$\pi_1$ என்றும் கொள்க. அப்போது பின்வருமாறு
+!!{derive} இயலும்:
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\pi_0$}
+\Deduce$ \Gamma_0 \fCenter !A $
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!A, \Gamma_1 \fCenter $
+\RightLabel{\Cut}
+\BinaryInf$ \Gamma_0,\Gamma_1 \fCenter $
+\end{prooftree}
+
+$\Gamma_0 \subseteq \Gamma$, $\Gamma_1 \subseteq \Gamma$ என்பதால்,
+$\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$; ஆகவே $\Gamma$ முரணுடையது.
+\end{proof}
+
+% SEGMENT OLP-0078-S03
+\begin{prop}
+\ollabel{prop:prov-incons}
+$\Gamma \Proves !A$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Gamma \cup
+\{\lnot !A\}$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+முதலில் $\Gamma \Proves !A$ என்க; அதாவது, $\Gamma \Sequent !A$ இன்
+!!a{derivation}~$\pi_0$ உள்ளது. ஒரு $\LeftR{\lnot}$ விதியைச் சேர்ப்பதன்
+மூலம்~$\lnot !A, \Gamma \Sequent \quad$ இன் !!a{derivation} ஒன்றைப்
+பெறுகிறோம்; அதாவது, $\Gamma \cup \{\lnot !A\}$ முரணுடையது.
+
+$\Gamma \cup \{\lnot !A\}$ முரணுடையது எனில், $\lnot !A, \Gamma
+\Sequent \quad$ இன் !!a{derivation}~$\pi_1$ உள்ளது. பின்வருவது $\Gamma
+\Sequent !A$ இன் !!a{derivation}:
+\begin{prooftree}
+  \Axiom$!A \fCenter !A$
+  \RightLabel{\RightR{\lnot}}
+  \UnaryInf$\fCenter !A, \lnot !A$
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\lnot !A, \Gamma \fCenter$
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma \fCenter !A$
+\end{prooftree}
+\end{proof}
+
+% SEGMENT OLP-0078-S04
+\begin{prob}
+$\Gamma \Proves \lnot !A$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Gamma
+\cup \{!A\}$ முரணுடையது என்பதை நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0078-S05
+\begin{prop}\ollabel{prop:explicit-inc}
+  $\Gamma \Proves !A$ என்றும் $\lnot !A \in \Gamma$ என்றும் இருந்தால்,
+  $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+  $\Gamma \Proves !A$ என்றும் $\lnot !A \in \Gamma$ என்றும் கொள்க.
+  $\Gamma_0 \Sequent !A$ என்ற தொடரணியின் !!a{derivation}~$\pi$ ஒன்று
+  உள்ளது. $\lnot !A, \Gamma_0 \Sequent \quad$ தொடரணியும்
+  !!{derivable}:
+  \begin{prooftree}
+    \AxiomC{}
+    \RightLabel{$\pi$}
+    \Deduce$\Gamma_0 \fCenter !A$
+    \Axiom$!A \fCenter !A$
+    \RightLabel{\LeftR{\lnot}}
+    \UnaryInf$\lnot !A, !A \fCenter$
+    \RightLabel{\LeftR{\Exchange}}
+    \UnaryInf$!A, \lnot !A \fCenter$
+    \RightLabel{\Cut}
+    \BinaryInf$\Gamma_0, \lnot !A \fCenter$
+  \end{prooftree}
+  $\lnot !A \in \Gamma$, $\Gamma_0 \subseteq \Gamma$ என்பதால், இது
+  $\Gamma$ முரணுடையது என்பதைக் காட்டுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0078-S06
+\begin{prop}\ollabel{prop:provability-exhaustive}
+  $\Gamma \cup \{!A\}$, $\Gamma \cup \{\lnot !A\}$ ஆகிய இரண்டும்
+  முரணுடையவை எனில், $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+$\Gamma_0 \subseteq \Gamma$, $\Gamma_1 \subseteq \Gamma$ என்ற முடிவுறு
+கணங்களும், முறையே $!A, \Gamma_0 \Sequent \quad$, $\lnot !A, \Gamma_1
+\Sequent \quad$ ஆகியவற்றின் $\Log{LK}$-!!{derivation}s $\pi_0$, $\pi_1$
+உம் உள்ளன. அப்போது பின்வருமாறு !!{derive} இயலும்:
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\pi_0$}
+\Deduce$ !A, \Gamma_0 \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \Gamma_0 \fCenter \lnot !A$
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\lnot !A, \Gamma_1 \fCenter  $
+\RightLabel{\Cut}
+\BinaryInf$ \Gamma_0, \Gamma_1 \fCenter $
+\end{prooftree}
+$\Gamma_0 \subseteq \Gamma$, $\Gamma_1 \subseteq \Gamma$ என்பதால்,
+$\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$. ஆகவே $\Gamma$ முரணுடையது.
+\end{proof}
+
+\end{document}

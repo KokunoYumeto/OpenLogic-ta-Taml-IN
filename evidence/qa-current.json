@@ -10,8 +10,8 @@
     "pass": true
   },
   "translation_coverage": {
-    "drafted": 65,
-    "textual_invariants_pass": 65,
+    "drafted": 80,
+    "textual_invariants_pass": 80,
     "combined_reader_verified": 51,
     "release_verified": 51,
     "published_sources": 51,
@@ -21,8 +21,8 @@
   "source_content_hashes_verified": 722,
   "canon_sources": 9,
   "canon_passages": 50,
-  "term_decisions": 96,
-  "aligned_segments": 523,
+  "term_decisions": 103,
+  "aligned_segments": 599,
   "semantic_review": "semantic-review-current.json",
   "build_qa": "tex-b001-receipt.json",
   "current_checkpoint": "checkpoint-current.json",

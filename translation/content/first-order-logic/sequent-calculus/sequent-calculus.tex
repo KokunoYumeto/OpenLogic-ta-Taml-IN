@@ -1,0 +1,58 @@
+% SEGMENT OLP-0069-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+
+\documentclass[../../../include/open-logic-chapter]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olchapter{fol}{seq}{தொடரணிக் கணியம்}}
+      {\olchapter{pl}{seq}{தொடரணிக் கணியம்}}
+
+\begin{editorial}
+  இந்த அதிகாரம் செவ்வியல் முதல்-வரிசைத் தருக்கவியலுக்கான கென்ட்சனின்
+  நிலையான தொடரணிக் கணியம் LK ஐ வழங்குகிறது. இதற்கு இன்னும் பல
+  எடுத்துக்காட்டுகளும் பயிற்சிகளும் சேர்க்கப்படலாம். தொடரணிக் கணியத்தை ஒரு
+  நிறுவல் முறைமையாகக் கருதுவதற்குரிய உள்ளடக்கத்தைச் சேர்க்கவோ விலக்கவோ
+  ``prfLK'' குறிச்சொல்லைப் பயன்படுத்துக.
+\end{editorial}
+
+\olimport{rules-and-proofs}
+
+\olimport{propositional-rules}
+
+\iftag{FOL}{%
+  \olimport{quantifier-rules}
+}{}
+
+\olimport{structural-rules}
+
+\olimport{derivations}
+
+\olimport{proving-things}
+
+\iftag{FOL}{%
+  \olimport{proving-things-quant}
+}{}
+
+\olimport{proof-theoretic-notions}
+
+\olimport{provability-consistency}
+
+\olimport{provability-propositional}
+
+\iftag{FOL}{%
+  \olimport{provability-quantifiers}
+}{}
+
+\olimport{soundness}
+
+\iftag{FOL}{%
+  \olimport{identity}
+  \olimport{soundness-identity}
+}{}
+
+\OLEndChapterHook
+
+\end{document}

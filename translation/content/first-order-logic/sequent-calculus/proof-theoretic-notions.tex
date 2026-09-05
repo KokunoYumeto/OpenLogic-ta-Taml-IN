@@ -1,0 +1,182 @@
+% SEGMENT OLP-0077-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: proof-theoretic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\begin{editorial}
+  இந்தப் பிரிவு தொடரணிக் கணியத்திற்கான வருவிக்கத்தக்கதன்மை உறவு மற்றும்
+  முரணின்மை ஆகியவற்றின் வரையறைகளைத் தொகுக்கிறது.
+\end{editorial}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{ptn}}
+      {\olfileid{pl}{seq}{ptn}}
+
+\olsection{நிறுவல்-கோட்பாட்டுக் கருத்துகள்}
+
+\begin{explain}
+பல முக்கியமான பொருண்மைக் கருத்துகளை (செல்லுபடித்தன்மை, பின்விளைவு,
+நிறைவுறத்தக்கதன்மை) நாம் வரையறுத்ததைப் போலவே, அவற்றுடன் தொடர்புடைய
+\emph{நிறுவல்-கோட்பாட்டுக் கருத்துகளை} இப்போது வரையறுக்கிறோம். இவை
+!!{structure}s[loc] !!{sentence}s நிறைவுறுவதைச் சார்ந்து வரையறுக்கப்படாமல்,
+குறிப்பிட்ட தொடரணிகளின் !!{derivability} அல்லது !!{nonderivability} ஐச்
+சார்ந்து வரையறுக்கப்படுகின்றன. இந்தக் கருத்துகள் ஒன்றுபடுகின்றன என்பது ஒரு
+முக்கியமான கண்டுபிடிப்பு. அவை ஒன்றுபடுவதே \emph{சரித்தன்மைத் தேற்றம்} மற்றும்
+\emph{நிறைவுத் தேற்றம்} ஆகியவற்றின் உள்ளடக்கம்.
+\end{explain}
+
+% SEGMENT OLP-0077-S02
+\begin{defn}[தேற்றங்கள்]
+!!^a{sentence}~$!A$ க்கு $\quad \Sequent !A$ தொடரணியின்
+!!a{derivation} ஒன்று~$\Log{LK}$ இல் இருந்தால், அந்த வாக்கியம் ஒரு \emph{தேற்றம்}.
+$!A$ தேற்றமாக இருந்தால் $\Proves !A$ என்றும், இல்லையெனில் $\Proves/ !A$
+என்றும் எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0077-S03
+\begin{defn}[!!^{derivability}]
+!!^a{sentence}~$!A$ என்பது !!{sentence}s கொண்ட~$\Gamma$ கணத்திலிருந்து
+\emph{!!{derivable}} என்பதை $\Gamma \Proves !A$ என்று எழுதுகிறோம். இதன்
+பொருள், $\Gamma_0 \subseteq \Gamma$ என்ற முடிவுறு உட்கணமும்,
+$\Gamma_0$ விலுள்ள !!{sentence}s[gen] $\Gamma_0'$ என்ற தொடரும் இருந்து,
+$\Log{LK}$ ஆனது $\Gamma_0' \Sequent !A$ ஐ !!{derive}s என்பதாகும். $!A$
+ஆனது $\Gamma$ இலிருந்து !!{derivable} அல்ல என்றால் $\Gamma \Proves/ !A$
+என்று எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0077-S04
+சுருக்கல், தளர்த்தல், இடமாற்றம் ஆகிய விதிகளால்~$\Gamma_0'$ இல் உள்ள
+!!{sentence}s[gen] வரிசையும் எண்ணிக்கையும் பொருட்டல்ல: $\Gamma_0' \Sequent
+!A$ என்ற தொடரணி !!{derivable} எனில்,~$\Gamma_0'$ இலுள்ள அதே !!{sentence}s[acc]
+கொண்ட எந்த $\Gamma_0''$ க்கும் $\Gamma_0'' \Sequent !A$ தொடரணியும்
+!!{derivable}. எடுத்துக்காட்டாக, $\Gamma_0 = \{!B, !C\}$ எனில்,
+$\Gamma_0' = \tuple{!B, !B, !C}$, $\Gamma_0'' = \tuple{!C, !C, !B}$
+ஆகிய இரண்டும்~$\Gamma_0$ விலுள்ள !!{sentence}s[acc] மட்டுமே கொண்ட தொடர்கள்.
+ஒன்றைக் கொண்ட ஒரு தொடரணி வருவிக்கத்தக்கது எனில் மற்றொன்றைக் கொண்ட தொடரணியும்
+அவ்வாறே; எடுத்துக்காட்டாக:
+\begin{prooftree}
+  \AxiomC{}
+  \Deduce$!B, !B, !C \fCenter !A$
+  \RightLabel{\LeftR{\Contraction}}
+  \UnaryInf$!B, !C \fCenter !A$
+  \RightLabel{\LeftR{\Exchange}}
+  \UnaryInf$!C, !B \fCenter !A$
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!C, !C, !B \fCenter !A$
+\end{prooftree}
+இனிமேல் $\Gamma_0$ என்பது !!{sentence}s கொண்ட ஒரு முடிவுறு கணமாக இருந்தால்,
+$\Gamma_0 \Sequent !A$ என்பது முன்தொடரில்~$\Gamma_0$ விலுள்ள !!{sentence}s[gen]
+ஒரு தொடரைக் கொண்ட ஏதேனும் ஒரு தொடரணி என்று கூறுவோம்; தேவையான சுருக்கல்கள்,
+இடமாற்றங்கள், தளர்த்தல்கள் ஆகியவற்றை மறைமுகமாகச் சேர்த்துக்கொள்வோம்.
+
+% SEGMENT OLP-0077-S05
+\begin{defn}[முரணின்மை]
+$\Gamma$ என்ற வாக்கியக் கணம் \emph{முரணுடையது} என்பது, $\Gamma_0 \subseteq
+\Gamma$ என்ற ஏதோவொரு முடிவுறு உட்கணம் இருந்து, $\Log{LK}$ ஆனது $\Gamma_0
+\Sequent \quad$ ஐ !!{derive}s என்பதாகும். $\Gamma$ முரணுடையதல்ல எனில்,
+அதாவது ஒவ்வொரு முடிவுறு $\Gamma_0 \subseteq \Gamma$ க்கும் $\Log{LK}$ ஆனது
+$\Gamma_0 \Sequent \quad$ ஐ !!{derive} இயலாது எனில், அது \emph{முரணற்றது}
+என்கிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0077-S06
+\begin{prop}[தற்சுட்டுப் பண்பு]
+\ollabel{prop:reflexivity}
+$!A \in \Gamma$ எனில், $\Gamma \Proves !A$.
+\end{prop}
+
+\begin{proof}
+தொடக்கத் தொடரணி $!A \Sequent !A$ !!{derivable}; மேலும் $\{!A\}
+\subseteq \Gamma$.
+\end{proof}
+  
+% SEGMENT OLP-0077-S07
+\begin{prop}[ஒருபோக்குத்தன்மை]
+\ollabel{prop:monotonicity}
+$\Gamma \subseteq \Delta$ மற்றும் $\Gamma \Proves !A$ எனில், $\Delta
+\Proves !A$.
+\end{prop}
+
+\begin{proof}
+$\Gamma \Proves !A$ என்க. அதாவது, $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+முடிவுறு உட்கணம் இருந்து, $\Gamma_0 \Sequent !A$ !!{derivable}. $\Gamma
+\subseteq \Delta$ என்பதால், $\Gamma_0$ ஆனது~$\Delta$ வின் முடிவுறு உட்கணமும்
+ஆகும். ஆகவே $\Gamma_0 \Sequent !A$ இன் !!{derivation} ஆனது $\Delta
+\Proves !A$ என்பதையும் காட்டுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0077-S08
+\begin{prop}[கடப்புப் பண்பு]
+\ollabel{prop:transitivity}
+$\Gamma \Proves !A$ மற்றும் $\{!A\} \cup \Delta \Proves !B$ எனில்,
+$\Gamma \cup \Delta \Proves !B$.
+\end{prop}
+
+\begin{proof}
+$\Gamma \Proves !A$ எனில், ஒரு முடிவுறு $\Gamma_0 \subseteq \Gamma$ உம்,
+$\Gamma_0 \Sequent !A$ இன் !!a{derivation}~$\pi_0$ உம் உள்ளன. $\{!A\}
+\cup \Delta \Proves !B$ எனில், ஏதோவொரு முடிவுறு $\Delta_0 \subseteq
+\Delta$ க்கு $!A, \Delta_0 \Sequent !B$ இன் !!a{derivation}~$\pi_1$
+உள்ளது. பின்வரும் !!{derivation}[acc] கருதுக:
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{$\pi_0$}
+  \Deduce$\Gamma_0 \fCenter !A$
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!A, \Delta_0 \fCenter !B$
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma_0, \Delta_0 \fCenter !B$
+\end{prooftree}
+$\Gamma_0 \cup \Delta_0 \subseteq \Gamma \cup \Delta$ என்பதால், இது
+$\Gamma \cup \Delta \Proves !B$ என்பதைக் காட்டுகிறது.
+\end{proof}
+
+குறிப்பாக, $\Gamma \Proves !A$ மற்றும் $!A \Proves !B$ எனில் $\Gamma
+\Proves !B$ என்பது இதன் பொருள் என்பதைக் கவனிக்கவும். மேலும் $!A_1,
+\dots, !A_n \Proves !B$ என்றும், ஒவ்வொரு~$i$ க்கும் $\Gamma \Proves !A_i$
+என்றும் இருந்தால், $\Gamma \Proves !B$ என்பதும் பின்வருகிறது.
+
+% SEGMENT OLP-0077-S09
+\begin{prop}
+\ollabel{prop:incons}
+$\Gamma$ முரணுடையது என்பது, அப்போதும் அப்போது மட்டுமே, ஒவ்வொரு
+வாக்கியம்~$!A$ க்கும் $\Gamma \Proves {!A}$.
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[fol][seq][ptn]{prop:incons} ஐ நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0077-S10
+\begin{prop}[இறுக்கத்தன்மை]
+  \ollabel{prop:proves-compact}
+  \begin{enumerate}
+  \item $\Gamma \Proves !A$ எனில், $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+    முடிவுறு உட்கணம் இருந்து, $\Gamma_0 \Proves !A$.
+  \item $\Gamma$ வின் ஒவ்வொரு முடிவுறு உட்கணமும் முரணற்றது எனில்,
+    $\Gamma$ முரணற்றது.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $\Gamma \Proves !A$ எனில், $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+      முடிவுறு உட்கணம் இருந்து, $\Gamma_0 \Sequent !A$ தொடரணிக்கு
+      !!a{derivation} உள்ளது. இதனால் $\Gamma_0 \Proves !A$.
+    \item $\Gamma$ முரணுடையது எனில், $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+      முடிவுறு உட்கணம் இருந்து, $\Log{LK}$ ஆனது $\Gamma_0 \Sequent \quad$ ஐ
+      !!{derive}s. ஆனால் அப்போது~$\Gamma_0$, $\Gamma$ வின் முரணுடைய ஒரு
+      முடிவுறு உட்கணமாகும்.
+  \end{enumerate}
+\end{proof}
+
+\end{document}

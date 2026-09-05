@@ -1,0 +1,281 @@
+{
+  "batch_id": "TA-B041",
+  "units": [
+    {
+      "unit_id": "OLP-0081",
+      "source_sha256": "4de487cafc9d685844abb2c0b29c7b51debeb30a9b1129c7a2fa8c13ae48b151",
+      "translation_sha256": "f1cc590dd95f493dc167595743ad198561eef3926ff7d1b48bf9868d344b096f",
+      "source_bytes": 17663,
+      "translation_bytes": 32849,
+      "source_coverage_complete": true,
+      "segments": 17,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma\\Sequent\\Delta$",
+        "$\\Pi\\setminus\\Lambda$"
+      ],
+      "extra_math": [
+        "$!A\\land!B,\\Gamma\\Sequent\\Delta$",
+        "$\\Pi\\Sequent\\Lambda$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "ass",
+        "ext",
+        "fol",
+        "include",
+        "loc",
+        "logic",
+        "open",
+        "section",
+        "sem",
+        "seq",
+        "sou",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SEQ-002",
+          "unit_id": "OLP-0081",
+          "kind": "soundness-proof-dropped-principal-formula",
+          "action": "Restored the full conclusion of the left-conjunction inference in the validity conclusion.",
+          "expected_missing_math": [
+            "$\\Gamma\\Sequent\\Delta$"
+          ],
+          "expected_extra_math": [
+            "$!A\\land!B,\\Gamma\\Sequent\\Delta$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\land"
+          ],
+          "source_issue_or_choice": "After showing that every arbitrary interpretation satisfies A-and-B, Gamma sequent Delta, the source concludes only that Gamma sequent Delta is valid.",
+          "chosen_treatment": "தமிழ் நிறுவல் முதன்மை வாய்பாட்டைக் கொண்ட முழு முடிவுத் தொடரணியே செல்லுபடியாகும் எனத் திருத்துகிறது.",
+          "alternatives_considered": "முதன்மை வாய்பாட்டை இழந்த மூல முடிவை வைத்தல்",
+          "rationale": "The induction step must establish validity of the actual lower sequent of the left-conjunction inference.",
+          "precise_review_question": "Is A-and-B, Gamma sequent Delta the exact conclusion required by this induction case?",
+          "location_needle": "$!A \\land !B, \\Gamma \\Sequent"
+        },
+        {
+          "audit_id": "TA-SEQ-003",
+          "unit_id": "OLP-0081",
+          "kind": "cut-proof-set-difference-for-sequent",
+          "action": "Replaced a set-difference symbol by the sequent sign in the right-premise residue of the cut soundness case.",
+          "expected_missing_math": [
+            "$\\Pi\\setminus\\Lambda$"
+          ],
+          "expected_extra_math": [
+            "$\\Pi\\Sequent\\Lambda$"
+          ],
+          "expected_missing_commands": [
+            "\\setminus"
+          ],
+          "expected_extra_commands": [
+            "\\Sequent"
+          ],
+          "source_issue_or_choice": "The cut case says that the interpretation must satisfy Pi set-minus Lambda, which is neither a sequent nor the right premise with the cut formula removed.",
+          "chosen_treatment": "தமிழ் நிறுவல் இதனை $\\Pi \\Sequent \\Lambda$ எனத் திருத்துகிறது.",
+          "alternatives_considered": "பொருளற்ற கண வேறுபாட்டுக் குறியை வைத்தல்",
+          "rationale": "When the cut formula is true, satisfaction of the right premise requires satisfaction of its remaining sequent Pi sequent Lambda.",
+          "precise_review_question": "Does Pi sequent Lambda state exactly the residue needed for the cut conclusion?",
+          "location_needle": "$\\Pi \\Sequent \\Lambda$ ஐ நிறைவுறுத்த வேண்டும்"
+        },
+        {
+          "audit_id": "TA-READER-REF-004",
+          "unit_id": "OLP-0081",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped six absent first-order semantics references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[syn][sem]{prop:quant-terms}",
+              "to": "\\oliflabeldef{syn:sem:prop:quant-terms}{\\olref[syn][sem]{prop:quant-terms}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ass]{prop:sat-quant}",
+              "to": "\\oliflabeldef{syn:ass:prop:sat-quant}{\\olref[syn][ass]{prop:sat-quant}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ext]{cor:extensionality-sent}",
+              "to": "\\oliflabeldef{syn:ext:cor:extensionality-sent}{\\olref[syn][ext]{cor:extensionality-sent}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+              "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ext]{prop:ext-formulas}",
+              "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ext]{prop:extensionality}",
+              "to": "\\oliflabeldef{syn:ext:prop:extensionality}{\\olref[syn][ext]{prop:extensionality}}{}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof-systems reader omits the six referenced syntax-and-semantics results, which would otherwise render as literal question-mark pairs.",
+          "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் அந்த அளவையடை, வாக்கியம், சொல்-இடைநிறுத்தல் அல்லது குறி-சார்பு முடிவைச் சுருக்கமாகச் சொல்லும் தமிழ் தொடர்.",
+          "alternatives_considered": "Literal question marks; deleting the logical dependencies; permanently replacing the live links.",
+          "rationale": "The conditional branches keep the exact frozen reference identities, make the standalone proof readable, and restore numbered links automatically in a complete future reader.",
+          "precise_review_question": "Do the six Tamil fallbacks state the exact semantic dependency at each proof step without overstating the omitted propositions?",
+          "location_needle": "READER FALLBACK TA-READER-REF-004"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\setminus"
+      ],
+      "extra_commands": [
+        "\\Sequent",
+        "\\land",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0082",
+      "source_sha256": "0f9d6d0731f2a74f568d49545bfeeff9373aea71d188973549054823f240f23d",
+      "translation_sha256": "6e044c4eb5ec1cce6a5e81b3d17e56890fd03e3dbfd1f0b455ee51a1c3a5f5c1",
+      "source_bytes": 2380,
+      "translation_bytes": 3272,
+      "source_coverage_complete": true,
+      "segments": 4,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "loc",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0083",
+      "source_sha256": "0cc6d3e92d57d3070076ce2daa13aa85c6da6ac3cfb2b5d56df87bb7fef4fac3",
+      "translation_sha256": "44693bd9b2ed6b574c863530d99f146e35c8adefdbe5b49ef2249ee100e3fca9",
+      "source_bytes": 1763,
+      "translation_bytes": 4071,
+      "source_coverage_complete": true,
+      "segments": 2,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "ass",
+        "ext",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-READER-REF-005",
+          "unit_id": "OLP-0083",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped four absent first-order semantics references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+              "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{}",
+              "count": 2
+            },
+            {
+              "from": "\\olref[syn][ext]{prop:ext-formulas}",
+              "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{}",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "The identity-soundness proof depends on two syntax-and-semantics propositions that are not included in the proof-systems reader, producing four unresolved references.",
+          "chosen_treatment": "ஒவ்வொரு பயன்பாட்டிலும் இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் வாக்கிய நிறைவுறுத்தல் அல்லது சொல் இடைநிறுத்தல் முடிவை விளக்கும் தமிழ் தொடர்.",
+          "alternatives_considered": "Literal question marks; deleting the dependencies; permanently replacing the live links.",
+          "rationale": "The conditional fallbacks preserve the formal proof dependencies and remain reversible when the omitted chapters join the reader.",
+          "precise_review_question": "Do both repeated fallback descriptions remain grammatically and mathematically exact in the forward and reverse substitution steps?",
+          "location_needle": "READER FALLBACK TA-READER-REF-005"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

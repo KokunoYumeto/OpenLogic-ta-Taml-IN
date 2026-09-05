@@ -1,0 +1,128 @@
+% SEGMENT OLP-0074-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: derivations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{seq}{der}}
+      {\olfileid{pl}{seq}{der}}
+
+\olsection{\usetoken{P}{derivation}}
+
+\begin{explain}
+ஒரு தொடக்கத் தொடரணி எப்படி இருக்கும் என்று கூறி, அனுமான விதிகளையும்
+வழங்கியுள்ளோம். தொடரணிக் கணியத்தின் !!^{derivation}s இவற்றிலிருந்து
+மீள்வரையறையாக உருவாக்கப்படுகின்றன: ஒவ்வொரு !!{derivation}வும் தனித்த ஒரு
+தொடக்கத் தொடரணியாக இருக்கும்; அல்லது ஓர் அனுமானத்தைத் தொடர்ந்து வரும் ஒன்று
+அல்லது இரண்டு !!{derivation}s ஐக் கொண்டிருக்கும்.
+\end{explain}
+
+% SEGMENT OLP-0074-S02
+\begin{defn}[$\Log{LK}$ !!{derivation}]
+ஒரு தொடரணி~$S$ இன் \emph{$\Log{LK}$-!!{derivation}} என்பது பின்வரும்
+நிபந்தனைகளை நிறைவேற்றும் தொடரணிகளின் முடிவுறு மரம்:
+\begin{enumerate}
+\item மரத்தின் உச்சியிலுள்ள தொடரணிகள் தொடக்கத் தொடரணிகள்.
+\item மரத்தின் அடியிலுள்ள தொடரணி~$S$.
+\item மரத்தில் $S$ தவிர உள்ள ஒவ்வொரு தொடரணியும், அந்தத் தொடரணிக்கு நேராகக்
+  கீழே நிற்கும் முடிவைக் கொண்ட ஓர் அனுமான விதியின் சரியான பயன்பாட்டுக்கு
+  முன்கோளாக இருக்கும்.
+\end{enumerate}
+அப்போது $S$ ஐ அந்த !!{derivation}[gen] \emph{இறுதித் தொடரணி} என்றும், $S$
+\emph{$\Log{LK}$ இல் !!{derivable}} (அல்லது $\Log{LK}$-!!{derivable}) என்றும்
+கூறுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0074-S03
+\begin{ex}
+ஒவ்வொரு தொடக்கத் தொடரணியும், எடுத்துக்காட்டாக $!C \Sequent !C$, ஒரு
+!!a{derivation}. இதற்கு, எடுத்துக்காட்டாக, $\LeftR{\Weakening}$ விதியைப்
+பயன்படுத்தி ஒரு புதிய !!{derivation}[acc] பெறலாம்:
+\begin{prooftree}
+\Axiom$ \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\end{prooftree}
+ஆனால் இந்த விதி பொதுவானது: விதியிலுள்ள $!A$ ஐ எந்தவொரு !!{sentence}[ins],
+எடுத்துக்காட்டாக~$!D$ ஆலும், மாற்றலாம். அதன் முன்கோள் நமது தொடக்கத்
+தொடரணி $!C \Sequent !C$ உடன் பொருந்தினால், $\Gamma$, $\Delta$ ஆகிய இரண்டும்
+வெறுமனே~$!C$ என்றும், முடிவு $!D, !C \Sequent !C$ என்றும் அமையும். ஆகவே
+பின்வருவது !!a{derivation}:
+\begin{prooftree}
+\Axiom$ !C \fCenter !C $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !D, !C \fCenter !C$
+\end{prooftree}
+இப்போது இடப்புறத்திலுள்ள இரண்டு !!{sentence}s[acc] இடமாற்ற அனுமதிக்கும்
+$\LeftR{\Exchange}$ போன்ற மற்றொரு விதியைப் பயன்படுத்தலாம். ஆகவே பின்வருவதும்
+சரியான !!{derivation}:
+\begin{prooftree}
+\Axiom$ !C \fCenter !C $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !D, !C \fCenter !C$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !C, !D \fCenter !C$
+\end{prooftree}
+இந்த விதியின் பயன்பாட்டில், விதி
+\begin{prooftree}
+\Axiom$ \Gamma, !A, !B, \Pi \fCenter \Delta $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ \Gamma, !B, !A, \Pi \fCenter \Delta,$
+\end{prooftree}
+என்று வழங்கப்பட்டது; $\Gamma$, $\Pi$ ஆகிய இரண்டும் வெறுமையாகவும், $\Delta$
+என்பது $!C$ ஆகவும், $!A$, $!B$ ஆகியவற்றின் பங்குகளை முறையே $!D$, $!C$
+ஆகியவை வகிப்பனவாகவும் இருந்தன. இதேபோன்ற முறையில்,
+\begin{prooftree}
+\Axiom$ !D \fCenter !D $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !C, !D \fCenter !D$
+\end{prooftree}
+என்பதும் !!a{derivation} என்று காண்கிறோம்.
+
+% SEGMENT OLP-0074-S04
+இப்போது இந்த இரண்டு !!{derivation}s[acc] எடுத்து $\RightR{\land}$ கொண்டு
+இணைக்கலாம். அந்த விதி:
+\begin{prooftree}
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter \Delta, !A \land !B $
+\end{prooftree}
+நமது நேர்வில், முன்கோள்களுடன் முடியும் !!{derivation}s[gen] இறுதித்
+தொடரணிகளோடு விதியின் முன்கோள்கள் பொருந்த வேண்டும். இதன் பொருள் $\Gamma$
+என்பது $!C, !D$, $\Delta$ வெறுமை, $!A$ என்பது $!C$, $!B$ என்பது $!D$.
+ஆகவே அனுமானம் சரியாக இருக்க வேண்டுமெனில், அதன் முடிவு $!C, !D \Sequent !C
+\land !D$.
+\begin{prooftree}
+\Axiom$ !C \fCenter !C $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !D, !C \fCenter !C$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !C, !D \fCenter !C$
+\Axiom$ !D \fCenter !D $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !C, !D \fCenter !D$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ !C, !D \fCenter !C \land !D $
+\end{prooftree}
+முன்கோள்களை மறுவரிசையிலும் அமைக்கலாம்; அப்போது $!A$ என்பது $!D$ ஆகவும்,
+$!B$ என்பது~$!C$ ஆகவும் இருக்கும்.
+\begin{prooftree}
+\Axiom$ !D \fCenter !D $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !C, !D \fCenter !D$
+\Axiom$ !C \fCenter !C $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !D, !C \fCenter !C$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$ !C, !D \fCenter !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ !C, !D \fCenter !D \land !C $
+\end{prooftree}
+\end{ex}
+
+\end{document}

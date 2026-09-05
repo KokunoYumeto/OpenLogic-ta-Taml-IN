@@ -1,0 +1,80 @@
+% SEGMENT OLP-0082-S01
+% Part: first-order-logic
+% Chapter: sequent-calculus
+% Section: equality
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{seq}{ide}
+
+\olsection{\usetoken{S}{identity} உடன் \usetoken{P}{derivation}}
+
+!!{identity} உடைய !!^{derivation}s க்குக் கூடுதல் தொடக்கத் தொடரணிகளும்
+அனுமான விதிகளும் தேவை.
+
+\begin{defn}[$\eq$ க்கான தொடக்கத் தொடரணிகள்]
+$t$ ஒரு மூடிய சொல் எனில், ${} \Sequent \eq[t][t]$ ஒரு தொடக்கத் தொடரணி.
+\end{defn}
+
+$\eq$ க்கான விதிகள் பின்வருமாறு ($t_1$, $t_2$ ஆகியவை மூடிய சொற்கள்):
+
+\begin{defish}
+\Axiom$ \eq[t_1][t_2], \Gamma \fCenter \Delta, !A(t_1) $
+\RightLabel{$\eq$}
+\UnaryInf$\eq[t_1][t_2], \Gamma \fCenter \Delta, !A(t_2)$
+\DisplayProof
+\hfill
+\Axiom$\eq[t_1][t_2], \Gamma \fCenter \Delta, !A(t_2) $
+\RightLabel{$\eq$}
+\UnaryInf$\eq[t_1][t_2], \Gamma  \fCenter \Delta, !A(t_1)$
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0082-S02
+\begin{ex}
+$s$, $t$ ஆகியவை மூடிய சொற்கள் எனில், $\eq[s][t], !A(s) \Proves !A(t)$:
+\begin{prooftree}
+\Axiom$ !A(s) \fCenter !A(s)$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$\eq[s][t], !A(s)  \fCenter !A(s)$
+\RightLabel{$\eq$}
+\UnaryInf$\eq[s][t], !A(s)  \fCenter !A(t)$
+\end{prooftree}
+இது ஒன்றானவற்றின் பிரதியிடத்தக்கதன்மை நெறி அல்லது லைப்னிட்சின் விதி என்று
+அறியப்பட்டிருக்கலாம்.
+
+% SEGMENT OLP-0082-S03
+$\Log{LK}$ ஆனது $\eq$ சமச்சீர் மற்றும் கடப்புப் பண்புடையது என்று நிறுவுகிறது:
+\begin{prooftree}
+\Axiom$ \fCenter \eq[t_1][t_1] $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ \eq[t_1][t_2] \fCenter \eq[t_1][t_1] $
+\RightLabel{$\eq$}
+\UnaryInf$ \eq[t_1][t_2] \fCenter \eq[t_2][t_1]$
+\DisplayProof\qquad\bottomAlignProof
+\Axiom$ \eq[t_1][t_2] \fCenter \eq[t_1][t_2] $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$\eq[t_2][t_3], \eq[t_1][t_2]  \fCenter \eq[t_1][t_2] $
+\RightLabel{$\eq$}
+\UnaryInf$\eq[t_2][t_3], \eq[t_1][t_2]  \fCenter \eq[t_1][t_3]$
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$\eq[t_1][t_2], \eq[t_2][t_3]  \fCenter \eq[t_1][t_3]$
+\end{prooftree}
+இடப்புற !!{derivation}[loc], நமது $!A(x)$ என்பது !!{formula}~$\eq[x][t_1]$.
+வலப்புறம் $!A(x)$ ஐ~$\eq[t_1][x]$ என்று கொள்கிறோம்.
+\end{ex}
+
+% SEGMENT OLP-0082-S04
+\begin{prob}
+பின்வரும் தொடரணிகளுக்கு !!{derivation}s தருக:
+\begin{enumerate}
+\item $\Sequent \lforall[x][\lforall[y][((x = y \land !A(x)) \lif !A(y))]]$
+\item $\lexists[x][!A(x)] \land \lforall[y][\lforall[z][((!A(y) \land
+    !A(z)) \lif y = z)]] \Sequent 
+\lexists[x][(!A(x) \land \lforall[y][(!A(y) \lif y = x)])]$
+\end{enumerate}
+\end{prob}
+
+\end{document}

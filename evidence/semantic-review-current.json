@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-05T02:16:26.080113+00:00",
+  "date_utc": "2026-09-05T11:43:07.760747+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -327,6 +327,81 @@
       "unit_id": "OLP-0068",
       "source_sha256": "b9637a6a1cee29ebba2f8d2cdf238d4567d8ec4b7995607abcb0ee1aef0570b9",
       "translation_sha256": "9da97ff2f673e92b3aeaa5e39877d9afffff8ac942001c3ab6a9f3d343a317d7"
+    },
+    {
+      "unit_id": "OLP-0069",
+      "source_sha256": "f7e79d7b3f181c61d3defb24c630db20ceaf12a3ec237c9b0a2ab1f7855494fb",
+      "translation_sha256": "03777a936f205f3248d2f2780c82f1aaad6c2e3b971be9730ff8c224489ff07e"
+    },
+    {
+      "unit_id": "OLP-0070",
+      "source_sha256": "73a554964d7a3fc35a116f63e658340a8c89f9915c3f27e23f7ebd762df35859",
+      "translation_sha256": "48087dc49221558c04fbc36fb7bf81f8989ea40cace662447703a5a6c326690f"
+    },
+    {
+      "unit_id": "OLP-0071",
+      "source_sha256": "0bf253cf8afedca1478fb820770b04ab708dbe8cfd3344377a0d14ae91889276",
+      "translation_sha256": "54f8e931ac6423c4aae47983d521fc4c6ef980de382c9b6691c09ae3e8ce0a47"
+    },
+    {
+      "unit_id": "OLP-0072",
+      "source_sha256": "e0047087b88b91ba65c23a76f7c8f230c4161785f4d83f07d14461341b66d90e",
+      "translation_sha256": "a8069f98b8140624df665eaebcd25abddc1f1f8d666c1caa34fa3729e1b43931"
+    },
+    {
+      "unit_id": "OLP-0073",
+      "source_sha256": "5c13d5312a8b2287b54d67d2fadc6247ba499bd9b6a71255ea04891307689b06",
+      "translation_sha256": "c5d299bb94ea5bd0884773ab459c355ce0c0c8bb38e4647103adfdfb4e0116d4"
+    },
+    {
+      "unit_id": "OLP-0074",
+      "source_sha256": "25897d850b211443621f31a1166f443c1e00c6bcbf13002bc1b9281ca4300371",
+      "translation_sha256": "961d39f0a9a843fe68a5e67b8a7d7a96c50f2b6e7df0440842be13ee126c097f"
+    },
+    {
+      "unit_id": "OLP-0075",
+      "source_sha256": "8c94fddc6d2f4c5faee64e84c1216e1c1ca096719b5528ea4faff753b906d303",
+      "translation_sha256": "e27124c0278693fa0dea1e3298dc2b977a4a1b338fcf1bd7ab2d7e7ad053cb1e"
+    },
+    {
+      "unit_id": "OLP-0076",
+      "source_sha256": "d2e7eba11801753dfd9c57c6be6d45df5c11de57843c3f689dbee7636419aa99",
+      "translation_sha256": "5208d4e895f93dbb2118ce9b600d18e61dee7a05d7ec825d9364c79293c79c54"
+    },
+    {
+      "unit_id": "OLP-0077",
+      "source_sha256": "91c07ed071c2f9c18d3f10665b163b35dcc8636e7e0f27b4586aa9df63177a53",
+      "translation_sha256": "5688c9ee16e9f6d956fc7e6f5f31671d9120284083173c6e73926dcd00ee142d"
+    },
+    {
+      "unit_id": "OLP-0078",
+      "source_sha256": "a44d3cb4dadd224e943e0ea4d3d81529c6e108e7eecbcf9b1cb7d3632e4a150a",
+      "translation_sha256": "0dca04cc2a7897c18da377d29bb801fa45cd7ae89cee937e651623365e8346c8"
+    },
+    {
+      "unit_id": "OLP-0079",
+      "source_sha256": "b9a23c15949d620b4783f3d1629b9e41315defac417dea12dd75118342b9d36c",
+      "translation_sha256": "635f22bf93f3a685337effb4ee907c6a48074f8ec2928e260989bd198aaa8e64"
+    },
+    {
+      "unit_id": "OLP-0080",
+      "source_sha256": "30d343a6b09d234683fff540afec999650f2cf4afd9ce751138b8f3b93f2fe6a",
+      "translation_sha256": "dfe3ecdd20fe144757ad6802e825720040b040380e82707aa5fd961d90143138"
+    },
+    {
+      "unit_id": "OLP-0081",
+      "source_sha256": "4de487cafc9d685844abb2c0b29c7b51debeb30a9b1129c7a2fa8c13ae48b151",
+      "translation_sha256": "f1cc590dd95f493dc167595743ad198561eef3926ff7d1b48bf9868d344b096f"
+    },
+    {
+      "unit_id": "OLP-0082",
+      "source_sha256": "0f9d6d0731f2a74f568d49545bfeeff9373aea71d188973549054823f240f23d",
+      "translation_sha256": "6e044c4eb5ec1cce6a5e81b3d17e56890fd03e3dbfd1f0b455ee51a1c3a5f5c1"
+    },
+    {
+      "unit_id": "OLP-0083",
+      "source_sha256": "0cc6d3e92d57d3070076ce2daa13aa85c6da6ac3cfb2b5d56df87bb7fef4fac3",
+      "translation_sha256": "44693bd9b2ed6b574c863530d99f146e35c8adefdbe5b49ef2249ee100e3fca9"
     }
   ],
   "samples": [
@@ -980,6 +1055,209 @@
       "assessment": "The three-line example and all axiom-schema substitutions remain unchanged.",
       "translation_segment_sha256": "1fb62a9577983bf4bab88855036fa1dd4d300697f01e07458561046f81e1ead0",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0069-S01",
+      "reverse_paraphrase": "The chapter presents Gentzen LK for classical first-order and propositional logic and imports rules, derivations, proof search, proof-theoretic notions, soundness and identity in source order.",
+      "assessment": "The editorial LK name remains plain prose exactly where the frozen source uses plain prose; every import identifier is retained.",
+      "translation_segment_sha256": "47f075f9b82e7fd9acac05208ee8c6050c45664e499a8e73675de69f994ffeb0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0070-S02",
+      "reverse_paraphrase": "A sequent is true when either not all antecedent sentences are true or at least one succedent sentence is true; the empty-antecedent and empty-succedent cases reduce to a disjunction and a negated conjunction respectively.",
+      "assessment": "Both boundary cases and the validity biconditional remain explicit.",
+      "translation_segment_sha256": "d65dce43ab3ea46a1a88b45df209f2bf0f3e89a7420df09e0f2f5392fd341648",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0072-S04",
+      "reverse_paraphrase": "Quantifier rule notation permits replacing one or more, but not necessarily all, occurrences of a closed term by the bound variable; the existential-right rule has no freshness condition.",
+      "assessment": "The example distinguishes substitution notation from the eigenvariable restriction and preserves every displayed formula.",
+      "translation_segment_sha256": "611972bd297f54b6e6247b9c5f9b047a4a81c30a53ee180c04094a2422ab0198",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0072-S05",
+      "reverse_paraphrase": "The existential-left and universal-right rules require their rule-local constant not to occur outside A(a) in the upper sequent; without freshness the displayed invalid sequent becomes derivable.",
+      "assessment": "The direction and scope of the eigenvariable condition are retained.",
+      "translation_segment_sha256": "a10b09c3085281d4ea0dd5e635ceb97addcf2779666f87b90a5ac21cbb5ce663",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0073-S04",
+      "reverse_paraphrase": "Cut combines Gamma sequent Delta,A and A,Pi sequent Lambda into Gamma,Pi sequent Delta,Lambda, eliminating the shared cut formula.",
+      "assessment": "The two premise contexts and the resulting context concatenations are not interchanged.",
+      "translation_segment_sha256": "6ffae9132ff2566f73a815478a33869af4952da9acd5279692b6a26abcf16cb3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0074-S02",
+      "reverse_paraphrase": "An LK derivation is a finite tree whose leaves are initial sequents and whose non-leaf sequents follow from their immediate predecessors by an LK rule; its root is the end-sequent.",
+      "assessment": "Tree orientation, finiteness and rule-local predecessor conditions all remain.",
+      "translation_segment_sha256": "f59178d80be2a9708c735ca6c632d93d533d8d831210a91ddb225f09a3b9de38",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0074-S04",
+      "reverse_paraphrase": "Two derivations ending in the two premises of conjunction-right can be combined when their contexts agree, yielding a derivation of the conjunction in the succedent.",
+      "assessment": "Both premise orders and both final conjunction orders shown in the examples are preserved.",
+      "translation_segment_sha256": "0f9eced645b135258f192c8d7194c87ff7098a26b6338496fe606c21b94f2e5e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0075-S03",
+      "reverse_paraphrase": "A tempting conjunction-left step makes one branch reduce to A sequent B and therefore fails; backtracking to disjunction-left yields two branches that each close through conjunction-left and negation-left.",
+      "assessment": "The failed search path is retained as instruction rather than silently replaced by the successful derivation.",
+      "translation_segment_sha256": "e606d040e0f005a76013b622043d74488611d15a9be55ba025565f5528e3c0a9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0075-S04",
+      "reverse_paraphrase": "Excluded middle requires contraction in backward proof search so one copy of A-or-not-A remains while the other is decomposed; the completed derivation closes from A sequent A.",
+      "assessment": "Both unsuccessful one-branch attempts and the successful contraction derivation remain.",
+      "translation_segment_sha256": "291dba5708da94e7d8780e20fbba218bdc40b399b046f19a74ea5ab65bc6ca43",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0076-S01",
+      "reverse_paraphrase": "For exists-not-A sequent not-forall-A, the eigenvariable-sensitive existential-left step is performed low in the proof and the same term is chosen for both quantifier rules so the branch closes at A(a) sequent A(a).",
+      "assessment": "Freshness is checked against the lower end-sequent after the full tree is constructed.",
+      "translation_segment_sha256": "c5b0b28b9bbec5c41d5f0755a171e0cca463dd5322a63f2fe8fe06440de9d718",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0077-S03",
+      "reverse_paraphrase": "Gamma proves A exactly when some finite subset Gamma-zero can be sequenced as Gamma-zero-prime and LK derives Gamma-zero-prime sequent A.",
+      "assessment": "Finite support, the set-to-sequence conversion and the failure notation are all retained.",
+      "translation_segment_sha256": "2f3ee7166282bb7bf17fedf2b6f3aa7df86ac254967ce837f82ed8349d3b6097",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0077-S05",
+      "reverse_paraphrase": "Gamma is inconsistent when some finite subset derives an empty succedent; it is consistent when no finite subset does so.",
+      "assessment": "The finite-subset quantifier and the empty succedent are explicit.",
+      "translation_segment_sha256": "fe5fdca56b52f9f40466482764d334175f5339fc933d8ef8a19035a21ae899e9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0077-S08",
+      "reverse_paraphrase": "Transitivity of derivability follows by cutting a derivation of Gamma-zero sequent A with one of A,Delta-zero sequent B.",
+      "assessment": "The proof concludes for Gamma union Delta and separately states the iterated-premise consequence.",
+      "translation_segment_sha256": "646e4e54287286793d7db53e99b1e3dae1943c5ad4bafb8eab82b4903de51a8a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0078-S03",
+      "reverse_paraphrase": "Gamma proves A exactly when adding not-A makes Gamma inconsistent: one direction applies negation-left and the reverse direction cuts the inconsistent derivation against A sequent A extended by negation-right.",
+      "assessment": "Both directions are constructive and keep the cut formula fixed.",
+      "translation_segment_sha256": "000a5f576b3035b8f464e3e205d93882d3527e33fedffb50fc976abce4a606b7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0078-S06",
+      "reverse_paraphrase": "If adjoining A and adjoining not-A are each inconsistent, negation-right converts the first witness to not-A in the succedent and cut combines it with the second witness.",
+      "assessment": "The two finite subsets remain within Gamma, establishing inconsistency of Gamma itself.",
+      "translation_segment_sha256": "91624076fd8f10d1c367f4ca82d36c05e6007e671fda787b5473d140e38797ee",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0079-S02",
+      "reverse_paraphrase": "Conjunction elimination is witnessed by conjunction-left derivations, while conjunction introduction combines the two initial sequents with conjunction-right.",
+      "assessment": "The three provability claims and their exact proof trees remain.",
+      "translation_segment_sha256": "fc927e35bd0aa9aad0f1344dcfcb51de02fe017d79a69fd422c53a2948e8b386",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0079-S03",
+      "reverse_paraphrase": "A-or-B together with not-A and not-B is inconsistent, while either disjunct alone derives the disjunction.",
+      "assessment": "The double inference lines are explained as bundled structural steps rather than primitive rules.",
+      "translation_segment_sha256": "c8765b1e9d140fa0d7dd7f0ae54bc9e3136a6de29890957f9b40427f283c3c3f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0079-S04",
+      "reverse_paraphrase": "Modus ponens is derived by implication-left, while not-A and B independently derive A-implies-B through implication-right.",
+      "assessment": "The antecedent and succedent positions in all three trees remain exact.",
+      "translation_segment_sha256": "62fc910733efe8d956c6328410c7f0b75407b99524668b42377a9b3ed0f22e73",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0080-S02",
+      "reverse_paraphrase": "If a fresh constant c occurs in neither Gamma nor A(x), a derivation of A(c) from finite Gamma-zero extends by universal-right to a derivation of forall-x A(x).",
+      "assessment": "The freshness domain covers both the premises and the quantified formula.",
+      "translation_segment_sha256": "38710035fdbe0a5c9d533200955ff75839b64d032474a14374c85a803e80d211",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0081-S02",
+      "reverse_paraphrase": "An interpretation satisfies Gamma sequent Delta exactly when some antecedent member is false or some succedent member is true; a sequent is valid when every interpretation satisfies it.",
+      "assessment": "The definition uses the correct disjunction and preserves the FOL/propositional branches.",
+      "translation_segment_sha256": "618d82684f066f746d559162fa07246ebe241628e91a6d0e693ea6c20d24b899",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0081-S03",
+      "reverse_paraphrase": "Soundness is proved by induction on the number of inferences in a derivation, with initial sequents as the zero case and valid immediate premises as the induction hypothesis.",
+      "assessment": "The induction measure is the inference count, not formula complexity.",
+      "translation_segment_sha256": "3ac3b61706605b5a24d4eb40c0304f70b3b9b6768fc5db8e8b2549fb3044fc47",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0081-S06",
+      "reverse_paraphrase": "For conjunction-left, falsity of A implies falsity of A-and-B, while the other premise-validity cases transfer unchanged; the conclusion is the full A-and-B,Gamma sequent Delta.",
+      "assessment": "TA-SEQ-002 repairs the frozen source conclusion that accidentally drops the principal conjunction.",
+      "translation_segment_sha256": "4555440d70f3a46e161eff681f22fbda60c545ad7368caee2d171fd97605f4dd",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0081-S10",
+      "reverse_paraphrase": "Universal-right soundness changes only the fresh constant interpretation to an arbitrary assignment value, transfers premise truth by extensionality, and then removes the fresh constant to establish A(x) for every assignment.",
+      "assessment": "All freshness uses and both extensionality steps remain explicit.",
+      "translation_segment_sha256": "dfc25bd1f25d6c3d036309c975db5761f6f64c775d7d446fa7a308735f1c78a8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0081-S12",
+      "reverse_paraphrase": "Cut soundness splits on the truth of the cut formula: if false the left premise forces Gamma sequent Delta, and if true the right premise forces Pi sequent Lambda.",
+      "assessment": "TA-SEQ-003 repairs the frozen set-difference symbol to the sequent sign.",
+      "translation_segment_sha256": "3df6e72145aeb4156b635c0ee709c3d7cc3262efbdee733581eea7df7cfb8f68",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0081-S16",
+      "reverse_paraphrase": "If Gamma proves A, a finite Gamma-zero sequent A is derivable and hence valid; every model of Gamma therefore makes A true.",
+      "assessment": "Finite support and the passage from sequent validity to semantic entailment are both retained.",
+      "translation_segment_sha256": "7acd252c715a68bf2d6d41a360cdaa792244af7dd72a980dab537a651822c456",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0081-S17",
+      "reverse_paraphrase": "Satisfiability implies consistency by contrapositive: an empty-succedent derivation from finite Gamma-zero makes every interpretation falsify at least one member of Gamma-zero.",
+      "assessment": "The proof concludes that no interpretation satisfies all of Gamma.",
+      "translation_segment_sha256": "87aa86f3d20cbf757787dd0a81fe57c275495007a2cd20ed4524defbc399ab5f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0082-S01",
+      "reverse_paraphrase": "Identity adds reflexive initial sequents for closed terms and two equality rules that transport A from t-one to t-two or conversely under an equality antecedent.",
+      "assessment": "Closed-term restrictions and both rule directions remain.",
+      "translation_segment_sha256": "16c2d6d5d699e230cf38a4611f2f5c5cc6e64a1fdd66799854b5e0d0ad11e246",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0082-S03",
+      "reverse_paraphrase": "LK derives symmetry by transporting the formula x equals t-one and transitivity by transporting t-one equals x; the text identifies the formula chosen in each proof.",
+      "assessment": "The two proof trees and their distinct substitution formulas remain exact.",
+      "translation_segment_sha256": "17bf5dae1e1e8c0e220f2a7d2ad230fd0427720659674417ad7d9f9722d2bb84",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0083-S02",
+      "reverse_paraphrase": "Identity-rule soundness chooses an assignment sending x to the value of t-one, transfers A(t-one) to A(x), uses equality of term values, and transfers back to A(t-two).",
+      "assessment": "Both sentence-satisfaction and formula-extensionality references are preserved.",
+      "translation_segment_sha256": "5793f44907d1af58a0ff3a3c43fecf132f1b658b49848e765e45a6165001df4c",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -1056,9 +1334,17 @@
       "unit_id": "OLP-0048",
       "issue": "Cauchy construction says equivalence relations instead of classes, uses rational zero in a real positivity definition, and names raw sequences rather than quotient classes as the field. Tamil repairs these under TA-ARI-003 through TA-ARI-005; later representative shorthand remains explicit.",
       "editorial_note": "translation/arithmetization-notes.tex"
+    },
+    {
+      "unit_id": "OLP-0077",
+      "issue": "The editorial identifies natural deduction although the section defines theoremhood, derivability and consistency exclusively through LK sequents. Tamil corrects the system name under TA-SEQ-001."
+    },
+    {
+      "unit_id": "OLP-0081",
+      "issue": "The soundness proof drops the principal conjunction in one induction conclusion and typesets a cut-premise sequent as set difference. Tamil restores the full conclusion under TA-SEQ-002 and the sequent sign under TA-SEQ-003."
     }
   ],
-  "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; the integer-label changes are covered here and by rerun structural QA",
+  "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "The exact 51-unit reader passed protected build, text extraction, font and all-page visual QA; all remaining source units and the final full-edition reader still require verification."
+  "remaining": "Eighty source units now pass textual and author semantic QA. The exact 51-unit reader remains the current fully rendered and published release; a new cumulative reader and the remaining 642 frozen units still require completion."
 }
