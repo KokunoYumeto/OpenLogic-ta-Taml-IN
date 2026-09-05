@@ -1,0 +1,57 @@
+% SEGMENT OLP-0084-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+
+\documentclass[../../../include/open-logic-chapter]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olchapter{fol}{ntd}{இயல்பான வருவித்தல்}}
+      {\olchapter{pl}{ntd}{இயல்பான வருவித்தல்}}
+
+% SEGMENT OLP-0084-S02
+\begin{editorial}
+இந்த அதிகாரம் ஜென்ட்சன்/ப்ராவிட்ஸ் பாணியிலான இயல்பான வருவித்தல்
+முறைமையை வழங்குகிறது.
+
+இயல்பான வருவித்தலை ஒரு நிறுவல் முறைமையாகக் கருதுவதற்குரிய உள்ளடக்கத்தைச்
+சேர்க்கவோ விலக்கவோ ``prfND'' குறிச்சொல்லைப் பயன்படுத்துக.
+\end{editorial}
+
+\olimport{rules-and-proofs}
+
+\olimport{propositional-rules}
+
+\iftag{FOL}{%
+  \olimport{quantifier-rules}
+}{}
+
+\olimport{derivations}
+
+\olimport{proving-things}
+
+\iftag{FOL}{%
+  \olimport{proving-things-quant}
+}{}
+
+\olimport{proof-theoretic-notions}
+
+\olimport{provability-consistency}
+
+\olimport{provability-propositional}
+
+\iftag{FOL}{%
+  \olimport{provability-quantifiers}
+}{}
+
+\olimport{soundness}
+
+\iftag{FOL}{%
+  \olimport{identity}
+  \olimport{soundness-identity}
+}{}
+
+\OLEndChapterHook
+
+\end{document}

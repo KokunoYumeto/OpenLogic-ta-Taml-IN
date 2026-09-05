@@ -1,0 +1,53 @@
+% SEGMENT OLP-0097-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: soundness-identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{ntd}{sid}
+
+\olsection{\usetoken{S}{identity} கொண்ட சரித்தன்மை}
+
+\begin{prop}
+$\eq$ க்கான விதிகளைக் கொண்ட இயல்பான வருவித்தல் சரித்தன்மையுடையது.
+\end{prop}
+
+\begin{proof}
+$\eq[t][t]$ வடிவிலான எந்த !!{formula} உம் செல்லுபடியாகும்; ஏனெனில் ஒவ்வொரு
+!!{structure}~$\Struct M$ க்கும் $\Sat{M}{\eq[t][t]}$. (சொல்~$t$ மூடியது,
+அதாவது எந்த மாறியையும் கொண்டிருக்காது என்று எடுத்துக்கொள்கிறோம்; எனவே மாறி
+ஒதுக்கீடுகள் பொருட்டல்ல.)
+
+% SEGMENT OLP-0097-S02
+!!a{derivation}[gen] கடைசி அனுமானம் \Elim{\eq} என்க; அதாவது !!{derivation}
+பின்வரும் வடிவில் உள்ளது:
+\begin{prooftree}
+  \AxiomC{$\Gamma_1$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$\eq[t_1][t_2]$}
+  \AxiomC{$\Gamma_2$}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!A(t_1)$}
+  \RightLabel{\Elim{\eq}}
+  \BinaryInfC{$!A(t_2)$}
+\end{prooftree}
+முன்கோள்கள்~$\eq[t_1][t_2]$, $!A(t_1)$ ஆகியவை முறையே !!{undischarged}
+எடுகோள்கள்~$\Gamma_1$, $\Gamma_2$ இலிருந்து !!{derive} செய்யப்படுகின்றன.
+$!A(t_2)$ ஆனது $\Gamma_1 \cup \Gamma_2$ இலிருந்து பின்தொடர்கிறது என்று காட்ட
+விரும்புகிறோம். $\Sat{M}{\Gamma_1 \cup \Gamma_2}$ ஆகுமாறு
+!!a{structure}~$\Struct{M}$ ஐக் கருதுக. தொகுத்தறிதல் கருதுகோளால்
+$\Sat{M}{!A(t_1)}$ மற்றும் $\Sat{M}{\eq[t_1][t_2]}$. ஆகவே
+$\Value{t_1}{M} = \Value{t_2}{M}$. $s$ ஏதேனும் ஒரு மாறி ஒதுக்கீடு என்றும்,
+$m = \Value{t_1}{M} = \Value{t_2}{M}$ என்றும் கொள்க.
+\oliflabeldef{fol:syn:ext:prop:ext-formulas}{\olref[fol][syn][ext]{prop:ext-formulas}}{சொல்
+இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு} படி,
+$\Sat{M}{!A(t_1)}[s]$ என்பது, அப்போதும் அப்போது மட்டுமே,
+$\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$; அதுவும், அப்போதும் அப்போது மட்டுமே,
+$\Sat{M}{!A(t_2)}[s]$. $\Sat{M}{!A(t_1)}$ என்பதால்,
+$\Sat{M}{!A(t_2)}$.
+\end{proof}
+
+\end{document}

@@ -1,0 +1,135 @@
+% SEGMENT OLP-0093-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: provability-propositional
+
+% verification of properties of provability needed for maximally
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{ppr}}
+      {\olfileid{pl}{ntd}{ppr}}
+
+\olsection{\usetoken{S}{derivability} மற்றும் கூற்று இணைப்புகள்}
+
+\begin{explain}
+  இயல்பான வருவித்தலின் !!{derivability} உறவு~$\Proves$, கூற்று இணைப்புகள்
+  தொடர்பான சில அடிப்படை உண்மைகளை நிறுவும் அளவுக்கு வலிமையானது என்பதை
+  நிறுவுகிறோம். எடுத்துக்காட்டாக, $!A \land !B \Proves !A$ மற்றும் $!A,
+  !A \lif !B \Proves !B$ (முன்நிலையுறுத்தல்). நிறைவுத் தேற்றத்தின்
+  நிறுவலுக்கு இந்த உண்மைகள் தேவை.
+\end{explain}
+
+\begin{prop}\ollabel{prop:provability-land}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-land-left} $!A \land !B \Proves
+    !A$, $!A \land !B \Proves !B$ ஆகிய இரண்டும்.
+  \item \ollabel{prop:provability-land-right} $!A, !B \Proves !A \land !B$.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item பின்வரும் இரண்டையும் !!{derive} இயலும்:
+    \begin{prooftree}
+      \AxiomC{$!A \land !B$}
+      \RightLabel{\Elim{\land}}
+      \UnaryInfC{$!A$}
+      \DisplayProof\qquad\bottomAlignProof
+      \AxiomC{$!A \land !B$}
+      \RightLabel{\Elim{\land}}
+      \UnaryInfC{$!B$}
+    \end{prooftree}
+  \item பின்வருமாறு !!{derive} இயலும்:
+    \begin{prooftree}
+      \AxiomC{$!A$}
+      \AxiomC{$!B$}
+      \RightLabel{\Intro{\land}}
+      \BinaryInfC{$!A \land !B$}
+    \end{prooftree}
+  \end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0093-S02
+\begin{prop}\ollabel{prop:provability-lor}
+  \begin{enumerate}
+  \item $!A \lor !B, \lnot !A, \lnot !B$ முரணுடையது.
+  \item $!A \Proves !A \lor !B$, $!B \Proves !A \lor !B$ ஆகிய இரண்டும்.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item பின்வரும் !!{derivation}[acc] கருதுக:
+    \begin{prooftree}
+      \AxiomC{$!A \lor !B$}
+      \AxiomC{$\lnot !A$}
+      \AxiomC{$\Discharge{!A}{1}$}
+      \RightLabel{\Elim{\lnot}}
+      \BinaryInfC{$\lfalse$}
+      \AxiomC{$\lnot !B$}
+      \AxiomC{$\Discharge{!B}{1}$}
+      \RightLabel{\Elim{\lnot}}
+      \BinaryInfC{$\lfalse$}
+      \DischargeRule{\Elim{\lor}}{1}
+      \TrinaryInfC{$\lfalse$}
+    \end{prooftree}
+    இது !!{undischarged} எடுகோள்கள்~$!A \lor !B$, $\lnot !A$,
+    $\lnot !B$ ஆகியவற்றிலிருந்து~$\lfalse$ இன் !!a{derivation}.
+  \item பின்வரும் இரண்டையும் !!{derive} இயலும்:
+    \begin{prooftree}
+      \AxiomC{$!A$}
+      \RightLabel{\Intro{\lor}}
+      \UnaryInfC{$!A \lor !B$}
+      \DisplayProof\qquad\bottomAlignProof
+      \AxiomC{$!B$}
+      \RightLabel{\Intro{\lor}}
+      \UnaryInfC{$!A \lor !B$}
+    \end{prooftree}
+  \end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0093-S03
+\begin{prop}\ollabel{prop:provability-lif}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-lif-left} $!A, !A \lif !B \Proves !B$.
+  \item \ollabel{prop:provability-lif-right}
+    $\lnot !A \Proves !A \lif !B$, $!B \Proves !A \lif !B$ ஆகிய இரண்டும்.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item பின்வருமாறு !!{derive} இயலும்:
+    \begin{prooftree}
+      \AxiomC{$!A \lif !B$}
+      \AxiomC{$!A$}
+      \RightLabel{\Elim{\lif}}
+      \BinaryInfC{$!B$}
+    \end{prooftree}
+    
+  \item பின்வரும் இரு !!{derivation}s இதனைக் காட்டுகின்றன:
+    \begin{prooftree}
+      \AxiomC{$\lnot !A$}
+      \AxiomC{$\Discharge{!A}{1}$}
+      \RightLabel{\Elim{\lnot}}
+      \BinaryInfC{$\lfalse$}
+      \RightLabel{\FalseInt}
+      \UnaryInfC{$!B$}
+      \DischargeRule{\Intro{\lif}}{1}
+      \UnaryInfC{$!A \lif !B$}
+      \DisplayProof\qquad\bottomAlignProof
+      \AxiomC{$!B$}
+      \RightLabel{\Intro{\lif}}
+      \UnaryInfC{$!A \lif !B$}
+    \end{prooftree}
+    $\Intro{\lif}$ ஆனது எடுகோள்~$!A$ ஐ !!{discharge} செய்யலாம்; ஆனால்
+    அவ்வாறு செய்ய வேண்டிய கட்டாயமில்லை என்பதைக் கவனிக்கவும்.
+  \end{enumerate}
+\end{proof}
+
+\end{document}

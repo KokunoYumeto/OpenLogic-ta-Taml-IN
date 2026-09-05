@@ -10,8 +10,8 @@
     "pass": true
   },
   "translation_coverage": {
-    "drafted": 80,
-    "textual_invariants_pass": 80,
+    "drafted": 94,
+    "textual_invariants_pass": 94,
     "combined_reader_verified": 51,
     "release_verified": 51,
     "published_sources": 51,
@@ -22,7 +22,7 @@
   "canon_sources": 9,
   "canon_passages": 50,
   "term_decisions": 103,
-  "aligned_segments": 599,
+  "aligned_segments": 698,
   "semantic_review": "semantic-review-current.json",
   "build_qa": "tex-b001-receipt.json",
   "current_checkpoint": "checkpoint-current.json",
@@ -32,5 +32,6 @@
   "translation_decision_log": "translation-decisions.jsonl",
   "combined_build_attempt": "tex-sfr-patch-receipt.json",
   "combined_build_qa": "tex-sfr-patch-receipt.json",
-  "combined_render_qa": "sfr-render-qa.json"
+  "combined_render_qa": "sfr-render-qa.json",
+  "proof_systems_reader_build_attempt": "TEX-PROOF-SYSTEMS-ND-RECEIPT.json"
 }

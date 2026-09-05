@@ -1,0 +1,240 @@
+{
+  "batch_id": "TA-B046",
+  "units": [
+    {
+      "unit_id": "OLP-0095",
+      "source_sha256": "8b90318e1a2ed38568fb61cd5529d496cdfd17f322fd9c731a194e2d08e0a4b9",
+      "translation_sha256": "4cb58a682f0d2e02f98227a77c09f7cc64530d90a277a723e50d93f89e8c390b",
+      "source_bytes": 13016,
+      "translation_bytes": 24348,
+      "source_coverage_complete": true,
+      "segments": 16,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "ass",
+        "ext",
+        "fol",
+        "gen",
+        "include",
+        "logic",
+        "ntd",
+        "open",
+        "sat",
+        "section",
+        "sou",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-ND-005",
+          "unit_id": "OLP-0095",
+          "kind": "natural-deduction-raw-universal-command",
+          "action": "Corrected the soundness exercise case from the raw TeX universal symbol to OpenLogic's defined universal operator, matching the universal-elimination rule introduced earlier.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\forall"
+          ],
+          "expected_extra_commands": [
+            "\\lforall"
+          ],
+          "source_issue_or_choice": "The source names the final unary exercise case as \\Elim{\\forall}, whereas the natural-deduction rules use \\Elim{\\lforall}.",
+          "chosen_treatment": "தமிழ் உரை விதிப் பெயரை \\Elim{\\lforall} எனத் திருத்துகிறது.",
+          "alternatives_considered": "தனித்த \\forall குறியை வைத்தல்; விதிப் பெயரை உரையாக மட்டும் வழங்குதல்",
+          "rationale": "The operator macro \\lforall is the edition's defined universal connective and is used by the exact elimination rule whose soundness case is assigned as an exercise.",
+          "precise_review_question": "Does replacing only the raw universal glyph command with \\lforall make this exercise label exactly match the defined universal-elimination rule?",
+          "location_needle": "SOURCE CORRECTION TA-ND-005"
+        },
+        {
+          "audit_id": "TA-READER-REF-006",
+          "unit_id": "OLP-0095",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped six absent first-order syntax-and-semantics references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[syn][ass]{prop:sat-quant}",
+              "to": "\\oliflabeldef{syn:ass:prop:sat-quant}{\\olref[syn][ass]{prop:sat-quant}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][sat]{defn:satisfaction}",
+              "to": "\\oliflabeldef{syn:sat:defn:satisfaction}{\\olref[syn][sat]{defn:satisfaction}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ext]{cor:extensionality-sent}",
+              "to": "\\oliflabeldef{syn:ext:cor:extensionality-sent}{\\olref[syn][ext]{cor:extensionality-sent}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+              "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ext]{prop:ext-formulas}",
+              "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ext]{prop:extensionality}",
+              "to": "\\oliflabeldef{syn:ext:prop:extensionality}{\\olref[syn][ext]{prop:extensionality}}{}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The cumulative proof-systems reader omits the six referenced syntax-and-semantics results used by the universal-introduction soundness case, which would otherwise render as unresolved question marks.",
+          "chosen_treatment": "ஒவ்வொரு பயன்பாட்டிலும் இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் அளவையடை நிறைவுறுத்தல், வாக்கியக் கண நிறைவுறுத்தல், குறி-சார்பு அல்லது சொல்-இடைநிறுத்தல் முடிவை விளக்கும் தமிழ் தொடர்.",
+          "alternatives_considered": "Literal question marks; deleting the semantic dependencies; permanently replacing the live links.",
+          "rationale": "The conditional branches preserve the exact reference identities, make the standalone soundness proof readable, and automatically restore numbered links in a complete reader.",
+          "precise_review_question": "Do the six Tamil fallbacks state exactly the semantic dependency at each universal-introduction step without overstating the omitted definitions and propositions?",
+          "location_needle": "syn:ass:prop:sat-quant"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\forall"
+      ],
+      "extra_commands": [
+        "\\lforall",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0096",
+      "source_sha256": "2f301d8fc8aa78831e17b9d14042c97218795d400a350b0726be3776eed17575",
+      "translation_sha256": "b691b2d96e5b902f6753893cc0c072a1e6110ca285153aed6fa7d106cb0e0e5c",
+      "source_bytes": 3829,
+      "translation_bytes": 5530,
+      "source_coverage_complete": true,
+      "segments": 7,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "acc",
+        "align",
+        "gen",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0097",
+      "source_sha256": "426ee50b639d92c730c70912bfda4fdf34c99e0e33097dc253cb196a01af7e7d",
+      "translation_sha256": "2910f4793cec7f1db86bbcb4075d6fcbf35c66a6e39e6624c03fa395401e5f94",
+      "source_bytes": 1606,
+      "translation_bytes": 3085,
+      "source_coverage_complete": true,
+      "segments": 2,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "ext",
+        "fol",
+        "gen",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-READER-REF-007",
+          "unit_id": "OLP-0097",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped the absent formula-extensionality reference in oliflabeldef with a descriptive Tamil fallback; the live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[fol][syn][ext]{prop:ext-formulas}",
+              "to": "\\oliflabeldef{fol:syn:ext:prop:ext-formulas}{\\olref[fol][syn][ext]{prop:ext-formulas}}{}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The cumulative proof-systems reader omits the formula-extensionality proposition used by identity-elimination soundness, which would otherwise render as an unresolved question-mark pair.",
+          "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் சொல் இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு என்ற தமிழ் விளக்கம்.",
+          "alternatives_considered": "Literal question marks; deleting the dependency; permanently replacing the live link.",
+          "rationale": "The conditional fallback preserves the exact reference identity, makes the standalone proof readable, and restores the live numbered reference in a complete reader.",
+          "precise_review_question": "Does the Tamil fallback identify exactly the substitution-versus-assignment result needed to carry A(t1) across equality to A(t2)?",
+          "location_needle": "fol:syn:ext:prop:ext-formulas"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 80/722 source units; reader pages mapped for 0 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 94/722 source units; reader pages mapped for 0 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -442,6 +442,86 @@ Please double-check: **does the explicit endofunction hypothesis state exactly w
 
 - `TA-OCC-fa3c879fc75e83b3` — OLP-0051 / `OLP-0051-S03`; source `content/sets-functions-relations/infinite/dedekind-algebra.tex:48`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:61`; PDF page pending.
 
+## TA-ND-001 — The source says that a sentence stands below one, two, or three other sequents, although the surrounding text and displayed natural-deduction rules use sentences as the premises.
+
+Chosen rendering: **தமிழ் உரை ஒன்று, இரண்டு அல்லது மூன்று மற்ற வாக்கியங்களின் கீழ் ஒரு வாக்கியம் நிற்பதாகத் திருத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Natural-deduction derivations here are trees of sentences, and the immediately following sentence calls the expressions above an inference its premises. Sequent calculus is a different proof system in the frozen source.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0085 (checked_supports)
+
+Alternatives: பொருந்தாத தொடரணிகள் என்ற மூலச் சொல்லை வைத்தல்; பொதுவாக வெளிப்பாடுகள் என்று மாற்றுதல்
+
+Please double-check: **does sentences identify exactly the one, two, or three premises above a natural-deduction inference without importing sequent-calculus structure?**
+
+- `TA-OCC-8cded43c4114ae3a` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:33`; PDF page pending.
+
+## TA-ND-002 — The completed proof labels the inference from not-A and A to falsehood as introduction of falsehood, while the prose and partial tree identify the same step as negation elimination.
+
+Chosen rendering: **தமிழ் நிறுவல் அந்தப் படியை \Elim{\lnot} எனத் திருத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed inference has premises not-A and A and conclusion falsehood, exactly the negation-elimination rule defined earlier. The surrounding sentence explicitly says to use negation elimination.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0089 (checked_supports)
+
+Alternatives: பொருந்தாத \Intro{\lfalse} பெயரை வைத்தல்; பெயரையே நீக்குதல்
+
+Please double-check: **is negation elimination the unique defined rule that licenses this two-premise step to falsehood?**
+
+- `TA-OCC-927b7a3e49810f7c` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:116`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:133`; PDF page pending.
+
+## TA-ND-003 — The example calls the root formula a sentence in the end-sequent, although this section defines natural-deduction derivations as trees of sentences and reserves sequents for the separate LK system.
+
+Chosen rendering: **தமிழ் உரை இதனை வருவித்தலின் இறுதி வாக்கியம் என்று வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The diagram contains a single root sentence, not a two-sided sequent. Final sentence preserves the intended operator-scope explanation without importing LK structure.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0089 (checked_supports)
+
+Alternatives: தொடரணிக் கணியச் சொல்லான இறுதித் தொடரணி என்பதை வைத்தல்; வெறுமனே முடிவு என்று சுருக்குதல்
+
+Please double-check: **does final sentence identify the root expression precisely while preserving the claim that its first conditional is the main operator?**
+
+- `TA-OCC-704b1fb1cec9d7a1` — OLP-0089 / `OLP-0089-S02`; source `content/first-order-logic/natural-deduction/proving-things.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:64`; PDF page pending.
+
+## TA-ND-004 — The source's final check names \Elim{\exists}, whereas the natural-deduction system and the proof tree use \Elim{\lexists}.
+
+Chosen rendering: **தமிழ் உரை விதிப் பெயரை \Elim{\lexists} எனத் திருத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The operator macro \lexists is the frozen edition's defined existential connective and is used in the exact rule application being checked. Raw \exists is inconsistent with that notation layer.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0090 (checked_supports)
+
+Alternatives: தனித்த \exists குறியை வைத்தல்; விதிப் பெயரை உரையாக மட்டும் வழங்குதல்
+
+Please double-check: **does replacing only the raw existential glyph command with \lexists make this rule reference exactly match the displayed existential-elimination inference?**
+
+- `TA-OCC-f952dcb561bf31ac` — OLP-0090 / `OLP-0090-S05`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:88`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:96`; PDF page pending.
+
+## TA-ND-005 — The source names the final unary exercise case as \Elim{\forall}, whereas the natural-deduction rules use \Elim{\lforall}.
+
+Chosen rendering: **தமிழ் உரை விதிப் பெயரை \Elim{\lforall} எனத் திருத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The operator macro \lforall is the edition's defined universal connective and is used by the exact elimination rule whose soundness case is assigned as an exercise.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0095 (checked_supports)
+
+Alternatives: தனித்த \forall குறியை வைத்தல்; விதிப் பெயரை உரையாக மட்டும் வழங்குதல்
+
+Please double-check: **does replacing only the raw universal glyph command with \lforall make this exercise label exactly match the defined universal-elimination rule?**
+
+- `TA-OCC-7c7f34ca2f81bcab` — OLP-0095 / `OLP-0095-S09`; source `content/first-order-logic/natural-deduction/soundness.tex:205`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:223`; PDF page pending.
+
 ## TA-READER-REF-001 — The cumulative 51-unit reader omits the target history chapter, so the frozen cross-reference rendered as a literal question-mark pair.
 
 Chosen rendering: **இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவு என்ற விளக்கத் தொடர்.**
@@ -531,6 +611,43 @@ Please double-check: **do both repeated fallback descriptions remain grammatical
 - `TA-OCC-0fdba5e21e25ea35` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:36`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:42`; PDF page pending.
 - `TA-OCC-3104fba019a5cf5b` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:39`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:47`; PDF page pending.
 - `TA-OCC-331b2174bbf20db3` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:40`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:50`; PDF page pending.
+
+## TA-READER-REF-006 — The cumulative proof-systems reader omits the six referenced syntax-and-semantics results used by the universal-introduction soundness case, which would otherwise render as unresolved question marks.
+
+Chosen rendering: **ஒவ்வொரு பயன்பாட்டிலும் இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் அளவையடை நிறைவுறுத்தல், வாக்கியக் கண நிறைவுறுத்தல், குறி-சார்பு அல்லது சொல்-இடைநிறுத்தல் முடிவை விளக்கும் தமிழ் தொடர்.**
+
+Kind: `citation`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The conditional branches preserve the exact reference identities, make the standalone soundness proof readable, and automatically restore numbered links in a complete reader.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0095 (checked_supports)
+
+Alternatives: Literal question marks; deleting the semantic dependencies; permanently replacing the live links.
+
+Please double-check: **do the six Tamil fallbacks state exactly the semantic dependency at each universal-introduction step without overstating the omitted definitions and propositions?**
+
+- `TA-OCC-d9df181e95e16df4` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:189`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:195`; PDF page pending.
+- `TA-OCC-50facd64d49a3f1e` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:191`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:198`; PDF page pending.
+- `TA-OCC-606b8dae4aa1057d` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:194`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:202`; PDF page pending.
+- `TA-OCC-886ca07007219954` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:197`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:206`; PDF page pending.
+- `TA-OCC-057f0c012b6acfb5` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:198`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:210`; PDF page pending.
+- `TA-OCC-4ac891923d19a234` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:201`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:215`; PDF page pending.
+
+## TA-READER-REF-007 — The cumulative proof-systems reader omits the formula-extensionality proposition used by identity-elimination soundness, which would otherwise render as an unresolved question-mark pair.
+
+Chosen rendering: **இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் சொல் இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு என்ற தமிழ் விளக்கம்.**
+
+Kind: `citation`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The conditional fallback preserves the exact reference identity, makes the standalone proof readable, and restores the live numbered reference in a complete reader.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0097 (checked_supports)
+
+Alternatives: Literal question marks; deleting the dependency; permanently replacing the live link.
+
+Please double-check: **does the Tamil fallback identify exactly the substitution-versus-assignment result needed to carry A(t1) across equality to A(t2)?**
+
+- `TA-OCC-2d01b629a9796673` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:42`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:45`; PDF page pending.
 
 ## TA-SEQ-001 — The editorial says the section collects definitions for natural deduction although every definition uses LK sequent derivations.
 
@@ -847,6 +964,8 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-06a8844e4233d7e4` — OLP-0068 / `OLP-0068-S05`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:66`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:77`; PDF page pending.
 - `TA-OCC-7669e36885f088d9` — OLP-0077 / `OLP-0077-S05`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:70`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:78`; PDF page pending.
 - `TA-OCC-78fbf7d1d8215e4a` — OLP-0081 / `OLP-0081-S01`; source `content/first-order-logic/sequent-calculus/soundness.tex:25`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:27`; PDF page pending.
+- `TA-OCC-7293cd7f5080db75` — OLP-0091 / `OLP-0091-S04`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:48`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:53`; PDF page pending.
+- `TA-OCC-936330de98fc7c3b` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:26`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -1191,6 +1310,7 @@ Please double-check: **do the listed uses of “உட்கணம்” preserv
 - `TA-OCC-4e45a7d72daa3907` — OLP-0077 / `OLP-0077-S10`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:152`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:173`; PDF page pending.
 - `TA-OCC-b2b4e8857b32ab53` — OLP-0077 / `OLP-0077-S10`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:159`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:176`; PDF page pending.
 - `TA-OCC-8e4e5bfe97e2ffbc` — OLP-0081 / `OLP-0081-S16`; source `content/first-order-logic/sequent-calculus/soundness.tex:357`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:388`; PDF page pending.
+- `TA-OCC-64a8051240f1373e` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:139`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:154`; PDF page pending.
 
 ## TA-T005 — proper subset
 
@@ -1412,6 +1532,11 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-e611ad25c78d4b2b` — OLP-0077 / `OLP-0077-S09`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:135`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:147`; PDF page pending.
 - `TA-OCC-51d89f54138ee698` — OLP-0078 / `OLP-0078-S03`; source `content/first-order-logic/sequent-calculus/provability-consistency.tex:47`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-consistency.tex:51`; PDF page pending.
 - `TA-OCC-33f2730fbce25a61` — OLP-0078 / `OLP-0078-S04`; source `content/first-order-logic/sequent-calculus/provability-consistency.tex:72`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-consistency.tex:78`; PDF page pending.
+- `TA-OCC-1dd1435ece691360` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:46`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:48`; PDF page pending.
+- `TA-OCC-8d97be1bfd94f4d1` — OLP-0092 / `OLP-0092-S03`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:78`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:82`; PDF page pending.
+- `TA-OCC-6d1d42af277171de` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:197`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:212`; PDF page pending.
+- `TA-OCC-6c26070c2bc5dbce` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:42`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:47`; PDF page pending.
+- `TA-OCC-fea03c9591534ddc` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:43`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:48`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -1606,6 +1731,14 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-f615a7a20070a04c` — OLP-0054 / `OLP-0054-S07`; source `content/sets-functions-relations/infinite/card-sb.tex:73`; Tamil `translation/content/sets-functions-relations/infinite/card-sb.tex:85`; PDF page pending.
 - `TA-OCC-bceb363f6210cdd2` — OLP-0058 / `OLP-0058-S03`; source `content/propositional-logic/syntax-and-semantics/formulas.tex:61`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:80`; PDF page pending.
 - `TA-OCC-b1e38bf0c28dc6e6` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:22`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:22`; PDF page pending.
+- `TA-OCC-308d41b20fc28cff` — OLP-0090 / `OLP-0090-S03`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:51`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:56`; PDF page pending.
+- `TA-OCC-6e4870332e4439e2` — OLP-0090 / `OLP-0090-S03`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:56`; PDF page pending.
+- `TA-OCC-7ea5c4baa9c94f7b` — OLP-0090 / `OLP-0090-S04`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:67`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:72`; PDF page pending.
+- `TA-OCC-f24e163c30ca0f59` — OLP-0090 / `OLP-0090-S04`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:71`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:75`; PDF page pending.
+- `TA-OCC-0e1fa50f7df7b247` — OLP-0090 / `OLP-0090-S12`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:194`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:205`; PDF page pending.
+- `TA-OCC-bf62795044caceea` — OLP-0090 / `OLP-0090-S14`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:215`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:231`; PDF page pending.
+- `TA-OCC-d6e796d304e489b0` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:152`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:157`; PDF page pending.
+- `TA-OCC-a0e28608a9ede246` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:244`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:292`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -1875,6 +2008,30 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-c4971081395259c7` — OLP-0081 / `OLP-0081-S12`; source `content/first-order-logic/sequent-calculus/soundness.tex:280`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:308`; PDF page pending.
 - `TA-OCC-ee8996c41ba6887e` — OLP-0081 / `OLP-0081-S13`; source `content/first-order-logic/sequent-calculus/soundness.tex:303`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:332`; PDF page pending.
 - `TA-OCC-0810f7d9bbd867ef` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:17`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:33`; PDF page pending.
+- `TA-OCC-9500f2ac9a169382` — OLP-0084 / `OLP-0084-S02`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:18`; PDF page pending.
+- `TA-OCC-7af0c39454ccf490` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-d188396764207123` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:18`; PDF page pending.
+- `TA-OCC-18ce7a94435de81d` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:40`; PDF page pending.
+- `TA-OCC-ed427b16003b1311` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:14`; PDF page pending.
+- `TA-OCC-9b059a39dd6ff429` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:24`; PDF page pending.
+- `TA-OCC-c5e47c82e05807e2` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:20`; PDF page pending.
+- `TA-OCC-2199b96a7f5179e3` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:39`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:43`; PDF page pending.
+- `TA-OCC-2db0758c7ab5fa6d` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:45`; PDF page pending.
+- `TA-OCC-047569ed3904f0a7` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:53`; PDF page pending.
+- `TA-OCC-735cffded2680fef` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:43`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:56`; PDF page pending.
+- `TA-OCC-26afd1da6d39d93c` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:77`; PDF page pending.
+- `TA-OCC-60b4ac66137cbfea` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:86`; PDF page pending.
+- `TA-OCC-cb7dbd244849ae07` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:86`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:100`; PDF page pending.
+- `TA-OCC-bad1c0d20ed8ea3b` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:86`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:105`; PDF page pending.
+- `TA-OCC-61d951a586027243` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:109`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:124`; PDF page pending.
+- `TA-OCC-b81e8d7ffb8533b4` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:109`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:129`; PDF page pending.
+- `TA-OCC-5a5e790cf76958fb` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:130`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:145`; PDF page pending.
+- `TA-OCC-c21ad3b25d0b2cc0` — OLP-0095 / `OLP-0095-S07`; source `content/first-order-logic/natural-deduction/soundness.tex:163`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:169`; PDF page pending.
+- `TA-OCC-652bb572b35a6f3f` — OLP-0095 / `OLP-0095-S07`; source `content/first-order-logic/natural-deduction/soundness.tex:163`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:174`; PDF page pending.
+- `TA-OCC-016ab9eb22db1be1` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:169`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:190`; PDF page pending.
+- `TA-OCC-d608a5b6a6a083b6` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:228`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:247`; PDF page pending.
+- `TA-OCC-3cc959e23443f657` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:256`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:278`; PDF page pending.
+- `TA-OCC-21642fcd09c9fcca` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:39`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:41`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -2024,6 +2181,9 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-4b7d8d24b003df75` — OLP-0067 / `OLP-0067-S05`; source `content/first-order-logic/proof-systems/tableaux.tex:72`; Tamil `translation/content/first-order-logic/proof-systems/tableaux.tex:92`; PDF page pending.
 - `TA-OCC-40be3c4c98cdde83` — OLP-0070 / `OLP-0070-S02`; source `content/first-order-logic/sequent-calculus/rules-and-proofs.tex:29`; Tamil `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:46`; PDF page pending.
 - `TA-OCC-8c03c16958cb917c` — OLP-0077 / `OLP-0077-S01`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:10`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:23`; PDF page pending.
+- `TA-OCC-e3d98581786fff9f` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:29`; PDF page pending.
+- `TA-OCC-53b3b01c5a529c8d` — OLP-0089 / `OLP-0089-S07`; source `content/first-order-logic/natural-deduction/proving-things.tex:178`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:184`; PDF page pending.
+- `TA-OCC-bb9448983366284e` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:23`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -2143,6 +2303,9 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-99295556d2d0e499` — OLP-0077 / `OLP-0077-S08`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:102`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:113`; PDF page pending.
 - `TA-OCC-c03f1dcbdde5f5b5` — OLP-0082 / `OLP-0082-S03`; source `content/first-order-logic/sequent-calculus/identity.tex:47`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:49`; PDF page pending.
 - `TA-OCC-c37f627ca34db85d` — OLP-0082 / `OLP-0082-S03`; source `content/first-order-logic/sequent-calculus/identity.tex:47`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:49`; PDF page pending.
+- `TA-OCC-36c032c92bb35869` — OLP-0091 / `OLP-0091-S05`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:59`; PDF page pending.
+- `TA-OCC-829d16ab4e63acaf` — OLP-0091 / `OLP-0091-S07`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:75`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:82`; PDF page pending.
+- `TA-OCC-e0cc3fe381f1a9db` — OLP-0096 / `OLP-0096-S03`; source `content/first-order-logic/natural-deduction/identity.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:56`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -2530,6 +2693,18 @@ Please double-check: **is “மரவுரு / வேர் / கிளை”
 - `TA-OCC-cb426e3f9be1e8d6` — OLP-0075 / `OLP-0075-S03`; source `content/first-order-logic/sequent-calculus/proving-things.tex:168`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:169`; PDF page pending.
 - `TA-OCC-882d429ce20c60c3` — OLP-0075 / `OLP-0075-S03`; source `content/first-order-logic/sequent-calculus/proving-things.tex:208`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:209`; PDF page pending.
 - `TA-OCC-aa8b5e1b416f00ea` — OLP-0075 / `OLP-0075-S03`; source `content/first-order-logic/sequent-calculus/proving-things.tex:227`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:227`; PDF page pending.
+- `TA-OCC-18e2f2f5bbb56305` — OLP-0085 / `OLP-0085-S02`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:28`; PDF page pending.
+- `TA-OCC-b418f7aee5fb94b8` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:35`; PDF page pending.
+- `TA-OCC-bf8352ca2ff4603d` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:28`; PDF page pending.
+- `TA-OCC-6b95d334143322ef` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:30`; PDF page pending.
+- `TA-OCC-794be869027b719c` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:31`; PDF page pending.
+- `TA-OCC-cd5018366f7b3a41` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:30`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:32`; PDF page pending.
+- `TA-OCC-cfbc20521de62310` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:33`; PDF page pending.
+- `TA-OCC-e00164d4d856135d` — OLP-0089 / `OLP-0089-S04`; source `content/first-order-logic/natural-deduction/proving-things.tex:98`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:98`; PDF page pending.
+- `TA-OCC-da6f2e641e9e2985` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:128`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:117`; PDF page pending.
+- `TA-OCC-8438c5ca0b4c5cdc` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:128`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:118`; PDF page pending.
+- `TA-OCC-13b187ef53bea316` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:128`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:128`; PDF page pending.
+- `TA-OCC-a9d9cbbd281583d2` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:149`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:151`; PDF page pending.
 
 ## TA-T037 — least element / well-order / chain
 
@@ -3001,6 +3176,147 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-bbe005a9cb442208` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:26`; PDF page pending.
 - `TA-OCC-287fb5dd37cadc67` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:40`; PDF page pending.
 - `TA-OCC-b9f28d19c87ea37e` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:51`; PDF page pending.
+- `TA-OCC-4361243f9bbfa213` — OLP-0084 / `OLP-0084-S01`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:10`; PDF page pending.
+- `TA-OCC-e02593a301caba64` — OLP-0084 / `OLP-0084-S01`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:11`; PDF page pending.
+- `TA-OCC-ccb2bc97092b8e46` — OLP-0084 / `OLP-0084-S02`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:15`; PDF page pending.
+- `TA-OCC-06db85f39a7c97d8` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:17`; PDF page pending.
+- `TA-OCC-13537ba720ffe098` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-c2520b125ce914db` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:34`; PDF page pending.
+- `TA-OCC-757ad211c1e8b926` — OLP-0086 / `OLP-0086-S07`; source `content/first-order-logic/natural-deduction/propositional-rules.tex:118`; Tamil `translation/content/first-order-logic/natural-deduction/propositional-rules.tex:124`; PDF page pending.
+- `TA-OCC-79cc50fa7da1969c` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:30`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:30`; PDF page pending.
+- `TA-OCC-c228e2572c116fce` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:56`; PDF page pending.
+- `TA-OCC-9b2db6d68373c4f6` — OLP-0087 / `OLP-0087-S04`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:59`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:62`; PDF page pending.
+- `TA-OCC-993c1ab1bf195b8c` — OLP-0087 / `OLP-0087-S05`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:64`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:68`; PDF page pending.
+- `TA-OCC-f0db2e446783475d` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:106`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:112`; PDF page pending.
+- `TA-OCC-68c9513f9f8a18ee` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:18`; PDF page pending.
+- `TA-OCC-57b42d3e7efbd622` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:19`; PDF page pending.
+- `TA-OCC-a3dfa83b3b8b223f` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:21`; PDF page pending.
+- `TA-OCC-d58301c3a1e79b35` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:25`; PDF page pending.
+- `TA-OCC-ff1a6b299d125832` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:24`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:27`; PDF page pending.
+- `TA-OCC-38085f8247c6e417` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:28`; PDF page pending.
+- `TA-OCC-354c81f35e531196` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:37`; PDF page pending.
+- `TA-OCC-4c4b25b0f91f8762` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:39`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:40`; PDF page pending.
+- `TA-OCC-d320a4b337d4282f` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:43`; PDF page pending.
+- `TA-OCC-9ec238d855ae0d5c` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:46`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:48`; PDF page pending.
+- `TA-OCC-8f8b46017ed87c77` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:47`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:49`; PDF page pending.
+- `TA-OCC-a24c52dd7eced430` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:48`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:50`; PDF page pending.
+- `TA-OCC-e8accc3141d93548` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:66`; PDF page pending.
+- `TA-OCC-c6d5641f9c33bc87` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:74`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:74`; PDF page pending.
+- `TA-OCC-2ac525c8963c50cf` — OLP-0088 / `OLP-0088-S04`; source `content/first-order-logic/natural-deduction/derivations.tex:79`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:80`; PDF page pending.
+- `TA-OCC-2d36b28358538c67` — OLP-0088 / `OLP-0088-S05`; source `content/first-order-logic/natural-deduction/derivations.tex:101`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:102`; PDF page pending.
+- `TA-OCC-5f4db8d6e7e5d1b0` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:17`; PDF page pending.
+- `TA-OCC-fda30c11f88a065b` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:19`; PDF page pending.
+- `TA-OCC-79788e07dc429364` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:49`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:48`; PDF page pending.
+- `TA-OCC-ca9ba56da26dea72` — OLP-0089 / `OLP-0089-S02`; source `content/first-order-logic/natural-deduction/proving-things.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:53`; PDF page pending.
+- `TA-OCC-bce619001c7a16a4` — OLP-0089 / `OLP-0089-S02`; source `content/first-order-logic/natural-deduction/proving-things.tex:58`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:56`; PDF page pending.
+- `TA-OCC-54999a54b76b8d00` — OLP-0089 / `OLP-0089-S03`; source `content/first-order-logic/natural-deduction/proving-things.tex:85`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:84`; PDF page pending.
+- `TA-OCC-85b1ec87a6cc8978` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:116`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:117`; PDF page pending.
+- `TA-OCC-3112d47256bf6779` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:117`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:118`; PDF page pending.
+- `TA-OCC-5123173b08b5d535` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:116`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:128`; PDF page pending.
+- `TA-OCC-b4fc524722d98e16` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:151`; PDF page pending.
+- `TA-OCC-66477c2442b3b991` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:154`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:156`; PDF page pending.
+- `TA-OCC-b03b55c7c9aeaf64` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:176`; PDF page pending.
+- `TA-OCC-1025d7fc64804c15` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:174`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:176`; PDF page pending.
+- `TA-OCC-a8027a6e47fa2363` — OLP-0089 / `OLP-0089-S07`; source `content/first-order-logic/natural-deduction/proving-things.tex:180`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:183`; PDF page pending.
+- `TA-OCC-0ca601eded041869` — OLP-0089 / `OLP-0089-S08`; source `content/first-order-logic/natural-deduction/proving-things.tex:196`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:200`; PDF page pending.
+- `TA-OCC-bfe1bd85048a9694` — OLP-0089 / `OLP-0089-S09`; source `content/first-order-logic/natural-deduction/proving-things.tex:209`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:214`; PDF page pending.
+- `TA-OCC-ad252c74c0d12d32` — OLP-0089 / `OLP-0089-S12`; source `content/first-order-logic/natural-deduction/proving-things.tex:268`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:279`; PDF page pending.
+- `TA-OCC-fb66e36ee23a2c52` — OLP-0089 / `OLP-0089-S13`; source `content/first-order-logic/natural-deduction/proving-things.tex:278`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:290`; PDF page pending.
+- `TA-OCC-a090b5302a4eccdb` — OLP-0089 / `OLP-0089-S14`; source `content/first-order-logic/natural-deduction/proving-things.tex:296`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:309`; PDF page pending.
+- `TA-OCC-af4f0aea37a3ffca` — OLP-0090 / `OLP-0090-S01`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:11`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:18`; PDF page pending.
+- `TA-OCC-b1607610ef3e372d` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:20`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:22`; PDF page pending.
+- `TA-OCC-35c7d4dada6db6f5` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:20`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:23`; PDF page pending.
+- `TA-OCC-f769b25e8837f9ba` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:38`; PDF page pending.
+- `TA-OCC-c7228351069ec973` — OLP-0090 / `OLP-0090-S05`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:93`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:97`; PDF page pending.
+- `TA-OCC-923413d79135d9ec` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:97`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:102`; PDF page pending.
+- `TA-OCC-3c577bfc13f05238` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:97`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:102`; PDF page pending.
+- `TA-OCC-2be5497ab8095704` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:102`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:108`; PDF page pending.
+- `TA-OCC-e9f953424b3af3f0` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:102`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:108`; PDF page pending.
+- `TA-OCC-cca0b2e990d28808` — OLP-0090 / `OLP-0090-S07`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:113`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:118`; PDF page pending.
+- `TA-OCC-733c83890d84fad0` — OLP-0090 / `OLP-0090-S10`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:180`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:189`; PDF page pending.
+- `TA-OCC-63c4cf063bd77a8f` — OLP-0090 / `OLP-0090-S11`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:184`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:196`; PDF page pending.
+- `TA-OCC-9a87ac1e692b7327` — OLP-0090 / `OLP-0090-S11`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:184`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:196`; PDF page pending.
+- `TA-OCC-f2d01263cfc758e3` — OLP-0090 / `OLP-0090-S11`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:187`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:197`; PDF page pending.
+- `TA-OCC-9c4b7c6a91b1035d` — OLP-0090 / `OLP-0090-S12`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:192`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:204`; PDF page pending.
+- `TA-OCC-ccc292d67ad4920b` — OLP-0090 / `OLP-0090-S15`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:231`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:247`; PDF page pending.
+- `TA-OCC-121e41ff980bdf96` — OLP-0090 / `OLP-0090-S16`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:246`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:263`; PDF page pending.
+- `TA-OCC-0da70cde41091378` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:23`; PDF page pending.
+- `TA-OCC-81776fab1c39eb6e` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; PDF page pending.
+- `TA-OCC-9ad6e02e4c0a17ed` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:29`; PDF page pending.
+- `TA-OCC-b7089e355479bbf9` — OLP-0091 / `OLP-0091-S02`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:33`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:36`; PDF page pending.
+- `TA-OCC-9bf1a1344767877c` — OLP-0091 / `OLP-0091-S03`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:42`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:46`; PDF page pending.
+- `TA-OCC-4fbdf67f34d851a0` — OLP-0091 / `OLP-0091-S05`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:59`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:65`; PDF page pending.
+- `TA-OCC-0c4d2e4bb3d62520` — OLP-0091 / `OLP-0091-S06`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:71`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:77`; PDF page pending.
+- `TA-OCC-9ce49f13bfe18490` — OLP-0091 / `OLP-0091-S06`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:71`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:78`; PDF page pending.
+- `TA-OCC-ead2600010b82c3b` — OLP-0091 / `OLP-0091-S07`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:82`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:90`; PDF page pending.
+- `TA-OCC-0ff2bf40320d4ab5` — OLP-0091 / `OLP-0091-S07`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:84`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:93`; PDF page pending.
+- `TA-OCC-ac241213134f5886` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:149`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:163`; PDF page pending.
+- `TA-OCC-e0c5cf6ad21d1a71` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:151`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:164`; PDF page pending.
+- `TA-OCC-b1babdc77bd275fd` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:152`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:168`; PDF page pending.
+- `TA-OCC-0db38cfa3c61ffc2` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:17`; PDF page pending.
+- `TA-OCC-f94f2a50d3cba22e` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:26`; PDF page pending.
+- `TA-OCC-6938189fc3ccd74a` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:26`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:27`; PDF page pending.
+- `TA-OCC-1bf0126309c62954` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:40`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:41`; PDF page pending.
+- `TA-OCC-f02446aad9a9dc50` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:42`; PDF page pending.
+- `TA-OCC-f1d635c1541ff722` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:51`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:54`; PDF page pending.
+- `TA-OCC-d919424d2e1d7031` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:52`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:55`; PDF page pending.
+- `TA-OCC-a11622817054f3d1` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:64`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:68`; PDF page pending.
+- `TA-OCC-9eb4988b0d46ef17` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:69`; PDF page pending.
+- `TA-OCC-00975d17b1974cbf` — OLP-0092 / `OLP-0092-S04`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:89`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:94`; PDF page pending.
+- `TA-OCC-56f1f94df0d772e6` — OLP-0092 / `OLP-0092-S05`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:109`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:116`; PDF page pending.
+- `TA-OCC-4a35ea5637b88943` — OLP-0092 / `OLP-0092-S05`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:127`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:133`; PDF page pending.
+- `TA-OCC-bd40bef5ecd7df40` — OLP-0093 / `OLP-0093-S01`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:6`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:23`; PDF page pending.
+- `TA-OCC-0198d6b21d672226` — OLP-0093 / `OLP-0093-S02`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:67`; PDF page pending.
+- `TA-OCC-4d8741475d0efe28` — OLP-0093 / `OLP-0093-S02`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:80`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:82`; PDF page pending.
+- `TA-OCC-5890c48f591c1e62` — OLP-0093 / `OLP-0093-S03`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:113`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:115`; PDF page pending.
+- `TA-OCC-26aa5e8cfe18a2ac` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:18`; PDF page pending.
+- `TA-OCC-f577ed988e9309d7` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:19`; PDF page pending.
+- `TA-OCC-445cceb9aa306971` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:29`; PDF page pending.
+- `TA-OCC-82efd28869fbb1cd` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:31`; PDF page pending.
+- `TA-OCC-50c320c722a8cbec` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:32`; PDF page pending.
+- `TA-OCC-9ecd51c36e95879a` — OLP-0094 / `OLP-0094-S02`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:45`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:48`; PDF page pending.
+- `TA-OCC-2308f24fe007cae7` — OLP-0094 / `OLP-0094-S02`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:56`; PDF page pending.
+- `TA-OCC-9568861dc3a8b80a` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:17`; PDF page pending.
+- `TA-OCC-2ca7f51f765546c3` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:17`; PDF page pending.
+- `TA-OCC-1f64c5826062f6e1` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:19`; PDF page pending.
+- `TA-OCC-33a2a9c0b272b199` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:26`; PDF page pending.
+- `TA-OCC-60017dc2f305d193` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:27`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:28`; PDF page pending.
+- `TA-OCC-48cdeeb314811aac` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:29`; PDF page pending.
+- `TA-OCC-2842489691daca32` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:30`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:30`; PDF page pending.
+- `TA-OCC-4b1c380cbfc7849a` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:40`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:42`; PDF page pending.
+- `TA-OCC-c9de00cee23e730b` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:40`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:49`; PDF page pending.
+- `TA-OCC-8cefd9f4eb2690fd` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:51`; PDF page pending.
+- `TA-OCC-c01a1d1c3665b179` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:55`; PDF page pending.
+- `TA-OCC-2661db01a55913c2` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:57`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:57`; PDF page pending.
+- `TA-OCC-45864fce96fb74eb` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:68`; PDF page pending.
+- `TA-OCC-dc4ba05fa78e8a04` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:88`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:92`; PDF page pending.
+- `TA-OCC-ae43e1d46c4d273b` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:111`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:116`; PDF page pending.
+- `TA-OCC-7dbf26ba96a91877` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:198`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:196`; PDF page pending.
+- `TA-OCC-0787a63549ee5a25` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:198`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:199`; PDF page pending.
+- `TA-OCC-d3a3a127f1958af8` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:198`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:207`; PDF page pending.
+- `TA-OCC-d05b8be2350df518` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:245`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:266`; PDF page pending.
+- `TA-OCC-e29146f14d1b2a13` — OLP-0095 / `OLP-0095-S15`; source `content/first-order-logic/natural-deduction/soundness.tex:281`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:304`; PDF page pending.
+- `TA-OCC-e1d61899ad1a7760` — OLP-0095 / `OLP-0095-S15`; source `content/first-order-logic/natural-deduction/soundness.tex:281`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:310`; PDF page pending.
+- `TA-OCC-f33cea02fe2304c5` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:303`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:322`; PDF page pending.
+- `TA-OCC-b7eb51af42f2e0cc` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:303`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:328`; PDF page pending.
+- `TA-OCC-ce10a3cca3ce202c` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:303`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:329`; PDF page pending.
+- `TA-OCC-edff052c2e256f40` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:303`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:331`; PDF page pending.
+- `TA-OCC-a58f8d7d8a14f970` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:303`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:334`; PDF page pending.
+- `TA-OCC-4b296e7888115fb5` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:303`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:335`; PDF page pending.
+- `TA-OCC-60e4f58776860ec1` — OLP-0096 / `OLP-0096-S01`; source `content/first-order-logic/natural-deduction/identity.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:14`; PDF page pending.
+- `TA-OCC-619773f13edc3bee` — OLP-0096 / `OLP-0096-S03`; source `content/first-order-logic/natural-deduction/identity.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:59`; PDF page pending.
+- `TA-OCC-1997ab786970bdcc` — OLP-0096 / `OLP-0096-S04`; source `content/first-order-logic/natural-deduction/identity.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:71`; PDF page pending.
+- `TA-OCC-8ea8a55146b6d6e1` — OLP-0096 / `OLP-0096-S05`; source `content/first-order-logic/natural-deduction/identity.tex:79`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:86`; PDF page pending.
+- `TA-OCC-41c3ae1fd04d319c` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:96`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:105`; PDF page pending.
+- `TA-OCC-351b48b889214baf` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:96`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:105`; PDF page pending.
+- `TA-OCC-7c67d86635ab3832` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:98`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:107`; PDF page pending.
+- `TA-OCC-3daff7d4816e6cdd` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:98`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:107`; PDF page pending.
+- `TA-OCC-df8b23e325643929` — OLP-0096 / `OLP-0096-S07`; source `content/first-order-logic/natural-deduction/identity.tex:115`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:124`; PDF page pending.
+- `TA-OCC-e99a3769f3edb93d` — OLP-0096 / `OLP-0096-S07`; source `content/first-order-logic/natural-deduction/identity.tex:115`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:124`; PDF page pending.
+- `TA-OCC-87eaec611efb3f81` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:15`; PDF page pending.
+- `TA-OCC-5e220c855e8570b7` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:19`; PDF page pending.
+- `TA-OCC-94bb6504b2e125fe` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:25`; PDF page pending.
+- `TA-OCC-9d3f43f536ba24af` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:24`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:25`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -3226,6 +3542,8 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-a783d863e6ad7ebf` — OLP-0064 / `OLP-0064-S03`; source `content/first-order-logic/proof-systems/introduction.tex:38`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:41`; PDF page pending.
 - `TA-OCC-703f7bed8b2e44c0` — OLP-0064 / `OLP-0064-S05`; source `content/first-order-logic/proof-systems/introduction.tex:65`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:80`; PDF page pending.
 - `TA-OCC-0acf3537d6fb1f71` — OLP-0075 / `OLP-0075-S04`; source `content/first-order-logic/sequent-calculus/proving-things.tex:252`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:284`; PDF page pending.
+- `TA-OCC-92b01222ec0f25ec` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:33`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:58`; PDF page pending.
+- `TA-OCC-84e96d3fd5a2c3c6` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:165`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:196`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -3276,6 +3594,7 @@ Please double-check: **do the listed uses of “தொடரி / முன்�
 - `TA-OCC-ecf666dd19ee2648` — OLP-0066 / `OLP-0066-S02`; source `content/first-order-logic/proof-systems/natural-deduction.tex:33`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:44`; PDF page pending.
 - `TA-OCC-a89a665f50e2a78e` — OLP-0070 / `OLP-0070-S03`; source `content/first-order-logic/sequent-calculus/rules-and-proofs.tex:46`; Tamil `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:52`; PDF page pending.
 - `TA-OCC-d8797c5a8567a063` — OLP-0070 / `OLP-0070-S03`; source `content/first-order-logic/sequent-calculus/rules-and-proofs.tex:46`; Tamil `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:53`; PDF page pending.
+- `TA-OCC-39ba497d0f44138a` — OLP-0088 / `OLP-0088-S04`; source `content/first-order-logic/natural-deduction/derivations.tex:76`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:79`; PDF page pending.
 
 ## TA-T044 — sequence / closure: recovered alternatives
 
@@ -3597,6 +3916,14 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-b320a4c9ee655040` — OLP-0077 / `OLP-0077-S04`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:51`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:58`; PDF page pending.
 - `TA-OCC-e391555dbc393736` — OLP-0079 / `OLP-0079-S01`; source `content/first-order-logic/sequent-calculus/provability-propositional.tex:1`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-propositional.tex:21`; PDF page pending.
 - `TA-OCC-0b0706808da2a68b` — OLP-0080 / `OLP-0080-S01`; source `content/first-order-logic/sequent-calculus/provability-quantifiers.tex:1`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-quantifiers.tex:14`; PDF page pending.
+- `TA-OCC-a0da227beb6147e3` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:20`; PDF page pending.
+- `TA-OCC-d806e5e122c5eda5` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:29`; PDF page pending.
+- `TA-OCC-54857d40992758e1` — OLP-0089 / `OLP-0089-S03`; source `content/first-order-logic/natural-deduction/proving-things.tex:77`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:77`; PDF page pending.
+- `TA-OCC-97f6cad1f2c5b253` — OLP-0089 / `OLP-0089-S07`; source `content/first-order-logic/natural-deduction/proving-things.tex:178`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:184`; PDF page pending.
+- `TA-OCC-02cf7fb7573a7f02` — OLP-0090 / `OLP-0090-S04`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:67`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:75`; PDF page pending.
+- `TA-OCC-b8d4b240452aeb11` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:23`; PDF page pending.
+- `TA-OCC-f13fe47af443b049` — OLP-0093 / `OLP-0093-S01`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:21`; PDF page pending.
+- `TA-OCC-807ee486b551f49e` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:18`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -3962,6 +4289,17 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-a91b034daf6597ee` — OLP-0081 / `OLP-0081-S14`; source `content/first-order-logic/sequent-calculus/soundness.tex:319`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:349`; PDF page pending.
 - `TA-OCC-0b415092fd534f6e` — OLP-0081 / `OLP-0081-S16`; source `content/first-order-logic/sequent-calculus/soundness.tex:360`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:391`; PDF page pending.
 - `TA-OCC-d8d6dd759488d174` — OLP-0081 / `OLP-0081-S17`; source `content/first-order-logic/sequent-calculus/soundness.tex:376`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:408`; PDF page pending.
+- `TA-OCC-39a33d0b9f7cca2d` — OLP-0093 / `OLP-0093-S01`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:17`; PDF page pending.
+- `TA-OCC-437614f1e93e85fb` — OLP-0093 / `OLP-0093-S01`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:20`; PDF page pending.
+- `TA-OCC-f697f38058227aac` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:48`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:50`; PDF page pending.
+- `TA-OCC-3eb9af4bac114680` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:76`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:79`; PDF page pending.
+- `TA-OCC-22a019ef54538c12` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:121`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:126`; PDF page pending.
+- `TA-OCC-115670b11a0ba876` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:142`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:147`; PDF page pending.
+- `TA-OCC-27f1f216562f503a` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:146`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:151`; PDF page pending.
+- `TA-OCC-116d583f95f8b2cd` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:234`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:253`; PDF page pending.
+- `TA-OCC-94f2d2dedf490893` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:260`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:281`; PDF page pending.
+- `TA-OCC-52b6034c38a907a0` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:306`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:330`; PDF page pending.
+- `TA-OCC-f854c08bc40cb0d7` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:309`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:332`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -5056,6 +5394,7 @@ Please double-check: **is “பரிமாற்று வளையம் / �
 - `TA-OCC-927d562da12a59b0` — OLP-0047 / `OLP-0047-S12`; source `content/sets-functions-relations/arithmetization/checking-details.tex:151`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:185`; PDF page pending.
 - `TA-OCC-669d8156425873b1` — OLP-0047 / `OLP-0047-S14`; source `content/sets-functions-relations/arithmetization/checking-details.tex:176`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:219`; PDF page pending.
 - `TA-OCC-b7b16f7863551030` — OLP-0082 / `OLP-0082-S01`; source `content/first-order-logic/sequent-calculus/identity.tex:13`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:14`; PDF page pending.
+- `TA-OCC-3a9fe844d0e04d45` — OLP-0096 / `OLP-0096-S01`; source `content/first-order-logic/natural-deduction/identity.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:14`; PDF page pending.
 
 ## TA-T074 — Cauchy sequence / limit / tends to zero / monotone increasing or decreasing / decimal expansion
 
@@ -5198,6 +5537,9 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-ced21323a1626507` — OLP-0071 / `OLP-0071-S01`; source `content/first-order-logic/sequent-calculus/propositional-rules.tex:1`; Tamil `translation/content/first-order-logic/sequent-calculus/propositional-rules.tex:14`; PDF page pending.
 - `TA-OCC-17e6cf1502b63400` — OLP-0079 / `OLP-0079-S01`; source `content/first-order-logic/sequent-calculus/provability-propositional.tex:1`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-propositional.tex:17`; PDF page pending.
 - `TA-OCC-5e55bb96041a8ef6` — OLP-0079 / `OLP-0079-S01`; source `content/first-order-logic/sequent-calculus/provability-propositional.tex:1`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-propositional.tex:20`; PDF page pending.
+- `TA-OCC-b88fc71880a75f51` — OLP-0086 / `OLP-0086-S01`; source `content/first-order-logic/natural-deduction/propositional-rules.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/propositional-rules.tex:14`; PDF page pending.
+- `TA-OCC-642837b7869b762b` — OLP-0093 / `OLP-0093-S01`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:17`; PDF page pending.
+- `TA-OCC-121896b5dcc76ec2` — OLP-0093 / `OLP-0093-S01`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:20`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -5406,6 +5748,19 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-3a803cd72d0d65a3` — OLP-0081 / `OLP-0081-S16`; source `content/first-order-logic/sequent-calculus/soundness.tex:360`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:392`; PDF page pending.
 - `TA-OCC-4c6c55471eb07f56` — OLP-0081 / `OLP-0081-S16`; source `content/first-order-logic/sequent-calculus/soundness.tex:360`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:392`; PDF page pending.
 - `TA-OCC-630068af681fc46b` — OLP-0081 / `OLP-0081-S17`; source `content/first-order-logic/sequent-calculus/soundness.tex:376`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:408`; PDF page pending.
+- `TA-OCC-51ef80c33bd77a7c` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:23`; PDF page pending.
+- `TA-OCC-4c177bec0b6198b7` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:48`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:50`; PDF page pending.
+- `TA-OCC-16fd508642797f77` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:76`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:79`; PDF page pending.
+- `TA-OCC-06d1deb1bfd0440f` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:121`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:126`; PDF page pending.
+- `TA-OCC-1df7ce25a490b982` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:142`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:147`; PDF page pending.
+- `TA-OCC-dc5cae0281a69700` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:146`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:151`; PDF page pending.
+- `TA-OCC-e80e633de9ed60ae` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:197`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:203`; PDF page pending.
+- `TA-OCC-0c5751075106f68d` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:197`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:216`; PDF page pending.
+- `TA-OCC-cff2b64bb31d2ff5` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:234`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:253`; PDF page pending.
+- `TA-OCC-2e6f66f3b30cb459` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:260`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:281`; PDF page pending.
+- `TA-OCC-2824b47bc924c1f6` — OLP-0095 / `OLP-0095-S15`; source `content/first-order-logic/natural-deduction/soundness.tex:279`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:316`; PDF page pending.
+- `TA-OCC-b517afc236342d19` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:306`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:330`; PDF page pending.
+- `TA-OCC-f58ba5e9017f6f8a` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:309`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:332`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -5439,6 +5794,9 @@ Please double-check: **do the listed uses of “தருக்க இணைப�
 - `TA-OCC-f14f7f494a5ee836` — OLP-0075 / `OLP-0075-S01`; source `content/first-order-logic/sequent-calculus/proving-things.tex:1`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:29`; PDF page pending.
 - `TA-OCC-f976f3de2e936316` — OLP-0075 / `OLP-0075-S02`; source `content/first-order-logic/sequent-calculus/proving-things.tex:60`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:61`; PDF page pending.
 - `TA-OCC-658a345c0336d799` — OLP-0075 / `OLP-0075-S02`; source `content/first-order-logic/sequent-calculus/proving-things.tex:110`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:112`; PDF page pending.
+- `TA-OCC-30209a9871c4e660` — OLP-0090 / `OLP-0090-S12`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:192`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:204`; PDF page pending.
+- `TA-OCC-cad1450409e83b1f` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:82`; PDF page pending.
+- `TA-OCC-87da1444d1de1a38` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:130`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:150`; PDF page pending.
 
 ## TA-T080 — conditional / biconditional
 
@@ -5604,6 +5962,18 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-ba04b5cf14258243` — OLP-0081 / `OLP-0081-S09`; source `content/first-order-logic/sequent-calculus/soundness.tex:209`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:221`; PDF page pending.
 - `TA-OCC-50e1661ffc6ea0c3` — OLP-0081 / `OLP-0081-S10`; source `content/first-order-logic/sequent-calculus/soundness.tex:229`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:246`; PDF page pending.
 - `TA-OCC-5f6e5c8741b4678e` — OLP-0082 / `OLP-0082-S03`; source `content/first-order-logic/sequent-calculus/identity.tex:63`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:65`; PDF page pending.
+- `TA-OCC-20617c8c90642267` — OLP-0087 / `OLP-0087-S05`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:64`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:68`; PDF page pending.
+- `TA-OCC-724296c9f33fb1f3` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:106`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:112`; PDF page pending.
+- `TA-OCC-8fc5b08bdcc6ed9b` — OLP-0089 / `OLP-0089-S07`; source `content/first-order-logic/natural-deduction/proving-things.tex:180`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:183`; PDF page pending.
+- `TA-OCC-3cf7a95dbde26afe` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:20`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:22`; PDF page pending.
+- `TA-OCC-0365747bc191cd0d` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:97`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:102`; PDF page pending.
+- `TA-OCC-4a37c4894d74ec50` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:97`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:102`; PDF page pending.
+- `TA-OCC-8454eea47d8ea685` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:102`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:108`; PDF page pending.
+- `TA-OCC-69564844268f7914` — OLP-0090 / `OLP-0090-S11`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:184`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:196`; PDF page pending.
+- `TA-OCC-1f8eecb798909799` — OLP-0090 / `OLP-0090-S11`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:187`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:197`; PDF page pending.
+- `TA-OCC-0d57568d6022186a` — OLP-0096 / `OLP-0096-S05`; source `content/first-order-logic/natural-deduction/identity.tex:79`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:86`; PDF page pending.
+- `TA-OCC-feb45c1e2ac0d5ca` — OLP-0096 / `OLP-0096-S07`; source `content/first-order-logic/natural-deduction/identity.tex:115`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:124`; PDF page pending.
+- `TA-OCC-fab2bb390e56be10` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:19`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -5647,6 +6017,15 @@ Please double-check: **is “மெய்மதிப்பு ஒதுக்�
 - `TA-OCC-fdc22a8689e9fc3b` — OLP-0081 / `OLP-0081-S14`; source `content/first-order-logic/sequent-calculus/soundness.tex:319`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:349`; PDF page pending.
 - `TA-OCC-ca00fea5585c7fa8` — OLP-0081 / `OLP-0081-S16`; source `content/first-order-logic/sequent-calculus/soundness.tex:360`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:391`; PDF page pending.
 - `TA-OCC-87ce6ceca2e6de1a` — OLP-0081 / `OLP-0081-S17`; source `content/first-order-logic/sequent-calculus/soundness.tex:376`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:408`; PDF page pending.
+- `TA-OCC-ffb7f40204e644cf` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:48`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:50`; PDF page pending.
+- `TA-OCC-123b11e308f2b502` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:76`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:79`; PDF page pending.
+- `TA-OCC-bda8abbe52132159` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:121`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:126`; PDF page pending.
+- `TA-OCC-bb75ba443d85cfdd` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:142`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:147`; PDF page pending.
+- `TA-OCC-6c2e4ecd22b0a4b8` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:146`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:151`; PDF page pending.
+- `TA-OCC-7c4937f6dd7b4b22` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:234`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:253`; PDF page pending.
+- `TA-OCC-721d5cc4793832bf` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:260`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:281`; PDF page pending.
+- `TA-OCC-819e82f3229b4342` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:306`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:330`; PDF page pending.
+- `TA-OCC-cb8fd4484e0437ad` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:309`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:332`; PDF page pending.
 
 ## TA-T083 — satisfaction / satisfiable / unsatisfiable
 
@@ -5687,6 +6066,13 @@ Please double-check: **is “நிறைவுறுத்தல் / நிற
 - `TA-OCC-b73fc5cd0c1bb20c` — OLP-0081 / `OLP-0081-S17`; source `content/first-order-logic/sequent-calculus/soundness.tex:381`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:412`; PDF page pending.
 - `TA-OCC-2e4f9575c97a8fc2` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:17`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:40`; PDF page pending.
 - `TA-OCC-0367e5735824239f` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:17`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:51`; PDF page pending.
+- `TA-OCC-f386c599aab70fdf` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:24`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:23`; PDF page pending.
+- `TA-OCC-be6d1e5482eae003` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:26`; PDF page pending.
+- `TA-OCC-d61bc30cc9c024a8` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:191`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:196`; PDF page pending.
+- `TA-OCC-582c38c7a38e2771` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:191`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:199`; PDF page pending.
+- `TA-OCC-bca5f9e2018b329f` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:191`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:207`; PDF page pending.
+- `TA-OCC-fbae3b48a6650990` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:298`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:322`; PDF page pending.
+- `TA-OCC-3c124358150697ae` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:311`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:335`; PDF page pending.
 
 ## TA-T084 — tautology / contradiction / contingent
 
@@ -5712,6 +6098,10 @@ Please double-check: **do the listed uses of “மெய்மம் / மு�
 - `TA-OCC-459aefdb5a67d1df` — OLP-0062 / `OLP-0062-S03`; source `content/propositional-logic/syntax-and-semantics/semantic-notions.tex:48`; Tamil `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:52`; PDF page pending.
 - `TA-OCC-e9cd8a44fdf5799e` — OLP-0081 / `OLP-0081-S01`; source `content/first-order-logic/sequent-calculus/soundness.tex:22`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:24`; PDF page pending.
 - `TA-OCC-449c07c258e37ff4` — OLP-0081 / `OLP-0081-S15`; source `content/first-order-logic/sequent-calculus/soundness.tex:348`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:378`; PDF page pending.
+- `TA-OCC-4d7994c1b7a2a898` — OLP-0090 / `OLP-0090-S03`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:51`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:56`; PDF page pending.
+- `TA-OCC-29c5e7df34bde180` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:22`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:23`; PDF page pending.
+- `TA-OCC-5a2fed142c8d28e5` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:152`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:157`; PDF page pending.
+- `TA-OCC-b4ce383d5fdd6b42` — OLP-0095 / `OLP-0095-S15`; source `content/first-order-logic/natural-deduction/soundness.tex:293`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:316`; PDF page pending.
 
 ## TA-T085 — semantic entailment / semantic notions / semantic deduction theorem
 
@@ -5780,6 +6170,7 @@ Please double-check: **is “சீரான பிரதியீடு / உ�
 
 - `TA-OCC-5deac7689d5efecd` — OLP-0062 / `OLP-0062-S03`; source `content/propositional-logic/syntax-and-semantics/semantic-notions.tex:54`; Tamil `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:58`; PDF page pending.
 - `TA-OCC-e2e0bce9749428d8` — OLP-0077 / `OLP-0077-S07`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:88`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:98`; PDF page pending.
+- `TA-OCC-9c96e9eee6be7e1b` — OLP-0091 / `OLP-0091-S06`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:64`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:70`; PDF page pending.
 
 ## TA-T088 — derivation / proof / inference
 
@@ -6002,6 +6393,134 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-dcf931d2708a05b0` — OLP-0082 / `OLP-0082-S04`; source `content/first-order-logic/sequent-calculus/identity.tex:68`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:71`; PDF page pending.
 - `TA-OCC-c8859fb47da109f8` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:26`; PDF page pending.
 - `TA-OCC-285277841085c66c` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:26`; PDF page pending.
+- `TA-OCC-9eeaabf3ca06757a` — OLP-0084 / `OLP-0084-S01`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:10`; PDF page pending.
+- `TA-OCC-db6ce533faa12f8c` — OLP-0084 / `OLP-0084-S01`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:11`; PDF page pending.
+- `TA-OCC-5aea4d2ab0d1b65a` — OLP-0084 / `OLP-0084-S02`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:15`; PDF page pending.
+- `TA-OCC-6907741e5ca5ea59` — OLP-0084 / `OLP-0084-S02`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:20`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:18`; PDF page pending.
+- `TA-OCC-b00f6dbd792e06b9` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:17`; PDF page pending.
+- `TA-OCC-471fdb7baa72c4f1` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-dac13694eecb932f` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-e77c6ef4fdcc42ae` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:34`; PDF page pending.
+- `TA-OCC-5c0bbb79bdf54fcd` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:43`; PDF page pending.
+- `TA-OCC-9db21307814791d3` — OLP-0086 / `OLP-0086-S07`; source `content/first-order-logic/natural-deduction/propositional-rules.tex:118`; Tamil `translation/content/first-order-logic/natural-deduction/propositional-rules.tex:124`; PDF page pending.
+- `TA-OCC-f15f983f6ab1c26d` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:30`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:30`; PDF page pending.
+- `TA-OCC-437277c0c30bbfec` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:56`; PDF page pending.
+- `TA-OCC-9d56d9ec34b4da9f` — OLP-0087 / `OLP-0087-S04`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:59`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:62`; PDF page pending.
+- `TA-OCC-69cf44948c2fb8d2` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:18`; PDF page pending.
+- `TA-OCC-93b9ab8fa986d452` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:19`; PDF page pending.
+- `TA-OCC-ff0c5b545a6aab62` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:21`; PDF page pending.
+- `TA-OCC-6f7e0dee4b5b745a` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:25`; PDF page pending.
+- `TA-OCC-b11fc5898bfdb10f` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:24`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:27`; PDF page pending.
+- `TA-OCC-c3627e21bc70c47e` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:37`; PDF page pending.
+- `TA-OCC-efadcb89098f7981` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:39`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:40`; PDF page pending.
+- `TA-OCC-30807c52eead8ebc` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:43`; PDF page pending.
+- `TA-OCC-8e96cd206a436b23` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:46`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:48`; PDF page pending.
+- `TA-OCC-dc7d840a2829bd49` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:47`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:49`; PDF page pending.
+- `TA-OCC-ce81c26bcf048876` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:48`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:50`; PDF page pending.
+- `TA-OCC-9afd598face93f0d` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:66`; PDF page pending.
+- `TA-OCC-c32fc8e53e1717ed` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:74`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:74`; PDF page pending.
+- `TA-OCC-de682dc29aee0338` — OLP-0088 / `OLP-0088-S04`; source `content/first-order-logic/natural-deduction/derivations.tex:79`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:80`; PDF page pending.
+- `TA-OCC-c6dd7c6f4bb3dc33` — OLP-0088 / `OLP-0088-S05`; source `content/first-order-logic/natural-deduction/derivations.tex:101`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:102`; PDF page pending.
+- `TA-OCC-2e8dc89784d18d5e` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:17`; PDF page pending.
+- `TA-OCC-f27b44b979adeac8` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:19`; PDF page pending.
+- `TA-OCC-aaa04756369ed642` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:25`; PDF page pending.
+- `TA-OCC-9d3b95ecef16305b` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:40`; PDF page pending.
+- `TA-OCC-1a4093f4fb0b1637` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:49`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:48`; PDF page pending.
+- `TA-OCC-32f5d61918d5b47c` — OLP-0089 / `OLP-0089-S02`; source `content/first-order-logic/natural-deduction/proving-things.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:53`; PDF page pending.
+- `TA-OCC-87a5d73e3dd9ecea` — OLP-0089 / `OLP-0089-S02`; source `content/first-order-logic/natural-deduction/proving-things.tex:58`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:56`; PDF page pending.
+- `TA-OCC-8994d6d463ff8dd7` — OLP-0089 / `OLP-0089-S03`; source `content/first-order-logic/natural-deduction/proving-things.tex:85`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:84`; PDF page pending.
+- `TA-OCC-c1072e8c567a8434` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:116`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:117`; PDF page pending.
+- `TA-OCC-25633ca48dab716d` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:117`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:118`; PDF page pending.
+- `TA-OCC-d8fd2a93cf7ece3b` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:151`; PDF page pending.
+- `TA-OCC-4ceaa3903f50252d` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:154`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:156`; PDF page pending.
+- `TA-OCC-0079d9949aa64128` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:174`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:176`; PDF page pending.
+- `TA-OCC-0cd2109d1d0a3525` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:176`; PDF page pending.
+- `TA-OCC-95d3295d428a6fed` — OLP-0089 / `OLP-0089-S08`; source `content/first-order-logic/natural-deduction/proving-things.tex:196`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:200`; PDF page pending.
+- `TA-OCC-c7d9fc2f16286d8f` — OLP-0089 / `OLP-0089-S09`; source `content/first-order-logic/natural-deduction/proving-things.tex:209`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:214`; PDF page pending.
+- `TA-OCC-b6df376115a677fa` — OLP-0089 / `OLP-0089-S12`; source `content/first-order-logic/natural-deduction/proving-things.tex:268`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:279`; PDF page pending.
+- `TA-OCC-03605a2be3c1a3d9` — OLP-0089 / `OLP-0089-S13`; source `content/first-order-logic/natural-deduction/proving-things.tex:278`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:290`; PDF page pending.
+- `TA-OCC-54b3813081ade72c` — OLP-0089 / `OLP-0089-S14`; source `content/first-order-logic/natural-deduction/proving-things.tex:296`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:309`; PDF page pending.
+- `TA-OCC-4271f16786f1fe4b` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:20`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:23`; PDF page pending.
+- `TA-OCC-9186d098f019dd55` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:38`; PDF page pending.
+- `TA-OCC-a18369b89efeacf9` — OLP-0090 / `OLP-0090-S05`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:93`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:97`; PDF page pending.
+- `TA-OCC-883c6196e45a06a2` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:102`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:108`; PDF page pending.
+- `TA-OCC-66bfa5ecea1ee95d` — OLP-0090 / `OLP-0090-S07`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:113`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:118`; PDF page pending.
+- `TA-OCC-72767f0fd45de149` — OLP-0090 / `OLP-0090-S10`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:180`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:189`; PDF page pending.
+- `TA-OCC-f1d44228788e5782` — OLP-0090 / `OLP-0090-S11`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:184`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:196`; PDF page pending.
+- `TA-OCC-5efe46f3e55713c9` — OLP-0090 / `OLP-0090-S12`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:192`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:204`; PDF page pending.
+- `TA-OCC-c91fdb8bed93a462` — OLP-0090 / `OLP-0090-S15`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:231`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:247`; PDF page pending.
+- `TA-OCC-36a631648aceba23` — OLP-0090 / `OLP-0090-S16`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:246`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:263`; PDF page pending.
+- `TA-OCC-534e52a58fd6b00b` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:14`; PDF page pending.
+- `TA-OCC-07a936edd72ac1e7` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:24`; PDF page pending.
+- `TA-OCC-b92827709561e9c3` — OLP-0091 / `OLP-0091-S02`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:33`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:36`; PDF page pending.
+- `TA-OCC-7ae408b09b990217` — OLP-0091 / `OLP-0091-S03`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:42`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:46`; PDF page pending.
+- `TA-OCC-01e21805576d5be7` — OLP-0091 / `OLP-0091-S05`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:59`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:65`; PDF page pending.
+- `TA-OCC-47f5f837d26e3e51` — OLP-0091 / `OLP-0091-S06`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:71`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:77`; PDF page pending.
+- `TA-OCC-e7e517ddc49843d8` — OLP-0091 / `OLP-0091-S06`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:71`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:78`; PDF page pending.
+- `TA-OCC-c15d34ed1cd97e45` — OLP-0091 / `OLP-0091-S07`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:82`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:90`; PDF page pending.
+- `TA-OCC-24d44ce9d4c4bd1d` — OLP-0091 / `OLP-0091-S07`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:84`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:93`; PDF page pending.
+- `TA-OCC-cd22202156f68d09` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:149`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:163`; PDF page pending.
+- `TA-OCC-f41125ce170bfc40` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:151`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:164`; PDF page pending.
+- `TA-OCC-6a9cacd0022b773b` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:152`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:168`; PDF page pending.
+- `TA-OCC-df7c2a617676da17` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:26`; PDF page pending.
+- `TA-OCC-02c93571f7dd9293` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:26`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:27`; PDF page pending.
+- `TA-OCC-3103e4a4c1cf199a` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:40`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:41`; PDF page pending.
+- `TA-OCC-49d8941a2d67978e` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:42`; PDF page pending.
+- `TA-OCC-3ce25fddb285adff` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:51`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:54`; PDF page pending.
+- `TA-OCC-391ecf4be480aac3` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:52`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:55`; PDF page pending.
+- `TA-OCC-eb0429482068e1a0` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:64`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:68`; PDF page pending.
+- `TA-OCC-131486f892a531df` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:69`; PDF page pending.
+- `TA-OCC-0b5fab957e64c4a7` — OLP-0092 / `OLP-0092-S04`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:89`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:94`; PDF page pending.
+- `TA-OCC-656efec026c9a2a7` — OLP-0092 / `OLP-0092-S05`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:109`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:116`; PDF page pending.
+- `TA-OCC-3b9e1dc5cf03ecf2` — OLP-0092 / `OLP-0092-S05`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:127`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:133`; PDF page pending.
+- `TA-OCC-e7f8032e13ae8075` — OLP-0093 / `OLP-0093-S02`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:67`; PDF page pending.
+- `TA-OCC-5bc01e8781048a56` — OLP-0093 / `OLP-0093-S02`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:80`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:82`; PDF page pending.
+- `TA-OCC-2e25f41207d24bf0` — OLP-0093 / `OLP-0093-S03`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:113`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:115`; PDF page pending.
+- `TA-OCC-250b1cc98758a1bf` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:18`; PDF page pending.
+- `TA-OCC-b25bd182ca3724c1` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:29`; PDF page pending.
+- `TA-OCC-22c8259f6b713ab7` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:31`; PDF page pending.
+- `TA-OCC-a7334ec8d44fb72a` — OLP-0094 / `OLP-0094-S02`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:45`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:48`; PDF page pending.
+- `TA-OCC-a83aa0d21888bb04` — OLP-0094 / `OLP-0094-S02`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:56`; PDF page pending.
+- `TA-OCC-c09751e2a0e798f9` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:17`; PDF page pending.
+- `TA-OCC-cb52ad741fe358ba` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:17`; PDF page pending.
+- `TA-OCC-1e464035658bd184` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:19`; PDF page pending.
+- `TA-OCC-80d93d15a974be00` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:20`; PDF page pending.
+- `TA-OCC-60a57272ac8d3860` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:27`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:28`; PDF page pending.
+- `TA-OCC-221bad21f78ffa34` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:29`; PDF page pending.
+- `TA-OCC-fca5a3af0a2d8b2a` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:30`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:30`; PDF page pending.
+- `TA-OCC-e6627996bd7a99f7` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:40`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:42`; PDF page pending.
+- `TA-OCC-d37857171ff46ee1` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:55`; PDF page pending.
+- `TA-OCC-943d68462ce05655` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:57`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:57`; PDF page pending.
+- `TA-OCC-d5cba2da121ae851` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:68`; PDF page pending.
+- `TA-OCC-e7d9284391bdf173` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:68`; PDF page pending.
+- `TA-OCC-23d4eca0594ff784` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:88`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:90`; PDF page pending.
+- `TA-OCC-b89e2fed12b59221` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:88`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:92`; PDF page pending.
+- `TA-OCC-5217d6ca7411c1a8` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:111`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:114`; PDF page pending.
+- `TA-OCC-fb2e0e688ade76fc` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:111`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:116`; PDF page pending.
+- `TA-OCC-f2db549fc26c9fc0` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:130`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:136`; PDF page pending.
+- `TA-OCC-63afa87309562cc1` — OLP-0095 / `OLP-0095-S07`; source `content/first-order-logic/natural-deduction/soundness.tex:155`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:161`; PDF page pending.
+- `TA-OCC-be7bc81cff62650b` — OLP-0095 / `OLP-0095-S07`; source `content/first-order-logic/natural-deduction/soundness.tex:155`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:177`; PDF page pending.
+- `TA-OCC-a1822245c2ae51d2` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:172`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:181`; PDF page pending.
+- `TA-OCC-68bcda091117e653` — OLP-0095 / `OLP-0095-S09`; source `content/first-order-logic/natural-deduction/soundness.tex:205`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:221`; PDF page pending.
+- `TA-OCC-c91579167aca1579` — OLP-0095 / `OLP-0095-S09`; source `content/first-order-logic/natural-deduction/soundness.tex:207`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:224`; PDF page pending.
+- `TA-OCC-de360e83dbd18e06` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:216`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:235`; PDF page pending.
+- `TA-OCC-a58c4dedea57eb2b` — OLP-0095 / `OLP-0095-S12`; source `content/first-order-logic/natural-deduction/soundness.tex:242`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:262`; PDF page pending.
+- `TA-OCC-c455491d22a8e4bd` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:245`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:265`; PDF page pending.
+- `TA-OCC-6f353e37681fadba` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:245`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:266`; PDF page pending.
+- `TA-OCC-c091933c20032aae` — OLP-0095 / `OLP-0095-S14`; source `content/first-order-logic/natural-deduction/soundness.tex:273`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:295`; PDF page pending.
+- `TA-OCC-80c22f39a1a28747` — OLP-0095 / `OLP-0095-S14`; source `content/first-order-logic/natural-deduction/soundness.tex:275`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:297`; PDF page pending.
+- `TA-OCC-2ea8ae02cc703951` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:303`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:328`; PDF page pending.
+- `TA-OCC-77f39ab6c59ba894` — OLP-0096 / `OLP-0096-S01`; source `content/first-order-logic/natural-deduction/identity.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:14`; PDF page pending.
+- `TA-OCC-c06db6c33eeffffd` — OLP-0096 / `OLP-0096-S03`; source `content/first-order-logic/natural-deduction/identity.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:59`; PDF page pending.
+- `TA-OCC-328a13126081b159` — OLP-0096 / `OLP-0096-S04`; source `content/first-order-logic/natural-deduction/identity.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:71`; PDF page pending.
+- `TA-OCC-9bd745663c48de08` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:96`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:105`; PDF page pending.
+- `TA-OCC-2f82479f88dfc9ee` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:98`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:107`; PDF page pending.
+- `TA-OCC-43731cb11a591a96` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:98`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:107`; PDF page pending.
+- `TA-OCC-48f967c36ec87503` — OLP-0096 / `OLP-0096-S07`; source `content/first-order-logic/natural-deduction/identity.tex:115`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:124`; PDF page pending.
+- `TA-OCC-1288b231aa22b53b` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:15`; PDF page pending.
+- `TA-OCC-adf2221d71d7c10d` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:25`; PDF page pending.
+- `TA-OCC-f7b2ad9529cc5801` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:25`; PDF page pending.
+- `TA-OCC-9ec297a64b4a3c15` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:24`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:25`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -6210,6 +6729,112 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-b6fd9a3944d66607` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:24`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:27`; PDF page pending.
 - `TA-OCC-3f4df206231e4cbd` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:26`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:29`; PDF page pending.
 - `TA-OCC-711356f50099814f` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:30`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:33`; PDF page pending.
+- `TA-OCC-88ab5ef615c67972` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-4cc6247ac388e84d` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:22`; PDF page pending.
+- `TA-OCC-5983307f7d5e6b59` — OLP-0085 / `OLP-0085-S02`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:26`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:27`; PDF page pending.
+- `TA-OCC-81c65f757deee27f` — OLP-0085 / `OLP-0085-S02`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:27`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:29`; PDF page pending.
+- `TA-OCC-f4e048dd446617b0` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:32`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:35`; PDF page pending.
+- `TA-OCC-8a96c2caaff378e4` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:35`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:38`; PDF page pending.
+- `TA-OCC-ff0bf7d78993c130` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:39`; PDF page pending.
+- `TA-OCC-42acdece0d8aa667` — OLP-0086 / `OLP-0086-S07`; source `content/first-order-logic/natural-deduction/propositional-rules.tex:115`; Tamil `translation/content/first-order-logic/natural-deduction/propositional-rules.tex:124`; PDF page pending.
+- `TA-OCC-2b877382dbc20138` — OLP-0086 / `OLP-0086-S07`; source `content/first-order-logic/natural-deduction/propositional-rules.tex:117`; Tamil `translation/content/first-order-logic/natural-deduction/propositional-rules.tex:125`; PDF page pending.
+- `TA-OCC-9338ee69a036fcd1` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:29`; PDF page pending.
+- `TA-OCC-5c6fe94b56532166` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:29`; PDF page pending.
+- `TA-OCC-10b571174e6198f4` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:54`; PDF page pending.
+- `TA-OCC-67065c2cfedbccf3` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:55`; PDF page pending.
+- `TA-OCC-4fb6b8f543b549e1` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:54`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:55`; PDF page pending.
+- `TA-OCC-0ff1eb7fb2b76ff7` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:55`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:57`; PDF page pending.
+- `TA-OCC-73f271f4cb13dbb5` — OLP-0087 / `OLP-0087-S04`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:58`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:61`; PDF page pending.
+- `TA-OCC-a1537fb82a54886d` — OLP-0087 / `OLP-0087-S04`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:59`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:62`; PDF page pending.
+- `TA-OCC-f8e3cd73b8c2a232` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:90`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:96`; PDF page pending.
+- `TA-OCC-3853c61859b56ef1` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:17`; PDF page pending.
+- `TA-OCC-0e9f65f927ce1f85` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:26`; PDF page pending.
+- `TA-OCC-8da48094ec5f01e2` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:32`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:28`; PDF page pending.
+- `TA-OCC-febfc1bb33f22489` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:33`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:34`; PDF page pending.
+- `TA-OCC-86358d6d8f865956` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:37`; PDF page pending.
+- `TA-OCC-260572401cba2e7b` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:37`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:38`; PDF page pending.
+- `TA-OCC-101e0fc3a762c44e` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:46`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:59`; PDF page pending.
+- `TA-OCC-19864ba7bb3a6c94` — OLP-0088 / `OLP-0088-S03`; source `content/first-order-logic/natural-deduction/derivations.tex:58`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:66`; PDF page pending.
+- `TA-OCC-4f3a5857388a8c32` — OLP-0088 / `OLP-0088-S04`; source `content/first-order-logic/natural-deduction/derivations.tex:77`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:79`; PDF page pending.
+- `TA-OCC-7c4703179f29812f` — OLP-0088 / `OLP-0088-S05`; source `content/first-order-logic/natural-deduction/derivations.tex:98`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:100`; PDF page pending.
+- `TA-OCC-f31d9300c0437fbf` — OLP-0088 / `OLP-0088-S05`; source `content/first-order-logic/natural-deduction/derivations.tex:99`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:100`; PDF page pending.
+- `TA-OCC-f739db75510239d7` — OLP-0088 / `OLP-0088-S05`; source `content/first-order-logic/natural-deduction/derivations.tex:99`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:101`; PDF page pending.
+- `TA-OCC-33e06b3936ae0ed5` — OLP-0088 / `OLP-0088-S05`; source `content/first-order-logic/natural-deduction/derivations.tex:100`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:101`; PDF page pending.
+- `TA-OCC-57d1e12a999b186f` — OLP-0088 / `OLP-0088-S05`; source `content/first-order-logic/natural-deduction/derivations.tex:102`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:103`; PDF page pending.
+- `TA-OCC-aa752b75494fd8d6` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:28`; PDF page pending.
+- `TA-OCC-95e7e13ba129b819` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:27`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:29`; PDF page pending.
+- `TA-OCC-e6f5b53040eb1e67` — OLP-0089 / `OLP-0089-S03`; source `content/first-order-logic/natural-deduction/proving-things.tex:80`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:82`; PDF page pending.
+- `TA-OCC-33b5337b4a066636` — OLP-0089 / `OLP-0089-S03`; source `content/first-order-logic/natural-deduction/proving-things.tex:81`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:82`; PDF page pending.
+- `TA-OCC-f8d571b00210937a` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:119`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:120`; PDF page pending.
+- `TA-OCC-23d74dadfbc55c08` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:152`; PDF page pending.
+- `TA-OCC-148b2d0309db7242` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:152`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:154`; PDF page pending.
+- `TA-OCC-1eb7943c307524a5` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:155`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:157`; PDF page pending.
+- `TA-OCC-04884ca3f0ac61f4` — OLP-0089 / `OLP-0089-S07`; source `content/first-order-logic/natural-deduction/proving-things.tex:180`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:190`; PDF page pending.
+- `TA-OCC-1cf14e36f4847cd0` — OLP-0089 / `OLP-0089-S08`; source `content/first-order-logic/natural-deduction/proving-things.tex:197`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:201`; PDF page pending.
+- `TA-OCC-8f7a00176afb5a9e` — OLP-0089 / `OLP-0089-S10`; source `content/first-order-logic/natural-deduction/proving-things.tex:224`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:230`; PDF page pending.
+- `TA-OCC-e65af53327062baa` — OLP-0089 / `OLP-0089-S10`; source `content/first-order-logic/natural-deduction/proving-things.tex:225`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:230`; PDF page pending.
+- `TA-OCC-62084e4114df337b` — OLP-0090 / `OLP-0090-S03`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:52`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:57`; PDF page pending.
+- `TA-OCC-9c7ec72c20415940` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:98`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:103`; PDF page pending.
+- `TA-OCC-6201e917144b4eb5` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:99`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:104`; PDF page pending.
+- `TA-OCC-7c7b6c882347846d` — OLP-0090 / `OLP-0090-S06`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:103`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:106`; PDF page pending.
+- `TA-OCC-b6c860ef55f84fb4` — OLP-0090 / `OLP-0090-S07`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:112`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:116`; PDF page pending.
+- `TA-OCC-1347bab427c407d6` — OLP-0090 / `OLP-0090-S08`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:124`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:130`; PDF page pending.
+- `TA-OCC-4d33cd02ab931e49` — OLP-0090 / `OLP-0090-S09`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:137`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:145`; PDF page pending.
+- `TA-OCC-1c03406ba9b8a0c8` — OLP-0090 / `OLP-0090-S11`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:185`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:194`; PDF page pending.
+- `TA-OCC-947b23ae7804d77f` — OLP-0090 / `OLP-0090-S13`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:203`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:216`; PDF page pending.
+- `TA-OCC-469242996367f3b5` — OLP-0090 / `OLP-0090-S14`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:214`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:230`; PDF page pending.
+- `TA-OCC-e50110fb8203ca96` — OLP-0091 / `OLP-0091-S03`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:42`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:45`; PDF page pending.
+- `TA-OCC-0c0a94d994a4c740` — OLP-0091 / `OLP-0091-S05`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:59`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:65`; PDF page pending.
+- `TA-OCC-b661df0c3599fd1e` — OLP-0091 / `OLP-0091-S07`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:83`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:106`; PDF page pending.
+- `TA-OCC-ee704e0b063b768e` — OLP-0091 / `OLP-0091-S08`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:103`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:111`; PDF page pending.
+- `TA-OCC-d8b64d438f5ab223` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:154`; PDF page pending.
+- `TA-OCC-4445a76bead4c93a` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:155`; PDF page pending.
+- `TA-OCC-963eaa40de0aa212` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:164`; PDF page pending.
+- `TA-OCC-3a34529fa1fad3b1` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:165`; PDF page pending.
+- `TA-OCC-f88c79bded12cdd1` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:165`; PDF page pending.
+- `TA-OCC-546bfdd67d585e15` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:150`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:167`; PDF page pending.
+- `TA-OCC-ef0a5ad397cc2fab` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:41`; PDF page pending.
+- `TA-OCC-4290b17fe77b8713` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:52`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:54`; PDF page pending.
+- `TA-OCC-a36335641e54789b` — OLP-0092 / `OLP-0092-S02`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:67`; PDF page pending.
+- `TA-OCC-d09747ef29bda306` — OLP-0092 / `OLP-0092-S04`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:99`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:104`; PDF page pending.
+- `TA-OCC-ba27170d24f88228` — OLP-0092 / `OLP-0092-S05`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:113`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:132`; PDF page pending.
+- `TA-OCC-69d126b24459426b` — OLP-0093 / `OLP-0093-S02`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:70`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:81`; PDF page pending.
+- `TA-OCC-b8c650a01826d2f2` — OLP-0093 / `OLP-0093-S03`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:128`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:130`; PDF page pending.
+- `TA-OCC-57903395140c82c6` — OLP-0093 / `OLP-0093-S03`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:128`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:130`; PDF page pending.
+- `TA-OCC-260d171c0fcff7d0` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:35`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:37`; PDF page pending.
+- `TA-OCC-66f257b1725385d2` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:45`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:47`; PDF page pending.
+- `TA-OCC-eb7045254cbbb66f` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:45`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:48`; PDF page pending.
+- `TA-OCC-8a7e3e665ea62fe4` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:46`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:49`; PDF page pending.
+- `TA-OCC-2177fe1cc9035e44` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:49`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:54`; PDF page pending.
+- `TA-OCC-3a2c10f9733848b8` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:53`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:54`; PDF page pending.
+- `TA-OCC-c2c6853e84900c17` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:55`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:57`; PDF page pending.
+- `TA-OCC-a6c5c2ba7869003e` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:55`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:58`; PDF page pending.
+- `TA-OCC-8d091ced7e4cf2f5` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:56`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:58`; PDF page pending.
+- `TA-OCC-4e98e0ad45457103` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:57`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:59`; PDF page pending.
+- `TA-OCC-8c7943cccd852265` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:68`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:77`; PDF page pending.
+- `TA-OCC-ec9971176831d449` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:87`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:90`; PDF page pending.
+- `TA-OCC-b4678076907982f6` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:96`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:101`; PDF page pending.
+- `TA-OCC-f3af82b55645296e` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:110`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:114`; PDF page pending.
+- `TA-OCC-c02330a54f4d07c8` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:111`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:115`; PDF page pending.
+- `TA-OCC-ffc5c4e018dc2446` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:119`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:125`; PDF page pending.
+- `TA-OCC-54f91c9013b52525` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:131`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:146`; PDF page pending.
+- `TA-OCC-22716a5daaa7be00` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:131`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:149`; PDF page pending.
+- `TA-OCC-4966d29a98cc2b7a` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:170`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:190`; PDF page pending.
+- `TA-OCC-bb23acc84a97657d` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:183`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:191`; PDF page pending.
+- `TA-OCC-fffbec9e4955ef83` — OLP-0095 / `OLP-0095-S10`; source `content/first-order-logic/natural-deduction/soundness.tex:211`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:229`; PDF page pending.
+- `TA-OCC-2c07a0b1ede79fec` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:217`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:235`; PDF page pending.
+- `TA-OCC-de494183dc46340e` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:228`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:248`; PDF page pending.
+- `TA-OCC-ebf53da7f50b7993` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:229`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:249`; PDF page pending.
+- `TA-OCC-ed24eaa37f95b034` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:230`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:250`; PDF page pending.
+- `TA-OCC-7a03d22cdb1660a0` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:245`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:265`; PDF page pending.
+- `TA-OCC-2f550c885203ed2f` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:256`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:279`; PDF page pending.
+- `TA-OCC-a24d9cf3054a734c` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:257`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:280`; PDF page pending.
+- `TA-OCC-321787d098e899c5` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:304`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:328`; PDF page pending.
+- `TA-OCC-250963d28a0f5a9e` — OLP-0096 / `OLP-0096-S02`; source `content/first-order-logic/natural-deduction/identity.tex:38`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:38`; PDF page pending.
+- `TA-OCC-7e6628806f491bf4` — OLP-0096 / `OLP-0096-S05`; source `content/first-order-logic/natural-deduction/identity.tex:78`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:86`; PDF page pending.
+- `TA-OCC-0283b8619e3da012` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:97`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:105`; PDF page pending.
+- `TA-OCC-857c7be4646d398e` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:35`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:37`; PDF page pending.
+- `TA-OCC-ee0f8a531cff18b6` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:38`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -6418,6 +7043,18 @@ Please double-check: **is “இயல்பான வருவித்தல�
 - `TA-OCC-ebdc0683611b5366` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:26`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:28`; PDF page pending.
 - `TA-OCC-168860d8c09f445d` — OLP-0066 / `OLP-0066-S02`; source `content/first-order-logic/proof-systems/natural-deduction.tex:33`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:48`; PDF page pending.
 - `TA-OCC-b36cd12b58fbe6b3` — OLP-0066 / `OLP-0066-S05`; source `content/first-order-logic/proof-systems/natural-deduction.tex:81`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:85`; PDF page pending.
+- `TA-OCC-7fc5704c6cffc64f` — OLP-0084 / `OLP-0084-S01`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:9`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:10`; PDF page pending.
+- `TA-OCC-648680aa0acfc9a3` — OLP-0084 / `OLP-0084-S01`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:10`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:11`; PDF page pending.
+- `TA-OCC-2719c86839f0f9d6` — OLP-0084 / `OLP-0084-S02`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:15`; PDF page pending.
+- `TA-OCC-0b0285741eff1f01` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:17`; PDF page pending.
+- `TA-OCC-e47465807069b501` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-11da107c2fd49b08` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:40`; PDF page pending.
+- `TA-OCC-867c9ff889a3fb29` — OLP-0085 / `OLP-0085-S03`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:37`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:40`; PDF page pending.
+- `TA-OCC-21467276f756ea8f` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:105`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:110`; PDF page pending.
+- `TA-OCC-500ee97f2848da99` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:39`; PDF page pending.
+- `TA-OCC-8919de759bb9fff4` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:18`; PDF page pending.
+- `TA-OCC-6a8dc6af1252961f` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:17`; PDF page pending.
+- `TA-OCC-b60fec4fd50e97ba` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:14`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:15`; PDF page pending.
 
 ## TA-T093 — tableau / truth tree / signed formula / closed branch / open branch
 
@@ -6575,6 +7212,40 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-2853419cad7c3440` — OLP-0083 / `OLP-0083-S01`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:11`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:16`; PDF page pending.
 - `TA-OCC-b19e044f6a01e979` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:17`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:40`; PDF page pending.
 - `TA-OCC-acb695913cbb2112` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:17`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:51`; PDF page pending.
+- `TA-OCC-8934966b2b18ae7e` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:85`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:95`; PDF page pending.
+- `TA-OCC-be3c88f2716649dc` — OLP-0088 / `OLP-0088-S02`; source `content/first-order-logic/natural-deduction/derivations.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:28`; PDF page pending.
+- `TA-OCC-15d7726edbf57625` — OLP-0089 / `OLP-0089-S05`; source `content/first-order-logic/natural-deduction/proving-things.tex:116`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:128`; PDF page pending.
+- `TA-OCC-4b5ecafc5a59632c` — OLP-0089 / `OLP-0089-S06`; source `content/first-order-logic/natural-deduction/proving-things.tex:149`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:176`; PDF page pending.
+- `TA-OCC-3daf85aa59a6d629` — OLP-0090 / `OLP-0090-S01`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:18`; PDF page pending.
+- `TA-OCC-89cce7a74b838a12` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:27`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:23`; PDF page pending.
+- `TA-OCC-0182b304c3ea862e` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; PDF page pending.
+- `TA-OCC-a1bfcb74d6ba0d34` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:29`; PDF page pending.
+- `TA-OCC-0c1ccd5617331121` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:29`; PDF page pending.
+- `TA-OCC-91ea85a8356b5028` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:17`; PDF page pending.
+- `TA-OCC-01a5c266b4461638` — OLP-0093 / `OLP-0093-S01`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:6`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:23`; PDF page pending.
+- `TA-OCC-5aacd98cac1347a7` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:6`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:19`; PDF page pending.
+- `TA-OCC-20f8e804679aa7b4` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:32`; PDF page pending.
+- `TA-OCC-8d43502029aecb09` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:14`; PDF page pending.
+- `TA-OCC-2bb1981b4ce3ea38` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:18`; PDF page pending.
+- `TA-OCC-2c03426fc31ad52d` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:18`; PDF page pending.
+- `TA-OCC-c568b2b2c5583f44` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:26`; PDF page pending.
+- `TA-OCC-643de3bc7c42fd94` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:29`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:30`; PDF page pending.
+- `TA-OCC-1301c75213d6bb6d` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:33`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:35`; PDF page pending.
+- `TA-OCC-9bb5b3c51554fb67` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:34`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:49`; PDF page pending.
+- `TA-OCC-f058c825bc25fe70` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:34`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:51`; PDF page pending.
+- `TA-OCC-fd823d1a4dca31c0` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:165`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:196`; PDF page pending.
+- `TA-OCC-89c99a1c2e43f712` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:165`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:199`; PDF page pending.
+- `TA-OCC-e28b1136781e980f` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:165`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:207`; PDF page pending.
+- `TA-OCC-6b7ea528e3a625db` — OLP-0095 / `OLP-0095-S15`; source `content/first-order-logic/natural-deduction/soundness.tex:281`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:304`; PDF page pending.
+- `TA-OCC-f5ab39553d7b8610` — OLP-0095 / `OLP-0095-S15`; source `content/first-order-logic/natural-deduction/soundness.tex:287`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:310`; PDF page pending.
+- `TA-OCC-e9db9a4b7ddcb425` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:297`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:322`; PDF page pending.
+- `TA-OCC-8894651b696569de` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:305`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:329`; PDF page pending.
+- `TA-OCC-586814ba8e0fd467` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:305`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:331`; PDF page pending.
+- `TA-OCC-940fd2f9280ae34c` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:305`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:334`; PDF page pending.
+- `TA-OCC-7fc49ebbe30b6fe9` — OLP-0095 / `OLP-0095-S16`; source `content/first-order-logic/natural-deduction/soundness.tex:305`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:335`; PDF page pending.
+- `TA-OCC-f141610ca96f42a1` — OLP-0096 / `OLP-0096-S06`; source `content/first-order-logic/natural-deduction/identity.tex:96`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:105`; PDF page pending.
+- `TA-OCC-514af3d9038a0678` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:12`; PDF page pending.
+- `TA-OCC-ee06ba3340998ab7` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:11`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:15`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -6599,6 +7270,9 @@ Please double-check: **is “முரணின்மை / முரணுடை
 - `TA-OCC-a8914467303293bd` — OLP-0077 / `OLP-0077-S01`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:11`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:12`; PDF page pending.
 - `TA-OCC-87a2fc4c85ffdcb5` — OLP-0077 / `OLP-0077-S05`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:69`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:77`; PDF page pending.
 - `TA-OCC-2ace5346c8f6fe11` — OLP-0078 / `OLP-0078-S01`; source `content/first-order-logic/sequent-calculus/provability-consistency.tex:3`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-consistency.tex:14`; PDF page pending.
+- `TA-OCC-94c16584938610fe` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:18`; PDF page pending.
+- `TA-OCC-6a970b2d1be09cb0` — OLP-0091 / `OLP-0091-S04`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:47`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:52`; PDF page pending.
+- `TA-OCC-32b39e89906bfd12` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:14`; PDF page pending.
 
 ## TA-T096 — quantifier
 
@@ -6623,6 +7297,13 @@ Please double-check: **is “அளவையடை” the established India-stan
 - `TA-OCC-eb28e6fcee5ee284` — OLP-0080 / `OLP-0080-S01`; source `content/first-order-logic/sequent-calculus/provability-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-quantifiers.tex:11`; PDF page pending.
 - `TA-OCC-0486b30c0dc8b633` — OLP-0081 / `OLP-0081-S09`; source `content/first-order-logic/sequent-calculus/soundness.tex:208`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:237`; PDF page pending.
 - `TA-OCC-dfa21cf164348310` — OLP-0081 / `OLP-0081-S10`; source `content/first-order-logic/sequent-calculus/soundness.tex:228`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:266`; PDF page pending.
+- `TA-OCC-029680a93697f41e` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:12`; PDF page pending.
+- `TA-OCC-c736e4b3a2306e30` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:105`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:110`; PDF page pending.
+- `TA-OCC-09206a41f06d5b92` — OLP-0090 / `OLP-0090-S01`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:11`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:12`; PDF page pending.
+- `TA-OCC-c2b33d5a3304065c` — OLP-0090 / `OLP-0090-S01`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:14`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:15`; PDF page pending.
+- `TA-OCC-588a6926897589ab` — OLP-0090 / `OLP-0090-S05`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:88`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:93`; PDF page pending.
+- `TA-OCC-099c623aaf758ffa` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:15`; PDF page pending.
+- `TA-OCC-ba295a073d28866e` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:165`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:195`; PDF page pending.
 
 ## TA-T097 — antecedent / succedent / end-sequent
 
@@ -6651,6 +7332,18 @@ Please double-check: **is “முன்தொடர் / பின்தொட
 - `TA-OCC-4f45d03a419b8462` — OLP-0075 / `OLP-0075-S03`; source `content/first-order-logic/sequent-calculus/proving-things.tex:159`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:160`; PDF page pending.
 - `TA-OCC-50cfb87d0a13af8b` — OLP-0075 / `OLP-0075-S03`; source `content/first-order-logic/sequent-calculus/proving-things.tex:164`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:166`; PDF page pending.
 - `TA-OCC-5fd8d7b8877900a2` — OLP-0076 / `OLP-0076-S01`; source `content/first-order-logic/sequent-calculus/proving-things-quant.tex:81`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things-quant.tex:79`; PDF page pending.
+- `TA-OCC-063673089b3438b1` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:85`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:97`; PDF page pending.
+- `TA-OCC-8cd2c13a3eaed2de` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:85`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:112`; PDF page pending.
+- `TA-OCC-da2641ba8c0b21b3` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:33`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:58`; PDF page pending.
+- `TA-OCC-00042e2e42359812` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:33`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:59`; PDF page pending.
+- `TA-OCC-d8bc8ffed5ab7d23` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:78`; PDF page pending.
+- `TA-OCC-b4445db62933a6a4` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:86`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:101`; PDF page pending.
+- `TA-OCC-83f64b6825493422` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:109`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:125`; PDF page pending.
+- `TA-OCC-7f20f1a4757e8f05` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:130`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:146`; PDF page pending.
+- `TA-OCC-92f0ae898f25dd59` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:216`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:248`; PDF page pending.
+- `TA-OCC-6d1ea86934ec73cc` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:216`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:249`; PDF page pending.
+- `TA-OCC-ecf3a0bb3c6b46f9` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:244`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:280`; PDF page pending.
+- `TA-OCC-9ec391fabb10cd41` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:39`; PDF page pending.
 
 ## TA-T098 — logical rule / structural rule / weakening / contraction / exchange / cut
 
@@ -6733,6 +7426,8 @@ Please double-check: **is “தருக்க விதி / கட்டம�
 - `TA-OCC-b6892573dc2d080e` — OLP-0079 / `OLP-0079-S03`; source `content/first-order-logic/sequent-calculus/provability-propositional.tex:84`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-propositional.tex:86`; PDF page pending.
 - `TA-OCC-0ea91a92b0072ba6` — OLP-0081 / `OLP-0081-S04`; source `content/first-order-logic/sequent-calculus/soundness.tex:75`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:79`; PDF page pending.
 - `TA-OCC-edc280bd55067b7d` — OLP-0081 / `OLP-0081-S12`; source `content/first-order-logic/sequent-calculus/soundness.tex:270`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:298`; PDF page pending.
+- `TA-OCC-e3f157f7090e4e5c` — OLP-0086 / `OLP-0086-S01`; source `content/first-order-logic/natural-deduction/propositional-rules.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/propositional-rules.tex:14`; PDF page pending.
+- `TA-OCC-9caba7179e008a85` — OLP-0089 / `OLP-0089-S02`; source `content/first-order-logic/natural-deduction/proving-things.tex:63`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:61`; PDF page pending.
 
 ## TA-T099 — eigenvariable / eigenvariable condition
 
@@ -6764,6 +7459,24 @@ Please double-check: **is “தனிமாறி / தனிமாறி ந�
 - `TA-OCC-423479cfd98efbc5` — OLP-0076 / `OLP-0076-S01`; source `content/first-order-logic/sequent-calculus/proving-things-quant.tex:78`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things-quant.tex:79`; PDF page pending.
 - `TA-OCC-a772b93440ab5e8a` — OLP-0080 / `OLP-0080-S02`; source `content/first-order-logic/sequent-calculus/provability-quantifiers.tex:29`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-quantifiers.tex:30`; PDF page pending.
 - `TA-OCC-b423a6861e13479e` — OLP-0081 / `OLP-0081-S10`; source `content/first-order-logic/sequent-calculus/soundness.tex:236`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:254`; PDF page pending.
+- `TA-OCC-9122e1840014c735` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:32`; PDF page pending.
+- `TA-OCC-b84d9d695be1dd85` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:32`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:33`; PDF page pending.
+- `TA-OCC-89d633bc0b020211` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:56`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:58`; PDF page pending.
+- `TA-OCC-7f9df3452d59e0fe` — OLP-0087 / `OLP-0087-S04`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:58`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:62`; PDF page pending.
+- `TA-OCC-3f45c5633a156e85` — OLP-0087 / `OLP-0087-S04`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:61`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:64`; PDF page pending.
+- `TA-OCC-32a94a73571a534f` — OLP-0087 / `OLP-0087-S05`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:78`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:83`; PDF page pending.
+- `TA-OCC-245ac4cf6e8308e8` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:89`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:95`; PDF page pending.
+- `TA-OCC-6c1850ceccfd1c01` — OLP-0090 / `OLP-0090-S01`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:15`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:15`; PDF page pending.
+- `TA-OCC-1760d2d303ce99ab` — OLP-0090 / `OLP-0090-S01`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:15`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:17`; PDF page pending.
+- `TA-OCC-53ef688d17783d25` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:37`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:39`; PDF page pending.
+- `TA-OCC-452658b4caae2c4d` — OLP-0090 / `OLP-0090-S04`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:68`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:73`; PDF page pending.
+- `TA-OCC-b260f9bacc025905` — OLP-0090 / `OLP-0090-S05`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:89`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:93`; PDF page pending.
+- `TA-OCC-d02904be44cd88f8` — OLP-0090 / `OLP-0090-S05`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:89`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:94`; PDF page pending.
+- `TA-OCC-ec97b3668a832b1e` — OLP-0090 / `OLP-0090-S05`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:91`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:95`; PDF page pending.
+- `TA-OCC-435502331a9b99a9` — OLP-0090 / `OLP-0090-S07`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:115`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:119`; PDF page pending.
+- `TA-OCC-e7b3e2f10055aa6b` — OLP-0090 / `OLP-0090-S09`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:138`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:146`; PDF page pending.
+- `TA-OCC-b254cb78de7eead0` — OLP-0090 / `OLP-0090-S10`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:178`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:188`; PDF page pending.
+- `TA-OCC-0a29994584c11295` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:32`; PDF page pending.
 
 ## TA-T100 — variable / constant symbol / closed term / main operator
 
@@ -6821,6 +7534,31 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-acdd8cf581363eb6` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:33`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:43`; PDF page pending.
 - `TA-OCC-4b475bd3778c0c8e` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:33`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:48`; PDF page pending.
 - `TA-OCC-2202f9f0a859509e` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:33`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:51`; PDF page pending.
+- `TA-OCC-f8ec577f83cdcd7f` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:28`; PDF page pending.
+- `TA-OCC-f23da5a9256c6d6f` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:28`; PDF page pending.
+- `TA-OCC-39a47bd9f11059d4` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:31`; PDF page pending.
+- `TA-OCC-30c9ba10156c25b7` — OLP-0087 / `OLP-0087-S01`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:28`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:32`; PDF page pending.
+- `TA-OCC-9b573de8da72f5b3` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:52`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:54`; PDF page pending.
+- `TA-OCC-09e7ff60031d195e` — OLP-0087 / `OLP-0087-S03`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:52`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:57`; PDF page pending.
+- `TA-OCC-5831dc562521183c` — OLP-0087 / `OLP-0087-S05`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:68`; PDF page pending.
+- `TA-OCC-6b11bc9ce8746c9c` — OLP-0087 / `OLP-0087-S05`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:78`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:81`; PDF page pending.
+- `TA-OCC-115bb144046d6134` — OLP-0087 / `OLP-0087-S05`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:79`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:84`; PDF page pending.
+- `TA-OCC-db709c708ab9c999` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:90`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:94`; PDF page pending.
+- `TA-OCC-19d4eccacad85311` — OLP-0087 / `OLP-0087-S06`; source `content/first-order-logic/natural-deduction/quantifier-rules.tex:106`; Tamil `translation/content/first-order-logic/natural-deduction/quantifier-rules.tex:110`; PDF page pending.
+- `TA-OCC-32168c89affae8d3` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:26`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:26`; PDF page pending.
+- `TA-OCC-f2e1b7fb9c1f2651` — OLP-0089 / `OLP-0089-S02`; source `content/first-order-logic/natural-deduction/proving-things.tex:66`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:65`; PDF page pending.
+- `TA-OCC-4b346eb7ca0beb89` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:40`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:41`; PDF page pending.
+- `TA-OCC-d699675ecab9ac27` — OLP-0090 / `OLP-0090-S02`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:40`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:41`; PDF page pending.
+- `TA-OCC-6a2a763f1af21de1` — OLP-0090 / `OLP-0090-S09`; source `content/first-order-logic/natural-deduction/proving-things-quant.tex:139`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things-quant.tex:147`; PDF page pending.
+- `TA-OCC-5e67f2ef057ba3fd` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:24`; PDF page pending.
+- `TA-OCC-790a2a230a82bd63` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:187`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:194`; PDF page pending.
+- `TA-OCC-704cd0b72e84c849` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:202`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:207`; PDF page pending.
+- `TA-OCC-58d9714c5224aa3c` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:202`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:211`; PDF page pending.
+- `TA-OCC-9524d2be043bfb44` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:202`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:217`; PDF page pending.
+- `TA-OCC-bc2a287f72eaa430` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:20`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:21`; PDF page pending.
+- `TA-OCC-50db2e166968dfc2` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:21`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:21`; PDF page pending.
+- `TA-OCC-3b8043e5d6dd5cc6` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:43`; PDF page pending.
+- `TA-OCC-cc8051cfed6b8b24` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:46`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -6863,6 +7601,18 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-a723a09bf4ad50a9` — OLP-0078 / `OLP-0078-S01`; source `content/first-order-logic/sequent-calculus/provability-consistency.tex:15`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-consistency.tex:16`; PDF page pending.
 - `TA-OCC-4e4195a844dfd9fe` — OLP-0079 / `OLP-0079-S01`; source `content/first-order-logic/sequent-calculus/provability-propositional.tex:19`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-propositional.tex:20`; PDF page pending.
 - `TA-OCC-476e8825d6d7eee4` — OLP-0081 / `OLP-0081-S01`; source `content/first-order-logic/sequent-calculus/soundness.tex:33`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:35`; PDF page pending.
+- `TA-OCC-706b3ae099e676b5` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:14`; PDF page pending.
+- `TA-OCC-a9da19bd79dc23ab` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:17`; PDF page pending.
+- `TA-OCC-2502437c9374b8e4` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:24`; PDF page pending.
+- `TA-OCC-68e68bb665cf8114` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:26`; PDF page pending.
+- `TA-OCC-66c32f71a8988f6d` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:27`; PDF page pending.
+- `TA-OCC-94e87865b84ee072` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:29`; PDF page pending.
+- `TA-OCC-a9c3e98b0368c9bd` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:25`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:29`; PDF page pending.
+- `TA-OCC-9c7147d89b55b07f` — OLP-0091 / `OLP-0091-S02`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:32`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:36`; PDF page pending.
+- `TA-OCC-7b7db790adb7f3c5` — OLP-0091 / `OLP-0091-S03`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:39`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:42`; PDF page pending.
+- `TA-OCC-122908f1ea5fca27` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:136`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:150`; PDF page pending.
+- `TA-OCC-a351464cca6754ae` — OLP-0092 / `OLP-0092-S01`; source `content/first-order-logic/natural-deduction/provability-consistency.tex:15`; Tamil `translation/content/first-order-logic/natural-deduction/provability-consistency.tex:16`; PDF page pending.
+- `TA-OCC-24554b06394ca71f` — OLP-0093 / `OLP-0093-S01`; source `content/first-order-logic/natural-deduction/provability-propositional.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/provability-propositional.tex:20`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -6897,3 +7647,4 @@ Please double-check: **is “ஒன்றானவற்றின் பிர�
 
 - `TA-OCC-9d403ccfd2abdc98` — OLP-0082 / `OLP-0082-S02`; source `content/first-order-logic/sequent-calculus/identity.tex:34`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:45`; PDF page pending.
 - `TA-OCC-5d654f31c7f4ad98` — OLP-0082 / `OLP-0082-S02`; source `content/first-order-logic/sequent-calculus/identity.tex:34`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:45`; PDF page pending.
+- `TA-OCC-57cdeb94ea69b2d5` — OLP-0096 / `OLP-0096-S02`; source `content/first-order-logic/natural-deduction/identity.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:50`; PDF page pending.

@@ -1,0 +1,133 @@
+% SEGMENT OLP-0096-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{ntd}{ide}
+
+\olsection{\usetoken{S}{identity} கொண்ட \usetoken{P}{derivation}}
+
+!!{identity} கொண்ட !!^{derivation}s க்குக் கூடுதல் அனுமான விதிகள் தேவை.
+
+\begin{defish}
+\AxiomC{}
+\RightLabel{\Intro{\eq}}
+\UnaryInfC{$\eq[t][t]$}
+\DisplayProof
+\hfill
+\begin{tabular}{r}
+\AxiomC{$\eq[t_1][t_2]$}
+\AxiomC{$!A(t_1)$}
+\RightLabel{\Elim{\eq}}
+\BinaryInfC{$!A(t_2)$}
+\DisplayProof
+\\[3ex]
+\AxiomC{$\eq[t_1][t_2]$}
+\AxiomC{$!A(t_2)$}
+\RightLabel{\Elim{\eq}}
+\BinaryInfC{$!A(t_1)$}
+\DisplayProof
+\end{tabular}
+\end{defish}
+
+% SEGMENT OLP-0096-S02
+மேலுள்ள விதிகளில் $t$, $t_1$, $t_2$ ஆகியவை மூடிய சொற்கள். எடுகோள்கள்
+எவையும் இல்லாமல், $\eq[t][t]$ வடிவிலான எந்த அடையாளக் கூற்றையும் நேரடியாக
+!!{derive} செய்ய \Intro{\eq} விதி அனுமதிக்கிறது.
+
+\begin{ex}
+$s$, $t$ ஆகியவை மூடிய சொற்கள் எனில், $!A(s), \eq[s][t] \Proves !A(t)$:
+\begin{prooftree}
+\AxiomC{$\eq[s][t]$}
+\AxiomC{$!A(s)$}
+\RightLabel{$\Elim{\eq}$}
+\BinaryInfC{$!A(t)$}
+\end{prooftree}
+இது ``ஒத்தனவற்றின் பதிலிடத்தக்கதன்மைக் கொள்கை'' அல்லது லைப்னிட்சின் விதி
+என்ற பெயர்களில் அறிமுகமானதாக இருக்கலாம்.
+\end{ex}
+
+% SEGMENT OLP-0096-S03
+\begin{prob}
+$=$ ஆனது சமச்சீரும் கடப்புடையதும் என்பதை நிறுவுக; அதாவது,
+$\lforall[x][\lforall[y][(\eq[x][y] \lif
+    \eq[y][x])]]$ மற்றும் $\lforall[x][\lforall[y][\lforall[z]((\eq[x][y]
+    \land \eq[y][z]) \lif \eq[x][z])]]$ ஆகியவற்றின் !!{derivation}s ஐக்
+கொடுக்கவும்.
+\end{prob}
+
+% SEGMENT OLP-0096-S04
+\begin{ex}
+பின்வரும் !!{sentence}[acc] நாம் !!{derive} செய்கிறோம்:
+\begin{align*}
+& \lforall[x][\lforall[y][((!A(x) \land !A(y)) \lif \eq[x][y])]]
+\intertext{பின்வரும் !!{sentence} இலிருந்து:}
+& \lexists[x][\lforall[y][(!A(y) \lif \eq[y][x])]]
+\end{align*}
+!!{derivation}[acc] பின்னோக்கி உருவாக்குகிறோம்:
+\begin{prooftree}
+\AxiomC{$\lexists[x][\lforall[y][(!A(y) \lif \eq[y][x])]]
+\quad \Discharge{!A(a) \land !A(b)}{1}$}
+\DeduceC{$\eq[a][b]$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$((!A(a) \land !A(b)) \lif \eq[a][b])$}
+\RightLabel{\Intro{\lforall}}
+\UnaryInfC{$\lforall[y][((!A(a) \land !A(y)) \lif \eq[a][y])]$}
+\RightLabel{\Intro{\lforall}}
+\UnaryInfC{$\lforall[x][\lforall[y][((!A(x) \land !A(y)) \lif \eq[x][y])]]$}
+\end{prooftree}
+
+% SEGMENT OLP-0096-S05
+இப்போது முதன்மை எடுகோளைப் பயன்படுத்த வேண்டும். அது ஓர் இருத்தலளவை
+!!{formula} என்பதால், இடைநிலை முடிவு~$\eq[a][b]$ ஐ !!{derive} செய்ய
+\Elim{\lexists} ஐப் பயன்படுத்துகிறோம்.
+\begin{prooftree}
+\AxiomC{$\lexists[x][\lforall[y][(!A(y) \lif \eq[y][x])]]$}
+\AxiomC{$\Discharge{\lforall[y][(!A(y) \lif \eq[y][c]])}{2}$}
+\noLine
+\UnaryInfC{$\Discharge{!A(a) \land !A(b)}{1}$}
+\DeduceC{$\eq[a][b]$}
+\DischargeRule{\Elim{\lexists}}{2}
+\BinaryInfC{$\eq[a][b]$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$((!A(a) \land !A(b)) \lif \eq[a][b])$}
+\RightLabel{\Intro{\lforall}}
+\UnaryInfC{$\lforall[y][((!A(a) \land !A(y)) \lif \eq[a][y])]$}
+\RightLabel{\Intro{\lforall}}
+\UnaryInfC{$\lforall[x][\lforall[y][((!A(x) \land !A(y)) \lif \eq[x][y])]]$}
+\end{prooftree}
+
+% SEGMENT OLP-0096-S06
+மேல் வலப்புறத் துணை-!!{derivation} ஐ நிறைவுசெய்ய, அதன் எடுகோள்களைப்
+பயன்படுத்தி $\eq[a][c]$, $\eq[b][c]$ ஆகியவற்றைக் காட்டுகிறோம். இதற்கு இரு
+தனித்த !!{derivation}s தேவை. $\eq[a][c]$ க்கான !!{derivation} பின்வருமாறு:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lforall[y][(!A(y) \lif \eq[y][c]])}{2}$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!A(a) \lif \eq[a][c]$}
+\AxiomC{$\Discharge{!A(a) \land !A(b)}{1}$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!A(a)$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$\eq[a][c]$}
+\end{prooftree}
+$\eq[a][c]$, $\eq[b][c]$ ஆகியவற்றிலிருந்து \Elim{\eq} ஆல் $\eq[a][b]$ ஐ
+!!{derive} செய்கிறோம்.
+\end{ex}
+
+% SEGMENT OLP-0096-S07
+\begin{prob}
+பின்வரும் !!{formula}s[gen] !!{derivation}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $\lforall[x][\lforall[y][((\eq[x][y] \land !A(x)) \lif !A(y))]]$
+\item $\lexists[x][!A(x)] \land \lforall[y][\lforall[z][((!A(y) \land
+    !A(z)) \lif \eq[y][z])]] \lif \lexists[x][(!A(x) \land
+  \lforall[y][(!A(y) \lif \eq[y][x])])]$
+\end{enumerate}
+\end{prob}
+
+\end{document}

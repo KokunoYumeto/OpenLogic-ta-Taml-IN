@@ -1,0 +1,323 @@
+% SEGMENT OLP-0089-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: proving-things
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{pro}}
+      {\olfileid{pl}{ntd}{pro}}
+
+\olsection{\usetoken{P}{derivation} எடுத்துக்காட்டுகள்}
+
+\begin{ex}
+!!{sentence}~$(!A \land !B) \lif !A$ இன் !!a{derivation} ஐக் கொடுப்போம்.
+
+!!{derivation}[gen] அடியில் வேண்டிய முடிவை முதலில் எழுதுகிறோம்.
+\begin{prooftree}
+\AxiomC{}
+\UnaryInfC{$(!A\land !B) \lif !A$}
+\end{prooftree}
+
+இவ்வடிவிலான !!a{sentence} ஐ எந்தவகை அனுமானம் விளைவிக்கக்கூடும் என்பதை
+அடுத்து கண்டறிய வேண்டும். முடிவின் !!{main operator} ஆனது~$\lif$; எனவே
+\Intro{\lif} விதியைப் பயன்படுத்தி முடிவை அடைய முயல்வோம். நிறுவலின் இறுதியில்
+எல்லா எடுகோள்களும் !!{discharged} ஆகியுள்ளனவா என்பதை எளிதில் காணும் பொருட்டு,
+முன்னேறும்போதே தொடர்புடைய எடுகோள்களை எழுதி அனுமான விதிகளுக்குப் பெயரிடுவது
+சிறந்தது.
+\begin{prooftree}
+\AxiomC{$\Discharge{!A \land !B}{1}$}
+\DeduceC{$!A$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(!A\land !B) \lif !A$}
+\end{prooftree}
+
+இப்போது $!A \land !B$ என்ற எடுகோளிலிருந்து $!A$ வரையிலான படிகளை நிரப்ப
+வேண்டும். கையாள வேண்டிய ஒரே இணைப்பி~$\land$ என்பதால், $\land$ நீக்கல் விதியைப்
+பயன்படுத்த வேண்டும். இதனால் பின்வரும் நிறுவல் கிடைக்கிறது:
+\begin{prooftree}
+\AxiomC{$\Discharge{!A \land !B}{1}$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!A$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(!A\land !B) \lif !A$}
+\end{prooftree}
+இப்போது $(!A \land !B) \lif !A$ இன் சரியான !!{derivation} நம்மிடம் உள்ளது.
+\end{ex}
+
+% SEGMENT OLP-0089-S02
+\begin{ex}
+இப்போது $(\lnot !A \lor !B) \lif (!A \lif !B)$ இன் !!a{derivation} ஐக்
+கொடுப்போம்.
+
+!!{derivation}[gen] அடியில் வேண்டிய முடிவை முதலில் எழுதுகிறோம்.
+\begin{prooftree}
+\AxiomC{}
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+இம்முடிவைத் தரக்கூடிய தருக்க விதியைக் கண்டறிய, முடிவிலுள்ள தருக்க
+இணைப்பிகளான~$\lnot$, $\lor$, $\lif$ ஆகியவற்றைப் பார்க்கிறோம். இப்போது
+முதலில் இடம்பெறும்~$\lif$ மட்டுமே பொருத்தமானது; ஏனெனில் அதுவே இறுதி
+% SOURCE CORRECTION TA-ND-003: “end-sequent” is corrected to final sentence.
+!!{sentence}[gen] !!{main operator}. $\lnot$, $\lor$, இரண்டாவதாக இடம்பெறும்
+$\lif$ ஆகியவை மற்றோர் இணைப்பியின் ஆட்சியெல்லைக்குள் இருப்பதால், அவற்றைப்
+பின்னர் கவனிப்போம். ஆகவே \Intro{\lif} விதியுடன் தொடங்குகிறோம். அதன் சரியான
+பயன்பாடு பின்வருமாறு அமைய வேண்டும்:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\DeduceC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+
+% SEGMENT OLP-0089-S03
+இதிலிருந்து தொடர இரண்டு வழிகள் உள்ளன. அடியிலிருந்து மேல்நோக்கித் தொடர்ந்து
+மற்றொரு \Intro{\lif} விதிப் பயன்பாட்டைத் தேடலாம்; அல்லது மேலிருந்து
+கீழ்நோக்கிச் சென்று \Elim{\lor} விதியைப் பயன்படுத்தலாம். இரண்டாவது வழியைப்
+பயன்படுத்துவோம். $\lnot !A \lor !B$ என்ற எடுகோளை \Elim{\lor} இன் இடதுகோடி
+முன்கோளாகப் பயன்படுத்துவோம். \Elim{\lor} இன் செல்லுபடியான பயன்பாட்டில் மற்ற
+இரு முன்கோள்களும் முடிவு~$!A \lif !B$ க்கு ஒத்தவையாக இருக்க வேண்டும்; ஆனால்
+ஒவ்வொன்றையும் $\lnot !A \lor !B$ இன் இரு பிரிநிலைகளில் ஒன்றான மற்றோர்
+எடுகோளிலிருந்து வருவிக்கலாம். ஆகவே நமது !!{derivation} பின்வருமாறு அமையும்:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\AxiomC{$\Discharge{\lnot !A}{2}$}
+\DeduceC{$!A \lif !B$}
+\AxiomC{$\Discharge{!B}{2}$}
+\DeduceC{$!A \lif !B$}
+\DischargeRule{\Elim{\lor}}{2}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+
+% SEGMENT OLP-0089-S04
+வலப்புற இரு கிளைகளிலும் $!A \lif !B$ ஐ !!{derive} செய்ய விரும்புகிறோம்;
+இதற்கு \Intro{\lif} ஐப் பயன்படுத்துவது சிறந்தது.
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\AxiomC{$\Discharge{\lnot !A}{2}, \Discharge{!A}{3}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{3}
+\UnaryInfC{$!A \lif !B$}
+\AxiomC{$\Discharge{!B}{2}, \Discharge{!A}{4}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{4}
+\UnaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lor}}{2}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+
+% SEGMENT OLP-0089-S05
+!!{derivation}[gen] விடுபட்ட இரு பகுதிகளுக்காக, நடுக் கிளையில் $\lnot !A$,
+$!A$ ஆகியவற்றிலிருந்து $!B$ இன் !!{derivation} ஒன்றும், இடப்புறக் கிளையில்
+$!A$, $!B$ ஆகியவற்றிலிருந்து மற்றொன்றும் வேண்டும். முதலாவதை முதலில்
+எடுத்துக்கொள்வோம். $\lnot !A$ உம் $!A$ உம் \Elim{\lnot} இன் இரு முன்கோள்கள்:
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A}{2}$}
+\AxiomC{$\Discharge{!A}{3}$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\DeduceC{$!B$}
+\end{prooftree}
+\FalseInt ஐப் பயன்படுத்தி $!B$ ஐ முடிவாகப் பெற்று, கிளையை நிறைவுசெய்யலாம்.
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\AxiomC{$\Discharge{\lnot !A}{2}$}
+\AxiomC{$\Discharge{!A}{3}$}
+% SOURCE CORRECTION TA-ND-002: false introduction is corrected to negation elimination.
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!B$}
+\DischargeRule{\Intro{\lif}}{3}
+\UnaryInfC{$!A \lif !B$}
+\AxiomC{$\Discharge{!B}{2}, \Discharge{!A}{4}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{4}
+\UnaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lor}}{2}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+
+% SEGMENT OLP-0089-S06
+இப்போது வலதுகோடிக் கிளையைப் பார்ப்போம். !!{derivation}[gen] வரையறை,
+\emph{எடுகோள்களை விடுவிக்க அனுமதிக்கிறது}; ஆனால் அவற்றை விடுவிக்க
+\emph{கட்டாயப்படுத்துவதில்லை} என்பதை இங்கு உணர்வது முக்கியம். வேறு சொற்களில்,
+$!A$, $!B$ ஆகிய எடுகோள்களில் ஒன்றைப் பயன்படுத்தாமல் மற்றொன்றிலிருந்து $!B$ ஐ
+வருவிக்க முடிந்தால் அதுவும் சரியே. $!B$ இலிருந்து~$!B$ ஐ !!{derive} செய்வது
+எளியது: $!B$ தனியே அத்தகைய !!a{derivation}; அனுமானங்கள் எவையும் தேவையில்லை.
+ஆகவே எடுகோள்~$!A$ ஐ அப்படியே நீக்கலாம்.
+\begin{prooftree}
+\AxiomC{$\Discharge{\lnot !A \lor !B}{1}$}
+\AxiomC{$\Discharge{\lnot !A}{2}$}
+\AxiomC{$\Discharge{!A}{3}$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!B$}
+\DischargeRule{\Intro{\lif}}{3}
+\UnaryInfC{$!A \lif !B$}
+\AxiomC{$\Discharge{!B}{2}$}
+\RightLabel{\Intro{\lif}}
+\UnaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lor}}{2}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Intro{\lif}}{1} 
+\UnaryInfC{$(\lnot !A \lor !B) \lif (!A \lif !B)$}
+\end{prooftree}
+நிறைவுற்ற !!{derivation}[loc] வலதுகோடி \Intro{\lif} அனுமானம் உண்மையில் எந்த
+எடுகோளையும் விடுவிக்கவில்லை என்பதைக் கவனிக்கவும்.
+\end{ex}
+
+% SEGMENT OLP-0089-S07
+\begin{ex}
+இதுவரை \FalseCl{} விதி நமக்குத் தேவைப்படவில்லை. விதியின் முடிவின்
+உள்-!!{formula} ஆக இல்லாத எடுகோளை விடுவிக்க இது அனுமதிப்பது அதன் சிறப்பு.
+இது \FalseInt{} விதியுடன் நெருங்கிய தொடர்புடையது. உண்மையில் \FalseInt{} விதி,
+\FalseCl{} விதியின் ஒரு சிறப்புநிலை—\FalseInt{} மட்டுமே அனுமதிக்கப்படும் ஒரு
+தருக்கம் ``உள்ளுணர்வுவாதத் தருக்கம்'' எனப்படுகிறது. வேறு எதுவும் பலிக்காதபோது
+கடைசி வழியாக \FalseCl{} விதியைப் பயன்படுத்தலாம். எடுத்துக்காட்டாக,
+$!A \lor \lnot !A$ ஐ !!{derive} செய்ய விரும்புகிறோம் என்க. நமது வழக்கமான உத்தி,
+$\Intro{\lor}$ ஐப் பயன்படுத்தி $!A \lor \lnot !A$ ஐ !!{derive} செய்ய முயல்வது.
+ஆனால் எடுகோள்களே இல்லாமல் $!A$ அல்லது $\lnot !A$ இவற்றில் ஒன்றை !!{derive}
+செய்ய இது கோரும்; அதனைச் செய்ய முடியாது. இப்போது \FalseCl{} உதவுகிறது!
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+
+% SEGMENT OLP-0089-S08
+இப்போது $\lnot(!A \lor \lnot !A)$ இலிருந்து $\lfalse$ இன் !!a{derivation} ஐத்
+தேடுகிறோம். $\lfalse$ ஆனது $\Elim{\lnot}$ இன் முடிவு என்பதால் அதனை முயலலாம்:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$\lnot !A$}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+
+% SEGMENT OLP-0089-S09
+$\lnot !A$ இன் !!a{derivation} ஐக் கண்டறியும் உத்தி~$\Intro{\lnot}$ இன்
+பயன்பாட்டைக் கோருகிறது:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}, \Discharge{!A}{2}$}
+  \DeduceC{$\lfalse$}
+  \DischargeRule{\Intro{\lnot}}{2}
+  \UnaryInfC{$\lnot !A$}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+
+% SEGMENT OLP-0089-S10
+இங்கு எடுகோள்~$\lnot(!A \lor \lnot !A)$ க்கும், நமது புதிய எடுகோள்~$!A$
+இலிருந்து~$\Intro{\lor}$ ஆல் பின்தொடரும் $!A \lor \lnot !A$ க்கும்
+$\Elim{\lnot}$ ஐப் பயன்படுத்தி $\lfalse$ ஐ எளிதில் பெறலாம்:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \AxiomC{$\Discharge{!A}{2}$}
+  \RightLabel{\Intro{\lor}}
+  \UnaryInfC{$!A \lor \lnot !A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\Intro{\lnot}}{2}
+  \UnaryInfC{$\lnot !A$}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+
+% SEGMENT OLP-0089-S11
+வலப்புறத்திலும் இதே உத்தியைப் பயன்படுத்துகிறோம்; இங்கு மட்டும்~\FalseCl மூலம்
+$!A$ ஐப் பெறுகிறோம்:
+\begin{prooftree}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \AxiomC{$\Discharge{!A}{2}$}
+  \RightLabel{\Intro{\lor}}
+  \UnaryInfC{$!A \lor \lnot !A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\Intro{\lnot}}{2}
+  \UnaryInfC{$\lnot !A$}
+  \AxiomC{$\Discharge{\lnot(!A \lor \lnot !A)}{1}$}
+  \AxiomC{$\Discharge{\lnot !A}{3}$}
+  \RightLabel{\Intro{\lor}}
+  \UnaryInfC{$!A \lor \lnot !A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{3}
+  \UnaryInfC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A \lor \lnot !A$}
+\end{prooftree}
+\end{ex}
+
+% SEGMENT OLP-0089-S12
+\begin{prob}
+பின்வருவனவற்றைக் காட்டும் !!{derivation}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $!A \land (!B \land !C) \Proves (!A \land !B) \land !C$.
+\item $!A \lor (!B \lor !C) \Proves (!A \lor !B) \lor !C$.
+\item $!A \lif (!B \lif !C) \Proves !B \lif (!A \lif !C)$.
+\item $!A \Proves \lnot\lnot !A$.
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0089-S13
+\begin{prob}
+பின்வருவனவற்றைக் காட்டும் !!{derivation}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $(!A \lor !B) \lif !C \Proves !A \lif !C$.
+\item $(!A \lif !C) \land (!B \lif !C) \Proves (!A \lor !B) \lif !C$.
+\item $\Proves \lnot(!A \land \lnot !A)$.
+\item $!B \lif !A \Proves \lnot !A \lif \lnot !B$.
+\item $\Proves (!A \lif \lnot !A) \lif \lnot !A$.
+\item $\Proves \lnot(!A \lif !B) \lif \lnot !B$.
+\item $!A \lif !C \Proves \lnot (!A \land \lnot !C)$.
+\item $!A \land \lnot !C \Proves \lnot (!A \lif !C)$.
+\item $!A \lor !B, \lnot !B \Proves !A$.
+\item $\lnot !A \lor \lnot !B \Proves \lnot(!A \land !B)$.
+\item $\Proves (\lnot !A \land \lnot !B) \lif\lnot(!A \lor !B)$.
+\item $\Proves \lnot(!A \lor !B) \lif (\lnot !A \land \lnot !B)$.
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0089-S14
+\begin{prob}
+பின்வருவனவற்றைக் காட்டும் !!{derivation}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $\lnot(!A \lif !B) \Proves !A$.
+\item $\lnot(!A \land !B) \Proves \lnot !A \lor \lnot !B$.
+\item $!A \lif !B \Proves \lnot !A \lor !B$.
+\item $\Proves \lnot \lnot !A \lif !A$.
+\item $!A \lif !B, \lnot !A \lif !B \Proves !B$.
+\item $(!A \land !B) \lif !C \Proves (!A \lif !C) \lor (!B \lif !C)$.
+\item $(!A \lif !B) \lif !A \Proves !A$.
+\item $\Proves (!A \lif !B) \lor (!B \lif !C)$.
+\end{enumerate}
+(இவை அனைத்திற்கும் $\FalseCl$~விதி தேவை.)
+\end{prob}
+
+\end{document}

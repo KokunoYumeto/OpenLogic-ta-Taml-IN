@@ -1,0 +1,112 @@
+% SEGMENT OLP-0088-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: derivations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{der}}
+      {\olfileid{pl}{ntd}{der}}
+
+\olsection{\usetoken{P}{derivation}}
+
+\begin{explain}
+எடுகோள் என்றால் என்ன என்று கூறி, அனுமான விதிகளையும் கொடுத்துள்ளோம். இயல்பான
+வருவித்தலில் உள்ள !!^{derivation}s இவற்றிலிருந்து தொகுத்தறிதல் முறையில்
+உருவாக்கப்படுகின்றன: ஒவ்வொரு !!{derivation} உம் தனியே ஓர் எடுகோளாகவோ,
+சரியான ஓர் அனுமானத்தைத் தொடர்ந்து வரும் ஒன்று, இரண்டு அல்லது மூன்று
+!!{derivation}s ஆகவோ இருக்கும்.
+\end{explain}
+
+% SEGMENT OLP-0088-S02
+\begin{defn}[!!^{derivation}]
+எடுகோள்கள்~$\Gamma$ இலிருந்து !!a{sentence}~$!A$ இன்
+\Article{derivation} \emph{!!{derivation}} என்பது பின்வரும் நிபந்தனைகளை
+நிறைவுறுத்தும் !!{sentence}s[gen] ஒரு முடிவுறு மரவுரு:
+\begin{enumerate}
+\item மரவுருவின் மிக மேலுள்ள !!{sentence}s, $\Gamma$ வில் உள்ளன அல்லது
+  மரவுருவிலுள்ள ஓர் அனுமானத்தால் !!{discharged} ஆகின்றன.
+\item மரவுருவின் மிகக் கீழுள்ள !!{sentence} ஆனது~$!A$.
+\item மரவுருவின் கீழுள்ள !!{sentence}~$!A$ ஐத் தவிர அதிலுள்ள ஒவ்வொரு
+  !!{sentence} உம், அதற்கு நேரடியாகக் கீழே முடிவு அமைந்திருக்கும் அனுமான
+  விதியின் சரியான பயன்பாடு ஒன்றின் முன்கோளாகும்.
+\end{enumerate}
+அப்போது $!A$ ஐ அந்த !!{derivation}[gen] \emph{முடிவு} என்றும், $\Gamma$ வை
+அதன் !!{undischarged} எடுகோள்கள் என்றும் சொல்கிறோம்.
+
+$\Gamma$ இலிருந்து $!A$ இன் !!a{derivation} இருந்தால், $!A$ ஆனது
+$\Gamma$ இலிருந்து \emph{!!{derivable}} என்கிறோம்; குறியீட்டில்:
+$\Gamma \Proves !A$. ஒவ்வோர் எடுகோளும் !!{discharged} ஆகும் $!A$ இன்
+!!a{derivation} இருந்தால், $\Proves !A$ என்று எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0088-S03
+\begin{ex}
+ஒவ்வோர் எடுகோளும் தனியே !!a{derivation}. ஆகவே, எடுத்துக்காட்டாக, $!A$ தனியே
+!!a{derivation}; $!B$ உம் தனியே அப்படியே. இவற்றிற்கு, எடுத்துக்காட்டாக,
+$\Intro{\land}$ விதியைப் பயன்படுத்தி ஒரு புதிய !!{derivation} ஐப் பெறலாம்:
+\begin{prooftree}
+\AxiomC{$!A$}
+\AxiomC{$!B$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!A \land !B$}
+\end{prooftree}
+இந்த விதிகள் பொதுவானவையாக இருக்க நோக்கமுடையவை: அதிலுள்ள $!A$, $!B$ ஐ எந்த
+!!{sentence}s ஆலும், எடுத்துக்காட்டாக $!C$, $!D$ ஆலும் மாற்றலாம். அப்போது
+முடிவு $!C \land !D$ ஆகும்; எனவே
+\begin{prooftree}
+\AxiomC{$!C$}
+\AxiomC{$!D$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!C \land !D$}
+\end{prooftree}
+ஒரு சரியான !!{derivation}. நிச்சயமாக, எடுகோள்களை இடமாற்றவும் முடியும்; அப்போது
+$!D$ ஆனது~$!A$ இன் பங்கையும் $!C$ ஆனது~$!B$ இன் பங்கையும் வகிக்கும். ஆகவே,
+\begin{prooftree}
+\AxiomC{$!D$}
+\AxiomC{$!C$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!D \land !C$}
+\end{prooftree}
+உம் ஒரு சரியான !!{derivation}.
+
+% SEGMENT OLP-0088-S04
+இப்போது மற்றொரு விதியை, எடுத்துக்காட்டாக $\Intro{\lif}$ ஐப் பயன்படுத்தலாம்.
+இது ஒரு நிபந்தனைவாக்கியத்தை முடிவாகக் கொள்ள அனுமதிப்பதுடன், அந்த
+நிபந்தனைவாக்கியத்தின் முன்னிலைக்கு ஒன்றான எந்த எடுகோளையும் !!{discharge}
+செய்ய அனுமதிக்கிறது. ஆகவே பின்வரும் இரண்டும் சரியான !!{derivation}s ஆகும்:
+\begin{prooftree}
+\AxiomC{$\Discharge{!C}{1}$}
+\AxiomC{$!D$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!C \land !D$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$!C \lif (!C \land !D)$}
+\DisplayProof\bottomAlignProof
+\AxiomC{$!C$}
+\AxiomC{$\Discharge{!D}{1}$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!C \land !D$}
+\DischargeRule{\Intro{\lif}}{1}
+\UnaryInfC{$!D \lif (!C \land !D)$}
+\end{prooftree}
+அவை முறையே, $!D \Proves !C \lif (!C \land !D)$ என்றும்
+$!C \Proves !D \lif (!C \land !D)$ என்றும் காட்டுகின்றன.
+
+% SEGMENT OLP-0088-S05
+எடுகோள்களை விடுவித்தல் ஓர் அனுமதியே அன்றி, கட்டாயம் அல்ல என்பதை நினைவுகூர்க:
+எடுகோள்களை விடுவிக்க வேண்டியதில்லை. குறிப்பாக, விடுவிக்க வேண்டிய எடுகோள்கள்
+!!{derivation}[loc] இல்லாதபோதும் ஒரு விதியைப் பயன்படுத்தலாம். எடுத்துக்காட்டாக,
+!!{discharged} செய்யப்பட வேண்டிய எடுகோள்~$!A$ எதுவும் இல்லாதபோதும்,
+பின்வருவது முறையானது:
+\begin{prooftree}
+  \AxiomC{$!B$}
+  \DischargeRule{\Intro{\lif}}{1}
+  \UnaryInfC{$!A \lif !B$}
+\end{prooftree}
+\end{ex}
+
+\end{document}

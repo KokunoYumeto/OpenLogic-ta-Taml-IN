@@ -1,0 +1,127 @@
+% SEGMENT OLP-0086-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: propositional-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{prl}}
+      {\olfileid{pl}{ntd}{prl}}
+
+\olsection{கூற்றுத் தருக்க விதிகள்}
+
+
+\subsection{$\land$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{$!A$}
+\AxiomC{$!B$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!A \land !B$}
+\DisplayProof
+\hfill
+\begin{tabular}{r}
+\AxiomC{$!A \land !B$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!A$}
+\DisplayProof
+\\[3ex]
+\AxiomC{$!A \land !B$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!B$}
+\DisplayProof
+\end{tabular}
+\end{defish}
+
+% SEGMENT OLP-0086-S02
+\subsection{$\lor$ க்கான விதிகள்}
+
+\begin{defish}
+\begin{tabular}{r}
+\AxiomC{$!A$}
+\RightLabel{\Intro{\lor}}
+\UnaryInfC{$!A \lor !B$}
+\DisplayProof
+\\[3ex]
+\AxiomC{$!B$}
+\RightLabel{\Intro{\lor}}
+\UnaryInfC{$!A \lor !B$}
+\DisplayProof
+\end{tabular}
+\hfill
+\AxiomC{$!A \lor !B$}
+\AxiomC{$\Discharge{!A}{n}$}
+\DeduceC{$!C$}
+\AxiomC{$\Discharge{!B}{n}$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lor}}{n}
+\TrinaryInfC{$!C$}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0086-S03
+\subsection{$\lif$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{$\Discharge{!A}{n}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{n}
+\UnaryInfC{$!A \lif !B$}
+\DisplayProof
+\hfill
+\AxiomC{$!A \lif !B$}
+\AxiomC{$!A$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!B$}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0086-S04
+\subsection{$\lnot$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{$\Discharge{!A}{n}$}
+\noLine
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{n}
+\UnaryInfC{$\lnot !A$}
+\DisplayProof
+\hfill
+\AxiomC{$\lnot !A$}
+\AxiomC{$!A$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0086-S05
+\subsection{$\lfalse$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!A$}
+\DisplayProof
+\hfill
+\AxiomC{$\Discharge{\lnot !A}{n}$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\FalseCl}{n}
+\UnaryInfC{$!A$}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0086-S06
+$\Intro{\lnot}$ உம் $\FalseCl$ உம் மிகவும் ஒத்தவை என்பதை கவனிக்கவும்.
+வேறுபாடு இதுவே: $\Intro{\lnot}$ மறுக்கப்பட்ட !!{sentence}~$\lnot !A$ ஐ
+வருவிக்கிறது; ஆனால் $\FalseCl$ உடன்பாட்டு !!{sentence}~$!A$ ஐ வருவிக்கிறது.
+
+% SEGMENT OLP-0086-S07
+ஏதேனும் ஓர் எடுகோளை விடுவிக்கலாம் என்று ஒரு விதி குறிப்பிட்டால், அதனை ஓர்
+அனுமதியாகவே எடுத்துக்கொள்கிறோம்; கட்டாயமாக அல்ல. எடுத்துக்காட்டாக,
+$\Intro{\lif}$ விதியில், முன்கோள்~$!B$ இன் !!{derivation}[loc] $!A$ வடிவிலான
+எந்த எண்ணிக்கையிலான எடுகோள்களையும்—பூச்சியத்தையும் சேர்த்து—விடுவிக்கலாம்.
+
+\end{document}

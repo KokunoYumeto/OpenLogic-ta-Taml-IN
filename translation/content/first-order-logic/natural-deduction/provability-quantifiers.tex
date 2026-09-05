@@ -1,0 +1,65 @@
+% SEGMENT OLP-0094-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: provability-quantifiers
+
+% verification of properties of provability needed for maximally
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{ntd}{qpr}
+
+\olsection{\usetoken{S}{derivability} மற்றும் அளவையடைகள்}
+
+\begin{explain}
+  இந்தப் பிரிவில் நிறுவப்படும்~$\Proves$ தொடர்பான உண்மைகளை இயல்பான வருவித்தல்
+  விதிகள் தர வேண்டும் என்பதும் நிறைவுத் தேற்றத்திற்குத் தேவை.
+\end{explain}
+
+\begin{thm}
+\ollabel{thm:strong-generalization} $c$ என்பது $\Gamma$ அல்லது $!A(x)$ இல்
+இடம்பெறாத ஒரு மாறிலிக் குறி என்றும், $\Gamma \Proves !A(c)$ என்றும் இருந்தால்,
+$\Gamma \Proves \lforall[x][!A(x)]$.
+\end{thm}
+
+\begin{proof}
+$\Gamma$ இலிருந்து~$!A(c)$ இன் !!a{derivation} ஐ~$\delta$ என்க. ஒரு
+\Intro{\lforall} அனுமானத்தைச் சேர்ப்பதன் மூலம்
+$\lforall[x][!A(x)]$ இன் !!a{derivation} ஒன்றைப் பெறுகிறோம். $c$ ஆனது
+$\Gamma$ அல்லது $!A(x)$ இல் இடம்பெறாததால் தனிமாறி நிபந்தனை நிறைவுறுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0094-S02
+\begin{prop}
+\ollabel{prop:provability-quantifiers}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$!A(t) \Proves \lexists[x][!A(x)]$.}{}
+
+\tagitem{prvAll}{$\lforall[x][!A(x)] \Proves !A(t)$.}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{பின்வருவது~$!A(t)$ இலிருந்து
+  $\lexists[x][!A(x)]$ இன் !!a{derivation}:
+\begin{prooftree}
+\AxiomC{$!A(t)$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!A(x)]$}
+\end{prooftree}}{}
+
+\tagitem{prvAll}{பின்வருவது~$\lforall[x][!A(x)]$ இலிருந்து~$!A(t)$ இன்
+  !!a{derivation}:
+\begin{prooftree}
+\AxiomC{$\lforall[x][!A(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!A(t)$}
+\end{prooftree}}{}
+\end{tagenumerate}
+\end{proof}
+
+\end{document}

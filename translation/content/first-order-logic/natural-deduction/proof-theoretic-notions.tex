@@ -1,0 +1,174 @@
+% SEGMENT OLP-0091-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: proof-theoretic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{ptn}}
+      {\olfileid{pl}{ntd}{ptn}}
+
+\olsection{நிறுவல்-கோட்பாட்டுக் கருத்துகள்}
+
+\begin{editorial}
+இந்தப் பிரிவு இயல்பான வருவித்தலுக்கான வருவிக்கத்தக்கதன்மை உறவு மற்றும்
+முரணின்மை ஆகியவற்றின் வரையறைகளைத் தொகுக்கிறது.
+\end{editorial}
+
+\begin{explain}
+பல முக்கியமான பொருண்மைக் கருத்துகளை (செல்லுபடித்தன்மை, பின்விளைவு,
+நிறைவுறத்தக்கதன்மை) நாம் வரையறுத்ததைப் போலவே, அவற்றுடன் தொடர்புடைய
+\emph{நிறுவல்-கோட்பாட்டுக் கருத்துகளை} இப்போது வரையறுக்கிறோம். இவை
+!!{structure}s[loc] !!{sentence}s நிறைவுறுவதைச் சார்ந்து வரையறுக்கப்படாமல்,
+குறிப்பிட்ட !!{sentence}s மற்றவற்றிலிருந்து !!{derivability} அல்லது
+!!{nonderivability} உடையனவாக இருப்பதைச் சார்ந்து வரையறுக்கப்படுகின்றன.
+இந்தக் கருத்துகள் ஒன்றுபடுகின்றன என்பது ஒரு முக்கியமான கண்டுபிடிப்பு. அவை
+ஒன்றுபடுவதே \emph{சரித்தன்மைத் தேற்றம்} மற்றும் \emph{நிறைவுத் தேற்றம்}
+ஆகியவற்றின் உள்ளடக்கம்.
+\end{explain}
+
+% SEGMENT OLP-0091-S02
+\begin{defn}[தேற்றங்கள்]
+ஒவ்வோர் எடுகோளும் !!{discharged} ஆகும் வகையில், இயல்பான வருவித்தலில்
+!!{sentence}~$!A$ இன் !!a{derivation} இருந்தால், $!A$ ஒரு \emph{தேற்றம்}.
+$!A$ தேற்றமாக இருந்தால் $
+\Proves !A$ என்றும், இல்லையெனில் $\Proves/ !A$ என்றும் எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0091-S03
+\begin{defn}[!!^{derivability}]
+!!{sentence}s கொண்ட~$\Gamma$ கணத்திலிருந்து !!^a{sentence}~$!A$ ஆனது
+\emph{!!{derivable}} என்பதை $\Gamma \Proves !A$ என்று எழுதுகிறோம். இதன்
+பொருள், முடிவு~$!A$ ஐக் கொண்டதும், ஒவ்வோர் எடுகோளும் !!{discharged} ஆகவோ
+$\Gamma$ வில் இருக்கவோ செய்கின்றதுமான !!a{derivation} ஒன்று உள்ளது என்பதாகும்.
+$!A$ ஆனது~$\Gamma$ இலிருந்து !!{derivable} அல்ல எனில் $\Gamma \Proves/ !A$
+என்று எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0091-S04
+\begin{defn}[முரணின்மை]
+!!{sentence}s கொண்ட~$\Gamma$ கணம், $\Gamma \Proves \lfalse$ எனில், அப்போதும்
+அப்போது மட்டுமே \emph{முரணுடையது}. $\Gamma$ முரணுடையதல்ல எனில், அதாவது
+$\Gamma \Proves/ \lfalse$ எனில், அது \emph{முரணற்றது} என்கிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0091-S05
+\begin{prop}[தற்சுட்டுப் பண்பு]
+\ollabel{prop:reflexivity}
+$!A \in \Gamma$ எனில், $\Gamma \Proves !A$.
+\end{prop}
+
+\begin{proof}
+எடுகோள்~$!A$ தனியே~$!A$ இன் !!a{derivation}; அதன் ஒவ்வொரு
+!!{undischarged} எடுகோளும் (அதாவது $!A$)~$\Gamma$ வில் உள்ளது.
+\end{proof}
+  
+% SEGMENT OLP-0091-S06
+\begin{prop}[ஒருபோக்குத்தன்மை]
+\ollabel{prop:monotonicity}
+$\Gamma \subseteq \Delta$ மற்றும் $\Gamma \Proves !A$ எனில், $\Delta
+\Proves !A$.
+\end{prop}
+
+\begin{proof}
+$\Gamma$ இலிருந்து $!A$ இன் எந்த !!{derivation} உம்~$\Delta$ இலிருந்து
+$!A$ இன் !!a{derivation} உம் ஆகும்.
+\end{proof}
+
+% SEGMENT OLP-0091-S07
+\begin{prop}[கடப்புப் பண்பு]
+\ollabel{prop:transitivity}
+$\Gamma \Proves !A$ மற்றும் $\{!A\} \cup \Delta \Proves
+!B$ எனில், $\Gamma \cup \Delta \Proves !B$.
+\end{prop}
+
+\begin{proof}
+$\Gamma \Proves !A$ எனில், ஒவ்வொரு !!{undischarged} எடுகோளும்~$\Gamma$ வில்
+இருக்குமாறு $!A$ இன் !!a{derivation}~$\delta_0$ உள்ளது. $\{!A\} \cup
+\Delta \Proves !B$ எனில், ஒவ்வொரு !!{undischarged} எடுகோளும்
+$\{!A\} \cup \Delta$ வில் இருக்குமாறு $!B$ இன்
+!!a{derivation}~$\delta_1$ உள்ளது. இப்போது பின்வருவதைக் கருதுக:
+\begin{prooftree}
+  \AxiomC{$\Delta, \Discharge{!A}{1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!B$}
+  \DischargeRule{\Intro{\lif}}{1}
+  \UnaryInfC{$!A \lif !B$}
+  \AxiomC{$\Gamma$}
+  \RightLabel{$\delta_0$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lif}}
+  \BinaryInfC{$!B$}
+\end{prooftree}
+இப்போது !!{undischarged} எடுகோள்கள் அனைத்தும் $\Gamma \cup \Delta$ வில்
+உள்ளன; ஆகவே இது $\Gamma \cup \Delta \Proves !B$ என்பதைக் காட்டுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0091-S08
+$\Gamma = \{!A_1, !A_2, \ldots, !A_k\}$ ஒரு முடிவுறு கணமாக இருக்கும்போது,
+$\Gamma \Proves !B$ என்பதற்கு எளிய குறியீடாக $!A_1,!A_2,\ldots,!A_k
+\Proves !B$ ஐப் பயன்படுத்தலாம். குறிப்பாக $!A \Proves !B$ என்பது
+$\{!A\} \Proves !B$ என்பதைக் குறிக்கும்.
+
+$\Gamma \Proves !A$ மற்றும் $!A \Proves !B$ எனில், $\Gamma \Proves !B$
+என்பதைக் கவனிக்கவும். மேலும் $!A_1, \dots, !A_n \Proves !B$ என்றும்,
+ஒவ்வொரு~$i$ க்கும் $\Gamma \Proves !A_i$ என்றும் இருந்தால், $\Gamma
+\Proves !B$ என்பதும் பின்வருகிறது.
+
+% SEGMENT OLP-0091-S09
+\begin{prop}
+\ollabel{prop:incons}
+பின்வருவன சமானமானவை.
+    \begin{enumerate}
+      \item \( \Gamma \) முரணுடையது.
+      \item ஒவ்வொரு !!{sentence}~\( {!A} \) க்கும் \( \Gamma \Proves {!A} \).
+      \item ஏதோவொரு !!{sentence}~\( {!A} \) க்கு \( \Gamma \Proves {!A} \)
+        மற்றும் \( \Gamma \Proves \lnot {!A} \).
+    \end{enumerate}
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][ntd][ptn]{prop:incons} ஐ நிறுவுக.
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][ntd][ptn]{prop:incons} ஐ நிறுவுக.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0091-S10
+\begin{prop}[இறுக்கத்தன்மை]
+  \ollabel{prop:proves-compact}
+  \begin{enumerate}
+  \item $\Gamma \Proves !A$ எனில், $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+    முடிவுறு உட்கணம் இருந்து, $\Gamma_0 \Proves !A$.
+  \item $\Gamma$ வின் ஒவ்வொரு முடிவுறு உட்கணமும் முரணற்றது எனில்,
+    $\Gamma$ முரணற்றது.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $\Gamma \Proves !A$ எனில், $\Gamma$ இலிருந்து~$!A$ இன்
+      !!a{derivation}~$\delta$ உள்ளது. $\delta$ வின் !!{undischarged}
+      எடுகோள்களின் கணத்தை~$\Gamma_0$ என்க. எந்த !!{derivation} உம்
+      முடிவுறுவதால், $\Gamma_0$ வில் முடிவுறு எண்ணிக்கையிலான
+      !!{sentence}s மட்டுமே இருக்க முடியும். ஆகவே $\delta$ ஆனது
+      $\Gamma_0 \subseteq \Gamma$ என்ற முடிவுறு கணத்திலிருந்து~$!A$ இன்
+      !!a{derivation}.
+    \item இது $!A \ident \lfalse$ என்ற சிறப்புநிலையில் (1) இன்
+      எதிர்மறைநேர்மாற்று.
+  \end{enumerate}
+\end{proof}
+
+\end{document}

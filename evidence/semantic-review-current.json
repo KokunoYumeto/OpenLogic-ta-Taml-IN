@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-05T11:43:07.760747+00:00",
+  "date_utc": "2026-09-05T16:26:27.699225+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -402,6 +402,76 @@
       "unit_id": "OLP-0083",
       "source_sha256": "0cc6d3e92d57d3070076ce2daa13aa85c6da6ac3cfb2b5d56df87bb7fef4fac3",
       "translation_sha256": "44693bd9b2ed6b574c863530d99f146e35c8adefdbe5b49ef2249ee100e3fca9"
+    },
+    {
+      "unit_id": "OLP-0084",
+      "source_sha256": "c53bed3aa593285a104c9e4c1c40a08efadb3b58094119043baa7a27b8a652e7",
+      "translation_sha256": "36f23211e1639dfb8989f65cbbe3a032b218159f0e2d7f616a293934cf3e7146"
+    },
+    {
+      "unit_id": "OLP-0085",
+      "source_sha256": "e6e8bed6816bd64ac24342fd4d591ca0e7c1ddf82fc056b452aa87c45d810506",
+      "translation_sha256": "c7625a8915cc9a9c8ae85877a0f97ba5d15ddc91adf9f2a6cdf9dc5f4d1fc4f2"
+    },
+    {
+      "unit_id": "OLP-0086",
+      "source_sha256": "5a85acea130c096719ef92c9513ab18a27380a22972eb859d55db92600932846",
+      "translation_sha256": "8ae3c0826195b015c2ac056d57366b80e129e0aa71407d62d60213e3634dcc86"
+    },
+    {
+      "unit_id": "OLP-0087",
+      "source_sha256": "eb6d95a24fce278404457d9169c033645853aab7e1c22dd4ca1fec9595068313",
+      "translation_sha256": "c54dd664f178615c742db833d811b4bac40c8a1db42dea12430234b89df86da6"
+    },
+    {
+      "unit_id": "OLP-0088",
+      "source_sha256": "f238e4c13bb97940ff82f8016aed565b9388d475721f9b6ff132166bf628aa5e",
+      "translation_sha256": "c2cbc90481c4e4815c2d18f53460f31f3c3e5927f9d08d43db9f117d355d9b25"
+    },
+    {
+      "unit_id": "OLP-0089",
+      "source_sha256": "d39069643439c576cb5813ef635725ac09ef83257571e380b92dfa223a801ecc",
+      "translation_sha256": "282af3510f1ad7fff42c4302ae6dd249f828c5992a54ec8920bfcacfa013360a"
+    },
+    {
+      "unit_id": "OLP-0090",
+      "source_sha256": "962c30713b222744c165ce87f7cb8ab11d18d0e805d8d386900bfe8e8104f63f",
+      "translation_sha256": "5bf2dc5e481afbcd580472dc7cf18c45c90f85f53bcfbf46d0760c0b4f8e9400"
+    },
+    {
+      "unit_id": "OLP-0091",
+      "source_sha256": "12ae1ea4a864b9a42e5fb6addcfc552bb4b74c1ba2cadced427593e4ca52f8e3",
+      "translation_sha256": "37828106adbc105ca070615902c4af98d6fb08ddbc8cc86a12cd22407c18a9e8"
+    },
+    {
+      "unit_id": "OLP-0092",
+      "source_sha256": "90f40aecedac9a8f2760b9976de0c6eac71c1b1e90911c4a30ce029a2d9e13c6",
+      "translation_sha256": "8f28ee4f6395c6491a7a4677de8428ad21d832d196aa6d0388ba0121b54c2b6b"
+    },
+    {
+      "unit_id": "OLP-0093",
+      "source_sha256": "afb2c635bfea260b7ab2bc413c04f13ac8be807849baf90716dd54f89b29558a",
+      "translation_sha256": "04c71358a6f65b5fee69b004495a4311b03cc40f293725c8633049c8a9ea85cc"
+    },
+    {
+      "unit_id": "OLP-0094",
+      "source_sha256": "589113c86043ad1152eb1f67bef6340f846cb51929e2d3f26294450516da247c",
+      "translation_sha256": "6580f3256882ae3fedad0f3b571d3ac6a8d959987c7835b57d71d54b407fb636"
+    },
+    {
+      "unit_id": "OLP-0095",
+      "source_sha256": "8b90318e1a2ed38568fb61cd5529d496cdfd17f322fd9c731a194e2d08e0a4b9",
+      "translation_sha256": "4cb58a682f0d2e02f98227a77c09f7cc64530d90a277a723e50d93f89e8c390b"
+    },
+    {
+      "unit_id": "OLP-0096",
+      "source_sha256": "2f301d8fc8aa78831e17b9d14042c97218795d400a350b0726be3776eed17575",
+      "translation_sha256": "b691b2d96e5b902f6753893cc0c072a1e6110ca285153aed6fa7d106cb0e0e5c"
+    },
+    {
+      "unit_id": "OLP-0097",
+      "source_sha256": "426ee50b639d92c730c70912bfda4fdf34c99e0e33097dc253cb196a01af7e7d",
+      "translation_sha256": "2910f4793cec7f1db86bbcb4075d6fcbf35c66a6e39e6624c03fa395401e5f94"
     }
   ],
   "samples": [
@@ -1258,6 +1328,265 @@
       "assessment": "Both sentence-satisfaction and formula-extensionality references are preserved.",
       "translation_segment_sha256": "5793f44907d1af58a0ff3a3c43fecf132f1b658b49848e765e45a6165001df4c",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0084-S02",
+      "reverse_paraphrase": "The chapter presents a Gentzen/Prawitz-style natural-deduction system and uses the prfND tag for material that treats it specifically as a proof system.",
+      "assessment": "The historical style attribution and the exact tag name remain.",
+      "translation_segment_sha256": "d12bc5a48650ff52d5d34703ccf9bfac0029c75ca7ca690f28f5bcad65d01c55",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0085-S01",
+      "reverse_paraphrase": "Natural-deduction proofs begin from assumptions and apply inference rules; negation introduction, conditional introduction, disjunction elimination and, in first-order logic, existential elimination may discharge labeled assumptions.",
+      "assessment": "The propositional/FOL branch and the role of discharge labels remain explicit.",
+      "translation_segment_sha256": "ae6a724858f2a7e51178d8317f8b6b38d4f35bac3d388460938a425aea1dd365",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0085-S03",
+      "reverse_paraphrase": "A natural-deduction derivation is a tree of sentences whose immediate predecessors are the premises of an inference and whose lower sentence is its conclusion; introduction and elimination rules add or remove the relevant operator.",
+      "assessment": "TA-ND-001 corrects the frozen prose word sequents to sentences, matching every surrounding token and rule diagram.",
+      "translation_segment_sha256": "1e510423492f8d5bbe316d31e9b89a5f973a7122628bac104a05c8e3d24b7acd",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0086-S06",
+      "reverse_paraphrase": "Negation introduction derives a negated sentence from falsity under a discharged assumption, whereas classical falsity derives the corresponding positive sentence.",
+      "assessment": "The two superficially similar rule conclusions remain distinguished.",
+      "translation_segment_sha256": "09b36c15facd2568aa2245e8b3ca59983b17eb5fe58e85bf61b0e4000f7637ec",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0086-S07",
+      "reverse_paraphrase": "A discharge annotation grants permission rather than imposing a requirement; conditional introduction may discharge any number of matching assumptions in the premise derivation, including zero.",
+      "assessment": "The zero-assumption case and the optional force of discharge are both retained.",
+      "translation_segment_sha256": "b3dd6932bd12829a6f448622ef5795e8305bfc90c887789e2b18def73b5b9617",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0087-S01",
+      "reverse_paraphrase": "Universal introduction uses a constant absent from the conclusion and from every undischarged assumption in the premise derivation; that rule-local constant is called the eigenvariable.",
+      "assessment": "The closed-term restriction for universal elimination and the historically inherited eigenvariable name remain separate.",
+      "translation_segment_sha256": "36b445fb6db8c03f800a59c8ebd9521c9ef01037c253c7cff2b80d63ecf91047",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0087-S05",
+      "reverse_paraphrase": "Existential introduction may replace one or more but not necessarily all occurrences of a closed term by the bound variable, while the eigenvariable rules forbid their fresh constant from already occurring in the formula.",
+      "assessment": "The P(t,t) examples preserve the asymmetry between arbitrary witness terms and fresh eigenvariables.",
+      "translation_segment_sha256": "5e18da0efe44b807258ccd2a7f5f5a155e91ad31d2c9e38cb29929f4c0b96f68",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0087-S06",
+      "reverse_paraphrase": "The eigenvariable condition is necessary for soundness: without it, existential A would incorrectly yield universal A; quantifier elimination with closed terms also preserves sentencehood of formulas derived from sentences.",
+      "assessment": "The invalid derivation, failed entailment and sentence-closure consequence all remain.",
+      "translation_segment_sha256": "61e79892a385497a861e33b821cfef87bcf11c963d2002b6736176f29e86dace",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0088-S02",
+      "reverse_paraphrase": "A derivation of A from Gamma is a finite sentence tree whose leaves are Gamma assumptions or discharged assumptions, whose root is A, and whose other nodes are premises of correct rule applications.",
+      "assessment": "The conclusion, undischarged assumptions and the two provability notations are defined with their exact scopes.",
+      "translation_segment_sha256": "c72191fe310b26e5626acee9b1fc3c72145569597d20e48ead3aa2469c9a6cab",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0088-S04",
+      "reverse_paraphrase": "Conditional introduction applied to the two conjunction derivations discharges C in one case and D in the other, leaving the opposite assumption undischarged.",
+      "assessment": "The two displayed proof trees establish the two stated turnstile claims in the correct order.",
+      "translation_segment_sha256": "3fa9adef872218d53768086f927858c0ecb02d66a51a6dbf79a31b93bc24dd76",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0088-S05",
+      "reverse_paraphrase": "Conditional introduction remains legal when no matching assumption occurs, because discharge is optional rather than mandatory.",
+      "assessment": "The displayed derivation from B to A-implies-B retains its deliberately unused discharge label.",
+      "translation_segment_sha256": "ac23cdab3fc5925446827b3b8e4458e17df1f7e7ca08a81406224aa139c3a918",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0089-S02",
+      "reverse_paraphrase": "To derive not-A-or-B implies A-implies-B, the construction first introduces the outer conditional and then eliminates the disjunction into two branches with the same conditional conclusion.",
+      "assessment": "TA-ND-003 calls the root expression a final sentence rather than importing the LK term end-sequent; operator scope remains exact.",
+      "translation_segment_sha256": "f076c4d9c84593aa2a3d900392d8ee272b2aca0928e46998151f452a7a49bd94",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0089-S05",
+      "reverse_paraphrase": "In the not-A branch, negation elimination yields falsehood and falsehood introduction yields B before conditional introduction.",
+      "assessment": "TA-ND-002 repairs the completed tree label so the not-A,A-to-falsehood step agrees with the preceding partial tree and prose.",
+      "translation_segment_sha256": "4389555d5bfc67131217fc61334d3b02e8ba1f59a22c3231212d964fde657066",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0089-S06",
+      "reverse_paraphrase": "In the B branch, A is unused: B alone supports A-implies-B because conditional introduction may discharge zero assumptions.",
+      "assessment": "The final derivation and its undischarged assumptions are preserved.",
+      "translation_segment_sha256": "4921c6dfba18e16edae0e602f317115055b5e0a13251cab06e7a0350cbfd30d2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0089-S11",
+      "reverse_paraphrase": "Excluded middle is completed classically: the left branch derives not-A by negation introduction and the right branch derives A by classical falsehood, both under the negated target.",
+      "assessment": "All three discharge labels and both nested contradictions retain their scopes.",
+      "translation_segment_sha256": "ad2a7e0273e3689c8cc7c2f54ca05cffef53a0d089b79c1f5a87354b0c20d7fc",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0090-S02",
+      "reverse_paraphrase": "The quantified derivation begins with conditional introduction, then sets up existential elimination using a fresh constant absent from the conclusion and all dependent assumptions.",
+      "assessment": "The eigenvariable-sensitive inference is placed low in the finished proof as instructed.",
+      "translation_segment_sha256": "ed6ca80ef7c392f283ed4b9e91fe60bd721d6ddbe3e308c268449caa39aea923",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0090-S05",
+      "reverse_paraphrase": "The only eigenvariable-constrained rule in the first example is existential elimination, and its constant a occurs in no assumption on which the inference depends.",
+      "assessment": "TA-ND-004 repairs the raw existential glyph so the prose names the exact OpenLogic rule macro.",
+      "translation_segment_sha256": "dfe83b82e54ea6188f34d51ef5a1d3ecb066db99ef83fa453210eca9e1c0f1b1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0090-S09",
+      "reverse_paraphrase": "From universal B-implies-C the proof instantiates a, combines it with B(a) by conditional elimination, and prepares C(a) for existential introduction.",
+      "assessment": "Universal elimination has no eigenvariable restriction; the same a remains governed by the lower existential-elimination step.",
+      "translation_segment_sha256": "831ee72fb2609c95dbc317506be25df1fa82bba552fba200d9e66b21b3d314a7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0090-S14",
+      "reverse_paraphrase": "The final quantified example derives exists-B by modus ponens, contradicts not-exists-B, and discharges the temporary forall-A assumption to obtain not-forall-A.",
+      "assessment": "The two permanent assumptions remain undischarged and the target negation has the correct scope.",
+      "translation_segment_sha256": "eca572100f8db87f9c55c003b3e080f004a9500fc0b5a00147048be78545f801",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0091-S03",
+      "reverse_paraphrase": "A is derivable from Gamma exactly when there is a natural-deduction derivation concluding A whose every assumption is either discharged or belongs to Gamma.",
+      "assessment": "The definition differs appropriately from the finite-sequent witness used by LK while retaining the same turnstile notation.",
+      "translation_segment_sha256": "432d80998e7a3adddb8fb2cb67a72d06b4fc97ba20aed9f0e31f34afcae8edaf",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0091-S07",
+      "reverse_paraphrase": "Transitivity converts the second derivation into A-implies-B by discharging A, then applies it to the first derivation of A; all remaining assumptions lie in Gamma union Delta.",
+      "assessment": "The two derivation labels and union of undischarged contexts remain exact.",
+      "translation_segment_sha256": "ce049a9c8fc132fbb9f1d550f5962c82090b18a6fe86c2082859518c7b16087c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0091-S10",
+      "reverse_paraphrase": "Natural-deduction compactness follows because a finite derivation has only finitely many undischarged assumptions; the consistency clause is the contrapositive at falsehood.",
+      "assessment": "Both finite-support claims retain their quantifier direction.",
+      "translation_segment_sha256": "8343e5a009f43d44a1513d8140782380c4519e9988dbfef3c19bf4b653600693",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0092-S02",
+      "reverse_paraphrase": "Gamma derives A exactly when Gamma together with not-A is inconsistent: negation elimination proves one direction and classical falsehood with discharged not-A proves the reverse.",
+      "assessment": "Both directions preserve which assumption is discharged and which remain in Gamma.",
+      "translation_segment_sha256": "5fb348aa7d654c51eb2adbcc338792a5f0e0d7b4b9c01caaba764cd3c1962a32",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0092-S05",
+      "reverse_paraphrase": "If Gamma with A and Gamma with not-A are each inconsistent, the two contradiction derivations yield not-not-A and not-A, whose negation elimination makes Gamma itself inconsistent.",
+      "assessment": "Both temporary assumptions are discharged and the final context is Gamma alone.",
+      "translation_segment_sha256": "bf8cc8a085a6b8d5320e5dca6751d95cad3342397563b3033a879768f994e3b3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0093-S02",
+      "reverse_paraphrase": "A-or-B together with not-A and not-B derives falsehood by disjunction elimination; either disjunct alone derives the disjunction by introduction.",
+      "assessment": "The shared discharge label closes the matching branch assumptions only.",
+      "translation_segment_sha256": "f4748072870771b89e145195c302e2e9a2ecf03777e1f7277acd06ec746e6ffb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0093-S03",
+      "reverse_paraphrase": "Modus ponens follows by conditional elimination; either not-A or B separately derives A-implies-B, with discharge optional in the B case.",
+      "assessment": "The second proof deliberately has no A assumption to discharge.",
+      "translation_segment_sha256": "9ce59cd03bccc3624809e3318452018fadbc89e9cc358b4c276e89347a7de54a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0094-S01",
+      "reverse_paraphrase": "Strong generalization adds universal introduction to a derivation of A(c) when c occurs in neither Gamma nor A(x), thereby satisfying the eigenvariable condition.",
+      "assessment": "The freshness domain includes both undischarged assumptions and the quantified formula.",
+      "translation_segment_sha256": "b4fc899c6407db718aeb91d3894a60ea771ee7b6fc33eae1c7629e5a45898e76",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0095-S02",
+      "reverse_paraphrase": "Natural-deduction soundness is proved by induction on inference count: the zero-inference tree is one undischarged assumption, and each lowest rule uses smaller premise derivations.",
+      "assessment": "The induction hypothesis ranges over the undischarged assumptions of each subderivation.",
+      "translation_segment_sha256": "1d02b5d2321ccbb9d4790b5c4dbe1905930dd926adf621b59b7e862df0587e66",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0095-S03",
+      "reverse_paraphrase": "Negation-introduction soundness assumes Gamma true and not-A false; then A is true, making Gamma together with A satisfy the premise context that was assumed to entail falsehood.",
+      "assessment": "The contradiction discharges A and leaves exactly Gamma.",
+      "translation_segment_sha256": "266535f49ac34926ebe50c81cff31fa622de080dec6fde558cb7c02ddab452f1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0095-S06",
+      "reverse_paraphrase": "Conditional-introduction soundness uses the induction hypothesis Gamma-union-A entails B; a countermodel to A-implies-B would satisfy Gamma and A while falsifying B.",
+      "assessment": "The semantic countermodel and the discharged assumption have matching scope.",
+      "translation_segment_sha256": "9f87f2c970a2d6413cde4e28eb50cf87a3189cb9fe480e15fb9bf459f2d8acf2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0095-S08",
+      "reverse_paraphrase": "Universal-introduction soundness reinterprets the fresh constant a as an arbitrary assignment value, transfers satisfaction to A(a), then uses substitution and extensionality to establish A(x) for every assignment.",
+      "assessment": "All six omitted semantic dependencies have reversible reader fallbacks; freshness covers Gamma and A(x).",
+      "translation_segment_sha256": "e0b5e9b6f4fb58db5486fd50cb57c9f5305ada2a968fcffb8fe22d99658b0c7d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0095-S11",
+      "reverse_paraphrase": "Conjunction-introduction soundness combines models of the two undischarged contexts: the induction hypotheses yield A from Gamma-one and B from Gamma-two, so their union entails A-and-B.",
+      "assessment": "The two premise contexts are united without being conflated.",
+      "translation_segment_sha256": "21eb927e5c49427aceb747ec230cd91b6e62d29b1051e57e8b90bbc88a64e4f3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0095-S13",
+      "reverse_paraphrase": "Conditional-elimination soundness combines Gamma-one entails A-implies-B with Gamma-two entails A; every model of their union therefore makes B true.",
+      "assessment": "The reductio in parentheses preserves the truth conditions of the conditional.",
+      "translation_segment_sha256": "089fca81e50cd20bef4de7288f803029808b2ccf266282969cb7e3172d58cc02",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0095-S16",
+      "reverse_paraphrase": "If Gamma were inconsistent, soundness would make every model of Gamma satisfy falsehood; since no interpretation satisfies falsehood, Gamma is unsatisfiable.",
+      "assessment": "This contrapositive establishes satisfiability implies consistency.",
+      "translation_segment_sha256": "58367273448bc6e8aa8a2ee0923a2aa9ab997a55637becbedbac2619e6672a66",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0096-S02",
+      "reverse_paraphrase": "Identity introduction derives t-equals-t without assumptions, while equality elimination transports A from s to t under s-equals-t; this is the substitutability of identicals or Leibniz law.",
+      "assessment": "Closed-term restrictions and both directions of substitution remain explicit.",
+      "translation_segment_sha256": "e78a644e527d27dd56d34e3912fafb279ee34396216ad75b801452ecc4c82898",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0096-S06",
+      "reverse_paraphrase": "The uniqueness example obtains a-equals-c and b-equals-c from the existential witness property, then uses equality elimination to derive a-equals-b.",
+      "assessment": "The rule can use b-equals-c together with the formula a-equals-c in its reverse transport direction.",
+      "translation_segment_sha256": "633f0c33bd5c571fe04446f3ee46b74e6e44555327acee213f5ab94b78424b49",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0097-S02",
+      "reverse_paraphrase": "Identity-elimination soundness uses equality of the denotations of t-one and t-two and formula extensionality to transfer A(t-one) to A(t-two) under any assignment.",
+      "assessment": "The union of premise assumptions and the substitution-versus-assignment dependency remain exact.",
+      "translation_segment_sha256": "64ccb84d839fbb7faeed595cbf6461ba399dd34d3ce61f6791ec26ac621465e1",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -1342,9 +1671,25 @@
     {
       "unit_id": "OLP-0081",
       "issue": "The soundness proof drops the principal conjunction in one induction conclusion and typesets a cut-premise sequent as set difference. Tamil restores the full conclusion under TA-SEQ-002 and the sequent sign under TA-SEQ-003."
+    },
+    {
+      "unit_id": "OLP-0085",
+      "issue": "The natural-deduction description calls the one, two or three sentence premises above an inference sequents, conflicting with the surrounding sentence tokens and rule diagrams. Tamil corrects the noun to sentences under TA-ND-001."
+    },
+    {
+      "unit_id": "OLP-0089",
+      "issue": "A completed proof tree labels the inference from not-A and A to falsehood as falsehood introduction although its prose and preceding tree say negation elimination; the same unit calls a natural-deduction root an end-sequent. Tamil repairs these under TA-ND-002 and TA-ND-003."
+    },
+    {
+      "unit_id": "OLP-0090",
+      "issue": "The final eigenvariable check names existential elimination with a raw TeX existential glyph rather than the edition operator used by the actual rule. Tamil repairs the macro under TA-ND-004."
+    },
+    {
+      "unit_id": "OLP-0095",
+      "issue": "The universal-elimination soundness exercise uses a raw TeX universal glyph rather than the defined OpenLogic operator. Tamil repairs the macro under TA-ND-005; six omitted syntax-and-semantics references retain reversible fallbacks under TA-READER-REF-006."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "Eighty source units now pass textual and author semantic QA. The exact 51-unit reader remains the current fully rendered and published release; a new cumulative reader and the remaining 642 frozen units still require completion."
+  "remaining": "Ninety-four source units now pass textual and author semantic QA. The exact 51-unit reader remains the current fully rendered and published release; a new cumulative reader and the remaining 628 frozen units still require completion."
 }

@@ -1,0 +1,94 @@
+{
+  "batch_id": "TA-B043",
+  "units": [
+    {
+      "unit_id": "OLP-0089",
+      "source_sha256": "d39069643439c576cb5813ef635725ac09ef83257571e380b92dfa223a801ecc",
+      "translation_sha256": "282af3510f1ad7fff42c4302ae6dd249f828c5992a54ec8920bfcacfa013360a",
+      "source_bytes": 11062,
+      "translation_bytes": 17432,
+      "source_coverage_complete": true,
+      "segments": 14,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "gen",
+        "include",
+        "loc",
+        "logic",
+        "main",
+        "open",
+        "operator",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-ND-002",
+          "unit_id": "OLP-0089",
+          "kind": "natural-deduction-wrong-rule-label",
+          "action": "Corrected the displayed falsehood step from false introduction to negation elimination, matching its two premises, the surrounding prose and the immediately preceding partial proof tree.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\Intro",
+            "\\lfalse"
+          ],
+          "expected_extra_commands": [
+            "\\Elim",
+            "\\lnot"
+          ],
+          "source_issue_or_choice": "The completed proof labels the inference from not-A and A to falsehood as introduction of falsehood, while the prose and partial tree identify the same step as negation elimination.",
+          "chosen_treatment": "தமிழ் நிறுவல் அந்தப் படியை \\Elim{\\lnot} எனத் திருத்துகிறது.",
+          "alternatives_considered": "பொருந்தாத \\Intro{\\lfalse} பெயரை வைத்தல்; பெயரையே நீக்குதல்",
+          "rationale": "The displayed inference has premises not-A and A and conclusion falsehood, exactly the negation-elimination rule defined earlier. The surrounding sentence explicitly says to use negation elimination.",
+          "precise_review_question": "Is negation elimination the unique defined rule that licenses this two-premise step to falsehood?",
+          "location_needle": "SOURCE CORRECTION TA-ND-002"
+        },
+        {
+          "audit_id": "TA-ND-003",
+          "unit_id": "OLP-0089",
+          "kind": "natural-deduction-end-sequent-misnomer",
+          "action": "Corrected end-sequent to final sentence in the prose discussion of a natural-deduction tree.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The example calls the root formula a sentence in the end-sequent, although this section defines natural-deduction derivations as trees of sentences and reserves sequents for the separate LK system.",
+          "chosen_treatment": "தமிழ் உரை இதனை வருவித்தலின் இறுதி வாக்கியம் என்று வழங்குகிறது.",
+          "alternatives_considered": "தொடரணிக் கணியச் சொல்லான இறுதித் தொடரணி என்பதை வைத்தல்; வெறுமனே முடிவு என்று சுருக்குதல்",
+          "rationale": "The diagram contains a single root sentence, not a two-sided sequent. Final sentence preserves the intended operator-scope explanation without importing LK structure.",
+          "precise_review_question": "Does final sentence identify the root expression precisely while preserving the claim that its first conditional is the main operator?",
+          "location_needle": "SOURCE CORRECTION TA-ND-003"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Intro",
+        "\\lfalse"
+      ],
+      "extra_commands": [
+        "\\Elim",
+        "\\lnot"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

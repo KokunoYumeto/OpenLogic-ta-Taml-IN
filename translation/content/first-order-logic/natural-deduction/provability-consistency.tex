@@ -1,0 +1,137 @@
+% SEGMENT OLP-0092-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: provability-consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{prv}}
+      {\olfileid{pl}{ntd}{prv}}
+      
+\olsection{\usetoken{S}{derivability} மற்றும் முரணின்மை}
+
+!!{derivability} உறவின் பல பண்புகளை இப்போது நிறுவுவோம். அவை தனித்தும்
+சுவையானவை; மேலும் அவை ஒவ்வொன்றும் நிறைவுத் தேற்றத்தின் நிறுவலில் ஒரு பங்கு
+வகிக்கும்.
+
+\begin{prop}\ollabel{prop:provability-contr}
+  $\Gamma \Proves !A$ என்றும், $\Gamma \cup \{!A\}$ முரணுடையது என்றும்
+  இருந்தால், $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+$\Gamma$ இலிருந்து~$!A$ இன் !!{derivation} ஐ~$\delta_1$ என்றும்,
+$\Gamma \cup \{!A\}$ இலிருந்து~$\lfalse$ இன் !!{derivation} ஐ~$\delta_2$
+என்றும் கொள்க. அப்போது பின்வருமாறு !!{derive} இயலும்:
+\begin{prooftree}
+\AxiomC{$\Gamma, \Discharge{!A}{1}$}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{1}
+\UnaryInfC{$\lnot !A$}
+\AxiomC{$\Gamma$}
+\RightLabel{$\delta_1$}
+\DeduceC{$!A$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\end{prooftree}
+புதிய !!{derivation}[loc] எடுகோள்~$!A$ ஆனது !!{discharged}; ஆகவே இது
+$\Gamma$ இலிருந்து !!a{derivation}.
+\end{proof}
+
+% SEGMENT OLP-0092-S02
+\begin{prop}
+\ollabel{prop:prov-incons}
+$\Gamma \Proves !A$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Gamma \cup
+\{\lnot !A\}$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+முதலில் $\Gamma \Proves !A$ என்க; அதாவது, !!{undischarged}
+எடுகோள்கள்~$\Gamma$ இலிருந்து~$!A$ இன் !!a{derivation}~$\delta_0$ உள்ளது.
+$\Gamma \cup \{\lnot !A\}$ இலிருந்து~$\lfalse$ இன் !!a{derivation} ஒன்றைப்
+பின்வருமாறு பெறுகிறோம்:
+\begin{prooftree}
+  \AxiomC{$\lnot !A$}
+  \AxiomC{$\Gamma$}
+  \RightLabel{$\delta_0$}
+  \DeduceC{$!A$}
+  \RightLabel{\Elim{\lnot}}
+  \BinaryInfC{$\lfalse$}
+\end{prooftree}
+
+இப்போது $\Gamma \cup \{\lnot !A\}$ முரணுடையது என்க; அதற்குரிய
+$\Gamma \cup \{\lnot !A\}$ விலுள்ள !!{undischarged} எடுகோள்களிலிருந்து
+$\lfalse$ இன் !!{derivation} ஐ~$\delta_1$ என்க. $\FalseCl$ ஐப் பயன்படுத்தி
+$\Gamma$ விலிருந்து மட்டும்~$!A$ இன் !!a{derivation} ஒன்றைப் பெறுகிறோம்:
+\begin{prooftree}
+  \AxiomC{$\Gamma, \Discharge{\lnot !A}{1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$\lfalse$}
+  \RightLabel{\FalseCl}
+  \DischargeRule{\FalseCl}{1}
+  \UnaryInfC{$!A$}
+\end{prooftree}
+\end{proof}
+
+% SEGMENT OLP-0092-S03
+\begin{prob}
+$\Gamma \Proves \lnot !A$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Gamma
+\cup \{!A\}$ முரணுடையது என்பதை நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0092-S04
+\begin{prop}\ollabel{prop:explicit-inc}
+  $\Gamma \Proves !A$ என்றும் $\lnot !A \in \Gamma$ என்றும் இருந்தால்,
+  $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+  $\Gamma \Proves !A$ என்றும் $\lnot !A \in \Gamma$ என்றும் கொள்க.
+  $\Gamma$ இலிருந்து~$!A$ இன் !!a{derivation}~$\delta$ உள்ளது.
+  $\Elim{\lnot}$ விதியின் இந்த எளிய பயன்பாட்டைக் கருதுக:
+  \begin{prooftree}
+    \AxiomC{$\lnot !A$}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta$}
+    \DeduceC{$!A$}
+    \RightLabel{\Elim{\lnot}}
+    \BinaryInfC{$\lfalse$}
+  \end{prooftree}
+  $\lnot !A \in \Gamma$ என்பதால், அனைத்து !!{undischarged} எடுகோள்களும்
+  $\Gamma$ வில் உள்ளன; ஆகவே இது $\Gamma \Proves \lfalse$ என்பதைக் காட்டுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0092-S05
+\begin{prop}\ollabel{prop:provability-exhaustive}
+  $\Gamma \cup \{!A\}$, $\Gamma \cup \{\lnot !A\}$ ஆகிய இரண்டும்
+  முரணுடையவை எனில், $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+$\Gamma \cup \{ !A \}$ இலிருந்து~$\lfalse$ உம், $\Gamma \cup \{ \lnot !A
+\}$ இலிருந்து~$\lfalse$ உம் ஆகியவற்றின் !!{derivation}s முறையே~$\delta_1$,
+$\delta_2$ உள்ளன. அப்போது பின்வருமாறு !!{derive} இயலும்:
+\begin{prooftree}
+\AxiomC{$\Gamma, \Discharge{\lnot !A}{2}$}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{2}
+\UnaryInfC{$\lnot \lnot !A$}
+\AxiomC{$\Gamma, \Discharge{!A}{1}$}
+\RightLabel{$\delta_1$}
+\DeduceC{$\lfalse$}
+\DischargeRule{\Intro{\lnot}}{1}
+\UnaryInfC{$\lnot !A$}
+\RightLabel{\Elim{\lnot}}
+\BinaryInfC{$\lfalse$}
+\end{prooftree}
+எடுகோள்கள்~$!A$, $\lnot !A$ ஆகியவை !!{discharged} ஆவதால், இது
+$\Gamma$ இலிருந்து மட்டும்~$\lfalse$ இன் !!a{derivation}. ஆகவே $\Gamma$
+முரணுடையது.
+\end{proof}
+
+\end{document}

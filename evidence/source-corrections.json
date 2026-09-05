@@ -480,6 +480,157 @@
       "rationale": "The conditional fallbacks preserve the formal proof dependencies and remain reversible when the omitted chapters join the reader.",
       "precise_review_question": "Do both repeated fallback descriptions remain grammatically and mathematically exact in the forward and reverse substitution steps?",
       "location_needle": "READER FALLBACK TA-READER-REF-005"
+    },
+    {
+      "audit_id": "TA-ND-001",
+      "unit_id": "OLP-0085",
+      "kind": "natural-deduction-sentences-mislabeled-sequents",
+      "action": "Corrected sequents to sentences in the prose description of a natural-deduction tree, matching the surrounding sentence tokens and the rule diagrams.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says that a sentence stands below one, two, or three other sequents, although the surrounding text and displayed natural-deduction rules use sentences as the premises.",
+      "chosen_treatment": "தமிழ் உரை ஒன்று, இரண்டு அல்லது மூன்று மற்ற வாக்கியங்களின் கீழ் ஒரு வாக்கியம் நிற்பதாகத் திருத்துகிறது.",
+      "alternatives_considered": "பொருந்தாத தொடரணிகள் என்ற மூலச் சொல்லை வைத்தல்; பொதுவாக வெளிப்பாடுகள் என்று மாற்றுதல்",
+      "rationale": "Natural-deduction derivations here are trees of sentences, and the immediately following sentence calls the expressions above an inference its premises. Sequent calculus is a different proof system in the frozen source.",
+      "precise_review_question": "Does sentences identify exactly the one, two, or three premises above a natural-deduction inference without importing sequent-calculus structure?",
+      "location_needle": "SOURCE CORRECTION TA-ND-001"
+    },
+    {
+      "audit_id": "TA-ND-002",
+      "unit_id": "OLP-0089",
+      "kind": "natural-deduction-wrong-rule-label",
+      "action": "Corrected the displayed falsehood step from false introduction to negation elimination, matching its two premises, the surrounding prose and the immediately preceding partial proof tree.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\Intro", "\\lfalse"],
+      "expected_extra_commands": ["\\Elim", "\\lnot"],
+      "source_issue_or_choice": "The completed proof labels the inference from not-A and A to falsehood as introduction of falsehood, while the prose and partial tree identify the same step as negation elimination.",
+      "chosen_treatment": "தமிழ் நிறுவல் அந்தப் படியை \\Elim{\\lnot} எனத் திருத்துகிறது.",
+      "alternatives_considered": "பொருந்தாத \\Intro{\\lfalse} பெயரை வைத்தல்; பெயரையே நீக்குதல்",
+      "rationale": "The displayed inference has premises not-A and A and conclusion falsehood, exactly the negation-elimination rule defined earlier. The surrounding sentence explicitly says to use negation elimination.",
+      "precise_review_question": "Is negation elimination the unique defined rule that licenses this two-premise step to falsehood?",
+      "location_needle": "SOURCE CORRECTION TA-ND-002"
+    },
+    {
+      "audit_id": "TA-ND-003",
+      "unit_id": "OLP-0089",
+      "kind": "natural-deduction-end-sequent-misnomer",
+      "action": "Corrected end-sequent to final sentence in the prose discussion of a natural-deduction tree.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The example calls the root formula a sentence in the end-sequent, although this section defines natural-deduction derivations as trees of sentences and reserves sequents for the separate LK system.",
+      "chosen_treatment": "தமிழ் உரை இதனை வருவித்தலின் இறுதி வாக்கியம் என்று வழங்குகிறது.",
+      "alternatives_considered": "தொடரணிக் கணியச் சொல்லான இறுதித் தொடரணி என்பதை வைத்தல்; வெறுமனே முடிவு என்று சுருக்குதல்",
+      "rationale": "The diagram contains a single root sentence, not a two-sided sequent. Final sentence preserves the intended operator-scope explanation without importing LK structure.",
+      "precise_review_question": "Does final sentence identify the root expression precisely while preserving the claim that its first conditional is the main operator?",
+      "location_needle": "SOURCE CORRECTION TA-ND-003"
+    },
+    {
+      "audit_id": "TA-ND-004",
+      "unit_id": "OLP-0090",
+      "kind": "natural-deduction-raw-existential-command",
+      "action": "Corrected the eigenvariable-check prose from the raw TeX existential symbol to OpenLogic's defined existential operator, matching every preceding existential-elimination rule label in the derivation.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\exists"],
+      "expected_extra_commands": ["\\lexists"],
+      "source_issue_or_choice": "The source's final check names \\Elim{\\exists}, whereas the natural-deduction system and the proof tree use \\Elim{\\lexists}.",
+      "chosen_treatment": "தமிழ் உரை விதிப் பெயரை \\Elim{\\lexists} எனத் திருத்துகிறது.",
+      "alternatives_considered": "தனித்த \\exists குறியை வைத்தல்; விதிப் பெயரை உரையாக மட்டும் வழங்குதல்",
+      "rationale": "The operator macro \\lexists is the frozen edition's defined existential connective and is used in the exact rule application being checked. Raw \\exists is inconsistent with that notation layer.",
+      "precise_review_question": "Does replacing only the raw existential glyph command with \\lexists make this rule reference exactly match the displayed existential-elimination inference?",
+      "location_needle": "SOURCE CORRECTION TA-ND-004"
+    },
+    {
+      "audit_id": "TA-ND-005",
+      "unit_id": "OLP-0095",
+      "kind": "natural-deduction-raw-universal-command",
+      "action": "Corrected the soundness exercise case from the raw TeX universal symbol to OpenLogic's defined universal operator, matching the universal-elimination rule introduced earlier.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\forall"],
+      "expected_extra_commands": ["\\lforall"],
+      "source_issue_or_choice": "The source names the final unary exercise case as \\Elim{\\forall}, whereas the natural-deduction rules use \\Elim{\\lforall}.",
+      "chosen_treatment": "தமிழ் உரை விதிப் பெயரை \\Elim{\\lforall} எனத் திருத்துகிறது.",
+      "alternatives_considered": "தனித்த \\forall குறியை வைத்தல்; விதிப் பெயரை உரையாக மட்டும் வழங்குதல்",
+      "rationale": "The operator macro \\lforall is the edition's defined universal connective and is used by the exact elimination rule whose soundness case is assigned as an exercise.",
+      "precise_review_question": "Does replacing only the raw universal glyph command with \\lforall make this exercise label exactly match the defined universal-elimination rule?",
+      "location_needle": "SOURCE CORRECTION TA-ND-005"
+    },
+    {
+      "audit_id": "TA-READER-REF-006",
+      "unit_id": "OLP-0095",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped six absent first-order syntax-and-semantics references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[syn][ass]{prop:sat-quant}",
+          "to": "\\oliflabeldef{syn:ass:prop:sat-quant}{\\olref[syn][ass]{prop:sat-quant}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][sat]{defn:satisfaction}",
+          "to": "\\oliflabeldef{syn:sat:defn:satisfaction}{\\olref[syn][sat]{defn:satisfaction}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{cor:extensionality-sent}",
+          "to": "\\oliflabeldef{syn:ext:cor:extensionality-sent}{\\olref[syn][ext]{cor:extensionality-sent}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+          "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:ext-formulas}",
+          "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:extensionality}",
+          "to": "\\oliflabeldef{syn:ext:prop:extensionality}{\\olref[syn][ext]{prop:extensionality}}{}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The cumulative proof-systems reader omits the six referenced syntax-and-semantics results used by the universal-introduction soundness case, which would otherwise render as unresolved question marks.",
+      "chosen_treatment": "ஒவ்வொரு பயன்பாட்டிலும் இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் அளவையடை நிறைவுறுத்தல், வாக்கியக் கண நிறைவுறுத்தல், குறி-சார்பு அல்லது சொல்-இடைநிறுத்தல் முடிவை விளக்கும் தமிழ் தொடர்.",
+      "alternatives_considered": "Literal question marks; deleting the semantic dependencies; permanently replacing the live links.",
+      "rationale": "The conditional branches preserve the exact reference identities, make the standalone soundness proof readable, and automatically restore numbered links in a complete reader.",
+      "precise_review_question": "Do the six Tamil fallbacks state exactly the semantic dependency at each universal-introduction step without overstating the omitted definitions and propositions?",
+      "location_needle": "syn:ass:prop:sat-quant"
+    },
+    {
+      "audit_id": "TA-READER-REF-007",
+      "unit_id": "OLP-0097",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped the absent formula-extensionality reference in oliflabeldef with a descriptive Tamil fallback; the live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[fol][syn][ext]{prop:ext-formulas}",
+          "to": "\\oliflabeldef{fol:syn:ext:prop:ext-formulas}{\\olref[fol][syn][ext]{prop:ext-formulas}}{}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The cumulative proof-systems reader omits the formula-extensionality proposition used by identity-elimination soundness, which would otherwise render as an unresolved question-mark pair.",
+      "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் சொல் இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு என்ற தமிழ் விளக்கம்.",
+      "alternatives_considered": "Literal question marks; deleting the dependency; permanently replacing the live link.",
+      "rationale": "The conditional fallback preserves the exact reference identity, makes the standalone proof readable, and restores the live numbered reference in a complete reader.",
+      "precise_review_question": "Does the Tamil fallback identify exactly the substitution-versus-assignment result needed to carry A(t1) across equality to A(t2)?",
+      "location_needle": "fol:syn:ext:prop:ext-formulas"
     }
   ],
   "by_unit": {
@@ -496,6 +647,11 @@
     "OLP-0040": ["OLSIZ-010", "TA-SIZ-LOCAL-003"],
     "OLP-0077": ["TA-SEQ-001"],
     "OLP-0081": ["TA-SEQ-002", "TA-SEQ-003", "TA-READER-REF-004"],
-    "OLP-0083": ["TA-READER-REF-005"]
+    "OLP-0083": ["TA-READER-REF-005"],
+    "OLP-0085": ["TA-ND-001"],
+    "OLP-0089": ["TA-ND-002", "TA-ND-003"],
+    "OLP-0090": ["TA-ND-004"],
+    "OLP-0095": ["TA-ND-005", "TA-READER-REF-006"],
+    "OLP-0097": ["TA-READER-REF-007"]
   }
 }

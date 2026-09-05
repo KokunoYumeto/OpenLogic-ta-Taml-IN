@@ -1,0 +1,116 @@
+% SEGMENT OLP-0087-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: quantifier-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{ntd}{qrl}
+
+\olsection{அளவையடை விதிகள்}
+
+\subsection{$\lforall$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{$!A(a)$}
+\RightLabel{\Intro{\lforall}}
+\UnaryInfC{$\lforall[x][\Atom{!A}{x}]$}
+\DisplayProof
+\hfill
+\AxiomC{$\lforall[x][\Atom{!A}{x}]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!A(t)$}
+\DisplayProof
+\end{defish}
+
+$\lforall$ க்கான விதிகளில், $t$ ஒரு மூடிய சொல் (எந்த மாறியையும் கொண்டிராத
+சொல்); $a$ ஆனது முடிவு~$\lforall[x][!A(x)]$ இலும், முன்கோள்~$!A(a)$ உடன்
+முடியும் !!{derivation}[loc] !!{undischarged} ஆக இருக்கும் எந்த எடுகோளிலும்
+இடம்பெறாத !!a{constant}. $a$ ஐ \Intro{\lforall} அனுமானத்தின்
+\emph{தனிமாறி} என்கிறோம்.\footnote{மேலுள்ள விதியில் $a$ ஒரு மாறிலிக்
+குறியாக இருந்தபோதும், ``தனிமாறி'' என்ற சொல்லைப் பயன்படுத்துகிறோம். இதற்கு
+வரலாற்றுக் காரணங்கள் உள்ளன.}
+
+% SEGMENT OLP-0087-S02
+\subsection{$\lexists$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{$\Atom{!A}{t}$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][\Atom{!A}{x}]$}
+\DisplayProof
+\hfill
+\AxiomC{$\lexists[x][\Atom{!A}{x}]$}
+\AxiomC{[$\Atom{!A}{a}$]$^n$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lexists}}{n}
+\BinaryInfC{$!C$}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0087-S03
+இங்கும் $t$ ஒரு மூடிய சொல். மேலும் $a$ ஆனது முன்கோள்
+$\lexists[x][!A(x)]$ இலும், முடிவு~$!C$ இலும், இரு முன்கோள்களுடன் முடியும்
+!!{derivation}s[loc] !!{undischarged} ஆக இருக்கும் எந்த எடுகோளிலும்
+($!A(a)$ என்ற எடுகோள்களைத் தவிர) இடம்பெறாத !!a{constant}. $a$ ஐ
+\Elim{\lexists} அனுமானத்தின் \emph{தனிமாறி} என்கிறோம்.
+
+% SEGMENT OLP-0087-S04
+\Intro{\lforall} அல்லது \Elim{\lexists} அனுமானத்திற்கான முன்கோள்களுக்கு
+இட்டுச் செல்லும் !!{derivation}s[loc], தனிமாறி முன்கோள்களிலோ எந்த
+!!{undischarged} எடுகோளிலோ இடம்பெறக்கூடாது என்ற நிபந்தனை
+\emph{தனிமாறி நிபந்தனை} எனப்படுகிறது.
+
+% SEGMENT OLP-0087-S05
+\begin{explain}
+$!A$ என்பது !!{variable}~$x$ ஐ கட்டற்றதாகக் கொண்ட !!a{formula} எனில், இதனை
+$!A(x)$ என்று எழுதிக் காட்டும் மரபை நினைவுகூர்க. அதே சூழலில், $!A(t)$ என்பது
+$\Subst{!A}{t}{x}$ என்பதன் சுருக்கம். எனவே $\Intro\lexists$ விதியைப்
+பின்வருமாறும் எழுதலாம்:
+\begin{prooftree}
+\AxiomC{$\Subst{!A}{t}{x}$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!A]$}
+\end{prooftree}
+$t$ ஏற்கெனவே~$!A$ இல் இடம்பெறலாம் என்பதை கவனிக்கவும்; எடுத்துக்காட்டாக,
+$!A$ ஆனது~$\Atom{\Obj P}{t,x}$ ஆக இருக்கலாம். ஆகவே,
+$\Atom{\Obj P}{t,t}$ இலிருந்து $\lexists[x][\Atom{\Obj P}{t,x}]$ ஐ
+அனுமானிப்பது $\Intro\lexists$ இன் சரியான பயன்பாடு—முன்கோளில் வரும் $t$ இன்
+ஒன்று அல்லது அதற்கு மேற்பட்ட இடம்பெறுதல்களை, கட்டுண்ட !!{variable}~$x$ ஆல்
+``மாற்றலாம்''; அவை அனைத்தையும் மாற்ற வேண்டியதில்லை. எனினும்,
+$\Intro\lforall$, $\Elim\lexists$ ஆகியவற்றின் தனிமாறி நிபந்தனைகள்,
+!!{constant}~$a$ ஆனது~$!A$ இல் இடம்பெறக்கூடாது என்று கோருகின்றன. எனவே,
+$\Atom{\Obj P}{a,a}$ இலிருந்து $\lforall[x][\Atom{\Obj P}{a,x}]$ ஐ
+$\Intro\lforall$ பயன்படுத்தி சரியாக அனுமானிக்க முடியாது.
+\end{explain}
+
+% SEGMENT OLP-0087-S06
+\begin{explain}
+\Intro{\lexists}, \Elim{\lforall} ஆகியவற்றில் கட்டுப்பாடுகள் இல்லை;
+சொல்~$t$ எதுவாகவும் இருக்கலாம். ஆகவே எந்த நிபந்தனையையும் பற்றி கவலைப்பட
+வேண்டியதில்லை. மறுபுறம், \Elim{\lexists}, \Intro{\lforall} விதிகளில்,
+!!{constant}~$a$ முடிவிலோ ஓர் !!{undischarged} எடுகோளிலோ எங்கும்
+இடம்பெறக்கூடாது என்று தனிமாறி நிபந்தனை கோருகிறது. முறைமை சரித்தன்மை
+உடையதாக, அதாவது எந்த !!{undischarged} எடுகோள்களிலிருந்து !!{sentence}s
+பின்தொடர்கின்றனவோ அவற்றிலிருந்து மட்டுமே அவற்றை !!{derive} செய்வதாக இருப்பதை
+உறுதிசெய்ய இந்நிபந்தனை தேவை. இந்நிபந்தனை இல்லையெனில் பின்வருவது
+அனுமதிக்கப்படும்:
+\begin{prooftree}
+  \AxiomC{$\lexists[x][!A(x)]$}
+  \AxiomC{$\Discharge{!A(a)}{1}$}
+  \RightLabel{*\Intro{\lforall}}
+  \UnaryInfC{$\lforall[x][!A(x)]$}
+  \RightLabel{\Elim{\lexists}}
+  \BinaryInfC{$\lforall[x][!A(x)]$}
+\end{prooftree}
+ஆனால் $\lexists[x][!A(x)] \Entails/ \lforall[x][!A(x)]$.
+
+அளவையடைகளுக்கான நீக்கல் விதிகள், !!{variable}s[dat] பதிலாக மூடிய சொற்களை
+மட்டுமே இட அனுமதிப்பதால், !!{sentence}s[gen] ஒரு கணத்திலிருந்து வருவிக்கப்படும்
+எந்த !!{formula} உம் தானே !!a{sentence} என்பது பின்தொடர்கிறது.
+\end{explain}
+
+
+\end{document}

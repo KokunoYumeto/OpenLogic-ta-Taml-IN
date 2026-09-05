@@ -1,0 +1,58 @@
+% SEGMENT OLP-0085-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: rules-and-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{rul}}
+      {\olfileid{pl}{ntd}{rul}}
+
+\olsection{விதிகளும் \usetoken{P}{derivation}}
+
+\begin{explain}
+இயல்பான வருவித்தல் முறைமைகள், கணித நிறுவலில் பயன்படுத்தப்படும் முறைசாரா
+காரணியத்தை நெருக்கமாக ஒத்திருக்க நோக்கமுடையவை (எனவே இது ஓரளவு
+``இயல்பானது''). இயல்பான வருவித்தல் நிறுவல்கள் எடுகோள்களுடன் தொடங்குகின்றன.
+பிறகு அனுமான விதிகள் பயன்படுத்தப்படுகின்றன. \Intro{\lnot}, \Intro{\lif},
+\iftag{FOL}{\Elim{\lor}, \Elim{\lexists}}{\Elim{\lor}} அனுமான விதிகளால்
+எடுகோள்கள் ``!!{discharged}'' ஆகின்றன; தெளிவுக்காக, !!{discharged} எடுகோளின்
+பெயர் அனுமானத்தின் அருகே வைக்கப்படுகிறது.
+\end{explain}
+
+% SEGMENT OLP-0085-S02
+\begin{defn}[எடுகோள்]
+எந்தக் கிளையிலும் மிக மேலுள்ள நிலையில் இருக்கும் எந்த !!{sentence} உம்
+ஓர் \emph{எடுகோள்} ஆகும்.
+\end{defn}
+
+% SEGMENT OLP-0085-S03
+% SOURCE CORRECTION TA-ND-001: “sequents” is corrected to sentences.
+இயல்பான வருவித்தலில் உள்ள !!^{derivation}s, !!{sentence}s[gen] குறிப்பிட்ட
+மரவுருக்கள் ஆகும். அவற்றின் மிக மேலுள்ள !!{sentence}s எடுகோள்கள்; ஒரு
+!!{sentence} ஒன்று, இரண்டு அல்லது மூன்று மற்ற வாக்கியங்களின் கீழ் இருந்தால்,
+அது ஓர் அனுமான விதியால் சரியாகப் பின்தொடர வேண்டும். அனுமானத்தின் மேலுள்ள
+!!{sentence}s அதன் \emph{முன்கோள்கள்} என்றும், கீழுள்ள !!{sentence} அதன்
+\emph{முடிவு} என்றும் அழைக்கப்படுகின்றன. ஒவ்வோர் !!{operator} க்கும் ஓர்
+அறிமுக விதியும் ஒரு நீக்கல் விதியும் என விதிகள் இணைகளாக வருகின்றன. அவை
+முடிவில் ஓர் !!{operator} ஐ அறிமுகப்படுத்துகின்றன அல்லது விதியின் முன்கோளில்
+இருந்து ஓர் !!{operator} ஐ நீக்குகின்றன. சில விதிகள், குறிப்பிட்ட வகையான
+எடுகோளை \emph{!!{discharged}} செய்ய அனுமதிக்கின்றன. எந்த அனுமானம் எந்த
+எடுகோளை !!{discharged} செய்கிறது என்பதைக் காட்ட, எடுகோளுக்கும் அனுமானத்திற்கும்
+பெயர்கள் இடுகிறோம். எடுகோளை ``$\Discharge{!A}{n}$'' என்று எழுதுவது இதனைக்
+குறிக்கிறது.
+
+% SEGMENT OLP-0085-S04
+% Only include this sentence is on of \land, lor, lif or lnot is defined.
+
+\iftag{notprvNot,notprvAnd,notprvOr,notprvIf}{}%
+	{$\land$, $\lor$, $\lif$, $\lnot$, $\lfalse$ ஆகிய !!{operator}s[dat]
+அவற்றில் சில வரையறுக்கப்பட்டிருந்தாலும் எல்லாவற்றிற்கும் விதிகளைக் கருதுவது
+வழக்கம்.}
+
+
+
+\end{document}

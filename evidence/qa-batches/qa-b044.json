@@ -1,0 +1,71 @@
+{
+  "batch_id": "TA-B044",
+  "units": [
+    {
+      "unit_id": "OLP-0090",
+      "source_sha256": "962c30713b222744c165ce87f7cb8ab11d18d0e805d8d386900bfe8e8104f63f",
+      "translation_sha256": "5bf2dc5e481afbcd580472dc7cf18c45c90f85f53bcfbf46d0760c0b4f8e9400",
+      "source_bytes": 9548,
+      "translation_bytes": 15573,
+      "source_coverage_complete": true,
+      "segments": 16,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "gen",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-ND-004",
+          "unit_id": "OLP-0090",
+          "kind": "natural-deduction-raw-existential-command",
+          "action": "Corrected the eigenvariable-check prose from the raw TeX existential symbol to OpenLogic's defined existential operator, matching every preceding existential-elimination rule label in the derivation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\exists"
+          ],
+          "expected_extra_commands": [
+            "\\lexists"
+          ],
+          "source_issue_or_choice": "The source's final check names \\Elim{\\exists}, whereas the natural-deduction system and the proof tree use \\Elim{\\lexists}.",
+          "chosen_treatment": "தமிழ் உரை விதிப் பெயரை \\Elim{\\lexists} எனத் திருத்துகிறது.",
+          "alternatives_considered": "தனித்த \\exists குறியை வைத்தல்; விதிப் பெயரை உரையாக மட்டும் வழங்குதல்",
+          "rationale": "The operator macro \\lexists is the frozen edition's defined existential connective and is used in the exact rule application being checked. Raw \\exists is inconsistent with that notation layer.",
+          "precise_review_question": "Does replacing only the raw existential glyph command with \\lexists make this rule reference exactly match the displayed existential-elimination inference?",
+          "location_needle": "SOURCE CORRECTION TA-ND-004"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\exists"
+      ],
+      "extra_commands": [
+        "\\lexists"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

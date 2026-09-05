@@ -1,0 +1,338 @@
+% SEGMENT OLP-0095-S01
+% Part: first-order-logic
+% Chapter: natural-deduction
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{ntd}{sou}}
+      {\olfileid{pl}{ntd}{sou}}
+      
+\olsection{சரித்தன்மை}
+
+\begin{explain}
+இயல்பான வருவித்தல் போன்ற !!^a{derivation} முறைமை, உண்மையில் பின்தொடராதவற்றை
+!!{derive} செய்ய இயலாது எனில் \emph{சரித்தன்மையுடையது}. எனவே சரித்தன்மை
+என்பது !!{derivation} முறைமைகளுக்கான உறுதிசெய்யப்பட்ட பாதுகாப்புப் பண்பின்
+ஒரு வகை. எந்த நிறுவல்-கோட்பாட்டுப் பண்பைப் பற்றிக் கேட்கிறோம் என்பதைப் பொறுத்து,
+எடுத்துக்காட்டாகப் பின்வருவனவற்றை அறிய விரும்புகிறோம்:
+\begin{enumerate}
+\item ஒவ்வொரு !!{derivable} !!{sentence} உம் \iftag{FOL}{செல்லுபடியானது}{ஒரு மெய்மம்};
+\item சிலவற்றிலிருந்து !!a{sentence} !!{derivable} எனில், அது அவற்றின்
+  பின்விளைவும் ஆகும்;
+\item !!{sentence}s கொண்ட ஒரு கணம் முரணுடையது எனில், அது நிறைவுறத்தக்கதல்ல.
+\end{enumerate}
+இவை !!a{derivation} முறைமையின் முக்கியமான பண்புகள். இவற்றில் எதுவொன்றும்
+நிலவாவிட்டால், அந்த !!{derivation} முறைமை குறைபாடுடையது—அது அளவுக்கு அதிகமாக
+!!{derive} செய்யும். எனவே !!a{derivation} முறைமையின் சரித்தன்மையை நிறுவுவது
+மிகவும் முக்கியம்.
+\end{explain}
+
+% SEGMENT OLP-0095-S02
+\begin{thm}[சரித்தன்மை]
+\ollabel{thm:soundness}
+!!{undischarged} எடுகோள்கள்~$\Gamma$ இலிருந்து $!A$ !!{derivable} எனில்,
+$\Gamma \Entails !A$.
+\end{thm}
+
+\begin{proof}
+$!A$ இன் !!a{derivation} ஐ~$\delta$ என்க. $\delta$ விலுள்ள அனுமானங்களின்
+எண்ணிக்கை மீது தொகுத்தறிதல் முறையில் செல்கிறோம்.
+
+அனுமானங்களின் எண்ணிக்கை~$0$ ஆக இருக்கும்போது கூற்றைக் காட்டுவது தொகுத்தறிதல்
+அடிநிலை. இந்நிலையில் $\delta$ ஒரே !!{sentence}~$!A$ ஐ, அதாவது ஓர் எடுகோளை,
+மட்டுமே கொண்டிருக்கும். எடுகோள்களை அனுமானங்களால் மட்டுமே !!{discharged} செய்ய
+முடியும்; இங்கு அனுமானங்களே இல்லாததால், அந்த எடுகோள் !!{undischarged} ஆகும்.
+ஆகவே நிறுவலின் அனைத்து !!{undischarged} எடுகோள்களையும் நிறைவுறுத்தும் எந்த
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$} உம்
+$!A$ ஐயும் நிறைவுறுத்தும்.
+
+இப்போது தொகுத்தறிதல் படியைப் பார்ப்போம். $\delta$ ஆனது~$n$ அனுமானங்களைக்
+கொண்டுள்ளது என்க. மிகக் கீழுள்ள அனுமானத்தின் முன்கோள் அல்லது முன்கோள்கள்,
+ஒவ்வொன்றும்~$n$ ஐவிடக் குறைவான அனுமானங்களைக் கொண்ட துணை-!!{derivation}s மூலம்
+!!{derive} செய்யப்படுகின்றன. தொகுத்தறிதல் கருதுகோளை ஏற்கிறோம்: மிகக் கீழுள்ள
+அனுமானத்தின் முன்கோள்கள், அவற்றில் முடியும் துணை-!!{derivation}s[gen]
+!!{undischarged} எடுகோள்களிலிருந்து பின்தொடர்கின்றன. முடிவு~$!A$ ஆனது முழு
+நிறுவலின் !!{undischarged} எடுகோள்களிலிருந்து பின்தொடர்கிறது என்று காட்ட
+வேண்டும்.
+
+மிகக் கீழுள்ள அனுமானத்தின் வகைக்கேற்ப நேர்வுகளைப் பிரிக்கிறோம். முதலில் ஒரே
+முன்கோளைக் கொண்டிருக்கக்கூடிய அனுமானங்களைப் பார்ப்போம்.
+
+\begin{enumerate}
+
+% SEGMENT OLP-0095-S03
+\item கடைசி அனுமானம் \Intro{\lnot} என்க. !!{derivation} பின்வரும் வடிவில்
+  இருக்கும்:
+  \begin{prooftree}
+    \AxiomC{$\Gamma, \Discharge{!A}{n}$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$\lfalse$}
+    \DischargeRule{\Intro{\lnot}}{n}
+    \UnaryInfC{$\lnot !A$}
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால், $\delta_1$ இன் !!{undischarged} எடுகோள்கள்
+  $\Gamma \cup \{!A\}$ இலிருந்து~$\lfalse$ பின்தொடர்கிறது.
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ஒன்றைக் கருதுக. $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ எனில்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\lnot !A}$ என்று காட்ட வேண்டும்.
+  மறுப்புக்கொணர்வுக்காக $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ என்றும்,
+  ஆனால் $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{\lnot !A}$ என்றும், அதாவது
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ என்றும் கொள்க. அப்போது
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma \cup \{!A\}}$ ஆகும். இது நமது
+  தொகுத்தறிதல் கருதுகோளுக்கு முரணானது. ஆகவே
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\lnot !A}$.
+
+% SEGMENT OLP-0095-S04
+\item கடைசி அனுமானம் \Elim{\land}. இரண்டு வகைகள் உள்ளன: முன்கோள்~$!A \land
+  !B$ இலிருந்து $!A$ அல்லது $!B$ ஐ அனுமானிக்கலாம். முதல் நேர்வைக் கருதுக.
+  !!{derivation}~$\delta$ பின்வருமாறு அமையும்:
+  \begin{prooftree}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A \land !B$}
+    \RightLabel{\Elim{\land}}
+    \UnaryInfC{$!A$}
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால், $!A \land !B$ ஆனது~$\delta_1$ இன்
+  !!{undischarged} எடுகோள்கள்~$\Gamma$ இலிருந்து பின்தொடர்கிறது.
+  \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} என்ற !!a{structure} ஒன்றைக்
+  கருதுக. $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ எனில்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ என்று காட்ட வேண்டும்.
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ என்க. தொகுத்தறிதல் கருதுகோளான
+  $\Gamma \Entails !A \land !B$ படி,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$. வரையறைப்படி,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$ என்பது, அப்போதும் அப்போது
+  மட்டுமே, $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ மற்றும்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$. ($!A \land !B$ இலிருந்து~$!B$
+  அனுமானிக்கப்படும் நேர்வும் இதேபோல் கையாளப்படுகிறது.)
+  
+% SEGMENT OLP-0095-S05
+\item கடைசி அனுமானம் \Intro{\lor}. இரண்டு வகைகள் உள்ளன: முன்கோள்~$!A$
+  அல்லது முன்கோள்~$!B$ இலிருந்து $!A \lor !B$ ஐ அனுமானிக்கலாம். முதல்
+  நேர்வைக் கருதுக. !!{derivation} பின்வரும் வடிவில் இருக்கும்:
+  \begin{prooftree}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A$}
+    \RightLabel{\Intro{\lor}}
+    \UnaryInfC{$!A \lor !B$}
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால், $!A$ ஆனது~$\delta_1$ இன் !!{undischarged}
+  எடுகோள்கள்~$\Gamma$ இலிருந்து பின்தொடர்கிறது.
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ஒன்றைக் கருதுக. $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ எனில்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lor !B}$ என்று காட்ட வேண்டும்.
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ என்க. தொகுத்தறிதல் கருதுகோளான
+  $\Gamma \Entails !A$ படி, $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
+  ஆகவே $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lor !B}$ ஆகவும் இருக்க வேண்டும்.
+  ($!B$ இலிருந்து $!A \lor !B$ அனுமானிக்கப்படும் நேர்வும் இதேபோல்
+  கையாளப்படுகிறது.)
+  
+% SEGMENT OLP-0095-S06
+\item கடைசி அனுமானம் \Intro{\lif}. $!A$ என்ற எடுகோளையும் $!B$ என்ற
+  முடிவையும் கொண்ட துணைநிறுவலிலிருந்து $!A \lif !B$ அனுமானிக்கப்படுகிறது:
+  \begin{prooftree}
+    \AxiomC{$\Gamma, \Discharge{!A}{n}$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!B$}
+    \DischargeRule{\Intro{\lif}}{n}
+    \UnaryInfC{$!A \lif !B$}
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால், $!B$ ஆனது~$\delta_1$ இன் !!{undischarged}
+  எடுகோள்களிலிருந்து பின்தொடர்கிறது; அதாவது $\Gamma \cup \{!A\} \Entails
+  !B$. \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ஒன்றைக் கருதுக. கடைசி அனுமானத்தில் $!A$ விடுவிக்கப்படுவதால், $\delta$ வின்
+  !!{undischarged} எடுகோள்கள் $\Gamma$ மட்டுமே. எனவே $\Gamma \Entails !A
+  \lif !B$ என்று காட்ட வேண்டும். மறுப்புக்கொணர்வுக்காக, ஏதோவொரு
+  \iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$} க்கு
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ ஆனால்
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \lif !B}$ என்க. அப்போது
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ மற்றும்
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$. ஆனால் கருதுகோளால் $!B$ ஆனது
+  $\Gamma \cup \{!A\}$ இன் பின்விளைவு; அதாவது
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$. இது ஒரு முரண்பாடு. ஆகவே
+  $\Gamma \Entails !A \lif !B$.
+
+% SEGMENT OLP-0095-S07
+\item கடைசி அனுமானம் \FalseInt. இங்கு $\delta$ பின்வருமாறு முடியும்:
+  \begin{prooftree}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$\lfalse$}
+    \RightLabel{\FalseInt}
+    \UnaryInfC{$!A$}
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால் $\Gamma \Entails \lfalse$. $\Gamma \Entails !A$
+  என்று காட்ட வேண்டும். அவ்வாறில்லை என்க; அப்போது ஏதோவொரு
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ க்கு
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ மற்றும்
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$. ஆனால் எப்போதும்
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{\lfalse}$; ஆகவே தொகுத்தறிதல்
+  கருதுகோளுக்கு முரணாக $\Gamma \Entails/ \lfalse$ ஆகிவிடும்.
+
+\item கடைசி அனுமானம் \FalseCl: பயிற்சி.
+
+% SEGMENT OLP-0095-S08
+\iftag{FOL}{
+\item கடைசி அனுமானம் \Intro{\lforall}. அப்போது $\delta$ பின்வரும் வடிவில்
+  இருக்கும்:
+  \begin{prooftree}
+    \AxiomC{$\Gamma$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A(a)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x)]$}
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால் முன்கோள்~$!A(a)$ ஆனது !!{undischarged}
+  எடுகோள்கள்~$\Gamma$ வின் பின்விளைவு. $\Sat{M}{\Gamma}$ ஆகுமாறு ஏதோவொரு
+  கட்டமைப்பு~$\Struct{M}$ ஐக் கருதுக. $\Sat{M}{\lforall[x][!A(x)]}$ என்று
+  காட்ட வேண்டும். $\lforall[x][!A(x)]$ ஒரு !!a{sentence} என்பதால், இதற்காக
+  ஒவ்வொரு மாறி ஒதுக்கீடு~$s$ க்கும் $\Sat{M}{!A(x)}[s]$ என்று காட்ட வேண்டும்
+  (\oliflabeldef{syn:ass:prop:sat-quant}{\olref[syn][ass]{prop:sat-quant}}{அளவையடைகளுக்கான
+  நிறைவுறுத்தல் விதி}). $\Gamma$ முழுவதும் வாக்கியங்களைக் கொண்டுள்ளதால்,
+  ஒவ்வொரு $!B \in \Gamma$ க்கும் $\Sat{M}{!B}[s]$ என்று
+  \oliflabeldef{syn:sat:defn:satisfaction}{\olref[syn][sat]{defn:satisfaction}}{வாக்கியக்
+  கணத்திற்கான நிறைவுறுத்தல் வரையறை} படி கிடைக்கிறது. $\Assign{a}{M'} = s(x)$
+  என்பதைத்தவிர $\Struct{M}$ போலவே இருக்கும் கட்டமைப்பு~$\Struct{M'}$ ஐக்
+  கொள்க. $a$ ஆனது~$\Gamma$ வில் இடம்பெறாததால்,
+  \oliflabeldef{syn:ext:cor:extensionality-sent}{\olref[syn][ext]{cor:extensionality-sent}}{ஒரு
+  வாக்கியத்தின் மெய்மை அதில் வரும் குறிகளின் விளக்கங்களை மட்டுமே சாரும் என்ற
+  துணைவிளைவு} படி $\Sat{M'}{\Gamma}$. $\Gamma \Entails !A(a)$ என்பதால்
+  $\Sat{M'}{!A(a)}$. $!A(a)$ ஒரு !!a{sentence} என்பதால்,
+  \oliflabeldef{syn:ass:prop:sentence-sat-true}{\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு
+  வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு} படி
+  $\Sat{M'}{!A(a)}[s]$. $!A(a)$ என்பது $\Subst{!A(x)}{a}{x}$ மட்டுமே என்பதை
+  நினைவுகூர்க; ஆகவே
+  \oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+  இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு} படி
+  $\Sat{M'}{!A(x)}[s]$ என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\Sat{M'}{!A(a)}$. எனவே $\Sat{M'}{!A(x)}[s]$. $a$ ஆனது~$!A(x)$ இல்
+  இடம்பெறாததால்,
+  \oliflabeldef{syn:ext:prop:extensionality}{\olref[syn][ext]{prop:extensionality}}{ஒரு
+  வாய்பாட்டின் மெய்மை அதில் வரும் மொழிக் குறிகளின் விளக்கங்களை மட்டுமே சாரும்
+  என்ற முன்மொழிவு} படி $\Sat{M}{!A(x)}[s]$. ஆனால் $s$ தன்னிச்சையான மாறி
+  ஒதுக்கீடு; ஆகவே $\Sat{M}{\lforall[x][!A(x)]}$.
+  
+% SEGMENT OLP-0095-S09
+\item கடைசி அனுமானம் \Intro{\lexists}: பயிற்சி.
+
+% SOURCE CORRECTION TA-ND-005: raw \forall is corrected to \lforall.
+\item கடைசி அனுமானம் \Elim{\lforall}: பயிற்சி.
+}{}
+\end{enumerate}
+
+% SEGMENT OLP-0095-S10
+இப்போது பல முன்கோள்களைக் கொண்டிருக்கக்கூடிய அனுமானங்களைப் பார்ப்போம்:
+\Elim{\lor}, \Intro{\land}, \iftag{FOL}{\Elim{\lif}, மற்றும்
+  \Elim{\lexists}}{மற்றும் \Elim{\lif}}.
+\begin{enumerate}
+
+% SEGMENT OLP-0095-S11
+\item கடைசி அனுமானம் \Intro{\land}. முன்கோள்கள்~$!A$, $!B$ ஆகியவற்றிலிருந்து
+  $!A \land !B$ அனுமானிக்கப்படுகிறது; $\delta$ பின்வரும் வடிவில் இருக்கும்:
+  \begin{prooftree}
+    \AxiomC{$\Gamma_1$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A$}
+    \AxiomC{$\Gamma_2$}
+    \RightLabel{$\delta_2$}
+    \DeduceC{$!B$}
+    \RightLabel{\Intro{\land}}
+    \BinaryInfC{$!A \land !B$}
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால், $!A$ ஆனது~$\delta_1$ இன் !!{undischarged}
+  எடுகோள்கள்~$\Gamma_1$ இலிருந்து பின்தொடர்கிறது; $!B$ ஆனது~$\delta_2$ இன்
+  !!{undischarged} எடுகோள்கள்~$\Gamma_2$ இலிருந்து பின்தொடர்கிறது. $\delta$
+  வின் !!{undischarged} எடுகோள்கள் $\Gamma_1 \cup \Gamma_2$; ஆகவே
+  $\Gamma_1 \cup \Gamma_2 \Entails !A \land !B$ என்று காட்ட வேண்டும்.
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_1 \cup \Gamma_2}$ ஆகுமாறு
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ஒன்றைக் கருதுக. $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_1}$ என்பதாலும்
+  $\Gamma_1 \Entails !A$ என்பதாலும்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. மேலும்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_2}$ என்பதாலும் $\Gamma_2 \Entails
+  !B$ என்பதாலும் $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$. இரண்டையும் சேர்த்து,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$.
+  
+% SEGMENT OLP-0095-S12
+\item கடைசி அனுமானம் \Elim{\lor}: பயிற்சி.
+
+% SEGMENT OLP-0095-S13
+\item கடைசி அனுமானம் \Elim{\lif}. முன்கோள்கள்~$!A \lif !B$, $!A$
+  ஆகியவற்றிலிருந்து $!B$ அனுமானிக்கப்படுகிறது. !!{derivation}~$\delta$
+  பின்வருமாறு அமையும்:
+  \begin{prooftree}
+    \AxiomC{$\Gamma_1$}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A \lif !B$}
+    \AxiomC{$\Gamma_2$}
+    \RightLabel{$\delta_2$}
+    \DeduceC{$!A$}
+    \RightLabel{\Elim{\lif}}
+    \BinaryInfC{$!B$}
+  \end{prooftree}
+  தொகுத்தறிதல் கருதுகோளால், $!A \lif !B$ ஆனது~$\delta_1$ இன்
+  !!{undischarged} எடுகோள்கள்~$\Gamma_1$ இலிருந்தும், $!A$ ஆனது~$\delta_2$
+  இன் !!{undischarged} எடுகோள்கள்~$\Gamma_2$ இலிருந்தும் பின்தொடர்கின்றன.
+  \iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+  ஒன்றைக் கருதுக. $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_1 \cup
+    \Gamma_2}$ எனில், $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ என்று காட்ட
+  வேண்டும். $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma_1 \cup \Gamma_2}$ என்க.
+  $\Gamma_1 \Entails !A \lif !B$ என்பதால்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$. $\Gamma_2 \Entails !A$
+  என்பதால் $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. ஆகவே
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$. (இல்லையெனில்,
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$ மற்றும்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ என்பவற்றால்
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A \lif !B}$ கிடைத்து,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$ என்பதுடன் முரண்படும்.)
+
+% SEGMENT OLP-0095-S14
+\item கடைசி அனுமானம் \Elim{\lnot}: பயிற்சி.
+  
+\tagitem{FOL}{கடைசி அனுமானம் \Elim{\lexists}: பயிற்சி.}{}
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0095-S15
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][ntd][sou]{thm:soundness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][ntd][sou]{thm:soundness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+$\Proves !A$ எனில், $!A$ ஒரு \iftag{FOL}{செல்லுபடியான வாக்கியம்}{மெய்மம்}.
+\end{cor}
+
+% SEGMENT OLP-0095-S16
+\begin{cor}
+\ollabel{cor:consistency-soundness}
+$\Gamma$ நிறைவுறத்தக்கது எனில், அது முரணற்றது.
+\end{cor}
+
+\begin{proof}
+எதிர்மறைநேர்மாற்றை நிறுவுகிறோம். $\Gamma$ முரணற்றதல்ல என்க. அப்போது
+$\Gamma \Proves \lfalse$; அதாவது, $\Gamma$ விலுள்ள !!{undischarged}
+எடுகோள்களிலிருந்து $\lfalse$ இன் !!a{derivation} உள்ளது.
+\olref{thm:soundness} படி, $\Gamma$ வை நிறைவுறுத்தும் எந்த
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$} உம்
+$\lfalse$ ஐ நிறைவுறுத்த வேண்டும். ஒவ்வொரு
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$} க்கும்
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{\lfalse}$ என்பதால், எந்த
+\iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} உம்~$\Gamma$ வை நிறைவுறுத்தாது;
+அதாவது $\Gamma$ நிறைவுறத்தக்கதல்ல.
+\end{proof}
+
+\end{document}
