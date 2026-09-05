@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-05T00:41:18.540687+00:00",
+  "date_utc": "2026-09-05T02:16:26.080113+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -297,6 +297,36 @@
       "unit_id": "OLP-0062",
       "source_sha256": "992456e01aa355799eabea11dc7d2a49a5f1a0f0ebeef05d36f86603c0f06d39",
       "translation_sha256": "973aa3dcd3bd6629e95a601a4a2a3e162abd6c687efd3887b6ddb4e2588a3446"
+    },
+    {
+      "unit_id": "OLP-0063",
+      "source_sha256": "09977f6410bc57fcedf4428c2212ccf67b2bf0bf574413c4e2fdcf4de6cccab7",
+      "translation_sha256": "1f7a80625eb412f908f72bfbc52b1a57f837ea82869ff73ea049def5ca95d722"
+    },
+    {
+      "unit_id": "OLP-0064",
+      "source_sha256": "148266281cc87fcd3e454249b9f6c42a117a9aed0733cc5a5f2e954ffd60bb58",
+      "translation_sha256": "b761cfb74350ff5647d05c8a44b935eb3fe6f7cc50a8a414b2058130023bb4c1"
+    },
+    {
+      "unit_id": "OLP-0065",
+      "source_sha256": "5448a91da184ef1d41e40ec2d56b74db63d49412d8b96b3f2a39a101b0191bad",
+      "translation_sha256": "3b42171b4319037bba21cecd70d1d1019949f8df368d353b008c530207dd708b"
+    },
+    {
+      "unit_id": "OLP-0066",
+      "source_sha256": "77b5d31c7b63f657e0d5492d83810bfdc21af0169a9b38ccd5302e0e4cdefdfe",
+      "translation_sha256": "4e2fd02da17a292c320b9e0c959b21037008833ca5ddb75234dc005901df6048"
+    },
+    {
+      "unit_id": "OLP-0067",
+      "source_sha256": "8c9db50bcbc7a4aa757b8d57796b2e51df04b1cabb61f46756a79f72a1780b8f",
+      "translation_sha256": "c310424b10bda5ceda8d2c7dddf113ae4a75f43abee9b9dd0ebf41bbe5ec548f"
+    },
+    {
+      "unit_id": "OLP-0068",
+      "source_sha256": "b9637a6a1cee29ebba2f8d2cdf238d4567d8ec4b7995607abcb0ee1aef0570b9",
+      "translation_sha256": "9da97ff2f673e92b3aeaa5e39877d9afffff8ac942001c3ab6a9f3d343a317d7"
     }
   ],
   "samples": [
@@ -886,6 +916,69 @@
       "reverse_paraphrase": "Given injections A to B and B to A, the image inclusions and helper proposition produce a bijection to g[B], followed by g inverse to B.",
       "assessment": "Function directions, image domains and the final composition are retained exactly as in the frozen source.",
       "translation_segment_sha256": "c1e49b29349f1e559e6a16f340cecc208d10b3b2b8ca5b93aad826c55ee14335",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0063-S01",
+      "reverse_paraphrase": "The proof-systems chapter imports its introduction and all four surveyed calculi: sequent calculus, natural deduction, tableaux and axiomatic deduction.",
+      "assessment": "All five imports remain in source order and the editorial scope is retained.",
+      "translation_segment_sha256": "28de54148607bdbafe8013f9f1e30d6d48b1201a7a7d1c7991f2c4d0672c6eef",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0064-S05",
+      "reverse_paraphrase": "Soundness is the only-if direction: derivability guarantees entailment or validity.",
+      "assessment": "The direction is stated in prose and remains aligned with the preceding two biconditionals.",
+      "translation_segment_sha256": "671c2f24cd78882d662efdf15baf9ebe0cb51237d8364b1f653a4f61990c92f8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0064-S06",
+      "reverse_paraphrase": "Completeness is the converse direction: semantic validity or entailment guarantees syntactic derivability.",
+      "assessment": "The theorem and consequence versions remain separate, and no complete-system claim is made for every logic.",
+      "translation_segment_sha256": "e53152fe0ef6f3c6102e720f22a7165a13400d91c328272799c7a09df96dd2c9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0064-S07",
+      "reverse_paraphrase": "A set is syntactically inconsistent when everything is derivable from it; consistency is intended to coincide with semantic satisfiability.",
+      "assessment": "The two notions and the soundness/completeness directions are not conflated.",
+      "translation_segment_sha256": "4283341bd449ffff3044cb8b1ca4bd54dbc7c53b3cb534b0c4645503805c7816",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0065-S01",
+      "reverse_paraphrase": "A sequent is a pair of possibly empty sentence sequences separated by the sequent sign; a derivation is a tree rooted below initial sequents.",
+      "assessment": "Both sides may be empty, and the left/right inference examples retain their exact formulas.",
+      "translation_segment_sha256": "26c477f0712fd216af27cf088071062a775b74821aa3759e8f45e07264315d36",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0066-S02",
+      "reverse_paraphrase": "Natural deduction may discharge temporary assumptions; the assumptions left undischarged jointly entail the conclusion.",
+      "assessment": "The roles of leaves, root, temporary hypotheses, discharge labels and conclusion are all retained.",
+      "translation_segment_sha256": "1be57db126a45d01961d8dc0ed72da445029ed73f5c3ade55aac6e07ab08fd8f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0067-S02",
+      "reverse_paraphrase": "A tableau closes exactly when every branch contains matching true- and false-signed copies of some formula.",
+      "assessment": "Branch splitting and the two sign-specific rule patterns remain distinct.",
+      "translation_segment_sha256": "7abf09708d3b544d48513bea2d3aab42a504659555747b7d3487bfb54984e559",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0067-S05",
+      "reverse_paraphrase": "A fully expanded open tableau branch can yield a satisfying structure, while a closed tableau is an upside-down condensed sequent derivation.",
+      "assessment": "Satisfiable does not imply every tableau is closed; the open-branch qualification and rule-saturation condition remain.",
+      "translation_segment_sha256": "1b84644f95971bd538cdb8cac9dfc680cb22828278727fa23ec81a452f982f14",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0068-S03",
+      "reverse_paraphrase": "In an axiomatic system, Gamma proves A when a derivation ending in A uses Gamma for its assumption lines; a theorem uses no such lines.",
+      "assessment": "The three-line example and all axiom-schema substitutions remain unchanged.",
+      "translation_segment_sha256": "1fb62a9577983bf4bab88855036fa1dd4d300697f01e07458561046f81e1ead0",
       "status": "author-reviewed"
     }
   ],

@@ -3,7 +3,7 @@
 India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
 Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
 
-The full edition is in progress. **59 of 722 frozen content units are drafted, source-aligned and textually audited** (Sets through Infinite Sets, followed by propositional syntax and semantics).
+The full edition is in progress. **65 of 722 frozen content units are drafted, source-aligned and textually audited** (Sets through Infinite Sets, propositional syntax and semantics, and the first-order proof-systems survey).
 The first tagged reader remains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
 The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Sets, Relations, Functions, Size of Sets, number-system construction and Infinite Sets. Patch release v0.2.1 replaces five references to chapters outside this reader with descriptive Tamil fallbacks; the live references return automatically when those destinations are included in a later complete edition. It passed a three-pass guarded XeLaTeX/BibTeX build, font embedding and copy/search checks, plus visual inspection of every rendered page.
 
@@ -11,14 +11,14 @@ The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Set
 
 - [கணங்கள் — Tamil Sets chapter PDF](readers/sets-ta-Taml-IN.pdf): 13 pages including attribution and a separate edition note.
 - [கணங்கள் முதல் முடிவுறாத கணங்கள் வரை — combined Tamil PDF](readers/sets-functions-relations-ta-Taml-IN.pdf): 99 pages, 51 source units and six chapters, including separate source-correction notes.
-- Editable Tamil: translation/content/sets-functions-relations/ and translation/content/propositional-logic/.
+- Editable Tamil: translation/content/sets-functions-relations/, translation/content/propositional-logic/, and translation/content/first-order-logic/proof-systems/.
 - Frozen, unchanged English sources and original components: upstream/.
 - Reader master: build/tamil-batch001.tex.
 - Combined 51-unit checkpoint master: build/tamil-sfr.tex.
 - Propositional syntax-and-semantics source master: build/tamil-pl-syn.tex.
 
 This is machine translation with source comparison and author semantic review. Independent human or native-speaker approval is not claimed.
-Both readers were checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 59 drafted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction; the later eight units currently have textual QA only. The patched 51-unit combined reader has no undefined references or literal `??` markers. The evidence records 495 aligned segments and the exact accepted 99-page PDF hash.
+Both readers were checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 65 drafted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction; the later fourteen units currently have textual QA only. The patched 51-unit combined reader has no undefined references or literal `??` markers. The evidence records 523 aligned segments and the exact accepted 99-page PDF hash.
 
 PDF text reuse has measured limitations. Poppler correctly extracts five tested Tamil phrases and representative union, intersection and Cartesian-product formulas. PyMuPDF duplicates some Tamil syllables or loses spacing. Composite negation symbols may still split during extraction in some contexts; blackboard number-set letters may extract as ordinary letters. Use the editable formulas for exact mathematical reuse. This is not a claim of tagged-PDF or universal screen-reader accessibility. A semantic reader remains part of the continuing full-edition work.
 
