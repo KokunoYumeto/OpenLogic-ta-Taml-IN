@@ -1,0 +1,33 @@
+{
+  "schema": "openlogic-tamil-metadata-byte-correction/1",
+  "generated_utc": "2026-09-05T01:00:14.4049478Z",
+  "scope": "Evidence metadata only; no translation source, reader, release asset or TeX process was changed.",
+  "public_commit_audited": "cddabdc531ef570e852519f7b9dbe78bb7e1ef86",
+  "issue": "The version-1 recovery receipt labeled private Windows state hashes as state_hashes without distinguishing them from the LF or mixed public Git payloads. Those private hashes were valid for their own bytes but did not bind the public evidence files.",
+  "superseded_receipt": {
+    "private_state_path": "METADATA-RECOVERY-CURRENT.json",
+    "private_state_bytes": 3027,
+    "private_state_sha256": "3ae2e26cd2b144558679d077bfa5357e7e947cfa71ba9acc5f173c2ff0d28052",
+    "public_path": "evidence/metadata-recovery-current.json",
+    "public_bytes": 2974,
+    "public_sha256": "a54d1c37ae54642575573f82d5fb2574f9322c3424648488b0c2e7da0db08b49",
+    "public_git_blob": "2ccbbb5e3d2ce88cff9e8befbba58881ca4c35ef"
+  },
+  "corrected_receipt": {
+    "schema": "openlogic-tamil-interrupted-metadata-recovery/2",
+    "private_state_path": "METADATA-RECOVERY-CURRENT.json",
+    "private_state_bytes": 6111,
+    "private_state_sha256": "8e238fdc9ab057b4b0f3fef347fc0d2300f82a25dc42a5d2ef1a53b1a0f89fc3",
+    "public_path": "evidence/metadata-recovery-current.json",
+    "public_bytes": 6062,
+    "public_sha256": "9deb7fddd05a24f83a6d917eb8155473e70caa6c7c1a93a513e2ede51a1699c4",
+    "public_git_blob": "b4937fe7d9ccef4dab9be353d87074f30d31f216",
+    "exact_public_file_bindings": 13
+  },
+  "accepted_reader_unchanged": {
+    "path": "readers/sets-functions-relations-ta-Taml-IN.pdf",
+    "bytes": 810122,
+    "sha256": "e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83"
+  },
+  "result": "corrected"
+}

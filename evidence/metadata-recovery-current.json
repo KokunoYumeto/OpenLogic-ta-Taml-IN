@@ -1,5 +1,5 @@
 {
-  "schema": "openlogic-tamil-interrupted-metadata-recovery/1",
+  "schema": "openlogic-tamil-interrupted-metadata-recovery/2",
   "generated_utc": "2026-09-05T00:41:20.005434+00:00",
   "scope": "Evidence-only recovery after immutable v0.2.1; accepted reader bytes were not rebuilt or changed.",
   "manager_audit_inputs": {
@@ -35,7 +35,8 @@
     "duplicate_ids": [],
     "sha256": "b92e3519f49a25d14f7190e015eba4ad2b903c128223853cd7fd86975a397a3a"
   },
-  "state_hashes": {
+  "representation_note": "The following private-state hashes bind the exact Windows working bytes present at recovery time; most use CRLF. They are not hashes of the public Git blobs. Public repository bytes are bound separately below.",
+  "private_state_sha256_at_recovery": {
     "SOURCE_MANIFEST.jsonl": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155",
     "CANON_SOURCES.jsonl": "87a96334b208dbfa758c8fc0eb17c5bce2dcd9eeb483affd8f56e02dfb97d004",
     "CANON_PASSAGES.jsonl": "9fa459acbad03b75a4cc830dbd9be853229b8ef3bc1fa41a3994009fefc5758f",
@@ -50,5 +51,21 @@
     "PUBLICATION-READBACK.json": "aaac9730075fe36a57473ff9b6489027e281fe83463a747d44beba34b4acfe90",
     "SFR-RENDER-QA.json": "bc4310da73bd3e8131778ff092692b180250e3b0065c838f9a637bddcdfdacb9"
   },
+  "public_evidence_at_commit_cddabdc531ef570e852519f7b9dbe78bb7e1ef86": {
+    "evidence/source-manifest.jsonl": {"bytes": 356467, "sha256": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155", "git_blob": "81c23ac491332aff12511f6a9ea9bb28f2b2375e"},
+    "evidence/canon-sources.jsonl": {"bytes": 7741, "sha256": "29b219d148abcb011f52c2f1f8cf5740621e8b10ee09f1bd853ff5f4a9b49207", "git_blob": "210f31c094803af4b6974bb6801b05aa3cd0722e"},
+    "evidence/canon-passages.jsonl": {"bytes": 34297, "sha256": "99858c5bc77523d3df13efa29cb01815899c781762a0e2de4ff17b9d89ea8246", "git_blob": "122bbc27ba08a7f69e740aa6ed0cd364db006e49"},
+    "evidence/term-decisions.jsonl": {"bytes": 45885, "sha256": "27ad175231e308c8be84c15ccde954b13956c8f8033ac067f03b0dca5724bb23", "git_blob": "94a6702e94932dbee8f5a1bc0872479cd66875d0"},
+    "evidence/segment-canon-use.jsonl": {"bytes": 655907, "sha256": "22bb817cd15db29b2c263274a028aec1ca62b3f8d76a182fb94fb899be282a7e", "git_blob": "4b1563a4490fc67d9bbf65d41ecefb496c5fab7f"},
+    "evidence/translation-decisions.jsonl": {"bytes": 435384, "sha256": "b92e3519f49a25d14f7190e015eba4ad2b903c128223853cd7fd86975a397a3a", "git_blob": "d14f90b6dcac96aaf9807bbf3221c44281041778"},
+    "evidence/semantic-review-current.json": {"bytes": 56855, "sha256": "054c280d039ae235065c678f3e66634fdaf01ea59f5d6f49c28f80a33214c990", "git_blob": "ab75ce6d5a227ad13b049709a17b7d9cfeb14dbd"},
+    "evidence/qa-batches/qa-b037.json": {"bytes": 10345, "sha256": "5d5a7a1cfe49998fda2b22331dc019fc7ff2a9e01129d7847f07545efccb07a2", "git_blob": "9060e374f3fbd0b2a89ef114ee0036b152ffcf03"},
+    "evidence/qa-current.json": {"bytes": 1385, "sha256": "0d5cce46f50b9e307cd881ac8d060f81765a636d076284db6d1791862730e2b0", "git_blob": "38895c53b586ed5d9b997f37885836013eca043b"},
+    "evidence/checkpoint-current.json": {"bytes": 115693, "sha256": "4065ce7744e0ff4b9282ad64b7ca0509b20b498302c5a29c4d35e6f0539cbbcf", "git_blob": "fdc3974fa4a7ad276dee9bfc68ae8a1596806953"},
+    "evidence/cursor-current.json": {"bytes": 2742, "sha256": "5b98139ed52ef9505f3244540c04184d399b48d0229b019e9c1dc53d5facfd63", "git_blob": "bc893dd8d8d0945afb180e5def2128a474b7e29e"},
+    "evidence/publication-readback-current.json": {"bytes": 3949, "sha256": "8ab020a06be424cbc02f99df47a8bb51f036618368d347053876259432d2eac4", "git_blob": "9125c71af665f064c1561264d4498591439fe0d9"},
+    "evidence/sfr-render-qa.json": {"bytes": 3941, "sha256": "724c851a90e6b4248bbfd576a2cd07ebddb7e4fc02a6023ddc7e727dffd84600", "git_blob": "dee04abcde0f2306b74d64a7ad89d70d0905be29"}
+  },
+  "correction": "The version-1 field named state_hashes was valid only for private state bytes and was ambiguous when presented beside public evidence paths. Version 2 labels that representation and binds the exact public bytes and Git blob identities separately.",
   "result": "pass"
 }
