@@ -1,0 +1,117 @@
+{
+  "schema": "openlogic-tamil-proof-systems-checkpoint-public-readback/1",
+  "verified_utc": "2026-09-05T02:52:31.417014+00:00",
+  "anonymous": true,
+  "authorization_header_sent": false,
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "commit": "ef7a360177e04239a4ed5763a8fcd73ff948ca7b",
+  "main_ref_commit": "ef7a360177e04239a4ed5763a8fcd73ff948ca7b",
+  "prior_release_tags_unchanged": {
+    "v0.1.0-sets": "0cd67f05f2ae68538525c9ea1d7b81a7b9fc052f",
+    "v0.2.0-sets-functions-relations": "efa6b7982b5a60c83dab0d37359f8f43a82b99c1",
+    "v0.2.1-sets-functions-relations": "8a7d5ff8f78c75a41c9e1d58e8fc49be3ce34b2d"
+  },
+  "codeload": {
+    "url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/ef7a360177e04239a4ed5763a8fcd73ff948ca7b",
+    "http_status": 200,
+    "bytes": 3481220,
+    "sha256": "3046e5b7862934e410738e240eb2028c29dafb0766eb7dd1481a3f2a7166b552",
+    "root": "OpenLogic-ta-Taml-IN-ef7a360177e04239a4ed5763a8fcd73ff948ca7b",
+    "files": 948,
+    "unsafe_paths": 0,
+    "duplicate_paths": 0
+  },
+  "local_git_archive": {
+    "bytes": 3347330,
+    "sha256": "368ee5e58b49141b55201343eaf34d2f058048035138069e144616ffb2f1f2b0",
+    "files": 948,
+    "duplicate_paths": 0
+  },
+  "comparison": {
+    "local_only_paths": 0,
+    "remote_only_paths": 0,
+    "content_mismatches": 0,
+    "verified_files": 948
+  },
+  "key_public_hashes": {
+    "README.md": {
+      "bytes": 5683,
+      "sha256": "0a58e4a470671f5d4809dca03185565e02622cb271d48e9ddc83be3acf06c6a9"
+    },
+    "evidence/checkpoint-current.json": {
+      "bytes": 122792,
+      "sha256": "a1895d9bcf764c0e97ce3bd427ab1a870e9eeb38ae17339d177979cfb54d8407"
+    },
+    "evidence/cursor-current.json": {
+      "bytes": 2845,
+      "sha256": "3e4e0b27887ce52099b0ec65162fcecd28923eec9a80673f57d06937a05ac443"
+    },
+    "evidence/qa-batches/qa-b038.json": {
+      "bytes": 7262,
+      "sha256": "1269a82d2350b48bbd4b3da3f9fa647ca6ee0ea009d3eb3b31b079fcc0afec3d"
+    },
+    "evidence/qa-current.json": {
+      "bytes": 1385,
+      "sha256": "ac415e176c576668da094f7b8c7116070f0c0372056f036a87837fda75fe8d27"
+    },
+    "evidence/segment-canon-use.jsonl": {
+      "bytes": 706353,
+      "sha256": "7196e229b077f253ba78673c60deb39f0f53601161c70d498baa7cd7a186a3b6"
+    },
+    "evidence/semantic-review-current.json": {
+      "bytes": 62339,
+      "sha256": "4e80d1522e3d24365c9cd1590757ab384b7573bfd4fe4a6a6ba1a51a415d13e7"
+    },
+    "evidence/term-decisions.jsonl": {
+      "bytes": 51806,
+      "sha256": "11c1fe8c43fa180c0c0d9f91a1d2334e32395dfa46927c97a78213a1fdd9e869"
+    },
+    "evidence/translation-decisions.jsonl": {
+      "bytes": 497325,
+      "sha256": "b4b2c2ed57106d8690b81bce67777c2e47b6fd657c76530a09663fb3021bae94"
+    },
+    "translation/content/first-order-logic/proof-systems/proof-systems.tex": {
+      "bytes": 1235,
+      "sha256": "1f7a80625eb412f908f72bfbc52b1a57f837ea82869ff73ea049def5ca95d722"
+    },
+    "translation/content/first-order-logic/proof-systems/introduction.tex": {
+      "bytes": 13402,
+      "sha256": "b761cfb74350ff5647d05c8a44b935eb3fe6f7cc50a8a414b2058130023bb4c1"
+    },
+    "translation/content/first-order-logic/proof-systems/sequent-calculus.tex": {
+      "bytes": 6445,
+      "sha256": "3b42171b4319037bba21cecd70d1d1019949f8df368d353b008c530207dd708b"
+    },
+    "translation/content/first-order-logic/proof-systems/natural-deduction.tex": {
+      "bytes": 11009,
+      "sha256": "4e2fd02da17a292c320b9e0c959b21037008833ca5ddb75234dc005901df6048"
+    },
+    "translation/content/first-order-logic/proof-systems/tableaux.tex": {
+      "bytes": 8326,
+      "sha256": "c310424b10bda5ceda8d2c7dddf113ae4a75f43abee9b9dd0ebf41bbe5ec548f"
+    },
+    "translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex": {
+      "bytes": 9536,
+      "sha256": "9da97ff2f673e92b3aeaa5e39877d9afffff8ac942001c3ab6a9f3d343a317d7"
+    },
+    "readers/sets-functions-relations-ta-Taml-IN.pdf": {
+      "bytes": 810122,
+      "sha256": "e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83"
+    }
+  },
+  "scope": {
+    "drafted_units": 65,
+    "aligned_segments": 523,
+    "reader_verified_units": 51,
+    "new_source_units": [
+      "OLP-0063",
+      "OLP-0064",
+      "OLP-0065",
+      "OLP-0066",
+      "OLP-0067",
+      "OLP-0068"
+    ],
+    "next_contiguous_unit": "OLP-0069"
+  },
+  "result": "pass"
+}
