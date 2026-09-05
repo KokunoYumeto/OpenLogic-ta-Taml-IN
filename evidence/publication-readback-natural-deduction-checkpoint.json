@@ -1,0 +1,145 @@
+{
+  "schema": "openlogic-tamil-natural-deduction-checkpoint-public-readback/1",
+  "verified_utc": "2026-09-05T16:37:59.153169+00:00",
+  "anonymous": true,
+  "authorization_header_sent": false,
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "commit": "be75bc82cc111b23dee07600373cf2434f5306a5",
+  "main_ref_commit": "be75bc82cc111b23dee07600373cf2434f5306a5",
+  "prior_release_tags_unchanged": {
+    "v0.1.0-sets": "0cd67f05f2ae68538525c9ea1d7b81a7b9fc052f",
+    "v0.2.0-sets-functions-relations": "efa6b7982b5a60c83dab0d37359f8f43a82b99c1",
+    "v0.2.1-sets-functions-relations": "8a7d5ff8f78c75a41c9e1d58e8fc49be3ce34b2d"
+  },
+  "codeload": {
+    "url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/be75bc82cc111b23dee07600373cf2434f5306a5",
+    "http_status": 200,
+    "bytes": 4860730,
+    "sha256": "f20eeaf01826ef715d1c9ebac028af99248852b29c2ab9d9c521b7f7dadea9c7",
+    "root": "OpenLogic-ta-Taml-IN-be75bc82cc111b23dee07600373cf2434f5306a5",
+    "files": 997
+  },
+  "local_git_archive": {
+    "bytes": 4720392,
+    "sha256": "758a2d69d24d75e0e640c0cef6b37137e3d649b8376e42046c610e0250e77bcd",
+    "files": 997
+  },
+  "comparison": {
+    "local_only_paths": 0,
+    "remote_only_paths": 0,
+    "content_mismatches": 0,
+    "verified_files": 997
+  },
+  "key_public_hashes": {
+    "README.md": {
+      "bytes": 6337,
+      "sha256": "c24965c9c2273c694285c99db45abc7bb96ac8aa57c924db6b70919dcad89f7d"
+    },
+    "build/tamil-proof-systems-sequent.tex": {
+      "bytes": 6174,
+      "sha256": "5ef744362c7226c6ade640b343bfcc7316579724207475ae271cc2fafc52bee6"
+    },
+    "evidence/checkpoint-current.json": {
+      "bytes": 186173,
+      "sha256": "989c18208ec26cce8ada08e6bb378d4ff9fd9854c09ad8bd4aa359e02831ce7f"
+    },
+    "evidence/cursor-current.json": {
+      "bytes": 3293,
+      "sha256": "b55c7879562dbc5809effedf6c07ecbbf869a9e32608b0a8b8e62eaab6955dd0"
+    },
+    "evidence/qa-current.json": {
+      "bytes": 1463,
+      "sha256": "84459a51e141ad963331f45f474604ff9a0ba4fa6500c63fd09535deab4dfd28"
+    },
+    "evidence/semantic-review-current.json": {
+      "bytes": 103702,
+      "sha256": "2fdda4c81884e16487c7e3cb14e5449ad4c118729388c52af1df7b1ebec82787"
+    },
+    "evidence/source-corrections.json": {
+      "bytes": 49584,
+      "sha256": "6bbd0e6a473295eaaf8a219b933bb62439fffc32762281d0865bc3e68be719d7"
+    },
+    "evidence/qa-batches/qa-b042.json": {
+      "bytes": 7976,
+      "sha256": "ee9432892cb4139d99cc5526af7b723d659bc56c255d860e7cfb60fbb6a671c2"
+    },
+    "evidence/qa-batches/qa-b043.json": {
+      "bytes": 4751,
+      "sha256": "e8e92ffbb51cc8894a93c99d244f304b624e6169d8d41693452e0a53f02e868f"
+    },
+    "evidence/qa-batches/qa-b044.json": {
+      "bytes": 3101,
+      "sha256": "8488db103329eaf00deb7f7fcc7ab24f01d73940b2b271e50613339bcae982b6"
+    },
+    "evidence/qa-batches/qa-b045.json": {
+      "bytes": 4950,
+      "sha256": "771a75f41ca8eb951a9f932d14070603a11492ee22133c9e3e0d61a092faec70"
+    },
+    "evidence/qa-batches/qa-b046.json": {
+      "bytes": 11219,
+      "sha256": "de1f0aa544f3fca53bdf9cafcd5c4e9973a9a5be11ed9fe6b5e286d08a5c3b1e"
+    },
+    "evidence/translation-decisions/START_HERE.md": {
+      "bytes": 913,
+      "sha256": "4e5e796935bfec587663a5c923ba9052bf342a732729801029aee800fb1ffa1e"
+    },
+    "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md": {
+      "bytes": 1449597,
+      "sha256": "90518c00a45c5368f484e5ee4ca9b6ae28bdcb1fa4a6bb0980088603a59ee96d"
+    },
+    "evidence/translation-decisions/PRIORITY_REVIEW.md": {
+      "bytes": 742333,
+      "sha256": "ef8aad7ba4a78b5a0d01aa9b991053f80110599588e9a7c373fc69827895b5b3"
+    },
+    "evidence/translation-decisions/DECISION_OCCURRENCES.csv": {
+      "bytes": 3981701,
+      "sha256": "1a8abeb130eb4ff4d6b1401da38036b6d3e01a72081f399ed75ed3e2c1fb5e99"
+    },
+    "evidence/translation-decisions/DECISIONS.json": {
+      "bytes": 17099767,
+      "sha256": "79c0d638c19b01a418e0fb76e303f7f289ba16d129b7d654fdf545a3bebdf719"
+    },
+    "evidence/translation-decisions/translation-decision.schema.json": {
+      "bytes": 10787,
+      "sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90"
+    },
+    "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": {
+      "bytes": 2937,
+      "sha256": "77e86ef85de8aa0ad712507e02d4b637128ee1cde9199ff9e8440901688a41a1"
+    },
+    "evidence/translation-decisions/VARIANT_ASSESSMENT.md": {
+      "bytes": 4374,
+      "sha256": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d"
+    },
+    "readers/sets-functions-relations-ta-Taml-IN.pdf": {
+      "bytes": 810122,
+      "sha256": "e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83"
+    }
+  },
+  "scope": {
+    "drafted_units": 94,
+    "aligned_segments": 698,
+    "reader_verified_units": 51,
+    "new_source_units": [
+      "OLP-0084",
+      "OLP-0085",
+      "OLP-0086",
+      "OLP-0087",
+      "OLP-0088",
+      "OLP-0089",
+      "OLP-0090",
+      "OLP-0091",
+      "OLP-0092",
+      "OLP-0093",
+      "OLP-0094",
+      "OLP-0095",
+      "OLP-0096",
+      "OLP-0097"
+    ],
+    "semantic_review_samples": 159,
+    "decision_records": 147,
+    "decision_occurrences": 5440,
+    "next_contiguous_unit": "OLP-0098"
+  },
+  "result": "pass"
+}
