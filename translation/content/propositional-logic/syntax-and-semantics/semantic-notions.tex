@@ -1,0 +1,101 @@
+% SEGMENT OLP-0062-S01
+% Part: propositional-logic
+% Chapter: syntax-and-semantics
+% Section: semantic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{syn}{sem}
+
+\olsection{பொருண்மைக் கருத்துகள்}
+
+பின்வரும் பொருண்மைக் கருத்துகளை வரையறுக்கிறோம்:
+
+\begin{defn}
+\begin{enumerate}
+\item ஏதோ ஒரு~$\pAssign{v}$ க்கு $\pSat{v}{!A}$ எனில்,
+  !!^a{formula}~$!A$ \emph{நிறைவுறத்தக்கது}; எந்த $\pAssign{v}$ க்கும்
+  $\pSat{v}{!A}$ இல்லை எனில் அது \emph{நிறைவுறத்தகாதது};
+\item எல்லா !!{valuation}s~$\pAssign{v}$ க்கும் $\pSat{v}{!A}$ எனில்,
+  !!^a{formula}~$!A$ ஒரு \emph{மெய்மம்};
+\item !!^a{formula}~$!A$ நிறைவுறத்தக்கதாகவும் மெய்மமாக இல்லாமலும்
+  இருந்தால், அது \emph{நிச்சயமற்றது};
+\item $\Gamma$ என்பது !!{formula}s இன் கணம் எனில், $\pSat{v}{\Gamma}$
+  ஆக உள்ள ஒவ்வொரு !!{valuation}~$\pAssign{v}$ க்கும் $\pSat{v}{!A}$
+  என இருப்பது, அப்போதும் அப்போது மட்டுமே, $\Gamma \Entails !A$
+  (``$\Gamma$ இலிருந்து $!A$ பொருண்மைப்படிப் பின்விளைகிறது'') என்க.
+\item $\Gamma$ என்பது !!{formula}s இன் கணம் எனில், $\pSat{v}{\Gamma}$
+  ஆக இருக்குமாறு !!a{valuation}~$\pAssign{v}$ இருந்தால் $\Gamma$
+  \emph{நிறைவுறத்தக்கது}; இல்லையெனில் $\Gamma$
+  \emph{நிறைவுறத்தகாதது}.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0062-S02
+\begin{prob}
+ பின்வரும் நான்கு !!{formula}s ஒவ்வொன்றும் (a)~நிறைவுறத்தக்கதா,
+ (b)~மெய்மமா, (c)~நிச்சயமற்றதா எனத் தீர்மானிக்க.
+\begin{enumerate}
+  \item \( ( \Obj p_0 \lif ( \lnot \Obj p_1 \lif \lnot \Obj p_0 ) ) \).
+  \item \( ( ( \Obj p_0 \land \lnot \Obj p_1 ) \lif ( \lnot \Obj p_0 \land \Obj p_2 )) \liff ( ( \Obj p_2 \lif \Obj p_0 ) \lif ( \Obj p_0 \lif \Obj p_1 )) \).
+  \item \( ( \Obj p_0 \liff \Obj p_1 ) \lif ( \Obj p_2 \liff \lnot \Obj p_1 ) \).
+  \item \( (( \Obj p_0 \liff ( \lnot \Obj p_1 \land \Obj p_2 )) \lor ( \Obj p_2 \lif ( \Obj p_0 \liff \Obj p_1 ))) \).
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0062-S03
+\begin{prop}
+\ollabel{prop:semanticalfacts}
+\begin{enumerate}
+\item $!A$ ஒரு மெய்மம் என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\emptyset \Entails !A$;
+\item $\Gamma \Entails !A$ மற்றும் $\Gamma \Entails !A \lif !B$ எனில்,
+  $\Gamma \Entails !B$;
+\item $\Gamma$ நிறைவுறத்தக்கது எனில், $\Gamma$ வின் ஒவ்வொரு முடிவுறு
+  உட்கணமும் நிறைவுறத்தக்கது;
+\item \ollabel{def:monotonicity} ஒருபோக்குத்தன்மை: $\Gamma \subseteq \Delta$
+  மற்றும் $\Gamma \Entails !A$ எனில், $\Delta \Entails !A$ உம்;
+\item \ollabel{def:Cut} கடப்புப் பண்பு: $\Gamma \Entails !A$ மற்றும்
+  $\Delta \cup \{ !A\} \Entails !B$ எனில், $\Gamma \cup \Delta \Entails
+  !B$.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[pl][syn][sem]{prop:semanticalfacts} ஐ நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0062-S04
+\begin{prop}\ollabel{prop:entails-unsat}
+  $\Gamma \Entails !A$ என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\Gamma \cup \{\lnot !A\}$ நிறைவுறத்தகாதது.
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[pl][syn][sem]{prop:entails-unsat} ஐ நிறுவுக.
+\end{prob}
+
+\begin{thm}[பொருண்மைக் கழித்தல் தேற்றம்]
+  \ollabel{thm:sem-deduction} $\Gamma \Entails !A \lif !B$ என்பது,
+  அப்போதும் அப்போது மட்டுமே, $\Gamma \cup \{!A\} \Entails !B$.
+\end{thm}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[pl][syn][sem]{thm:sem-deduction} ஐ நிறுவுக.
+\end{prob}
+
+\end{document}

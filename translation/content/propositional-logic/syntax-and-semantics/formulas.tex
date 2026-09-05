@@ -1,0 +1,196 @@
+% SEGMENT OLP-0058-S01
+% Part: propositional-logic
+% Chapter: syntax-and-semantics
+% Section: formulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{syn}{fml}
+
+\olsection{கூற்றுத் தருக்க \usetoken{P}{formula}}
+
+கூற்றுத் தருக்கவியலின் !!^{formula}s,
+\emph{!!{propositional
+    variable}s}
+\iftag{prvFalse}{\iftag{prvTrue}{,}{ மற்றும்} பொய்மைக்கான
+  கூற்று மாறிலி~$\lfalse$}{}
+\iftag{prvTrue}{\iftag{prvFalse}{
+    மற்றும்}{} மெய்மைக்கான கூற்று மாறிலி~$\ltrue$}{} ஆகியவற்றிலிருந்து
+\emph{தருக்க இணைப்புகளைப்} பயன்படுத்திக் கட்டமைக்கப்படுகின்றன.
+
+\begin{enumerate}
+\item !!^a{denumerable} கணமான~$\PVar$ இல் உள்ள !!{propositional variable}s
+  $\Obj p_0$, $\Obj p_1$, \dots
+\tagitem{prvFalse}{!!{falsity}க்கான கூற்று மாறிலி~$\lfalse$.}{}
+\tagitem{prvTrue}{!!{truth}க்கான கூற்று மாறிலி~$\ltrue$.}{}
+\item தருக்க இணைப்புகள்:
+  \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (மறுப்பு)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (இணையல்)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (பிரிப்பிணைவு)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}%
+\item குறியிடல் குறிகள்: (, ), மற்றும் காற்புள்ளி.
+\end{enumerate}
+
+கூற்றுத் தருக்கவியலின் இந்த மொழியை $\Lang L_0$ என்று குறிக்கிறோம்.
+
+% SEGMENT OLP-0058-S02
+\iftag{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}{%
+மேலே அறிமுகப்படுத்தப்பட்ட மூல இணைப்புகளுடன், பின்வரும்
+\emph{வரையறுக்கப்பட்ட} குறியீடுகளையும் பயன்படுத்துகிறோம்:
+\startycommalist
+  \iftag{defNot}{\ycomma $\lnot$ (மறுப்பு)}{}%
+  \iftag{defAnd}{\ycomma $\land$ (இணையல்)}{}%
+  \iftag{defOr}{\ycomma $\lor$ (பிரிப்பிணைவு)}{}%
+  \iftag{defIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{defIff}{\ycomma $\liff$ (!!{biconditional})}{}%
+  \iftag{defFalse}{\ycomma $\lfalse$ (!!{falsity})}{}%
+  \iftag{defTrue}{\ycomma $\ltrue$ (!!{truth})}}{}.
+
+\begin{tagblock}{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}
+\begin{explain}
+வரையறுக்கப்பட்ட குறியீடு அதிகாரப்பூர்வமாக மொழியின் பகுதியன்று; அது ஒரு
+முறையற்ற சுருக்கக்குறியாக அறிமுகப்படுத்தப்படுகிறது. மூலக் குறியீடுகளை
+மட்டுமே பயன்படுத்தினால் மிகவும் நீளமாகிவிடும் வாய்பாடுகளைச் சுருக்கமாக
+எழுத அது உதவுகிறது. இது தெளிவான நன்மை. ஆனால் நிறுவல்கள் சுருங்குவது
+இதைவிடப் பெரிய நன்மை. ஒரு குறியீடு மூலக் குறியீடாக இருந்தால், நிறுவல்களில்
+அதைத் தனியாகக் கையாள வேண்டும். எனவே மூலக் குறியீடுகள் அதிகமானால் நமது
+நிறுவல்களும் நீளமாகும்.
+\end{explain}
+\end{tagblock}
+
+% SEGMENT OLP-0058-S03
+% Alternate symbols
+
+\begin{intro}
+மேலே நாம் பயன்படுத்தியவற்றிலிருந்து வேறுபட்ட கலைச்சொற்களையும்
+குறியீடுகளையும் நீங்கள் அறிந்திருக்கலாம். தருக்கவியல் நூல்களும்
+ஆசிரியர்களும் ``மறுப்பு'' என்பதற்கு பொதுவாக $\sim$, $\neg$, மற்றும்~!\
+ஆகியவற்றையும், ``இணையல்'' என்பதற்கு $\wedge$, $\cdot$, மற்றும் $\&$
+ஆகியவற்றையும் பயன்படுத்துகின்றனர். ``நிபந்தனைக்கூற்று'' அல்லது
+``உட்குறிப்பு'' என்பதற்குப் பொதுவாகப் பயன்படுத்தப்படும் குறியீடுகள்
+$\rightarrow$, $\Rightarrow$, மற்றும் $\supset$ ஆகும்.
+\iftag{prvIff,defIff}{``இரு நிபந்தனைக்கூற்று,'' ``இருவழி உட்குறிப்பு,''
+  அல்லது ``(பொருட்சார்) சமானம்'' என்பதற்கான குறியீடுகள்
+  $\leftrightarrow$, $\Leftrightarrow$, மற்றும் $\equiv$ ஆகும்.}{}
+\iftag{prvFalse,defFalse}{$\lfalse$ குறியீடு ``பொய்மை,'' ``பொய்யம்,''
+  ``முரண்பாடு,'' அல்லது ``கீழ்'' என்றும் பலவாறு அழைக்கப்படுகிறது.}{}
+\iftag{prvTrue,defTrue}{$\ltrue$ குறியீடு ``மெய்மை,'' ``மெய்யம்,''
+  அல்லது ``மேல்'' என்றும் பலவாறு அழைக்கப்படுகிறது.}{}
+\end{intro}
+
+% SEGMENT OLP-0058-S04
+\begin{defn}[வாய்பாடு]
+\ollabel{defn:formulas}
+கூற்றுத் தருக்கவியலின் \emph{!!{formula}s} கணம்~$\Frm[L_0]$ பின்வருமாறு
+தொகுத்தறிதலாக வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ ஓர் அணு !!{formula}.}{}
+
+\tagitem{prvTrue}{$\ltrue$ ஓர் அணு !!{formula}.}{}
+
+\item ஒவ்வொரு !!{propositional variable}~$\Obj p_i$ உம் ஓர் அணு
+  !!{formula}.
+
+\tagitem{prvNot}{$!A$ !!a{formula} எனில், $\lnot !A$ உம்
+  !!a{formula}.}{}
+
+\tagitem{prvAnd}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \land
+  !B)$ உம் !!a{formula}.}{}
+
+\tagitem{prvOr}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \lor !B)$
+  உம் !!a{formula}.}{}
+
+\tagitem{prvIf}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \lif !B)$
+  உம் !!a{formula}.}{}
+
+\tagitem{prvIff}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \liff !B)$
+  உம் !!a{formula}.}{}
+
+\tagitem{limitClause}{வேறெதுவும் !!a{formula} அன்று.}{}
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0058-S05
+\begin{explain}
+!!{formula}s இன் வரையறை ஒரு \emph{தொகுத்தறிதல் வரையறை}. அடிப்படையில்,
+!!{formula}s இன் கணத்தை முடிவிலாப் பல நிலைகளில் கட்டமைக்கிறோம். தொடக்க
+நிலையில் எல்லா அணு வாய்பாடுகளையும் வாய்பாடுகளாக அறிவிக்கிறோம்; இது
+வரையறையின் முதல் சில நேர்வுகளான
+\iftag{prvTrue}{$\ltrue$, }{}%
+\iftag{prvFalse}{$\lfalse$, }{}%
+$\Obj p_i$ ஆகிய நேர்வுகளுக்கு ஒத்தது. ஆகவே ``அணு !!{formula}'' என்பது
+இந்த வடிவங்களில் ஏதேனும் ஒன்றில் உள்ள !!{formula}வைக் குறிக்கும்.
+
+வரையறையின் பிற நேர்வுகள், ஏற்கெனவே கட்டமைக்கப்பட்ட !!{formula}s
+இலிருந்து புதிய !!{formula}s ஐக் கட்டமைப்பதற்கான விதிகளைத் தருகின்றன.
+இரண்டாம் நிலையில் அவற்றைப் பயன்படுத்தி அணு !!{formula}s இலிருந்து
+!!{formula}s ஐக் கட்டமைக்கலாம். மூன்றாம் நிலையில் அணு வாய்பாடுகளிலிருந்தும்
+இரண்டாம் நிலையில் பெறப்பட்டவற்றிலிருந்தும் புதிய வாய்பாடுகளைக்
+கட்டமைக்கிறோம்; இவ்வாறு தொடர்கிறோம். இறுதியில் அத்தகைய ஏதோ ஒரு நிலையில்
+கட்டமைக்கப்படுவது மட்டுமே !!{formula} ஆகும்.
+\end{explain}
+
+% SEGMENT OLP-0058-S06
+$!B$, $!C$ ஆகியவற்றிலிருந்து இரு இட இணைப்பு~$\ast$ ஐப் பயன்படுத்திக்
+கட்டமைக்கப்பட்ட வாய்பாடு $(!B \ast !C)$ ஐ எழுதும்போது, பெரும்பாலும்
+வெளிப்புற அடைப்புக்குறிச் சோடியை விட்டுவிட்டு $!B \ast !C$ என்று மட்டும்
+எழுதுவோம்.
+
+% SEGMENT OLP-0058-S07
+\begin{tagblock}{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}
+\begin{defn}
+வரையறுக்கப்பட்ட செயலிகளைப் பயன்படுத்திக் கட்டமைக்கப்படும் வாய்பாடுகளைப்
+பின்வருமாறு புரிந்துகொள்ள வேண்டும்:
+
+\begin{tagenumerate}{defTrue,defFalse,defNot,defOr,defAnd,defIf,defIff,defEx,defAll}
+
+\tagitem{defTrue}{$\ltrue$ என்பது
+  \iftag{prvFalse}{$\lnot\lfalse$}{ஏதோ ஒரு நிலையான அணு
+    !!{formula}~$!A$ க்கான $(!A \lor \lnot !A)$} என்பதன் சுருக்கம்.}{}
+
+\tagitem{defFalse}{$\lfalse$ என்பது
+  \iftag{prvTrue}{$\lnot\ltrue$}{ஏதோ ஒரு நிலையான அணு
+    !!{formula}~$!A$ க்கான $(!A \land \lnot !A)$} என்பதன் சுருக்கம்.}{}
+
+\tagitem{defNot}{$\lnot !A$ என்பது $!A \lif \lfalse$ என்பதன் சுருக்கம்.}{}
+
+\tagitem{defOr}{$!A \lor !B$ என்பது
+  \iftag{prvAnd}{$\lnot(\lnot !A \land \lnot !B)$}{$\lnot !A \lif
+    !B$} என்பதன் சுருக்கம்.}{}
+
+\tagitem{defAnd}{$!A \land !B$ என்பது
+  \iftag{prvOr}{$\lnot(\lnot !A \lor \lnot !B)$}{$\lnot (!A \lif
+    \lnot !B)$} என்பதன் சுருக்கம்.}{}
+
+\tagitem{defIf}{$!A \lif !B$ என்பது
+  \iftag{prvOr}{$\lnot !A \lor !B)$}{$\lnot (!A \land \lnot !B)$}
+  என்பதன் சுருக்கம்.}{}
+
+\tagitem{defIff}{$!A \liff !B$ என்பது $(!A \lif !B) \land (!B
+  \lif !A)$ என்பதன் சுருக்கம்.}{}
+\end{tagenumerate}
+\end{defn}
+\end{tagblock}
+
+% SEGMENT OLP-0058-S08
+\begin{defn}[தொடரமைப்புசார் ஒரேதன்மை]
+$\ident$ குறியீடு குறியீட்டுச் சரங்களுக்கு இடையிலான தொடரமைப்புசார்
+ஒரேதன்மையைக் குறிக்கிறது. அதாவது $!A \ident !B$ என்பது, அப்போதும்
+அப்போது மட்டுமே, $!A$, $!B$ ஆகியவை ஒரே நீளமுள்ள குறியீட்டுச் சரங்களாகவும்
+ஒவ்வொரு இடத்திலும் ஒரே குறியீட்டைக் கொண்டவையாகவும் இருப்பதைக் குறிக்கும்.
+\end{defn}
+
+தொடரிணைப்பால் பெறப்பட்ட சரங்கள் $\ident$ குறியீட்டின் இருபுறமும் வரலாம்.
+எடுத்துக்காட்டாக, $!A \ident (!B \lor !C)$ என்பது: தொடக்க அடைப்புக்குறி,
+$!B$ சரம், $\lor$ குறியீடு, $!C$ சரம், நிறைவு அடைப்புக்குறி ஆகியவற்றை
+இந்த வரிசையில் தொடரிணைத்துப் பெறப்படும் சரமும் $!A$ குறியீட்டுச் சரமும்
+ஒரே சரம் என்று பொருள்படும். இது உண்மையானால், $!A$ இன் முதல் குறியீடு
+தொடக்க அடைப்புக்குறி என்றும், $!A$ ஆனது $!B$ ஐ ஓர் உட்சரமாகக்
+கொண்டுள்ளது என்றும் (இரண்டாம் குறியீட்டிலிருந்து தொடங்கி), அந்த உட்சரத்தை
+$\lor$ தொடர்ந்து வருகிறது என்றும், இன்ன பிறவும் அறிகிறோம்.
+
+\end{document}

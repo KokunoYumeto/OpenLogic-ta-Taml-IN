@@ -1,0 +1,214 @@
+% SEGMENT OLP-0061-S01
+% Part: propositional-logic
+% Chapter: syntax-and-semantics
+% Section: valuations-sat
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{syn}{val}
+
+\olsection{\usetoken{P}{valuation} மற்றும் நிறைவுறுத்தல்}
+
+\begin{defn}[!!^{valuation}s]
+``மெய்'', ``பொய்'' என்ற இரு மெய்மதிப்புகளின் கணம் $\{\True, \False\}$
+என்க. $\Lang{L_0}$ க்கான \emph{!!{valuation}} என்பது மொழியின்
+!!{propositional variable}s க்கு $\True$ அல்லது $\False$ ஐ ஒதுக்கும்
+சார்பு~$\pAssign{v}$; அதாவது $\pAssign{v} \colon
+\PVar \to \{\True, \False \}$.
+\end{defn}
+
+% SEGMENT OLP-0061-S02
+\begin{defn}
+  !!a{valuation}~$\pAssign{v}$ தரப்பட்டால், மதிப்பீட்டுச் சார்பு
+  $\pValue{v} \colon \Frm[L_0] \to \{\True, \False \}$ ஐப் பின்வருமாறு
+  தொகுத்தறிதலாக வரையறுக்க:
+  \begin{align*}
+    \iftag{prvFalse}{\pValue{v}(\lfalse) & = \False; \\}{}
+    \iftag{prvTrue}{\pValue{v}(\ltrue) & = \True; \\}{}
+    \pValue{v}(\Obj p_n) & = \pAssign{v}(\Obj p_n); \\
+    \iftag{prvNot}{\pValue{v}(\lnot !A) & = \begin{cases}
+        \True & \text{பின்வரும் நிலையில்: } \pValue{v}(!A) = \False;\\
+        \False & \text{இல்லையெனில்.}
+      \end{cases} \\ }{}
+    \iftag{prvAnd}{\pValue{v}(!A \land !B) & = \begin{cases}
+        \True &
+        \text{$\pValue{v}(!A) = \True$ மற்றும் $\pValue{v}(!B) = \True$ எனில்;}\\
+        \False &
+        \text{$\pValue{v}(!A) = \False$ அல்லது $\pValue{v}(!B) = \False$ எனில்}.
+      \end{cases}\\}{}
+    \iftag{prvOr}{\pValue{v}(!A \lor !B) & = \begin{cases}
+        \True &
+        \text{$\pValue{v}(!A) = \True$ அல்லது $\pValue{v}(!B) = \True$ எனில்;}\\
+        \False &
+        \text{$\pValue{v}(!A) = \False$ மற்றும் $\pValue{v}(!B) = \False$ எனில்}.
+      \end{cases}\\}{}
+    \iftag{prvIf}{\pValue{v}(!A \lif !B) & = \begin{cases}
+        \True &
+        \text{$\pValue{v}(!A) = \False$ அல்லது $\pValue{v}(!B) = \True$ எனில்;}\\
+        \False &
+        \text{$\pValue{v}(!A) = \True$ மற்றும் $\pValue{v}(!B) = \False$ எனில்}.
+      \end{cases}\\}{}
+    \iftag{prvIff}{\pValue{v}(!A \liff !B) & = \begin{cases}
+        \True &
+        \text{$\pValue{v}(!A) = \pValue{v}(!B)$ எனில்;}\\
+        \False &
+        \text{$\pValue{v}(!A) \neq \pValue{v}(!B)$ எனில்}.
+      \end{cases}}{}
+\end{align*}
+\end{defn}
+
+% SEGMENT OLP-0061-S03
+\begin{explain}
+இந்தக் கூறுகள் பின்வரும் மெய்மை அட்டவணைகளுக்கு ஒத்தவை:
+\begin{center}
+\iftag{prvNot}{
+  \begin{tabular}{|c||c|} \hline
+    $!A$ & $ \lnot !A$ \\
+    \hline \hline
+    $\True$ & $\False$ \\
+    $\False$ & $\True$ \\
+    \hline
+  \end{tabular}
+}{}
+\iftag{prvAnd}{
+  \begin{tabular}{|cc||c|} \hline
+    $!A$ & $!B$ & $!A \land !B$ \\
+    \hline \hline
+    $\True$ & $\True$ & $\True$ \\
+    $\True$ & $\False$ & $\False$ \\
+    $\False$ & $\True$ & $\False$ \\
+    $\False$ & $\False$ & $\False$ \\
+    \hline
+  \end{tabular}
+}{}
+\iftag{prvOr}{
+  \begin{tabular}{|cc||c|} \hline
+    $!A$ & $!B$ & $!A \lor !B$ \\
+    \hline \hline
+    $\True$ & $\True$ & $\True$ \\
+    $\True$ & $\False$ & $\True$ \\
+    $\False$ & $\True$ & $\True$ \\
+    $\False$ & $\False$ & $\False$ \\
+    \hline
+  \end{tabular}
+}{}%
+\iftag{notprvNot,notprvAnd,notprvOr,notprvIf}{}{\\[1em]}
+\iftag{prvIf}{
+  \begin{tabular}{|cc||c|} \hline
+    $!A$ & $!B$ & $!A \lif !B$ \\
+    \hline \hline
+    $\True$ & $\True$ & $\True$ \\
+    $\True$ & $\False$ & $\False$ \\
+    $\False$ & $\True$ & $\True$ \\
+    $\False$ & $\False$ & $\True$ \\
+    \hline
+  \end{tabular}
+}{}
+\iftag{prvIff}{
+  \begin{tabular}{|cc||c|} \hline
+    $!A$ & $!B$ & $!A \liff !B$ \\
+    \hline \hline
+    $\True$ & $\True$ & $\True$ \\
+    $\True$ & $\False$ & $\False$ \\
+    $\False$ & $\True$ & $\False$ \\
+    $\False$ & $\False$ & $\True$ \\
+    \hline
+  \end{tabular}
+}{}
+\end{center}
+\end{explain}
+
+% SEGMENT OLP-0061-S04
+\begin{prob}
+$\Lang{L_0}$ இல் $\diamondsuit$ என்ற மூவிட இணைப்பைப் பின்வரும்
+மதிப்பீட்டுடன் சேர்ப்பதைக் கருதுக:
+\begin{gather*}
+  \pValue{v}(\diamondsuit( !A , !B , !C ) ) = \begin{cases}
+    \pValue{v}( !B ) &
+    \text{$\pValue{v}(!A) = \True$ எனில்;}\\
+    \pValue{v}( !C ) &
+    \text{$\pValue{v}(!A) = \False $ எனில்.}
+  \end{cases}
+\end{gather*}
+இந்த இணைப்பிற்கான மெய்மை அட்டவணையை எழுதுக.
+\end{prob}
+
+% SEGMENT OLP-0061-S05
+\begin{thm}[உள்ளூர்த் தீர்மானிப்பு]
+\ollabel{thm:LocalDetermination} !!{valuation}s $\pAssign{v_1}$,
+$\pAssign{v_2}$ ஆகியவை $!A$ இல் வரும் !!{propositional
+variable}s
+மீது ஒத்திருக்கட்டும். அதாவது, ஏதோ ஒரு !!{formula}~$!A$ இல்
+$\Obj p_n$ வரும்போதெல்லாம் $\pAssign{v_1}(\Obj p_n) =
+\pAssign{v_2}(\Obj p_n)$ என இருக்கட்டும். அப்போது $\pValue{v_1}$,
+$\pValue{v_2}$ ஆகியவையும் $!A$ மீது ஒத்திருக்கும்; அதாவது
+$\pValue{v_1}(!A) = \pValue{v_2}(!A)$.
+\end{thm}
+
+\begin{proof}
+$!A$ இன்மீதான தொகுத்தறிதலால் நிறுவுக.
+\end{proof}
+
+% SEGMENT OLP-0061-S06
+\begin{defn}[நிறைவுறுத்தல்]
+\ollabel{defn:satisfaction} \emph{!!a{formula}~$!A$ ஐ
+  !!a{valuation}~$\pAssign{v}$ நிறைவுறுத்துதல்} என்ற கருத்தை
+  $\pSat{v}{!A}$ எனப் பின்வருமாறு தொகுத்தறிதலாக வரையறுக்கலாம்.
+  (``$\pSat{v}{!A}$ அன்று'' என்பதைக் குறிக்க $\pSat/{v}{!A}$ என்று
+  எழுதுகிறோம்.)
+\begin{enumerate}
+\tagitem{prvFalse}{%
+  \indcase{!A}{\lfalse}{$\pSat/{v}{\indfrm}$.}}{}
+
+\tagitem{prvTrue}{%
+  \indcase{!A}{\ltrue}{$\pSat{v}{\indfrm}$.}}{}
+
+\item \indcase{!A}{\Obj p_i}{$\pSat{v}{\indfrm}$ என்பது, அப்போதும்
+  அப்போது மட்டுமே, $\pAssign{v}(\Obj p_i) = \True$.}
+
+\tagitem{prvNot}{%
+  \indcase{!A}{\lnot !B}{$\pSat{v}{\indfrm}$ என்பது, அப்போதும் அப்போது
+    மட்டுமே, $\pSat/{v}{!B}$.}}{}
+
+\tagitem{prvAnd}{%
+  \indcase{!A}{(!B \land !C)}{$\pSat{v}{\indfrm}$ என்பது, அப்போதும்
+    அப்போது மட்டுமே, $\pSat{v}{!B}$ மற்றும் $\pSat{v}{!C}$.}}{}
+
+\tagitem{prvOr}{%
+  \indcase{!A}{(!B \lor !C)}{$\pSat{v}{\indfrm}$ என்பது, அப்போதும்
+    அப்போது மட்டுமே, $\pSat{v}{!B}$ அல்லது $\pSat{v}{!C}$ (அல்லது
+    இரண்டும்).}}{}
+
+\tagitem{prvIf}{%
+  \indcase{!A}{(!B \lif !C)}{$\pSat{v}{\indfrm}$ என்பது, அப்போதும்
+    அப்போது மட்டுமே, $\pSat/{v}{!B}$ அல்லது $\pSat{v}{!C}$ (அல்லது
+    இரண்டும்).}}{}
+
+\tagitem{prvIff}{%
+  \indcase{!A}{(!B \liff !C)}{$\pSat{v}{\indfrm}$ என்பது, அப்போதும்
+    அப்போது மட்டுமே, $\pSat{v}{!B}$ மற்றும் $\pSat{v}{!C}$ இரண்டும்
+    பொருந்தும், அல்லது $\pSat{v}{!B}$ மற்றும் $\pSat{v}{!C}$ இரண்டுமே
+    பொருந்தாது.}}{}
+\end{enumerate}
+$\Gamma$ என்பது !!{formula}s இன் கணம் எனில், ஒவ்வொரு~$!A \in \Gamma$
+க்கும் $\pSat{v}{!A}$ என இருப்பது, அப்போதும் அப்போது மட்டுமே,
+$\pSat{v}{\Gamma}$ என்க.
+\end{defn}
+
+% SEGMENT OLP-0061-S07
+\begin{prop}\ollabel{prop:sat-value}
+  $\pSat{v}{!A}$ என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\pValue{v}(!A) = \True$.
+\end{prop}
+
+\begin{proof}
+  $!A$ இன்மீதான தொகுத்தறிதலால் நிறுவுக.
+\end{proof}
+
+\begin{prob}
+  \olref[pl][syn][val]{prop:sat-value} ஐ நிறுவுக.
+\end{prob}
+
+\end{document}

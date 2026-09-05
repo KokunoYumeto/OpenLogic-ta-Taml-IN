@@ -1,0 +1,54 @@
+{
+  "schema": "openlogic-tamil-interrupted-metadata-recovery/1",
+  "generated_utc": "2026-09-05T00:41:20.005434+00:00",
+  "scope": "Evidence-only recovery after immutable v0.2.1; accepted reader bytes were not rebuilt or changed.",
+  "manager_audit_inputs": {
+    "v0.2.1_release_audit_sha256": "aae28aff28b9d7acdf0e4b58c1bf4fbba81375c12d972a8a6b7ccd54e68b9fbe",
+    "interrupted_state_audit_sha256": "e1f38937114e16fc0f510ad7e16aedeaabd21c69564acdefcd0dde24cd62b51e"
+  },
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "source_files_rehashed": 722,
+  "batch_receipts_replayed": 37,
+  "drafted_units_replayed": 59,
+  "segment_slices_replayed": 495,
+  "semantic_review_samples": 84,
+  "canon_sources": 7,
+  "canon_passages": 47,
+  "term_decisions": 87,
+  "next_contiguous_unit": "OLP-0063",
+  "reader_verified_units": 51,
+  "release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.1-sets-functions-relations",
+  "release_commit": "8a7d5ff8f78c75a41c9e1d58e8fc49be3ce34b2d",
+  "accepted_reader": {
+    "path": "readers/sets-functions-relations-ta-Taml-IN.pdf",
+    "bytes": 810122,
+    "sha256": "e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83"
+  },
+  "repaired_exact_hashes": {
+    "OLP-0061": "da4712227fd6b5609183441b3f88600569a61a7daf7a593b52d843c0cd2a9499",
+    "OLP-0061-S05": "be738573a32942206b76ef5d5cde641c9f1b5d6f7d9fceaf3985f822896ed74e",
+    "QA-B037.json": "7640a7e685bb6f3293643acb678c5bb6ab91ae0006603a6db3aa9afe182d9c9a"
+  },
+  "translation_decisions": {
+    "records": 119,
+    "unique_ids": 119,
+    "duplicate_ids": [],
+    "sha256": "b92e3519f49a25d14f7190e015eba4ad2b903c128223853cd7fd86975a397a3a"
+  },
+  "state_hashes": {
+    "SOURCE_MANIFEST.jsonl": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155",
+    "CANON_SOURCES.jsonl": "87a96334b208dbfa758c8fc0eb17c5bce2dcd9eeb483affd8f56e02dfb97d004",
+    "CANON_PASSAGES.jsonl": "9fa459acbad03b75a4cc830dbd9be853229b8ef3bc1fa41a3994009fefc5758f",
+    "TERM_DECISIONS.jsonl": "58ad2064175beb237bb32c5189db04b746537c0aaec87df2ee115b6d233acacb",
+    "SEGMENT_CANON_USE.jsonl": "cb2e07f4a49a85d4e78001d77aa2863a433863f10d11d4eba1fdc10437cc1b2f",
+    "TRANSLATION_DECISIONS.jsonl": "b92e3519f49a25d14f7190e015eba4ad2b903c128223853cd7fd86975a397a3a",
+    "SEMANTIC_REVIEW-CURRENT.json": "567d5f0ea4ca9ec80d37954bd1e58b169099dee22af731f41e4177b523bf9921",
+    "QA-B037.json": "7640a7e685bb6f3293643acb678c5bb6ab91ae0006603a6db3aa9afe182d9c9a",
+    "QA.json": "ba4861f73efb2260abf790985be5de6f91b520bb82775bd43ba7742830f4de23",
+    "CHECKPOINT-CURRENT.json": "c24387c242fdf0ffaceba34b35260a4a509ec70c99a623edca5a6cb6d0f67daf",
+    "CURSOR.json": "e0848a82bc8204bd7be4a16125631faa6dddda5b2147462194e3f3b2fb52d20d",
+    "PUBLICATION-READBACK.json": "aaac9730075fe36a57473ff9b6489027e281fe83463a747d44beba34b4acfe90",
+    "SFR-RENDER-QA.json": "bc4310da73bd3e8131778ff092692b180250e3b0065c838f9a637bddcdfdacb9"
+  },
+  "result": "pass"
+}

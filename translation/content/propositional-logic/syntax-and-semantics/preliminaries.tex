@@ -1,0 +1,135 @@
+% SEGMENT OLP-0059-S01
+% Part: propositional-logic
+% Chapter: propositional-logic
+% Section: preliminaries
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{syn}{pre}
+
+\olsection{முன்தயாரிப்புகள்}
+
+\begin{thm}[\emph{!!{formula}s இன்மீதான தொகுத்தறிதல் நெறி}]
+  \ollabel{thm:induction}
+  ஏதோ ஒரு பண்பு~$P$ எல்லா அணு !!{formula}s க்கும் பொருந்துவதாகவும்,
+  பின்வருமாறு அமைவதாகவும் இருக்கட்டும்:
+  \begin{enumerate}
+    \tagitem{prvNot}{$!A$ க்கு அது பொருந்தும்போதெல்லாம் $\lnot !A$
+      க்கும் பொருந்துகிறது; }{}
+    \tagitem{prvAnd}{$!A$, $!B$ ஆகியவற்றுக்கு அது பொருந்தும்போதெல்லாம்
+      $(!A \land !B)$ க்கும் பொருந்துகிறது; }{}
+    \tagitem{prvOr}{$!A$, $!B$ ஆகியவற்றுக்கு அது பொருந்தும்போதெல்லாம்
+      $(!A \lor !B)$ க்கும் பொருந்துகிறது; }{}
+    \tagitem{prvIf}{$!A$, $!B$ ஆகியவற்றுக்கு அது பொருந்தும்போதெல்லாம்
+      $(!A \lif !B)$ க்கும் பொருந்துகிறது; }{}
+    \tagitem{prvIff}{$!A$, $!B$ ஆகியவற்றுக்கு அது பொருந்தும்போதெல்லாம்
+      $(!A \liff !B)$ க்கும் பொருந்துகிறது. }{}
+  \end{enumerate}
+  அப்போது $P$ எல்லா !!{formula}s க்கும் பொருந்தும்.
+\end{thm}
+
+\begin{proof}
+  பண்பு~$P$ ஐக் கொண்ட எல்லா !!{formula}s இன் தொகுப்பு $S$ என்க.
+  தெளிவாக $S \subseteq \Frm[L_0]$. $S$ ஆனது
+  \olref[fml]{defn:formulas} இன் எல்லா நிபந்தனைகளையும் நிறைவேற்றுகிறது:
+  அது எல்லா அணு !!{formula}s ஐயும் கொண்டுள்ளது; !!{operator}s இன்கீழ்
+  மூடியுள்ளது. அத்தகைய வகுப்புகளில் $\Frm[L_0]$ மிகச் சிறியது; எனவே
+  $\Frm[L_0] \subseteq S$. ஆகவே $\Frm[L_0] = S$; ஒவ்வொரு வாய்பாடும்
+  பண்பு~$P$ ஐக் கொண்டுள்ளது.
+\end{proof}
+
+% SEGMENT OLP-0059-S02
+\begin{prop}\ollabel{prop:balanced}
+   $\Frm[L_0]$ இல் உள்ள எந்த !!{formula}வும் \emph{சமநிலையுடையது};
+   அதாவது அதிலுள்ள இடது அடைப்புக்குறிகளின் எண்ணிக்கையும் வலது
+   அடைப்புக்குறிகளின் எண்ணிக்கையும் சமம்.
+\end{prop}
+
+\begin{prob}
+\olref[pl][syn][pre]{prop:balanced} ஐ நிறுவுக.
+\end{prob}
+
+\begin{prop} \ollabel{prop:noinit}
+!!a{formula}வின் எந்த மெய்யான தொடக்கத் துண்டும் !!a{formula} அன்று.
+\end{prop}
+
+\begin{prob}
+  \olref[pl][syn][pre]{prop:noinit} ஐ நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0059-S03
+\begin{prop}[தனித்த வாசிப்புத்தன்மை]
+$ \Frm[L_0]$ இல் உள்ள எந்த !!{formula}~$!A$ உம் பின்வருவனவற்றுள் ஒன்றாக
+ஒரே ஒரு கட்டமைப்புப் பகுப்பாய்வைக் கொண்டுள்ளது:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$.}{}
+
+\tagitem{prvTrue}{$\ltrue$.}{}
+
+\item ஏதோ ஒரு $\Obj p_n \in  \PVar$ க்கான $\Obj p_n$.
+
+\tagitem{prvNot}{ஏதோ ஒரு !!{formula}~$!B$ க்கான $\lnot !B$.}{}
+
+\tagitem{prvAnd}{ஏதோ சில !!{formula}s $!B$, $!C$ க்கான
+  $(!B \land !C)$.}{}
+
+\tagitem{prvOr}{ஏதோ சில !!{formula}s $!B$, $!C$ க்கான
+  $(!B \lor !C)$.}{}
+
+\tagitem{prvIf}{ஏதோ சில !!{formula}s $!B$, $!C$ க்கான
+  $(!B \lif !C)$.}{}
+
+\tagitem{prvIff}{ஏதோ சில !!{formula}s $!B$, $!C$ க்கான
+  $(!B \liff !C)$.}{}
+\end{enumerate}
+மேலும், இந்தக் கட்டமைப்புப் பகுப்பாய்வு \emph{தனித்தது}.
+\end{prop}
+
+% SEGMENT OLP-0059-S04
+\begin{proof}
+$!A$ இன்மீது தொகுத்தறிதலால் நிறுவுக. எடுத்துக்காட்டாக, $!A$ ஆனது
+$(!B \lif !C)$ என்றும் $(!B' \lif !C')$ என்றும் இரு வேறுபட்ட
+வாசிப்புகளைக் கொண்டுள்ளதாகக் கொள்க. அப்போது $!B$, $!B'$ இரண்டும் ஒன்றாக
+இருக்க வேண்டும் (இல்லையெனில் அவற்றுள் ஒன்று மற்றதன் மெய்யான தொடக்கத்
+துண்டாக இருக்கும்). எனவே $!A$ இன் இரு வாசிப்புகளும் வேறுபட்டால், ஒரே
+குறியீட்டுத் தொடரின் வேறுபட்ட வாசிப்புகளாக $!C$, $!C'$ இருப்பதே அதற்குக்
+காரணமாக வேண்டும். தொகுத்தறிதல் கருதுகோளின்படி இது இயலாது.
+\end{proof}
+
+
+% SEGMENT OLP-0059-S05
+\begin{defn}[ஒரேசீரான பதிலீடு]
+$!A$, $!B$ ஆகியவை !!{formula}s ஆகவும், $\Obj p_i$ ஒரு !!{propositional
+variable} ஆகவும் இருந்தால், $!A$ இல் வரும் $\Obj p_i$ இன் ஒவ்வொரு
+நிகழ்வையும் $!B$ இன் ஒரு நிகழ்வால் பதிலிடுவதன் விளைவை
+$\Subst{!A}{!B}{\Obj p_i}$ குறிக்கும். அதேபோல், $\Obj p_1$, \dots,~$\Obj p_n$
+ஆகியவற்றுக்குப் பதிலாக !!{formula}s $!B_1$, \dots,~$!B_n$ ஆகியவற்றை
+ஒரேநேரத்தில் பதிலிடுவதை
+$\SSubst{!A}{\subst{!B_1}{\Obj p_1},\dots,\subst{!B_n}{\Obj p_n}}$ குறிக்கும்.
+\end{defn}
+
+% SEGMENT OLP-0059-S06
+\begin{prob} கீழே உள்ள ஐந்து !!{formula}s ஒவ்வொன்றுக்கும், அந்த
+ !!{formula}வை \( \Subst{!A}{!B}{\Obj p_i} \) என்ற பதிலீடாக எழுத
+ முடியுமா எனத் தீர்மானிக்க; இங்கு \( !A \) என்பது
+ (i)~\( \Obj p_0 \); (ii)~\( ( \lnot \Obj p_0 \land \Obj
+ p_1) \); மற்றும் (iii)~\( ( ( \lnot \Obj p_0 \lif \Obj p_1 ) \land \Obj
+ p_2 ) \). ஒவ்வொரு நேர்விலும் உரிய பதிலீட்டைக் குறிப்பிடுக.
+  \begin{enumerate}
+    \item \( \Obj p_1 \)
+    \item \( ( \lnot \Obj p_0 \land \Obj p_0 ) \)
+    \item \( ( ( \Obj p_0 \lor \Obj p_1 ) \land \Obj p_2 )  \)
+    \item \( \lnot ( ( \Obj p_0 \lif \Obj p_1 ) \land \Obj p_2 ) \)
+    \item \( (( \lnot ( \Obj p_0 \lif \Obj p_1 ) \lif ( \Obj p_0 \lor \Obj p_1 )) \land \lnot ( \Obj p_0 \land \Obj p_1 )) \)
+  \end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0059-S07
+\begin{prob}
+$\Subst{!A}{!B}{p}$ க்குத் தொகுத்தறிதலால் கணிதவியல்ரீதியான ஒரு
+துல்லியமான வரையறையைக் கொடுக்க.
+\end{prob}
+
+\end{document}

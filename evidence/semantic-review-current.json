@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-04T22:08:19.810173+00:00",
+  "date_utc": "2026-09-05T00:41:18.540687+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -206,7 +206,7 @@
     {
       "unit_id": "OLP-0044",
       "source_sha256": "3df30161417b836178ff701aa3d778b9ec7c1ba8e3a8a54f98b5584a7960f453",
-      "translation_sha256": "d73cb6355ef03c2b95178919cb8945b802929215b55f65447e37f2eab18249b1"
+      "translation_sha256": "38a6b22958ec35fbc4e290b9ceb3ad70df6cb9247f4db7d1205304fa572dd90d"
     },
     {
       "unit_id": "OLP-0045",
@@ -226,7 +226,7 @@
     {
       "unit_id": "OLP-0048",
       "source_sha256": "35d0a39913340eadcab7fb9d7742b56aef0d0f29868cd65eeca9dc53694e8ac2",
-      "translation_sha256": "c793b875e5c715adbe0499d92fa3ccd4d2cfd2853ac8743240ecac0a78d9198f"
+      "translation_sha256": "553ac5511a18533ae36b923779b55d929df20f8b00332099fe2c66eafee6b439"
     },
     {
       "unit_id": "OLP-0049",
@@ -246,7 +246,7 @@
     {
       "unit_id": "OLP-0052",
       "source_sha256": "ea5f6c80d70abca6f5598de3e221c2f60524c40cbf533ae8a5336d5bb7186537",
-      "translation_sha256": "636496512f70e595add569d0d21a7c9035bbc82d24142fa66671e613f30eb4b1"
+      "translation_sha256": "c590efcf2c4d5d85dcacc9a42dd10c63c27b0deed5a758510cafff107baf44ba"
     },
     {
       "unit_id": "OLP-0053",
@@ -257,6 +257,46 @@
       "unit_id": "OLP-0054",
       "source_sha256": "88534a3f2be736a704ab31343e45933edb9712fa5b4411eb102c0f4a12d656e9",
       "translation_sha256": "37877cbcb2538c4e44b42ca5c664146d4f762d105d1de0791f3ad234a73349b9"
+    },
+    {
+      "unit_id": "OLP-0055",
+      "source_sha256": "1af59702eeba2337e42385ae40315eb7761ca569b0991f0afe69ad74bd5258aa",
+      "translation_sha256": "4ab90bce479b5ef2ea36bce5c3e9943d39ddd817e906f1886d190829e09c1921"
+    },
+    {
+      "unit_id": "OLP-0056",
+      "source_sha256": "d99022091f0fa2b689b3a3e845c3908dd45c8a9c36c74f3d9c589d17d629f805",
+      "translation_sha256": "170f00f16333ccbc750fb556fe900ed153bfb2eed9225d955384dbf1b655916e"
+    },
+    {
+      "unit_id": "OLP-0057",
+      "source_sha256": "3040499782b5cc91adab39a5ba93031d4daf6d05ad084e97937d6f84ebed432c",
+      "translation_sha256": "1b5c99401dd3e39424f0fbad1c61bdce1afb9c5e845fdc639b5a41584f658a5e"
+    },
+    {
+      "unit_id": "OLP-0058",
+      "source_sha256": "f05ab9c5e23b362dbee9f6063f096f52ebc9e7f97b29acc9c07f18788f1f8f48",
+      "translation_sha256": "6cf6bf76b5e781008643898106b689fd27b5261492977bae90ec7991bc9ef661"
+    },
+    {
+      "unit_id": "OLP-0059",
+      "source_sha256": "32b55f3fdc69170d1c4856c5abd86e8845d1d4993b8e649a0501475ad0c5a9dc",
+      "translation_sha256": "0a8c66c986e1b2feab34d65a0b23ec5b2b98aad68c0614af58451daebc39cbe4"
+    },
+    {
+      "unit_id": "OLP-0060",
+      "source_sha256": "fff70555c1ef515d9092e72c91496aa898f74e4dd41e4cadc82f49a30c5850f5",
+      "translation_sha256": "873452de49cee5df20c337a49a6b677f5b6cbe8908ea24d4eaf3072b747b4d2d"
+    },
+    {
+      "unit_id": "OLP-0061",
+      "source_sha256": "9f0b5ecd5a8462ab5d970546602a1a0b0e46e5908c6a0f46369f93543583f882",
+      "translation_sha256": "da4712227fd6b5609183441b3f88600569a61a7daf7a593b52d843c0cd2a9499"
+    },
+    {
+      "unit_id": "OLP-0062",
+      "source_sha256": "992456e01aa355799eabea11dc7d2a49a5f1a0f0ebeef05d36f86603c0f06d39",
+      "translation_sha256": "973aa3dcd3bd6629e95a601a4a2a3e162abd6c687efd3887b6ddb4e2588a3446"
     }
   ],
   "samples": [
@@ -747,14 +787,14 @@
       "segment_id": "OLP-0048-S05",
       "reverse_paraphrase": "A Cauchy sequence of rationals eventually makes every pair of tail values epsilon-close for each positive rational epsilon.",
       "assessment": "Quantifier order is epsilon, then a tail index, then all two tail positions.",
-      "translation_segment_sha256": "28b4817588a265b03fbb9a8a295dcf96588dc10466dfed5b28d1971f3d55b7e0",
+      "translation_segment_sha256": "c0b2502188ec879eb808611dcec34095597cd6b533a41a7830c2f6223c91f870",
       "status": "author-reviewed"
     },
     {
       "segment_id": "OLP-0048-S07",
       "reverse_paraphrase": "Two Cauchy sequences represent the same real when their pointwise difference tends to zero.",
       "assessment": "The source slip from equivalence classes to equivalence relations is corrected under TA-ARI-003.",
-      "translation_segment_sha256": "5b19a02005681ce6ecd1e70afc07665dbaa38776640d9362ae3ebc02204a56dd",
+      "translation_segment_sha256": "1b3b2681909aa628fbd0c8c320802d3bd734e7b2af9c7a67fa85a08013d11fd4",
       "status": "author-reviewed"
     },
     {
@@ -817,7 +857,7 @@
       "segment_id": "OLP-0052-S07",
       "reverse_paraphrase": "Addition, multiplication and exponentiation are to be defined recursively from o and successor s.",
       "assessment": "All six displayed recursion equations and the deferred-justification citation remain present.",
-      "translation_segment_sha256": "ebc2a87a4b076a58090d4fb89c70546b1f0fc5a7d7d2257bef1c64ef88840546",
+      "translation_segment_sha256": "093cfb4a9dc8408103524dcdc16ea3d9dd0509490240fe30bd6db58e77f8a94a",
       "status": "author-reviewed"
     },
     {

@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper,openany]{memoir}
+\newcommand{\olpath}{../upstream}
+\usepackage{fontspec}
+\ifLuaTeX
+\setmainfont{Nirmala UI}[Script=Tamil,Renderer=HarfBuzz,WordSpace=1.3,ItalicFont={Nirmala UI},ItalicFeatures={FakeSlant=0.15}]
+\setsansfont{Nirmala UI}[Script=Tamil,Renderer=HarfBuzz,WordSpace=1.3]
+\else
+\setmainfont{Nirmala UI}[Script=Tamil,Renderer=OpenType,WordSpace=1.3,ItalicFont={Nirmala UI},ItalicFeatures={FakeSlant=0.15}]
+\setsansfont{Nirmala UI}[Script=Tamil,Renderer=OpenType,WordSpace=1.3]
+\fi
+\setmonofont{Consolas}
+\input{\olpath/sty/open-logic.sty}
+\ifXeTeX
+  \XeTeXlinebreaklocale "ta"
+  \XeTeXlinebreakskip=0pt plus 1pt
+  \XeTeXgenerateactualtext=1
+\fi
+\setlrmarginsandblock{25mm}{25mm}{*}
+\setulmarginsandblock{22mm}{25mm}{*}
+\checkandfixthelayout
+\linespread{1.17}
+\emergencystretch=2em
+\input{../translation/tamil-config.sty}
+\input{../translation/tamil-pdf-math.sty}
+\tagtrue{novice,math,compsci}
+\setlocalecaption{english}{definition}{வரையறை}
+\setlocalecaption{english}{example}{எடுத்துக்காட்டு}
+\setlocalecaption{english}{lemma}{துணைத்தேற்றம்}
+\setlocalecaption{english}{proposition}{கூற்று}
+\setlocalecaption{english}{problem}{பயிற்சி}
+\setlocalecaption{english}{problems}{பயிற்சிகள்}
+\setlocalecaption{english}{theorem}{தேற்றம்}
+\addto\captionsenglish{\renewcommand{\proofname}{நிறுவல்}}
+\crefname{section}{பிரிவு}{பிரிவுகள்}
+\Crefname{section}{பிரிவு}{பிரிவுகள்}
+\crefname{defn}{வரையறை}{வரையறைகள்}
+\Crefname{defn}{வரையறை}{வரையறைகள்}
+\crefname{thm}{தேற்றம்}{தேற்றங்கள்}
+\Crefname{thm}{தேற்றம்}{தேற்றங்கள்}
+\crefname{lem}{துணைத்தேற்றம்}{துணைத்தேற்றங்கள்}
+\Crefname{lem}{துணைத்தேற்றம்}{துணைத்தேற்றங்கள்}
+\crefname{prop}{கூற்று}{கூற்றுகள்}
+\Crefname{prop}{கூற்று}{கூற்றுகள்}
+\crefname{prob}{பயிற்சி}{பயிற்சிகள்}
+\Crefname{prob}{பயிற்சி}{பயிற்சிகள்}
+\AtBeginEnvironment{align*}{\fontsize{9.5}{12}\selectfont}
+\hypersetup{pdftitle={OpenLogic: Tamil propositional syntax and semantics},pdfauthor={OpenLogic Tamil translation programme},pdfsubject={Machine translation; OLP-0055 through OLP-0062; 8 of 722 source units}}
+\begin{document}
+\raggedright
+\pagestyle{plain}
+\subfile{../translation/content/propositional-logic/syntax-and-semantics/syntax-and-semantics.tex}
+\end{document}
