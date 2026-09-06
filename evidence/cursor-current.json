@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-cursor/4",
-  "phase": "v0.3.0-release-candidate-108-units-textually-and-semantically-verified",
+  "phase": "v0.3.0-published-108-units-textually-and-semantically-verified-continuing-corpus",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified_units": 722,
   "total_units": 722,
@@ -119,10 +119,10 @@
   "reader_verified_distinct_units": 100,
   "combined_reader_verified_units": 51,
   "proof_systems_reader_verified_units": 49,
-  "release_verified_units": 51,
-  "published_source_units": 51,
+  "release_verified_units": 100,
+  "published_source_units": 108,
   "checkpoint": "CHECKPOINT-CURRENT.json",
-  "public_release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.1-sets-functions-relations",
+  "public_release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.3.0-proof-systems",
   "live_build_handle": null,
   "next_contiguous_unit": "OLP-0112",
   "next_actions": [

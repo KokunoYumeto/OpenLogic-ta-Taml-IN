@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-checkpoint/4",
-  "date_utc": "2026-09-06T18:45:29.235515+00:00",
+  "date_utc": "2026-09-06T18:56:18.870088+00:00",
   "previous_goal_turn_classification": "progress",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified": 722,
@@ -44,8 +44,8 @@
   "combined_reader_qa": "sfr-render-qa.json",
   "proof_systems_reader_build_qa": "tex-proof-systems-tableaux-receipt.json",
   "proof_systems_reader_qa": "proof-systems-tableaux-render-qa.json",
-  "release_verified_units": 51,
-  "published_source_units": 51,
+  "release_verified_units": 100,
+  "published_source_units": 108,
   "edition_complete": false,
   "unit_artifacts": [
     {
@@ -5299,7 +5299,8 @@
     "SFR-RENDER-QA.json": "bc4310da73bd3e8131778ff092692b180250e3b0065c838f9a637bddcdfdacb9",
     "TEX-PROOF-SYSTEMS-TABLEAUX-RECEIPT.json": "4106145a38edb93ee05b2a4d386e14b05b59d63c2d396f1a9a6d4a2021abdab4",
     "PROOF-SYSTEMS-TABLEAUX-RENDER-QA.json": "af3ce71454f334fd4b1f742c56b434d1bb79b5d31427a0af1b3d0841271963f0",
-    "PUBLICATION-READBACK.json": "aaac9730075fe36a57473ff9b6489027e281fe83463a747d44beba34b4acfe90",
+    "PUBLICATION-READBACK.json": "6af3f7bb4263014103ad484aa09481c479366e34d99ee98a464f705a9508cd7c",
+    "PUBLICATION-READBACK-PROOF-SYSTEMS.json": "6af3f7bb4263014103ad484aa09481c479366e34d99ee98a464f705a9508cd7c",
     "QA-B001.json": "3346eb20708f475474f6f04da8d68514bf43f41e56edd4a9cc20ff92a6db8b23",
     "QA-B002.json": "22831e877a5b17793ebfa60caef76a1756c4b301c4c4b231f21ace49f4de172e",
     "QA-B003.json": "83ff416ea4a5a9cc1f30cfba6ed20602612bb8450a57239392206c300949bf38",
@@ -5371,11 +5372,12 @@
     "evidence/translation-decisions/DECISIONS.json": "a55e0c1032885140d0e8c2be1c0311409ef29f8f1f42071e7319f45265987076",
     "evidence/translation-decisions/translation-decision.schema.json": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
     "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": "b2462bc8df8e1fe8b285ea0fec0221b1c851300291ba8d2d04f95ccb02faf852",
-    "evidence/translation-decisions/VARIANT_ASSESSMENT.md": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d"
+    "evidence/translation-decisions/VARIANT_ASSESSMENT.md": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d",
+    "evidence/publication-readback-proof-systems-release.json": "6af3f7bb4263014103ad484aa09481c479366e34d99ee98a464f705a9508cd7c"
   },
-  "publication": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.2.1-sets-functions-relations",
-  "current_release_published": false,
-  "release_verification_scope": "The exact 49-unit proof-systems reader is a locally verified v0.3.0 release candidate; the exact 51-unit v0.2.1 reader remains the current anonymously verified public release.",
+  "publication": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.3.0-proof-systems",
+  "current_release_published": true,
+  "release_verification_scope": "The exact v0.3.0 proof-systems reader and 108 translated source units are publicly released and anonymously byte-verified; the prior 51-unit reader remains separately verified.",
   "unresolved": [
     "614 source units remain untranslated",
     "Eight drafted units OLP-0055 through OLP-0062 have textual and semantic QA but are not yet in an all-page visually verified reader",

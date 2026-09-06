@@ -16,8 +16,8 @@
     "reader_verified_distinct": 100,
     "combined_reader_verified": 51,
     "proof_systems_reader_verified": 49,
-    "release_verified": 51,
-    "published_sources": 51,
+    "release_verified": 100,
+    "published_sources": 108,
     "total": 722
   },
   "release_complete": false,
