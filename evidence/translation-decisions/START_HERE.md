@@ -10,4 +10,4 @@ This directory contains the canonical expert-review surfaces for the `openlogic-
 - `TRANSLATION_DECISION_QA.json` verifies the schema and projection gates.
 - `VARIANT_ASSESSMENT.md` records the evidence-based script, notation, register, and regional-edition recommendation.
 
-Current coverage is 94/722 translated source units. Reader pages are mapped for 0 units; all other page fields say `pending` and are never guessed.
+Current coverage is 108/722 translated source units. Reader pages are mapped for 49 units; all other page fields say `pending` and are never guessed.

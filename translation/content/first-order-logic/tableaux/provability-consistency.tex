@@ -1,0 +1,156 @@
+% SEGMENT OLP-0106-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: provability-consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{prv}}
+      {\olfileid{pl}{tab}{prv}}
+
+\olsection{\usetoken{S}{derivability} மற்றும் முரணின்மை}
+
+!!{derivability} உறவின் பல பண்புகளை இப்போது நிறுவுவோம். அவை தனித்தும்
+சுவையானவை; மேலும் அவை ஒவ்வொன்றும் நிறைவுத் தேற்றத்தின் நிறுவலில் ஒரு பங்கு
+வகிக்கும்.
+
+\begin{prop}\ollabel{prop:provability-contr}
+  $\Gamma \Proves !A$ என்றும், $\Gamma \cup \{!A\}$ முரணுடையது என்றும்
+  இருந்தால், $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+$\Gamma_0 = \{!B_1, \dots, !B_n\}$, $\Gamma_1
+  =\{!C_1, \dots, !C_n\} \subseteq \Gamma$ என்ற முடிவுறு கணங்கள் இருந்து,
+  \begin{align*}
+    \{\sFmla{\False}{!A}, &
+    \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\} \\
+    \{\sFmla{\True}{!A}, &
+    \sFmla{\True}{!C_1}, \dots, \sFmla{\True}{!C_m}\}
+  \end{align*}
+  ஆகியவற்றுக்கு மூடிய !!{tableau}s உள்ளன. $!A$ மீது \Cut{} விதியைப்
+  பயன்படுத்தி இவற்றை ஒற்றை மூடிய !!a{tableau}வாக இணைக்கலாம்; அது $\Gamma_0
+  \cup \Gamma_1$ முரணுடையது என்பதைக் காட்டுகிறது. $\Gamma_0
+  \subseteq \Gamma$, $\Gamma_1 \subseteq \Gamma$ என்பதால் $\Gamma_0 \cup
+  \Gamma_1 \subseteq \Gamma$; ஆகவே $\Gamma$ முரணுடையது.
+\end{proof}
+
+% SEGMENT OLP-0106-S02
+\begin{prop}
+\ollabel{prop:prov-incons}
+$\Gamma \Proves !A$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Gamma \cup
+\{\lnot !A\}$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+முதலில் $\Gamma \Proves !A$ என்க; அதாவது பின்வருவதற்கு மூடிய
+!!a{tableau} உள்ளது:
+\[
+\{\sFmla{\False}{!A},
+\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}
+\]
+$\TRule{\True}{\lnot}$ விதியைப் பயன்படுத்தி இதைப் பின்வருவதற்கான மூடிய
+!!a{tableau}வாக மாற்றலாம்:
+\[
+\{\sFmla{\True}{\lnot !A},
+\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}.
+\]
+
+மறுபுறம், பின்னையதற்கு மூடிய !!a{tableau} இருந்தால், முதல் எடுகோளான
+$\sFmla{\True}{\lnot !A}$ க்கு \TRule{\True}{\lnot} ஐப் பயன்படுத்தியதால்
+கிடைக்கும் ஒவ்வொரு வாய்பாட்டையும் அந்த எடுகோளையும் நீக்கி,
+$\sFmla{\False}{!A}$ என்ற எடுகோளைச் சேர்ப்பதன் மூலம் அதை முன்னையதற்கான மூடிய
+!!a{tableau}வாக மாற்றலாம். ஏனெனில் முன்பு ஒரு கிளை,
+$\sFmla{\True}{\lnot !A}$ க்கு \TRule{\True}{\lnot} ஐப் பயன்படுத்தியதன்
+முடிவான $\sFmla{\False}{!A}$ ஐக் கொண்டதால் மூடியிருந்தால், புதிய
+!!{tableau}விலுள்ள தொடர்புடைய கிளையும் மூடியிருக்கும். பழைய அட்டவணை மரத்தில்
+$\sFmla{\True}{\lnot !A}$ என்ற எடுகோளையும் $\sFmla{\False}{\lnot !A}$ ஐயும்
+கொண்டதால் ஒரு கிளை மூடியிருந்தால், $\sFmla{\False}{\lnot !A}$ க்கு
+$\TRule{\False}{\lnot}$ ஐப் பயன்படுத்தி $\sFmla{\True}{!A}$ ஐப் பெற்று அதை
+மூடிய கிளையாக மாற்றலாம். நாம் $\sFmla{\False}{!A}$ ஐ எடுகோளாகச்
+சேர்த்திருப்பதால் இது கிளையை மூடுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0106-S03
+\begin{prob}
+$\Gamma \Proves \lnot !A$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Gamma
+\cup \{!A\}$ முரணுடையது என்பதை நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0106-S04
+\begin{prop}\ollabel{prop:explicit-inc}
+  $\Gamma \Proves !A$ என்றும் $\lnot !A \in \Gamma$ என்றும் இருந்தால்,
+  $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+  $\Gamma \Proves !A$ என்றும் $\lnot !A \in \Gamma$ என்றும் கொள்க. அப்போது
+  பின்வருவதற்கு மூடிய அட்டவணை மரம் இருக்குமாறு $!B_1$, \dots,
+  $!B_n \in \Gamma$ உள்ளன:
+  \[
+  \{\sFmla{\False}{!A}, \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}
+  \]
+  % SOURCE CORRECTION TA-TAB-003: apply T-not to the replacement assumption.
+  \sFmla{\False}{!A} என்ற எடுகோளை \sFmla{\True}{\lnot !A} ஆல்
+  மாற்றி, \sFmla{\True}{\lnot !A} க்கு \TRule{\True}{\lnot} ஐப்
+  பயன்படுத்தியதன் முடிவை எடுகோள்களுக்குப் பின் செருகுக. இவ்வாறு அமைந்த
+  !!{tableau}வில், பழைய !!{tableau}வின் வரி~$1$ ஐச் சார்ந்து
+  நியாயப்படுத்தப்பட்ட எந்த !!{sentence} உம்
+  இப்போது வரி~$n+1$ ஐச் சார்ந்து நியாயப்படுத்தப்படுகிறது. ஆகவே பழைய
+  !!{tableau} மூடியிருந்தால் புதியதும் மூடியிருக்கும். அனைத்து எடுகோள்களும்
+  $\Gamma$ வில் இருப்பதால் இது $\Gamma$ முரணுடையது என்பதைக் காட்டுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0106-S05
+\begin{prop}\ollabel{prop:provability-exhaustive}
+  $\Gamma \cup \{!A\}$, $\Gamma \cup \{\lnot !A\}$ ஆகிய இரண்டும்
+  முரணுடையவை எனில், $\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+  $!B_1$, \dots, $!B_n \in \Gamma$ மற்றும் $!C_1$, \dots,
+  $!C_m \in \Gamma$ இருந்து,
+  \begin{align*}
+    \{\sFmla{\True}{!A}, &
+    \sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\} \text{ மற்றும்}\\
+    \{\sFmla{\True}{\lnot !A}, &
+    \sFmla{\True}{!C_1}, \dots, \sFmla{\True}{!C_m}\}
+  \end{align*}
+  ஆகிய இரண்டிற்கும் மூடிய !!{tableau}s இருந்தால், $\sFmla{\True}{!B_1}$,
+  \dots, $\sFmla{\True}{!B_n}$ ஆகியவற்றுடன் $\sFmla{\True}{!C_1}$,
+  \dots, $\sFmla{\True}{!C_m}$ ஆகியவற்றையும் எடுகோள்களாகக் கொண்டு, பின்னர்
+  \Cut{} விதியைப் பயன்படுத்துவதன் மூலம் $\Gamma$ முரணுடையது என்பதைக் காட்டும்
+  ஒற்றை இணைந்த !!a{tableau}வை அமைக்கலாம். இதனால் இரண்டு கிளைகள் கிடைக்கின்றன;
+  ஒன்று $\sFmla{\True}{!A}$ உடனும், மற்றது $\sFmla{\False}{!A}$ உடனும்
+  தொடங்குகின்றன.
+  
+  இடப்புறத்தில், முதல் !!{tableau}வின் எடுகோள்களுக்குக் கீழுள்ள பகுதியைச்
+  சேர்க்கவும். முதல் !!{tableau}வின் ஒவ்வோர் எடுகோளும், அவற்றுள்
+  $\sFmla{\True}{!A}$ உம், கிடைப்பதால் இங்குள்ள ஒவ்வொரு விதிப் பயன்பாடும்
+  இன்னும் சரியானதே. ஆகவே $\sFmla{\True}{!A}$ க்குக் கீழுள்ள ஒவ்வொரு கிளையும்
+  மூடுகிறது.
+  
+  வலப்புறத்தில், இரண்டாவது !!{tableau}வின் எடுகோளுக்குக் கீழுள்ள பகுதியை,
+  $\sFmla{\True}{\lnot !A}$ க்கு~$\TRule{\True}{\lnot}$ ஐப் பயன்படுத்தியதன்
+  முடிவுகளை நீக்கிவிட்டுச் சேர்க்கவும். $\sFmla{\True}{\lnot !A}$ க்கு
+  $\TRule{\True}{\lnot}$ ஐப் பயன்படுத்தியதன் முடிவு
+  $\sFmla{\False}{!A}$; இருப்பினும் இணைந்த !!{tableau}வின் வலப்பக்கத்தில்
+  \Cut{} விதியின் முடிவாக அது கிடைக்கிறது.
+
+  இரண்டாவது அட்டவணை மரத்தில் ஒரு கிளை $\sFmla{\True}{\lnot !A}$ என்ற
+  எடுகோளையும் (இணைந்த !!{tableau}வில் அது இப்போது எடுகோளாகத் தோன்றாது)
+  $\sFmla{\False}{\lnot !A}$ ஐயும் கொண்டதால் மூடியிருந்தால்,
+  $\sFmla{\False}{\lnot !A}$ க்கு $\TRule{\False}{\lnot}$ ஐப் பயன்படுத்தி
+  $\sFmla{\True}{!A}$ ஐப் பெறலாம். இணைந்த !!{tableau}விலுள்ள தொடர்புடைய
+  கிளை இப்போது மூடுகிறது; ஏனெனில் அது \Cut{} விதியின் வலப்பக்க முடிவான
+  $\sFmla{\False}{!A}$ ஐக் கொண்டுள்ளது. இரண்டாவது !!{tableau}விலுள்ள ஒரு கிளை
+  வேறு காரணத்திற்காக மூடியிருந்தால், இணைந்த !!{tableau}விலுள்ள தொடர்புடைய
+  கிளையும் மூடுகிறது; ஏனெனில் பழைய இரண்டாவது !!{tableau}வின் கிளையில்
+  $\sFmla{\True}{\lnot !A}$ ஐத் தவிர இடம்பெறும் எந்த !!{signed formula}s உம்
+  இணைந்த !!{tableau}வின் தொடர்புடைய கிளையிலும் இடம்பெறுகின்றன.
+  \end{proof}
+
+\end{document}

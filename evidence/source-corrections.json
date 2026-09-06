@@ -631,6 +631,239 @@
       "rationale": "The conditional fallback preserves the exact reference identity, makes the standalone proof readable, and restores the live numbered reference in a complete reader.",
       "precise_review_question": "Does the Tamil fallback identify exactly the substitution-versus-assignment result needed to carry A(t1) across equality to A(t2)?",
       "location_needle": "fol:syn:ext:prop:ext-formulas"
+    },
+    {
+      "audit_id": "TA-TAB-001",
+      "unit_id": "OLP-0098",
+      "kind": "tableaux-editorial-system-name-copy-error",
+      "action": "Corrected the editorial instruction from natural deduction to tableaux, matching the chapter, the prfTab tag and the imported sections.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.",
+      "chosen_treatment": "தமிழ் பதிப்புக் குறிப்பு prfTab குறிச்சொல் அட்டவணை மரங்களை நிறுவல் முறைமையாகக் கருதும் உள்ளடக்கத்தைக் கட்டுப்படுத்துகிறது எனத் திருத்துகிறது.",
+      "alternatives_considered": "பொருந்தாத இயல்பான வருவித்தல் என்ற மூலச் சொல்லை வைத்தல்; முறைமையின் பெயரை முழுவதும் நீக்குதல்",
+      "rationale": "This is a direct chapter-template copy error: the parallel natural-deduction chapter uses prfND, while this chapter is named tableaux and uses prfTab.",
+      "precise_review_question": "Does replacing only natural deduction with tableaux restore the exact intended scope of the prfTab editorial instruction?",
+      "location_needle": "SOURCE CORRECTION TA-TAB-001"
+    },
+    {
+      "audit_id": "TA-TAB-002",
+      "unit_id": "OLP-0101",
+      "kind": "tableaux-raw-universal-command",
+      "action": "Corrected two raw TeX universal-symbol commands in tableau rule labels to OpenLogic's defined universal operator.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\forall", "\\forall"],
+      "expected_extra_commands": ["\\lforall", "\\lforall"],
+      "source_issue_or_choice": "The universal tableau section twice uses \\forall inside \\TRule labels while all displayed formulas and the rule's other labels use the edition operator \\lforall.",
+      "chosen_treatment": "தமிழ் உரை இரண்டு விதிப் பெயர்களையும் \\TRule{...}{\\lforall} எனத் திருத்துகிறது.",
+      "alternatives_considered": "இரண்டு தனித்த \\forall குறிகளையும் வைத்தல்; விதிப் பெயர்களை உரையாக மட்டும் வழங்குதல்",
+      "rationale": "The operator macro \\lforall is the defined OpenLogic universal quantifier and makes both labels match the formulas and all subsequent references to the same rules.",
+      "precise_review_question": "Do the two replacements make the universal tableau rule labels internally identical to the defined rules without changing their logical content?",
+      "location_needle": "SOURCE CORRECTION TA-TAB-002"
+    },
+    {
+      "audit_id": "TA-TAB-003",
+      "unit_id": "OLP-0106",
+      "kind": "tableaux-negation-rule-premise-mismatch",
+      "action": "Corrected the prose to apply the true-negation tableau rule to the newly substituted true signed negation, whose conclusion is the required false signed formula.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\False"],
+      "expected_extra_commands": ["\\True", "\\lnot"],
+      "source_issue_or_choice": "After replacing the assumption False A by True not-A, the source says to apply the T-negation rule to False A; that is neither the replacement assumption nor a premise of the T-negation rule.",
+      "chosen_treatment": "தமிழ் உரை \\sFmla{\\True}{\\lnot !A} என்ற புதிய எடுகோளுக்கே \\TRule{\\True}{\\lnot} ஐப் பயன்படுத்தி \\sFmla{\\False}{!A} ஐச் செருகுகிறது.",
+      "alternatives_considered": "பொருந்தாத False A என்ற மூலப் பயன்பாட்டை வைத்தல்; விதிப் பயன்பாட்டை முழுவதும் நீக்குதல்",
+      "rationale": "The preceding replacement, the defined T-negation rule and the following line-renumbering argument all require True not-A as the rule premise and False A as its conclusion.",
+      "precise_review_question": "Does changing only the named premise to True not-A make the transformation well-formed and preserve the proof's exact conclusion?",
+      "location_needle": "SOURCE CORRECTION TA-TAB-003"
+    },
+    {
+      "audit_id": "TA-TAB-004",
+      "unit_id": "OLP-0107",
+      "kind": "tableaux-malformed-signed-formula-arguments",
+      "action": "Restored the missing argument boundary in eight signed-formula nodes so that each sFmla call receives a truth sign and a formula as separate arguments.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "Eight tableau nodes nest the formula inside the truth-sign argument and omit sFmla's second argument, unlike every well-formed signed formula in the chapter.",
+      "chosen_treatment": "தமிழ் TeX இல் எட்டு இடங்களிலும் \\sFmla{குறி}{வாய்பாடு} என்ற இரண்டு தனி உறுப்புகள் மீட்டமைக்கப்படுகின்றன.",
+      "alternatives_considered": "கட்டமைப்பிழையுள்ள ஒரே உறுப்புப் பயன்பாடுகளை வைத்தல்; அட்டவணை மரங்களை உரையாக மாற்றுதல்",
+      "rationale": "The surrounding assumptions, closure pairs and the sFmla definition make the intended signs and formulas unambiguous; restoring the brace boundary is required for well-formed typesetting.",
+      "precise_review_question": "Do all eight repaired calls preserve the intended sign and A-or-B formula while supplying exactly the two arguments required by sFmla?",
+      "location_needle": "SOURCE CORRECTION TA-TAB-004"
+    },
+    {
+      "audit_id": "TA-TAB-005",
+      "unit_id": "OLP-0109",
+      "kind": "tableaux-soundness-schematic-formula-mismatch",
+      "action": "Made the universal-tableau soundness cases use the same schematic formula A in each rule premise, conclusion and semantic justification.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "\\sFmla{\\True}{\\lforall[x][!B(x)]}",
+          "to": "\\sFmla{\\True}{\\lforall[x][!A(x)]}",
+          "count": 1
+        },
+        {
+          "from": "\\sFmla{\\False}{\\lforall[x][!B(x)]}",
+          "to": "\\sFmla{\\False}{\\lforall[x][!A(x)]}",
+          "count": 1
+        },
+        {
+          "from": "\\Sat/{M}{\\lforall[x][!B(x)]}",
+          "to": "\\Sat/{M}{\\lforall[x][!A(x)]}",
+          "count": 2
+        },
+        {
+          "from": "\\Sat/{M}{!B(x)}[s]",
+          "to": "\\Sat/{M}{!A(x)}[s]",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "Both universal-rule soundness cases name B(x) in their premise or initial semantic clauses but introduce and prove the required conclusion using A(t) or A(a).",
+      "chosen_treatment": "தமிழ் நிறுவல் இரு நேர்வுகளிலும் ஒரே திட்ட வாய்பாடு !A(x) ஐ முன்கோள், முடிவு, நிறைவுறுத்தல் விளக்கம் அனைத்திலும் பயன்படுத்துகிறது.",
+      "alternatives_considered": "The inconsistent B/A letters; changing the rule conclusions and every later A-expression to B instead.",
+      "rationale": "The displayed tableau rules instantiate one formula schema throughout. The conclusions A(t) and A(a), together with the later extensionality steps, make A(x) the unambiguous intended premise formula.",
+      "precise_review_question": "Do the four normalized replacements remove only the B/A copy mismatch while leaving both universal-rule soundness arguments formally unchanged?",
+      "location_needle": "SOURCE CORRECTION TA-TAB-005"
+    },
+    {
+      "audit_id": "TA-READER-REF-008",
+      "unit_id": "OLP-0109",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped six absent first-order semantic references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[syn][sem]{prop:quant-terms}",
+          "to": "\\oliflabeldef{syn:sem:prop:quant-terms}{\\olref[syn][sem]{prop:quant-terms}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ass]{prop:sat-quant}",
+          "to": "\\oliflabeldef{syn:ass:prop:sat-quant}{\\olref[syn][ass]{prop:sat-quant}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{cor:extensionality-sent}",
+          "to": "\\oliflabeldef{syn:ext:cor:extensionality-sent}{\\olref[syn][ext]{cor:extensionality-sent}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:extensionality}",
+          "to": "\\oliflabeldef{syn:ext:prop:extensionality}{\\olref[syn][ext]{prop:extensionality}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:ext-formulas}",
+          "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+          "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The cumulative proof-systems reader omits the six syntax-and-semantics results used in the quantified tableau soundness cases, which would otherwise render as unresolved question marks.",
+      "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் மூடிய சொல் இடைநிறுத்தல், அளவையடை நிறைவுறுத்தல், குறி-சார்பு அல்லது சொல்-இடைநிறுத்தல் முடிவை விளக்கும் தமிழ் தொடர்.",
+      "alternatives_considered": "Literal question marks; deleting the semantic dependencies; permanently replacing the live links.",
+      "rationale": "The conditional fallbacks preserve the exact reference identities, keep the standalone proof readable and automatically restore numbered links in a complete reader.",
+      "precise_review_question": "Do the six Tamil fallbacks state exactly the semantic dependency used at each quantified tableau step without overstating the omitted result?",
+      "location_needle": "syn:sem:prop:quant-terms"
+    },
+    {
+      "audit_id": "TA-TAB-006",
+      "unit_id": "OLP-0111",
+      "kind": "tableaux-identity-rule-sign-mismatch",
+      "action": "Corrected the added formula in the true-identity soundness case from an unspecified sign S to the true sign required by the named rule.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\True"],
+      "normalized_math_replacements": [
+        {
+          "from": "\\sFmla{S}{!A(t_2)}",
+          "to": "\\sFmla{\\True}{!A(t_2)}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The proof explicitly considers the T-identity rule and assumes True equality and True A(t1), but calls its added conclusion S A(t2).",
+      "chosen_treatment": "தமிழ் நிறுவல் சேர்க்கப்படும் முடிவை \\sFmla{\\True}{!A(t_2)} எனக் குறிப்பிடுகிறது.",
+      "alternatives_considered": "The unspecified sign S; broadening the proof to both identity rules in the same paragraph.",
+      "rationale": "The named T-identity rule has a true signed conclusion, and every subsequent semantic statement in the paragraph proves precisely that conclusion.",
+      "precise_review_question": "Does replacing S with True make the sentence agree exactly with the rule and the proof that follows?",
+      "location_needle": "SOURCE CORRECTION TA-TAB-006"
+    },
+    {
+      "audit_id": "TA-READER-REF-009",
+      "unit_id": "OLP-0111",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped four absent first-order semantic references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+          "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{}",
+          "count": 2
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:ext-formulas}",
+          "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{}",
+          "count": 2
+        }
+      ],
+      "source_issue_or_choice": "The cumulative proof-systems reader omits the sentence-assignment and formula-substitution propositions used by identity-tableau soundness, which would otherwise render as unresolved question marks.",
+      "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் வாக்கிய நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது அல்லது சொல் இடைநிறுத்தல் மாறி ஒதுக்கீட்டுடன் பொருந்தும் என்ற தமிழ் விளக்கம்.",
+      "alternatives_considered": "Literal question marks; deleting the semantic dependencies; permanently replacing the live links.",
+      "rationale": "The conditional fallbacks preserve all four exact reference occurrences and keep the standalone proof readable while restoring numbered links in a complete reader.",
+      "precise_review_question": "Do the repeated Tamil fallbacks identify exactly the assignment-independence and substitution results used to carry A(t1) across equality to A(t2)?",
+      "location_needle": "SOURCE CORRECTION TA-TAB-006"
+    },
+    {
+      "audit_id": "TA-TAB-007",
+      "unit_id": "OLP-0110",
+      "kind": "tableaux-identity-substitution-instance-mismatches",
+      "action": "Corrected two displayed substitution instances in the symmetry and transitivity explanations to match the premises and conclusions of the accompanying tableaux.",
+      "expected_missing_math": ["$\\sFmla{\\True}{!A(s_2)}$", "$\\eq[t_1][t_2]$"],
+      "expected_extra_math": ["$\\sFmla{\\True}{!A(s_1)}$", "$\\eq[s_1][s_2]$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "In the symmetry example the second premise is described as A(s2) although line 3 is A(s1); in the transitivity example A(s2) is expanded as eq[t1][t2] although the stated schema A(x)=eq[s1][x] gives eq[s1][s2].",
+      "chosen_treatment": "தமிழ் விளக்கம் சமச்சீர் மரத்தில் இரண்டாம் முன்தேவையை A(s1) என்றும், கடப்பு மரத்தில் A(s2) இன் விரிவை eq[s1][s2] என்றும் வழங்குகிறது.",
+      "alternatives_considered": "The two inconsistent source expressions; changing the surrounding tableaux or schema assignments.",
+      "rationale": "Each corrected expression is uniquely fixed by the adjacent line number, the stated A(x) schema and the displayed identity-rule application.",
+      "precise_review_question": "Do the corrected A(s1) and eq[s1][s2] expressions now identify exactly the second premise in each displayed tableau?",
+      "location_needle": "SOURCE CORRECTION TA-TAB-007"
+    },
+    {
+      "audit_id": "TA-RENDER-001",
+      "unit_id": "OLP-0066",
+      "kind": "proper-name-tamil-transliteration",
+      "action": "Transliterated Stanisław Jaśkowski into Tamil rather than leaving TeX accent commands that the Tamil reader font cannot render.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\l"],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The earlier target retained the Polish name in Latin TeX notation, producing missing-glyph warnings for crossed l and the combining acute accent in the standalone Tamil reader.",
+      "chosen_treatment": "Stanisław Jaśkowski என்பது ஸ்டானிஸ்லாவ் யாஸ்கோவ்ஸ்கி எனத் தமிழ் எழுத்துகளில் ஒலிபெயர்க்கப்படுகிறது.",
+      "alternatives_considered": "Unaccented Latin spelling; a one-name Latin font override; retaining missing glyphs.",
+      "rationale": "The surrounding historical names are already transliterated into Tamil. Tamil-script transliteration removes the verified rendering defect while preserving the person's identity and the passage's attribution.",
+      "precise_review_question": "Is ஸ்டானிஸ்லாவ் யாஸ்கோவ்ஸ்கி a clear India-standard Tamil transliteration of Stanisław Jaśkowski in this historical sentence?",
+      "location_needle": "RENDER LOCALIZATION TA-RENDER-001"
     }
   ],
   "by_unit": {
@@ -645,6 +878,7 @@
     "OLP-0036": ["OLSIZ-007"],
     "OLP-0039": ["OLSIZ-008", "OLSIZ-009"],
     "OLP-0040": ["OLSIZ-010", "TA-SIZ-LOCAL-003"],
+    "OLP-0066": ["TA-RENDER-001"],
     "OLP-0077": ["TA-SEQ-001"],
     "OLP-0081": ["TA-SEQ-002", "TA-SEQ-003", "TA-READER-REF-004"],
     "OLP-0083": ["TA-READER-REF-005"],
@@ -652,6 +886,13 @@
     "OLP-0089": ["TA-ND-002", "TA-ND-003"],
     "OLP-0090": ["TA-ND-004"],
     "OLP-0095": ["TA-ND-005", "TA-READER-REF-006"],
-    "OLP-0097": ["TA-READER-REF-007"]
+    "OLP-0097": ["TA-READER-REF-007"],
+    "OLP-0098": ["TA-TAB-001"],
+    "OLP-0101": ["TA-TAB-002"],
+    "OLP-0106": ["TA-TAB-003"],
+    "OLP-0107": ["TA-TAB-004"],
+    "OLP-0109": ["TA-TAB-005", "TA-READER-REF-008"],
+    "OLP-0110": ["TA-TAB-007"],
+    "OLP-0111": ["TA-TAB-006", "TA-READER-REF-009"]
   }
 }

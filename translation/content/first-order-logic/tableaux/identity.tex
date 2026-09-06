@@ -1,0 +1,113 @@
+% SEGMENT OLP-0110-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{tab}{ide}
+
+\olsection{\usetoken{S}{identity} கொண்ட \usetoken{P}{tableau}}
+
+!!^{identity} கொண்ட !!^{tableau}s க்குக் கூடுதல் அனுமான விதிகள் தேவை.
+$\eq$ க்கான விதிகள் பின்வருமாறு ($t$, $t_1$, $t_2$ ஆகியவை மூடிய சொற்கள்):
+
+\begin{defish}
+\AxiomC{}
+\RightLabel{$\eq$}
+\UnaryInfC{\sFmla{\True}{\eq[t][t]}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\True}{\eq[t_1][t_2]}}
+\noLine
+\UnaryInfC{\sFmla{\True}{!A(t_1)}}
+\RightLabel{$\TRule{\True}{\eq}$}
+\UnaryInfC{\sFmla{\True}{!A(t_2)}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\True}{\eq[t_1][t_2]}}
+\noLine
+\UnaryInfC{\sFmla{\False}{!A(t_1)}}
+\RightLabel{$\TRule{\False}{\eq}$}
+\UnaryInfC{\sFmla{\False}{!A(t_2)}}
+\DisplayProof
+\end{defish}
+மற்ற எல்லா விதிகளுக்கும் மாறாக, $\TRule{\True}{\eq}$,
+$\TRule{\False}{\eq}$ ஆகியவற்றைப் பயன்படுத்தக் கிளையில் ஏற்கெனவே
+\emph{இரண்டு} குறியிட்ட !!{formula}s இருக்க வேண்டும் என்பதைக் கவனிக்கவும்;
+அவை $\sFmla{\True}{\eq[t_1][t_2]}$, $\sFmla{S}{!A(t_1)}$ ஆகிய இரண்டும்.
+
+% SEGMENT OLP-0110-S02
+\begin{ex}
+$s$, $t$ ஆகியவை மூடிய சொற்கள் எனில், $\eq[s][t], !A(s)
+\Proves !A(t)$:
+\begin{oltableau}
+  [\sFmla{\False}{\formula{A}(t)}, just = \TAss
+    [\sFmla{\True}{\eq[s][t]}, just = \TAss
+      [\sFmla{\True}{\formula{A}(s)}, just = \TAss
+        [\sFmla{\True}{\formula{A}(t)}, just={\TRule{\True}{\eq}[2, 3]}, close]
+      ]
+    ]
+  ]
+\end{oltableau}
+இது ஒன்றானவற்றின் பிரதியிடத்தக்கதன்மைக் கொள்கை அல்லது லைப்னிட்சின் விதி
+என்று அறிமுகமானதாக இருக்கலாம்.
+
+% SEGMENT OLP-0110-S03
+!!^{tableau}s, $\eq$ சமச்சீரானது என்பதை, அதாவது $\eq[s_1][s_2]
+\Proves \eq[s_2][s_1]$ என்பதை, நிறுவுகின்றன:
+\begin{oltableau}
+  [\sFmla{\False}{\eq[s_2][s_1]}, just = \TAss
+    [\sFmla{\True}{\eq[s_1][s_2]}, just = \TAss
+      [\sFmla{\True}{\eq[s_1][s_1]}, just = {$\eq$}
+        [\sFmla{\True}{\eq[s_2][s_1]}, just = {\TRule{\True}{\eq}[2, 3]}, close]
+      ]
+    ]
+  ]
+\end{oltableau}
+இங்கு வரி~$2$, $\TRule{\True}{\eq}$ க்குத் தேவையான முதல்
+!!{formula}~$\sFmla{\True}{\eq[s_1][s_2]}$. வரி~$3$ அதற்குத் தேவையான
+இரண்டாவது வாய்பாடு; அது $\sFmla{\True}{!A(s_1)}$ என்ற வடிவிலுள்ளது—
+% SOURCE CORRECTION TA-TAB-007: the second premise is A(s_1), not A(s_2).
+$!A(x)$ ஐ $\eq[x][s_1]$ எனக் கருதுக; அப்போது $!A(s_1)$ என்பது
+$\eq[s_1][s_1]$, $!A(s_2)$ என்பது $\eq[s_2][s_1]$.
+
+% SEGMENT OLP-0110-S04
+$\eq$ கடப்புப் பண்புடையது என்பதையும், அதாவது $\eq[s_1][s_2],
+\eq[s_2][s_3] \Proves \eq[s_1][s_3]$ என்பதையும், அவை நிறுவுகின்றன:
+\begin{oltableau}
+  [\sFmla{\False}{\eq[s_1][s_3]}, just = \TAss
+    [\sFmla{\True}{\eq[s_1][s_2]}, just = \TAss
+      [\sFmla{\True}{\eq[s_2][s_3]}, just = \TAss
+        [\sFmla{\True}{\eq[s_1][s_3]}, just = {\TRule{\True}{\eq}[3, 2]}, close]
+      ]
+    ]
+  ]
+\end{oltableau}
+இந்த !!{tableau}வில் $\TRule{\True}{\eq}$ க்குத் தேவையான முதல் !!{formula},
+வரி~$3$ இலுள்ள $\sFmla{\True}{\eq[s_2][s_3]}$ ஆகும் ($s_2$ ஆனது~$t_1$
+இன் பாத்திரத்தையும் $s_3$ ஆனது~$t_2$ இன் பாத்திரத்தையும் வகிக்கின்றன).
+தேவையான இரண்டாவது வாய்பாடு வரி~$2$; அது
+$\sFmla{\True}{!A(s_2)}$ என்ற வடிவிலுள்ளது. இங்கு $!A(x)$ ஐ
+$\eq[s_1][x]$ எனக் கருதுக; அப்போது $!A(s_2)$ என்பது
+% SOURCE CORRECTION TA-TAB-007: instantiate the displayed schema as eq[s_1][s_2].
+$\eq[s_1][s_2]$ (அதாவது வரி~$2$) ஆகவும், $!A(s_3)$ என்பது முடிவிலுள்ள
+!!{formula}~$\eq[s_1][s_3]$ ஆகவும் அமைகின்றன.
+\end{ex}
+
+% SEGMENT OLP-0110-S05
+\begin{prob}
+பின்வருவனவற்றுக்கு மூடிய !!{tableau}s தருக:
+\begin{enumerate}
+\item $\sFmla{\False}{\lforall[x][\lforall[y][((x = y \land !A(x))
+      \lif !A(y))]]}$
+\item $\sFmla{\False}{\lexists[x][(!A(x) \land
+    \lforall[y][(!A(y) \lif y = x)])]}$,\\
+  $\sFmla{\True}{\lexists[x][!A(x)] \land
+    \lforall[y][\lforall[z][((!A(y) \land !A(z)) \lif y = z)]]}$
+\end{enumerate}
+\end{prob}
+
+\end{document}

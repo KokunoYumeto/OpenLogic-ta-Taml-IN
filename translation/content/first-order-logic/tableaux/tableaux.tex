@@ -1,0 +1,57 @@
+% SEGMENT OLP-0098-S01
+% Part: first-order-logic
+% Chapter: tableaux
+
+\documentclass[../../../include/open-logic-chapter]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olchapter{fol}{tab}{அட்டவணை மரங்கள்}}
+      {\olchapter{pl}{tab}{அட்டவணை மரங்கள்}}
+
+% SEGMENT OLP-0098-S02
+\begin{editorial}
+இந்த அதிகாரம் குறியிட்ட பகுப்பாய்வு அட்டவணை-மர முறைமை ஒன்றை வழங்குகிறது.
+  
+% SOURCE CORRECTION TA-TAB-001: prfTab governs tableaux, not natural deduction.
+அட்டவணை மரங்களை ஒரு நிறுவல் முறைமையாகக் கருதுவதற்குரிய உள்ளடக்கத்தைச்
+சேர்க்கவோ விலக்கவோ ``prfTab'' குறிச்சொல்லைப் பயன்படுத்துக.
+\end{editorial}
+
+\olimport{rules-and-proofs}
+
+\olimport{propositional-rules}
+
+\iftag{FOL}{%
+  \olimport{quantifier-rules}
+}{}
+
+\olimport{derivations}
+
+\olimport{proving-things}
+
+\iftag{FOL}{%
+  \olimport{proving-things-quant}
+}{}
+
+\olimport{proof-theoretic-notions}
+
+\olimport{provability-consistency}
+
+\olimport{provability-propositional}
+
+\iftag{FOL}{%
+  \olimport{provability-quantifiers}
+}{}
+
+\olimport{soundness}
+
+\iftag{FOL}{%
+  \olimport{identity}
+  \olimport{soundness-identity}
+}{}
+
+\OLEndChapterHook
+
+\end{document}

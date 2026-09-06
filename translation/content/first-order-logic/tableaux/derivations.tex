@@ -1,0 +1,100 @@
+% SEGMENT OLP-0102-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: derivations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{der}}
+      {\olfileid{pl}{tab}{der}}
+
+\olsection{\usetoken{P}{tableau}}
+
+\begin{explain}
+எடுகோள் என்றால் என்ன என்று கூறி, அனுமான விதிகளையும் கொடுத்துள்ளோம்.
+!!^{tableau}s இவற்றிலிருந்து தொகுத்தறிதல் முறையில் உருவாக்கப்படுகின்றன:
+ஒவ்வோர் !!{tableau} உம் ஒன்று அல்லது அதற்கு மேற்பட்ட எடுகோள்களைக் கொண்ட
+ஒற்றைக் கிளையாகவோ, ஒரு கிளையில் அனுமான விதிகளில் ஒன்றைப் பயன்படுத்தி
+!!a{tableau}விலிருந்து பெறப்படுவதாகவோ இருக்கும்.
+\end{explain}
+
+% SEGMENT OLP-0102-S02
+\begin{defn}[!!^{tableau}]
+$\sFmla{S_1}{!A_1}$, \dots, $\sFmla{S_n}{!A_n}$ என்ற எடுகோள்களுக்கான
+(இங்கு ஒவ்வொரு $S_i$ உம் $\True$ அல்லது~$\False$) !!^a{tableau} என்பது
+பின்வரும் நிபந்தனைகளை நிறைவுறுத்தும் !!{signed formula}s இன் ஒரு முடிவுறு
+மரவுரு:
+\begin{enumerate}
+\item மரவுருவின் மிக மேலுள்ள $n$ !!{signed formula}s, ஒன்றன்கீழ் ஒன்றாக
+  $\sFmla{S_i}{!A_i}$ ஆகும்.
+\item எடுகோள்களில் ஒன்றாக இல்லாத மரவுருவின் ஒவ்வொரு !!{signed formula} உம்,
+  அதற்கு மேலுள்ள கிளையிலுள்ள !!a{signed formula}விற்கு அனுமான விதி ஒன்றைச்
+  சரியாகப் பயன்படுத்துவதால் கிடைக்கிறது.
+\end{enumerate}
+!!a{tableau}வின் ஒரு கிளையில் $\sFmla{\True}{!A}$,
+$\sFmla{\False}{!A}$ ஆகிய இரண்டும் இருந்தால், அப்போதும் அப்போது மட்டுமே, அது
+\emph{மூடியது}; இல்லையெனில் அது \emph{திறந்தது}. ஒவ்வொரு கிளையும் மூடியுள்ள
+!!^a{tableau} அதன் எடுகோள் கணத்திற்கான \emph{மூடிய !!{tableau}} ஆகும்.
+!!^a{tableau} மூடியதல்ல என்றால், அதாவது அதில் குறைந்தது ஒரு திறந்த கிளையாவது
+இருந்தால், அது \emph{திறந்தது}.
+\end{defn}
+
+% SEGMENT OLP-0102-S03
+\begin{ex}
+  எந்த எடுகோள் கணமும் தனியே !!a{tableau}; ஆனால் பொதுவாக அது மூடியதாக
+  இருக்காது. (எடுகோள்களிலேயே $\sFmla{\True}{!A}$,
+  $\sFmla{\False}{!A}$ என்ற !!{signed formula}s சோடி ஏற்கெனவே இருந்தால்
+  மட்டுமே அது மூடியிருக்கும் என்பது தெளிவு.)
+
+  திறந்ததோ மூடியதோ ஆன !!a{tableau}விலுள்ள !!a{signed formula}~$!A$ க்கு
+  ஓர் அனுமான விதியைப் பயன்படுத்தி, அதிலிருந்து புதிய பெரிய அட்டவணை மரம் ஒன்றைப்
+  பெறலாம். விதி பயன்படுத்தப்படும்~$!A$ இன் அந்த நிகழ்வைக் கொண்ட ஒவ்வொரு
+  கிளையின் முடிவிலும் ஒன்று அல்லது அதற்கு மேற்பட்ட !!{signed formula}s ஐ
+  அவ்விதி சேர்க்கும்.
+
+  எடுத்துக்காட்டாக $\sFmla{\True}{!A \land \lnot !A}$ என்ற எடுகோளைக்
+  கருதுக. அந்த எடுகோளை மட்டும் கொண்ட (திறந்த) !!{tableau} இதோ:
+  \begin{center}
+    \begin{tableau}{}
+      [\sFmla{\True}{\formula{A} \land \lnot \formula{A}}, just=\TAss]
+    \end{tableau}{}
+  \end{center}
+  இந்த எடுகோளுக்கு $\TRule{\True}{\land}$ விதியைப் பயன்படுத்தி அதிலிருந்து
+  புதிய !!a{tableau} ஒன்றைப் பெறுகிறோம். $\sFmla{\True}{!A}$,
+  $\sFmla{\True}{\lnot !A}$ என்ற இரண்டு புதிய வரிகளை !!{tableau}வில் சேர்க்க
+  அந்த விதி அனுமதிக்கிறது:
+  \begin{center}
+    \begin{tableau}{}
+      [\sFmla{\True}{\formula{A} \land \lnot \formula{A}}, just=\TAss
+        [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\land}[1]},
+          [\sFmla{\True}{\lnot \formula{A}}, just={\TRule{\True}{\land}[1]}
+          ]
+        ]
+      ]
+    \end{tableau}{}
+  \end{center}
+  !!{tableau}s ஐ எழுதும்போது, பயன்படுத்திய விதிகளை வலப்புறத்தில் பதிவு
+  செய்கிறோம் (எடுத்துக்காட்டாக, $\TRule{\True}{\land} 1$ என்பது அந்த வரியிலுள்ள
+  !!{signed formula}, வரி~$1$ இலுள்ள !!{signed formula}விற்கு
+  $\TRule{\True}{\land}$ விதியைப் பயன்படுத்துவதால் கிடைத்தது என்று பொருள்).
+  இந்தப் புதிய !!{tableau}வில் இப்போது கூடுதல் !!{signed formula}s உள்ளன;
+  ஆனால் அவற்றில் ஒன்றிற்கு மட்டுமே ($\sFmla{\True}{\lnot !A}$) ஒரு விதியைப்
+  பயன்படுத்த முடியும் (இங்கு $\TRule{\True}{\lnot}$ விதி). அதனால் பின்வரும்
+  மூடிய !!{tableau} கிடைக்கிறது:
+  \begin{center}
+    \begin{tableau}{}
+      [\sFmla{\True}{\formula{A} \land \lnot \formula{A}}, just=\TAss
+        [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\land}[1]}
+          [\sFmla{\True}{\lnot \formula{A}}, just={\TRule{\True}{\land}[1]}
+            [\sFmla{\False}{\formula{A}}, just={\TRule{\True}{\lnot}[3]}, close]
+          ]
+        ]
+      ]
+    \end{tableau}{}
+  \end{center}
+\end{ex}
+
+\end{document}

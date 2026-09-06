@@ -1,0 +1,120 @@
+{
+  "schema": "openlogic-tamil-reader-render-qa/3",
+  "checked_utc": "2026-09-05T23:45:37.899156+00:00",
+  "scope": {
+    "reader_units": 49,
+    "first_unit": "OLP-0063",
+    "last_unit": "OLP-0111",
+    "programme_completed_units": 108,
+    "total_frozen_units": 722,
+    "reader_contents": [
+      "proof-system overview",
+      "sequent calculus",
+      "natural deduction",
+      "tableaux"
+    ]
+  },
+  "pdf": {
+    "path": "readers/proof-systems-sequent-natural-deduction-tableaux-ta-Taml-IN.pdf",
+    "bytes": 522878,
+    "sha256": "ee181a7a52686d44422977d32f935c977f829cb6f0673ac7b82fd881de174d7d",
+    "pages": 89,
+    "all_pages_a4": true,
+    "encrypted": false,
+    "pdf_version": "1.7"
+  },
+  "build": {
+    "master_path": "build/tamil-proof-systems-sequent.tex",
+    "master_bytes": 6338,
+    "master_sha256": "1cca718a0a0d11a7525d1463323989f0bd12289ae69002c2336ea6459b2fdd30",
+    "config_path": "translation/tamil-config.sty",
+    "config_sha256": "1d3cd72a3f69db3d1b0abd315ab50364eedb274e38ca56543d7a533bc40817d4",
+    "receipt_path": "TEX-PROOF-SYSTEMS-TABLEAUX-RECEIPT.json",
+    "receipt_sha256": "4106145a38edb93ee05b2a4d386e14b05b59d63c2d396f1a9a6d4a2021abdab4",
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "mutex_acquired": true,
+    "abandoned_mutex": false,
+    "engine": "xelatex",
+    "passes": 2,
+    "pass_exit_codes": [
+      0,
+      0
+    ],
+    "missing_character_warnings": 0,
+    "undefined_references": 0,
+    "multiply_defined_labels": 0,
+    "overfull_box_warnings_per_pass": 3,
+    "overfull_box_diagnostics": [
+      "Overfull \\hbox (1.3484pt too wide) detected at line 32",
+      "Overfull \\hbox (2.70451pt too wide) detected at line 26",
+      "Overfull \\hbox (3.61192pt too wide) detected at line 26"
+    ],
+    "overfull_visual_classification": "Three internal signed-formula boxes extend by 1.3484-3.61192 pt inside their tableau nodes; exact-page inspection confirms no visible margin overflow, clipping, or overlap.",
+    "inherited_file_request_warnings_per_pass": 2
+  },
+  "semantic_review": {
+    "path": "SEMANTIC_REVIEW-CURRENT.json",
+    "sha256": "5cf4405880b0f00a210dc15b0b81571b717d35792c6898bacac22168c81512e8",
+    "bound_units": 108,
+    "reviewed_samples": 194
+  },
+  "text_extraction": {
+    "path": "tamil-proof-systems-tableaux-ee181a7a5268.txt",
+    "bytes": 380697,
+    "sha256": "d2e88c4ff7fdb9c96dfff0a14244538e2a5d155e17d06ea7c2d74248f82b204c",
+    "replacement_character_count": 0,
+    "literal_question_pair_count": 0,
+    "duplicate_article_count": 0,
+    "unexpected_ascii_prose_words": [],
+    "allowed_ascii_words_note": "Formal rule labels, system notation, proper titles, and Open Logic Project attribution only.",
+    "required_searches": {
+      "reader title": true,
+      "tableaux chapter": true,
+      "soundness section": true,
+      "identity section": true,
+      "Jaśkowski transliteration": true
+    }
+  },
+  "fonts": {
+    "font_rows": 15,
+    "all_embedded": true,
+    "pdffonts_output_sha256": "485a9ce7b89ce781fede1d7632340a8a3787e05668449a77d88e7ceaa3e67a98"
+  },
+  "render": {
+    "directory": "tmp/pdfs/proof-systems-tableaux-ee181a7a5268",
+    "resolution_dpi": 110,
+    "page_png_count": 89,
+    "page_png_total_bytes": 21191866,
+    "contact_sheet_count": 10,
+    "contact_sheet_total_bytes": 21186655,
+    "contact_sheet_layout": "3x3",
+    "visually_inspected_page_range": "1-89",
+    "focused_pages": [
+      1,
+      8,
+      62,
+      63,
+      64,
+      65,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89
+    ]
+  },
+  "visual_findings": {
+    "visual_review_complete": true,
+    "clipped_text": 0,
+    "overlapping_text": 0,
+    "unreadable_glyphs": 0,
+    "broken_tables_or_trees": 0,
+    "margin_overflows": 0,
+    "notes": [
+      "All 89 pages were inspected through generated 3x3 contact sheets from this exact PDF.",
+      "The title page, Jaśkowski transliteration, warned tableau boxes, and concluding soundness and identity pages were inspected individually."
+    ]
+  },
+  "result": "pass"
+}

@@ -1,0 +1,100 @@
+% SEGMENT OLP-0100-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: propositional-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{prl}}
+      {\olfileid{pl}{tab}{prl}}
+
+\olsection{கூற்றுத் தருக்க விதிகள்}
+
+\subsection{$\lnot$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{\sFmla{\True}{\lnot !A}}
+\RightLabel{\TRule{\True}{\lnot}}
+\UnaryInfC{\sFmla{\False}{!A}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\False}{\lnot !A}}
+\RightLabel{\TRule{\False}{\lnot}}
+\UnaryInfC{\sFmla{\True}{!A}}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0100-S02
+\subsection{$\land$ க்கான விதிகள்}
+
+\begin{defish}\noindent
+\AxiomC{\sFmla{\True}{!A \land !B}}
+\RightLabel{\TRule{\True}{\land}}
+\UnaryInfC{\sFmla{\True}{!A}}
+\noLine
+\UnaryInfC{\sFmla{\True}{!B}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\False}{!A \land !B}}
+\RightLabel{\TRule{\False}{\land}}
+\UnaryInfC{$\sFmla{\False}{!A} \quad \mid \quad \sFmla{\False}{!B}$}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0100-S03
+\subsection{$\lor$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{\sFmla{\True}{!A \lor !B}}
+\RightLabel{\TRule{\True}{\lor}}
+\UnaryInfC{$\sFmla{\True}{!A} \quad \mid \quad \sFmla{\True}{!B}$}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\False}{!A \lor !B}}
+\RightLabel{\TRule{\False}{\lor}}
+\UnaryInfC{\sFmla{\False}{!A}}
+\noLine
+\UnaryInfC{\sFmla{\False}{!B}}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0100-S04
+\subsection{$\lif$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{\sFmla{\True}{!A \lif !B}}
+\RightLabel{\TRule{\True}{\lif}}
+\UnaryInfC{$\sFmla{\False}{!A} \quad \mid \quad \sFmla{\True}{!B}$}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\False}{!A \lif !B}}
+\RightLabel{\TRule{\False}{\lif}}
+\UnaryInfC{\sFmla{\True}{!A}}
+\noLine
+\UnaryInfC{\sFmla{\False}{!B}}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0100-S05
+\subsection{வெட்டு விதி}
+
+\begin{defish}
+\AxiomC{}
+\RightLabel{\Cut}
+\UnaryInfC{$\sFmla{\True}{!A} \quad \mid \quad \sFmla{\False}{!A}$}
+\DisplayProof
+\end{defish}
+
+% SEGMENT OLP-0100-S06
+\Cut{} விதி முந்தைய !!a{signed formula}விற்கு ``பயன்படுத்தப்படுவது'' அல்ல;
+மாறாக, !!a{tableau}விலுள்ள ஒவ்வொரு கிளையையும் இரண்டாகப் பிரிக்க அது
+அனுமதிக்கிறது: ஒரு கிளையில் $\sFmla{\True}{!A}$ உம், மற்றதில்
+$\sFmla{\False}{!A}$ உம் இருக்கும். இந்த விதி இன்றியமையாததல்ல---மூடிய
+!!a{tableau} உடைய எந்த !!{signed formula}s கணத்திற்கும் \Cut{} ஐப்
+பயன்படுத்தாத ஒன்றும் உண்டு---ஆனால் !!{tableau}s ஐ
+வசதியாக இணைக்க இது உதவுகிறது.
+
+\end{document}

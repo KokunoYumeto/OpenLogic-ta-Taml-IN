@@ -1,0 +1,57 @@
+% SEGMENT OLP-0111-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: soundness-identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{tab}{sid}
+
+\olsection{\usetoken{S}{identity} கொண்ட சரித்தன்மை}
+
+\begin{prop}
+ஒன்றாதலுக்கான விதிகளைக் கொண்ட !!^{tableau}s சரித்தன்மையுடையவை: எந்த மூடிய
+!!{tableau}வும் நிறைவுறத்தக்கதல்ல.
+\end{prop}
+
+% SEGMENT OLP-0111-S02
+\begin{proof}
+முன்புபோலப் பின்வருவதை மட்டும் காட்ட வேண்டும்: !!a{tableau} ஒன்றுக்கு
+நிறைவுறத்தக்க கிளை இருக்கும்போது, அந்தக் கிளையில்~$\eq$ க்கான விதிகளுள்
+ஒன்றைப் பயன்படுத்துவதால் கிடைக்கும் கிளையும் நிறைவுறத்தக்கது. கிளையிலுள்ள
+குறியிட்ட !!{formula}s கணத்தை~$\Gamma$ எனவும், $\Gamma$ வை நிறைவுறுத்தும்
+!!a{structure} ஒன்றை~$\Struct{M}$ எனவும் கொள்க.
+
+$\eq$ ஐப் பயன்படுத்தி, அதாவது குறியிட்ட
+!!{formula}~$\sFmla{\True}{\eq[t][t]}$ ஐச் சேர்த்து, கிளை
+விரிவாக்கப்படுகிறது என்க. தெளிவாகவே $\Sat{M}{\eq[t][t]}$; ஆகவே
+$\Struct{M}$ ஆனது $\Gamma \cup \{\sFmla{\True}{\eq[t][t]}\}$ ஐயும்
+நிறைவுறுத்துகிறது.
+
+% SEGMENT OLP-0111-S03
+$\TRule{\True}{\eq}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்பட்டால், குறியிட்ட
+% SOURCE CORRECTION TA-TAB-006: the T-identity conclusion has the True sign.
+!!{formula}~$\sFmla{\True}{!A(t_2)}$ ஐச் சேர்க்கிறோம்; மேலும் $\Gamma$ ஆனது
+$\sFmla{\True}{\eq[t_1][t_2]}$, $\sFmla{\True}{!A(t_1)}$ ஆகிய இரண்டையும்
+கொண்டுள்ளது. எனவே $\Sat{M}{\eq[t_1][t_2]}$ மற்றும்
+$\Sat{M}{!A(t_1)}$. $s(x) = \Value{t_1}{M}$ ஆகுமாறு ஒரு மாறி
+ஒதுக்கீட்டை~$s$ என்க.
+\oliflabeldef{syn:ass:prop:sentence-sat-true}{\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு
+வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு} படி,
+$\Sat{M}{!A(t_1)}[s]$. $\varAssign{s}{s}{x}$ என்பதால்,
+\oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு} படி,
+$\Sat{M}{!A(x)}[s]$. $\Sat{M}{\eq[t_1][t_2]}$ என்பதால்,
+$\Value{t_1}{M} = \Value{t_2}{M}$; எனவே $s(x) = \Value{t_2}{M}$.
+\oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு} ஐ மீண்டும்
+பயன்படுத்தினால், $\Sat{M}{!A(t_2)}[s]$ என்றும் கிடைக்கிறது.
+\oliflabeldef{syn:ass:prop:sentence-sat-true}{\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு
+வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு} படி,
+$\Sat{M}{!A(t_2)}$. $\TRule{\False}{\eq}$ நேர்வும் இதேபோல்
+கையாளப்படுகிறது.
+\end{proof}
+
+\end{document}

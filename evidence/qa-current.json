@@ -10,9 +10,12 @@
     "pass": true
   },
   "translation_coverage": {
-    "drafted": 94,
-    "textual_invariants_pass": 94,
+    "drafted": 108,
+    "textual_invariants_pass": 108,
+    "semantic_reviewed": 108,
+    "reader_verified_distinct": 100,
     "combined_reader_verified": 51,
+    "proof_systems_reader_verified": 49,
     "release_verified": 51,
     "published_sources": 51,
     "total": 722
@@ -22,16 +25,22 @@
   "canon_sources": 9,
   "canon_passages": 50,
   "term_decisions": 103,
-  "aligned_segments": 698,
+  "aligned_segments": 792,
   "semantic_review": "semantic-review-current.json",
   "build_qa": "tex-b001-receipt.json",
   "current_checkpoint": "checkpoint-current.json",
   "laptop_reconciliation": "laptop-canon-reconciliation.md",
   "publication_readback": "publication-readback-current.json",
-  "pdf_scope": "Exact 51-unit v0.2.1 combined reader passed protected build, font, copy/search and all-page visual QA and is the current tagged public release. Later drafted units have textual QA only.",
+  "pdf_scope": "Two exact interim readers cover 100 distinct units. Both passed protected builds, embedded-font and copy/search checks, and all-page visual QA.",
   "translation_decision_log": "translation-decisions.jsonl",
   "combined_build_attempt": "tex-sfr-patch-receipt.json",
   "combined_build_qa": "tex-sfr-patch-receipt.json",
   "combined_render_qa": "sfr-render-qa.json",
-  "proof_systems_reader_build_attempt": "TEX-PROOF-SYSTEMS-ND-RECEIPT.json"
+  "proof_systems_reader_build_attempt": "TEX-PROOF-SYSTEMS-ND-RECEIPT.json",
+  "translation_decisions": 157,
+  "translation_decision_occurrences": 6399,
+  "reader_page_mapped_occurrences": 2740,
+  "reader_page_pending_occurrences": 3659,
+  "proof_systems_build_qa": "tex-proof-systems-tableaux-receipt.json",
+  "proof_systems_render_qa": "proof-systems-tableaux-render-qa.json"
 }

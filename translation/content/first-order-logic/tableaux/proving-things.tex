@@ -1,0 +1,476 @@
+% SEGMENT OLP-0103-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: proving-things
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{pro}}
+      {\olfileid{pl}{tab}{pro}}
+
+\olsection{\usetoken{P}{tableau} எடுத்துக்காட்டுகள்}
+
+% SEGMENT OLP-0103-S02
+\begin{ex}
+!!{sentence} $(!A \land !B) \lif !A$ க்கான மூடிய !!a{tableau} ஒன்றைக்
+கண்டுபிடிப்போம்.
+
+அதற்குரிய எடுகோளை !!{tableau}[gen] மேலே எழுதித் தொடங்குகிறோம்.
+\begin{oltableau}
+  [\sFmla{\False}{(\formula{A} \land \formula{B}) \lif \formula{A}},
+    just = \TAss]
+\end{oltableau}
+
+ஒரே ஓர் எடுகோள்தான் உள்ளது; ஆகவே ஒரு விதியைப் பயன்படுத்தக்கூடிய ஒரே
+!!a{signed formula}தான் உள்ளது. (ஒவ்வொரு !!{signed formula}விற்கும்
+அதிகபட்சம் ஒரு விதியையே பயன்படுத்த முடியும்: அது தொடர்புடைய குறிக்கும்
+!!{sentence}[gen] !!{main operator}க்கும் உரிய விதியாகும்.) இந்நேர்வில்
+$\TRule{\False}{\lif}$ ஐப் பயன்படுத்த வேண்டும்.
+\begin{oltableau}
+  [\sFmla{\False}{(\formula{A} \land \formula{B}) \lif \formula{A}},
+    checked, just = \TAss
+    [\sFmla{\True}{\formula{A} \land \formula{B}},
+      just={\TRule{\False}{\lif}[1]}
+      [\sFmla{\False}{\formula{A}}, just={\TRule{\False}{\lif}[1]}]
+    ]
+  ]
+\end{oltableau}
+எந்த !!{signed formula}s க்கு அவற்றிற்குரிய விதிகளைப் பயன்படுத்தியுள்ளோம்
+என்பதைக் கண்காணிக்க, அந்த வாக்கியத்துக்கு அருகில் ஒரு சரிக்குறி எழுதுகிறோம்.
+ஆனால் எல்லாத் திறந்த கிளைகளிலும் விதி பயன்படுத்தப்பட்டிருந்தால்
+\emph{மட்டுமே} சரிக்குறி எழுதுக. ஒவ்வொரு திறந்த கிளையிலும்
+!!a{signed formula}விற்குரிய விதி பயன்படுத்தப்பட்டதும், அதற்குத் திரும்பி வந்து மீண்டும்
+விதியைப் பயன்படுத்த வேண்டியதில்லை. இங்கு ஒரே கிளைதான் உள்ளதால் விதியை ஒருமுறை
+மட்டுமே பயன்படுத்த வேண்டும். (சரிக்குறிகள் அட்டவணை மரங்களைக் கட்டுவதற்கான
+வசதி மட்டுமே; அவை அட்டவணை மரங்களின் தொடரமைப்பில் அதிகாரப்பூர்வப் பகுதிகள் அல்ல.)
+
+ஒரு விதியைப் பயன்படுத்தக்கூடிய புதிய !!a{signed formula} உள்ளது: வரி~$2$
+இலுள்ள $\sFmla{\True}{!A \land !B}$. $\TRule{\True}{\land}$ விதியைப்
+பயன்படுத்தினால் பின்வருவது கிடைக்கிறது:
+\begin{oltableau}
+  [\sFmla{\False}{(\formula{A} \land \formula{B}) \lif \formula{A}},
+    checked, just = \TAss
+    [\sFmla{\True}{\formula{A} \land \formula{B}},
+      just={\TRule{\False}{\lif}[1]}, checked
+      [\sFmla{\False}{\formula{A}}, just={\TRule{\False}{\lif}[1]}
+        [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\land}[2]}
+          [\sFmla{\True}{\formula{B}}, just={\TRule{\True}{\land}[2]}, close
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+இப்போது கிளையில் $\sFmla{\True}{!A}$ (வரி~$4$ இல்),
+$\sFmla{\False}{!A}$ (வரி~$3$ இல்) ஆகிய இரண்டும் இருப்பதால் கிளை மூடியது.
+அது ஒரே கிளை என்பதால் !!{tableau}வும் மூடியது. $(!A \land !B) \lif !A$
+க்கான மூடிய !!a{tableau} ஒன்றைக் கண்டுபிடித்துவிட்டோம்.
+\end{ex}
+
+% SEGMENT OLP-0103-S03
+\begin{ex}
+இப்போது $(\lnot !A \lor !B) \lif (!A \lif !B)$ க்கான மூடிய !!a{tableau}
+ஒன்றைக் கண்டுபிடிப்போம்.
+
+அதற்குரிய எடுகோளுடன் தொடங்குகிறோம்:
+\begin{oltableau}
+  [\sFmla{\False}{(\lnot \formula{A} \lor \formula{B}) \lif
+      (\formula{A} \lif \formula{B})}, just=\TAss]
+\end{oltableau}
+இந்த !!{tableau}விலுள்ள ஒரே !!{signed formula}வின் !!{main operator}~$\lif$;
+அதன் குறி~$\False$. எனவே அதற்கு $\TRule{\False}{\lif}$ விதியைப் பயன்படுத்தி
+பின்வருவதைப் பெறுகிறோம்:
+\begin{oltableau}
+  [\sFmla{\False}{(\lnot \formula{A} \lor \formula{B})
+      \lif (\formula{A} \lif \formula{B})}, just=\TAss, checked
+    [\sFmla{\True}{\lnot \formula{A} \lor \formula{B}},
+      just={\TRule{\False}{\lif}[1]}
+      [\sFmla{\False}{(\formula{A} \lif \formula{B})},
+        just={\TRule{\False}{\lif}[1]}
+      ]
+    ]
+  ]
+\end{oltableau}
+இப்போது வரி~$2$ க்கு~$\TRule{\True}{\lor}$ ஐப் பயன்படுத்துவதா அல்லது
+வரி~$3$ க்கு $\TRule{\False}{\lif}$ ஐப் பயன்படுத்துவதா என்ற தெரிவு உள்ளது.
+ஒவ்வொரு கிளையிலும் ஒவ்வொரு !!{signed formula}விற்குரிய விதியும்
+பயன்படுத்தப்படும் வரை, எந்த வரிசையைத் தேர்ந்தெடுக்கிறோம் என்பது உண்மையில்
+பொருட்டல்ல. ஆகவே முதலாவதைத் தேர்ந்தெடுப்போம். $\TRule{\True}{\lor}$ விதி
+!!{tableau}வைக் கிளைக்க அனுமதிக்கிறது; விதியின் இரண்டு முடிவுகளும் இரு புதிய
+கிளைகளில் சேர்க்கப்படும் புதிய !!{signed formula}s ஆகும். இதனால் பின்வருவது
+கிடைக்கிறது:
+\begin{oltableau}
+  [\sFmla{\False}{(\lnot \formula{A} \lor \formula{B}) \lif
+      (\formula{A} \lif \formula{B})}, just=\TAss, checked
+    [\sFmla{\True}{\lnot \formula{A} \lor \formula{B}},
+      just={\TRule{\False}{\lif}[1]}, checked
+      [\sFmla{\False}{(\formula{A} \lif \formula{B})},
+        just={\TRule{\False}{\lif}[1]}
+        [\sFmla{\True}{\lnot \formula{A}}, just={\TRule{\True}{\lor}[2]}]
+        [\sFmla{\True}{\formula{B}}, just={\TRule{\True}{\lor}[2]}]
+      ]
+    ]
+  ]
+\end{oltableau}
+வரி~$3$ க்கு $\TRule{\False}{\lif}$ விதியை இன்னும் பயன்படுத்தவில்லை; இப்போது
+அதைச் செய்வோம். நேரத்தை மிச்சப்படுத்த இரு கிளைகளிலும் அதைப் பயன்படுத்துகிறோம்.
+ஒவ்வொரு திறந்த கிளையிலும் தொடர்புடைய விதியைப் பயன்படுத்தியிருந்தால் மட்டுமே
+!!a{signed formula}விற்கு அருகில் சரிக்குறி எழுதுகிறோம் என்பதை நினைவுகூர்க.
+ஆகவே விதி பொருந்தும் !!{signed formula}வைக் கொண்ட ஒவ்வொரு கிளையின் முடிவிலும்
+அவ்விதியைப் பயன்படுத்துவது நல்ல உத்தி. அப்படிச் செய்தால் வெவ்வேறு கிளைகளின்
+கீழ்ப்பகுதியில் அந்த !!{signed formula}விற்குத் திரும்ப வேண்டியதில்லை.
+\begin{oltableau}
+  [\sFmla{\False}{(\lnot \formula{A} \lor \formula{B}) \lif
+      (\formula{A} \lif \formula{B})}, just=\TAss, checked
+    [\sFmla{\True}{\lnot \formula{A} \lor \formula{B}},
+      just={\TRule{\False}{\lif}[1]}, checked
+      [\sFmla{\False}{(\formula{A} \lif \formula{B})},
+        just={\TRule{\False}{\lif}[1]}, checked
+        [\sFmla{\True}{\lnot \formula{A}}, just={\TRule{\True}{\lor}[2]}
+          [\sFmla{\True}{\formula{A}}, just={\TRule{\False}{\lif}[3]}
+            [\sFmla{\False}{\formula{B}}, just={\TRule{\False}{\lif}[3]}]
+          ]
+        ]
+        [\sFmla{\True}{\formula{B}}, just={\TRule{\True}{\lor}[2]}
+          [\sFmla{\True}{\formula{A}}, just={\TRule{\False}{\lif}[3]}
+            [\sFmla{\False}{\formula{B}}, just={\TRule{\False}{\lif}[3]}, close]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+வலப்புறக் கிளை இப்போது மூடியது. இடப்புறக் கிளையில் வரி~$4$ க்கு
+$\TRule{\True}{\lnot}$ விதியை இன்னும் பயன்படுத்தலாம். இதனால்
+$\sFmla{\False}{!A}$ கிடைத்து இடப்புறக் கிளை மூடுகிறது:
+\begin{oltableau}
+  [\sFmla{\False}{(\lnot \formula{A} \lor \formula{B}) \lif
+      (\formula{A} \lif \formula{B})}, just=\TAss, checked
+    [\sFmla{\True}{\lnot \formula{A} \lor \formula{B}},
+      just={\TRule{\False}{\lif}[1]}, checked
+      [\sFmla{\False}{(\formula{A} \lif \formula{B})},
+        just={\TRule{\False}{\lif}[1]}, checked
+        [\sFmla{\True}{\lnot \formula{A}}, just={\TRule{\True}{\lor}[2]}
+          [\sFmla{\True}{\formula{A}}, just={\TRule{\False}{\lif}[3]}
+            [\sFmla{\False}{\formula{B}}, just={\TRule{\False}{\lif}[3]}
+              [\sFmla{\False}{\formula{A}},
+                just={\TRule{\True}{\lnot}[4]}, close]
+            ]
+          ]
+        ]
+        [\sFmla{\True}{\formula{B}}, just={\TRule{\True}{\lor}[2]}
+          [\sFmla{\True}{\formula{A}}, just={\TRule{\False}{\lif}[3]}
+            [\sFmla{\False}{\formula{B}},
+              just={\TRule{\False}{\lif}[3]}, close]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+\end{ex}
+
+% SEGMENT OLP-0103-S04
+\begin{ex}
+எத்தனை !!{signed formula}s ஐ வேண்டுமானாலும் எடுகோள்களாகக் கொண்டு
+!!{tableau}s அமைக்கலாம். கிளைக்க அனுமதிக்கும் ஒன்றுக்கு மேற்பட்ட விதிகளைப்
+பயன்படுத்துவதும் அடிக்கடி தேவைப்படுகிறது; பொதுவாக !!a{tableau} எத்தனை
+கிளைகளை வேண்டுமானாலும் கொண்டிருக்கலாம். எடுத்துக்காட்டாக,
+$\{\sFmla{\True}{!A \lor (!B \land !C)}, \sFmla{\False}{(!A \lor !B) \land (!A
+  \lor !C)}\}$ க்கான !!a{tableau}வைக் கருதுக. முதல் எடுகோளுக்கு
+$\TRule{\True}{\lor}$ ஐப் பயன்படுத்தித் தொடங்குகிறோம்:
+\begin{oltableau}
+  [\sFmla{\True}{\formula{A} \lor (\formula{B} \land \formula{C})},
+    just=\TAss, checked
+    [\sFmla{\False}{(\formula{A} \lor \formula{B}) \land
+        (\formula{A} \lor \formula{C})}, just=\TAss
+      [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\lor}[1]}]
+      [\sFmla{\True}{\formula{B} \land \formula{C}},
+        just={\TRule{\True}{\lor}[1]}]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0103-S05
+இப்போது வரி~$2$ க்கு $\TRule{\False}{\land}$ விதியைப் பயன்படுத்தலாம். இரு
+கிளைகளிலும் ஒரே நேரத்தில் இதைச் செய்வதால் வரி~$2$ இல் சரிக்குறியிடலாம்:
+\begin{oltableau}
+  [\sFmla{\True}{\formula{A} \lor (\formula{B} \land \formula{C})},
+    just=\TAss, checked
+    [\sFmla{\False}{(\formula{A} \lor \formula{B}) \land
+        (\formula{A} \lor \formula{C})}, just=\TAss, checked
+      [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\lor}[1]}
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}]
+      ]
+      [\sFmla{\True}{\formula{B} \land \formula{C}},
+        just={\TRule{\True}{\lor}[1]}
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0103-S06
+இப்போது $!A \lor !B$ ஐக் கொண்ட எல்லாக் கிளைகளிலும்
+$\TRule{\False}{\lor}$ ஐப் பயன்படுத்தலாம்:
+\begin{oltableau}
+  [\sFmla{\True}{\formula{A} \lor (\formula{B} \land \formula{C})},
+    just=\TAss, checked
+    [\sFmla{\False}{(\formula{A} \lor \formula{B}) \land
+        (\formula{A} \lor \formula{C})}, just=\TAss, checked
+      [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\lor}[1]}
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}}, just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{B}},
+              just={\TRule{\False}{\lor}[4]}, close]
+          ]
+        ]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}]
+      ]
+      [\sFmla{\True}{\formula{B} \land \formula{C}},
+        just={\TRule{\True}{\lor}[1]}
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}}, just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{B}},
+              just={\TRule{\False}{\lor}[4]}]
+          ]
+        ]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0103-S07
+மிக இடப்புறக் கிளை இப்போது மூடியது. அடுத்து $!A \lor !C$ க்கு
+$\TRule{\False}{\lor}$ ஐப் பயன்படுத்துவோம்:
+\begin{oltableau}
+  [\sFmla{\True}{\formula{A} \lor (\formula{B} \land \formula{C})},
+    just=\TAss, checked
+    [\sFmla{\False}{(\formula{A} \lor \formula{B}) \land
+        (\formula{A} \lor \formula{C})}, just=\TAss, checked
+      [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\lor}[1]}
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{B}},
+              just={\TRule{\False}{\lor}[4]}, close]
+          ]
+        ]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}, move by=2
+            [\sFmla{\False}{\formula{C}},
+              just={\TRule{\False}{\lor}[4]}, close]
+          ]
+        ]
+      ]
+      [\sFmla{\True}{\formula{B} \land \formula{C}},
+        just={\TRule{\True}{\lor}[1]}
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{B}},
+              just={\TRule{\False}{\lor}[4]}
+            ]
+          ]
+        ]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}, move by=2
+            [\sFmla{\False}{\formula{C}},
+              just={\TRule{\False}{\lor}[4]}]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0103-S08
+தெளிவுக்காக, $\TRule{\False}{\lor}$ ஐ இரண்டாம் முறை பயன்படுத்தியதன் முடிவைக்
+கீழே நகர்த்தியுள்ளோம் என்பதை கவனிக்கவும். இந்நேர்வில் அது தேவைப்பட்டிருக்காது;
+ஏனெனில் நியாயங்கள் ஒரேவிதமாகவே இருந்திருக்கும்.
+
+% SEGMENT OLP-0103-S09
+இரண்டு கிளைகள் இன்னும் திறந்துள்ளன; வரி~$3$ இலுள்ள
+$\sFmla{\True}{!B \land !C}$ இன்னும் சரிக்குறியிடப்படவில்லை. அதற்கு
+$\TRule{\True}{\land}$ ஐப் பயன்படுத்தி மூடிய !!a{tableau}வைப் பெறுகிறோம்:
+\begin{oltableau}
+  [\sFmla{\True}{\formula{A} \lor (\formula{B} \land \formula{C})},
+    just=\TAss, checked
+    [\sFmla{\False}{(\formula{A} \lor \formula{B}) \land
+        (\formula{A} \lor \formula{C})}, just=\TAss, checked
+      [\sFmla{\True}{\formula{A}}, just={\TRule{\True}{\lor}[1]}
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{B}},
+              just={\TRule{\False}{\lor}[4]}, close]
+          ]
+        ]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{C}},
+              just={\TRule{\False}{\lor}[4]}, close]
+          ]
+        ]
+      ]
+      [\sFmla{\True}{\formula{B} \land \formula{C}},
+        just={\TRule{\True}{\lor}[1]}, checked
+        [\sFmla{\False}{\formula{A} \lor \formula{B}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{B}},
+              just={\TRule{\False}{\lor}[4]}
+              [\sFmla{\True}{\formula{B}},
+                just={\TRule{\True}{\land}[3]}
+                [\sFmla{\True}{\formula{C}},
+                  just={\TRule{\True}{\land}[3]},close
+                ]
+              ]
+            ]
+          ]
+        ]
+        [\sFmla{\False}{\formula{A} \lor \formula{C}},
+          just={\TRule{\False}{\land}[2]}, checked
+          [\sFmla{\False}{\formula{A}},
+            just={\TRule{\False}{\lor}[4]}
+            [\sFmla{\False}{\formula{C}},
+              just={\TRule{\False}{\lor}[4]}
+              [\sFmla{\True}{\formula{B}},
+                just={\TRule{\True}{\land}[3]}
+                [\sFmla{\True}{\formula{C}},
+                  just={\TRule{\True}{\land}[3]},close
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0103-S10
+ஒப்பிடுவதற்காக, அதே எடுகோள் கணத்திற்காக விதிகள் வேறொரு வரிசையில்
+பயன்படுத்தப்பட்டுள்ள மூடிய !!a{tableau} இதோ:
+\begin{oltableau}
+  [\sFmla{\True}{\formula{A} \lor (\formula{B} \land \formula{C})},
+    just=\TAss, checked
+    [\sFmla{\False}{(\formula{A} \lor \formula{B}) \land
+        (\formula{A} \lor \formula{C})}, just=\TAss, checked
+      [\sFmla{\False}{\formula{A} \lor \formula{B}},
+        just={\TRule{\False}{\land}[2]}, checked
+        [\sFmla{\False}{\formula{A}},
+          just={\TRule{\False}{\lor}[3]}
+          [\sFmla{\False}{\formula{B}},
+            just={\TRule{\False}{\lor}[3]}
+            [\sFmla{\True}{\formula{A}},
+              just={\TRule{\True}{\lor}[1]},close
+            ]
+            [\sFmla{\True}{\formula{B} \land \formula{C}},
+              just={\TRule{\True}{\lor}[1]}, checked
+              [\sFmla{\True}{\formula{B}},
+                just={\TRule{\True}{\land}[6]}
+                [\sFmla{\True}{\formula{C}},
+                  just={\TRule{\True}{\land}[6]},close
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+      [\sFmla{\False}{\formula{A} \lor \formula{C}},
+        just={\TRule{\False}{\land}[2]}, checked
+        [\sFmla{\False}{\formula{A}},
+          just={\TRule{\False}{\lor}[3]}
+          [\sFmla{\False}{\formula{C}},
+            just={\TRule{\False}{\lor}[3]}
+            [\sFmla{\True}{\formula{A}},
+              just={\TRule{\True}{\lor}[1]},close
+            ]
+            [\sFmla{\True}{\formula{B} \land \formula{C}},
+              just={\TRule{\True}{\lor}[1]}, checked
+              [\sFmla{\True}{\formula{B}},
+                just={\TRule{\True}{\land}[6]}
+                [\sFmla{\True}{\formula{C}},
+                  just={\TRule{\True}{\land}[6]},close
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+\end{ex}
+
+% SEGMENT OLP-0103-S11
+\begin{prob}
+பின்வருவனவற்றிற்கான மூடிய !!{tableau}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $\sFmla{\True}{!A \land (!B \land !C)}, \sFmla{\False}{(!A \land !B) \land !C}$.
+\item $\sFmla{\True}{!A \lor (!B \lor !C)}, \sFmla{\False}{(!A \lor !B) \lor !C}$.
+\item $\sFmla{\True}{!A \lif (!B \lif !C)}, \sFmla{\False}{!B \lif (!A \lif !C)}$.
+\item $\sFmla{\True}{!A}, \sFmla{\False}{\lnot\lnot !A}$.
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0103-S12
+\begin{prob}
+பின்வருவனவற்றிற்கான மூடிய !!{tableau}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $\sFmla{\True}{(!A \lor !B) \lif !C}, \sFmla{\False}{!A \lif !C}$.
+\item $\sFmla{\True}{(!A \lif !C) \land (!B \lif !C)}, \sFmla{\False}{(!A \lor !B) \lif !C}$.
+\item $\sFmla{\False}{\lnot(!A \land \lnot !A)}$.
+\item $\sFmla{\True}{!B \lif !A}, \sFmla{\False}{\lnot !A \lif \lnot !B}$.
+\item $\sFmla{\False}{(!A \lif \lnot !A) \lif \lnot !A}$.
+\item $\sFmla{\False}{\lnot(!A \lif !B) \lif \lnot !B}$.
+\item $\sFmla{\True}{!A \lif !C}, \sFmla{\False}{\lnot (!A \land \lnot !C)}$.
+\item $\sFmla{\True}{!A \land \lnot !C}, \sFmla{\False}{\lnot (!A \lif !C)}$.
+\item $\sFmla{\True}{!A \lor !B, \lnot !B}, \sFmla{\False}{!A}$.
+\item $\sFmla{\True}{\lnot !A \lor \lnot !B}, \sFmla{\False}{\lnot(!A \land !B)}$.
+\item $\sFmla{\False}{(\lnot !A \land \lnot !B) \lif\lnot(!A \lor !B)}$.
+\item $\sFmla{\False}{\lnot(!A \lor !B) \lif (\lnot !A \land \lnot !B)}$.
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0103-S13
+\begin{prob}
+பின்வருவனவற்றிற்கான மூடிய !!{tableau}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $\sFmla{\True}{\lnot(!A \lif !B)}, \sFmla{\False}{!A}$.
+\item $\sFmla{\True}{\lnot(!A \land !B)}, \sFmla{\False}{\lnot !A \lor \lnot !B}$.
+\item $\sFmla{\True}{!A \lif !B}, \sFmla{\False}{\lnot !A \lor !B}$.
+\item $\sFmla{\False}{\lnot \lnot !A \lif !A}$.
+\item $\sFmla{\True}{!A \lif !B}, \sFmla{\True}{\lnot !A \lif !B}, \sFmla{\False}{!B}$.
+\item $\sFmla{\True}{(!A \land !B) \lif !C}, \sFmla{\False}{(!A \lif !C) \lor (!B \lif !C)}$.
+\item $\sFmla{\True}{(!A \lif !B) \lif !A}, \sFmla{\False}{!A}$.
+\item $\sFmla{\False}{(!A \lif !B) \lor (!B \lif !C)}$.
+\end{enumerate}
+\end{prob}
+
+\end{document}

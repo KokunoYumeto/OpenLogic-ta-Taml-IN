@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0095",
       "source_sha256": "8b90318e1a2ed38568fb61cd5529d496cdfd17f322fd9c731a194e2d08e0a4b9",
-      "translation_sha256": "4cb58a682f0d2e02f98227a77c09f7cc64530d90a277a723e50d93f89e8c390b",
+      "translation_sha256": "f25b3d69e72c57ae22b2b7b72759174b49a712e2cefeb8256e5f6ead94642e2b",
       "source_bytes": 13016,
-      "translation_bytes": 24348,
+      "translation_bytes": 24328,
       "source_coverage_complete": true,
       "segments": 16,
       "math_multiset_parity": true,

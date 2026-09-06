@@ -1,0 +1,372 @@
+% SEGMENT OLP-0104-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: proving-things-quant
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{tab}{prq}
+
+\olsection{அளவையடைகளுடன் \usetoken{P}{tableau}}
+
+% SEGMENT OLP-0104-S02
+\begin{ex}
+அளவையடைகளைக் கையாளும்போது தனிமாறி நிபந்தனையை மீறாமல் இருப்பதை உறுதிசெய்ய
+வேண்டும்; இதற்காகச் சில அனுமானங்களைச் செயல்படுத்தும் வரிசையை மாற்றித் தேர்ந்து
+பார்க்க வேண்டியிருக்கும். பொதுவாகத் தனிமாறி நிபந்தனைக்குட்பட்ட விதிகளை முதலில்
+செய்துமுடிக்க முயல்வது உதவும் (நிறைவுற்ற !!{tableau}வில் அவை மேலே அமையும்).
+
+!!{sentence} $\lexists[x][\lnot !A(x)] \lif \lnot \lforall[x][!A(x)]$
+க்கான !!a{tableau}வை எவ்வாறு கொடுப்போம் என்று பார்ப்போம். வழக்கம்போல எடுகோளைப்
+பதிவு செய்தே தொடங்குகிறோம்:
+\begin{oltableau}
+[\sFmla{\False}{\lexists[x][\lnot \formula{A}(x)]\lif \lnot
+    \lforall[x][\formula{A}(x)]}, just=\TAss]
+\end{oltableau}
+!!{main operator}~$\lif$ என்பதால் $\TRule{\False}{\lif}$ ஐப் பயன்படுத்துகிறோம்:
+\begin{oltableau}
+[\sFmla{\False}{\lexists[x][\lnot \formula{A}(x)]\lif \lnot
+    \lforall[x][\formula{A}(x)]}, just=\TAss, checked
+  [\sFmla{\True}{\lexists[x][\lnot \formula{A}(x)]},
+    just={\TRule{\False}{\lif}[1]}
+    [\sFmla{\False}{\lnot\lforall[x][\formula{A}(x)]},
+      just={\TRule{\False}{\lif}[1]}]
+  ]
+]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S03
+அடுத்து கையாள வேண்டியது வரி~$2$. $\TRule{\True}{\lexists}$ ஐப்
+பயன்படுத்துகிறோம். இதற்கு ஒரு புதிய !!{constant} தேவை; இதுவரை எந்த
+!!{constant}s உம் இடம்பெறாததால், எதை வேண்டுமானாலும் தேர்ந்தெடுக்கலாம்;
+எடுத்துக்காட்டாக~$a$.
+\begin{oltableau}
+[\sFmla{\False}{\lexists[x][\lnot \formula{A}(x)]\lif \lnot
+    \lforall[x][\formula{A}(x)]}, just=\TAss, checked
+  [\sFmla{\True}{\lexists[x][\lnot \formula{A}(x)]},
+    just={\TRule{\False}{\lif}[1]}, checked
+    [\sFmla{\False}{\lnot\lforall[x][\formula{A}(x)]},
+      just={\TRule{\False}{\lif}[1]}
+      [\sFmla{\True}{\lnot\formula{A}(a)}, just={\TRule{\True}{\lexists}[2]}]
+    ]
+  ]
+]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S04
+இப்போது வரி~$3$ க்கு $\TRule{\False}{\lnot}$ ஐப் பயன்படுத்துகிறோம்:
+\begin{oltableau}
+[\sFmla{\False}{\lexists[x][\lnot \formula{A}(x)]\lif \lnot
+    \lforall[x][\formula{A}(x)]}, just=\TAss, checked
+  [\sFmla{\True}{\lexists[x][\lnot \formula{A}(x)]},
+    just={\TRule{\False}{\lif}[1]}, checked
+    [\sFmla{\False}{\lnot\lforall[x][\formula{A}(x)]},
+      just={\TRule{\False}{\lif}[1]}, checked
+      [\sFmla{\True}{\lnot\formula{A}(a)}, just={\TRule{\True}{\lexists}[2]}
+        [\sFmla{\True}{\lforall[x][\formula{A}(x)]},
+          just = {\TRule{\False}{\lnot}[3]}
+        ]
+      ]
+    ]
+  ]
+]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S05
+வரி~$4$ க்கு $\TRule{\True}{\lnot}$ ஐயும், அதைத் தொடர்ந்து வரி~$5$ க்கு
+$\TRule{\True}{\lforall}$ ஐயும் பயன்படுத்தி மூடிய !!a{tableau}வைப் பெறுகிறோம்.
+\begin{oltableau}
+[\sFmla{\False}{\lexists[x][\lnot \formula{A}(x)]\lif \lnot
+    \lforall[x][\formula{A}(x)]}, just=\TAss, checked
+  [\sFmla{\True}{\lexists[x][\lnot \formula{A}(x)]},
+    just={\TRule{\False}{\lif}[1]}, checked
+    [\sFmla{\False}{\lnot\lforall[x][\formula{A}(x)]},
+      just={\TRule{\False}{\lif}[1]}, checked
+      [\sFmla{\True}{\lnot\formula{A}(a)}, just={\TRule{\True}{\lexists}[2]}
+        [\sFmla{\True}{\lforall[x][\formula{A}(x)]},
+          just = {\TRule{\False}{\lnot}[3]}
+          [\sFmla{\False}{\formula{A}(a)}, just={\TRule{\True}{\lnot}[4]}
+            [\sFmla{\True}{\formula{A}(a)},
+              just={\TRule{\True}{\lforall}[5]}, close
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+]
+\end{oltableau}
+\end{ex}
+
+% SEGMENT OLP-0104-S06
+\begin{ex}
+பின்வரும் கணத்திற்கான !!a{tableau}வை எவ்வாறு கொடுப்போம் என்று பார்ப்போம்:
+\[
+\sFmla{\False}{\lexists[x][!C(x,b)]},
+\sFmla{\True}{\lexists[x][(!A(x) \land !B(x))]},
+\sFmla{\True}{\lforall[x][(!B(x) \lif !C(x,b))]}.
+\]
+வழக்கம்போல எடுகோள்களுடன் தொடங்குகிறோம்:
+\begin{oltableau}
+  [\sFmla{\False}{\lexists[x][\formula{C}(x,b)]}, just=\TAss
+    [\sFmla{\True}{\lexists[x][(\formula{A}(x) \land \formula{B}(x))]},
+      just=\TAss
+      [\sFmla{\True}{\lforall[x][(\formula{B}(x) \lif \formula{C}(x,b))]},
+        just=\TAss]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S07
+தனிமாறி நிபந்தனையுள்ள விதியை எப்போதும் முதலில் பயன்படுத்த வேண்டும்; இங்கு
+அது வரி~$2$ க்கான $\TRule{\True}{\lexists}$. எடுகோள்களில்
+!!{constant}~$b$ இருப்பதால் வேறொன்றைப் பயன்படுத்த வேண்டும்; மீண்டும்~$a$ ஐத்
+தேர்ந்தெடுப்போம்.
+\begin{oltableau}
+  [\sFmla{\False}{\lexists[x][\formula{C}(x,b)]}, just=\TAss
+    [\sFmla{\True}{\lexists[x][(\formula{A}(x) \land \formula{B}(x))]},
+      just=\TAss, checked
+      [\sFmla{\True}{\lforall[x][(\formula{B}(x) \lif \formula{C}(x,b))]},
+        just=\TAss
+        [\sFmla{\True}{\formula{A}(a) \land \formula{B}(a)},
+          just={\TRule{\True}{\lexists}[2]}]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S08
+இப்போது வரி~$1$ க்கு $\TRule{\False}{\lexists}$ ஐயோ, வரி~$3$ க்கு
+$\TRule{\True}{\lforall}$ ஐயோ பயன்படுத்தினால், $x$ க்குப் பதிலாக எந்தச்
+சொல்~$t$ ஐ இடுவது என்று தீர்மானிக்க வேண்டும். இவ்விதிகளுக்குத் தனிமாறி
+நிபந்தனை இல்லாததால் விரும்பிய சொல்லைத் தேர்ந்தெடுக்கலாம். சில நேர்வுகளில்
+வெவ்வேறு~$t$ களுடன் விதியைப் பலமுறை பயன்படுத்தவும் வேண்டியிருக்கலாம். ஆனால்
+பொதுவிதியாக, !!{tableau}வில் ஏற்கெனவே இடம்பெறும் சொற்களில் ஒன்றை---இங்கு
+$a$, $b$---தேர்ந்தெடுப்பது பயனளிக்கும்; இந்நேர்வில் $a$ ஒரு மூடிய கிளையைத்
+தர அதிக வாய்ப்புள்ளது என்று ஊகிக்கலாம்.
+\begin{oltableau}
+  [\sFmla{\False}{\lexists[x][\formula{C}(x,b)]}, just=\TAss
+    [\sFmla{\True}{\lexists[x][(\formula{A}(x) \land \formula{B}(x))]},
+      just=\TAss, checked
+      [\sFmla{\True}{\lforall[x][(\formula{B}(x) \lif \formula{C}(x,b))]}, just=\TAss
+        [\sFmla{\True}{\formula{A}(a) \land \formula{B}(a)}, just={\TRule{\True}{\lexists}[2]}
+          [\sFmla{\False}{\formula{C}(a,b)}, just={\TRule{\False}{\lexists}[1]}
+            [\sFmla{\True}{\formula{B}(a) \lif \formula{C}(a,b)},
+              just={\TRule{\True}{\lforall}[3]}
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S09
+வரி $1$, $3$ இலுள்ள !!{signed formula}s ஐச் சரிக்குறியிடுவதில்லை; ஏனெனில்
+அவற்றை மீண்டும் பயன்படுத்த வேண்டியிருக்கலாம். இப்போது வரி~$4$ க்கு
+$\TRule{\True}{\land}$ ஐப் பயன்படுத்துக:
+\begin{oltableau}
+  [\sFmla{\False}{\lexists[x][\formula{C}(x,b)]}, just=\TAss
+    [\sFmla{\True}{\lexists[x][(\formula{A}(x) \land \formula{B}(x))]},
+      just=\TAss, checked
+      [\sFmla{\True}{\lforall[x][(\formula{B}(x) \lif \formula{C}(x,b))]}, just=\TAss
+        [\sFmla{\True}{\formula{A}(a) \land \formula{B}(a)},
+          just={\TRule{\True}{\lexists}[2]}, checked
+          [\sFmla{\False}{\formula{C}(a,b)}, just={\TRule{\False}{\lexists}[1]}
+            [\sFmla{\True}{\formula{B}(a) \lif \formula{C}(a,b)},
+              just={\TRule{\True}{\lforall}[3]}
+              [\sFmla{\True}{\formula{A}(a)}, just={\TRule{\True}{\land}[4]}
+                [\sFmla{\True}{\formula{B}(a)}, just={\TRule{\True}{\land}[4]}
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S10
+இப்போது வரி~$6$ க்கு $\TRule{\True}{\lif}$ ஐப் பயன்படுத்தினால் !!{tableau}
+மூடுகிறது:
+\begin{oltableau}
+  [\sFmla{\False}{\lexists[x][\formula{C}(x,b)]}, just=\TAss
+    [\sFmla{\True}{\lexists[x][(\formula{A}(x) \land \formula{B}(x))]},
+      just=\TAss, checked
+      [\sFmla{\True}{\lforall[x][(\formula{B}(x) \lif \formula{C}(x,b))]},
+        just=\TAss
+        [\sFmla{\True}{\formula{A}(a) \land \formula{B}(a)},
+          just={\TRule{\True}{\lexists}[2]}, checked
+          [\sFmla{\False}{\formula{C}(a,b)},
+            just={\TRule{\False}{\lexists}[1]}
+            [\sFmla{\True}{\formula{B}(a) \lif \formula{C}(a,b)},
+              just={\TRule{\True}{\lforall}[3]}, checked
+              [\sFmla{\True}{\formula{A}(a)},
+                just={\TRule{\True}{\land}[4]}
+                [\sFmla{\True}{\formula{B}(a)},
+                  just={\TRule{\True}{\land}[4]}
+                  [\sFmla{\False}{\formula{B}(a)},
+                    just={\TRule{\True}{\lif}[6]},close
+                  ]
+                  [\sFmla{\True}{\formula{C}(a,b)},
+                    just={\TRule{\True}{\lif}[6]},close
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+
+\end{ex}
+
+% SEGMENT OLP-0104-S11
+\begin{ex}
+பின்வரும் கணத்திற்கான !!a{tableau}வை அமைக்கிறோம்:
+\[
+\sFmla{\True}{\lforall[x][!A(x)]}, \sFmla{\True}{\lforall[x][!A(x)] 
+  \lif \lexists[y][!B(y)]}, \sFmla{\True}{\lnot\lexists[y][!B(y)]}.
+\]
+வழக்கம்போல எடுகோள்களை எழுதுகிறோம்:
+\begin{oltableau}
+  [\sFmla{\True}{\lforall[x][\formula{A}(x)]}, just=\TAss
+    [\sFmla{\True}{\lforall[x][\formula{A}(x)] \lif
+        \lexists[y][\formula{B}(y)]}, just=\TAss
+      [\sFmla{\True}{\lnot\lexists[y][\formula{B}(y)]}, just=\TAss
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S12
+வரி~$3$ க்கு $\TRule{\True}{\lnot}$ விதியைப் பயன்படுத்தித் தொடங்குகிறோம்.
+``தனிமாறி நிபந்தனையுள்ள விதிகளை எப்போதும் முதலில் பயன்படுத்துக'' என்ற விதியின்
+ஒரு பின்விளைவு, ``தனிமாறி நிபந்தனையில்லாத அளவையடை விதிகள் தேவைப்படும் வரை
+அவற்றைப் பயன்படுத்துவதை ஒத்திவைக்கவும்'' என்பதாகும். கிளைப்பை விளைவிக்கும்
+விதிகளையும் ஒத்திவைக்கவும்.
+\begin{oltableau}
+  [\sFmla{\True}{\lforall[x][\formula{A}(x)]}, just=\TAss
+    [\sFmla{\True}{\lforall[x][\formula{A}(x)] \lif
+        \lexists[y][\formula{B}(y)]}, just=\TAss
+      [\sFmla{\True}{\lnot\lexists[y][\formula{B}(y)]}, just=\TAss, checked
+        [\sFmla{\False}{\lexists[y][\formula{B}(y)]}, just={\TRule{\True}{\lnot}[3]}]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S13
+புதிய வரி~$4$ க்குத் தனிமாறி நிபந்தனையில்லாத அளவையடை விதியான
+$\TRule{\False}{\lexists}$ தேவை. ஆகவே இதை ஒத்திவைத்து, வரி~$2$ இல்
+$\TRule{\True}{\lif}$ ஐப் பயன்படுத்துகிறோம்.
+\begin{oltableau}
+  [\sFmla{\True}{\lforall[x][\formula{A}(x)]}, just=\TAss
+    [\sFmla{\True}{\lforall[x][\formula{A}(x)] \lif
+        \lexists[y][\formula{B}(y)]}, just=\TAss, checked
+      [\sFmla{\True}{\lnot\lexists[y][\formula{B}(y)]}, just=\TAss, checked
+        [\sFmla{\False}{\lexists[y][\formula{B}(y)]},
+          just={\TRule{\True}{\lnot}[3]},
+          [\sFmla{\False}{\lforall[x][\formula{A}(x)]}, just={\TRule{\True}{\lif}[2]}]
+          [\sFmla{\True}{\lexists[y][\formula{B}(y)]}, just={\TRule{\True}{\lif}[2]}]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S14
+புதிய !!{signed formula}s இரண்டிற்கும் தனிமாறி நிபந்தனையுள்ள விதிகள் தேவை;
+ஆகவே அவற்றை அடுத்து பயன்படுத்த வேண்டும்:
+\begin{oltableau}
+  [\sFmla{\True}{\lforall[x][\formula{A}(x)]}, just=\TAss
+    [\sFmla{\True}{\lforall[x][\formula{A}(x)] \lif
+        \lexists[y][\formula{B}(y)]}, just=\TAss, checked
+      [\sFmla{\True}{\lnot\lexists[y][\formula{B}(y)]}, just=\TAss, checked
+        [\sFmla{\False}{\lexists[y][\formula{B}(y)]},
+          just={\TRule{\True}{\lnot}[3]}
+          [\sFmla{\False}{\lforall[x][\formula{A}(x)]}, just={\TRule{\True}{\lif}[2]},checked
+            [\sFmla{\False}{\formula{A}(b)}, just={\TRule{\False}{\lforall}[5]}]
+          ]
+          [\sFmla{\True}{\lexists[y][\formula{B}(y)]}, just={\TRule{\True}{\lif}[2]},checked
+            [\sFmla{\True}{\formula{B}(c)}, just={\TRule{\True}{\lexists}[5]}]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+
+% SEGMENT OLP-0104-S15
+கிளைகளை மூட, வரி $1$, $3$ இலுள்ள !!{signed formula}s ஐப் பயன்படுத்த வேண்டும்.
+அவற்றிற்குரிய விதிகளுக்கு (\TRule{\True}{\lforall},
+\TRule{\False}{\lexists}) தனிமாறி நிபந்தனைகள் இல்லை; எனவே பொருத்தமான எந்தச்
+சொற்களையும் தேர்ந்தெடுக்கலாம். இங்கு அவை முறையே $b$, $c$.
+\begin{oltableau}
+  [\sFmla{\True}{\lforall[x][\formula{A}(x)]}, just=\TAss
+    [\sFmla{\True}{\lforall[x][\formula{A}(x)] \lif
+        \lexists[y][\formula{B}(y)]}, just=\TAss, checked
+      [\sFmla{\True}{\lnot\lexists[y][\formula{B}(y)]}, just=\TAss, checked
+        [\sFmla{\False}{\lexists[y][\formula{B}(y)]},
+          just={\TRule{\True}{\lnot}[3]}
+          [\sFmla{\False}{\lforall[x][\formula{A}(x)]},
+            just={\TRule{\True}{\lif}[2]},checked
+            [\sFmla{\False}{\formula{A}(b)},
+              just={\TRule{\False}{\lforall}[5]}
+              [\sFmla{\True}{\formula{A}(b)},
+                just={\TRule{\True}{\lforall}[1]},close
+              ]
+            ]
+          ]
+          [\sFmla{\True}{\lexists[y][\formula{B}(y)]},
+            just={\TRule{\True}{\lif}[2]},checked
+            [\sFmla{\True}{\formula{B}(c)},
+              just={\TRule{\True}{\lexists}[5]}
+              [\sFmla{\False}{\formula{B}(c)},
+                just={\TRule{\False}{\lexists}[4]},close
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  ]
+\end{oltableau}
+\end{ex}
+
+% SEGMENT OLP-0104-S16
+\begin{prob}
+பின்வருவனவற்றிற்கான மூடிய !!{tableau}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $\sFmla{\False}{(\lforall[x][!A(x)] \land \lforall[y][!B(y)])
+\lif \lforall[z][(!A(z) \land !B(z))]}$.
+\item $\sFmla{\False}{(\lexists[x][!A(x)] \lor \lexists[y][!B(y)])
+\lif \lexists[z][(!A(z) \lor !B(z))]}$.
+\item $\sFmla{\True}{\lforall[x][(!A(x) \lif !B)]},
+\sFmla{\False}{\lexists[y][!A(y)] \lif !B}$.
+\item $\sFmla{\True}{\lforall[x][\lnot !A(x)]},
+\sFmla{\False}{\lnot\lexists[x][!A(x)]}$.
+\item $\sFmla{\False}{\lnot\lexists[x][!A(x)] \lif \lforall[x][\lnot
+!A(x)]}$.
+\item $\sFmla{\False}{\lnot\lexists[x][\lforall[y][((!A(x,y) \lif
+\lnot !A(y,y)) \land (\lnot !A(y,y) \lif !A(x,y)))]]}$.
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0104-S17
+\begin{prob}
+பின்வருவனவற்றிற்கான மூடிய !!{tableau}s ஐக் கொடுக்கவும்:
+\begin{enumerate}
+\item $\sFmla{\False}{\lnot\lforall[x][!A(x)] \lif \lexists[x][\lnot!A(x)]}$.
+\item $\sFmla{\True}{(\lforall[x][!A(x)] \lif !B)}, \sFmla{\False}{\lexists[y][(!A(y) \lif !B)]}$.
+\item $\sFmla{\False}{\lexists[x][(!A(x) \lif \lforall[y][!A(y)])]}$.
+\end{enumerate}
+\end{prob}
+
+\end{document}

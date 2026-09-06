@@ -1,0 +1,36 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-proof-systems-sequent.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-05T23:42:06.3912670Z",
+  "passes": [
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "Overfull \\hbox (2.70451pt too wide) detected at line 26",
+        "Overfull \\hbox (3.61192pt too wide) detected at line 26",
+        "Overfull \\hbox (1.3484pt too wide) detected at line 32",
+        "LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right."
+      ],
+      "exit_code": 0,
+      "pass": 1
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "Overfull \\hbox (2.70451pt too wide) detected at line 26",
+        "Overfull \\hbox (3.61192pt too wide) detected at line 26",
+        "Overfull \\hbox (1.3484pt too wide) detected at line 32"
+      ],
+      "exit_code": 0,
+      "pass": 2
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "finished_utc": "2026-09-05T23:42:55.4804154Z"
+}

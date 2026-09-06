@@ -1,0 +1,282 @@
+% SEGMENT OLP-0109-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: soundness.tex
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{tab}{sou}}
+      {\olfileid{pl}{tab}{sou}}
+      
+\olsection{சரித்தன்மை}
+
+\begin{explain}
+அட்டவணை மரங்கள் போன்ற !!^a{derivation} முறைமை, உண்மையில் நிலவாதவற்றை
+!!{derive} செய்ய இயலாது எனில் \emph{சரித்தன்மையுடையது}. எனவே சரித்தன்மை
+என்பது !!{derivation} முறைமைகளுக்கான உறுதிசெய்யப்பட்ட பாதுகாப்புப் பண்பின்
+ஒரு வகை. எந்த நிறுவல்-கோட்பாட்டுப் பண்பைப் பற்றிக் கேட்கிறோம் என்பதைப்
+பொறுத்து, எடுத்துக்காட்டாகப் பின்வருவனவற்றை அறிய விரும்புகிறோம்:
+\begin{enumerate}
+\item !!{derivable} ஆன ஒவ்வொரு~$!A$ உம் \iftag{FOL}{செல்லுபடியானது}{ஒரு மெய்மம்};
+\item சிலவற்றிலிருந்து !!a{sentence} !!{derivable} எனில், அது அவற்றின்
+  பின்விளைவும் ஆகும்;
+\item !!{sentence}s கொண்ட ஒரு கணம் முரணுடையது எனில், அது நிறைவுறத்தக்கதல்ல.
+\end{enumerate}
+இவை !!a{derivation} முறைமையின் முக்கியமான பண்புகள். இவற்றில் எதுவொன்றும்
+நிலவாவிட்டால், அந்த !!{derivation} முறைமை குறைபாடுடையது—அது அளவுக்கு
+அதிகமாக !!{derive} செய்யும். எனவே !!a{derivation} முறைமையின் சரித்தன்மையை
+நிறுவுவது மிகவும் முக்கியம்.
+
+மேற்கண்ட நிறுவல்-கோட்பாட்டுப் பண்புகள் அனைத்தும் ஏதாவதொரு வகையான மூடிய
+!!{tableau}s மூலம் வரையறுக்கப்படுவதால், மேலுள்ள (1)--(3) ஐ நிறுவுவதற்கு
+மூடிய !!{tableau}s இன் பொருளியல் பண்புகள் பற்றிய ஒன்றை நிறுவ வேண்டும்.
+முதலில், !!a{signed formula} ஒரு கட்டமைப்பில் நிறைவுறுத்தப்படுவது என்றால் என்ன என்பதை
+வரையறுப்போம்; பின்னர் ஓர் !!{tableau} மூடியது எனில், அதன் எல்லா
+எடுகோள்களையும் எந்தக் கட்டமைப்பும் நிறைவுறுத்தாது என்று காட்டுவோம். இதன்
+துணைவிளைவுகளாக (1)--(3) பின்தொடரும்.
+\end{explain}
+
+% SEGMENT OLP-0109-S02
+\begin{defn}
+\iftag{FOL}{!!^a{structure}}{!!^a{valuation}}~$\iftag{FOL}{\Struct{M}}{\pAssign{v}}$
+ஆனது !!a{signed formula}~$\sFmla{\True}{!A}$ ஐ, அப்போதும் அப்போது மட்டுமே,
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ எனில் \emph{நிறைவுறுத்துகிறது}; மேலும்
+$\sFmla{\False}{!A}$ ஐ, அப்போதும் அப்போது மட்டுமே,
+$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$ எனில் நிறைவுறுத்துகிறது.
+$\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது !!{signed formula}s கொண்ட
+கணம்~$\Gamma$ வை, அப்போதும் அப்போது மட்டுமே, ஒவ்வொரு
+$\sFmla{S}{!A} \in \Gamma$ ஐயும் நிறைவுறுத்துகிறது. $\Gamma$ வை
+நிறைவுறுத்தும் \iftag{FOL}{!!a{structure}}{!!a{valuation}} ஒன்று இருந்தால்
+இக்கணம்~\emph{நிறைவுறத்தக்கது}; இல்லையெனில் அது
+\emph{நிறைவுறத்தக்கதல்ல}.
+\end{defn}
+
+% SEGMENT OLP-0109-S03
+\begin{thm}[சரித்தன்மை]
+  \ollabel{thm:tableau-soundness}
+  $\Gamma$ விற்கு மூடிய !!a{tableau} இருந்தால், $\Gamma$ நிறைவுறத்தக்கதல்ல.
+\end{thm}
+
+% SEGMENT OLP-0109-S04
+\begin{proof}
+!!a{tableau}வின் கிளையிலுள்ள !!{signed formula}s கணம் நிறைவுறத்தக்கது
+எனில், அந்தக் கிளையை நிறைவுறத்தக்கது என்று அழைப்போம்; மேலும் குறைந்தது ஒரு
+நிறைவுறத்தக்க கிளையைக் கொண்ட !!a{tableau}வை நிறைவுறத்தக்கது என்று அழைப்போம்.
+
+பின்வருவதை நாம் காட்டுகிறோம்: நிறைவுறத்தக்க !!a{tableau}வை அனுமான
+விதிகளுள் ஒன்றால் விரிவாக்கினால், அதன் விளைவாக எப்போதும் நிறைவுறத்தக்க
+!!a{tableau}வே கிடைக்கும். இது தேற்றத்தை நிறுவும்: எடுகோள்களாக~$\Gamma$
+வை மட்டுமே கொண்ட !!{tableau}விற்கு அனுமான விதிகளைப் பயன்படுத்தியே எந்த
+மூடிய !!a{tableau}வும் கிடைக்கிறது. ஆகவே $\Gamma$
+நிறைவுறத்தக்கதாக இருந்தால், அதற்கான ஒவ்வோர் !!{tableau}வும்
+நிறைவுறத்தக்கதாக இருக்கும். ஆனால் ஒரு மூடிய !!a{tableau} தெளிவாகவே
+நிறைவுறத்தக்கதல்ல: அதன் ஒவ்வொரு கிளையும் $\sFmla{\True}{!A}$,
+$\sFmla{\False}{!A}$ ஆகிய இரண்டையும் கொண்டிருக்கும்; எந்தக் கட்டமைப்பாலும்
+$!A$ ஐ ஒரே நேரத்தில் நிறைவுறுத்தவும் நிறைவுறுத்தாமலும் இருக்க முடியாது.
+
+% SEGMENT OLP-0109-S05
+நிறைவுறத்தக்க ஓர் !!{tableau}, அதாவது குறைந்தது ஒரு நிறைவுறத்தக்க கிளையைக்
+கொண்ட !!a{tableau}, நம்மிடம் உள்ளது என்க. ஓர் அனுமான விதியைப் பயன்படுத்துவது
+ஒரு கிளையில் !!{signed formula}s ஐச் சேர்க்கும் அல்லது ஒரு கிளையை இரண்டாகப்
+பிரிக்கும். இப்போது பயன்படுத்தப்படும் விதியால் விரிவாக்கப்படாத நிறைவுறத்தக்க
+கிளை அந்த !!{tableau}வில் இருந்தால், விரிவாக்கப்பட்ட !!{tableau}விலும் அது
+நிறைவுறத்தக்க கிளையாகவே இருக்கும்; எனவே விரிவாக்கப்பட்ட அட்டவணை மரம்
+நிறைவுறத்தக்கது. ஆகவே ஒரு விதி நிறைவுறத்தக்க கிளைக்குப் பயன்படுத்தப்படும்
+நேர்வை மட்டுமே நாம் ஆராய வேண்டும்.
+
+% SEGMENT OLP-0109-S06
+அந்தக் கிளையிலுள்ள !!{signed formula}s கணத்தை~$\Gamma$ எனவும், விதி
+பயன்படுத்தப்படும் !!{signed formula}வை $\sFmla{S}{!A} \in \Gamma$ எனவும்
+கொள்க. விதியின் விளைவாகக் கிளை பிரியவில்லை எனில், விரிவாக்கப்பட்ட கிளை,
+அதாவது விதியின் முடிவுகளைச் சேர்த்த~$\Gamma$, இன்னும் நிறைவுறத்தக்கது என்று
+காட்ட வேண்டும். விதியின் விளைவாகக் கிளை பிரிந்தால், கிடைக்கும் இரு கிளைகளில்
+குறைந்தது ஒன்று நிறைவுறத்தக்கது என்று காட்ட வேண்டும்.
+  
+% SEGMENT OLP-0109-S07
+முதலில் கிளையைப் பிரிக்காத சாத்தியமான அனுமானங்களைப் பார்ப்போம்.
+\begin{enumerate}
+\item $\sFmla{\True}{\lnot !B} \in \Gamma$ க்கு
+  $\TRule{\True}{\lnot}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது.
+  அப்போது விரிவாக்கப்பட்ட கிளை $\Gamma \cup
+  \{\sFmla{\False}{!B}\}$ என்ற !!{signed formula}s ஐக் கொண்டிருக்கும்.
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ என்க. குறிப்பாக,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\lnot !B}$. ஆகவே
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$; அதாவது
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது
+  $\sFmla{\False}{!B}$ ஐ நிறைவுறுத்துகிறது.
+
+% SEGMENT OLP-0109-S08
+\item $\sFmla{\False}{\lnot !B} \in \Gamma$ க்கு
+  $\TRule{\False}{\lnot}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது:
+  பயிற்சி.
+\item $\sFmla{\True}{!B \land !C} \in \Gamma$ க்கு
+  $\TRule{\True}{\land}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது;
+  இதன் விளைவாக $\sFmla{\True}{!B}$, $\sFmla{\True}{!C}$ என்ற இரண்டு புதிய
+  !!{signed formula}s கிளையில் சேர்கின்றன. குறிப்பாக
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B \land !C}$ ஆகுமாறு
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ என்க. அப்போது
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ மற்றும்
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$. அதாவது
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது
+  $\sFmla{\True}{!B}$, $\sFmla{\True}{!C}$ ஆகிய இரண்டையும்
+  நிறைவுறுத்துகிறது.
+\item $\sFmla{\False}{!B \lor !C} \in \Gamma$ க்கு
+  $\TRule{\False}{\lor}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது:
+  பயிற்சி.
+\item $\sFmla{\False}{!B \lif !C} \in \Gamma$ க்கு
+  $\TRule{\False}{\lif}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது:
+  இதன் விளைவாக $\sFmla{\True}{!B}$, $\sFmla{\False}{!C}$ என்ற இரண்டு புதிய
+  !!{signed formula}s கிளையில் சேர்கின்றன. குறிப்பாக
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B \lif !C}$ ஆகுமாறு
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ என்க. அப்போது
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ மற்றும்
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$. அதாவது
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது
+  $\sFmla{\True}{!B}$, $\sFmla{\False}{!C}$ ஆகிய இரண்டையும்
+  நிறைவுறுத்துகிறது.
+
+% SEGMENT OLP-0109-S09
+\iftag{FOL}{%
+% SOURCE CORRECTION TA-TAB-005: use the same schematic formula A throughout.
+\item $\sFmla{\True}{\lforall[x][!A(x)]} \in \Gamma$ க்கு
+  $\TRule{\True}{\lforall}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது;
+  இதன் விளைவாகப் புதிய !!{signed formula}~$\sFmla{\True}{!A(t)}$ கிளையில்
+  சேர்கிறது. $\Sat{M}{\Gamma}$, குறிப்பாக
+  $\Sat{M}{\lforall[x][!A(x)]}$, என்க.
+  \oliflabeldef{syn:sem:prop:quant-terms}{\olref[syn][sem]{prop:quant-terms}}{மூடிய
+  சொல் இடைநிறுத்தலுக்கான அளவையடை நிறைவுறுத்தல் முன்மொழிவு} படி,
+  $\Sat{M}{!A(t)}$. எனவே $\Struct{M}$ ஆனது
+  $\sFmla{\True}{!A(t)}$ ஐ நிறைவுறுத்துகிறது.
+
+\item $\sFmla{\False}{\lforall[x][!A(x)]} \in \Gamma$ க்கு
+  $\TRule{\False}{\lforall}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது;
+  இதன் விளைவாக~$\Gamma$ வில் இடம்பெறாத !!a{constant}~$a$ வைக் கொண்ட புதிய
+  !!{signed formula}~$\sFmla{\False}{!A(a)}$ கிளையில் சேர்கிறது.
+  $\Gamma$ நிறைவுறத்தக்கது என்பதால், $\Sat{M}{\Gamma}$ ஆகுமாறு ஒரு
+  $\Struct{M}$ உள்ளது; குறிப்பாக $\Sat/{M}{\lforall[x][!A(x)]}$. $\Gamma
+  \cup \{\sFmla{\False}{!A(a)}\}$ நிறைவுறத்தக்கது என்று காட்ட வேண்டும்.
+  இதற்குப் பொருத்தமான~$\Struct{M'}$ ஐப் பின்வருமாறு வரையறுக்கிறோம்.
+
+  \oliflabeldef{syn:ass:prop:sat-quant}{\olref[syn][ass]{prop:sat-quant}}{அளவையடைகளுக்கான
+  நிறைவுறுத்தல் விதி} படி, $\Sat/{M}{\lforall[x][!A(x)]}$ என்பது,
+  அப்போதும் அப்போது மட்டுமே, ஏதோவொரு $s$ க்கு
+  $\Sat/{M}{!A(x)}[s]$. இப்போது $\Struct{M}$ போலவே இருந்து,
+  $\Assign{a}{M'} = s(x)$ என்பதை மட்டும் வேறுபாடாகக் கொண்ட
+  $\Struct{M'}$ ஐக் கொள்க. $a$ ஆனது~$\Gamma$ வில் இடம்பெறாததால்,
+  \oliflabeldef{syn:ext:cor:extensionality-sent}{\olref[syn][ext]{cor:extensionality-sent}}{ஒரு
+  வாக்கியத்தின் மெய்மை அதில் வரும் குறிகளின் விளக்கங்களை மட்டுமே சாரும் என்ற
+  துணைவிளைவு} படி, ஒவ்வொரு $\sFmla{\True}{!C} \in \Gamma$ க்கும்
+  $\Sat{M'}{!C}$; ஒவ்வொரு $\sFmla{\False}{!C} \in \Gamma$ க்கும்
+  $\Sat/{M'}{!C}$.
+
+  \oliflabeldef{syn:ext:prop:extensionality}{\olref[syn][ext]{prop:extensionality}}{ஒரு
+  வாய்பாட்டின் மெய்மை அதில் வரும் மொழிக் குறிகளின் விளக்கங்களை மட்டுமே சாரும்
+  என்ற முன்மொழிவு} படி, $\Sat/{M'}{!A(x)}[s]$.
+  \oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+  இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு} படி,
+  $\Sat/{M'}{!A(a)}[s]$. $!A(a)$ !!a{sentence} என்பதால்,
+  \oliflabeldef{syn:ass:prop:sentence-sat-true}{\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு
+  வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு} படி,
+  $\Sat/{M'}{!A(a)}$; அதாவது $\Struct{M'}$ ஆனது
+  $\sFmla{\False}{!A(a)}$ ஐ நிறைவுறுத்துகிறது.
+\item $\sFmla{\True}{\lexists[x][!B(x)]} \in \Gamma$ க்கு
+  $\TRule{\True}{\lexists}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது:
+  பயிற்சி.
+\item $\sFmla{\False}{\lexists[x][!B(x)]} \in \Gamma$ க்கு
+  $\TRule{\False}{\lexists}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது:
+  பயிற்சி.}{}
+\end{enumerate}
+
+% SEGMENT OLP-0109-S10
+இப்போது கிளையைப் பிரிக்கும் சாத்தியமான அனுமானங்களைப் பார்ப்போம்.
+\begin{enumerate}
+\item $\sFmla{\False}{!B \land !C} \in \Gamma$ க்கு
+  $\TRule{\False}{\land}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது;
+  இதன் விளைவாக இரு கிளைகள் கிடைக்கின்றன: இடப்புறக் கிளை
+  $\sFmla{\False}{!B}$ வழியாகவும் வலப்புறக் கிளை
+  $\sFmla{\False}{!C}$ வழியாகவும் தொடர்கின்றன. குறிப்பாக
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B \land !C}$ ஆகுமாறு
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ என்க. அப்போது
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$ அல்லது
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$. முதல் நேர்வில்,
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது
+  $\sFmla{\False}{!B}$ ஐ நிறைவுறுத்துகிறது; அதாவது
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது இடப்புறக் கிளையிலுள்ள
+  வாய்பாடுகளை நிறைவுறுத்துகிறது. இரண்டாம் நேர்வில்,
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது
+  $\sFmla{\False}{!C}$ ஐ நிறைவுறுத்துகிறது; அதாவது
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது வலப்புறக் கிளையிலுள்ள
+  வாய்பாடுகளை நிறைவுறுத்துகிறது.
+\item $\sFmla{\True}{!B \lor !C} \in \Gamma$ க்கு
+  $\TRule{\True}{\lor}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது:
+  பயிற்சி.
+\item $\sFmla{\True}{!B \lif !C} \in \Gamma$ க்கு
+  $\TRule{\True}{\lif}$ ஐப் பயன்படுத்திக் கிளை விரிவாக்கப்படுகிறது:
+  பயிற்சி.
+\item கிளை \Cut{} விதியால் விரிவாக்கப்படுகிறது: இதன் விளைவாக இரு கிளைகள்
+  கிடைக்கின்றன; ஒன்று $\sFmla{\True}{!B}$ ஐயும் மற்றது
+  $\sFmla{\False}{!B}$ ஐயும் கொண்டிருக்கும்.
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ என்பதோடு,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$ அல்லது
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!B}$ என்பதால்,
+  $\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ ஆனது இடப்புற அல்லது வலப்புறக்
+  கிளையை நிறைவுறுத்துகிறது.
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0109-S11
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][tab][sou]{thm:tableau-soundness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][tab][sou]{thm:tableau-soundness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0109-S12
+\begin{cor}
+\ollabel{cor:weak-soundness}
+$\Proves !A$ எனில், $!A$ \iftag{FOL}{செல்லுபடியானது}{ஒரு மெய்மம்}.
+\end{cor}
+
+% SEGMENT OLP-0109-S13
+\begin{cor}
+\ollabel{cor:entailment-soundness}
+$\Gamma \Proves !A$ எனில், $\Gamma \Entails !A$.
+\end{cor}
+
+\begin{proof}
+  $\Gamma \Proves !A$ எனில், ஏதோவொரு $!B_1$, \dots, $!B_n \in
+  \Gamma$ க்கு $\{\sFmla{\False}{!A}, \sFmla{\True}{!B_1}, \dots,
+  \sFmla{\True}{!B_n}\}$ ஒரு மூடிய !!{tableau}வைக் கொண்டிருக்கும்.
+  \olref{thm:tableau-soundness} படி, ஒவ்வொரு
+  \iftag{FOL}{!!{structure}}{!!{valuation}}~$\iftag{FOL}{\Struct{M}}{\pAssign{v}}$
+  உம் ஏதோவொரு $!B_i$ ஐப் பொய்யாக்கும் அல்லது $!A$ ஐ மெய்யாக்கும். ஆகவே
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{\Gamma}$ எனில்,
+  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ ஆகவும் இருக்கும்.
+\end{proof}
+
+% SEGMENT OLP-0109-S14
+\begin{cor}
+\ollabel{cor:consistency-soundness}
+$\Gamma$ நிறைவுறத்தக்கது எனில், அது முரணற்றது.
+\end{cor}
+
+\begin{proof}
+இதன் மறுதலையை நிறுவுகிறோம். $\Gamma$ முரணற்றதல்ல என்க. அப்போது
+$!B_1$, \dots, $!B_n \in \Gamma$ இருந்து,
+$\{\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n}\}$ க்கான மூடிய
+!!{tableau} ஒன்று இருக்கும். \olref{thm:tableau-soundness} படி, எல்லா
+$i=1$, \dots,~$n$ க்கும் $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B_i}$ ஆகுமாறு
+$\iftag{FOL}{\Struct{M}}{\pAssign{v}}$ எதுவும் இல்லை. ஆனால் அப்போது
+$\Gamma$ நிறைவுறத்தக்கதல்ல.
+\end{proof}
+
+\end{document}

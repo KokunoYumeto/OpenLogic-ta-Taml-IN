@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-05T16:26:27.699225+00:00",
+  "date_utc": "2026-09-05T23:41:54.952828+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -316,7 +316,7 @@
     {
       "unit_id": "OLP-0066",
       "source_sha256": "77b5d31c7b63f657e0d5492d83810bfdc21af0169a9b38ccd5302e0e4cdefdfe",
-      "translation_sha256": "4e2fd02da17a292c320b9e0c959b21037008833ca5ddb75234dc005901df6048"
+      "translation_sha256": "3e74a8e3809b0ccd4f7545968d197db18ec9afc26d56b52306fc17dff9c54577"
     },
     {
       "unit_id": "OLP-0067",
@@ -336,7 +336,7 @@
     {
       "unit_id": "OLP-0070",
       "source_sha256": "73a554964d7a3fc35a116f63e658340a8c89f9915c3f27e23f7ebd762df35859",
-      "translation_sha256": "48087dc49221558c04fbc36fb7bf81f8989ea40cace662447703a5a6c326690f"
+      "translation_sha256": "7036eeeb2198d98d6daaa05acd898ecb8c477099e98f86427398eea7a23d7991"
     },
     {
       "unit_id": "OLP-0071",
@@ -356,7 +356,7 @@
     {
       "unit_id": "OLP-0074",
       "source_sha256": "25897d850b211443621f31a1166f443c1e00c6bcbf13002bc1b9281ca4300371",
-      "translation_sha256": "961d39f0a9a843fe68a5e67b8a7d7a96c50f2b6e7df0440842be13ee126c097f"
+      "translation_sha256": "22b776858aa3c277105513b2cd4ae63b4bb56b732406430e94a40f876533c137"
     },
     {
       "unit_id": "OLP-0075",
@@ -461,7 +461,7 @@
     {
       "unit_id": "OLP-0095",
       "source_sha256": "8b90318e1a2ed38568fb61cd5529d496cdfd17f322fd9c731a194e2d08e0a4b9",
-      "translation_sha256": "4cb58a682f0d2e02f98227a77c09f7cc64530d90a277a723e50d93f89e8c390b"
+      "translation_sha256": "f25b3d69e72c57ae22b2b7b72759174b49a712e2cefeb8256e5f6ead94642e2b"
     },
     {
       "unit_id": "OLP-0096",
@@ -472,6 +472,76 @@
       "unit_id": "OLP-0097",
       "source_sha256": "426ee50b639d92c730c70912bfda4fdf34c99e0e33097dc253cb196a01af7e7d",
       "translation_sha256": "2910f4793cec7f1db86bbcb4075d6fcbf35c66a6e39e6624c03fa395401e5f94"
+    },
+    {
+      "unit_id": "OLP-0098",
+      "source_sha256": "1c6e7018e63cae3440e85d537303288261afd422b9e13bc455b99c2d206aa1b6",
+      "translation_sha256": "938c31f7888abf64a35d3909ace527f415e3f7de960df09e7ad42db026b57448"
+    },
+    {
+      "unit_id": "OLP-0099",
+      "source_sha256": "312d16775a4a86acf5772c8d02db03233101014ef0ee9a77e3c39b5ca6815a8c",
+      "translation_sha256": "96f7aa5c8acee55a75f9b2b2f635fdbb6af18f6843a908459f085e5f599d99b5"
+    },
+    {
+      "unit_id": "OLP-0100",
+      "source_sha256": "dcf0dc5fbdbfd79a7cf8c4b07a3d3d51aedc9ac424416d205ee5a8fd0877a8f4",
+      "translation_sha256": "58737c8768ab5905b71ad0674d92dd27324218aeeb606a693c530652716c859c"
+    },
+    {
+      "unit_id": "OLP-0101",
+      "source_sha256": "682b3f1de2569dc63657243b83a3daa8966cc1786fa44d5d2fa34da2658e2bb0",
+      "translation_sha256": "ecbc38e4558b5f3cdaf5a065ddabdf0aca12330ab194b5c23352d02b848e80d7"
+    },
+    {
+      "unit_id": "OLP-0102",
+      "source_sha256": "2cb9a2b6c144eb8b53c4a4d9c52daab60bcd3491dbc909cdd5ccf42300fe5452",
+      "translation_sha256": "dafc71d3c5f97ffd3b6c4c8fef399c1db488524c102207ee134012d2e188370c"
+    },
+    {
+      "unit_id": "OLP-0103",
+      "source_sha256": "6940ff2f8466cfb9dc740a4e7aa2cf9551c9a3d3304aa8ebe93217d11e451e90",
+      "translation_sha256": "7a3194c266749e4f7983f9f7e4caa89e61d4ea7b8085be2f5319955ee6b965f7"
+    },
+    {
+      "unit_id": "OLP-0104",
+      "source_sha256": "253a81c3ef645fee728f66e385a86459773fa5d6a82e73740cb55497c598c234",
+      "translation_sha256": "35937b4577b7afb0bef96b40bb4e7db4a17d086b9ee67c462aa8f91857a5e461"
+    },
+    {
+      "unit_id": "OLP-0105",
+      "source_sha256": "38a3260d51ba6fc9db22f6b40b1a57f5c46e80d2a008053beffbb7cf5eff7e71",
+      "translation_sha256": "df508affe5017702de2d5e605fd51805b06f544d4c4519128dee3eba011dcb5b"
+    },
+    {
+      "unit_id": "OLP-0106",
+      "source_sha256": "1e3cd1b98b0dae48850118a996aa37c04da92108c91d2096e51ac4a19025f348",
+      "translation_sha256": "0bc1259960ad8ea19459a8d245eacefe92c4242e0f8c06122b22cfa2d2e18d55"
+    },
+    {
+      "unit_id": "OLP-0107",
+      "source_sha256": "342109e7ee29a08f322f02df997f40ca08aa60cc1388f150b7b23c0aaddd9f13",
+      "translation_sha256": "8af5a5515a223e4226c6f493264cce05f3721765524b9df2650c9399ee13d60d"
+    },
+    {
+      "unit_id": "OLP-0108",
+      "source_sha256": "0087b4788815c95c714158f2f37438e351183f97d8388c0acde21c20a6e8aa0f",
+      "translation_sha256": "d6c41fb6babeb757799e660719770a9adc3690fbd90ffcbc5e1b41c1437207bb"
+    },
+    {
+      "unit_id": "OLP-0109",
+      "source_sha256": "d08c0332f74466555414fa2463a0d32e8bcf40abdf7cab4016c1c48133166a80",
+      "translation_sha256": "45ef333b9bf81ce94646d42762125729c36e7be9acb1825c0092ee3b0088e6a8"
+    },
+    {
+      "unit_id": "OLP-0110",
+      "source_sha256": "3e088c34666999c12f7a9c60aee27e93d0a5e917b9af2afc47115c7c52ef4c1d",
+      "translation_sha256": "7c0be0cdba04ce255b3880904dd3c9f66375c5c142c6f5c93288785422e35d15"
+    },
+    {
+      "unit_id": "OLP-0111",
+      "source_sha256": "d86101dc8eb627b831cd3c1f637102f221e755df98c96fe8ba74170f4a60f58b",
+      "translation_sha256": "4f2e32606163d02a5256d98cb7a9e7f51f430d8f1bf594dc4e3756a51b2d5716"
     }
   ],
   "samples": [
@@ -1543,7 +1613,7 @@
       "segment_id": "OLP-0095-S08",
       "reverse_paraphrase": "Universal-introduction soundness reinterprets the fresh constant a as an arbitrary assignment value, transfers satisfaction to A(a), then uses substitution and extensionality to establish A(x) for every assignment.",
       "assessment": "All six omitted semantic dependencies have reversible reader fallbacks; freshness covers Gamma and A(x).",
-      "translation_segment_sha256": "e0b5e9b6f4fb58db5486fd50cb57c9f5305ada2a968fcffb8fe22d99658b0c7d",
+      "translation_segment_sha256": "54d66a3ee38dfe492c923797b5bb511a4c32b193d08be409198854d325b6f671",
       "status": "author-reviewed"
     },
     {
@@ -1586,6 +1656,251 @@
       "reverse_paraphrase": "Identity-elimination soundness uses equality of the denotations of t-one and t-two and formula extensionality to transfer A(t-one) to A(t-two) under any assignment.",
       "assessment": "The union of premise assumptions and the substitution-versus-assignment dependency remain exact.",
       "translation_segment_sha256": "64ccb84d839fbb7faeed595cbf6461ba399dd34d3ce61f6791ec26ac621465e1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0098-S02",
+      "reverse_paraphrase": "The chapter presents signed analytic tableaux and imports all thirteen rule, construction, metatheory, soundness and identity sections in source order.",
+      "assessment": "TA-TAB-001 repairs only the copied editorial system name: prfTab governs tableaux.",
+      "translation_segment_sha256": "85d5b9aac612764f0bf5d65bcfc80d395d56a8f4e5de6d6ce744e8898d3c173e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0099-S02",
+      "reverse_paraphrase": "A signed formula pairs one sentence with exactly one of the two truth-value signs True and False.",
+      "assessment": "The definition remains syntactic; the following segment separately gives its semantic intuition.",
+      "translation_segment_sha256": "a13cb59bc0765d2e15d9630a88d76ac87c276b74c7d95f02eec0db760df09af3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0099-S05",
+      "reverse_paraphrase": "A branch closes when it contains both True A and False A for some A; a tableau closes only when every branch closes.",
+      "assessment": "Local branch closure and global tableau closure remain distinct.",
+      "translation_segment_sha256": "206a1590982940d3243dad8c92ea6f3c8223bbcaaaee18467ddf9baa86a27a28",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0100-S06",
+      "reverse_paraphrase": "Cut may split every branch into True A and False A without expanding a prior formula; it is dispensable for existence of closed tableaux but useful for combining them.",
+      "assessment": "The admissibility claim and the practical role of cut are both retained.",
+      "translation_segment_sha256": "81d0084e8d8037124dc34e036372c25fec7a94147377142e283d366ccca31ac7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0101-S01",
+      "reverse_paraphrase": "True-universal may instantiate any closed term, whereas False-universal must introduce a constant fresh above that inference.",
+      "assessment": "Both raw universal rule labels are normalized to the edition operator under TA-TAB-002; the formula schemas are unchanged.",
+      "translation_segment_sha256": "88ab1c612219f98d4ae5e28101261258e1fcf7bc46249a568f28d5d9c648fcf7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0101-S04",
+      "reverse_paraphrase": "In a free-variable formula A(x), substitution may use a term already occurring in A, while the eigenvariable rules require their new constant not to occur in A or above the inference.",
+      "assessment": "The P(t,x) valid and P(a,x) invalid instances preserve the contrast.",
+      "translation_segment_sha256": "1b6d32d4b227d5a32a78267c99def4fe259e9316f4b74d11a57dc2249d91bbde",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0101-S05",
+      "reverse_paraphrase": "Without the eigenvariable condition the system would close a tableau for exists-x A(x) implying forall-x A(x), although that conditional is invalid.",
+      "assessment": "The counterexample uses the same illicit constant on both quantified steps.",
+      "translation_segment_sha256": "5f6304447580d8e2b361cd39a0b1838d8a7719fb0b64d16144d7af23d5a7e77f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0102-S02",
+      "reverse_paraphrase": "A tableau is a finite tree beginning with its signed assumptions and extended only by correct rule applications; a branch is closed by opposite signs on one formula, and a tableau is closed when all branches are.",
+      "assessment": "Finiteness, construction, branch closure and tableau closure are all explicit.",
+      "translation_segment_sha256": "9fdaf628690ea850f998582c0bdb7d68d69ee7f11ac3def433e20ee2e9155b44",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0103-S02",
+      "reverse_paraphrase": "To prove (A and B) implies A, begin with its false sign, expand the false conditional and then the true conjunction; True A closes against False A.",
+      "assessment": "Rule choice follows sign and main operator, and check marks are stated to be construction aids only.",
+      "translation_segment_sha256": "4cccc1a02ac44759ce71d1d33bb2590b50516a7d7a00a7ac3384db0d72ee99d4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0103-S03",
+      "reverse_paraphrase": "For (not-A or B) implies (A implies B), true disjunction creates two branches; expanding the false inner conditional closes the B branch, and true negation closes the not-A branch.",
+      "assessment": "The same earlier formula is expanded on every open branch before it is checked.",
+      "translation_segment_sha256": "c6ad6af2d082baf7d939b073de86eb97276fee9ffde8d65b2db19d691b3c74b5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0103-S09",
+      "reverse_paraphrase": "A tableau with two splitting rules is completed by expanding the remaining true conjunction on both open branches, producing the signed formulas needed for closure.",
+      "assessment": "The multi-branch example preserves every branch and justification.",
+      "translation_segment_sha256": "4ac9d782c562fda7639cc5aab3bf6bcbae5d50db6e5987727c8a6451f6d4907f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0104-S02",
+      "reverse_paraphrase": "Quantified tableau search should normally apply eigenvariable-constrained rules early, because later constants can make an otherwise available fresh choice illegal.",
+      "assessment": "The first example orders its quantified inferences to respect freshness.",
+      "translation_segment_sha256": "afe4c11bb6be9dadd78e1e60a6f7842385e06175c146de0493d2b14b14d49662",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0104-S08",
+      "reverse_paraphrase": "Rules without an eigenvariable condition may be reused with different closed terms; choosing a term already present on the branch is often strategically effective.",
+      "assessment": "The text presents this as a search heuristic rather than a formal restriction.",
+      "translation_segment_sha256": "e56c22eea334cc0b2ba3859d2dd9f76a7bba751f4d8580d42e726881fa422f02",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0104-S12",
+      "reverse_paraphrase": "After true negation, the example delays quantifier rules without freshness conditions and splitting rules until the constrained rules can be exposed.",
+      "assessment": "The stated proof-search priority is applied consistently in the following branches.",
+      "translation_segment_sha256": "1ce35f0cc1de2c951d39ae9c3a8c20c227fe419c9c72d0665855534af95eb201",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0104-S15",
+      "reverse_paraphrase": "The final two open branches close by instantiating true universal with b and false existential with c, matching the fresh witnesses introduced earlier.",
+      "assessment": "The selected terms are permitted because these two rules have no eigenvariable condition.",
+      "translation_segment_sha256": "6ec20ad04605db5472e45a7f8c06a78d53dc4a98251004b7a65b0c331808694f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0105-S03",
+      "reverse_paraphrase": "Gamma derives A when some finite subset of Gamma, signed true, together with False A has a closed tableau.",
+      "assessment": "Finite support and the negative target sign are both retained.",
+      "translation_segment_sha256": "40f5235981ec7e5a362863e38ddb41aff333191462246c4336f756cf960c6c4a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0105-S07",
+      "reverse_paraphrase": "Transitivity combines a tableau for Delta together with A deriving B and one for Gamma deriving A by cutting on A and attaching the two closed tableaux to the resulting branches.",
+      "assessment": "The finite Gamma and Delta witnesses remain on the combined root.",
+      "translation_segment_sha256": "62af03d335a9e675cb07515f449950e6600d42c83c3a87fa0c4e4632f965fe76",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0105-S10",
+      "reverse_paraphrase": "Tableau derivability is compact because its definition already uses finitely many assumptions; if Gamma were inconsistent, one finite subset would witness that inconsistency.",
+      "assessment": "Both compactness clauses keep their converse or contrapositive direction.",
+      "translation_segment_sha256": "10d635ed47c3cae849b562108634557da6cb53f5ba3a357f1d712230e798f079",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0106-S02",
+      "reverse_paraphrase": "Gamma derives A exactly when Gamma together with not-A is inconsistent; true negation converts between the False A assumption and the True not-A assumption.",
+      "assessment": "Both transformations preserve closure, including the special branch closed by opposite signs on not-A.",
+      "translation_segment_sha256": "aaa061c6fc0486d7501297a3b94d24a869ce7a467d99a23cde058c1a5dcf266f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0106-S04",
+      "reverse_paraphrase": "If Gamma derives A and already contains not-A, replacing False A by True not-A and applying true negation yields a closed tableau whose assumptions all come from Gamma.",
+      "assessment": "TA-TAB-003 repairs the named premise of the true-negation application.",
+      "translation_segment_sha256": "f9b2fb4b265653e004eed4c3c5d4d4f23c267a1b303a7b5306a3be78f02fa1b6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0106-S05",
+      "reverse_paraphrase": "If both Gamma with A and Gamma with not-A are inconsistent, cut on A joins their closed tableaux; the right branch reconstructs any closure formerly depending on True not-A.",
+      "assessment": "The proof handles separately closure by opposite not-A signs and closure for another reason.",
+      "translation_segment_sha256": "e3630e7f68de8fda09a6956e08fe59b863554133c2095335036648ea7531970f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0107-S01",
+      "reverse_paraphrase": "The conjunction tableaux prove both projections from A-and-B and the introduction of A-and-B from A and B.",
+      "assessment": "TA-TAB-004 repairs eight malformed signed-formula calls without changing their signs or formulas.",
+      "translation_segment_sha256": "5b1471db91576300c68ed64a3335cb37f705bb86ab682d6426ec4183f9d635b0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0107-S02",
+      "reverse_paraphrase": "A-or-B with not-A and not-B is inconsistent, while either disjunct alone derives the disjunction.",
+      "assessment": "The branching true-disjunction proof and the nonbranching false-disjunction proofs remain distinct.",
+      "translation_segment_sha256": "ba5d4fbc339dcadfb7e8497d41432803a0b94743388d2c7a5a90be01780d717f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0107-S03",
+      "reverse_paraphrase": "A and A-implies-B derive B; separately not-A and B each derive A-implies-B.",
+      "assessment": "The two branches of true implication encode exactly falsity of the antecedent or truth of the consequent.",
+      "translation_segment_sha256": "174ad24850d3d5c3ba27f0307adcabae571e57bc9ba98da6ecea9a9f2d11e1ef",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0108-S01",
+      "reverse_paraphrase": "Strong generalization replaces the False A(c) root by False forall-x A(x) and inserts A(c) using the false-universal rule when c is absent from Gamma and A(x).",
+      "assessment": "The freshness condition covers every assumption above the inserted line.",
+      "translation_segment_sha256": "698cad454e65ed4704fea19923bce2e844a464d7a07f87defa094245d87d9d04",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0108-S02",
+      "reverse_paraphrase": "A closed tableau proves A(t) entails exists-x A(x), and another proves forall-x A(x) entails A(t).",
+      "assessment": "The existential and universal instantiations use the same closed term t in their respective tagged branches.",
+      "translation_segment_sha256": "1c5211f444e04fb4013251d9d39256c44f9b3c5b60416e5feaf3036402b1d4a5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0109-S02",
+      "reverse_paraphrase": "A structure satisfies True A exactly when it satisfies A, and satisfies False A exactly when it does not satisfy A; a signed set is satisfiable when one structure satisfies every member.",
+      "assessment": "The definition distinguishes satisfaction of a signed formula from satisfiability of a set.",
+      "translation_segment_sha256": "eb9392c14889355a177ca844948e14bf5e6a060327b7c8e443095ab2a50403e1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0109-S04",
+      "reverse_paraphrase": "Soundness follows because every rule preserves the existence of at least one satisfiable branch, while no closed tableau has any satisfiable branch.",
+      "assessment": "The proof invariant concerns tableaux with at least one satisfiable branch, not every branch.",
+      "translation_segment_sha256": "873f563763d921d0e45bbb5898e6c230eb583a85b133028b80d4932e8c8ad441",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0109-S09",
+      "reverse_paraphrase": "The universal cases instantiate a true universal with a closed term and witness a false universal by reinterpreting a fresh constant; the same schema A is used throughout both cases.",
+      "assessment": "TA-TAB-005 repairs the frozen B/A mismatch, and all six semantic dependencies retain reversible reader fallbacks.",
+      "translation_segment_sha256": "9ec0befbf290ded4bdcb19c46151825e61827ce4a2ef27d9ae31ab087cf70a58",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0109-S10",
+      "reverse_paraphrase": "For a splitting rule, soundness needs only one resulting branch to remain satisfiable; false conjunction chooses a false conjunct and cut chooses the sign that agrees with the model.",
+      "assessment": "The disjunctive semantic argument is not mistaken for satisfaction of both branches.",
+      "translation_segment_sha256": "3f11c3af40e7c720a183fa197dc3d686a1a6c333535ff558d8733d70d85df5bb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0109-S13",
+      "reverse_paraphrase": "If Gamma derives A, a closed tableau for False A and finitely many True Gamma assumptions is unsatisfiable, so every model of Gamma makes A true.",
+      "assessment": "Finite support and semantic entailment remain explicit.",
+      "translation_segment_sha256": "ae92a901ac6ce4876449395cec1eca1bbea49034074e71e8b3e80fa6aab6ae77",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0109-S14",
+      "reverse_paraphrase": "Satisfiability implies consistency by contrapositive: a closed tableau from finitely many True Gamma assumptions would make it impossible for any structure to satisfy all of Gamma.",
+      "assessment": "The result uses tableau soundness rather than identifying the syntactic and semantic notions by definition.",
+      "translation_segment_sha256": "2b591ae34b6790cc3e8a06e73c24ee22868ed60f749dddcc33fcefbc24b452ef",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0110-S03",
+      "reverse_paraphrase": "Identity tableaux derive symmetry by using reflexivity A(s1)=s1=s1 as the second premise and transporting it along s1=s2.",
+      "assessment": "TA-TAB-007 corrects the prose instance from A(s2) to A(s1), matching line 3 and the rule.",
+      "translation_segment_sha256": "60d79dcd801478ad2ae8d0989665a2299a25c1129ffd2635318e52b81be27d34",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0110-S04",
+      "reverse_paraphrase": "Transitivity treats s2=s3 as the equality premise and s1=s2 as A(s2) for A(x)=s1=x, yielding s1=s3.",
+      "assessment": "TA-TAB-007 corrects the expanded second premise to s1=s2.",
+      "translation_segment_sha256": "0ebf7e4661899b212393957b1f726fb5e9a32fa4db667642219f643de0bd8009",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0111-S03",
+      "reverse_paraphrase": "True-identity soundness transfers A(t1) to A(x) under an assignment, uses equality of the denotations of t1 and t2, and transfers back to A(t2).",
+      "assessment": "TA-TAB-006 restores the True sign of the added conclusion; four semantic references retain reversible fallbacks.",
+      "translation_segment_sha256": "b5ff6fd6b807ec7800cc9545df291a7ae50e27ca234079441f53dea5896ef4fe",
       "status": "author-reviewed"
     }
   ],
@@ -1687,9 +2002,37 @@
     {
       "unit_id": "OLP-0095",
       "issue": "The universal-elimination soundness exercise uses a raw TeX universal glyph rather than the defined OpenLogic operator. Tamil repairs the macro under TA-ND-005; six omitted syntax-and-semantics references retain reversible fallbacks under TA-READER-REF-006."
+    },
+    {
+      "unit_id": "OLP-0098",
+      "issue": "The editorial says prfTab governs natural deduction although its tag and every import concern tableaux. Tamil repairs the copied system name under TA-TAB-001."
+    },
+    {
+      "unit_id": "OLP-0101",
+      "issue": "Two universal tableau rule labels use the raw TeX universal command instead of the edition operator used in their formulas. Tamil repairs both labels under TA-TAB-002."
+    },
+    {
+      "unit_id": "OLP-0106",
+      "issue": "After replacing False A with True not-A, the proof names False A as the premise of true-negation. Tamil names the actual replacement premise under TA-TAB-003."
+    },
+    {
+      "unit_id": "OLP-0107",
+      "issue": "Eight signed-formula nodes omit the boundary between their sign and formula arguments. Tamil restores the two required arguments under TA-TAB-004 without changing the displayed signs or formulas."
+    },
+    {
+      "unit_id": "OLP-0109",
+      "issue": "The quantified soundness cases switch from schema B in their premises to A in their conclusions and later steps. Tamil uses A throughout under TA-TAB-005; six omitted syntax-and-semantics references retain reversible fallbacks under TA-READER-REF-008."
+    },
+    {
+      "unit_id": "OLP-0110",
+      "issue": "The symmetry explanation calls line 3 A(s2) although it is A(s1), and the transitivity explanation expands A(s2) as eq[t1][t2] rather than eq[s1][s2]. Tamil repairs both displayed instances under TA-TAB-007."
+    },
+    {
+      "unit_id": "OLP-0111",
+      "issue": "The true-identity soundness case calls its added conclusion S A(t2) although the named rule and proof require True A(t2). Tamil restores the sign under TA-TAB-006; four omitted semantic references retain reversible fallbacks under TA-READER-REF-009."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "Ninety-four source units now pass textual and author semantic QA. The exact 51-unit reader remains the current fully rendered and published release; a new cumulative reader and the remaining 628 frozen units still require completion."
+  "remaining": "One hundred eight source units now pass textual and author semantic QA. The exact 51-unit reader remains the current fully rendered and published release; a new cumulative reader and the remaining 614 frozen units still require completion."
 }

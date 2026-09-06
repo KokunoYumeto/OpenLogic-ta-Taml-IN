@@ -1,0 +1,90 @@
+% SEGMENT OLP-0108-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: provability-quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{tab}{qpr}
+\olsection{\usetoken{S}{derivability} மற்றும் அளவையடைகள்}
+
+\begin{explain}
+  இந்தப் பிரிவில் நிறுவப்படும்~$\Proves$ தொடர்பான உண்மைகளை அட்டவணை-மர விதிகள்
+  தர வேண்டும் என்பதும் நிறைவுத் தேற்றத்திற்குத் தேவை.
+\end{explain}
+
+\begin{thm}
+\ollabel{thm:strong-generalization} $c$ என்பது $\Gamma$ அல்லது~$!A(x)$ இல்
+இடம்பெறாத ஒரு மாறிலிக் குறி என்றும், $\Gamma \Proves !A(c)$ என்றும் இருந்தால்,
+$\Gamma \Proves \lforall[x][!A(x)]$.
+\end{thm}
+
+\begin{proof}
+$\Gamma \Proves !A(c)$ என்க; அதாவது $!B_1$, \dots, $!B_n
+\in \Gamma$ இருந்து, பின்வருவதற்கு மூடிய !!a{tableau} உள்ளது:
+\begin{align*}
+\{ \sFmla{\False}{!A(c)}, &
+\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n} \}.
+\intertext{பின்வருவதற்கும் மூடிய !!a{tableau} உள்ளது என்று காட்ட வேண்டும்:}
+\{ \sFmla{\False}{\lforall[x][!A(x)]}, &
+\sFmla{\True}{!B_1}, \dots, \sFmla{\True}{!B_n} \}.
+\end{align*}
+மூடிய !!{tableau}வை எடுத்துக்கொண்டு, முதல் எடுகோளை
+$\sFmla{\False}{\lforall[x][!A(x)]}$ ஆல் மாற்றி, எடுகோள்களுக்குப் பின்
+$\sFmla{\False}{!A(c)}$ ஐச் செருகுக.
+\begin{center}
+\begin{tableau}{not line numbering}
+  [\sFmla{\False}{\formula{A}(c)}
+    [\sFmla{\True}{\formula{B}_1}
+      [\vdots
+      [\sFmla{\True}{\formula{B}_n}, 
+        [][][]]]]]
+\end{tableau}\qquad
+\begin{tableau}{not line numbering}
+  [\sFmla{\False}{\lforall[x][\formula{A}(x)]}
+    [\sFmla{\True}{\formula{B}_1}
+      [\vdots
+        [\sFmla{\True}{\formula{B}_n},
+          [\sFmla{\False}{\formula{A}(c)}
+        [][][]]]]]]
+\end{tableau}
+\end{center}
+முன்பு எடுகோள்களாகக் கிடைத்த எல்லா !!{sentence}s உம் இன்னும்
+!!{tableau}[gen] மேலே கிடைப்பதால் அட்டவணை மரம் தொடர்ந்து மூடியதாக உள்ளது.
+செருகப்பட்ட வரி $\TRule{\False}{\lforall}$ இன் சரியான பயன்பாட்டின் முடிவு;
+ஏனெனில் !!{constant}~$c$ ஆனது $!B_1$, \dots, $!B_n$ அல்லது
+$\lforall[x][!A(x)]$ இல் இடம்பெறாது; அதாவது புதிய !!{tableau}வில் செருகப்பட்ட
+வரிக்கு மேலே அது இடம்பெறாது.
+\end{proof}
+
+% SEGMENT OLP-0108-S02
+\begin{prop}
+\ollabel{prop:provability-quantifiers}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$!A(t) \Proves \lexists[x][!A(x)]$.}{}
+\tagitem{prvAll}{$\lforall[x][!A(x)] \Proves !A(t)$.}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{பின்வருவதற்கான மூடிய !!a{tableau}:
+  $\sFmla{\False}{\lexists[x][!A(x)]}, \sFmla{\True}{!A(t)}$.
+  \begin{oltableau}
+    [\sFmla{\False}{\lexists[x][\formula{A}(x)]}, just = \TAss
+      [\sFmla{\True}{\formula{A}(t)}, just = \TAss
+        [\sFmla{\False}{\formula{A}(t)}, just = {\TRule{\False}{\lexists}[1]}, close]]]
+    \end{oltableau}}{}
+\tagitem{prvAll}{பின்வருவதற்கான மூடிய !!a{tableau}:
+  $\sFmla{\False}{\formula{A}(t)}, \sFmla{\True}{\lforall[x][!A(x)]}, $.
+  \begin{oltableau}
+    [\sFmla{\False}{\formula{A}(t)}, just = \TAss
+      [\sFmla{\True}{\lforall[x][\formula{A}(x)]}, just = \TAss
+        [\sFmla{\True}{\formula{A}(t)}, just = {\TRule{\True}{\lforall}[2]}, close]]]
+    \end{oltableau}}{}
+\end{tagenumerate}
+\end{proof}
+
+\end{document}

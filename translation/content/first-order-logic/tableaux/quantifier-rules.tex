@@ -1,0 +1,115 @@
+% SEGMENT OLP-0101-S01
+% Part: first-order-logic
+% Chapter: tableaux
+% Section: quantifier-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{tab}{qrl}
+
+\olsection{அளவையடை விதிகள்}
+
+\subsection{$\lforall$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{\sFmla{\True}{\lforall[x][!A(x)]}}
+% SOURCE CORRECTION TA-TAB-002: use the edition's logical quantifier macro.
+\RightLabel{\TRule{\True}{\lforall}}
+\UnaryInfC{\sFmla{\True}{!A(t)}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\False}{\lforall[x][!A(x)]}}
+\RightLabel{\TRule{\False}{\lforall}}
+\UnaryInfC{\sFmla{\False}{!A(a)}}
+\DisplayProof
+\end{defish}
+
+\TRule{\True}{\lforall} இல், $t$ ஒரு மூடிய சொல் (அதாவது மாறிகள் இல்லாத
+சொல்). \TRule{\False}{\lforall} இல், $a$ என்பது
+\TRule{\False}{\lforall} விதிக்கு மேலுள்ள கிளையில் எங்கும் இடம்பெறாத
+!!a{constant}. $a$ ஐ \TRule{\False}{\lforall} அனுமானத்தின்
+\emph{தனிமாறி} என்கிறோம்.\footnote{மேலுள்ள விதியில் $a$ !!a{constant}
+ஆக இருந்தாலும் ``தனிமாறி'' என்ற சொல்லையே பயன்படுத்துகிறோம். இதற்கு வரலாற்றுக்
+காரணங்கள் உள்ளன.}
+
+% SEGMENT OLP-0101-S02
+\subsection{$\lexists$ க்கான விதிகள்}
+
+\begin{defish}
+\AxiomC{\sFmla{\True}{\lexists[x][!A(x)]}}
+\RightLabel{\TRule{\True}{\lexists}}
+\UnaryInfC{\sFmla{\True}{!A(a)}}
+\DisplayProof
+\hfill
+\AxiomC{\sFmla{\False}{\lexists[x][!A(x)]}}
+\RightLabel{\TRule{\False}{\lexists}}
+\UnaryInfC{\sFmla{\False}{!A(t)}}
+\DisplayProof
+\end{defish}
+
+மீண்டும், $t$ ஒரு மூடிய சொல்; $a$ என்பது \TRule{\True}{\lexists}
+விதிக்கு மேலுள்ள கிளையில் இடம்பெறாத !!a{constant}. $a$ ஐ
+\TRule{\True}{\lexists} அனுமானத்தின் \emph{தனிமாறி} என்கிறோம்.
+
+% SEGMENT OLP-0101-S03
+\TRule{\False}{\lforall} அல்லது \TRule{\True}{\lexists} அனுமானத்திற்கு
+மேலுள்ள கிளையில் ஒரு தனிமாறி இடம்பெறக்கூடாது என்ற நிபந்தனை
+\emph{தனிமாறி நிபந்தனை} எனப்படுகிறது.
+
+% SEGMENT OLP-0101-S04
+\begin{explain}
+$!A$ என்பது !!{variable}~$x$ ஐக் கட்டற்றதாகக் கொண்ட !!a{formula} என்றால், அதை $!A(x)$
+என்று எழுதிக் குறிப்போம் என்ற மரபை நினைவுகூர்க. அதே சூழலில் $!A(t)$ என்பது
+$\Subst{!A}{t}{x}$ என்பதன் சுருக்கம். ஆகவே \TRule{\False}{\lexists}
+விதியைப் பின்வருமாறும் எழுதலாம்:
+\begin{prooftree}
+  \AxiomC{\sFmla{\False}{\lexists[x][!A]}}
+  \RightLabel{\TRule{\False}{\lexists}}
+  \UnaryInfC{\sFmla{\False}{\Subst{!A}{t}{x}}}
+\end{prooftree}
+$t$ ஏற்கெனவே~$!A$ இல் இடம்பெறலாம் என்பதை கவனிக்கவும்; எடுத்துக்காட்டாக,
+$!A$ ஆனது~$\Atom{\Obj P}{t,x}$ ஆக இருக்கலாம். எனவே
+$\sFmla{\False}{\lexists[x][\Atom{\Obj P}{t,x}]}$ இலிருந்து
+$\sFmla{\False}{\Atom{\Obj P}{t,t}}$ ஐ அனுமானிப்பது
+\TRule{\False}{\lexists} இன் சரியான பயன்பாடாகும். ஆனால்
+\TRule{\False}{\lforall}, \TRule{\True}{\lexists} ஆகியவற்றின்
+தனிமாறி நிபந்தனைகள் !!{constant}~$a$ ஆனது~$!A$ இல் இடம்பெறக்கூடாது எனக்
+கோருகின்றன. ஆகவே $\TRule{\False}{\lforall}$ ஐப் பயன்படுத்தி
+$\sFmla{\False}{\lforall[x][\Atom{\Obj P}{a,x}]}$ இலிருந்து
+$\sFmla{\False}{\Atom{\Obj P}{a,a}}$ ஐச் சரியாக அனுமானிக்க முடியாது.
+\end{explain}
+
+% SEGMENT OLP-0101-S05
+\begin{explain}
+\TRule{\True}{\lforall}, \TRule{\False}{\lexists} ஆகியவற்றில்
+சொல்~$t$ மீது எந்தக் கட்டுப்பாடும் இல்லை. மறுபுறம்,
+\TRule{\True}{\lexists}, \TRule{\False}{\lforall} விதிகளில்,
+அந்தந்த அனுமானத்திற்கு மேலுள்ள கிளைகளில் !!{constant}~$a$ எங்கும்
+இடம்பெறக்கூடாது என்று தனிமாறி நிபந்தனை கோருகிறது. முறைமை சரித்தன்மையுடையதாக
+இருப்பதை உறுதிசெய்ய இது தேவை. இந்நிபந்தனை இல்லையெனில்,
+$\lexists[x][\formula{A}(x)] \lif \lforall[x][\formula{A}(x)]$ க்குப்
+பின்வரும் மூடிய !!a{tableau} கிடைக்கும்:
+\begin{center}
+\begin{tableau}{}
+  [\sFmla{\False}{\lexists[x][\formula{A}(x)] \lif \lforall[x][\formula{A}(x)]}, just=\TAss
+    [\sFmla{\True}{\lexists[x][\formula{A}(x)]},
+      just={\TRule{\False}{\lif}[1]}
+      [\sFmla{\False}{\lforall[x][\formula{A}(x)]},
+        just={\TRule{\False}{\lif}[1]}
+        [\sFmla{\True}{\formula{A}(a)},
+          just={\TRule{\True}{\lexists}[2]}
+          [\sFmla{\False}{\formula{A}(a)},
+            just={\TRule{\False}{\lforall}[3]}, close]
+        ]
+      ]
+    ]
+  ]
+\end{tableau}
+\end{center}
+ஆனால் $\lexists[x][\formula{A}(x)] \lif
+\lforall[x][\formula{A}(x)]$ செல்லுபடியாகாது.
+\end{explain}
+
+\end{document}

@@ -103,9 +103,9 @@
     {
       "unit_id": "OLP-0066",
       "source_sha256": "77b5d31c7b63f657e0d5492d83810bfdc21af0169a9b38ccd5302e0e4cdefdfe",
-      "translation_sha256": "4e2fd02da17a292c320b9e0c959b21037008833ca5ddb75234dc005901df6048",
+      "translation_sha256": "3e74a8e3809b0ccd4f7545968d197db18ec9afc26d56b52306fc17dff9c54577",
       "source_bytes": 4534,
-      "translation_bytes": 11009,
+      "translation_bytes": 11135,
       "source_coverage_complete": true,
       "segments": 5,
       "math_multiset_parity": true,
@@ -117,21 +117,40 @@
       "unicode_nfc": true,
       "replacement_char_absent": true,
       "english_words_for_review": [
-        "Stanis",
         "include",
         "logic",
         "open",
-        "section",
-        "skowski"
+        "section"
       ],
       "visual_review_complete": false,
-      "audited_source_corrections": [],
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-RENDER-001",
+          "unit_id": "OLP-0066",
+          "kind": "proper-name-tamil-transliteration",
+          "action": "Transliterated Stanisław Jaśkowski into Tamil rather than leaving TeX accent commands that the Tamil reader font cannot render.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\l"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The earlier target retained the Polish name in Latin TeX notation, producing missing-glyph warnings for crossed l and the combining acute accent in the standalone Tamil reader.",
+          "chosen_treatment": "Stanisław Jaśkowski என்பது ஸ்டானிஸ்லாவ் யாஸ்கோவ்ஸ்கி எனத் தமிழ் எழுத்துகளில் ஒலிபெயர்க்கப்படுகிறது.",
+          "alternatives_considered": "Unaccented Latin spelling; a one-name Latin font override; retaining missing glyphs.",
+          "rationale": "The surrounding historical names are already transliterated into Tamil. Tamil-script transliteration removes the verified rendering defect while preserving the person's identity and the passage's attribution.",
+          "precise_review_question": "Is ஸ்டானிஸ்லாவ் யாஸ்கோவ்ஸ்கி a clear India-standard Tamil transliteration of Stanisław Jaśkowski in this historical sentence?",
+          "location_needle": "RENDER LOCALIZATION TA-RENDER-001"
+        }
+      ],
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
-      "command_multiset_parity": true,
-      "missing_commands": [],
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\l"
+      ],
       "extra_commands": [],
       "command_parity_or_audited_correction": true
     },
