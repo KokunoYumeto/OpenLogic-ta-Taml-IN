@@ -1,0 +1,43 @@
+% Part: second-order-logic
+% Chapter: syntax-and-semantics
+% Section: semantic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0327-S01
+
+\olfileid{sol}{syn}{sem}
+\olsection{பொருள்கோள் கருத்துகள்}
+
+\begin{explain}
+\emph{ஏற்புடைமை}, \emph{உட்படுத்தல்}, \emph{நிறைவுறத்தக்கதன்மை}
+ஆகிய மையத் தருக்கக் கருத்துகள் முதல்தரத் தருக்கத்திற்கு
+வரையறுக்கப்படும் அதே முறையில் இரண்டாம்தரத் தருக்கத்திற்கும்
+வரையறுக்கப்படுகின்றன. ஆனால் அடிப்படையான நிறைவுறுத்தல் உறவு இப்போது
+இரண்டாம்தர !!{formula}s க்கானது. இரண்டாம்தர !!{sentence} என்பது,
+பயனிலை மற்றும் சார்பு மாறிகள் உட்பட எல்லா மாறிகளும் கட்டுண்டிருக்கும்
+!!a{formula} என்பது தெளிவு.
+\end{explain}
+
+\begin{defn}[ஏற்புடைமை]
+ஒவ்வொரு !!{structure}~$\Struct M$ க்கும் $\Sat{M}{!A}$ எனில்,
+எனில் மட்டுமே, ஒரு வாக்கியம்~$!A$ \emph{ஏற்புடையது};
+$\Entails !A$ என்று எழுதுகிறோம்.
+\end{defn}
+
+\begin{defn}[உட்படுத்தல்]
+$\Sat{M}{\Gamma}$ ஆகும் ஒவ்வொரு !!{structure}~$\Struct M$ க்கும்
+$\Sat{M}{!A}$ எனில், எனில் மட்டுமே, வாக்கியங்களின் கணம்~$\Gamma$
+ஒரு வாக்கியம்~$!A$ ஐ \emph{உட்படுத்துகிறது}; $\Gamma
+\Entails !A$ என்று எழுதுகிறோம்.
+\end{defn}
+
+\begin{defn}[நிறைவுறத்தக்கதன்மை]
+ஏதோ ஒரு !!{structure}~$\Struct M$ க்கு $\Sat{M}{\Gamma}$ எனில்,
+வாக்கியங்களின் கணம்~$\Gamma$ \emph{நிறைவுறத்தக்கது}. $\Gamma$
+நிறைவுறத்தக்கது அல்ல என்றால் அது \emph{நிறைவுறத்தகாதது} எனப்படும்.
+\end{defn}
+
+\end{document}

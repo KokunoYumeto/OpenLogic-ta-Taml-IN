@@ -1,0 +1,43 @@
+{
+    "schema":  "openlogic-tamil-epub-html-guard/1",
+    "mutex":  "Global\\InterlanguageTeXSlotV1",
+    "acquisition_timeout_ms":  60000,
+    "process_timeout_minutes":  12,
+    "master":  "tamil-batch001.tex",
+    "master_sha256":  "b23f9575347629a3feeeb7f6f2e955f46383f8b70a6f8f98cc275b237b45aff7",
+    "adapter_sha256":  "004e839d1f5ade25d2bbbe23b36949573589d95a270e10c660d5fa3888cfc501",
+    "reader_slug":  "sets",
+    "converter":  "make4ht",
+    "converter_version":  "make4ht version v0.4e",
+    "options":  [
+                    "lualatex",
+                    "html5",
+                    "mathml",
+                    "charset=utf-8",
+                    "fn-in",
+                    "no-shell-escape"
+                ],
+    "started_utc":  "2026-09-12T22:10:10.0703732Z",
+    "status":  "converter-failed",
+    "abandoned_mutex":  false,
+    "exit_code":  1,
+    "issues":  [
+                   {
+                       "line":  "! I can\u0027t find file `C:\\interlanguage\u0027.",
+                       "file":  "sets.log"
+                   },
+                   {
+                       "line":  "! Emergency stop.",
+                       "file":  "sets.log"
+                   },
+                   {
+                       "line":  "!  ==\u003e Fatal error occurred, bad output DVI file produced!",
+                       "file":  "sets.log"
+                   }
+               ],
+    "output_files":  [
+
+                     ],
+    "error":  "make4ht failed with exit code 1",
+    "finished_utc":  "2026-09-12T22:10:12.7539551Z"
+}

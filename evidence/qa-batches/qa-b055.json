@@ -1,0 +1,280 @@
+{
+  "batch_id": "TA-B055",
+  "units": [
+    {
+      "unit_id": "OLP-0118",
+      "source_sha256": "0afb9df4b5f0f5c1e892cf411d126f45acce94cfbdc9087e4bd37cb851cc370b",
+      "translation_sha256": "30245b47e3898e04fdc76e6143693fde9b61e14b45c08f91a882b4ed17fc419e",
+      "source_bytes": 4266,
+      "translation_bytes": 8317,
+      "source_coverage_complete": true,
+      "segments": 11,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$B_i=!A$"
+      ],
+      "extra_math": [
+        "$!B_i=!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "axd",
+        "fol",
+        "include",
+        "loc",
+        "logic",
+        "open",
+        "ptn",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AXD-001",
+          "unit_id": "OLP-0118",
+          "kind": "missing-formula-metavariable-marker",
+          "action": "Restored the missing OpenLogic formula metavariable marker on B_i in the transitivity proof.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$B_i=!A$",
+              "to": "$!B_i=!A$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof introduces every derivation line as !B_i but later writes B_i = !A once without the formula marker.",
+          "chosen_treatment": "தமிழ் நிறுவல் அந்த வரியை $!B_i = !A$ என எழுதுகிறது.",
+          "alternatives_considered": "Retaining the plain italic B_i; changing the surrounding indexed formulas.",
+          "rationale": "The preceding definition of the sequence and the equality being discussed uniquely identify the intended formula metavariable !B_i.",
+          "precise_review_question": "Does restoring only the exclamation marker make this occurrence match the derivation-line notation used throughout the proof?",
+          "location_needle": "SOURCE CORRECTION TA-AXD-001"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0119",
+      "source_sha256": "ef122fcfc1a8c24e89cf5abe30efa11bcd0a1cc3ed9fca2426618e9174481780",
+      "translation_sha256": "ba627277b63bdb5ec329aae279b7424c6831d077b62a6bbc38330c662c9eadca",
+      "source_bytes": 4727,
+      "translation_bytes": 8559,
+      "source_coverage_complete": true,
+      "segments": 10,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Proves(!A\\lif!B)\\lif((!B\\lif!C)\\lif(!A\\lif!C)$"
+      ],
+      "extra_math": [
+        "$\\Proves(!A\\lif!B)\\lif((!B\\lif!C)\\lif(!A\\lif!C))$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Hyp",
+        "align",
+        "axd",
+        "ded",
+        "fol",
+        "include",
+        "logic",
+        "open",
+        "pro",
+        "prp",
+        "ptn",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AXD-002",
+          "unit_id": "OLP-0119",
+          "kind": "unclosed-formula-parenthesis",
+          "action": "Closed the outer parenthesis in the first listed derivability fact.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\Proves(!A\\lif!B)\\lif((!B\\lif!C)\\lif(!A\\lif!C)$",
+              "to": "$\\Proves(!A\\lif!B)\\lif((!B\\lif!C)\\lif(!A\\lif!C))$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The displayed conditional opens two parentheses after the main implication but closes only the inner one.",
+          "chosen_treatment": "தமிழ் வாய்பாடு கடைசியில் இரண்டாம் வல அடைப்புக்குறியைச் சேர்க்கிறது.",
+          "alternatives_considered": "Retaining the unmatched parenthesis; deleting an earlier opening parenthesis.",
+          "rationale": "The intended hypothetical-syllogism formula and the balanced grouping are uniquely determined by the three conditionals.",
+          "precise_review_question": "Does the added final parenthesis close only the outer consequent grouping without altering connective scope?",
+          "location_needle": "SOURCE CORRECTION TA-AXD-002"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0120",
+      "source_sha256": "79f2ddf58916652493c2892078b01dd53ae1691a97e28cfed043cbe285d11888",
+      "translation_sha256": "a30ca4cb58c7318c72d5c1e2a77abc3bc2cea47a6430e1d8bcd4b858c13be23a",
+      "source_bytes": 2176,
+      "translation_bytes": 4028,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\Gamma\\cup\\{!A\\}&\\Proves!C\\lif!D(a),\\\\\\Gamma&\\Proves!A\\lif(!C\\lif!D(a)).\\\\&\\Proves(!A\\lif(!C\\lif!D(a)))\\lif((!A\\land!C)\\lif!D(a))\\\\\\Gamma&\\Proves(!A\\land!C)\\lif!D(a).\\\\\\Gamma&\\Proves(!A\\land!C)\\lif\\lforall[x][!D(x)].\\\\&\\Proves((!A\\land!C)\\lif\\lforall[x][!D(x)])\\lif(!A\\lif(!C\\lif\\lforall[x][!D(x)]),\\\\\\Gamma&\\Proves!A\\lif(!C\\lif\\lforall[x][!D(x)]),\\end{align*}",
+        "$\\Gamma\\Proves!B$"
+      ],
+      "extra_math": [
+        "$\\Gamma\\Proves!A\\lif!B$",
+        "\\begin{align*}\\Gamma\\cup\\{!A\\}&\\Proves!C\\lif!D(a),\\\\\\Gamma&\\Proves!A\\lif(!C\\lif!D(a)).\\\\&\\Proves(!A\\lif(!C\\lif!D(a)))\\lif((!A\\land!C)\\lif!D(a))\\\\\\Gamma&\\Proves(!A\\land!C)\\lif!D(a).\\\\\\Gamma&\\Proves(!A\\land!C)\\lif\\lforall[x][!D(x)].\\\\&\\Proves((!A\\land!C)\\lif\\lforall[x][!D(x)])\\lif(!A\\lif(!C\\lif\\lforall[x][!D(x)])),\\\\\\Gamma&\\Proves!A\\lif(!C\\lif\\lforall[x][!D(x)]),\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "axd",
+        "ddq",
+        "ded",
+        "fol",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AXD-003",
+          "unit_id": "OLP-0120",
+          "kind": "unclosed-formula-parenthesis",
+          "action": "Closed the outer parenthesis in the quantified deduction proof's second auxiliary theorem.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "&\\Proves((!A\\land!C)\\lif\\lforall[x][!D(x)])\\lif(!A\\lif(!C\\lif\\lforall[x][!D(x)]),",
+              "to": "&\\Proves((!A\\land!C)\\lif\\lforall[x][!D(x)])\\lif(!A\\lif(!C\\lif\\lforall[x][!D(x)])),",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The auxiliary conditional opens an outer parenthesis around its consequent and leaves it unmatched before the comma.",
+          "chosen_treatment": "தமிழ் வாய்பாடு காற்புள்ளிக்கு முன் விடுபட்ட வல அடைப்புக்குறியைச் சேர்க்கிறது.",
+          "alternatives_considered": "Retaining the unmatched parenthesis; changing the displayed derivation.",
+          "rationale": "The immediately following modus-ponens step needs the fully grouped consequent A implies (C implies forall x D(x)).",
+          "precise_review_question": "Does the added parenthesis preserve exactly the auxiliary theorem used by the next modus-ponens step?",
+          "location_needle": "SOURCE CORRECTION TA-AXD-003"
+        },
+        {
+          "audit_id": "TA-AXD-004",
+          "unit_id": "OLP-0120",
+          "kind": "deduction-theorem-conclusion-mismatch",
+          "action": "Restored the required conclusion Gamma proves A implies B at the end of the quantified induction case.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\lif"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\Gamma\\Proves!B$",
+              "to": "$\\Gamma\\Proves!A\\lif!B$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The frozen source concludes Gamma proves B although the theorem and the immediately preceding displayed line establish Gamma proves A implies B. The current upstream OpenLogic master file has the corrected conclusion.",
+          "chosen_treatment": "தமிழ் நிறுவல் $\\Gamma \\Proves !A \\lif !B$ என்ற தேற்றத்தின் முடிவையே கூறுகிறது.",
+          "alternatives_considered": "Retaining Gamma proves B; changing the theorem statement.",
+          "rationale": "The induction goal, the preceding formula B identical to C implies forall x D(x), and current upstream all confirm A implies B as the unique intended conclusion.",
+          "precise_review_question": "Does the restored A-conditional make the final sentence match both the theorem statement and the preceding derived formula?",
+          "location_needle": "SOURCE CORRECTION TA-AXD-004"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\lif"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0121",
+      "source_sha256": "22a6a04d9ab4298d762efd6bf2041fa9bf3f2d91c6803b744458812c232cdacc",
+      "translation_sha256": "042a7cb92e1a94c57f65235c7cae487589f7fe8029c228264bd3be9c1f98efa1",
+      "source_bytes": 2886,
+      "translation_bytes": 4362,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "axd",
+        "ded",
+        "fol",
+        "include",
+        "logic",
+        "open",
+        "prp",
+        "prv",
+        "ptn",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

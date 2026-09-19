@@ -1,0 +1,113 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: subformulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0155-S01
+\olfileid{fol}{syn}{sbf}
+
+\olsection{\printtoken{P}{subformula}}
+
+\begin{explain}
+கொடுக்கப்பட்ட ஒரு !!{formula} வை ``உருவாக்கும்'' !!{formula}s பற்றி பேசுவது
+பல நேரங்களில் பயனுள்ளதாக இருக்கும். இவற்றை அதன்
+\emph{!!{subformula}s} என்கிறோம். எந்த !!{formula} வும் தன்னையே !!a{subformula}
+ஆகக் கொண்டுள்ளது; $!A$ இன் $!A$ அல்லாத துணைச்சூத்திரம்
+\emph{சரியான !!{subformula}}.
+\end{explain}
+
+\begin{defn}[உடனடி !!^{subformula}]
+$!A$ ஒரு !!a{formula} ஆக இருந்தால், $!A$ இன்
+\emph{உடனடி !!{subformula}s} பின்வருமாறு தொகுத்தறிதல் வழியில்
+வரையறுக்கப்படுகின்றன:
+\begin{enumerate}
+\item அணு !!{formula}s க்கு உடனடி !!{subformula}s எதுவும் இல்லை.
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\indfrm$ இன் ஒரே உடனடி
+    !!{subformula}~$!B$.}}{}
+
+\item \indcase{!A}{(!B \ast !C)}{$\indfrm$ இன் உடனடி !!{subformula}s
+  $!B$, $!C$ (இங்கு $\ast$ என்பது ஏதேனும் ஒரு இரு-இடத் தொடுப்புக்குறி).}
+
+\tagitem{prvAll}{\indcase{!A}{\lforall[x][!B]}{$\indfrm$ இன் ஒரே உடனடி
+    !!{subformula}~$!B$.}}{}
+
+\tagitem{prvEx}{\indcase{!A}{\lexists[x][!B]}{$\indfrm$ இன் ஒரே உடனடி
+    !!{subformula}~$!B$.}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[சரியான !!^{subformula}]
+$!A$ ஒரு !!a{formula} ஆக இருந்தால், $!A$ இன்
+\emph{சரியான !!{subformula}s} பின்வருமாறு மறுநிகழ்வு வழியில்
+வரையறுக்கப்படுகின்றன:
+\begin{enumerate}
+\item அணு !!{formula}s க்கு சரியான !!{subformula}s எதுவும் இல்லை.
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\indfrm$ இன் சரியான !!{subformula}s
+    $!B$ மற்றும் $!B$ இன் அனைத்து சரியான !!{subformula}s உம் ஆகும்.}}{}
+
+\item \indcase{!A}{(!B \ast !C)}{$\indfrm$ இன் சரியான !!{subformula}s
+  $!B$, $!C$, மேலும் $!B$ மற்றும்~$!C$ இன் அனைத்து சரியான
+  !!{subformula}s உம் ஆகும்.}
+
+\tagitem{prvAll}{\indcase{!A}{\lforall[x][!B]}{$\indfrm$ இன் சரியான
+    !!{subformula}s~$!B$ மற்றும்~$!B$ இன் அனைத்து சரியான !!{subformula}s உம்
+    ஆகும்.}}{}
+
+\tagitem{prvEx}{\indcase{!A}{\lexists[x][!B]}{$\indfrm$ இன் சரியான
+    !!{subformula}s~$!B$ மற்றும்~$!B$ இன் அனைத்து சரியான !!{subformula}s உம்
+    ஆகும்.}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[!!^{subformula}]
+$!A$ இன் !!{subformula}s என்பது $!A$ தானும் அதன் அனைத்து சரியான
+!!{subformula}s உம் சேர்ந்த தொகுப்பு.
+\end{defn}
+
+\begin{explain}
+உடனடி !!{subformula}s மற்றும் சரியான !!{subformula}s ஆகியவற்றை நாம்
+வரையறுத்த விதத்தில் உள்ள நுண்ணிய வேறுபாட்டைக் கவனியுங்கள். முதல் நிலையில்,
+ஒரு சூத்திரம்~$!A$ இன் உடனடி !!{subformula}s ஐ நேரடியாக வரையறுத்தோம்;
+$!A$ இன் சாத்தியமான ஒவ்வொரு வடிவிற்கும் இது நிகழ்வுகளால் அளிக்கப்பட்ட வெளிப்படையான
+வரையறை; நிகழ்வுகள் !!{formula}s தொகுப்பின் தொகுத்தறிதல் வரையறையை
+பின்பற்றுகின்றன. இரண்டாவது நிலையில், எல்லா !!{formula}s தொகுப்பு
+வரையறுக்கப்படும் முறையையே பின்பற்றுகிறோம்; ஆனால் ஒவ்வொரு நிகழ்விலும்
+சிறிய !!{formula}s $!B$, $!C$ தாமாக இருப்பதுடன் இந்த !!{formula}s இன்
+சரியான !!{subformula}s ஐயும் சேர்க்கிறோம். இதனால் வரையறை
+\emph{மறுநிகழ்வு} ஆகிறது. பொதுவாக, தொகுத்தறிதல் வழியில் வரையறுக்கப்பட்ட
+ஒரு தொகுப்பில் (இங்கு !!{formula}s) ஒரு சார்பை வரையறுக்கும் போது, அந்த
+சார்பின் வரையறை நிகழ்வுகளே அதே சார்பைப் பயன்படுத்தினால் அது மறுநிகழ்வு
+வரையறை. இருப்பினும் நன்கு வரையறுக்கப்பட, நாம் வரையறுக்கும் வாதத்திற்கு
+``முன்'' வரும் வாதங்களுக்கான சார்பு மதிப்புகளை மட்டுமே பயன்படுத்துகிறோம்
+என்பதை உறுதிசெய்ய வேண்டும். இங்கு $(!B \ast !C)$ க்கான ``சரியான
+!!{subformula}'' ஐ வரையறுக்கும் போது ``முந்தைய'' !!{formula}s $!B$, $!C$
+இன் சரியான !!{subformula}s ஐ மட்டுமே பயன்படுத்துகிறோம்.
+\end{explain}
+
+\begin{prop}
+\ollabel{prop:subfrm-trans}
+$!B$ என்பது $!A$ இன் ஒரு subformula என்றும், $!C$ என்பது $!B$ இன் ஒரு
+subformula என்றும் வைத்துக்கொள்வோம். அப்போது $!C$ என்பது $!A$ இன் ஒரு
+subformula. வேறு சொற்களில், subformula தொடர்பு கடப்புநிலையானது.
+\end{prop}
+
+\begin{prob}
+\olref[fol][syn][sbf]{prop:subfrm-trans} ஐ நிறுவுக.
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:count-subfrms}
+$!A$ என்பது $n$ தொடுப்புக்குறிகளும் அளவையடைகளும் கொண்ட ஒரு சூத்திரம் எனில்,
+$!A$ இல் அதிகபட்சம் $2n+1$ துணைச்சூத்திரங்கள் உள்ளன.
+\end{prop}
+
+\begin{prob}
+\olref[fol][syn][sbf]{prop:count-subfrms} ஐ நிறுவுக.
+\end{prob}
+
+\end{document}

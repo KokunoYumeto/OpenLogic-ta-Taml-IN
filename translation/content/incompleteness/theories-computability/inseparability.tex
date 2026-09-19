@@ -1,0 +1,56 @@
+% Part: incompleteness
+% Chapter: theories-computability
+% Section: inseparability
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0309-S01
+
+\olfileid{inc}{tcp}{ins}
+
+\olsection{$\Th{Q}$ இல் நிறுவத்தக்க மற்றும் மறுதலிக்கத்தக்க வாக்கியங்கள்
+  கணிக்கத்தக்கவாறு பிரிக்கவியலாதவை}
+
+{\em மறுப்புகள்}~$\Th{Q}$ இல் நிறுவத்தக்க வாக்கியங்களின் கணம்
+$\Th{\bar Q}$ என்க; அதாவது,
+$\Th{\bar Q} = \Setabs{!A}{\Th{Q} \Proves \lnot !A}$.
+$A$, $B$ என்ற தொடர்பில்லாக் கணங்களுக்கு, $A \subseteq C$ மற்றும்
+$B \subseteq \Complement{C}$ ஆகுமாறு கணிக்கத்தக்க கணம்~$C$ எதுவும்
+இல்லையெனில், அவை கணிக்கத்தக்கவாறு பிரிக்கவியலாதவை எனப்படுவதை நினைவுகூர்க.
+
+\begin{lem}
+$\Th{Q}$ மற்றும் $\Th{\bar Q}$ கணிக்கத்தக்கவாறு பிரிக்கவியலாதவை.
+\end{lem}
+
+\begin{proof}
+$\Th{Q} \subseteq C$ மற்றும் $\Th{\bar Q} \subseteq \Complement{C}$ ஆக
+உள்ள ஒரு கணிக்கத்தக்க கணம்~$C$ உள்ளது என்று கொள்க. உறவு~$R(x,y)$ என்பது
+பின்வருவதாக இருக்கட்டும்:
+\begin{quote}
+$x$ ஆனது $!D(u)$ என்ற ஒரு வாய்பாட்டைக் குறியீடாக்குகிறது; மேலும்
+$!D(\num y)$ ஆனது~$C$ இல் உள்ளது.
+\end{quote}
+$R(x,y)$ ஓர் அனைத்தளாவிய கணிக்கத்தக்க உறவு என்று காட்டி ஒரு முரண்பாட்டைப்
+பெறுவோம்.
+
+$S(y)$ கணிக்கத்தக்கது என்றும், $\Th{Q}$ இல்~$!D_S(u)$ ஆல்
+பிரதிநிதித்துவப்படுத்தப்படுகிறது என்றும் கொள்க. அப்போது
+\begin{eqnarray*}
+% SOURCE CORRECTION TA-INC-036: S is evaluated at the metatheoretic number n.
+S(n) & \lif & \Th{Q} \Proves !D_S(\num n) \\
+& \lif & !D_S(\num n) \in C
+\end{eqnarray*}
+மற்றும்
+\begin{eqnarray*}
+\lnot S(n) & \lif & \Th{Q} \Proves \lnot !D_S(\num n) \\
+& \lif & !D_S(\num n) \in \Th{\bar Q} \\
+& \lif & !D_S(\num n) \not\in C.
+\end{eqnarray*}
+ஆகவே $S(y)$ ஆனது
+% SOURCE CORRECTION TA-INC-037: code the one-free-variable formula D_S(u).
+$R(\Gn{!D_S(u)},y)$ குச் சமவலிமையானது.
+\end{proof}
+
+\end{document}

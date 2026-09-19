@@ -1,6 +1,7 @@
 build/*
 !build/*.tex
 !build/*.ps1
+!build/*.py
 release/
 __pycache__/
 *.pyc

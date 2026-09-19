@@ -1,0 +1,171 @@
+{
+  "schema": "openlogic-tamil-reader-render-qa/3",
+  "checked_utc": "2026-09-09T00:46:33.329845+00:00",
+  "scope": {
+    "reader_units": 11,
+    "compiled_source_units_including_chapter_driver": 12,
+    "first_unit": "OLP-0290",
+    "last_unit": "OLP-0300",
+    "programme_completed_units": 308,
+    "total_frozen_units": 722,
+    "reader_contents": [
+      "Robinson Q and the representability/computability equivalence",
+      "the beta-function lemma and coding of finite sequences",
+      "elimination of primitive recursion by regular minimization",
+      "basic functions, composition and regular minimization",
+      "representation of relations, undecidability and Sigma-one completeness"
+    ]
+  },
+  "pdf": {
+    "path": "readers/representability-in-q-ta-Taml-IN.pdf",
+    "bytes": 267166,
+    "sha256": "e8512fe714e84c84ec5d4fd4cdcf7e126670762d3b5cdfe18c39eb65ef562b10",
+    "pages": 26,
+    "all_pages_a4": true,
+    "encrypted": false,
+    "pdf_version": "1.7",
+    "metadata_title": "OpenLogic Tamil: Representability in Robinson Q",
+    "metadata_subject": "Machine translation; 11 reader units; programme coverage 308 of 722 frozen source units",
+    "metadata_author": "OpenLogic Tamil translation programme",
+    "personal_name_absent_from_metadata": true
+  },
+  "build": {
+    "master_path": "build/tamil-representability-in-q.tex",
+    "master_bytes": 6857,
+    "master_sha256": "9dc2142961037da2773b49bba0681a12b7938809ef67eb622ede452dc51d5fa8",
+    "config_path": "translation/tamil-config.sty",
+    "config_sha256": "dd532c8560bf11a47e04413903379a860c9810b8cec737c78573b56f421d99a0",
+    "receipt_path": "TEX-REPRESENTABILITY-IN-Q-RECEIPT.json",
+    "receipt_sha256": "512a194f73193c85e563ea97f2c9be69845c821ec6f46da9659a0cb672b38560",
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "mutex_acquired": true,
+    "abandoned_mutex": false,
+    "engine": "xelatex",
+    "passes": 3,
+    "pass_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "missing_character_warnings": 0,
+    "undefined_references": 0,
+    "multiply_defined_labels": 0,
+    "overfull_box_warnings": 0,
+    "underfull_box_warnings": 0,
+    "font_warnings": 0,
+    "only_expected_receipt_warnings": true
+  },
+  "textual_unit_qa": {
+    "batch_receipts": [
+      {
+        "path": "QA-B155.json",
+        "sha256": "6f42b93355d3e6f8c739af6d80ebf3e87eb60a527bdd029c3a5174b1f0404542"
+      },
+      {
+        "path": "QA-B156.json",
+        "sha256": "389e51c9d6d7b96c0a2c2b90e3c8566bc68d2e0cb9b66f5c1a29b80ed7f2301c"
+      },
+      {
+        "path": "QA-B157.json",
+        "sha256": "4bd79558469d5b63d71127521a96d2b2f2bb3e2e5cf0ce0c13955fb270cab6dc"
+      },
+      {
+        "path": "QA-B158.json",
+        "sha256": "473aa24fc85a4f11b8954f84fb62d633dbb8d15da68cc3b9125cb65d31bef0a5"
+      },
+      {
+        "path": "QA-B159.json",
+        "sha256": "2af3fe5e94d9bf007dfcd9c1b89efd8a2470a6281f396478ce3d551769f6de7a"
+      },
+      {
+        "path": "QA-B160.json",
+        "sha256": "fcda1b67f9201d06695f2084894189fb8cc44f70abee9d8d490c416bc5190171"
+      },
+      {
+        "path": "QA-B161.json",
+        "sha256": "41a1606bb4fc800dd8c599c2d3a2d174ee7c88aaa783eaba6faf339ca5cf26ca"
+      }
+    ],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass, including audited source corrections and standalone-reader reference fallbacks",
+    "source_corrections_path": "SOURCE_CORRECTIONS.json",
+    "source_corrections_sha256": "a19135c945c77eaf8f98fab6a728e5c7c15488be662438d221227a80cf394807",
+    "standalone_reference_fallback": "TA-READER-REF-013"
+  },
+  "semantic_review": {
+    "path": "SEMANTIC_REVIEW-CURRENT.json",
+    "sha256": "808789d1d868920ce5eeea6281cdad5d9a4e5109e9c7008e478e9e27f958f426",
+    "bound_units": 308,
+    "reviewed_samples": 402
+  },
+  "text_extraction": {
+    "path": "renders-representability-in-q-e8512fe7/representability-in-q-e8512fe714e8.txt",
+    "bytes": 125560,
+    "sha256": "b190808e09fa2cd65a6eaaed3b22f7a1f129d5b2914285c82e9df39c350b4400",
+    "tamil_character_count": 32743,
+    "replacement_character_count": 0,
+    "literal_question_pair_count": 0,
+    "automatic_english_labels": [],
+    "required_searches": {
+      "Tamil reader title": true,
+      "representability chapter": true,
+      "introduction": true,
+      "representable functions computable": true,
+      "beta function": true,
+      "primitive recursion simulation": true,
+      "basic functions": true,
+      "composition": true,
+      "regular minimization": true,
+      "computable functions representable": true,
+      "relations": true,
+      "undecidability": true,
+      "sigma one completeness": true
+    },
+    "allowed_ascii_words_note": "Open Logic Project and CC BY attribution, personal and technical names, formal symbols and literal notation only."
+  },
+  "fonts": {
+    "font_rows": 24,
+    "all_embedded": true,
+    "all_subset": true,
+    "tamil_fonts_unicode_mapped": true,
+    "legacy_math_fonts_without_unicode_map": [],
+    "classification": "Tamil text fonts are Unicode mapped and copy-search succeeds; embedded legacy symbol subsets without ToUnicode maps affect formula extraction only.",
+    "pdffonts_output_path": "renders-representability-in-q-e8512fe7/representability-in-q-e8512fe714e8-pdffonts.txt",
+    "pdffonts_output_sha256": "4979643ba921e7baebe3ccf0773feb1f66a20b3839ea3226f5ac9401ed1076c8"
+  },
+  "render": {
+    "directory": "renders-representability-in-q-e8512fe7",
+    "resolution_dpi": 110,
+    "page_png_count": 26,
+    "page_png_total_bytes": 7559323,
+    "contact_sheet_count": 4,
+    "contact_sheet_total_bytes": 7654134,
+    "contact_sheet_layout": "4x2",
+    "visually_inspected_page_range": "1-26",
+    "focused_pages": [
+      1,
+      3,
+      7,
+      11,
+      15,
+      18,
+      21,
+      23,
+      26
+    ]
+  },
+  "visual_findings": {
+    "visual_review_complete": true,
+    "clipped_text": 0,
+    "overlapping_text": 0,
+    "unreadable_glyphs": 0,
+    "broken_formulas_or_diagrams": 0,
+    "margin_overflows": 0,
+    "notes": [
+      "All 26 pages were inspected through four generated 4x2 contact sheets from this exact PDF.",
+      "The title page, chapter opening, dense Q-axiom displays, beta coding formulas, minimization proof, relation reduction and Sigma-one proof were also inspected individually.",
+      "Tamil prose, dense formulas, tables and proof displays remain readable and within the page margins."
+    ]
+  },
+  "result": "pass"
+}

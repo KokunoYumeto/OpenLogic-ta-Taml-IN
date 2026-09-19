@@ -1,0 +1,39 @@
+% SEGMENT OLP-0117-S01
+% Part: first-order-logic 
+% Chapter: axiomatic-deduction 
+% Section: proving-things-quant
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{prq}
+
+\olsection{அளவையடைகளைக் கொண்ட \usetoken{P}{derivation}}
+
+% SEGMENT OLP-0117-S02
+\begin{ex}
+$(\lforall[x][!A(x)] \land \lforall[y][!B(y)]) \lif
+\lforall[x][(!A(x) \land !B(x))]$ இன் !!a{derivation} ஒன்றைத் தருவோம்.
+
+முதலில், பின்வருவதைக் கவனிக்கவும்:
+\begin{align*}
+  (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif \lforall[x][!A(x)]\\
+  \intertext{என்பது \olref[prp]{ax:land1} இன் ஒரு நிகழ்வு; மேலும்}
+  \lforall[x][!A(x)] & \lif !A(a) \\
+  \intertext{என்பது \olref[qua]{ax:q1} இன் ஒரு நிகழ்வு. ஆகவே \olref[pro]{prop:chain} ஆல்}
+  (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif !A(a) \\
+  \intertext{!!{derivable} என்று அறிகிறோம். அதேபோல்,}
+  (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif \lforall[y][!B(y)] \qquad\text{மற்றும்}\\
+    \lforall[y][!B(y)] & \lif !B(a)\\
+    \intertext{ஆகியவை முறையே \olref[prp]{ax:land2} மற்றும் \olref[qua]{ax:q1} இன் நிகழ்வுகள் என்பதால்,}
+    (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif !B(a)\\
+    \intertext{என்பது \olref[pro]{prop:chain} ஆல் வருவிக்கத்தக்கது. \olref[prp]{ax:land3} இன் பொருத்தமான நிகழ்வையும்~\MP ஐ இருமுறையும் பயன்படுத்தினால்,}
+    (\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif (!A(a) \land !B(a))\\
+    \intertext{என்பது வருவிக்கத்தக்கது எனக் காணலாம். இப்போது \QR{} ஐப் பயன்படுத்தி பின்வருவதைப் பெறலாம்:}
+(\lforall[x][!A(x)] \land \lforall[y][!B(y)]) & \lif \lforall[x][(!A(x) \land !B(x))].
+\end{align*}
+\end{ex}
+
+\end{document}
+

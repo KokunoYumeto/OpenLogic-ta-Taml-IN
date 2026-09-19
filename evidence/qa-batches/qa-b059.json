@@ -1,0 +1,200 @@
+{
+  "batch_id": "TA-B059",
+  "units": [
+    {
+      "unit_id": "OLP-0132",
+      "source_sha256": "4eefa87745fd3f79045f8f49b82dcd2c0a9c3268148150863870c82401c60702",
+      "translation_sha256": "c277eb65cec397f6f369e153dc262a5586d012ee485eb135e073eee91b10e1ae",
+      "source_bytes": 11011,
+      "translation_bytes": 20333,
+      "source_coverage_complete": true,
+      "segments": 16,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\lforall[x][!A(x)]\\in\\Gamma^*$"
+      ],
+      "extra_math": [
+        "$\\lforall[x][!B(x)]\\in\\Gamma^*$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "FOL",
+        "align",
+        "ass",
+        "ccs",
+        "com",
+        "ext",
+        "fol",
+        "hen",
+        "include",
+        "logic",
+        "mod",
+        "notFOL",
+        "open",
+        "probAll",
+        "probAnd",
+        "probEx",
+        "probIf",
+        "probOr",
+        "propositional",
+        "prvAll",
+        "prvEx",
+        "section",
+        "syn",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-COM-002",
+          "unit_id": "OLP-0132",
+          "kind": "induction-metavariable-consistency",
+          "action": "Used B rather than A in the universal truth-lemma induction conclusion.",
+          "expected_missing_math": [
+            "$\\lforall[x][!A(x)]\\in\\Gamma^*$"
+          ],
+          "expected_extra_math": [
+            "$\\lforall[x][!B(x)]\\in\\Gamma^*$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The universal induction case is stated for forall-x B(x), and every preceding satisfaction and membership formula uses B, but its final membership formula unexpectedly switches to A.",
+          "chosen_treatment": "தமிழ் நிறுவல் தொகுத்தறிதல் வழக்கின் வாய்பாடு B-ஐ இறுதி அனைத்தளவையிட்ட உறுப்பியச் சூத்திரத்திலும் தொடர்ந்து பயன்படுத்துகிறது.",
+          "alternatives_considered": "Preserving the isolated A despite the induction case and saturation proposition both using B.",
+          "rationale": "The induction variable A names the whole formula, while B is its immediate quantified subformula; the truth-lemma conclusion must be membership of forall-x B(x).",
+          "precise_review_question": "Does replacing A by B in the final universal-membership formula restore the stated induction case without changing its quantifier or set?",
+          "location_needle": "SOURCE CORRECTION TA-COM-002"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0133",
+      "source_sha256": "bc3391e4db38b0552ee8429b14f32124cdb7ee71e766ce17a5eaa2422126aa71",
+      "translation_sha256": "2b54bedd2971295741c211a700856b5a5fd43c7684a31621ae4509fff2f49447",
+      "source_bytes": 7831,
+      "translation_bytes": 14128,
+      "source_coverage_complete": true,
+      "segments": 13,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\Gamma^*\\Proves\\eq[\\Atom{f}{t_1,\\dots,t_{i-1},t,t_{i+1},,\\dots,t_n}][\\Atom{f}{t_1,\\dots,t_{i-1},t',t_{i+1},\\dots,t_n}]\\]"
+      ],
+      "extra_math": [
+        "\\[\\Gamma^*\\Proves\\eq[\\Atom{f}{t_1,\\dots,t_{i-1},t,t_{i+1},\\dots,t_n}][\\Atom{f}{t_1,\\dots,t_{i-1},t',t_{i+1},\\dots,t_n}]\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "com",
+        "fol",
+        "ide",
+        "include",
+        "logic",
+        "mod",
+        "multline",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-COM-003",
+          "unit_id": "OLP-0133",
+          "kind": "duplicated-punctuation-in-term",
+          "action": "Removed a duplicated comma from the displayed function term in the congruence proof obligation.",
+          "expected_missing_math": [
+            "\\[\\Gamma^*\\Proves\\eq[\\Atom{f}{t_1,\\dots,t_{i-1},t,t_{i+1},,\\dots,t_n}][\\Atom{f}{t_1,\\dots,t_{i-1},t',t_{i+1},\\dots,t_n}]\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\Gamma^*\\Proves\\eq[\\Atom{f}{t_1,\\dots,t_{i-1},t,t_{i+1},\\dots,t_n}][\\Atom{f}{t_1,\\dots,t_{i-1},t',t_{i+1},\\dots,t_n}]\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The first function term contains two consecutive commas after t_(i+1), unlike the proposition immediately above and the second function term on the same line.",
+          "chosen_treatment": "தமிழ் பதிப்பு முதல் சார்புச் சொல்லில் மீளுரைத்த காற்புள்ளியை நீக்கி இரு சொற்களையும் ஒரே n-இட வடிவில் தருகிறது.",
+          "alternatives_considered": "Preserving the duplicated comma as if it denoted a missing argument.",
+          "rationale": "The surrounding quantified list supplies exactly n arguments, and both the proposition and comparison term show the intended single separator.",
+          "precise_review_question": "Is the doubled comma purely typographic, with the corrected term matching the stated congruence property?",
+          "location_needle": "SOURCE CORRECTION TA-COM-003"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0134",
+      "source_sha256": "2e28c82c4787c75fc159295bf38adfb4aa5e1dff0025c237cd750bfc33964ecb",
+      "translation_sha256": "b79732f26f39abbe906f54f9487c1eaf03f76e6dbd73dc96b154f800b6435c49",
+      "source_bytes": 4643,
+      "translation_bytes": 9188,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "com",
+        "cth",
+        "fol",
+        "hen",
+        "ide",
+        "include",
+        "lin",
+        "logic",
+        "mod",
+        "open",
+        "prfAX",
+        "prfND",
+        "prfSC",
+        "prfTab",
+        "section",
+        "sem",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

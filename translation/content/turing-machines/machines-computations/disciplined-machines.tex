@@ -1,0 +1,101 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: well-behaved-machines
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0260-S01
+
+\olfileid{tur}{mac}{dis}
+\olsection{ஒழுங்குக்குட்பட்ட பொறிகள்}
+
+\begin{explain}
+\olref[hal]{sec} என்ற பிரிவில், ஒதுக்கப்பட்ட ஒரே ஒரு நிற்றல்
+நிலை~$h$ ஐக் கொண்ட டியூரிங் பொறிகளைக் கருதினோம்---அத்தகைய பொறிகள்
+நிற்குமானால், நிலை~$h$ இல் நிற்பது உறுதி. இவ்வகையில், ஒற்றை நிற்றல்
+நிலையுள்ள பொறிகள், பொதுவாக டியூரிங் பொறிகளை இருக்க அனுமதிப்பதைவிட
+அதிக ``ஒழுங்குக்குட்பட்டவை''. டியூரிங் பொறிகளின் நடத்தைக்கு வேறு
+கட்டுப்பாடுகளையும் நாம் விதிக்கலாம். எடுத்துக்காட்டாக, கட்டம்~$0$
+இலுள்ள நாடா முனைக் குறியை டியூரிங் பொறிகள் அழிப்பதையோ, கட்டம்~$0$
+இலிருந்து இடப்புறம் நகர முயல்வதையோ நாம் தடைசெய்யவில்லை. (இந்த
+நேர்வில் தலை கட்டம்~$0$ இலேயே தங்குகிறது என்று நமது வரையறை
+கூறுகிறது; வேறு வரையறைகளில் பொறி நிற்கும்.) இதேபோல், ஒரு டியூரிங்
+பொறி நிற்குமானால், கட்டம்~$1$ இல் நிற்கும் என்று கருதுவது சில
+நேரங்களில் விரும்பத்தக்கது.
+\end{explain}
+
+\begin{defn}\ollabel{defn:disciplined}
+ஒரு டியூரிங் பொறி~$M$ \emph{ஒழுங்குக்குட்பட்டது} எனில் மட்டுமே,
+\begin{enumerate}
+    \item அது ஒதுக்கப்பட்ட ஒரே ஒரு நிற்றல் நிலை~$h$ ஐக் கொண்டுள்ளது,
+    \item அது நிற்குமானால், கட்டம்~$1$ ஐ வருடும்போது நிற்கிறது,
+    \item கட்டம்~$0$ இலுள்ள $\TMendtape$ குறியை அது ஒருபோதும் அழிப்பதில்லை, மேலும்
+    \item கட்டம்~$0$ இலிருந்து இடப்புறம் நகர அது ஒருபோதும் முயல்வதில்லை.
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+எந்த டியூரிங் பொறியையும் அதே நடத்தையும் ஒதுக்கப்பட்ட ஒரு நிற்றல்
+நிலையும் கொண்ட பொறியாக மாற்றலாம் என்று ஏற்கெனவே விவாதித்துள்ளோம்.
+புதிய நிலை~$h$ ஐச் சேர்த்து, மூல~$\delta$ வரையறுக்கப்படாத ஒவ்வொரு
+ஜோடி $\tuple{q,\sigma}$ க்கும்
+$\delta(q, \sigma) = \tuple{h, \sigma, N}$ என்ற கட்டளையைச் சேர்ப்பதன்
+மூலம் இதை எளிதாகச் செய்யலாம். நிறுவுவது சலிப்பூட்டுவதாக இருந்தாலும்,
+எந்த டியூரிங் பொறி~$M$ ஐயும் அதே உள்ளீடுகளில் நின்று அதே வெளியீட்டை
+உருவாக்கும் ஒழுங்குக்குட்பட்ட ஒரு டியூரிங் பொறி~$M'$ ஆக மாற்ற முடியும்
+என்பது உண்மை. எடுத்துக்காட்டாக, டியூரிங் பொறி நின்றிருக்கும்போது
+கட்டம்~$1$ இல் இல்லை எனில், நாடா முனைக் குறியைக் கண்டுபிடிக்கும் வரை
+தலையை இடப்புறம் நகர்த்தி, பின்பு ஒரு கட்டம் வலப்புறம் நகர்த்தி,
+பிறகு நிறுத்தும் சில கட்டளைகளைச் சேர்க்கலாம். மற்ற நிபந்தனைகளை
+எவ்வாறு கையாளலாம் என்பதை நீங்கள் சிந்திப்பதற்காக விட்டுவைக்கிறோம்.
+\end{explain}
+
+\begin{ex}
+    \olref{fig:adder-disc} இல், \olref[una]{ex:adder} இலுள்ள
+    கூட்டல் பொறியை ஒழுங்குக்குட்பட்ட ஒரு பொறியாக மாற்றுகிறோம்.
+    \begin{figure}\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [below right of=B] {$q_2$};
+  \node[state]         (D) [below left of=C] {$q_3$};
+  \node[state]         (H) [left of=D] {$h$};
+
+  \path (A) edge node {\TMtrans{\TMblank}{\TMstroke}{\TMstay}} (B)
+           edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+            edge node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (C)
+        (C) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMleft}} (D)
+        (D) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (D)
+        edge node {\TMtrans{\TMendtape}{\TMendtape}{\TMright}} (H);
+\end{tikzpicture}
+\]\caption{ஒழுங்குக்குட்பட்ட ஒரு கூட்டல் பொறி}
+\ollabel{fig:adder-disc}
+\end{figure}
+\end{ex}
+
+\begin{prop}\ollabel{prop:disciplined} ஒவ்வொரு டியூரிங் பொறி~$M$
+க்கும்,~$M$ வெளியீடு~$O$ உடன் நின்றால் வெளியீடு~$O$ உடன் நிற்கவும்,
+~$M$ நிற்காவிட்டால் நிற்காமல் இருக்கவும் செய்கின்ற, ஒழுங்குக்குட்பட்ட
+ஒரு டியூரிங் பொறி~$M'$ உள்ளது. குறிப்பாக, ஒரு டியூரிங் பொறியால்
+கணிக்கத்தக்க எந்தச் சார்பு $f\colon\Nat^n \to \Nat$ உம்
+ஒழுங்குக்குட்பட்ட ஒரு டியூரிங் பொறியாலும் கணிக்கத்தக்கது.
+\end{prop}
+
+\begin{prob}\label{tur:mac:dis:prob:disc-succ}
+$f(x) = x+1$ ஐக் கணிக்கும் ஒழுங்குக்குட்பட்ட ஒரு பொறியைத் தருக.
+\end{prob}
+
+
+\begin{prob}\label{tur:mac:dis:prob:copier}
+உள்ளீடு $\TMstroke^n$ இல் தொடங்கும்போது
+$\TMstroke^n \concat \TMblank \concat \TMstroke^n$ என்ற வெளியீட்டை
+உருவாக்கும் ஒழுங்குக்குட்பட்ட ஒரு பொறியைக் கண்டறிக.
+\end{prob}
+
+\end{document}

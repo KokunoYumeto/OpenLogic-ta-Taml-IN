@@ -1,0 +1,184 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: compactness-direct
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{cpd}}
+      {\olfileid{pl}{com}{cpd}}
+
+% SEGMENT OLP-0136-S01
+\olsection{இறுதிக்குட்பட்ட தன்மைத் தேற்றத்தின் நேரடி நிறுவல்}
+
+நிறைவு தேற்றத்தைப் பயன்படுத்தாமல், அதன் நிறுவலில் பயன்படுத்திய அதே
+கருத்துகளால் இறுதிக்குட்பட்ட தன்மைத் தேற்றத்தை நேரடியாக நிறுவலாம். நிறைவு
+தேற்றத்தின் நிறுவலில், !!{sentence}s கொண்ட முரணற்ற கணம்~$\Gamma$ இலிருந்து
+தொடங்கி, அதை !!{sentence}s கொண்ட முரணற்ற\iftag{FOL}{, செறிவுற்ற}{} மற்றும்
+!!{complete} கணம்~$\Gamma^*$ ஆக விரிவாக்கினோம். பின்னர்~$\Gamma^*$ இலிருந்து
+கட்டமைக்கப்பட்ட
+\iftag{FOL}{சொல் மாதிரி~$\Struct{M(\Gamma^*)}$}{!!{valuation}~$\pAssign{v(\Gamma^*)}$}
+இல்~$\Gamma$ இன் எல்லா !!{sentence}s உம் மெய் எனக் காட்டினோம்; ஆகவே
+$\Gamma$ நிறைவுசெய்யத்தக்கது.
+
+இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்க வாக்கியக் கணம் நிறைவுசெய்யத்தக்கது
+எனக் காட்டவும் இதே முறையைப் பயன்படுத்தலாம். மெய்மை துணைத்தேற்றத்திற்கு
+இட்டுச் செல்லும் முடிவுகளில் ``முரணற்ற'' என்பதற்குப் பதில்
+``இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்க'' என்பதைப் பயன்படுத்தும் இணையான
+வடிவங்களை மட்டும் நிறுவ வேண்டும்.
+
+% SEGMENT OLP-0136-S02
+\begin{prop}
+\ollabel{prop:fsat-ccs}
+$\Gamma$ ஆனது !!{complete} ஆகவும் இறுதிக்குட்பட்டவாறு
+நிறைவுசெய்யத்தக்கதாகவும் இருக்கிறது என்க. அப்போது:
+\begin{enumerate}
+\tagitem{prvAnd}{$(!A \land !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+  $!A \in \Gamma$ மற்றும் $!B \in \Gamma$ இரண்டும்.}{}
+
+\tagitem{prvOr}{$(!A \lor !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+  $!A \in \Gamma$ அல்லது $!B \in \Gamma$.}{}
+
+\tagitem{prvIf}{$(!A \lif !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+  $!A \notin \Gamma$ அல்லது $!B \in \Gamma$.}{}
+\end{enumerate}
+\end{prop}
+
+% SEGMENT OLP-0136-S03
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cpd]{prop:fsat-ccs} ஐ நிறுவுக. $\Proves$ ஐப்
+பயன்படுத்துவதைத் தவிர்க்க.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0136-S04
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][com][cpd]{prop:fsat-ccs} ஐ நிறுவுக. $\Proves$ ஐப்
+பயன்படுத்துவதைத் தவிர்க்க.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0136-S05
+\iftag{FOL}{%
+\begin{lem}
+\ollabel{lem:fsat-henkin} இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்க ஒவ்வொரு
+கணம்~$\Gamma$ ஐயும், செறிவுற்றதும் இறுதிக்குட்பட்டவாறு
+நிறைவுசெய்யத்தக்கதுமான கணம்~$\Gamma'$ ஆக விரிவாக்கலாம்.
+\end{lem}
+}{}
+
+% SEGMENT OLP-0136-S06
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cpd]{lem:fsat-henkin} ஐ நிறுவுக. (குறிப்பு: $\Gamma_n$
+இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கது எனில், $\Gamma_n \cup \{!D_n\}$ உம்
+அவ்வாறே என்பதை, !!{derivation}s அல்லது முரணின்மையைச் சிறிதும் பயன்படுத்தாமல்
+காட்டுவதே முக்கியமான படி.)
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0136-S07
+\iftag{FOL}{
+\begin{prop}\ollabel{prop:fsat-instances}
+$\Gamma$ நிறைவானதாகவும், இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கதாகவும்,
+செறிவுற்றதாகவும் இருக்கிறது என்க.
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$\lexists[x][!A(x)] \in \Gamma$ அப்போதும் அப்போது மட்டுமே,
+  குறைந்தது ஒரு மூடிய சொல்~$t$ க்கு $!A(t) \in \Gamma$.}{}
+\tagitem{prvAll}{$\lforall[x][!A(x)] \in \Gamma$ அப்போதும் அப்போது மட்டுமே,
+  எல்லா மூடிய சொற்கள்~$t$ க்கும் $!A(t) \in \Gamma$.}{}
+\end{tagenumerate}
+\end{prop}
+}{}
+
+% SEGMENT OLP-0136-S08
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cpd]{prop:fsat-instances} ஐ நிறுவுக.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0136-S09
+\begin{lem}
+\ollabel{lem:fsat-lindenbaum} இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்க ஒவ்வொரு
+கணம்~$\Gamma$ ஐயும், !!a{complete} ஆகவும் இறுதிக்குட்பட்டவாறு
+நிறைவுசெய்யத்தக்கதாகவும் இருக்கும் கணம்~$\Gamma^*$ ஆக விரிவாக்கலாம்.
+\end{lem}
+
+% SEGMENT OLP-0136-S10
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cpd]{lem:fsat-lindenbaum} ஐ நிறுவுக. (குறிப்பு:
+$\Gamma_n$ இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கது எனில்,
+$\Gamma_n \cup \{!A_n\}$ அல்லது $\Gamma_n \cup \{\lnot !A_n\}$
+இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கது என்பதைக் காட்டுவதே முக்கியமான படி.)
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0136-S11
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][com][cpd]{lem:fsat-lindenbaum} ஐ நிறுவுக. (குறிப்பு:
+$\Gamma_n$ இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கது எனில்,
+$\Gamma_n \cup \{!A_n\}$ அல்லது $\Gamma_n \cup \{\lnot !A_n\}$
+இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கது என்பதைக் காட்டுவதே முக்கியமான படி.)
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0136-S12
+\begin{thm}[இறுதிக்குட்பட்ட தன்மை]
+\ollabel{thm:compactness-direct} $\Gamma$ நிறைவுசெய்யத்தக்கது அப்போதும்
+அப்போது மட்டுமே அது இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கது.
+\end{thm}
+
+% SEGMENT OLP-0136-S13
+\begin{proof}
+$\Gamma$ நிறைவுசெய்யத்தக்கது எனில், எல்லா $!A \in \Gamma$ களுக்கும்
+$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$ ஆக இருக்குமாறு
+\iftag{FOL}{!!a{structure}~$\Struct{M}$}{!!a{valuation}~$\pAssign{v}$}
+ஒன்று உள்ளது. அதே \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$},~$\Gamma$ இன்
+ஒவ்வோர் இறுதிக்குட்பட்ட உட்கணத்தையும் நிறைவுறுத்தும்; ஆகவே~$\Gamma$
+இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கது.
+
+இப்போது~$\Gamma$ இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கது என்க.\iftag{FOL}{
+  \olref{lem:fsat-henkin} படி, $\Gamma' \supseteq \Gamma$ ஆக இருக்கும்,
+  இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்க செறிவுற்ற கணம் ஒன்று உள்ளது.}{}
+\olref{lem:fsat-lindenbaum} படி, $\iftag{FOL}{\Gamma'}{\Gamma}$ ஐ
+!!a{complete} ஆகவும் இறுதிக்குட்பட்டவாறு நிறைவுசெய்யத்தக்கதாகவும் இருக்கும்
+கணம்~$\Gamma^*$ ஆக விரிவாக்கலாம்\iftag{FOL}{; மேலும்~$\Gamma^*$ தொடர்ந்து
+  செறிவுற்றதாகவே உள்ளது}{}. \olref[mod]{defn:termmodel} இல் உள்ளவாறு
+\iftag{FOL}{சொல் மாதிரி~$\Struct{M(\Gamma^*)}$}{!!{valuation}~$\pAssign{v(\Gamma^*)}$}
+ஐக் கட்டமைக்க.\iftag{FOL}{ \olref[mod]{prop:quant-termmodel} ஆனது
+$\Gamma^*$ முரணற்றது (அல்லது !!{complete} அல்லது செறிவுற்றது) என்ற உண்மையைச்
+சார்ந்திருக்கவில்லை; $\Struct{M(\Gamma^*)}$ இன் ஒவ்வோர் உறுப்பும் ஒரு மூடிய
+சொல்லின் மதிப்பு என்ற உண்மையை மட்டுமே சார்ந்தது என்பதைக் கவனிக்க.}{}
+மெய்மை துணைத்தேற்றத்தின் (\olref[mod]{lem:truth}) நிறுவலில்,
+\olref[ccs]{prop:ccs}\iftag{FOL}{ மற்றும்
+\olref[hen]{prop:saturated-instances} ஆகியவற்றுக்கான மேற்கோள்களுக்குப் பதில்
+\olref{prop:fsat-ccs} மற்றும் \olref{prop:fsat-instances} ஆகியவற்றுக்கான
+மேற்கோள்களைப் பயன்படுத்தினால்} நிறுவல் மாறாமல் பொருந்தும்.
+\end{proof}
+
+% SEGMENT OLP-0136-S14
+\tagprob{FOL}
+\begin{prob}
+மெய்மை துணைத்தேற்றத்தின் (\olref[fol][com][mod]{lem:truth}) முழு நிறுவலையும்,
+\olref[fol][com][cpd]{thm:compactness-direct} இன் நிறுவலுக்குத் தேவையான
+வடிவத்தில் எழுதுக.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0136-S15
+\tagprob{notFOL}
+\begin{prob}
+மெய்மை துணைத்தேற்றத்தின் (\olref[pl][com][mod]{lem:truth}) முழு நிறுவலையும்,
+\olref[pl][com][cpd]{thm:compactness-direct} இன் நிறுவலுக்குத் தேவையான
+வடிவத்தில் எழுதுக.
+\end{prob}
+\tagendprob
+
+\end{document}

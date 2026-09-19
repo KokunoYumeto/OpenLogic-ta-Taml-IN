@@ -1,0 +1,60 @@
+% Part: second-order-logic
+% Chapter: metatheory
+% Section: undecidability-and-axiomatizability
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0333-S01
+
+\olfileid{sol}{met}{nax}
+
+\olsection{இரண்டாம்தரத் தருக்கம் அடிகோளாக்கத்தக்கதன்று}
+
+\begin{thm}
+\ollabel{thm:sol-undecidable}
+இரண்டாம்தரத் தருக்கம் தீர்மானிக்கவியலாதது.
+\end{thm}
+
+\begin{proof}
+ஒரு முதல்தர !!{sentence}, முதல்தரத் தருக்கத்தில் ஏற்புடையது எனில்,
+எனில் மட்டுமே, இரண்டாம்தரத் தருக்கத்திலும் ஏற்புடையது; முதல்தரத்
+தருக்கம் தீர்மானிக்கவியலாதது.
+\end{proof}
+
+\begin{thm}
+\ollabel{cor:sol-not-axiomatizable}
+இரண்டாம்தரத் தருக்கத்திற்கு ஒலிப்பும் நிறைவும் உடைய !!{derivation}
+முறைமை எதுவும் இல்லை.
+\end{thm}
+
+\begin{proof}
+$!A$ என்பது எண்கணித மொழியிலுள்ள !!a{sentence} என்க.
+$\Sat{N}{!A}$ எனில், எனில் மட்டுமே, $\Th{PA^2} \Entails !A$.
+~$\Th{PA^2}$ இன் ஒன்பது அடிகோள்களின் இணைவு~$!P$ என்க.
+$\Th{PA^2} \Entails !A$ எனில், எனில் மட்டுமே,
+$\Entails !P \lif !A$; அதாவது,
+% SOURCE CORRECTION TA-SOL-001: close the satisfaction macro before closing math mode.
+$\Sat{M}{!P \lif !A}$. இப்போது, $\Obj{0}$ க்கு மாற்றாக~$z$ ஐயும்,
+$\prime$ க்கு மாற்றாக ஓரிடச் சார்பு மாறி~$u$ ஐயும்,
+$+$, $\times$ ஆகியவற்றுக்கு முறையே இரண்டிடச் சார்பு
+மாறிகள்~$u'$,~$u''$ ஐயும், $<$ க்கு மாற்றாக இரண்டிட உறவு
+மாறி~$L$ ஐயும் இட்டு, அனைத்தளவையிட்டுப் பெறப்படும்
+!!{sentence}
+$\lforall[z][\lforall[u][\lforall[u'][\lforall[u''][\lforall[L][(!P' \lif !A')]]]]]$
+ஐக் கருதுக. மூல வாக்கியம் ஏற்புடையது எனில், எனில் மட்டுமே,
+$\Th{PA^2} \Entails !A$ எனில், எனில் மட்டுமே,
+$\Sat{N}{!A}$ எனில், எனில் மட்டுமே, இந்த வாக்கியம் தூய
+இரண்டாம்தரத் தருக்கத்தின் ஏற்புடைய வாக்கியமாகும். ஆகவே இரண்டாம்தரத்
+தருக்கத்திற்கு ஒலிப்பும் நிறைவும் உடைய நிறுவல் முறைமை இருந்தால்,
+~$\Struct{N}$ இல் மெய்யான !!{sentence}s ஐக் கணிக்கத்தக்கவாறு
+எண்ணிடும் $f\colon \Nat \to \Sent[L_A]$ என்ற சார்பை அதிலிருந்து
+வரையறுக்கலாம். இந்தச் சார்பை ஏதோ முதல்தர வாய்பாடு~$!B_f(x, y)$
+ஆனது~$\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தும். அப்போது
+!!{formula}~$\lexists[x][!B_f(x, y)]$ ஆனது~$\Struct{N}$ இன் மெய்யான
+முதல்தர !!{sentence}s இன் கணத்தை வரையறுக்கும்; இது டார்ஸ்கியின்
+தேற்றத்திற்கு முரணாகும்.
+\end{proof}
+
+\end{document}

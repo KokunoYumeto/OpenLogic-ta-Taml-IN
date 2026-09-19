@@ -1,0 +1,59 @@
+% Part: second-order-logic
+% Chapter: metatheory
+% Section: compactness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0335-S01
+
+\olfileid{sol}{met}{lst}
+
+\olsection{லோவென்ஹைம்--ஸ்கோலம் தேற்றம் இரண்டாம்தரத் தருக்கத்தில் தோல்வியடைகிறது}
+
+\begin{explain}
+(கீழ்நோக்கிய) லோவென்ஹைம்--ஸ்கோலம் தேற்றம், முடிவிலா மாதிரியைக்
+கொண்ட ஒவ்வொரு !!{sentence}s இன் கணத்திற்கும் !!a{enumerable}
+மாதிரி உண்டு என்று கூறுகிறது. அதுவும் நிறைவுத் தேற்றத்தின் ஒரு
+விளைவே: நிறைவு நிறுவல், எந்த முரணற்ற !!{sentence}s இன் கணத்திற்கும்
+ஒரு மாதிரியை உருவாக்குகிறது; அந்த மாதிரி !!{enumerable}. மேல்நோக்கிய
+லோவென்ஹைம்--ஸ்கோலம் தேற்றமும் உண்டு. !!{sentence}s இன் கணத்திற்கு
+!!a{denumerable} மாதிரி இருந்தால், அதற்கு !!a{nonenumerable}
+மாதிரியும் உண்டு என்று அது உறுதிசெய்கிறது. இரு தேற்றங்களும்
+இரண்டாம்தரத் தருக்கத்தில் தோல்வியடைகின்றன.
+\end{explain}
+
+\begin{thm}
+\ollabel{thm:sol-no-ls} லோவென்ஹைம்--ஸ்கோலம் தேற்றம் இரண்டாம்தரத்
+தருக்கத்தில் தோல்வியடைகிறது: முடிவிலா மாதிரிகளைக் கொண்டும்
+!!{enumerable} மாதிரி எதையும் கொண்டிராத !!{sentence}s உள்ளன.
+\end{thm}
+
+\begin{proof}
+\[
+\fn{Count} \ident \lexists[z][\lexists[u][\lforall[X][((X(z) \land
+      \lforall[x][(X(x) \lif X(u(x)))]) \lif \lforall[x][X(x)])]]]
+\]
+என்பது !!a{structure}~$\Struct{M}$ இல் $\Domain{M}$
+!!{enumerable} எனில், எனில் மட்டுமே, மெய்யாகிறது என்பதை நினைவுகூர்க.
+ஆகவே~$\lnot\fn{Count}$ ஆனது~$\Struct{M}$ இல்
+$\Domain{M}$ !!{nonenumerable} எனில், எனில் மட்டுமே, மெய்யாகிறது.
+அத்தகைய !!{structure}s உள்ளன: !!{domain} ஆக ஏதாவது
+!!{nonenumerable} கணத்தை எடுத்துக்கொள்க; எடுத்துக்காட்டாக,
+$\Pow{\Nat}$ அல்லது~$\Real$. எனவே~$\lnot \fn{Count}$ க்கு முடிவிலா
+மாதிரிகள் உள்ளன; ஆனால் !!{enumerable} மாதிரிகள் இல்லை.
+\end{proof}
+
+\begin{thm}
+!!{denumerable} மாதிரிகளைக் கொண்டும் !!{nonenumerable} மாதிரி
+எதையும் கொண்டிராத !!{sentence}s உள்ளன.
+\end{thm}
+
+\begin{proof}
+$\fn{Count} \land \fn{Inf}$ ஆனது~$\Nat$ இல் மெய்; ஆனால்
+$\Domain{M}$ !!{nonenumerable} ஆகும் எந்த !!{structure}~$\Struct{M}$
+இலும் மெய் அன்று.
+\end{proof}
+
+\end{document}

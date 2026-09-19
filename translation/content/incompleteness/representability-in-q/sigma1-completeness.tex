@@ -1,0 +1,318 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: sigma1-completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0300-S01
+
+\olfileid{inc}{inp}{s1c}
+\olsection{\texorpdfstring{$\Sigma_1$}{Sigma-1} நிறைவு}
+
+$\Th{Q}$ மற்றும் அதன் முரணற்ற, அடிகோளாக்கத்தக்க விரிவாக்கங்கள்
+முழுநிறைவற்றவையாக இருந்தாலும், எண்குறிகளைப் பற்றிய பல அடிப்படை உண்மைகளை
+$\Th{Q}$ நிறுவுகிறது என்று கண்டோம். உண்மையில், இதை இன்னும் கணிசமாக
+விரிவாக்கலாம். $\Th{Q}$ இல் நிறுவக்கூடியவற்றின் எல்லையைப் புரிந்துகொள்ள,
+$\Delta_0$, $\Sigma_1$, $\Pi_1$ !!{formula}s என்ற கருத்துகளை
+அறிமுகப்படுத்துகிறோம். தோராயமாகக் கூறினால், $\Sigma_1$ !!{formula} என்பது
+$\lexists[x][!B(x)]$ வடிவிலுள்ள ஒன்று; இதில்~$!B$ வாக்குத் தருக்க
+இணைப்பிகளையும் வரம்பிட்ட அளவையிகளையும் மட்டுமே பயன்படுத்தி
+உருவாக்கப்படுகிறது. $\Struct{N}$ இல் மெய்யான $\Sigma_1$ !!{sentence} ஆக
+$!A$ இருந்தால், $\Th{Q} \Proves !A$ என்று காட்டுவோம்
+(\olref{thm:sigma1-completeness}).
+
+\begin{defn}
+\ollabel{defn:bd-quant}
+ஒரு \emph{வரம்பிட்ட இருத்தலளவை !!{formula}} என்பது
+$\lexists[x][(x < t \land !A(x))]$ வடிவிலுள்ள ஒன்று; இங்கு~$t$ ஏதேனும்
+ஒரு சொல். வழக்கமாக இதை $\bexists{x < t}{!A(x)}$ என்று எழுதுகிறோம்.
+%
+ஒரு \emph{வரம்பிட்ட அனைத்தளவை !!{formula}} என்பது
+$\lforall[x][(x < t \lif !A(x))]$ வடிவிலுள்ள ஒன்று; இங்கு~$t$ ஏதேனும்
+ஒரு சொல். வழக்கமாக இதை $\bforall{x < t}{!A(x)}$ என்று எழுதுகிறோம்.
+\end{defn}
+
+\begin{defn}
+\ollabel{defn:delta0-sigma1-pi1-frm}
+அணு !!{formula}s இலிருந்து வாக்குத் தருக்க இணைப்பிகளையும் வரம்பிட்ட
+அளவையிடலையும் மட்டும் பயன்படுத்தி உருவாக்கப்பட்டால்,
+ஒரு !!{formula}~$!B$ ஆனது $\Delta_0$ ஆகும்.
+%
+$!B$ ஆனது $\Delta_0$ ஆகவும் $!A \ident \lexists[x][!B(x)]$ ஆகவும்
+இருந்தால், ஒரு !!{formula}~$!A$ ஆனது $\Sigma_1$ ஆகும்.
+%
+$!B$ ஆனது $\Delta_0$ ஆகவும் $!A \ident \lforall[x][!B(x)]$ ஆகவும்
+இருந்தால், ஒரு !!{formula}~$!A$ ஆனது $\Pi_1$ ஆகும்.
+\end{defn}
+
+\begin{lem}
+\ollabel{lem:q-proves-clterm-id} $t$ ஒரு மூடிய சொல் என்றும்,
+$\Value{t}{N} = n$ என்றும் கொள்க. அப்போது
+$\Th{Q} \Proves \eq[t][\num n]$.
+\end{lem}
+
+\begin{proof}
+$t$ இன் சிக்கல்தன்மை மீது தொகுத்தறிதலால் இதை நிறுவுகிறோம். அடிப்படை
+நேர்வில், $\Value{\Obj 0}{N} = 0$; மேலும் $\num 0 \ident \Obj 0$
+என்பதால் $\Th{Q} \Proves \eq[\Obj 0][\num 0]$.
+%
+தொகுத்தறிதல் நேர்வுக்கு, $t_1$, $t_2$ ஆகியவை
+$\Value{t_1}{N} = n_1$, $\Value{t_2}{N} = n_2$ என்பவற்றை
+நிறைவுசெய்யும் சொற்கள் என்றும்,
+$\Th{Q} \Proves \eq[t_1][\num n_1]$ மற்றும்
+$\Th{Q} \Proves \eq[t_2][\num n_2]$ என்றும் கொள்க.
+
+அப்போது $\Value{(t_1')}{N} = n_1 + 1$. தொகுத்தறிதல் எடுகோளுக்கும்
+$\eq[\num{n_1}'][\num{n_1}']$ என்ற !!{formula} வுக்கும் ஒன்றாதலுக்கான
+முதல்தர விதிகளைப் பயன்படுத்துவதால்
+$\Th{Q} \Proves \eq[t_1'][{\num n_1}']$.
+எண்குறிகளின் வரையறையின்படி, ஆகவே
+$\Th{Q} \Proves \eq[t_1'][\num{n_1 + 1}]$.
+
+கூட்டல்களுக்கு,
+\[
+      \Value{(t_1 + t_2)}{N}
+    = \Value{t_1}{N} + \Value{t_2}{N}
+    = n_1 + n_2.
+\]
+தொகுத்தறிதல் எடுகோளாலும் ஒன்றாதல் விதிகளாலும்,
+$\Th{Q} \Proves \eq[t_1 + t_2][\num{n_1} + t_2]$; ஒன்றாதல் விதிகளை
+இரண்டாம் முறை பயன்படுத்துவதால்,
+$\Th{Q} \Proves \eq[t_1 + t_2][\num{n_1} + \num{n_2}]$.
+\olref[inc][req][bre]{lem:q-proves-add} இன்படி,
+$\Th{Q} \Proves \eq[\num{n_1} + \num{n_2}][\num{n_1 + n_2}]$;
+ஆகவே $\Th{Q} \Proves \eq[t_1 + t_2][\num{n_1 + n_2}]$.
+
+\olref[inc][req][bre]{lem:q-proves-mult} ஐப் பயன்படுத்தி,
+$\times$ க்கும் இதேபோன்ற காரணமுறை பொருந்தும்.
+%
+எண்கணிதத்தின் மூடிய சொற்கள் அனைத்தையும் இவை உள்ளடக்குவதால்,
+$\Value{t}{N} = n$ ஆக உள்ள எல்லா மூடிய சொற்கள்~$t$ க்கும்
+$\Th{Q} \Proves \eq[t][\num n]$.
+\end{proof}
+
+\begin{prob}
+\olref{lem:q-proves-clterm-id} இல் $\times$ இடம்பெறும் பகுதியை
+விரிவாக நிறுவுக.
+\end{prob}
+
+\begin{lem}
+\ollabel{lem:atomic-completeness}
+$t_1$, $t_2$ ஆகியவை மூடிய சொற்கள் என்று கொள்க. அப்போது:
+\begin{enumerate}
+\item $\Value{t_1}{N} = \Value{t_2}{N}$ எனில்,
+    $\Th{Q} \Proves \eq[t_1][t_2]$.
+\item $\Value{t_1}{N} \neq \Value{t_2}{N}$ எனில்,
+    $\Th{Q} \Proves \eq/[t_1][t_2]$.
+\item $\Value{t_1}{N} < \Value{t_2}{N}$ எனில்,
+    $\Th{Q} \Proves t_1 < t_2$.
+\item $\Value{t_2}{N} \leq \Value{t_1}{N}$ எனில்,
+    $\Th{Q} \Proves \lnot(t_1 < t_2)$.
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+$t_1$, $t_2$ என்ற சொற்கள் தரப்பட்டால்,
+$n = \Value{t_1}{N}$, $m = \Value{t_2}{N}$ என நிலைப்படுத்துகிறோம்.
+
+$!A \ident t_1 = t_2$ என்று கொள்க.
+\olref{lem:q-proves-clterm-id} இன்படி,
+$\Th{Q} \Proves \eq[t_1][\num n]$;
+% SOURCE CORRECTION TA-INC-024: t_2 evaluates to m, not n.
+மேலும் $\Th{Q} \Proves \eq[t_2][\num m]$.
+$n = m$ எனில், $\Th{Q} \Proves \eq[\num n][\num m]$; ஆகவே
+ஒன்றாதலின் கடப்புத்தன்மையால் $\Th{Q} \Proves \eq[t_1][t_2]$.
+$n \neq m$ எனில், $\Th{Q} \Proves \eq/[\num n][\num m]$;
+மீண்டும் ஒன்றாதலின் கடப்புத்தன்மையால்
+$\Th{Q} \Proves \eq/[t_1][t_2]$.
+
+இப்போது $!A \ident t_1 < t_2$ என்க. இரண்டு நேர்வுகளிலும்
+$x < y \liff \lexists[z][\eq[z' + x][y]]$ என்று எல்லா $x,y$ க்கும்
+கூறும் அடிகோள்~$!Q_8$ ஐச் சார்ந்திருக்கிறோம்.
+
+$\Sat{N}{t_1 < t_2}$ என்று கொள்க. அப்போது
+$n + k + 1 = m$ ஆகுமாறு ஏதோ $k \in \Nat$ உள்ளது.
+\olref{lem:q-proves-clterm-id} இன்படி,
+$\Th{Q} \Proves \eq[t_1][\num n]$ மற்றும்
+$\Th{Q} \Proves \eq[t_2][\num m]$.
+% SOURCE CORRECTION TA-INC-025: Q_8 needs the successor witness as the left addend.
+இத்துணைத்தேற்றத்தின் முதல் பகுதியின்படி,
+$\Th{Q} \Proves \eq[{\num k}' + \num n][\num m]$.
+ஒன்றாதலின் கடப்புத்தன்மையால்
+$\Th{Q} \Proves \eq[{\num k}' + t_1][t_2]$;
+எனவே $\Th{Q} \Proves \lexists[z][\eq[z' + t_1][t_2]]$.
+$!Q_8$ இன் வலமிருந்து இடமான திசையின்படி,
+$\Th{Q} \Proves t_1 < t_2$.
+
+இதற்கு மாறாக $\Sat/{N}{t_1 < t_2}$, அதாவது $m \leq n$, என்று கொள்க.
+%
+$\Th{Q}$ இல் செயல்பட்டு, $t_1 < t_2$ என்று எடுகொள்வோம்.
+$!Q_8$ இன் இடமிருந்து வலமான திசையின்படி,
+$\eq[z' + t_1][t_2]$ ஆகுமாறு ஏதோ~$z$ உள்ளது.
+$\Th{Q} \Proves \eq[t_1][\num n]$ மற்றும்
+$\Th{Q} \Proves \eq[t_2][\num m]$ என்பதால்,
+$\eq[z' + \num n][\num m]$.
+%
+$!Q_5$ ஐப் பயன்படுத்தி~$m$ மீது செய்யும் வெளித் தொகுத்தறிதலால்,
+$\eq[z' + \num{n - m}][\Obj 0]$.
+$m = n$ எனில், $\eq/[z'][\Obj 0]$; இது
+% SOURCE CORRECTION TA-INC-026: successor nonzeroness is Q_2, in both contradictions.
+~$!Q_2$ இன்படி ஒரு முரண்பாட்டைத் தருகிறது.
+$m < n$ எனில், மீண்டும்~$!Q_5$ இன்படி
+$\eq[(z' + \num{n - m - 1})'][\Obj 0]$;
+இது~$!Q_2$ இன்படி ஒரு முரண்பாட்டைத் தருகிறது.
+ஆகவே $\Th{Q} \Proves \lnot(t_1 < t_2)$.
+\end{proof}
+
+\begin{lem}
+\ollabel{lem:bounded-quant-equiv}
+$!A$ ஒரு !!a{formula} என்றும், $t$ ஒரு மூடிய சொல் என்றும்,
+$k=\Value{t}{N}$ என்றும் கொள்க. அப்போது:
+\begin{enumerate}
+\item $\Th{Q} \Proves \bforall{x<t}{!A(x)}$ எனில், எனில் மட்டுமே
+    $\Th{Q} \Proves !A(\num 0) \land \dots \land !A(\num{k-1})$.
+\item $\Th{Q} \Proves \bexists{x<t}{!A(x)}$ எனில், எனில் மட்டுமே
+    $\Th{Q} \Proves !A(\num 0) \lor \dots \lor !A(\num{k-1})$.
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+வரம்பிட்ட அனைத்தளவையைக் கொண்ட நேர்வை நிறுவுவோம்.
+$\Value{t}{N} = 0$ எனில், சமவலிமையின் இடப்பக்கம்~$\Th{Q}$ இல்
+நிறுவத்தக்கது; ஏனெனில் \olref[inc][req][min]{lem:less-zero} இன்படி
+$x<\num 0$ ஆகும் எதுவும் இல்லை. இதேபோல்,
+% SOURCE CORRECTION TA-INC-027: the universal case has an empty conjunction.
+வெற்று இணைப்பை வெறுமனே $\ltrue$ என்று எடுத்துக்கொள்ளலாம்; இதுவும்
+$\Th{Q}$ இல் நிறுவத்தக்கது.
+%
+எனவே, ஏதோ ஓர் இயல் எண்~$k$ க்கு $\Value{t}{N} = k+1$ என்று கொள்கிறோம்.
+\olref{lem:q-proves-clterm-id} இன்படி,
+$\bforall{x<\num{k+1}}{!A(x)}$ வடிவிலுள்ள ஒரு !!a{formula} உடன்
+செயல்படுவதாகக் கொள்ளலாம்.
+
+$\Th{Q} \Proves \bforall{x<\num{k+1}}{!A(x)}$ என்று கொள்க; மேலும்
+$n \leq k$ என்க. \olref{lem:atomic-completeness} இன்படி
+$\Th{Q} \Proves \num n < \num{k+1}$ என்பதால், தருக்கத்தின்படி
+$\Th{Q} \Proves !A(\num n)$. ஒவ்வொரு $n \leq k$ க்கும் இவ்வுண்மையைப்
+$k+1$ முறை பயன்படுத்தி, வேண்டியபடி
+$\Th{Q} \Proves !A(\num 0) \land \dots \land !A(\num k)$ என்று பெறுகிறோம்.
+
+மறுதிசைக்கு,
+$\Th{Q} \Proves !A(\num 0) \land \dots \land !A(\num k)$ என்று கொள்க.
+$\Th{Q}$ இல் செயல்பட்டு, $x < \num{k+1}$ என்று எடுகொள்வோம்.
+\olref[inc][req][min]{lem:less-nsucc} இன்படி,
+$x = \num 0 \lor \dots \lor x = \num k$; ஆகவே தருக்கத்தின்படி~$!A(x)$.
+இதிலிருந்து அனைத்தளவைக் கூற்று
+$\bforall{x<\num{k+1}}{!A(x)}$ பின்வருகிறது.
+
+வரம்பிட்ட இருத்தலளவிடப்பட்ட !!{formula}s க்கான சமவலிமையின் நிறுவல்
+இதைப் போன்றது.
+\end{proof}
+
+\begin{prob}
+\olref{lem:bounded-quant-equiv} இல் இருத்தலளவை நேர்வுக்கு ஒரு விரிவான
+நிறுவலைத் தருக.
+\end{prob}
+
+\begin{lem}
+\ollabel{lem:delta0-completeness}
+$!A$ என்பது~$\Struct{N}$ இல் மெய்யான ஒரு $\Delta_0$ !!{sentence} எனில்,
+$\Th{Q} \Proves !A$.
+\end{lem}
+
+\begin{proof}
+!!{formula} வின் சிக்கல்தன்மை மீது தொகுத்தறிதலால் இதை நிறுவுகிறோம்.
+%
+\olref{lem:atomic-completeness} அடிப்படை நேர்வைத் தருவதால், தொகுத்தறிதல்
+படிக்குச் செல்கிறோம். எளிமைக்காக, மறுப்புக் குறி பயன்படுத்தப்பட்டுள்ள
+!!{formula} வின் அமைப்பைப் பொறுத்து, மறுப்பு நேர்வை உட்நேர்வுகளாகப்
+பிரிக்கிறோம்.
+
+\begin{enumerate}
+\item $(!A \land !B)$ ஆனது~$\Struct{N}$ இல் மெய் என்று கொள்க;
+ஆகவே $!A$, $!B$ ஆகியவை~$\Struct{N}$ இல் மெய்.
+தொகுத்தறிதல் எடுகோளின்படி, $\Th{Q} \Proves !A$ மற்றும்
+$\Th{Q} \Proves !B$; எனவே தருக்கத்தின்படி
+$\Th{Q} \Proves (!A \land !B)$.
+%
+\item $\lnot (!A \land !B)$ ஆனது~$\Struct{N}$ இல் மெய் என்று கொள்க;
+ஆகவே $\lnot !A$ அல்லது $\lnot !B$ ஆனது~$\Struct{N}$ இல் மெய்.
+பொதுத்தன்மை இழப்பின்றி முதலாவது மெய் என்று கொள்க. தொகுத்தறிதல்
+எடுகோளின்படி $\Th{Q} \Proves \lnot !A$; எனவே தருக்கத்தின்படி
+$\Th{Q} \Proves \lnot (!A \land !B)$.
+%
+\item $(!A \lor !B)$ ஆனது~$\Struct{N}$ இல் மெய் என்று கொள்க; ஆகவே
+$!A$ ஆனது~$\Struct{N}$ இல் மெய் அல்லது $!B$ ஆனது~$\Struct{N}$ இல் மெய்.
+பொதுத்தன்மை இழப்பின்றி முதலாவது பொருந்துகிறது என்று கொள்க. தொகுத்தறிதல்
+எடுகோளின்படி $\Th{Q} \Proves !A$; எனவே தருக்கத்தின்படி
+$\Th{Q} \Proves (!A \lor !B)$.
+%
+\item $\lnot(!A \lor !B)$ ஆனது~$\Struct{N}$ இல் மெய் என்று கொள்க;
+ஆகவே $\lnot !A$, $\lnot !B$ ஆகியவை~$\Struct{N}$ இல் மெய்.
+அப்போது தொகுத்தறிதல் எடுகோளின்படி $\Th{Q} \Proves \lnot !A$ மற்றும்
+$\Th{Q} \Proves \lnot !B$. இதன் விளைவாக, தருக்கத்தின்படி
+$\Th{Q} \Proves \lnot(!A \lor !B)$.
+%
+\item $\bforall{x<t}{!A(x)}$ ஆனது~$\Struct{N}$ இல் மெய் என்று கொள்க;
+இங்கு~$t$ ஒரு மூடிய சொல், $k=\Value{t}{N}$.
+$n < \Value{t}{N}$ ஆக உள்ள எல்லா எண்களுக்கும்
+$!A(\num n)$ ஆனது~$\Struct{N}$ இல் மெய்யாக இருந்தால், தொகுத்தறிதல்
+எடுகோளாலும் தருக்கத்தாலும்
+$\Th{Q} \Proves !A(\num 0) \land \dots \land !A(\num{k-1})$.
+\olref{lem:bounded-quant-equiv} இன்படி,
+$\Th{Q} \Proves \bforall{x<t}{!A(x)}$ என்று பின்வருகிறது.
+%
+\item $\bexists{x < t}{!A(x)}$ வடிவிலுள்ள !!a{sentence} ஐக் கொண்ட
+வரம்பிட்ட இருத்தலளவை நேர்வும், வரம்பிட்ட அனைத்தளவை நேர்வைப் போன்றதே.
+%
+\item $\lnot \bforall{x<t}{!A(x)}$ ஆனது~$\Struct{N}$ இல் மெய் என்று
+கொள்க; இங்கு~$t$ ஒரு மூடிய சொல். இந்த !!{sentence} ஆனது
+$\bexists{x<t}{\lnot !A(x)}$ என்ற !!{sentence} க்குச் சமவலிமையானது;
+அச்சமவலிமை~$\Th{Q}$ இல் வருவிக்கத்தக்கது. ஆகவே வரம்பிட்ட
+இருத்தலளவைகளுக்கான காரணமுறையைப் பயன்படுத்தலாம்.
+%
+\item இதேபோல்,
+% SOURCE CORRECTION TA-INC-028: the bounded-existential matrix needs its second argument.
+$\lnot \bexists{x<t}{!A(x)}$ ஆனது~$\Struct{N}$ இல் மெய் என்று கொள்க;
+இங்கு~$t$ ஒரு மூடிய சொல். இந்த !!{sentence} ஆனது~$\Th{Q}$ இல்
+$\bforall{x<t}{\lnot!A(x)}$ குச் சமவலிமையானது; ஆகவே வரம்பிட்ட
+அனைத்தளவைகளுக்கான காரணமுறையைப் பயன்படுத்தலாம்.
+%
+\item இறுதியாக, $\lnot !A$ ஆனது~$\Struct{N}$ இல் மெய் என்று கொள்க.
+$!A$ அணுவாக உள்ள நேர்வும், ஏதோ ஒரு $\Delta_0$ !!{sentence}~$!B$ க்கு
+$\lnot !A \ident \lnot\lnot !B$ ஆக உள்ள நேர்வும் மட்டுமே எஞ்சுகின்றன.
+$!A$ அணுவாக இருந்தால், \olref{lem:atomic-completeness} இன்படி
+$\Th{Q} \Proves \lnot !A$.
+$\lnot !A \ident \lnot\lnot !B$ எனில், தருக்கத்தின்படி அது~$\Th{Q}$ இல்
+$!B$ க்கு நிறுவத்தக்கவாறு சமவலிமையானது. $\lnot !A$ ஆனது~$\Struct{N}$ இல்
+மெய் என்பதால், அந்த வாக்கியமும்~$\Struct{N}$ இல் மெய். ஆகவே தொகுத்தறிதல்
+எடுகோளின்படி $\Th{Q} \Proves \lnot !A$.
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref{lem:delta0-completeness} இல் இருத்தலளவை நேர்வுக்கு ஒரு விரிவான
+நிறுவலைத் தருக.
+\end{prob}
+
+\begin{thm}
+\ollabel{thm:sigma1-completeness}
+$!A$ என்பது~$\Struct{N}$ இல் மெய்யான ஒரு $\Sigma_1$ !!{sentence} எனில்,
+$\Th{Q} \Proves !A$.
+\end{thm}
+
+\begin{proof}
+% SOURCE CORRECTION TA-INC-029: use the two-argument lexists syntax required by the definition and conclusion.
+$\lexists[x][!A(x)]$ என்பது~$\Struct{N}$ இல் மெய்யான ஒரு
+$\Sigma_1$ !!{sentence} எனில், $s(x) = n$ மற்றும்
+$\Sat{N}{!A(x)}[s]$ ஆகுமாறு ஓர் இயல் எண்~$n$ மற்றும் ஒரு மாறி
+மதிப்பளிப்பு~$s$ உள்ளன. நிறைவுறுத்தல் தொடர்பு பற்றிய தரநிலை உண்மைகளின்படி,
+$\Sat{N}{!A(\num n)}$ என்று பின்வருகிறது. ஆனால் $!A(\num n)$ ஒரு
+$\Delta_0$ !!{formula}; ஆகவே \olref{lem:delta0-completeness} இன்படி
+$\Th{Q} \Proves !A(\num n)$. இதனால் தருக்கத்தின்படி
+$\Th{Q} \Proves \lexists[x][!A(x)]$ என்றும் அமையும்.
+\end{proof}
+
+\end{document}

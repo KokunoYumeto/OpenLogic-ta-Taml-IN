@@ -1,0 +1,41 @@
+% Part: incompleteness
+% Chapter: theories-computability
+% Section: computably-axiomatizable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0306-S01
+
+\olfileid{inc}{tcp}{cax}
+
+\olsection{\printtoken{S}{அடிகோளாக்கத்தக்க} கோட்பாடுகள்}
+
+ஒரு கோட்பாடு~$\Th{T}$ குக் கணிக்கத்தக்க அடிகோள் கணம்~$A$ இருந்தால்,
+அது \emph{!!{axiomatizable}} எனப்படுகிறது. ($A$ ஆனது~$\Th{T}$ கான
+அடிகோள் கணம் என்று கூறுவதன் பொருள்
+$T = \Setabs{!A}{A \Proves !A}$.) இயல் எண்களின் எந்த “நியாயமான”
+அடிகோளாக்கமும் இப்பண்பைக் கொண்டிருக்கும். குறிப்பாக, முடிவுறு அடிகோள்
+கணத்தைக் கொண்ட எந்தக் கோட்பாடும் !!{axiomatizable}.
+
+\begin{lem}
+$\Th{T}$ ஆனது !!{axiomatizable} என்று கொள்க. அப்போது $\Th{T}$ ஆனது
+!!{computably enumerable}.
+\end{lem}
+
+\begin{proof}
+$A$ ஆனது~$\Th{T}$ கான ஒரு கணிக்கத்தக்க அடிகோள் கணம் என்று கொள்க.
+$!A \in T$ ஆ என்று தீர்மானிக்க, அடிகோள்களிலிருந்து~$!A$ இன் ஒரு
+!!a{derivation} ஐத் தேடினால் போதும்.
+
+சற்றே வேறுவிதமாகக் கூறினால், $A$ இல் உள்ள
+$!B_1$, \dots, $!B_k$ என்ற முடிவுறு அடிகோள் பட்டியலும்,
+முதல்தரத் தருக்கத்தில் $(!B_1 \land \dots \land !B_k) \lif !A$ இன்
+ஒரு !!a{derivation} உம் இருந்தால், அப்போதும் அப்போது மட்டுமே
+$!A$ ஆனது~$\Th{T}$ இல் உள்ளது. மேலும், “\dots ஒன்று இருந்து \dots ஆகும்”
+என்ற வடிவிலான வரையறையைக் கொண்ட எந்தக் கணமும், இரண்டாம் “\dots”
+கணிக்கத்தக்கதாக இருந்தால், !!{c.e.} என்று ஏற்கெனவே அறிவோம்.
+\end{proof}
+
+\end{document}

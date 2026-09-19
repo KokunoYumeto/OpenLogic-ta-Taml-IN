@@ -1,0 +1,49 @@
+{
+  "batch_id": "TA-B069",
+  "units": [
+    {
+      "unit_id": "OLP-0155",
+      "source_sha256": "6e287a941dee45c936517925a0db269918b5020ac24892a03342dc7678f6c938",
+      "translation_sha256": "532d9b5979b84f6d4ce02b0c0300c698ce4304e696c85a03793d5041d23843ad",
+      "source_bytes": 3967,
+      "translation_bytes": 7519,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "fol",
+        "include",
+        "logic",
+        "open",
+        "sbf",
+        "section",
+        "subformula",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "schema": "openlogic-tamil-reader-render-qa/3",
+  "checked_utc": "2026-09-08T01:55:05.938516+00:00",
+  "scope": {
+    "reader_units": 12,
+    "compiled_source_units_including_chapter_drivers": 14,
+    "first_unit": "OLP-0276",
+    "last_unit": "OLP-0288",
+    "programme_completed_units": 285,
+    "total_frozen_units": 722,
+    "reader_contents": [
+      "historical background, definitions and overview of incompleteness",
+      "undecidability of theories",
+      "Gödel coding of symbols, terms and formulas",
+      "syntactic substitution",
+      "proof coding for sequent calculus, natural deduction and axiomatic deduction"
+    ]
+  },
+  "pdf": {
+    "path": "readers/incompleteness-arithmetization-ta-Taml-IN.pdf",
+    "bytes": 353792,
+    "sha256": "4f985c31276f63792c1fcfd0b8ddd1506d1239ed389957f8ce15066ec35488db",
+    "pages": 40,
+    "all_pages_a4": true,
+    "encrypted": false,
+    "pdf_version": "1.7",
+    "metadata_title": "OpenLogic Tamil: Incompleteness and arithmetization",
+    "metadata_subject": "Machine translation; 12 reader units; programme coverage 285 of 722 frozen source units",
+    "metadata_author": "OpenLogic Tamil translation programme",
+    "personal_name_absent_from_metadata": true
+  },
+  "build": {
+    "master_path": "build/tamil-incompleteness-arithmetization.tex",
+    "master_bytes": 7076,
+    "master_sha256": "a76e4ace3f7c9aa1c5f177a027638decd547f070402b4315d5aa42addf717c0e",
+    "config_path": "translation/tamil-config.sty",
+    "config_sha256": "23ef1eb68ba21645a5d9dd54760f1ca45548070a6f4d195c1fc509c2540934e3",
+    "receipt_path": "TEX-INCOMPLETENESS-ARITHMETIZATION-RECEIPT.json",
+    "receipt_sha256": "7814aec2ec9fb62f0f1d9551b2d0feb6091629edcc35e0c8a69697b49e029482",
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "mutex_acquired": true,
+    "abandoned_mutex": false,
+    "engine": "xelatex",
+    "passes": 3,
+    "pass_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "missing_character_warnings": 0,
+    "undefined_references": 0,
+    "multiply_defined_labels": 0,
+    "overfull_box_warnings": 0,
+    "underfull_box_warnings": 0,
+    "font_warnings": 0,
+    "inherited_file_request_warnings_per_pass": 2,
+    "first_pass_label_rerun_warning": 1,
+    "only_expected_receipt_warnings": true
+  },
+  "textual_unit_qa": {
+    "batch_receipts": [
+      {
+        "path": "QA-B144.json",
+        "sha256": "ad57983097997f9988cfd02467333d27f7205ea5b590b5c1d818339ba6628b46"
+      },
+      {
+        "path": "QA-B145.json",
+        "sha256": "02a5e7225588c7c72ed9ec6d7c5c926d5b4578d5a3707e2e08221f48eab29384"
+      },
+      {
+        "path": "QA-B146.json",
+        "sha256": "1dce9d20b45dc59b04a3dde88b6f8442c31127fd5ebc75ca67a3a4f1fecf59cf"
+      },
+      {
+        "path": "QA-B147.json",
+        "sha256": "060a51171436693af70b85184e1f51f1fbcdd1a3d269879185f1675c52d488c7"
+      },
+      {
+        "path": "QA-B148.json",
+        "sha256": "1baa9f0f2471d8bb571baf2b19b4d58531627f740fccde7e6d312c9d27f8a4c8"
+      },
+      {
+        "path": "QA-B149.json",
+        "sha256": "188c2f2875fa7ec0c563ce2b4711bc372ea29cf5ebee66f23105e9b997812834"
+      },
+      {
+        "path": "QA-B150.json",
+        "sha256": "27321816ba39d5da4aa0ea77b53d8af260661743c6996d878e8a35ad0d7c310d"
+      },
+      {
+        "path": "QA-B151.json",
+        "sha256": "5fb10dc86a3f773146d45457110de56eb4688ed0fe95ece08e7f3c8672901f9d"
+      },
+      {
+        "path": "QA-B152.json",
+        "sha256": "61bccf9727fde4662228e1d659692b38fc777010bdb12e1d41f155c7140fdaca"
+      },
+      {
+        "path": "QA-B153.json",
+        "sha256": "a31d3edb772ad776829837fa5170d3535b1407dd3927dee3de28eb0260a5127f"
+      },
+      {
+        "path": "QA-B154.json",
+        "sha256": "18879d93f6c5311ba60c6c54157aac066a425433929a07bc1f06a3b84b42fa49"
+      }
+    ],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass, including audited source corrections and standalone-reader reference fallback",
+    "source_corrections_path": "SOURCE_CORRECTIONS.json",
+    "source_corrections_sha256": "5901a3f5aede163cff68cb1d348b1f6110ccd087c0f08d19d8f919f16932bf31",
+    "standalone_reference_fallback": "TA-READER-REF-012"
+  },
+  "semantic_review": {
+    "path": "SEMANTIC_REVIEW-CURRENT.json",
+    "sha256": "547d07a00d5def11002b4c8aa63bf8e9ce4c70aa34af865452bd44cb0351738d",
+    "bound_units": 285,
+    "reviewed_samples": 379
+  },
+  "text_extraction": {
+    "path": "renders-incompleteness-arithmetization-4f985c31/incompleteness-arithmetization-4f985c31276f.txt",
+    "bytes": 205722,
+    "sha256": "f82f7acb7e9ce82ac2c4f517d4cd54e0dc578c8e6b884f93a4c650930cee2f64",
+    "tamil_character_count": 56570,
+    "replacement_character_count": 0,
+    "literal_question_pair_count": 0,
+    "automatic_english_labels": [],
+    "required_searches": {
+      "Tamil reader title": true,
+      "incompleteness introduction": true,
+      "historical background": true,
+      "overview": true,
+      "undecidability and incompleteness": true,
+      "arithmetization chapter": true,
+      "coding symbols": true,
+      "coding terms": true,
+      "substitution": true,
+      "natural deduction": true,
+      "axiomatic derivation": true
+    },
+    "allowed_ascii_words_note": "Open Logic Project and CC BY attribution, personal and technical names, formal symbols and literal notation only."
+  },
+  "fonts": {
+    "font_rows": 23,
+    "all_embedded": true,
+    "all_subset": true,
+    "tamil_fonts_unicode_mapped": true,
+    "legacy_math_fonts_without_unicode_map": [],
+    "classification": "Tamil text fonts are Unicode mapped and copy-search succeeds; embedded legacy symbol subsets without ToUnicode maps affect formula extraction only.",
+    "pdffonts_output_path": "renders-incompleteness-arithmetization-4f985c31/incompleteness-arithmetization-4f985c31276f-pdffonts.txt",
+    "pdffonts_output_sha256": "bf2d94e273197dfa7e0b490db77ec9db8cc0bd82e2389d318bf0feb12803ad06"
+  },
+  "render": {
+    "directory": "renders-incompleteness-arithmetization-4f985c31",
+    "resolution_dpi": 110,
+    "page_png_count": 40,
+    "page_png_total_bytes": 12273998,
+    "contact_sheet_count": 5,
+    "contact_sheet_total_bytes": 12091871,
+    "contact_sheet_layout": "4x2",
+    "visually_inspected_page_range": "1-40",
+    "focused_pages": [
+      1,
+      3,
+      8,
+      13,
+      18,
+      23,
+      28,
+      32,
+      36,
+      40
+    ]
+  },
+  "visual_findings": {
+    "visual_review_complete": true,
+    "clipped_text": 0,
+    "overlapping_text": 0,
+    "unreadable_glyphs": 0,
+    "broken_formulas_or_diagrams": 0,
+    "margin_overflows": 0,
+    "notes": [
+      "All 40 pages were inspected through five generated 4x2 contact sheets from this exact PDF.",
+      "The title page, chapter openings, dense coding displays, proof trees, rule-code tables and final deduction-theorem construction were also inspected individually.",
+      "Tamil prose, dense formulas, tables and proof trees remain readable and within the page margins."
+    ]
+  },
+  "result": "pass"
+}

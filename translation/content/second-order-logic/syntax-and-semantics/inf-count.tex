@@ -1,0 +1,148 @@
+% Part: second-order-logic
+% Chapter: syntax-and-semantics
+% Section: size-of-domain
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0329-S01
+
+\olfileid{sol}{syn}{siz}
+
+\olsection{முடிவிலா மற்றும் \usetoken{S}{enumerable}
+  \usetoken{P}{domain} ஐ விவரித்தல்}
+
+!!a{injective} சார்பு~$f\colon M \to M$ ஒன்று !!{surjective} ஆகாமல்,
+அதாவது $\ran{f} \neq M$ ஆக இருந்தால், எனில் மட்டுமே, ஒரு கணம்~$M$
+(Dedekind) முடிவிலாதது. முதல்தரத் தருக்கத்தில் ஓரிட
+!!{function}~$f$ ஐக் கருதி, !!a{structure}~$\Struct{M}$ இல் அதற்கு
+அளிக்கப்பட்ட சார்பு~$\Assign{f}{M}$ !!{injective} என்றும்
+$\ran{f} \neq \Domain{M}$ என்றும் கூறலாம்:
+\[
+\lforall[x][\lforall[y][(\eq[f(x)][f(y)] \to \eq[x][y])]] \land
+\lexists[y][\lforall[x][\eq/[y][f(x)]]].
+\]
+$\Struct{M}$ இந்த !!{sentence} ஐ நிறைவுறுத்தினால்,
+$\Assign{f}{M}: \Domain{M} \to \Domain{M}$ !!{injective}; எனவே
+$\Domain{M}$ முடிவிலாததாக இருக்க வேண்டும். $\Domain{M}$ முடிவிலாதது
+எனில் இத்தகைய சார்பு ஒன்று உண்டு; $\Assign{f}{M}$ ஐ அந்தச் சார்பாக
+அமைத்தால் $\Struct{M}$ அந்த !!{sentence} ஐ நிறைவுறுத்தும். ஆனால்
+இந்த நோக்கத்திற்காகப் பயன்படுத்தப்படும் தருக்கமல்லாத குறி~$f$ மொழியில்
+இருக்க வேண்டும். இரண்டாம்தரத் தருக்கத்தில், இத்தகைய சார்பு
+\emph{உள்ளது} என்று நேரடியாகக் கூறலாம். இதற்கு இனி~$f$ தேவையில்லை;
+தூய இரண்டாம்தரத் தருக்கத்தில் பின்வரும் !!{sentence} கிடைக்கிறது:
+\[
+\fn{Inf} \ident \lexists[u][(\lforall[x][\lforall[y][(\eq[u(x)][u(y)]
+      \lif \eq[x][y])]] \land \lexists[y][\lforall[x][\eq/[y][u(x)]]])].
+\]
+$\Sat{M}{\fn{Inf}}$ என்பது $\Domain{M}$ முடிவிலாதது எனில், எனில்
+மட்டுமே. பின்னர் $\fn{Fin} \ident \lnot \fn{Inf}$ என்று
+வரையறுக்கலாம்; $\Sat{M}{\fn{Fin}}$ என்பது $\Domain{M}$ முடிவுறுவது
+எனில், எனில் மட்டுமே. தூய முதல்தரத் தருக்கத்தின் எந்த ஒற்றை
+!!{sentence} உம் !!{domain} முடிவிலாதது என்பதை வெளிப்படுத்த முடியாது;
+ஆனால் அவற்றின் ஒரு முடிவிலா கணம் அதை வெளிப்படுத்த முடியும்.
+!!a{structure} இல் அதன் பொருட்களம் முடிவுறுவது அப்போதும் அப்போது
+மட்டுமே நிறைவுறுத்தப்படும் தூய முதல்தர !!{sentence}s இன் கணம்
+எதுவும் இல்லை.
+
+\begin{prop}
+$\Sat{M}{\fn{Inf}}$ என்பது $\Domain{M}$ முடிவிலாதது எனில், எனில் மட்டுமே.
+\end{prop}
+
+\begin{proof}
+$\Sat{M}{\fn{Inf}}$ என்பது ஏதோ ஓர்~$s$ க்கு
+  $\Sat{M}{\lforall[x][\lforall[y][(\eq[u(x)][u(y)] \lif \eq[x][y])]]
+    \land \lexists[y][\lforall[x][\eq/[y][u(x)]]]}[s]$ எனில், எனில்
+  மட்டுமே. அது பொருந்தினால், $s(u)$ ஓர் !!a{injective} சார்பு;
+  ஏதோ ஒரு $y \in \Domain{M}$ ஆனது~$s(u)$ இன் வீச்சில் இல்லை.
+  மறுதிசையில், $\ran{f} \neq \Domain{M}$ ஆகும் ஓர் !!a{injective}
+  $f\colon \Domain{M} \to \Domain{M}$ இருந்தால், $s(u) = f$ என்பது
+  தேவையான மாறி மதிப்பீடு.
+\end{proof}
+
+ஒரு கணம் $M$ இன் !!{element}s க்கு (மறுநிகழ்வு இல்லாத, ஆனால்
+முடிவுறக்கூடிய) பின்வரும் ஓர் எண்ணிடல் இருந்தால், அந்தக் கணம்
+!!{enumerable}:
+\[
+m_0, m_1, m_2, \dots
+\]
+இத்தகைய எண்ணிடல் இருப்பது அப்போதும் அப்போது மட்டுமே,
+!!a{element} $z \in M$ ஒன்றும் $f\colon M \to M$ என்ற சார்பும் இருந்து,
+$z$, $f(z)$, $f(f(z))$, \dots ஆகியவை~$M$ இன் எல்லா
+!!{element}s ஆகும். எண்ணிடல் இருந்தால், $z = m_0$ என்றும்
+$f(m_k) = m_{k+1}$ என்றும் (அல்லது $m_k$ எண்ணிடலின் கடைசி
+!!{element} எனில் $f(m_k) = m_k$ என்றும்) அமைத்தால், தேவையான
+!!{element} உம் சார்பும் கிடைக்கும். மறுபுறம், இத்தகைய $z$, $f$
+இருந்தால், $z$, $f(z)$, $f(f(z))$, \dots என்பது~$M$ இன் எண்ணிடல்;
+எனவே $M$ !!{enumerable}. இரண்டாம்தரத் தருக்கத்தில் $z$,~$f$
+இருப்பதை வெளிப்படுத்தி, ஒரு !!a{structure} இல் அந்த !!{structure}
+!!{enumerable} ஆக இருந்தால், எனில் மட்டுமே, மெய்யாகும் பின்வரும்
+!!{sentence} ஐ உருவாக்கலாம்:
+\[
+\fn{Count} \ident
+\lexists[z][\lexists[u][\lforall[X][((X(z) \land
+      \lforall[x][(X(x) \lif X(u(x)))]) \lif \lforall[x][X(x)])]]]
+\]
+
+\begin{prop}
+$\Sat{M}{\fn{Count}}$ என்பது $\Domain{M}$ !!{enumerable} எனில்,
+எனில் மட்டுமே.
+\end{prop}
+
+\begin{proof}
+$\Domain{M}$ !!{enumerable} என்று கருதி, $m_0$, $m_1$, \dots
+என்பது ஓர் எண்ணிடல் என்க. மறுநிகழ்வுகளை அகற்றி எந்த $m_k$ உம்
+இருமுறை வராது என்று உறுதிசெய்யலாம். $f(m_k) = m_{k+1}$ என்று
+வரையறுத்து, $s(z) = m_0$, $s(u) = f$ எனக் கொள்க. பின்வருவதை
+நாம் காட்டுகிறோம்:
+\[
+\Sat{M}{\lforall[X][((X(z) \land \lforall[x][(X(x) \lif X(u(x)))])
+    \lif \lforall[x][X(x)])]}[s]
+\]
+$M \subseteq \Domain{M}$ தன்னிச்சையானது என்க. மேலும்
+$\Sat{M}{(X(z) \land \lforall[x][(X(x) \lif
+X(u(x)))])}[\Subst{s}{M}{X}]$ என்று கருதுக. அப்போது
+$\Subst{s}{M}{X}(z) \in M$; மேலும் $x \in M$ ஆகும்போதெல்லாம்
+$(\Subst{s}{M}{X}(u))(x) \in M$. வேறு சொற்களில்,
+$\varAssign{\Subst{s}{M}{X}}{s}{X}$ என்பதால், $m_0 \in M$;
+மேலும் $x \in M$ எனில் $f(x) \in M$. எனவே $m_0 \in M$,
+$m_1 = f(m_0) \in M$, $m_2 = f(f(m_0)) \in M$ முதலியன.
+ஆகவே $M = \Domain{M}$; எனவே
+$\Sat{M}{\lforall[x][X(x)]}[\Subst{s}{M}{X}]$. மேலும்
+$M \subseteq \Domain{M}$ தன்னிச்சையானது என்பதால், தேவையான
+$\Sat{M}{\fn{Count}}$ கிடைக்கிறது.
+
+இப்போது $\Sat{M}{\fn{Count}}$ என்று, அதாவது ஏதோ ஓர்~$s$ க்கு
+\[
+\Sat{M}{\lforall[X][((X(z) \land \lforall[x][(X(x) \lif X(u(x)))])
+    \lif \lforall[x][X(x)])]}[s]
+\]
+என்று கருதுக. $m = s(z)$, $f = s(u)$ எனக் கொடுத்து,
+$M = \{m, f(m), f(f(m)), \dots\}$ ஐக் கருதுக. இவ்வாறு
+வரையறுக்கப்பட்ட $M$ தெளிவாக !!{enumerable}. அனுமானத்தின்படி,
+\[
+\Sat{M}{(X(z) \land \lforall[x][(X(x) \lif X(u(x)))])
+    \lif \lforall[x][X(x)]}[\Subst{s}{M}{X}]
+\]
+மேலும், $M \ni m = \Subst{s}{M}{X}(z)$ என்பதால்
+$\Sat{M}{X(z)}[\Subst{s}{M}{X}]$; $x \in M$ ஆகும்போதெல்லாம்
+$f(x) \in M$ என்பதால்
+$\Sat{M}{\lforall[x][(X(x) \lif
+X(u(x)))]}[\Subst{s}{M}{X}]$ உம் பொருந்தும். முன்னிகழ்வும்
+நிபந்தனைவாக்கியமும் இரண்டும் நிறைவுறுத்தப்படுவதால், பின்னிகழ்வும்
+நிறைவுறுத்தப்பட வேண்டும்:
+$\Sat{M}{\lforall[x][X(x)]}[\Subst{s}{M}{X}]$. ஆனால் இதன் பொருள்
+$M = \Domain{M}$. எனவே, வரையறைப்படி $M$ எண்ணிடத்தக்கது என்பதால்
+$\Domain{M}$ உம் !!{enumerable}.
+\end{proof}
+
+\begin{prob}
+!!{sentence}~$\fn{Inf} \land \fn{Count}$ ஆனது எல்லா
+!!{denumerable} பொருட்களங்களிலும், அவற்றில் மட்டுமே, மெய்யாகும்.
+~$\fn{Count}$ இன் வரையறையை மாற்றி, பொருட்களம் !!{denumerable}
+என்பதை நேரடியாக வெளிப்படுத்தும் வேறொரு !!{sentence} ஆக அதை
+அமைத்து, அது அவ்வாறு வெளிப்படுத்துகிறது என்று நிறுவுக.
+\end{prob}
+
+\end{document}

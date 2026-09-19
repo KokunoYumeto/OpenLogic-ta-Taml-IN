@@ -1,0 +1,45 @@
+{
+  "batch_id": "TA-B124",
+  "units": [
+    {
+      "unit_id": "OLP-0231",
+      "source_sha256": "284d55b8904baa230dce3fb9f00c04412d17988b67682157a0da65bdce8bd348",
+      "translation_sha256": "f657fc69fb3aa64f8f55d3ac646411004f92f848514acc36f515a6391ba06629",
+      "source_bytes": 3978,
+      "translation_bytes": 9667,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

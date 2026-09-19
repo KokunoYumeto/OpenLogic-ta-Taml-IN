@@ -1,0 +1,142 @@
+% SEGMENT OLP-0119-S01
+% Part: first-order-logic 
+% Chapter: axiomatic-deduction 
+% Section: deduction-theorem
+
+% verification of properties of provability needed for maximally 
+% consistent sets in the completeness chapter.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{ded}}
+      {\olfileid{pl}{axd}{ded}}
+
+\olsection{கழித்தல் தேற்றம்}
+
+% SEGMENT OLP-0119-S02
+நாம் கண்டபடி, அடிகோள் அமைப்பில் !!{derivation}s கொடுப்பது கடினமானது;
+!!{derivation}s ஐக் கண்டுபிடிப்பதும் கடினமாக இருக்கலாம். நீண்ட !!{formula}s பட்டியல்களை
+உண்மையில் எழுதுவதற்குப் பதிலாக, சில எளிய முடிவுகளைப் பயன்படுத்தி அத்தகைய
+!!{derivation}s இருப்பதாக வாதிடுவது பொதுவாக எளிது. அத்தகைய மூன்று முடிவுகளை
+ஏற்கெனவே நிறுவியுள்ளோம்: $!A \in \Gamma$ என்று அறியும்போது எப்போதும்
+$\Gamma \Proves !A$ என்று உறுதிப்படுத்தலாம் என
+\olref[ptn]{prop:reflexivity} கூறுகிறது. $\Gamma \Proves !A$ எனில்
+$\Gamma \cup \{!B\} \Proves !A$ உம் என்று
+\olref[ptn]{prop:monotonicity} கூறுகிறது. மேலும் $\Gamma \Proves !A$ மற்றும்
+$!A \Proves !B$ எனில் $\Gamma \Proves !B$ என்று
+\olref[ptn]{prop:transitivity} உட்கிடையாகத் தருகிறது. இதோ மற்றோர் எளிய
+முடிவு; மோடஸ் போனென்ஸின் ஓர் ``மேல்நிலை'' வடிவம்:
+
+% SEGMENT OLP-0119-S03
+\begin{prop}
+  \ollabel{prop:mp} $\Gamma \Proves !A$ மற்றும் $\Gamma \Proves !A \lif
+  !B$ எனில், $\Gamma \Proves !B$.
+\end{prop}
+
+\begin{proof}
+  $\{!A, !A \lif !B\} \Proves !B$ என்பது நமக்குத் தெரியும்:
+  \begin{derivation}
+    1. & $!A$ & Hyp.\\
+    2. & $!A \lif !B$ & Hyp.\\
+    3. & $!B$ & 1, 2, MP
+  \end{derivation}
+  \olref[ptn]{prop:transitivity} படி, $\Gamma \Proves !B$.
+\end{proof}
+
+% SEGMENT OLP-0119-S04
+இந்தச் சூழலில் நாம் பயன்படுத்தவிருக்கும் மிக முக்கியமான முடிவு கழித்தல்
+தேற்றம்:
+
+% SEGMENT OLP-0119-S05
+\begin{thm}[கழித்தல் தேற்றம்]
+\ollabel{thm:deduction-thm} $\Gamma \cup \{!A\} \Proves !B$ எனில்,
+அப்போதும் அப்போது மட்டுமே $\Gamma \Proves !A \lif !B$.
+\end{thm}
+
+% SEGMENT OLP-0119-S06
+\begin{proof}
+போதுமான நிபந்தனையை நிறுவும் திசை உடனடியாகப் பின்தொடர்கிறது. $\Gamma \Proves !A \lif !B$ எனில்,
+\olref[ptn]{prop:monotonicity} படி $\Gamma \cup \{!A\} \Proves !A \lif
+!B$ உம். மேலும் \olref[ptn]{prop:reflexivity} படி $\Gamma \cup \{!A\}
+\Proves !A$. எனவே \olref{prop:mp} படி $\Gamma \cup \{!A\} \Proves !B$.
+
+மறுதிசைக்கு, $\Gamma \cup \{!A\}$ இலிருந்து~$!B$ இன் !!{derivation}
+நீளத்தின் மீது தொகுத்தறிதல் செய்கிறோம்.
+
+தொகுத்தறிதல் அடிப்படையில், நீளம்~$1$ கொண்ட ஒவ்வொரு !!{derivation} க்கும்
+கூற்றை நிறுவுகிறோம். $\Gamma \cup \{!A\}$ இலிருந்து~$!B$ இன் நீளம்~$1$
+கொண்ட !!^a{derivation} ஆனது~$!B$ ஐ மட்டுமே கொண்டது; அது சரியானது எனில்
+$!B$ ஆனது~$\in \Gamma \cup \{!A\}$ அல்லது ஓர் அடிகோள். $!B \in \Gamma$
+அல்லது அது ஓர் அடிகோள் எனில், $\Gamma \Proves !B$. மேலும்
+\olref[prp]{ax:lif1} படி $\Gamma \Proves !B \lif (!A \lif !B)$;
+\olref{prop:mp} ஆனது $\Gamma \Proves !A \lif !B$ ஐத் தருகிறது. $!B \in
+\{ !A\}$ எனில், $\Gamma \Proves !A \lif !B$; ஏனெனில் கடைசி
+!!{sentence}~$!A \lif !B$ ஆனது~$!A \lif !A$ க்கு ஒன்றே; இதனை
+\olref[pro]{ex:identity} இல் நாம் ஏற்கெனவே !!{derive} செய்துள்ளோம்.
+
+தொகுத்தறிதல் படியில், $\Gamma \cup \{!A\}$ இலிருந்து~$!B$ இன்
+!!a{derivation} ஆனது மோடஸ் போனென்ஸால் நியாயப்படுத்தப்பட்ட படி~$!B$ உடன்
+முடிகிறது என்க. (அது மோடஸ் போனென்ஸால் நியாயப்படுத்தப்படவில்லை எனில்,
+$!B \in \Gamma$, $!B \ident !A$, அல்லது $!B$ ஓர் அடிகோள்; தொகுத்தறிதல்
+அடிப்படையில் பயன்படுத்திய அதே வாதம் பொருந்தும்.) அப்போது ஏதோவொரு
+!!{formula}~$!C$ க்கு, அந்த !!{derivation}வின் முந்தைய படிகள்~$!C \lif !B$
+மற்றும்~$!C$; அதாவது, $\Gamma \cup \{!A\} \Proves !C \lif !B$ மற்றும்
+$\Gamma \cup \{!A\} \Proves !C$. அவற்றுக்குரிய !!{derivation}s குறுகியவை;
+எனவே தொகுத்தறிதல் கருதுகோள் அவற்றுக்குப் பொருந்தும். ஆகவே பின்வரும்
+இரண்டும் கிடைக்கின்றன:
+\begin{align*}
+  & \Gamma \Proves !A \lif (!C \lif !B); \\
+  & \Gamma \Proves !A \lif !C.
+\end{align*}
+மேலும் \olref[prp]{ax:lif2} படி
+\[
+\Gamma \Proves (!A \lif (!C \lif !B)) \lif
+((!A\lif !C)  \lif (!A \lif !B)),
+\]
+என்பதும் கிடைக்கிறது. \olref{prop:mp} ஐ இருமுறை பயன்படுத்தினால்,
+தேவையானபடி $\Gamma \Proves !A \lif !B$ கிடைக்கும்.
+\end{proof}
+
+% SEGMENT OLP-0119-S07
+கழித்தல் தேற்றம் செல்லுபடியாகுமாறு துல்லியமாகவே \olref[prp]{ax:lif1},
+\olref[prp]{ax:lif2} ஆகியவை தேர்ந்தெடுக்கப்பட்டன என்பதைக் கவனிக்கவும்.
+
+% SEGMENT OLP-0119-S08
+!!{derivability} பற்றிய பின்வரும் பயனுள்ள உண்மைகளைப் பயிற்சிகளாக விடுகிறோம்.
+
+% SEGMENT OLP-0119-S09
+\begin{prop}
+  \ollabel{prop:derivfacts}
+\begin{enumerate}
+% SOURCE CORRECTION TA-AXD-002: close the outer conditional's parenthesis.
+\item $\Proves (!A \lif !B) \lif ((!B \lif !C)
+  \lif (!A \lif !C))$; \ollabel{derivfacts:a}
+\item $\Gamma \cup \{ \lnot !A\}
+  \Proves \lnot !B$ எனில், $\Gamma \cup \{ !B\} \Proves
+  !A$ (எதிர்மறைநேர்மாற்று); \ollabel{derivfacts:b}
+\item  $\{ !A, \lnot!A\} \Proves
+    !B$ (எக்ஸ் ஃபால்சோ குவோட்லிபெட், வெடிப்புக் கொள்கை); \ollabel{derivfacts:c}
+\item  $\{ \lnot\lnot!A\} \Proves
+  !A$ (இரட்டை மறுப்பு நீக்கம்);\ollabel{derivfacts:d}
+\item $\Gamma \Proves \lnot\lnot!A$ எனில், $\Gamma \Proves
+  !A$;\ollabel{derivfacts:e}
+\end{enumerate}
+\end{prop}
+
+% SEGMENT OLP-0119-S10
+\tagprob{FOL}
+\begin{prob}
+  \olref[fol][axd][ded]{prop:derivfacts} ஐ நிறுவுக.
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+  \olref[pl][axd][ded]{prop:derivfacts} ஐ நிறுவுக.
+\end{prob}
+\tagendprob
+
+\end{document}

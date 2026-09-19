@@ -1,0 +1,37 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-axiomatic-deduction.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-06T20:14:33.3904876Z",
+  "passes": [
+    {
+      "pass": 1,
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    },
+    {
+      "pass": 2,
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    },
+    {
+      "pass": 3,
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "finished_utc": "2026-09-06T20:16:55.5371057Z"
+}

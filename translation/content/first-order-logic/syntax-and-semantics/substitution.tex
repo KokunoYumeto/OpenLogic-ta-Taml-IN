@@ -1,0 +1,131 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0158-S01
+\olfileid{fol}{syn}{sub}
+
+\olsection{மாற்றீடு}
+
+\begin{defn}[ஒரு சொல்லில் மாற்றீடு]
+$\Subst{s}{t}{x}$ என்பதை, $s$ இல் வரும் ஒவ்வொரு~$x$ நிகழ்வுக்கும் $t$ ஐ
+\emph{மாற்றீடு} செய்த பின் கிடைக்கும் விளைவாக, மறுநிகழ்வு வழியில்
+வரையறுக்கிறோம்:
+\begin{enumerate}
+\item \indcase{s}{c}{$\Subst{\indfrm}{t}{x}$ என்பது $s$ தானே.}
+
+\item \indcase{s}{y}{$\Subst{\indfrm}{t}{x}$ என்பதும்~$s$ தானே; $y$ ஒரு
+  மாறியாகவும் $y \not\ident x$ ஆகவும் இருந்தால்.}
+
+\item \indcase{s}{x}{$\Subst{\indfrm}{t}{x}$ என்பது~$t$.}
+
+\item\indcase{s}{\Atom{f}{t_1, \dots, t_n}}{$\Subst{\indfrmp}{t}{x}$ என்பது
+  $\Atom{f}{\Subst{t_1}{t}{x}, \dots, \Subst{t_n}{t}{x}}$.}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+ஒரு சொல்லாகிய~$t$, $!A$ இல் $x$ க்காக \emph{!!{free for}} ஆகும் எனில்,
+$!A$ இல் $x$ இன் எந்தக் கட்டற்ற நிகழ்வும், $t$ இல் உள்ள ஒரு மாறியைக்
+கட்டும் அளவையடையின் வீச்சில் இடம்பெறாது.
+\end{defn}
+
+\begin{ex} ~
+\begin{enumerate}
+\item $\Obj v_8$, $\lexists[\Obj
+  v_3]\Atom{\Obj A^2_4}{\Obj v_3,\Obj v_1}$ இல் $\Obj v_1$ க்காக
+  கட்டற்றது.
+
+\item $\Obj f^2_1(\Obj v_1, \Obj v_2)$, $\lforall[\Obj v_2]\Atom{\Obj A^2_4}{\Obj v_0,\Obj v_2}$
+  இல் $\Obj v_0$ க்காக \emph{கட்டற்றதல்ல}.
+\end{enumerate}
+\end{ex}
+
+\begin{defn}[ஒரு !!a{formula} வில் மாற்றீடு]
+$!A$ ஒரு !!a{formula}, $x$ ஒரு !!a{variable}, $t$ ஒரு சொல், மேலும்
+$!A$ இல் $x$ க்காக !!{free for} ஆக இருக்கட்டும். அப்போது
+$\Subst{!A}{t}{x}$ என்பது $!A$ இல் $x$ இன் அனைத்து கட்டற்ற நிகழ்வுகளுக்கும்
+$t$ ஐ மாற்றிய பின் கிடைக்கும் விளைவு.
+\begin{enumerate}
+\tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\Subst{\indfrm}{t}{x}$ என்பது
+    $\lfalse$.}}{}
+
+\tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\Subst{\indfrm}{t}{x}$ என்பது
+    $\ltrue$.}}{}
+
+\item \indcase{!A}{\Atom{P}{t_1,\dots,
+    t_n}}{$\Subst{\indfrm}{t}{x}$ என்பது $\Atom{P}{\Subst{t_1}{t}{x},
+    \dots, \Subst{t_n}{t}{x}}$.}
+
+\item \indcase{!A}{\eq[t_1][t_2]}{$\Subst{\indfrmp}{t}{x}$ என்பது
+  $\Subst{t_1}{t}{x} = \Subst{t_2}{t}{x}$.}
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\Subst{\indfrmp}{t}{x}$ என்பது
+    $\lnot \Subst{!B}{t}{x}$.}}{}
+
+\tagitem{prvAnd}{\indcase{!A}{(!B \land
+    !C)}{$\Subst{\indfrmp}{t}{x}$ என்பது $(\Subst{!B}{t}{x} \land
+    \Subst{!C}{t}{x})$.}}{}
+
+\tagitem{prvOr}{\indcase{!A}{(!B \lor
+    !C)}{$\Subst{\indfrmp}{t}{x}$ என்பது $(\Subst{!B}{t}{x} \lor
+    \Subst{!C}{t}{x})$.}}{}
+
+\tagitem{prvIf}{\indcase{!A}{(!B \lif
+    !C)}{$\Subst{\indfrmp}{t}{x}$ என்பது $(\Subst{!B}{t}{x} \lif
+    \Subst{!C}{t}{x})$.}}{}
+
+\tagitem{prvIff}{\indcase{!A}{(!B \liff
+    !C)}{$\Subst{\indfrmp}{t}{x}$ என்பது $(\Subst{!B}{t}{x} \liff
+    \Subst{!C}{t}{x})$.}}{}
+
+\tagitem{prvAll}{
+\indcase{!A}{\lforall[y][!B]}{$\Subst{\indfrmp}{t}{x}$
+    என்பது $\lforall[y][\Subst{!B}{t}{x}]$; $y$ என்பது $x$ இலிருந்து
+    வேறுபட்ட மாறியாக இருந்தால். இல்லையெனில் $\Subst{\indfrmp}{t}{x}$
+    என்பது $\indfrm$ தானே.}}{}
+
+\tagitem{prvEx}{
+\indcase{!A}{\lexists[y][!B]}{$\Subst{\indfrmp}{t}{x}$
+    என்பது $\lexists[y][\Subst{!B}{t}{x}]$; $y$ என்பது $x$ இலிருந்து
+    வேறுபட்ட மாறியாக இருந்தால். இல்லையெனில் $\Subst{\indfrmp}{t}{x}$
+    என்பது $\indfrm$ தானே.}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+மாற்றீடு வெறுமையானதாக இருக்கலாம் என்பதை கவனியுங்கள்: $x$ என்பது $!A$ இல்
+முற்றிலும் தோன்றவில்லை என்றால், $\Subst{!A}{t}{x}$ என்பது~$!A$ தானே.
+
+$t$, $!A$ இல் $x$ க்காக !!{free for} ஆக இருக்க வேண்டும் என்ற கட்டுப்பாடு
+பின்வரும் நிகழ்வுகளைத் தவிர்க்க அவசியம். $!A \ident \lexists[y][x < y]$,
+$t \ident y$ என்றால், $\Subst{!A}{t}{x}$ என்பது $\lexists[y][y <
+  y]$ ஆகிவிடும். இங்கு கட்டற்ற மாறி $y$, மாற்றீட்டின் போது
+$\lexists[y]$ அளவையடையால் ``பிடிக்கப்படுகிறது''; இது விரும்பத்தகாதது.
+உதாரணமாக, $\lforall[x][!B]$ உண்மையாக இருக்கும்போது
+$\Subst{!B}{t}{x}$ உம் உண்மையாக இருக்க வேண்டும் என்று விரும்புகிறோம்.
+ஆனால் $\lforall[x][\lexists[y][x < y]]$ ஐக் கருதுக (இங்கு $!B$ என்பது
+$\lexists[y][x < y]$). இது இயற்கை எண்களைப் பற்றி உண்மையான ஒரு வாக்கியம்:
+ஒவ்வொரு எண்~$x$ க்கும் அதைவிடப் பெரிய எண்~$y$ ஒன்று உள்ளது. $x$ க்கான
+சாத்தியமான மாற்றீடாக $y$ ஐ அனுமதித்தால்,
+$\Subst{!B}{y}{x} \ident \lexists[y][y < y]$ கிடைக்கும்; இது பொய்.
+$t$ இன் கட்டற்ற மாறிகள் எதுவும் $!A$ இல் ஒரு அளவையடையால் கட்டுண்டு
+விடாதபடி கேட்பதன் மூலம் இதைத் தடுக்கிறோம்.
+\end{explain}
+
+சிக்கலான குறியீட்டைத் தவிர்க்க பின்வரும் மரபைப் பயன்படுத்துகிறோம். $!A$ ஒரு
+!!a{formula} என்றும் அதில் !!{variable}~$x$ கட்டற்றதாகத் தோன்றலாம் என்றும்
+இருந்தால், இதைச் சுட்ட $!A(x)$ என்றும் எழுதுவோம். எந்த $!A$, $x$ ஆகியவற்றை
+குறிக்கிறோம் என்பது தெளிவாகவும், $t$ ஒரு சொலாகவும் (அது $!A(x)$ இல் $x$
+க்காக கட்டற்றது எனக் கருதி) இருந்தால், $!A(t)$ என்பது
+$\Subst{!A}{t}{x}$ க்கான சுருக்கம். ஆகவே, ``$!A(t)$ என்பது
+$\lforall[x][!A(x)]$ இன் ஒரு நிகழ்வு'' என்று சொல்லலாம். இதன் பொருள்:
+$!A$ எந்த !!{formula} ஆகவும், $x$ ஒரு !!a{variable} ஆகவும், $t$ ஒரு
+சொல்லாகவும் இருந்து $!A$ இல் $x$ க்காக கட்டற்றதாக இருந்தால்,
+$\Subst{!A}{t}{x}$ என்பது $\lforall[x][!A]$ இன் ஒரு நிகழ்வு.
+
+\end{document}

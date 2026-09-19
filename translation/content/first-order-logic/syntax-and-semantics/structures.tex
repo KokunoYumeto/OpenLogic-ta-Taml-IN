@@ -1,0 +1,113 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: Structures
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0161-S01
+\olfileid{fol}{syn}{str}
+
+\olsection{முதல்தர மொழிகளுக்கான \printtoken{P}{structure}}
+
+\begin{explain}
+முதல்தர மொழிகள் தாமாகவே \emph{பொருள்படுத்தப்படாதவை}: அவற்றிலுள்ள
+!!{constant}s, !!{function}s, !!{predicate}s ஆகியவற்றுக்கு குறிப்பிட்ட
+பொருள் இணைக்கப்படவில்லை. பொருள் ஒரு \article{structure}
+\emph{!!{structure}} ஐக் குறிப்பிடுவதன் மூலம் வழங்கப்படுகிறது. அது
+\emph{பொருட்களத்தை}, அதாவது !!{constant}s சுட்டும், !!{function}s இயங்கும்,
+அளவையடைகள் இயங்கும் பொருட்களின் தொகுப்பை, குறிப்பிடுகிறது. மேலும் எந்த
+!!{constant}s எந்தப் பொருட்களைச் சுட்டுகின்றன, !!a{function} பொருட்களைப்
+பொருட்களுக்கு எவ்வாறு மாற்றுகிறது, !!{predicate}s எந்தப் பொருட்களுக்குப்
+பொருந்துகின்றன என்பதையும் குறிப்பிடுகிறது. !!^{structure}s தருக்கத்தின்
+\emph{பொருண்மையியல்} கருத்துகளுக்கு அடிப்படை; எடுத்துக்காட்டாக உட்கிடை,
+செல்லுபடியாகும் தன்மை, நிறைவுசெய்யத்தக்க தன்மை. இலக்கியத்தில் இவை
+``கட்டமைப்புகள்'', ``பொருள்படுத்தல்கள்'' அல்லது ``மாதிரிகள்'' என்றும்
+அழைக்கப்படுகின்றன.
+\end{explain}
+
+\begin{defn}[!!^{structure}s]
+ஒரு முதல்தர தருக்க மொழி~$\Lang{L}$ க்கான
+\Article{structure} \emph{!!{structure}}~$\Struct M$ பின்வரும்
+உறுப்புகளைக் கொண்டது:
+\begin{enumerate}
+\item \emph{பொருட்களம்:} வெறுமையற்ற தொகுப்பு, $\Domain M$
+\item \emph{!!{constant}s இன் பொருள்படுத்தல்:} $\Lang{L}$ இன் ஒவ்வொரு
+  !!{constant}~$c$ க்கும், !!a{element} $\Assign{c}{M} \in \Domain M$
+\item \emph{!!{predicate}s இன் பொருள்படுத்தல்:} $\Lang{L}$ இன் ஒவ்வொரு
+  $n$-இட !!{predicate}~$R$ க்கும் ($\eq$ ஐத் தவிர),
+  $n$-இடத் தொடர்பு $\Assign{R}{M} \subseteq \Domain{M}^n$
+\item \emph{!!{function}s இன் பொருள்படுத்தல்:} $\Lang{L}$ இன் ஒவ்வொரு
+  $n$-இட !!{function}~$f$ க்கும், $n$-இடச் சார்பு
+  $\Assign{f}{M} \colon \Domain{M}^n \to \Domain{M}$
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+கணித மொழிக்கான !!^a{structure}~$\Struct M$ ஒரு தொகுப்பு, அதன்
+$\Domain M$ இல் உள்ள ஓர் உறுப்பு $\Assign{\Obj 0}{M}$ (இது
+!!{constant}~$\Obj 0$ இன் பொருள்படுத்தல்), ஒரு-இடச் சார்பு
+$\Assign{\Obj \prime}{M} \colon \Domain{M} \to \Domain M$,
+இரண்டு இரு-இடச் சார்புகள் $\Assign{\Obj +}{M}$ மற்றும்
+$\Assign{\Obj \times}{M}$ (இரண்டும் $\Domain M^2 \to \Domain M$),
+மற்றும் இரு-இடத் தொடர்பு $\Assign{\Obj <}{M} \subseteq \Domain{M}^2$
+ஆகியவற்றைக் கொண்டுள்ளது.
+
+இத்தகைய ஒரு கட்டமைப்பின் வெளிப்படையான எடுத்துக்காட்டு:
+\begin{enumerate}
+\item $\Domain N = \Nat$
+\item $\Assign{\Obj 0}{N} = 0$
+\item $\Assign{\Obj \prime}{N}(n) = n + 1$ for all $n \in \Nat$
+\item $\Assign{\Obj +}{N}(n, m) = n + m$ for all $n, m \in \Nat$
+\item $\Assign{\Obj \times}{N}(n, m) = n\cdot m$ for all $n, m \in \Nat$
+\item $\Assign{\Obj <}{N} = \Setabs{\tuple{n, m}}{n \in \Nat, m \in
+  \Nat, n < m}$
+\end{enumerate}
+$\Lang L_A$ க்காக இவ்வாறு வரையறுக்கப்பட்ட~$\Struct N$,
+\emph{கணிதத்தின் நிலையான மாதிரி} எனப்படுகிறது; ஏனெனில் $\Lang L_A$ இன்
+தருக்கமல்லாத மாறில்களை எதிர்பார்ப்பது போலவே அது பொருள்படுத்துகிறது.
+
+இருப்பினும் $\Lang L_A$ க்கு வேறு பல !!{structure}s இருக்கலாம். உதாரணமாக,
+$\Nat$ க்குப் பதிலாக முழு எண்களின் தொகுப்பு~$\Int$ ஐப் பொருட்களமாக எடுத்து,
+$\Obj 0$, $\Obj \prime$, $\Obj +$, $\Obj \times$, $\Obj <$ ஆகியவற்றின்
+பொருள்படுத்தல்களை அதற்கேற்ப வரையறுக்கலாம். எண்ணங்களுடன் தொலைவான தொடர்பும்
+இல்லாத $\Lang L_A$ கட்டமைப்புகளையும் வரையறுக்க முடியும்.
+\end{ex}
+
+\begin{ex}
+கணக்குத்தொகுப்புக் கோட்பாட்டின் மொழி~$\Lang L_Z$ க்கான
+ஒரு கட்டமைப்பு~$\Struct M$ க்கு ஒரு தொகுப்பும் ஒரே ஒரு இரு-இடத் தொடர்பும் போதும்.
+எனவே, உதாரணமாக, மக்களின் தொகுப்பும் ``$x$ என்பது $y$ ஐ விட வயதானது''
+என்ற தொடர்பும் $\Lang L_Z$ க்கான !!a{structure} ஆகப் பயன்படலாம்; அதுபோலவே
+$n,m \in \Nat$ களுக்கான $n \ge m$ தொடர்புடன் $\Nat$ உம் பயன்படலாம்.
+
+$\Lang L_Z$ க்கான குறிப்பாக ஆர்வமூட்டும் !!{structure} ஒன்றில்
+!!{element}s ஆகப் பொருட்களத்தின் உறுப்புகள் உண்மையில் தொகுப்புகளாகவும்,
+$\Obj \in$ இன் பொருள்படுத்தல் ``$x$ என்பது~$y$ இன் !!a{element}'' என்ற
+தொடர்பாகவும் இருக்கிறது. இது \emph{மரபுரீதியாக இறுதிக்குட்பட்ட
+தொகுப்புகளின்} !!{structure}~$\Struct{{HF}}$:
+\begin{enumerate}
+\item $\Domain{{{HF}}} = \emptyset \cup \Pow{\emptyset} \cup
+  \Pow{\Pow{\emptyset}} \cup \Pow{\Pow{\Pow{\emptyset}}} \cup \dots$;
+\item $\Assign{\Obj \in}{{{HF}}} = \Setabs{\tuple{x, y}}{x, y \in
+  \Domain{{{HF}}}, x \in y}$.
+\end{enumerate}
+\end{ex}
+
+\begin{digress}
+எதை !!a{structure} என்று கருதுகிறோம் என்பதற்கான நிபந்தனைகள் நமது
+தருக்கத்தைப் பாதிக்கின்றன. உதாரணமாக, வெறுமைப் பொருட்களங்களைத் தடை செய்வது,
+அளவையிடப்பட்ட வாக்கியங்களின் நிறைவுறுத்தலுக்கான வழக்கமான கணக்கின்படி,
+$\lexists[x][(!A(x) \lor \lnot !A(x))]$ செல்லுபடியாகும்---ஒரு தருக்க
+உண்மை---என்பதை உறுதிசெய்கிறது. அதேபோல், எல்லா !!{constant}s உம்
+பொருட்களத்திலுள்ள ஒரு பொருளைக் குறிக்க வேண்டும் என்ற நிபந்தனை,
+இருப்பியல் பொதுமைப்படுத்தல் சரியான அனுமான வடிவம் என்பதை உறுதிசெய்கிறது:
+$!A(a)$, ஆகவே $\lexists[x][!A(x)]$. பெயர்கள் பொருட்களத்திற்கு வெளியே
+சுட்டலாம் அல்லது எதையும் சுட்டாமல் இருக்கலாம் என்று அனுமதித்தால்,
+\emph{கட்டற்ற தருக்கம்} நோக்கி நகர்வோம்; அங்கு இருப்பியல் பொதுமைப்படுத்தலுக்கு
+கூடுதல் முன்னனுமானம் தேவைப்படும்: $!A(a)$ மற்றும்
+$\lexists[x][\eq[x][a]]$, ஆகவே $\lexists[x][!A(x)]$.
+\end{digress}
+
+\end{document}

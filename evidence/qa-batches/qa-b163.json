@@ -1,0 +1,167 @@
+{
+  "batch_id": "TA-B163",
+  "units": [
+    {
+      "unit_id": "OLP-0305",
+      "source_sha256": "d81d5befab583c377a6a51acfffda6e2c4db3ba39aef1852fda6a88443c8547b",
+      "translation_sha256": "f08fc76f0097c2a609ba8129106455af54f03a9db2be7d2e51c56bb9190a741e",
+      "source_bytes": 2921,
+      "translation_bytes": 6386,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "eqnarray",
+        "include",
+        "logic",
+        "open",
+        "oqn",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-033",
+          "unit_id": "OLP-0305",
+          "kind": "metatheoretic-relation-applied-to-numeral-term",
+          "action": "Changed both evaluations of the external relation S from the object-language numeral for n to the natural number n.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\num",
+            "\\num"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "S is introduced as a computable relation on natural numbers, while D_S is its object-language representing formula. The two equivalence displays apply S itself to numeral n rather than n.",
+          "chosen_treatment": "தமிழ் மேக்கோட்பாட்டு S ஐ n இல் மதிப்பிட்டு, D_S க்கு மட்டும் எண்குறி num n ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating S as an object-language predicate symbol; removing numeral constructors from D_S.",
+          "rationale": "The definition of relation representability fixes the separation between external inputs and internal numeral terms.",
+          "precise_review_question": "Do both positive and negative equivalences now distinguish S(n) from D_S(num n)?",
+          "location_needle": "SOURCE CORRECTION TA-INC-033"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\num",
+        "\\num"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0306",
+      "source_sha256": "cefc4b7c268be41dd32831fc2258102ef090194ef6bb7df234ad618b0ddda19d",
+      "translation_sha256": "9fe924c82402ea3f76178ef42637251ffed9969cbbf50c6c081bb9dbd259927e",
+      "source_bytes": 1259,
+      "translation_bytes": 2633,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "computably",
+        "enumerable",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0307",
+      "source_sha256": "9e43a7335031abc7140dbc38c31a0dbd1d2be1495eeaced93ece2f1739c0067c",
+      "translation_sha256": "d16ede8bf2226f6692a496b47ae8ff118f26636da7a69e55786ad7fa568d245f",
+      "source_bytes": 1361,
+      "translation_bytes": 3241,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Th{T}$"
+      ],
+      "extra_math": [
+        "$A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-034",
+          "unit_id": "OLP-0307",
+          "kind": "ineffective-proof-search-premise-set",
+          "action": "Changed the simultaneous proof searches from the whole theory T to its stipulated computable axiom set A.",
+          "expected_missing_math": [
+            "$\\Th{T}$"
+          ],
+          "expected_extra_math": [
+            "$A$"
+          ],
+          "expected_missing_commands": [
+            "\\Th"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proof assumes a computable axiom set A but then tells the algorithm to search for a derivation from T, whose membership is exactly what the algorithm is meant to decide.",
+          "chosen_treatment": "தமிழ் படிமுறை கணிக்கத்தக்க அடிகோள் கணம் A இலிருந்து இரு வருவித்தல்களையும் தேடுகிறது.",
+          "alternatives_considered": "Using T as an oracle; assuming the theorem set is already decidable.",
+          "rationale": "Effective enumeration of derivations from A is supplied by axiomatizability and is the premise needed for the dovetailed search.",
+          "precise_review_question": "Does the algorithm now rely only on the computable axiom set rather than presupposing theorem membership?",
+          "location_needle": "SOURCE CORRECTION TA-INC-034"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Th"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

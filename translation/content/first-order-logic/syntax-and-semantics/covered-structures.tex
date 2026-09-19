@@ -1,0 +1,75 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: covered-structures
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0162-S01
+\olfileid{fol}{syn}{cov}
+
+\olsection{முதல்தர மொழிகளுக்கான மூடப்பட்ட \printtoken{P}{structure}}
+
+\begin{explain}
+ஒரு சொல் !!{variable}s எதையும் கொண்டிருக்கவில்லை என்றால் அது
+\emph{மூடியது} என்பதை நினைவுகூர்க.
+\end{explain}
+
+\begin{defn}[மூடிய சொற்களின் !!^{value}]
+$t$ என்பது மொழி~$\Lang L$ இன் மூடிய சொல் என்றும், $\Struct M$ என்பது
+$\Lang L$ க்கான ஒரு !!{structure} என்றும் கொள்வோம். அப்போது
+\emph{!!{value}}~$\Value{t}{M}$ பின்வருமாறு வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+\item $t$ என்பது !!{constant}~$c$ மட்டும் என்றால்,
+  $\Value{c}{M} = \Assign{c}{M}$.
+\item $t$ என்பது $\Atom{f}{t_1, \ldots, t_n}$ வடிவில் இருந்தால்,
+  \[
+  \Value{t}{M} = \Assign{f}{M}(\Value{t_1}{M}, \ldots,
+  \Value{t_n}{M}).
+  \]
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[மூடப்பட்ட !!{structure}]
+ஒரு !!{structure} \emph{மூடப்பட்டது} எனில், பொருட்களத்தின் ஒவ்வொரு
+உறுப்பும் ஏதேனும் ஒரு மூடிய சொல்லின் !!{value} ஆகும்.
+\end{defn}
+
+\begin{ex}
+!!{constant}s $\Obj{zero}$, $\Obj{one}$, $\Obj{two}$, \dots, இரு-இட
+!!{predicate}~$<$, மற்றும் இரு-இட !!{function}s $+$, $\times$ கொண்ட மொழி
+~$\Lang L$ ஆக இருக்கட்டும். அப்போது $\Lang L$ க்கான !!a{structure}~$\Struct
+M$ இன் பொருட்களம் $\Domain M = \{0, 1, 2, \ldots\}$; மேலும்
+$\Assign{\Obj{zero}}{M} = 0$, $\Assign{\Obj{one}}{M} = 1$,
+$\Assign{\Obj{two}}{M} = 2$, இவ்வாறே தொடர்கிறது. இரு-இடத் தொடர்புக் குறி
+$<$ க்கு, $\Assign{<}{M}$ என்பது $\tuple{c_1, c_2} \in \Domain{M}^2$ என்ற
+அனைத்து சோடிகளின் தொகுப்பு; இதில் $c_1$ என்பது~$c_2$ ஐ விடச் சிறியது.
+உதாரணமாக,
+$\tuple{1, 3} \in \Assign{<}{M}$, ஆனால்
+$\tuple{2, 2} \notin \Assign{<}{M}$. இரு-இட !!{function} $+$ க்கு,
+$\Assign{+}{M}$ ஐ வழக்கமான முறையில் வரையறுக்கலாம்---உதாரணமாக,
+$\Assign{+}{M}(2,3)$ ஆனது~$5$ க்கு செல்கிறது; இரு-இட !!{function}~$\times$
+க்கும் இதேபோல். ஆகவே, $\Obj{four}$ இன் !!{value} வெறுமனே~$4$; மேலும்
+$\times(\Obj{two}, + (\Obj{three},\Obj{zero}))$ (அல்லது இடைச்செருகல்
+குறியீட்டில், $\Obj{two} \times (\Obj{three} + \Obj{zero})$) இன் !!{value}
+\begin{multline*}
+\Value{\times(\Obj{two}, +(\Obj{three},\Obj{zero}))}{M} =\\
+\begin{aligned}
+& =\Assign{\times}{M}(\Value{\Obj{two}}{M}, \Value{+(\Obj{three}, \Obj{zero})}{M})\\
+& = \Assign{\times}{M}(\Value{\Obj{two}}{M}, \Assign{+}{M}(\Value{\Obj{three}}{M},
+\Value{\Obj{zero}}{M})) \\
+& = \Assign{\times}{M}(\Assign{\Obj{two}}{M}, \Assign{+}{M}(\Assign{\Obj{three}}{M},
+\Assign{\Obj{zero}}{M})) \\
+& = \Assign{\times}{M}(2, \Assign{+}{M}(3, 0)) \\
+& = \Assign{\times}{M}(2, 3) \\
+& = 6
+\end{aligned}
+\end{multline*}
+\end{ex}
+
+\begin{prob}
+கணிதத்தின் நிலையான மாதிரியான $\Struct N$ மூடப்பட்டதா? விளக்குக.
+\end{prob}
+
+\end{document}

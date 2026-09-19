@@ -1,0 +1,130 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: representable-comp
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0291-S01
+
+\olfileid{inc}{req}{rpc}
+\olsection{$\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்க சார்புகள் கணிக்கத்தக்கவை}
+
+$\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்க ஒவ்வொரு சார்பும் கணிக்கத்தக்கது
+என்று நிறுவுவோம். முதலில், $\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்க
+சார்புகள் பற்றிய ஒரு துணைத்தேற்றத்தை நிறுவ வேண்டும்.
+
+\begin{lem}\ollabel{lem:rep-q}
+  $f(x_0,
+  \dots, x_k)$ ஆனது~$\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்கது எனில்,
+  பின்வருமாறு அமையும் !!a{formula}~$!A_f(x_0, \dots, x_k, y)$ ஒன்று உள்ளது:
+  % SOURCE CORRECTION TA-INC-014: use A_f consistently in the witness formula and display.
+  \[
+  \Th{Q} \Proves !A_f(\num{n_0}, \dots, \num{n_k}, \num{m})
+  \quad\text{எனில், எனில் மட்டுமே}\quad m = f(n_0, \dots, n_k).
+  \]
+\end{lem}
+
+\begin{proof}
+  ``எனில்'' பகுதி
+\olref[int]{defn:representable-fn}\olref[int]{defn:rep:a} ஆகும். ``எனில்
+மட்டுமே'' பகுதியைப் பின்வருமாறு காணலாம்: $\Th{Q} \Proves
+!A_f(\num{n_0}, \dots, \num{n_k}, \num{m})$ ஆனால்
+$m \neq f(n_0, \dots, n_k)$ என்று கொள்க. $l = f(n_0, \dots, n_k)$
+என்க. \olref[int]{defn:representable-fn}\olref[int]{defn:rep:a} இன்படி,
+$\Th{Q} \Proves !A_f(\num{n_0}, \dots, \num{n_k}, \num{l})$.
+\olref[int]{defn:representable-fn}\olref[int]{defn:rep:b} இன்படி,
+% SOURCE CORRECTION TA-INC-015: definition (b) says that Q proves this universal formula.
+$\Th{Q} \Proves \lforall[y][(!A_f(\num{n_0}, \dots, \num{n_k}, y)
+\lif \num{l} = y)]$.
+தருக்கத்தையும் $\Th{Q} \Proves !A_f(\num{n_0}, \dots, \num{n_k},
+\num{m})$ என்ற எடுகோளையும் பயன்படுத்தி, $\Th{Q} \Proves
+\eq[\num{l}][\num{m}]$ என்று பெறுகிறோம். மறுபுறம்,
+\olref[bre]{lem:q-proves-neq} இன்படி, $\Th{Q} \Proves
+\eq/[\num{l}][\num{m}]$. ஆகவே $\Th{Q}$ முரணுள்ளது. ஆனால் இது
+இயலாது; ஏனெனில் தரநிலை மாதிரி $\Th{Q}$ ஐ நிறைவுறுத்துகிறது
+% READER FALLBACK TA-READER-REF-013: retain live external references in a cumulative reader.
+(\oliflabeldef{inc:def::def:standard-model}{\olref[int][def]{def:standard-model}}{எண்கணிதத்தின் தரநிலை மாதிரிக்கான முந்தைய வரையறை} ஐக் காண்க),
+$\Sat{N}{\Th{Q}}$; மேலும் நிறைவுறத்தக்க கோட்பாடுகள் ஒலிப்புத் தேற்றத்தின்படி
+எப்போதும் முரணற்றவை
+(\oliflabeldef{fol:axd:sou:cor:consistency-soundness}{\tagrefs{prfAX/{fol:axd:sou:cor:consistency-soundness},
+prfSC/{fol:seq:sou:cor:consistency-soundness},
+prfND/{fol:ntd:sou:cor:consistency-soundness},
+prfTab/{fol:tab:sou:cor:consistency-soundness}}}{ஒலிப்புத் தேற்றத்தின் முரணின்மைத் தொடர்விளைவுகள்}).
+\end{proof}
+
+\begin{lem}
+$\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்க ஒவ்வொரு சார்பும் கணிக்கத்தக்கது.
+\end{lem}
+
+\begin{proof}
+இது ஏன் மெய் என்பதற்கான உள்ளுணர்வுசார் எண்ணத்தை முதலில் தருவோம்.
+$f$ ஐக் கணிக்கப் பின்வருமாறு செய்கிறோம். எண்கணித மொழியிலுள்ள சாத்தியமான
+எல்லா !!{derivation}s~$\delta$ ஐயும் பட்டியலிடுக. இதை இயந்திர முறையில்
+செய்ய முடியும். ஒவ்வொன்றிற்கும், அது
+$!A_f(\num{n_0}, \dots, \num{n_k}, \num{m})$ என்ற வடிவிலுள்ள
+!!a{formula} வின் !!a{derivation} ஆக உள்ளதா என்று சோதிக்க
+(இது \olref{lem:rep-q} இல் $\Th{Q}$ இல்~$f$ ஐப் பிரதிநிதித்துவப்படுத்தும்
+!!{formula}). அவ்வாறெனில், \olref{lem:rep-q} இன்படி
+$m = f(n_0, \dots, n_k)$; எனவே $f$ இன் மதிப்பைக் கண்டுவிட்டோம். மேலும்,
+$\Th{Q} \Proves !A_f(\num{n_0}, \dots, \num{n_k},
+\num{f(n_0, \dots, n_k)})$ என்பதால், இறுதியில் சரியான வகையைச் சேர்ந்த
+$\delta$ ஒன்றைக் கண்டுபிடிப்போம்; ஆகவே தேடல் முடிவுறும்.
+
+நமது செயல்முறை எண்களின் மீது மட்டும் செயல்படாமல் !!{derivation}s மற்றும்
+!!{formula}s மீது செயல்படுவதாலும், ``சாத்தியமான எல்லா
+!!{derivation}s ஐயும் பட்டியலிடுவது'' ஏன் இயந்திர முறையில் சாத்தியம் என்று
+துல்லியமாக விளக்காததாலும் இது இன்னும் முற்றிலும் துல்லியமாகவில்லை. ஆனால்,
+சொற்கள், !!{formula}s, !!{derivation}s ஆகியவற்றைக் கோடல் எண்களால்
+குறியீடாக்க முடியும் என்று கண்டோம். கணக்கீட்டுக்கான துல்லியமான மாதிரியான
+பொதுவான மீள்வரையறைச் சார்புகளையும் அறிமுகப்படுத்தியுள்ளோம். மேலும்,
+$d$ ஆனது~$\Th{Q}$ இன் அடிகோள்களிலிருந்து கோடல் எண்~$y$ கொண்ட
+!!{formula} வின் !!a{derivation} ஒன்றின் கோடல் எண்ணாக இருந்தால், அப்போதும்
+அப்போது மட்டுமே பொருந்தும் தொடர்பான $\Prf[\Th{Q}](d,y)$ ஆனது (முதன்மை)
+மீள்வரையறையானது என்று கண்டோம். நமக்குத் தேவைப்படும் பிற முதன்மை
+மீள்வரையறைச் சார்புகள் $\fn{num}$
+(\oliflabeldef{inc:art:trm:prop:num-primrec}{\olref[art][trm]{prop:num-primrec}}{எண்குறிக் குறியீட்டின் முதன்மை மீள்வரையறை பற்றிய முந்தைய கூற்று})
+மற்றும் $\fn{Subst}$
+(\oliflabeldef{inc:art:sub:prop:subst-primrec}{\olref[art][sub]{prop:subst-primrec}}{தொடரமைப்புப் பதிலீட்டின் முதன்மை மீள்வரையறை பற்றிய முந்தைய கூற்று}) ஆகும். இவற்றிலிருந்து, $f$ ஐச்
+சிறுமமாக்கலால் வரையறுக்க முடியும்; ஆகவே $f$ மீள்வரையறையானது.
+
+முதலில், பின்வருமாறு வரையறுக்க:
+\begin{multline*}
+  A(n_0, \dots, n_k, m) = \\
+  \fn{Subst}(\fn{Subst}(\dots\fn{Subst}(\Gn{!A_f}, \fn{num}(n_0), \Gn{x_0}),\\ \dots),
+  \fn{num}(n_k),  \Gn{x_k}), \fn{num}(m), \Gn{y})
+\end{multline*}
+இது சிக்கலானதாகத் தோன்றினாலும், வெறுமனே
+$A(n_0, \dots, n_k, m) = \Gn{!A_f(\num{n_0}, \dots, \num{n_k},
+\num{m})}$ என்ற சார்பே ஆகும்.
+
+இப்போது, $(s)_0$ ஆனது~$\Th{Q}$ இலிருந்து
+$!A_f(\num{n_0}, \dots, \num{n_k}, \num{(s)_1})$ இன்
+!!a{derivation} ஒன்றின் கோடல் எண்ணாக இருந்தால் பொருந்தும்
+$R(n_0, \dots, n_k, s)$ என்ற தொடர்பைக் கருதுக:
+\[
+R(n_0, \dots, n_k, s) \quad\text{எனில், எனில் மட்டுமே}\quad
+\Prf[\Th{Q}]((s)_0, A(n_0,
+\dots, n_k, (s)_1))
+\]
+$R(n_0, \dots, n_k, s)$ பொருந்துமாறு ஓர்~$s$ ஐக் கண்டுபிடிக்க முடிந்தால்,
+% SOURCE CORRECTION TA-INC-016: the final object-language argument is the numeral for (s)_1.
+$(s)_0$ ஆனது~$A_f(\num{n_0}, \dots, \num{n_k},
+\num{(s)_1})$ இன் !!a{derivation} ஒன்றின் கோடல் எண்ணாக இருக்குமாறு
+$(s)_0$,~$(s)_1$ என்ற ஓர் எண் சோடியைக் கண்டுபிடித்துள்ளோம். ஆகவே
+$s$ ஐத் தேடுவது முறைசாராக் காட்டலில் உள்ள $d$,~$m$ என்ற சோடியைத்
+தேடுவதுபோன்றது. அத்தகைய ஓர்~$s$ ஐத் ``தேடும்'' கணிக்கத்தக்க சார்பை
+ஒழுங்கான சிறுமமாக்கலால் வரையறுக்க முடியும். $R$ ஒழுங்கானது என்பதைக்
+கவனிக்க: ஒவ்வொரு $n_0$, \dots, $n_k$ க்கும்,
+$\Th{Q} \Proves !A_f(\num{n_0}, \dots, \num{n_k},
+\num{f(n_0, \dots, n_k)})$ என்பதை நிறைவேற்றும் !!a{derivation}~$\delta$
+ஒன்று உள்ளது; ஆகவே
+$s = \tuple{\Gn{\delta}, f(n_0, \dots, n_k)}$ க்கு
+$R(n_0, \dots, n_k, s)$ பொருந்துகிறது. எனவே $f$ ஐப் பின்வருமாறு எழுதலாம்:
+\[
+f(n_0,\dots,n_{k}) = (\umin{s}{R(n_0, \dots, n_k, s)})_1.
+\]
+\end{proof}
+
+\end{document}

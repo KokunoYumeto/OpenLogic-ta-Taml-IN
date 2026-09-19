@@ -1,0 +1,72 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: theory-of-m
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0188-S01
+
+\olfileid{mod}{bas}{thm}
+
+\section{ஒரு \printtoken{S}{structure} இன் கோட்பாடு}
+
+ஒவ்வோர் !!{structure}~$\Struct{M}$ உம் சில !!{sentence}s ஐ
+மெய்யாக்கி, சிலவற்றைப் பொய்யாக்குகிறது. அது மெய்யாக்கும் எல்லா
+!!{sentence}s இன் கணம் அதன் \emph{கோட்பாடு} எனப்படுகிறது.
+அந்தக் கணம் உண்மையில் ஒரு கோட்பாடே; ஏனெனில் அதிலிருந்து தருக்கமுறையாக
+உட்கிடைக்கும் எதுவும்~$\Struct{M}$ உட்பட அதன் எல்லா மாதிரிகளிலும்
+மெய்யாக வேண்டும்.
+
+\begin{defn}
+  !!a{structure}~$\Struct M$ கொடுக்கப்பட்டால், $\Struct{M}$ இன்
+  \emph{கோட்பாடு} என்பது $\Struct{M}$ இல் மெய்யான !!{sentence}s இன்
+  கணம் $\Theory{M}$; அதாவது $\Theory{M} =
+  \Setabs{!A}{\Sat{M}{!A}}$.
+\end{defn}
+
+உய்த்தறிவாக மூடியிருந்தாலும் இல்லாவிட்டாலும், நோக்கமாகக் கொண்ட
+பொருள்கோளைக் கொண்ட !!{sentence}s இன் கணங்களைச் சுட்டவும் ``கோட்பாடு''
+என்ற சொல்லை முறைசாராமல் பயன்படுத்துகிறோம்.
+
+\begin{prop}
+எந்த $\Struct{M}$ க்கும், $\Theory{M}$ நிறைவானது.
+\end{prop}
+
+\begin{proof}
+எந்த !!{sentence}~$!A$ க்கும், $\Sat{M}{!A}$ அல்லது
+$\Sat{M}{\lnot !A}$; எனவே $!A \in \Theory{M}$ அல்லது
+$\lnot !A \in \Theory{M}$.
+\end{proof}
+
+\begin{prop}\ollabel{prop:equiv}
+  ஒவ்வொரு $!A \in \Theory{M}$ க்கும் $\Struct{N} \models !A$
+  எனில், $\Struct{M} \elemequiv \Struct{N}$.
+\end{prop}
+
+\begin{proof}
+எல்லா $!A \in \Theory{M}$ க்கும் $\Sat{N}{!A}$ என்பதால்,
+$\Theory{M} \subseteq
+\Theory{N}$. $\Sat{N}{!A}$ எனில், $\Sat/{N}{\lnot !A}$; எனவே
+$\lnot !A
+\notin \Theory{M}$. $\Theory{M}$ நிறைவானது என்பதால், $!A \in
+\Theory{M}$. ஆகவே, $\Theory{N} \subseteq \Theory{M}$; எனவே
+$\Struct{M} \elemequiv \Struct{N}$.
+\end{proof}
+
+\begin{rem}\ollabel{remark:R}
+  $\Struct{R} = \langle\Real, <\rangle$ ஐக் கருதுக. இது, மெய்யெண்களின்
+  கணம் $\Real$ ஐ ஆட்களமாகக் கொண்ட !!{structure}; மெய்யெண்கள் மீதான
+  $<$ உறவாகப் பொருள்கொள்ளப்படும் ஒரே ஒரு 2-இட !!{predicate} ஐ மட்டும்
+  கொண்ட !!{language} இற்குரியது. தெளிவாக $\Struct{R}$
+  !!{nonenumerable}; எனினும், $\Theory{R}$ வெளிப்படையாக முரணின்மையுடையது
+  என்பதால், L\"owenheim--Skolem தேற்றப்படி அதற்கு ஓர் !!a{enumerable}
+  மாதிரி உண்டு; அதை $\Struct{S}$ என்க. மேலும் \olref{prop:equiv} படி,
+  $\Struct{R}
+  \equiv \Struct{S}$. அதோடு, $\Struct{R}$ மற்றும் $\Struct{S}$
+  ஓரினமல்ல என்பதால், \olref[iso]{thm:isom} இன் மறுதலை பொதுவாகப்
+  பொருந்தாது என்பதை இது காட்டுகிறது.
+\end{rem}
+
+\end{document}

@@ -1,0 +1,195 @@
+{
+  "batch_id": "TA-B161",
+  "units": [
+    {
+      "unit_id": "OLP-0300",
+      "source_sha256": "9509cb0c6c1a6d93245a581021a177b4a658d0b098eb467d96a1fd0ba2e14d3d",
+      "translation_sha256": "6bc04d18c422488ede6363206903be5a20c419f3871b7f12f48868de0bb2d90a",
+      "source_bytes": 11579,
+      "translation_bytes": 21290,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Th{Q}\\Proves\\eq[t_2][\\numn]$",
+        "$\\Th{Q}\\Proves\\eq[\\numn+{\\numk}'][\\numm]$",
+        "$!Q_3$",
+        "$!Q_3$",
+        "$\\lnot\\bexists{x<t}!A(x)$",
+        "$\\lexists{x}!A(x)$"
+      ],
+      "extra_math": [
+        "$\\Th{Q}\\Proves\\eq[t_2][\\numm]$",
+        "$\\Th{Q}\\Proves\\eq[{\\numk}'+\\numn][\\numm]$",
+        "$!Q_2$",
+        "$!Q_2$",
+        "$\\lnot\\bexists{x<t}{!A(x)}$",
+        "$\\lexists[x][!A(x)]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "bre",
+        "inc",
+        "include",
+        "logic",
+        "min",
+        "open",
+        "req",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-024",
+          "unit_id": "OLP-0300",
+          "kind": "wrong-evaluation-numeral",
+          "action": "Changed the numeral proved equal to t_2 from n to m, its stipulated value in the standard model.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\Th{Q}\\Proves\\eq[t_2][\\numn]$",
+              "to": "$\\Th{Q}\\Proves\\eq[t_2][\\numm]$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof fixes n as the value of t_1 and m as the value of t_2, but then says Q proves t_2 equals numeral n before splitting into the n=m and n-not-equal-m cases.",
+          "chosen_treatment": "தமிழ் காட்டல் t_2 ஐ அதன் நிலைப்படுத்தப்பட்ட மதிப்பான m இன் எண்குறிக்குச் சமப்படுத்துகிறது.",
+          "alternatives_considered": "Keeping numeral n, which assumes the equality case before the case distinction; renaming both fixed values.",
+          "rationale": "The closed-term lemma applied to t_2 uniquely yields its own value m.",
+          "precise_review_question": "Does the corrected pair of equalities now support both the equality and inequality cases?",
+          "location_needle": "SOURCE CORRECTION TA-INC-024"
+        },
+        {
+          "audit_id": "TA-INC-025",
+          "unit_id": "OLP-0300",
+          "kind": "less-than-witness-addend-order",
+          "action": "Changed the closed numeral equality from n plus successor k to successor k plus n so it matches the Q8 witness formula used in the next inference.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\Th{Q}\\Proves\\eq[\\numn+{\\numk}'][\\numm]$",
+              "to": "$\\Th{Q}\\Proves\\eq[{\\numk}'+\\numn][\\numm]$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "Q8 defines x<y using z-prime plus x, but the frozen proof establishes n plus k-prime and then swaps the addends without deriving commutativity in Q.",
+          "chosen_treatment": "தமிழ் காட்டல் மூடிய சொல் துணைத்தேற்றத்தை நேரடியாக k-prime plus n என்ற வரிசையில் பயன்படுத்தி, அடுத்த Q8 நேர்வுடன் பொருந்தச் செய்கிறது.",
+          "alternatives_considered": "Assuming unproved global commutativity in Q; adding a separate commutativity lemma not available here.",
+          "rationale": "Both closed terms have value m, so atomic completeness directly proves the correctly ordered equality without any commutativity principle.",
+          "precise_review_question": "Does substituting t_1 for numeral n now yield exactly successor witness plus t_1 equals t_2?",
+          "location_needle": "SOURCE CORRECTION TA-INC-025"
+        },
+        {
+          "audit_id": "TA-INC-026",
+          "unit_id": "OLP-0300",
+          "kind": "wrong-robinson-q-axiom-number",
+          "action": "Changed both contradiction citations from Q3 to Q2, the axiom that no successor equals zero.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$!Q_3$",
+              "to": "$!Q_2$",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "Both contradictions have the form successor equals zero. Q2 states x-prime is not zero, whereas Q3 states that every nonzero number is a successor.",
+          "chosen_treatment": "தமிழ் இரண்டு முரண்பாட்டுப் படிகளிலும் வழிவரு சுழிக்குச் சமமல்ல என்று கூறும் Q_2 ஐச் சுட்டுகிறது.",
+          "alternatives_considered": "Retaining Q3; changing the contradiction formulas to fit Q3.",
+          "rationale": "The displayed contradictions instantiate Q2 directly and do not instantiate Q3.",
+          "precise_review_question": "Do both axiom citations now justify the exact successor-equals-zero contradictions displayed?",
+          "location_needle": "SOURCE CORRECTION TA-INC-026"
+        },
+        {
+          "audit_id": "TA-INC-027",
+          "unit_id": "OLP-0300",
+          "kind": "empty-boolean-operation",
+          "action": "Changed empty disjunction to empty conjunction in the zero-bound base case for the bounded universal formula.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The lemma's first clause expands a bounded universal formula into a finite conjunction, and at bound zero that conjunction is true; the frozen proof instead calls it an empty disjunction while assigning it the truth constant.",
+          "chosen_treatment": "தமிழ் அனைத்தளவை நேர்வுக்குரிய வெற்று இணைப்பை மெய் மாறிலியாக எடுத்துக்கொள்கிறது.",
+          "alternatives_considered": "Keeping empty disjunction while calling it true; switching to the existential clause.",
+          "rationale": "An empty conjunction is true and is exactly the k=0 instance of the conjunction on the right side of clause one.",
+          "precise_review_question": "Does the base case now name the same Boolean operation used in the lemma's universal clause?",
+          "location_needle": "SOURCE CORRECTION TA-INC-027"
+        },
+        {
+          "audit_id": "TA-INC-028",
+          "unit_id": "OLP-0300",
+          "kind": "missing-bounded-quantifier-matrix-argument",
+          "action": "Wrapped A(x) as the second argument of the bounded existential macro under negation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\lnot\\bexists{x<t}!A(x)$",
+              "to": "$\\lnot\\bexists{x<t}{!A(x)}$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The bounded existential macro requires a bound argument and a matrix argument, but the frozen expression leaves A(x) outside the macro braces.",
+          "chosen_treatment": "தமிழ் வெளிப்பாடு A(x) ஐ வரம்பிட்ட இருத்தலளவை மேட்ரிக்சாக இரண்டாம் கட்டளையுருப்பில் வைக்கிறது.",
+          "alternatives_considered": "Leaving the matrix outside the macro; rewriting the bounded quantifier in expanded ordinary-existential form.",
+          "rationale": "The companion bounded formulas throughout the section and the stated macro convention fix the intended two-argument syntax.",
+          "precise_review_question": "Is A(x) now scoped by the bounded existential quantifier exactly as required by the duality step?",
+          "location_needle": "SOURCE CORRECTION TA-INC-028"
+        },
+        {
+          "audit_id": "TA-INC-029",
+          "unit_id": "OLP-0300",
+          "kind": "malformed-existential-quantifier-syntax",
+          "action": "Changed the opening Sigma-one witness formula in the final proof to the documented two-optional-argument lexists syntax.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\lexists{x}!A(x)$",
+              "to": "$\\lexists[x][!A(x)]$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The final proof begins with lexists using a mandatory brace argument followed by an unscoped formula, while the definition and concluding line use the documented optional variable and matrix arguments.",
+          "chosen_treatment": "தமிழ் இறுதிக் காட்டல் வரையறையிலும் முடிவிலும் உள்ள அதே lexists[x][A(x)] வடிவைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Keeping malformed syntax; altering the definition and conclusion to match it.",
+          "rationale": "The macro declaration and every surrounding well-formed occurrence uniquely determine the intended syntax and scope.",
+          "precise_review_question": "Does the proof now begin and end with the same well-scoped Sigma-one existential sentence?",
+          "location_needle": "SOURCE CORRECTION TA-INC-029"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

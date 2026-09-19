@@ -1,0 +1,95 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: partial-iso
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0190-S01
+
+\olfileid{mod}{bas}{dlo}
+\section{செறிந்த நேரியல் வரிசைகள்}
+
+\begin{defn}
+  \emph{முனைகளற்ற செறிந்த நேரியல் வரிசை} என்பது ஒரே ஒரு 2-இட
+  !!{predicate}~$<$ ஐக் கொண்ட !!{language} க்கான, பின்வரும்
+  வாக்கியங்களை நிறைவுறுத்தும் !!a{structure} $\Struct{M}$:
+  \begin{enumerate}
+  \item $\lforall[x][\lnot x < x]$;
+  \item $\lforall[x][\lforall[y][\lforall[z][(x < y \lif (y < z \lif x
+    <z ))]]]$;
+  \item $\lforall[x][\lforall[y][(x< y \lor \eq[x][y] \lor y < x)]]$;
+  \item $\lforall[x][\lexists[y][x < y]]$;
+  \item $\lforall[x][\lexists[y][y < x]]$;
+  \item $\lforall[x][\lforall[y][(x < y \lif \lexists[z][(x < z \land
+        z < y))]]]$.
+ \end{enumerate}
+\end{defn}
+
+\begin{thm}\ollabel{thm:cantorQ}
+  எந்த இரு !!{enumerable} முனைகளற்ற செறிந்த நேரியல் வரிசைகளும்
+  ஓரினமானவை.
+\end{thm}
+
+\begin{proof}
+  $\Struct{M_1}$ மற்றும் $\Struct{M_2}$ ஆகியவை !!{enumerable}
+  முனைகளற்ற செறிந்த நேரியல் வரிசைகள் ஆகட்டும்; ${<_1} =
+  \Assign{<}{M_1}$ மற்றும் ${<_2} =
+  \Assign{<}{M_2}$ என்றும், அவற்றுக்கிடையிலான எல்லாப் பகுதி
+  ஓரினச்சார்புகளின் கணம் $\PIso{I}$ என்றும் கொள்க. குறைந்தபட்சம்
+  $\emptyset \in \PIso{I}$ என்பதால் $\PIso{I}$ வெற்றல்ல.
+  $\PIso{I}$ முன்னும் பின்னும் பண்பை நிறைவுறுத்துகிறது என்று காட்டுவோம்.
+  அப்போது $\Struct{M_1} \iso[p] \Struct{M_2}$; எனவே
+  \olref[pis]{thm:p-isom1} படி தேற்றம் பின்வரும்.
+
+  $\PIso{I}$ முன்னும் பண்பை நிறைவுறுத்துகிறது என்று காட்ட,
+  $p \in
+  \PIso{I}$ என்றும், $i = 1$, \dots,~$n$ க்கு $p(a_i) = b_i$ என்றும்
+  கொள்க; பொதுமை இழப்பின்றி $a_1 <_1 a_2 <_1 \cdots <_1
+  a_n$ என்று கொள்க. $a \in \Domain{M_1}$ கொடுக்கப்பட்டால்,
+  $b \in \Domain{M_2}$ ஐப் பின்வருமாறு கண்டறிக:
+  \begin{enumerate}
+  \item $a <_1 a_1$ எனில், $b <_2
+    b_1$ ஆகுமாறு $b \in \Domain{M_2}$ ஐக் கொள்க;
+  \item $a_n <_1 a$ எனில், $b_n <_2 b$ ஆகுமாறு
+    $b \in \Domain{M_2}$ ஐக் கொள்க;
+ \item ஏதேனும் $i$ க்கு $a_i <_1 a <_1 a_{i+1}$ எனில்,
+   $b_i <_2 b <_2 b_{i+1}$ ஆகுமாறு $b \in
+   \Domain{M_2}$ ஐக் கொள்க.
+  \end{enumerate}
+  $\Struct{M_2}$ ஒரு முனைகளற்ற செறிந்த நேரியல் வரிசை என்பதால்,
+  வேண்டிய பண்புடைய $b$ ஒன்றை எப்போதும் கண்டறியலாம்.
+  $q \in \PIso{I}$ ஆனது $p$ இன் வேண்டிய நீட்சியாக இருக்குமாறு
+  $q = p \cup \{ \langle a, b \rangle \}$ என்று வரையறுக்க.
+  இதனால் முன்னும் பண்பு நிறுவப்படுகிறது. பின்னும் பண்பு இதே போன்றது.
+  எனவே $\Struct{M_1} \iso[p] \Struct{M_2}$; மேலும்
+  \olref[pis]{thm:p-isom1} படி, $\Struct{M_1} \iso
+  \Struct{M_2}$.
+\end{proof}
+
+\begin{prob}
+  $\PIso{I}$ பின்னும் பண்பை நிறைவுறுத்துகிறது என்று சரிபார்த்து,
+  \olref[mod][bas][dlo]{thm:cantorQ} இன் நிரூபிப்பை நிறைவுசெய்க.
+\end{prob}
+
+\begin{rem}
+  $\Struct{S}$ ஏதேனும் ஓர் !!{enumerable} முனைகளற்ற செறிந்த நேரியல்
+  வரிசையாகட்டும். அப்போது (\olref{thm:cantorQ} படி)
+  $\Struct{S} \iso
+  \Struct{Q}$; இங்கே $\Struct{Q} = (\Rat, <)$ என்பது விகிதமுறு எண்களின்
+  கணம் $\Rat$ ஐ ஆட்களமாகக் கொண்ட !!{enumerable} செறிந்த நேரியல் வரிசை.
+  இப்போது \olref[thm]{remark:R} இலிருந்து !!{structure}
+  ~$\Struct{R} =
+  (\Real, <)$ ஐ மீண்டும் கருதுக. $\Struct{R}
+  \elemequiv \Struct{S}$ ஆகுமாறு !!a{enumerable} !!{structure}
+  ~$\Struct{S}$ ஒன்று உள்ளது என்று கண்டோம். ஆனால் $\Struct{S}$ ஒரு
+  !!a{enumerable} முனைகளற்ற செறிந்த நேரியல் வரிசை; எனவே அது
+  !!{structure}~$\Struct{Q}$ க்கு ஓரினமானது (ஆகவே அடிப்படையாகச்
+  சமானமானது). அடிப்படைச் சமானத்தின் கடப்புநிலைப் பண்பின்படி,
+  $\Struct{R} \elemequiv
+  \Struct{Q}$. (அதே முன்னும் பின்னும் வாதத்தால்
+  $\Struct{R} \iso[p] \Struct{Q}$ என்பதை நிறுவி, இதை நேரடியாகவும்
+  காட்டியிருக்கலாம்.)
+\end{rem}
+\end{document}

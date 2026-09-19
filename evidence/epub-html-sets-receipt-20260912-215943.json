@@ -1,0 +1,45 @@
+{
+    "schema":  "openlogic-tamil-epub-html-guard/1",
+    "mutex":  "Global\\InterlanguageTeXSlotV1",
+    "acquisition_timeout_ms":  60000,
+    "process_timeout_minutes":  12,
+    "master":  "tamil-batch001.tex",
+    "reader_slug":  "sets",
+    "converter":  "make4ht",
+    "converter_version":  "make4ht version v0.4e",
+    "options":  [
+                    "lualatex",
+                    "html5",
+                    "mathml",
+                    "charset=utf-8",
+                    "fn-in",
+                    "no-shell-escape"
+                ],
+    "started_utc":  "2026-09-12T21:57:12.2317449Z",
+    "status":  "converter-failed",
+    "abandoned_mutex":  false,
+    "exit_code":  1,
+    "issues":  [
+                   {
+                       "line":  "LaTeX Warning: You have requested file `\u0027,",
+                       "file":  "sets.log"
+                   },
+                   {
+                       "line":  "LaTeX Warning: You have requested file `\u0027,",
+                       "file":  "sets.log"
+                   },
+                   {
+                       "line":  "! LaTeX Error: Missing \\begin{document} in `\u0027.",
+                       "file":  "sets.log"
+                   },
+                   {
+                       "line":  "!  ==\u003e Fatal error occurred, bad output DVI file produced!",
+                       "file":  "sets.log"
+                   }
+               ],
+    "output_files":  [
+
+                     ],
+    "error":  "make4ht failed with exit code 1",
+    "finished_utc":  "2026-09-12T21:57:17.5767249Z"
+}

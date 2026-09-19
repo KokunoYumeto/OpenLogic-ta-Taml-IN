@@ -1,0 +1,92 @@
+% Part: second-order-logic
+% Chapter: sol-and-sets
+% Section: comparing-sets
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0338-S01
+
+\olfileid{sol}{set}{cmp}
+
+\olsection{கணங்களை ஒப்பிடுதல்}
+
+\begin{prop}
+!!{formula} $\lforall[x][(X(x) \lif Y(x))]$ ஆனது உட்கண உறவை
+வரையறுக்கிறது; அதாவது,
+$\Sat{M}{\lforall[x][(X(x) \lif Y(x))]}[s]$ எனில், எனில் மட்டுமே,
+$s(X) \subseteq s(Y)$.
+\end{prop}
+
+\begin{prop}
+!!{formula} $\lforall[x][(X(x) \liff Y(x))]$ ஆனது கணங்கள்மீதான
+சமனுறவை வரையறுக்கிறது; அதாவது,
+$\Sat{M}{\lforall[x][(X(x) \liff Y(x))]}[s]$ எனில், எனில் மட்டுமே,
+$s(X) = s(Y)$.
+\end{prop}
+
+\begin{prop}
+!!{formula} $\lexists[x][X(x)]$ ஆனது வெறுமையல்லாதிருக்கும்
+பண்பை வரையறுக்கிறது; அதாவது,
+$\Sat{M}{\lexists[x][X(x)]}[s]$ எனில், எனில் மட்டுமே,
+$s(X) \neq \emptyset$.
+\end{prop}
+
+!!a{injective} சார்பு $f\colon X \to Y$ ஒன்று இருந்தால், எனில்
+மட்டுமே, கணம்~$X$ ஆனது கணம்~$Y$ ஐவிடப் பெரிதன்று,
+$\cardle{X}{Y}$. ஒரு சார்பு உட்செலுத்துவதாக இருப்பதையும்,~$X$ இல்
+உள்ள உள்ளீடுகளுக்கான அதன் மதிப்புகள்~$Y$ இல் இருப்பதையும்
+வெளிப்படுத்த முடிவதால், பொருட்களத்தின் உட்கணங்கள்மீதான “பெரிதன்று”
+என்ற உறவையும் வரையறுக்கலாம்.
+
+\begin{prop}
+பின்வரும் வாய்பாடு
+% SOURCE CORRECTION TA-SOL-005: injectivity is required on X, not on the entire ambient domain.
+\[
+\lexists[u][(\lforall[x][(X(x) \lif Y(u(x)))] \land
+  \lforall[x][\lforall[y][((X(x) \land X(y) \land
+      \eq[u(x)][u(y)]) \lif \eq[x][y])]])]
+\]
+“பெரிதன்று” என்ற உறவை வரையறுக்கிறது.
+\end{prop}
+
+!!a{bijective} சார்பு~$f\colon X \to Y$ ஒன்று இருந்தால், எனில்
+மட்டுமே, இரண்டு கணங்கள் ஒரே அளவுடையவை, அல்லது “சமஎண்ணிக்கை
+உடையவை”, $\cardeq{X}{Y}$.
+
+\begin{prop}
+பின்வரும் வாய்பாடு
+\begin{multline*}
+  \lexists[u][(\lforall[x][(X(x) \lif Y(u(x)))] \land {}\\
+    \lforall[x][\lforall[y][((X(x) \land X(y) \land
+      \eq[u(x)][u(y)]) \lif \eq[x][y])]]
+  \land {} \\\lforall[y][(Y(y) \lif \lexists[x][(X(x)
+      \land \eq[y][u(x)])])])]
+\end{multline*}
+“சமஎண்ணிக்கை உடையது” என்ற உறவை வரையறுக்கிறது.
+\end{prop}
+
+இந்த !!{formula}s ஐ முறையே $X \subseteq Y$, $X = Y$,
+$X \neq \emptyset$, $\cardle{X}{Y}$, $\cardeq{X}{Y}$ என்று
+சுருக்கமாக எழுதுவோம். (கணங்கள் $X$, $Y$ பற்றி முறைசாராமல்
+பேசும்போதும் அதே குறியீட்டை பயன்படுத்துவதால் இது சற்றுக்
+குழப்பமளிக்கலாம். ஆனால் இங்கு, குறியீடு என்பது ஓரிட உறவு
+மாறிகள்~$X$,~$Y$ உள்ள இரண்டாம்தரத் தருக்கத்தின் !!{formula}s க்கான
+சுருக்கம்.)
+
+\begin{prop}
+!!{sentence} $\lforall[X][\lforall[Y][((\cardle{X}{Y} \land
+    \cardle{Y}{X}) \lif \cardeq{X}{Y})]]$ ஏற்புடையது.
+\end{prop}
+
+\begin{proof}
+எந்த உட்கணங்கள் $X \subseteq \Domain{M}$,
+$Y \subseteq \Domain{M}$ க்கும், $\cardle{X}{Y}$ மற்றும்
+$\cardle{Y}{X}$ எனில் $\cardeq{X}{Y}$ என்றால், இந்த !!{sentence}
+!!a{structure}~$\Struct{M}$ இல் நிறைவுறுத்தப்படுகிறது. ஆனால் இது
+\emph{எந்தக்} கணங்கள் $X$,~$Y$ க்கும் பொருந்தும்; இதுவே
+ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றம்.
+\end{proof}
+
+\end{document}

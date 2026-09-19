@@ -1,0 +1,104 @@
+{
+  "batch_id": "TA-B159",
+  "units": [
+    {
+      "unit_id": "OLP-0296",
+      "source_sha256": "396bbd36dbb04280e2521c9fb1af6b07ef3084e0205917c22eb308362f035e94",
+      "translation_sha256": "6a74980668a6081d2eb92ed695169fec9b9a958b914f7947644ef63a6713e415",
+      "source_bytes": 9799,
+      "translation_bytes": 18967,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align}\\Th{Q}&\\Proves\\eq[(a'+\\numn')][(a'+\\numn)']\\quad$!Q_5$\\ollabel{step5}\\\\\\Th{Q}&\\Proves\\eq[(a'+\\numn')][(a+\\numn')']\\quad\\ollabel{step6}\\\\\\Th{Q}&\\Proves\\eq[(a'+\\numn)'][(a+\\numn')']\\quad\\notag\\end{align}",
+        "$c'$"
+      ],
+      "extra_math": [
+        "\\begin{align}\\Th{Q}&\\Proves\\eq[(a'+\\numn')][(a'+\\numn)']\\quad$!Q_5$\\ollabel{step5}\\\\\\Th{Q}&\\Proves\\eq[(a'+\\numn)'][(a+\\numn')']\\quad\\ollabel{step6}\\\\\\Th{Q}&\\Proves\\eq[(a'+\\numn')][(a+\\numn')']\\quad\\notag\\end{align}",
+        "$c$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-020",
+          "unit_id": "OLP-0296",
+          "kind": "induction-step-equality-order",
+          "action": "Replaced the circular middle line with the equality derived from the induction hypothesis, then made the last line the desired conclusion by transitivity.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\Th{Q}&\\Proves\\eq[(a'+\\numn')][(a+\\numn')']\\quad\\ollabel{step6}",
+              "to": "\\Th{Q}&\\Proves\\eq[(a'+\\numn)'][(a+\\numn')']\\quad\\ollabel{step6}",
+              "count": 1
+            },
+            {
+              "from": "\\Th{Q}&\\Proves\\eq[(a'+\\numn)'][(a+\\numn')']\\quad\\notag",
+              "to": "\\Th{Q}&\\Proves\\eq[(a'+\\numn')][(a+\\numn')']\\quad\\notag",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The frozen induction display labels the desired conclusion itself as following from the induction hypothesis, then derives the intermediate equality from that conclusion and Q5. This reverses the two required steps and makes the reasoning circular.",
+          "chosen_treatment": "தமிழ் காட்டல் தொகுத்தறிதல் எடுகோளிலிருந்து நடுச் சமத்துவத்தை முதலில் பெற்று, அதை step5 உடன் சேர்த்து வேண்டிய சமத்துவத்தை இறுதியில் முடிவுசெய்கிறது.",
+          "alternatives_considered": "Keeping the circular order; adding a separate duplicate derivation while leaving the false justification in place.",
+          "rationale": "Q5 gives the first equality, the induction hypothesis together with successor congruence gives the middle equality, and transitivity then uniquely yields the target.",
+          "precise_review_question": "Do step5 and step6 now compose in the stated order to yield exactly the induction target?",
+          "location_needle": "SOURCE CORRECTION TA-INC-020"
+        },
+        {
+          "audit_id": "TA-INC-021",
+          "unit_id": "OLP-0296",
+          "kind": "existential-generalization-witness",
+          "action": "Changed the prose witness generalized in the trichotomy proof from c-prime to c.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$c'$",
+              "to": "$c$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "From (c-prime + b-prime) = numeral(m)-prime, the required Q8 witness formula is (u-prime + b-prime) = numeral(m+1). Substitution therefore uses u=c, whereas generalizing on the whole term c-prime would yield u+b-prime instead.",
+          "chosen_treatment": "தமிழ் காட்டல் c மீது இருத்தலளவைப் பொதுமைப்படுத்துகிறது; அப்போது u-prime இடத்தில் c-prime கிடைத்து வேண்டிய Q8 நேர்வு அமைகிறது.",
+          "alternatives_considered": "Generalizing on c-prime as printed; changing Q8 or the preceding equality.",
+          "rationale": "The syntactic substitution instance of the existential formula uniquely identifies c as the witness term.",
+          "precise_review_question": "Does existential introduction now substitute c for u so that u-prime reproduces the established c-prime term?",
+          "location_needle": "SOURCE CORRECTION TA-INC-021"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

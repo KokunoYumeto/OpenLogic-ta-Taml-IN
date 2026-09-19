@@ -1,0 +1,110 @@
+% Part: incompleteness
+% Chapter: representability-in-q
+% Section: composition-representable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0295-S01
+
+\olfileid{inc}{req}{cmp}
+\olsection{சேர்ப்பு $\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்கது}
+
+$h$ பின்வருமாறு வரையறுக்கப்படுகிறது என்று கொள்க:
+\[
+h(x_0,\dots,x_{l-1}) = f(g_0(x_0,\dots,x_{l-1}), \dots,
+g_{k-1}(x_0,\dots,x_{l-1})).
+\]
+இங்கு $f$, $g_0$, \dots,~$g_{k-1}$ ஆகிய சார்புகளை முறையே
+பிரதிநிதித்துவப்படுத்தும் !!{formula}s $!A_f, !A_{g_0}, \dots,
+!A_{g_{k-1}}$ ஐ ஏற்கெனவே கண்டுள்ளோம். $h$ ஐப் பிரதிநிதித்துவப்படுத்தும்
+!!a{formula}~$!A_h$ ஒன்றைக் கண்டறிய வேண்டும்.
+
+எல்லாச் சார்புகளும் $1$-இடச் சார்புகளாக இருக்கும் எளிய நேர்வில்
+தொடங்குவோம்; அதாவது $h(x) = f(g(x))$ ஐக் கருதுக. $!A_f(y, z)$ ஆனது~$f$
+ஐயும், $!A_g(x, y)$ ஆனது~$g$ ஐயும் பிரதிநிதித்துவப்படுத்தினால், $h$ ஐப்
+பிரதிநிதித்துவப்படுத்தும் !!a{formula}~$!A_h(x, z)$ நமக்குத் தேவை.
+$z = f(y)$, $y = g(x)$ இரண்டும் பொருந்துமாறு ஒரு~$y$ இருந்தால், எனில்
+மட்டுமே, $h(x) = z$ என்பதைக் கவனிக்க. ($h(x) = z$ எனில், $g(x)$
+அத்தகைய ஒரு~$y$; அத்தகைய $y$ ஒன்று இருந்தால், $y = g(x)$ மற்றும்
+$z = f(y)$ என்பதால், $z = f(g(x))$.) ஆகவே
+$\lexists[y][(!A_g(x, y) \land !A_f(y, z))]$ ஆனது~$!A_h(x, z)$ க்கான
+நல்ல வேட்பாகத் தெரிகிறது. தொடர்புடைய !!{formula}s ஐ~$\Th{Q}$ நிறுவுகிறது
+என்று மட்டும் சரிபார்க்க வேண்டும்.
+
+\begin{prop}
+\ollabel{prop:rep1}
+$h(n) = m$ எனில், $\Th{Q} \Proves !A_h(\num{n}, \num{m})$.
+\end{prop}
+
+\begin{proof}
+$h(n) = m$, அதாவது $f(g(n)) = m$ என்று கொள்க. $k = g(n)$ என்க. அப்போது
+\begin{align*}
+  \Th{Q} & \Proves !A_g(\num{n}, \num{k})
+  \intertext{ஏனெனில் $!A_g$ ஆனது~$g$ ஐப் பிரதிநிதித்துவப்படுத்துகிறது; மேலும்}
+  \Th{Q} & \Proves !A_f(\num{k}, \num{m})
+  \intertext{ஏனெனில் $!A_f$ ஆனது~$f$ ஐப் பிரதிநிதித்துவப்படுத்துகிறது. ஆகவே,}
+  \Th{Q} & \Proves !A_g(\num{n}, \num{k}) \land !A_f(\num{k}, \num{m})
+  \intertext{என்பதும், இதன் பின்விளைவாகப் பின்வருவதும் அமைகின்றன:}
+  \Th{Q} & \Proves \lexists[y][(!A_g(\num{n}, y) \land !A_f(y, \num{m}))],
+\end{align*}
+அதாவது, $\Th{Q} \Proves !A_h(\num{n}, \num{m})$.
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:rep2}
+$h(n) = m$ எனில், $\Th{Q} \Proves \lforall[z][(!A_h(\num{n}, z) \lif
+  z = \num{m})]$.
+\end{prop}
+
+\begin{proof}
+$h(n) = m$, அதாவது $f(g(n)) = m$ என்று கொள்க. $k = g(n)$ என்க. அப்போது
+\begin{align*}
+  \Th{Q} & \Proves \lforall[y][(!A_g(\num{n}, y) \lif \eq[y][\num{k}])]
+  \intertext{ஏனெனில் $!A_g$ ஆனது~$g$ ஐப் பிரதிநிதித்துவப்படுத்துகிறது; மேலும்}
+  \Th{Q} & \Proves \lforall[z][(!A_f(\num{k}, z) \lif \eq[z][\num{m}])]
+  \intertext{ஏனெனில் $!A_f$ ஆனது~$f$ ஐப் பிரதிநிதித்துவப்படுத்துகிறது. சிறிதளவு
+    தருக்கத்தை மட்டும் பயன்படுத்தி, பின்வருவதையும் காட்டலாம்:}
+  \Th{Q} & \Proves \lforall[z][(\lexists[y][(!A_g(\num{n}, y) \land
+      !A_f(y, z))] \lif \eq[z][\num{m}])].
+\end{align*}
+அதாவது, $\Th{Q} \Proves \lforall[y][(!A_h(\num n, y) \lif
+\eq[y][\num m])]$.
+\end{proof}
+
+$f$,~$g_i$ ஆகியவை $1$ ஐவிடப் பெரிய இடஎண்களைக் கொண்ட சிக்கலான
+நேர்விலும் இதே எண்ணம் செயல்படுகிறது.
+
+\begin{prop}
+\ollabel{prop:rep-composition}
+$!A_f(y_0, \dots, y_{k-1}, z)$ ஆனது $f(y_0, \dots, y_{k-1})$ ஐ
+~$\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்துகிறது என்றும்,
+$!A_{g_i}(x_0, \dots, x_{l-1}, y)$ ஆனது
+$g_i(x_0, \dots, x_{l-1})$ ஐ~$\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்துகிறது
+என்றும் இருந்தால்,
+\begin{multline*}
+  \lexists[y_0\dots][\lexists[y_{k-1}][(!A_{g_0}(x_0,\dots,x_{l-1},y_0) \land
+      \dots \land {}]]\\
+  !A_{g_{k-1}}(x_0,\dots,x_{l-1},y_{k-1}) \land !A_f(y_0,\dots,y_{k-1},z))
+\end{multline*}
+ஆனது பின்வருவதைப் பிரதிநிதித்துவப்படுத்துகிறது:
+\[
+h(x_0, \dots, x_{l-1}) = f(g_0(x_0, \dots, x_{l-1}), \dots, g_{k-1}(x_0,
+\dots, x_{l-1})).
+\]
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+% SOURCE CORRECTION TA-INC-018: the first guide is prop:rep1, not a duplicate prop:rep2.
+\olref[inc][req][cmp]{prop:rep1},
+\olref[inc][req][cmp]{prop:rep2} ஆகியவற்றின் நிறுவல்களை வழிகாட்டியாகப்
+பயன்படுத்தி, \olref[inc][req][cmp]{prop:rep-composition} இன் நிறுவலை
+விரிவாக நிறைவேற்றுக.
+\end{prob}
+
+\end{document}

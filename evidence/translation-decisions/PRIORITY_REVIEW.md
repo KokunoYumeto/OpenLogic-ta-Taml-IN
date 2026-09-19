@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 108/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 122/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -19,6 +19,134 @@ Alternatives: கருத்துரைகளைச் செயல்பட�
 Please double-check: **should a future corrected edition activate vetted definitions, or should the later exercise be narrowed?**
 
 - `TA-OCC-fc8f99a505e6c703` — OLP-0047 / `OLP-0047-S14`; source `content/sets-functions-relations/arithmetization/checking-details.tex:170`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:214`; PDF page pending.
+
+## TA-AXD-001 — The proof introduces every derivation line as !B_i but later writes B_i = !A once without the formula marker.
+
+Chosen rendering: **தமிழ் நிறுவல் அந்த வரியை $!B_i = !A$ என எழுதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding definition of the sequence and the equality being discussed uniquely identify the intended formula metavariable !B_i.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0118 (checked_supports)
+
+Alternatives: Retaining the plain italic B_i; changing the surrounding indexed formulas.
+
+Please double-check: **does restoring only the exclamation marker make this occurrence match the derivation-line notation used throughout the proof?**
+
+- `TA-OCC-5bf0d22f240486e4` — OLP-0118 / `OLP-0118-S08`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:63`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:93`; PDF page pending.
+
+## TA-AXD-002 — The displayed conditional opens two parentheses after the main implication but closes only the inner one.
+
+Chosen rendering: **தமிழ் வாய்பாடு கடைசியில் இரண்டாம் வல அடைப்புக்குறியைச் சேர்க்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The intended hypothetical-syllogism formula and the balanced grouping are uniquely determined by the three conditionals.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0119 (checked_supports)
+
+Alternatives: Retaining the unmatched parenthesis; deleting an earlier opening parenthesis.
+
+Please double-check: **does the added final parenthesis close only the outer consequent grouping without altering connective scope?**
+
+- `TA-OCC-37c418afde18778e` — OLP-0119 / `OLP-0119-S09`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:103`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:114`; PDF page pending.
+
+## TA-AXD-003 — The auxiliary conditional opens an outer parenthesis around its consequent and leaves it unmatched before the comma.
+
+Chosen rendering: **தமிழ் வாய்பாடு காற்புள்ளிக்கு முன் விடுபட்ட வல அடைப்புக்குறியைச் சேர்க்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The immediately following modus-ponens step needs the fully grouped consequent A implies (C implies forall x D(x)).
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0120 (checked_supports)
+
+Alternatives: Retaining the unmatched parenthesis; changing the displayed derivation.
+
+Please double-check: **does the added parenthesis preserve exactly the auxiliary theorem used by the next modus-ponens step?**
+
+- `TA-OCC-f7f56b2f0ac94c80` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:36`; PDF page pending.
+
+## TA-AXD-004 — The frozen source concludes Gamma proves B although the theorem and the immediately preceding displayed line establish Gamma proves A implies B. The current upstream OpenLogic master file has the corrected conclusion.
+
+Chosen rendering: **தமிழ் நிறுவல் $\Gamma \Proves !A \lif !B$ என்ற தேற்றத்தின் முடிவையே கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The induction goal, the preceding formula B identical to C implies forall x D(x), and current upstream all confirm A implies B as the unique intended conclusion.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0120 (checked_supports)
+
+Alternatives: Retaining Gamma proves B; changing the theorem statement.
+
+Please double-check: **does the restored A-conditional make the final sentence match both the theorem statement and the preceding derived formula?**
+
+- `TA-OCC-68308ace8fdaed3b` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:52`; PDF page pending.
+
+## TA-AXD-005 — The proof cites the left-projection axiom twice while claiming both left and right projections.
+
+Chosen rendering: **தமிழ் நிறுவல் முறையே ax:land1, ax:land2 ஆகிய இரு அடிகோள்களைக் குறிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The immediately preceding axiom list assigns ax:land1 to (A and B) implies A and ax:land2 to (A and B) implies B.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0122 (checked_supports)
+
+Alternatives: Retaining the duplicate; changing the proposition to repeat the left projection.
+
+Please double-check: **does ax:land2 uniquely justify the second projection stated in item one?**
+
+- `TA-OCC-bda2398b37567ebb` — OLP-0122 / `OLP-0122-S03`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:23`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:36`; PDF page pending.
+
+## TA-AXD-006 — The cited ax:lnot1 has the form (A implies B) implies ((A implies not-B) implies not-A), whereas the two displayed formulas are direct instances of ax:lnot2, not-A implies (A implies B).
+
+Chosen rendering: **தமிழ் நிறுவல் காட்டப்பட்ட இரு நிகழ்வுகளுக்கும் ax:lnot2 ஐக் குறிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Substituting false for B in ax:lnot2 gives each displayed premise exactly.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0122 (checked_supports)
+
+Alternatives: Retaining ax:lnot1; replacing the displayed formulas with instances of ax:lnot1.
+
+Please double-check: **is ax:lnot2 the exact schema instantiated by both formulas used before the deduction theorem?**
+
+- `TA-OCC-6bb95f488f2b8795` — OLP-0122 / `OLP-0122-S04`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:41`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:55`; PDF page pending.
+
+## TA-AXD-007 — The QR case uses !B(c) and !B(x) throughout but drops the formula marker in two universal formulas and one satisfaction formula.
+
+Chosen rendering: **தமிழ் நிறுவல் எல்லா இடங்களிலும் ஒரே !B வாய்பாட்டுத் திட்டத்தைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The rule premise, semantic goal, substitution identity and all later satisfaction statements uniquely fix !B as the intended formula schema.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0124 (checked_supports)
+
+Alternatives: Retaining three plain italic B expressions; removing the marker from every later B occurrence.
+
+Please double-check: **do the three restored markers make the QR conclusion, freshness clause and satisfaction claim use one unchanged formula schema?**
+
+- `TA-OCC-607f8cb6925effeb` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:90`; PDF page pending.
+
+## TA-AXD-008 — The identity axioms are explicitly restricted to closed terms, but the following propositions say any term and omit the restriction on t_1 and t_2 while proving the claims solely from those axioms.
+
+Chosen rendering: **தமிழ் முன்மொழிவுகள் t மற்றும் t_1, t_2 ஆகிய சொற்கள் மூடியவை என்ற நிபந்தனையை வெளிப்படையாகக் கூறுகின்றன.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The proofs use ax:id1 and ax:id2 directly, so their stated closed-term side condition must also govern the derived propositions.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0125 (checked_supports)
+
+Alternatives: Retaining the overbroad statements; broadening the axiom schemas to all terms.
+
+Please double-check: **do the added closed-term qualifications state exactly the scope licensed by ax:id1 and ax:id2?**
+
+- `TA-OCC-a6c3760731835433` — OLP-0125 / `OLP-0125-S05`; source `content/first-order-logic/axiomatic-deduction/identity.tex:38`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:44`; PDF page pending.
 
 ## TA-D001 — OpenLogic natural numbers include zero while the consulted school convention starts at one
 
@@ -362,6 +490,32 @@ Please double-check: **do the repeated Tamil fallbacks identify exactly the assi
 - `TA-OCC-d5513a8f726ebcdb` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:39`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:48`; PDF page 89.
 - `TA-OCC-01e4b54f56d4856a` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:40`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:51`; PDF page 89.
 
+## TA-READER-REF-010 — The 14-unit standalone axiomatic-deduction reader omits the syntax-and-semantics results cited by the soundness proof, which would otherwise render as unresolved question marks.
+
+Chosen rendering: **இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் பொருண்மைக் கழித்தல், நிறைவுறுத்தல், குறி-சார்பு அல்லது சொல்-இடைநிறுத்தல் முடிவைக் குறிக்கும் தமிழ் விளக்கம்.**
+
+Kind: `citation`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Conditional fallbacks keep the standalone chapter readable while preserving every exact reference identity for a later complete reader.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0124 (checked_supports)
+
+Alternatives: Literal question marks; deleting the semantic dependencies; permanently replacing the live links.
+
+Please double-check: **do the Tamil fallbacks identify exactly the semantic result used at each step without replacing the live links in a complete build?**
+
+- `TA-OCC-a904fc0b1327b731` — OLP-0124 / `OLP-0124-S04`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:48`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:52`; PDF page pending.
+- `TA-OCC-92d8544f20daa3a7` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:76`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:84`; PDF page pending.
+- `TA-OCC-b4a8c264c6214f5c` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:77`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:85`; PDF page pending.
+- `TA-OCC-6bada09760345229` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:84`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:94`; PDF page pending.
+- `TA-OCC-5d7f26fabf5307ea` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:91`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:102`; PDF page pending.
+- `TA-OCC-d2dc76a6307f19e5` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:93`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:105`; PDF page pending.
+- `TA-OCC-4271a9fd6c6be93a` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:96`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:109`; PDF page pending.
+- `TA-OCC-7fc942fe01fd7769` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:99`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:114`; PDF page pending.
+- `TA-OCC-2d80553c304c40a0` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:100`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:118`; PDF page pending.
+- `TA-OCC-75bf609857291b13` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:103`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:123`; PDF page pending.
+- `TA-OCC-3ef3cc2d9da26eda` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:106`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:128`; PDF page pending.
+
 ## TA-RENDER-001 — The earlier target retained the Polish name in Latin TeX notation, producing missing-glyph warnings for crossed l and the combining acute accent in the standalone Tamil reader.
 
 Chosen rendering: **Stanisław Jaśkowski என்பது ஸ்டானிஸ்லாவ் யாஸ்கோவ்ஸ்கி எனத் தமிழ் எழுத்துகளில் ஒலிபெயர்க்கப்படுகிறது.**
@@ -608,6 +762,13 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-98cf73c1295da58a` — OLP-0109 / `OLP-0109-S02`; source `content/first-order-logic/tableaux/soundness.tex:45`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:47`; PDF page 84.
 - `TA-OCC-fa541993522b5768` — OLP-0109 / `OLP-0109-S02`; source `content/first-order-logic/tableaux/soundness.tex:47`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:50`; PDF page 84.
 - `TA-OCC-11ca486b09ee7343` — OLP-0109 / `OLP-0109-S09`; source `content/first-order-logic/tableaux/soundness.tex:145`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:165`; PDF page 85.
+- `TA-OCC-470a7159a786fdb1` — OLP-0113 / `OLP-0113-S09`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:69`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:83`; PDF page pending.
+- `TA-OCC-07cdbb7f9257621e` — OLP-0118 / `OLP-0118-S05`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:39`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:46`; PDF page pending.
+- `TA-OCC-680da2d293431a96` — OLP-0118 / `OLP-0118-S10`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:93`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:107`; PDF page pending.
+- `TA-OCC-0e578f12e1b32685` — OLP-0119 / `OLP-0119-S05`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:49`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:56`; PDF page pending.
+- `TA-OCC-79c9c338baee6c49` — OLP-0121 / `OLP-0121-S03`; source `content/first-order-logic/axiomatic-deduction/provability-consistency.tex:35`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-consistency.tex:38`; PDF page pending.
+- `TA-OCC-e473d05b5cddaff9` — OLP-0121 / `OLP-0121-S04`; source `content/first-order-logic/axiomatic-deduction/provability-consistency.tex:56`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-consistency.tex:61`; PDF page pending.
+- `TA-OCC-5be07cee22b214be` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:99`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:121`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -794,27 +955,27 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 
 ## TA-T017 — axiom / naive
 
-Chosen rendering: **அடிக்கோள் / முறைசாராத**
+Chosen rendering: **அடிகோள் / முறைசாராத**
 
 Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
 
-Intended sense and rationale: Contextual formal-logic choices. Naive means not yet axiomatized, not unintelligent. Axiom attestation needed in later canon pass.
+Intended sense and rationale: Contextual formal-logic choices. Naive means not yet axiomatized, not unintelligent. The spelling அடிகோள் is normalized to the later proof-systems decision TA-T090; exact specialist attestation is still needed.
 
 Authority basis: TA-MQ-113-Q26 (checked_supports); TA-T017-EXACT-TERM-NOT-FOUND (not_found)
 
 Alternatives: ஏற்றுக்கோள்; naïve rendered by a direct loan
 
-Please double-check: **is “அடிக்கோள் / முறைசாராத” the established India-standard Tamil expression for “axiom / naive” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+Please double-check: **is “அடிகோள் / முறைசாராத” the established India-standard Tamil expression for “axiom / naive” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
 
-- `TA-OCC-d1f0f2f3714e4ebb` — OLP-0010 / `OLP-0010-S09`; source `content/sets-functions-relations/sets/russells-paradox.tex:76`; Tamil `translation/content/sets-functions-relations/sets/russells-paradox.tex:93`; PDF page pending.
+- `TA-OCC-0d12470ef22c16d9` — OLP-0010 / `OLP-0010-S09`; source `content/sets-functions-relations/sets/russells-paradox.tex:76`; Tamil `translation/content/sets-functions-relations/sets/russells-paradox.tex:93`; PDF page pending.
 - `TA-OCC-ebb1c0c9bcf5f151` — OLP-0010 / `OLP-0010-S10`; source `content/sets-functions-relations/sets/russells-paradox.tex:79`; Tamil `translation/content/sets-functions-relations/sets/russells-paradox.tex:97`; PDF page pending.
-- `TA-OCC-261115011e90b5b3` — OLP-0013 / `OLP-0013-S03`; source `content/sets-functions-relations/relations/reflections.tex:41`; Tamil `translation/content/sets-functions-relations/relations/reflections.tex:63`; PDF page pending.
-- `TA-OCC-6a81fa427840dd90` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:106`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:148`; PDF page pending.
-- `TA-OCC-06bdff52f094616f` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:107`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:154`; PDF page pending.
+- `TA-OCC-21201465780e9e21` — OLP-0013 / `OLP-0013-S03`; source `content/sets-functions-relations/relations/reflections.tex:41`; Tamil `translation/content/sets-functions-relations/relations/reflections.tex:63`; PDF page pending.
+- `TA-OCC-1c56cfd355426b8e` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:106`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:148`; PDF page pending.
+- `TA-OCC-4eb3efb6631e6600` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:107`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:154`; PDF page pending.
 - `TA-OCC-3752cdf058fb8d11` — OLP-0041 / `OLP-0041-S01`; source `content/sets-functions-relations/arithmetization/arithmetization.tex:1`; Tamil `translation/content/sets-functions-relations/arithmetization/arithmetization.tex:12`; PDF page pending.
 - `TA-OCC-1440ed13f66e1109` — OLP-0042 / `OLP-0042-S01`; source `content/sets-functions-relations/arithmetization/integers.tex:1`; Tamil `translation/content/sets-functions-relations/arithmetization/integers.tex:25`; PDF page pending.
 - `TA-OCC-a8e5605d48b2879e` — OLP-0042 / `OLP-0042-S01`; source `content/sets-functions-relations/arithmetization/integers.tex:1`; Tamil `translation/content/sets-functions-relations/arithmetization/integers.tex:28`; PDF page pending.
-- `TA-OCC-0a938cbadb135771` — OLP-0042 / `OLP-0042-S06`; source `content/sets-functions-relations/arithmetization/integers.tex:55`; Tamil `translation/content/sets-functions-relations/arithmetization/integers.tex:105`; PDF page pending.
+- `TA-OCC-1938d6dcf8adbf64` — OLP-0042 / `OLP-0042-S06`; source `content/sets-functions-relations/arithmetization/integers.tex:55`; Tamil `translation/content/sets-functions-relations/arithmetization/integers.tex:105`; PDF page pending.
 - `TA-OCC-3f593a212a66e856` — OLP-0043 / `OLP-0043-S01`; source `content/sets-functions-relations/arithmetization/rationals.tex:1`; Tamil `translation/content/sets-functions-relations/arithmetization/rationals.tex:13`; PDF page pending.
 - `TA-OCC-0b30439fdc03c1ad` — OLP-0043 / `OLP-0043-S01`; source `content/sets-functions-relations/arithmetization/rationals.tex:1`; Tamil `translation/content/sets-functions-relations/arithmetization/rationals.tex:28`; PDF page pending.
 - `TA-OCC-226d5be154b26aee` — OLP-0046 / `OLP-0046-S07`; source `content/sets-functions-relations/arithmetization/reflections.tex:92`; Tamil `translation/content/sets-functions-relations/arithmetization/reflections.tex:112`; PDF page pending.
@@ -824,6 +985,58 @@ Please double-check: **is “அடிக்கோள் / முறைசார
 - `TA-OCC-b8b654fe7978aac3` — OLP-0053 / `OLP-0053-S13`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:100`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:134`; PDF page pending.
 - `TA-OCC-5e094a7bd4a0ea39` — OLP-0054 / `OLP-0054-S01`; source `content/sets-functions-relations/infinite/card-sb.tex:1`; Tamil `translation/content/sets-functions-relations/infinite/card-sb.tex:10`; PDF page pending.
 - `TA-OCC-2a7695b48ce65f6b` — OLP-0054 / `OLP-0054-S01`; source `content/sets-functions-relations/infinite/card-sb.tex:1`; Tamil `translation/content/sets-functions-relations/infinite/card-sb.tex:11`; PDF page pending.
+- `TA-OCC-973d8b6ab2677864` — OLP-0064 / `OLP-0064-S02`; source `content/first-order-logic/proof-systems/introduction.tex:29`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:29`; PDF page 4.
+- `TA-OCC-415592f5e6837501` — OLP-0064 / `OLP-0064-S02`; source `content/first-order-logic/proof-systems/introduction.tex:32`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:31`; PDF page 4.
+- `TA-OCC-3fe3cd6620ec728d` — OLP-0064 / `OLP-0064-S02`; source `content/first-order-logic/proof-systems/introduction.tex:32`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:36`; PDF page 4.
+- `TA-OCC-5867cb785f0276c8` — OLP-0064 / `OLP-0064-S04`; source `content/first-order-logic/proof-systems/introduction.tex:50`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:59`; PDF page 5.
+- `TA-OCC-b644227ec06a1b73` — OLP-0065 / `OLP-0065-S01`; source `content/first-order-logic/proof-systems/sequent-calculus.tex:25`; Tamil `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:26`; PDF page 6.
+- `TA-OCC-34fd96c32572506b` — OLP-0068 / `OLP-0068-S01`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:21`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:14`; PDF page 10.
+- `TA-OCC-88a8d65f43348e79` — OLP-0068 / `OLP-0068-S01`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:25`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:16`; PDF page 10.
+- `TA-OCC-2d373e8fa30047a9` — OLP-0068 / `OLP-0068-S01`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:26`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:22`; PDF page 10.
+- `TA-OCC-5f7016cf239b4e7f` — OLP-0068 / `OLP-0068-S01`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:33`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:29`; PDF page 11.
+- `TA-OCC-a3cb90246828e727` — OLP-0068 / `OLP-0068-S01`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:33`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:36`; PDF page 11.
+- `TA-OCC-a722f9c5a043e93a` — OLP-0068 / `OLP-0068-S01`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:34`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:36`; PDF page 11.
+- `TA-OCC-d3c0a298b2fbdbdc` — OLP-0068 / `OLP-0068-S01`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:35`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:36`; PDF page 11.
+- `TA-OCC-36dfb8e5b8433dd4` — OLP-0068 / `OLP-0068-S01`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:36`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:38`; PDF page 11.
+- `TA-OCC-058f2862f12ea474` — OLP-0068 / `OLP-0068-S03`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:46`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:52`; PDF page 11.
+- `TA-OCC-eb2446b991a08a0d` — OLP-0068 / `OLP-0068-S05`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:67`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:78`; PDF page 11.
+- `TA-OCC-b8d750e0f77abbff` — OLP-0068 / `OLP-0068-S06`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:70`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:82`; PDF page 12.
+- `TA-OCC-6c3e2aace88015df` — OLP-0068 / `OLP-0068-S06`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:70`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:89`; PDF page 12.
+- `TA-OCC-961951b729ae5079` — OLP-0112 / `OLP-0112-S01`; source `content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:1`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:10`; PDF page pending.
+- `TA-OCC-dca8ceedc6e8218e` — OLP-0112 / `OLP-0112-S01`; source `content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:1`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:11`; PDF page pending.
+- `TA-OCC-27c8852fdf196ab0` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:18`; PDF page pending.
+- `TA-OCC-c61d78dd586a6670` — OLP-0113 / `OLP-0113-S03`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:31`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:35`; PDF page pending.
+- `TA-OCC-03ce94b969908249` — OLP-0113 / `OLP-0113-S04`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:38`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:43`; PDF page pending.
+- `TA-OCC-f7ed6d7f9eefdbbc` — OLP-0113 / `OLP-0113-S07`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:55`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:65`; PDF page pending.
+- `TA-OCC-e07094707545423c` — OLP-0113 / `OLP-0113-S07`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:58`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:68`; PDF page pending.
+- `TA-OCC-1461631e833a95ad` — OLP-0113 / `OLP-0113-S09`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:72`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:87`; PDF page pending.
+- `TA-OCC-39c9a9f1580d764d` — OLP-0114 / `OLP-0114-S01`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:14`; PDF page pending.
+- `TA-OCC-7390083cd626c12f` — OLP-0114 / `OLP-0114-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:17`; PDF page pending.
+- `TA-OCC-aecd6be1476ea8f5` — OLP-0114 / `OLP-0114-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:16`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:18`; PDF page pending.
+- `TA-OCC-627be15016a7677d` — OLP-0115 / `OLP-0115-S01`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:12`; PDF page pending.
+- `TA-OCC-1c480b1e44370b52` — OLP-0115 / `OLP-0115-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:13`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:15`; PDF page pending.
+- `TA-OCC-90adf09ed685488d` — OLP-0115 / `OLP-0115-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:14`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:16`; PDF page pending.
+- `TA-OCC-251261f6841cc468` — OLP-0116 / `OLP-0116-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:20`; PDF page pending.
+- `TA-OCC-75e12013725826af` — OLP-0116 / `OLP-0116-S03`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:43`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:50`; PDF page pending.
+- `TA-OCC-b152ffe92dfee5df` — OLP-0116 / `OLP-0116-S04`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:58`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:63`; PDF page pending.
+- `TA-OCC-f31e4aafe7858c8c` — OLP-0116 / `OLP-0116-S08`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:122`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:131`; PDF page pending.
+- `TA-OCC-2a8d6ce9e051bc32` — OLP-0118 / `OLP-0118-S08`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:76`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:87`; PDF page pending.
+- `TA-OCC-18b081c06b812c4e` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:20`; PDF page pending.
+- `TA-OCC-d21ee9317aed2f29` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:67`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:72`; PDF page pending.
+- `TA-OCC-3ff8608a61eb2c15` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:68`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:73`; PDF page pending.
+- `TA-OCC-29924ff7052628e9` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:78`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:83`; PDF page pending.
+- `TA-OCC-6af83e4813712bc2` — OLP-0122 / `OLP-0122-S02`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:18`; PDF page pending.
+- `TA-OCC-4b5ad6d24d102d41` — OLP-0123 / `OLP-0123-S01`; source `content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:1`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:18`; PDF page pending.
+- `TA-OCC-3f0f16b88541a496` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:18`; PDF page pending.
+- `TA-OCC-dc7f4f780fc1a7c8` — OLP-0124 / `OLP-0124-S03`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:35`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:38`; PDF page pending.
+- `TA-OCC-5e0f3c8c65a4cdf3` — OLP-0124 / `OLP-0124-S04`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:42`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:46`; PDF page pending.
+- `TA-OCC-33b85e28e288f383` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:62`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:70`; PDF page pending.
+- `TA-OCC-1ac74a50a1c036fc` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:63`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:72`; PDF page pending.
+- `TA-OCC-4941b85d9d999584` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:73`; PDF page pending.
+- `TA-OCC-86b8964e66102c09` — OLP-0125 / `OLP-0125-S02`; source `content/first-order-logic/axiomatic-deduction/identity.tex:14`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:15`; PDF page pending.
+- `TA-OCC-0d7cc25b63809f16` — OLP-0125 / `OLP-0125-S02`; source `content/first-order-logic/axiomatic-deduction/identity.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:17`; PDF page pending.
+- `TA-OCC-67880a61ca1f43cc` — OLP-0125 / `OLP-0125-S03`; source `content/first-order-logic/axiomatic-deduction/identity.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:20`; PDF page pending.
+- `TA-OCC-4d0c241a8caabb98` — OLP-0125 / `OLP-0125-S04`; source `content/first-order-logic/axiomatic-deduction/identity.tex:27`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:31`; PDF page pending.
 
 ## TA-T020 — tuple / recursive definition
 
@@ -974,6 +1187,23 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-8f44f0bf0fa28a56` — OLP-0105 / `OLP-0105-S01`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:13`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:24`; PDF page 76.
 - `TA-OCC-029545ec0ad645fc` — OLP-0109 / `OLP-0109-S01`; source `content/first-order-logic/tableaux/soundness.tex:19`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:20`; PDF page 84.
 - `TA-OCC-b09d8625878d14cd` — OLP-0109 / `OLP-0109-S01`; source `content/first-order-logic/tableaux/soundness.tex:32`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:33`; PDF page 84.
+- `TA-OCC-ded9c88d419559a9` — OLP-0118 / `OLP-0118-S01`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:14`; PDF page pending.
+- `TA-OCC-a1bb7c84a3d8f81d` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:21`; PDF page pending.
+- `TA-OCC-508e3dd4bb1f05a7` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:54`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:67`; PDF page pending.
+- `TA-OCC-c78e86c1c9101a82` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:61`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:69`; PDF page pending.
+- `TA-OCC-01f37d18f445733e` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:61`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:80`; PDF page pending.
+- `TA-OCC-7257e6a14044287c` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:83`; PDF page pending.
+- `TA-OCC-c9b547873b7bf6f2` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:88`; PDF page pending.
+- `TA-OCC-8d4882bfb77ac6b9` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:23`; PDF page pending.
+- `TA-OCC-a180af5334c144ad` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:25`; PDF page pending.
+- `TA-OCC-ec6160688d54ce4b` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:25`; PDF page pending.
+- `TA-OCC-3246a8cfc6473874` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:22`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:28`; PDF page pending.
+- `TA-OCC-ef8da3f0b6ac0556` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:22`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:39`; PDF page pending.
+- `TA-OCC-0f90db3fcf77fe63` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:21`; PDF page pending.
+- `TA-OCC-08771c1b810fad6d` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:68`; PDF page pending.
+- `TA-OCC-dfd55e139871069f` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:60`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:79`; PDF page pending.
+- `TA-OCC-7b1d24adb3306c77` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:60`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:80`; PDF page pending.
+- `TA-OCC-072ffa228f866fc5` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:82`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:93`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -1133,6 +1363,7 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-72b5d24879f29c36` — OLP-0106 / `OLP-0106-S05`; source `content/first-order-logic/tableaux/provability-consistency.tex:100`; Tamil `translation/content/first-order-logic/tableaux/provability-consistency.tex:147`; PDF page 80.
 - `TA-OCC-1b4a0d44915cf2c7` — OLP-0106 / `OLP-0106-S05`; source `content/first-order-logic/tableaux/provability-consistency.tex:100`; Tamil `translation/content/first-order-logic/tableaux/provability-consistency.tex:150`; PDF page 80.
 - `TA-OCC-37d2ac348a08245d` — OLP-0106 / `OLP-0106-S05`; source `content/first-order-logic/tableaux/provability-consistency.tex:100`; Tamil `translation/content/first-order-logic/tableaux/provability-consistency.tex:153`; PDF page 80.
+- `TA-OCC-031ca8d7092c707a` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -2299,6 +2530,130 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-6fc688894b86b509` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:31`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:36`; PDF page 89.
 - `TA-OCC-01dd32fa5143dcd5` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:31`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:42`; PDF page 89.
 - `TA-OCC-ea0ba658fcc647fb` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:31`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:52`; PDF page 89.
+- `TA-OCC-6d2950cf5a12af26` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:16`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:18`; PDF page pending.
+- `TA-OCC-128cbbb687806a72` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:16`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-886798777afae0e2` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-dade590bc7f6261c` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:20`; PDF page pending.
+- `TA-OCC-27b5d05846badd8e` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:20`; PDF page pending.
+- `TA-OCC-cea0d3eb9163dbc0` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:21`; PDF page pending.
+- `TA-OCC-e2a7194f6f7b9689` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:23`; PDF page pending.
+- `TA-OCC-f6f6e2092b8e64af` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:21`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:24`; PDF page pending.
+- `TA-OCC-f79a1eb21154fc7e` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:21`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:24`; PDF page pending.
+- `TA-OCC-ff706648eade1be7` — OLP-0113 / `OLP-0113-S03`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:25`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:29`; PDF page pending.
+- `TA-OCC-871fd0dc021f4b68` — OLP-0113 / `OLP-0113-S03`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:26`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:30`; PDF page pending.
+- `TA-OCC-1fbc8ba70675a775` — OLP-0113 / `OLP-0113-S03`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:27`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:31`; PDF page pending.
+- `TA-OCC-d452e15d1bc103fb` — OLP-0113 / `OLP-0113-S04`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:37`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:42`; PDF page pending.
+- `TA-OCC-97fbf6452c3b073a` — OLP-0113 / `OLP-0113-S04`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:40`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:45`; PDF page pending.
+- `TA-OCC-78399a90461de73b` — OLP-0113 / `OLP-0113-S05`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:45`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:50`; PDF page pending.
+- `TA-OCC-ecab2430ceba5316` — OLP-0113 / `OLP-0113-S06`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:49`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:57`; PDF page pending.
+- `TA-OCC-e6e898f476ec7846` — OLP-0113 / `OLP-0113-S06`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:53`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:60`; PDF page pending.
+- `TA-OCC-f75813cc2a4a6947` — OLP-0113 / `OLP-0113-S07`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:56`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:66`; PDF page pending.
+- `TA-OCC-fc8e4b36a73328d2` — OLP-0113 / `OLP-0113-S08`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:61`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:72`; PDF page pending.
+- `TA-OCC-ae1bd77d29db07f5` — OLP-0113 / `OLP-0113-S08`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:76`; PDF page pending.
+- `TA-OCC-c6c2abfe104462eb` — OLP-0113 / `OLP-0113-S09`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:68`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:81`; PDF page pending.
+- `TA-OCC-98ff13338a304ff3` — OLP-0113 / `OLP-0113-S09`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:69`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:84`; PDF page pending.
+- `TA-OCC-ca09a06b83434db9` — OLP-0113 / `OLP-0113-S09`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:78`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:95`; PDF page pending.
+- `TA-OCC-9e2010993d224ed7` — OLP-0113 / `OLP-0113-S09`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:81`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:96`; PDF page pending.
+- `TA-OCC-e3e866142bdd3f7e` — OLP-0113 / `OLP-0113-S10`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:85`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:100`; PDF page pending.
+- `TA-OCC-88d7a2d0215a8326` — OLP-0113 / `OLP-0113-S10`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:84`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:101`; PDF page pending.
+- `TA-OCC-2edcb5a0ebc6afa9` — OLP-0113 / `OLP-0113-S11`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:90`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:107`; PDF page pending.
+- `TA-OCC-94ea6144ab0b4087` — OLP-0113 / `OLP-0113-S11`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:90`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:108`; PDF page pending.
+- `TA-OCC-a9a91414a8e7a839` — OLP-0114 / `OLP-0114-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:19`; PDF page pending.
+- `TA-OCC-ca3cdfc6ade6576c` — OLP-0114 / `OLP-0114-S03`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:37`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:40`; PDF page pending.
+- `TA-OCC-8f97cf72d1443ee4` — OLP-0115 / `OLP-0115-S03`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:24`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:27`; PDF page pending.
+- `TA-OCC-53775d388c28c66e` — OLP-0115 / `OLP-0115-S03`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:27`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:30`; PDF page pending.
+- `TA-OCC-d8b83c9cdc350c7b` — OLP-0116 / `OLP-0116-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:30`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:34`; PDF page pending.
+- `TA-OCC-aa8c52d00e6e6006` — OLP-0116 / `OLP-0116-S03`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:42`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:47`; PDF page pending.
+- `TA-OCC-b2bf34e352f8650b` — OLP-0116 / `OLP-0116-S04`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:68`; PDF page pending.
+- `TA-OCC-defca26845457e42` — OLP-0116 / `OLP-0116-S04`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:71`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:76`; PDF page pending.
+- `TA-OCC-141ec2ae4f817444` — OLP-0116 / `OLP-0116-S05`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:84`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:89`; PDF page pending.
+- `TA-OCC-b8b18fd12724466f` — OLP-0116 / `OLP-0116-S05`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:84`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:90`; PDF page pending.
+- `TA-OCC-40f7a4193b0ec279` — OLP-0116 / `OLP-0116-S05`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:83`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:90`; PDF page pending.
+- `TA-OCC-09772529ad42b292` — OLP-0116 / `OLP-0116-S05`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:98`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:104`; PDF page pending.
+- `TA-OCC-040b1f990db671a6` — OLP-0116 / `OLP-0116-S07`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:108`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:116`; PDF page pending.
+- `TA-OCC-3ee67fcd60b88130` — OLP-0116 / `OLP-0116-S07`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:109`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:117`; PDF page pending.
+- `TA-OCC-d7b60e80928a4ed6` — OLP-0116 / `OLP-0116-S07`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:110`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:118`; PDF page pending.
+- `TA-OCC-cc67110782590433` — OLP-0116 / `OLP-0116-S07`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:111`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:119`; PDF page pending.
+- `TA-OCC-67f8f7eaeb0726a9` — OLP-0116 / `OLP-0116-S07`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:112`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:120`; PDF page pending.
+- `TA-OCC-19c10f2908ca5f67` — OLP-0116 / `OLP-0116-S07`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:113`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:121`; PDF page pending.
+- `TA-OCC-b5acb6adc2d00339` — OLP-0116 / `OLP-0116-S07`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:115`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:123`; PDF page pending.
+- `TA-OCC-c16475725437a179` — OLP-0116 / `OLP-0116-S07`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:117`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:125`; PDF page pending.
+- `TA-OCC-7d4ad10bc4eda748` — OLP-0116 / `OLP-0116-S08`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:121`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:131`; PDF page pending.
+- `TA-OCC-a53ed0569e211e95` — OLP-0117 / `OLP-0117-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:14`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:17`; PDF page pending.
+- `TA-OCC-9c7ea876e09a17fe` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; PDF page pending.
+- `TA-OCC-90902bd599860347` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:21`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:22`; PDF page pending.
+- `TA-OCC-d2c4543fb48340ec` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:23`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:23`; PDF page pending.
+- `TA-OCC-8af2ad1b092e12af` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:23`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:26`; PDF page pending.
+- `TA-OCC-23389f5d97b75f10` — OLP-0118 / `OLP-0118-S03`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:27`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:31`; PDF page pending.
+- `TA-OCC-41bc0c3fc02a8caa` — OLP-0118 / `OLP-0118-S03`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:28`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:32`; PDF page pending.
+- `TA-OCC-03427fcfbdfea888` — OLP-0118 / `OLP-0118-S04`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:33`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:38`; PDF page pending.
+- `TA-OCC-06d8073cc36a4b2d` — OLP-0118 / `OLP-0118-S04`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:33`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:38`; PDF page pending.
+- `TA-OCC-10330fd0f1d5331e` — OLP-0118 / `OLP-0118-S05`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:39`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:45`; PDF page pending.
+- `TA-OCC-91c5c02956ea54cc` — OLP-0118 / `OLP-0118-S06`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:49`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:57`; PDF page pending.
+- `TA-OCC-aba14816711cdd78` — OLP-0118 / `OLP-0118-S06`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:49`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:58`; PDF page pending.
+- `TA-OCC-1ce319c9832b0885` — OLP-0118 / `OLP-0118-S07`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:69`; PDF page pending.
+- `TA-OCC-42cfdb9e844b91a7` — OLP-0118 / `OLP-0118-S07`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:70`; PDF page pending.
+- `TA-OCC-ff0b44e3e0b11a1c` — OLP-0118 / `OLP-0118-S08`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:71`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:82`; PDF page pending.
+- `TA-OCC-f06200593be334fb` — OLP-0118 / `OLP-0118-S08`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:72`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:83`; PDF page pending.
+- `TA-OCC-0e02feb3bda130dd` — OLP-0118 / `OLP-0118-S08`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:74`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:85`; PDF page pending.
+- `TA-OCC-aff4ad86d5344085` — OLP-0118 / `OLP-0118-S08`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:75`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:86`; PDF page pending.
+- `TA-OCC-1f4d08fadc287f05` — OLP-0118 / `OLP-0118-S08`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:81`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:92`; PDF page pending.
+- `TA-OCC-1273be5625eff1d3` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:125`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:142`; PDF page pending.
+- `TA-OCC-0aa20875fc0b93f8` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:127`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:143`; PDF page pending.
+- `TA-OCC-4251e5351ea7261d` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:129`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:145`; PDF page pending.
+- `TA-OCC-3be2865c783027c1` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:129`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:146`; PDF page pending.
+- `TA-OCC-6bbcdde6d69b3276` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:20`; PDF page pending.
+- `TA-OCC-9bef9e2ba557f7d9` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:21`; PDF page pending.
+- `TA-OCC-e21fb342061fe5ca` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:21`; PDF page pending.
+- `TA-OCC-c2fbc3de1f7f5e71` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:21`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:23`; PDF page pending.
+- `TA-OCC-32ad4acffa062ef0` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:62`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:66`; PDF page pending.
+- `TA-OCC-5071fd4b1a881708` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:69`; PDF page pending.
+- `TA-OCC-7e2dd710d379446d` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:65`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:71`; PDF page pending.
+- `TA-OCC-db77799ff81097b7` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:75`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:81`; PDF page pending.
+- `TA-OCC-b9f2f1d92e4233b4` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:80`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:85`; PDF page pending.
+- `TA-OCC-7ac67abb4db2cd26` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:80`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:85`; PDF page pending.
+- `TA-OCC-413c900e42431083` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:82`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:87`; PDF page pending.
+- `TA-OCC-bc1d316919d3e29e` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:22`; PDF page pending.
+- `TA-OCC-6250eb6d4a2b9a32` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:25`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:29`; PDF page pending.
+- `TA-OCC-36bc57cb50d851e7` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:30`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:34`; PDF page pending.
+- `TA-OCC-23949049b9ea76b7` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:31`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:34`; PDF page pending.
+- `TA-OCC-42ca931bba954558` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:41`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:45`; PDF page pending.
+- `TA-OCC-da79e430cd9bf496` — OLP-0120 / `OLP-0120-S05`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:55`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:62`; PDF page pending.
+- `TA-OCC-6753e119e585f9ec` — OLP-0121 / `OLP-0121-S01`; source `content/first-order-logic/axiomatic-deduction/provability-consistency.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-consistency.tex:17`; PDF page pending.
+- `TA-OCC-1bfc6fcc864b6bb3` — OLP-0122 / `OLP-0122-S02`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:21`; PDF page pending.
+- `TA-OCC-12868b1a57e0d5b6` — OLP-0123 / `OLP-0123-S01`; source `content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:6`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:19`; PDF page pending.
+- `TA-OCC-e5516e2dc31250f7` — OLP-0123 / `OLP-0123-S01`; source `content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:19`; PDF page pending.
+- `TA-OCC-40b06fcdcaab1691` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:16`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:18`; PDF page pending.
+- `TA-OCC-54ef43b59cb5f487` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:16`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:18`; PDF page pending.
+- `TA-OCC-60e4cd3eaa24c8be` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:20`; PDF page pending.
+- `TA-OCC-12ee579614735fd2` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:25`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:27`; PDF page pending.
+- `TA-OCC-9b651dea2168783e` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:28`; PDF page pending.
+- `TA-OCC-cb4d5b96bfb4a5bf` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:28`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:30`; PDF page pending.
+- `TA-OCC-db0c8593d55eb16a` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:29`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:31`; PDF page pending.
+- `TA-OCC-2707ee90362a1de4` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:30`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:32`; PDF page pending.
+- `TA-OCC-8036274ce16e7129` — OLP-0124 / `OLP-0124-S04`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:41`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:49`; PDF page pending.
+- `TA-OCC-ac59b93d6d519087` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:60`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:68`; PDF page pending.
+- `TA-OCC-6e298597cf5308a4` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:62`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:70`; PDF page pending.
+- `TA-OCC-42dceb747fa82b2f` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:62`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:70`; PDF page pending.
+- `TA-OCC-9c3c67a65cc56425` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:68`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:76`; PDF page pending.
+- `TA-OCC-eb020f38ed1e98ee` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:70`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:77`; PDF page pending.
+- `TA-OCC-cacf7c1fea6c8110` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:69`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:78`; PDF page pending.
+- `TA-OCC-574ca9185b51408c` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:71`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:78`; PDF page pending.
+- `TA-OCC-cbfa782f4363cdba` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:71`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:78`; PDF page pending.
+- `TA-OCC-cab09880415d6d2d` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:100`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:103`; PDF page pending.
+- `TA-OCC-e6700df1991ee12c` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:100`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:106`; PDF page pending.
+- `TA-OCC-e8d9ba48603658f2` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:100`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:115`; PDF page pending.
+- `TA-OCC-102d378c4ea141a7` — OLP-0124 / `OLP-0124-S09`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:115`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:140`; PDF page pending.
+- `TA-OCC-02a71171e5f920d4` — OLP-0124 / `OLP-0124-S10`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:119`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:147`; PDF page pending.
+- `TA-OCC-944bf25e7bdf1798` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:131`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:153`; PDF page pending.
+- `TA-OCC-a0634e0ee0b84854` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:131`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:159`; PDF page pending.
+- `TA-OCC-a3b6377b4d0d326d` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:131`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:160`; PDF page pending.
+- `TA-OCC-97aa81d005d6e012` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:131`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:162`; PDF page pending.
+- `TA-OCC-030642300ca12f69` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:131`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:166`; PDF page pending.
+- `TA-OCC-33cae701babf0358` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:131`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:167`; PDF page pending.
+- `TA-OCC-b9ab4b6892c98662` — OLP-0125 / `OLP-0125-S02`; source `content/first-order-logic/axiomatic-deduction/identity.tex:13`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:15`; PDF page pending.
+- `TA-OCC-61fa56a498c19245` — OLP-0125 / `OLP-0125-S02`; source `content/first-order-logic/axiomatic-deduction/identity.tex:14`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:16`; PDF page pending.
+- `TA-OCC-7dbe06cbca5ffa34` — OLP-0125 / `OLP-0125-S06`; source `content/first-order-logic/axiomatic-deduction/identity.tex:48`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:55`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -2477,20 +2832,20 @@ Please double-check: **is “பகுதிச் சார்பு / மு�
 
 ## TA-T055 — Axiom of Choice
 
-Chosen rendering: **தேர்வு அடிக்கோள்**
+Chosen rendering: **தேர்வு அடிகோள்**
 
 Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
 
-Intended sense and rationale: Logical and inverse-function register only; no direct Tamil attestation for this axiom in consulted pages. Preserve the source footnote including exceptions.
+Intended sense and rationale: Logical and inverse-function register only; no direct Tamil attestation for this axiom in consulted pages. The spelling is normalized to the later proof-systems decision TA-T090. Preserve the source footnote including exceptions.
 
 Authority basis: TA-MQ-113-Q26 (checked_supports); TA-SC11-P45-FUNCTION-INVERSE (checked_context_only); TA-T055-EXACT-TERM-NOT-FOUND (not_found)
 
 Alternatives: None recorded.
 
-Please double-check: **is “தேர்வு அடிக்கோள்” the established India-standard Tamil expression for “Axiom of Choice” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+Please double-check: **is “தேர்வு அடிகோள்” the established India-standard Tamil expression for “Axiom of Choice” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
 
-- `TA-OCC-1ba0eecad6b0bd6b` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:110`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:148`; PDF page pending.
-- `TA-OCC-2c0f29f9a07dfff7` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:110`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:154`; PDF page pending.
+- `TA-OCC-a560d7cabb78b847` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:110`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:148`; PDF page pending.
+- `TA-OCC-40e272d4acd65608` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:110`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:154`; PDF page pending.
 
 ## TA-T057 — enumeration / uncountable
 
@@ -2844,6 +3199,7 @@ Please double-check: **is “காண்டோரின் வளைவழி /
 - `TA-OCC-6d5473db66fe5f45` — OLP-0111 / `OLP-0111-S01`; source `content/first-order-logic/tableaux/soundness-identity.tex:14`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:15`; PDF page 88.
 - `TA-OCC-044a5fb70375a51c` — OLP-0111 / `OLP-0111-S01`; source `content/first-order-logic/tableaux/soundness-identity.tex:14`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:16`; PDF page 88.
 - `TA-OCC-ddc6de0f12479a42` — OLP-0111 / `OLP-0111-S02`; source `content/first-order-logic/tableaux/soundness-identity.tex:19`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:21`; PDF page 88.
+- `TA-OCC-134c6843a7bb5dd1` — OLP-0124 / `OLP-0124-S04`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:41`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:56`; PDF page pending.
 
 ## TA-T061 — pairing function / encode / code / decode
 
@@ -3186,6 +3542,7 @@ Please double-check: **is “பரிமாற்று வளையம் / �
 - `TA-OCC-b7b16f7863551030` — OLP-0082 / `OLP-0082-S01`; source `content/first-order-logic/sequent-calculus/identity.tex:13`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:14`; PDF page 35.
 - `TA-OCC-3a9fe844d0e04d45` — OLP-0096 / `OLP-0096-S01`; source `content/first-order-logic/natural-deduction/identity.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:14`; PDF page 59.
 - `TA-OCC-2a22385be35998d8` — OLP-0110 / `OLP-0110-S01`; source `content/first-order-logic/tableaux/identity.tex:13`; Tamil `translation/content/first-order-logic/tableaux/identity.tex:14`; PDF page 87.
+- `TA-OCC-7030671629a1b472` — OLP-0125 / `OLP-0125-S03`; source `content/first-order-logic/axiomatic-deduction/identity.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:20`; PDF page pending.
 
 ## TA-T074 — Cauchy sequence / limit / tends to zero / monotone increasing or decreasing / decimal expansion
 
@@ -3330,6 +3687,9 @@ Please double-check: **is “மெய்மதிப்பு ஒதுக்�
 - `TA-OCC-d7fbda5a532b8937` — OLP-0109 / `OLP-0109-S02`; source `content/first-order-logic/tableaux/soundness.tex:42`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:44`; PDF page 84.
 - `TA-OCC-0a01b322c3830d9f` — OLP-0109 / `OLP-0109-S02`; source `content/first-order-logic/tableaux/soundness.tex:49`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:52`; PDF page 84.
 - `TA-OCC-771215b872d8a3df` — OLP-0109 / `OLP-0109-S13`; source `content/first-order-logic/tableaux/soundness.tex:219`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:260`; PDF page 87.
+- `TA-OCC-5b26b195d548d976` — OLP-0124 / `OLP-0124-S03`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:38`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:41`; PDF page pending.
+- `TA-OCC-61f1abc67e102899` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:133`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:161`; PDF page pending.
+- `TA-OCC-1656f06988c16501` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:137`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:164`; PDF page pending.
 
 ## TA-T083 — satisfaction / satisfiable / unsatisfiable
 
@@ -3411,6 +3771,13 @@ Please double-check: **is “நிறைவுறுத்தல் / நிற
 - `TA-OCC-a3f65072cbc5a35a` — OLP-0111 / `OLP-0111-S02`; source `content/first-order-logic/tableaux/soundness-identity.tex:21`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:23`; PDF page 88.
 - `TA-OCC-87c88a906d35e50c` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:30`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:42`; PDF page 89.
 - `TA-OCC-348102d173ff9307` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:30`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:52`; PDF page 89.
+- `TA-OCC-0b5fe48ca95a9c03` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; PDF page pending.
+- `TA-OCC-d38170e0119e8d42` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:26`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:28`; PDF page pending.
+- `TA-OCC-80ce3a80aa91fd8c` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:93`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:103`; PDF page pending.
+- `TA-OCC-4ab0f59eac1b65a9` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:93`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:106`; PDF page pending.
+- `TA-OCC-a641a8e8045334ec` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:93`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:115`; PDF page pending.
+- `TA-OCC-6ab0df893a8b246c` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:126`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:153`; PDF page pending.
+- `TA-OCC-e1f0636b4ab531a9` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:139`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:167`; PDF page pending.
 
 ## TA-T085 — semantic entailment / semantic notions / semantic deduction theorem
 
@@ -3481,6 +3848,7 @@ Please double-check: **is “சீரான பிரதியீடு / உ�
 - `TA-OCC-e2e0bce9749428d8` — OLP-0077 / `OLP-0077-S07`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:88`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:98`; PDF page 25.
 - `TA-OCC-9c96e9eee6be7e1b` — OLP-0091 / `OLP-0091-S06`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:64`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:70`; PDF page 50.
 - `TA-OCC-e9a605c571268bde` — OLP-0105 / `OLP-0105-S06`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:82`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:89`; PDF page 77.
+- `TA-OCC-5bae125431107465` — OLP-0118 / `OLP-0118-S07`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:52`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:62`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -3836,6 +4204,19 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-c2efdefad7c68b1b` — OLP-0109 / `OLP-0109-S01`; source `content/first-order-logic/tableaux/soundness.tex:37`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:38`; PDF page 84.
 - `TA-OCC-b5c9485ffeddddf7` — OLP-0109 / `OLP-0109-S04`; source `content/first-order-logic/tableaux/soundness.tex:67`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:71`; PDF page 85.
 - `TA-OCC-53bc18e41351137d` — OLP-0109 / `OLP-0109-S06`; source `content/first-order-logic/tableaux/soundness.tex:86`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:94`; PDF page 85.
+- `TA-OCC-8ba03e246841ed91` — OLP-0113 / `OLP-0113-S03`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:24`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:31`; PDF page pending.
+- `TA-OCC-01f086a993475994` — OLP-0116 / `OLP-0116-S05`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:97`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:103`; PDF page pending.
+- `TA-OCC-69bf0dd0e79dbf57` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:112`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:132`; PDF page pending.
+- `TA-OCC-bd9a02cb54ad9545` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:112`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:133`; PDF page pending.
+- `TA-OCC-a86c7b8bd47957d0` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:112`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:143`; PDF page pending.
+- `TA-OCC-256cf61cfc747382` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:22`; PDF page pending.
+- `TA-OCC-c17d6f1006881b0b` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:23`; PDF page pending.
+- `TA-OCC-8ff015c117759ad5` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:31`; PDF page pending.
+- `TA-OCC-abbac3fe6e0de244` — OLP-0119 / `OLP-0119-S04`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:46`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:50`; PDF page pending.
+- `TA-OCC-994717e89e64912f` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:83`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:88`; PDF page pending.
+- `TA-OCC-3629e16f3c72627f` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:35`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:39`; PDF page pending.
+- `TA-OCC-c026696645956a31` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:70`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:79`; PDF page pending.
+- `TA-OCC-c279fb0b817ea582` — OLP-0125 / `OLP-0125-S06`; source `content/first-order-logic/axiomatic-deduction/identity.tex:52`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:60`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -3851,6 +4232,11 @@ Alternatives: None recorded.
 
 Please double-check: **is “அடிகோள் / அடிகோள் வார்ப்புரு / அடிகோள் வருவித்தல்” the established India-standard Tamil expression for “axiom / axiom schema / axiomatic derivation” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
 
+- `TA-OCC-3694d9f8b70c4719` — OLP-0010 / `OLP-0010-S09`; source `content/sets-functions-relations/sets/russells-paradox.tex:76`; Tamil `translation/content/sets-functions-relations/sets/russells-paradox.tex:93`; PDF page pending.
+- `TA-OCC-82606417e8792093` — OLP-0013 / `OLP-0013-S03`; source `content/sets-functions-relations/relations/reflections.tex:41`; Tamil `translation/content/sets-functions-relations/relations/reflections.tex:63`; PDF page pending.
+- `TA-OCC-48942652f6cea6e8` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:106`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:148`; PDF page pending.
+- `TA-OCC-b377eeee9a82f1d0` — OLP-0024 / `OLP-0024-S08`; source `content/sets-functions-relations/functions/inverses.tex:107`; Tamil `translation/content/sets-functions-relations/functions/inverses.tex:154`; PDF page pending.
+- `TA-OCC-5a3e364eee10418a` — OLP-0042 / `OLP-0042-S06`; source `content/sets-functions-relations/arithmetization/integers.tex:55`; Tamil `translation/content/sets-functions-relations/arithmetization/integers.tex:105`; PDF page pending.
 - `TA-OCC-b4e49812b0622757` — OLP-0064 / `OLP-0064-S02`; source `content/first-order-logic/proof-systems/introduction.tex:29`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:29`; PDF page 4.
 - `TA-OCC-3d95edd4d74c6750` — OLP-0064 / `OLP-0064-S02`; source `content/first-order-logic/proof-systems/introduction.tex:32`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:31`; PDF page 4.
 - `TA-OCC-155d039d0afada05` — OLP-0064 / `OLP-0064-S02`; source `content/first-order-logic/proof-systems/introduction.tex:32`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:36`; PDF page 4.
@@ -3868,6 +4254,41 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-08b88b72d7098ec9` — OLP-0068 / `OLP-0068-S05`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:67`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:78`; PDF page 11.
 - `TA-OCC-bbf9b03a409007e8` — OLP-0068 / `OLP-0068-S06`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:70`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:82`; PDF page 12.
 - `TA-OCC-dc0c77aee6b16b80` — OLP-0068 / `OLP-0068-S06`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:70`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:89`; PDF page 12.
+- `TA-OCC-34208b8f9a00bdf2` — OLP-0112 / `OLP-0112-S01`; source `content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:1`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:10`; PDF page pending.
+- `TA-OCC-16cb43fc733082c5` — OLP-0112 / `OLP-0112-S01`; source `content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:1`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:11`; PDF page pending.
+- `TA-OCC-b7240592bb9cf34b` — OLP-0113 / `OLP-0113-S02`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:18`; PDF page pending.
+- `TA-OCC-830b28f3592e128f` — OLP-0113 / `OLP-0113-S03`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:31`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:35`; PDF page pending.
+- `TA-OCC-c0c2a24eaf63a83b` — OLP-0113 / `OLP-0113-S04`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:38`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:43`; PDF page pending.
+- `TA-OCC-316da78b93dc7b9a` — OLP-0113 / `OLP-0113-S07`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:55`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:65`; PDF page pending.
+- `TA-OCC-719fe8561d5d7ca6` — OLP-0113 / `OLP-0113-S07`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:58`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:68`; PDF page pending.
+- `TA-OCC-dd94aab658844784` — OLP-0113 / `OLP-0113-S09`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:72`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:87`; PDF page pending.
+- `TA-OCC-4c128feedffa792d` — OLP-0114 / `OLP-0114-S01`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:14`; PDF page pending.
+- `TA-OCC-ce2bb03b85fc7f6b` — OLP-0114 / `OLP-0114-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:17`; PDF page pending.
+- `TA-OCC-f48aa78982a2cc9a` — OLP-0114 / `OLP-0114-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:16`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:18`; PDF page pending.
+- `TA-OCC-c15beb9552d1170b` — OLP-0115 / `OLP-0115-S01`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:12`; PDF page pending.
+- `TA-OCC-bcfd48e19e7a4af0` — OLP-0115 / `OLP-0115-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:13`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:15`; PDF page pending.
+- `TA-OCC-f493e73c2a2e6efc` — OLP-0115 / `OLP-0115-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:14`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:16`; PDF page pending.
+- `TA-OCC-cb101c71edc74328` — OLP-0116 / `OLP-0116-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:20`; PDF page pending.
+- `TA-OCC-8242c5556934a634` — OLP-0116 / `OLP-0116-S03`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:43`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:50`; PDF page pending.
+- `TA-OCC-5b621cc8f1ed9201` — OLP-0116 / `OLP-0116-S04`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:58`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:63`; PDF page pending.
+- `TA-OCC-ee20f1f06d2801f3` — OLP-0116 / `OLP-0116-S08`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:122`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:131`; PDF page pending.
+- `TA-OCC-24ce24bc2fa07e0e` — OLP-0118 / `OLP-0118-S08`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:76`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:87`; PDF page pending.
+- `TA-OCC-c828e80fdb3a4757` — OLP-0119 / `OLP-0119-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:20`; PDF page pending.
+- `TA-OCC-234f823fb5b61525` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:67`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:72`; PDF page pending.
+- `TA-OCC-7267950277f2603f` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:68`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:73`; PDF page pending.
+- `TA-OCC-9a1e19e3dd5d8694` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:78`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:83`; PDF page pending.
+- `TA-OCC-1e85c5fc5474b089` — OLP-0122 / `OLP-0122-S02`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:18`; PDF page pending.
+- `TA-OCC-1f501e4b2a296cd3` — OLP-0123 / `OLP-0123-S01`; source `content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:1`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:18`; PDF page pending.
+- `TA-OCC-9b33d3cc8d8bc2b5` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:18`; PDF page pending.
+- `TA-OCC-971dfb30be9f4b8d` — OLP-0124 / `OLP-0124-S03`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:35`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:38`; PDF page pending.
+- `TA-OCC-089cb613c51be42f` — OLP-0124 / `OLP-0124-S04`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:42`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:46`; PDF page pending.
+- `TA-OCC-902d8ae7bfa7d2e1` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:62`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:70`; PDF page pending.
+- `TA-OCC-0c43c26d6a25e06e` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:63`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:72`; PDF page pending.
+- `TA-OCC-481e86671d21579e` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:73`; PDF page pending.
+- `TA-OCC-6b78ee9f39bba67f` — OLP-0125 / `OLP-0125-S02`; source `content/first-order-logic/axiomatic-deduction/identity.tex:14`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:15`; PDF page pending.
+- `TA-OCC-8222c2010c9f7167` — OLP-0125 / `OLP-0125-S02`; source `content/first-order-logic/axiomatic-deduction/identity.tex:14`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:17`; PDF page pending.
+- `TA-OCC-e99d8dc40da6bce8` — OLP-0125 / `OLP-0125-S03`; source `content/first-order-logic/axiomatic-deduction/identity.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:20`; PDF page pending.
+- `TA-OCC-2237f104de385595` — OLP-0125 / `OLP-0125-S04`; source `content/first-order-logic/axiomatic-deduction/identity.tex:27`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:31`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -4502,6 +4923,29 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-cd6ea927f19ad0d8` — OLP-0111 / `OLP-0111-S02`; source `content/first-order-logic/tableaux/soundness-identity.tex:18`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:31`; PDF page 89.
 - `TA-OCC-a1e160d1a35693c2` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:30`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:42`; PDF page 89.
 - `TA-OCC-51f33f8e698cc4b7` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:30`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:52`; PDF page 89.
+- `TA-OCC-77ceb031c5c92f58` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:22`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; PDF page pending.
+- `TA-OCC-53235eccaff16cae` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:23`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:22`; PDF page pending.
+- `TA-OCC-44e88ecde00b5be7` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:23`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:25`; PDF page pending.
+- `TA-OCC-b54f65e759061841` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:23`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:26`; PDF page pending.
+- `TA-OCC-10bfea49d3c1f2d9` — OLP-0120 / `OLP-0120-S05`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:54`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:62`; PDF page pending.
+- `TA-OCC-60d8b91c6b984e9c` — OLP-0121 / `OLP-0121-S01`; source `content/first-order-logic/axiomatic-deduction/provability-consistency.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-consistency.tex:17`; PDF page pending.
+- `TA-OCC-8d34bacfb09278de` — OLP-0122 / `OLP-0122-S02`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:21`; PDF page pending.
+- `TA-OCC-17edba962f674845` — OLP-0123 / `OLP-0123-S01`; source `content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:6`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:19`; PDF page pending.
+- `TA-OCC-539f093482c40823` — OLP-0124 / `OLP-0124-S01`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:14`; PDF page pending.
+- `TA-OCC-fd0b8cc3d2f988d1` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:19`; PDF page pending.
+- `TA-OCC-4dfed6547c13d91d` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:30`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:28`; PDF page pending.
+- `TA-OCC-dbea3066dd550f2b` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:30`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:33`; PDF page pending.
+- `TA-OCC-70600f4a2b05500c` — OLP-0124 / `OLP-0124-S04`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:41`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:49`; PDF page pending.
+- `TA-OCC-972cdb99accab13b` — OLP-0124 / `OLP-0124-S05`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:54`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:61`; PDF page pending.
+- `TA-OCC-1f8ad3707ca3dc32` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:103`; PDF page pending.
+- `TA-OCC-6df2218c51a0bdf9` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:106`; PDF page pending.
+- `TA-OCC-1d1cb506ca18a4df` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:115`; PDF page pending.
+- `TA-OCC-fd722e0cd7858add` — OLP-0124 / `OLP-0124-S09`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:115`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:140`; PDF page pending.
+- `TA-OCC-af5dd56abac8d1c4` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:125`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:153`; PDF page pending.
+- `TA-OCC-f2ad0f948597864c` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:132`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:160`; PDF page pending.
+- `TA-OCC-7ebac98f0079735b` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:132`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:162`; PDF page pending.
+- `TA-OCC-411fe65c26abc593` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:132`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:166`; PDF page pending.
+- `TA-OCC-653b68f602be2f62` — OLP-0124 / `OLP-0124-S11`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:132`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:167`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -4532,6 +4976,8 @@ Please double-check: **is “முரணின்மை / முரணுடை
 - `TA-OCC-df6b993fc270a814` — OLP-0105 / `OLP-0105-S01`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:17`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:17`; PDF page 76.
 - `TA-OCC-557c8ab9432865bd` — OLP-0105 / `OLP-0105-S04`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:53`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:58`; PDF page 76.
 - `TA-OCC-39ce6bf35937c128` — OLP-0106 / `OLP-0106-S01`; source `content/first-order-logic/tableaux/provability-consistency.tex:3`; Tamil `translation/content/first-order-logic/tableaux/provability-consistency.tex:14`; PDF page 78.
+- `TA-OCC-84facde06ccba2ca` — OLP-0118 / `OLP-0118-S05`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:38`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:44`; PDF page pending.
+- `TA-OCC-34925909178b5c7d` — OLP-0121 / `OLP-0121-S01`; source `content/first-order-logic/axiomatic-deduction/provability-consistency.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-consistency.tex:14`; PDF page pending.
 
 ## TA-T096 — quantifier
 
@@ -4571,6 +5017,17 @@ Please double-check: **is “அளவையடை” the established India-stan
 - `TA-OCC-88eb9c08c6c267f5` — OLP-0108 / `OLP-0108-S01`; source `content/first-order-logic/tableaux/provability-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/tableaux/provability-quantifiers.tex:11`; PDF page 82.
 - `TA-OCC-c94c9f2ed3c8810d` — OLP-0109 / `OLP-0109-S09`; source `content/first-order-logic/tableaux/soundness.tex:126`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:150`; PDF page 85.
 - `TA-OCC-35ca162d56692527` — OLP-0109 / `OLP-0109-S09`; source `content/first-order-logic/tableaux/soundness.tex:126`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:163`; PDF page 85.
+- `TA-OCC-7a82c18c62eadf82` — OLP-0112 / `OLP-0112-S02`; source `content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:16`; PDF page pending.
+- `TA-OCC-4480271202071998` — OLP-0112 / `OLP-0112-S02`; source `content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:20`; PDF page pending.
+- `TA-OCC-48b8f3e3427f5f56` — OLP-0112 / `OLP-0112-S02`; source `content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex:21`; PDF page pending.
+- `TA-OCC-2b8f063dabf82f7c` — OLP-0115 / `OLP-0115-S01`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:12`; PDF page pending.
+- `TA-OCC-b24a846ebd1a5950` — OLP-0115 / `OLP-0115-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:13`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:15`; PDF page pending.
+- `TA-OCC-fafd727fffc543bf` — OLP-0115 / `OLP-0115-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:14`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:16`; PDF page pending.
+- `TA-OCC-eff2e1664ee11e9a` — OLP-0115 / `OLP-0115-S03`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:23`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:26`; PDF page pending.
+- `TA-OCC-f1b3926ec279ebe5` — OLP-0117 / `OLP-0117-S01`; source `content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:11`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:12`; PDF page pending.
+- `TA-OCC-1eaf4fdae2ba410b` — OLP-0120 / `OLP-0120-S01`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:12`; PDF page pending.
+- `TA-OCC-365840a773987e2f` — OLP-0123 / `OLP-0123-S01`; source `content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:15`; PDF page pending.
+- `TA-OCC-c4df83042d03958d` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:102`; PDF page pending.
 
 ## TA-T097 — antecedent / succedent / end-sequent
 
@@ -4611,6 +5068,9 @@ Please double-check: **is “முன்தொடர் / பின்தொட
 - `TA-OCC-6d1ea86934ec73cc` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:216`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:249`; PDF page 58.
 - `TA-OCC-ecf3a0bb3c6b46f9` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:244`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:280`; PDF page 59.
 - `TA-OCC-9ec391fabb10cd41` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:23`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:39`; PDF page 61.
+- `TA-OCC-09d166b907e4af92` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:112`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:142`; PDF page pending.
+- `TA-OCC-1122c2e45af36b60` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:54`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:61`; PDF page pending.
+- `TA-OCC-bfca981ff64e99fb` — OLP-0125 / `OLP-0125-S06`; source `content/first-order-logic/axiomatic-deduction/identity.tex:42`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:60`; PDF page pending.
 
 ## TA-T098 — logical rule / structural rule / weakening / contraction / exchange / cut
 
@@ -4762,6 +5222,7 @@ Please double-check: **is “தனிமாறி / தனிமாறி ந�
 - `TA-OCC-433b3f7ea7e0e2c3` — OLP-0104 / `OLP-0104-S13`; source `content/first-order-logic/tableaux/proving-things-quant.tex:244`; Tamil `translation/content/first-order-logic/tableaux/proving-things-quant.tex:266`; PDF page 75.
 - `TA-OCC-640a5b6414ef8ad3` — OLP-0104 / `OLP-0104-S14`; source `content/first-order-logic/tableaux/proving-things-quant.tex:260`; Tamil `translation/content/first-order-logic/tableaux/proving-things-quant.tex:285`; PDF page 75.
 - `TA-OCC-baf4b80cfb9aa757` — OLP-0104 / `OLP-0104-S15`; source `content/first-order-logic/tableaux/proving-things-quant.tex:282`; Tamil `translation/content/first-order-logic/tableaux/proving-things-quant.tex:309`; PDF page 75.
+- `TA-OCC-674426d9afd3bfb1` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:41`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:45`; PDF page pending.
 
 ## TA-T100 — variable / constant symbol / closed term / main operator
 
@@ -4871,6 +5332,13 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-aa5ccc4d37f70ffb` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:34`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:45`; PDF page 89.
 - `TA-OCC-41674cdeb3889643` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:34`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:49`; PDF page 89.
 - `TA-OCC-9d5d5fdd3ce003b7` — OLP-0111 / `OLP-0111-S03`; source `content/first-order-logic/tableaux/soundness-identity.tex:34`; Tamil `translation/content/first-order-logic/tableaux/soundness-identity.tex:52`; PDF page 89.
+- `TA-OCC-1417f9bba8b5a0a5` — OLP-0123 / `OLP-0123-S02`; source `content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:22`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-quantifiers.tex:25`; PDF page pending.
+- `TA-OCC-cb8b526739c88a73` — OLP-0124 / `OLP-0124-S04`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:41`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:53`; PDF page pending.
+- `TA-OCC-e85d8ac72f37e0fe` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:90`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:100`; PDF page pending.
+- `TA-OCC-b9d92e1162a1258a` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:104`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:115`; PDF page pending.
+- `TA-OCC-39402088c8e5e400` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:104`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:119`; PDF page pending.
+- `TA-OCC-a83d1d15e2ed8c13` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:104`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:126`; PDF page pending.
+- `TA-OCC-0b0747e6e6f0edd5` — OLP-0125 / `OLP-0125-S05`; source `content/first-order-logic/axiomatic-deduction/identity.tex:38`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:45`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -4934,6 +5402,32 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-9361d7b1aaafc2b8` — OLP-0105 / `OLP-0105-S10`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:162`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:173`; PDF page 78.
 - `TA-OCC-c514d70f0dc9adb4` — OLP-0106 / `OLP-0106-S01`; source `content/first-order-logic/tableaux/provability-consistency.tex:15`; Tamil `translation/content/first-order-logic/tableaux/provability-consistency.tex:16`; PDF page 78.
 - `TA-OCC-226de089aa538518` — OLP-0107 / `OLP-0107-S01`; source `content/first-order-logic/tableaux/provability-propositional.tex:19`; Tamil `translation/content/first-order-logic/tableaux/provability-propositional.tex:20`; PDF page 80.
+- `TA-OCC-0e7fa93f960974df` — OLP-0113 / `OLP-0113-S03`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:24`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:28`; PDF page pending.
+- `TA-OCC-3abf82b6f495758c` — OLP-0113 / `OLP-0113-S10`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:83`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:99`; PDF page pending.
+- `TA-OCC-9748387865c9a558` — OLP-0113 / `OLP-0113-S11`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:89`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:108`; PDF page pending.
+- `TA-OCC-7d74729f413250df` — OLP-0113 / `OLP-0113-S11`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:90`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:108`; PDF page pending.
+- `TA-OCC-26dbb5bc578adee2` — OLP-0118 / `OLP-0118-S01`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:13`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:14`; PDF page pending.
+- `TA-OCC-0a2741c00a88cbcf` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:21`; PDF page pending.
+- `TA-OCC-38fa89bb3f4bfd11` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:23`; PDF page pending.
+- `TA-OCC-7b1f1a5856a10b1c` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:23`; PDF page pending.
+- `TA-OCC-0f0981d8e9e4232e` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:26`; PDF page pending.
+- `TA-OCC-8992dfdf42197e6d` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:26`; PDF page pending.
+- `TA-OCC-b2c98bbdc21261ee` — OLP-0118 / `OLP-0118-S03`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:26`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:30`; PDF page pending.
+- `TA-OCC-688a4a57b9bf1a34` — OLP-0118 / `OLP-0118-S04`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:32`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:39`; PDF page pending.
+- `TA-OCC-bc3e374e6e8bf0d1` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:112`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:128`; PDF page pending.
+- `TA-OCC-90c3cfdb5ddfab6d` — OLP-0119 / `OLP-0119-S01`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:17`; PDF page pending.
+- `TA-OCC-b00668e2cb7d35f9` — OLP-0119 / `OLP-0119-S04`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:47`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:51`; PDF page pending.
+- `TA-OCC-f9db610884564cb7` — OLP-0119 / `OLP-0119-S05`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:49`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:54`; PDF page pending.
+- `TA-OCC-6d9f2b60e50c1eb1` — OLP-0119 / `OLP-0119-S07`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:98`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:104`; PDF page pending.
+- `TA-OCC-ab0d54cab60fbe7e` — OLP-0119 / `OLP-0119-S08`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:100`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:108`; PDF page pending.
+- `TA-OCC-b95a9d3e4a6e35d4` — OLP-0120 / `OLP-0120-S01`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:12`; PDF page pending.
+- `TA-OCC-4cabd09ac179688c` — OLP-0120 / `OLP-0120-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:13`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:15`; PDF page pending.
+- `TA-OCC-9b20136a5618bb80` — OLP-0121 / `OLP-0121-S01`; source `content/first-order-logic/axiomatic-deduction/provability-consistency.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-consistency.tex:16`; PDF page pending.
+- `TA-OCC-933cff150309a023` — OLP-0122 / `OLP-0122-S02`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:16`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:18`; PDF page pending.
+- `TA-OCC-e0cf04f3b8572e6b` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:84`; PDF page pending.
+- `TA-OCC-b71bfebca5aa0253` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:85`; PDF page pending.
+- `TA-OCC-3a9ca1e22baeacc1` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:95`; PDF page pending.
+- `TA-OCC-72b4e96f620e4c42` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:129`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -4951,6 +5445,9 @@ Please double-check: **is “செல்லுபடியான தொடர�
 
 - `TA-OCC-ee64ebcc13ac3d7b` — OLP-0060 / `OLP-0060-S06`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:128`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:136`; PDF page pending.
 - `TA-OCC-8f7fb2683ff5dccc` — OLP-0081 / `OLP-0081-S08`; source `content/first-order-logic/sequent-calculus/soundness.tex:191`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:203`; PDF page 32.
+- `TA-OCC-da3412aa4da42425` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:54`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:88`; PDF page pending.
+- `TA-OCC-a4d91e262fe7f1dd` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:35`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:39`; PDF page pending.
+- `TA-OCC-8fa9be491bc4ca28` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:70`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:79`; PDF page pending.
 
 ## TA-T103 — substitutability of identicals / Leibniz's Law / identity inference rule
 
@@ -4971,6 +5468,69 @@ Please double-check: **is “ஒன்றானவற்றின் பிர�
 - `TA-OCC-57cdeb94ea69b2d5` — OLP-0096 / `OLP-0096-S02`; source `content/first-order-logic/natural-deduction/identity.tex:36`; Tamil `translation/content/first-order-logic/natural-deduction/identity.tex:50`; PDF page 60.
 - `TA-OCC-154a4cd89c5cdf4e` — OLP-0110 / `OLP-0110-S02`; source `content/first-order-logic/tableaux/identity.tex:41`; Tamil `translation/content/first-order-logic/tableaux/identity.tex:55`; PDF page 88.
 - `TA-OCC-541b41ee5f000922` — OLP-0110 / `OLP-0110-S02`; source `content/first-order-logic/tableaux/identity.tex:41`; Tamil `translation/content/first-order-logic/tableaux/identity.tex:55`; PDF page 88.
+
+## TA-T104 — modus ponens
+
+Chosen rendering: **மோடஸ் போனென்ஸ்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked Tamil logic original supports inference, premises and conclusion, and SCERT fixes the conditional's antecedent/consequent structure, but neither source supplies an exact Tamil headword for modus ponens. The edition transparently transliterates the internationally used Latin name and states the complete B, B→A therefore A rule at every defining locus.
+
+Authority basis: TA-IL1967-P112-113-INFERENCE (checked_supports); TA-SC12V2-P255-CONDITIONAL (checked_context_only); TA-T104-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “மோடஸ் போனென்ஸ்” the established India-standard Tamil expression for “modus ponens” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-ffb2ed3253b3d98e` — OLP-0068 / `OLP-0068-S02`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:38`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:44`; PDF page pending.
+- `TA-OCC-c12f85bbc64ddd78` — OLP-0113 / `OLP-0113-S09`; source `content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:77`; Tamil `translation/content/first-order-logic/axiomatic-deduction/rules-and-proofs.tex:92`; PDF page pending.
+- `TA-OCC-e1da1471fda3ef0d` — OLP-0114 / `OLP-0114-S03`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:36`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:39`; PDF page pending.
+- `TA-OCC-40c7f64dae99b6eb` — OLP-0114 / `OLP-0114-S04`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:41`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-propositional.tex:45`; PDF page pending.
+- `TA-OCC-b8ef880cde135887` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:127`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:142`; PDF page pending.
+- `TA-OCC-b9a22768b3a20c9b` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:27`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:30`; PDF page pending.
+- `TA-OCC-4aa6f0a71eec91a6` — OLP-0122 / `OLP-0122-S02`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:21`; PDF page pending.
+
+## TA-T105 — deduction theorem / generalized deduction theorem
+
+Chosen rendering: **கழித்தல் தேற்றம் / பொதுமைப்படுத்திய கழித்தல் தேற்றம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The existing propositional-semantics translation already uses பொருண்மைக் கழித்தல் தேற்றம் for the semantic counterpart. The syntactic theorem will be called கழித்தல் தேற்றம் and immediately states both directions between Γ∪{A}⊢B and Γ⊢A→B; the quantified generalization states its exact freshness condition. No exact modern Tamil headword was found in the checked passages.
+
+Authority basis: TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-SC12V2-P255-CONDITIONAL (checked_context_only); TA-T105-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கழித்தல் தேற்றம் / பொதுமைப்படுத்திய கழித்தல் தேற்றம்” the established India-standard Tamil expression for “deduction theorem / generalized deduction theorem” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-4d6c1517b413e01d` — OLP-0062 / `OLP-0062-S04`; source `content/propositional-logic/syntax-and-semantics/semantic-notions.tex:83`; Tamil `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:88`; PDF page pending.
+- `TA-OCC-bce03402a9cb8c60` — OLP-0119 / `OLP-0119-S01`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:16`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:17`; PDF page pending.
+- `TA-OCC-082b2c9890366e6a` — OLP-0119 / `OLP-0119-S05`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:49`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:54`; PDF page pending.
+- `TA-OCC-9044a1a03c1a0e90` — OLP-0119 / `OLP-0119-S07`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:98`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:104`; PDF page pending.
+- `TA-OCC-910de1703776268e` — OLP-0120 / `OLP-0120-S01`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:11`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:12`; PDF page pending.
+- `TA-OCC-ba90851ce7412d9a` — OLP-0120 / `OLP-0120-S02`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:13`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:15`; PDF page pending.
+- `TA-OCC-e26545a9297725ec` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:84`; PDF page pending.
+- `TA-OCC-ec3b9008bec40587` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:85`; PDF page pending.
+- `TA-OCC-9a5c7340b8d9ea37` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:95`; PDF page pending.
+- `TA-OCC-4035550b4e0e3ec4` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:129`; PDF page pending.
+
+## TA-T106 — free for (capture-avoiding substitutability)
+
+Chosen rendering: **இடைநிறுத்தத்தக்கது**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: No exact Tamil headword for the technical predicate was found in the checked sources. The edition uses இடைநிறுத்தத்தக்கது consistently with its existing சொல் இடைநிறுத்தல் terminology; the defining clause says precisely that no free occurrence of the replaced variable lies under a quantifier binding a variable in the substituting term.
+
+Authority basis: TA-TVA-D0412-QUANTIFIER (checked_supports); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports); TA-T106-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “இடைநிறுத்தத்தக்கது” the established India-standard Tamil expression for “free for (capture-avoiding substitutability)” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-d492dde1c79d471c` — OLP-0124 / `OLP-0124-S04`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:44`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:48`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

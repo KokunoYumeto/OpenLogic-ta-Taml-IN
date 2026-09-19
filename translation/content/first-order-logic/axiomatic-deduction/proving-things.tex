@@ -1,0 +1,143 @@
+% SEGMENT OLP-0116-S01
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: proving-things
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{pro}}
+      {\olfileid{pl}{axd}{pro}}
+
+\olsection{\usetoken{P}{derivation} எடுத்துக்காட்டுகள்}
+
+
+% SEGMENT OLP-0116-S02
+\begin{ex}
+$(\lnot !D \lor !E) \lif (!D \lif !E)$ என்பதை நிறுவ விரும்புகிறோம்
+என்க. இது நமது அடிகோள்களில் எதனுடைய நிகழ்வும் அல்ல என்பது தெளிவு;
+எனவே இதனை !!{derive} செய்ய \MP{} விதியைப் பயன்படுத்த வேண்டும். நமது ஒரே
+விதியான~MP, $!A$ மற்றும் $!A \lif !B$ கொடுக்கப்பட்டால்~$!B$ ஐ
+நியாயப்படுத்த அனுமதிக்கிறது. $!A$ ஐ $\lnot !D$ ஆகவும், $!B$ ஐ $!E$
+ஆகவும், $!C$ ஐ $!D \lif !E$ ஆகவும் கொண்டு \olref[prp]{ax:lor3} ஐப்
+பயன்படுத்துவது ஒரு உத்தியாகும்; அதாவது பின்வரும் நிகழ்வைப் பயன்படுத்தலாம்:
+\[
+(\lnot !D \lif (!D \lif !E)) \lif ((!E \lif (!D \lif !E)) \lif ((\lnot
+!D \lor !E) \lif (!D \lif !E))).
+\]
+ஏன்? MP ஐ இருமுறை பயன்படுத்தினால் நாம் விரும்பும் கடைசிப் பகுதி கிடைக்கும்.
+மேலும், $\lnot !D \lif (!D \lif !E)$ என்பது
+\olref[prp]{ax:lnot2} இன் நிகழ்வு என்றும், $!E \lif (!D \lif !E)$
+என்பது \olref[prp]{ax:lif1} இன் நிகழ்வு என்றும் எளிதாகக் காணலாம். ஆகவே
+நமது !!{derivation}:
+\begin{derivation}
+  1. &  $\lnot !D \lif (!D \lif !E)$ & \olref[prp]{ax:lnot2} \\
+  2. & $(\lnot !D \lif (!D \lif !E)) \lif {}$\\
+  &\qquad $((!E \lif (!D \lif !E)) \lif ((\lnot !D \lor !E) \lif (!D \lif !E)))$ & \olref[prp]{ax:lor3}\\
+  3. & $(!E \lif (!D \lif !E)) \lif ((\lnot !D \lor !E) \lif (!D \lif !E))$ & 1, 2, \MP\\
+  4. & $!E \lif (!D \lif !E)$ & \olref[prp]{ax:lif1}\\
+  5. & $(\lnot !D \lor !E) \lif (!D \lif !E)$ & 3, 4, \MP
+\end{derivation}
+\end{ex}
+
+% SEGMENT OLP-0116-S03
+\begin{ex}\ollabel{ex:identity}
+$!D \lif !D$ இன் !!a{derivation} ஒன்றைக் கண்டுபிடிக்க முயல்வோம். இது ஓர்
+அடிகோளின் நிகழ்வு அல்ல; எனவே இதனை !!{derive} செய்ய \MP{} ஐப் பயன்படுத்த
+வேண்டும். \olref[prp]{ax:lif1} என்பது~$!A \lif !B$ வடிவிலுள்ள ஓர்
+அடிகோள்; அதற்கு~\MP ஐப் பயன்படுத்தலாம். இந்நிலையில் \MP{} ஒரு சரியான
+படியாக நியாயப்படுத்தும் $!B$, நாம் !!{derive} செய்ய விரும்பும்~$!D \lif
+!D$ ஆக இருக்க வேண்டும்; அப்போதுதான் அது பயனுள்ளதாகும். எனவே $!A$ உம்
+$!D$ ஆக இருக்க வேண்டும்; அதாவது \olref[prp]{ax:lif1} இன் பின்வரும்
+நிகழ்வைக் கருதலாம்:
+\[
+!D \lif (!D \lif !D)
+\]
+\MP ஐப் பயன்படுத்த, அதற்குரிய இரண்டாம் எடுகூற்றாகிய~$!A$ ஐயும்
+நியாயப்படுத்த வேண்டும். ஆனால் நமது நிலையில் அது~$!D$ ஆகும்; $!D$ ஐத்
+தனியாக !!{derive} செய்ய இயலாது. எனவே வேறு உத்தி தேவை.
+
+% SEGMENT OLP-0116-S04
+வெறும்~$\lif$ ஐ மட்டும் கொண்ட மற்ற அடிகோள் \olref[prp]{ax:lif2}; அதாவது,
+\[
+(!A \lif (!B \lif !C)) \lif ((!A \lif !B) \lif (!A \lif !C))
+\]
+\MP{} ஐ இருமுறை பயன்படுத்தி கடைசியில் உள்ள உள்ளமை நிபந்தனைக் கூற்றை
+அடையலாம். மீண்டும், நாம் நோக்கும் !!{formula}வான $!A \lif !C$ என்பது
+$!D \lif !D$ ஆக இருக்கும் \olref[prp]{ax:lif2} இன் நிகழ்வை விரும்புகிறோம்
+என்பதே இதன் பொருள். எனவே $!A$ மற்றும் $!C$ இரண்டும்~$!D$. $!A \lif
+(!B \lif !C)$ மற்றும் $!A \lif !B$, அதாவது நமது நிலையில் $!D \lif
+(!B \lif !D)$ மற்றும் $!D \lif !B$, ஆகிய இரண்டும் !!{derivable} ஆகுமாறு
+$!B$ ஐ எவ்வாறு தேர்ந்தெடுப்பது? $!B$ ஐ எவ்வாறு தேர்ந்தெடுத்தாலும்,
+இவற்றில் முதலாவது ஏற்கெனவே \olref[prp]{ax:lif1} இன் நிகழ்வு. $!B$ என்பது
+$(!D \lif !D)$ ஆக இருந்தால், $!D \lif !B$ உம்
+\olref[prp]{ax:lif1} இன் மற்றொரு நிகழ்வாகும். ஆகவே நமது !!{derivation}:
+\begin{derivation}
+  1. & $!D \lif ((!D \lif !D) \lif !D)$ & \olref[prp]{ax:lif1}\\
+  2. & $(!D \lif ((!D \lif !D) \lif !D)) \lif {}$\\
+  & \qquad $((!D \lif (!D \lif !D)) \lif (!D \lif !D))$ & \olref[prp]{ax:lif2}\\
+  3. & $(!D \lif (!D \lif !D)) \lif (!D \lif !D)$ & 1, 2, \MP\\
+  4. & $!D \lif (!D \lif !D)$ & \olref[prp]{ax:lif1}\\
+  5. & $!D \lif !D$ & 3, 4, \MP
+\end{derivation}
+\end{ex}
+
+% SEGMENT OLP-0116-S05
+\begin{ex}\ollabel{ex:chain}
+சில நேரங்களில் வேறு சில !!{formula}s~$\Gamma$ இலிருந்து ஒரு குறிப்பிட்ட
+!!a{formula}வின் !!a{derivation} உள்ளது எனக் காட்ட விரும்புகிறோம்.
+எடுத்துக்காட்டாக, $\Gamma = \{!A \lif !B, !B \lif !C\}$ இலிருந்து
+$!A \lif !C$ ஐ !!{derive} செய்ய முடியும் எனக் காட்டுவோம்.
+\begin{derivation}
+  1. & $!A \lif !B$ & \Hyp\\
+  2. & $!B \lif !C$ & \Hyp\\
+  3. & $(!B \lif !C) \lif (!A \lif (!B \lif !C))$ & \olref[prp]{ax:lif1} \\
+  4. & $!A \lif (!B \lif !C)$ & 2, 3, \MP\\
+  5. & $(!A \lif (!B \lif !C)) \lif {}$\\
+  & \qquad $((!A \lif !B) \lif (!A \lif !C))$ & \olref[prp]{ax:lif2}\\
+  6. & $((!A \lif !B) \lif (!A \lif !C))$ & 4, 5, \MP\\
+  7. & $!A \lif !C$ & 1, 6, \MP
+\end{derivation}
+``கருதுகோள்'' என்பதற்கான ``\Hyp'' குறி உள்ள வரிகள், அந்த வரியிலுள்ள
+!!{formula} ஆனது~$\Gamma$ வின் !!a{element} என்பதைக் காட்டுகின்றன.
+\end{ex}
+
+% SEGMENT OLP-0116-S06
+\begin{prop}
+  \ollabel{prop:chain} $\Gamma \Proves !A \lif !B$ மற்றும் $\Gamma
+  \Proves !B \lif !C$ எனில், $\Gamma \Proves !A \lif !C$.
+\end{prop}
+
+% SEGMENT OLP-0116-S07
+\begin{proof}
+  $\Gamma \Proves !A \lif !B$ மற்றும் $\Gamma \Proves !B \lif !C$
+  என்க. அப்போது~$\Gamma$ இலிருந்து $!A \lif !B$ இன் !!a{derivation}வும்,
+  $\Gamma$ இலிருந்து~$!B \lif !C$ இன் !!a{derivation}வும் உள்ளன. அவற்றைப்
+  பின்னிணைத்து ஒரே !!{derivation} ஆக இணைக்கவும். இப்போது முந்தைய
+  எடுத்துக்காட்டின் !!{derivation} இல் உள்ள வரிகள் 3--7 ஐச் சேர்க்கவும்.
+  புதிய !!{derivation}வின் கடைசி வரியாகிய $!A \lif !C$ இன்
+  !!a{derivation} இது; இது~$\Gamma$ இலிருந்து தொடங்குகிறது. வரி~4 ஐ
+  நியாயப்படுத்தும்போது வரி எண்~2 பற்றிய குறிப்பை~$!B \lif !C$ இன்
+  !!{derivation}வின் கடைசி வரி பற்றிய குறிப்பால் மாற்றலாம்; வரி~7 ஐ
+  நியாயப்படுத்தும்போது வரி எண்~1 பற்றிய குறிப்பை~$!A \lif !B$ இன்
+  !!{derivation}வின் கடைசி வரி பற்றிய குறிப்பால் மாற்றலாம். ஆகவே அந்த
+  நியாயப்படுத்தல்கள் தொடர்ந்து செல்லுபடியாகின்றன.
+\end{proof}
+
+% SEGMENT OLP-0116-S08
+\begin{prob} 
+அடிகோள்களிலிருந்து !!{derivation}s ஐக் காட்சிப்படுத்தி பின்வருவனவற்றைக்
+காட்டுக:
+\begin{enumerate} 
+\item $(!A \land !B) \lif (!B \land !A)$
+\item $((!A \land !B) \lif !C) \lif (!A \lif (!B \lif !C))$
+\item $\lnot(!A \lor !B) \lif \lnot !A$
+\end{enumerate} 
+\end{prob}
+
+
+
+\end{document}
+

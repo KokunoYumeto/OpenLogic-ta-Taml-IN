@@ -1,0 +1,199 @@
+% Part: model-theory
+% Chapter: models-of-arithmetic
+% Section: standard-models
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0193-S01
+
+\olfileid{mod}{mar}{stm}
+\olsection{எண்கணிதத்தின் நிலையான மாதிரிகள்}
+
+எண்கணித மொழி~$\Lang{L_A}$ வெளிப்படையாக எண்களை, குறிப்பாக இயல்
+எண்களைப் பற்றிப் பேசவே நோக்கம்கொண்டுள்ளது. எனவே ``அந்த'' நிலையான
+மாதிரி~$\Struct{N}$ சிறப்பானது: நாம் பேச விரும்பும் மாதிரி அதுவே.
+ஆனால் தருக்கத்தில் கட்டமைப்புப் பண்புகளிலேயே நாம் அடிக்கடி ஆர்வம்
+கொள்கிறோம்; ஓரினமான எந்த இரு !!{structure}s உம் அவற்றைப் பகிர்கின்றன.
+எனவே சற்றுத் தாராளமாக,~$\Struct{N}$ க்கு ஓரினமான எந்த
+!!{structure} ஐயும் ``நிலையானது'' என்று கருதலாம்.
+
+\begin{defn}
+$\Lang{L_A}$ க்கான ஓர் !!{structure},~$\Struct{N}$ க்கு ஓரினமாக
+இருந்தால் \emph{நிலையானது}.
+\end{defn}
+
+\begin{prop}
+\ollabel{prop:standard-domain} !!a{structure}~$\Struct{M}$ நிலையானது
+எனில், அதன் ஆட்களம் நிலையான எண்குறிகளின் மதிப்புகளின் கணம்; அதாவது,
+\[
+\Domain{M} = \Setabs{\Value{\num{n}}{M}}{n \in \Nat}
+\]
+\end{prop}
+
+\begin{proof}
+தெளிவாக, ஒவ்வொரு $\Value{\num{n}}{M} \in \Domain{M}$. ஒவ்வொரு
+$x \in \Domain{M}$ உம் ஏதேனும்~$n$ க்கு
+$\Value{\num{n}}{M}$ உடன் சமம் என்று மட்டுமே காட்ட வேண்டும்.
+$\Struct{M}$ நிலையானது என்பதால் அது~$\Struct{N}$ க்கு ஓரினமானது.
+$g\colon \Nat \to \Domain{M}$ ஓர் ஓரினச்சார்பு என்று கொள்க. அப்போது
+$g(n) = g(\Value{\num{n}}{N}) =
+\Value{\num{n}}{M}$. ஆனால் $g$ !!{surjective} என்பதால், ஒவ்வொரு
+$x \in \Domain{M}$ க்கும் $g(n) = x$ ஆகுமாறு ஓர்~$n
+\in \Nat$ உண்டு.
+\end{proof}
+
+\begin{explain}
+$\Lang{L_A}$ க்கான கட்டமைப்பு~$\Struct{M}$ நிலையானது எனில், அதன்
+!!{domain} இன் எல்லா உறுப்புகளையும் நிலையான எண்குறிகள் $\num{0}$,
+$\num{1}$, $\num{2}$, \dots, அதாவது சொற்கள் $\Obj{0}$, $\Obj{0}'$,
+$\Obj{0}''$ முதலியவற்றால் பெயரிடலாம். இதனால் $\Domain{M}$ இன்
+!!{element}s எண்களாகவே \emph{உள்ளன} என்று பொருளல்ல;~$\Domain{N}$
+இலுள்ள எண்களைத் தனித்தெடுப்பதுபோலவே அவற்றையும் தனித்தெடுக்கலாம்
+என்பதே பொருள்.
+\end{explain}
+
+\begin{prob}
+\olref[mod][mar][stm]{prop:standard-domain} இன் மறுதலை பொய் என்று
+காட்டுக; அதாவது $\Domain{M} =
+\Setabs{\Value{\num{n}}{M}}{n \in \Nat}$ ஆகியும்~$\Struct{N}$ க்கு
+ஓரினமல்லாத !!a{structure}~$\Struct{M}$ ஒன்றின் எடுத்துக்காட்டைத் தருக.
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:thq-standard}
+$\Sat{M}{\Th{Q}}$ மற்றும் $\Domain{M} =
+\Setabs{\Value{\num{n}}{M}}{n
+  \in \Nat}$ எனில், $\Struct{M}$ நிலையானது.
+\end{prop}
+
+\begin{proof}
+$\Struct{M}$ ஆனது~$\Struct{N}$ க்கு ஓரினமானது என்று காட்ட வேண்டும்.
+$g(n) = \Value{\num{n}}{M}$ என வரையறுக்கப்பட்ட சார்பு
+$g\colon \Nat \to \Domain{M}$ ஐக் கருதுக. கருதுகோளின்படி $g$
+!!{surjective}. அது !!{injective} உம் ஆகும்: $n \neq m$ ஆகும்போதெல்லாம்
+$\Th{Q} \Proves
+\eq/[\num{n}][\num{m}]$. எனவே $\Sat{M}{\Th{Q}}$ என்பதால்,
+$n \neq
+m$ ஆகும்போதெல்லாம் $\Sat{M}{\eq/[\num{n}][\num{m}]}$. ஆகவே
+$n \neq m$ எனில், $\Value{\num{n}}{M} \neq
+\Value{\num{m}}{M}$; அதாவது $g(n) \neq g(m)$.
+
+$g$ ஓர் ஓரினச்சார்பு என்றும் சரிபார்க்க வேண்டும்.
+\begin{enumerate}
+\item $\Assign{\Obj{0}}{N} = 0$ என்பதால்,
+  $g(\Assign{\Obj{0}}{N}) = g(0)$. மேலும்~$g$ இன் வரையறைப்படி,
+  $g(0) =
+  \Value{\num{0}}{M}$. ஆனால் $\num{0}$ என்பது $\Obj{0}$ தான்;
+  !!a{constant} ஆக நேரும் ஒரு சொல்லின் மதிப்பு, அந்த !!{structure}
+  அந்த !!{constant} இற்கு ஒதுக்குவதால் கொடுக்கப்படுகிறது; அதாவது,
+  $\Value{\Obj{0}}{M} = \Assign{\Obj{0}}{M}$. எனவே வேண்டியபடி
+  $g(\Assign{\Obj{0}}{N}) = \Assign{\Obj{0}}{M}$.
+\item $\Struct{N}$ இல் $\prime$ ஆனது~$\Nat$ மீதான அடுத்தெண் சார்பு
+  என்பதால், $g(\Assign{\prime}{N}(n)) = g(n+1)$. பிறகு~$g$ இன்
+  வரையறைப்படி, $g(n+1) =
+  \Value{\num{n+1}}{M}$. ஆனால் $\num{n+1}$ உம் $\num{n}'$ உம் ஒரே
+  சொல்; எனவே $\Value{\num{n+1}}{M} =
+  \Value{\num{n}'}{M}$. மதிப்புச் சார்பின் வரையறைப்படி இது
+  $= \Assign{\prime}{M}(\Value{\num{n}}{M})$. மேலும்
+  $\Value{\num{n}}{M} = g(n)$ என்பதால்
+  $g(\Assign{\prime}{N}(n)) =
+  \Assign{\prime}{M}(g(n))$ கிடைக்கிறது.
+\item $\Struct{N}$ இல் $+$ ஆனது~$\Nat$ மீதான கூட்டல் சார்பு என்பதால்,
+  $g(\Assign{+}{N}(n,m)) = g(n+m)$. பிறகு~$g$ இன் வரையறைப்படி,
+  $g(n+m) =
+  \Value{\num{n+m}}{M}$. ஆனால் $\Th{Q} \Proves
+  \num{n+m} = (\num{n} + \num{m})$; எனவே
+  $\Value{\num{n+m}}{M} =
+  \Value{\num{n}+\num{m}}{M}$. மதிப்புச் சார்பின் வரையறைப்படி இது
+  $=
+  \Assign{+}{M}(\Value{\num{n}}{M},\Value{\num{m}}{M})$.
+  $\Value{\num{n}}{M} = g(n)$ மற்றும் $\Value{\num{m}}{M} = g(m)$
+  என்பதால், $g(\Assign{+}{N}(n, m)) =
+  \Assign{+}{M}(g(n), g(m))$ கிடைக்கிறது.
+\item $g(\Assign{\times}{N}(n, m)) =
+  \Assign{\times}{M}(g(n), g(m))$: பயிற்சி.
+\item $\tuple{n,m} \in \Assign{<}{N}$ எனில், எனில் மட்டுமே,
+  $n < m$. $n < m$ எனில், $\Th{Q} \Proves \num{n} < \num{m}$;
+  மேலும் $\Sat{M}{\num{n} <
+  \num{m}}$. ஆகவே
+  $\tuple{\Value{\num{n}}{M}, \Value{\num{m}}{M}} \in
+  \Assign{<}{M}$; அதாவது $\tuple{g(n), g(m)} \in \Assign{<}{M}$.
+  $n
+  \not< m$ எனில், $\Th{Q} \Proves \lnot \num{n} < \num{m}$;
+  அதன் விளைவாக $\Sat/{M}{\num{n} < \num{m}}$. முன்போலவே,
+  $\tuple{g(n), g(m)} \notin \Assign{<}{M}$. இரண்டையும் சேர்த்தால்,
+  $\tuple{n,m} \in \Assign{<}{N}$ எனில், எனில் மட்டுமே,
+  $\tuple{g(n), g(m)} \in
+  \Assign{<}{M}$.
+\end{enumerate}
+\end{proof}
+
+\begin{explain}
+$\Lang{L_A}$ க்கான வேறெந்த !!{structure}~$\Struct{M}$ இன்
+ஆட்களத்திற்கும்~$\Nat$ இலிருந்து ஒரு பொருத்தத்தை வரையறுக்கும் மிக
+வெளிப்படையான வழி சார்பு~$g$; ஏனெனில் அத்தகைய ஒவ்வொரு $\Struct{M}$ உம்
+$\num{0}$, $\num{1}$, $\num{2}$ முதலியவற்றால் பெயரிடப்பட்ட
+!!{element}s ஐக் கொண்டுள்ளது. எனவே~$\Struct{N}$ மெய்யாக்கும்
+$\num{n}$ குறித்த குறைந்தபட்சம் சில அடிப்படைக் கூற்றுகளை
+$\Struct{M}$ உம் அதே வகையில் மெய்யாக்கி, $g$ இருபுற ஒருமைச்சார்பாகவும்
+இருந்தால், $g$ ஓர் ஓரினச்சார்பாக மாறுவது வியப்பல்ல. உண்மையில்,
+$\num{n}$ குறிகள் பெயரிடுபவற்றைத் தவிர வேறு !!{element}s எதையும்
+$\Domain{M}$ கொண்டிருக்காவிட்டால், அது மட்டுமே ஓரினச்சார்பு.
+\end{explain}
+
+\begin{prop}
+\ollabel{prop:thq-unique-iso} $\Struct{M}$ நிலையானது எனில்,
+\olref{prop:thq-standard} இன் நிரூபிப்பிலுள்ள $g$ தான்
+$\Struct{N}$ இலிருந்து~$\Struct{M}$ க்கான ஒரே ஓரினச்சார்பு.
+\end{prop}
+
+\begin{proof}
+$h\colon \Nat \to \Domain{M}$ ஆனது $\Struct{N}$ மற்றும்~$\Struct{M}$
+இடையிலான ஓரினச்சார்பு என்று கொள்க. $n$ மீது தொகுத்தறிந்து
+$g = h$ என்று காட்டுகிறோம். $n = 0$ எனில்,~$g$ இன் வரையறைப்படி
+$g(0) = \Assign{\Obj{0}}{M}$. ஆனால் $h$ ஓர் ஓரினச்சார்பு என்பதால்,
+$h(0) =
+h(\Assign{\Obj{0}}{N}) =\Assign{\Obj{0}}{M}$; எனவே $g(0) = h(0)$.
+
+இப்போது $n+1$ நிலையைப் பார்க்க:
+\begin{align*}
+  g(n+1) & = \Value{\num{n+1}}{M} \text{ by definition of~$g$}\\
+  & = \Value{\num{n}'}{M} \text{ since $\num{n+1}\ident \num{n}'$}\\
+  & = \Assign{\prime}{M}(\Value{\num{n}}{M})
+    \text{ by definition of $\Value{t'}{M}$}\\
+  & = \Assign{\prime}{M}(g(n))  \text{ by definition of~$g$}\\
+  & = \Assign{\prime}{M}(h(n)) \text{ by induction hypothesis}\\
+  & = h(\Assign{\prime}{N}(n)) \text{ since $h$ is an isomorphism}\\
+  & = h(n+1)
+\end{align*}
+\end{proof}
+
+\begin{explain}
+எந்த !!{denumerable} கணம்~$M$ க்கும்,~$\Nat$ மற்றும் $M$ இடையே
+!!a{bijection} ஒன்று உண்டு; எனவே ஒவ்வோர் அத்தகைய கணம்~$M$ உம் ஒரு
+நிலையான மாதிரி~$\Struct{M}$ இன் சாத்தியமான !!{domain}. உண்மையில்,
+$z \in
+M$ என்ற ஒரு பொருளையும் ஏற்ற சார்பு $s$ ஒன்றையும்
+$\Assign{\Obj{0}}{M}$ மற்றும் $\Assign{\prime}{M}$ ஆகத்
+தேர்ந்தெடுத்தவுடன், $+$, $\times$, $<$ ஆகியவற்றின் பொருள்கோள்களும்
+தீர்மானிக்கப்பட்டுவிடுகின்றன. !!{injective} ஆகவும் !!{surjective}
+ஆகவும் உள்ள சார்புகள்~$s\colon M \to M \setminus \{z\}$ மட்டுமே
+நிலையான மாதிரியில்~$\Assign{\prime}{M}$ ஆக ஏற்றவை. $s$ இன் வீச்சு
+~$z$ ஐக் கொண்டிருக்க முடியாது; இல்லையெனில்
+$\lforall[x][\eq/[\Obj 0][x']]$ பொய்யாகும். அந்த !!{sentence}
+~$\Struct{N}$ இல் மெய்; எனவே $\Struct{M}$ உம் அதை மெய்யாக்க வேண்டும்.
+~$\Struct{N}$ இலுள்ள அடுத்தெண் சார்பு~$\Assign{\prime}{N}$
+உட்செலுத்துவதாக இருப்பதால், சார்பு~$s$ உம் !!{injective} ஆக இருக்க வேண்டும்;
+$\Assign{\prime}{N}$ !!{injective} என்பது~$\Struct{N}$ இல் மெய்யான
+!!a{sentence} ஆல் வெளிப்படுத்தப்படுகிறது. அது !!{surjective} ஆகவும்
+இருக்க வேண்டும்; இல்லையெனில்~$s$ இன் வரையறைக்களத்தில் இல்லாத
+$x \in M \setminus \{z\}$ ஒன்று இருக்கும்; அதாவது !!{sentence}
+$\lforall[x][(\eq[x][\Obj 0] \lor
+\lexists[y][\eq[y'][x]])]$ ஆனது~$\Struct{M}$ இல் பொய்யாகும்---ஆனால்
+அது~$\Struct{N}$ இல் மெய்.
+\end{explain}
+
+
+\end{document}

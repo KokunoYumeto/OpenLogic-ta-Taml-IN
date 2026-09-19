@@ -1,0 +1,142 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: isomorphism
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0187-S01
+
+\olfileid{mod}{bas}{iso}
+\olsection{ஓரினக்கட்டமைப்புகள்}
+
+முதல்வரிசை !!{structure}s இரண்டு வழிகளில் ஒத்திருக்கலாம். அவை ஒரே
+!!{sentence}s ஐ மெய்யாக்குவது ஓர் ஒற்றுமை. அத்தகைய !!{structure}s
+ஐ \emph{அடிப்படையாகச் சமானமானவை} என்று அழைக்கிறோம். ஆனால் ஒரே
+!!{sentence}s ஐ மெய்யாக்கினாலும் கட்டமைப்புகள் மிகவும்
+வேறுபட்டிருக்கலாம்---எடுத்துக்காட்டாக, ஒன்று !!{enumerable} ஆகவும்
+மற்றொன்று அவ்வாறு இல்லாமலும் இருக்கலாம். ஏனெனில், மொழி போதுமான
+செறிவுடையதாக இல்லாததாலோ L\"owenheim--Skolem தேற்றம் போன்ற
+முதல்வரிசைத் தருக்கத்தின் அடிப்படைக் கட்டுப்பாடுகளாலோ, !!a{structure}
+இன் பல பண்புகளை முதல்வரிசை மொழிகளில் வெளிப்படுத்த இயலாது.
+எனவே !!{structure}s இன் பொருட்கள் மட்டும் வேறுபட்டு, அவற்றின்
+கட்டமைப்புப் பண்புகள் வேறுபடாமல், அடிப்படையில் அவை ஒன்றாகவே இருப்பது
+இன்னொரு கண்டிப்பான ஒற்றுமை. இதைத் துல்லியமாக்கும் வழியே
+\emph{ஓரினச்சார்பு} என்ற கருத்துரு.
+
+\begin{defn}
+\ollabel{defn:elem-equiv}
+ஒரே !!{language}~$\Lang{L}$ க்கான இரு !!{structure}s
+$\Struct{M}$ மற்றும் $\Struct M'$ கொடுக்கப்பட்டால்,~$\Lang{L}$ இன்
+ஒவ்வொரு !!{sentence}~$!A$ க்கும், $\Sat{M}{!A}$ எனில், எனில் மட்டுமே,
+$\Sat{M'}{!A}$ என்றால், $\Struct{M}$ ஆனது $\Struct M'$ க்கு
+\emph{அடிப்படையாகச் சமானமானது} என்று கூறி, $\Struct{M} \equiv
+\Struct M'$ என எழுதுகிறோம்.
+\end{defn}
+
+\begin{defn}
+\ollabel{defn:isomorphism} ஒரே !!{language}~$\Lang L$ க்கான இரு
+!!{structure}s $\Struct{M}$ மற்றும் $\Struct M'$ கொடுக்கப்பட்டால்,
+பின்வருவனவற்றை நிறைவுறுத்தும் சார்பு $h \colon
+\Domain{M} \to \Domain{M'}$ ஒன்று இருந்தால், எனில் மட்டுமே,
+$\Struct{M}$ ஆனது~$\Struct M'$ க்கு \emph{ஓரினமானது} என்று கூறி,
+$\Struct{M} \simeq \Struct M'$ என எழுதுகிறோம்:
+\begin{enumerate}
+\item $h$ !!{injective}: $h(x) =
+  h(y)$ எனில் $x = y$;
+\item $h$ !!{surjective}: ஒவ்வொரு $y \in \Domain{M'}$ க்கும்,
+  $h(x) = y$ ஆகுமாறு $x \in \Domain{M}$ ஒன்று உண்டு;
+\item \ollabel{defn:iso-const}ஒவ்வொரு !!{constant} $c$ க்கும்:
+  $h(\Assign{c}{M}) = \Assign{c}{M'}$;
+\item \ollabel{defn:iso-pred}ஒவ்வொரு $n$-இட !!{predicate}~$P$ க்கும்:
+  \[
+  \tuple{a_1, \dots, a_n}\in \Assign{P}{M} \quad\text{iff}\quad
+  \tuple{h(a_1), \dots, h(a_n)} \in \Assign{P}{M'};
+  \]
+\item \ollabel{defn:iso-func}ஒவ்வொரு $n$-இட !!{function} $f$ க்கும்:
+  \[
+  h(\Assign{f}{M}(a_1, \dots, a_n)) =
+  \Assign{f}{M'}(h(a_1), \dots, h(a_n)).
+  \]
+\end{enumerate}
+\end{defn}
+
+\begin{thm}
+\ollabel{thm:isom}
+$\Struct{M} \iso \Struct M'$ எனில் $\Struct{M} \elemequiv
+\Struct{M'}$.
+\end{thm}
+
+\begin{proof}
+$\Struct{M}$ இலிருந்து $\Struct M'$ க்கான ஓரினச்சார்பு $h$ ஆகட்டும்.
+எந்த ஒதுக்கீடு~$s$ க்கும், $h \circ s$ என்பது $h$ மற்றும் $s$ இன்
+சேர்ப்பு; அதாவது $(h \circ s)(x) = h(s(x))$ ஆகுமாறு
+$\Struct{M'}$ இலுள்ள ஒதுக்கீடு. $t$ மற்றும் $!A$ மீது தொகுத்தறிந்து
+பின்வரும் வலுவான கூற்றுகளை நிரூபிக்கலாம்:
+\begin{enumerate}
+  \item[a.] $h(\Value{t}{M}[s]) = \Value{t}{M'}[h\circ s]$.
+  \item[b.] $\Sat{M}{!A}[s]$ எனில், எனில் மட்டுமே,
+  $\Sat{M'}{!A}[h \circ s]$.
+\end{enumerate}
+முதலாவது கூற்று~$t$ இன் சிக்கலின்மீது தொகுத்தறிந்து நிரூபிக்கப்படுகிறது.
+\begin{enumerate}
+\item $t \ident c$ எனில், $\Value{c}{M}[s] = \Assign{c}{M}$ மற்றும்
+  $\Value{c}{M'}[h \circ s] = \Assign{c}{M'}$. ஆகவே,
+  $h(\Value{t}{M}[s]) = h(\Assign{c}{M}) = \Assign{c}{M'}$
+  (\olref{defn:iso-const} என்ற \olref{defn:isomorphism} இன் விதிப்படி) $=
+  \Value{t}{M'}[h \circ s]$.
+\item $t \ident x$ எனில், $\Value{x}{M}[s] = s(x)$ மற்றும்
+  $\Value{x}{M'}[h \circ s] = h(s(x))$. ஆகவே,
+  $h(\Value{x}{M}[s]) =
+  h(s(x)) = \Value{x}{M'}[h \circ s]$.
+\item $t \ident f(t_1, \dots, t_n)$ எனில்,
+  \begin{align*}
+    \Value{t}{M}[s] & = \Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \quad\text{and}\\
+  \Value{t}{M'}[h \circ s] & = \Assign{f}{M}(\Value{t_1}{M'}[h \circ
+    s], \dots, \Value{t_n}{M'}[h \circ s]).
+  \end{align*}
+  ஒவ்வொரு $i$ க்கும், $h(\Value{t_i}{M}[s])
+  = \Value{t_i}{M'}[h\circ s]$ என்பதே தொகுத்தறிதல் கருதுகோள். எனவே,
+  \begin{align}
+    h(\Value{t}{M}[s])
+    & = h(\Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \notag\\
+    & = \Assign{f}{M'}(h(\Value{t_1}{M}[s]), \dots,
+    h(\Value{t_n}{M}[s])) \ollabel{iso-1}\\
+    & = \Assign{f}{M'}(\Value{t_1}{M'}[h \circ s], \dots,
+    \Value{t_n}{M'}[h \circ s]) \ollabel{iso-2}\\
+    & = \Value{t}{M'}[h\circ s] \notag
+  \end{align}
+  இங்கே \olref{iso-1} ஆனது \olref{defn:iso-func} என்ற
+  \olref{defn:isomorphism} இன் விதியிலிருந்தும், \olref{iso-2} தொகுத்தறிதல்
+  கருதுகோளிலிருந்தும் பின்வருகின்றன.
+\end{enumerate}
+பகுதி (b) ஒரு பயிற்சியாக விடப்படுகிறது.
+
+$!A$ ஒரு வாக்கியம் எனில், ஒதுக்கீடுகள்~$s$ மற்றும் $h \circ s$
+பொருத்தமற்றவை; மேலும் $\Sat{M}{!A}$ எனில், எனில் மட்டுமே,
+$\Sat{M'}{!A}$.
+\end{proof}
+
+\begin{prob}
+\olref[mod][bas][iso]{thm:isom} இன் (b) பகுதி நிரூபிப்பை விரிவாகச்
+செய்க. \olref[mod][bas][iso]{defn:isomorphism} இல் ஓரினச்சார்புகளைத்
+தன்மைப்படுத்தும் ஐந்து பண்புகளில் ஒவ்வொன்றும் எங்கே பயன்படுத்தப்படுகிறது
+என்பதைக் குறிப்பிடுவதை உறுதிசெய்க.
+\end{prob}
+
+\begin{defn}
+ஒரு கட்டமைப்பு $\Struct{M}$ இன் \emph{தன்னோரினச்சார்பு} என்பது
+$\Struct{M}$ இலிருந்து அதற்கே செல்லும் ஓரினச்சார்பு.
+\end{defn}
+
+\begin{prob}
+எந்தக் கட்டமைப்பு $\Struct{M}$ க்கும், $X$ ஆனது $\Struct{M}$ இன்
+வரையறுக்கத்தக்க உட்கணம் என்றும், $h$ ஆனது $\Struct{M}$ இன்
+தன்னோரினச்சார்பு என்றும் இருந்தால், $X
+= \Setabs{h(x)}{x \in X}$ (அதாவது, $X$ ஆனது $h$ இன் கீழ் மாறாது)
+என்று காட்டுக.
+\end{prob}
+
+
+\end{document}

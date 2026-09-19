@@ -1,0 +1,143 @@
+{
+  "batch_id": "TA-B158",
+  "units": [
+    {
+      "unit_id": "OLP-0294",
+      "source_sha256": "0bc250900584465d2c4b4db0dc26dbad8b6b23ed808586d9080afe9f91255b32",
+      "translation_sha256": "ca7ca918afffcfe7b9b411eabb0ee63c46fbc25fd827e5515f651832c2b7dae1",
+      "source_bytes": 8388,
+      "translation_bytes": 16962,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\Char{=}(x_0,x_1)=\\begin{cases}1&x_0=x_1\\\\0&otherwise\\end{cases}\\]"
+      ],
+      "extra_math": [
+        "\\[\\Char{=}(x_0,x_1)=\\begin{cases}1&x_0=x_1\\\\0&\\end{cases}\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Modus",
+        "align",
+        "bre",
+        "inc",
+        "include",
+        "logic",
+        "open",
+        "ponens",
+        "req",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-019",
+          "unit_id": "OLP-0294",
+          "kind": "math-mode-prose-localization",
+          "action": "Localized the bare English cases entry 'otherwise' as Tamil text inside the display.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\text"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "otherwise",
+              "to": "",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The second characteristic-function case leaves the ordinary English word 'otherwise' unwrapped in math mode, while the Tamil edition must translate formula annotations and must use a text wrapper for Tamil shaping.",
+          "chosen_treatment": "தமிழ் வாய்பாடு இரண்டாம் நேர்வை \\text{இல்லையெனில்} என்று அமைத்து, பொருளையும் தமிழ் எழுத்துரு வடிவமைப்பையும் பாதுகாக்கிறது.",
+          "alternatives_considered": "Leaving one English prose word untranslated; placing raw Tamil letters in math mode.",
+          "rationale": "The text wrapper is required for correct script shaping, and removing text bodies during formal-skeleton comparison leaves the intended zero branch unchanged.",
+          "precise_review_question": "Does the cases display now read naturally in Tamil while retaining the exact 1/0 conditions?",
+          "location_needle": "\\Char{=}(x_0, x_1) ="
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0295",
+      "source_sha256": "7dc6295f9eb46462918d4b261094f0e6fe0c6bae7d7aeac12603e45c0afd9bf6",
+      "translation_sha256": "edc2b6665277697a1d30f7a6721277febf6f3726b4734a847d755657e2a00c6e",
+      "source_bytes": 3449,
+      "translation_bytes": 6460,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "cmp",
+        "inc",
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "req",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-018",
+          "unit_id": "OLP-0295",
+          "kind": "duplicated-proof-guide-reference",
+          "action": "Changed the first of two identical references to proposition rep2 into the intended reference to proposition rep1.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "Using the proofs of \\olref[inc][req][cmp]{prop:rep2} and\n\\olref[inc][req][cmp]{prop:rep2} as a guide",
+              "to": "Using the proofs of \\olref[inc][req][cmp]{prop:rep1} and\n\\olref[inc][req][cmp]{prop:rep2} as a guide",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The exercise tells the reader to use the proofs of proposition rep2 and proposition rep2, although the immediately preceding paired existence and uniqueness propositions are rep1 and rep2.",
+          "chosen_treatment": "தமிழ் பயிற்சி இருப்பையும் தனித்தன்மையையும் நிறுவும் prop:rep1, prop:rep2 ஆகிய இரு காட்டல்களையும் வழிகாட்டிகளாகச் சுட்டுகிறது.",
+          "alternatives_considered": "Retaining the duplicate reference; changing the second reference instead and listing the pair in reverse order.",
+          "rationale": "The phrase 'proofs ... and ...' and the two immediately preceding propositions uniquely identify the intended pair and their natural order.",
+          "precise_review_question": "Does the exercise now direct the reader to both the existence and uniqueness proofs exactly once?",
+          "location_needle": "SOURCE CORRECTION TA-INC-018"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

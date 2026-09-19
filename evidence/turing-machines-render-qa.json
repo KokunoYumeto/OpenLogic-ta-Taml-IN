@@ -1,0 +1,195 @@
+{
+  "schema": "openlogic-tamil-reader-render-qa/3",
+  "checked_utc": "2026-09-08T01:55:36.271437+00:00",
+  "scope": {
+    "reader_units": 22,
+    "first_unit": "OLP-0252",
+    "last_unit": "OLP-0273",
+    "programme_completed_units": 285,
+    "total_frozen_units": 722,
+    "reader_contents": [
+      "Turing machines, configurations and computations",
+      "unary encodings, disciplined machines and composition",
+      "machine variants and the Church-Turing thesis",
+      "enumeration, universal simulation and the halting problem",
+      "the first-order decision problem and Trakhtenbrot's theorem"
+    ]
+  },
+  "pdf": {
+    "path": "readers/turing-machines-ta-Taml-IN.pdf",
+    "bytes": 432432,
+    "sha256": "7085516bd84bfdc89e43c2f2454fb71cd4e1dd0c84b55df3f136f0e2cfac17bd",
+    "pages": 50,
+    "all_pages_a4": true,
+    "encrypted": false,
+    "pdf_version": "1.7",
+    "metadata_title": "OpenLogic Tamil: Turing machines",
+    "metadata_subject": "Machine translation; OLP-0252 through OLP-0273; 22 of 722 frozen source units",
+    "metadata_author": "OpenLogic Tamil translation programme",
+    "personal_name_absent_from_metadata": true
+  },
+  "build": {
+    "master_path": "build/tamil-turing-machines.tex",
+    "master_bytes": 6579,
+    "master_sha256": "9d945c5f34233b4349baef059b99dd8f696502f4298064114fe3cf876a90f162",
+    "config_path": "translation/tamil-config.sty",
+    "config_sha256": "23ef1eb68ba21645a5d9dd54760f1ca45548070a6f4d195c1fc509c2540934e3",
+    "receipt_path": "TEX-TURING-MACHINES-RECEIPT.json",
+    "receipt_sha256": "8a03faf4c585494983a8cb08cff2ba0066714ad94d739c67afdb436b5c36266b",
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "mutex_acquired": true,
+    "abandoned_mutex": false,
+    "engine": "xelatex",
+    "passes": 3,
+    "pass_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "missing_character_warnings": 0,
+    "undefined_references": 0,
+    "multiply_defined_labels": 0,
+    "overfull_box_warnings": 0,
+    "underfull_box_warnings": 0,
+    "font_warnings": 0,
+    "inherited_file_request_warnings_per_pass": 2,
+    "only_inherited_file_request_warnings": true
+  },
+  "textual_unit_qa": {
+    "batch_receipts": [
+      {
+        "path": "QA-B131.json",
+        "sha256": "1662121369488d9097d362555581175c7dfe98345574fa4b2a68f76469ff69d7"
+      },
+      {
+        "path": "QA-B132.json",
+        "sha256": "97210c1a984d2879c043351fcb3a6e3ab6fab6fc803249b81330d302e183f0ff"
+      },
+      {
+        "path": "QA-B133.json",
+        "sha256": "ea8b41883d86896863a36ec37d3da0678e145b79600ffebbb682dc41e97697e9"
+      },
+      {
+        "path": "QA-B134.json",
+        "sha256": "6933873e485684af5715d3f807e53e155b10434f360edf31bc89b3185da83600"
+      },
+      {
+        "path": "QA-B135.json",
+        "sha256": "68b56c421030260b585c1d607bd10f94a04816f2eec9b49bbf7182b93761bbd7"
+      },
+      {
+        "path": "QA-B136.json",
+        "sha256": "0159cca9b4c5c7c8932a2cde74e5546126d193b0f5b61543d9aac1ba0135a39d"
+      },
+      {
+        "path": "QA-B137.json",
+        "sha256": "344b2d01e8fc716f9d16b02efade7e9e254492318e9bf9d310df1d59bb417b87"
+      },
+      {
+        "path": "QA-B138.json",
+        "sha256": "682965852e47c706484b3a82848467243e28915958a49d7b2605bda933c800ef"
+      },
+      {
+        "path": "QA-B139.json",
+        "sha256": "256c8c87745ce14f97d24ab1bf5ef685032bce58f5d7160634e410f0e80fbdab"
+      },
+      {
+        "path": "QA-B140.json",
+        "sha256": "e4ed128863221ef345b2f853f87aa45f2fff11dca0ccfd599cb201df58c58baf"
+      },
+      {
+        "path": "QA-B141.json",
+        "sha256": "ba907708affc4834ae4821576efc85c998f383ef7049f8e31462a08cba93a526"
+      },
+      {
+        "path": "QA-B142.json",
+        "sha256": "d314dc16e27a609d20e4a3792504edec6a48e2b2b3260f2f55645c1766d5ac0f"
+      },
+      {
+        "path": "QA-B143.json",
+        "sha256": "4d8c5216deb1f2f7c7004746369ebe5fc0c2010e6cbceab2eeb2b8b269b71cee"
+      }
+    ],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass, including audited standalone-reader reference fallbacks",
+    "source_corrections_path": "SOURCE_CORRECTIONS.json",
+    "source_corrections_sha256": "5901a3f5aede163cff68cb1d348b1f6110ccd087c0f08d19d8f919f16932bf31",
+    "standalone_reference_fallback": "TA-READER-REF-011"
+  },
+  "semantic_review": {
+    "path": "SEMANTIC_REVIEW-CURRENT.json",
+    "sha256": "547d07a00d5def11002b4c8aa63bf8e9ce4c70aa34af865452bd44cb0351738d",
+    "bound_units": 285,
+    "reviewed_samples": 379
+  },
+  "text_extraction": {
+    "path": "renders-turing-machines-7085516b/tamil-turing-machines-7085516bd84b.txt",
+    "bytes": 253053,
+    "sha256": "2f53b7a4e7adcc52cd77c3a3397b25ad3554105e67b671c0d71cc4b75cdab308",
+    "tamil_character_count": 69756,
+    "replacement_character_count": 0,
+    "literal_question_pair_count": 0,
+    "visible_english_otherwise_count": 0,
+    "automatic_english_labels": [],
+    "required_searches": {
+      "Tamil reader title": true,
+      "Turing-machines part": true,
+      "machines-and-computations chapter": true,
+      "Church-Turing thesis": true,
+      "undecidability chapter": true,
+      "halting problem": true,
+      "universal Turing machines": true,
+      "Trakhtenbrot theorem": true
+    },
+    "allowed_ascii_words_note": "Open Logic Project and CC BY attribution, formal symbols and literal notation only."
+  },
+  "fonts": {
+    "font_rows": 26,
+    "all_embedded": true,
+    "all_subset": true,
+    "tamil_fonts_unicode_mapped": true,
+    "legacy_math_fonts_without_unicode_map": [
+      "SGGGFG+CMSY10",
+      "NNZLWR+CMEX10",
+      "LJZCJK+CMEX9"
+    ],
+    "classification": "Tamil text fonts are Unicode mapped and copy-search succeeds; embedded legacy symbol subsets without ToUnicode maps affect formula extraction only.",
+    "pdffonts_output_path": "renders-turing-machines-7085516b/tamil-turing-machines-7085516bd84b-pdffonts.txt",
+    "pdffonts_output_sha256": "487a2e11036175502f1458174bbe61dfbbc77a9cf81e5b208c893069b4249b2a"
+  },
+  "render": {
+    "directory": "renders-turing-machines-7085516b",
+    "resolution_dpi": 110,
+    "page_png_count": 50,
+    "page_png_total_bytes": 14634160,
+    "contact_sheet_count": 7,
+    "contact_sheet_total_bytes": 14784041,
+    "contact_sheet_layout": "4x2",
+    "visually_inspected_page_range": "1-50",
+    "focused_pages": [
+      1,
+      5,
+      8,
+      23,
+      29,
+      32,
+      39,
+      45,
+      50
+    ]
+  },
+  "visual_findings": {
+    "visual_review_complete": true,
+    "clipped_text": 0,
+    "overlapping_text": 0,
+    "unreadable_glyphs": 0,
+    "broken_formulas_or_diagrams": 0,
+    "margin_overflows": 0,
+    "notes": [
+      "All 50 pages were inspected through seven generated 4x2 contact sheets from this exact PDF.",
+      "The title page, machine diagrams, transition tables, universal-machine construction, first-order encoding and concluding finite-model proof were also inspected individually.",
+      "Dense formulas, state diagrams and tape configurations remain readable and within the page margins."
+    ]
+  },
+  "result": "pass"
+}

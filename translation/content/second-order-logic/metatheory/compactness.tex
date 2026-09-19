@@ -1,0 +1,78 @@
+% Part: second-order-logic
+% Chapter: metatheory
+% Section: compactness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0334-S01
+
+\olfileid{sol}{met}{com}
+
+\olsection{இரண்டாம்தரத் தருக்கம் இறுக்கமானதன்று}
+
+\begin{explain}
+வாக்கியங்களின் கணம்~$\Gamma$ இன் ஒவ்வொரு முடிவுறு உட்கணமும்
+நிறைவுறுத்தத்தக்கது எனில், அக்கணத்தை
+\emph{முடிவுறுமுறையில் நிறைவுறுத்தத்தக்கது} என்போம். !!{sentence}s
+இன் கணம்~$\Gamma$ முடிவுறுமுறையில் நிறைவுறுத்தத்தக்கது எனில், அது
+நிறைவுறுத்தத்தக்கது என்ற பண்பு முதல்தரத் தருக்கத்திற்கு உண்டு.
+இப்பண்பு \emph{இறுக்கத்தன்மை} எனப்படுகிறது. இதற்கு உட்கிடப்பு
+பற்றிய நிகரான வடிவம் ஒன்று உண்டு: $\Gamma \Entails !A$ எனில்,
+ஏதோ முடிவுறு உட்கணம்~$\Gamma_0 \subseteq \Gamma$ க்கு ஏற்கெனவே
+$\Gamma_0 \Entails !A$. இந்த வடிவில் இது நிறைவுத் தேற்றத்தின்
+உடனடித் தொடர்விளைவு. ஏனெனில், $\Gamma \Entails !A$ எனில்,
+நிறைவால்~$\Gamma \Proves !A$. ஆனால் ஒரு !!{derivation} ஆனது
+~$\Gamma$ இன் முடிவுறு பல !!{sentence}s ஐ மட்டுமே பயன்படுத்த
+முடியும்.
+
+இரண்டாம்தரத் தருக்கத்திற்கு இறுக்கத்தன்மை பொருந்தாது.
+முடிவுறுமுறையில் நிறைவுறுத்தத்தக்கவையாக இருந்தும்
+நிறைவுறுத்தத்தக்கவையாக இல்லாத இரண்டாம்தர !!{sentence}s இன்
+கணங்களும், ஏதோ~$!A$ ஐ உட்கிடத்தியும் எந்த முடிவுறு உட்கணமும்
+~$!A$ ஐ உட்கிடத்தாத கணங்களும் உள்ளன.
+\end{explain}
+
+\begin{thm}
+% SOURCE CORRECTION TA-SOL-002: avoid collision with the undecidability theorem label.
+\ollabel{thm:sol-not-compact}
+இரண்டாம்தரத் தருக்கம் இறுக்கமானதன்று.
+\end{thm}
+
+\begin{proof}
+\[
+\fn{Inf} \ident \lexists[u][(\lforall[x][\lforall[y][(\eq[u(x)][u(y)]
+      \lif \eq[x][y])]] \land \lexists[y][\lforall[x][\eq/[y][u(x)]]])]
+\]
+என்பது !!a{structure} இல் அதன் பொருட்களம் முடிவிலாதது எனில்,
+எனில் மட்டுமே, நிறைவுறுத்தப்படுகிறது என்பதை நினைவுகூர்க.
+பொருட்களத்தில் குறைந்தது~$n$ !!{element}s உள்ளன என்று கூறும்
+வாக்கியம்~$!A^{\ge n}$ என்க; எடுத்துக்காட்டாக,
+\[
+!A^{\ge n} \ident \lexists[x_1][\dots\lexists[x_n][(\eq/[x_1][x_2]
+    \land \eq/[x_1][x_3] \land \dots \land \eq/[x_{n-1}][x_n])]].
+\]
+பின்வரும் !!{sentence}s இன் கணத்தைக் கருதுக:
+\[
+\Gamma = \{\lnot \fn{Inf}, !A^{\ge 1}, !A^{\ge 2}, !A^{\ge 3}, \dots\}.
+\]
+இது முடிவுறுமுறையில் நிறைவுறுத்தத்தக்கது. ஏனெனில் எந்த முடிவுறு
+உட்கணம்~$\Gamma_0 \subseteq \Gamma$ க்கும்,
+$!A^{\ge k} \in \Gamma$ ஆகவும், $n>k$ க்கு
+$!A^{\ge n} \in \Gamma$ ஆகாமலும் இருக்கும் ஏதோ~$k$ உள்ளது.
+$\Domain{M}$ இல் $k$ !!{element}s இருந்தால்,
+$\Sat{M}{\Gamma_0}$. ஆனால்~$\Gamma$ நிறைவுறுத்தத்தக்கது அன்று:
+$\Sat{M}{\lnot \fn{Inf}}$ எனில், $\Domain{M}$ முடிவுறுவதாக, அதன்
+அளவு~$k$ என்று வைத்துக்கொள்க. அப்போது
+$\Sat/{M}{!A^{\ge k+1}}$.
+\end{proof}
+
+\begin{prob}
+$\Gamma \Entails !A$ ஆகவும், ஒவ்வொரு முடிவுறு
+உட்கணம்~$\Gamma_0 \subseteq \Gamma$ க்கும்
+$\Gamma_0 \Entails/ !A$ ஆகவும் இருக்கும் கணம்~$\Gamma$ மற்றும்
+!!a{sentence}~$!A$ க்கு ஓர் எடுத்துக்காட்டுத் தருக.
+\end{prob}
+
+\end{document}

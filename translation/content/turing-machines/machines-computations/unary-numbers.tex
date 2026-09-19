@@ -1,0 +1,250 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: unary-numbers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0258-S01
+
+\olfileid{tur}{mac}{una}
+\olsection{எண்களின் ஒருமக் குறிப்பிடல்}
+
+\begin{explain}
+டியூரிங் பொறிகள் தமது நாடாவில் எழுதப்பட்ட குறிகளின் தொடர்களின்மீது
+செயல்படுகின்றன. ஒரு டியூரிங் பொறி பயன்படுத்தும் குறியெழுத்துத்
+தொகுதியைப் பொறுத்து, இக்குறித் தொடர்கள் பல்வேறு உள்ளீடுகளையும்
+வெளியீடுகளையும் குறிக்கலாம். இயல் எண்களின் சார்புகளான
+\emph{எண்கணிதச்} சார்புகளைக் கணிக்கும் டியூரிங் பொறிகள் இயல்பாகவே
+குறிப்பாக ஆர்வமூட்டுகின்றன. நேர்ம முழுக்களைக் குறிப்பிடுவதற்கான ஓர்
+எளிய வழி, அவற்றை~$\TMstroke$ என்ற ஒரே குறியின் தொடர்களாகக்
+குறியீடாக்குவது. $n \in \Nat$ எனில், $n = 0$ ஆகும்போது
+$\TMstroke^n$ என்பது வெற்றுத் தொடர் என்றும், இல்லையெனில் சரியாக $n$
+எண்ணிக்கையிலான $\TMstroke$-களைக் கொண்ட தொடர் என்றும் கொள்க.
+\end{explain}
+
+\begin{defn}[கணக்கீடு]
+ஒரு டியூரிங் பொறி~$M$ ஆனது $f\colon \Nat^k \to \Nat$ என்ற சார்பைக்
+\emph{கணிக்கிறது} எனில் மட்டுமே,~$M$ பின்வரும் உள்ளீட்டில்
+\[
+\TMstroke^{n_1} \TMblank \TMstroke^{n_2} \TMblank \dots \TMblank \TMstroke^{n_k}
+\]
+$\TMstroke^{f(n_1, \dots, n_k)}$ என்ற வெளியீட்டுடன் நிற்கிறது.
+\end{defn}
+
+\begin{prob}
+  ஒரு டியூரிங் பொறி~$M$ ஆனது $f\colon \Nat^k \to \Nat^m$ என்ற
+  சார்பைக் கணிப்பது எப்போது என்பதற்கான ஒரு வரையறையைத் தருக.
+\end{prob}
+
+\begin{ex}\ollabel{ex:adder}
+\emph{கூட்டல்:}
+$f(n,m) = n + m$ என்ற சார்பைக் கணிக்கும் ஒரு பொறியைக் கட்டுவோம்.
+இதற்கு நாடாவில் நீளங்கள் $n$,~$m$ ஆக உள்ள இரு $\TMstroke$ தொகுதிகளுடன்
+தொடங்கி, $n+m$ எண்ணிக்கையிலான~$\TMstroke$-களைக் கொண்ட ஒரே தொகுதியுடன்
+நிற்கும் ஒரு பொறி தேவை. உள்ளீட்டின் இரு~$\TMstroke$ தொகுதிகளும்
+ஒரு~$\TMblank$ ஆல் பிரிக்கப்படுகின்றன. எனவே,~$\TMblank$ உள்ள கட்டத்தில்
+ஒரு கோட்டை எழுதிவிட்டு, கடைசி~$\TMstroke$ ஐ அழிப்பது ஒரு முறையாகும்.
+\begin{figure}\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [right of=B] {$q_2$};
+
+  \path (A) edge node {\TMtrans{\TMblank}{\TMstroke}{\TMstay}} (B)
+           edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+            edge node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (C)
+        (C) edge [loop above] node {\TMtrans{\TMstroke}{\TMblank}{\TMstay}} (C);
+\end{tikzpicture}
+\]\caption{$f(x,y) = x+y$ ஐக் கணிக்கும் ஒரு பொறி}
+\ollabel{fig:adder}
+\end{figure}
+\end{ex}
+
+\begin{prob}
+உள்ளீடு~$\tuple{3,2}$ க்கு
+\olref[tur][mac][una]{ex:adder} இலுள்ள பொறியின் அமைவுநிலைகளை
+ஒன்றன்பின் ஒன்றாகத் தடமறிக. பொறி $0+0$ ஐக் கணித்தால் என்ன நிகழ்கிறது?
+\end{prob}
+
+\begin{explain}
+\olref[rep]{ex:doubler} இல்,~$\TMstroke$-களின் ஒரு தொடரை உள்ளீடாகப்
+பெற்று, நாடாவில் இருமடங்கு எண்ணிக்கையிலான~$\TMstroke$-களின் தொடருடன்
+நிற்கும் டியூரிங் பொறி ஒன்றை எடுத்துக்காட்டினோம்---அது இரட்டிப்பான்
+பொறி. எனினும், வெளியீட்டில் இரட்டிக்கப்பட்ட~$\TMstroke$ தொகுதிக்கு
+இடப்புறம் $\TMblank$-கள் இருப்பதால், நீங்கள் கருதியிருக்கக்கூடியவாறு
+அது உண்மையில் $f(x) = 2x$ என்ற சார்பைக் கணிப்பதில்லை. அதைச்
+சரிசெய்வதற்கான இரு வழிகளை விவரிப்போம்.
+\end{explain}
+
+\begin{ex}
+\olref{fig:doubler-disc} இலுள்ள பொறி $f(x) = 2x$ என்ற சார்பைக்
+கணிக்கிறது. \olref[rep]{ex:doubler} இலுள்ள பொறி செய்வதைப்போல்
+உள்ளீட்டை அழித்து, உள்ளீட்டிலுள்ள ஒவ்வொரு $\TMstroke$ க்கும் தொலை
+வலப்புறத்தில் இரு $\TMstroke$-களை எழுதுவதற்குப் பதிலாக, இப்பொறி
+உள்ளீட்டிலுள்ள ஒவ்வொரு~$\TMstroke$ க்கும் வலப்புறத்தில் ஒரே ஒரு
+~$\TMstroke$ ஐச் சேர்க்கிறது. உள்ளீடு எங்கு முடிகிறது என்பதை அது
+கண்காணிக்க வேண்டும். எனவே உள்ளீட்டுக்கும் சேர்க்கப்பட்ட கோடுகளுக்கும்
+இடையில் ஒரு~$\TMblank$ ஐ விட்டுவைத்து, மிக இறுதியில் அதை ஒரு
+~$\TMstroke$ ஆல் நிரப்புகிறது. உள்ளீட்டில் நாம் எங்கு இருக்கிறோம்
+என்பதையும் ``நினைவில்'' கொள்ள வேண்டும்; ஆகவே உள்ளீட்டுத் தொகுதியிலுள்ள
+ஒரு~$\TMstroke$ ஐத் தற்காலிகமாக ஒரு~$\TMblank$ ஆல் மாற்றுகிறோம்.
+  \begin{figure}
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state] (0)              {$q_0$};
+  \node[state]         (1) [above of=0] {$q_1$};
+  \node[state]         (2) [above of=1] {$q_2$};
+  \node[state]         (3) [right of=2] {$q_3$};
+  \node[state]         (4) [below of=3] {$q_4$};
+  \node[state]         (5) [below of=4] {$q_5$};
+  \node[state]         (6) [above right of=4] {$q_6$};
+  \node[state]         (7) [below of=6] {$q_7$};
+  \node[state]         (8) [below of=7] {$q_8$};
+
+  \path (0) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMright}} (1)
+%    (0) edge node {\TMtrans{\TMblank}{\TMblank}{\TMstay}} (h)
+    (1) edge [loop left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (1)
+      edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (2)
+    (2) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (2)
+        edge node {\TMtrans{\TMblank}{\TMstroke}{\TMleft}} (3)
+    (3) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (3)
+        edge node[left] {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (4)
+    (4) edge        node[left] {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+    (5) edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+        edge              node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (0)
+    (4) edge      node[sloped] {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (6)
+    (6) edge              node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (7)
+    (7) edge [loop right] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (7)
+        edge              node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (8)
+    (8) edge [loop right] node {\TMtrans{\TMstroke}{\TMblank}{\TMstay}} (8);
+    \end{tikzpicture}
+\]
+\caption{$f(x) = 2x$ ஐக் கணிக்கும் ஒரு பொறி}
+\ollabel{fig:doubler-disc}
+\end{figure}
+\end{ex}
+
+\begin{ex}\ollabel{ex:mover}
+$f(x) = 2x$ ஐக் கணிப்பதற்கான இரண்டாவது வழி, மூல இரட்டிப்பான்
+பொறியை அப்படியே வைத்துக்கொண்டு, இரட்டிக்கப்பட்ட கோடுகளின் தொகுதியை
+நாடாவின் தொலை இடப்புறத்துக்கு நகர்த்தும் நிலைகளையும் கட்டளைகளையும்
+இறுதியில் சேர்ப்பதாகும். \olref{fig:mover} இலுள்ள பொறி இந்தக் கடைசிப்
+பகுதியை மட்டும் செய்கிறது:~$\TMblank$-களின் ஒரு தொகுதியைத் தொடர்ந்து
+~$\TMstroke$-களின் ஒரு தொகுதி உள்ள நாடாவில் தொடங்கப்பட்டால்
+(மேலும் தலை~$\TMblank$ தொகுதிக்குள் எங்காவது இருந்தால்), அது
+~$\TMstroke$-களை ஒவ்வொன்றாக அழித்து, அவற்றை நாடாவின் தொடக்கத்தில்
+எழுதுகிறது. வேலை முடிந்ததை அறியும்பொருட்டு, முதலில் $\TMstroke$
+தொகுதியின் முடிவை ஒரு~$\TMendtape$ குறியால் குறிக்கிறது; அக்குறி
+இறுதியில் அழிக்கப்படுகிறது. நிலைகளை~$q_6$ இலிருந்து எண்ணத்
+தொடங்கியுள்ளோம்; இதனால் அவற்றை இரட்டிப்பான் பொறியுடன் சேர்க்கலாம்.
+உங்களுக்குத் தேவைப்படும் ஒரே கூடுதல் கட்டளை $\delta(q_0,
+\TMblank) = \tuple{q_6,\TMblank,\TMstay}$; அதாவது,~$q_0$ இலிருந்து
+~$q_6$ குச் செல்லும்,~$\TMtrans{\TMblank}{\TMblank}{\TMstay}$ என்று
+பெயரிடப்பட்ட ஓர் அம்பு. (ஒரு நுணுக்கமான சிக்கல் உள்ளது: இதனால்
+கிடைக்கும் பொறி உள்ளீடு~$x=0$ க்குச் செயல்படாது. இதைப் பயிற்சியாக
+விட்டுவைக்கிறோம்.)
+\begin{figure}
+  \[
+  \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                      semithick]
+    \tikzstyle{every state}=[fill=none,draw=black,text=black]
+    \node[initial,state] (6)              {$q_6$};
+    \node[state]         (7) [right of=6] {$q_7$};
+    \node[state]         (8) [right of=7] {$q_8$};
+    \node[state]         (9) [below of=8] {$q_9$};
+    \node[state]         (10) [left of=9] {$q_{10}$};
+    \node[state]         (11) [left of=10]  {$q_{11}$};
+    \node[state]         (12) [below of=11]  {$q_{12}$};
+    \node[state]         (13) [right of=12] {$q_{13}$};
+    \node[state]         (14) [right of=13] {$q_{14}$};
+    \path
+    (6)  edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (7)
+    (7)  edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (7)
+         edge node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (8)
+    (8)  edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (8)
+         edge node {\TMtrans{\TMblank}{\TMendtape}{\TMleft}} (9)
+    (9)  edge [loop right] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (9)
+         edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (10)
+    (10) edge node[above] {\TMtrans{\TMstroke}{\TMblank}{\TMleft}} (11)
+    (11) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (11)
+         edge node[left] {\begin{tabular}{@{}l@{}}
+          \TMtrans{\TMendtape}{\TMendtape}{\TMright}\\
+          \TMtrans{\TMstroke}{\TMstroke}{\TMright}
+         \end{tabular}} (12)
+    (12) edge node[] {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (13)
+    (13) edge [loop below] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (13)
+         edge node[sloped] {\TMtrans{\TMstroke}{\TMblank}{\TMleft}} (11)
+    (13) edge node {\TMtrans{\TMendtape}{\TMblank}{\TMstay}} (14);
+  \end{tikzpicture}
+  \]
+  \caption{$\TMstroke$-களின் ஒரு தொகுதியை இடப்புறம் நகர்த்துதல்}
+  \ollabel{fig:mover}
+\end{figure}
+\end{ex}
+
+\begin{prob}
+\olref[tur][mac][una]{ex:mover} இல்,
+\olref[tur][mac][una]{fig:doubler-disc} இலுள்ள இரட்டிப்பான் பொறியையும்
+\olref[tur][mac][una]{fig:mover} இலுள்ள நகர்த்தி பொறியையும்
+ஒருங்கிணைத்த ஒரு பொறியை விவரித்தோம். உள்ளீடு~$x=0$ இல், அதாவது
+வெற்று நாடாவில், இந்த ஒருங்கிணைந்த பொறியைத் தொடங்கினால் என்ன
+நிகழ்கிறது? இந்நேர்வில் பொறி வெளியீடு~$2x=0$ உடன் நிற்குமாறு அதை
+எவ்வாறு சரிசெய்வீர்? (ஒரு நிலையையும் ஒரு நிலைமாற்றத்தையும் சேர்ப்பதன்
+மூலம் இதைச் செய்ய முடியும்.)
+\end{prob}
+
+\begin{prob}
+\emph{கழித்தல்:} நீளங்கள் $n$,~$m$ ஆக உள்ள, வெற்றல்லாத இரு கோட்டுச்
+சரங்களை உள்ளீடாகக் கொடுக்கும்போது, $n > m$ எனில்,
+$f(n,m) = n - m$ என்ற சார்பைக் கணிக்கும் ஒரு டியூரிங் பொறியை
+வடிவமைக்க.
+\end{prob}
+
+\begin{prob}
+\emph{சமத்துவம்:} பின்வரும் சார்பைக் கணிக்க ஒரு டியூரிங் பொறியை
+வடிவமைக்க:
+\[
+\fn{equality}(n,m) =
+\begin{cases}
+  \text{1} & \text{~$n = m$ எனில்} \\
+  \text{0} & \text{~$n \neq m$ எனில்}
+\end{cases}
+\]
+இங்கு~$n$ மற்றும்~$m \in \PosInt$.
+\end{prob}
+
+\begin{prob}
+$x$, $y$ ஆகியவை நாடாவில் ஒரு $\TMblank$ ஆல் பிரிக்கப்பட்ட
+$\TMstroke$ சரங்களால் குறிப்பிடப்படும் நேர்ம முழுக்கள் எனில்,
+$\min(x,y)$ என்ற சார்பைக் கணிக்க ஒரு டியூரிங் பொறியை வடிவமைக்க.
+பொறியின் குறியெழுத்துத் தொகுதியில் கூடுதல் குறிகளைப் பயன்படுத்தலாம்.
+
+$\min$ என்ற சார்பு அதன் மாறிகளிலிருந்து மிகச்சிறிய மதிப்பைத்
+தேர்ந்தெடுக்கிறது; எனவே $\min(3,5)=3$, $\min(20,16)=16$,
+$\min(4,4)=4$, இவ்வாறாகத் தொடரும்.
+\end{prob}
+
+\begin{defn}
+  ஒரு டியூரிங் பொறி~$M$ ஆனது $f\colon \Nat^k
+  \pto \Nat$ என்ற பகுதிச் சார்பைக் கணிக்கிறது எனில் மட்டுமே,
+  \begin{enumerate}
+    \item $f(n_1, \dots, n_k) = m$ எனில்,~$M$ உள்ளீடு
+    $\TMstroke^{n_1}\concat\TMblank\concat
+    \dots \concat\TMblank\concat\TMstroke^{n_k}$ இல்
+    $\TMstroke^{m}$ என்ற வெளியீட்டுடன் நிற்கிறது.
+    \item $f(n_1, \dots, n_k)$ வரையறுக்கப்படவில்லை எனில்,~$M$
+    முற்றிலும் நிற்பதில்லை அல்லது~$\TMstroke$-களின் ஒரே தொகுதியாக
+    இல்லாத ஒரு வெளியீட்டுடன் நிற்கிறது.
+  \end{enumerate}
+\end{defn}
+
+\end{document}

@@ -1,0 +1,147 @@
+% Part: second-order-logic
+% Chapter: metatheory
+% Section: second-order-arithmetic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0332-S01
+
+\olfileid{sol}{met}{spa}
+
+\olsection{இரண்டாம்தர எண்கணிதம்}
+
+பேயானோ எண்கணிதத்தின் கோட்பாடு $\Th{PA}$ ஆனது~$\Th{Q}$ இன் எட்டு
+அடிகோள்களையும் கொண்டுள்ளது என்பதை நினைவுகூர்க:
+\begin{align*}
+& \lforall[x][\eq/[x'][\Obj 0]]\\
+& \lforall[x][\lforall[y][(\eq[x'][y'] \lif \eq[x][y])]]\\
+& \lforall[x][(\eq[x][\Obj 0] \lor \lexists[y][\eq[x][y']])]\\
+& \lforall[x][\eq[(x + \Obj 0)][x]]\\
+& \lforall[x][\lforall[y][\eq[(x + y')][(x + y)']]]\\
+& \lforall[x][\eq[(x \times \Obj 0)][\Obj 0]]\\
+& \lforall[x][\lforall[y][\eq[(x \times y')][((x \times y) + x)]]]\\
+& \lforall[x][\lforall[y][(x < y \liff \lexists[z][\eq[(z' + x)][y]])]]\\
+\intertext{மேலும் பின்வரும் வடிவிலான எல்லா வாக்கியங்களையும் கொண்டுள்ளது:}
+& (!A(\Obj 0) \land \lforall[x][(!A(x) \lif !A(x'))]) \lif \lforall[x][!A(x)].
+\end{align*}
+பிந்தியது ஒரு “வார்ப்புரு”; அதாவது, ஒவ்வோர் !!{formula}~$!A(x)$
+க்கும் ஒன்று வீதம் எண்கணித மொழியின் முடிவிலா பல !!{sentence}s ஐ
+உருவாக்கும் வடிவம். இந்த வார்ப்புருவை (முதல்தர)
+\emph{தொகுத்தறிதல் அடிகோள் வார்ப்புரு} என்கிறோம்.
+\emph{இரண்டாம்தர} பேயானோ எண்கணிதம்~$\Th{PA^2}$ இல்,
+தொகுத்தறிதலை ஒற்றை வாக்கியமாகக் கூறலாம். மேலுள்ள முதல் எட்டு
+அடிகோள்களும் பின்வரும் (இரண்டாம்தர)
+\emph{தொகுத்தறிதல் அடிகோளும்} சேர்ந்ததே~$\Th{PA^2}$:
+\[
+\lforall[X][((X(\Obj 0) \land \lforall[x][(X(x) \lif X(x'))]) \lif \lforall[x][X(x)])].
+\]
+!!{domain} இன் உட்கணம்~$X$ ஆனது~$\Assign{\Obj{0}}{M}$ ஐக்
+கொண்டிருந்து, எந்த~$x \in \Domain{M}$ உடனும்
+$\Assign{\prime}{M}(x)$ ஐயும் கொண்டிருந்தால் (அதாவது,
+“பின்வருவியின்கீழ் மூடப்பட்டிருந்தால்”), அது !!{domain} இல்
+உள்ள அனைத்தையும் கொண்டிருக்கும் (அதாவது, $X =
+\Domain{M})$ என்று இது கூறுகிறது.
+
+தொகுத்தறிதல் அடிகோளை நிறைவுறுத்தும் எந்த !!{structure} உம்,
+அடிகோள்கள்~$n \in \Nat$ க்கான~$\num{n}$ இன் மதிப்புகளாக இருக்க
+வேண்டும் என்று கோரும் !!{element}s ஐ மட்டுமே~$\Domain{M}$ இல்
+கொண்டிருப்பதை அந்த அடிகோள் உறுதிசெய்கிறது. $\Th{PA^2}$ இன்
+மாதிரியில் தரநிலையல்லாத எண்கள் எவையும் இல்லை.
+
+\begin{thm}
+\ollabel{thm:sol-pa-standard}
+$\Sat{M}{\Th{PA^2}}$ எனில், $\Domain{M} =
+\Setabs{\Value{\num{n}}{M}}{n \in \Nat}$.
+\end{thm}
+
+\begin{proof}
+$N = \Setabs{\Value{\num{n}}{M}}{n \in \Nat}$ என்க; மேலும்
+$\Sat{M}{\Th{PA^2}}$ என்று கொள்க. எந்த $n \in \Nat$ க்கும்
+$\Value{\num{n}}{M} \in \Domain{M}$ என்பது தெளிவு; ஆகவே
+$N \subseteq \Domain{M}$.
+
+இப்போது மறுதிசை உள்ளடக்கத்தைக் கருதுவோம். $s(X) = N$ ஆகும் மாறி
+மதிப்பீடு~$s$ ஐக் கொள்க. எடுகோளின்படி,
+\begin{align*}
+\Sat{M}{\lforall[X][((X(\Obj 0) \land \lforall[x][(X(x)
+      \lif X(x'))]) \lif \lforall[x][X(x)])]}, & \text{ thus}\\
+\Sat{M}{(X(\Obj 0) \land \lforall[x][(X(x) \lif X(x'))]) \lif
+  \lforall[x][X(x)]}[s]. &
+\end{align*}
+இந்த நிபந்தனைவாக்கியத்தின் முன்னுரையை எடுத்துக்கொள்க.
+$\Value{\Obj{0}}{M} \in N$; ஆகவே
+$\Sat{M}{X(\Obj{0})}[s]$. இரண்டாவது இணைவான
+$\lforall[x][(X(x) \lif X(x'))]$ உம் நிறைவுறுத்தப்படுகிறது.
+$x \in N$ என்று கொள்க. $N$ இன் வரையறையால், ஏதோ~$n$ க்கு
+$x = \Value{\num{n}}{M}$. எனவே
+$\Assign{\prime}{M}(x) = \Value{\num{n+1}}{M} \in N$. ஆகவே
+$\Assign{\prime}{M}(x) \in N$.
+
+$\Sat{M}{X(\Obj 0) \land \lforall[x][(X(x) \lif X(x'))]}[s]$
+என்று கிடைத்துள்ளது. இதனால்
+$\Sat{M}{\lforall[x][X(x)]}[s]$. ஆனால் இதன் பொருள், ஒவ்வொரு
+$x \in \Domain{M}$ க்கும் $x \in s(X) = N$. ஆகவே
+$\Domain{M} \subseteq N$.
+\end{proof}
+
+\begin{cor}
+\ollabel{cor:sol-pa-categorical}
+~$\Th{PA^2}$ இன் எந்த இரண்டு மாதிரிகளும் சமஅமைப்பானவை.
+\end{cor}
+
+\begin{proof}
+\olref{thm:sol-pa-standard} ஆல், $\Th{PA^2}$ இன் எந்த மாதிரியின்
+பொருட்களமும்~$\Value{\num{n}}{M}$ மதிப்புகளால் முழுமையாக நிரம்புகிறது.
+அத்தகைய எந்த மாதிரியும்~$\Th{Q}$ இன் மாதிரியாகவும் உள்ளது.
+\olref[mod][mar][stm]{prop:thq-standard} ஆல், அத்தகைய ஒவ்வொரு
+மாதிரியும் தரநிலையானது; அதாவது~$\Struct{N}$ உடன் சமஅமைப்பானது.
+\end{proof}
+
+மேலே, முதல் எட்டு எண்கணித அடிகோள்களையும் இரண்டாம்தரத் தொகுத்தறிதல்
+அடிகோளையும் கொண்ட கோட்பாடாக~$\Th{PA^2}$ ஐ வரையறுத்தோம். உண்மையில்,
+இரண்டாம்தரத் தருக்கத்தின் வெளிப்படுத்தும் ஆற்றலால், எண்கணித
+அடிகோள்களில் \emph{முதல் இரண்டு} அடிகோள்களும் தொகுத்தறிதலும் மட்டுமே
+இரண்டாம்தரப் பேயானோ எண்கணிதத்திற்குத் தேவை.
+
+\begin{prop}\ollabel{prop:sol-pa-definable}
+முதல் இரண்டு எண்கணித அடிகோள்களையும் (பின்வருவி அடிகோள்கள்)
+இரண்டாம்தரத் தொகுத்தறிதல் அடிகோளையும் கொண்ட இரண்டாம்தரக் கோட்பாடு
+$\Th{PA^{2\dagger}}$ என்க. அப்போது $\le$, $+$, $\times$ ஆகியவை
+$\Th{PA^{2\dagger}}$ இல் வரையறுக்கத்தக்கவை.
+\end{prop}
+
+\begin{proof}
+$\le$ வரையறுக்கத்தக்கது என்று காட்ட, $n \le m$ எனில், எனில்
+மட்டுமே, $\Sat{N}{!A_\le(\num n, \num m)}$ ஆகும்
+வாய்பாடு~$!A_\le(x, y)$ ஒன்றைக் காண வேண்டும். பின்வரும் வாய்பாட்டைக்
+கருதுக:
+\[
+!B(x, Y) \ident Y(x) \land \lforall[y][(Y(y) \lif Y(y'))]
+\]
+தெளிவாக, $Y \subseteq \Nat$ என்ற கணம்
+$\Setabs{m}{n \le m} \subseteq Y$ எனில், எனில் மட்டுமே,
+$!B(\num n, Y)$ ஐ நிறைவுறுத்துகிறது. எனவே
+$!A_\le(x, y) \ident \lforall[Y][(!B(x, Y) \lif Y(y))]$ என்று
+எடுத்துக்கொள்ளலாம்.
+
+கூட்டல் வரையறுக்கத்தக்கது என்பதைக் காண, $u(0)=k$,
+எல்லா $n$ க்கும் $u(n')=u(n)'$, மேலும் $m = u(l)$ ஆகும்
+சார்பு~$u$ ஒன்று இருந்தால், எனில் மட்டுமே, $k+l=m$ என்பதை
+கவனிக்க. இந்த நிகர்மையைப் பயன்படுத்தி, பின்வரும் வாய்பாட்டால்
+$\Th{PA^{2\dagger}}$ இல் கூட்டலை வரையறுக்கலாம்:
+% SOURCE CORRECTION TA-SOL-003: the recurrence binds w, not x.
+\[
+!A_+(x,y,z) \ident \lexists[u][(u(\Obj 0)=x \land \lforall[w][u(w')=u
+ (w)'] \land u(y)=z)]
+\]
+$k+l=m$ எனில், எனில் மட்டுமே,
+$\Sat{N}{!A_+(\num k, \num l, \num m)}$ என்பது தெளிவாக இருக்க வேண்டும்.
+\end{proof}
+
+\begin{prob}
+\olref[sol][met][spa]{prop:sol-pa-definable} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\end{document}

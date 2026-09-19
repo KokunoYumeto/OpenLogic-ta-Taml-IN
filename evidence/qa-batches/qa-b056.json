@@ -1,0 +1,345 @@
+{
+  "batch_id": "TA-B056",
+  "units": [
+    {
+      "unit_id": "OLP-0122",
+      "source_sha256": "25274e10fe6d96292fe2c701b7af38291dd1d98de12a62ef385a5efd1c413007",
+      "translation_sha256": "baed94a424cdcaf52211fb03583ac75da81974875a0ad32833e9ab3ddc14404a",
+      "source_bytes": 2632,
+      "translation_bytes": 3994,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "prp",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AXD-005",
+          "unit_id": "OLP-0122",
+          "kind": "wrong-conjunction-axiom-reference",
+          "action": "Changed the duplicated ax:land1 reference to ax:land2 for the right conjunction projection.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[prp]{ax:land1} and \\olref[prp]{ax:land1}",
+              "to": "\\olref[prp]{ax:land1} and \\olref[prp]{ax:land2}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof cites the left-projection axiom twice while claiming both left and right projections.",
+          "chosen_treatment": "தமிழ் நிறுவல் முறையே ax:land1, ax:land2 ஆகிய இரு அடிகோள்களைக் குறிப்பிடுகிறது.",
+          "alternatives_considered": "Retaining the duplicate; changing the proposition to repeat the left projection.",
+          "rationale": "The immediately preceding axiom list assigns ax:land1 to (A and B) implies A and ax:land2 to (A and B) implies B.",
+          "precise_review_question": "Does ax:land2 uniquely justify the second projection stated in item one?",
+          "location_needle": "SOURCE CORRECTION TA-AXD-005"
+        },
+        {
+          "audit_id": "TA-AXD-006",
+          "unit_id": "OLP-0122",
+          "kind": "wrong-negation-axiom-reference",
+          "action": "Changed ax:lnot1 to ax:lnot2 for the displayed instances not-A implies (A implies false) and not-B implies (B implies false).",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[prp]{ax:lnot1}",
+              "to": "\\olref[prp]{ax:lnot2}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The cited ax:lnot1 has the form (A implies B) implies ((A implies not-B) implies not-A), whereas the two displayed formulas are direct instances of ax:lnot2, not-A implies (A implies B).",
+          "chosen_treatment": "தமிழ் நிறுவல் காட்டப்பட்ட இரு நிகழ்வுகளுக்கும் ax:lnot2 ஐக் குறிப்பிடுகிறது.",
+          "alternatives_considered": "Retaining ax:lnot1; replacing the displayed formulas with instances of ax:lnot1.",
+          "rationale": "Substituting false for B in ax:lnot2 gives each displayed premise exactly.",
+          "precise_review_question": "Is ax:lnot2 the exact schema instantiated by both formulas used before the deduction theorem?",
+          "location_needle": "SOURCE CORRECTION TA-AXD-006"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0123",
+      "source_sha256": "07225de499f34bd17eec7586fc9bcc59e98ea3cfa064172091fa66a336bf20b6",
+      "translation_sha256": "6990d99223ab6b43646e7f2fc1679eced74d2fba7d402356d0fe3390b7accdab",
+      "source_bytes": 1449,
+      "translation_bytes": 2197,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "prvAll",
+        "prvEx",
+        "qua",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0124",
+      "source_sha256": "b5a11dd6a46306a767149f694f099bd9f57396013b4dfe67965e68ccae411ecb",
+      "translation_sha256": "ab6c55e111e87fefedf992be8284cf3a70c397d0e6fb99c307728f7bed291ab5",
+      "source_bytes": 5707,
+      "translation_bytes": 13431,
+      "source_coverage_complete": true,
+      "segments": 11,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!C\\lif\\lforall[x][B(x)]$",
+        "$\\lforall[x][B(x)]$",
+        "$\\Sat{M'}{B(c)}$"
+      ],
+      "extra_math": [
+        "$!C\\lif\\lforall[x][!B(x)]$",
+        "$\\lforall[x][!B(x)]$",
+        "$\\Sat{M'}{!B(c)}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "ass",
+        "axd",
+        "ext",
+        "fol",
+        "for",
+        "free",
+        "include",
+        "logic",
+        "open",
+        "qua",
+        "sat",
+        "section",
+        "sem",
+        "sou",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AXD-007",
+          "unit_id": "OLP-0124",
+          "kind": "missing-formula-metavariable-markers",
+          "action": "Restored the OpenLogic formula metavariable marker on the three inconsistent B occurrences in the quantified-rule soundness case.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\lforall[x][B(x)]",
+              "to": "\\lforall[x][!B(x)]",
+              "count": 2
+            },
+            {
+              "from": "\\Sat{M'}{B(c)}",
+              "to": "\\Sat{M'}{!B(c)}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The QR case uses !B(c) and !B(x) throughout but drops the formula marker in two universal formulas and one satisfaction formula.",
+          "chosen_treatment": "தமிழ் நிறுவல் எல்லா இடங்களிலும் ஒரே !B வாய்பாட்டுத் திட்டத்தைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Retaining three plain italic B expressions; removing the marker from every later B occurrence.",
+          "rationale": "The rule premise, semantic goal, substitution identity and all later satisfaction statements uniquely fix !B as the intended formula schema.",
+          "precise_review_question": "Do the three restored markers make the QR conclusion, freshness clause and satisfaction claim use one unchanged formula schema?",
+          "location_needle": "SOURCE CORRECTION TA-AXD-007"
+        },
+        {
+          "audit_id": "TA-READER-REF-010",
+          "unit_id": "OLP-0124",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped eleven syntax-and-semantics reference occurrences in oliflabeldef with descriptive Tamil fallbacks; every live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[syn][ext]{prop:ext-formulas}",
+              "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{சொல் இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு}",
+              "count": 2
+            },
+            {
+              "from": "\\olref[syn][sem]{thm:sem-deduction}",
+              "to": "\\oliflabeldef{syn:sem:thm:sem-deduction}{\\olref[syn][sem]{thm:sem-deduction}}{பொருண்மைக் கழித்தல் தேற்றம்}",
+              "count": 3
+            },
+            {
+              "from": "\\olref[pl][syn][sem]{thm:sem-deduction}",
+              "to": "\\oliflabeldef{pl:syn:sem:thm:sem-deduction}{\\olref[pl][syn][sem]{thm:sem-deduction}}{பொருண்மைக் கழித்தல் தேற்றம்}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ass]{prop:sat-quant}",
+              "to": "\\oliflabeldef{syn:ass:prop:sat-quant}{\\olref[syn][ass]{prop:sat-quant}}{அளவையடைகளுக்கான நிறைவுறுத்தல் விதி}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][sat]{defn:satisfaction}",
+              "to": "\\oliflabeldef{syn:sat:defn:satisfaction}{\\olref[syn][sat]{defn:satisfaction}}{வாக்கியக் கணத்திற்கான நிறைவுறுத்தல் வரையறை}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ext]{cor:extensionality-sent}",
+              "to": "\\oliflabeldef{syn:ext:cor:extensionality-sent}{\\olref[syn][ext]{cor:extensionality-sent}}{ஒரு வாக்கியத்தின் மெய்மை அதில் வரும் குறிகளின் விளக்கங்களை மட்டுமே சாரும் என்ற துணைவிளைவு}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+              "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[syn][ext]{prop:extensionality}",
+              "to": "\\oliflabeldef{syn:ext:prop:extensionality}{\\olref[syn][ext]{prop:extensionality}}{ஒரு வாய்பாட்டின் மெய்மை அதில் வரும் மொழிக் குறிகளின் விளக்கங்களை மட்டுமே சாரும் என்ற முன்மொழிவு}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The 14-unit standalone axiomatic-deduction reader omits the syntax-and-semantics results cited by the soundness proof, which would otherwise render as unresolved question marks.",
+          "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் பொருண்மைக் கழித்தல், நிறைவுறுத்தல், குறி-சார்பு அல்லது சொல்-இடைநிறுத்தல் முடிவைக் குறிக்கும் தமிழ் விளக்கம்.",
+          "alternatives_considered": "Literal question marks; deleting the semantic dependencies; permanently replacing the live links.",
+          "rationale": "Conditional fallbacks keep the standalone chapter readable while preserving every exact reference identity for a later complete reader.",
+          "precise_review_question": "Do the Tamil fallbacks identify exactly the semantic result used at each step without replacing the live links in a complete build?",
+          "location_needle": "syn:sem:thm:sem-deduction"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0125",
+      "source_sha256": "9a4f25fcf00baab5d8d5f05e7fe2315ca9f4ceaa39a67551489a5130b9b8a2d4",
+      "translation_sha256": "875d4639a6cc01905f7c14ec9e5df406ca7107903bccb8a51254e3d67c773f12",
+      "source_bytes": 1299,
+      "translation_bytes": 2384,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "axd",
+        "fol",
+        "ide",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AXD-008",
+          "unit_id": "OLP-0125",
+          "kind": "missing-closed-term-qualifications",
+          "action": "Made explicit that both identity propositions concern closed terms, matching the only identity axiom schemas available in this calculus.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The identity axioms are explicitly restricted to closed terms, but the following propositions say any term and omit the restriction on t_1 and t_2 while proving the claims solely from those axioms.",
+          "chosen_treatment": "தமிழ் முன்மொழிவுகள் t மற்றும் t_1, t_2 ஆகிய சொற்கள் மூடியவை என்ற நிபந்தனையை வெளிப்படையாகக் கூறுகின்றன.",
+          "alternatives_considered": "Retaining the overbroad statements; broadening the axiom schemas to all terms.",
+          "rationale": "The proofs use ax:id1 and ax:id2 directly, so their stated closed-term side condition must also govern the derived propositions.",
+          "precise_review_question": "Do the added closed-term qualifications state exactly the scope licensed by ax:id1 and ax:id2?",
+          "location_needle": "SOURCE CORRECTION TA-AXD-008"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

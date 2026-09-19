@@ -1,0 +1,179 @@
+{
+  "batch_id": "TA-B153",
+  "units": [
+    {
+      "unit_id": "OLP-0287",
+      "source_sha256": "06044a4b70f61e07629055bfc3cfb7a940ce5ccfc09efe1a5473e9c5e3af3d47",
+      "translation_sha256": "a07f1cdcae09d096202e5270ac42b40886a76e7f7aa7bf0db0c9c423c7600875",
+      "source_bytes": 14091,
+      "translation_bytes": 27110,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{multline*}(d)_0=1\\land{}\\\\\\bexists{a<d}{(\\fn{Discharge}(a,(d)_1,\\fn{DischargeLabel}(d))\\land{}}\\\\\\fn{EndFmla}(d)=(\\Gn{(}\\concata\\concat\\Gn{\\lif}\\concat\\fn{EndFmla}((d)_1)\\concat\\Gn{)}))\\end{multline*}",
+        "\\begin{multline*}\\fn{Sent}(\\fn{EndFmla}(d))\\land{}\\\\(\\fn{LastRule}(d)=1\\land\\fn{FollowsBy}_{\\Intro\\land}(d))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(d)=16\\land\\fn{FollowsBy}_{\\Elim\\eq}(d))\\lor{}\\\\\\bexists{n<d}{\\bexists{x<d}{(d=\\tuple{0,x,n})}}.\\end{multline*}",
+        "$\\bexists{j<(d')_0}{d=(d')_j}$",
+        "\\begin{multline*}\\bexists{s<\\fn{SubtreeSeq}(d)}{(\\fn{Subseq}(s,\\fn{SubtreeSeq}(d))\\land(s)_0=d\\land{}}\\\\\\bexists{n<d}{((s)_{\\len{s}\\tsub1}=\\tuple{0,z,n}\\land{}}\\\\\\bforall{i<(\\len{s}\\tsub1)}{(\\fn{Subderiv}((s)_{i+1},(s)_i)\\land{}}\\\\\\fn{DischargeLabel}((s)_i)\\neqn))).\\end{multline*}"
+      ],
+      "extra_math": [
+        "\\begin{multline*}(d)_0=1\\land{}\\\\\\bexists{a<d}{((\\fn{DischargeLabel}(d)=0\\lor\\fn{Discharge}(a,(d)_1,\\fn{DischargeLabel}(d)))\\land{}}\\\\\\fn{EndFmla}(d)=(\\Gn{(}\\concata\\concat\\Gn{\\lif}\\concat\\fn{EndFmla}((d)_1)\\concat\\Gn{)}))\\end{multline*}",
+        "\\begin{multline*}\\fn{Sent}(\\fn{EndFmla}(d))\\land{}\\\\[(\\fn{LastRule}(d)=1\\land\\fn{FollowsBy}_{\\Intro\\land}(d))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(d)=16\\land\\fn{FollowsBy}_{\\Elim\\eq}(d))\\lor{}\\\\\\bexists{n<d}{\\bexists{x<d}{(d=\\tuple{0,x,n})}}].\\end{multline*}",
+        "$\\bexists{j<(d')_0}{d=(d')_{j+1}}$",
+        "\\begin{multline*}\\bexists{s<\\fn{SubtreeSeq}(d)}{(\\fn{Subseq}(s,\\fn{SubtreeSeq}(d))\\land(s)_0=d\\land{}}\\\\\\bexists{n<d}{((s)_{\\len{s}\\tsub1}=\\tuple{0,z,n}\\land{}}\\\\\\bforall{i<(\\len{s}\\tsub1)}{(\\fn{Subderiv}((s)_{i+1},(s)_i)\\land{}}\\\\(n=0\\lor\\fn{DischargeLabel}((s)_i)\\neqn)))).\\end{multline*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "art",
+        "cmp",
+        "inc",
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "pnd",
+        "rec",
+        "section",
+        "tre"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-006",
+          "unit_id": "OLP-0287",
+          "kind": "correctness-disjunction-scope",
+          "action": "Grouped every rule and assumption branch under the sentence test in the definition of Correct.",
+          "expected_missing_math": [
+            "\\begin{multline*}\\fn{Sent}(\\fn{EndFmla}(d))\\land{}\\\\(\\fn{LastRule}(d)=1\\land\\fn{FollowsBy}_{\\Intro\\land}(d))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(d)=16\\land\\fn{FollowsBy}_{\\Elim\\eq}(d))\\lor{}\\\\\\bexists{n<d}{\\bexists{x<d}{(d=\\tuple{0,x,n})}}.\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}\\fn{Sent}(\\fn{EndFmla}(d))\\land{}\\\\[(\\fn{LastRule}(d)=1\\land\\fn{FollowsBy}_{\\Intro\\land}(d))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(d)=16\\land\\fn{FollowsBy}_{\\Elim\\eq}(d))\\lor{}\\\\\\bexists{n<d}{\\bexists{x<d}{(d=\\tuple{0,x,n})}}].\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Without grouping, standard precedence makes the Sent conjunct apply only to the first rule branch, although the following prose says the first line ensures every end-formula is a sentence.",
+          "chosen_treatment": "தமிழ் வரையறை எல்லா விதிக் கிளைகளையும் எடுகோள் கிளையையும் வாக்கியச் சோதனையின் ஒரே அடைப்புக்குறிக்குள் வைக்கிறது.",
+          "alternatives_considered": "Leaving later rule and assumption branches outside the sentence condition; repeating Sent in every disjunct.",
+          "rationale": "One bracket pair implements exactly the scope stated in the explanatory sentence and preserves every individual rule test.",
+          "precise_review_question": "Does Sent now constrain every Correct branch without changing the sixteen rule cases or the assumption case?",
+          "location_needle": "SOURCE CORRECTION TA-INC-006"
+        },
+        {
+          "audit_id": "TA-INC-007",
+          "unit_id": "OLP-0287",
+          "kind": "immediate-subderivation-tuple-index",
+          "action": "Shifted the immediate-subderivation tuple lookup from slot j to slot j+1.",
+          "expected_missing_math": [
+            "$\\bexists{j<(d')_0}{d=(d')_j}$"
+          ],
+          "expected_extra_math": [
+            "$\\bexists{j<(d')_0}{d=(d')_{j+1}}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The tuple's slot 0 stores its arity; immediate subderivation codes occupy slots 1 through that arity. Indexing by j with j<arity includes the arity field and omits the last subderivation.",
+          "chosen_treatment": "தமிழ் வரையறை உடனடி உட்வருவித்தல்களை அடுக்கின் 1 முதல் arity வரையிலான இடங்களிலிருந்து எடுக்கிறது.",
+          "alternatives_considered": "Quantifying 1≤j≤arity with an additional bounded-range encoding; preserving the off-by-one lookup.",
+          "rationale": "The coding definition at the start of the same section uniquely fixes the component positions.",
+          "precise_review_question": "Does the corrected bounded lookup inspect every and only immediate subderivation component?",
+          "location_needle": "SOURCE CORRECTION TA-INC-007"
+        },
+        {
+          "audit_id": "TA-INC-008",
+          "unit_id": "OLP-0287",
+          "kind": "vacuous-discharge-label-zero",
+          "action": "Allowed implication introduction with discharge label 0 without constraining every open assumption to match its antecedent.",
+          "expected_missing_math": [
+            "\\begin{multline*}(d)_0=1\\land{}\\\\\\bexists{a<d}{(\\fn{Discharge}(a,(d)_1,\\fn{DischargeLabel}(d))\\land{}}\\\\\\fn{EndFmla}(d)=(\\Gn{(}\\concata\\concat\\Gn{\\lif}\\concat\\fn{EndFmla}((d)_1)\\concat\\Gn{)}))\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}(d)_0=1\\land{}\\\\\\bexists{a<d}{((\\fn{DischargeLabel}(d)=0\\lor\\fn{Discharge}(a,(d)_1,\\fn{DischargeLabel}(d)))\\land{}}\\\\\\fn{EndFmla}(d)=(\\Gn{(}\\concata\\concat\\Gn{\\lif}\\concat\\fn{EndFmla}((d)_1)\\concat\\Gn{)}))\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\lor",
+            "\\fn"
+          ],
+          "source_issue_or_choice": "The coding definition assigns discharge label 0 when a rule discharges no assumptions. Applying Discharge(a,d,0) instead treats all label-0 open assumptions as one antecedent A and rejects valid vacuous implication introductions with unrelated open assumptions.",
+          "chosen_treatment": "விடுவிப்புச் சிட்டை 0 எனில் எந்த எடுகோளும் விடுவிக்கப்படவில்லை என்பதைத் தமிழ் வரையறை நேரடியாக ஒரு பிரிப்பிணைவுக் கிளையாக ஏற்கிறது.",
+          "alternatives_considered": "Forcing all undischarged assumptions to equal the conditional antecedent; forbidding vacuous discharge despite the coding clause.",
+          "rationale": "The explicit meaning assigned to label 0 and the natural-deduction rule's permitted vacuous discharge determine the added branch.",
+          "precise_review_question": "Does the label-0 branch admit exactly the no-discharge case while retaining the label-matching test for positive labels?",
+          "location_needle": "SOURCE CORRECTION TA-INC-008"
+        },
+        {
+          "audit_id": "TA-INC-009",
+          "unit_id": "OLP-0287",
+          "kind": "open-assumption-label-zero",
+          "action": "Made a label-0 assumption remain open regardless of the zero discharge marker carried by nondischarging ancestor rules.",
+          "expected_missing_math": [
+            "\\begin{multline*}\\bexists{s<\\fn{SubtreeSeq}(d)}{(\\fn{Subseq}(s,\\fn{SubtreeSeq}(d))\\land(s)_0=d\\land{}}\\\\\\bexists{n<d}{((s)_{\\len{s}\\tsub1}=\\tuple{0,z,n}\\land{}}\\\\\\bforall{i<(\\len{s}\\tsub1)}{(\\fn{Subderiv}((s)_{i+1},(s)_i)\\land{}}\\\\\\fn{DischargeLabel}((s)_i)\\neqn))).\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}\\bexists{s<\\fn{SubtreeSeq}(d)}{(\\fn{Subseq}(s,\\fn{SubtreeSeq}(d))\\land(s)_0=d\\land{}}\\\\\\bexists{n<d}{((s)_{\\len{s}\\tsub1}=\\tuple{0,z,n}\\land{}}\\\\\\bforall{i<(\\len{s}\\tsub1)}{(\\fn{Subderiv}((s)_{i+1},(s)_i)\\land{}}\\\\(n=0\\lor\\fn{DischargeLabel}((s)_i)\\neqn)))).\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\lor"
+          ],
+          "source_issue_or_choice": "The section defines label 0 both for an undischarged assumption and for an inference that discharges nothing. The unqualified inequality therefore misclassifies a label-0 assumption as discharged whenever its path crosses an ordinary nondischarging inference.",
+          "chosen_treatment": "எடுகோளின் சிட்டை 0 எனில் அது விடுவிக்கப்படாதது என்பதைத் தமிழ் வரையறை முதலில் ஏற்கிறது; நேர்மச் சிட்டைகளுக்கு மட்டுமே மூதாதை விடுவிப்புச் சிட்டையை ஒப்பிடுகிறது.",
+          "alternatives_considered": "Treating a nondischarging rule's zero marker as discharging every open assumption; replacing the entire path construction with a context-dependent code.",
+          "rationale": "The two explicit uses of zero require a sentinel exception; all positive-label path behavior remains unchanged.",
+          "precise_review_question": "Does the added zero-label disjunct prevent false discharge while preserving the ancestor check for labeled assumptions?",
+          "location_needle": "SOURCE CORRECTION TA-INC-009"
+        },
+        {
+          "audit_id": "TA-READER-REF-012",
+          "unit_id": "OLP-0287",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped the absent recursive-functions tree-coding section reference in oliflabeldef with a descriptive Tamil fallback; the live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[cmp][rec][tre]{sec}",
+              "to": "\\oliflabeldef{cmp:rec:tre:sec}{\\olref[cmp][rec][tre]{sec}}{மரவுருக் குறியீடாக்கம் பற்றிய முந்தைய பிரிவு}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The standalone incompleteness-and-arithmetization reader omits the recursive-functions chapter that supplies the cited tree-coding section, which otherwise renders as an unresolved question mark.",
+          "chosen_treatment": "இலக்கு இருந்தால் நேரடி பிரிவு மேற்கோள்; இல்லையெனில் மரவுருக் குறியீடாக்கம் பற்றிய முந்தைய பிரிவு என்ற துல்லியமான தமிழ் விளக்கம்.",
+          "alternatives_considered": "Literal question marks; deleting the coding dependency; permanently replacing the live section link.",
+          "rationale": "The conditional fallback keeps the local proof-code explanation readable while preserving the exact reference identity for a cumulative reader.",
+          "precise_review_question": "Does the fallback identify exactly the tree-coding material used by SubtreeSeq without inventing a section number?",
+          "location_needle": "READER FALLBACK TA-READER-REF-012"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\lor",
+        "\\lor",
+        "\\fn",
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

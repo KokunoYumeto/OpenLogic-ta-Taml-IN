@@ -1,0 +1,134 @@
+{
+  "batch_id": "TA-B138",
+  "units": [
+    {
+      "unit_id": "OLP-0266",
+      "source_sha256": "4c8ce821f6a0585dcd5a20f4d7d1082b439c2a21b1450cc967155a5a548f62c1",
+      "translation_sha256": "a76c808a3009fdbbb81717019d245cf9aff03b4ed88629b3dd39fc8234a4928f",
+      "source_bytes": 6946,
+      "translation_bytes": 15913,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "above",
+        "auto",
+        "bend",
+        "black",
+        "distance",
+        "draw",
+        "edge",
+        "every",
+        "fill",
+        "include",
+        "initial",
+        "left",
+        "logic",
+        "loop",
+        "node",
+        "none",
+        "open",
+        "right",
+        "section",
+        "semithick",
+        "shorten",
+        "state",
+        "stealth",
+        "text"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-READER-REF-011",
+          "unit_id": "OLP-0266",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped two absent size-of-sets exercise references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\cref{sfr:siz:zigzag:prob:posint-star}",
+              "to": "\\oliflabeldef{sfr:siz:zigzag:prob:posint-star}{\\cref{sfr:siz:zigzag:prob:posint-star}}{நேர்ம முழுக்களின் முடிவுறு தொடர்கள் பட்டியலிடத்தக்கவை என நிறுவும் பயிற்சி}",
+              "count": 1
+            },
+            {
+              "from": "\\cref{sfr:siz:red:prob:nat-nat}",
+              "to": "\\oliflabeldef{sfr:siz:red:prob:nat-nat}{\\cref{sfr:siz:red:prob:nat-nat}}{இயல் எண்களிலிருந்து இயல் எண்களுக்குச் செல்லும் எல்லாச் சார்புகளின் கணம் பட்டியலிடத்தக்கதல்ல என நிறுவும் பயிற்சி}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The 22-unit standalone Turing-machines reader omits the two size-of-sets exercises cited in the noncomputable-function cardinality proof, which otherwise render as unresolved question marks.",
+          "chosen_treatment": "இலக்கு இருந்தால் நேரடி பயிற்சி மேற்கோள்; இல்லையெனில் நேர்ம முழுக்களின் முடிவுறு தொடர்களின் பட்டியலிடத்தக்க தன்மையையும் இயல் எண் சார்புகளின் பட்டியலிடத்தக்கதல்லாத தன்மையையும் துல்லியமாகக் கூறும் தமிழ் விளக்கம்.",
+          "alternatives_considered": "Literal question marks; deleting the proof dependencies; permanently replacing the live exercise links.",
+          "rationale": "Conditional fallbacks keep the standalone cardinality proof readable while preserving both exact reference identities for a later cumulative reader.",
+          "precise_review_question": "Do the two Tamil fallbacks state exactly the cardinality facts used by the proof without claiming unavailable exercise numbers?",
+          "location_needle": "READER FALLBACK TA-READER-REF-011"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0267",
+      "source_sha256": "aa4bdd1cf46621152e74cecfe49f34398c6e9f29ac92473bc2835c7acfcf9ed6",
+      "translation_sha256": "94b7694519b9479bac245664a77ea199422fa6d69217befaa00b7adadb930294",
+      "source_bytes": 6859,
+      "translation_bytes": 17163,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "enu",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

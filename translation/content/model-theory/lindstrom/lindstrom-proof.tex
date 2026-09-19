@@ -1,0 +1,141 @@
+% Part: first-order-logic
+% Chapter: lindstrom
+% Section: lindstrom-proof
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0207-S01
+
+\olfileid{mod}{lin}{prf}
+
+\olsection{Lindstr\"om தேற்றம்}
+
+\begin{lem}
+\ollabel{lem:lindstrom}
+$!E \in L(\Lang{L})$ என்றும், $\Lang{L}$ இறுதிக்குட்பட்டது என்றும்
+கொள்க; மேலும் ஏதேனும் இரு !!{structure}s $\Struct{M}$ மற்றும்
+~$\Struct{N}$ க்கு, $\Struct{M} \equiv_n \Struct{N}$ மற்றும்
+$\Struct{M} \models_L !E$ எனில் $\Struct{N} \models_L !E$ உம்
+பொருந்துமாறு $n \in \Nat$ ஒன்று உள்ளது என்றும் கொள்க. அப்போது
+$!E$ ஆனது ஒரு முதல்வரிசை !!{sentence} க்குச் சமானமானது; அதாவது,
+$\Mod(L){!E} = \Mod(L){!D}$ ஆகுமாறு முதல்வரிசை $!D$ ஒன்று உள்ளது.
+\end{lem}
+
+\begin{proof}
+எந்த இரு $n$-சமானமான !!{structure}s $\Struct{M}$ மற்றும்
+$\Struct{N}$ உம் $!E$ க்கு ஒதுக்கப்படும் மதிப்பில் உடன்படுமாறு
+$n$ ஐக் கொள்க. \olref[bas][pis]{prop:qr-finite} ஐ நினைவுகூர்க:
+ஓர் இறுதிக்குட்பட்ட !!{language} இல், தருக்கச் சமானம் வரையில்,
+அளவையீட்டு படிநிலை $n$ ஐவிடப் பெரிதாக இல்லாத முதல்வரிசை
+!!{sentence}s இறுதிக்குட்பட்ட எண்ணிக்கையிலேயே உள்ளன. இப்போது
+ஒவ்வொரு நிலையான !!{structure}~$\Struct{M}$ க்கும்,
+$\QuantRank{!E} \le n$ உடன் $\Struct{M}$ இல் மெய்யாகும் அனைத்து
+முதல்வரிசை !!{sentence}s~$!E$ இன் இணைப்பாக
+$!D_{\Struct{M}}$ இருக்கட்டும் (இந்த இணைப்பு இறுதிக்குட்பட்டது);
+அப்போது $\Struct{N} \models !D_{\Struct{M}}$ எனில், எனில் மட்டுமே,
+$\Struct{N} \equiv_n \Struct{M}$. பிறகு $!D = \textstyle\bigvee
+\Setabs{!D_{\Struct{M}}}{\Struct{M} \models_L !E}$ என வைக்க;
+இந்தப் பிரிப்பும் தருக்கச் சமானம் வரையில் இறுதிக்குட்பட்டதே.
+
+இதிலிருந்து $\Mod(L){!E} = \Mod(L){!D}$ என்ற முடிவு கிடைக்கிறது.
+உண்மையில், $\Struct{N} \models_L !D$ எனில், ஏதேனும்
+$\Struct{M} \models_L !E$ க்கு $\Struct{N} \models
+!D_{\Struct{M}}$; எனவே, இக்கருதுகோளால், $\Struct{N} \models_L !E$
+உம் பொருந்தும். மாறாக, $\Struct{N} \models_L !E$ எனில்
+$!D_\Struct{N}$ ஆனது $!D$ இன் ஒரு பிரிப்புறுப்பு; மேலும்
+$\Struct{N} \models !D_\Struct{N}$ என்பதால்,
+$\Struct{N} \models_L !D$ உம் பொருந்தும்.
+\end{proof}
+
+\begin{thm}[Lindstr\"om தேற்றம்]
+  \ollabel{thm:lindstrom} $\tuple{L, \models_L}$ ஆனது
+  இறுதிக்குட்பட்ட தன்மை மற்றும் L\"owenheim--Skolem பண்புகளைக்
+  கொண்டுள்ளது என்று கொள்க. அப்போது $\tuple{L, \models_L} \le
+  \tuple{F, \models}$ (எனவே $\tuple{L, \models_L}$ முதல்வரிசைத்
+  தருக்கத்திற்குச் சமானமானது).
+\end{thm}
+
+\begin{proof}
+\olref{lem:lindstrom} படி, $\Lang{L}$ இறுதிக்குட்பட்டதாக இருக்கும்
+எந்த $!E \in L(\Lang{L})$ க்கும், ஏதேனும் இரு !!{structure}s
+$\Struct{M}$ மற்றும்~$\Struct{N}$ குறித்து பின்வருமாறு அமையும்
+$n \in \Nat$ ஒன்று உள்ளது எனக் காட்டினால் போதும்:
+$\Struct{M} \equiv_n \Struct{N}$ எனில், $\Struct{M}$ மற்றும்
+$\Struct{N}$ ஆகியவை $!E$ இல் உடன்படுகின்றன. ஏனெனில் அப்போது
+$!E$ ஒரு முதல்வரிசை !!{sentence} க்குச் சமானமானது; அதிலிருந்து
+$\tuple{L, \models_L} \le \tuple{F, \models}$ கிடைக்கிறது.
+நாம் இறுதிக்குட்பட்ட, முற்றிலும் உறவுசார் !!{language} ஒன்றில்
+பணியாற்றுவதால், \olref[bas][pis]{thm:b-n-f} படி
+$\Struct{M} \equiv_n \Struct{N}$ என்ற கூற்றை, அதற்கொத்த
+$I_n(\emptyset,\emptyset)$ என்ற இயற்கணிதவியல் கூற்றால் மாற்றலாம்.
+
+$!E$ கொடுக்கப்பட்டிருக்க, ஒவ்வொரு $n$ க்கும்
+$I_n(\emptyset, \emptyset)$ பொருந்தும்; ஆனால், எடுத்துக்காட்டாக,
+$\Struct{M}_n \models_L !E$ ஆகவும் $\Struct{N}_n \not\models_L !E$
+ஆகவும் இருக்கும் !!{structure}s $\Struct{M}_n$ மற்றும்
+$\Struct{N}_n$ உள்ளன என்று முரண்பாட்டிற்காகக் கொள்க.
+ஓரினப் பண்பின்படி, அனைத்து $\Struct{M}_n$ களும் மொழியின்
+மாறிலிகளை ஒரே பொருள்களாகப் பொருள்கொள்கின்றன என்று கொள்ளலாம்;
+மேலும் மொழியில் அணு !!{sentence}s இறுதிக்குட்பட்ட எண்ணிக்கையில்
+மட்டுமே இருப்பதால், அவை ஒரே அணு !!{sentence}s ஐ நிறைவுறுத்துகின்றன
+என்றும் கொள்ளலாம் (இல்லையெனில் $\Struct{M}$ களின் ஒரு
+உட்தொடரை எடுத்துக்கொள்ளலாம்). அனைத்து $\Struct{M}_n$ களின்
+ஒன்றிப்பு, அதாவது ஒவ்வொரு $\Struct{M}_n$ ஐயும் உட்கட்டமைப்பாகக்
+கொண்ட ஒரே குறைந்தபட்ச !!{structure}, $\Struct{M}$ ஆகட்டும்.
+\olref[lsp]{thm:abstract-p-isom} இன் நிரூபிப்பில் செய்ததுபோல்,
+தொடரிணைப்புச் சார்புகள் $P$ மற்றும்~$Q$ அடங்கிய விரிவாக்கப்பட்ட
+!!{language} இல், !!{domain} $\Domain{M} \cup
+\Domain{M}^{<\omega}$ உடைய $\Struct{M}$ இன் விரிவாக்கமாக
+$\Struct{M}^*$ இருக்கட்டும்.
+
+அதேபோல், $\Struct{N}_n$, $\Struct{N}$ மற்றும் $\Struct{N}^*$ ஐ
+வரையறுக்க. இப்போது $\Struct{M}^*$ மற்றும் $\Struct{N}^*$ இன்
+!!{domain}s உடன், இயலெண்கள்~$\Nat$ மற்றும் அவற்றின் இயல்பான
+வரிசை~$\le$ ஆகியவற்றையும் தனது !!{domain} இல் கொண்ட
+!!{structure} $\Struct{M}$ ஐக் கொள்க. அதன் !!{language} ஆனது
+$\Domain{M}$, $\Domain{N}$, $\Domain{M}^{<\omega}$ மற்றும்
+$\Domain{N}^{<\omega}$ ஆகிய !!{domain}s ஐக் குறிக்கும் கூடுதல்
+சார்புகளுடன், $\Struct{M}_n$ மற்றும் $\Struct{N}_n$ இன்
+ஆட்சிப்புலங்களைப் பின்வரும் பொருளில் குறியீடாக்கும் சார்புகளையும்
+ஐயும் கொண்டுள்ளது:
+\begin{align*}
+  \Domain{M_n} & = \Setabs{a \in \Domain{M}}{R(a, n)}; & 
+  \Domain{N_n} & = \Setabs{a \in \Domain{N}}{S(a,n)}; \\
+  \Domain{M}^{<\omega}_n & = \Setabs{a \in \Domain{M}^{<\omega}}{R(a,n)}; &
+  \Domain{N}^{<\omega}_n & = \Setabs{a \in \Domain{N}^{<\omega}}{S(a,n)}. 
+\end{align*}
+மேலும், $J(n, \mathbf{a}, \mathbf{b})$ எனில், எனில் மட்டுமே,
+$I_n(\mathbf{a}, \mathbf{b})$ பொருந்துமாறு அமைந்த மும்மை உறவு
+$J$ ஐயும் !!{structure}~$\Struct{M}$ கொண்டுள்ளது.
+
+இப்போது $R$, $S$, $J$ முதலியவற்றால் விரிவாக்கப்பட்ட
+!!{language}~$\Lang{L}$ இல் !!a{sentence}~$!D$ ஒன்று உள்ளது.
+$\le$ என்பது முதல் உறுப்பு கொண்டதும் கடைசி உறுப்பு
+இல்லாததுமான தனித்த நேரியல் வரிசை என்றும், $\Struct{M}_n \models
+!E$, $\Struct{N}_n \not\models !E$ என்றும், வரிசையிலுள்ள ஒவ்வொரு
+$n$ க்கும் $J(n, \mathbf{a}, \mathbf{b})$ எனில், எனில் மட்டுமே,
+$I_n(\mathbf{a}, \mathbf{b})$ என்றும் அது கூறுகிறது.
+
+இறுதிக்குட்பட்ட தன்மைப் பண்பைப் பயன்படுத்தி, வரிசை தரமற்ற
+உறுப்பு~$n^*$ ஒன்றைக் கொண்டிருக்கும் $!D$ இன் மாதிரி
+$\Struct{M}^*$ ஒன்றைக் காணலாம். அப்போது குறிப்பாக,
+$\Struct{M_{n^*}} \models_L !E$ மற்றும் $\Struct{N_{n^*}}
+\not\models_L !E$ ஆகுமாறு உட்!!{structure}s
+$\Struct{M_{n^*}}$ மற்றும் $\Struct{N_{n^*}}$ ஐ
+$\Struct{M^*}$ கொண்டிருக்கும். ஆனால் இப்போது
+$\Domain{M_{n^*}}$ மற்றும் $\Domain{N_{n^*}}$ இலிருந்து வரும்
+$k$-சோடிகளின் சோடிகளைக் கொண்ட கணம் $\mathcal{I}$ ஐப்
+பின்வருமாறு வரையறுக்கலாம்: $\mathbf{a}$ மற்றும் $\mathbf{b}$ இன்
+நீளம் $k$ எனில், $\tuple{\mathbf{a}, \mathbf{b}} \in \mathcal{I}$
+எனில், எனில் மட்டுமே, $J(n^*-k, \mathbf{a}, \mathbf{b})$.
+$n^*$ தரமற்றது என்பதால், ஒவ்வொரு தரமான $k$ க்கும்
+$n^* - k >0$; மேலும் $\Struct{M_{n^*}} \simeq_p
+\Struct{N_{n^*}}$ என்ற உண்மைக்கு கணம் $\mathcal{I}$ சான்றளிக்கிறது.
+ஆனால் \olref[lsp]{thm:abstract-p-isom} படி,
+$\Struct{M_{n^*}}$ ஆனது $\Struct{N_{n^*}}$ க்கு $L$-சமானமானது;
+இது ஒரு முரண்பாடு.
+\end{proof}
+
+\end{document}

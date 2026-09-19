@@ -1,0 +1,154 @@
+{
+  "schema": "openlogic-tamil-reader-render-qa/3",
+  "checked_utc": "2026-09-07T19:51:30Z",
+  "scope": {
+    "reader_units": 44,
+    "first_unit": "OLP-0208",
+    "last_unit": "OLP-0251",
+    "programme_completed_units": 248,
+    "total_frozen_units": 722,
+    "reader_contents": [
+      "recursive and primitive recursive functions",
+      "coding of sequences, trees and computations",
+      "partial recursion and Kleene normal form",
+      "halting and computably enumerable sets",
+      "many-one reducibility and complete c.e. sets",
+      "Rice's theorem, fixed points and self-reference"
+    ]
+  },
+  "pdf": {
+    "path": "readers/computability-ta-Taml-IN.pdf",
+    "bytes": 486347,
+    "sha256": "d6b579b11ecb9b6cbc4dea3bb35dc8b9dc6d31951634b8762ee3c35da693f642",
+    "pages": 63,
+    "all_pages_a4": true,
+    "encrypted": false,
+    "pdf_version": "1.7",
+    "metadata_title": "OpenLogic Tamil: computability",
+    "metadata_subject": "Machine translation; OLP-0208 through OLP-0251; 44 of 722 frozen source units",
+    "metadata_author": "OpenLogic Tamil translation programme",
+    "personal_name_absent_from_metadata": true
+  },
+  "build": {
+    "master_path": "build/tamil-computability.tex",
+    "master_bytes": 6372,
+    "master_sha256": "db456ae02ac3d0f9c5fdaf49c269bb335f2b5a66f4d36fcccd07125ca5f287bf",
+    "config_path": "translation/tamil-config.sty",
+    "config_sha256": "23ef1eb68ba21645a5d9dd54760f1ca45548070a6f4d195c1fc509c2540934e3",
+    "receipt_path": "TEX-COMPUTABILITY-RECEIPT.json",
+    "receipt_sha256": "00d4f04a62e65528b4aede192e18976c2e209aafa32d45edb84adb97b2e49dc5",
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "mutex_acquired": true,
+    "abandoned_mutex": false,
+    "engine": "xelatex",
+    "passes": 3,
+    "pass_exit_codes": [0, 0, 0],
+    "missing_character_warnings": 0,
+    "undefined_references": 0,
+    "multiply_defined_labels": 0,
+    "overfull_box_warnings": 0,
+    "underfull_box_warnings": 0,
+    "inherited_file_request_warnings_per_pass": 2,
+    "inherited_file_request_warnings": [
+      "bussproofs-extra.sty provides its own package name",
+      "ptolemaicastronomy.sty provides its own package name"
+    ]
+  },
+  "textual_unit_qa": {
+    "batch_receipts": [
+      {"path": "QA-B110.json", "sha256": "3d998c6b20cb9ff9dc0159f071b5989f68d1bb974732d78b7dc76d19b97dc1cd"},
+      {"path": "QA-B111.json", "sha256": "f14021fbee52531141ee5a8f37797dafd325532fa5880d13a284f89c8ed4395e"},
+      {"path": "QA-B112.json", "sha256": "9dec4dc942e5d80295c5476b781c552b30484e5f82734e5359f3b9e6505f20b7"},
+      {"path": "QA-B113.json", "sha256": "9cbe3620e63ade1e25c79d936ccb9f652a2a2197e7ba22e1d4802e47a4740a50"},
+      {"path": "QA-B114.json", "sha256": "c1cf056a85a0e430343d0b112580dc9cf9180a1d1b2e641e7452ea68f85abec8"},
+      {"path": "QA-B115.json", "sha256": "fa3fda69d665dd6158fdb47728d14b652bf5b8a99a2a0567c2338a46de5cd849"},
+      {"path": "QA-B116.json", "sha256": "0178b7f7e667b353e757669d6ff9b18772e5317ca350588d822dc78caff75191"},
+      {"path": "QA-B117.json", "sha256": "491714cc94ef226cf06ef77a2ffba174f7bdbd26e21986382718247a53665235"},
+      {"path": "QA-B118.json", "sha256": "b2179865452de0c88aa2bee9dd92672f769634f74f76448cd395bdc8ba7a6458"},
+      {"path": "QA-B119.json", "sha256": "4c4b69e9fd6bacf363fd79b0f1b4980a7e169e7fdc4a96ef3de067937cc02a74"},
+      {"path": "QA-B120.json", "sha256": "ae335d67252688606732f268cf29d05a5b69c8f5972e74189879a52af214f631"},
+      {"path": "QA-B121.json", "sha256": "b2c99d80ae8371984c61ebc24b776e02d68cd4b53115f458fc2a832a18ef1e1c"},
+      {"path": "QA-B122.json", "sha256": "486bf9aca867282dcf9f92c6963501d25c414052b8781e841e802540f5aefd11"},
+      {"path": "QA-B123.json", "sha256": "6007cc3ea8aee35da82413409640ff9927474600e1053d7224408f75c7ba67a4"},
+      {"path": "QA-B124.json", "sha256": "27774ecbe96c4dc967ad113e6cce714623550f631e62e22a6a232f0e53560f28"},
+      {"path": "QA-B125.json", "sha256": "2ecbc6bd1c6dba6a9c50258dabd63ce1d01e8ff57cb284677617219078e25096"},
+      {"path": "QA-B126.json", "sha256": "9dea4db18f0f448a2dba2397720bdfcc4ef10771178dea4aec5353222cc21851"},
+      {"path": "QA-B127.json", "sha256": "ff271b233c519cac607240575d66d89398ceb116fc3864c42e4525d96489b10d"},
+      {"path": "QA-B128.json", "sha256": "178bac5484f8e7aeaebd29661f552253b7faaafdd6a29568e88bfa235eaf3485"},
+      {"path": "QA-B129.json", "sha256": "69335afcf5cffb2ddbfa3f79a5981eccca53443fe1c480066a62b2e92440d3a1"},
+      {"path": "QA-B130.json", "sha256": "781841bfeaf351fea0610be917327cff695479791906b8bbd132586e5371e2e8"}
+    ],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass, including frozen-source issue preservation",
+    "visible_english_formula_prose_repaired": [
+      "two otherwise branches in OLP-0217",
+      "computably enumerable text token in OLP-0244 and OLP-0245",
+      "part and history captions"
+    ]
+  },
+  "semantic_review": {
+    "path": "SEMANTIC_REVIEW-CURRENT.json",
+    "sha256": "fb0456740763cffd07fc63a3a5f40ada340c0fe3234e97bdccf44e1243f98291",
+    "bound_units": 248,
+    "reviewed_samples": 342
+  },
+  "text_extraction": {
+    "path": "tamil-computability-d6b579b11ecb.txt",
+    "bytes": 313578,
+    "sha256": "7ad6b7795cf0d851f5f7406c193e7adb133595f98d6228a54b4797a70c22f652",
+    "tamil_character_count": 85328,
+    "replacement_character_count": 0,
+    "literal_question_pair_count": 0,
+    "visible_english_otherwise_count": 0,
+    "visible_english_computably_enumerable_count": 0,
+    "visible_english_part_caption_count": 0,
+    "visible_english_history_caption_count": 0,
+    "required_searches": {
+      "Tamil part caption": true,
+      "recursive functions": true,
+      "halting problem": true,
+      "computably enumerable sets": true,
+      "reducibility": true,
+      "Rice's theorem": true,
+      "fixed-point theorem": true
+    },
+    "allowed_ascii_words_note": "Open Logic Project and CC BY attribution, Java and C++ names, literal program examples, and extracted function or notation names only."
+  },
+  "fonts": {
+    "font_rows": 23,
+    "all_embedded": true,
+    "all_subset": true,
+    "tamil_fonts_unicode_mapped": true,
+    "legacy_math_font_without_unicode_map": "UKMNSC+CMSY10",
+    "classification": "The Tamil text fonts have Unicode mappings and copy-search succeeds. One embedded Computer Modern symbol subset lacks a ToUnicode map; formulas remain visually correct, while broader formula extraction is tracked as an edition-wide limitation.",
+    "pdffonts_output_path": "tamil-computability-d6b579b11ecb-pdffonts.txt",
+    "pdffonts_output_sha256": "e3fdc097383a4d4dd403e3a3e0a916100b9e9ca9477cdb0d1136f215787d459b"
+  },
+  "render": {
+    "directory": "renders-computability-d6b579b1",
+    "resolution_dpi": 110,
+    "page_png_count": 63,
+    "page_png_total_bytes": 18256545,
+    "contact_sheet_count": 8,
+    "contact_sheet_total_bytes": 4482433,
+    "contact_sheet_layout": "4x2",
+    "visually_inspected_page_range": "1-63",
+    "focused_pages": [4, 17, 53]
+  },
+  "visual_findings": {
+    "visual_review_complete": true,
+    "clipped_text": 0,
+    "overlapping_text": 0,
+    "unreadable_glyphs": 0,
+    "broken_formulas": 0,
+    "margin_overflows": 0,
+    "notes": [
+      "All 63 pages were inspected through eight generated 4x2 contact sheets from this exact PDF.",
+      "Page 4 was inspected individually and confirms the localized Tamil part caption.",
+      "Page 17 was inspected individually and confirms the localized fallback labels in characteristic-function cases.",
+      "Page 53 was inspected individually and confirms the localized complete c.e. set heading and body token.",
+      "Dense formula and code pages remain readable and entirely within page margins."
+    ]
+  },
+  "result": "pass"
+}

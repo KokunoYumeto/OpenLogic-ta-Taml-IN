@@ -1,0 +1,171 @@
+% SEGMENT OLP-0124-S01
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{sou}}
+      {\olfileid{pl}{axd}{sou}}
+      
+\olsection{சரித்தன்மை}
+
+% SEGMENT OLP-0124-S02
+\begin{explain}
+அடிகோள் வருவித்தல் போன்ற !!^a{derivation} அமைப்பு, உண்மையில் நிலவாதவற்றை
+!!{derive} செய்ய இயலாது எனில் \emph{சரியானது}. ஆகவே சரித்தன்மை என்பது
+!!{derivation} அமைப்புகளுக்கான ஒருவகை உறுதிப்படுத்தப்பட்ட பாதுகாப்புப் பண்பு.
+எந்த நிறுவல்-கோட்பாட்டுப் பண்பைப் பற்றி ஆராய்கிறோம் என்பதைப் பொறுத்து,
+எடுத்துக்காட்டாகப் பின்வருவனவற்றை அறிய விரும்புகிறோம்:
+\begin{enumerate}
+\item !!{derivable} ஆன ஒவ்வொரு~$!A$ உம் செல்லுபடியாகும்;
+\item மற்ற சில~$\Gamma$ இலிருந்து $!A$ !!{derivable} எனில், அது அவற்றின்
+  பின்விளைவும் ஆகும்;
+\item !!{formula}s கொண்ட ஒரு கணம்~$\Gamma$ முரணுடையது எனில், அது
+  நிறைவுற இயலாதது.
+\end{enumerate}
+இவை !!a{derivation} அமைப்பின் முக்கியமான பண்புகள். அவற்றில் ஏதேனும் ஒன்று
+செல்லுபடியாகவில்லை எனில், அந்த !!{derivation} அமைப்பு குறைபாடுடையது---அது
+மிக அதிகமானவற்றை !!{derive} செய்யும். எனவே !!a{derivation} அமைப்பின்
+சரித்தன்மையை நிறுவுவது மிக உயர்ந்த முக்கியத்துவம் உடையது.
+\end{explain}
+
+% SEGMENT OLP-0124-S03
+\begin{prop}
+  $!A$ ஓர் அடிகோள் எனில்,
+  \iftag{FOL}
+    {ஒவ்வொரு !!{structure}~$\Struct{M}$ மற்றும் ஒதுக்கீடு~$s$ க்கும் $\Sat{M}{!A}[s]$.}
+    {ஒவ்வொரு !!{valuation}~$\pAssign{v}$ க்கும் $\pSat{v}{!A}$.}
+\end{prop}
+
+% SEGMENT OLP-0124-S04
+\begin{proof}
+\iftag{FOL}{அடிகோள்கள் அனைத்தும் செல்லுபடியானவை என்பதைச் சரிபார்க்க வேண்டும்.
+  எடுத்துக்காட்டாக, \olref[qua]{ax:q1} க்கான நிலை இதோ: $t$ ஆனது~$!A$ இல்
+  $x$ க்காக !!{free for} என்க; மேலும்
+  $\Sat{M}{\lforall[x][!A]}[s]$ எனக் கொள்க. அப்போது நிறைவுறுத்தலின்
+  வரையறைப்படி, ஒவ்வொரு $\varAssign{s'}{s}{x}$ க்கும்
+  $\Sat{M}{!A}[s']$; குறிப்பாக $s'(x) = \Value{t}{M}[s]$ ஆகும்போதும் இது
+  செல்லுபடியாகும். \oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+  இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு} படி,
+  $\Sat{M}{\Subst{!A}{t}{x}}[s]$. இது
+  $\Sat{M}{(\lforall[x][!A] \lif \Subst{!A}{t}{x})}[s]$ என்பதைக்
+  காட்டுகிறது.}{ஒவ்வோர் அடிகோளுக்கும் மெய்மை அட்டவணைகள் அமைத்து அவை
+  மெய்மங்கள் என்பதைச் சரிபார்க்கவும்.}
+\end{proof}
+
+% SEGMENT OLP-0124-S05
+\begin{thm}[சரித்தன்மை]
+\ollabel{thm:soundness}
+$\Gamma \Proves !A$ எனில், $\Gamma \Entails !A$.
+\end{thm}
+
+% SEGMENT OLP-0124-S06
+\begin{proof}
+$\Gamma$ இலிருந்து~$!A$ இன் !!{derivation} நீளத்தின் மீது தொகுத்தறிதல்
+செய்கிறோம். அனுமானங்களால் நியாயப்படுத்தப்பட்ட படிகள் எவையும் இல்லையெனில்,
+அந்த !!{derivation}வில் உள்ள அனைத்து !!{formula}s உம் அடிகோள்களின்
+நிகழ்வுகளாகவோ~$\Gamma$ வில் உள்ளனவாகவோ இருக்கும். முந்தைய முன்மொழிவின்படி,
+அடிகோள்கள் அனைத்தும் \iftag{FOL}{செல்லுபடியானவை}{மெய்மங்கள்}; ஆகவே $!A$
+ஓர் அடிகோள் எனில் $\Gamma \Entails !A$. $!A \in \Gamma$ எனில், வெளிப்படையாக
+$\Gamma \Entails !A$.
+
+$!A$ இன் !!{derivation}வின் கடைசிப் படி மோடஸ் போனென்ஸால்
+நியாயப்படுத்தப்படுகிறது எனில், அந்த !!{derivation}வில் $!B$ மற்றும் $!B
+\lif !A$ என்ற !!{formula}s உள்ளன. அந்த !!{formula}s இல் முடியும் !!{derivation}வின்
+பகுதிகளுக்குத் தொகுத்தறிதல் கருதுகோள் பொருந்தும்; ஏனெனில் அவற்றில்
+அனுமானத்தால் நியாயப்படுத்தப்பட்ட படி குறைந்தது ஒன்று குறைவு. எனவே தொகுத்தறிதல்
+கருதுகோளின்படி, $\Gamma \Entails !B$ மற்றும் $\Gamma \Entails !B \lif
+!A$. பின்னர்
+\iftag{FOL}
+      {\oliflabeldef{syn:sem:thm:sem-deduction}{\olref[syn][sem]{thm:sem-deduction}}{பொருண்மைக் கழித்தல் தேற்றம்}}
+      {\oliflabeldef{pl:syn:sem:thm:sem-deduction}{\olref[pl][syn][sem]{thm:sem-deduction}}{பொருண்மைக் கழித்தல் தேற்றம்}}
+படி $\Gamma \Entails !A$.
+
+% SEGMENT OLP-0124-S07
+\iftag{FOL}{இப்போது கடைசிப் படி~\QR{} ஆல் நியாயப்படுத்தப்படுகிறது என்க.
+% SOURCE CORRECTION TA-AXD-007: use one formula schema B throughout the QR case.
+அப்போது அந்தப் படி $!C \lif \lforall[x][!B(x)]$ வடிவில் இருக்கும்; மேலும்
+$c$ ஆனது~$\Gamma$, $!C$, அல்லது $\lforall[x][!B(x)]$ இல் இடம்பெறாத நிலையில்,
+முந்தைய படியாக $!C \lif !B(c)$ இருக்கும். தொகுத்தறிதல் கருதுகோளின்படி,
+$\Gamma \Entails !C \lif !B(c)$. \oliflabeldef{syn:sem:thm:sem-deduction}{\olref[syn][sem]{thm:sem-deduction}}{பொருண்மைக்
+கழித்தல் தேற்றம்}
+படி $\Gamma \cup \{!C\} \Entails !B(c)$.
+
+$\Sat{M}{\Gamma \cup \{!C\}}$ ஆகுமாறு ஏதோவொரு கட்டமைப்பு~$\Struct{M}$
+ஐக் கருதுக. $\Sat{M}{\lforall[x][!B(x)]}$ என்று காட்ட வேண்டும்.
+$\lforall[x][!B(x)]$ !!a{sentence} என்பதால், ஒவ்வொரு மாறி
+ஒதுக்கீடு~$s$ க்கும் $\Sat{M}{!B(x)}[s]$ என்று காட்ட வேண்டும்
+(\oliflabeldef{syn:ass:prop:sat-quant}{\olref[syn][ass]{prop:sat-quant}}{அளவையடைகளுக்கான
+நிறைவுறுத்தல் விதி}). $\Gamma \cup \{!C\}$ முழுவதும்
+வாக்கியங்களைக் கொண்டுள்ளதால், ஒவ்வொரு $!D \in \Gamma$ க்கும்
+\oliflabeldef{syn:sat:defn:satisfaction}{\olref[syn][sat]{defn:satisfaction}}{வாக்கியக்
+கணத்திற்கான நிறைவுறுத்தல் வரையறை} படி $\Sat{M}{!D}[s]$. $\Assign{c}{M'}
+= s(x)$ என்பதைத்தவிர $\Struct{M}$ போலவே இருக்கும் கட்டமைப்பு~$\Struct{M'}$
+ஐக் கொள்க. $c$ ஆனது~$\Gamma$ அல்லது~$!C$ இல் இடம்பெறாததால்,
+\oliflabeldef{syn:ext:cor:extensionality-sent}{\olref[syn][ext]{cor:extensionality-sent}}{ஒரு
+வாக்கியத்தின் மெய்மை அதில் வரும் குறிகளின் விளக்கங்களை மட்டுமே சாரும் என்ற
+துணைவிளைவு} படி $\Sat{M'}{\Gamma \cup
+\{!C\}}$. $\Gamma \cup \{!C\} \Entails !B(c)$ என்பதால்
+$\Sat{M'}{!B(c)}$. $!B(c)$ !!a{sentence} என்பதால்,
+\oliflabeldef{syn:ass:prop:sentence-sat-true}{\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு
+வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு} படி
+$\Sat{M'}{!B(c)}[s]$.
+$!B(c)$ என்பது $\Subst{!B(x)}{c}{x}$ மட்டுமே என்பதை நினைவுகூர்க;
+\oliflabeldef{syn:ext:prop:ext-formulas}{\olref[syn][ext]{prop:ext-formulas}}{சொல்
+இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு} படி
+$\Sat{M'}{!B(x)}[s]$ என்பது,
+அப்போதும் அப்போது மட்டுமே, $\Sat{M'}{!B(c)}[s]$. எனவே
+$\Sat{M'}{!B(x)}[s]$. $c$ ஆனது~$!B(x)$ இல் இடம்பெறாததால்,
+\oliflabeldef{syn:ext:prop:extensionality}{\olref[syn][ext]{prop:extensionality}}{ஒரு
+வாய்பாட்டின் மெய்மை அதில் வரும் மொழிக் குறிகளின் விளக்கங்களை மட்டுமே சாரும்
+என்ற முன்மொழிவு} படி $\Sat{M}{!B(x)}[s]$. ஆனால் $s$
+தன்னிச்சையான மாறி ஒதுக்கீடு; ஆகவே $\Sat{M}{\lforall[x][!B(x)]}$.
+எனவே $\Gamma \cup \{!C\} \Entails \lforall[x][!B(x)]$.
+\oliflabeldef{syn:sem:thm:sem-deduction}{\olref[syn][sem]{thm:sem-deduction}}{பொருண்மைக்
+கழித்தல் தேற்றம்} படி $\Gamma \Entails !C \lif
+\lforall[x][!B(x)]$.
+
+% SEGMENT OLP-0124-S08
+$!A$ ஆனது~\QR{} ஆல் நியாயப்படுத்தப்பட்டும், $\lexists[x][!B(x)] \lif
+!C$ வடிவில் இருக்கும் நிலையையும் பயிற்சியாக விடுகிறோம்.}{}
+\end{proof}
+
+% SEGMENT OLP-0124-S09
+\tagprob{FOL}
+\begin{prob}
+  \olref[fol][axd][sou]{thm:soundness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0124-S10
+\begin{cor}
+\ollabel{cor:weak-soundness}
+$\Proves !A$ எனில், $!A$ ஒரு \iftag{FOL}{செல்லுபடியான வாய்பாடு}{மெய்மம்}.
+\end{cor}
+
+% SEGMENT OLP-0124-S11
+\begin{cor}
+\ollabel{cor:consistency-soundness}
+$\Gamma$ நிறைவுறத்தக்கது எனில், அது முரணற்றது.
+\end{cor}
+
+\begin{proof}
+எதிர்மறைநேர்மாற்றை நிறுவுகிறோம். $\Gamma$ முரணற்றதல்ல என்க. அப்போது
+$\Gamma \Proves \lfalse$; அதாவது, $\Gamma$ இலிருந்து~$\lfalse$ இன்
+!!a{derivation} உள்ளது. \olref{thm:soundness} படி, $\Gamma$ வை
+நிறைவுறுத்தும் எந்த
+\iftag{FOL}{!!{structure}~$\Struct{M}$}{!!{valuation}~$\pAssign{v}$} உம்
+$\lfalse$ ஐ நிறைவுறுத்த வேண்டும். ஒவ்வொரு
+\iftag{FOL}{$\Sat/{M}{\lfalse}$ ஆகும் !!{structure}~$\Struct{M}$
+  எதுவும் இல்லை}{$\pSat/{v}{\lfalse}$ ஆகும் !!{valuation}~$\pAssign{v}$
+  எதுவும் இல்லை} என்பதால், எந்த
+\iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} உம்~$\Gamma$ வை நிறைவுறுத்தாது;
+அதாவது, $\Gamma$ நிறைவுறத்தக்கதல்ல.
+\end{proof}
+
+
+\end{document}

@@ -1,0 +1,273 @@
+{
+  "batch_id": "TA-B164",
+  "units": [
+    {
+      "unit_id": "OLP-0308",
+      "source_sha256": "6d136f51b1d58f3d8831a237dd21b65a146381874e9549c7e504080264df82bd",
+      "translation_sha256": "c71a307f474fe7d566545de0e58c82859d22c4250e095ca4b6310212dae08d2e",
+      "source_bytes": 1681,
+      "translation_bytes": 4219,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-035",
+          "unit_id": "OLP-0308",
+          "kind": "axiomatized-versus-axiomatizable",
+          "action": "Rendered the proof premise as axiomatizable, matching both the theorem statement and the immediately preceding decidability lemma; retained the frozen token key in an alignment comment.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proof says merely axiomatized where its inference to decidability requires a computable axiomatization, expressed everywhere else as axiomatizable.",
+          "chosen_treatment": "தமிழ் காட்டல் முழுமையுடன் அடிகோளாக்கத்தக்கதன்மையைக் கொண்டு முந்தைய துணைத்தேற்றத்தை நேரடியாகப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating every theory with any axiom set as decidable; weakening the theorem.",
+          "rationale": "The theorem's hypothesis and cited preceding result uniquely require axiomatizability.",
+          "precise_review_question": "Does the one-line proof now invoke exactly the hypotheses of the complete-axiomatizable implies decidable lemma?",
+          "location_needle": "SOURCE CORRECTION TA-INC-035"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0309",
+      "source_sha256": "d9da8fc6073ab195b526966775f35c67384af226328d0e98531a7a8b111c6ff8",
+      "translation_sha256": "f85dc7d930d0b83d5568d29df22fa68aec8e54745e0cf2ba90c49d3257d5ec55",
+      "source_bytes": 1445,
+      "translation_bytes": 3016,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$R(\\#(!D_S(\\numu)),y)$"
+      ],
+      "extra_math": [
+        "$R(\\Gn{!D_S(u)},y)$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "eqnarray",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-036",
+          "unit_id": "OLP-0309",
+          "kind": "metatheoretic-relation-applied-to-numeral-term",
+          "action": "Changed the positive and negative evaluations of S from numeral n to natural number n.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\num",
+            "\\num"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "As in the preceding universal-relation proof, S is an external computable relation while D_S is its representing formula, but both displayed S expressions take an object-language numeral.",
+          "chosen_treatment": "தமிழ் S(n) மற்றும் D_S(num n) என்ற வகை வேறுபாட்டைப் பாதுகாக்கிறது.",
+          "alternatives_considered": "Treating S as an object-language predicate; changing the representing instances.",
+          "rationale": "The relation-representability definition and the construction of R require a natural-number input to S and a numeral term in D_S.",
+          "precise_review_question": "Are both external S evaluations now applied to n while every internal D_S instance retains num n?",
+          "location_needle": "SOURCE CORRECTION TA-INC-036"
+        },
+        {
+          "audit_id": "TA-INC-037",
+          "unit_id": "OLP-0309",
+          "kind": "wrong-coded-unary-formula",
+          "action": "Replaced the hash expression for D_S at numeral u with the Gödel number of the one-free-variable formula D_S(u).",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\num"
+          ],
+          "expected_extra_commands": [
+            "\\Gn"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "$R(\\#(!D_S(\\numu)),y)$",
+              "to": "$R(\\Gn{!D_S(u)},y)$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "R's first argument must code a formula D(u) with free variable u, but the final line hashes D_S applied to the numeral for u, which is neither the required schema nor the previously used Gödel-number notation.",
+          "chosen_treatment": "தமிழ் R இன் முதல் உட்பொருளாக ஒரே கட்டற்ற மாறி u கொண்ட D_S(u) வாய்பாட்டின் கோடல் எண்ணை இடுகிறது.",
+          "alternatives_considered": "Coding a closed numeral instance; treating num u as a free-variable placeholder.",
+          "rationale": "The definition of R and the universal relation parameter both uniquely require the code of D_S(u).",
+          "precise_review_question": "Does the final equivalence now use the code of the same unary formula introduced as representing S?",
+          "location_needle": "SOURCE CORRECTION TA-INC-037"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\num",
+        "\\num",
+        "\\num"
+      ],
+      "extra_commands": [
+        "\\Gn"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0310",
+      "source_sha256": "990cb27b8ea30898025f22704de1d8c790213d7e4439d43744f4e005722375ea",
+      "translation_sha256": "76234356d5fdf928bf92827e0d0b80dcf4f9b63e8824e09094bf4e4c53cfeda2",
+      "source_bytes": 2114,
+      "translation_bytes": 4615,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-038",
+          "unit_id": "OLP-0310",
+          "kind": "math-mode-prose-localization",
+          "action": "Localized the English predicate inside the set-builder text while preserving the bound formula metavariable and formal set-builder structure.",
+          "expected_missing_math": [
+            "$isprovableinfirst-orderlogic}}$"
+          ],
+          "expected_extra_math": [
+            "$முதல்தரத்தருக்கத்தில்நிறுவத்தக்கது}}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The corollary embeds an ordinary English explanatory phrase inside a text wrapper nested within an inline mathematical set-builder.",
+          "chosen_treatment": "தமிழ் அதே text உட்பரப்பில் முதல்தரத் தருக்கத்தில் நிறுவத்தக்கது என்று மொழிபெயர்க்கிறது.",
+          "alternatives_considered": "Leaving public-facing English prose untranslated; restructuring the formal set-builder.",
+          "rationale": "The nested dollar delimiters make the QA extractor expose the text fragment, although the TeX text wrapper preserves the same formal predicate role.",
+          "precise_review_question": "Does the set-builder now read naturally in Tamil while retaining the exact bound variable and theorem-set meaning?",
+          "location_needle": "முதல்தரத் தருக்கத்தில் நிறுவத்தக்கது"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0311",
+      "source_sha256": "180003bb40b9c0d66d6e9805dba9989e14b350ad857b45e35479923bb712a966",
+      "translation_sha256": "31ffe3ebddf22860b4dd675555cdc92800fc7fa1c4c40f75b83133f2de551be6",
+      "source_bytes": 2721,
+      "translation_bytes": 6837,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-039",
+          "unit_id": "OLP-0311",
+          "kind": "missing-consistency-qualification",
+          "action": "Added consistency to the first ZFC corollary, matching the immediately preceding general theorem.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The theorem says that no consistent extension is decidable, but the corollary drops consistency and thereby falsely excludes the inconsistent theory, a decidable extension of ZFC in which every sentence is provable.",
+          "chosen_treatment": "தமிழ் தொடர்விளைவு ZFC இன் முரணற்ற, தீர்மானிக்கத்தக்க விரிவாக்கம் இல்லை என்று தேற்றத்தின் சரியான தகுதியை வைத்திருக்கிறது.",
+          "alternatives_considered": "Retaining the false unrestricted corollary; silently treating every extension as consistent.",
+          "rationale": "The preceding theorem supplies exactly this qualification, and the chapter earlier explicitly notes that an inconsistent theory is decidable.",
+          "precise_review_question": "Does the corollary now follow directly from the stated interpretation theorem without excluding the decidable inconsistent extension?",
+          "location_needle": "SOURCE CORRECTION TA-INC-039"
+        },
+        {
+          "audit_id": "TA-INC-040",
+          "unit_id": "OLP-0311",
+          "kind": "truth-evaluated-in-language",
+          "action": "Changed the closing Presburger sentence from truth in the language of arithmetic to truth in the standard model.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "A language supplies syntax and cannot make sentences true; the paragraph begins by evaluating arithmetic sentences in the standard model and the Presburger comparison requires the same intended structure.",
+          "chosen_treatment": "தமிழ் பிரெஸ்பர்கர் முடிவிலும் வாக்கியங்களை எண்கணிதத் தரநிலை மாதிரியிலேயே மதிப்பிடுகிறது.",
+          "alternatives_considered": "Keeping the category error; using the vague phrase standard interpretation without matching the paragraph's established term.",
+          "rationale": "The immediately preceding comparison and the definition of true arithmetic uniquely determine the standard natural-number model.",
+          "precise_review_question": "Is the decidable Presburger theory now identified as the set of sentences true in the same standard model used throughout the paragraph?",
+          "location_needle": "SOURCE CORRECTION TA-INC-040"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "schema": "openlogic-tamil-cumulative-reader-render-qa/1",
+  "result": "pass",
+  "scope": {
+    "accepted_distinct_units": 203,
+    "component_readers": 7,
+    "pages": 384,
+    "section_start_pages": [
+      1,
+      100,
+      189,
+      206,
+      269,
+      319,
+      359
+    ]
+  },
+  "pdf": {
+    "path": "readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf",
+    "bytes": 3481125,
+    "sha256": "1b5f3bd1b1395b69a503665ac86e909dd1339ef954393375a4aa48708f70846b",
+    "all_pages_a4": true
+  },
+  "assembly": {
+    "receipt": "CUMULATIVE-READER-ASSEMBLY.json",
+    "receipt_sha256": "bc2dc56423e362b4a9ef6af9888244f09fc1a5cdb240a7a5eedcd545befc6be5",
+    "page_content_and_geometry_checked": 384,
+    "page_content_and_geometry_mismatches": [],
+    "component_pdfs_rebuilt": false
+  },
+  "navigation": {
+    "top_level_section_bookmarks": 7,
+    "named_destinations": 1913,
+    "link_annotations_checked": 626,
+    "broken_local_links": [],
+    "annotation_counts": {
+      "/Link": 626
+    }
+  },
+  "fonts": {
+    "rows": 152,
+    "all_embedded": true
+  },
+  "text_extraction": {
+    "bytes": 1741806,
+    "characters": 707744,
+    "tamil_characters": 494175,
+    "replacement_characters": 0,
+    "literal_question_pairs": 0,
+    "page_breaks": 384
+  },
+  "render": {
+    "representative_pages": [
+      1,
+      2,
+      49,
+      98,
+      99,
+      100,
+      101,
+      187,
+      188,
+      189,
+      204,
+      205,
+      206,
+      267,
+      268,
+      269,
+      317,
+      318,
+      319,
+      357,
+      358,
+      359,
+      383,
+      384
+    ],
+    "page_pngs": [
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-001.png",
+        "bytes": 138916,
+        "sha256": "737813376d5dc089332820215038a85c4127f80ce5176cee3fc7de7aa817ccea"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-002.png",
+        "bytes": 158538,
+        "sha256": "23a334282920e5b3e321c0b2927593753bce06abb97ac7f6ffcc29ae9972fbb0"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-049.png",
+        "bytes": 233596,
+        "sha256": "f393c4c44bfa393d03d75db5d7a699e458598c6c163ac2d2989c2c90c6015f3b"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-098.png",
+        "bytes": 321703,
+        "sha256": "8cb6b44004143cc3cf103ef40d32692a3c3dc08fc904a922962487ca2f73aa74"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-099.png",
+        "bytes": 160609,
+        "sha256": "c75b51d0a376c082ed6d9114940e35ba7ee56162846d09a46d92483fd820441b"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-100.png",
+        "bytes": 136456,
+        "sha256": "479f4c13ff91e1f9d69ba63d6ea90bfe4f00adbee7ced2e0e0bc8e22c21ef1eb"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-101.png",
+        "bytes": 196173,
+        "sha256": "735a32b49eceff0684c5adc1b37c48dbedf572e24818107e1a828bdfd6bce8bf"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-187.png",
+        "bytes": 276687,
+        "sha256": "d790f6cc5ce945e33ce4ed7673d8c82cf7768ccd623be27fa612211e3981df98"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-188.png",
+        "bytes": 177810,
+        "sha256": "9146f81c9800853f2c20670137420f8bd6d693b8c49bd6ae3026958ed8eee264"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-189.png",
+        "bytes": 108201,
+        "sha256": "21f37e5d504474f6186e429d890980c90dde9fa2806bdb473c771d60dc7f905d"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-204.png",
+        "bytes": 394479,
+        "sha256": "9eacdf0d04a4aa9de3797d539e61e37d86d7f08af8ecbc38baac8a82208204f1"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-205.png",
+        "bytes": 141335,
+        "sha256": "3efc8d728fffcf3f605951c01646cc29f98949b66f664ba18a196aa96da13769"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-206.png",
+        "bytes": 127048,
+        "sha256": "ec0a575d98b2d019b5e2cc3adeb57212747b866fc0b3467251328f346254716c"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-267.png",
+        "bytes": 384558,
+        "sha256": "2e9b55000e7226ef97bbd56b60de4a73737816ab2ae102bdecefd3985fa40215"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-268.png",
+        "bytes": 291335,
+        "sha256": "50bf2a855099f34ae5d154c7883a5e7b27d59e19c019cdfbab69d4db96943474"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-269.png",
+        "bytes": 129328,
+        "sha256": "d336b757b18a8a1e9b1a41a87a6bd93857d82184d614c99103c234de7176f350"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-317.png",
+        "bytes": 415161,
+        "sha256": "ba3e77cb986195ba1572c2f2e5568d543b7bc0454d84467fa9861212501e6947"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-318.png",
+        "bytes": 39685,
+        "sha256": "36a43ebefc7f2a663160489ff82712712f5c9e92516b8574442e15e68de2db24"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-319.png",
+        "bytes": 147187,
+        "sha256": "02c73f3508aa64581d717a1ca242293b7bce4564b74c81ce0e21c6a4e32a3276"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-357.png",
+        "bytes": 319922,
+        "sha256": "4f51a90fb43981d4c099d43af4a53b679dd2d6524a991e9566dffc61f6cd37a9"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-358.png",
+        "bytes": 301454,
+        "sha256": "8175e7f09a309945ff205ddb8d56057ca359773dcab3be60d7496de57b2f183c"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-359.png",
+        "bytes": 132978,
+        "sha256": "a15d0e8428dc9b04bd09c1a1cb8ca30bd82de57a35323f6c5dfd92b6b3040881"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-383.png",
+        "bytes": 376148,
+        "sha256": "96f9905235552d1df65405310725586e3450662d4af272e22ea180c3f62eb663"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\page-384.png",
+        "bytes": 278302,
+        "sha256": "6c29774cb0e136fd438bc52a57fc7967ed03f3e80a283b6ff0ac3b4a091910b6"
+      }
+    ],
+    "contact_sheets": [
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\contact-1.png",
+        "bytes": 1129552,
+        "sha256": "d23831a101af767a6edbc30834f45453fad90e3dca8d927612e84001f2eb9c4e"
+      },
+      {
+        "path": "C:\\interlanguage-task-state\\openlogic-ta-Taml-IN\\cumulative-render-20260912-2236\\contact-2.png",
+        "bytes": 1277582,
+        "sha256": "a27b8af3ffc479b6df46475c57a62f5072d10d8e6281b9193411544d26b25560"
+      }
+    ],
+    "selection": "First, last, and boundary-adjacent pages for all seven component readers, plus representative interior pages."
+  },
+  "visual_findings": {
+    "visual_review_complete": true,
+    "review_method": "Both contact sheets were directly inspected after exact stream/geometry comparison. Every component had already passed its own all-page visual QA.",
+    "clipped_text": 0,
+    "overlapping_text": 0,
+    "unreadable_glyphs": 0,
+    "broken_formulas_or_tables": 0,
+    "margin_overflows": 0,
+    "section_boundary_defects": 0
+  },
+  "limitations": [
+    "This is a cumulative reading PDF assembled from seven accepted component readers; it is not a continuous full-book reader.",
+    "The PDF is not claimed to be tagged PDF or universally screen-reader accessible.",
+    "Machine translation with source comparison and author semantic review; independent Tamil-specialist approval is not claimed."
+  ]
+}

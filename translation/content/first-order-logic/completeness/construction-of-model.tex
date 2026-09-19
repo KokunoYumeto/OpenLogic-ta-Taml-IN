@@ -1,0 +1,307 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: construction-of-model
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{mod}}
+      {\olfileid{pl}{com}{mod}}
+
+% SEGMENT OLP-0132-S01
+\olsection{ஒரு மாதிரியின் கட்டமைப்பு}
+
+% SEGMENT OLP-0132-S02
+\begin{explain}
+\iftag{FOL}{இப்போது நாம்~$\eq$ குறித்துக் கவலைப்படவில்லை; அதாவது,~$\eq$ ஐக்
+  கொண்டிராத முரணற்ற !!{sentence}s கணம்~$\Gamma$ நிறைவுசெய்யத்தக்கது என்பதை
+  மட்டும் காட்ட விரும்புகிறோம். முதலில்~$\Gamma$ ஐ முரணற்ற, !!{complete},
+  செறிவுற்ற கணம்~$\Gamma^*$ ஆக விரிவாக்குகிறோம். இந்நிலையில்
+  மாதிரி~$\Struct{M(\Gamma^*)}$ இன் வரையறை எளியது:~$\Lang{L'}$ இன்
+  மூடிய சொற்களின் கணத்தைப் பொருட்களமாக எடுத்துக்கொள்கிறோம். ஒவ்வொரு
+  !!{constant} ஐயும் அதற்கே ஒதுக்குகிறோம்; மேலும் பொதுவாக ஒவ்வொரு மூடிய
+  சொல்~$t$ க்கும் $\Value{t}{M(\Gamma^*)} = t$ என்பதை உறுதிசெய்கிறோம்.
+  !!{predicate}s களுக்கான விரிவுகள், ஓர் அணு !!{sentence} ஆனது
+  $\Struct{M(\Gamma^*)}$ இல் மெய்யாக இருப்பது அப்போதும் அப்போது மட்டுமே அது
+  $\Gamma^*$ இல் இருக்குமாறு ஒதுக்கப்படுகின்றன. இதனால்~$\Gamma^*$ இலுள்ள
+  எல்லா அணு !!{sentence}s உம் $\Struct{M(\Gamma^*)}$ இல் மெய்யாவது
+  வெளிப்படை. நாம் தொடங்கும்~$\Gamma^*$ முரணற்றதாகவும் நிறைவானதாகவும்
+  செறிவுற்றதாகவும் இருந்தால், மீதமுள்ளவையும் மெய்யாகும்.}{இப்போது எல்லா
+  $!A \in \Gamma$ களையும் மெய்யாக்கும் !!a{valuation} ஐ வரையறுக்கத் தயாராக
+  உள்ளோம். இதற்காக முதலில் லிண்டன்பாமின் துணைத்தேற்றத்தைப் பயன்படுத்துகிறோம்:
+  $\Gamma^* \supseteq \Gamma$ ஆக இருக்கும் நிறைவான முரணற்ற கணத்தைப்
+  பெறுகிறோம். $\Gamma^*$ இலுள்ள !!{propositional variable}s ஆனவை
+  $\pAssign v(\Gamma^*)$ ஐத் தீர்மானிக்குமாறு செய்கிறோம்.}
+\end{explain}
+
+% SEGMENT OLP-0132-S03
+\iftag{FOL}{%
+\begin{defn}[சொல் மாதிரி]
+\ollabel{defn:termmodel}
+$\Gamma^*$ ஆனது~$\Lang L$ என்ற மொழியிலுள்ள !!{sentence}s கொண்ட !!a{complete},
+முரணற்ற, செறிவுற்ற கணம் என்க. $\Gamma^*$ இன் \emph{சொல்
+  மாதிரி}~$\Struct M(\Gamma^*)$ என்பது பின்வருமாறு வரையறுக்கப்படும்
+!!{structure} ஆகும்:
+\begin{enumerate}
+\item !!{domain}~$\Domain{M(\Gamma^*)}$ என்பது~$\Lang L$ இன் எல்லா மூடிய
+  சொற்களின் கணம்.
+\item !!a{constant}~$c$ இன் பொருள்விளக்கம் $c$ தானே:
+  $\Assign{c}{M(\Gamma^*)} = c$.
+\item !!{function}~$f$ க்கு ஒதுக்கப்படும் சார்பு, மூடிய சொற்கள் $t_1$,
+  \dots, $t_n$ ஐ உள்ளீடுகளாகக் கொண்டால், மூடிய சொல் $f(t_1, \dots, t_n)$
+  ஐ மதிப்பாகக் கொண்டது:
+\[
+\Assign{f}{M(\Gamma^*)}(t_1, \dots, t_n) = f(t_1,\dots, t_n)
+\]
+\item $R$ ஓர் $n$-இட !!{predicate} எனில்,
+  \[
+  \tuple{t_1, \dots,
+  t_n} \in \Assign{R}{M(\Gamma^*)} \text{ அப்போதும் அப்போது மட்டுமே } \Atom{R}{t_1, \dots,
+    t_n} \in \Gamma^*.
+  \]
+\end{enumerate}
+\end{defn}
+}{%
+\begin{defn}
+\ollabel{defn:termmodel}
+$\Gamma^*$ ஆனது !!{formula}s கொண்ட நிறைவான முரணற்ற கணம் என்க. அப்போது
+\[
+\pAssign v(\Gamma^*)(p) = \begin{cases}
+  \True & \text{$p \in \Gamma^*$ எனில்}\\
+  \False & \text{$p \notin \Gamma^*$ எனில்}
+  \end{cases}
+\]
+என வைக்கிறோம்.
+\end{defn}
+}
+
+% SEGMENT OLP-0132-S04
+\iftag{FOL}{%
+$\Value{t}{M(\Gamma^*)} = t$ என்பது உண்மையிலேயே பொருந்துகிறது என்பதை இப்போது
+சரிபார்ப்போம்.
+
+\begin{lem}
+\ollabel{lem:val-in-termmodel} $\Struct M(\Gamma^*)$ ஆனது
+\olref{defn:termmodel} இன் சொல் மாதிரி எனில், $\Value{t}{M(\Gamma^*)} = t$.
+\end{lem}
+\begin{proof}
+ நிறுவல்~$t$ மீது தொகுத்தறிதலால் அமைகிறது. $t$ ஓர் !!a{constant} ஆகும்
+ அடிப்படை நிலை, சொல் மாதிரியின் வரையறையிலிருந்து நேரடியாகக் கிடைக்கிறது.
+ தொகுத்தறிதல் படிக்கு, $t_1, \ldots, t_n$ என்பவை
+ $\Value{t_i}{M(\Gamma^*)} = t_i$ ஆக இருக்கும் மூடிய சொற்கள் என்றும், $f$
+ ஓர் $n$-இட !!{function} என்றும் கொள்க. அப்போது
+\begin{align*}
+\Value{f(t_1,\ldots,t_n)}{M(\Gamma^*)} &= \Assign{f}{M(\Gamma^*)}(\Value{t_1}
+ {M(\Gamma^*)},
+\ldots, \Value{t_n}{M(\Gamma^*)}) \\
+&= \Assign{f}{M(\Gamma^*)}(t_1, \dots, t_n) \\
+&= f(t_1,\dots, t_n),
+\end{align*}
+எனவே தொகுத்தறிதலால் இது ஒவ்வொரு மூடிய சொல்~$t$ க்கும் பொருந்தும்.
+\end{proof}
+}
+
+% SEGMENT OLP-0132-S05
+\iftag{FOL}{%
+\begin{explain}
+  \iftag{prvEx}{!!^a{structure}~$\Struct{M}$, இருப்பளவையிட்ட
+    !!{sentence}~$\lexists[x][!A(x)]$ ஐ மெய்யாக்கினாலும், அது மெய்யாக்கும்
+    நிகழ்வு~$!A(t)$ எதுவும் இல்லாமல் இருக்கலாம்.}{}
+  \iftag{prvAll}{!!^a{structure}~$\Struct{M}$, அனைத்தளவையிட்ட
+    !!{sentence}~$\lforall[x][!A(x)]$ இன் எல்லா நிகழ்வுகள்~$!A(t)$ ஐயும்
+    மெய்யாக்கினாலும்,~$\lforall[x][!A(x)]$ ஐ மெய்யாக்காமல் இருக்கலாம்.}{}
+  ஏனெனில் பொதுவாக~$\Domain{M}$ இன் ஒவ்வோர் !!{element} உம் ஒரு மூடிய சொல்லின்
+  மதிப்பாக இருப்பதில்லை ($\Struct{M}$ முழுதும் மூடிய சொற்களின் மதிப்புகளால்
+  எட்டப்படாமல் இருக்கலாம்). இதனால்தான் நிறைவுறுத்தல் உறவு மாறி ஒதுக்கீடுகள்
+  வழியாக வரையறுக்கப்படுகிறது. ஆனால் நமது சொல் மாதிரி~$\Struct{M(\Gamma^*)}$
+  முழுதும் அவ்வாறு எட்டப்படுவதால், இது தேவையில்லை. அடுத்த முடிவு இதையே கூறுகிறது.
+\end{explain}
+
+% SEGMENT OLP-0132-S06
+\begin{prop}
+\ollabel{prop:quant-termmodel}
+$\Struct M(\Gamma^*)$ ஆனது~\olref{defn:termmodel} இன் சொல் மாதிரி என்க.
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$\Sat{M(\Gamma^*)}{\lexists[x][!A(x)]}$ அப்போதும் அப்போது
+  மட்டுமே, குறைந்தது ஒரு மூடிய சொல்~$t$ க்கு
+  $\Sat{M(\Gamma^*)}{!A(t)}$.}{}
+\tagitem{prvAll}{$\Sat{M(\Gamma^*)}{\lforall[x][!A(x)]}$ அப்போதும் அப்போது
+  மட்டுமே, எல்லா மூடிய சொற்கள்~$t$ க்கும்
+  $\Sat{M(\Gamma^*)}{!A(t)}$.}{}
+\end{tagenumerate}
+\end{prop}
+
+% SEGMENT OLP-0132-S07
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{%
+  \iftag{probEx}{பயிற்சி.}{\olref[syn][ass]{prop:sat-quant} படி,
+    குறைந்தது ஒரு மாறி ஒதுக்கீடு~$s$ க்கு
+    $\Sat{M(\Gamma^*)}{!A(x)}[s]$ என்பது அப்போதும் அப்போது மட்டுமே
+    $\Sat{M(\Gamma^*)}{\lexists[x][!A(x)]}$. $\Domain{M(\Gamma^*)}$ ஆனது
+    $\Lang{L}$ இன் மூடிய சொற்களைக் கொண்டிருப்பதால், $s(x) = t$ ஆகவும்
+    $\Sat{M(\Gamma^*)}{!A(x)}[s]$ ஆகவும் இருக்குமாறு குறைந்தது ஒரு மூடிய
+    சொல்~$t$ இருப்பது அப்போதும் அப்போது மட்டுமே இதுவும் பொருந்தும்.
+    \olref[fol][syn][ext]{prop:ext-formulas} படி, $s(x) = t$ எனில்,
+    $\Sat{M(\Gamma^*)}{!A(x)}[s]$ அப்போதும் அப்போது மட்டுமே
+    $\Sat{M(\Gamma^*)}{!A(t)}[s]$. $!A(t)$ ஒரு வாக்கியம் என்பதால்,
+    \olref[fol][syn][ass]{prop:sentence-sat-true} படி,
+    $\Sat{M(\Gamma^*)}{!A(t)}[s]$ அப்போதும் அப்போது மட்டுமே
+    $\Sat{M(\Gamma^*)}{!A(t)}$.}}{}
+\tagitem{prvAll}{%
+  \iftag{probAll}{பயிற்சி.}{\olref[syn][ass]{prop:sat-quant} படி, ஒவ்வொரு
+    மாறி ஒதுக்கீடு $s$ க்கும் $\Sat{M(\Gamma^*)}{!A(x)}[s]$ என்பது அப்போதும்
+    அப்போது மட்டுமே $\Sat{M(\Gamma^*)}{\lforall[x][!A(x)]}$.
+    $\Domain{M(\Gamma^*)}$ ஆனது~$\Lang{L}$ இன் மூடிய சொற்களைக் கொண்டிருப்பதை
+    நினைவுகூர்க. ஆகவே ஒவ்வொரு மூடிய சொல்~$t$ க்கும் $s(x) = t$ என்பது
+    அத்தகைய ஒரு மாறி ஒதுக்கீடு; எந்த மாறி ஒதுக்கீட்டுக்கும் $s(x)$ என்பது
+    ஏதோ ஒரு மூடிய சொல்~$t$. \olref[fol][syn][ext]{prop:ext-formulas} படி,
+    $s(x) = t$ எனில், $\Sat{M(\Gamma^*)}{!A(x)}[s]$ அப்போதும் அப்போது
+    மட்டுமே $\Sat{M(\Gamma^*)}{!A(t)}[s]$. $!A(t)$ ஒரு வாக்கியம் என்பதால்,
+    \olref[fol][syn][ass]{prop:sentence-sat-true} படி,
+    $\Sat{M(\Gamma^*)}{!A(t)}[s]$ அப்போதும் அப்போது மட்டுமே
+    $\Sat{M(\Gamma^*)}{!A(t)}$.}}{}
+\end{tagenumerate}
+\end{proof}
+}{}
+
+% SEGMENT OLP-0132-S08
+\tagprob[FOL]{probEx,probAll}
+\begin{prob}
+\olref[fol][com][mod]{prop:quant-termmodel} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0132-S09
+\begin{lem}[மெய்மை துணைத்தேற்றம்]
+\ollabel{lem:truth} \iftag{FOL}{$!A$ ஆனது~$\eq$ ஐக் கொண்டிருக்கவில்லை என்க.
+அப்போது}{}
+$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!A}$ அப்போதும் அப்போது
+மட்டுமே $!A \in \Gamma^*$.
+\end{lem}
+
+% SEGMENT OLP-0132-S10
+\begin{proof}
+இரு திசைகளையும் ஒரே நேரத்தில், $!A$ மீது தொகுத்தறிதலால் நிறுவுகிறோம்.
+\begin{enumerate}
+\tagitem{prvFalse}{\indcase{!A}{\lfalse}
+  {$\iftag{FOL}{\Sat/{M(\Gamma^*)}{\lfalse}}{\pSat/{v(\Gamma^*)}{\lfalse}}$
+    என்பது நிறைவுறுத்தலின் வரையறையால். மறுபுறம், $\Gamma^*$ முரணற்றதால்
+    $\lfalse \notin \Gamma^*$.}}{}
+
+\tagitem{prvTrue}{\indcase{!A}{\ltrue}
+  {$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\ltrue}$
+    என்பது நிறைவுறுத்தலின் வரையறையால். மறுபுறம், $\Gamma^*$ முரணற்றதாகவும்
+    !!{complete} ஆகவும் இருந்து, $\Gamma^* \Proves \ltrue$ என்பதால்,
+    $\ltrue \in \Gamma^*$.}}{}
+
+\tagitem{FOL}{\indcase{!A}{R(t_1, \dots, t_n)}
+  {$\Sat{M(\Gamma^*)}{\Atom{R}{t_1, \dots, t_n}}$ அப்போதும் அப்போது மட்டுமே
+    $\tuple{t_1, \dots, t_n} \in \Assign{R}{M(\Gamma^*)}$ (நிறைவுறுத்தலின்
+    வரையறையால்); அப்போதும் அப்போது மட்டுமே $R(t_1, \dots, t_n) \in
+    \Gamma^*$ ($\Struct M(\Gamma^*)$ இன் கட்டமைப்பால்).}}{\indcase{!A}{p}
+    {$\pSat{v(\Gamma^*)}{p}$ அப்போதும் அப்போது மட்டுமே
+    $\pAssign v(\Gamma^*)(p) = \True$ (நிறைவுறுத்தலின் வரையறையால்);
+    அப்போதும் அப்போது மட்டுமே $p \in \Gamma^*$
+    ($\pAssign v(\Gamma^*)$ இன் கட்டமைப்பால்).}}
+
+% SEGMENT OLP-0132-S11
+\tagitem{prvNot}{%
+  \indcase{!A}{\lnot !B}
+    {$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\indfrm}$ அப்போதும்
+    அப்போது மட்டுமே
+    $\iftag{FOL}{\Sat/{M(\Gamma^*)}{!B}}{\pSat/{v(\Gamma^*)}{!B}}$
+    (நிறைவுறுத்தலின் வரையறையால்). தொகுத்தறிதல் கருதுகோளின்படி,
+    $\iftag{FOL}{\Sat/{M(\Gamma^*)}{!B}}{\pSat/{v(\Gamma^*)}{!B}}$ அப்போதும்
+    அப்போது மட்டுமே $!B \notin \Gamma^*$. $\Gamma^*$ முரணற்றதாகவும்
+    !!{complete} ஆகவும் இருப்பதால், $!B \notin \Gamma^*$ அப்போதும் அப்போது
+    மட்டுமே $\lnot !B \in \Gamma^*$.}}{}
+
+% SEGMENT OLP-0132-S12
+\tagitem{prvAnd}{%
+\iftag{probAnd}{%
+  \indcase!{!A}{!B \land !C}{}}{%
+  \indcase{!A}{!B \land
+    !C}{$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\indfrm}$
+    அப்போதும் அப்போது மட்டுமே
+    $\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!B}$ மற்றும்
+    $\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!C}$ இரண்டும்
+    பொருந்தும் (நிறைவுறுத்தலின் வரையறையால்); அப்போதும் அப்போது மட்டுமே
+    $!B \in \Gamma^*$ மற்றும் $!C \in \Gamma^*$ இரண்டும் பொருந்தும்
+    (தொகுத்தறிதல் கருதுகோளின்படி). \olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-and}
+    படி, அப்போதும் அப்போது மட்டுமே $(!B \land !C) \in \Gamma^*$.}}}{}
+
+% SEGMENT OLP-0132-S13
+\tagitem{prvOr}{%
+\iftag{probOr}{%
+  \indcase!{!A}{!B \lor !C}{}}{%
+  \indcase{!A}{!B \lor !C}
+    {$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\indfrm}$ அப்போதும்
+    அப்போது மட்டுமே $\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!B}$
+    அல்லது $\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!C}$
+    (நிறைவுறுத்தலின் வரையறையால்); அப்போதும் அப்போது மட்டுமே
+    $!B \in \Gamma^*$ அல்லது $!C \in \Gamma^*$ (தொகுத்தறிதல்
+    கருதுகோளின்படி). \olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-or} படி,
+    அப்போதும் அப்போது மட்டுமே $(!B \lor !C) \in \Gamma^*$.}}}{}
+
+% SEGMENT OLP-0132-S14
+\tagitem{prvIf}{%
+\iftag{probIf}{%
+  \indcase!{!A}{!B \lif !C}{}}{%
+  \indcase{!A}{!B \lif !C}
+    {$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{\indfrm}$ அப்போதும்
+    அப்போது மட்டுமே $\iftag{FOL}{\Sat/{M(\Gamma^*)}}{\pSat/{v(\Gamma^*)}}{!B}$
+    அல்லது $\iftag{FOL}{\Sat{M (\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!C}$
+    (நிறைவுறுத்தலின் வரையறையால்); அப்போதும் அப்போது மட்டுமே
+    $!B \notin \Gamma^*$ அல்லது $!C \in \Gamma^*$ (தொகுத்தறிதல்
+    கருதுகோளின்படி). \olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-if} படி,
+    அப்போதும் அப்போது மட்டுமே $(!B \lif !C) \in \Gamma^*$.}}}{}
+
+% SEGMENT OLP-0132-S15
+\iftag{FOL}{%
+\tagitem{prvAll}{%
+  \iftag{probAll}{%
+    \indcase!{!A}{\lforall[x][!B(x)]}{}}{%
+    \indcase{!A}{\lforall[x][!B(x)]}{$\Sat{M(\Gamma^*)}{\indfrm}$ அப்போதும்
+      அப்போது மட்டுமே எல்லா சொற்கள்~$t$ க்கும்
+      $\Sat{M(\Gamma^*)}{!B(t)}$ (\olref{prop:quant-termmodel}).
+      தொகுத்தறிதல் கருதுகோளின்படி, அப்போதும் அப்போது மட்டுமே எல்லா
+      சொற்கள்~$t$ க்கும் $!B(t) \in \Gamma^*$; மேலும்
+      \olref[hen]{prop:saturated-instances} படி, அப்போதும் அப்போது மட்டுமே
+      % SOURCE CORRECTION TA-COM-002: retain the quantified induction formula B consistently.
+      $\lforall[x][!B(x)] \in \Gamma^*$.}}}{}
+
+\tagitem{prvEx}{%
+  \iftag{probEx}{%
+    \indcase!{!A}{\lexists[x][!B(x)]}{}}{%
+    \indcase{!A}{\lexists[x][!B(x)]}{$\Sat{M(\Gamma^*)}{\indfrm}$ அப்போதும்
+      அப்போது மட்டுமே குறைந்தது ஒரு சொல்~$t$ க்கு
+      $\Sat{M(\Gamma^*)}{!B(t)}$ (\olref{prop:quant-termmodel}).
+      தொகுத்தறிதல் கருதுகோளின்படி, அப்போதும் அப்போது மட்டுமே குறைந்தது ஒரு
+      சொல்~$t$ க்கு $!B(t) \in \Gamma^*$. மேலும்
+      \olref[hen]{prop:saturated-instances} படி, அப்போதும் அப்போது மட்டுமே
+      $\lexists[x][!B(x)] \in \Gamma^*$.}}}{}
+}{}
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0132-S16
+\tagprob[FOL]{probOr,probAnd,probIf,probEx,probAll}
+
+\begin{prob}
+\olref[fol][com][mod]{lem:truth} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\tagendprob
+
+\tagprob[notFOL]{probOr,probAnd,probIf}
+
+\begin{prob}
+\olref[pl][com][mod]{lem:truth} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\tagendprob
+
+\end{document}

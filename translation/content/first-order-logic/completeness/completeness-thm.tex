@@ -1,0 +1,133 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: completeness-theorem
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{cth}}
+      {\olfileid{pl}{com}{cth}}
+
+% SEGMENT OLP-0134-S01
+\olsection{நிறைவு தேற்றம்}
+
+% SEGMENT OLP-0134-S02
+\begin{explain}
+நமது முடிவுகளை ஒன்றிணைப்போம்: நிறைவு தேற்றத்தை அடைகிறோம்.
+\end{explain}
+
+% SEGMENT OLP-0134-S03
+\begin{thm}[நிறைவு தேற்றம்]
+\ollabel{thm:completeness}
+$\Gamma$ என்பது !!{sentence}s கொண்ட ஒரு கணம் என்க. $\Gamma$ முரணற்றது எனில்,
+அது நிறைவுசெய்யத்தக்கது.
+\end{thm}
+
+\begin{proof}
+$\Gamma$ முரணற்றது என்க.\iftag{FOL}{ \olref[hen]{lem:henkin} படி,
+$\Gamma' \supseteq \Gamma$ ஆக இருக்கும் செறிவுற்ற முரணற்ற கணம் ஒன்று
+உள்ளது.}{} \olref[lin]{lem:lindenbaum} படி,
+$\Gamma^* \supseteq \iftag{FOL}{\Gamma'}{\Gamma}$ ஆகவும் முரணற்றதாகவும்
+!!{complete} ஆகவும் இருக்கும் கணம் ஒன்று உள்ளது.
+\iftag{FOL}{
+  $\Gamma' \subseteq \Gamma^*$ என்பதால், ஒவ்வொரு !!{formula}~$!A(x)$ க்கும்
+  பின்வரும் வடிவிலான !!a{sentence} ஐ~$\Gamma^*$ கொண்டுள்ளது:
+  \iftag{prvEx}
+        {$\lexists[x][!A(x)] \lif !A(c)$}
+        {$\lnot\lforall[x][!A(x)] \lif \lnot !A(c)$}.
+  ஆகவே~$\Gamma^*$ செறிவுற்றது. $\Gamma$ ஆனது~$\eq$ ஐக் கொண்டிருக்கவில்லை
+  எனில்,}{அப்போது} \olref[mod]{lem:truth} படி,
+$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!A}$ அப்போதும் அப்போது
+மட்டுமே $!A \in \Gamma^*$. குறிப்பாக, எல்லா $!A \in \Gamma$ களுக்கும்
+$\iftag{FOL}{\Sat{M(\Gamma^*)}}{\pSat{v(\Gamma^*)}}{!A}$ என்பது இதிலிருந்து
+கிடைக்கிறது; ஆகவே~$\Gamma$ நிறைவுசெய்யத்தக்கது.\iftag{FOL}{
+  $\Gamma$ ஆனது~$\eq$ ஐக் கொண்டிருந்தால், \olref[ide]{lem:truth} படி எல்லா
+  !!{sentence}s~$!A$ க்கும் $\Sat{\equivclass{M}{\approx}}{!A}$ அப்போதும்
+  அப்போது மட்டுமே $!A \in \Gamma^*$. குறிப்பாக, எல்லா $!A \in \Gamma$
+  களுக்கும் $\Sat{\equivclass{M}{\approx}}{!A}$; ஆகவே~$\Gamma$
+  நிறைவுசெய்யத்தக்கது.}{}
+\end{proof}
+
+% SEGMENT OLP-0134-S04
+\begin{cor}[நிறைவு தேற்றம், இரண்டாம் வடிவம்]
+\ollabel{cor:completeness}
+எல்லா~$\Gamma$ களுக்கும் !!{sentence}s~$!A$ க்கும்: $\Gamma \Entails !A$
+எனில் $\Gamma \Proves !A$.
+\end{cor}
+
+% SEGMENT OLP-0134-S05
+\begin{proof}
+\olref{cor:completeness} மற்றும் \olref{thm:completeness} ஆகியவற்றிலுள்ள
+$\Gamma$ கள் அனைத்தளவையிடப்பட்டுள்ளன என்பதைக் கவனிக்க. குழப்பத்தைத்
+தவிர்ப்பதற்காக, \olref{thm:completeness} ஐ வேறொரு மாறியைப் பயன்படுத்தி
+மீண்டும் கூறுவோம்: !!{sentence}s கொண்ட எந்தக் கணம்~$\Delta$ க்கும்,
+$\Delta$ முரணற்றது எனில் அது நிறைவுசெய்யத்தக்கது. எதிர்நிலைமாற்றத்தால்,
+$\Delta$ நிறைவுசெய்யத்தக்கதல்ல எனில், $\Delta$ முரணுடையது. இதைப் பயன்படுத்தி
+முடிவுரையை நிறுவுவோம்.
+
+$\Gamma \Entails !A$ என்க. அப்போது \olref[syn][sem]{prop:entails-unsat}
+படி, $\Gamma \cup \{\lnot !A\}$ நிறைவுசெய்யத்தக்கதல்ல. $\Gamma \cup
+\{\lnot !A\}$ ஐ நமது~$\Delta$ ஆக எடுத்துக்கொண்டால்,
+\olref{thm:completeness} இன் முந்தைய வடிவம் $\Gamma \cup \{\lnot !A\}$
+முரணுடையது எனத் தருகிறது. பின்வரும் மேற்கோளின்படி
+\iftag{FOL}{%
+  \tagrefs{prfAX/{fol:axd:prv:prop:prov-incons},
+    prfSC/{fol:seq:prv:prop:prov-incons},
+    prfND/{fol:ntd:prv:prop:prov-incons},
+    prfTab/{fol:tab:prv:prop:prov-incons}}}{%
+  \tagrefs{prfAX/{pl:axd:prv:prop:prov-incons},
+    prfSC/{pl:seq:prv:prop:prov-incons},
+    prfND/{pl:ntd:prv:prop:prov-incons},
+    prfTab/{pl:tab:prv:prop:prov-incons}}},
+$\Gamma \Proves !A$.
+\end{proof}
+
+% SEGMENT OLP-0134-S06
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][com][cth]{cor:completeness} ஐப் பயன்படுத்தி
+\olref[fol][com][cth]{thm:completeness} ஐ நிறுவுக; இதன்மூலம் நிறைவு
+தேற்றத்தின் இரு வடிவங்களும் சமானமானவை எனக் காட்டுக.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0134-S07
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][com][cth]{cor:completeness} ஐப் பயன்படுத்தி
+\olref[pl][com][cth]{thm:completeness} ஐ நிறுவுக; இதன்மூலம் நிறைவு
+தேற்றத்தின் இரு வடிவங்களும் சமானமானவை எனக் காட்டுக.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0134-S08
+\tagprob{FOL}
+\begin{prob}
+!!a{derivation} முறைமை நிறைவானதாக இருப்பதற்கு, நிறைவுசெய்யத்தக்கதல்லாத
+ஒவ்வொரு கணமும் முரணுடையது என நிறுவுமளவுக்கு அதன் விதிகள் வலுவாக இருக்க
+வேண்டும். நிறைவை நிறுவுவதற்கு !!{derivation} விதிகளில் எவை தேவைப்பட்டன?
+அவ்விதிகளில் ஏதேனும் நிறுவலில் எங்கும் பயன்படுத்தப்படவில்லையா? இக்கேள்விகளுக்கு
+விடையளிக்க, \olref[fol][com][cth]{thm:completeness} இன் நிறுவலுக்கு இட்டுச்
+செல்லும் எந்த முடிவுகளில் எந்த !!{derivation} விதிகள் பயன்படுத்தப்பட்டன
+என்பதைக் காட்டும் பட்டியல் அல்லது வரைபடத்தை உருவாக்குக. இந்நிறுவல்களில்
+வெளிப்படையாகக் கூறப்படாத விதிப் பயன்பாடுகளையும் குறிப்பிடுக.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0134-S09
+\tagprob{notFOL}
+\begin{prob}
+!!a{derivation} முறைமை நிறைவானதாக இருப்பதற்கு, நிறைவுசெய்யத்தக்கதல்லாத
+ஒவ்வொரு கணமும் முரணுடையது என நிறுவுமளவுக்கு அதன் விதிகள் வலுவாக இருக்க
+வேண்டும். நிறைவை நிறுவுவதற்கு !!{derivation} விதிகளில் எவை தேவைப்பட்டன?
+அவ்விதிகளில் ஏதேனும் நிறுவலில் எங்கும் பயன்படுத்தப்படவில்லையா? இக்கேள்விகளுக்கு
+விடையளிக்க, \olref[pl][com][cth]{thm:completeness} இன் நிறுவலுக்கு இட்டுச்
+செல்லும் எந்த முடிவுகளில் எந்த !!{derivation} விதிகள் பயன்படுத்தப்பட்டன
+என்பதைக் காட்டும் பட்டியல் அல்லது வரைபடத்தை உருவாக்குக. இந்நிறுவல்களில்
+வெளிப்படையாகக் கூறப்படாத விதிப் பயன்பாடுகளையும் குறிப்பிடுக.
+\end{prob}
+\tagendprob
+
+\end{document}

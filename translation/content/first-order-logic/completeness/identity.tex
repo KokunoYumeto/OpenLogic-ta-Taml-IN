@@ -1,0 +1,220 @@
+% Part: first-order-logic
+% Chapter: completeness
+% Section: identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{com}{ide}
+
+% SEGMENT OLP-0133-S01
+\olsection{சமனியம்}
+
+% SEGMENT OLP-0133-S02
+\begin{explain}
+முந்தைய பிரிவில் தரப்பட்ட சொல் மாதிரியின் கட்டமைப்பு,~$\eq$ ஐக் கொண்டிராத
+கணங்கள்~$\Gamma$ க்கான முதல்தர தருக்கத்தின் நிறைவை நிறுவப் போதுமானது. அந்தச்
+சொல் மாதிரி~$\eq$ ஐக் கொண்டிராத ஒவ்வொரு $!A \in \Gamma^*$ ஐயும் (அதனால்
+எல்லா $!A \in \Gamma$ களையும்) நிறைவுறுத்துகிறது. ஆனால்~$\eq$ இடம்பெற்றால்
+அது செயல்படாது. ஏனெனில் அப்போது~$\Gamma^*$, !!a{sentence}~$\eq[t][t']$ ஐக்
+கொண்டிருக்கலாம்; ஆனால் சொல் மாதிரியில் எந்தச் சொல்லின் மதிப்பும் அந்தச்
+சொல்லே. ஆகவே $t$ மற்றும் $t'$ வெவ்வேறு சொற்கள் எனில், சொல் மாதிரியில்
+அவற்றின் மதிப்புகளான முறையே $t$ மற்றும் $t'$ வெவ்வேறானவை; எனவே
+$\eq[t][t']$ பொய். இருப்பினும், ``பகுத்தொகுதியாக்கல்'' எனப்படும்
+கட்டமைப்பைப் பயன்படுத்தி இதைச் சரிசெய்யலாம்.
+\end{explain}
+
+% SEGMENT OLP-0133-S03
+\begin{defn}
+  $\Gamma^*$ ஆனது~$\Lang L$ இலுள்ள வாக்கியங்களைக் கொண்ட முரணற்ற,
+  !!{complete} கணம் என்க. $\Lang L$ இன் மூடிய சொற்களின் கணத்தின் மீது
+  $\approx$ என்ற உறவைப் பின்வருமாறு வரையறுக்கிறோம்:
+  \[
+  t \approx t' \text{\quad அப்போதும் அப்போது மட்டுமே \quad} \eq[t][t'] \in \Gamma^*
+  \]
+\end{defn}
+
+% SEGMENT OLP-0133-S04
+\begin{prop}
+\ollabel{prop:approx-equiv}
+$\approx$ என்ற உறவு பின்வரும் பண்புகளைக் கொண்டுள்ளது:
+\begin{enumerate}
+\item $\approx$ தற்சுட்டானது.
+\item $\approx$ சமச்சீரானது.
+\item $\approx$ கடப்புநிலையானது.
+\item $t \approx t'$ எனவும், $f$ ஓர் !!a{function} எனவும், $t_1$, \dots,
+  $t_{i-1}$, $t_{i+1}$, \dots, $t_n$ ஆகியவை மூடிய சொற்கள் எனவும் இருந்தால்,
+\[
+\Atom{f}{t_1,\dots, t_{i-1}, t, t_{i+1}, \dots, t_n} \approx
+\Atom{f}{t_1,\dots, t_{i-1}, t', t_{i+1}, \dots, t_n}.
+\]
+\item $t \approx t'$ எனவும், $R$ ஓர் !!a{predicate} எனவும், $t_1$, \dots,
+  $t_{i-1}$, $t_{i+1}$, \dots, $t_n$ ஆகியவை மூடிய சொற்கள் எனவும் இருந்தால்,
+\begin{multline*}
+\Atom{R}{t_1,\dots, t_{i-1}, t, t_{i+1}, \dots, t_n} \in \Gamma^* \text{ அப்போதும் அப்போது மட்டுமே } \\
+\Atom{R}{t_1,\dots, t_{i-1}, t', t_{i+1}, \dots, t_n} \in \Gamma^*.
+\end{multline*}
+\end{enumerate}
+\end{prop}
+
+% SEGMENT OLP-0133-S05
+\begin{proof}
+$\Gamma^*$ முரணற்றதாகவும் !!{complete} ஆகவும் இருப்பதால், $\eq[t][t'] \in
+\Gamma^*$ அப்போதும் அப்போது மட்டுமே $\Gamma^* \Proves \eq[t][t']$. ஆகவே
+பின்வருவனவற்றைக் காட்டினால் போதும்:
+\begin{enumerate}
+\item எல்லா மூடிய சொற்கள்~$t$ க்கும் $\Gamma^* \Proves \eq[t][t]$.
+\item $\Gamma^* \Proves \eq[t][t']$ எனில் $\Gamma^* \Proves \eq[t'][t]$.
+\item $\Gamma^* \Proves \eq[t][t']$ மற்றும் $\Gamma^* \Proves
+  \eq[t'][t'']$ எனில், $\Gamma^* \Proves \eq[t][t'']$.
+\item $\Gamma^* \Proves \eq[t][t']$ எனில்,
+% SOURCE CORRECTION TA-COM-003: remove the duplicated comma from the function term.
+\[
+\Gamma^* \Proves
+\eq[\Atom{f}{t_1,\dots,t_{i-1},t,t_{i+1},\dots,t_n}][\Atom{f}{t_1,\dots,t_{i-1},t',t_{i+1},\dots,t_n}]
+\]
+என்பது ஒவ்வொரு $n$-இட !!{function}~$f$ க்கும், மூடிய சொற்கள் $t_1$, \dots,
+$t_{i-1}$, $t_{i+1}$, \dots,~$t_n$ க்கும் பொருந்தும்.
+\item $\Gamma^* \Proves \eq[t][t']$ மற்றும்
+$\Gamma^* \Proves
+\Atom{R}{t_1,\dots,t_{i-1},t,t_{i+1},\dots,t_n}$ எனில்,
+$\Gamma^* \Proves \Atom{R}{t_1,\dots,t_{i-1},t',t_{i+1},\dots,t_n}$
+என்பது ஒவ்வொரு $n$-இட !!{predicate}~$R$ க்கும், மூடிய சொற்கள் $t_1$, \dots,
+$t_{i-1}$, $t_{i+1}$, \dots,~$t_n$ க்கும் பொருந்தும்.
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0133-S06
+\begin{prob}
+\olref[fol][com][ide]{prop:approx-equiv} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+% SEGMENT OLP-0133-S07
+\begin{defn}
+$\Gamma^*$ ஆனது~$\Lang L$ என்ற மொழியிலுள்ள முரணற்ற, !!{complete} கணம்
+எனவும், $t$ ஒரு மூடிய சொல் எனவும், $\approx$ முந்தைய வரையறையில்
+உள்ளவாறு எனவும் கொள்க. அப்போது:
+\[
+\equivrep{t}{\approx} = \Setabs{t'}{t'\in \Trm[L], t \approx t'}
+\]
+மேலும் $\equivclass{\Trm[L]}{\approx} = \Setabs{\equivrep{t}{\approx}}{t \in \Trm[L]}$.
+\end{defn}
+
+% SEGMENT OLP-0133-S08
+\begin{defn}
+\ollabel{defn:term-model-factor}
+$\Struct M = \Struct M(\Gamma^*)$ என்பது~\olref[mod]{defn:termmodel} இல்
+தரப்பட்ட~$\Gamma^*$ இன் சொல் மாதிரி என்க. அப்போது
+$\Struct{\equivclass{M}{\approx}}$ என்பது பின்வரும் !!{structure}:
+\begin{enumerate}
+\item $\Domain{\equivclass{M}{\approx}} = \equivclass{\Trm[L]}{\approx}$.
+\item $\Assign{c}{\equivclass{M}{\approx}} = \equivrep{c}{\approx}$
+\item $\Assign{f}{\equivclass{M}{\approx}}(\equivrep{t_1}{\approx}, \dots,
+  \equivrep{t_n}{\approx}) = \equivrep{\Atom{f}{t_1,\dots, t_n}}{\approx}$
+\item $\tuple{\equivrep{t_1}{\approx}, \dots, \equivrep{t_n}{\approx}} \in
+  \Assign{R}{\equivclass{M}{\approx}}$ அப்போதும் அப்போது மட்டுமே
+  $\Sat{M}{\Atom{R}{t_1,\dots, t_n}}$; அதாவது, அப்போதும் அப்போது மட்டுமே
+  $\Atom{R}{t_1,\dots, t_n} \in \Gamma^*$.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0133-S09
+\begin{explain}
+$\equivclass{\Trm[L]}{\approx}$ இன் உறுப்புகளை
+$\equivrep{t}{\approx}$ என்று குறிப்பிட்டு, அதாவது
+$t \in \equivrep{t}{\approx}$ என்ற \emph{பிரதிநிதிகள்} வழியாக,
+$\Assign{f}{\equivclass{M}{\approx}}$ மற்றும்
+$\Assign{R}{\equivclass{M}{\approx}}$ ஆகியவற்றை வரையறுத்துள்ளோம் என்பதைக்
+கவனிக்க. இந்த வரையறைகள் அப்பிரதிநிதிகளின் தேர்வைச் சார்ந்திருக்கவில்லை
+என்பதை உறுதிசெய்ய வேண்டும். அதாவது, அதே சமான வகுப்புகளைத் தீர்மானிக்கும்
+வேறு தேர்வுகள்~$t'$ க்கு
+($\equivrep{t}{\approx} = \equivrep{t'}{\approx}$), வரையறைகள் அதே முடிவைத்
+தர வேண்டும். எடுத்துக்காட்டாக, $R$ ஓர் ஓரிட !!{predicate} எனில், வரையறையின்
+கடைசி கூறின்படி $\equivrep{t}{\approx} \in
+\Assign{R}{\equivclass{M}{\approx}}$ அப்போதும் அப்போது மட்டுமே
+$\Sat{M}{\Atom{R}{t}}$. $t \approx t'$ ஆக இருக்கும் வேறொரு சொல்~$t'$ க்கு
+$\Sat/{M}{\Atom{R}{t}}$ எனில், வரையறை
+$\equivrep{t'}{\approx} \notin \Assign{R}{\equivclass{M}{\approx}}$ ஐக்
+கோரிவிடும். $t \approx t'$ எனில், $\equivrep{t}{\approx} =
+\equivrep{t'}{\approx}$; ஆனால் $\equivrep{t}{\approx} \in
+\Assign{R}{\equivclass{M}{\approx}}$ மற்றும் $\equivrep{t}{\approx}
+\notin \Assign{R}{\equivclass{M}{\approx}}$ இரண்டும் ஒருங்கே இருக்க முடியாது.
+இது நிகழாது என்பதை~\olref{prop:approx-equiv} உறுதிசெய்கிறது.
+\end{explain}
+
+% SEGMENT OLP-0133-S10
+\begin{prop}
+$\Struct{\equivclass{M}{\approx}}$ நன்கு வரையறுக்கப்பட்டுள்ளது. அதாவது,
+$t_1$, \dots, $t_n$, $t_1'$, \dots, $t_n'$ ஆகியவை மூடிய சொற்களாகவும்,
+$t_i \approx t_i'$ ஆகவும் இருந்தால்,
+\begin{enumerate}
+\item $\equivrep{\Atom{f}{t_1,\dots, t_n}}{\approx} =
+    \equivrep{\Atom{f}{t_1',\dots, t_n'}}{\approx}$; அதாவது,
+  \[
+  \Atom{f}{t_1,\dots, t_n} \approx \Atom{f}{t_1',\dots, t_n'}
+  \]
+  மற்றும்
+\item $\Sat{M}{\Atom{R}{t_1,\dots, t_n}}$ அப்போதும் அப்போது மட்டுமே
+  $\Sat{M}{\Atom{R}{t_1',\dots, t_n'}}$; அதாவது,
+  \[
+    \Atom{R}{t_1,\dots, t_n} \in \Gamma^* \text{ அப்போதும் அப்போது மட்டுமே }
+    \Atom{R}{t_1',\dots, t_n'} \in \Gamma^*.
+  \]
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+$n$ மீதான தொகுத்தறிதலாலும்~\olref{prop:approx-equiv} இலிருந்தும் கிடைக்கிறது.
+\end{proof}
+
+% SEGMENT OLP-0133-S11
+சொல் மாதிரியைப் போலவே, மெய்மை துணைத்தேற்றத்தை நிறுவுவதற்கு முன் பின்வரும்
+துணைத்தேற்றம் தேவை.
+
+\begin{lem}
+\ollabel{lem:val-in-termmodel-factored} $\Struct M = \Struct M
+ (\Gamma^*)$ என்க. அப்போது $\Value{t}{\equivclass{M}{\approx}} = \equivrep{t}
+ {\approx}$.
+\end{lem}
+\begin{proof}
+இந்த நிறுவல்~\olref[mod]{lem:val-in-termmodel} இன் நிறுவலை ஒத்தது.
+\end{proof}
+
+\begin{prob}
+\olref[fol][com][ide]{lem:val-in-termmodel-factored} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+% SEGMENT OLP-0133-S12
+\begin{lem}
+\ollabel{lem:truth}
+எல்லா வாக்கியங்கள்~$!A$ க்கும், $\Sat{\equivclass{M}{\approx}}{!A}$ அப்போதும்
+அப்போது மட்டுமே $!A \in \Gamma^*$.
+\end{lem}
+
+\begin{proof}
+\olref[mod]{lem:truth} இன் நிறுவலைப் போலவே,~$!A$ மீது தொகுத்தறிதலால்
+நிறுவுகிறோம். $!A \ident \eq[t][t']$ ஆக இருக்கும் நிலை மட்டுமே கூடுதல்
+கவனம் கோருகிறது.
+\begin{align*}
+\Sat{\equivclass{M}{\approx}}{\eq[t][t']} & \text{ அப்போதும் அப்போது மட்டுமே } \equivrep{t}{\approx} = \equivrep{t'}{\approx}
+\text{ ($\Struct{\equivclass{M}{\approx}}$ இன் வரையறையால்)}\\
+& \text{ அப்போதும் அப்போது மட்டுமே } t \approx t' \text{ ($\equivrep{t}{\approx}$ இன் வரையறையால்)}\\
+& \text{ அப்போதும் அப்போது மட்டுமே } \eq[t][t'] \in \Gamma^* \text{ ($\approx$ இன் வரையறையால்).}
+\end{align*}
+\end{proof}
+
+% SEGMENT OLP-0133-S13
+\begin{digress}
+$\Struct{M(\Gamma^*)}$ எப்போதும் !!{enumerable} ஆகவும் முடிவிலியாகவும்
+இருந்தாலும், $\Struct{\equivclass{M}{\approx}}$ இறுதிக்குட்பட்டதாக இருக்கலாம்
+என்பதைக் கவனிக்க. ஏனெனில் $\equivrep{t}{\approx}$ என்ற வகுப்புகள்
+இறுதிக்குட்பட்ட எண்ணிக்கையில் மட்டுமே இருக்கலாம். இதுவே எதிர்பார்க்கத்தக்கது;
+ஏனெனில், அவை மெய்யாக இருக்கும் எந்த !!{structure} உம் இறுதிக்குட்பட்டதாக
+இருக்க வேண்டும் என்று கோரும் !!{sentence}s ஐ~$\Gamma$ கொண்டிருக்கலாம்.
+எடுத்துக்காட்டாக, $\lforall[x][\lforall[y][x = y]]$ ஒரு முரணற்ற
+!!{sentence}; ஆனால் சரியாக ஓர் !!{element} ஐக் கொண்ட !!a{domain} உடைய
+!!{structure}s இல் மட்டுமே அது நிறைவுறுத்தப்படுகிறது.
+\end{digress}
+
+\end{document}

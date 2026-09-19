@@ -1,0 +1,300 @@
+{
+  "batch_id": "TA-B167",
+  "units": [
+    {
+      "unit_id": "OLP-0330",
+      "source_sha256": "4da3e8e4537a2a8ebf7870903b03ee5a09945b1fc8d9bded72d3009c60377afe",
+      "translation_sha256": "f69596b15c4bf0c52b026052ef516eeca6310c14715cd03de884de779fa12dc5",
+      "source_bytes": 384,
+      "translation_bytes": 486,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0331",
+      "source_sha256": "413d8f1950ae13bf318f29e071b196cbc1971aa378d2aa94ac79e1342baf6e2c",
+      "translation_sha256": "3b553c87636f8aa2e6d9b9acb9629c5939da30552370b6d5849194cce86fcfba",
+      "source_bytes": 1909,
+      "translation_bytes": 4780,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "computably",
+        "enumerable",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0332",
+      "source_sha256": "a09f150a63d364e758adf2547e5237108b76d6ea7f08d23fe9373792b71bea0d",
+      "translation_sha256": "2671295a23f3c2a1926c18e104c2074d0803547c7d7f16eb10bb710321e75411",
+      "source_bytes": 5174,
+      "translation_bytes": 9854,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[!A_+(x,y,z)\\ident\\lexists[u][(u(\\Obj0)=x\\land\\lforall[w][u(x')=u(x)']\\landu(y)=z)]\\]"
+      ],
+      "extra_math": [
+        "\\[!A_+(x,y,z)\\ident\\lexists[u][(u(\\Obj0)=x\\land\\lforall[w][u(w')=u(w)']\\landu(y)=z)]\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "mar",
+        "met",
+        "mod",
+        "open",
+        "section",
+        "sol",
+        "spa",
+        "stm",
+        "thus"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SOL-003",
+          "unit_id": "OLP-0332",
+          "kind": "bound-variable-mismatch",
+          "action": "Used the universally bound variable w in both occurrences of the addition recurrence.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "u(x')=u(x)'",
+              "to": "u(w')=u(w)'",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The displayed definition quantifies over w but writes x in the recurrence, leaving w unused and failing to define iteration of the function.",
+          "chosen_treatment": "தமிழ் வாய்பாட்டில் அனைத்தளவையிடப்பட்ட w மாறியே மீள்விதியின் இரு இடங்களிலும் பயன்படுத்தப்படுகிறது.",
+          "alternatives_considered": "Keeping the free x recurrence; changing the binder to x, which would capture the formula's first free argument.",
+          "rationale": "The preceding prose says u(n-prime)=u(n)-prime for every n; w is the formula's fresh bound counterpart and cannot capture the free input x.",
+          "precise_review_question": "Does the corrected recurrence quantify a fresh iteration variable while leaving x, y and z free as the addition graph arguments?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-003"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0333",
+      "source_sha256": "d145a2ab03186358310a7f917ed7aa9eb49e95efbb80c3a2e8356be818d25108",
+      "translation_sha256": "33c48b3b909373fe9f74e3fbf49d438eafa82bf01d38a5dd2c6a5662a32eeba9",
+      "source_bytes": 1875,
+      "translation_bytes": 4104,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Sat{M}{!P\\lif!A$"
+      ],
+      "extra_math": [
+        "$\\Sat{M}{!P\\lif!A}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SOL-001",
+          "unit_id": "OLP-0333",
+          "kind": "unbalanced-satisfaction-formula",
+          "action": "Closed the second argument of the satisfaction macro before closing inline math mode.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\Sat{M}{!P\\lif!A$",
+              "to": "$\\Sat{M}{!P\\lif!A}$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The frozen source closes math mode inside the second argument of \\Sat and leaves its closing brace outside math, producing malformed TeX.",
+          "chosen_treatment": "தமிழ் பதிப்பில் \\Sat இன் இரண்டாவது உறுப்பு கணிதமுறைக்குள் முறையாக மூடப்படுகிறது.",
+          "alternatives_considered": "Preserving the unbalanced TeX; dropping the satisfaction notation.",
+          "rationale": "The immediately preceding equivalence uniquely determines the intended formula, and balancing the brace is required for a buildable reader.",
+          "precise_review_question": "Does the corrected expression state that every structure satisfies the conditional P implies A?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-001"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0334",
+      "source_sha256": "6f6e125a26a4b3c0303e675ccae12c1d25ff5aee9b38500e3335a145fb5bb267",
+      "translation_sha256": "198d654d935f6c7ce82172a94bdd00f50af97cc1e86f9e86ceda2cad754ec86e",
+      "source_bytes": 2406,
+      "translation_bytes": 5224,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SOL-002",
+          "unit_id": "OLP-0334",
+          "kind": "duplicate-theorem-label",
+          "action": "Changed the compactness theorem label from thm:sol-undecidable to thm:sol-not-compact.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "\\ollabel{thm:sol-undecidable}",
+              "to": "\\ollabel{thm:sol-not-compact}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The frozen compactness theorem repeats the immediately preceding undecidability theorem label, so the chapter has two different results with one identifier.",
+          "chosen_treatment": "இறுக்கத்தன்மைத் தேற்றத்திற்கு அதன் கருத்தை நேரடியாகக் குறிக்கும் தனி நிலையான சிட்டை வழங்கப்பட்டுள்ளது.",
+          "alternatives_considered": "Keeping the duplicate label and ambiguous references; deleting the label.",
+          "rationale": "A unique descriptive label preserves reference integrity without changing theorem content.",
+          "precise_review_question": "Is the new identifier unique in the translated corpus and clearly tied to failure of compactness?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-002"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0335",
+      "source_sha256": "997505d0bb8de8bbc170192327c4ea5182773179e818d9ab41381471c30c5cff",
+      "translation_sha256": "c55a126822f94660fe6580fd830da964e827ef4e0c92aa6c424888bc611f7baa",
+      "source_bytes": 1784,
+      "translation_bytes": 3715,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

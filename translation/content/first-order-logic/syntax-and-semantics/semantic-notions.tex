@@ -1,0 +1,173 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: Semantic Notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0166-S01
+
+\olfileid{fol}{syn}{sem}
+\olsection{பொருண்மையியல் கருத்துகள்}
+
+\begin{explain}
+முதல்தர மொழிகளுக்கான !!{structure}s இன் வரையறையைக் கொண்டு,
+வாக்கியங்களின் சில அடிப்படைப் பொருண்மையியல் பண்புகளையும் அவற்றுக்கு
+இடையிலான உறவுகளையும் வரையறுக்கலாம். இவற்றுள் எளிமையானது ஒரு வாக்கியத்தின்
+\emph{செல்லுபடித்தன்மை}. ஒரு வாக்கியம் ஒவ்வொரு !!{structure} இலும்
+நிறைவுறுத்தப்பட்டால் அது செல்லுபடியாகும். செல்லுபடியான வாக்கியங்கள்,
+அவற்றிலுள்ள தருக்கமல்லாக் குறியீடுகள் எவ்வாறு பொருள்கொள்ளப்பட்டாலும்
+நிறைவுறுத்தப்படுகின்றன. எனவே செல்லுபடியான வாக்கியங்கள்
+\emph{தருக்க மெய்மங்கள்} என்றும் அழைக்கப்படுகின்றன---அவை எந்த
+!!{structure} இலும் மெய்யானவை, அதாவது நிறைவுறுத்தப்படுபவை. ஆகவே அவற்றின்
+மெய்மை, அவற்றில் தோன்றும் தருக்கக் குறியீடுகளையும் அவற்றின் தொடரமைப்பு
+!!{structure} ஐயும் மட்டுமே சார்ந்தது; தருக்கமல்லாக் குறியீடுகளையோ
+அவற்றின் பொருள்கோளையோ சார்ந்ததல்ல.
+\end{explain}
+
+\begin{defn}[செல்லுபடித்தன்மை]
+ஒவ்வொரு !!{structure}~$\Struct M$ க்கும் $\Sat{M}{!A}$ iff, வாக்கியம்
+$!A$ \emph{செல்லுபடியாகும்}, $\Entails !A$, என்கிறோம்.
+\end{defn}
+
+\begin{defn}[உட்கிடை]
+$\Sat{M}{\Gamma}$ ஆகும் ஒவ்வொரு !!{structure}~$\Struct M$ க்கும்
+$\Sat{M}{!A}$ iff, வாக்கியங்களின் தொகுப்பு~$\Gamma$ ஆனது
+வாக்கியம்~$!A$ ஐ \emph{உட்கிடையச் செய்கிறது}, $\Gamma
+\Entails !A$, என்கிறோம்.
+\end{defn}
+
+
+\begin{defn}[நிறைவுசெய்யத்தக்க தன்மை]
+ஏதேனும் ஒரு !!{structure}~$\Struct M$ க்கு $\Sat{M}{\Gamma}$ எனில்,
+வாக்கியங்களின் தொகுப்பு~$\Gamma$ \emph{நிறைவுசெய்யத்தக்கது}.
+$\Gamma$ நிறைவுசெய்யத்தக்கதல்ல எனில், அது
+\emph{நிறைவுசெய்யத்தக்கதல்லாதது} எனப்படுகிறது.
+\end{defn}
+
+\begin{prop}
+ஒவ்வொரு வாக்கியத் தொகுப்பு~$\Gamma$ க்கும்
+$\Gamma \Entails !A$ iff, வாக்கியம் $!A$ செல்லுபடியாகும்.
+\end{prop}
+
+\begin{proof}
+முன்னோக்கு திசைக்கு, $!A$ செல்லுபடியாகட்டும்; $\Gamma$ ஒரு வாக்கியத்
+தொகுப்பாக இருக்கட்டும். $\Sat{M}{\Gamma}$ ஆகும்
+!!a{structure}~$\Struct M$ ஒன்றை எடுத்துக்கொள்க. $!A$ செல்லுபடியானதால்
+$\Sat{M}{!A}$; எனவே $\Gamma \Entails !A$.
+
+பின்னோக்கு திசையின் எதிர்நிலைமாற்றத்திற்கு, $!A$ செல்லுபடியாகாதது என்க.
+அப்போது $\Sat/{M}{!A}$ ஆகும் !!a{structure}~$\Struct M$ ஒன்று உள்ளது.
+$\Gamma = \{ \ltrue \}$ எனும்போது, $\ltrue$ செல்லுபடியானதால்
+$\Sat{M}{\Gamma}$. ஆகவே, $\Sat{M}{\Gamma}$ ஆனால் $\Sat/{M}{!A}$ ஆகும்
+!!a{structure}~$\Struct M$ ஒன்று உள்ளது; எனவே $\Gamma$ ஆனது $!A$ ஐ
+உட்கிடையச் செய்யாது.
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:entails-unsat}
+$\Gamma \Entails !A$ iff $\Gamma \cup \{\lnot !A\}$
+நிறைவுசெய்யத்தக்கதல்ல.
+\end{prop}
+
+\begin{proof}
+முன்னோக்கு திசைக்கு, $\Gamma \Entails !A$ என்க. இதற்கு மாறாக
+$\Sat{M}{\Gamma \cup \{ \lnot !A \}}$ ஆகும்
+!!a{structure}~$\Struct M$ ஒன்று உள்ளது என்றும் கொள்க.
+$\Sat{M}{\Gamma}$ மற்றும் $\Gamma \Entails !A$ என்பதால்
+$\Sat{M}{!A}$. மேலும் $\Sat{M}{\Gamma\cup \{ \lnot !A \}}$ என்பதால்
+$\Sat{M}{\lnot !A}$; எனவே $\Sat{M}{!A}$ மற்றும் $\Sat/{M}{!A}$ இரண்டுமே
+கிடைக்கின்றன; இது ஒரு முரண்பாடு. ஆகவே, அத்தகைய !!{structure}~$\Struct M$
+இருக்க முடியாது; எனவே $\Gamma \cup \{ \lnot !A \}$
+நிறைவுசெய்யத்தக்கதல்ல.
+
+பின்னோக்கு திசைக்கு, $\Gamma \cup \{ \lnot !A \}$
+நிறைவுசெய்யத்தக்கதல்ல என்க. எனவே ஒவ்வொரு
+!!{structure}~$\Struct M$ க்கும் $\Sat/{M}{\Gamma}$ அல்லது
+$\Sat{M}{!A}$. ஆகவே $\Sat{M}{\Gamma}$ ஆகும் ஒவ்வொரு !!{structure}
+$\Struct M$ க்கும் $\Sat{M}{!A}$; எனவே $\Gamma \Entails !A$.
+\end{proof}
+
+\begin{prob}
+\begin{enumerate}
+\item $\Gamma \Entails \bot$ iff $\Gamma$ நிறைவுசெய்யத்தக்கதல்ல என்று
+  காட்டுக.
+\item $\Gamma \cup \{!A\} \Entails \bot$ iff
+  $\Gamma \Entails \lnot !A$ என்று காட்டுக.
+\item $c$ ஆனது $!A$ அல்லது $\Gamma$ இல் தோன்றவில்லை என்க.
+  $\Gamma \Entails \lforall[x][!A]$ iff
+  $\Gamma \Entails \Subst{!A}{c}{x}$ என்று காட்டுக.
+\end{enumerate}
+\end{prob}
+
+\begin{prop}
+$\Gamma \subseteq \Gamma'$ மற்றும் $\Gamma \Entails !A$ எனில்,
+$\Gamma' \Entails !A$.
+\end{prop}
+
+\begin{proof}
+$\Gamma \subseteq \Gamma'$ மற்றும் $\Gamma \Entails !A$ என்க.
+$\Sat{M}{\Gamma'}$ ஆகும் கட்டமைப்பு $\Struct M$ ஒன்றை எடுத்துக்கொள்க;
+அப்போது $\Sat{M}{\Gamma}$. மேலும் $\Gamma \Entails !A$ என்பதால்
+$\Sat{M}{!A}$ கிடைக்கிறது. ஆகவே, $\Sat{M}{\Gamma'}$ எனும்போதெல்லாம்
+$\Sat{M}{!A}$; எனவே $\Gamma' \Entails !A$.
+\end{proof}
+
+
+\begin{thm}[பொருண்மை நிறுவல் தேற்றம்]
+\ollabel{thm:sem-deduction}
+$\Gamma \cup \{!A\} \Entails !B$ iff $\Gamma \Entails !A \lif !B$.
+\end{thm}
+
+\begin{proof}
+முன்னோக்கு திசைக்கு, $\Gamma \cup \{ !A \} \Entails !B$ என்க.
+$\Sat{M}{\Gamma}$ ஆகும் !!a{structure}~$\Struct M$ ஒன்றை எடுத்துக்கொள்க.
+$\Sat{M}{!A}$ எனில், $\Sat{M}{\Gamma \cup \{ !A \} }$. மேலும்
+$\Gamma \cup \{ !A \}$ ஆனது $!B$ ஐ உட்கிடையச் செய்வதால்
+$\Sat{M}{!B}$ கிடைக்கிறது. ஆகவே $\Sat{M}{!A \lif !B}$; எனவே
+$\Gamma \Entails !A \lif !B$.
+
+பின்னோக்கு திசைக்கு, $\Gamma \Entails !A \lif !B$ என்க. மேலும்
+$\Sat{M}{\Gamma \cup \{ !A \}}$ ஆகும் !!a{structure}~$\Struct M$
+ஒன்றை எடுத்துக்கொள்க. அப்போது $\Sat{M}{\Gamma}$; எனவே
+$\Sat{M}{!A \lif !B}$. மேலும் $\Sat{M}{!A}$ என்பதால் $\Sat{M}{!B}$.
+ஆகவே, $\Sat{M}{\Gamma \cup \{ !A \} }$ எனும்போதெல்லாம்
+$\Sat{M}{!B}$; எனவே $\Gamma \cup \{ !A \} \Entails !B$.
+\end{proof}
+
+\begin{prop}\ollabel{prop:quant-terms}
+  $\Struct{M}$ ஒரு !!a{structure} ஆகவும், $!A(x)$ ஆனது ஒரே கட்டற்ற
+  மாறி~$x$ ஐக் கொண்ட !!a{formula} ஆகவும், $t$ ஒரு மூடிய சொல்லாகவும்
+  இருக்கட்டும். அப்போது:
+  \begin{tagenumerate}{prvEx,prvAll}
+    \tagitem{prvEx}{$!A(t) \Entails \lexists[x][!A(x)]$}{}
+    \tagitem{prvAll}{$\lforall[x][!A(x)] \Entails !A(t)$}{}
+  \end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{tagenumerate}{prvEx,prvAll}
+    \tagitem{prvEx}{%
+      \iftag{probEx}{பயிற்சி.}{$\Sat{M}{!A(t)}$ என்க.
+        $s(x) = \Value{t}{M}$ ஆகும் மாறி ஒதுக்கீடு $s$ ஒன்றை எடுத்துக்கொள்க.
+        $!A(t)$ ஒரு !!a{sentence} என்பதால் $\Sat{M}{!A(t)}[s]$.
+        \olref[ext]{prop:ext-formulas} இன்படி $\Sat{M}{!A(x)}[s]$.
+        \olref[ass]{prop:sat-quant},
+        $\Sat{M}{\lexists[x][!A(x)]}$.}}{}
+    \tagitem{prvAll}{%
+      \iftag{probAll}{பயிற்சி.}{
+        $\Sat{M}{\lforall[x][!A(x)]}$ என்க.
+        $s(x) = \Value{t}{M}$ ஆகும் மாறி ஒதுக்கீடு~$s$ ஒன்றை எடுத்துக்கொள்க.
+        \olref[ass]{prop:sat-quant} இன்படி $\Sat{M}{!A(x)}[s]$.
+        \olref[ext]{prop:ext-formulas} இன்படி $\Sat{M}{!A(t)}[s]$.
+        $!A(t)$ ஒரு !!a{sentence} என்பதால்
+        \olref[ass]{prop:sentence-sat-true} இன்படி $\Sat{M}{!A(t)}$.}}{}
+  \end{tagenumerate}
+\end{proof}
+
+\begin{probtag}{probEx,probAll}
+  \olref[fol][syn][sem]{prop:quant-terms} இன் நிரூபணத்தை நிறைவுசெய்க.
+\end{probtag} 
+
+\end{document}

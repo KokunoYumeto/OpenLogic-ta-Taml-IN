@@ -1,0 +1,101 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: main-operator
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0154-S01
+\olfileid{fol}{syn}{mai}
+
+\olsection{\printtoken{S}{main operator} ஒரு சூத்திரத்தில்}
+
+\begin{explain}
+!!a{formula}~$!A$ ஐ உருவாக்கப் பயன்படுத்திய கடைசி இயக்கியைப் பற்றி பேசுவது
+பல நேரங்களில் பயனுள்ளதாக இருக்கும். இந்த இயக்கி~$!A$ இன் \emph{முதன்மை
+இயக்கி} எனப்படுகிறது. உள்ளுணர்வாக, இது $!A$ இன் ``வெளிப்புற'' இயக்கி.
+உதாரணமாக, $\lnot !A$ இன் முதன்மை இயக்கி $\lnot$; $(!A \lor !B)$ இன்
+முதன்மை இயக்கி $\lor$; இவ்வாறே.
+\end{explain}
+
+\begin{defn}[!!^{main operator}]
+\ollabel{def:main-op}
+!!a{formula}~$!A$ இன் \emph{!!{main operator}} பின்வருமாறு வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+\item \indcase*{!A}{!A}{$\indfrm$ க்கு !!{main operator} இல்லை.}
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\indfrm$ இன் !!{main operator}
+  $\lnot$.}}{}
+
+\tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\indfrm$ இன் !!{main operator}
+  $\land$.}}{}
+
+\tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\indfrm$ இன் !!{main operator}
+  $\lor$.}}{}
+
+\tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\indfrm$ இன் !!{main operator}
+  $\lif$.}}{}
+
+\tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\indfrm$ இன் !!{main operator}
+  $\liff$.}}{}
+
+\tagitem{prvAll}{\indcase{!A}{\lforall[x][!B]}{$\indfrm$ இன் !!{main operator}
+  $\lforall$.}}{}
+
+\tagitem{prvEx}{\indcase{!A}{\lexists[x][!B]}{$\indfrm$ இன் !!{main operator}
+  $\lexists$.}}{}
+\end{enumerate}
+\end{defn}
+
+ஒவ்வொரு நிலையிலும், சூத்திரத்தில் சுட்டிக்காட்டப்பட்ட !!{main operator} இன்
+குறிப்பிட்ட \emph{நிகழ்வையே} குறிக்கிறோம். உதாரணமாக,
+$((!D \lif !E) \lif (!E \lif !D))$ என்பது $(!B \lif !C)$ வடிவில் உள்ளது;
+இங்கு $!B$ என்பது $(!D \lif !E)$, $!C$ என்பது $(!E \lif !D)$. ஆகவே
+$\lif$ இன் இரண்டாவது நிகழ்வே !!{main operator}.
+
+\begin{explain}
+இது அணுவல்லாத !!{formula}s அனைத்தையும் அவற்றின் !!{main operator}
+நிகழ்வுகளுக்கு மாற்றும் ஒரு சார்பின் \emph{மறுநிகழ்வு} வரையறை. !!{formula}s
+தொகுத்தறிதல் வழியில் வரையறுக்கப்பட்ட விதத்தால், ஒவ்வொரு !!{formula}~$!A$ வும்
+\olref{def:main-op} இன் ஏதாவது ஒரு நிலையில் அடங்கும். எனவே அணுவல்லாத
+ஒவ்வொரு !!{formula}~$!A$ க்கும் !!a{main
+  operator} இருப்பது உறுதி.
+ஒவ்வொரு !!{formula} வும் இந்நிபந்தனைகளில் ஒன்றை மட்டுமே பூர்த்தி செய்கிறது;
+மேலும் ஒவ்வொரு நிலையில் $!A$ உருவாக்கப்பட்ட சிறிய !!{formula}s தனித்துவமாகத்
+தீர்மானிக்கப்படுகின்றன. ஆகவே $!A$ இன் !!{main
+  operator} நிகழ்வு தனித்துவமானது;
+இதனால் ஒரு சார்பை வரையறுத்துள்ளோம்.
+\end{explain}
+
+!!{formula}s இன் !!{main operator} எந்தக் குறி என்பதைப் பொறுத்து,
+\olref{tab:main-op} இல் உள்ள பெயர்களால் அழைக்கிறோம்.\iftag{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}
+{ ஆனால் வரையறுக்கப்பட்ட இயக்கிகள் அதிகாரப்பூர்வமாக !!{formula}s இல்
+தோன்றுவதில்லை என்பதை நினைவில் கொள்ளுங்கள். அவை சுருக்கங்கள் மட்டுமே; எனவே
+அதிகாரப்பூர்வமாக ஒரு சூத்திரத்தின் முதன்மை இயக்கியாக இருக்க முடியாது.
+அனைத்து !!{formula}s பற்றிய நிறுவல்களில் அவற்றைத் தனித்தனியாகக் கருதத்
+தேவையில்லை.}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c | c | c}
+!!^{main operator} & !!{formula} இன் வகை & எடுத்துக்காட்டு\\
+\hline
+none & atomic (!!{formula}) &
+\iftag{prvFalse}{$\lfalse$,}{}
+\iftag{prvTrue}{$\ltrue$,}{}
+$\Atom{R}{t_1, \dots, t_n}$,
+$\eq[t_1][t_2]$\\
+$\lnot$ & மறுப்பு & $\lnot !A$ \\
+$\land$ & இணையல் & $(!A \land !B$) \\
+$\lor$ & பிரிப்பிணைவு & $(!A \lor !B$) \\
+$\lif$ & !!{conditional} & $(!A \lif !B$) \\
+$\liff$ & !!{biconditional} & $(!A \liff !B)$ \\
+$\lforall[][]$ & universal (!!{formula})& $\lforall[x][!A]$ \\
+$\lexists[][]$ & existential (!!{formula})& $\lexists[x][!A]$
+\end{tabular}
+\caption{முதன்மை இயக்கியும் !!{formula}s இன் பெயர்களும்}
+\ollabel{tab:main-op}
+\end{table}
+
+\end{document}

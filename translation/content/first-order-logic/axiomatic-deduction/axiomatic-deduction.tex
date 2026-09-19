@@ -1,0 +1,64 @@
+% SEGMENT OLP-0112-S01
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+
+\documentclass[../../../include/open-logic-chapter]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olchapter{fol}{axd}{அடிகோள் \usetoken{P}{derivation}}}
+      {\olchapter{pl}{axd}{அடிகோள் \usetoken{P}{derivation}}}
+
+% SEGMENT OLP-0112-S02
+\begin{editorial}
+இந்த அதிகாரத்திலுள்ள உள்ளடக்கம், எந்தத் தருக்க இணைப்புகளும்
+அளவையடைகளும் ஆதிநிலையானவை அல்லது வரையறுக்கப்பட்டவை எனக் காட்டும்
+பல்வேறு குறிச்சொற்களை மதிக்கிறதா என்பதை உறுதிப்படுத்த இதுவரை எந்த
+முயற்சியும் மேற்கொள்ளப்படவில்லை. வரையறுக்கப்பட்டதாகக் கருதப்படும்
+$\liff$ ஐத் தவிர, அனைத்தும் ஆதிநிலையானவை எனக் கருதப்படுகின்றன. FOL
+குறிச்சொல் மெய்யானால் அளவையடைகளைக் கொண்ட ஒரு பதிப்பையும், இல்லையெனில்
+அளவையடைகள் இல்லாத பதிப்பையும் உருவாக்குகிறோம்.
+\end{editorial}
+
+% SEGMENT OLP-0112-S03
+\olimport{rules-and-proofs}
+
+\olimport{axioms-rules-propositional}
+
+\iftag{FOL}{%
+  \olimport{axioms-rules-quantifiers}
+}{}
+
+\olimport{proving-things}
+
+\iftag{FOL}{%
+  \olimport{proving-things-quant}
+}{}
+
+\olimport{proof-theoretic-notions}
+
+\olimport{deduction-theorem}
+
+\iftag{FOL}{%
+  \olimport{deduction-theorem-quantifiers}
+}{}
+
+\olimport{provability-consistency}
+
+\olimport{provability-propositional}
+
+\iftag{FOL}{%
+  \olimport{provability-quantifiers}
+}{}
+
+\olimport{soundness}
+
+\iftag{FOL}{
+  \olimport{identity}
+}{}
+
+\OLEndChapterHook
+
+\end{document}
+

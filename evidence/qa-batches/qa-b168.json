@@ -1,0 +1,370 @@
+{
+  "batch_id": "TA-B168",
+  "units": [
+    {
+      "unit_id": "OLP-0336",
+      "source_sha256": "304f9bcabacf05d66b95b6cdcc38a3fa4fe9b633248dfae7cd4247af62da5316",
+      "translation_sha256": "173142b0353d73ee227c23f875cfa35285c8757d34e4afad1a9f3c38bc78f034",
+      "source_bytes": 668,
+      "translation_bytes": 1411,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0337",
+      "source_sha256": "3da2e59a89619b402e35fc14fb67b2c94584e503450b6253d22deca5f456331d",
+      "translation_sha256": "5fbb8ecbf15244c74be9444004cce55a52990e406434be0a138cd5dcbe53df19",
+      "source_bytes": 829,
+      "translation_bytes": 1996,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0338",
+      "source_sha256": "d64defa142c5d31762b286b3e9c94fbe278e6462d8f417388b2405383e73b330",
+      "translation_sha256": "6df48043adb301396c9c0a42f44d7256c07f7e6631087e476fc3c1aa009d70b3",
+      "source_bytes": 2564,
+      "translation_bytes": 4786,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]])]\\]",
+        "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land{}\\\\\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][(X(x)\\land\\eq[y][u(x)])])])]\\end{multline*}"
+      ],
+      "extra_math": [
+        "\\[\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]])]\\]",
+        "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land{}\\\\\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][(X(x)\\land\\eq[y][u(x)])])])]\\end{multline*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SOL-005",
+          "unit_id": "OLP-0338",
+          "kind": "ambient-domain-injectivity-too-strong",
+          "action": "Restricted both comparison formulas' injectivity requirement to arguments in X.",
+          "expected_missing_math": [
+            "\\[\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]])]\\]",
+            "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land{}\\\\\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][(X(x)\\land\\eq[y][u(x)])])])]\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\[\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]])]\\]",
+            "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land{}\\\\\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][(X(x)\\land\\eq[y][u(x)])])])]\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\land",
+            "\\land",
+            "\\land",
+            "\\land"
+          ],
+          "source_issue_or_choice": "The frozen formulas demand that a total ambient-domain function be injective everywhere, which is stronger than the stated existence of an injection from X to Y and can fail solely because the complement of X is too large.",
+          "chosen_treatment": "தமிழ் வாய்பாடுகள் u இன் மதிப்புகள் X இலிருந்து Y க்குச் செல்கின்றன என்றும், X இல் உள்ள உள்ளீடுகள்மீது மட்டும் u உட்செலுத்துவதாகும் என்றும் கூறுகின்றன.",
+          "alternatives_considered": "Keeping global injectivity; introducing partial-function semantics absent from the chapter.",
+          "rationale": "A total second-order function variable can represent an injection with restricted domain X exactly by guarding both injectivity arguments with X membership.",
+          "precise_review_question": "Do both corrected formulas now characterize |X|≤|Y| and |X|=|Y| without constraints on u outside X?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-005"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\land",
+        "\\land",
+        "\\land",
+        "\\land"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0339",
+      "source_sha256": "2383760cd26cb2fa42f968483e74a90dfd4a1e5de3361d21322508282bf588b6",
+      "translation_sha256": "724d579184fb3e5c242dab0b067dea1ba24802bd9897b9268f6831c14b44cd77",
+      "source_bytes": 2480,
+      "translation_bytes": 5271,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{multline*}\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[y][(X(y)\\land\\lforall[x][(X(x)\\lif\\eq/[y][u(x)])]])]\\end{multline*}"
+      ],
+      "extra_math": [
+        "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifX(u(x)))]\\land{}\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[y][(X(y)\\land\\lforall[x][(X(x)\\lif\\eq/[y][u(x)])]])]\\end{multline*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SOL-006",
+          "unit_id": "OLP-0339",
+          "kind": "subset-infinitude-formula-too-strong-and-not-closed",
+          "action": "Required the witness to map X into X and to be injective only on X.",
+          "expected_missing_math": [
+            "\\begin{multline*}\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[y][(X(y)\\land\\lforall[x][(X(x)\\lif\\eq/[y][u(x)])]])]\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifX(u(x)))]\\land{}\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[y][(X(y)\\land\\lforall[x][(X(x)\\lif\\eq/[y][u(x)])]])]\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\lforall",
+            "\\lif",
+            "\\land",
+            "\\land",
+            "\\land"
+          ],
+          "source_issue_or_choice": "The frozen formula makes u globally injective but never requires values of X-elements to remain in X, so it does not state that u is an injective nonsurjective self-map of X.",
+          "chosen_treatment": "தமிழ் வாய்பாடு X இன் கீழ் மூடுதலையும் X-இல் கட்டுப்படுத்தப்பட்ட உட்செலுத்துதலையும் சேர்த்து டெடெகிண்ட் முடிவிலாதன்மையைத் துல்லியமாகக் கூறுகிறது.",
+          "alternatives_considered": "Retaining global injectivity with no closure; treating u as partial despite standard function-variable semantics.",
+          "rationale": "The preceding domain-level criterion requires exactly an injective nonsurjective map X→X.",
+          "precise_review_question": "Does the corrected formula hold exactly when s(X) has an injective nonsurjective self-map?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-006"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\lforall",
+        "\\lif",
+        "\\land",
+        "\\land",
+        "\\land"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0340",
+      "source_sha256": "386d49b1ac96e634b3ea56980e592fdbf8bd6f5aa112e0e9e235c9835734d990",
+      "translation_sha256": "b02c233aec03c02cb07de79a1eb6b50fc7169742064f6af51ca6a6c63ff0d974",
+      "source_bytes": 6256,
+      "translation_bytes": 14063,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{multline*}\\fn{Pow}(Y,R,X)\\ident\\\\\\lforall[Z][(Z\\subseteqX\\lif\\lexists[x][(Y(x)\\land\\fn{Codes}(x,R,Z))])]\\land{}\\\\\\lforall[x][(Y(x)\\lif\\lforall[Z][(\\fn{Codes}(x,R,Z)\\lifZ\\subseteqX)]]\\end{multline*}",
+        "\\begin{multline*}\\lforall[X][\\lforall[Y][\\lforall[R][(\\fn{Pow}(Y,R,X)\\lif\\\\\\lnot\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[x][(Y(x)\\lifX(u(x)))])])]]]\\end{multline*}",
+        "\\begin{multline*}\\Sat{M}{\\lexists[X][\\lexists[Y][\\lexists[R][(\\fn{Aleph}_0(X)\\land\\fn{Pow}(Y,R,X)\\land\\\\\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][\\eq[y][u(x)]])])])]]]}.\\end{multline*}"
+      ],
+      "extra_math": [
+        "\\begin{multline*}\\fn{Pow}(Y,R,X)\\ident\\\\\\lforall[Z][(Z\\subseteqX\\lif\\lexists[x][(Y(x)\\land\\fn{Codes}(x,R,Z))])]\\land{}\\\\\\lforall[x][(Y(x)\\lif\\lforall[Z][(\\fn{Codes}(x,R,Z)\\lifZ\\subseteqX)])]\\end{multline*}",
+        "\\begin{multline*}\\lforall[X][\\lforall[Y][\\lforall[R][(\\fn{Pow}(Y,R,X)\\lif\\\\\\lnot\\lexists[u][(\\lforall[x][\\lforall[y][((Y(x)\\landY(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[x][(Y(x)\\lifX(u(x)))])])]]]\\end{multline*}",
+        "\\begin{multline*}\\Sat{M}{\\lexists[X][\\lexists[Y][\\lexists[R][(\\fn{Aleph}_0(X)\\land\\fn{Pow}(Y,R,X)\\land{}\\lforall[x][\\lforall[y][((Y(x)\\landY(y)\\land\\lforall[z][R(x,z)\\liffR(y,z)])\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[u][(\\lforall[x][Y(u(x))]\\land{}\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][\\eq[y][u(x)]])])])]]]}.\\end{multline*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-SOL-004",
+          "unit_id": "OLP-0340",
+          "kind": "wrong-set-variable-in-proof",
+          "action": "Changed the proof's final description from subsets of s(Z) to subsets of s(X).",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proof explains a formula whose only set parameters at that stage are X and Y, but its final sentence refers to subsets of s(Z); Z is only a locally quantified coding variable in the preceding definition.",
+          "chosen_treatment": "தமிழ் நிறுவல் s(Y) இன் உறுப்புகளை s(X) இன் உட்கணங்களுடன் தொடர்புபடுத்துகிறது என்று சரியான அடுக்குக்கண அளவுருவைக் கூறுகிறது.",
+          "alternatives_considered": "Keeping the unbound prose variable Z; replacing X in the displayed formula, where it is already correct.",
+          "rationale": "Pow(Y,R,X) explicitly says that Y codes the powerset of X, so the final injectivity condition associates Y-elements with subsets of X.",
+          "precise_review_question": "Does the final proof sentence now describe the same X-parametrized powerset coding relation as the displayed formula?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-004"
+        },
+        {
+          "audit_id": "TA-SOL-007",
+          "unit_id": "OLP-0340",
+          "kind": "unbalanced-powerset-coding-clause",
+          "action": "Closed the outer implication before closing its universal quantifier.",
+          "expected_missing_math": [
+            "\\begin{multline*}\\fn{Pow}(Y,R,X)\\ident\\\\\\lforall[Z][(Z\\subseteqX\\lif\\lexists[x][(Y(x)\\land\\fn{Codes}(x,R,Z))])]\\land{}\\\\\\lforall[x][(Y(x)\\lif\\lforall[Z][(\\fn{Codes}(x,R,Z)\\lifZ\\subseteqX)]]\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}\\fn{Pow}(Y,R,X)\\ident\\\\\\lforall[Z][(Z\\subseteqX\\lif\\lexists[x][(Y(x)\\land\\fn{Codes}(x,R,Z))])]\\land{}\\\\\\lforall[x][(Y(x)\\lif\\lforall[Z][(\\fn{Codes}(x,R,Z)\\lifZ\\subseteqX)])]\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen Pow formula closes the inner universal quantifier but omits the parenthesis closing Y(x) implies that universal condition.",
+          "chosen_treatment": "தமிழ் வாய்பாடு வெளிப்புற நிபந்தனைவாக்கியத்தின் அடைப்புக்குறியை அளவையடை முடிவதற்கு முன் மூடுகிறது.",
+          "alternatives_considered": "Preserving the unbalanced formula; deleting the converse coding clause.",
+          "rationale": "Balancing the clause yields the prose-stated condition that every Y-element codes only a subset of X.",
+          "precise_review_question": "Is every bracket and parenthesis in the corrected Pow definition balanced with the intended scope?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-007"
+        },
+        {
+          "audit_id": "TA-SOL-008",
+          "unit_id": "OLP-0340",
+          "kind": "cantor-formula-injectivity-too-strong",
+          "action": "Restricted the prohibited injection to the coded powerset domain Y.",
+          "expected_missing_math": [
+            "\\begin{multline*}\\lforall[X][\\lforall[Y][\\lforall[R][(\\fn{Pow}(Y,R,X)\\lif\\\\\\lnot\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[x][(Y(x)\\lifX(u(x)))])])]]]\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}\\lforall[X][\\lforall[Y][\\lforall[R][(\\fn{Pow}(Y,R,X)\\lif\\\\\\lnot\\lexists[u][(\\lforall[x][\\lforall[y][((Y(x)\\landY(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[x][(Y(x)\\lifX(u(x)))])])]]]\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\land",
+            "\\land"
+          ],
+          "source_issue_or_choice": "The frozen Cantor formula rules out only functions injective on the entire ambient domain, which need not rule out an injection from the coded powerset subset Y into X.",
+          "chosen_treatment": "தமிழ் வாய்பாடு Y இல் உள்ள இரு உள்ளீடுகளுக்கே உட்செலுத்துதலைக் கோருகிறது.",
+          "alternatives_considered": "Keeping ambient injectivity; requiring u(Y)=X, which would express bijection rather than injection.",
+          "rationale": "Cantor's theorem denies an injection from the powerset coding domain Y to X, independent of u outside Y.",
+          "precise_review_question": "Does the corrected sentence rule out every injection Y→X represented by a total ambient function?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-008"
+        },
+        {
+          "audit_id": "TA-SOL-009",
+          "unit_id": "OLP-0340",
+          "kind": "continuum-cardinality-formula-insufficient",
+          "action": "Required unique subset codes and a bijection from the entire domain onto their coding set Y.",
+          "expected_missing_math": [
+            "\\begin{multline*}\\Sat{M}{\\lexists[X][\\lexists[Y][\\lexists[R][(\\fn{Aleph}_0(X)\\land\\fn{Pow}(Y,R,X)\\land\\\\\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][\\eq[y][u(x)]])])])]]]}.\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}\\Sat{M}{\\lexists[X][\\lexists[Y][\\lexists[R][(\\fn{Aleph}_0(X)\\land\\fn{Pow}(Y,R,X)\\land{}\\lforall[x][\\lforall[y][((Y(x)\\landY(y)\\land\\lforall[z][R(x,z)\\liffR(y,z)])\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[u][(\\lforall[x][Y(u(x))]\\land{}\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][\\eq[y][u(x)]])])])]]]}.\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\lforall",
+            "\\lforall",
+            "\\lforall",
+            "\\lforall",
+            "\\liff",
+            "\\lif",
+            "\\land",
+            "\\land",
+            "\\land",
+            "\\land",
+            "\\eq"
+          ],
+          "source_issue_or_choice": "The frozen formula permits duplicate codes, does not require the range of u to stay in Y, and requires only that Y lie inside the range; these conditions do not establish a bijection between the domain and a continuum-sized set.",
+          "chosen_treatment": "தமிழ் வாய்பாடு Y இல் குறியீடுகள் தனித்தவையாகவும், u பொருட்களம் முழுவதிலிருந்தும் Y க்கு உட்செலுத்தும் மேற்கோர்த்தலாகவும் இருக்க வேண்டும் என்று கூறுகிறது.",
+          "alternatives_considered": "Keeping the one-sided range condition; reusing Cont(Y) while leaving its domain-size hypothesis external.",
+          "rationale": "Unique coding makes Y equipotent with the powerset of a countable X, and the three u clauses express a bijection from Domain(M) onto Y.",
+          "precise_review_question": "Do unique codes plus the range, injectivity and surjectivity clauses prove exactly |Domain(M)|=|R|?",
+          "location_needle": "SOURCE CORRECTION TA-SOL-009"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\lforall",
+        "\\lforall",
+        "\\lforall",
+        "\\lforall",
+        "\\liff",
+        "\\lif",
+        "\\land",
+        "\\land",
+        "\\land",
+        "\\land",
+        "\\land",
+        "\\land",
+        "\\eq"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

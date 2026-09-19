@@ -1,0 +1,270 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: formation-sequences
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0156-S01
+\olfileid{fol}{syn}{fseq}
+
+\olsection{உருவாக்க வரிசைகள்}
+
+தொகுத்தறிதல் வரையறையைப் பயன்படுத்தி !!{formula}s ஐ வரையறுப்பதும்,
+அவற்றின் பண்புகளைத் தொகுத்தறிதல் வழியாக நிறுவுவதும் நேர்த்தியானதும்
+திறமையானதுமான அணுகுமுறை. இருப்பினும், !!{formula}s உருவாக்கத்தை மேலும்
+கீழிருந்து மேலாக, படிப்படியாகக் கருதுவதும் பயனுள்ளதாக இருக்கலாம். இதற்காக
+இங்கு \emph{உருவாக்க வரிசை} என்ற கருத்தைப் பயன்படுத்துகிறோம்.
+%
+சொற்களையும் !!{formula}s உம் அவற்றின் தொகுத்தறிதல் வரையறைகளைக் குறிப்பிடாமல்
+இவ்வாறு அறிமுகப்படுத்தலாம் என்பதை காட்ட, முதலில் ஏதேனும் ஒரு மொழி~$\Lang L$
+இலிருந்து எடுக்கப்பட்ட குறியீடுகளின் தன்னிச்சையான சரம் என்ற கருத்தை
+அறிமுகப்படுத்துவோம்.
+
+\begin{defn}[Strings]
+\ollabel{defn:string}
+$\Lang L$ ஒரு முதல்தர மொழி எனக் கொள்வோம். \emph{$\Lang
+L$-சரம்} என்பது $\Lang L$ இன் குறியீடுகளைக் கொண்ட ஒரு இறுதி வரிசை.
+சூழலால் மொழி~$\Lang L$ தெளிவாக நிர்ணயிக்கப்பட்டிருக்கும் போது,
+$\Lang L$-சரத்தை வெறுமனே \emph{சரம்} என்று அழைப்போம்.
+\end{defn}
+
+\begin{ex}
+எந்த முதல்தர மொழி~$\Lang L$ க்கும், எல்லா
+$\Lang L$-!!{formula}s உம் $\Lang L$-சரங்களே; ஆனால் இதன் மாறுபக்கம்
+உண்மை அல்ல. உதாரணமாக, \[)(\Obj v_0\lif\lexists\] என்பது ஒரு
+$\Lang L$-சரம்; ஆனால் $\Lang L$-!!{formula} அல்ல.
+\end{ex}
+
+\begin{defn}[Formation sequences for terms]
+\ollabel{defn:fseq-trm}
+$\Lang L$-சரங்களின் இறுதி வரிசை~$\tuple{t_0,\dotsc,t_n}$,
+$t \ident t_n$ ஆகவும், ஒவ்வொரு $i \leq n$ க்கும் பின்வருவனவற்றில் ஒன்று
+நடந்தாலும், சொல்~$t$ க்கான ஒரு \emph{உருவாக்க வரிசை}:
+$t_i$ ஒரு !!a{variable} அல்லது !!a{constant}; அல்லது $\Lang L$ இல் ஒரு
+$k$-இட !!{function}~$f$ இருந்து, $m_0,\dotsc,m_k < i$ ஆகியவை இருக்கும்,
+அவற்றால் $t_i \ident f(t_{m_0},\dotsc,t_{m_k})$.
+வேறுபாடு தேவைப்படும் போது, சொற்களுக்கான உருவாக்க வரிசைகளை
+\emph{சொல் உருவாக்க வரிசைகள்} என்று அழைப்போம்.
+\end{defn}
+
+\begin{ex}
+பின்வரும் வரிசை
+\[
+    \tuple{\Obj c_0, \Obj v_0, \Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}, \Atom{\Obj f^1_0}{\Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}}}
+\]
+சொல்~$\Atom{\Obj f^1_0}{\Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}}$ க்கான
+உருவாக்க வரிசை. அதே சொல்லுக்கு பின்வரும் வரிசையும் ஒரு உருவாக்க வரிசை:
+\[
+    \tuple{\Obj v_0, \Obj c_0, \Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}, \Atom{\Obj f^1_0}{\Atom{\Obj f^2_0}{\Obj c_0, \Obj v_0}}}.
+\]
+\end{ex}
+
+\begin{defn}[Formation sequences for formulas]
+\ollabel{defn:fseq-frm}
+$\Lang L$-சரங்களின் இறுதி வரிசை~$\tuple{!A_0,\dotsc,!A_n}$,
+$!A \ident !A_n$ ஆகவும், ஒவ்வொரு $i \leq n$ க்கும் $!A_i$ ஒரு அணு
+!!{formula} ஆகவோ, அல்லது $j,k < i$ மற்றும் !!a{variable}~$x$ இருந்து
+பின்வருவனவற்றில் ஒன்று உண்மையாகவோ இருந்தால், $!A$ க்கான ஒரு
+\emph{உருவாக்க வரிசை}:
+\begin{enumerate}
+    \tagitem{prvNot}{$!A_i \ident \lnot !A_j$.}{}%
+    \tagitem{prvAnd}{$!A_i \ident (!A_j \land !A_k)$.}{}%
+    \tagitem{prvOr}{$!A_i \ident (!A_j \lor !A_k)$.}{}%
+    \tagitem{prvIf}{$!A_i \ident (!A_j \lif !A_k)$.}{}%
+    \tagitem{prvIff}{$!A_i \ident (!A_j \liff !A_k)$.}{}%
+    \tagitem{prvAll}{$!A_i \ident \lforall[x][!A_j]$.}{}%
+    \tagitem{prvEx}{$!A_i \ident \lexists[x][!A_j]$.}{}%
+\end{enumerate}
+வேறுபாடு தேவைப்படும் போது, சூத்திரங்களுக்கான உருவாக்க வரிசைகளை
+\emph{சூத்திர உருவாக்க வரிசைகள்} என்று அழைப்போம்.
+\end{defn}
+
+\begin{ex}
+\[
+\tuple{
+    \Atom{\Obj A^1_0}{\Obj v_0},
+    \Atom{\Obj A^1_1}{\Obj c_1},
+    (\Atom{\Obj A^1_1}{\Obj c_1} \land \Atom{\Obj A^1_0}{\Obj v_0}),
+    \lexists[\Obj v_0][(\Atom{\Obj A^1_1}{\Obj c_1} \land \Atom{\Obj A^1_0}{\Obj v_0})]
+}
+\]
+என்பது $\lexists[\Obj v_0][(\Atom{\Obj A^1_1}{\Obj c_1} \land
+\Atom{\Obj A^1_0}{\Obj v_0})]$ க்கான உருவாக்க வரிசை. பின்வரும்
+\begin{multline*}
+\tuple{
+    \Atom{\Obj A^1_0}{\Obj v_0},
+    \Atom{\Obj A^1_1}{\Obj c_1},
+    (\Atom{\Obj A^1_1}{\Obj c_1} \land \Atom{\Obj A^1_0}{\Obj v_0}),
+    \Atom{\Obj A^1_1}{\Obj c_1},\\
+    \lforall[\Obj v_1][\Atom{\Obj A^1_0}{\Obj v_0}],
+    \lexists[\Obj v_0][(\Atom{\Obj A^1_1}{\Obj c_1} \land \Atom{\Obj A^1_0}{\Obj v_0})]
+}.
+\end{multline*}
+வரிசையும் அதற்கானதே.
+%
+இரண்டாவது எடுத்துக்காட்டிலிருந்து தெரியும் போல், உருவாக்க வரிசைகளில்
+``தேவையற்ற கூறுகள்'' இருக்கலாம்: மீண்டும் வரும் அல்லது கட்டுமானத்திற்கு
+பங்களிக்காத !!{formula}s.
+\end{ex}
+
+\begin{prop}\ollabel{prop:formed}
+$\Frm[L]$ இல் உள்ள ஒவ்வொரு !!{formula}~$!A$ க்கும் ஒரு உருவாக்க வரிசை உண்டு.
+\end{prop}
+
+\begin{proof}
+$!A$ அணுவாக இருக்கட்டும். அப்போது $\tuple{!A}$ என்பது $!A$ க்கான உருவாக்க
+வரிசை.
+%
+இப்போது $!B$,~$!C$ ஆகியவற்றுக்கு முறையே
+$\tuple{!B_0,\dotsc,!B_n}$, $\tuple{!C_0,\dotsc,!C_m}$ என்ற உருவாக்க
+வரிசைகள் இருப்பதாகக் கொள்வோம்.
+%
+\begin{enumerate}
+  \tagitem{prvNot}{$!A \ident \lnot !B$ என்றால்,
+      $\tuple{!B_0,\dotsc,!B_n,\lnot !B_n}$ என்பது $!A$ க்கான உருவாக்க
+      வரிசை.}{}
+  \tagitem{prvAnd}{$!A \ident (!B \land !C)$ என்றால்,
+      $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \land !C_m)}$
+      என்பது $!A$ க்கான உருவாக்க வரிசை.}{}
+  \tagitem{prvOr}{$!A \ident (!B \lor !C)$ என்றால்,
+      $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \lor !C_m)}$
+      என்பது $!A$ க்கான உருவாக்க வரிசை.}{}
+  \tagitem{prvIf}{$!A \ident (!B \lif !C)$ என்றால்,
+      $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \lif !C_m)}$
+      என்பது $!A$ க்கான உருவாக்க வரிசை.}{}
+  \tagitem{prvIff}{$!A \ident (!B \liff !C)$ என்றால்,
+      $\tuple{!B_0,\dotsc,!B_n,!C_0,\dotsc,!C_m,(!B_n \liff !C_m)}$
+      என்பது $!A$ க்கான உருவாக்க வரிசை.}{}
+  \tagitem{prvAll}{$!A \ident \lforall[x][!B]$ என்றால்,
+      $\tuple{!B_0,\dotsc,!B_n,\lforall[x][!B_n]}$ என்பது $!A$ க்கான
+      உருவாக்க வரிசை.}{}
+  \tagitem{prvEx}{$!A \ident \lexists[x][!B]$ என்றால்,
+      $\tuple{!B_0,\dotsc,!B_n,\lexists[x][!B_n]}$ என்பது $!A$ க்கான
+      உருவாக்க வரிசை.}{}
+\end{enumerate}
+!!{formula}s மீது தொகுத்தறிதல் கொள்கையின்படி, ஒவ்வொரு !!{formula} வுக்கும்
+ஒரு உருவாக்க வரிசை உண்டு.
+\end{proof}
+
+இதன் மறுதிசையையும் நிறுவலாம். இது முக்கியம்; ஏனெனில் சூத்திரங்களை
+வரையறுக்கும் நமது இரு முறைகளும் சமமானவை, அதாவது ஒரே முடிவுகளைக் கொடுக்கின்றன
+என்பதை இது காட்டுகிறது. மேலும், உருவாக்க வரிசைகளின் நீளத்தின் மீது சாதாரண
+தொகுத்தறிதலைப் பயன்படுத்தி சூத்திரங்களைப் பற்றிய தேற்றங்களை நிறுவலாம்.
+
+\begin{lem}
+\ollabel{lem:fseq-init}
+$\tuple{!A_0,\dotsc,!A_n}$ என்பது $!A_n$ க்கான உருவாக்க வரிசை என்றும்,
+$k \leq n$ என்றும் கொள்வோம். அப்போது $\tuple{!A_0,\dotsc,!A_k}$ என்பது
+$!A_k$ க்கான உருவாக்க வரிசை.
+\end{lem}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][fseq]{lem:fseq-init} ஐ நிறுவுக.
+\end{prob}
+
+\begin{thm}
+\ollabel{thm:fseq-frm-equiv}
+$\Frm[L]$ என்பது, $!A$ க்கான ஒரு !!{formula} உருவாக்க வரிசை இருக்கும் என்ற நிபந்தனையைப்
+பூர்த்தி செய்யும் எல்லா $\Lang L$-சரங்களான~$!A$ களின் தொகுப்பு.
+\end{thm}
+
+\begin{proof}
+$F$ என்பது $\Lang L$ மொழியிலுள்ள, உருவாக்க வரிசை கொண்ட அனைத்து குறியீட்டு
+சரங்களின் தொகுப்பாக இருக்கட்டும். \olref[fol][syn][fseq]{prop:formed} இல்
+பார்த்தபடி $\Frm[L] \subseteq F$; எனவே இப்போது மாறுபக்கத்தை நிறுவுகிறோம்.
+
+$!A$ க்கு $\tuple{!A_0,\dotsc,!A_n}$ என்ற உருவாக்க வரிசை இருக்கட்டும்.
+$n$ மீது வலுவான தொகுத்தறிதலால் $!A \in \Frm[L]$ என்பதை நிறுவுவோம்.
+$m < n$ நீளமுள்ள உருவாக்க வரிசை கொண்ட ஒவ்வொரு குறியீட்டு சரமும்
+$\Frm[L]$ இல் உள்ளது என்பதே தொகுத்தறிதல் கருதுகோள்.
+உருவாக்க வரிசையின் வரையறைப்படி, $!A \ident !A_n$ அணுவாக இருக்கலாம்;
+அல்லது $j,k < n$ இருந்து பின்வருவனவற்றில் ஒன்று நிகழலாம்:
+\begin{enumerate}
+    \tagitem{prvNot}{$!A \ident \lnot !A_j$.}{}%
+    \tagitem{prvAnd}{$!A \ident (!A_j \land !A_k)$.}{}%
+    \tagitem{prvOr}{$!A \ident (!A_j \lor !A_k)$.}{}%
+    \tagitem{prvIf}{$!A \ident (!A_j \lif !A_k)$.}{}%
+    \tagitem{prvIff}{$!A \ident (!A_j \liff !A_k)$.}{}%
+    \tagitem{prvAll}{$!A \ident \lforall[x][!A_j]$.}{}%
+    \tagitem{prvEx}{$!A \ident \lexists[x][!A_j]$.}{}%
+\end{enumerate}
+இப்போது நிகழ்வுகளாகப் பிரித்து காரணமிடுவோம். $!A$ அணுவாக இருந்தால்
+$!A_n \in \Frm[L_0]$. மாறாக $!A \equiv (!A_j \land !A_k)$ எனக் கொள்வோம்.
+\olref[fol][syn][fseq]{lem:fseq-init} படி,
+$\tuple{!A_0,\dotsc,!A_j}$ மற்றும் $\tuple{!A_0,\dotsc,!A_k}$ ஆகியவை
+முறையே $!A_j$,~$!A_k$ க்கான உருவாக்க வரிசைகள். இவை $!A$ க்கான
+உருவாக்க வரிசையின் சரியான தொடக்க உபவரிசைகள் என்பதால், இரண்டின் நீளமும்
+$n$ ஐ விடக் குறைவு. ஆகவே தொகுத்தறிதல் கருதுகோளால் $!A_j$,~$!A_k$
+ஆகியவை $\Frm[L_0]$ இல் உள்ளன; !!a{formula} வரையறையால்
+$(!A_j \land !A_k)$ உம் அங்கே உள்ளது. மற்ற நிகழ்வுகளும் இதே முறையில்.
+\end{proof}
+
+சொற்களுக்கான உருவாக்க வரிசைகளுக்கும் !!{formula}s க்கான வரிசைகளின் பண்புகளைப்
+போன்ற பண்புகள் உள்ளன.
+
+\begin{prop}
+\ollabel{prop:fseq-trm-equiv}
+$\Trm[L]$ என்பது, $t$ க்கான ஒரு சொல் உருவாக்க வரிசை இருக்கும் என்ற நிபந்தனையைப்
+பூர்த்தி செய்யும் எல்லா $\Lang L$-சரங்களான $t$ களின் தொகுப்பு.
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][fseq]{prop:fseq-trm-equiv} ஐ நிறுவுக.
+\olref[fol][syn][fseq]{thm:fseq-frm-equiv} இன் நிறுவலில் பயன்படுத்திய
+முறையைப் போன்ற உத்தியைப் பயன்படுத்துக.
+\end{prob}
+
+உருவாக்க வரிசைகளில் தோன்றக்கூடிய ``தேவையற்ற கூறுகள்'' இரண்டு வகை:
+மீண்டும் வரும் உறுப்புகள், மற்றும் உருவாக்கம் அல்லது சொல்லைக் கட்டுவதற்கு
+பொருத்தமில்லாத உறுப்புகள். குறைந்தபட்ச உருவாக்க வரிசைகளைப் பார்ப்பதன் மூலம்
+இரண்டையும் நீக்கலாம்.
+
+\begin{defn}[Minimal formation sequences]
+\ollabel{defn:minimal-fseq}
+$\tuple{!A_0, \ldots, !A_n}$ என்ற $!A$ க்கான உருவாக்க வரிசை,
+$!A$ க்கான வேறு ஒவ்வொரு உருவாக்க வரிசை~$s$ க்கும், $s$ இன் நீளம் $n+1$ ஐ விடக்
+குறைவாக இல்லாவிட்டால், $!A$ க்கான ஒரு \emph{குறைந்தபட்ச உருவாக்க வரிசை}.
+
+அதேபோல், $t$ க்கான $\tuple{t_0, \ldots, t_n}$ என்ற உருவாக்க வரிசை,
+$t$ க்கான வேறு ஒவ்வொரு உருவாக்க வரிசை~$s$ க்கும், $s$ இன் நீளம் $n+1$ ஐ விடக்
+குறைவாக இல்லாவிட்டால், $t$ க்கான ஒரு \emph{குறைந்தபட்ச உருவாக்க வரிசை}.
+\end{defn}
+
+ஒரு சூத்திரம் அல்லது சொல்லுக்கு ஒன்றுக்கு மேற்பட்ட குறைந்தபட்ச உருவாக்க
+வரிசைகள் இருக்கலாம்; ஆனால் அவற்றில் சரியாக ஒரே குறியீட்டு சரங்கள் இருக்கும்.
+
+\begin{prop}
+\ollabel{prop:subformula-equivs}
+பின்வருவன சமமானவை:
+\begin{enumerate}
+    \item $!B$ என்பது~$!A$ இன் ஒரு sub-!!{formula}.
+    \item $!A$ இன் ஒவ்வொரு உருவாக்க வரிசையிலும் $!B$ தோன்றுகிறது.
+    \item $!A$ இன் ஒரு குறைந்தபட்ச உருவாக்க வரிசையில் $!B$ தோன்றுகிறது.
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][fseq]{prop:subformula-equivs} ஐ நிறுவுக.
+\end{prob}
+
+\begin{history}
+உருவாக்க வரிசைகளை ரேமண்ட் ஸ்மல்லியன் தனது பாடநூல்
+\emph{First-Order Logic} \citep{Smullyan1968} இல் அறிமுகப்படுத்தினார்.
+உருவாக்க வரிசைகளின் கூடுதல் பண்புகளை \citet{Zuckerman1973} நிறுவினார்.
+\end{history}
+
+\end{document}

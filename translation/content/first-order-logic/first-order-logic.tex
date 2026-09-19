@@ -1,0 +1,60 @@
+% Part: first-order logic
+
+\documentclass[../../include/open-logic-part]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0138-S01
+\olpart{fol}{முதல்தர தருக்கம்}
+
+\begin{editorial}
+  இப்பகுதி முதல்தர தருக்கத்தின் மேல்கோட்பாட்டை நிறைவு வரை எடுத்துரைக்கிறது.
+  தற்போது இது கூற்றுத் தருக்கத்திற்கான தனி எடுத்துரைப்பைச் சார்ந்திருக்கவில்லை;
+  ஒவ்வொன்றும் நிறுவப்படுகிறது. ``FOL'' என்ற குறிச்சொல் பொய்யாக இருந்தால்,
+  மூலக் கோப்புகள் அளவையடைகள் பற்றிய உள்ளடக்கத்தை விலக்கி
+  (மேலும் ``!!{structure}'' என்பதற்குப் பதில் ``!!{valuation}'',
+  $\Struct{M}$ என்பதற்குப் பதில் $\pAssign{v}$ போன்றவற்றை அமைத்து) வெளியிடும்.
+  உண்மையில், கூற்றுத் தருக்கப் பகுதியிலுள்ள பெரும்பாலான உள்ளடக்கம் ``FOL''
+  குறிச்சொல் அணைக்கப்பட்ட முதல்தர உள்ளடக்கமே.
+
+  கூற்றுத் தருக்கப் பகுதியையும் சேர்த்தால், இது பெருமளவு மீளுரைப்பை உருவாக்கும்.
+  இருப்பினும், இப்பகுதி கூற்றுத் தருக்க உள்ளடக்கத்தைக் கணக்கில் கொள்ளவும்,
+  ஏற்கெனவே எடுத்துரைக்கப்பட்ட உள்ளடக்கத்தை விலக்கவும், கூற்றுத் தருக்கப்
+  பகுதியின் இணையான இடங்களை மேற்கோளிட்டு நிறுவல்களைச் சுருக்கவும் இயலுமாறு
+  செய்வது திட்டமிடப்பட்டுள்ளது.
+\end{editorial}
+
+% SEGMENT OLP-0138-S02
+\olimport[introduction]{introduction}
+
+\olimport[syntax-and-semantics]{syntax}
+
+\olimport[syntax-and-semantics]{semantics}
+
+\olimport[models-theories]{models-theories}
+
+\olimport[proof-systems]{proof-systems}
+
+\iftag{prfSC}{%
+  \olimport[sequent-calculus]{sequent-calculus}
+}{}
+
+\iftag{prfND}{%
+  \olimport[natural-deduction]{natural-deduction}
+}{}
+
+\iftag{prfTab}{%
+  \olimport[tableaux]{tableaux}
+}{}
+
+\iftag{prfAX}{%
+  \olimport[axiomatic-deduction]{axiomatic-deduction}
+}{}
+
+\olimport[completeness]{completeness}
+
+\olimport[beyond]{beyond}
+
+\OLEndPartHook
+
+\end{document}

@@ -1,0 +1,73 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: reducts-and-expansions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0184-S01
+
+\olfileid{mod}{bas}{red}
+\section{குறைப்புகளும் விரிவாக்கங்களும்}
+
+பொதுவான குறியீடுகளைக் கொண்ட மொழிகளையும் அவற்றுக்கான !!{structure}s
+ஐயும் ஒப்பிடுவது பல நேரங்களில் பயனுள்ளதோ தேவையானதோ ஆகிறது.
+!!a{language}~$\Lang{L}$ இலுள்ள எல்லாக் குறியீடுகளும்
+!!a{language}~$\Lang{L'}$ இன் பகுதியாகவும் இருக்கும் நிலையே மிகவும்
+பொதுவானது; அதாவது $\Lang{L} \subseteq \Lang{L'}$.
+கூடுதல் குறியீடுகளுக்குப் பொருள்கோள்களைச் சேர்த்தும், பொதுவான
+குறியீடுகளின் பொருள்கோள்களை மாற்றாமலும், ஓர் $\Lang{L}$-!!{structure}
+~$\Struct{M}$ ஐ எப்போதும் ஓர் $\Lang{L'}$-!!{structure} ஆக
+விரிவாக்கலாம். மறுபுறம், $\Lang{L'}$-structure~$\Struct{M'}$
+ஒன்றிலிருந்து,~$\Lang{L}$ இல் இடம்பெறாத குறியீடுகளின் பொருள்கோள்களை
+``மறப்பதன்'' மூலம் ஓர் $\Lang{L}$-structure ஐப் பெறலாம்.
+
+\begin{defn}
+\ollabel{defn:reduct}
+$\Lang L \subseteq \Lang L'$ என்றும், $\Struct M$ ஓர்
+$\Lang L$-!!{structure} என்றும், $\Struct M'$ ஓர்
+$\Lang L'$-!!{structure} என்றும் கொள்க. பின்வருபவை பொருந்தினால், எனில்
+மட்டுமே, $\Struct M$ என்பது $\Struct M'$ இன் $\Lang L$ க்கான
+\emph{குறைப்பு}; $\Struct M'$ என்பது $\Struct M$ இன் $\Lang L'$
+க்கான \emph{விரிவாக்கம்}:
+\begin{enumerate}
+\item $\Domain{M} = \Domain{M'}$
+\item ஒவ்வொரு !!{constant}~$c \in \Lang L$ க்கும்,
+  $\Assign{c}{M} = \Assign{c}{M'}$.
+\item ஒவ்வொரு !!{function}~$f \in \Lang L$ க்கும்,
+  $\Assign{f}{M} = \Assign{f}{M'}$.
+\item ஒவ்வொரு !!{predicate}~$P \in \Lang L$ க்கும்,
+  $\Assign{P}{M} = \Assign{P}{M'}$.
+\end{enumerate}
+\end{defn}
+
+\begin{prop}
+\ollabel{prop:reduct}
+ஓர் $\Lang{L}$-!!{structure}~$\Struct{M}$ ஆனது ஓர்
+$\Lang{L'}$-!!{structure}~$\Struct{M'}$ இன் குறைப்பு எனில்,
+எல்லா $\Lang{L}$-!!{sentence}s~$!A$ க்கும்,
+\[
+\Sat{M}{!A} \text{ iff } \Sat{M'}{!A}.
+\]
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[mod][bas][red]{prop:reduct} ஐ நிரூபிக்க.
+\end{prob}
+
+\begin{defn}
+ஓர் $\Lang{L}$-structure $\Struct{M}$ நம்மிடம் உள்ளது என்றும்,
+$\Lang{L'} = \Lang{L} \cup \{P\}$ ஆனது ஒரே ஒரு $n$-இட
+!!{predicate}~$P$ ஐச் சேர்ப்பதால் பெறப்படும் $\Lang{L}$ இன்
+விரிவாக்கம் என்றும், $R \subseteq \Domain{M}^n$ ஓர் $n$-இடத்
+தொடர்பு என்றும் கொள்க. அப்போது, $\Assign{P}{M'} = R$ ஆகுமாறு
+~$\Struct{M}$ இன் விரிவாக்கம்~$\Struct{M'}$ ஐக் குறிக்க
+$\Expan{M}{R}$ என எழுதுகிறோம்.
+\end{defn}
+
+\end{document}

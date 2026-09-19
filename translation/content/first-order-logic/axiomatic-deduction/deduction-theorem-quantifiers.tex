@@ -1,0 +1,65 @@
+% SEGMENT OLP-0120-S01
+% Part: first-order-logic 
+% Chapter: axiomatic-deduction 
+% Section: deduction-theorem-quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{ddq}
+
+\olsection{அளவையடைகளுடன் கழித்தல் தேற்றம்}
+
+% SEGMENT OLP-0120-S02
+\begin{thm}[கழித்தல் தேற்றம்]
+\ollabel{thm:deduction-thm-q} $\Gamma \cup \{!A\} \Proves !B$ எனில்,
+$\Gamma \Proves !A \lif !B$.
+\end{thm}
+
+% SEGMENT OLP-0120-S03
+\begin{proof}
+$\Gamma \cup \{!A\}$ இலிருந்து~$!B$ இன் !!{derivation} நீளத்தின் மீது
+மீண்டும் தொகுத்தறிதல் செய்கிறோம்.
+
+தொகுத்தறிதல் அடிப்படைக்கான நிறுவல், \olref[ded]{thm:deduction-thm} இன்
+நிறுவலில் உள்ளதற்கு ஒன்றே.
+
+தொகுத்தறிதல் படியில், $\Gamma \cup \{!A\}$ இலிருந்து~$!B$ இன்
+!!{derivation} ஆனது ஓர் அனுமான விதியால் நியாயப்படுத்தப்பட்ட படி~$!B$ உடன்
+முடிகிறது என மீண்டும் கொள்க. அந்த அனுமான விதி மோடஸ் போனென்ஸ் எனில்,
+\olref[ded]{thm:deduction-thm} இன் நிறுவலில் செய்தபடியே தொடர்கிறோம். அந்த
+அனுமான விதி \QR{} எனில், $!B \ident !C \lif \lforall[x][!D(x)]$ என்றும்,
+$a$ ஆனது~$!C$, $!A$, அல்லது $\Gamma$ வில் இடம்பெறாத நிலையில், $!C \lif
+!D(a)$ வடிவிலான !!a{formula} அந்த !!{derivation}வில் முன்பே வருகிறது என்றும்
+அறிகிறோம். ஆகவே
+% SOURCE CORRECTION TA-AXD-003: close the outer conditional's parenthesis.
+\begin{align*}
+  \Gamma \cup \{!A\} & \Proves !C \lif !D(a),\\
+  \intertext{மேலும் தொகுத்தறிதல் கருதுகோள் பொருந்துவதால்,}
+    \Gamma & \Proves !A \lif (!C \lif !D(a)).\\
+  \intertext{பின்வருவதாலும்}
+  & \Proves (!A \lif (!C \lif !D(a))) \lif ((!A \land !C) \lif !D(a))\\
+  \intertext{மோடஸ் போனென்ஸாலும் கிடைப்பது}
+  \Gamma & \Proves (!A \land !C) \lif !D(a).\\
+  \intertext{தனிமாறி நிபந்தனை தொடர்ந்து பொருந்துவதால், இந்த !!{derivation}வில் \QR{} ஆல் நியாயப்படுத்தப்பட்ட ஒரு படியைச் சேர்த்து நாம் பெறுவது}
+    \Gamma & \Proves (!A \land !C) \lif \lforall[x][!D(x)].\\
+    \intertext{மேலும் நமக்கு இருப்பது}
+    & \Proves ((!A \land !C) \lif \lforall[x][!D(x)]) \lif (!A \lif (!C \lif \lforall[x][!D(x)])),\\
+    \intertext{எனவே மோடஸ் போனென்ஸால்,}
+    \Gamma & \Proves !A \lif (!C \lif \lforall[x][!D(x)]),
+\end{align*}
+% SOURCE CORRECTION TA-AXD-004: state the deduction-theorem conclusion confirmed upstream.
+அதாவது, $\Gamma \Proves !A \lif !B$.
+
+% SEGMENT OLP-0120-S04
+$!B$ ஆனது~\QR{} விதியால் நியாயப்படுத்தப்பட்டும், $\lexists[x][!D(x)]
+\lif !C$ வடிவில் இருக்கும் நிலையையும் பயிற்சியாக விடுகிறோம்.
+\end{proof}
+
+% SEGMENT OLP-0120-S05
+\begin{prob}
+  \olref[fol][axd][ddq]{thm:deduction-thm-q} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\end{document}

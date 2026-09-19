@@ -1,0 +1,243 @@
+{
+  "batch_id": "TA-B162",
+  "units": [
+    {
+      "unit_id": "OLP-0301",
+      "source_sha256": "7ad40d40de21a99732a88044dbcad5e27bc167251fec630bd668d70b02562e7d",
+      "translation_sha256": "df717afeb301c956e6c854779c0d80c3e943b2ca24b1f99be4a5f4970641995f",
+      "source_bytes": 802,
+      "translation_bytes": 1392,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0302",
+      "source_sha256": "6279aee1c9f721738aea943abd540619f8b8719601bd1507ed8feebfba56ee3b",
+      "translation_sha256": "9ec06c6eb0113368a43b574abaa6968c11574ccb8ab054cc82fde5a4876aaac7",
+      "source_bytes": 1577,
+      "translation_bytes": 3542,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "int",
+        "logic",
+        "open",
+        "rel",
+        "req",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-030",
+          "unit_id": "OLP-0302",
+          "kind": "unbalanced-list-reference-parenthesis",
+          "action": "Added the missing opening parenthesis before the fourth list-item reference.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The fourth item ends its theorem reference with a closing parenthesis but has no matching opening parenthesis, unlike the preceding three parallel items.",
+          "chosen_treatment": "தமிழ் நான்காம் பட்டியல் உறுப்பிலும் மேற்கோளைப் பொருந்திய அடைப்புக்குறிகளுக்குள் வைக்கிறது.",
+          "alternatives_considered": "Deleting the unmatched closing parenthesis; preserving inconsistent punctuation.",
+          "rationale": "The three preceding items and the identical syntactic role of the fourth reference fix the intended punctuation.",
+          "precise_review_question": "Does the fourth theorem reference now follow the same balanced pattern as the other three?",
+          "location_needle": "SOURCE CORRECTION TA-INC-030"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0303",
+      "source_sha256": "26919c5d76e83e2084a4b157b7991d7a4f798c61973106e903f93812432122a4",
+      "translation_sha256": "482c4f4f98cde811b2bd7a2fe88ca79d1ce88b7058a68ff3afa3b041d2dc3ad3",
+      "source_bytes": 1923,
+      "translation_bytes": 4195,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$K=\\Setabs{x}{!A_x(x)\\downarrow}$",
+        "$!A_x(x)\\downarrow$",
+        "$\\lexists[s][T(\\numx,\\numx,s)]$",
+        "$\\lexists[s][T(\\numx,\\numx,s)]$"
+      ],
+      "extra_math": [
+        "$K=\\Setabs{x}{\\cfind{x}(x)\\fdefined}$",
+        "$\\cfind{x}(x)\\fdefined$",
+        "$\\lexists[s][!A_T(\\numx,\\numx,s)]$",
+        "$\\lexists[s][!A_T(\\numx,\\numx,s)]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-031",
+          "unit_id": "OLP-0303",
+          "kind": "halting-set-function-metavariable",
+          "action": "Replaced two uses of the formula metavariable A_x applied to x with the indexed partial-computation notation cfind_x(x) defined.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\downarrow",
+            "\\downarrow"
+          ],
+          "expected_extra_commands": [
+            "\\cfind",
+            "\\fdefined",
+            "\\cfind",
+            "\\fdefined"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "$K=\\Setabs{x}{!A_x(x)\\downarrow}$",
+              "to": "$K=\\Setabs{x}{\\cfind{x}(x)\\fdefined}$",
+              "count": 1
+            },
+            {
+              "from": "$!A_x(x)\\downarrow$",
+              "to": "$\\cfind{x}(x)\\fdefined$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The diagonal halting set K was defined earlier by definedness of the indexed partial function cfind_x(x), but this proof twice applies a down-arrow to the logical formula metavariable A_x.",
+          "chosen_treatment": "தமிழ் K இன் முன் வரையறையிலுள்ள சுட்டெண் சார்பின் வரையறுக்கப்பட்ட தன்மைக் குறிமுறையையே இரு இடங்களிலும் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating A_x as an unexplained program notation; redefining K locally with a formula.",
+          "rationale": "The cited many-one completeness result and Kleene T equivalence both concern the established self-halting set.",
+          "precise_review_question": "Do the definition of K and the converse conclusion now use the same indexed-computation notation?",
+          "location_needle": "SOURCE CORRECTION TA-INC-031"
+        },
+        {
+          "audit_id": "TA-INC-032",
+          "unit_id": "OLP-0303",
+          "kind": "uncoded-kleene-predicate-in-arithmetic-sentence",
+          "action": "Replaced both final occurrences of the metatheoretic Kleene predicate T inside the claimed Q sentence with its representing formula A_T.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\lexists[s][T(\\numx,\\numx,s)]$",
+              "to": "$\\lexists[s][!A_T(\\numx,\\numx,s)]$",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "The proof introduces A_T as the arithmetic formula representing Kleene's external relation T and uses it throughout the reduction, but the final summary and coded sentence revert to T with numeral arguments.",
+          "chosen_treatment": "தமிழ் Q நிறுவும் வாக்கியத்திலும் அதன் குறியீட்டைத் தரும் சார்பிலும் பிரதிநிதித்துவ வாய்பாடு A_T ஐ வைத்திருக்கிறது.",
+          "alternatives_considered": "Adding T as an unexplained symbol to the language of arithmetic; replacing the earlier representation proof with a richer language.",
+          "rationale": "Only A_T belongs to the stated language and is the formula whose Q-provability was established immediately above.",
+          "precise_review_question": "Does the reduction function now code exactly the arithmetic sentence proved equivalent to self-halting?",
+          "location_needle": "SOURCE CORRECTION TA-INC-032"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\downarrow",
+        "\\downarrow"
+      ],
+      "extra_commands": [
+        "\\cfind",
+        "\\cfind",
+        "\\fdefined",
+        "\\fdefined"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0304",
+      "source_sha256": "141abd39d6939f679a6ee519dd4d9782a870650b8d94fdceff9f5b0e29cd8265",
+      "translation_sha256": "074feac2f1f70709a848ccb73ddd5b0d69cdf380db28ad05799a4e54a1585d91",
+      "source_bytes": 1933,
+      "translation_bytes": 4474,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

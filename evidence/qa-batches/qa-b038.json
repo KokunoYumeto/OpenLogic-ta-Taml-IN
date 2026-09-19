@@ -194,7 +194,7 @@
     {
       "unit_id": "OLP-0068",
       "source_sha256": "b9637a6a1cee29ebba2f8d2cdf238d4567d8ec4b7995607abcb0ee1aef0570b9",
-      "translation_sha256": "9da97ff2f673e92b3aeaa5e39877d9afffff8ac942001c3ab6a9f3d343a317d7",
+      "translation_sha256": "1f5edc68e64e281937bf32b86b7bdb2ad91bb7c8714b8f0a83feb0ae0b15c636",
       "source_bytes": 3937,
       "translation_bytes": 9536,
       "source_coverage_complete": true,

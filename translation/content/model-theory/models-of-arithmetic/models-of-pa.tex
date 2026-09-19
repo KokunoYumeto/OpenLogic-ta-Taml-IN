@@ -1,0 +1,298 @@
+% Part: first-order-logic
+% Chapter: models-of-arithmetic
+% Section: models-of-pa
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0196-S01
+
+\olfileid{mod}{mar}{mpa}
+\section{$\Th{PA}$ இன் மாதிரிகள்}
+
+\begin{explain}
+~$\Th{TA}$ இன் எந்த நிலையற்ற மாதிரியும்~$\Th{PA}$ இன் மாதிரியும்
+ஆகும். ~$\Th{TA}$ இன், எனவே~$\Th{PA}$ இன், நிலையற்ற மாதிரிகள்
+உள்ளன என்பதை அறிவோம். அத்தகைய நிலையற்ற மாதிரிகள், நிலையான
+``எண்கள்'' அனைத்திற்கும் ``அப்பால்'' உள்ள ஆட்களத்தின் !!{element}s
+ஆகிய நிலையற்ற ``எண்களைக்'' கொண்டுள்ளன என்பதையும் அறிவோம். ஆனால் அவை
+எவ்வாறு ஒழுங்கமைந்துள்ளன? அவற்றின் எண்ணிக்கை என்ன? வலுக்குறைந்த
+கோட்பாடு~$\Th{Q}$ இன் மாதிரிகள் ஒரே ஒரு நிலையற்ற எண்ணைக்கூடக்
+கொண்டிருக்கலாம் என்று கண்டோம். ஆனால் அவ்வெளிய !!{structure}s ஆனவை
+$\Th{PA}$ அல்லது $\Th{TA}$ இன் மாதிரிகள் அல்ல.
+
+$\Th{PA}$ அல்லது $\Th{TA}$ இன் மாதிரிகளின் கட்டமைப்பைப் புரிந்துகொள்ள,
+இக்கோட்பாடுகளில் எவ்வுண்மைகள் !!{derivable} என்று காண வேண்டும்.
+எடுத்துக்காட்டாக, $\lforall[x][\eq/[x][x']]$ மற்றும்
+$\lforall[x][\lforall[y][\eq[(x+y)][(y+x)]]]$ ஆகியவற்றை
+$\Th{PA}$ ஏற்கெனவே நிரூபிக்கிறது; எனவே இவை போன்ற !!{sentence}s ஐப்
+பொய்யாக்கும் எளிய கட்டமைப்புகள்~$\Th{PA}$ இன் மாதிரிகளாக முடியாது.
+
+~$\Struct{M}$ ஆனது~$\Th{PA}$ இன் மாதிரி என்று கொள்க. அப்போது
+$\Th{PA} \Proves
+!A$ எனில், $\Sat{M}{!A}$. மீண்டும் $\Assign{\Obj{0}}{M}$ க்கு
+$\nszero$ என்றும், $\Assign{\prime}{M}$ க்கு $\nssucc$ என்றும்,
+$\Assign{+}{M}$ க்கு $\nsplus$ என்றும், $\Assign{\times}{M}$ க்கு
+$\nstimes$ என்றும், $\Assign{<}{M}$ க்கு $\nsless$ என்றும்
+பயன்படுத்துவோம். அப்போது எந்த !!{sentence}~$!A$ உம் $\nszero$,
+$\nssucc$, $\nsplus$, $\nstimes$, $\nsless$ குறித்த ஒரு நிபந்தனையைக்
+கூறுகிறது; $\Sat{M}{!A}$ எனில் அந்நிபந்தனை நிறைவுற வேண்டும்.
+எடுத்துக்காட்டாக, $\Sat{M}{!Q_1}$, அதாவது
+$\Sat{M}{\lforall[x][\lforall[y][(\eq[x'][y'] \lif \eq[x][y])]]}$
+எனில், $\nssucc$ !!{injective} ஆக இருக்க வேண்டும்.
+\end{explain}
+
+\begin{prop}
+$\Struct{M}$ இல், $\nsless$ ஒரு நேரியல் கண்டிப்பான வரிசை; அதாவது
+அது பின்வருவனவற்றை நிறைவுறுத்துகிறது:
+\begin{enumerate}
+\item எந்த~$x \in \Domain{M}$ க்கும் $x \nsless x$ அல்ல.
+\item $x \nsless y$ மற்றும் $y \nsless z$ எனில் $x \nsless z$.
+\item எந்த $x \neq y$ க்கும், $x \nsless y$ அல்லது $y \nsless x$
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+$\Th{PA}$ பின்வருவனவற்றை நிரூபிக்கிறது:
+\begin{enumerate}
+\item $\lforall[x][\lnot x < x]$
+\item $\lforall[x][\lforall[y][\lforall[z][((x < y \land y < z) \lif x < z)]]]$
+\item $\lforall[x][\lforall[y][((x < y \lor y < x) \lor \eq[x][y]))]]$
+\end{enumerate}
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:M-discrete} $\nsless$-வரிசையில்~$\Domain{M}$ இன்
+மீச்சிறு !!{element} $\nszero$. எந்த $x$ க்கும்,
+$x \nsless
+x^\nssucc$; இப்பண்புடைய $\nsless$-மீச்சிறு !!{element}
+$x^\nssucc$. எந்த $x$ க்கும் $y^\nssucc = x$ ஆகுமாறு ஒரேயொரு
+$y$ உள்ளது. ($y$ ஐ~$\Struct{M}$ இல்~$x$ இன் ``முன்னெண்'' என்று
+அழைத்து, அதை~$^\nssucc x$ எனக் குறிக்கிறோம்.)
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[mod][mar][mpa]{prop:M-discrete} இலுள்ள $\nszero$, $\nssucc$,
+$\nsless$ ஆகியவற்றின் பண்புகளை உறுதிசெய்யும்,~$\Th{PA}$ இல்
+!!{derivable} (எனவே~$\Struct{N}$ இல் மெய்யான)~$\Lang{L_A}$ இன்
+!!{sentence}s ஐக் கண்டறிக.
+\end{prob}
+
+\begin{prop}
+~$\Struct{M}$ இன் எல்லா நிலையான !!{element}s உம்
+(~$\nsless$ படி) எல்லா நிலையற்ற !!{element}s ஐவிடக் குறைவானவை.
+\end{prop}
+
+\begin{proof}
+~$\Struct{M}$ இன் நிலையான !!{element} ஆன
+$\Value{\num{n}}{M}$ என்பதற்குச் சுருக்கமாக $n$ ஐப் பயன்படுத்துவோம்.
+எந்த~$n
+\in \Nat$ க்கும், $\lforall[x][(x < \num{n}' \lif
+(\eq[x][\num{0}] \lor
+  \eq[x][\num{1}] \lor \dots \lor \eq[x][\num{n}]))]$ என்பதை
+$\Th{Q}$ ஏற்கெனவே நிரூபிக்கிறது. $\nsless \nszero$ ஆகும்
+!!{element}s எதுவும் இல்லை. எனவே $n$ நிலையானதாகவும் $x$
+நிலையற்றதாகவும் இருந்தால், $x \nsless n$ ஆக முடியாது. வரையறைப்படி,
+எந்த~$n
+\in \Nat$ க்கும் $\Value{\num{n}}{M}$ ஆக இல்லாத உறுப்பே நிலையற்ற
+உறுப்பு; எனவே $x \neq n$ உம் பொருந்தும். $\nsless$ ஒரு நேரியல் வரிசை
+என்பதால் $n \nsless x$ ஆக வேண்டும்.
+\end{proof}
+
+\begin{prop}
+~$\Domain{M}$ இன் ஒவ்வொரு நிலையற்ற !!{element}~$x$ உம் பின்வரும்
+உட்கணத்தின் உறுப்பு:
+\[
+\dots ^{\nssucc\nssucc\nssucc}x \nsless ^{\nssucc\nssucc}x \nsless
+^{\nssucc}x \nsless x \nsless x^{\nssucc} \nsless x^{\nssucc\nssucc}
+\nsless x^{\nssucc\nssucc\nssucc} \nsless \dots
+\]
+இவ்வுட்கணத்தை \emph{~$x$ இன் தொகுதி} என்று அழைத்து, அதை $[x]$ என
+எழுதுகிறோம். அதற்கு மீச்சிறு உறுப்பும் மீப்பெரு !!{element} உம்
+இல்லை. ஏதேனும் நிலையான~$n$ க்கு $x \nsplus n = y$ அல்லது
+$y \nsplus n = x$ ஆகும் $y \in \Domain{M}$ அனைத்தின் கணமாக
+இதனைத் தன்மைப்படுத்தலாம்.
+\end{prop}
+
+\begin{proof}
+~$\Domain{M}$ இன் ஒவ்வோர் !!{element}~$y$ உம் ஒரேயொரு
+அடுத்தெண்~$y^\nssucc$ ஐயும் ஒரேயொரு முன்னெண்~$^\nssucc y$ ஐயும்
+கொண்டிருப்பதால், அத்தகைய கணம்~$[x]$ எப்போதும் உள்ளது என்பது தெளிவு.
+அடுத்தடுத்த !!{element}s $y$, $y^\nssucc$ க்கு
+$y \nsless y^\nssucc$; மேலும் $y$ ஐவிட $\nsless$-பெரிதான
+~$\Domain{M}$ இன் $\nsless$-மீச்சிறு !!{element} $y^\nssucc$.
+எப்போதும் $^\nssucc y \nsless y$ மற்றும் $y \nsless y^\nssucc$
+என்பதால், $[x]$ க்கு மீச்சிறு அல்லது மீப்பெரு !!{element} இல்லை.
+$y \in [x]$ எனில் $x \in [y]$; ஏனெனில் அப்போது
+$y^{\nssucc\dots\nssucc} = x$ அல்லது
+$x^{\nssucc\dots\nssucc} = y$. $y^{\nssucc\dots\nssucc} = x$
+($n$ எண்ணிக்கையிலான $\nssucc$-களுடன்) எனில், $y \nsplus n = x$;
+மறுதலையும் பொருந்தும். ஏனெனில் ($n$ என்பது~$\prime$-களின் எண்ணிக்கை
+எனில்) $\Th{PA} \Proves \lforall[x][\eq[x^{\prime\dots\prime}][(x +
+    \num{n})]]$.
+\end{proof}
+
+\begin{prop}
+$[x] \neq [y]$ மற்றும் $x \nsless y$ எனில், எந்த
+$u \in [x]$ மற்றும் எந்த $v \in [y]$ க்கும் $u \nsless v$.
+\end{prop}
+
+\begin{proof}
+$\Th{PA} \Proves \lforall[x][\lforall[y][(x < y \lif (x' < y
+    \lor x' = y))]]$ என்பதைக் கவனிக்க. எனவே $u \nsless v$ எனில்,
+$[u] \neq [v]$ ஆகும்போது எந்த~$n$ க்கும்
+$u \nsplus
+n^\nssucc \nsless v$ உம் பொருந்தும்.
+
+எந்த $u \in [x]$ உம் $\nsless y$: கருதுகோளின்படி
+$x \nsless y$. $u
+\nsless x$ எனில், கடப்புநிலையால் $u \nsless y$. மேலும்
+$x \nsless u$ ஆனால் $u
+\in [x]$ எனில், ஏதேனும்~$n$ க்கு $u = x\nsplus n^\nssucc$;
+எனவே இப்போது நிரூபித்த உண்மையால் $u \nsless y$.
+
+இப்போது $v \in [y]$ ஆனது $\nsless y$ என்று, அதாவது ஏதேனும்
+நிலையான~$m$ க்கு $v \nsplus
+m^\nssucc = y$ என்று கொள்க. $v \nsless x$ ஆக முடியாது; இல்லையெனில்
+$y = v \nsplus m^\nssucc \nsless x$. தெளிவாக $x \neq
+v$ உம் ஆகும்; இல்லையெனில்
+$x \nsplus m^\nssucc = v \nsplus m^\nssucc = y$ என்பதால்
+$[x] = [y]$ கிடைக்கும். எனவே $x \nsless v$. ஆனால் அப்போது எந்த
+~$n$ க்கும் $x \nsplus
+n^\nssucc \nsless v$ உம் பொருந்தும். எனவே $x \nsless u$ மற்றும்
+$u \in
+[x]$ எனில், $u \nsless v$. $u \nsless x$ எனில், கடப்புநிலையால்
+$u \nsless v$.
+
+இறுதியாக, $y \nsless v$ எனில், நாம் காட்டியபடி $u
+\nsless y$ என்பதாலும் $y \nsless v$ என்பதாலும் $u \nsless v$.
+\end{proof}
+
+\begin{cor}
+$[x] \neq [y]$ எனில், $[x] \cap [y] = \emptyset$.
+\end{cor}
+
+\begin{proof}
+$z \in [x]$ மற்றும் $x \nsless y$ என்று கொள்க. அப்போது எல்லா
+$u
+\in [y]$ க்கும் $z \nsless u$. $z \in [y]$ எனில்,
+$z \nsless z$ கிடைக்கும். $y
+\nsless x$ எனும்போதும் இதே போன்றது.
+\end{proof}
+
+\begin{explain}
+இதன் பொருள், தொகுதிகளையே $\nsless$ ஐ மதிக்கும் வகையில்
+வரிசைப்படுத்தலாம்: $[x] \nsless [y]$ எனில், எனில் மட்டுமே,
+$x \nsless y$; அல்லது சமானமாக, எந்த $u \in [x]$ மற்றும்
+$v \in [y]$ க்கும் $u \nsless v$. தெளிவாக, நிலையான தொகுதி $[0]$
+மீச்சிறு தொகுதி. அது எந்த நிலையற்ற தொகுதியுடனும் வெட்டாது; எந்த இரு
+நிலையற்ற தொகுதிகளும் வெட்டுவதில்லை. குறிப்பாக, அடுத்தெண்களையோ
+முன்னெண்களையோ மீண்டும் மீண்டும் எடுத்து வேறொரு தொகுதியை
+``அடைய'' முடியாது.
+\end{explain}
+
+\begin{prop}
+$x$ மற்றும் $y$ நிலையற்றவை எனில், $x \nsless x \nsplus y$ மற்றும்
+$x
+\nsplus y \notin [x]$.
+\end{prop}
+
+\begin{proof}
+$y$ நிலையற்றது எனில், $y \neq \nszero$.
+$\Th{PA} \Proves
+\lforall[x][(y \neq \Obj{0} \lif x < (x+y))]$. இப்போது
+$x
+\nsplus y \in [x]$ என்று கொள்க. $x \nsless x \nsplus y$ என்பதால்,
+$x
+\nsplus n^\nssucc = x \nsplus y$ ஆகும். ஆனால்
+$\Th{PA} \Proves
+\lforall[x][\lforall[y][\lforall[z][(\eq[(x+y)][(x+z)] \lif y = z)]]]$
+(கூட்டலுக்கான நீக்கல் விதி). இதனால் ஏதேனும் நிலையான~$n$ க்கு
+$y = n^\nssucc$ என்று கிடைக்கும்; ஆனால் $y$ நிலையற்றது எனக்
+கருதப்பட்டுள்ளது.
+\end{proof}
+
+\begin{prop}
+மீச்சிறு நிலையற்ற தொகுதி இல்லை.
+\end{prop}
+
+\begin{proof}
+$\Th{PA} \Proves \lforall[x][\lexists[y][(\eq[(y+y)][x] \lor
+      \eq[(y+y)'][x])]]$; அதாவது ஒவ்வொரு $x$ உம்~$2$ ஆல்
+வகுபடும் (ஒருவேளை மீதி~$1$ உடன்). $x$ நிலையற்றது எனில்~$y$ உம்
+நிலையற்றது. முந்தைய கூற்றின்படி, $y \nsless y \nsplus y$ மற்றும்
+$y \nsplus y
+  \notin [y]$. அப்போது $y \nsless (y \nsplus y)^\nssucc$ மற்றும்
+$(y
+  \nsplus y)^\nssucc \notin [y]$ உம் பொருந்தும். ஆனால்
+$x = y \nsplus y$ அல்லது $x = (y
+  \nsplus y)^\nssucc$; எனவே $y \nsless x$ மற்றும் $y \notin [x]$.
+\end{proof}
+
+\begin{prop}
+மீப்பெரு தொகுதி இல்லை.
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+~$\Th{PA}$ இன் நிலையற்ற மாதிரியில் மீப்பெரு தொகுதி இல்லை என்று
+காட்டுக.
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:blocks-dense}
+தொகுதிகளின் வரிசை செறிந்தது. அதாவது $x \nsless y$ மற்றும்
+$[x] \neq [y]$ எனில், அவற்றுக்கிடையில் அவை இரண்டிலிருந்தும் வேறுபட்ட
+தொகுதி $[z]$ ஒன்று உள்ளது.
+\end{prop}
+
+\begin{proof}
+$x \nsless y$ என்று கொள்க. முன்போலவே, $x \nsplus y$ இரண்டால்
+வகுபடும் (ஒருவேளை மீதியுடன்): $x \oplus y = z \oplus z$ அல்லது
+$x \oplus y = (z \oplus
+z)^\nssucc$ ஆகுமாறு $z \in \Domain{M}$ ஒன்று உண்டு. உறுப்பு $z$
+ஆனது $x$ மற்றும்~$y$ இன் ``சராசரி''; மேலும் $x
+\nsless z$ மற்றும் $z \nsless y$.
+\end{proof}
+
+\begin{prob}
+\olref[mod][mar][mpa]{prop:blocks-dense} இன் விரிவான நிரூபிப்பை
+எழுதுக. ~ $z$ இன் இருப்பை உறுதிசெய்ய $\Th{PA}$ எந்த !!{sentence}
+ஐ !!{derive} செய்ய வேண்டும்? ஏன் $x \nsless z$ மற்றும்
+$z \nsless y$? ஏன் $[x] \neq [z]$ மற்றும் $[z]
+\neq [y]$?
+\end{prob}
+
+\begin{explain}
+எனவே நிலையற்ற தொகுதிகள் விகிதமுறு எண்களைப் போல வரிசைப்படுத்தப்பட்டுள்ளன:
+அவை முனைகளற்ற !!a{denumerable} செறிந்த நேரியல் வரிசையை உருவாக்குகின்றன.
+அத்தகைய எந்த இரு !!{denumerable} வரிசைகளும் ஓரினமானவை என்று காட்டலாம்.
+இதனால், மெய் எண்கணிதத்தின் எந்த இரு !!{enumerable} நிலையற்ற மாதிரிகள்
+$\Struct{M}_1$ மற்றும் $\Struct{M_2}$ க்கும், $<$ மற்றும் $=$ ஐ மட்டும்
+கொண்ட மொழிக்கான அவற்றின் குறைப்புகள் ஓரினமானவை என்று பின்வருகிறது.
+உண்மையில், ஓரினச்சார்பு $h$ ஐப் பின்வருமாறு வரையறுக்கலாம்:
+$\Struct{M_1}$ மற்றும் $\Struct{M_2}$ இன் நிலையான பகுதிகள் நிலையான
+மாதிரி $\Struct{N}$ க்கு ஓரினமானவை; எனவே ஒன்றுக்கொன்றும் ஓரினமானவை.
+நிலையற்ற பகுதியை உருவாக்கும் தொகுதிகள் தாமே விகிதமுறு எண்களைப் போல
+வரிசைப்படுத்தப்பட்டுள்ளன; எனவே ஓரினமானவை. தொகுதிகளின் ஓரினச்சார்பை,
+ஒவ்வொன்றிலும் தன்னிச்சையான உறுப்புகளை இணைத்தும், பின்னர்
+$\Struct{M_1}$ இல் $x$ இன் அடுத்தெண்ணின் படிமத்தை $\Struct{M_2}$ இல்
+$x$ இன் படிமத்தின் அடுத்தெண்ணாக எடுத்தும், தொகுதிகளுக்கு
+\emph{உள்ளேயும்} ஓர் ஓரினச்சார்பாக நீட்டிக்கலாம்.
+$\mathfrak{M}_1$ மற்றும் $\mathfrak{M}_2$ ஆகியவை எண்கணிதத்தின் முழு
+மொழியில் ஓரினமானவை என்று இதிலிருந்து \emph{பின்வராது} என்பதைக்
+கவனிக்க (உண்மையில், ஓரினத்தன்மை எப்போதும் !!a{language} ஐச் சார்ந்தது);
+ஏனெனில் $\Domain{M_1}$ மற்றும் $\Domain{M_2}$ மீது கூட்டலையும்
+பெருக்கலையும் ஓரினமற்ற வழிகளில் வரையறுக்கலாம். (ஒரு நிறைவான
+கோட்பாட்டின் எண்ணத்தக்க மாதிரிகளின் எண்ணிக்கை~2 ஆக இருக்க முடியாது
+என்ற வாட்டின் புகழ்பெற்ற தேற்றத்திலிருந்தும் இது பின்வருகிறது.)
+\end{explain}
+\end{document}

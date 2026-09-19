@@ -45,7 +45,16 @@
 \settexttoken{variable}{மாறி}{மாறிகள்}[மாறி][மாறிகள்]
 \definetoken{p-dat}{variable}{மாறிகளுக்குப்}
 \settexttoken{constant}{மாறிலிக் குறி}{மாறிலிக் குறிகள்}[மாறிலிக் குறி][மாறிலிக் குறிகள்]
+\settexttoken{predicate}{பயனிலைக் குறி}{பயனிலைக் குறிகள்}[பயனிலைக் குறி][பயனிலைக் குறிகள்]
+\settexttoken{function}{சார்புக் குறி}{சார்புக் குறிகள்}[சார்புக் குறி][சார்புக் குறிகள்]
+\settexttoken{domain}{பொருட்களம்}{பொருட்களங்கள்}[பொருட்களம்][பொருட்களங்கள்]
+\settexttoken{value}{மதிப்பு}{மதிப்புகள்}[மதிப்பு][மதிப்புகள்]
 \settexttoken{main operator}{முதன்மைச் செயலி}{முதன்மைச் செயலிகள்}[முதன்மைச் செயலி][முதன்மைச் செயலிகள்]
+% A term is "free for" a variable when substituting it causes no capture.
+% Keep this as a predicate phrase so protected !!{free for} tokens read
+% naturally after both singular and plural mathematical subjects.
+\settexttoken{free for}{இடைநிறுத்தத்தக்கது}{இடைநிறுத்தத்தக்கவை}[இடைநிறுத்தத்தக்கது][இடைநிறுத்தத்தக்கவை]
+\settexttoken{complete}{நிறைவான}{நிறைவான}[நிறைவான][நிறைவான]
 \settexttoken{propositional variable}{கூற்று மாறி}{கூற்று மாறிகள்}[கூற்று மாறி][கூற்று மாறிகள்]
 \settexttoken{valuation}{மெய்மதிப்பு ஒதுக்கீடு}{மெய்மதிப்பு ஒதுக்கீடுகள்}[மெய்மதிப்பு ஒதுக்கீடு][மெய்மதிப்பு ஒதுக்கீடுகள்]
 \settexttoken{conditional}{நிபந்தனைக் கூற்று}{நிபந்தனைக் கூற்றுகள்}[நிபந்தனைக் கூற்று][நிபந்தனைக் கூற்றுகள்]
@@ -58,6 +67,8 @@
 \definetoken{p-loc}{structure}{கட்டமைப்புகளில்}
 \settexttoken{identity}{ஒன்றாதல்}{ஒன்றாதல்கள்}[ஒன்றாதல்][ஒன்றாதல்கள்]
 \settexttoken{denumerable}{எண்ணிடத்தக்க}{எண்ணிடத்தக்க}[எண்ணிடத்தக்க][எண்ணிடத்தக்க]
+\definetoken{a}{denumerable}{ஓர்}
+\definetoken{A}{denumerable}{ஓர்}
 \definetoken{a}{propositional variable}{ஒரு}
 \definetoken{A}{propositional variable}{ஒரு}
 \definetoken{a}{valuation}{ஒரு}
@@ -82,6 +93,16 @@
 \definetoken{A}{variable}{ஒரு}
 \definetoken{a}{constant}{ஒரு}
 \definetoken{A}{constant}{ஒரு}
+\definetoken{a}{predicate}{ஒரு}
+\definetoken{A}{predicate}{ஒரு}
+\definetoken{a}{function}{ஒரு}
+\definetoken{A}{function}{ஒரு}
+\definetoken{a}{domain}{ஒரு}
+\definetoken{A}{domain}{ஒரு}
+\definetoken{a}{value}{ஒரு}
+\definetoken{A}{value}{ஒரு}
+\definetoken{a}{complete}{ஒரு}
+\definetoken{A}{complete}{ஒரு}
 \settexttoken{injective}{ஒன்றுக்கொன்றான}{ஒன்றுக்கொன்றான}[ஒன்றுக்கொன்றான][ஒன்றுக்கொன்றான]
 \settexttoken{surjective}{மேற்கோர்த்தல்}{மேற்கோர்த்தல்}[மேற்கோர்த்தல்][மேற்கோர்த்தல்]
 \settexttoken{enumerable}{எண்ணிடத்தக்க}{எண்ணிடத்தக்க}[எண்ணிடத்தக்க][எண்ணிடத்தக்க]
@@ -94,6 +115,22 @@
 \settexttoken{injection}{ஒன்றுக்கொன்றான சார்பு}{ஒன்றுக்கொன்றான சார்புகள்}[ஒன்றுக்கொன்றான சார்பு][ஒன்றுக்கொன்றான சார்புகள்]
 \settexttoken{surjection}{மேற்கோர்த்தல் சார்பு}{மேற்கோர்த்தல் சார்புகள்}[மேற்கோர்த்தல் சார்பு][மேற்கோர்த்தல் சார்புகள்]
 \settexttoken{bijection}{இருபுறச் சார்பு}{இருபுறச் சார்புகள்}[இருபுறச் சார்பு][இருபுறச் சார்புகள்]
+\settexttoken{computably enumerable}{கணிக்கத்தக்கவாறு எண்ணிடத்தக்க}{கணிக்கத்தக்கவாறு எண்ணிடத்தக்க}[கணிக்கத்தக்கவாறு எண்ணிடத்தக்க][கணிக்கத்தக்கவாறு எண்ணிடத்தக்க]
+\settexttoken{c.e.}{க.வ.எ.}{க.வ.எ.}[க.வ.எ.][க.வ.எ.]
+\settexttoken{decidable}{தீர்மானிக்கத்தக்க}{தீர்மானிக்கத்தக்க}[தீர்மானிக்கத்தக்க][தீர்மானிக்கத்தக்க]
+\settexttoken{axiomatizable}{அடிகோளாக்கத்தக்க}{அடிகோளாக்கத்தக்க}[அடிகோளாக்கத்தக்க][அடிகோளாக்கத்தக்க]
+\settexttoken{axiomatized}{அடிகோளாக்கப்பட்ட}{அடிகோளாக்கப்பட்ட}[அடிகோளாக்கப்பட்ட][அடிகோளாக்கப்பட்ட]
+\settexttoken{axiomatizability}{அடிகோளாக்கத்தன்மை}{அடிகோளாக்கத்தன்மை}[அடிகோளாக்கத்தன்மை][அடிகோளாக்கத்தன்மை]
+\settexttoken{language}{மொழி}{மொழிகள்}[மொழி][மொழிகள்]
+\settexttoken{represents}{பிரதிநிதித்துவப்படுத்துகிறது}{பிரதிநிதித்துவப்படுத்துகின்றன}[பிரதிநிதித்துவப்படுத்துகிறது][பிரதிநிதித்துவப்படுத்துகின்றன]
+\settexttoken{subformula}{உட்வாய்பாடு}{உட்வாய்பாடுகள்}[உட்வாய்பாடு][உட்வாய்பாடுகள்]
+\settexttoken{lambda define}{லாம்டா-வரையறுக்கிறது}{லாம்டா-வரையறுக்கின்றன}[லாம்டா-வரையறுக்கிறது][லாம்டா-வரையறுக்கின்றன]
+\settexttoken{lambda defined}{லாம்டா-வரையறுக்கப்பட்ட}{லாம்டா-வரையறுக்கப்பட்ட}[லாம்டா-வரையறுக்கப்பட்ட]
+\settexttoken{lambda definable}{லாம்டா-வரையறுக்கத்தக்க}{லாம்டா-வரையறுக்கத்தக்க}[லாம்டா-வரையறுக்கத்தக்க]
+\definetoken{a}{language}{ஒரு}
+\definetoken{A}{language}{ஒரு}
+\definetoken{a}{subformula}{ஓர்}
+\definetoken{A}{subformula}{ஓர்}
 \definetoken{a}{injective}{ஓர்}
 \definetoken{a}{surjective}{ஒரு}
 \definetoken{a}{bijective}{ஓர்}

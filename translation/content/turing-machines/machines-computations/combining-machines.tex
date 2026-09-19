@@ -1,0 +1,179 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: combining-machines
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0261-S01
+
+\olfileid{tur}{mac}{cmb}
+\olsection{டியூரிங் பொறிகளை இணைத்தல்}
+
+\begin{explain}
+இதுவரை நாம் பார்த்த டியூரிங் பொறிகளின் எடுத்துக்காட்டுகள் இயல்பில்
+மிகவும் எளியவை. ஆனால் உண்மையில், தற்கால நிரலாக்க மொழி எதனாலும்
+தீர்க்கக்கூடிய எந்தச் சிக்கலையும் டியூரிங் பொறிகளாலும் தீர்க்கலாம்.
+மேலும் சிக்கலான டியூரிங் பொறிகளைக் கட்ட, அவற்றை இணைக்க முடியும் என்று
+நமக்கு நாமே உறுதிப்படுத்திக்கொள்வது முக்கியம்; அப்போது செயல்முறையை
+எளிய பகுதிகளாகப் பிரித்து, மேலும் சிக்கலான சிக்கல்களைத் தீர்க்கும்
+பொறிகளைக் கட்டலாம். ஒரு சிக்கலான சிக்கலை அதன் கூறுப் பகுதிகளாகப்
+பிரிப்பதற்கான இயல்பான வழியைக் கண்டறிய முடிந்தால், பல எளிய டியூரிங்
+பொறிகளை உருவாக்கி, அவற்றைச் சிக்கலைத் தீர்க்கக்கூடிய ஒரே பொறியாக
+இணைப்பதன் மூலம் பல கட்டங்களில் அச்சிக்கலை அணுகலாம். அடுத்த பிரிவில்
+நிற்றல் சிக்கலை அணுகும்போது இக்குறிப்பு குறிப்பாக முக்கியமானது.
+
+டியூரிங் பொறிகள் $M = \tuple{Q, \Sigma, q_0, \delta}$ மற்றும்
+~$M' = \tuple{Q', \Sigma', q_0', \delta'}$ ஆகியவற்றை எவ்வாறு
+இணைப்பது?~$M$ நின்றபிறகு நாடாவின் அமைவுநிலையை இப்போது பொறி~$M'$ இன்
+ஓர் இயக்கத்திற்கான உள்ளீட்டு அமைவுநிலையாகப் பயன்படுத்துகிறோம். இதைச்
+செய்யும் ஒரே டியூரிங் பொறி $M \frown M'$ ஐப் பெற, பின்வருவனவற்றைச்
+செய்க:
+\begin{enumerate}
+    \item $M$ க்கும்~$M'$ க்கும் பொதுவான நிலைகள் எவையும் இல்லாதவாறு
+    ($Q \cap Q' = \emptyset$),~$M'$ இன் எல்லா நிலைகள்~$Q'$ க்கும்
+    மறுஎண்ணிடுக (அல்லது மறுபெயரிடுக).
+    \item $M \frown M'$ இன் நிலைகள் $Q \cup Q'$.
+    \item நாடாவின் குறியெழுத்துத் தொகுதி $\Sigma \cup \Sigma'$.
+    \item தொடக்க நிலை~$q_0$.
+    \item நிலைமாற்றுச் சார்பு பின்வருமாறு தரப்படும் $\delta''$ என்ற சார்பு:
+    \[\delta''(q,\sigma) =
+    \begin{cases}
+      \delta(q,\sigma) & \text{$q \in Q$ எனில்}\\
+      \delta'(q,\sigma) & \text{$q \in Q'$ எனில்}\\
+      \tuple{q_0', \sigma, \TMstay} & \text{$q \in Q$ மற்றும்
+      $\delta(q,\sigma)$ வரையறுக்கப்படவில்லை எனில்}
+    \end{cases}\]
+\end{enumerate}
+இதனால் கிடைக்கும் பொறி, $q \in Q$ என்ற நிலையில் இருக்கும்போது~$M$ இன்
+கட்டளைகளையும்,~$q \in Q'$ என்ற நிலையில் இருக்கும்போது~$M'$ இன்
+கட்டளைகளையும் பயன்படுத்துகிறது. $q \in Q$ என்ற நிலையில் இருந்து,
+~$M$ இல் நிலைமாற்றம் இல்லாத ஒரு குறி~$\sigma$ ஐ வருடும்போது (அதாவது,
+~$M$ நின்றிருக்கும் நிலையில்), அது~$M'$ இன் தொடக்க நிலைக்குள்
+செல்கிறது (நாடாவின் உள்ளடக்கத்தையும் தலையின் இருப்பிடத்தையும்
+அப்படியே விட்டுவைக்கிறது).
+
+பொறி~$M$ ஒழுங்குக்குட்பட்டதாக இல்லாவிட்டால்,~$M$ நிற்கும்போது
+நாடாவின் தலை எங்குள்ளது என்று நமக்குத் தெரியாது. எனவே~$M$ இன்
+நிற்றல் அமைவுநிலையில் தலை கட்டம்~$1$ ஐ வருட வேண்டியதில்லை என்பதைக்
+கவனிக்க. பொறிகளை இணைக்கும்போது இதை மனத்தில் கொள்வது முக்கியம்.
+\end{explain}
+
+\begin{ex}
+\emph{பொறிகளை இணைத்தல்:} நீளங்கள் $n$,~$m$ ஆக உள்ள
+~$\TMstroke$-களின் இரு தொகுதிகளைக் கொண்ட உள்ளீட்டில் தொடங்கும்போது,
+நாடாவில் $2(m+n)$ எண்ணிக்கையிலான $\TMstroke$-களைக் கொண்ட ஒரே
+தொகுதியுடன் நிற்கும் ஒரு பொறியை வடிவமைப்போம். இப்பொறியைக் கட்ட,
+நமக்கு ஏற்கெனவே பழக்கமான இரு பொறிகளை இணைக்கலாம்: கூட்டல் பொறியையும்
+இரட்டிப்பானையும். கூட்டல் பொறிக்கான ஒரு நிலை வரைபடத்தை வரைவதன்
+மூலம் தொடங்குகிறோம்.
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state] (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [right of=B] {$q_2$};
+
+  \path (A) edge node {\TMtrans{\TMblank}{\TMstroke}{\TMstay}} (B)
+            edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+            edge node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (C)
+        (C) edge [loop above] node {\TMtrans{\TMstroke}{\TMblank}{\TMstay}} (C);
+\end{tikzpicture}
+\]
+நிலை~$q_2$ இல் நிற்பதற்குப் பதிலாக, வெளியீட்டை இரட்டிப்பதற்காகச்
+செயல்பாட்டைத் தொடர விரும்புகிறோம். இரட்டிப்பான் பொறி உள்ளீட்டிலுள்ள
+முதல் கோட்டை அழித்து, தனியான வெளியீட்டில் இரு கோடுகளை எழுதுகிறது
+என்பதை நினைவுகூர்க. கூட்டல் பொறியின் வெளியீட்டிலுள்ள முதல் கோட்டை
+நாடாவின் தலை வாசிப்பதை உறுதிசெய்ய ஒரு கட்டளையைச் சேர்ப்போம்.
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state] (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [right of=B] {$q_2$};
+  \node[state]         (D) [below left of=C] {$q_3$};
+  \node[state]         (E) [below left of=D] {$q_4$};
+
+  \path (A) edge node {\TMtrans{\TMblank}{\TMstroke}{\TMstay}} (B)
+            edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+            edge node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (C)
+        (C) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMleft}} (D)
+        (D) edge [loop left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (D)
+            edge node[left, xshift=-2mm] {\TMtrans{\TMendtape}{\TMendtape}{\TMright}} (E);
+\end{tikzpicture}
+\]
+உள்ளீட்டை இரட்டிப்பது இப்போது எளிது---நாம் செய்ய வேண்டியதெல்லாம்
+இரட்டிப்பான் பொறியை நிலை~$q_4$ உடன் இணைப்பதே. இரட்டிப்பான் பொறியின்
+நிலைகள்~$q_0$ குப் பதிலாக~$q_4$ இல் தொடங்குமாறு அவற்றை மறுபெயரிட
+வேண்டும்---இவ்வாறு இரு தொடக்க நிலைகள் ஏற்படுவதைத் தவிர்க்கிறோம்.
+இறுதி வரைபடம் \olref{fig:combined} இல் உள்ளதுபோல் அமைய வேண்டும்.
+\begin{figure}
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+  \node[initial,state] (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [right of=B] {$q_2$};
+  \node[state]         (D) [below left of=C] {$q_3$};
+  \node[state]         (E) [below left of=D] {$q_4$};
+  \node[state]         (2) [right of=E] {$q_5$};
+  \node[state]         (3) [right of=2] {$q_6$};
+  \node[state]         (4) [below of=3] {$q_7$};
+  \node[state]         (5) [left of=4]  {$q_8$};
+  \node[state]         (6) [left of=5]  {$q_9$};
+
+  \path (A) edge node {\TMtrans{\TMblank}{\TMstroke}{\TMstay}} (B)
+            edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+            edge node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (C)
+        (C) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMleft}} (D)
+        (D) edge [loop left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (D)
+            edge node[left, xshift=-2mm] {\TMtrans{\TMendtape}{\TMendtape}{\TMright}} (E)
+    (E) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMright}} (2)
+    (2) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (2)
+      edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (3)
+    (3) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (3)
+        edge node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (4)
+    (4) edge [loop below] node {\TMtrans{\TMblank}{\TMstroke}{\TMleft}} (4)
+        edge node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+    (5) edge [loop below]  node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+        edge              node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (6)
+    (6) edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (6)
+        edge              node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (E);
+\end{tikzpicture}
+\]
+\caption{கூட்டல் பொறியையும் இரட்டிப்பான் பொறியையும் இணைத்தல்}
+\ollabel{fig:combined}
+\end{figure}
+\end{ex}
+
+\begin{prop}
+    $M$, $M'$ ஆகியவை ஒழுங்குக்குட்பட்டவையாக இருந்து, முறையே
+    $f\colon \Nat^k \to \Nat$, $f'\colon \Nat \to \Nat$ என்ற
+    சார்புகளைக் கணிக்கின்றன எனில், $M \frown M'$ உம்
+    ஒழுங்குக்குட்பட்டது; மேலும் அது~$\comp{f}{f'}$ ஐக் கணிக்கிறது.
+\end{prop}
+
+\begin{proof}
+    $M$ ஒழுங்குக்குட்பட்டது என்பதால், அது
+    வெளியீடு~$f(n_1,\dots,n_k) = m$ உடன் நிற்கும்போது, தலை
+    கட்டம்~$1$ ஐ வருடுகிறது. இப்போது~$M'$ இன் தொடக்க நிலைக்குள்
+    சென்றால், பொறி வெளியீடு $f'(m)$ உடன் மீண்டும் கட்டம்~$1$ ஐ
+    வருடியபடி நிற்கும். \olref[dis]{defn:disciplined} இன் மற்ற
+    நிபந்தனைகளும் நிறைவேறுகின்றன.
+\end{proof}
+
+\begin{prob}
+    \cref{tur:mac:dis:prob:disc-succ} இலிருந்து பொறி~$M$ ஐ எடுத்து,
+    $M \frown M$ ஐக் கட்டமைப்பதன் மூலம் $f(x) = x+2$ ஐக் கணிக்கும்
+    ஒழுங்குக்குட்பட்ட ஒரு டியூரிங் பொறியைத் தருக.
+\end{prob}
+\end{document}

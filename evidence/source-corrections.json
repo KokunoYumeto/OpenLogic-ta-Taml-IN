@@ -864,6 +864,1505 @@
       "rationale": "The surrounding historical names are already transliterated into Tamil. Tamil-script transliteration removes the verified rendering defect while preserving the person's identity and the passage's attribution.",
       "precise_review_question": "Is ஸ்டானிஸ்லாவ் யாஸ்கோவ்ஸ்கி a clear India-standard Tamil transliteration of Stanisław Jaśkowski in this historical sentence?",
       "location_needle": "RENDER LOCALIZATION TA-RENDER-001"
+    },
+    {
+      "audit_id": "TA-AXD-001",
+      "unit_id": "OLP-0118",
+      "kind": "missing-formula-metavariable-marker",
+      "action": "Restored the missing OpenLogic formula metavariable marker on B_i in the transitivity proof.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$B_i=!A$",
+          "to": "$!B_i=!A$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The proof introduces every derivation line as !B_i but later writes B_i = !A once without the formula marker.",
+      "chosen_treatment": "தமிழ் நிறுவல் அந்த வரியை $!B_i = !A$ என எழுதுகிறது.",
+      "alternatives_considered": "Retaining the plain italic B_i; changing the surrounding indexed formulas.",
+      "rationale": "The preceding definition of the sequence and the equality being discussed uniquely identify the intended formula metavariable !B_i.",
+      "precise_review_question": "Does restoring only the exclamation marker make this occurrence match the derivation-line notation used throughout the proof?",
+      "location_needle": "SOURCE CORRECTION TA-AXD-001"
+    },
+    {
+      "audit_id": "TA-AXD-002",
+      "unit_id": "OLP-0119",
+      "kind": "unclosed-formula-parenthesis",
+      "action": "Closed the outer parenthesis in the first listed derivability fact.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\Proves(!A\\lif!B)\\lif((!B\\lif!C)\\lif(!A\\lif!C)$",
+          "to": "$\\Proves(!A\\lif!B)\\lif((!B\\lif!C)\\lif(!A\\lif!C))$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The displayed conditional opens two parentheses after the main implication but closes only the inner one.",
+      "chosen_treatment": "தமிழ் வாய்பாடு கடைசியில் இரண்டாம் வல அடைப்புக்குறியைச் சேர்க்கிறது.",
+      "alternatives_considered": "Retaining the unmatched parenthesis; deleting an earlier opening parenthesis.",
+      "rationale": "The intended hypothetical-syllogism formula and the balanced grouping are uniquely determined by the three conditionals.",
+      "precise_review_question": "Does the added final parenthesis close only the outer consequent grouping without altering connective scope?",
+      "location_needle": "SOURCE CORRECTION TA-AXD-002"
+    },
+    {
+      "audit_id": "TA-AXD-003",
+      "unit_id": "OLP-0120",
+      "kind": "unclosed-formula-parenthesis",
+      "action": "Closed the outer parenthesis in the quantified deduction proof's second auxiliary theorem.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "&\\Proves((!A\\land!C)\\lif\\lforall[x][!D(x)])\\lif(!A\\lif(!C\\lif\\lforall[x][!D(x)]),",
+          "to": "&\\Proves((!A\\land!C)\\lif\\lforall[x][!D(x)])\\lif(!A\\lif(!C\\lif\\lforall[x][!D(x)])),",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The auxiliary conditional opens an outer parenthesis around its consequent and leaves it unmatched before the comma.",
+      "chosen_treatment": "தமிழ் வாய்பாடு காற்புள்ளிக்கு முன் விடுபட்ட வல அடைப்புக்குறியைச் சேர்க்கிறது.",
+      "alternatives_considered": "Retaining the unmatched parenthesis; changing the displayed derivation.",
+      "rationale": "The immediately following modus-ponens step needs the fully grouped consequent A implies (C implies forall x D(x)).",
+      "precise_review_question": "Does the added parenthesis preserve exactly the auxiliary theorem used by the next modus-ponens step?",
+      "location_needle": "SOURCE CORRECTION TA-AXD-003"
+    },
+    {
+      "audit_id": "TA-AXD-004",
+      "unit_id": "OLP-0120",
+      "kind": "deduction-theorem-conclusion-mismatch",
+      "action": "Restored the required conclusion Gamma proves A implies B at the end of the quantified induction case.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\lif"],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\Gamma\\Proves!B$",
+          "to": "$\\Gamma\\Proves!A\\lif!B$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The frozen source concludes Gamma proves B although the theorem and the immediately preceding displayed line establish Gamma proves A implies B. The current upstream OpenLogic master file has the corrected conclusion.",
+      "chosen_treatment": "தமிழ் நிறுவல் $\\Gamma \\Proves !A \\lif !B$ என்ற தேற்றத்தின் முடிவையே கூறுகிறது.",
+      "alternatives_considered": "Retaining Gamma proves B; changing the theorem statement.",
+      "rationale": "The induction goal, the preceding formula B identical to C implies forall x D(x), and current upstream all confirm A implies B as the unique intended conclusion.",
+      "precise_review_question": "Does the restored A-conditional make the final sentence match both the theorem statement and the preceding derived formula?",
+      "location_needle": "SOURCE CORRECTION TA-AXD-004"
+    },
+    {
+      "audit_id": "TA-AXD-005",
+      "unit_id": "OLP-0122",
+      "kind": "wrong-conjunction-axiom-reference",
+      "action": "Changed the duplicated ax:land1 reference to ax:land2 for the right conjunction projection.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[prp]{ax:land1} and \\olref[prp]{ax:land1}",
+          "to": "\\olref[prp]{ax:land1} and \\olref[prp]{ax:land2}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The proof cites the left-projection axiom twice while claiming both left and right projections.",
+      "chosen_treatment": "தமிழ் நிறுவல் முறையே ax:land1, ax:land2 ஆகிய இரு அடிகோள்களைக் குறிப்பிடுகிறது.",
+      "alternatives_considered": "Retaining the duplicate; changing the proposition to repeat the left projection.",
+      "rationale": "The immediately preceding axiom list assigns ax:land1 to (A and B) implies A and ax:land2 to (A and B) implies B.",
+      "precise_review_question": "Does ax:land2 uniquely justify the second projection stated in item one?",
+      "location_needle": "SOURCE CORRECTION TA-AXD-005"
+    },
+    {
+      "audit_id": "TA-AXD-006",
+      "unit_id": "OLP-0122",
+      "kind": "wrong-negation-axiom-reference",
+      "action": "Changed ax:lnot1 to ax:lnot2 for the displayed instances not-A implies (A implies false) and not-B implies (B implies false).",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[prp]{ax:lnot1}",
+          "to": "\\olref[prp]{ax:lnot2}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The cited ax:lnot1 has the form (A implies B) implies ((A implies not-B) implies not-A), whereas the two displayed formulas are direct instances of ax:lnot2, not-A implies (A implies B).",
+      "chosen_treatment": "தமிழ் நிறுவல் காட்டப்பட்ட இரு நிகழ்வுகளுக்கும் ax:lnot2 ஐக் குறிப்பிடுகிறது.",
+      "alternatives_considered": "Retaining ax:lnot1; replacing the displayed formulas with instances of ax:lnot1.",
+      "rationale": "Substituting false for B in ax:lnot2 gives each displayed premise exactly.",
+      "precise_review_question": "Is ax:lnot2 the exact schema instantiated by both formulas used before the deduction theorem?",
+      "location_needle": "SOURCE CORRECTION TA-AXD-006"
+    },
+    {
+      "audit_id": "TA-AXD-007",
+      "unit_id": "OLP-0124",
+      "kind": "missing-formula-metavariable-markers",
+      "action": "Restored the OpenLogic formula metavariable marker on the three inconsistent B occurrences in the quantified-rule soundness case.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "\\lforall[x][B(x)]",
+          "to": "\\lforall[x][!B(x)]",
+          "count": 2
+        },
+        {
+          "from": "\\Sat{M'}{B(c)}",
+          "to": "\\Sat{M'}{!B(c)}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The QR case uses !B(c) and !B(x) throughout but drops the formula marker in two universal formulas and one satisfaction formula.",
+      "chosen_treatment": "தமிழ் நிறுவல் எல்லா இடங்களிலும் ஒரே !B வாய்பாட்டுத் திட்டத்தைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Retaining three plain italic B expressions; removing the marker from every later B occurrence.",
+      "rationale": "The rule premise, semantic goal, substitution identity and all later satisfaction statements uniquely fix !B as the intended formula schema.",
+      "precise_review_question": "Do the three restored markers make the QR conclusion, freshness clause and satisfaction claim use one unchanged formula schema?",
+      "location_needle": "SOURCE CORRECTION TA-AXD-007"
+    },
+    {
+      "audit_id": "TA-AXD-008",
+      "unit_id": "OLP-0125",
+      "kind": "missing-closed-term-qualifications",
+      "action": "Made explicit that both identity propositions concern closed terms, matching the only identity axiom schemas available in this calculus.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The identity axioms are explicitly restricted to closed terms, but the following propositions say any term and omit the restriction on t_1 and t_2 while proving the claims solely from those axioms.",
+      "chosen_treatment": "தமிழ் முன்மொழிவுகள் t மற்றும் t_1, t_2 ஆகிய சொற்கள் மூடியவை என்ற நிபந்தனையை வெளிப்படையாகக் கூறுகின்றன.",
+      "alternatives_considered": "Retaining the overbroad statements; broadening the axiom schemas to all terms.",
+      "rationale": "The proofs use ax:id1 and ax:id2 directly, so their stated closed-term side condition must also govern the derived propositions.",
+      "precise_review_question": "Do the added closed-term qualifications state exactly the scope licensed by ax:id1 and ax:id2?",
+      "location_needle": "SOURCE CORRECTION TA-AXD-008"
+    },
+    {
+      "audit_id": "TA-READER-REF-010",
+      "unit_id": "OLP-0124",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped eleven syntax-and-semantics reference occurrences in oliflabeldef with descriptive Tamil fallbacks; every live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[syn][ext]{prop:ext-formulas}",
+          "to": "\\oliflabeldef{syn:ext:prop:ext-formulas}{\\olref[syn][ext]{prop:ext-formulas}}{சொல் இடைநிறுத்தலுக்கும் மாறி ஒதுக்கீட்டுக்கும் இடையிலான முன்மொழிவு}",
+          "count": 2
+        },
+        {
+          "from": "\\olref[syn][sem]{thm:sem-deduction}",
+          "to": "\\oliflabeldef{syn:sem:thm:sem-deduction}{\\olref[syn][sem]{thm:sem-deduction}}{பொருண்மைக் கழித்தல் தேற்றம்}",
+          "count": 3
+        },
+        {
+          "from": "\\olref[pl][syn][sem]{thm:sem-deduction}",
+          "to": "\\oliflabeldef{pl:syn:sem:thm:sem-deduction}{\\olref[pl][syn][sem]{thm:sem-deduction}}{பொருண்மைக் கழித்தல் தேற்றம்}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ass]{prop:sat-quant}",
+          "to": "\\oliflabeldef{syn:ass:prop:sat-quant}{\\olref[syn][ass]{prop:sat-quant}}{அளவையடைகளுக்கான நிறைவுறுத்தல் விதி}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][sat]{defn:satisfaction}",
+          "to": "\\oliflabeldef{syn:sat:defn:satisfaction}{\\olref[syn][sat]{defn:satisfaction}}{வாக்கியக் கணத்திற்கான நிறைவுறுத்தல் வரையறை}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{cor:extensionality-sent}",
+          "to": "\\oliflabeldef{syn:ext:cor:extensionality-sent}{\\olref[syn][ext]{cor:extensionality-sent}}{ஒரு வாக்கியத்தின் மெய்மை அதில் வரும் குறிகளின் விளக்கங்களை மட்டுமே சாரும் என்ற துணைவிளைவு}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ass]{prop:sentence-sat-true}",
+          "to": "\\oliflabeldef{syn:ass:prop:sentence-sat-true}{\\olref[syn][ass]{prop:sentence-sat-true}}{ஒரு வாக்கியத்தின் நிறைவுறுத்தல் மாறி ஒதுக்கீட்டைச் சாராது என்ற முன்மொழிவு}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[syn][ext]{prop:extensionality}",
+          "to": "\\oliflabeldef{syn:ext:prop:extensionality}{\\olref[syn][ext]{prop:extensionality}}{ஒரு வாய்பாட்டின் மெய்மை அதில் வரும் மொழிக் குறிகளின் விளக்கங்களை மட்டுமே சாரும் என்ற முன்மொழிவு}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The 14-unit standalone axiomatic-deduction reader omits the syntax-and-semantics results cited by the soundness proof, which would otherwise render as unresolved question marks.",
+      "chosen_treatment": "இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் பொருண்மைக் கழித்தல், நிறைவுறுத்தல், குறி-சார்பு அல்லது சொல்-இடைநிறுத்தல் முடிவைக் குறிக்கும் தமிழ் விளக்கம்.",
+      "alternatives_considered": "Literal question marks; deleting the semantic dependencies; permanently replacing the live links.",
+      "rationale": "Conditional fallbacks keep the standalone chapter readable while preserving every exact reference identity for a later complete reader.",
+      "precise_review_question": "Do the Tamil fallbacks identify exactly the semantic result used at each step without replacing the live links in a complete build?",
+      "location_needle": "syn:sem:thm:sem-deduction"
+    },
+    {
+      "audit_id": "TA-COM-001",
+      "unit_id": "OLP-0131",
+      "kind": "empty-finite-subset-case",
+      "action": "Handled the empty finite subset separately before choosing a largest stage index in the Lindenbaum consistency proof.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proof chooses the largest of the finitely many stage indices associated with members of Gamma-prime, but a finite subset may be empty and then has no such largest index.",
+      "chosen_treatment": "தமிழ் நிறுவல் வெற்றுக் கணத்தின் முரணின்மையை முதலில் தனியே கூறி, வெற்றற்ற இறுதிக்குட்பட்ட உட்கணத்திற்கே மீப்பெரிய சுட்டெண்ணைத் தேர்கிறது.",
+      "alternatives_considered": "Silently assuming the finite subset is nonempty; assigning an arbitrary stage to the empty subset without saying so.",
+      "rationale": "The empty subset is consistent trivially. Every nonempty finite subset has finitely many associated natural-number indices and therefore a largest one, after which the source argument applies unchanged.",
+      "precise_review_question": "Does the explicit empty-set case close the only gap before the maximum-index argument without changing the compactness step?",
+      "location_needle": "SOURCE CORRECTION TA-COM-001"
+    },
+    {
+      "audit_id": "TA-COM-002",
+      "unit_id": "OLP-0132",
+      "kind": "induction-metavariable-consistency",
+      "action": "Used B rather than A in the universal truth-lemma induction conclusion.",
+      "expected_missing_math": ["$\\lforall[x][!A(x)]\\in\\Gamma^*$"],
+      "expected_extra_math": ["$\\lforall[x][!B(x)]\\in\\Gamma^*$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The universal induction case is stated for forall-x B(x), and every preceding satisfaction and membership formula uses B, but its final membership formula unexpectedly switches to A.",
+      "chosen_treatment": "தமிழ் நிறுவல் தொகுத்தறிதல் வழக்கின் வாய்பாடு B-ஐ இறுதி அனைத்தளவையிட்ட உறுப்பியச் சூத்திரத்திலும் தொடர்ந்து பயன்படுத்துகிறது.",
+      "alternatives_considered": "Preserving the isolated A despite the induction case and saturation proposition both using B.",
+      "rationale": "The induction variable A names the whole formula, while B is its immediate quantified subformula; the truth-lemma conclusion must be membership of forall-x B(x).",
+      "precise_review_question": "Does replacing A by B in the final universal-membership formula restore the stated induction case without changing its quantifier or set?",
+      "location_needle": "SOURCE CORRECTION TA-COM-002"
+    },
+    {
+      "audit_id": "TA-COM-003",
+      "unit_id": "OLP-0133",
+      "kind": "duplicated-punctuation-in-term",
+      "action": "Removed a duplicated comma from the displayed function term in the congruence proof obligation.",
+      "expected_missing_math": ["\\[\\Gamma^*\\Proves\\eq[\\Atom{f}{t_1,\\dots,t_{i-1},t,t_{i+1},,\\dots,t_n}][\\Atom{f}{t_1,\\dots,t_{i-1},t',t_{i+1},\\dots,t_n}]\\]"],
+      "expected_extra_math": ["\\[\\Gamma^*\\Proves\\eq[\\Atom{f}{t_1,\\dots,t_{i-1},t,t_{i+1},\\dots,t_n}][\\Atom{f}{t_1,\\dots,t_{i-1},t',t_{i+1},\\dots,t_n}]\\]"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The first function term contains two consecutive commas after t_(i+1), unlike the proposition immediately above and the second function term on the same line.",
+      "chosen_treatment": "தமிழ் பதிப்பு முதல் சார்புச் சொல்லில் மீளுரைத்த காற்புள்ளியை நீக்கி இரு சொற்களையும் ஒரே n-இட வடிவில் தருகிறது.",
+      "alternatives_considered": "Preserving the duplicated comma as if it denoted a missing argument.",
+      "rationale": "The surrounding quantified list supplies exactly n arguments, and both the proposition and comparison term show the intended single separator.",
+      "precise_review_question": "Is the doubled comma purely typographic, with the corrected term matching the stated congruence property?",
+      "location_needle": "SOURCE CORRECTION TA-COM-003"
+    },
+    {
+      "audit_id": "TA-COM-004",
+      "unit_id": "OLP-0135",
+      "kind": "empty-finite-subset-case",
+      "action": "Handled an empty Delta-prime before choosing its largest lower-bound index in the compactness example.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proof chooses the largest n for which A_(at-least-n) belongs to the finite set Delta-prime, but Delta-prime may be empty and then no such largest n exists.",
+      "chosen_treatment": "தமிழ் நிறுவல் Delta-prime வெற்றாக இருந்தால் n-ஐ ஒன்று என வைத்துக் கொண்டு, வெற்றற்ற நிலையில் மட்டுமே மீப்பெரிய சுட்டெண்ணைத் தேர்கிறது.",
+      "alternatives_considered": "Silently assuming Delta-prime is nonempty; excluding the empty finite subset from the compactness argument.",
+      "rationale": "Choosing one in the empty case preserves a finite lower bound and supplies a finite model of Lambda with enough elements; the original maximum argument then covers every nonempty case.",
+      "precise_review_question": "Does the explicit empty case make the finite-satisfiability argument total while preserving the same compactness contradiction?",
+      "location_needle": "SOURCE CORRECTION TA-COM-004"
+    },
+    {
+      "audit_id": "TA-INT-001",
+      "unit_id": "OLP-0140",
+      "kind": "unbalanced-quantifier-scope",
+      "action": "Closed the universal premise before the comma and removed the stray bracket after the existential conclusion in the semantic-entailment example.",
+      "expected_missing_math": ["$\\lforall[x][(!A(x)\\lif!B(x)),\\lexists[x][!A(x)]\\Entails\\lexists[x][!B(x)]]$"],
+      "expected_extra_math": ["$\\lforall[x][(!A(x)\\lif!B(x))],\\lexists[x][!A(x)]\\Entails\\lexists[x][!B(x)]$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The opening universal-formula bracket runs across the premise separator and entailment, while a compensating stray bracket follows the conclusion.",
+      "chosen_treatment": "தமிழ் பதிப்பு அனைத்தளவையிட்ட முதல் முன்கூற்றை காற்புள்ளிக்கு முன் மூடி, இருப்பளவையிட்ட முடிவுக்குப் பிந்தைய மிகை அடைப்புக்குறியை நீக்குகிறது.",
+      "alternatives_considered": "Treating the entire sequent as the scope of one universal quantifier despite the comma and entailment sign.",
+      "rationale": "The immediately following ant/insect prose identifies two premises and one conclusion, and the same three formulas recur with the intended balanced scopes.",
+      "precise_review_question": "Do the balanced brackets yield exactly the two-premise entailment described by the adjacent example?",
+      "location_needle": "SOURCE CORRECTION TA-INT-001"
+    },
+    {
+      "audit_id": "TA-INT-002",
+      "unit_id": "OLP-0140",
+      "kind": "unbalanced-derivation-formulas",
+      "action": "Balanced the universal premise and existential conclusion in the natural-deduction example.",
+      "expected_missing_math": ["$\\lforall[x][(!A(x)\\lif!B(x))$", "$\\lexists[x][!B(x)]]$"],
+      "expected_extra_math": ["$\\lforall[x][(!A(x)\\lif!B(x))]$", "$\\lexists[x][!B(x)]$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The first displayed premise lacks its quantifier-closing bracket and the conclusion carries an extra bracket.",
+      "chosen_treatment": "தமிழ் பதிப்பு ஒவ்வொரு அளவையிட்ட வாய்பாட்டையும் அதன் சொந்த கணிதத் தொகுதிக்குள் சமநிலையான அடைப்புக்குறிகளுடன் தருகிறது.",
+      "alternatives_considered": "Preserving visibly malformed formulas in a pedagogical derivation example.",
+      "rationale": "The same valid argument is stated with balanced formulas immediately before and after this sentence.",
+      "precise_review_question": "Do the repaired premise and conclusion match the stated natural-deduction argument exactly?",
+      "location_needle": "SOURCE CORRECTION TA-INT-002"
+    },
+    {
+      "audit_id": "TA-INT-003",
+      "unit_id": "OLP-0140",
+      "kind": "unbalanced-metalogical-formulas",
+      "action": "Balanced the universal premise and existential conclusion in the final derivability-entailment biconditional.",
+      "expected_missing_math": ["$\\lforall[x][(!A(x)\\lif!B(x))$", "$\\lexists[x][!B(x)]]$"],
+      "expected_extra_math": ["$\\lforall[x][(!A(x)\\lif!B(x))]$", "$\\lexists[x][!B(x)]$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The closing metalogical paragraph repeats the preceding missing universal bracket and extra existential bracket.",
+      "chosen_treatment": "தமிழ் மேல்தருக்கவியல் கூற்று இரு முன்கூற்றுகளையும் முடிவையும் தனித்தனி சமநிலையான வாய்பாடுகளாகப் பாதுகாக்கிறது.",
+      "alternatives_considered": "Retaining malformed delimiters that obscure the biconditional’s object-language formulas.",
+      "rationale": "The paragraph explicitly compares derivability with semantic entailment for the same valid argument already identified above.",
+      "precise_review_question": "Does the repair preserve the intended derivability-if-and-only-if-entailment claim with no scope change?",
+      "location_needle": "SOURCE CORRECTION TA-INT-003"
+    },
+    {
+      "audit_id": "TA-INT-004",
+      "unit_id": "OLP-0143",
+      "kind": "predicate-arity-wording",
+      "action": "Retained the source’s distinction that predicates, rather than constants, may have more than one place.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The frozen overview says constants can have more than one place, although the surrounding sentence and later general semantics make predicates the intended multi-place symbols.",
+      "chosen_treatment": "தமிழ் பதிப்பு பல இடங்களைக் கொண்டிருக்கக்கூடிய குறிகளாக பயனிலைக் குறிகளைத் தெளிவுபடுத்துகிறது; மாறிலிக் குறிகள் தனித்தனி பெயரிடும் குறிகளாகவே உள்ளன.",
+      "alternatives_considered": "Literal translation of the constant-arity slip; silently deleting the general-case qualification.",
+      "rationale": "Predicate arity is required by the immediately following general case and by every later n-place predicate clause; constants are interpreted as individual objects in this simple language.",
+      "precise_review_question": "Does the repaired wording state the intended generalization without changing the simple three-component structure definition?",
+      "location_needle": "SOURCE CORRECTION TA-INT-004"
+    },
+    {
+      "audit_id": "TA-INT-005",
+      "unit_id": "OLP-0143",
+      "kind": "domain-example-value",
+      "action": "Changed the assignment example’s impossible value 3 to 0, matching the displayed domain {0,1,2}.",
+      "expected_missing_math": ["$3$"],
+      "expected_extra_math": ["$0$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source displays Domain(M)={0,1,2} but says variable assignments choose one of 1, 2, or 3.",
+      "chosen_treatment": "தமிழ் பதிப்பு ஒரே எடுத்துக்காட்டில் காட்டப்பட்ட பொருட்களத்துடன் ஒத்த 0, 1, 2 மதிப்புகளைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Preserving 3 and leaving the assignment outside the displayed domain.",
+      "rationale": "A variable assignment must map into Domain(M); replacing 3 by 0 is the unique direct repair consistent with the explicitly displayed three-element domain.",
+      "precise_review_question": "Does the replacement make the assignment example type-correct while preserving every later witness value and satisfaction claim?",
+      "location_needle": "SOURCE CORRECTION TA-INT-005"
+    },
+    {
+      "audit_id": "TA-READER-REF-011",
+      "unit_id": "OLP-0266",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped two absent size-of-sets exercise references in oliflabeldef with descriptive Tamil fallbacks; each live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
+      "identifier_replacements": [
+        {
+          "from": "\\cref{sfr:siz:zigzag:prob:posint-star}",
+          "to": "\\oliflabeldef{sfr:siz:zigzag:prob:posint-star}{\\cref{sfr:siz:zigzag:prob:posint-star}}{நேர்ம முழுக்களின் முடிவுறு தொடர்கள் பட்டியலிடத்தக்கவை என நிறுவும் பயிற்சி}",
+          "count": 1
+        },
+        {
+          "from": "\\cref{sfr:siz:red:prob:nat-nat}",
+          "to": "\\oliflabeldef{sfr:siz:red:prob:nat-nat}{\\cref{sfr:siz:red:prob:nat-nat}}{இயல் எண்களிலிருந்து இயல் எண்களுக்குச் செல்லும் எல்லாச் சார்புகளின் கணம் பட்டியலிடத்தக்கதல்ல என நிறுவும் பயிற்சி}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The 22-unit standalone Turing-machines reader omits the two size-of-sets exercises cited in the noncomputable-function cardinality proof, which otherwise render as unresolved question marks.",
+      "chosen_treatment": "இலக்கு இருந்தால் நேரடி பயிற்சி மேற்கோள்; இல்லையெனில் நேர்ம முழுக்களின் முடிவுறு தொடர்களின் பட்டியலிடத்தக்க தன்மையையும் இயல் எண் சார்புகளின் பட்டியலிடத்தக்கதல்லாத தன்மையையும் துல்லியமாகக் கூறும் தமிழ் விளக்கம்.",
+      "alternatives_considered": "Literal question marks; deleting the proof dependencies; permanently replacing the live exercise links.",
+      "rationale": "Conditional fallbacks keep the standalone cardinality proof readable while preserving both exact reference identities for a later cumulative reader.",
+      "precise_review_question": "Do the two Tamil fallbacks state exactly the cardinality facts used by the proof without claiming unavailable exercise numbers?",
+      "location_needle": "READER FALLBACK TA-READER-REF-011"
+    },
+    {
+      "audit_id": "TA-INC-001",
+      "unit_id": "OLP-0278",
+      "kind": "misplaced-parenthesis-in-inline-math",
+      "action": "Moved the closing parenthesis in the definition of an independent sentence outside the inline math span.",
+      "expected_missing_math": ["$\\Gamma)$"],
+      "expected_extra_math": ["$\\Gamma$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source opens the explanatory parenthesis in prose but closes it before the math delimiter, placing a prose parenthesis inside the formula Gamma.",
+      "chosen_treatment": "தமிழ் பதிப்பு சார்பற்ற வாக்கியத்தின் விளக்க அடைப்புக்குறியை கணிதத் தொகுதிக்கு வெளியே மூடுகிறது.",
+      "alternatives_considered": "Preserving a visibly malformed inline formula; deleting the parenthetical dependence on Gamma.",
+      "rationale": "Gamma alone is the mathematical object, while the parenthesis belongs to the surrounding prose phrase ‘of Gamma.’",
+      "precise_review_question": "Does moving only the parenthesis preserve the definition of independence while restoring a well-formed inline formula?",
+      "location_needle": "SOURCE CORRECTION TA-INC-001"
+    },
+    {
+      "audit_id": "TA-INC-002",
+      "unit_id": "OLP-0286",
+      "kind": "stray-parenthesis-in-derivation-code",
+      "action": "Removed the stray right parenthesis from the initial-sequent Gödel number inside the fully expanded derivation code.",
+      "expected_missing_math": ["\\[\\tuple{1,\\tuple{1,\\tuple{0,\\Gn{!A\\Sequent!A)}},\\Gn{!A\\land!B\\Sequent!A},9},\\Gn{\\Sequent(!A\\land!B)\\lif!A},14}.\\]"],
+      "expected_extra_math": ["\\[\\tuple{1,\\tuple{1,\\tuple{0,\\Gn{!A\\Sequent!A}},\\Gn{!A\\land!B\\Sequent!A},9},\\Gn{\\Sequent(!A\\land!B)\\lif!A},14}.\\]"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The worked example first defines the initial-sequent code as Gn(A sequent A), but its final expanded tuple changes the formula to Gn(A sequent A)) by inserting an unmatched object-language parenthesis.",
+      "chosen_treatment": "தமிழ் விரிவாக்கப்பட்ட அடுக்கு, ஏற்கெனவே வரையறுக்கப்பட்ட தொடக்கத் தொடரணிக் குறியீட்டை மாறாமல் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Preserving a visibly different and malformed initial-sequent code in the final line.",
+      "rationale": "The preceding definition of p_0 and the recursive tuple expansion uniquely determine the corrected subexpression.",
+      "precise_review_question": "Does the expanded tuple now contain exactly the previously defined p_0 without altering any outer tuple component?",
+      "location_needle": "SOURCE CORRECTION TA-INC-002"
+    },
+    {
+      "audit_id": "TA-INC-003",
+      "unit_id": "OLP-0286",
+      "kind": "inconsistent-primitive-recursive-predicate-names",
+      "action": "Used EndSequent consistently for the end-sequent extractor and InitSeq consistently for the initial-sequent recognizer.",
+      "expected_missing_math": [
+        "$\\fn{EndSeq}(p)=(p)_{(p)_0+1}$",
+        "\\begin{multline*}\\fn{Sequent}(\\fn{EndSequent}(p))\\land{}\\\\[(\\fn{LastRule}(p)=1\\land\\fn{FollowsBy}_{\\LeftR\\Weakening}(p))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(p)=20\\land\\fn{FollowsBy}_{\\eq}(p))\\lor{}\\\\(p)_0=0\\land\\fn{InitialSeq}(\\fn{EndSequent}(p))]\\end{multline*}"
+      ],
+      "expected_extra_math": [
+        "$\\fn{EndSequent}(p)=(p)_{(p)_0+1}$",
+        "\\begin{multline*}\\fn{Sequent}(\\fn{EndSequent}(p))\\land{}\\\\[(\\fn{LastRule}(p)=1\\land\\fn{FollowsBy}_{\\LeftR\\Weakening}(p))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(p)=20\\land\\fn{FollowsBy}_{\\eq}(p))\\lor{}\\\\(p)_0=0\\land\\fn{InitSeq}(\\fn{EndSequent}(p))]\\end{multline*}"
+      ],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source introduces EndSeq but uses EndSequent everywhere thereafter; it introduces InitSeq but calls InitialSeq in the definition of Correct.",
+      "chosen_treatment": "தமிழ் பதிப்பு இறுதித் தொடரணி எடுப்பிக்குத் தொடர்ச்சியாக EndSequent என்றும், தொடக்கத் தொடரணி சோதனைக்குத் தொடர்ச்சியாக InitSeq என்றும் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Treating each spelling as a distinct undefined function or relation; renaming every later EndSequent occurrence.",
+      "rationale": "The defining equations and every later use make each pair one mathematical operation, and the chosen forms minimize changes while keeping the dominant usage.",
+      "precise_review_question": "Are the extractor and recognizer now each named uniformly at their definition and every use?",
+      "location_needle": "SOURCE CORRECTION TA-INC-003"
+    },
+    {
+      "audit_id": "TA-INC-004",
+      "unit_id": "OLP-0286",
+      "kind": "derivation-code-variable-and-delimiter-mismatch",
+      "action": "Kept p as the derivation-code variable in the correctness explanation and closed the missing parenthesis in the bounded Correct test.",
+      "expected_missing_math": [
+        "$d$",
+        "$\\fn{Deriv}(d)$",
+        "\\[\\bforall{i<\\len{\\fn{SubtreeSeq}(p)}}{\\fn{Correct}((\\fn{SubtreeSeq}(p))_i}.\\]"
+      ],
+      "expected_extra_math": [
+        "$p$",
+        "$\\fn{Deriv}(p)$",
+        "\\[\\bforall{i<\\len{\\fn{SubtreeSeq}(p)}}{\\fn{Correct}((\\fn{SubtreeSeq}(p))_i)}.\\]"
+      ],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The section defines Correct(p) and Deriv(p), but two prose formulas switch to d; the displayed bounded universal also leaves Correct's argument parenthesis open.",
+      "chosen_treatment": "தமிழ் நிறுவல் முழுவதும் வருவிப்புக் குறியீடாக p ஐப் பயன்படுத்தி, Correct இன் உட்பொருளைச் சமநிலையான அடைப்புக்குறியால் மூடுகிறது.",
+      "alternatives_considered": "Changing every surrounding p to d; preserving the syntactically unclosed Correct application.",
+      "rationale": "The proposition, SubtreeSeq expression and every adjacent occurrence use p, and the intended predicate application has a uniquely determined closing parenthesis.",
+      "precise_review_question": "Does one variable now denote the derivation code throughout, and is the bounded universal a well-formed formula?",
+      "location_needle": "SOURCE CORRECTION TA-INC-004"
+    },
+    {
+      "audit_id": "TA-INC-005",
+      "unit_id": "OLP-0286",
+      "kind": "proof-relation-output-code-variable",
+      "action": "Changed the prose test for the sole succedent formula from equality with derivation code x to equality with formula code y.",
+      "expected_missing_math": ["$\\len{(\\fn{EndSequent}(x))_1}=1\\land((\\fn{EndSequent}(x))_1)_0=x$"],
+      "expected_extra_math": ["$\\len{(\\fn{EndSequent}(x))_1}=1\\land((\\fn{EndSequent}(x))_1)_0=y$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "Prf_Gamma(x,y) assigns x to the derivation code and y to the Gödel number of A, but the prose test sets the sole right-side entry equal to x. The final defining display correctly uses y.",
+      "chosen_treatment": "தமிழ் உரை இறுதி வரையறையைப் போலவே வலப்பக்கத்தின் ஒரே உறுப்பை வாய்பாட்டுக் குறியீடான y உடன் சமப்படுத்துகிறது.",
+      "alternatives_considered": "Preserving the prose contradiction; changing the final definition and proposition to make x serve both roles.",
+      "rationale": "The proposition's variable roles and the immediately following formal definition independently fix y as the required value.",
+      "precise_review_question": "Does the prose test now agree with the final Prf definition while preserving x exclusively as the derivation code?",
+      "location_needle": "SOURCE CORRECTION TA-INC-005"
+    },
+    {
+      "audit_id": "TA-INC-006",
+      "unit_id": "OLP-0287",
+      "kind": "correctness-disjunction-scope",
+      "action": "Grouped every rule and assumption branch under the sentence test in the definition of Correct.",
+      "expected_missing_math": ["\\begin{multline*}\\fn{Sent}(\\fn{EndFmla}(d))\\land{}\\\\(\\fn{LastRule}(d)=1\\land\\fn{FollowsBy}_{\\Intro\\land}(d))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(d)=16\\land\\fn{FollowsBy}_{\\Elim\\eq}(d))\\lor{}\\\\\\bexists{n<d}{\\bexists{x<d}{(d=\\tuple{0,x,n})}}.\\end{multline*}"],
+      "expected_extra_math": ["\\begin{multline*}\\fn{Sent}(\\fn{EndFmla}(d))\\land{}\\\\[(\\fn{LastRule}(d)=1\\land\\fn{FollowsBy}_{\\Intro\\land}(d))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(d)=16\\land\\fn{FollowsBy}_{\\Elim\\eq}(d))\\lor{}\\\\\\bexists{n<d}{\\bexists{x<d}{(d=\\tuple{0,x,n})}}].\\end{multline*}"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "Without grouping, standard precedence makes the Sent conjunct apply only to the first rule branch, although the following prose says the first line ensures every end-formula is a sentence.",
+      "chosen_treatment": "தமிழ் வரையறை எல்லா விதிக் கிளைகளையும் எடுகோள் கிளையையும் வாக்கியச் சோதனையின் ஒரே அடைப்புக்குறிக்குள் வைக்கிறது.",
+      "alternatives_considered": "Leaving later rule and assumption branches outside the sentence condition; repeating Sent in every disjunct.",
+      "rationale": "One bracket pair implements exactly the scope stated in the explanatory sentence and preserves every individual rule test.",
+      "precise_review_question": "Does Sent now constrain every Correct branch without changing the sixteen rule cases or the assumption case?",
+      "location_needle": "SOURCE CORRECTION TA-INC-006"
+    },
+    {
+      "audit_id": "TA-INC-007",
+      "unit_id": "OLP-0287",
+      "kind": "immediate-subderivation-tuple-index",
+      "action": "Shifted the immediate-subderivation tuple lookup from slot j to slot j+1.",
+      "expected_missing_math": ["$\\bexists{j<(d')_0}{d=(d')_j}$"],
+      "expected_extra_math": ["$\\bexists{j<(d')_0}{d=(d')_{j+1}}$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The tuple's slot 0 stores its arity; immediate subderivation codes occupy slots 1 through that arity. Indexing by j with j<arity includes the arity field and omits the last subderivation.",
+      "chosen_treatment": "தமிழ் வரையறை உடனடி உட்வருவித்தல்களை அடுக்கின் 1 முதல் arity வரையிலான இடங்களிலிருந்து எடுக்கிறது.",
+      "alternatives_considered": "Quantifying 1≤j≤arity with an additional bounded-range encoding; preserving the off-by-one lookup.",
+      "rationale": "The coding definition at the start of the same section uniquely fixes the component positions.",
+      "precise_review_question": "Does the corrected bounded lookup inspect every and only immediate subderivation component?",
+      "location_needle": "SOURCE CORRECTION TA-INC-007"
+    },
+    {
+      "audit_id": "TA-INC-008",
+      "unit_id": "OLP-0287",
+      "kind": "vacuous-discharge-label-zero",
+      "action": "Allowed implication introduction with discharge label 0 without constraining every open assumption to match its antecedent.",
+      "expected_missing_math": ["\\begin{multline*}(d)_0=1\\land{}\\\\\\bexists{a<d}{(\\fn{Discharge}(a,(d)_1,\\fn{DischargeLabel}(d))\\land{}}\\\\\\fn{EndFmla}(d)=(\\Gn{(}\\concata\\concat\\Gn{\\lif}\\concat\\fn{EndFmla}((d)_1)\\concat\\Gn{)}))\\end{multline*}"],
+      "expected_extra_math": ["\\begin{multline*}(d)_0=1\\land{}\\\\\\bexists{a<d}{((\\fn{DischargeLabel}(d)=0\\lor\\fn{Discharge}(a,(d)_1,\\fn{DischargeLabel}(d)))\\land{}}\\\\\\fn{EndFmla}(d)=(\\Gn{(}\\concata\\concat\\Gn{\\lif}\\concat\\fn{EndFmla}((d)_1)\\concat\\Gn{)}))\\end{multline*}"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\lor", "\\fn"],
+      "source_issue_or_choice": "The coding definition assigns discharge label 0 when a rule discharges no assumptions. Applying Discharge(a,d,0) instead treats all label-0 open assumptions as one antecedent A and rejects valid vacuous implication introductions with unrelated open assumptions.",
+      "chosen_treatment": "விடுவிப்புச் சிட்டை 0 எனில் எந்த எடுகோளும் விடுவிக்கப்படவில்லை என்பதைத் தமிழ் வரையறை நேரடியாக ஒரு பிரிப்பிணைவுக் கிளையாக ஏற்கிறது.",
+      "alternatives_considered": "Forcing all undischarged assumptions to equal the conditional antecedent; forbidding vacuous discharge despite the coding clause.",
+      "rationale": "The explicit meaning assigned to label 0 and the natural-deduction rule's permitted vacuous discharge determine the added branch.",
+      "precise_review_question": "Does the label-0 branch admit exactly the no-discharge case while retaining the label-matching test for positive labels?",
+      "location_needle": "SOURCE CORRECTION TA-INC-008"
+    },
+    {
+      "audit_id": "TA-INC-009",
+      "unit_id": "OLP-0287",
+      "kind": "open-assumption-label-zero",
+      "action": "Made a label-0 assumption remain open regardless of the zero discharge marker carried by nondischarging ancestor rules.",
+      "expected_missing_math": ["\\begin{multline*}\\bexists{s<\\fn{SubtreeSeq}(d)}{(\\fn{Subseq}(s,\\fn{SubtreeSeq}(d))\\land(s)_0=d\\land{}}\\\\\\bexists{n<d}{((s)_{\\len{s}\\tsub1}=\\tuple{0,z,n}\\land{}}\\\\\\bforall{i<(\\len{s}\\tsub1)}{(\\fn{Subderiv}((s)_{i+1},(s)_i)\\land{}}\\\\\\fn{DischargeLabel}((s)_i)\\neqn))).\\end{multline*}"],
+      "expected_extra_math": ["\\begin{multline*}\\bexists{s<\\fn{SubtreeSeq}(d)}{(\\fn{Subseq}(s,\\fn{SubtreeSeq}(d))\\land(s)_0=d\\land{}}\\\\\\bexists{n<d}{((s)_{\\len{s}\\tsub1}=\\tuple{0,z,n}\\land{}}\\\\\\bforall{i<(\\len{s}\\tsub1)}{(\\fn{Subderiv}((s)_{i+1},(s)_i)\\land{}}\\\\(n=0\\lor\\fn{DischargeLabel}((s)_i)\\neqn)))).\\end{multline*}"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\lor"],
+      "source_issue_or_choice": "The section defines label 0 both for an undischarged assumption and for an inference that discharges nothing. The unqualified inequality therefore misclassifies a label-0 assumption as discharged whenever its path crosses an ordinary nondischarging inference.",
+      "chosen_treatment": "எடுகோளின் சிட்டை 0 எனில் அது விடுவிக்கப்படாதது என்பதைத் தமிழ் வரையறை முதலில் ஏற்கிறது; நேர்மச் சிட்டைகளுக்கு மட்டுமே மூதாதை விடுவிப்புச் சிட்டையை ஒப்பிடுகிறது.",
+      "alternatives_considered": "Treating a nondischarging rule's zero marker as discharging every open assumption; replacing the entire path construction with a context-dependent code.",
+      "rationale": "The two explicit uses of zero require a sentinel exception; all positive-label path behavior remains unchanged.",
+      "precise_review_question": "Does the added zero-label disjunct prevent false discharge while preserving the ancestor check for labeled assumptions?",
+      "location_needle": "SOURCE CORRECTION TA-INC-009"
+    },
+    {
+      "audit_id": "TA-INC-010",
+      "unit_id": "OLP-0288",
+      "kind": "quantifier-rule-bound-variable-prose",
+      "action": "Replaced a with c in the prose bound for the constant used on preceding line j, and translated the nearby 'does on occur' typo as the intended 'does not occur'.",
+      "expected_missing_math": ["$a$"],
+      "expected_extra_math": ["$c$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The formal QR clause bounds constant code c by the formula code on line j, but its explanatory sentence switches to a. The earlier sentence also prints 'does on occur' where both the rule and five-item expansion require 'does not occur'.",
+      "chosen_treatment": "தமிழ் விளக்கம் முந்தைய வரியால் வரம்பிடப்படும் மாறிலிக் குறியீட்டை c என்றே வைத்தும், அது B இல் இடம்பெறாது என்றும் கூறுகிறது.",
+      "alternatives_considered": "Changing the formal constant variable to a; translating the negation typo literally.",
+      "rationale": "The displayed predicate, its Const(c) test, substitution and nonoccurrence condition all independently identify c.",
+      "precise_review_question": "Does the corrected prose consistently identify c as the preceding-line constant and preserve its nonoccurrence condition?",
+      "location_needle": "SOURCE CORRECTION TA-INC-010"
+    },
+    {
+      "audit_id": "TA-INC-011",
+      "unit_id": "OLP-0288",
+      "kind": "unbound-preceding-line-index",
+      "action": "Added the missing bounded existential j<i around the QR_1 definition.",
+      "expected_missing_math": ["\\begin{multline*}\\fn{QR}_1(d,i)\\defiff\\bexists{b<(d)_i}{\\bexists{x<(d)_i}{\\bexists{a<(d)_i}{\\bexists{c<(d)_j}{(}}}}\\\\\\fn{Var}(x)\\land\\fn{Const}(c)\\land{}\\\\(d)_i=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\Gn{\\lforall}\\concatx\\concata\\concat\\Gn{)}\\land{}\\\\(d)_j=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\fn{Subst}(a,c,x)\\concat\\Gn{)}\\land{}\\\\\\fn{Sent}(b)\\land\\fn{Sent}(\\fn{Subst}(a,c,x))\\land{}\\bforall{k<\\len{b}}{(b)_k\\neq(c)_0})\\end{multline*}"],
+      "expected_extra_math": ["\\begin{multline*}\\fn{QR}_1(d,i)\\defiff\\bexists{j<i}{\\bexists{b<(d)_i}{\\bexists{x<(d)_i}{\\bexists{a<(d)_i}{\\bexists{c<(d)_j}{(}}}}}\\\\\\fn{Var}(x)\\land\\fn{Const}(c)\\land{}\\\\(d)_i=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\Gn{\\lforall}\\concatx\\concata\\concat\\Gn{)}\\land{}\\\\(d)_j=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\fn{Subst}(a,c,x)\\concat\\Gn{)}\\land{}\\\\\\fn{Sent}(b)\\land\\fn{Sent}(\\fn{Subst}(a,c,x))\\land{}\\bforall{k<\\len{b}}{(b)_k\\neq(c)_0})\\end{multline*}"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\bexists"],
+      "source_issue_or_choice": "The QR_1 formula refers to line index j in the bound on c and in (d)_j but never binds j, although the preceding five-item account explicitly requires some line j<i.",
+      "chosen_treatment": "தமிழ் வாய்பாடு j<i என்ற வரம்புள்ள இருத்தலளவையீட்டை வெளிப்புறமாகச் சேர்த்து, அதன் முழு உட்பரப்பில் j ஐப் பிணைக்கிறது.",
+      "alternatives_considered": "Leaving j free; replacing j by i and thereby losing the required preceding line.",
+      "rationale": "The prose and modus of the quantifier rule uniquely require an earlier witness line.",
+      "precise_review_question": "Is every use of j now bound by j<i without changing the bounds or roles of b, x, a and c?",
+      "location_needle": "SOURCE CORRECTION TA-INC-011"
+    },
+    {
+      "audit_id": "TA-INC-012",
+      "unit_id": "OLP-0288",
+      "kind": "conditional-helper-recursion-name",
+      "action": "Made the three-argument hCond step recurse through hCond rather than the two-argument wrapper Cond.",
+      "expected_missing_math": ["\\begin{align*}\\fn{hCond}(s,y,0)&=y\\\\\\fn{hCond}(s,y,n+1)&=\\Gn{(}\\concat(s)_{n}\\concat\\Gn{\\lif}\\concat\\fn{Cond}(s,y,n)\\concat\\Gn{)}\\\\\\fn{Cond}(s,y)&=\\fn{hCond}(s,y,\\len{s})\\\\$\\Prf[\\Gamma](x,y)$\\Prf[\\Gamma](x,y)&\\defiff\\bexists{s<\\fn{sequenceBound}(x,x)}{(}\\\\&\\qquad(x)_{\\len{x}-1}=\\fn{Cond}(s,y)\\land{}\\\\&\\qquad\\bforall{i<\\len{s}}{(s)_i\\in\\Gamma}\\land{}\\\\&\\qquad\\fn{Deriv}(x)).\\end{align*}"],
+      "expected_extra_math": ["\\begin{align*}\\fn{hCond}(s,y,0)&=y\\\\\\fn{hCond}(s,y,n+1)&=\\Gn{(}\\concat(s)_{n}\\concat\\Gn{\\lif}\\concat\\fn{hCond}(s,y,n)\\concat\\Gn{)}\\\\\\fn{Cond}(s,y)&=\\fn{hCond}(s,y,\\len{s})\\\\$\\Prf[\\Gamma](x,y)$\\Prf[\\Gamma](x,y)&\\defiff\\bexists{s<\\fn{sequenceBound}(x,x)}{(}\\\\&\\qquad(x)_{\\len{x}-1}=\\fn{Cond}(s,y)\\land{}\\\\&\\qquad\\bforall{i<\\len{s}}{R_\\Gamma((s)_i)}\\land{}\\\\&\\qquad\\fn{Deriv}(x)).\\end{align*}"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The step clause calls Cond with three arguments even though the next line defines Cond as the two-argument wrapper and hCond as the three-argument recursion helper.",
+      "chosen_treatment": "தமிழ் படிநிலை hCond(s,y,n) ஐ மீண்டும் அழைக்கிறது; இறுதி வரியில் மட்டும் இரு-உட்பொருள் Cond மூடுறையைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Redefining Cond as three-argument and changing the wrapper; preserving an arity-inconsistent recursion.",
+      "rationale": "The base clause, step left side and wrapper equation uniquely determine hCond as the recursive helper. The expected display pair also contains the separately audited TA-INC-013 membership repair in the same align environment.",
+      "precise_review_question": "Does the recursive step now reduce n while the public two-argument Cond definition remain unchanged?",
+      "location_needle": "SOURCE CORRECTION TA-INC-012"
+    },
+    {
+      "audit_id": "TA-INC-013",
+      "unit_id": "OLP-0288",
+      "kind": "primitive-recursive-theory-membership-test",
+      "action": "Replaced meta-level membership in Gamma inside the Prf definition with the stated primitive-recursive predicate R_Gamma.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\in"],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proof begins by naming R_Gamma(y) as the primitive-recursive test for membership in Gamma, but the final displayed definition reverts to the unanalyzed expression (s)_i in Gamma.",
+      "chosen_treatment": "தமிழ் இறுதி வரையறை ஒவ்வொரு முன்னிலைக் குறியீட்டுக்கும் R_Gamma((s)_i) ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Leaving set membership as an undefined object-language operation; deleting the opening predicate assumption.",
+      "rationale": "Substitution of the already supplied characteristic predicate is exactly what establishes primitive recursiveness.",
+      "precise_review_question": "Does the final bounded universal now invoke R_Gamma on each sequence entry and preserve every other Prf conjunct?",
+      "location_needle": "SOURCE CORRECTION TA-INC-013"
+    },
+    {
+      "audit_id": "TA-INC-014",
+      "unit_id": "OLP-0291",
+      "kind": "representing-formula-subscript-consistency",
+      "action": "Changed the lemma's witness formula from A to A_f so it agrees with the displayed biconditional and every use in the proof.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$!A(x_0,\\dots,x_k,y)$",
+          "to": "$!A_f(x_0,\\dots,x_k,y)$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The lemma introduces A(x_0,...,x_k,y), but its display and the entire proof use A_f for the same representing formula.",
+      "chosen_treatment": "தமிழ் துணைத்தேற்றம் தொடக்கத்திலிருந்தே பிரதிநிதித்துவ வாய்பாட்டை A_f என்று பெயரிட்டு, காட்டலின் முழுவதும் அதே பெயரைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Changing every later A_f to A; preserving two names for one witness without an equality or renaming clause.",
+      "rationale": "The subscript records dependence on f and is already fixed by the preceding definition, displayed equivalence and all subsequent proof steps.",
+      "precise_review_question": "Does one formula name A_f now denote the witness consistently in the lemma, display and proof?",
+      "location_needle": "SOURCE CORRECTION TA-INC-014"
+    },
+    {
+      "audit_id": "TA-INC-015",
+      "unit_id": "OLP-0291",
+      "kind": "omitted-provability-prefix",
+      "action": "Restored the missing Q-proves prefix before the universal uniqueness formula supplied by representability clause (b).",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\Th", "\\Proves"],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\lforall[y][(!A_f(\\num{n_0},\\dots,\\num{n_k},y)\\lif\\num{l}=y)]$",
+          "to": "$\\Th{Q}\\Proves\\lforall[y][(!A_f(\\num{n_0},\\dots,\\num{n_k},y)\\lif\\num{l}=y)]$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "Representability clause (b) says that Q proves the uniqueness formula, but the proof quotes only the bare formula and then needs it as a Q-theorem to infer Q proves numeral equality.",
+      "chosen_treatment": "தமிழ் காட்டல் தனித்தன்மை வாய்பாட்டுக்கு முன் Q நிறுவுகிறது என்பதை மீட்டமைத்து, அடுத்த தருக்கப் படியின் கோட்பாட்டு உட்பரப்பைப் பாதுகாக்கிறது.",
+      "alternatives_considered": "Treating the uniqueness formula as a metatheoretic assumption; omitting the later conclusion that Q proves the equality.",
+      "rationale": "The cited definition and the next inference independently require the formula to be derivable in Q, not merely displayed at the meta-level.",
+      "precise_review_question": "Is the uniqueness formula now explicitly a theorem of Q, making the subsequent equality derivation valid?",
+      "location_needle": "SOURCE CORRECTION TA-INC-015"
+    },
+    {
+      "audit_id": "TA-INC-016",
+      "unit_id": "OLP-0291",
+      "kind": "missing-numeral-constructor",
+      "action": "Wrapped the decoded output (s)_1 in the numeral constructor in the informal explanation of the searched proof pair.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\num"],
+      "normalized_math_replacements": [
+        {
+          "from": "$A_f(\\num{n_0},\\dots,\\num{n_k},(s)_1)$",
+          "to": "$A_f(\\num{n_0},\\dots,\\num{n_k},\\num{(s)_1})$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The relation immediately above substitutes num((s)_1) into the object-language formula through A(...,(s)_1), but the explanatory sentence inserts the meta-level number (s)_1 directly as its final term.",
+      "chosen_treatment": "தமிழ் விளக்கம் குறிவிலக்கப்பட்ட வெளியீடு (s)_1 க்கான எண்ணுருவையே வாய்பாட்டின் இறுதி உட்பொருளாக இடுகிறது.",
+      "alternatives_considered": "Leaving a meta-level number in an object-language formula; removing numeral constructors from the preceding definition and substitution function.",
+      "rationale": "The definition of A and the relation R uniquely determine the syntactic formula whose proof code is being searched.",
+      "precise_review_question": "Does the searched derivation now end in the formula containing the numeral for (s)_1, consistent with A and R?",
+      "location_needle": "SOURCE CORRECTION TA-INC-016"
+    },
+    {
+      "audit_id": "TA-INC-017",
+      "unit_id": "OLP-0293",
+      "kind": "primitive-recursion-function-arguments",
+      "action": "Changed the introductory function signature from h(x, vector z) to h(vector x, y), matching both primitive-recursion equations and all subsequent occurrences.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$h(x,\\vecz)$",
+          "to": "$h(\\vecx,y)$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The prose names h(x, vector z), while the immediately following base and step equations, the beta-coded sequence and the final extraction all define h(vector x, y).",
+      "chosen_treatment": "தமிழ் அறிமுகம் இரு வரையறைச் சமன்பாடுகளிலும் தொடர்ந்து வரும் அதே உட்பொருட்களான வெக்டர் x மற்றும் y ஐக் கொண்ட h ஐப் பெயரிடுகிறது.",
+      "alternatives_considered": "Changing every equation and later construction to x and vector z; preserving an unexplained switch in arity and argument roles.",
+      "rationale": "The base variable y=0, successor step y+1 and final beta extraction uniquely determine the intended signature.",
+      "precise_review_question": "Does h now have the same vector parameters and recursion variable everywhere in the lemma and proof?",
+      "location_needle": "SOURCE CORRECTION TA-INC-017"
+    },
+    {
+      "audit_id": "TA-INC-018",
+      "unit_id": "OLP-0295",
+      "kind": "duplicated-proof-guide-reference",
+      "action": "Changed the first of two identical references to proposition rep2 into the intended reference to proposition rep1.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {
+          "from": "Using the proofs of \\olref[inc][req][cmp]{prop:rep2} and\n\\olref[inc][req][cmp]{prop:rep2} as a guide",
+          "to": "Using the proofs of \\olref[inc][req][cmp]{prop:rep1} and\n\\olref[inc][req][cmp]{prop:rep2} as a guide",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The exercise tells the reader to use the proofs of proposition rep2 and proposition rep2, although the immediately preceding paired existence and uniqueness propositions are rep1 and rep2.",
+      "chosen_treatment": "தமிழ் பயிற்சி இருப்பையும் தனித்தன்மையையும் நிறுவும் prop:rep1, prop:rep2 ஆகிய இரு காட்டல்களையும் வழிகாட்டிகளாகச் சுட்டுகிறது.",
+      "alternatives_considered": "Retaining the duplicate reference; changing the second reference instead and listing the pair in reverse order.",
+      "rationale": "The phrase 'proofs ... and ...' and the two immediately preceding propositions uniquely identify the intended pair and their natural order.",
+      "precise_review_question": "Does the exercise now direct the reader to both the existence and uniqueness proofs exactly once?",
+      "location_needle": "SOURCE CORRECTION TA-INC-018"
+    },
+    {
+      "audit_id": "TA-INC-019",
+      "unit_id": "OLP-0294",
+      "kind": "math-mode-prose-localization",
+      "action": "Localized the bare English cases entry 'otherwise' as Tamil text inside the display.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\text"],
+      "normalized_math_replacements": [
+        {
+          "from": "otherwise",
+          "to": "",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The second characteristic-function case leaves the ordinary English word 'otherwise' unwrapped in math mode, while the Tamil edition must translate formula annotations and must use a text wrapper for Tamil shaping.",
+      "chosen_treatment": "தமிழ் வாய்பாடு இரண்டாம் நேர்வை \\text{இல்லையெனில்} என்று அமைத்து, பொருளையும் தமிழ் எழுத்துரு வடிவமைப்பையும் பாதுகாக்கிறது.",
+      "alternatives_considered": "Leaving one English prose word untranslated; placing raw Tamil letters in math mode.",
+      "rationale": "The text wrapper is required for correct script shaping, and removing text bodies during formal-skeleton comparison leaves the intended zero branch unchanged.",
+      "precise_review_question": "Does the cases display now read naturally in Tamil while retaining the exact 1/0 conditions?",
+      "location_needle": "\\Char{=}(x_0, x_1) ="
+    },
+    {
+      "audit_id": "TA-INC-020",
+      "unit_id": "OLP-0296",
+      "kind": "induction-step-equality-order",
+      "action": "Replaced the circular middle line with the equality derived from the induction hypothesis, then made the last line the desired conclusion by transitivity.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "\\Th{Q}&\\Proves\\eq[(a'+\\numn')][(a+\\numn')']\\quad\\ollabel{step6}",
+          "to": "\\Th{Q}&\\Proves\\eq[(a'+\\numn)'][(a+\\numn')']\\quad\\ollabel{step6}",
+          "count": 1
+        },
+        {
+          "from": "\\Th{Q}&\\Proves\\eq[(a'+\\numn)'][(a+\\numn')']\\quad\\notag",
+          "to": "\\Th{Q}&\\Proves\\eq[(a'+\\numn')][(a+\\numn')']\\quad\\notag",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The frozen induction display labels the desired conclusion itself as following from the induction hypothesis, then derives the intermediate equality from that conclusion and Q5. This reverses the two required steps and makes the reasoning circular.",
+      "chosen_treatment": "தமிழ் காட்டல் தொகுத்தறிதல் எடுகோளிலிருந்து நடுச் சமத்துவத்தை முதலில் பெற்று, அதை step5 உடன் சேர்த்து வேண்டிய சமத்துவத்தை இறுதியில் முடிவுசெய்கிறது.",
+      "alternatives_considered": "Keeping the circular order; adding a separate duplicate derivation while leaving the false justification in place.",
+      "rationale": "Q5 gives the first equality, the induction hypothesis together with successor congruence gives the middle equality, and transitivity then uniquely yields the target.",
+      "precise_review_question": "Do step5 and step6 now compose in the stated order to yield exactly the induction target?",
+      "location_needle": "SOURCE CORRECTION TA-INC-020"
+    },
+    {
+      "audit_id": "TA-INC-021",
+      "unit_id": "OLP-0296",
+      "kind": "existential-generalization-witness",
+      "action": "Changed the prose witness generalized in the trichotomy proof from c-prime to c.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$c'$",
+          "to": "$c$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "From (c-prime + b-prime) = numeral(m)-prime, the required Q8 witness formula is (u-prime + b-prime) = numeral(m+1). Substitution therefore uses u=c, whereas generalizing on the whole term c-prime would yield u+b-prime instead.",
+      "chosen_treatment": "தமிழ் காட்டல் c மீது இருத்தலளவைப் பொதுமைப்படுத்துகிறது; அப்போது u-prime இடத்தில் c-prime கிடைத்து வேண்டிய Q8 நேர்வு அமைகிறது.",
+      "alternatives_considered": "Generalizing on c-prime as printed; changing Q8 or the preceding equality.",
+      "rationale": "The syntactic substitution instance of the existential formula uniquely identifies c as the witness term.",
+      "precise_review_question": "Does existential introduction now substitute c for u so that u-prime reproduces the established c-prime term?",
+      "location_needle": "SOURCE CORRECTION TA-INC-021"
+    },
+    {
+      "audit_id": "TA-INC-022",
+      "unit_id": "OLP-0297",
+      "kind": "omitted-primitive-recursion-restriction",
+      "action": "Restored the statement that h is defined from f and g by primitive recursion before invoking the lemma that eliminates primitive recursion.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The cited lemma applies to the function h defined from f and g by primitive recursion, but the frozen sentence merely says h is defined from f and g and thus omits the construction being eliminated.",
+      "chosen_treatment": "தமிழ் காட்டல் h ஆனது f மற்றும் g இலிருந்து முதன்மை மீள்வரையறையால் வரையறுக்கப்படுகிறது என்பதை வெளிப்படையாக மீட்டமைக்கிறது.",
+      "alternatives_considered": "Leaving the construction unspecified; weakening the cited lemma into a false claim about every function definable from f and g.",
+      "rationale": "The preceding characterization and the cited primitive-recursion simulation lemma uniquely supply the omitted construction.",
+      "precise_review_question": "Does the sentence now state exactly which primitive-recursive construction is replaced by composition and regular minimization?",
+      "location_needle": "SOURCE CORRECTION TA-INC-022"
+    },
+    {
+      "audit_id": "TA-INC-023",
+      "unit_id": "OLP-0297",
+      "kind": "missing-consistency-qualification",
+      "action": "Qualified the converse representability claim and the final comparison of axiomatizable theories by consistency.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "A computable derivation system alone does not ensure that every represented function is computable: an inconsistent axiomatizable theory proves every graph formula and its uniqueness clause, so every function becomes representable under the stated definition.",
+      "chosen_treatment": "தமிழ் விளக்கம் கணிக்கத்தக்க வருவித்தல் முறையுடன் முரணின்மையையும் கோருகிறது; இறுதி அடிகோளாக்கத்தக்க கோட்பாடுகள் பற்றிய கூற்றிலும் அதே தகுதியைச் சேர்க்கிறது.",
+      "alternatives_considered": "Retaining the overclaim; silently assuming consistency without stating it; redefining representability.",
+      "rationale": "The immediately preceding proof that representability yields computability explicitly uses consistency, and the standard examples Q, PA and ZF are intended under that same qualification.",
+      "precise_review_question": "Do both general claims now exclude inconsistent derivation systems while preserving the intended comparison across Q, PA and ZF?",
+      "location_needle": "SOURCE CORRECTION TA-INC-023"
+    },
+    {
+      "audit_id": "TA-INC-024",
+      "unit_id": "OLP-0300",
+      "kind": "wrong-evaluation-numeral",
+      "action": "Changed the numeral proved equal to t_2 from n to m, its stipulated value in the standard model.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\Th{Q}\\Proves\\eq[t_2][\\numn]$",
+          "to": "$\\Th{Q}\\Proves\\eq[t_2][\\numm]$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The proof fixes n as the value of t_1 and m as the value of t_2, but then says Q proves t_2 equals numeral n before splitting into the n=m and n-not-equal-m cases.",
+      "chosen_treatment": "தமிழ் காட்டல் t_2 ஐ அதன் நிலைப்படுத்தப்பட்ட மதிப்பான m இன் எண்குறிக்குச் சமப்படுத்துகிறது.",
+      "alternatives_considered": "Keeping numeral n, which assumes the equality case before the case distinction; renaming both fixed values.",
+      "rationale": "The closed-term lemma applied to t_2 uniquely yields its own value m.",
+      "precise_review_question": "Does the corrected pair of equalities now support both the equality and inequality cases?",
+      "location_needle": "SOURCE CORRECTION TA-INC-024"
+    },
+    {
+      "audit_id": "TA-INC-025",
+      "unit_id": "OLP-0300",
+      "kind": "less-than-witness-addend-order",
+      "action": "Changed the closed numeral equality from n plus successor k to successor k plus n so it matches the Q8 witness formula used in the next inference.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\Th{Q}\\Proves\\eq[\\numn+{\\numk}'][\\numm]$",
+          "to": "$\\Th{Q}\\Proves\\eq[{\\numk}'+\\numn][\\numm]$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "Q8 defines x<y using z-prime plus x, but the frozen proof establishes n plus k-prime and then swaps the addends without deriving commutativity in Q.",
+      "chosen_treatment": "தமிழ் காட்டல் மூடிய சொல் துணைத்தேற்றத்தை நேரடியாக k-prime plus n என்ற வரிசையில் பயன்படுத்தி, அடுத்த Q8 நேர்வுடன் பொருந்தச் செய்கிறது.",
+      "alternatives_considered": "Assuming unproved global commutativity in Q; adding a separate commutativity lemma not available here.",
+      "rationale": "Both closed terms have value m, so atomic completeness directly proves the correctly ordered equality without any commutativity principle.",
+      "precise_review_question": "Does substituting t_1 for numeral n now yield exactly successor witness plus t_1 equals t_2?",
+      "location_needle": "SOURCE CORRECTION TA-INC-025"
+    },
+    {
+      "audit_id": "TA-INC-026",
+      "unit_id": "OLP-0300",
+      "kind": "wrong-robinson-q-axiom-number",
+      "action": "Changed both contradiction citations from Q3 to Q2, the axiom that no successor equals zero.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$!Q_3$",
+          "to": "$!Q_2$",
+          "count": 2
+        }
+      ],
+      "source_issue_or_choice": "Both contradictions have the form successor equals zero. Q2 states x-prime is not zero, whereas Q3 states that every nonzero number is a successor.",
+      "chosen_treatment": "தமிழ் இரண்டு முரண்பாட்டுப் படிகளிலும் வழிவரு சுழிக்குச் சமமல்ல என்று கூறும் Q_2 ஐச் சுட்டுகிறது.",
+      "alternatives_considered": "Retaining Q3; changing the contradiction formulas to fit Q3.",
+      "rationale": "The displayed contradictions instantiate Q2 directly and do not instantiate Q3.",
+      "precise_review_question": "Do both axiom citations now justify the exact successor-equals-zero contradictions displayed?",
+      "location_needle": "SOURCE CORRECTION TA-INC-026"
+    },
+    {
+      "audit_id": "TA-INC-027",
+      "unit_id": "OLP-0300",
+      "kind": "empty-boolean-operation",
+      "action": "Changed empty disjunction to empty conjunction in the zero-bound base case for the bounded universal formula.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The lemma's first clause expands a bounded universal formula into a finite conjunction, and at bound zero that conjunction is true; the frozen proof instead calls it an empty disjunction while assigning it the truth constant.",
+      "chosen_treatment": "தமிழ் அனைத்தளவை நேர்வுக்குரிய வெற்று இணைப்பை மெய் மாறிலியாக எடுத்துக்கொள்கிறது.",
+      "alternatives_considered": "Keeping empty disjunction while calling it true; switching to the existential clause.",
+      "rationale": "An empty conjunction is true and is exactly the k=0 instance of the conjunction on the right side of clause one.",
+      "precise_review_question": "Does the base case now name the same Boolean operation used in the lemma's universal clause?",
+      "location_needle": "SOURCE CORRECTION TA-INC-027"
+    },
+    {
+      "audit_id": "TA-INC-028",
+      "unit_id": "OLP-0300",
+      "kind": "missing-bounded-quantifier-matrix-argument",
+      "action": "Wrapped A(x) as the second argument of the bounded existential macro under negation.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\lnot\\bexists{x<t}!A(x)$",
+          "to": "$\\lnot\\bexists{x<t}{!A(x)}$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The bounded existential macro requires a bound argument and a matrix argument, but the frozen expression leaves A(x) outside the macro braces.",
+      "chosen_treatment": "தமிழ் வெளிப்பாடு A(x) ஐ வரம்பிட்ட இருத்தலளவை மேட்ரிக்சாக இரண்டாம் கட்டளையுருப்பில் வைக்கிறது.",
+      "alternatives_considered": "Leaving the matrix outside the macro; rewriting the bounded quantifier in expanded ordinary-existential form.",
+      "rationale": "The companion bounded formulas throughout the section and the stated macro convention fix the intended two-argument syntax.",
+      "precise_review_question": "Is A(x) now scoped by the bounded existential quantifier exactly as required by the duality step?",
+      "location_needle": "SOURCE CORRECTION TA-INC-028"
+    },
+    {
+      "audit_id": "TA-INC-029",
+      "unit_id": "OLP-0300",
+      "kind": "malformed-existential-quantifier-syntax",
+      "action": "Changed the opening Sigma-one witness formula in the final proof to the documented two-optional-argument lexists syntax.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\lexists{x}!A(x)$",
+          "to": "$\\lexists[x][!A(x)]$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The final proof begins with lexists using a mandatory brace argument followed by an unscoped formula, while the definition and concluding line use the documented optional variable and matrix arguments.",
+      "chosen_treatment": "தமிழ் இறுதிக் காட்டல் வரையறையிலும் முடிவிலும் உள்ள அதே lexists[x][A(x)] வடிவைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Keeping malformed syntax; altering the definition and conclusion to match it.",
+      "rationale": "The macro declaration and every surrounding well-formed occurrence uniquely determine the intended syntax and scope.",
+      "precise_review_question": "Does the proof now begin and end with the same well-scoped Sigma-one existential sentence?",
+      "location_needle": "SOURCE CORRECTION TA-INC-029"
+    },
+    {
+      "audit_id": "TA-INC-030",
+      "unit_id": "OLP-0302",
+      "kind": "unbalanced-list-reference-parenthesis",
+      "action": "Added the missing opening parenthesis before the fourth list-item reference.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The fourth item ends its theorem reference with a closing parenthesis but has no matching opening parenthesis, unlike the preceding three parallel items.",
+      "chosen_treatment": "தமிழ் நான்காம் பட்டியல் உறுப்பிலும் மேற்கோளைப் பொருந்திய அடைப்புக்குறிகளுக்குள் வைக்கிறது.",
+      "alternatives_considered": "Deleting the unmatched closing parenthesis; preserving inconsistent punctuation.",
+      "rationale": "The three preceding items and the identical syntactic role of the fourth reference fix the intended punctuation.",
+      "precise_review_question": "Does the fourth theorem reference now follow the same balanced pattern as the other three?",
+      "location_needle": "SOURCE CORRECTION TA-INC-030"
+    },
+    {
+      "audit_id": "TA-INC-031",
+      "unit_id": "OLP-0303",
+      "kind": "halting-set-function-metavariable",
+      "action": "Replaced two uses of the formula metavariable A_x applied to x with the indexed partial-computation notation cfind_x(x) defined.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\downarrow", "\\downarrow"],
+      "expected_extra_commands": ["\\cfind", "\\fdefined", "\\cfind", "\\fdefined"],
+      "normalized_math_replacements": [
+        {
+          "from": "$K=\\Setabs{x}{!A_x(x)\\downarrow}$",
+          "to": "$K=\\Setabs{x}{\\cfind{x}(x)\\fdefined}$",
+          "count": 1
+        },
+        {
+          "from": "$!A_x(x)\\downarrow$",
+          "to": "$\\cfind{x}(x)\\fdefined$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The diagonal halting set K was defined earlier by definedness of the indexed partial function cfind_x(x), but this proof twice applies a down-arrow to the logical formula metavariable A_x.",
+      "chosen_treatment": "தமிழ் K இன் முன் வரையறையிலுள்ள சுட்டெண் சார்பின் வரையறுக்கப்பட்ட தன்மைக் குறிமுறையையே இரு இடங்களிலும் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Treating A_x as an unexplained program notation; redefining K locally with a formula.",
+      "rationale": "The cited many-one completeness result and Kleene T equivalence both concern the established self-halting set.",
+      "precise_review_question": "Do the definition of K and the converse conclusion now use the same indexed-computation notation?",
+      "location_needle": "SOURCE CORRECTION TA-INC-031"
+    },
+    {
+      "audit_id": "TA-INC-032",
+      "unit_id": "OLP-0303",
+      "kind": "uncoded-kleene-predicate-in-arithmetic-sentence",
+      "action": "Replaced both final occurrences of the metatheoretic Kleene predicate T inside the claimed Q sentence with its representing formula A_T.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\lexists[s][T(\\numx,\\numx,s)]$",
+          "to": "$\\lexists[s][!A_T(\\numx,\\numx,s)]$",
+          "count": 2
+        }
+      ],
+      "source_issue_or_choice": "The proof introduces A_T as the arithmetic formula representing Kleene's external relation T and uses it throughout the reduction, but the final summary and coded sentence revert to T with numeral arguments.",
+      "chosen_treatment": "தமிழ் Q நிறுவும் வாக்கியத்திலும் அதன் குறியீட்டைத் தரும் சார்பிலும் பிரதிநிதித்துவ வாய்பாடு A_T ஐ வைத்திருக்கிறது.",
+      "alternatives_considered": "Adding T as an unexplained symbol to the language of arithmetic; replacing the earlier representation proof with a richer language.",
+      "rationale": "Only A_T belongs to the stated language and is the formula whose Q-provability was established immediately above.",
+      "precise_review_question": "Does the reduction function now code exactly the arithmetic sentence proved equivalent to self-halting?",
+      "location_needle": "SOURCE CORRECTION TA-INC-032"
+    },
+    {
+      "audit_id": "TA-INC-033",
+      "unit_id": "OLP-0305",
+      "kind": "metatheoretic-relation-applied-to-numeral-term",
+      "action": "Changed both evaluations of the external relation S from the object-language numeral for n to the natural number n.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\num", "\\num"],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "S is introduced as a computable relation on natural numbers, while D_S is its object-language representing formula. The two equivalence displays apply S itself to numeral n rather than n.",
+      "chosen_treatment": "தமிழ் மேக்கோட்பாட்டு S ஐ n இல் மதிப்பிட்டு, D_S க்கு மட்டும் எண்குறி num n ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Treating S as an object-language predicate symbol; removing numeral constructors from D_S.",
+      "rationale": "The definition of relation representability fixes the separation between external inputs and internal numeral terms.",
+      "precise_review_question": "Do both positive and negative equivalences now distinguish S(n) from D_S(num n)?",
+      "location_needle": "SOURCE CORRECTION TA-INC-033"
+    },
+    {
+      "audit_id": "TA-INC-034",
+      "unit_id": "OLP-0307",
+      "kind": "ineffective-proof-search-premise-set",
+      "action": "Changed the simultaneous proof searches from the whole theory T to its stipulated computable axiom set A.",
+      "expected_missing_math": ["$\\Th{T}$"],
+      "expected_extra_math": ["$A$"],
+      "expected_missing_commands": ["\\Th"],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proof assumes a computable axiom set A but then tells the algorithm to search for a derivation from T, whose membership is exactly what the algorithm is meant to decide.",
+      "chosen_treatment": "தமிழ் படிமுறை கணிக்கத்தக்க அடிகோள் கணம் A இலிருந்து இரு வருவித்தல்களையும் தேடுகிறது.",
+      "alternatives_considered": "Using T as an oracle; assuming the theorem set is already decidable.",
+      "rationale": "Effective enumeration of derivations from A is supplied by axiomatizability and is the premise needed for the dovetailed search.",
+      "precise_review_question": "Does the algorithm now rely only on the computable axiom set rather than presupposing theorem membership?",
+      "location_needle": "SOURCE CORRECTION TA-INC-034"
+    },
+    {
+      "audit_id": "TA-INC-035",
+      "unit_id": "OLP-0308",
+      "kind": "axiomatized-versus-axiomatizable",
+      "action": "Rendered the proof premise as axiomatizable, matching both the theorem statement and the immediately preceding decidability lemma; retained the frozen token key in an alignment comment.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proof says merely axiomatized where its inference to decidability requires a computable axiomatization, expressed everywhere else as axiomatizable.",
+      "chosen_treatment": "தமிழ் காட்டல் முழுமையுடன் அடிகோளாக்கத்தக்கதன்மையைக் கொண்டு முந்தைய துணைத்தேற்றத்தை நேரடியாகப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Treating every theory with any axiom set as decidable; weakening the theorem.",
+      "rationale": "The theorem's hypothesis and cited preceding result uniquely require axiomatizability.",
+      "precise_review_question": "Does the one-line proof now invoke exactly the hypotheses of the complete-axiomatizable implies decidable lemma?",
+      "location_needle": "SOURCE CORRECTION TA-INC-035"
+    },
+    {
+      "audit_id": "TA-INC-036",
+      "unit_id": "OLP-0309",
+      "kind": "metatheoretic-relation-applied-to-numeral-term",
+      "action": "Changed the positive and negative evaluations of S from numeral n to natural number n.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\num", "\\num"],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "As in the preceding universal-relation proof, S is an external computable relation while D_S is its representing formula, but both displayed S expressions take an object-language numeral.",
+      "chosen_treatment": "தமிழ் S(n) மற்றும் D_S(num n) என்ற வகை வேறுபாட்டைப் பாதுகாக்கிறது.",
+      "alternatives_considered": "Treating S as an object-language predicate; changing the representing instances.",
+      "rationale": "The relation-representability definition and the construction of R require a natural-number input to S and a numeral term in D_S.",
+      "precise_review_question": "Are both external S evaluations now applied to n while every internal D_S instance retains num n?",
+      "location_needle": "SOURCE CORRECTION TA-INC-036"
+    },
+    {
+      "audit_id": "TA-INC-037",
+      "unit_id": "OLP-0309",
+      "kind": "wrong-coded-unary-formula",
+      "action": "Replaced the hash expression for D_S at numeral u with the Gödel number of the one-free-variable formula D_S(u).",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\num"],
+      "expected_extra_commands": ["\\Gn"],
+      "normalized_math_replacements": [
+        {
+          "from": "$R(\\#(!D_S(\\numu)),y)$",
+          "to": "$R(\\Gn{!D_S(u)},y)$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "R's first argument must code a formula D(u) with free variable u, but the final line hashes D_S applied to the numeral for u, which is neither the required schema nor the previously used Gödel-number notation.",
+      "chosen_treatment": "தமிழ் R இன் முதல் உட்பொருளாக ஒரே கட்டற்ற மாறி u கொண்ட D_S(u) வாய்பாட்டின் கோடல் எண்ணை இடுகிறது.",
+      "alternatives_considered": "Coding a closed numeral instance; treating num u as a free-variable placeholder.",
+      "rationale": "The definition of R and the universal relation parameter both uniquely require the code of D_S(u).",
+      "precise_review_question": "Does the final equivalence now use the code of the same unary formula introduced as representing S?",
+      "location_needle": "SOURCE CORRECTION TA-INC-037"
+    },
+    {
+      "audit_id": "TA-INC-038",
+      "unit_id": "OLP-0310",
+      "kind": "math-mode-prose-localization",
+      "action": "Localized the English predicate inside the set-builder text while preserving the bound formula metavariable and formal set-builder structure.",
+      "expected_missing_math": ["$isprovableinfirst-orderlogic}}$"],
+      "expected_extra_math": ["$முதல்தரத்தருக்கத்தில்நிறுவத்தக்கது}}$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The corollary embeds an ordinary English explanatory phrase inside a text wrapper nested within an inline mathematical set-builder.",
+      "chosen_treatment": "தமிழ் அதே text உட்பரப்பில் முதல்தரத் தருக்கத்தில் நிறுவத்தக்கது என்று மொழிபெயர்க்கிறது.",
+      "alternatives_considered": "Leaving public-facing English prose untranslated; restructuring the formal set-builder.",
+      "rationale": "The nested dollar delimiters make the QA extractor expose the text fragment, although the TeX text wrapper preserves the same formal predicate role.",
+      "precise_review_question": "Does the set-builder now read naturally in Tamil while retaining the exact bound variable and theorem-set meaning?",
+      "location_needle": "முதல்தரத் தருக்கத்தில் நிறுவத்தக்கது"
+    },
+    {
+      "audit_id": "TA-INC-039",
+      "unit_id": "OLP-0311",
+      "kind": "missing-consistency-qualification",
+      "action": "Added consistency to the first ZFC corollary, matching the immediately preceding general theorem.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The theorem says that no consistent extension is decidable, but the corollary drops consistency and thereby falsely excludes the inconsistent theory, a decidable extension of ZFC in which every sentence is provable.",
+      "chosen_treatment": "தமிழ் தொடர்விளைவு ZFC இன் முரணற்ற, தீர்மானிக்கத்தக்க விரிவாக்கம் இல்லை என்று தேற்றத்தின் சரியான தகுதியை வைத்திருக்கிறது.",
+      "alternatives_considered": "Retaining the false unrestricted corollary; silently treating every extension as consistent.",
+      "rationale": "The preceding theorem supplies exactly this qualification, and the chapter earlier explicitly notes that an inconsistent theory is decidable.",
+      "precise_review_question": "Does the corollary now follow directly from the stated interpretation theorem without excluding the decidable inconsistent extension?",
+      "location_needle": "SOURCE CORRECTION TA-INC-039"
+    },
+    {
+      "audit_id": "TA-INC-040",
+      "unit_id": "OLP-0311",
+      "kind": "truth-evaluated-in-language",
+      "action": "Changed the closing Presburger sentence from truth in the language of arithmetic to truth in the standard model.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "A language supplies syntax and cannot make sentences true; the paragraph begins by evaluating arithmetic sentences in the standard model and the Presburger comparison requires the same intended structure.",
+      "chosen_treatment": "தமிழ் பிரெஸ்பர்கர் முடிவிலும் வாக்கியங்களை எண்கணிதத் தரநிலை மாதிரியிலேயே மதிப்பிடுகிறது.",
+      "alternatives_considered": "Keeping the category error; using the vague phrase standard interpretation without matching the paragraph's established term.",
+      "rationale": "The immediately preceding comparison and the definition of true arithmetic uniquely determine the standard natural-number model.",
+      "precise_review_question": "Is the decidable Presburger theory now identified as the set of sentences true in the same standard model used throughout the paragraph?",
+      "location_needle": "SOURCE CORRECTION TA-INC-040"
+    },
+    {
+      "audit_id": "TA-READER-REF-012",
+      "unit_id": "OLP-0287",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped the absent recursive-functions tree-coding section reference in oliflabeldef with a descriptive Tamil fallback; the live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[cmp][rec][tre]{sec}",
+          "to": "\\oliflabeldef{cmp:rec:tre:sec}{\\olref[cmp][rec][tre]{sec}}{மரவுருக் குறியீடாக்கம் பற்றிய முந்தைய பிரிவு}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The standalone incompleteness-and-arithmetization reader omits the recursive-functions chapter that supplies the cited tree-coding section, which otherwise renders as an unresolved question mark.",
+      "chosen_treatment": "இலக்கு இருந்தால் நேரடி பிரிவு மேற்கோள்; இல்லையெனில் மரவுருக் குறியீடாக்கம் பற்றிய முந்தைய பிரிவு என்ற துல்லியமான தமிழ் விளக்கம்.",
+      "alternatives_considered": "Literal question marks; deleting the coding dependency; permanently replacing the live section link.",
+      "rationale": "The conditional fallback keeps the local proof-code explanation readable while preserving the exact reference identity for a cumulative reader.",
+      "precise_review_question": "Does the fallback identify exactly the tree-coding material used by SubtreeSeq without inventing a section number?",
+      "location_needle": "READER FALLBACK TA-READER-REF-012"
+    },
+    {
+      "audit_id": "TA-READER-REF-013",
+      "unit_id": "OLP-0291",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped four references outside the focused representability reader in conditional label checks with descriptive Tamil fallbacks; every live reference remains active when its label is present.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[int][def]{def:standard-model}",
+          "to": "\\oliflabeldef{inc:def::def:standard-model}{\\olref[int][def]{def:standard-model}}{எண்கணிதத்தின் தரநிலை மாதிரிக்கான முந்தைய வரையறை}",
+          "count": 1
+        },
+        {
+          "from": "\\tagrefs{prfAX/{fol:axd:sou:cor:consistency-soundness},\nprfSC/{fol:seq:sou:cor:consistency-soundness},\nprfND/{fol:ntd:sou:cor:consistency-soundness},\nprfTab/{fol:tab:sou:cor:consistency-soundness}}",
+          "to": "\\oliflabeldef{fol:axd:sou:cor:consistency-soundness}{\\tagrefs{prfAX/{fol:axd:sou:cor:consistency-soundness},\nprfSC/{fol:seq:sou:cor:consistency-soundness},\nprfND/{fol:ntd:sou:cor:consistency-soundness},\nprfTab/{fol:tab:sou:cor:consistency-soundness}}}{ஒலிப்புத் தேற்றத்தின் முரணின்மைத் தொடர்விளைவுகள்}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[art][trm]{prop:num-primrec}",
+          "to": "\\oliflabeldef{inc:art:trm:prop:num-primrec}{\\olref[art][trm]{prop:num-primrec}}{எண்குறிக் குறியீட்டின் முதன்மை மீள்வரையறை பற்றிய முந்தைய கூற்று}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[art][sub]{prop:subst-primrec}",
+          "to": "\\oliflabeldef{inc:art:sub:prop:subst-primrec}{\\olref[art][sub]{prop:subst-primrec}}{தொடரமைப்புப் பதிலீட்டின் முதன்மை மீள்வரையறை பற்றிய முந்தைய கூற்று}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The focused representability reader omits the earlier standard-model definition, four proof-system soundness results and two arithmetization propositions cited by this proof, which otherwise render as unresolved question marks.",
+      "chosen_treatment": "இலக்குகள் உள்ள முழு வாசகத்தில் நேரடி மேற்கோள்கள்; தனி வாசகத்தில் அவற்றின் சரியான கருத்தைச் சொல்லும் தமிழ் விளக்கங்கள்.",
+      "alternatives_considered": "Literal question marks; deleting dependencies; bundling unrelated earlier chapters into the focused reader.",
+      "rationale": "Conditional fallbacks keep this exact chapter readable by itself and automatically restore every stable link in the final cumulative edition.",
+      "precise_review_question": "Do all four fallback sites identify their omitted results accurately without inventing numbers or weakening the proof dependencies?",
+      "location_needle": "READER FALLBACK TA-READER-REF-013"
+    },
+    {
+      "audit_id": "TA-READER-REF-014",
+      "unit_id": "OLP-0299",
+      "kind": "out-of-scope-cross-reference-fallback",
+      "action": "Wrapped the two omitted recursive-functions theorem references in conditional label checks with descriptive Tamil fallbacks.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\oliflabeldef", "\\oliflabeldef"],
+      "identifier_replacements": [
+        {
+          "from": "\\olref[cmp][rec][nft]{thm:kleene-nf}",
+          "to": "\\oliflabeldef{cmp:rec:nft:thm:kleene-nf}{\\olref[cmp][rec][nft]{thm:kleene-nf}}{க்ளீனியின் இயல்புவடிவத் தேற்றம்}",
+          "count": 1
+        },
+        {
+          "from": "\\olref[cmp][rec][hlt]{thm:halting-problem}",
+          "to": "\\oliflabeldef{cmp:rec:hlt:thm:halting-problem}{\\olref[cmp][rec][hlt]{thm:halting-problem}}{நிற்றல் சிக்கலின் தீர்மானிக்கவியலாமைத் தேற்றம்}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The focused reader omits the recursive-functions normal-form and halting-problem sections used by the undecidability reduction.",
+      "chosen_treatment": "இலக்குகள் இருந்தால் நேரடி தேற்ற மேற்கோள்கள்; இல்லையெனில் க்ளீனி இயல்புவடிவமும் நிற்றல் சிக்கல் முடிவும் பற்றிய துல்லியமான தமிழ் விளக்கங்கள்.",
+      "alternatives_considered": "Literal question marks; deleting the reduction’s cited premises; importing the full computability reader.",
+      "rationale": "Both conditional branches preserve the exact dependency and regain the frozen links when the complete corpus is assembled.",
+      "precise_review_question": "Do the two fallbacks distinguish the normal-form representation theorem from the halting undecidability theorem?",
+      "location_needle": "READER FALLBACK TA-READER-REF-014"
+    },
+    {
+      "audit_id": "TA-SOL-001",
+      "unit_id": "OLP-0333",
+      "kind": "unbalanced-satisfaction-formula",
+      "action": "Closed the second argument of the satisfaction macro before closing inline math mode.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\Sat{M}{!P\\lif!A$",
+          "to": "$\\Sat{M}{!P\\lif!A}$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The frozen source closes math mode inside the second argument of \\Sat and leaves its closing brace outside math, producing malformed TeX.",
+      "chosen_treatment": "தமிழ் பதிப்பில் \\Sat இன் இரண்டாவது உறுப்பு கணிதமுறைக்குள் முறையாக மூடப்படுகிறது.",
+      "alternatives_considered": "Preserving the unbalanced TeX; dropping the satisfaction notation.",
+      "rationale": "The immediately preceding equivalence uniquely determines the intended formula, and balancing the brace is required for a buildable reader.",
+      "precise_review_question": "Does the corrected expression state that every structure satisfies the conditional P implies A?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-001"
+    },
+    {
+      "audit_id": "TA-SOL-002",
+      "unit_id": "OLP-0334",
+      "kind": "duplicate-theorem-label",
+      "action": "Changed the compactness theorem label from thm:sol-undecidable to thm:sol-not-compact.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {
+          "from": "\\ollabel{thm:sol-undecidable}",
+          "to": "\\ollabel{thm:sol-not-compact}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The frozen compactness theorem repeats the immediately preceding undecidability theorem label, so the chapter has two different results with one identifier.",
+      "chosen_treatment": "இறுக்கத்தன்மைத் தேற்றத்திற்கு அதன் கருத்தை நேரடியாகக் குறிக்கும் தனி நிலையான சிட்டை வழங்கப்பட்டுள்ளது.",
+      "alternatives_considered": "Keeping the duplicate label and ambiguous references; deleting the label.",
+      "rationale": "A unique descriptive label preserves reference integrity without changing theorem content.",
+      "precise_review_question": "Is the new identifier unique in the translated corpus and clearly tied to failure of compactness?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-002"
+    },
+    {
+      "audit_id": "TA-SOL-003",
+      "unit_id": "OLP-0332",
+      "kind": "bound-variable-mismatch",
+      "action": "Used the universally bound variable w in both occurrences of the addition recurrence.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "u(x')=u(x)'",
+          "to": "u(w')=u(w)'",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The displayed definition quantifies over w but writes x in the recurrence, leaving w unused and failing to define iteration of the function.",
+      "chosen_treatment": "தமிழ் வாய்பாட்டில் அனைத்தளவையிடப்பட்ட w மாறியே மீள்விதியின் இரு இடங்களிலும் பயன்படுத்தப்படுகிறது.",
+      "alternatives_considered": "Keeping the free x recurrence; changing the binder to x, which would capture the formula's first free argument.",
+      "rationale": "The preceding prose says u(n-prime)=u(n)-prime for every n; w is the formula's fresh bound counterpart and cannot capture the free input x.",
+      "precise_review_question": "Does the corrected recurrence quantify a fresh iteration variable while leaving x, y and z free as the addition graph arguments?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-003"
+    },
+    {
+      "audit_id": "TA-SOL-004",
+      "unit_id": "OLP-0340",
+      "kind": "wrong-set-variable-in-proof",
+      "action": "Changed the proof's final description from subsets of s(Z) to subsets of s(X).",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proof explains a formula whose only set parameters at that stage are X and Y, but its final sentence refers to subsets of s(Z); Z is only a locally quantified coding variable in the preceding definition.",
+      "chosen_treatment": "தமிழ் நிறுவல் s(Y) இன் உறுப்புகளை s(X) இன் உட்கணங்களுடன் தொடர்புபடுத்துகிறது என்று சரியான அடுக்குக்கண அளவுருவைக் கூறுகிறது.",
+      "alternatives_considered": "Keeping the unbound prose variable Z; replacing X in the displayed formula, where it is already correct.",
+      "rationale": "Pow(Y,R,X) explicitly says that Y codes the powerset of X, so the final injectivity condition associates Y-elements with subsets of X.",
+      "precise_review_question": "Does the final proof sentence now describe the same X-parametrized powerset coding relation as the displayed formula?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-004"
+    },
+    {
+      "audit_id": "TA-SOL-005",
+      "unit_id": "OLP-0338",
+      "kind": "ambient-domain-injectivity-too-strong",
+      "action": "Restricted both comparison formulas' injectivity requirement to arguments in X.",
+      "expected_missing_math": [
+        "\\[\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]])]\\]",
+        "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land{}\\\\\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][(X(x)\\land\\eq[y][u(x)])])])]\\end{multline*}"
+      ],
+      "expected_extra_math": [
+        "\\[\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]])]\\]",
+        "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifY(u(x)))]\\land{}\\\\\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][(X(x)\\land\\eq[y][u(x)])])])]\\end{multline*}"
+      ],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\land", "\\land", "\\land", "\\land"],
+      "source_issue_or_choice": "The frozen formulas demand that a total ambient-domain function be injective everywhere, which is stronger than the stated existence of an injection from X to Y and can fail solely because the complement of X is too large.",
+      "chosen_treatment": "தமிழ் வாய்பாடுகள் u இன் மதிப்புகள் X இலிருந்து Y க்குச் செல்கின்றன என்றும், X இல் உள்ள உள்ளீடுகள்மீது மட்டும் u உட்செலுத்துவதாகும் என்றும் கூறுகின்றன.",
+      "alternatives_considered": "Keeping global injectivity; introducing partial-function semantics absent from the chapter.",
+      "rationale": "A total second-order function variable can represent an injection with restricted domain X exactly by guarding both injectivity arguments with X membership.",
+      "precise_review_question": "Do both corrected formulas now characterize |X|≤|Y| and |X|=|Y| without constraints on u outside X?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-005"
+    },
+    {
+      "audit_id": "TA-SOL-006",
+      "unit_id": "OLP-0339",
+      "kind": "subset-infinitude-formula-too-strong-and-not-closed",
+      "action": "Required the witness to map X into X and to be injective only on X.",
+      "expected_missing_math": [
+        "\\begin{multline*}\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[y][(X(y)\\land\\lforall[x][(X(x)\\lif\\eq/[y][u(x)])]])]\\end{multline*}"
+      ],
+      "expected_extra_math": [
+        "\\begin{multline*}\\lexists[u][(\\lforall[x][(X(x)\\lifX(u(x)))]\\land{}\\lforall[x][\\lforall[y][((X(x)\\landX(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[y][(X(y)\\land\\lforall[x][(X(x)\\lif\\eq/[y][u(x)])]])]\\end{multline*}"
+      ],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\lforall", "\\lif", "\\land", "\\land", "\\land"],
+      "source_issue_or_choice": "The frozen formula makes u globally injective but never requires values of X-elements to remain in X, so it does not state that u is an injective nonsurjective self-map of X.",
+      "chosen_treatment": "தமிழ் வாய்பாடு X இன் கீழ் மூடுதலையும் X-இல் கட்டுப்படுத்தப்பட்ட உட்செலுத்துதலையும் சேர்த்து டெடெகிண்ட் முடிவிலாதன்மையைத் துல்லியமாகக் கூறுகிறது.",
+      "alternatives_considered": "Retaining global injectivity with no closure; treating u as partial despite standard function-variable semantics.",
+      "rationale": "The preceding domain-level criterion requires exactly an injective nonsurjective map X→X.",
+      "precise_review_question": "Does the corrected formula hold exactly when s(X) has an injective nonsurjective self-map?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-006"
+    },
+    {
+      "audit_id": "TA-SOL-007",
+      "unit_id": "OLP-0340",
+      "kind": "unbalanced-powerset-coding-clause",
+      "action": "Closed the outer implication before closing its universal quantifier.",
+      "expected_missing_math": [
+        "\\begin{multline*}\\fn{Pow}(Y,R,X)\\ident\\\\\\lforall[Z][(Z\\subseteqX\\lif\\lexists[x][(Y(x)\\land\\fn{Codes}(x,R,Z))])]\\land{}\\\\\\lforall[x][(Y(x)\\lif\\lforall[Z][(\\fn{Codes}(x,R,Z)\\lifZ\\subseteqX)]]\\end{multline*}"
+      ],
+      "expected_extra_math": [
+        "\\begin{multline*}\\fn{Pow}(Y,R,X)\\ident\\\\\\lforall[Z][(Z\\subseteqX\\lif\\lexists[x][(Y(x)\\land\\fn{Codes}(x,R,Z))])]\\land{}\\\\\\lforall[x][(Y(x)\\lif\\lforall[Z][(\\fn{Codes}(x,R,Z)\\lifZ\\subseteqX)])]\\end{multline*}"
+      ],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The frozen Pow formula closes the inner universal quantifier but omits the parenthesis closing Y(x) implies that universal condition.",
+      "chosen_treatment": "தமிழ் வாய்பாடு வெளிப்புற நிபந்தனைவாக்கியத்தின் அடைப்புக்குறியை அளவையடை முடிவதற்கு முன் மூடுகிறது.",
+      "alternatives_considered": "Preserving the unbalanced formula; deleting the converse coding clause.",
+      "rationale": "Balancing the clause yields the prose-stated condition that every Y-element codes only a subset of X.",
+      "precise_review_question": "Is every bracket and parenthesis in the corrected Pow definition balanced with the intended scope?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-007"
+    },
+    {
+      "audit_id": "TA-SOL-008",
+      "unit_id": "OLP-0340",
+      "kind": "cantor-formula-injectivity-too-strong",
+      "action": "Restricted the prohibited injection to the coded powerset domain Y.",
+      "expected_missing_math": [
+        "\\begin{multline*}\\lforall[X][\\lforall[Y][\\lforall[R][(\\fn{Pow}(Y,R,X)\\lif\\\\\\lnot\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[x][(Y(x)\\lifX(u(x)))])])]]]\\end{multline*}"
+      ],
+      "expected_extra_math": [
+        "\\begin{multline*}\\lforall[X][\\lforall[Y][\\lforall[R][(\\fn{Pow}(Y,R,X)\\lif\\\\\\lnot\\lexists[u][(\\lforall[x][\\lforall[y][((Y(x)\\landY(y)\\land\\eq[u(x)][u(y)])\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[x][(Y(x)\\lifX(u(x)))])])]]]\\end{multline*}"
+      ],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\land", "\\land"],
+      "source_issue_or_choice": "The frozen Cantor formula rules out only functions injective on the entire ambient domain, which need not rule out an injection from the coded powerset subset Y into X.",
+      "chosen_treatment": "தமிழ் வாய்பாடு Y இல் உள்ள இரு உள்ளீடுகளுக்கே உட்செலுத்துதலைக் கோருகிறது.",
+      "alternatives_considered": "Keeping ambient injectivity; requiring u(Y)=X, which would express bijection rather than injection.",
+      "rationale": "Cantor's theorem denies an injection from the powerset coding domain Y to X, independent of u outside Y.",
+      "precise_review_question": "Does the corrected sentence rule out every injection Y→X represented by a total ambient function?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-008"
+    },
+    {
+      "audit_id": "TA-SOL-009",
+      "unit_id": "OLP-0340",
+      "kind": "continuum-cardinality-formula-insufficient",
+      "action": "Required unique subset codes and a bijection from the entire domain onto their coding set Y.",
+      "expected_missing_math": [
+        "\\begin{multline*}\\Sat{M}{\\lexists[X][\\lexists[Y][\\lexists[R][(\\fn{Aleph}_0(X)\\land\\fn{Pow}(Y,R,X)\\land\\\\\\lexists[u][(\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][\\eq[y][u(x)]])])])]]]}.\\end{multline*}"
+      ],
+      "expected_extra_math": [
+        "\\begin{multline*}\\Sat{M}{\\lexists[X][\\lexists[Y][\\lexists[R][(\\fn{Aleph}_0(X)\\land\\fn{Pow}(Y,R,X)\\land{}\\lforall[x][\\lforall[y][((Y(x)\\landY(y)\\land\\lforall[z][R(x,z)\\liffR(y,z)])\\lif\\eq[x][y])]]\\land{}\\\\\\lexists[u][(\\lforall[x][Y(u(x))]\\land{}\\lforall[x][\\lforall[y][(\\eq[u(x)][u(y)]\\lif\\eq[x][y])]]\\land{}\\\\\\lforall[y][(Y(y)\\lif\\lexists[x][\\eq[y][u(x)]])])])]]]}.\\end{multline*}"
+      ],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\lforall", "\\lforall", "\\lforall", "\\lforall", "\\liff", "\\lif", "\\land", "\\land", "\\land", "\\land", "\\eq"],
+      "source_issue_or_choice": "The frozen formula permits duplicate codes, does not require the range of u to stay in Y, and requires only that Y lie inside the range; these conditions do not establish a bijection between the domain and a continuum-sized set.",
+      "chosen_treatment": "தமிழ் வாய்பாடு Y இல் குறியீடுகள் தனித்தவையாகவும், u பொருட்களம் முழுவதிலிருந்தும் Y க்கு உட்செலுத்தும் மேற்கோர்த்தலாகவும் இருக்க வேண்டும் என்று கூறுகிறது.",
+      "alternatives_considered": "Keeping the one-sided range condition; reusing Cont(Y) while leaving its domain-size hypothesis external.",
+      "rationale": "Unique coding makes Y equipotent with the powerset of a countable X, and the three u clauses express a bijection from Domain(M) onto Y.",
+      "precise_review_question": "Do unique codes plus the range, injectivity and surjectivity clauses prove exactly |Domain(M)|=|R|?",
+      "location_needle": "SOURCE CORRECTION TA-SOL-009"
+    },
+    {
+      "audit_id": "TA-LAM-001",
+      "unit_id": "OLP-0344",
+      "kind": "prose-typo",
+      "action": "Read the frozen phrase 'From example' as the contextually intended 'For example.'",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The second notation convention begins 'From example,' where both grammar and the immediately following illustration require 'For example.'",
+      "chosen_treatment": "தமிழ் உரை இதனை இலக்கணப்படி 'எடுத்துக்காட்டாக' என்று வழங்குகிறது.",
+      "alternatives_considered": "Preserving an ungrammatical directional phrase that has no coherent mathematical reading.",
+      "rationale": "This corrects a one-word prose typo without changing the example, formula, convention, command, or identifier inventory.",
+      "precise_review_question": "Does the Tamil sentence introduce the displayed lambda-scope illustration as an example without adding a new claim?",
+      "location_needle": "SOURCE CORRECTION TA-LAM-001"
+    },
+    {
+      "audit_id": "TA-LAM-002",
+      "unit_id": "OLP-0344",
+      "kind": "overbroad-binding-definition",
+      "action": "Qualified binding by requiring an enclosing lambda abstraction for the same variable and assigned multiple matching binders to the nearest enclosing one.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The frozen prose calls variables inside the scope of any lambda bound, although its adjoining (lambda z. y z)x example correctly treats y as free inside the lambda-z body.",
+      "chosen_treatment": "தமிழ் உரை ஒரு மாறிநிகழ்வை அதே மாறிக்கான மிக அருகிலுள்ள வெளிச்சூழ் லாம்டா பிணைப்பியே கட்டுகிறது என்றும், பொருந்தும் பிணைப்பி இல்லாத நிகழ்வு கட்டற்றது என்றும் துல்லியப்படுத்துகிறது.",
+      "alternatives_considered": "Preserving the over-broad scope wording; mentioning only the same-variable condition without resolving nested repeated binders.",
+      "rationale": "The corrected definition agrees with the source's own immediately following example and preserves the standard nearest-matching-binder rule without changing either displayed term.",
+      "precise_review_question": "Does the Tamil definition classify y and x as free and z as bound in (lambda z. y z)x, including under nested abstractions with repeated variable names?",
+      "location_needle": "SOURCE CORRECTION TA-LAM-002"
     }
   ],
   "by_unit": {
@@ -893,6 +2392,46 @@
     "OLP-0107": ["TA-TAB-004"],
     "OLP-0109": ["TA-TAB-005", "TA-READER-REF-008"],
     "OLP-0110": ["TA-TAB-007"],
-    "OLP-0111": ["TA-TAB-006", "TA-READER-REF-009"]
+    "OLP-0111": ["TA-TAB-006", "TA-READER-REF-009"],
+    "OLP-0118": ["TA-AXD-001"],
+    "OLP-0119": ["TA-AXD-002"],
+    "OLP-0120": ["TA-AXD-003", "TA-AXD-004"],
+    "OLP-0122": ["TA-AXD-005", "TA-AXD-006"],
+    "OLP-0124": ["TA-AXD-007", "TA-READER-REF-010"],
+    "OLP-0125": ["TA-AXD-008"],
+    "OLP-0131": ["TA-COM-001"],
+    "OLP-0132": ["TA-COM-002"],
+    "OLP-0133": ["TA-COM-003"],
+    "OLP-0135": ["TA-COM-004"],
+    "OLP-0140": ["TA-INT-001", "TA-INT-002", "TA-INT-003"],
+    "OLP-0143": ["TA-INT-004", "TA-INT-005"],
+    "OLP-0266": ["TA-READER-REF-011"],
+    "OLP-0278": ["TA-INC-001"],
+    "OLP-0286": ["TA-INC-002", "TA-INC-003", "TA-INC-004", "TA-INC-005"],
+    "OLP-0287": ["TA-INC-006", "TA-INC-007", "TA-INC-008", "TA-INC-009", "TA-READER-REF-012"],
+    "OLP-0288": ["TA-INC-010", "TA-INC-011", "TA-INC-012", "TA-INC-013"],
+    "OLP-0291": ["TA-INC-014", "TA-INC-015", "TA-INC-016", "TA-READER-REF-013"],
+    "OLP-0293": ["TA-INC-017"],
+    "OLP-0294": ["TA-INC-019"],
+    "OLP-0295": ["TA-INC-018"],
+    "OLP-0296": ["TA-INC-020", "TA-INC-021"],
+    "OLP-0297": ["TA-INC-022", "TA-INC-023"],
+    "OLP-0299": ["TA-READER-REF-014"],
+    "OLP-0300": ["TA-INC-024", "TA-INC-025", "TA-INC-026", "TA-INC-027", "TA-INC-028", "TA-INC-029"],
+    "OLP-0302": ["TA-INC-030"],
+    "OLP-0303": ["TA-INC-031", "TA-INC-032"],
+    "OLP-0305": ["TA-INC-033"],
+    "OLP-0307": ["TA-INC-034"],
+    "OLP-0308": ["TA-INC-035"],
+    "OLP-0309": ["TA-INC-036", "TA-INC-037"],
+    "OLP-0310": ["TA-INC-038"],
+    "OLP-0311": ["TA-INC-039", "TA-INC-040"],
+    "OLP-0332": ["TA-SOL-003"],
+    "OLP-0333": ["TA-SOL-001"],
+    "OLP-0334": ["TA-SOL-002"],
+    "OLP-0338": ["TA-SOL-005"],
+    "OLP-0339": ["TA-SOL-006"],
+    "OLP-0340": ["TA-SOL-004", "TA-SOL-007", "TA-SOL-008", "TA-SOL-009"],
+    "OLP-0344": ["TA-LAM-001", "TA-LAM-002"]
   }
 }

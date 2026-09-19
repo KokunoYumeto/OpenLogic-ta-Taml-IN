@@ -1,0 +1,152 @@
+% SEGMENT OLP-0118-S01
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: proof-theoretic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{ptn}}
+      {\olfileid{pl}{axd}{ptn}}
+
+\olsection{நிறுவல்-கோட்பாட்டுக் கருத்துகள்}
+
+% SEGMENT OLP-0118-S02
+\begin{explain}
+பல முக்கியமான பொருண்மைக் கருத்துகளை
+(\iftag{FOL}{செல்லுபடித்தன்மை}{மெய்மம்}, பின்விளைவு,
+நிறைவுறத்தக்கதன்மை) நாம் வரையறுத்ததைப் போலவே, அவற்றுடன் தொடர்புடைய
+\emph{நிறுவல்-கோட்பாட்டுக் கருத்துகளை} இப்போது வரையறுக்கிறோம். இவை
+!!{structure}s[loc] !!{sentence}s நிறைவுறுவதைச் சார்ந்து வரையறுக்கப்படாமல்,
+குறிப்பிட்ட வாய்பாடுகளின் !!{derivability} அல்லது !!{nonderivability}
+ஆகியவற்றைச் சார்ந்து வரையறுக்கப்படுகின்றன. இந்தக் கருத்துகள் ஒன்றுபடுகின்றன
+என்பது ஒரு முக்கியமான கண்டுபிடிப்பு. அவை ஒன்றுபடுவதே \emph{சரித்தன்மைத்
+தேற்றம்} மற்றும் \emph{நிறைவுத் தேற்றம்} ஆகியவற்றின் உள்ளடக்கம்.
+\end{explain}
+
+% SEGMENT OLP-0118-S03
+\begin{defn}[!!^{derivability}]
+!!^a{formula}~$!A$ இல் முடியும், $\Gamma$ இலிருந்து ஒரு
+!!{derivation} இருந்தால், $!A$ ஆனது~$\Gamma$ இலிருந்து
+\emph{!!{derivable}}; இதனை $\Gamma \Proves !A$ என்று எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0118-S04
+\begin{defn}[தேற்றங்கள்]
+வெற்றுக் கணத்திலிருந்து !!^a{formula}~$!A$ இன் !!a{derivation} இருந்தால்,
+$!A$ ஒரு \emph{தேற்றம்}. $!A$ தேற்றமாக இருந்தால் $\Proves !A$ என்றும்,
+இல்லையெனில் $\Proves/ !A$ என்றும் எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0118-S05
+\begin{defn}[முரணின்மை]
+!!{formula}s கொண்ட ஒரு கணம்~$\Gamma$, $\Gamma\Proves/ \lfalse$ எனில்,
+அப்போதும் அப்போது மட்டுமே \emph{முரணற்றது}; இல்லையெனில் அது
+\emph{முரணுடையது}.
+\end{defn}
+
+% SEGMENT OLP-0118-S06
+\begin{prop}[தற்சுட்டுப் பண்பு]
+\ollabel{prop:reflexivity}
+$!A \in \Gamma$ எனில், $\Gamma \Proves !A$.
+\end{prop}
+
+\begin{proof}
+  !!{formula}~$!A$ தனியே~$\Gamma$ இலிருந்து~$!A$ இன்
+  !!a{derivation}.
+\end{proof}
+
+% SEGMENT OLP-0118-S07
+\begin{prop}[ஒருபோக்குத்தன்மை]
+\ollabel{prop:monotonicity}
+$\Gamma \subseteq \Delta$ மற்றும் $\Gamma \Proves !A$ எனில், $\Delta
+\Proves !A$.
+\end{prop}
+
+\begin{proof}
+$\Gamma$ இலிருந்து~$!A$ இன் எந்த !!{derivation} உம்~$\Delta$ இலிருந்து
+$!A$ இன் !!a{derivation} உம் ஆகும்.
+\end{proof}
+
+% SEGMENT OLP-0118-S08
+\begin{prop}[கடப்புப் பண்பு]
+\ollabel{prop:transitivity}
+$\Gamma \Proves !A$ மற்றும் $\{!A\} \cup \Delta \Proves
+!B$ எனில், $\Gamma \cup \Delta \Proves !B$.
+\end{prop}
+
+\begin{proof}
+  $\{!A\} \cup \Delta \Proves !B$ என்க. அப்போது~$\{!A\} \cup
+  \Delta$ இலிருந்து !!a{derivation} $!B_1$, \dots, $!B_l = !B$ உள்ளது.
+  அந்த !!{derivation}வின் சில படிகள், முந்தைய வரி~$!B_i = !A$ ஐக்
+  குறிப்பிடும் ஒரு விதியால் சரியானவையாக இருக்கும். கருதுகோளின்படி,
+  $\Gamma$ இலிருந்து~$!A$ இன் !!a{derivation} உள்ளது; அதாவது,
+  $!A_1$, \dots, $!A_k = !A$ என்ற !!a{derivation} உள்ளது, இதில் ஒவ்வொரு
+  $!A_i$ உம் ஓர் அடிகோள், $\Gamma$ வின் !!a{element}, அல்லது ஓர் அனுமான
+  விதியால் சரியானது. இப்போது பின்வரும் தொடரைக் கருதுக:
+  \[
+  !A_1, \dots, !A_k = !A, !B_1, \dots, !B_l = !B.
+  \]
+  இது $\Gamma \cup \Delta$ இலிருந்து~$!B$ இன் சரியான !!a{derivation};
+  % SOURCE CORRECTION TA-AXD-001: restore the formula metavariable marker on B_i.
+  ஏனெனில் ஒவ்வொரு $!B_i = !A$ உம் இப்போது~$!A_k = !A$ ஐ நியாயப்படுத்தும்
+  அதே விதியால் நியாயப்படுத்தப்படுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0118-S09
+$\Gamma \Proves !A$ மற்றும் $!A \Proves !B$ எனில், குறிப்பாக $\Gamma
+\Proves !B$ என்பதே இதன் பொருள் என்பதைக் கவனிக்கவும். மேலும் $!A_1,
+\dots, !A_n \Proves !B$ என்றும், ஒவ்வொரு~$i$ க்கும் $\Gamma \Proves !A_i$
+என்றும் இருந்தால், $\Gamma \Proves !B$ என்பதும் பின்வருகிறது.
+
+% SEGMENT OLP-0118-S10
+\begin{prop}
+\ollabel{prop:incons}
+ஒவ்வொரு~$!A$ க்கும் $\Gamma \Proves !A$ எனில், அப்போதும் அப்போது மட்டுமே
+$\Gamma$ முரணுடையது.
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\tagprob{FOL}
+\begin{prob}
+\olref[fol][axd][ptn]{prop:incons} ஐ நிறுவுக.
+\end{prob}
+\tagendprob
+
+\tagprob{notFOL}
+\begin{prob}
+\olref[pl][axd][ptn]{prop:incons} ஐ நிறுவுக.
+\end{prob}
+\tagendprob
+
+% SEGMENT OLP-0118-S11
+\begin{prop}[இறுக்கத்தன்மை]
+\ollabel{prop:proves-compact}
+  \begin{enumerate}
+  \item $\Gamma \Proves !A$ எனில், $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+    முடிவுறு உட்கணம் இருந்து, $\Gamma_0 \Proves !A$.
+  \item $\Gamma$ வின் ஒவ்வொரு முடிவுறு உட்கணமும் முரணற்றது எனில்,
+    $\Gamma$ முரணற்றது.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $\Gamma \Proves !A$ எனில், $!A \ident !A_n$ ஆகவும், ஒவ்வொரு
+      $!A_i$ உம் ஒரு தருக்க அடிகோளாகவோ, $\Gamma$ வின் !!a{element} ஆகவோ,
+      முந்தைய !!{formula}s இலிருந்து மோடஸ் போனென்ஸ் மூலம் பின்தொடர்வதாகவோ
+      இருக்குமாறு $!A_1$, \dots,~$!A_n$ என்ற முடிவுறு !!{formula}s தொடர்
+      உள்ளது. $\Gamma$ வில் உள்ள அந்த $!A_i$ களையே~$\Gamma_0$ என்க.
+      அப்போது அந்த !!{derivation} ஆனது~$\Gamma_0$ இலிருந்தும்
+      !!a{derivation}; எனவே $\Gamma_0 \Proves !A$.
+    \item இது $!A \ident \lfalse$ என்ற சிறப்புநிலையில் (1) இன்
+      எதிர்மறைநேர்மாற்று.
+\end{enumerate}
+\end{proof}
+
+\end{document}

@@ -1,0 +1,53 @@
+% Part: first-order-logic
+% Chapter: model-theory
+% Section: substructures
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0185-S01
+
+\olfileid{mod}{bas}{sub}
+\olsection{உட்\printtoken{p}{structure}}
+
+!!a{structure}~$\Struct{M}$ இன் !!{domain} மற்றொரு~$\Struct{M'}$
+இன் உட்கணமாக இருக்கலாம். ஆனால் $\Domain{M} \subseteq \Domain{M'}$
+என்பதுடன், குறைந்தபட்சம் பொதுப் பகுதியான~$\Domain{M}$ மீது மொழியின்
+குறியீடுகளை எவ்வாறு பொருள்கொள்கின்றன என்பதிலும் $\Struct{M}$ மற்றும்
+$\Struct{M'}$ ``உடன்பட்டால்'' மட்டுமே, $\Struct{M}$ ஐ
+$\Struct{M'}$ இன் ``பகுதி'' என்று கருத வேண்டும்.
+
+\begin{defn}
+\ollabel{defn:substructure}
+ஒரே மொழி~$\Lang L$ க்கான !!{structure}s $\Struct M$ மற்றும்
+$\Struct M'$ கொடுக்கப்பட்டால், பின்வருபவை பொருந்தினால், எனில் மட்டுமே,
+$\Struct M$ ஐ $\Struct M'$ இன் \emph{உட்!!{structure}} என்றும்,
+$\Struct M'$ ஐ $\Struct M$ இன் \emph{நீட்சி} என்றும் அழைக்கிறோம்;
+இதை $\Struct M \substruct \Struct M'$ என எழுதுகிறோம்:
+\begin{enumerate}
+\item $\Domain{M} \subseteq \Domain{M'}$,
+\item ஒவ்வொரு மாறிலி $c \in \Lang L$ க்கும், $\Assign{c}{M} =
+    \Assign{c}{M'}$;
+\item ஒவ்வொரு $n$-இட !!{function} $f \in \Lang L$ க்கும்,
+  எல்லா $a_1$, \dots, $a_n \in \Domain{M}$ க்கும்
+  $\Assign{f}{M}(a_1, \dots, a_n) = \Assign{f}{M'}(a_1, \dots, a_n)$.
+\item ஒவ்வொரு $n$-இட !!{predicate} $R \in \Lang L$ க்கும்,
+  எல்லா $a_1$, \dots, $a_n \in \Domain{M}$ க்கும், $\langle
+  a_1, \dots, a_n\rangle \in \Assign{R}{M}$ எனில், எனில் மட்டுமே,
+  $\langle a_1, \dots, a_n\rangle \in \Assign{R}{M'}$.
+\end{enumerate}
+\end{defn}
+
+\begin{rem}
+\ollabel{rem:substructure}
+மொழியில் மாறிலிகளோ !!{function}s ஓ இல்லையெனில், எந்த $N
+\subseteq \Domain{M}$ உம், $\Assign{R}{N} =
+\Assign{R}{M} \cap N^n$ என்று வைப்பதன் மூலம், !!{domain}
+~$\Domain{N} = N$ உடைய $\Struct M$ இன் உட்!!{structure}
+~$\Struct{N}$ ஒன்றைத் தீர்மானிக்கிறது.
+\end{rem}
+
+% இதைப் பற்றி ஏதேனும் நிரூபிக்கவா? எடுத்துக்காட்டுகள்?
+
+\end{document}

@@ -1,0 +1,97 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: coding-formulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0284-S01
+
+\olfileid{inc}{art}{frm}
+\olsection{\printtoken{P}{formula}களைக் குறியீடாக்குதல்}
+
+$\fn{Term}(x)$ என்ற தொடர்பை முதன்மை மீள்வரையறை முறையில் வரையறுத்தவுடன்,
+!!{formula}s க்கு ஒத்த $\fn{Frm}(x)$ என்ற தொடர்பையும் முதன்மை மீள்வரையறை
+முறையில் வரையறுக்க அதைப் பயன்படுத்தலாம்.
+
+\begin{prop}
+$x$ ஆனது ஓர் அணு !!{formula} வின் கோடல் எண்ணாக இருந்தால், அப்போதும்
+அப்போது மட்டுமே பொருந்தும் $\fn{Atom}(x)$ என்ற தொடர்பு முதன்மை
+மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+பின்வருவனவற்றுள் ஒன்று பொருந்தினால், அப்போதும் அப்போது மட்டுமே, $x$ ஆனது
+ஓர் அணு !!{formula} வின் கோடல் எண்ணாகும்:
+\begin{enumerate}
+\item ஒவ்வொரு $i < n$ க்கும் $\fn{Term}((z)_i)$ ஆகவும், $x = $
+\[
+\Gn{\Obj P^n_j(} \concat \fn{flatten}(z) \concat \Gn{)}.
+\]
+  ஆகவும் இருக்குமாறு $n$, $j < x$, மற்றும் $z < x$ உள்ளன.
+\item $\fn{Term}(z_1)$, $\fn{Term}(z_2)$, மற்றும் $x = $
+\[
+\Gn{{\eq}(} \concat z_1 \concat \Gn{,} \concat z_2 \concat{\Gn{)}}.
+\]
+  ஆக இருக்குமாறு $z_1, z_2 < x$ உள்ளன.
+  \tagitem{prvFalse}{$x = \Gn{\lfalse}$.}{}
+  \tagitem{prvTrue}{$x = \Gn{\ltrue}$.}{}
+\end{enumerate}
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:frm-primrec}
+$x$ ஆனது !!a{formula} வின் கோடல் எண்ணாக இருந்தால், அப்போதும் அப்போது
+மட்டுமே பொருந்தும் $\fn{Frm}(x)$ என்ற தொடர்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+குறிகளின் ஒரு தொடர்~$s$ !!a{formula} ஆக இருந்தால், அப்போதும் அப்போது
+மட்டுமே, $s_0$, \dots, $s_{k-1} = s$ என்ற !!{formula} களின் அமைப்புத்
+தொடர் ஒன்று இருக்கும்; அமைப்புவிதிகளின்படி அணு !!{formula}s இலிருந்து~$s$
+எவ்வாறு அமைக்கப்பட்டது என்பதை அது பதிவுசெய்யும். ஒவ்வொரு $s_i$ இன்
+குறியீடும் (உண்மையில் $\tuple{s_0, \dots, s_{k-1}}$ என்ற தொடரின்
+குறியீட்டின் குறியீடும்)~$s$ இன் குறியீடான~$x$ ஐவிடச் சிறியது.
+\end{proof}
+
+\begin{prob}
+\olref[inc][art][frm]{prop:frm-primrec} க்கு விரிவான நிறுவலைத் தருக;
+அதில் \olref[inc][art][trm]{prop:term-primrec} இன் முதல் நிறுவலைப்
+பின்பற்றுக.
+\end{prob}
+
+\begin{prop}
+\ollabel{prop:freeocc-primrec}
+கோடல் எண்~$x$ கொண்ட வாய்பாட்டின் $i$-ஆம் குறி, கோடல் எண்~$z$ கொண்ட
+மாறியின் ஒரு கட்டிலா நிகழ்வாக இருந்தால், அப்போதும் அப்போது மட்டுமே பொருந்தும்
+$\fn{FreeOcc}(x, z, i)$ என்ற தொடர்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[inc][art][frm]{prop:freeocc-primrec} ஐ நிறுவுக. !!a{formula} வின்
+எந்த உட்தொடர் !!a{formula} ஆக இருக்கிறதோ, அது அதன் ஓர் உட்-!!{formula}
+என்ற உண்மையை நீங்கள் பயன்படுத்தலாம்.
+\end{prob}
+
+\begin{prop}
+$x$~ஆனது !!a{sentence} இன் கோடல் எண்ணாக இருந்தால், அப்போதும் அப்போது
+மட்டுமே பொருந்தும் $\fn{Sent}(x)$ என்ற பண்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+ஒரு !!{sentence} என்பது !!^{variable}s இன் கட்டிலா நிகழ்வுகள் இல்லாத
+!!a{formula}. ஆகவே, பின்வருவது பொருந்தினால், அப்போதும் அப்போது மட்டுமே,
+$\fn{Sent}(x)$ பொருந்தும்:
+\begin{multline*}
+\bforall{i<\len{x}}{\bforall{z<x}{}}\\
+(\bexists{j<z}{z=\Gn{\Obj v_j}} \lif \lnot\fn{FreeOcc}(x,z,i)).
+\end{multline*}
+\end{proof}
+
+
+\end{document}

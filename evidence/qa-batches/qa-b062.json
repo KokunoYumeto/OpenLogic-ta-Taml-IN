@@ -1,0 +1,156 @@
+{
+  "batch_id": "TA-B062",
+  "units": [
+    {
+      "unit_id": "OLP-0141",
+      "source_sha256": "13404c0d5539db8f9ec7ac2205560b802e61e18623610a74d945c21f64e71884",
+      "translation_sha256": "6cdcce64612755c39123be9a99defe983c6c6c490d7570043b7aeb55f5e22aad",
+      "source_bytes": 2840,
+      "translation_bytes": 6820,
+      "source_coverage_complete": true,
+      "segments": 2,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0142",
+      "source_sha256": "359d5608df5b55db1a6ec96c390c2baeecc87cd9fa20d026a827afbfe3cb1ff4",
+      "translation_sha256": "c976405d31a7f8b7e682c0a4c78ee341f5fb4426608a89c1dfb12b89f61df929",
+      "source_bytes": 4276,
+      "translation_bytes": 8950,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "idf",
+        "include",
+        "ind",
+        "logic",
+        "mth",
+        "open",
+        "section",
+        "sti"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0143",
+      "source_sha256": "01faa20f2f8d843d47cb7ca05e57a665ad3cd43f288b9504910a8e43bbad0c18",
+      "translation_sha256": "8c5505dabb71744e022031bd09e2dbb3b3dee51b98982466f621ed1b38917c27",
+      "source_bytes": 5894,
+      "translation_bytes": 13711,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$3$"
+      ],
+      "extra_math": [
+        "$0$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INT-004",
+          "unit_id": "OLP-0143",
+          "kind": "predicate-arity-wording",
+          "action": "Retained the source’s distinction that predicates, rather than constants, may have more than one place.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen overview says constants can have more than one place, although the surrounding sentence and later general semantics make predicates the intended multi-place symbols.",
+          "chosen_treatment": "தமிழ் பதிப்பு பல இடங்களைக் கொண்டிருக்கக்கூடிய குறிகளாக பயனிலைக் குறிகளைத் தெளிவுபடுத்துகிறது; மாறிலிக் குறிகள் தனித்தனி பெயரிடும் குறிகளாகவே உள்ளன.",
+          "alternatives_considered": "Literal translation of the constant-arity slip; silently deleting the general-case qualification.",
+          "rationale": "Predicate arity is required by the immediately following general case and by every later n-place predicate clause; constants are interpreted as individual objects in this simple language.",
+          "precise_review_question": "Does the repaired wording state the intended generalization without changing the simple three-component structure definition?",
+          "location_needle": "SOURCE CORRECTION TA-INT-004"
+        },
+        {
+          "audit_id": "TA-INT-005",
+          "unit_id": "OLP-0143",
+          "kind": "domain-example-value",
+          "action": "Changed the assignment example’s impossible value 3 to 0, matching the displayed domain {0,1,2}.",
+          "expected_missing_math": [
+            "$3$"
+          ],
+          "expected_extra_math": [
+            "$0$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source displays Domain(M)={0,1,2} but says variable assignments choose one of 1, 2, or 3.",
+          "chosen_treatment": "தமிழ் பதிப்பு ஒரே எடுத்துக்காட்டில் காட்டப்பட்ட பொருட்களத்துடன் ஒத்த 0, 1, 2 மதிப்புகளைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Preserving 3 and leaving the assignment outside the displayed domain.",
+          "rationale": "A variable assignment must map into Domain(M); replacing 3 by 0 is the unique direct repair consistent with the explicitly displayed three-element domain.",
+          "precise_review_question": "Does the replacement make the assignment example type-correct while preserving every later witness value and satisfaction claim?",
+          "location_needle": "SOURCE CORRECTION TA-INT-005"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

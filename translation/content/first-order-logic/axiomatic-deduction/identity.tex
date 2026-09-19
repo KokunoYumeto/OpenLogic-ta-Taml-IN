@@ -1,0 +1,63 @@
+% SEGMENT OLP-0125-S01
+% Part: first-order-logic
+% Chapter: axiomatic-proofs
+% Section: identity
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{ide}
+
+\olsection{\usetoken{S}{identity} கொண்ட \usetoken{P}{derivation}}
+
+% SEGMENT OLP-0125-S02
+!!{derivation}s இல்~$\eq$ ஐ இடம்பெறச் செய்ய, புதிய அடிகோள் திட்டங்களைச்
+சேர்க்கிறோம். !!{derivation} மற்றும்~$\Proves$ ஆகியவற்றின் வரையறை மாறாமல்
+இருக்கும்; புதிய அடிகோள்களையும் இப்போது அனுமதிக்கிறோம்.
+
+% SEGMENT OLP-0125-S03
+\begin{defn}[!!{identity}க்கான அடிகோள்கள்]
+\begin{align}
+\ollabel{ax:id1} & \eq[t][t], \\
+\ollabel{ax:id2} & \eq[t_1][t_2] \lif (!B(t_1) \lif
+  !B(t_2)),
+\end{align}
+எந்த மூடிய சொற்கள் $t$, $t_1$, $t_2$ ஆகியவற்றுக்கும்.
+\end{defn}
+
+% SEGMENT OLP-0125-S04
+\begin{prop}\ollabel{prop:sound}
+  \olref{ax:id1}, \olref{ax:id2} ஆகிய அடிகோள்கள் செல்லுபடியானவை.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[fol][axd][ide]{prop:sound} ஐ நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0125-S05
+\begin{prop}\ollabel{prop:iden1}
+ % SOURCE CORRECTION TA-AXD-008: retain the closed-term scope of the identity axioms.
+ எந்த மூடிய சொல்~$t$ மற்றும் கணம்~$\Gamma$ க்கும் $\Gamma \Proves \eq[t][t]$.
+\end{prop}
+
+% SEGMENT OLP-0125-S06
+\begin{prop}\ollabel{prop:iden2}
+  கீழுள்ள இரு சொற்களும் மூடியவை என்றும், $\Gamma \Proves !A(t_1)$ மற்றும் $\Gamma \Proves
+  \eq[t_1][t_2]$ எனில், $\Gamma \Proves !A(t_2)$.
+\end{prop}
+
+\begin{proof}
+பின்வரும் !!{formula}
+\[
+(\eq[t_1][t_2] \lif (!A(t_1) \lif !A(t_2)))
+\]
+ஆனது~\olref{ax:id2} இன் ஒரு நிகழ்வு. \MP{} ஐ இருமுறை பயன்படுத்தினால்
+முடிவு பின்தொடர்கிறது.
+\end{proof}
+
+\end{document}

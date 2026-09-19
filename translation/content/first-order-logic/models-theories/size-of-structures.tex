@@ -1,0 +1,76 @@
+% Part: first-order-logic
+% Chapter: models-theories
+% Section: size-of-structures
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0173-S01
+
+\olfileid{fol}{mat}{siz}
+
+\olsection{\printtoken{P}{structure} இன் அளவை வெளிப்படுத்துதல்}
+
+\begin{explain}
+ஒரு மொழியின் தருக்கமல்லாக் குறியீடுகளைப் பயன்படுத்தாமலேயே
+கட்டமைப்புகளின் சில பண்புகளை வெளிப்படுத்த முடியும். எடுத்துக்காட்டாக,
+ஒரு !!a{structure} இன், அதாவது அந்த !!{structure} இன், !!{domain} இல்
+ஒரு குறிப்பிட்ட எண்ணிக்கை~$n$
+!!{element}s குறைந்தது, அதிகபட்சம், அல்லது சரியாக இருந்தால் மட்டுமே
+அதில் மெய்யாகும் !!{sentence}s உள்ளன.
+\end{explain}
+
+\begin{prop}
+!!{sentence}
+\begin{multline*}
+  !A_{\ge n} \ident \lexists[x_1][\lexists[x_2][\dots\lexists[x_n][{}]]]\\
+  \begin{aligned}
+  (\eq/[x_1][x_2] \land {}
+  \eq/[x_1][x_3] \land \eq/[x_1][x_4] \land \dots \land \eq/[x_1][x_n] \land {}\\
+\eq/[x_2][x_3] \land \eq/[x_2][x_4] \land \dots \land {} \eq/[x_2][x_n] \land {} \\
+\vdots\\
+\eq/[x_{n-1}][x_n])
+\end{aligned}
+\end{multline*}
+ஆனது !!a{structure}~$\Struct M$ இல் மெய் iff $\Domain M$ இல் குறைந்தது
+$n$ !!{element}s உள்ளன. இதனால், $\Sat{M}{\lnot !A_{\ge n+1}}$ iff
+$\Domain M$ இல் அதிகபட்சம்~$n$ !!{element}s உள்ளன.
+
+\end{prop}
+
+\begin{prop}
+!!{sentence}
+\begin{multline*}
+!A_{= n} \ident \lexists[x_1][\lexists[x_2][\dots\lexists[x_n][{}]]] \\
+\begin{aligned}
+  (\eq/[x_1][x_2] \land {}
+  \eq/[x_1][x_3] \land \eq/[x_1][x_4] \land \dots \land \eq/[x_1][x_n] \land {}\\
+\eq/[x_2][x_3] \land \eq/[x_2][x_4] \land \dots \land {} \eq/[x_2][x_n] \land {} \\
+\vdots\\
+\eq/[x_{n-1}][x_n] \land {} \\
+\lforall[y][(\eq[y][x_1] \lor \dots \lor \eq[y][x_n]]))
+\end{aligned}
+\end{multline*}
+ஆனது !!a{structure}~$\Struct M$ இல் மெய் iff $\Domain M$ இல் சரியாக
+$n$ !!{element}s உள்ளன.
+\end{prop}
+
+\begin{prop}
+ஒரு !!{structure} முடிவிலியானது iff அது பின்வருவதன் மாதிரி:
+\[
+\{!A_{\ge 1}, !A_{\ge 2}, !A_{\ge 3}, \dots \}.
+\]
+\end{prop}
+
+~$\Struct M$ இல் மெய் iff $\Domain M$ முடிவிலியானது என்று அமையும்
+ஒரே முற்றிலும் தருக்க வாக்கியம் எதுவுமில்லை. ஆனால் முடிவிலி மாதிரிகளை
+மட்டுமே கொண்ட, தருக்கமல்லாத !!{predicate}s உடைய !!{sentence}s ஐ வழங்க
+முடியும் (ஒவ்வொரு முடிவிலி !!{structure} உம் அவற்றின் மாதிரி அல்ல).
+ஓர் இறுதிக்குட்பட்ட கட்டமைப்பாக இருத்தல் என்ற பண்பையும்,
+!!{nonenumerable} கட்டமைப்பாக இருத்தல் என்ற பண்பையும், முடிவிலா
+!!{sentence}s தொகுப்பால் கூட வெளிப்படுத்த முடியாது. இவ்வுண்மைகள்
+இறுதிக்குட்பட்ட தன்மை மற்றும் L\"owenheim--Skolem தேற்றங்களிலிருந்து
+கிடைக்கின்றன.
+
+\end{document}

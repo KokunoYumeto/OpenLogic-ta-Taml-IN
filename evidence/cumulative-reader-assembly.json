@@ -1,0 +1,103 @@
+{
+  "schema": "openlogic-tamil-cumulative-reader-assembly/1",
+  "language": "ta-Taml-IN",
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "scope": {
+    "accepted_distinct_units": 203,
+    "component_readers": 7,
+    "pages": 384,
+    "order": "frozen-source order with accepted gaps retained"
+  },
+  "assembly": "Lossless PDF page concatenation; accepted component PDFs were not rebuilt or changed.",
+  "sections": [
+    {
+      "title": "கணங்கள், தொடர்புகள், சார்புகள் மற்றும் எண்கணிதக் கட்டமைப்புகள்",
+      "source_path": "readers/sets-functions-relations-ta-Taml-IN.pdf",
+      "source_bytes": 810122,
+      "source_sha256": "e845fd5f83a95dbb060477a82caac74e2b8c51a1a407bf862ddee15defbdba83",
+      "units": 51,
+      "pages": 99,
+      "first_cumulative_page": 1,
+      "last_cumulative_page": 99,
+      "source_qa": "SFR-RENDER-QA.json",
+      "source_qa_sha256": "bc4310da73bd3e8131778ff092692b180250e3b0065c838f9a637bddcdfdacb9"
+    },
+    {
+      "title": "நிறுவல் முறைமைகள்: தொடர்கணிதம், இயற்கை வருவித்தல், அட்டவணை மரங்கள்",
+      "source_path": "readers/proof-systems-sequent-natural-deduction-tableaux-ta-Taml-IN.pdf",
+      "source_bytes": 522878,
+      "source_sha256": "ee181a7a52686d44422977d32f935c977f829cb6f0673ac7b82fd881de174d7d",
+      "units": 49,
+      "pages": 89,
+      "first_cumulative_page": 100,
+      "last_cumulative_page": 188,
+      "source_qa": "PROOF-SYSTEMS-TABLEAUX-RENDER-QA.json",
+      "source_qa_sha256": "af3ce71454f334fd4b1f742c56b434d1bb79b5d31427a0af1b3d0841271963f0"
+    },
+    {
+      "title": "அடிகோள் வருவித்தல்",
+      "source_path": "readers/axiomatic-deduction-ta-Taml-IN.pdf",
+      "source_bytes": 170834,
+      "source_sha256": "243495e1e9570d8fa1aa8e1cd5566e69a862102c966bda37d93d77e5af860789",
+      "units": 14,
+      "pages": 17,
+      "first_cumulative_page": 189,
+      "last_cumulative_page": 205,
+      "source_qa": "AXIOMATIC-DEDUCTION-RENDER-QA.json",
+      "source_qa_sha256": "6d3065c6941eaa7991ae53fc9c2a5d5d41980e3b8918fef7c03733a3c2f5fe1e"
+    },
+    {
+      "title": "கணிப்புத்தன்மை",
+      "source_path": "readers/computability-ta-Taml-IN.pdf",
+      "source_bytes": 486347,
+      "source_sha256": "d6b579b11ecb9b6cbc4dea3bb35dc8b9dc6d31951634b8762ee3c35da693f642",
+      "units": 44,
+      "pages": 63,
+      "first_cumulative_page": 206,
+      "last_cumulative_page": 268,
+      "source_qa": "COMPUTABILITY-RENDER-QA.json",
+      "source_qa_sha256": "14ae9f433abedc14be3f587226847c6762bf8520e0b5ec4d63bc2adb21258201"
+    },
+    {
+      "title": "டியூரிங் பொறிகள்",
+      "source_path": "readers/turing-machines-ta-Taml-IN.pdf",
+      "source_bytes": 432432,
+      "source_sha256": "7085516bd84bfdc89e43c2f2454fb71cd4e1dd0c84b55df3f136f0e2cfac17bd",
+      "units": 22,
+      "pages": 50,
+      "first_cumulative_page": 269,
+      "last_cumulative_page": 318,
+      "source_qa": "TURING-MACHINES-RENDER-QA.json",
+      "source_qa_sha256": "38290c8229fefe8a1c8b66f5cca01d2c7a1f57c34744f11a8003c76da038c069"
+    },
+    {
+      "title": "முழுமையின்மையும் எண்கணிதமாக்கலும்",
+      "source_path": "readers/incompleteness-arithmetization-ta-Taml-IN.pdf",
+      "source_bytes": 353792,
+      "source_sha256": "4f985c31276f63792c1fcfd0b8ddd1506d1239ed389957f8ce15066ec35488db",
+      "units": 12,
+      "pages": 40,
+      "first_cumulative_page": 319,
+      "last_cumulative_page": 358,
+      "source_qa": "INCOMPLETENESS-ARITHMETIZATION-RENDER-QA.json",
+      "source_qa_sha256": "a92d06cac0900a229133e21db20582270e939f8de09719002e5fde2259e5e19e"
+    },
+    {
+      "title": "ராபின்சன் Q இல் பிரதிநிதித்துவப்படுத்தல்",
+      "source_path": "readers/representability-in-q-ta-Taml-IN.pdf",
+      "source_bytes": 267166,
+      "source_sha256": "e8512fe714e84c84ec5d4fd4cdcf7e126670762d3b5cdfe18c39eb65ef562b10",
+      "units": 11,
+      "pages": 26,
+      "first_cumulative_page": 359,
+      "last_cumulative_page": 384,
+      "source_qa": "REPRESENTABILITY-IN-Q-RENDER-QA.json",
+      "source_qa_sha256": "b6d9f9e100bc3b6529357df03724debe350a071f1fe797866fb77d3245681d79"
+    }
+  ],
+  "output": {
+    "path": "readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf",
+    "bytes": 3481125,
+    "sha256": "1b5f3bd1b1395b69a503665ac86e909dd1339ef954393375a4aa48708f70846b"
+  }
+}

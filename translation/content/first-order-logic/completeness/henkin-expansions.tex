@@ -1,0 +1,235 @@
+% SEGMENT OLP-0130-S01
+% Part: first-order-logic
+% Chapter: completeness
+% Section: henkin-expansion
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{com}{hen}
+
+\olsection{ஹென்கின் விரிவாக்கம்}
+
+\begin{explain}
+நிறைவு தேற்றத்தை நிறுவுவதிலுள்ள சவாலின் ஒரு பகுதி இதுதான்: நிறைவான முரணற்ற
+கணம்~$\Gamma$ இலிருந்து நாம் கட்டமைக்கும் மாதிரி, $\Gamma$ விலுள்ள எல்லா
+அளவையிட்ட !!{formula}s ஐயும் மெய்யாக்க வேண்டும். இதை உறுதிசெய்ய லியோன்
+ஹென்கின் உருவாக்கிய ஓர் உத்தியைப் பயன்படுத்துகிறோம். முடிவிலா எண்ணிக்கையிலான
+!!{constant}s ஐ மொழியுடன் சேர்த்து அதை விரிவாக்குவதே இந்த உத்தியின் சாரம்.
+மேலும், $!A(x)$ என்ற ஒரு கட்டற்ற !!{variable} கொண்ட ஒவ்வொரு !!{formula}
+க்கும் பின்வரும் வடிவிலுள்ள ஒரு வாய்பாட்டைச் சேர்க்கிறோம்:
+\iftag{prvEx}
+      {$\lexists[x][!A(x)] \lif !A(c)$}
+      {$\lnot\lforall[x][!A(x)] \lif \lnot !A(c)$},
+இங்கு $c$ என்பது புதிய !!{constant}s இல் ஒன்று. $\Gamma$ ஐ நிறைவுறுத்தும்
+!!{structure} ஐக் கட்டமைக்கும்போது, புதிய மாறிலிக் குறிகளுள்
+\iftag{prvEx}
+{ஒவ்வொரு மெய்யான இருப்பளவை வாக்கியத்துக்கும் ஒரு சான்று இருப்பதை}
+{ஒவ்வொரு பொய்யான அனைத்தளவை வாக்கியத்துக்கும் ஓர் எதிரெடுத்துக்காட்டு இருப்பதை}
+இது உறுதிசெய்யும்.
+\end{explain}
+
+% SEGMENT OLP-0130-S02
+\begin{prop}
+\ollabel{prop:lang-exp}
+$\Lang L$ இல் $\Gamma$ முரணற்றது என்றும், புதிய !!{constant}s
+$\Obj d_0$, $\Obj d_1$, \dots{} கொண்ட !!a{denumerable} கணத்தை~$\Lang L$
+உடன் சேர்த்ததால் $\Lang L'$ கிடைக்கிறது என்றும் கொள்க. அப்போது~$\Lang L'$
+இலும் $\Gamma$ முரணற்றது.
+\end{prop}
+
+% SEGMENT OLP-0130-S03
+\begin{defn}[செறிவுற்ற கணம்]
+$\Lang {L}$ என்ற மொழியின் !!{formula}s கொண்ட ஒரு கணம்~$\Gamma$, ஒரு
+கட்டற்ற !!{variable}~$x$ ஐக் கொண்ட ஒவ்வொரு
+!!{formula}~$!A(x) \in \Frm[L]$ க்கும், பின்வரும் நிபந்தனையை நிறைவுசெய்யும்
+!!a{constant}~$c \in \Lang{L}$ ஒன்று இருந்தால், அப்போதும் அப்போது மட்டுமே
+\emph{செறிவுற்றது}:
+\iftag{prvEx}
+      {$\lexists[x][!A(x)] \lif !A(c) \in \Gamma$}
+      {$\lnot\lforall[x][!A(x)] \lif \lnot !A(c) \in \Gamma$}.
+\end{defn}
+
+% SEGMENT OLP-0130-S04
+பின்வரும் வரையறையை அடுத்த தேற்றத்தின் நிறுவலில் பயன்படுத்துவோம்.
+
+\begin{defn}
+\ollabel{defn:henkin-exp}
+$\Lang L'$ ஆனது \olref{prop:lang-exp} இல் உள்ளவாறு இருக்கட்டும். ஒரே மாறி
+($x_i$) கட்டற்று வரும்~$\Lang L'$ இன் எல்லா
+!!{formula}s~$!A_i(x_i)$ களையும் $!A_0(x_0)$, $!A_1(x_1)$, \dots{} என
+எண்ணிடுவோம். !!{sentence}s~$!D_n$ ஐ~$n$ மீது தொகுத்தறிதலால் வரையறுப்போம்.
+
+$\Lang{L}$ உடன் நாம் சேர்த்த $\Obj d_i$ களில், $!A_0(x_0)$ இல் வராத முதல்
+!!{constant} ஐ~$c_0$ என்க. $!D_0$, \dots,~$!D_{n-1}$ ஏற்கெனவே
+வரையறுக்கப்பட்டுள்ளன எனக் கொண்டு, $!D_0$, \dots,~$!D_{n-1}$ இலும்
+$!A_n(x_n)$ இலும் வராத புதிய !!{constant}s~$\Obj d_i$ இல் முதலில் வருவதை
+$c_n$ என்க.
+
+இப்போது $!D_{n}$ ஐப் பின்வரும் !!{formula} என வரையறுக்கவும்:
+\iftag{prvEx}
+{$\lexists[x_{n}][!A_{n}(x_{n})] \lif
+  !A_{n}(c_{n})$}{$\lnot\lforall[x_{n}][!A_{n}(x_{n})] \lif \lnot
+  !A_{n}(c_{n})$}.
+\end{defn}
+
+% SEGMENT OLP-0130-S05
+\begin{lem}
+\ollabel{lem:henkin}
+ஒவ்வொரு முரணற்ற கணம்~$\Gamma$ ஐயும் செறிவுற்ற முரணற்ற கணம்~$\Gamma'$ ஆக
+விரிவாக்கலாம்.
+\end{lem}
+
+\begin{proof}
+$\Lang{L}$ என்ற மொழியில் முரணற்ற வாக்கியக் கணம்~$\Gamma$ தரப்பட்டிருக்கிறது
+என்க. புதிய !!{constant}s கொண்ட !!a{denumerable} கணத்தைச் சேர்த்து
+மொழியை~$\Lang{L'}$ ஆக விரிவாக்குக. \olref{prop:lang-exp} படி, விரிவான
+மொழியிலும் $\Gamma$ முரணற்றதாகவே உள்ளது. மேலும், $!D_i$ ஆனது
+\olref{defn:henkin-exp} இல் உள்ளவாறு இருக்கட்டும். பின்வருமாறு வைக்கவும்:
+\begin{align*}
+\Gamma_0 & = \Gamma \\
+\Gamma_{n+1} & = \Gamma_n \cup \{!D_n \}
+\end{align*}
+அதாவது, $\Gamma_{n+1} = \Gamma \cup \{ !D_0, \dots, !D_n \}$; மேலும்
+$\Gamma' = \bigcup_{n} \Gamma_n$ என்க. $\Gamma'$ செறிவுற்றது என்பது
+தெளிவு.
+
+% SEGMENT OLP-0130-S06
+$\Gamma'$ முரணுடையது எனில், ஏதோ $n$ க்கு $\Gamma_n$ முரணுடையதாக இருக்கும்
+(பயிற்சி: ஏன் என்று விளக்குக). ஆகவே $\Gamma'$ முரணற்றது என்பதைக் காட்ட,
+ஒவ்வொரு கணம்~$\Gamma_n$ உம் முரணற்றது என்பதை~$n$ மீது தொகுத்தறிதலால்
+காட்டினால் போதும்.
+
+தொகுத்தறிதலின் அடிநிலை, $\Gamma_0 = \Gamma$ முரணற்றது என்ற கூற்றே; இது
+தேற்றத்தின் கருதுகோள். தொகுத்தறிதல் படிக்கு, $\Gamma_{n}$ முரணற்றது என்றும்,
+ஆனால் $\Gamma_{n+1} = \Gamma_n \cup \{!D_n\}$ முரணுடையது என்றும் கொள்வோம்.
+
+% SEGMENT OLP-0130-S07
+$!D_n$ என்பது
+\iftag{prvEx}
+{$\lexists[x_{n}][!A_{n}(x_n)] \lif !A_{n}(c_{n})$}
+{$\lnot\lforall[x_{n}][!A_{n}(x_n)] \lif \lnot !A_{n}(c_{n})$}
+என்பதை நினைவுகூர்க; இங்கு $!A_n(x_n)$ ஆனது~$\Lang{L'}$ இன் !!a{formula};
+அதில் $x_n$ என்ற மாறி மட்டுமே கட்டற்று வருகிறது. $c_n$ ஐ நாம் தேர்ந்த
+முறையால் (காண்க \olref{defn:henkin-exp}), $c_n$ ஆனது~$!A_n(x_n)$ இலும்
+$\Gamma_n$ இலும் வராது.
+
+% SEGMENT OLP-0130-S08
+$\Gamma_n \cup \{!D_n\}$ முரணுடையது எனில், $\Gamma_n
+\Proves \lnot !D_n$; ஆகவே பின்வருவன இரண்டும் அமையும்:
+\iftag{prvEx}{
+\[
+\Gamma_n \Proves \lexists[x_n][!A_n(x_n)]
+\qquad
+\Gamma_n \Proves \lnot !A_n(c_n)
+\]}{
+\[
+\Gamma_n \Proves \lnot\lforall[x_n][!A_n(x_n)]
+\qquad
+\Gamma_n \Proves !A_n(c_n)
+\]}
+$c_n$ ஆனது $\Gamma_n$ இலும்~$!A_n(x_n)$ இலும் வராததால்,
+\tagrefs{prfAX/{fol:axd:qpr:thm:strong-generalization},prfSC/{fol:seq:qpr:thm:strong-generalization},prfND/{fol:ntd:qpr:thm:strong-generalization},prfTab/{fol:tab:qpr:thm:strong-generalization}}
+பொருந்தும். பின்வருவனவற்றிலிருந்து
+\iftag{prvEx}
+{$\Gamma_n \Proves \lnot !A_n(c_n)$}
+{$\Gamma_n \Proves !A_n(c_n)$},
+பின்வருவனவற்றைப் பெறுகிறோம்:
+\iftag{prvEx}
+{$\Gamma_n \Proves \lforall[x_n][\lnot !A_n(x_n)]$}
+{$\Gamma_n \Proves \lforall[x_n][!A_n(x_n)]$}.
+எனவே, பின்வரும் இரு கூற்றுகளும் நமக்குக் கிடைக்கின்றன:
+\iftag{prvEx}
+{$\Gamma_n \Proves \lexists[x_n][!A_n(x_n)]$ மற்றும்
+$\Gamma_n \Proves \lforall[x_n][\lnot !A_n(x_n)]$}
+{$\Gamma_n \Proves \lnot\lforall[x_n][!A_n(x_n)]$ மற்றும்
+$\Gamma_n \Proves \lforall[x_n][!A_n(x_n)]$};
+ஆகவே $\Gamma_n$ தானே முரணுடையது.
+
+% SEGMENT OLP-0130-S09
+\iftag{prvEx}
+{(பின்வருவதைக் கவனிக்கவும்:
+\iftag{prvAll}
+{$\lforall[x_n][\lnot !A_n(x_n)] \Proves
+  \lnot\lexists[x_n][!A_n(x_n)]$}
+{$\lforall[x_n][\lnot !A_n]$ என்பது
+  $\lnot\lexists[x_n][\lnot\lnot !A_n(x_n)]$ என வரையறுக்கப்படுகிறது; மேலும்
+  $\lnot\lexists[x_n][\lnot\lnot !A_n(x_n)] \Proves
+  \lnot\lexists[x_n][!A_n(x_n)]$}.)}{}
+இது ஒரு முரண்பாடு: $\Gamma_n$ முரணற்றது எனக் கொண்டிருந்தோம். எனவே
+$\Gamma_n \cup \{ !D_n\}$ முரணற்றது.
+\end{proof}
+
+% SEGMENT OLP-0130-S10
+\begin{explain}
+செறிவுற்ற \emph{நிறைவான}, முரணற்ற கணங்கள் பின்வரும் பண்பைக் கொண்டுள்ளன
+என்பதை இப்போது காட்டுவோம்: \iftag{prvAll}{ஓர் அனைத்தளவையிட்ட !!{sentence}
+அதில் இருக்கும் அப்போதும் அப்போது மட்டுமே அதன் எல்லா நிகழ்வுகளும் அதில்
+இருக்கும்}{}\iftag{defAll,defEx}{}{; மேலும் }\iftag{prvAll}{ஓர்
+இருப்பளவையிட்ட !!{sentence} அதில் இருக்கும் அப்போதும் அப்போது மட்டுமே அதன்
+குறைந்தது ஒரு நிகழ்வு அதில் இருக்கும்}{}. நிறைவான, முரணற்ற, செறிவுற்ற ஒரு
+கணத்திலிருந்து நாம் உருவாக்கும் !!{structure} ஆனது அதன் எல்லா அளவையிட்ட
+வாக்கியங்களையும் மெய்யாக்குகிறது என்பதைக் காட்ட இதைப் பயன்படுத்துவோம்.
+\end{explain}
+
+% SEGMENT OLP-0130-S11
+\begin{prop}\ollabel{prop:saturated-instances}
+$\Gamma$ நிறைவானதாகவும், முரணற்றதாகவும், செறிவுற்றதாகவும் உள்ளது என்க.
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$\lexists[x][!A(x)] \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+  குறைந்தது ஒரு மூடிய சொல்~$t$ க்கு $!A(t) \in \Gamma$.}{}
+\tagitem{prvAll}{$\lforall[x][!A(x)] \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+  எல்லா மூடிய சொற்கள்~$t$ க்கும் $!A(t) \in \Gamma$.}{}
+\end{tagenumerate}
+\end{prop}
+
+% SEGMENT OLP-0130-S12
+\begin{proof}
+  \begin{tagenumerate}{prvEx,prvAll}
+  \tagitem{prvEx}{%
+    \iftag{probEx}{பயிற்சி.}{முதலில் $\lexists[x][!A(x)] \in \Gamma$ என்க.
+      $\Gamma$ செறிவுற்றது ஆதலால், ஏதோ !!{constant}~$c$ க்கு
+      $(\lexists[x][!A(x)] \lif !A(c)) \in \Gamma$. பின்வரும் மேற்கோளின்
+      உருப்படி~(1) படியும்,
+      \tagrefs{prfAX/{fol:axd:ppr:prop:provability-lif},prfSC/{fol:seq:ppr:prop:provability-lif},prfND/{fol:ntd:ppr:prop:provability-lif},prfTab/{fol:tab:ppr:prop:provability-lif}},
+      \olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-prov-in} படியும்,
+      $!A(c) \in \Gamma$.
+
+    மறுதிசைக்கு செறிவுறுதல் தேவையில்லை: $!A(t) \in \Gamma$ என்க. பின்வரும்
+    மேற்கோளின் உருப்படி~(1) படி,
+      \tagrefs{prfAX/{fol:axd:qpr:prop:provability-quantifiers},prfSC/{fol:seq:qpr:prop:provability-quantifiers},prfND/{fol:ntd:qpr:prop:provability-quantifiers},prfTab/{fol:tab:qpr:prop:provability-quantifiers}},
+    $\Gamma \Proves \lexists[x][!A(x)]$. மேலும்
+    \olref[ccs]{prop:ccs}\olref[ccs]{prop:ccs-prov-in} படி,
+    $\lexists[x][!A(x)] \in \Gamma$.}}{}
+
+% SEGMENT OLP-0130-S13
+  \tagitem{prvAll}{%
+    \iftag{probAll}{பயிற்சி.}{எல்லா மூடிய சொற்கள்~$t$ க்கும்
+      $!A(t) \in \Gamma$ என்க. இதற்கு மாறாக,
+      $\lforall[x][!A(x)] \notin \Gamma$ எனக் கொள்வோம். $\Gamma$ நிறைவானது
+      ஆதலால் $\lnot\lforall[x][!A(x)] \in \Gamma$. செறிவுறுதலால், ஏதோ
+      !!{constant}~$c$ க்கு
+      \iftag{prvEx}{$(\lexists[x][\lnot !A(x)] \lif \lnot !A(c)) \in
+        \Gamma$}{$(\lnot\lforall[x][!A(x)] \lif \lnot !A(c)) \in
+        \Gamma$}. கருதுகோளின்படி $c$ ஒரு மூடிய சொல் ஆதலால்,
+      $!A(c) \in \Gamma$. ஆனால் இது $\Gamma$ ஐ முரணுடையதாக்கும்.
+      (பயிற்சி: பின்வரும் கணம் முரணுடையது என்பதைக் காட்டும் !!{derivation} ஐத்
+      தருக:
+      \[
+      \lnot \lforall[x][!A(x)],
+      \iftag{prvEx}{\lexists[x][\lnot !A(x)] \lif \lnot
+        !A(c)}{\lnot\lforall[x][!A(x)] \lif \lnot
+        !A(c)}, !A(c)
+      \]
+      )
+
+      மறுதிசைக்கு செறிவுறுதல் தேவையில்லை: $\lforall[x][!A(x)] \in \Gamma$
+      என்க. பின்வரும் மேற்கோளின் உருப்படி~(2) படி,
+      \tagrefs{prfAX/{fol:axd:qpr:prop:provability-quantifiers},prfSC/{fol:seq:qpr:prop:provability-quantifiers},prfND/{fol:ntd:qpr:prop:provability-quantifiers},prfTab/{fol:tab:qpr:prop:provability-quantifiers}},
+      $\Gamma \Proves !A(t)$. \olref[ccs]{prop:ccs} படி
+      $!A(t) \in \Gamma$.}}{}
+  \end{tagenumerate}
+\end{proof}
+
+\end{document}

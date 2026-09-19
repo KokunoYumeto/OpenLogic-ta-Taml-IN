@@ -1,0 +1,32 @@
+{
+    "schema":  "openlogic-tamil-epub-html-guard/1",
+    "mutex":  "Global\\InterlanguageTeXSlotV1",
+    "acquisition_timeout_ms":  60000,
+    "process_timeout_minutes":  12,
+    "master":  "tamil-batch001.tex",
+    "master_sha256":  "b23f9575347629a3feeeb7f6f2e955f46383f8b70a6f8f98cc275b237b45aff7",
+    "adapter_sha256":  "4591ad25214e20ff913c7d443172e4220be33ef42dc2cbaf4fd3cac01536528a",
+    "reader_slug":  "sets",
+    "converter":  "make4ht",
+    "converter_version":  "make4ht version v0.4e",
+    "options":  [
+                    "lualatex",
+                    "html5",
+                    "mathml",
+                    "charset=utf-8",
+                    "fn-in",
+                    "no-shell-escape"
+                ],
+    "started_utc":  "2026-09-12T22:11:07.8976953Z",
+    "status":  "starting",
+    "abandoned_mutex":  false,
+    "exit_code":  null,
+    "issues":  [
+
+               ],
+    "output_files":  [
+
+                     ],
+    "error":  "Exception calling \"Run\" with \"4\" argument(s): \"Captured TeX tree timeout\"",
+    "finished_utc":  "2026-09-12T22:23:08.7562673Z"
+}

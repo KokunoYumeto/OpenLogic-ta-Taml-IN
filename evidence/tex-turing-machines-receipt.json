@@ -1,0 +1,37 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-turing-machines.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-07T23:52:04.7964097Z",
+  "passes": [
+    {
+      "exit_code": 0,
+      "pass": 1,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "pass": 2,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "pass": 3,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "finished_utc": "2026-09-07T23:52:34.6224369Z"
+}

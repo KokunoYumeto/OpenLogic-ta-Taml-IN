@@ -1,0 +1,38 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-incompleteness-arithmetization.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-08T01:50:23.4031643Z",
+  "passes": [
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right."
+      ],
+      "exit_code": 0,
+      "pass": 1
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "exit_code": 0,
+      "pass": 2
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "exit_code": 0,
+      "pass": 3
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "finished_utc": "2026-09-08T01:50:36.4053454Z"
+}

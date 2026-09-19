@@ -1,0 +1,148 @@
+{
+  "schema": "openlogic-tamil-reader-render-qa/3",
+  "checked_utc": "2026-09-06T20:20:55.5358442Z",
+  "scope": {
+    "reader_units": 14,
+    "first_unit": "OLP-0112",
+    "last_unit": "OLP-0125",
+    "programme_completed_units": 122,
+    "total_frozen_units": 722,
+    "reader_contents": [
+      "axiomatic derivations and proofs",
+      "propositional and quantifier axiom systems",
+      "deduction theorems",
+      "provability and consistency",
+      "soundness",
+      "identity"
+    ]
+  },
+  "pdf": {
+    "path": "readers/axiomatic-deduction-ta-Taml-IN.pdf",
+    "bytes": 170834,
+    "sha256": "243495e1e9570d8fa1aa8e1cd5566e69a862102c966bda37d93d77e5af860789",
+    "pages": 17,
+    "all_pages_a4": true,
+    "encrypted": false,
+    "pdf_version": "1.7",
+    "metadata_title": "OpenLogic Tamil: axiomatic deduction",
+    "metadata_subject": "Machine translation; OLP-0112 through OLP-0125; 14 of 722 frozen source units",
+    "metadata_author": "OpenLogic Tamil translation programme",
+    "personal_name_absent_from_metadata": true
+  },
+  "build": {
+    "master_path": "build/tamil-axiomatic-deduction.tex",
+    "master_bytes": 5671,
+    "master_sha256": "46e63520ff2e1ab1998d5fc5ce465a342608975f72bd047ed79c6cfd747c4899",
+    "config_path": "translation/tamil-config.sty",
+    "config_sha256": "a7f9808e6a11681658b0105dee1d10c0f6f5679844cf80816abe35dab7957aaa",
+    "receipt_path": "TEX-AXIOMATIC-DEDUCTION-RECEIPT.json",
+    "receipt_sha256": "839faa95fd428faae1ac203268d0cfa80de57dedc4d7d1d2c124f0345bab3223",
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "mutex_acquired": true,
+    "abandoned_mutex": false,
+    "engine": "xelatex",
+    "passes": 3,
+    "pass_exit_codes": [
+      0,
+      0,
+      0
+    ],
+    "missing_character_warnings": 0,
+    "undefined_references": 0,
+    "multiply_defined_labels": 0,
+    "overfull_box_warnings": 0,
+    "underfull_box_warnings": 1,
+    "underfull_visual_classification": "One page-output underfull vbox; full-page inspection shows no clipping, overlap, or abnormal vertical gap.",
+    "inherited_file_request_warnings_per_pass": 2,
+    "inherited_file_request_warnings": [
+      "bussproofs-extra.sty provides its own package name",
+      "ptolemaicastronomy.sty provides its own package name"
+    ],
+    "font_shape_warnings_per_pass": 2,
+    "font_shape_classification": "Nirmala UI has no small-caps face, so XeLaTeX substitutes the available embedded face; inspection shows readable output."
+  },
+  "textual_unit_qa": {
+    "batch_receipts": [
+      {
+        "path": "QA-B053.json",
+        "sha256": "49bed10276ddc94ad0f95e3c8c62a3d8aca1e621086fa5056de9b0afa828775a"
+      },
+      {
+        "path": "QA-B054.json",
+        "sha256": "4808b6a6df29a11d59ce36256ad703b069d01015d5692434bf500295f3b1229a"
+      },
+      {
+        "path": "QA-B055.json",
+        "sha256": "80615e70762723b304f707498589f5af10ca39c6fccbb109daaec7563b4fb7ee"
+      },
+      {
+        "path": "QA-B056.json",
+        "sha256": "25798691805219f89e5665ccb49b79c89d022599343f1354516641cc0a02adb0"
+      }
+    ],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass, including recorded audited corrections"
+  },
+  "semantic_review": {
+    "path": "SEMANTIC_REVIEW-CURRENT.json",
+    "sha256": "e1f9af8423e7955c9daadd9808cfd728b93f830cd204bff84d364dec588760f8",
+    "bound_units": 125,
+    "reviewed_samples": 213
+  },
+  "text_extraction": {
+    "path": "tamil-axiomatic-deduction-243495e1e957.txt",
+    "bytes": 65712,
+    "sha256": "33c90f08d5e10023b66d4df73af78758f737e1748ded3136f11d997c53268072",
+    "replacement_character_count": 0,
+    "literal_question_pair_count": 0,
+    "duplicate_article_count": 0,
+    "english_free_for_count": 0,
+    "tamil_free_for_count": 1,
+    "unexpected_ascii_prose_words": [],
+    "allowed_ascii_words_note": "Open Logic Project and CC BY attribution, formal Hyp rule labels, and extracted mathematical notation such as ValM only.",
+    "required_searches": {
+      "reader title": true,
+      "deduction theorem": true,
+      "soundness section": true,
+      "identity section": true,
+      "capture-avoiding substitutability token": true
+    }
+  },
+  "fonts": {
+    "font_rows": 13,
+    "all_embedded": true,
+    "all_subset": true,
+    "all_unicode": true,
+    "pdffonts_output_path": "tamil-axiomatic-deduction-243495e1e957-pdffonts.txt",
+    "pdffonts_output_sha256": "1996d88bde764984535aebf7cc4c9eb2eeff5cb2979ce9ec85bb237ecd8cc9ee"
+  },
+  "render": {
+    "directory": "tmp/pdfs/axiomatic-deduction-243495e1e957",
+    "resolution_dpi": 120,
+    "page_png_count": 17,
+    "page_png_total_bytes": 4383960,
+    "contact_sheet_count": 2,
+    "contact_sheet_total_bytes": 6366482,
+    "contact_sheet_layout": "3x3",
+    "visually_inspected_page_range": "1-17",
+    "focused_pages": [
+      4,
+      15
+    ]
+  },
+  "visual_findings": {
+    "visual_review_complete": true,
+    "clipped_text": 0,
+    "overlapping_text": 0,
+    "unreadable_glyphs": 0,
+    "broken_derivations": 0,
+    "margin_overflows": 0,
+    "notes": [
+      "All 17 pages were inspected through two generated 3x3 contact sheets from this exact PDF.",
+      "Page 4 was inspected individually after removing a duplicated Tamil article; it now reads with one article.",
+      "Page 15 was inspected individually after localizing the protected free-for token as இடைநிறுத்தத்தக்கது.",
+      "The densest proof page remains readable and entirely within the page margins."
+    ]
+  },
+  "result": "pass"
+}

@@ -1,0 +1,190 @@
+{
+  "batch_id": "TA-B156",
+  "units": [
+    {
+      "unit_id": "OLP-0291",
+      "source_sha256": "d5b487962fa2cdb7c4aa920366ccd501d5b83c9e9308861906906b802cd856ef",
+      "translation_sha256": "ca762f5d03b5e05e9cd9fc293184657fecc806c76bdd8991b29ac3896f746ec8",
+      "source_bytes": 4929,
+      "translation_bytes": 11102,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!A(x_0,\\dots,x_k,y)$",
+        "$\\lforall[y][(!A_f(\\num{n_0},\\dots,\\num{n_k},y)\\lif\\num{l}=y)]$",
+        "$A_f(\\num{n_0},\\dots,\\num{n_k},(s)_1)$"
+      ],
+      "extra_math": [
+        "$!A_f(x_0,\\dots,x_k,y)$",
+        "$\\Th{Q}\\Proves\\lforall[y][(!A_f(\\num{n_0},\\dots,\\num{n_k},y)\\lif\\num{l}=y)]$",
+        "$A_f(\\num{n_0},\\dots,\\num{n_k},\\num{(s)_1})$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "art",
+        "bre",
+        "def",
+        "include",
+        "int",
+        "logic",
+        "multline",
+        "open",
+        "prfAX",
+        "prfND",
+        "prfSC",
+        "prfTab",
+        "section",
+        "sub",
+        "trm"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-014",
+          "unit_id": "OLP-0291",
+          "kind": "representing-formula-subscript-consistency",
+          "action": "Changed the lemma's witness formula from A to A_f so it agrees with the displayed biconditional and every use in the proof.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$!A(x_0,\\dots,x_k,y)$",
+              "to": "$!A_f(x_0,\\dots,x_k,y)$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The lemma introduces A(x_0,...,x_k,y), but its display and the entire proof use A_f for the same representing formula.",
+          "chosen_treatment": "தமிழ் துணைத்தேற்றம் தொடக்கத்திலிருந்தே பிரதிநிதித்துவ வாய்பாட்டை A_f என்று பெயரிட்டு, காட்டலின் முழுவதும் அதே பெயரைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Changing every later A_f to A; preserving two names for one witness without an equality or renaming clause.",
+          "rationale": "The subscript records dependence on f and is already fixed by the preceding definition, displayed equivalence and all subsequent proof steps.",
+          "precise_review_question": "Does one formula name A_f now denote the witness consistently in the lemma, display and proof?",
+          "location_needle": "SOURCE CORRECTION TA-INC-014"
+        },
+        {
+          "audit_id": "TA-INC-015",
+          "unit_id": "OLP-0291",
+          "kind": "omitted-provability-prefix",
+          "action": "Restored the missing Q-proves prefix before the universal uniqueness formula supplied by representability clause (b).",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\Th",
+            "\\Proves"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\lforall[y][(!A_f(\\num{n_0},\\dots,\\num{n_k},y)\\lif\\num{l}=y)]$",
+              "to": "$\\Th{Q}\\Proves\\lforall[y][(!A_f(\\num{n_0},\\dots,\\num{n_k},y)\\lif\\num{l}=y)]$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "Representability clause (b) says that Q proves the uniqueness formula, but the proof quotes only the bare formula and then needs it as a Q-theorem to infer Q proves numeral equality.",
+          "chosen_treatment": "தமிழ் காட்டல் தனித்தன்மை வாய்பாட்டுக்கு முன் Q நிறுவுகிறது என்பதை மீட்டமைத்து, அடுத்த தருக்கப் படியின் கோட்பாட்டு உட்பரப்பைப் பாதுகாக்கிறது.",
+          "alternatives_considered": "Treating the uniqueness formula as a metatheoretic assumption; omitting the later conclusion that Q proves the equality.",
+          "rationale": "The cited definition and the next inference independently require the formula to be derivable in Q, not merely displayed at the meta-level.",
+          "precise_review_question": "Is the uniqueness formula now explicitly a theorem of Q, making the subsequent equality derivation valid?",
+          "location_needle": "SOURCE CORRECTION TA-INC-015"
+        },
+        {
+          "audit_id": "TA-INC-016",
+          "unit_id": "OLP-0291",
+          "kind": "missing-numeral-constructor",
+          "action": "Wrapped the decoded output (s)_1 in the numeral constructor in the informal explanation of the searched proof pair.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\num"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "$A_f(\\num{n_0},\\dots,\\num{n_k},(s)_1)$",
+              "to": "$A_f(\\num{n_0},\\dots,\\num{n_k},\\num{(s)_1})$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The relation immediately above substitutes num((s)_1) into the object-language formula through A(...,(s)_1), but the explanatory sentence inserts the meta-level number (s)_1 directly as its final term.",
+          "chosen_treatment": "தமிழ் விளக்கம் குறிவிலக்கப்பட்ட வெளியீடு (s)_1 க்கான எண்ணுருவையே வாய்பாட்டின் இறுதி உட்பொருளாக இடுகிறது.",
+          "alternatives_considered": "Leaving a meta-level number in an object-language formula; removing numeral constructors from the preceding definition and substitution function.",
+          "rationale": "The definition of A and the relation R uniquely determine the syntactic formula whose proof code is being searched.",
+          "precise_review_question": "Does the searched derivation now end in the formula containing the numeral for (s)_1, consistent with A and R?",
+          "location_needle": "SOURCE CORRECTION TA-INC-016"
+        },
+        {
+          "audit_id": "TA-READER-REF-013",
+          "unit_id": "OLP-0291",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped four references outside the focused representability reader in conditional label checks with descriptive Tamil fallbacks; every live reference remains active when its label is present.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[int][def]{def:standard-model}",
+              "to": "\\oliflabeldef{inc:def::def:standard-model}{\\olref[int][def]{def:standard-model}}{எண்கணிதத்தின் தரநிலை மாதிரிக்கான முந்தைய வரையறை}",
+              "count": 1
+            },
+            {
+              "from": "\\tagrefs{prfAX/{fol:axd:sou:cor:consistency-soundness},\nprfSC/{fol:seq:sou:cor:consistency-soundness},\nprfND/{fol:ntd:sou:cor:consistency-soundness},\nprfTab/{fol:tab:sou:cor:consistency-soundness}}",
+              "to": "\\oliflabeldef{fol:axd:sou:cor:consistency-soundness}{\\tagrefs{prfAX/{fol:axd:sou:cor:consistency-soundness},\nprfSC/{fol:seq:sou:cor:consistency-soundness},\nprfND/{fol:ntd:sou:cor:consistency-soundness},\nprfTab/{fol:tab:sou:cor:consistency-soundness}}}{ஒலிப்புத் தேற்றத்தின் முரணின்மைத் தொடர்விளைவுகள்}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[art][trm]{prop:num-primrec}",
+              "to": "\\oliflabeldef{inc:art:trm:prop:num-primrec}{\\olref[art][trm]{prop:num-primrec}}{எண்குறிக் குறியீட்டின் முதன்மை மீள்வரையறை பற்றிய முந்தைய கூற்று}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[art][sub]{prop:subst-primrec}",
+              "to": "\\oliflabeldef{inc:art:sub:prop:subst-primrec}{\\olref[art][sub]{prop:subst-primrec}}{தொடரமைப்புப் பதிலீட்டின் முதன்மை மீள்வரையறை பற்றிய முந்தைய கூற்று}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The focused representability reader omits the earlier standard-model definition, four proof-system soundness results and two arithmetization propositions cited by this proof, which otherwise render as unresolved question marks.",
+          "chosen_treatment": "இலக்குகள் உள்ள முழு வாசகத்தில் நேரடி மேற்கோள்கள்; தனி வாசகத்தில் அவற்றின் சரியான கருத்தைச் சொல்லும் தமிழ் விளக்கங்கள்.",
+          "alternatives_considered": "Literal question marks; deleting dependencies; bundling unrelated earlier chapters into the focused reader.",
+          "rationale": "Conditional fallbacks keep this exact chapter readable by itself and automatically restore every stable link in the final cumulative edition.",
+          "precise_review_question": "Do all four fallback sites identify their omitted results accurately without inventing numbers or weakening the proof dependencies?",
+          "location_needle": "READER FALLBACK TA-READER-REF-013"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\Th",
+        "\\Proves",
+        "\\num",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

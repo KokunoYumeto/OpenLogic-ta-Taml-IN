@@ -1,0 +1,299 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: proofs-in-lk
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0286-S01
+
+\olfileid{inc}{art}{plk}
+\olsection{$\Log{LK}$ இல் \usetoken{P}{derivation}}
+
+\begin{explain}
+!!{derivation}s ஐ எண்கணிதமாக்க, !!{derivation}s ஐ எண்களாகப் பிரதிநிதித்துவப்படுத்த
+வேண்டும். ஒவ்வோர் அனுமானமும் ஒரு சிட்டையையும் கொண்டிருக்கும் தொடரணிகளின்
+மரங்களே !!{derivation}s என்பதால், மீள்வரையறைப் பிரதிநிதித்துவமே மிகத்
+தெளிவான அணுகுமுறை: ஒரு !!{derivation} ஐ ஓர் அடுக்காகப்
+பிரதிநிதித்துவப்படுத்துகிறோம்; அதன் கூறுகள் இறுதித் தொடரணி, சிட்டை, மற்றும்
+கடைசி அனுமானத்தின் முன்கோள்களுக்கு இட்டுச்செல்லும் உட்-!!{derivation}s இன்
+பிரதிநிதித்துவங்கள்.
+\end{explain}
+
+\begin{defn}
+$\Gamma$ என்பது !!{sentence}s இன் முடிவுறு தொடராகவும், $\Gamma =
+\tuple{!A_1, \dots, !A_n}$ ஆகவும் இருந்தால், $\Gn{\Gamma} =
+\tuple{\Gn{!A_1}, \dots, \Gn{!A_n}}$.
+
+$\Gamma \Sequent \Delta$ ஒரு தொடரணி எனில், $\Gamma \Sequent \Delta$ இன்
+ஒரு கோடல் எண்
+\[
+\Gn{\Gamma \Sequent \Delta} = \tuple{\Gn{\Gamma}, \Gn{\Delta}}
+\]
+
+$\pi$ என்பது $\Log{LK}$ இல் !!a{derivation} எனில், $\Gn{\pi}$ பின்வருமாறு
+வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+\item தொடக்கத் தொடரணி $\Gamma \Sequent \Delta$ மட்டுமே~$\pi$ இல் இருந்தால்,
+  $\Gn{\pi}$ என்பது
+  \[
+    \tuple{0, \Gn{\Gamma \Sequent \Delta}}.
+  \]
+\item ஒன்று அல்லது இரண்டு முன்கோள்களைக் கொண்ட ஓர் அனுமானத்தில்~$\pi$
+  முடிவடைந்து, அதன் முடிவுரை $\Gamma \Sequent \Delta$ ஆகவும், கடைசி
+  அனுமானத்தின் முன்கோளில் முடியும் உடனடி உட்நிறுவல்கள் $\pi_1$ மற்றும்
+  $\pi_2$ ஆகவும் இருந்தால், முறையே $\Gn{\pi}$ என்பது
+  \begin{align*}
+    & \tuple{1, \Gn{\pi_1}, \Gn{\Gamma \Sequent \Delta}, k} \text{ அல்லது}\\
+    & \tuple{2, \Gn{\pi_1}, \Gn{\pi_2}, \Gn{\Gamma \Sequent \Delta}, k},
+  \end{align*}
+  இங்கு கடைசி அனுமானத்தில் பயன்படுத்தப்பட்ட விதியைப் பொறுத்து, பின்வரும்
+  அட்டவணை~$k$ ஐத் தருகிறது:
+
+  \begin{tabular}{lccccccc}
+    \text{விதி:} & \LeftR{\Weakening} & \RightR{\Weakening} &
+    \LeftR{\Contraction} & \RightR{\Contraction} &
+    \LeftR{\Exchange} & \RightR{\Exchange} \\
+    $k$: & 1 & 2 & 3 & 4 & 5 & 6 \\[2ex]
+    \text{விதி:} & \LeftR{\lnot} & \RightR{\lnot} &
+    \LeftR{\land} & \RightR{\land} &
+    \LeftR{\lor} & \RightR{\lor} \\
+    $k$: & 7 & 8 & 9 & 10 & 11 & 12 \\[2ex]
+    \text{விதி:} & \LeftR{\lif} & \RightR{\lif} &
+    \LeftR{\lforall} & \RightR{\lforall} &
+    \LeftR{\lexists} & \RightR{\lexists} \\
+    $k$: & 13 & 14 & 15 & 16 & 17 & 18 \\[2ex]
+    \text{விதி:} & \Cut & = \\
+    $k$: & 19 & 20
+  \end{tabular}
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+  மிக எளிய பின்வரும் !!{derivation} ஐக் கருதுக:
+  \begin{prooftree}
+    \Axiom$!A \fCenter !A$
+    \RightLabel{\LeftR{\land}}
+    \UnaryInf$!A \land !B \fCenter !A$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\fCenter (!A \land !B) \lif !A$
+  \end{prooftree}
+  தொடக்கத் தொடரணியின் கோடல் எண் $p_0 = \tuple{0,
+    \Gn{!A \Sequent !A}}$ ஆக இருக்கும். $\LeftR{\land}$ இன் முடிவுரையில்
+  முடியும் !!{derivation} இன் கோடல் எண் $p_1 =
+    \tuple{1, p_0, \Gn{!A \land !B \Sequent !A}, 9}$ ஆக இருக்கும்
+  ($\LeftR{\land}$ க்கு ஒரு முன்கோள் இருப்பதால் $1$; முடிவுரை
+  $!A \land !B \Sequent !A$ இன் கோடல் எண்; மேலும் $\LeftR{\land}$ ஐக்
+  குறியீடாக்கும் எண் $9$). அப்போது முழு !!{derivation} இன் கோடல் எண்
+  $\tuple{1, p_1, \Gn{\Sequent (!A \land !B) \lif !A)}, 14}$; அதாவது,
+  % SOURCE CORRECTION TA-INC-002: initial-sequent Gödel number has no stray parenthesis.
+  \[
+  \tuple{1, \tuple{1, \tuple{0, \Gn{!A \Sequent !A}}, \Gn{!A \land !B \Sequent !A}, 9},
+    \Gn{\Sequent (!A \land !B) \lif !A}, 14}.
+  \]
+\end{ex}
+
+\begin{explain}
+!!{derivation}s கான ஒரு பிரதிநிதித்துவத்தைத் தீர்மானித்தபின், அத்தகைய
+!!{derivation}s ஐ முதன்மை மீள்வரையறை முறையில் கையாளலாம் என்றும், அவற்றின்
+முக்கிய பண்புகளையும் தொடர்புகளையும் அவ்வாறே வெளிப்படுத்தலாம் என்றும் காட்ட
+வேண்டும். சில செயற்பாடுகள் எளியவை: எடுத்துக்காட்டாக, !!a{derivation} இன்
+கோடல் எண்~$p$ தரப்பட்டால்,
+% SOURCE CORRECTION TA-INC-003: use EndSequent consistently with every later occurrence.
+$\fn{EndSequent}(p) = (p)_{(p)_0+1}$ அதன் இறுதித் தொடரணியின் கோடல் எண்ணையும்,
+$\fn{LastRule}(p) = (p)_{(p)_0+2}$ அதன் கடைசி விதியின் குறியீட்டையும் தரும்.
+\[
+  \len{s} = 2 \land \bforall{i<\len{(s)_0} + \len{(s)_1}}{\fn{Sent}(((s)_0 \concat (s)_1)_i)}
+\]
+என்பதால் வரையறுக்கப்படும் $\fn{Sequent}(s)$ என்ற பண்பு~$s$ க்குப்
+பொருந்துவது, !!{sentence}s கொண்ட ஒரு தொடரணியின் கோடல் எண்ணாக~$s$
+இருந்தால், அப்போதும் அப்போது மட்டுமே.
+பொருந்தும். சில செயற்பாடுகள் மிகக் கடினமானவை. அவற்றை எவ்வாறு செய்வது
+என்பதையாவது வரைவாகக் காட்டுவோம். “$\Gamma$ இலிருந்து~$!A$ ஐ வருவிக்கும்
+!!a{derivation}~$\pi$” என்ற தொடர்பு, $\pi$ மற்றும்~$!A$ இன் கோடல் எண்களின்
+முதன்மை மீள்வரையறைத் தொடர்பு என்று காட்டுவதே இலக்கு.
+\end{explain}
+
+\begin{prop}\ollabel{prop:followsby}
+  கோடல் எண்~$p$ கொண்ட !!{derivation}~$\pi$ இன் கடைசி அனுமானம் சரியாக
+  இருந்தால், அப்போதும் அப்போது மட்டுமே பொருந்தும் $\fn{Correct}(p)$ என்ற
+  பண்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+  ஏதாவது !!a{sentence}~$!A$ க்கு $\Gamma \Sequent \Delta$ என்பது
+  $!A \Sequent !A$ ஆக இருந்தாலோ, ஏதாவது சொல்~$t$ க்கு
+  $\Gamma \Sequent \Delta$ என்பது $\emptyset \Sequent \eq[t][t]$ ஆக
+  இருந்தாலோ, $\Gamma \Sequent \Delta$ ஒரு தொடக்கத் தொடரணி. கோடல் எண்களின்
+  அடிப்படையில், பின்வருவது பொருந்தினால், அப்போதும் அப்போது மட்டுமே
+  $\fn{InitSeq}(s)$ பொருந்தும்:
+  \begin{align*}
+  \bexists{x < s}{} (\fn{Sent}(x) & \land
+  s = \tuple{\tuple{x},\tuple{x}})
+  \lor {}\\
+  \bexists{t<s}{} (\fn{Term}(t) & \land
+  s = \tuple{0, \tuple{\Gn{{\eq}(} \concat t \concat \Gn{,} \concat t \concat \Gn{)}}}).
+  \end{align*}
+
+  ஒவ்வோர் அனுமான விதி~$R$ க்கும் $\fn{FollowsBy}_R(p)$ என்ற தொடர்பு முதன்மை
+  மீள்வரையறையானது என்றும் காட்ட வேண்டும். இங்கு, $p$ என்பது
+  !!{derivation}~$\pi$ இன் கோடல் எண்ணாகவும், $\pi$ இன் இறுதித் தொடரணி,
+  அதன் உடனடி உட்-!!{derivation}s இலிருந்து~$R$ ஐச் சரியாகப் பயன்படுத்திப்
+  பின்தொடர்வதாகவும் இருந்தால், அப்போதும் அப்போது மட்டுமே
+  $\fn{FollowsBy}_R(p)$ பொருந்தும்.
+
+  \RightR{\land} விதியின் நேர்வு எளியது. சரியான $\RightR{\land}$
+  அனுமானத்தில்~$\pi$ முடிந்தால், அது பின்வருமாறு இருக்கும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma \fCenter \Delta, !A$
+
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$\Gamma \fCenter \Delta, !B$
+
+    \RightLabel{\RightR\land}
+    \BinaryInf$\Gamma \fCenter \Delta, !A \land !B$
+  \end{prooftree}
+  ஆகவே, பின்வருமாறு அமையும் !!{sentence}s இன் தொடர்கள் $\Gamma$,
+  $\Delta$ உம், இரு !!{sentence}s $!A$, $!B$ உம் இருந்தால், அப்போதும்
+  அப்போது மட்டுமே, !!{derivation}~$\pi$ இன் கடைசி அனுமானம்
+  $\RightR{\land}$ இன் சரியான பயன்பாடாகும்: $\pi_1$ இன் இறுதித் தொடரணி
+  $\Gamma \Sequent \Delta, !A$; $\pi_2$ இன் இறுதித் தொடரணி
+  $\Gamma \Sequent \Delta, !B$; மேலும் $\pi$ இன் இறுதித் தொடரணி
+  $\Gamma \Sequent \Delta, !A \land !B$. இதைக் கோடல் எண்களின் மொழிக்கு
+  மாற்றினால் போதும். $s = \Gn{\Gamma \Sequent \Delta}$ எனில்
+  $(s)_0 = \Gn{\Gamma}$ மற்றும் $(s)_1 = \Gn{\Delta}$. ஆகவே,
+  பின்வருவது பொருந்தினால், அப்போதும் அப்போது மட்டுமே
+  $\fn{FollowsBy}_{\RightR{\land}}(p)$ பொருந்தும்:
+\begin{align*}
+& \bexists{g < p}{\bexists{d < p}{\bexists{a < p}{\bexists{b < p}{\quad}}}} \\
+& \qquad \fn{EndSequent}(p) =
+  \tuple{g, d \concat
+    \tuple{\Gn{(} \concat a \concat \Gn{\land} \concat b \concat \Gn{)}}} \land {} \\
+& \qquad \fn{EndSequent}((p)_1) = \tuple{g, d \concat \tuple{a}} \land {}\\
+& \qquad \fn{EndSequent}((p)_2) = \tuple{g, d \concat \tuple{b}} \land {}\\
+& \qquad (p)_0 = 2 \land \fn{LastRule}(p) = 10.
+\end{align*}
+தனித்தனி வரிகள் முறையே பின்வருவனவற்றை வெளிப்படுத்துகின்றன:
+“கோடல் எண்~$g$ கொண்ட ஒரு தொடர்~($\Gamma$), கோடல் எண்~$d$ கொண்ட ஒரு
+தொடர்~($\Delta$), கோடல் எண்~$a$ கொண்ட !!a{formula}~($!A$), கோடல்
+எண்~$b$ கொண்ட !!a{formula}~($!B$) உள்ளன”; மேலும் “$\pi$ இன் இறுதித்
+தொடரணி $\Gamma \Sequent \Delta, !A \land !B$”, “$\pi_1$ இன் இறுதித்
+தொடரணி $\Gamma \Sequent \Delta, !A$”, “$\pi_2$ இன் இறுதித் தொடரணி
+$\Gamma \Sequent \Delta, !B$”, மற்றும் “$\pi$ க்கு இரண்டு உடனடி
+உட்வருவித்தல்கள் உள்ளன; கடைசி அனுமான விதி எண்~$10$ கொண்ட
+$\RightR\land$”.
+
+பின்வருமாறு அமையும் தொடர்கள் $\Gamma$, $\Delta$, !!a{formula}~$!A$,
+ஒரு மாறி~$x$, மற்றும் ஒரு சொல்~$t$ இருந்தால், அப்போதும் அப்போது மட்டுமே,
+$\pi$ இன் கடைசி அனுமானம் $\RightR\lexists$ இன் சரியான பயன்பாடாகும்:
+$\pi$ இன் இறுதித் தொடரணி $\Gamma \Sequent \Delta, \lexists[x][!A]$;
+$\pi_1$ இன் இறுதித் தொடரணி $\Gamma \Sequent \Delta,
+\Subst{!A}{t}{x}$. எனவே கோடல் எண்களின் அடிப்படையில், பின்வருவது
+பொருந்தினால், அப்போதும் அப்போது மட்டுமே
+$\fn{FollowsBy}_{\RightR\lexists}(p)$ பொருந்தும்:
+\begin{align*}
+  & \bexists{g<p}{\bexists{d<p}{\bexists{a<p}{\bexists{x<p}{\bexists{t<p}{\quad}}}}}\\
+  & \qquad \fn{EndSequent}(p) =
+  \tuple{
+    g,
+    d \concat \tuple{\Gn{\lexists} \concat x \concat a}
+  } \land {}\\
+  & \qquad \fn{EndSequent}((p)_1) =
+  \tuple{
+    g,
+    d \concat \tuple{\fn{Subst}(a, t, x)}
+  } \land {}\\
+  & \qquad (p)_0 = 1 \land \fn{LastRule}(p) = 18.
+\end{align*}
+அடுத்து, $\fn{Correct}(p)$ ஐப் பின்வருமாறு வரையறுக்கிறோம்:
+% SOURCE CORRECTION TA-INC-003: use the already defined InitSeq predicate.
+\begin{multline*}
+  \fn{Sequent}(\fn{EndSequent}(p)) \land {}\\
+  [(\fn{LastRule}(p) = 1 \land
+  \fn{FollowsBy}_{\LeftR\Weakening}(p)) \lor \dots \lor {}\\
+  (\fn{LastRule}(p) = 20 \land \fn{FollowsBy}_{\eq}(p)) \lor {}\\
+  (p)_0 = 0 \land \fn{InitSeq}(\fn{EndSequent}(p))]
+\end{multline*}
+முதல் வரி, $p$ இன் இறுதித் தொடரணி உண்மையில் !!{sentence}s கொண்ட ஒரு
+தொடரணியே என்பதை உறுதிசெய்கிறது. $p$ ஒரு தொடக்கத் தொடரணி மட்டுமே ஆகும்
+நேர்வைக் கடைசி வரி கையாளுகிறது.
+\end{proof}
+
+\begin{prob}
+  \olref[inc][art][plk]{prop:followsby} இல் உள்ளவாறு பின்வரும் பண்புகளை
+  வரையறுக்க:
+  \begin{enumerate}
+  \item $\fn{FollowsBy}_{\Cut}(p)$,
+  \item $\fn{FollowsBy}_{\LeftR\lif}(p)$,
+  \item $\fn{FollowsBy}_{\eq}(p)$,
+  \item $\fn{FollowsBy}_{\RightR{\lforall}}(p)$.
+  \end{enumerate}
+  கடைசிப் பண்புக்கு, கோடல் எண்~$p$ கொண்ட !!{derivation} இன் கடைசி அனுமானம்
+  தனிமாறி நிபந்தனையை நிறைவுசெய்கிறதா என்பதை முதன்மை மீள்வரையறை முறையில்
+  சோதிக்கலாம் என்றும் காட்ட வேண்டும்; அதாவது, $\RightR{\lforall}$ இன்
+  தனிமாறி~$a$, இறுதித் தொடரணியில் இடம்பெறக்கூடாது.
+  \end{prob}
+
+\begin{prop}
+  \ollabel{prop:deriv}
+  $p$ ஆனது சரியான !!{derivation}~$\pi$ இன் கோடல் எண்ணாக இருந்தால் பொருந்தும்
+  $\fn{Deriv}(p)$ என்ற தொடர்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+  !!^a{derivation}~$\pi$ இன் ஒவ்வோர் அனுமானமும் ஒரு விதியின் சரியான
+  பயன்பாடாக, அதாவது அதன் ஒவ்வோர் உட்-!!{derivation} உம் ஒரு சரியான
+  அனுமானத்தில் முடிந்தால், $\pi$ சரியானது. ஆகவே,
+  % SOURCE CORRECTION TA-INC-004: keep p as the derivation-code variable.
+  $\fn{Deriv}(p)$ பொருந்தினால், அப்போதும் அப்போது மட்டுமே,
+  \[
+  \bforall{i<\len{\fn{SubtreeSeq}(p)}}{\fn{Correct}((\fn{SubtreeSeq}(p))_i)}.
+  \]
+\end{proof}
+
+
+\begin{prop}
+$\Gamma$ என்பது !!{sentence}s இன் முதன்மை மீள்வரையறைக் கணம் என்க. அப்போது,
+“ஏதாவது முடிவுறு $\Gamma_0 \subseteq \Gamma$ க்கு,
+$x$ என்பது $\Gamma_0 \Sequent !A$ இன் !!a{derivation}~$\pi$ இன்
+குறியீடாகவும், $y$ என்பது~$!A$ இன் கோடல் எண்ணாகவும் உள்ளது” என்பதை
+வெளிப்படுத்தும் $\Prf[\Gamma](x, y)$ என்ற தொடர்பு முதன்மை
+மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+“$y \in \Gamma$” என்பது $R_\Gamma(y)$ என்ற முதன்மை மீள்வரையறைப்
+பயனிலையால் தரப்படுகிறது என்க. $y$ என்பது ஒரு வாக்கியம்~$!A$ இன் கோடல்
+எண்ணாகவும், $x$ என்பது $\Gamma_0 \Sequent !A$ என்ற இறுதித் தொடரணியைக்
+கொண்ட ஓர் $\Log{LK}$-!!{derivation} இன் குறியீடாகவும் இருந்தால்,
+அப்போதும் அப்போது மட்டுமே பொருந்தும் $\Prf[\Gamma](x, y)$ முதன்மை
+மீள்வரையறையானது என்று காட்ட வேண்டும்.
+
+முந்தைய கூற்றின்படி, $x$ என்பது $\Log{LK}$ இல் சரியான
+!!{derivation}~$\pi$ இன் குறியீடாக இருந்தால், அப்போதும் அப்போது மட்டுமே
+பொருந்தும் $\fn{Deriv}(x)$ என்ற பண்பு முதன்மை மீள்வரையறையானது. $x$
+அத்தகைய குறியீடு எனில், $\fn{EndSequent}(x)$ என்பது~$\pi$ இன் இறுதித்
+தொடரணியின் குறியீடு; ஆகவே $(\fn{EndSequent}(x))_0$ என்பது இறுதித்
+தொடரணியின் இடப்பக்கக் குறியீடு, $(\fn{EndSequent}(x))_1$ என்பது அதன்
+வலப்பக்கக் குறியீடு. எனவே, “$\pi$ இன் இறுதித் தொடரணியின் வலப்பக்கம்
+~$!A$” என்பதை
+% SOURCE CORRECTION TA-INC-005: y, not the derivation code x, is the Gödel number of A.
+$\len{(\fn{EndSequent}(x))_1} = 1 \land ((\fn{EndSequent}(x))_1)_0 =
+y$ என்று வெளிப்படுத்தலாம். $\pi$ இன் இறுதித் தொடரணியின் இடப்பக்கம்
+தானாகவே முடிவுறுவது; அதிலுள்ள ஒவ்வொரு வாக்கியமும்~$\Gamma$ இல் இருப்பதை
+மட்டுமே வெளிப்படுத்த வேண்டும். ஆகவே, $\Prf[\Gamma](x, y)$ ஐப் பின்வருமாறு
+வரையறுக்கலாம்:
+\begin{align*}
+\Prf[\Gamma](x, y) \defiff {}&
+\fn{Deriv}(x) \land {} \\
+& \bforall{i <
+  \len{(\fn{EndSequent}(x))_0}}{R_\Gamma(((\fn{EndSequent}(x))_0)_i)} \land {}\\
+& \len{(\fn{EndSequent}(x))_1} = 1 \land ((\fn{EndSequent}(x))_1)_0 = y.
+\end{align*}
+\end{proof}
+
+\end{document}

@@ -1,0 +1,111 @@
+% SEGMENT OLP-0131-S01
+% Part: first-order-logic
+% Chapter: completeness
+% Section: lindenbaums-lemma
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{com}{lin}}
+      {\olfileid{pl}{com}{lin}}
+
+\olsection{லிண்டன்பாமின் துணைத்தேற்றம்}
+
+% SEGMENT OLP-0131-S02
+\begin{explain}
+முரணற்ற எந்த !!{sentence}s கணமும், முரணற்றதாக மட்டுமன்றி !!{complete}
+ஆகவும் உள்ள ஏதோவொரு வாக்கியக் கணத்தில் அடங்கியுள்ளது என்பதைக் காட்டும்
+துணைத்தேற்றத்தை இப்போது நிறுவுவோம். ஒவ்வொரு படியிலும் கணம் முரணற்றதாகவே
+இருப்பதை உறுதிசெய்து, ஒரு நேரத்தில் ஒரு !!{sentence} ஐச் சேர்ப்பதன் மூலம்
+நிறுவல் செயல்படுகிறது. ஒவ்வொரு $!A$ க்கும், ஏதோவொரு கட்டத்தில் $!A$ அல்லது
+$\lnot !A$ சேர்க்கப்படுமாறு இதைச் செய்கிறோம். அந்தக் கட்டமைப்பின் எல்லாப்
+படிநிலைகளின் ஒன்றிப்பு $!A$ அல்லது அதன் மறுப்பு~$\lnot !A$ ஐக் கொண்டிருக்கும்;
+ஆகவே அது நிறைவானது. ஒவ்வொரு படிநிலையிலும் ஒரு முரண்பாட்டை அறிமுகப்படுத்தாமல்
+இருப்பதை உறுதிசெய்வதால், அது முரணற்றதாகவும் உள்ளது.
+\end{explain}
+
+% SEGMENT OLP-0131-S03
+\begin{lem}[லிண்டன்பாமின் துணைத்தேற்றம்]
+\ollabel{lem:lindenbaum} $\Lang{L}$ என்ற மொழியிலுள்ள ஒவ்வொரு முரணற்ற
+கணம்~$\Gamma$ ஐயும் !!a{complete}, முரணற்ற கணம்~$\Gamma^*$ ஆக
+விரிவாக்கலாம்.
+\end{lem}
+
+% SEGMENT OLP-0131-S04
+\begin{proof}
+$\Gamma$ முரணற்றது என்க. $\Lang L$ இன் எல்லா !!{sentence}s ஐயும்
+$!A_0$, $!A_1$, \dots{} என எண்ணிடுக. $\Gamma_0 = \Gamma$ என வரையறுத்து,
+\[
+\Gamma_{n+1} =
+\begin{cases}
+\Gamma_n \cup \{ !A_n \} & \textrm{$\Gamma_n \cup \{!A_n\}$
+  முரணற்றது எனில்;} \\
+\Gamma_n \cup \{ \lnot !A_n \} & \textrm{இல்லையெனில்.}
+\end{cases}
+\]
+என வைக்கவும். $\Gamma^* = \bigcup_{n \geq 0} \Gamma_n$ என்க.
+
+% SEGMENT OLP-0131-S05
+ஒவ்வொரு $\Gamma_n$ உம் முரணற்றது: வரையறைப்படி $\Gamma_0$ முரணற்றது.
+$\Gamma_{n+1} = \Gamma_n \cup \{!A_n\}$ எனில், வலப்புறக் கணம் முரணற்றது
+என்பதால்தான் அவ்வாறு வரையறுக்கப்பட்டது. அது முரணுடையது எனில்,
+$\Gamma_{n+1} = \Gamma_n \cup \{\lnot !A_n\}$. அப்போது
+$\Gamma_n \cup \{\lnot !A_n\}$ முரணற்றது என்பதைச் சரிபார்க்க வேண்டும்.
+அது முரணுடையது எனக் கொள்வோம். அப்படியானால் $\Gamma_n \cup \{!A_n\}$,
+$\Gamma_n \cup \{\lnot !A_n\}$ ஆகிய \emph{இரண்டுமே} முரணுடையவை. பின்வரும்
+மேற்கோளின்படி இது $\Gamma_n$ முரணுடையதாக இருக்க வேண்டும் என்பதைக் குறிக்கும்:
+\iftag{FOL}{%
+  \tagrefs{prfAX/{fol:axd:prv:prop:provability-exhaustive},
+    prfSC/{fol:seq:prv:prop:provability-exhaustive},
+    prfND/{fol:ntd:prv:prop:provability-exhaustive},
+    prfTab/{fol:tab:prv:prop:provability-exhaustive}}}{%
+  \tagrefs{prfAX/{pl:axd:prv:prop:provability-exhaustive},
+    prfSC/{pl:seq:prv:prop:provability-exhaustive},
+    prfND/{pl:ntd:prv:prop:provability-exhaustive},
+    prfTab/{pl:tab:prv:prop:provability-exhaustive}}}.
+இது தொகுத்தறிதல் கருதுகோளுக்கு முரணாகும்.
+
+% SEGMENT OLP-0131-S06
+ஒவ்வொரு~$n$ க்கும், ஒவ்வொரு $i < n$ க்கும்,
+$\Gamma_i \subseteq \Gamma_n$. இது~$n$ மீதான எளிய தொகுத்தறிதலால் கிடைக்கும்.
+$n=0$ எனில் $i < 0$ ஆகும் $i$ எதுவும் இல்லை; ஆகவே கூற்று தானாகவே
+செல்லுபடியாகும். தொகுத்தறிதல் படிக்கு, $n$ க்கு இது மெய் என்க. $i < n+1$
+எனில் $\Gamma_i \subseteq \Gamma_{n+1}$ என்பதைக் காட்டுவோம். கட்டமைப்பின்படி
+$\Gamma_{n+1} = \Gamma_n \cup \{!A_n\}$ அல்லது
+$= \Gamma_n \cup \{\lnot !A_n\}$. எனவே
+$\Gamma_n \subseteq \Gamma_{n+1}$. $i < n+1$ எனில், தொகுத்தறிதல்
+கருதுகோளால் ($i < n$ எனில்) அல்லது $\Gamma_n \subseteq \Gamma_n$ என்ற
+தெளிவான உண்மையால் ($i = n$ எனில்), $\Gamma_i \subseteq \Gamma_n$.
+$\subseteq$ இன் கடப்புப் பண்பால் $\Gamma_i \subseteq \Gamma_{n+1}$.
+
+% SEGMENT OLP-0131-S07
+இதிலிருந்து $\Gamma^*$ முரணற்றது என்பது பின்வருமாறு கிடைக்கிறது:
+$\Gamma' \subseteq \Gamma^*$ ஓர் இறுதிக்குட்பட்ட கணம் என்க. அது வெற்றுக்
+% SOURCE CORRECTION TA-COM-001: handle the empty finite subset before choosing a largest index.
+கணம் எனில் முரணற்றது என்பது தெளிவு. இல்லையெனில், ஒவ்வொரு
+$!B \in \Gamma'$ உம் ஏதோ~$\Gamma_i$ இல் உள்ளது. இந்தச் சுட்டெண்களில்
+மீப்பெரியதை~$n$ என்க. $i \le n$ எனில் $\Gamma_i \subseteq \Gamma_n$;
+ஆகவே ஒவ்வொரு $!B \in \Gamma'$ உம்~$\in \Gamma_n$; அதாவது,
+$\Gamma' \subseteq \Gamma_n$; மேலும் $\Gamma_n$ முரணற்றது. ஆகவே
+ஒவ்வோர் இறுதிக்குட்பட்ட உட்கணம்~$\Gamma' \subseteq \Gamma^*$ உம் முரணற்றது.
+பின்வரும் மேற்கோளின்படி $\Gamma^*$ முரணற்றது:
+\iftag{FOL}{%
+  \tagrefs{prfAX/{fol:axd:ptn:prop:proves-compact},
+    prfSC/{fol:seq:ptn:prop:proves-compact},
+    prfND/{fol:ntd:ptn:prop:proves-compact},
+    prfTab/{fol:tab:ptn:prop:proves-compact}}}{%
+  \tagrefs{prfAX/{pl:axd:ptn:prop:proves-compact},
+    prfSC/{pl:seq:ptn:prop:proves-compact},
+    prfND/{pl:ntd:ptn:prop:proves-compact},
+    prfTab/{pl:tab:ptn:prop:proves-compact}}}.
+
+% SEGMENT OLP-0131-S08
+$\Frm[L]$ இன் ஒவ்வொரு !!{sentence} உம்~$\Gamma^*$ ஐ வரையறுக்கப் பயன்படுத்திய
+பட்டியலில் வருகிறது. $!A_n \notin \Gamma^*$ எனில், அதற்குக் காரணம்
+$\Gamma_n \cup \{!A_n\}$ முரணுடையதாக இருந்ததே. ஆனால் அப்போது
+$\lnot !A_n \in \Gamma^*$; ஆகவே $\Gamma^*$ ஆனது !!{complete}.
+\end{proof}
+
+\end{document}

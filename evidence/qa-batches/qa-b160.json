@@ -1,0 +1,197 @@
+{
+  "batch_id": "TA-B160",
+  "units": [
+    {
+      "unit_id": "OLP-0297",
+      "source_sha256": "48131a3e5cfc021a6d3eda9f9c180ed5ab21e6e31de0237a780c063c02807442",
+      "translation_sha256": "ccd52d38b948ad1dc38087a7ad55791643f7dc5e7f77f945ba0f7da483596a43",
+      "source_bytes": 2743,
+      "translation_bytes": 7745,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "add",
+        "bre",
+        "cmp",
+        "inc",
+        "include",
+        "logic",
+        "min",
+        "mult",
+        "open",
+        "pri",
+        "proj",
+        "prop",
+        "rep",
+        "req",
+        "section",
+        "succ",
+        "zero"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-022",
+          "unit_id": "OLP-0297",
+          "kind": "omitted-primitive-recursion-restriction",
+          "action": "Restored the statement that h is defined from f and g by primitive recursion before invoking the lemma that eliminates primitive recursion.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The cited lemma applies to the function h defined from f and g by primitive recursion, but the frozen sentence merely says h is defined from f and g and thus omits the construction being eliminated.",
+          "chosen_treatment": "தமிழ் காட்டல் h ஆனது f மற்றும் g இலிருந்து முதன்மை மீள்வரையறையால் வரையறுக்கப்படுகிறது என்பதை வெளிப்படையாக மீட்டமைக்கிறது.",
+          "alternatives_considered": "Leaving the construction unspecified; weakening the cited lemma into a false claim about every function definable from f and g.",
+          "rationale": "The preceding characterization and the cited primitive-recursion simulation lemma uniquely supply the omitted construction.",
+          "precise_review_question": "Does the sentence now state exactly which primitive-recursive construction is replaced by composition and regular minimization?",
+          "location_needle": "SOURCE CORRECTION TA-INC-022"
+        },
+        {
+          "audit_id": "TA-INC-023",
+          "unit_id": "OLP-0297",
+          "kind": "missing-consistency-qualification",
+          "action": "Qualified the converse representability claim and the final comparison of axiomatizable theories by consistency.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "A computable derivation system alone does not ensure that every represented function is computable: an inconsistent axiomatizable theory proves every graph formula and its uniqueness clause, so every function becomes representable under the stated definition.",
+          "chosen_treatment": "தமிழ் விளக்கம் கணிக்கத்தக்க வருவித்தல் முறையுடன் முரணின்மையையும் கோருகிறது; இறுதி அடிகோளாக்கத்தக்க கோட்பாடுகள் பற்றிய கூற்றிலும் அதே தகுதியைச் சேர்க்கிறது.",
+          "alternatives_considered": "Retaining the overclaim; silently assuming consistency without stating it; redefining representability.",
+          "rationale": "The immediately preceding proof that representability yields computability explicitly uses consistency, and the standard examples Q, PA and ZF are intended under that same qualification.",
+          "precise_review_question": "Do both general claims now exclude inconsistent derivation systems while preserving the intended comparison across Q, PA and ZF?",
+          "location_needle": "SOURCE CORRECTION TA-INC-023"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0298",
+      "source_sha256": "97b0cb4406cc953b30d2006dc7e27ef8262a6f82e8926186eefbdb0a5602ef55",
+      "translation_sha256": "c58f39f9cc00b165ccfa21ae16f8d498a3846914171009b7ed890bf6e8b34814",
+      "source_bytes": 2409,
+      "translation_bytes": 5015,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "int",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0299",
+      "source_sha256": "ced54dd307fbc001e4d3a4a2184e22d12bef0e499d9130c42765b737e46a2a98",
+      "translation_sha256": "b37e78ff95335893392ddab9b81caa8d9aa9d662821fad69b870e9c0ff67d622",
+      "source_bytes": 2841,
+      "translation_bytes": 6618,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "cmp",
+        "hlt",
+        "include",
+        "logic",
+        "nft",
+        "open",
+        "rec",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-READER-REF-014",
+          "unit_id": "OLP-0299",
+          "kind": "out-of-scope-cross-reference-fallback",
+          "action": "Wrapped the two omitted recursive-functions theorem references in conditional label checks with descriptive Tamil fallbacks.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\oliflabeldef",
+            "\\oliflabeldef"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[cmp][rec][nft]{thm:kleene-nf}",
+              "to": "\\oliflabeldef{cmp:rec:nft:thm:kleene-nf}{\\olref[cmp][rec][nft]{thm:kleene-nf}}{க்ளீனியின் இயல்புவடிவத் தேற்றம்}",
+              "count": 1
+            },
+            {
+              "from": "\\olref[cmp][rec][hlt]{thm:halting-problem}",
+              "to": "\\oliflabeldef{cmp:rec:hlt:thm:halting-problem}{\\olref[cmp][rec][hlt]{thm:halting-problem}}{நிற்றல் சிக்கலின் தீர்மானிக்கவியலாமைத் தேற்றம்}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The focused reader omits the recursive-functions normal-form and halting-problem sections used by the undecidability reduction.",
+          "chosen_treatment": "இலக்குகள் இருந்தால் நேரடி தேற்ற மேற்கோள்கள்; இல்லையெனில் க்ளீனி இயல்புவடிவமும் நிற்றல் சிக்கல் முடிவும் பற்றிய துல்லியமான தமிழ் விளக்கங்கள்.",
+          "alternatives_considered": "Literal question marks; deleting the reduction’s cited premises; importing the full computability reader.",
+          "rationale": "Both conditional branches preserve the exact dependency and regain the frozen links when the complete corpus is assembled.",
+          "precise_review_question": "Do the two fallbacks distinguish the normal-form representation theorem from the halting undecidability theorem?",
+          "location_needle": "READER FALLBACK TA-READER-REF-014"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\oliflabeldef",
+        "\\oliflabeldef"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

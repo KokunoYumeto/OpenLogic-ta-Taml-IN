@@ -1,0 +1,145 @@
+{
+  "batch_id": "TA-B154",
+  "units": [
+    {
+      "unit_id": "OLP-0288",
+      "source_sha256": "6498fe743671727c99bee3ff39efb8e83bf46be470a8c2b613b62a8757c3e4eb",
+      "translation_sha256": "fc1fc13f7a0d503999005e16fec22192df4eeae79263f6df052f2f597d9fdca3",
+      "source_bytes": 9400,
+      "translation_bytes": 19978,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$a$",
+        "\\begin{multline*}\\fn{QR}_1(d,i)\\defiff\\bexists{b<(d)_i}{\\bexists{x<(d)_i}{\\bexists{a<(d)_i}{\\bexists{c<(d)_j}{(}}}}\\\\\\fn{Var}(x)\\land\\fn{Const}(c)\\land{}\\\\(d)_i=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\Gn{\\lforall}\\concatx\\concata\\concat\\Gn{)}\\land{}\\\\(d)_j=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\fn{Subst}(a,c,x)\\concat\\Gn{)}\\land{}\\\\\\fn{Sent}(b)\\land\\fn{Sent}(\\fn{Subst}(a,c,x))\\land{}\\bforall{k<\\len{b}}{(b)_k\\neq(c)_0})\\end{multline*}",
+        "\\begin{align*}\\fn{hCond}(s,y,0)&=y\\\\\\fn{hCond}(s,y,n+1)&=\\Gn{(}\\concat(s)_{n}\\concat\\Gn{\\lif}\\concat\\fn{Cond}(s,y,n)\\concat\\Gn{)}\\\\\\fn{Cond}(s,y)&=\\fn{hCond}(s,y,\\len{s})\\\\$\\Prf[\\Gamma](x,y)$\\Prf[\\Gamma](x,y)&\\defiff\\bexists{s<\\fn{sequenceBound}(x,x)}{(}\\\\&\\qquad(x)_{\\len{x}-1}=\\fn{Cond}(s,y)\\land{}\\\\&\\qquad\\bforall{i<\\len{s}}{(s)_i\\in\\Gamma}\\land{}\\\\&\\qquad\\fn{Deriv}(x)).\\end{align*}"
+      ],
+      "extra_math": [
+        "$c$",
+        "\\begin{multline*}\\fn{QR}_1(d,i)\\defiff\\bexists{j<i}{\\bexists{b<(d)_i}{\\bexists{x<(d)_i}{\\bexists{a<(d)_i}{\\bexists{c<(d)_j}{(}}}}}\\\\\\fn{Var}(x)\\land\\fn{Const}(c)\\land{}\\\\(d)_i=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\Gn{\\lforall}\\concatx\\concata\\concat\\Gn{)}\\land{}\\\\(d)_j=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\fn{Subst}(a,c,x)\\concat\\Gn{)}\\land{}\\\\\\fn{Sent}(b)\\land\\fn{Sent}(\\fn{Subst}(a,c,x))\\land{}\\bforall{k<\\len{b}}{(b)_k\\neq(c)_0})\\end{multline*}",
+        "\\begin{align*}\\fn{hCond}(s,y,0)&=y\\\\\\fn{hCond}(s,y,n+1)&=\\Gn{(}\\concat(s)_{n}\\concat\\Gn{\\lif}\\concat\\fn{hCond}(s,y,n)\\concat\\Gn{)}\\\\\\fn{Cond}(s,y)&=\\fn{hCond}(s,y,\\len{s})\\\\$\\Prf[\\Gamma](x,y)$\\Prf[\\Gamma](x,y)&\\defiff\\bexists{s<\\fn{sequenceBound}(x,x)}{(}\\\\&\\qquad(x)_{\\len{x}-1}=\\fn{Cond}(s,y)\\land{}\\\\&\\qquad\\bforall{i<\\len{s}}{R_\\Gamma((s)_i)}\\land{}\\\\&\\qquad\\fn{Deriv}(x)).\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "art",
+        "inc",
+        "include",
+        "logic",
+        "modus",
+        "multline",
+        "open",
+        "pax",
+        "ponens",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-010",
+          "unit_id": "OLP-0288",
+          "kind": "quantifier-rule-bound-variable-prose",
+          "action": "Replaced a with c in the prose bound for the constant used on preceding line j, and translated the nearby 'does on occur' typo as the intended 'does not occur'.",
+          "expected_missing_math": [
+            "$a$"
+          ],
+          "expected_extra_math": [
+            "$c$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The formal QR clause bounds constant code c by the formula code on line j, but its explanatory sentence switches to a. The earlier sentence also prints 'does on occur' where both the rule and five-item expansion require 'does not occur'.",
+          "chosen_treatment": "தமிழ் விளக்கம் முந்தைய வரியால் வரம்பிடப்படும் மாறிலிக் குறியீட்டை c என்றே வைத்தும், அது B இல் இடம்பெறாது என்றும் கூறுகிறது.",
+          "alternatives_considered": "Changing the formal constant variable to a; translating the negation typo literally.",
+          "rationale": "The displayed predicate, its Const(c) test, substitution and nonoccurrence condition all independently identify c.",
+          "precise_review_question": "Does the corrected prose consistently identify c as the preceding-line constant and preserve its nonoccurrence condition?",
+          "location_needle": "SOURCE CORRECTION TA-INC-010"
+        },
+        {
+          "audit_id": "TA-INC-011",
+          "unit_id": "OLP-0288",
+          "kind": "unbound-preceding-line-index",
+          "action": "Added the missing bounded existential j<i around the QR_1 definition.",
+          "expected_missing_math": [
+            "\\begin{multline*}\\fn{QR}_1(d,i)\\defiff\\bexists{b<(d)_i}{\\bexists{x<(d)_i}{\\bexists{a<(d)_i}{\\bexists{c<(d)_j}{(}}}}\\\\\\fn{Var}(x)\\land\\fn{Const}(c)\\land{}\\\\(d)_i=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\Gn{\\lforall}\\concatx\\concata\\concat\\Gn{)}\\land{}\\\\(d)_j=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\fn{Subst}(a,c,x)\\concat\\Gn{)}\\land{}\\\\\\fn{Sent}(b)\\land\\fn{Sent}(\\fn{Subst}(a,c,x))\\land{}\\bforall{k<\\len{b}}{(b)_k\\neq(c)_0})\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}\\fn{QR}_1(d,i)\\defiff\\bexists{j<i}{\\bexists{b<(d)_i}{\\bexists{x<(d)_i}{\\bexists{a<(d)_i}{\\bexists{c<(d)_j}{(}}}}}\\\\\\fn{Var}(x)\\land\\fn{Const}(c)\\land{}\\\\(d)_i=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\Gn{\\lforall}\\concatx\\concata\\concat\\Gn{)}\\land{}\\\\(d)_j=\\Gn{(}\\concatb\\concat\\Gn{\\lif}\\concat\\fn{Subst}(a,c,x)\\concat\\Gn{)}\\land{}\\\\\\fn{Sent}(b)\\land\\fn{Sent}(\\fn{Subst}(a,c,x))\\land{}\\bforall{k<\\len{b}}{(b)_k\\neq(c)_0})\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\bexists"
+          ],
+          "source_issue_or_choice": "The QR_1 formula refers to line index j in the bound on c and in (d)_j but never binds j, although the preceding five-item account explicitly requires some line j<i.",
+          "chosen_treatment": "தமிழ் வாய்பாடு j<i என்ற வரம்புள்ள இருத்தலளவையீட்டை வெளிப்புறமாகச் சேர்த்து, அதன் முழு உட்பரப்பில் j ஐப் பிணைக்கிறது.",
+          "alternatives_considered": "Leaving j free; replacing j by i and thereby losing the required preceding line.",
+          "rationale": "The prose and modus of the quantifier rule uniquely require an earlier witness line.",
+          "precise_review_question": "Is every use of j now bound by j<i without changing the bounds or roles of b, x, a and c?",
+          "location_needle": "SOURCE CORRECTION TA-INC-011"
+        },
+        {
+          "audit_id": "TA-INC-012",
+          "unit_id": "OLP-0288",
+          "kind": "conditional-helper-recursion-name",
+          "action": "Made the three-argument hCond step recurse through hCond rather than the two-argument wrapper Cond.",
+          "expected_missing_math": [
+            "\\begin{align*}\\fn{hCond}(s,y,0)&=y\\\\\\fn{hCond}(s,y,n+1)&=\\Gn{(}\\concat(s)_{n}\\concat\\Gn{\\lif}\\concat\\fn{Cond}(s,y,n)\\concat\\Gn{)}\\\\\\fn{Cond}(s,y)&=\\fn{hCond}(s,y,\\len{s})\\\\$\\Prf[\\Gamma](x,y)$\\Prf[\\Gamma](x,y)&\\defiff\\bexists{s<\\fn{sequenceBound}(x,x)}{(}\\\\&\\qquad(x)_{\\len{x}-1}=\\fn{Cond}(s,y)\\land{}\\\\&\\qquad\\bforall{i<\\len{s}}{(s)_i\\in\\Gamma}\\land{}\\\\&\\qquad\\fn{Deriv}(x)).\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{align*}\\fn{hCond}(s,y,0)&=y\\\\\\fn{hCond}(s,y,n+1)&=\\Gn{(}\\concat(s)_{n}\\concat\\Gn{\\lif}\\concat\\fn{hCond}(s,y,n)\\concat\\Gn{)}\\\\\\fn{Cond}(s,y)&=\\fn{hCond}(s,y,\\len{s})\\\\$\\Prf[\\Gamma](x,y)$\\Prf[\\Gamma](x,y)&\\defiff\\bexists{s<\\fn{sequenceBound}(x,x)}{(}\\\\&\\qquad(x)_{\\len{x}-1}=\\fn{Cond}(s,y)\\land{}\\\\&\\qquad\\bforall{i<\\len{s}}{R_\\Gamma((s)_i)}\\land{}\\\\&\\qquad\\fn{Deriv}(x)).\\end{align*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The step clause calls Cond with three arguments even though the next line defines Cond as the two-argument wrapper and hCond as the three-argument recursion helper.",
+          "chosen_treatment": "தமிழ் படிநிலை hCond(s,y,n) ஐ மீண்டும் அழைக்கிறது; இறுதி வரியில் மட்டும் இரு-உட்பொருள் Cond மூடுறையைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Redefining Cond as three-argument and changing the wrapper; preserving an arity-inconsistent recursion.",
+          "rationale": "The base clause, step left side and wrapper equation uniquely determine hCond as the recursive helper. The expected display pair also contains the separately audited TA-INC-013 membership repair in the same align environment.",
+          "precise_review_question": "Does the recursive step now reduce n while the public two-argument Cond definition remain unchanged?",
+          "location_needle": "SOURCE CORRECTION TA-INC-012"
+        },
+        {
+          "audit_id": "TA-INC-013",
+          "unit_id": "OLP-0288",
+          "kind": "primitive-recursive-theory-membership-test",
+          "action": "Replaced meta-level membership in Gamma inside the Prf definition with the stated primitive-recursive predicate R_Gamma.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\in"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proof begins by naming R_Gamma(y) as the primitive-recursive test for membership in Gamma, but the final displayed definition reverts to the unanalyzed expression (s)_i in Gamma.",
+          "chosen_treatment": "தமிழ் இறுதி வரையறை ஒவ்வொரு முன்னிலைக் குறியீட்டுக்கும் R_Gamma((s)_i) ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Leaving set membership as an undefined object-language operation; deleting the opening predicate assumption.",
+          "rationale": "Substitution of the already supplied characteristic predicate is exactly what establishes primitive recursiveness.",
+          "precise_review_question": "Does the final bounded universal now invoke R_Gamma on each sequence entry and preserve every other Prf conjunct?",
+          "location_needle": "SOURCE CORRECTION TA-INC-013"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\in"
+      ],
+      "extra_commands": [
+        "\\bexists"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

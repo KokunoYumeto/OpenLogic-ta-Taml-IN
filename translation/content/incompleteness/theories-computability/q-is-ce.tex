@@ -1,0 +1,63 @@
+% Part: incompleteness
+% Chapter: theories-computability
+% Section: q-is-ce
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0303-S01
+
+\olfileid{inc}{tcp}{qce}
+
+\olsection{$\Th{Q}$ ஆனது \printtoken{S}{க.வ.எ.}-முழுமையானது}
+
+\begin{thm}
+$\Th{Q}$ ஆனது !!{c.e.}, ஆனால் தீர்மானிக்கத்தக்கது அல்ல. உண்மையில்,
+அது ஒரு முழுமையான !!{c.e.} கணம்.
+\end{thm}
+
+\begin{proof}
+$\Th{Q}$ ஆனது !!{c.e.} என்பதை எளிதாகக் காணலாம்; ஏனெனில்,
+$\Th{Q}$ இல்~$y$ க்கு ஒரு நிறுவல்~$x$ உள்ள வாக்கியங்கள்~$y$ இன்
+(குறியீடுகளின்) கணமே அது:
+\[
+Q = \Setabs{y}{\lexists[x][\Prf[\Th{Q}](x,y)]}.
+\]
+ஆனால் $\Prf[\Th{Q}](x,y)$ கணிக்கத்தக்கது (உண்மையில், முதன்மை
+மீள்வரையறையானது) என்று அறிவோம்; மேலும் மேலுள்ள வடிவில் எழுதக்கூடிய எந்தக்
+கணமும் க.வ.எ.
+
+அது ஒரு முழுமையான c.e.\ கணம் என்று கூறுவது $K \leq_m Q$ என்று கூறுவதற்குச்
+சமவலிமையானது; இங்கு,
+% SOURCE CORRECTION TA-INC-031: K is defined by indexed computation, not a formula metavariable.
+$K = \Setabs{x}{\cfind{x}(x) \fdefined}$. ஆகவே $K$ ஆனது~$\Th{Q}$ குக்
+குறைக்கத்தக்கது என்று காட்டுவோம். க்ளீனியின் பயனிலை~$T(e,x,s)$ முதன்மை
+மீள்வரையறையானது என்பதால், அது~$\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்கது;
+அதைப் பிரதிநிதித்துவப்படுத்துவது~$!A_T$ என்க. அப்போது ஒவ்வோர்~$x$ க்கும்,
+\begin{align*}
+x \in K & \lif \lexists[s][T(x,x,s)] \\
+& \lif \lexists[s][(\Th{Q} \Proves !A_T(\num x,\num x, \num s))]
+  \\
+& \lif \Th{Q} \Proves \lexists[s][!A_T(\num x, \num x, s)].
+\end{align*}
+மறுதிசையில்,
+$\Th{Q} \Proves \lexists[s][!A_T(\num x, \num x, s)]$ எனில், உண்மையில்
+ஏதோ ஓர் இயல் எண்~$n$ க்கு $!A_T(\num x,\num x,\num n)$ என்ற வாய்பாடு
+மெய்யாக இருக்க வேண்டும். இப்போது $T(x,x,n)$ பொய்யாக இருந்தால்,
+$!A_T$ ஆனது~$T$ ஐப் பிரதிநிதித்துவப்படுத்துவதால், $\Th{Q}$ ஆனது
+$\lnot !A_T(\num x,\num x,\num n)$ ஐ நிறுவும். ஆனால் அப்போது~$\Th{Q}$
+ஒரு பொய்யான வாய்பாட்டை நிறுவுகிறது; இது ஒரு முரண்பாடு. ஆகவே
+$T(x,x,n)$ மெய்யாகவே இருக்க வேண்டும்; இதனால்
+$\cfind{x}(x) \fdefined$.
+
+சுருக்கமாக, ஒவ்வோர்~$x$ க்கும், $x$ ஆனது~$K$ இல் இருந்தால், அப்போதும் அப்போது மட்டுமே
+$\Th{Q}$ ஆனது $\lexists[s][!A_T(\num x,\num x,s)]$ ஐ நிறுவுகிறது.
+ஆகவே, $x$ ஐ
+% SOURCE CORRECTION TA-INC-032: the coded arithmetic sentence uses the representing formula A_T.
+$\lexists[s][!A_T(\num x,\num x,s)]$ என்ற வாக்கியத்தின் (ஒரு
+குறியீட்டுக்கு) அனுப்பும் சார்பு~$f$, $K$ ஐ~$\Th{Q}$ குக் குறைக்கும்
+ஒரு குறைத்தலாகும்.
+\end{proof}
+
+\end{document}

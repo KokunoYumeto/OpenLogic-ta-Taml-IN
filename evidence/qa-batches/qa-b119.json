@@ -1,0 +1,83 @@
+{
+  "batch_id": "TA-B119",
+  "units": [
+    {
+      "unit_id": "OLP-0221",
+      "source_sha256": "a6e3ba54bc944e81c1db72ae00f56f1dc27b3ed05c57de110585810927569277",
+      "translation_sha256": "9a2efab899939de65c47ddfb7f9e39a62dae201426decf7c78fafdeba3272a91",
+      "source_bytes": 3410,
+      "translation_bytes": 8232,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "cmp",
+        "include",
+        "logic",
+        "open",
+        "rec",
+        "section",
+        "tre"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0222",
+      "source_sha256": "ecd3dc5f6ffbfcbf812e75ed5b87ed9b1f9aa49b779a9e3a6c3a6f491d691400",
+      "translation_sha256": "ee1add3c9c0b571baab74bdf483d97c06539f6bba805f9ef025c4417508c061c",
+      "source_bytes": 2657,
+      "translation_bytes": 5622,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

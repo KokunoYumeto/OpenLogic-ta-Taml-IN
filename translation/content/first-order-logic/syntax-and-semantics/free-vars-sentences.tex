@@ -1,0 +1,100 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: free-vars-sentences
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0157-S01
+\olfileid{fol}{syn}{fvs}
+
+\olsection{கட்டற்ற \printtoken{P}{variable} மற்றும் \printtoken{P}{sentence}}
+
+\begin{defn}[!!a{variable} இன் கட்டற்ற நிகழ்வுகள்]
+\ollabel{defn:free-occ}
+ஒரு !!a{formula} இல் !!a{variable} இன் \emph{கட்டற்ற} நிகழ்வுகள்
+பின்வருமாறு தொகுத்தறிதல் வழியில் வரையறுக்கப்படுகின்றன:
+\begin{enumerate}
+\item \indcase*{!A}{$!A$ is atomic}{$\indfrm$ இல் உள்ள அனைத்து !!{variable}
+  நிகழ்வுகளும் கட்டற்றவை.}
+
+\tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\indfrm$ இன் கட்டற்ற !!{variable}
+  நிகழ்வுகள், $!B$ இல் உள்ளவற்றுடன் சரியாக ஒத்தவை.}}{}
+
+\item \indcase{!A}{(!B \ast !C)}{$\indfrm$ இன் கட்டற்ற !!{variable}
+  நிகழ்வுகள் $!B$ இல் உள்ளவையும்~$!C$ இல் உள்ளவையும் ஆகும்.}
+
+\tagitem{prvAll}{\indcase{!A}{\lforall[x][!B]}{$\indfrm$ இல் உள்ள கட்டற்ற
+  !!{variable} நிகழ்வுகள், $!B$ இல் உள்ள $x$ நிகழ்வுகளைத் தவிர மற்றவை.}}{}
+
+\tagitem{prvEx}{\indcase{!A}{\lexists[x][!B]}{$\indfrm$ இல் உள்ள கட்டற்ற
+  !!{variable} நிகழ்வுகள், $!B$ இல் உள்ள $x$ நிகழ்வுகளைத் தவிர மற்றவை.}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[கட்டுண்ட மாறிகள்]
+ஒரு சூத்திரம்~$!A$ இல் !!a{variable} இன் ஒரு நிகழ்வு \emph{கட்டுண்டது}
+எனில் அது கட்டற்றதல்ல.
+\end{defn}
+
+\begin{prob}
+\olref[fol][syn][fvs]{defn:free-occ} இன் வழியில் கட்டுண்ட மாறி
+நிகழ்வுகளுக்கான ஒரு தொகுத்தறிதல் வரையறையைத் தருக.
+\end{prob}
+
+\begin{defn}[வீச்சு]
+\iftag{prvAll}{ஒரு சூத்திரம்~$!A$ இல் உள்ள துணைச்சூத்திரத்தின் நிகழ்வு
+  $\lforall[x][!B]$ ஆக இருந்தால், $!A$ இல் அதற்குரிய $!B$ நிகழ்வு,
+  $\lforall[x]$ இன் அதற்குரிய நிகழ்வின் \emph{வீச்சு}. 
+  \iftag{prvEx}{$\lexists[x]$ க்கும் இதேபோல்.}{}}{ஒரு
+  சூத்திரம்~$!A$ இல் $\lexists[x][!B]$ துணைச்சூத்திரத்தின் நிகழ்வு
+  இருந்தால், $!A$ இல் அதற்குரிய $!B$ நிகழ்வு, $\lexists[x]$ இன்
+  அதற்குரிய நிகழ்வின் \emph{வீச்சு}.}
+
+$!B$ ஒரு அளவையடை நிகழ்வின் வீச்சாக இருந்தால்
+\iftag{prvAll}{$\lforall[x]$\iftag{prvEx}{ அல்லது
+    $\lexists[x]$}{}}{$\lexists[x]$} இல்~$!A$, அப்போது~$!B$ இல் $x$ இன்
+கட்டற்ற நிகழ்வுகள்
+\iftag{prvAll}{$\lforall[x][!B]$\iftag{prvEx}{ மற்றும்
+$\lexists[x][!B]$}{}}{$\lexists[x][!B]$} இல் கட்டுண்டவை. இந்நிகழ்வுகள்
+குறிப்பிட்ட அளவையடை நிகழ்வால் \emph{கட்டுண்டவை} என்று சொல்கிறோம்.
+\end{defn}
+
+\begin{ex}
+பின்வரும் சூத்திரத்தைக் கருதுக:
+\[
+\lexists[\Obj v_0][\underbrace{\Atom{\Obj A^2_0}{\Obj v_0,\Obj v_1}}_{!B}] 
+\]
+$!B$ என்பது $\lexists[\Obj v_0]$ இன் வீச்சு. இந்த அளவையடை $!B$ இல்
+$\Obj v_0$ இன் நிகழ்வைக் கட்டுகிறது; ஆனால் $\Obj v_1$ இன் நிகழ்வைக்
+கட்டுவதில்லை. எனவே இந்நிலையில் $\Obj v_1$ ஒரு கட்டற்ற மாறி.
+
+
+இது இன்னும் சிக்கலான !!{formula}~$!A$ இல் எவ்வாறு இயங்கும் என்பதைப்
+பார்க்கலாம்:
+\[
+\lforall[\Obj v_0][\underbrace{(\Atom{\Obj A^1_0}{\Obj v_0} \lif
+    \Atom{\Obj A^2_0}{\Obj v_0, \Obj v_1})}_{!B}] \lif \lexists[\Obj
+  v_1][\underbrace{(\Atom{\Obj A^2_1}{\Obj v_0, \Obj v_1} \lor \lforall[\Obj v_0][\overbrace{\lnot \Atom{\Obj A^1_1}{\Obj v_0}}^{!D}])}_{!C}]
+\]
+$!B$ என்பது முதல் $\lforall[\Obj v_0]$ இன் வீச்சு; $!C$ என்பது
+$\lexists[\Obj v_1]$ இன் வீச்சு; $!D$ என்பது இரண்டாவது
+$\lforall[\Obj v_0]$ இன் வீச்சு. முதல் $\lforall[\Obj v_0]$,
+$!B$ இல் உள்ள $\Obj v_0$ நிகழ்வுகளைக் கட்டுகிறது; $\lexists[\Obj v_1]$,
+$!C$ இல் உள்ள $\Obj v_1$ நிகழ்வைக் கட்டுகிறது; இரண்டாவது
+$\lforall[\Obj v_0]$, $!D$ இல் உள்ள $\Obj v_0$ நிகழ்வைக் கட்டுகிறது.
+$\Obj v_1$ இன் முதல் நிகழ்வும் $\Obj v_0$ இன் நான்காவது நிகழ்வும் $!A$ இல்
+கட்டற்றவை. $\Obj v_0$ இன் கடைசி நிகழ்வு $!D$ இல் கட்டற்றது; ஆனால் $!C$
+மற்றும்~$!A$ இல் கட்டுண்டது.
+\end{ex}
+
+\begin{defn}[வாக்கியம்]
+!!^a{formula}~$!A$ ஒரு \article{sentence} \emph{!!{sentence}} ஆகும்
+அப்போதும் அப்போது மட்டுமே, அதில் !!{variable}s இன் கட்டற்ற நிகழ்வுகள்
+எதுவும் இல்லாவிட்டால்.
+\end{defn}
+
+% add examples!
+
+\end{document}

@@ -1,0 +1,58 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0285-S01
+
+\olfileid{inc}{art}{sub}
+\olsection{பதிலீடு}
+
+!!a{formula}~$!A$ இல் !!a{variable}~$u$ இன் எல்லாக் கட்டிலா நிகழ்வுகளையும்
+$t$ என்ற ஒரு சொல்லால் பதிலிடும் செயற்பாடே பதிலீடு என்பதை நினைவுகூர்க; இது
+$\Subst{!A}{t}{u}$ என்று எழுதப்படுகிறது. !!{variable}s, !!{formula}s மற்றும்
+சொற்களின் கோடல் எண்கள் மீது செய்யப்படும்போது, இச்செயற்பாடு முதன்மை
+மீள்வரையறையானது.
+
+\begin{prop}\ollabel{prop:subst-primrec}
+பின்வரும் பண்பைக் கொண்ட $\fn{Subst}(x, y, z)$ என்ற முதன்மை மீள்வரையறைச்
+சார்பு ஒன்று உள்ளது:
+\[
+\fn{Subst}(\Gn{!A}, \Gn{t}, \Gn{u}) = \Gn{\Subst{!A}{t}{u}}.
+\]
+\end{prop}
+
+\begin{proof}
+பின்வருமாறு முதன்மை மீள்வரையறையால் $\fn{hSubst}$ என்ற ஒரு சார்பை இப்போது
+வரையறுக்கலாம்:
+\begin{multline*}
+\begin{aligned}
+\fn{hSubst}(x, y, z, 0) & = \emptyseq \\
+\fn{hSubst}(x, y, z, i+1) & =
+\end{aligned}\\
+\begin{cases}
+\fn{hSubst}(x, y, z, i) \concat y & \text{$\fn{FreeOcc}(x, z, i)$ எனில்} \\
+\fn{append}(\fn{hSubst}(x, y, z, i), (x)_{i}) & \text{மற்றபடி.}
+\end{cases}
+\end{multline*}
+$\fn{Subst}(x, y, z)$ ஐ இப்போது $\fn{hSubst}(x, y, z, \len{x})$ என்று
+வரையறுக்கலாம்.
+\end{proof}
+
+\begin{prop}
+\ollabel{prop:free-for}
+கோடல் எண்~$y$ கொண்ட சொல், கோடல் எண்~$z$ கொண்ட மாறிக்காக, கோடல் எண்~$x$
+கொண்ட வாய்பாட்டில் !!{free for} ஆக இருந்தால், அப்போதும் அப்போது மட்டுமே
+பொருந்தும் $\fn{FreeFor}(x, y, z)$ என்ற தொடர்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof} பயிற்சி. \end{proof}
+
+\begin{prob}
+\olref[inc][art][sub]{prop:free-for} ஐ நிறுவுக.
+\end{prob}
+
+\end{document}

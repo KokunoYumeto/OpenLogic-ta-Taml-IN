@@ -120,9 +120,9 @@
     {
       "unit_id": "OLP-0013",
       "source_sha256": "75047e8806a58c0a0c07ae2e55554d9ad2affb9d5297b1d5585ebe0b2f3de651",
-      "translation_sha256": "ab422f305bdaf05e9ed28968e4a329b75237a33c6818c9e6fee3c664d3240048",
+      "translation_sha256": "a00ab6c19db86438ebf575a9af051a4987b7b09a95800b59a66c97b03d26f572",
       "source_bytes": 3989,
-      "translation_bytes": 9886,
+      "translation_bytes": 9880,
       "source_coverage_complete": true,
       "segments": 5,
       "math_multiset_parity": true,

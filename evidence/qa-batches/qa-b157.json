@@ -1,0 +1,109 @@
+{
+  "batch_id": "TA-B157",
+  "units": [
+    {
+      "unit_id": "OLP-0292",
+      "source_sha256": "041d2d3510e2d838d1631634a22a8d5eeb0fb5942df402382cafab3d82b6f5d0",
+      "translation_sha256": "0113a31eed5c2847597a45e309ed42680d1a4837c771d7f9c4b16e99cce4d8b0",
+      "source_bytes": 6812,
+      "translation_bytes": 15987,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0293",
+      "source_sha256": "ec7c33837767fa024b45506d818a6601efa0523abef7c474881281d6c7e969a9",
+      "translation_sha256": "71bfc99fd8659304fef3a4bff5d1dbc1d2e0bcb1cb9cb9bf93386a3305c9c7ab",
+      "source_bytes": 2010,
+      "translation_bytes": 4787,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$h(x,\\vecz)$"
+      ],
+      "extra_math": [
+        "$h(\\vecx,y)$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "bet",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-017",
+          "unit_id": "OLP-0293",
+          "kind": "primitive-recursion-function-arguments",
+          "action": "Changed the introductory function signature from h(x, vector z) to h(vector x, y), matching both primitive-recursion equations and all subsequent occurrences.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$h(x,\\vecz)$",
+              "to": "$h(\\vecx,y)$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The prose names h(x, vector z), while the immediately following base and step equations, the beta-coded sequence and the final extraction all define h(vector x, y).",
+          "chosen_treatment": "தமிழ் அறிமுகம் இரு வரையறைச் சமன்பாடுகளிலும் தொடர்ந்து வரும் அதே உட்பொருட்களான வெக்டர் x மற்றும் y ஐக் கொண்ட h ஐப் பெயரிடுகிறது.",
+          "alternatives_considered": "Changing every equation and later construction to x and vector z; preserving an unexplained switch in arity and argument roles.",
+          "rationale": "The base variable y=0, successor step y+1 and final beta extraction uniquely determine the intended signature.",
+          "precise_review_question": "Does h now have the same vector parameters and recursion variable everywhere in the lemma and proof?",
+          "location_needle": "SOURCE CORRECTION TA-INC-017"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

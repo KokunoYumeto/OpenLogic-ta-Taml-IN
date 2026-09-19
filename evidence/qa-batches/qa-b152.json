@@ -1,0 +1,153 @@
+{
+  "batch_id": "TA-B152",
+  "units": [
+    {
+      "unit_id": "OLP-0286",
+      "source_sha256": "841537ac9e922a29d77bcdc56665413533d40831e7b19d9053644ceccdf6b64b",
+      "translation_sha256": "f1efa388a5cf654a7f18d3cfeba8a4572b690d7b93464e473d1690a62140a93b",
+      "source_bytes": 11602,
+      "translation_bytes": 21273,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\tuple{1,\\tuple{1,\\tuple{0,\\Gn{!A\\Sequent!A)}},\\Gn{!A\\land!B\\Sequent!A},9},\\Gn{\\Sequent(!A\\land!B)\\lif!A},14}.\\]",
+        "$\\fn{EndSeq}(p)=(p)_{(p)_0+1}$",
+        "$d$",
+        "\\begin{multline*}\\fn{Sequent}(\\fn{EndSequent}(p))\\land{}\\\\[(\\fn{LastRule}(p)=1\\land\\fn{FollowsBy}_{\\LeftR\\Weakening}(p))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(p)=20\\land\\fn{FollowsBy}_{\\eq}(p))\\lor{}\\\\(p)_0=0\\land\\fn{InitialSeq}(\\fn{EndSequent}(p))]\\end{multline*}",
+        "$\\fn{Deriv}(d)$",
+        "\\[\\bforall{i<\\len{\\fn{SubtreeSeq}(p)}}{\\fn{Correct}((\\fn{SubtreeSeq}(p))_i}.\\]",
+        "$\\len{(\\fn{EndSequent}(x))_1}=1\\land((\\fn{EndSequent}(x))_1)_0=x$"
+      ],
+      "extra_math": [
+        "\\[\\tuple{1,\\tuple{1,\\tuple{0,\\Gn{!A\\Sequent!A}},\\Gn{!A\\land!B\\Sequent!A},9},\\Gn{\\Sequent(!A\\land!B)\\lif!A},14}.\\]",
+        "$p$",
+        "$\\fn{EndSequent}(p)=(p)_{(p)_0+1}$",
+        "\\begin{multline*}\\fn{Sequent}(\\fn{EndSequent}(p))\\land{}\\\\[(\\fn{LastRule}(p)=1\\land\\fn{FollowsBy}_{\\LeftR\\Weakening}(p))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(p)=20\\land\\fn{FollowsBy}_{\\eq}(p))\\lor{}\\\\(p)_0=0\\land\\fn{InitSeq}(\\fn{EndSequent}(p))]\\end{multline*}",
+        "$\\fn{Deriv}(p)$",
+        "\\[\\bforall{i<\\len{\\fn{SubtreeSeq}(p)}}{\\fn{Correct}((\\fn{SubtreeSeq}(p))_i)}.\\]",
+        "$\\len{(\\fn{EndSequent}(x))_1}=1\\land((\\fn{EndSequent}(x))_1)_0=y$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "art",
+        "inc",
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "plk",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-002",
+          "unit_id": "OLP-0286",
+          "kind": "stray-parenthesis-in-derivation-code",
+          "action": "Removed the stray right parenthesis from the initial-sequent Gödel number inside the fully expanded derivation code.",
+          "expected_missing_math": [
+            "\\[\\tuple{1,\\tuple{1,\\tuple{0,\\Gn{!A\\Sequent!A)}},\\Gn{!A\\land!B\\Sequent!A},9},\\Gn{\\Sequent(!A\\land!B)\\lif!A},14}.\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\tuple{1,\\tuple{1,\\tuple{0,\\Gn{!A\\Sequent!A}},\\Gn{!A\\land!B\\Sequent!A},9},\\Gn{\\Sequent(!A\\land!B)\\lif!A},14}.\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The worked example first defines the initial-sequent code as Gn(A sequent A), but its final expanded tuple changes the formula to Gn(A sequent A)) by inserting an unmatched object-language parenthesis.",
+          "chosen_treatment": "தமிழ் விரிவாக்கப்பட்ட அடுக்கு, ஏற்கெனவே வரையறுக்கப்பட்ட தொடக்கத் தொடரணிக் குறியீட்டை மாறாமல் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Preserving a visibly different and malformed initial-sequent code in the final line.",
+          "rationale": "The preceding definition of p_0 and the recursive tuple expansion uniquely determine the corrected subexpression.",
+          "precise_review_question": "Does the expanded tuple now contain exactly the previously defined p_0 without altering any outer tuple component?",
+          "location_needle": "SOURCE CORRECTION TA-INC-002"
+        },
+        {
+          "audit_id": "TA-INC-003",
+          "unit_id": "OLP-0286",
+          "kind": "inconsistent-primitive-recursive-predicate-names",
+          "action": "Used EndSequent consistently for the end-sequent extractor and InitSeq consistently for the initial-sequent recognizer.",
+          "expected_missing_math": [
+            "$\\fn{EndSeq}(p)=(p)_{(p)_0+1}$",
+            "\\begin{multline*}\\fn{Sequent}(\\fn{EndSequent}(p))\\land{}\\\\[(\\fn{LastRule}(p)=1\\land\\fn{FollowsBy}_{\\LeftR\\Weakening}(p))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(p)=20\\land\\fn{FollowsBy}_{\\eq}(p))\\lor{}\\\\(p)_0=0\\land\\fn{InitialSeq}(\\fn{EndSequent}(p))]\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "$\\fn{EndSequent}(p)=(p)_{(p)_0+1}$",
+            "\\begin{multline*}\\fn{Sequent}(\\fn{EndSequent}(p))\\land{}\\\\[(\\fn{LastRule}(p)=1\\land\\fn{FollowsBy}_{\\LeftR\\Weakening}(p))\\lor\\dots\\lor{}\\\\(\\fn{LastRule}(p)=20\\land\\fn{FollowsBy}_{\\eq}(p))\\lor{}\\\\(p)_0=0\\land\\fn{InitSeq}(\\fn{EndSequent}(p))]\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source introduces EndSeq but uses EndSequent everywhere thereafter; it introduces InitSeq but calls InitialSeq in the definition of Correct.",
+          "chosen_treatment": "தமிழ் பதிப்பு இறுதித் தொடரணி எடுப்பிக்குத் தொடர்ச்சியாக EndSequent என்றும், தொடக்கத் தொடரணி சோதனைக்குத் தொடர்ச்சியாக InitSeq என்றும் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating each spelling as a distinct undefined function or relation; renaming every later EndSequent occurrence.",
+          "rationale": "The defining equations and every later use make each pair one mathematical operation, and the chosen forms minimize changes while keeping the dominant usage.",
+          "precise_review_question": "Are the extractor and recognizer now each named uniformly at their definition and every use?",
+          "location_needle": "SOURCE CORRECTION TA-INC-003"
+        },
+        {
+          "audit_id": "TA-INC-004",
+          "unit_id": "OLP-0286",
+          "kind": "derivation-code-variable-and-delimiter-mismatch",
+          "action": "Kept p as the derivation-code variable in the correctness explanation and closed the missing parenthesis in the bounded Correct test.",
+          "expected_missing_math": [
+            "$d$",
+            "$\\fn{Deriv}(d)$",
+            "\\[\\bforall{i<\\len{\\fn{SubtreeSeq}(p)}}{\\fn{Correct}((\\fn{SubtreeSeq}(p))_i}.\\]"
+          ],
+          "expected_extra_math": [
+            "$p$",
+            "$\\fn{Deriv}(p)$",
+            "\\[\\bforall{i<\\len{\\fn{SubtreeSeq}(p)}}{\\fn{Correct}((\\fn{SubtreeSeq}(p))_i)}.\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The section defines Correct(p) and Deriv(p), but two prose formulas switch to d; the displayed bounded universal also leaves Correct's argument parenthesis open.",
+          "chosen_treatment": "தமிழ் நிறுவல் முழுவதும் வருவிப்புக் குறியீடாக p ஐப் பயன்படுத்தி, Correct இன் உட்பொருளைச் சமநிலையான அடைப்புக்குறியால் மூடுகிறது.",
+          "alternatives_considered": "Changing every surrounding p to d; preserving the syntactically unclosed Correct application.",
+          "rationale": "The proposition, SubtreeSeq expression and every adjacent occurrence use p, and the intended predicate application has a uniquely determined closing parenthesis.",
+          "precise_review_question": "Does one variable now denote the derivation code throughout, and is the bounded universal a well-formed formula?",
+          "location_needle": "SOURCE CORRECTION TA-INC-004"
+        },
+        {
+          "audit_id": "TA-INC-005",
+          "unit_id": "OLP-0286",
+          "kind": "proof-relation-output-code-variable",
+          "action": "Changed the prose test for the sole succedent formula from equality with derivation code x to equality with formula code y.",
+          "expected_missing_math": [
+            "$\\len{(\\fn{EndSequent}(x))_1}=1\\land((\\fn{EndSequent}(x))_1)_0=x$"
+          ],
+          "expected_extra_math": [
+            "$\\len{(\\fn{EndSequent}(x))_1}=1\\land((\\fn{EndSequent}(x))_1)_0=y$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Prf_Gamma(x,y) assigns x to the derivation code and y to the Gödel number of A, but the prose test sets the sole right-side entry equal to x. The final defining display correctly uses y.",
+          "chosen_treatment": "தமிழ் உரை இறுதி வரையறையைப் போலவே வலப்பக்கத்தின் ஒரே உறுப்பை வாய்பாட்டுக் குறியீடான y உடன் சமப்படுத்துகிறது.",
+          "alternatives_considered": "Preserving the prose contradiction; changing the final definition and proposition to make x serve both roles.",
+          "rationale": "The proposition's variable roles and the immediately following formal definition independently fix y as the required value.",
+          "precise_review_question": "Does the prose test now agree with the final Prf definition while preserving x exclusively as the derivation code?",
+          "location_needle": "SOURCE CORRECTION TA-INC-005"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

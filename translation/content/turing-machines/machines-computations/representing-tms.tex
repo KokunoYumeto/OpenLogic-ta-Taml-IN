@@ -1,0 +1,315 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: representing-tms
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0255-S01
+
+\olfileid{tur}{mac}{rep}
+\olsection{டியூரிங் பொறிகளைக் குறிப்பிடுதல்}
+
+\begin{explain}
+டியூரிங் பொறிகளை \emph{நிலை வரைபடங்களால்} காட்சிப்படுத்தலாம்.
+அம்புகளால் இணைக்கப்பட்ட நிலைக் கலங்கள் இவ்வரைபடங்களை உருவாக்குகின்றன.
+எதிர்பார்க்கத்தக்கவாறே, ஒவ்வொரு நிலைக் கலமும் பொறியின் ஒரு நிலையைக்
+குறிக்கிறது. ஒவ்வொரு அம்பும் அந்நிலையிலிருந்து நிறைவேற்றக்கூடிய ஒரு
+கட்டளையைக் குறிக்கிறது; கட்டளையின் விவரங்கள் அதற்குரிய அம்பின்
+மேலோ கீழோ எழுதப்படுகின்றன. $q_0$, $q_1$ என்ற இரு உள்நிலைகளையும்
+ஒரே ஒரு கட்டளையையும் மட்டும் கொண்ட பின்வரும் பொறியைக் கருதுக:
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]   (A)              {$q_0$};
+  \node[state]   (B) [right of=A] {$q_1$};
+
+  \path (A) edge  node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (B);
+\end{tikzpicture}
+\]
+டியூரிங் பொறிக்கு ஒரு வாசி-எழுது தலையும், அதன்மீது உள்ளீடு எழுதப்பட்ட
+ஒரு நாடாவும் உள்ளன என்பதை நினைவுகூர்க. இக்கட்டளையைப் பின்வருமாறு
+வாசிக்கலாம்: \emph{நிலை $q_0$ இல் ஒரு~$\TMblank$ ஐ வாசித்தால்,
+ஒரு~$\TMstroke$ ஐ எழுதி, வலப்புறம் நகர்ந்து, நிலை $q_1$ குச் செல்க}.
+இது நிலைமாற்றுச் சார்பு $\tuple{q_0, \TMblank}$ ஐ
+$\tuple{q_1, \TMstroke, \TMright}$ கு அனுப்புவதற்குச் சமானம்.
+\end{explain}
+
+\begin{ex}
+\emph{இரட்டை எண் பொறி}: நாடாவில் முதல் $\TMblank$ க்கு முன்
+எல்லா $\TMstroke$-களும் வருகின்றன என்ற கருதுகோளின்கீழ்,
+நாடாவில் இரட்டை எண்ணிக்கையிலான $\TMstroke$-கள் இருந்தால், எனில்
+மட்டுமே, பின்வரும் டியூரிங் பொறி நிற்கிறது.
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+
+  \path (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+        (B) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (B)
+            edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (A);
+\end{tikzpicture}
+\]
+
+நிலை வரைபடம் பின்வரும் நிலைமாற்றுச் சார்புக்குரியது:
+\begin{align*}
+\delta(q_0, \TMstroke) & = \tuple{q_1, \TMstroke, \TMright},\\
+\delta(q_1, \TMstroke) & = \tuple{q_0, \TMstroke, \TMright},\\
+\delta(q_1, \TMblank)  & = \tuple{q_1, \TMblank, \TMright}
+\end{align*}
+\end{ex}
+
+\begin{explain}
+உள்ளீடு இரட்டை எண்ணிக்கையிலான கோடுகளாக இருக்கும்போது மட்டுமே
+மேலுள்ள பொறி நிற்கிறது. இல்லையெனில், பொறி (கொள்கையளவில்)
+முடிவின்றிச் செயல்படத் தொடர்கிறது. எந்தப் பொறிக்கும் உள்ளீட்டுக்கும்,
+வெளியீட்டைத் தீர்மானிக்கப் பொறியின் \emph{அமைவுநிலைகளை}
+ஒன்றன்பின் ஒன்றாகத் தடமறியலாம். அமைவுநிலைகளுக்கான முறைசார்ந்த
+வரையறையைப் பின்னர் தருவோம். இப்போதைக்கு, பொறி இயங்கும்போது எந்த
+நேரத்திலும் அதன் நிலையைப் படம்பிடிக்கும் வரைபடங்களின் தொடராக
+அமைவுநிலைகளை உள்ளுணர்வாகக் கருதலாம். நாடாவின் உள்ளடக்கம்,
+பொறியின் நிலை, வாசி-எழுது தலையின் இருப்பிடம் ஆகியவற்றை
+அமைவுநிலைகள் காட்டுகின்றன.
+
+நான்கு $\TMstroke$-களை உள்ளீடாகக் கொண்டு தொடங்கும்போது, இரட்டை
+எண் பொறியின் அமைவுநிலைகளை ஒன்றன்பின் ஒன்றாகத் தடமறிவோம்.
+இந்நேர்வில் பொறி நிற்கும் என்று எதிர்பார்க்கிறோம். பிறகு மூன்று
+$\TMstroke$-களை உள்ளீடாகக் கொண்டு பொறியை இயக்குவோம்; அங்கு பொறி
+என்றென்றும் இயங்கும்.
+
+பொறி நிலை~$q_0$ இல் தொடங்கி, இடக்கோடி~$\TMstroke$ ஐ வருடுகிறது.
+பொறியின் தொடக்க நிலையைப் பின்வருமாறு குறிப்பிடலாம்:
+\[
+\TMendtape \TMstroke_0 \TMstroke \TMstroke \TMstroke \TMblank \ldots
+\]
+மேலுள்ள அமைவுநிலை நேரடியானது. காணக்கூடியவாறு, பொறி நிலை ஒன்றில்
+தொடங்கி, இடக்கோடி~$\TMstroke$ ஐ வருடுகிறது. முதல்~$\TMstroke$ இல்
+நிலைப் பெயரை கீழொட்டாகக் குறிப்பதால் இது காட்டப்படுகிறது.
+இப்புள்ளியில் பொருந்தும் கட்டளை
+$\delta(q_0, \TMstroke) = \tuple{q_1, \TMstroke, \TMright}$;
+எனவே பொறி நாடாவில் வலப்புறம் நகர்ந்து நிலை~$q_1$ கு மாறுகிறது.
+\[
+\TMendtape \TMstroke \TMstroke_1 \TMstroke \TMstroke \TMblank \ldots
+\]
+பொறி இப்போது நிலை~$q_1$ இல் ஒரு~$\TMstroke$ ஐ வருடுவதால்,
+$\delta(q_1, \TMstroke) = \tuple{q_0, \TMstroke, \TMright}$
+என்ற கட்டளையை நாம் ``பின்பற்ற'' வேண்டும். இதனால்
+பின்வரும் அமைவுநிலை கிடைக்கிறது:
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke_0 \TMstroke \TMblank \ldots
+\]
+பொறி தொடரும்போது, விதிகள் மீண்டும் அதே வரிசையில் பயன்படுத்தப்பட்டு,
+பின்வரும் இரு அமைவுநிலைகள் கிடைக்கின்றன:
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke \TMstroke_1 \TMblank \ldots
+\]
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke \TMstroke \TMblank_0 \ldots
+\]
+பொறி இப்போது நிலை~$q_0$ இல் ஒரு~$\TMblank$ ஐ வருடுகிறது.
+நிறைவேற்ற வேண்டிய கட்டளை எதுவும் இல்லை என்பதை நிலைமாற்று
+வரைபடத்திலிருந்து எளிதில் காணலாம்; எனவே பொறி நின்றுள்ளது.
+உள்ளீடு ஏற்கப்பட்டது என்பதே இதன் பொருள்.
+
+அடுத்து, மூன்று $\TMstroke$-களை உள்ளீடாகக் கொண்டு பொறியைத்
+தொடங்குகிறோம் எனக் கொள்க. அதே கட்டளைகள் நிறைவேற்றப்படுவதால்
+முதல் சில அமைவுநிலைகள் ஒத்தவை; நாடா உள்ளீட்டில் மட்டும் சிறு
+வேறுபாடு உள்ளது:
+\[
+\TMendtape \TMstroke_0 \TMstroke \TMstroke \TMblank \ldots
+\]
+\[
+\TMendtape \TMstroke \TMstroke_1 \TMstroke \TMblank \ldots
+\]
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke_0 \TMblank \ldots
+\]
+\[
+\TMendtape \TMstroke \TMstroke \TMstroke \TMblank_1 \ldots
+\]
+பொறி இப்போது எல்லா $\TMstroke$-களையும் கடந்து, நிலை~$q_1$ இல்
+ஒரு~$\TMblank$ ஐ வாசிக்கிறது. வரைபடத்தில் காட்டப்பட்டவாறு,
+$\delta(q_1, \TMblank) =\tuple{q_1, \TMblank, \TMright}$ என்ற
+வடிவில் ஒரு கட்டளை உள்ளது. நாடா வலப்புறத்தில் முடிவின்றி
+$\TMblank$ ஆல் நிரப்பப்பட்டுள்ளதால், பொறி இக்கட்டளையை
+\emph{என்றென்றும்} நிறைவேற்றத் தொடரும்; நிலை~$q_1$ இலேயே இருந்து
+மேன்மேலும் வலப்புறம் நகரும். பொறி ஒருபோதும் நிற்காது; உள்ளீட்டை
+ஏற்காது.
+\end{explain}
+
+\begin{explain}
+எல்லாப் பொறிகளும் நிற்காது என்பதைக் கவனிப்பது முக்கியம். நிற்றல்
+என்பது, நிறைவேற்ற வேண்டிய கட்டளைகள் பொறியிடம் தீர்ந்துவிடுவது
+என்றால், ஒவ்வொரு நிலையிலும் ஒவ்வொரு குறிக்கும் வெளியேறும் அம்பு
+இருப்பதை உறுதிசெய்து ஒருபோதும் நிற்காத பொறியை உருவாக்கலாம்.
+~$q_0$ இல் ஒரு $\TMblank$ ஐ வருடுவதற்கான கட்டளையைச் சேர்த்து,
+இரட்டை எண் பொறியை முடிவின்றி இயங்குமாறு மாற்றலாம்.
+\end{explain}
+
+\begin{ex}
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state] (A)              {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+
+  \path
+  (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (B)
+      edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (A)
+  (B) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (B)
+      edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (A);
+\end{tikzpicture}
+\]
+\end{ex}
+
+\begin{explain}
+டியூரிங் பொறிகளைக் குறிப்பிடுவதற்கு பொறி அட்டவணைகள்
+மற்றொரு வழி. பொறி அட்டவணையில் நாடாவின் குறியெழுத்துத் தொகுதி
+$x$-அச்சிலும், பொறி நிலைகளின் கணம் $y$-அச்சிலும் காட்டப்படுகின்றன.
+அட்டவணைக்குள், ஒவ்வொரு நிலையும் குறியும் வெட்டும் இடத்தில்
+கட்டளையின் மீதிப்பகுதி---புதிய நிலை, புதிய குறி, நகர்வுத் திசை---
+எழுதப்படுகிறது. பொறி எந்த நிலையில், எந்தக் குறிக்காக நிற்கிறது
+என்று தீர்மானிப்பதைப் பொறி அட்டவணைகள் எளிதாக்குகின்றன.
+அட்டவணையில் ஓர் இடைவெளி இருக்கும் போதெல்லாம், அது பொறி
+நிற்கக்கூடிய ஒரு புள்ளி. பொறி நிற்கும் புள்ளிகள் எப்போதும் உடனடியாகத்
+தெளிவாக இல்லாத நிலை வரைபடங்கள், கட்டளைத் தொகுதிகள் ஆகியவற்றைப்
+போலன்றி, பொறி அட்டவணையின் இடைவெளிகளைக் கண்டறிந்து எந்த நிற்றல்
+புள்ளியையும் விரைவாக அடையாளம் காணலாம்.
+\end{explain}
+
+\begin{ex}
+இரட்டை எண் பொறிக்கான பொறி அட்டவணை:
+\[
+\centering
+\begin{tabular}{lllll}
+\cline{2-4}
+\multicolumn{1}{l|}{}      & \multicolumn{1}{c|}{$\TMblank$}
+& \multicolumn{1}{c|}{$\TMstroke$}     & \multicolumn{1}{c|}{$\TMendtape$}   &  \\ \cline{1-4}
+\multicolumn{1}{|l|}{$q_0$} & \multicolumn{1}{l|}{}
+& \multicolumn{1}{l|}{\TMtrans{\TMstroke}{q_1}{\TMright}} &
+\multicolumn{1}{l|}{\phantom{\TMtrans{\TMstroke}{q_1}{\TMright}}} &  \\ \cline{1-4}
+\multicolumn{1}{|l|}{$q_1$} & \multicolumn{1}{l|}{\TMtrans{\TMblank}{q_1}{\TMright}}
+& \multicolumn{1}{l|}{\TMtrans{\TMstroke}{q_0}{\TMright}} &
+\multicolumn{1}{l|}{\phantom{\TMtrans{\TMstroke}{q_1}{\TMright}}} &  \\ \cline{1-4}
+\end{tabular}
+\]
+நாம் காணக்கூடியவாறு, நிலை~$q_0$ இல் ஒரு~$\TMblank$ ஐ வருடும்போது
+பொறி நிற்கிறது.
+\end{ex}
+
+\begin{explain}
+இதுவரை உள்ளீட்டை வாசித்து ஏற்கும் பொறிகளை மட்டுமே கருதியுள்ளோம்.
+ஆனால் டியூரிங் பொறிகளால் வாசிக்கவும் எழுதவும் முடியும்.
+இத்தகைய பொறிக்கு ஓர் எடுத்துக்காட்டு (இன்னும் மிகப் பல
+எடுத்துக்காட்டுகள் இருந்தாலும்) ஒரு \emph{இரட்டிப்பான்}.
+நாடாவில்~$n$ $\TMstroke$-களின் ஒரு தொகுதியுடன் தொடங்கும்போது,
+இரட்டிப்பான்~$2n$ $\TMstroke$-களின் ஒரு தொகுதியை வெளியிடுகிறது.
+\end{explain}
+
+\begin{ex}
+  \ollabel{ex:doubler} இரட்டிப்பான் பொறியைக் கட்டுவதற்கு முன்,
+  சிக்கலைத் தீர்ப்பதற்கான ஒரு \emph{செயலுத்தியை} வகுப்பது முக்கியம்.
+  பொறி (நாம் அதை வகுத்துள்ளபடி) தான் எத்தனை $\TMstroke$-களை
+  வாசித்துள்ளது என்பதை நினைவில் வைத்துக்கொள்ள முடியாது; எனவே
+  நாடாவிலுள்ள எல்லா $\TMstroke$-களையும் கண்காணிக்க ஒரு வழியை
+  வகுக்க வேண்டும். வெளியீட்டை உள்ளீட்டிலிருந்து ஒரு~$\TMblank$ ஆல்
+  பிரிப்பது அத்தகைய ஒரு வழி. அப்போது பொறி உள்ளீட்டிலுள்ள முதல்
+  $\TMstroke$ ஐ அழித்து, உள்ளீட்டின் மீதிப்பகுதியைக் கடந்து,
+  ஒரு $\TMblank$ ஐ விட்டுவிட்டு, இரு புதிய $\TMstroke$-களை எழுதலாம்.
+  பிறகு பொறி பின்னே சென்று, உள்ளீட்டிலுள்ள இரண்டாவது $\TMstroke$ ஐக்
+  கண்டுபிடித்து அதையும் இரட்டிக்கும். உள்ளீட்டின் ஒவ்வொரு
+  $\TMstroke$ க்கும், வெளியீட்டின் இரு $\TMstroke$-களை எழுதும்.
+  பொறி செல்லச்செல்ல உள்ளீட்டை அழிப்பதால், எந்த $\TMstroke$ உம்
+  தவறவிடப்படவோ இருமுறை இரட்டிக்கப்படவோ இல்லை என்று உறுதிசெய்யலாம்.
+  முழு உள்ளீடும் அழிக்கப்பட்டதும், நாடாவில் $2n$ $\TMstroke$-கள்
+  மீதமிருக்கும். இதனால் கிடைக்கும் டியூரிங் பொறியின் நிலை வரைபடம்
+  \olref{fig:doubler} இல் காட்டப்பட்டுள்ளது.
+  \begin{figure}
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state] (1)              {$q_0$};
+  \node[state]         (2) [right of=1] {$q_1$};
+  \node[state]         (3) [right of=2] {$q_2$};
+  \node[state]         (4) [below of=3] {$q_3$};
+  \node[state]         (5) [left of=4]  {$q_4$};
+  \node[state]         (6) [left of=5]  {$q_5$};
+
+  \path (1) edge node {\TMtrans{\TMstroke}{\TMblank}{\TMright}} (2)
+    (2) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (2)
+      edge node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (3)
+    (3) edge [loop above] node {\TMtrans{\TMstroke}{\TMstroke}{\TMright}} (3)
+        edge node {\TMtrans{\TMblank}{\TMstroke}{\TMright}} (4)
+    (4) edge [loop below] node {\TMtrans{\TMblank}{\TMstroke}{\TMleft}} (4)
+        edge node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+    (5) edge [loop below]  node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (5)
+        edge              node {\TMtrans{\TMblank}{\TMblank}{\TMleft}} (6)
+    (6) edge [loop below] node {\TMtrans{\TMstroke}{\TMstroke}{\TMleft}} (6)
+        edge              node {\TMtrans{\TMblank}{\TMblank}{\TMright}} (1);
+\end{tikzpicture}
+\]
+\caption{ஓர் இரட்டிப்பான் பொறி}
+\ollabel{fig:doubler}
+\end{figure}
+\end{ex}
+
+\begin{prob}
+தன்னிச்சையான ஓர் உள்ளீட்டைத் தேர்ந்தெடுத்து,
+\olref[tur][mac][rep]{ex:doubler} இலுள்ள இரட்டிப்பான் பொறியின்
+அமைவுநிலைகளை ஒன்றன்பின் ஒன்றாகத் தடமறிக.
+\end{prob}
+
+\begin{prob}
+$\{\TMendtape,\TMblank, A, B\}$ என்ற குறியெழுத்துத் தொகுதியைக்
+கொண்ட பின்வரும் டியூரிங் பொறியை வடிவமைக்க: $A$-களின் எண்ணிக்கை
+$B$-களின் எண்ணிக்கைக்குச் சமமாகவும் \emph{மேலும்} எல்லா $A$-களும்
+எல்லா $B$-களுக்கும் முன் வருவதாகவும் உள்ள எந்த $A$, $B$
+எழுத்துத்தொடரையும் பொறி ஏற்க வேண்டும், அதாவது அதில் நிற்க வேண்டும்.
+$A$-களின் எண்ணிக்கை~$B$-களின் எண்ணிக்கைக்குச் சமமல்லாத அல்லது
+எல்லா~$A$-களும் எல்லா~$B$-களுக்கும் முன் வராத எந்த
+எழுத்துத்தொடரையும் பொறி மறுக்க வேண்டும், அதாவது அதில் நிற்கக்கூடாது.
+(எடுத்துக்காட்டாக, பொறி $AABB$, $AAABBB$ ஆகியவற்றை ஏற்று,
+$AAB$, $AABBAABB$ இரண்டையும் மறுக்க வேண்டும்.)
+\end{prob}
+
+\begin{prob}
+$\{\TMendtape,\TMblank, A, B\}$ என்ற குறியெழுத்துத் தொகுதியைக்
+கொண்ட பின்வரும் டியூரிங் பொறியை வடிவமைக்க: $A$-களும் $B$-களும்
+கொண்ட எந்த எழுத்துத்தொடர் $\alpha$ ஐயும் உள்ளீடாகப் பெற்று,
+அவற்றை நகலெடுத்து $\alpha\alpha$ என்ற வடிவில் வெளியீட்டை உருவாக்க
+வேண்டும். (எடுத்துக்காட்டாக, உள்ளீடு $ABBA$ ஆனது வெளியீடு
+$ABBAABBA$ ஐத் தர வேண்டும்.)
+\end{prob}
+
+\begin{prob}
+\emph{அகரவரிசையிலா?:} $\{\TMendtape,\TMblank, A, B\}$ என்ற
+குறியெழுத்துத் தொகுதியைக் கொண்ட பின்வரும் டியூரிங் பொறியை வடிவமைக்க:
+$A$-களும் $B$-களும் கொண்ட ஒரு முடிவுறு தொடரை உள்ளீடாகப்
+பெறும்போது, எல்லா $A$-களும் எல்லா $B$-களுக்கும் இடப்புறம்
+தோன்றுகின்றனவா இல்லையா என்று சரிபார்க்க வேண்டும். பொறி உள்ளீட்டு
+எழுத்துத்தொடரை நாடாவில் விட்டுவிட்டு, எழுத்துத்தொடர்
+``அகரவரிசையில்'' இருந்தால் நிற்க வேண்டும்; இல்லையெனில்
+என்றென்றும் கண்ணியில் இயங்க வேண்டும்.
+\end{prob}
+
+\begin{prob}
+\emph{அகரவரிசைப்படுத்தி:} $\{\TMendtape,\TMblank, A, B\}$ என்ற
+குறியெழுத்துத் தொகுதியைக் கொண்ட பின்வரும் டியூரிங் பொறியை வடிவமைக்க:
+$A$-களும் $B$-களும் கொண்ட ஒரு முடிவுறு தொடரை உள்ளீடாகப் பெற்று,
+எல்லா $A$-களும் எல்லா~$B$-களுக்கும் இடப்புறம் இருக்குமாறு அவற்றை
+மறுவரிசைப்படுத்த வேண்டும். (எடுத்துக்காட்டாக, தொடர் $BABAA$ ஆனது
+தொடர் $AAABB$ ஆகவும், தொடர் $ABBABB$ ஆனது தொடர் $AABBBB$ ஆகவும்
+மாற வேண்டும்.)
+\end{prob}
+
+\end{document}

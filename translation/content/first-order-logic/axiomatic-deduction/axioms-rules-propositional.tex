@@ -1,0 +1,48 @@
+% SEGMENT OLP-0114-S01
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: axioms-rules-propositional
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{prp}}
+      {\olfileid{pl}{axd}{prp}}
+
+\olsection{கூற்று இணைப்புகளுக்கான அடிகோள்களும் விதிகளும்}
+
+% SEGMENT OLP-0114-S02
+\begin{defn}[அடிகோள்கள்]
+கூற்று இணைப்புகளுக்கான \emph{அடிகோள்களின்} கணம் $\PAx$, பின்வரும்
+வடிவங்களைக் கொண்ட எல்லா !!{formula}s ஐயும் உள்ளடக்குகிறது:
+\begin{align}
+  & (!A \land !B) \lif !A \ollabel{ax:land1}\\
+  & (!A \land !B) \lif !B \ollabel{ax:land2}\\
+  & !A \lif (!B \lif (!A \land !B)) \ollabel{ax:land3}\\
+  & !A \lif (!A \lor !B) \ollabel{ax:lor1}\\
+  & !A \lif (!B \lor !A) \ollabel{ax:lor2}\\
+  & (!A \lif !C) \lif ((!B \lif !C) \lif ((!A \lor !B) \lif !C)) \ollabel{ax:lor3}\\
+  & !A \lif (!B \lif !A) \ollabel{ax:lif1}\\
+  & (!A \lif (!B \lif !C)) \lif ((!A \lif !B) \lif (!A \lif !C)) \ollabel{ax:lif2}\\
+  & (!A \lif !B) \lif ((!A \lif \lnot !B) \lif \lnot !A) \ollabel{ax:lnot1}\\
+  & \lnot !A \lif (!A \lif !B) \ollabel{ax:lnot2}\\
+  & \ltrue \ollabel{ax:ltrue}\\
+  & \lfalse \lif !A \ollabel{ax:lfalse1}\\
+  & (!A \lif \lfalse) \lif \lnot !A \ollabel{ax:lfalse2}\\
+  & \lnot\lnot !A \lif !A \ollabel{ax:dne}
+\end{align}
+\end{defn}
+
+% SEGMENT OLP-0114-S03
+\begin{defn}[மோடஸ் போனென்ஸ்]
+  $!B$ மற்றும் $!B \lif !A$ ஆகியவை ஏற்கெனவே !!a{derivation} இல்
+  வந்திருந்தால், $!A$ ஒரு சரியான அனுமானப் படி.
+\end{defn}
+
+% SEGMENT OLP-0114-S04
+மோடஸ் போனென்ஸ் விதியை ``\MP'' எனச் சுருக்கி எழுதுவோம்.
+
+\end{document}
+

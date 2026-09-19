@@ -1,0 +1,443 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: satisfaction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0163-S01
+
+\olfileid{fol}{syn}{sat}
+
+\olsection{\article{formula} \printtoken{S}{formula} ஒன்றின்
+  \article{structure} \printtoken{S}{structure} இல் நிறைவுறுத்தல்}
+
+\begin{explain}
+ஒருபுறம் சொற்கள், !!{formula}s போன்ற வெளிப்பாடுகளையும் மறுபுறம்
+!!{structure}s-ஐயும் தொடர்புபடுத்தும் அடிப்படைக் கருத்துகள், ஒரு சொல்லின்
+\emph{!!{value}} மற்றும் !!a{formula} இன் \emph{நிறைவுறுத்தல்} ஆகும்.
+முறைசாராமல் கூறினால், ஒரு சொல்லின் !!{value} என்பது !!a{structure} இன்
+!!a{element} ஆகும்---சொல் ஒரு மாறிலி மட்டும் என்றால் அதன் !!{value} அந்த
+மாறிலிக்கு !!{structure} ஒதுக்கும் பொருளாகும்; அது !!{function}s மூலம்
+உருவாக்கப்பட்டிருந்தால், சொல்லிலுள்ள மாறிலிகளின் !!{value}s மற்றும்
+செயற்குறிகளுக்கு ஒதுக்கப்பட்ட சார்புகளிலிருந்து அதன் !!{value}
+கணக்கிடப்படுகிறது. !!^a{formula} ஒன்று !!a{structure} இல்
+\emph{நிறைவுறுத்தப்படுகிறது} என்றால், பயனிலைக் குறிகளுக்கு வழங்கப்பட்ட
+பொருள்படுத்தல் அந்த !!{formula} ஐ !!{structure} இன் பொருட்களத்தில்
+மெய்யாக்குகிறது. நிறைவுறுத்தல் என்ற இந்தக் கருத்து தொகுத்தறிதல் முறையில்
+குறிப்பிடப்படுகிறது: அணு !!{formula}s எப்போது நிறைவுறுத்தப்படுகின்றன
+என்பதை !!{structure} இன் வரையறை நேரடியாகக் கூறுகிறது; சிக்கலான
+!!{formula} எப்போது நிறைவுறுத்தப்படுகிறது என்பதை அதன் முதன்மை இணைப்பி
+அல்லது அளவையடை, மேலும் அதன் உடனடி !!{subformula}s நிறைவுறுத்தப்படுகின்றனவா
+என்பதன் அடிப்படையில் வரையறுக்கிறோம்.
+
+இங்கே அளவையடைகளின் நிலை சற்றுச் சிக்கலானது; ஏனெனில் அளவையிடப்பட்ட
+!!{subformula} கொண்ட !!{formula} ஒன்றின் உடனடி துணைப்பகுதியில் ஒரு கட்டற்ற
+!!{variable} இருக்கும், ஆனால் !!{structure}s !!{variable}s இன் !!{value}s ஐ
+குறிப்பிடுவதில்லை. இந்தச் சிக்கலைச் சமாளிக்க
+\emph{மாறி ஒதுக்கீடுகளை} அறிமுகப்படுத்துகிறோம்; நிறைவுறுத்தலை
+!!a{structure} ஒன்றை மட்டும் சார்ந்து வரையறுப்பதற்குப் பதிலாக,
+!!a{structure} மற்றும் !!a{variable} ஒதுக்கீடு இரண்டையும் சார்ந்து
+வரையறுக்கிறோம்.
+\end{explain}
+
+\begin{defn}[மாறி ஒதுக்கீடு]
+!!a{structure}~$\Struct{M}$ க்கான \emph{மாறி ஒதுக்கீடு}~$s$ என்பது
+ஒவ்வொரு !!{variable} ஐயும் $\Domain M$ இன் !!a{element} ஒன்றுக்கு
+அனுப்பும் ஒரு சார்பாகும்; அதாவது, $s\colon \Var \to \Domain M$.
+\end{defn}
+
+\begin{explain}
+!!^a{structure} ஒவ்வொரு !!{constant} க்கும் !!a{value} ஒன்றை ஒதுக்குகிறது;
+மாறி ஒதுக்கீடு ஒவ்வொரு மாறிக்கும் ஒன்றை ஒதுக்குகிறது. ஆனால் இவற்றிலிருந்து
+உருவாக்கப்படும் சொற்களையும் !!{element}s இன் !!{domain} க்கு பெயர்களாகப்
+பயன்படுத்த விரும்புகிறோம். இதற்காகச் சொற்களின் !!{value} ஐத் தொகுத்தறிதல்
+முறையில் வரையறுக்கிறோம். !!{constant}s மற்றும் மாறிகளின் மதிப்பு
+!!{structure} அல்லது மாறி ஒதுக்கீடு குறிப்பிடுவது போலவே இருக்கும்;
+மேலும் சிக்கலான சொற்களின் மதிப்பு, !!{structure} !!{function}s க்கு
+ஒதுக்கும் சார்புகளைப் பயன்படுத்தி மீளுருவாக்கமாகக் கணக்கிடப்படுகிறது.
+\end{explain}
+
+\begin{defn}[சொற்களின் !!^{value}]
+$t$ என்பது $\Lang L$ மொழியின் ஒரு சொல், $\Struct M$ என்பது $\Lang L$ க்கான
+!!{structure}, மேலும் $s$ என்பது $\Struct M$ க்கான !!a{variable} ஒதுக்கீடு
+எனில், \emph{!!{value}}~$\Value{t}{M}[s]$ பின்வருமாறு வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+\item \indcase{t}{c}{$\Value{\indfrm}{M}[s] = \Assign{\indcomplex}{M}$.}
+\item \indcase{t}{x}{$\Value{\indfrm}{M}[s] = s(\indcomplex)$.}
+\item \indcase{t}{\Atom{f}{t_1, \ldots, t_n}}{
+\[
+\Value{\indfrm}{M}[s] = \Assign{f}{M}(\Value{t_1}{M}[s], \ldots,
+\Value{t_n}{M}[s]).
+\]}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[$x$-மாறுபாடு]
+$s$ என்பது !!a{variable} ஒதுக்கீடு கொண்ட !!a{structure}~$\Struct M$ எனில்,
+$s$ இலிருந்து $x$ க்கு ஒதுக்கும் மதிப்பில் மட்டும் அதிகபட்சம் வேறுபடும்
+!!{variable} ஒதுக்கீடு~$s'$ ஐ, $\Struct M$ க்கானதாகவும்,
+$s$ இன் \emph{$x$-மாறுபாடு} என்கிறோம்.
+$s'$ என்பது $s$ இன் $x$-மாறுபாடு என்றால்
+$\varAssign{s'}{s}{x}$ என்று எழுதுகிறோம்.
+\end{defn}
+
+\begin{explain}
+ஒரு ஒதுக்கீடு~$s$ இன் $x$-மாறுபாடு, $x$ க்கு \emph{வேறுபட்ட ஒன்றையே}
+ஒதுக்க வேண்டும் என்ற கட்டாயம் இல்லை என்பதை நினைவில் கொள்க. உண்மையில்,
+ஒவ்வொரு ஒதுக்கீடும் தன்னுடைய ஒரு $x$-மாறுபாடாகும்.
+\end{explain}
+
+\begin{defn}
+  $s$ என்பது !!a{variable} ஒதுக்கீடு கொண்ட !!a{structure}~$\Struct M$
+  என்றும் $m \in \Domain{M}$ என்றும் கொள்வோம். அப்போது
+  $\Subst{s}{m}{x}$ என்பது பின்வருமாறு வரையறுக்கப்படும் மாறி ஒதுக்கீடு:
+  \[\Subst{s}{m}{x}(y) = \begin{cases}
+    m & \text{if } y \ident x\\
+    s(y) & \text{otherwise}.
+  \end{cases}\]
+\end{defn}
+
+வேறு விதமாகச் சொன்னால், $\Subst{s}{m}{x}$ என்பது $s$ இன் அந்தச்
+சிறப்பான $x$-மாறுபாடு; அது பொருட்களத்தின் !!{element}~$m$ ஐ $x$ க்கு
+ஒதுக்குகிறது, மேலும் $x$ ஐத் தவிர்ந்த !!{variable}s க்கு $s$ ஒதுக்கும்
+அதே பொருட்களை ஒதுக்குகிறது.
+
+\begin{defn}[நிறைவுறுத்தல்]
+\ollabel{defn:satisfaction}
+!!a{formula}~$!A$ இன் !!a{structure}~$\Struct M$ இல்
+!!a{variable} ஒதுக்கீடு~$s$ ஐச் சார்ந்து, குறியீட்டில்:
+$\Sat{M}{!A}[s]$, பின்வருமாறு மீளுருவாக்கமாக வரையறுக்கப்படுகிறது. 
+$\Sat/{M}{!A}[s]$ என்பது `$\Sat{M}{!A}[s]$ அல்ல` என்பதைக் குறிக்கும்.
+\begin{enumerate}
+\tagitem{prvFalse}{%
+  \indcase{!A}{\lfalse}{$\Sat/{M}{\indfrm}[s]$.}}{}
+
+\tagitem{prvTrue}{%
+  \indcase{!A}{\ltrue}{$\Sat{M}{\indfrm}[s]$.}}{}
+
+\item \indcase{!A}{\Atom{R}{t_1, \dots, t_n}}{$\Sat{M}{\indfrm}[s]$
+  அப்போதும் அப்போது மட்டுமே $\langle \Value{t_1}{M}[s], \dots,
+  \Value{t_n}{M}[s] \rangle \in \Assign{R}{M}$.}
+
+\item \indcase{!A}{\eq[t_1][t_2]}{$\Sat{M}{\indfrm}[s]$ அப்போதும்
+  அப்போது மட்டுமே $\Value{t_1}{M}[s] = \Value{t_2}{M}[s]$.}
+
+\tagitem{prvNot}{%
+  \indcase{!A}{\lnot !B}{$\Sat{M}{\indfrm}[s]$ அப்போதும் அப்போது மட்டுமே
+    $\Sat/{M}{!B}[s]$.}}{}
+
+\tagitem{prvAnd}{%
+  \indcase{!A}{(!B \land !C)}{$\Sat{M}{\indfrm}[s]$ அப்போதும் அப்போது
+    மட்டுமே $\Sat{M}{!B}[s]$ மற்றும் $\Sat{M}{!C}[s]$.}}{}
+
+\tagitem{prvOr}{%
+  \indcase{!A}{(!B \lor !C)}{$\Sat{M}{\indfrm}[s]$ அப்போதும் அப்போது மட்டுமே
+    $\Sat{M}{!B}[s]$ அல்லது $\Sat{M}{!C}[s]$ (அல்லது இரண்டும்).}}{}
+
+\tagitem{prvIf}{%
+  \indcase{!A}{(!B \lif !C)}{$\Sat{M}{\indfrm}[s]$ அப்போதும் அப்போது
+    மட்டுமே $\Sat/{M}{!B}[s]$ அல்லது $\Sat{M}{!C}[s]$ (அல்லது இரண்டும்).}}{}
+
+\tagitem{prvIff}{%
+  \indcase{!A}{(!B \liff !C)}{$\Sat{M}{\indfrm}[s]$ அப்போதும் அப்போது
+    மட்டுமே இரண்டும், $\Sat{M}{!B}[s]$ மற்றும் $\Sat{M}{!C}[s]$, அல்லது
+    இரண்டுமே அல்ல, $\Sat{M}{!B}[s]$ மற்றும் $\Sat{M}{!C}[s]$ எதுவும் அல்ல.}}{}
+
+\tagitem{prvAll}{%
+  \indcase{!A}{\lforall[x][!B]}{$\Sat{M}{\indfrm}[s]$ அப்போதும் அப்போது
+    மட்டுமே ஒவ்வொரு !!{element}~$m \in \Domain M$ க்கும்
+    $\Sat{M}{!B}[\Subst{s}{m}{x}]$.}}{}
+
+\tagitem{prvEx}{%
+  \indcase{!A}{\lexists[x][!B]}{$\Sat{M}{\indfrm}[s]$ அப்போதும் அப்போது
+  மட்டுமே குறைந்தது ஒரு !!{element}~$m \in \Domain M$ க்கு
+  $\Sat{M}{!B}[\Subst{s}{m}{x}]$.}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+கடைசி
+\iftag{notprvEx,notprvAll}{உட்பிரிவில்}{இரண்டு உட்பிரிவுகளில்} மாறி
+ஒதுக்கீடுகள் முக்கியமானவை.\iftag{prvAll}{ நாம்
+ $\lforall[x][!B(x)]$ இன் நிறைவுறுத்தலை ``ஒவ்வொரு $m \in
+\Domain{M}$ க்கும் $\Sat{M}{!B(m)}$`` என்று வரையறுக்க முடியாது.}{}\iftag{prvEx}{ நாம்
+ $\lexists[x][!B(x)]$ இன் நிறைவுறுத்தலை ``குறைந்தது ஒரு $m \in
+\Domain{M}$ க்கும் $\Sat{M}{!B(m)}$`` என்று வரையறுக்க முடியாது.}{} காரணம், $m \in
+\Domain M$ என்பது மொழியின் குறியீடு அல்ல; ஆகவே $!B(m)$ ஒரு
+!!a{formula} அல்ல (அதாவது, $\Subst{!B}{m}{x}$ வரையறுக்கப்படவில்லை).
+மேலும் !!{constant}s அல்லது சொற்கள் ஒவ்வொரு !!{element} ஐயும்
+$\Struct{M}$ இல் பெயரிடும் அளவுக்கு உள்ளன என்று கருத முடியாது; !!{structure}s
+இன் வரையறை அத்தகைய தேவையை விதிப்பதில்லை. நிலையான மொழியில்
+!!{constant}s இன் தொகுப்பு !!{denumerable}; எனவே $\Domain{M}$ !!{enumerable}
+ஆக இல்லாவிட்டால் ஒவ்வொரு பொருளுக்கும் பெயரிடப் போதுமான !!{constant}s
+கூட இருக்காது.
+
+இந்தச் சிக்கலை !!{variable} ஒதுக்கீடுகளை அறிமுகப்படுத்துவதன் மூலம்
+தீர்க்கிறோம்; அவை மாறிகளை பொருட்களத்தின் !!{element}s உடன் நேரடியாக
+இணைக்கின்றன. ஆகவே, எடுத்துக்காட்டாக,
+\iftag{prvEx}{$\lexists[x][!B(x)]$}{$\lforall[x][!B(x)]$} என்பது நிறைவுறுத்தப்படுகிறது
+$\Struct M$ இல் iff \iftag{prvEx}{குறைந்தது ஒரு $m \in
+\Domain{M}$ க்கு}{ஒவ்வொரு $m \in \Domain{M}$ க்கும், $\Sat{M}{!B(m)}$},
+என்று சொல்வதற்குப் பதிலாக, அது
+$\Struct M$ இல் $s$ ஐ \emph{சார்ந்து} நிறைவுறுத்தப்படுகிறது iff
+$!B(x)$ ஆனது $\Subst{s}{m}{x}$ ஐச் சார்ந்து
+\iftag{prvEx}{குறைந்தது ஒரு}{ஒவ்வொரு} $m \in \Domain M$ க்கும்
+நிறைவுறுத்தப்படுகிறது என்று சொல்கிறோம்.
+\end{explain}
+
+\begin{ex}
+$a$ மற்றும் $b$ !!{constant}s, $f$ இரு-இட !!{function}, $R$ இரு-இட
+!!{predicate} ஆக இருக்கும் $\Lang{L} = \{a, b, f, R\}$ என்க.
+பின்வருமாறு வரையறுக்கப்பட்ட !!{structure}~$\Struct{M}$ ஐக் கருதுக:
+\begin{enumerate}
+\item $\Domain M = \{1, 2, 3, 4\}$
+\item $\Assign{a}{M} = 1$
+\item $\Assign{b}{M} = 2$
+\item $\Assign{f}{M}(x, y) = x+y$ if $x+y \le 3$ and $= 3$ otherwise.
+\item $\Assign{R}{M} = \{\tuple{1, 1}, \tuple{1, 2}, \tuple{2, 3}, \tuple{2, 4}\}$
+\end{enumerate}
+ஒவ்வொரு !!{variable} க்கும் $1 \in \Domain{M}$ ஐ ஒதுக்கும்
+$s(x) = 1$ என்ற சார்பு, $\Struct{M}$ க்கான மாறி ஒதுக்கீடாகும்.
+
+அப்போது
+\begin{align*}
+\Value{f(a,b)}{M}[s] & = \Assign{f}{M}(\Value{a}{M}[s], \Value{b}{M}[s]).
+\intertext{$a$ மற்றும் $b$ !!{constant}s என்பதால்
+  $\Value{a}{M}[s] = \Assign{a}{M} = 1$ என்றும்
+  $\Value{b}{M}[s] = \Assign{b}{M} = 2$ என்றும் கிடைக்கிறது. ஆகவே}
+\Value{f(a,b)}{M}[s] & = \Assign{f}{M}(1, 2) = 1+2 = 3.
+\intertext{$f(f(a,b),a)$ இன் மதிப்பைக் கணக்கிட, பின்வருவதைக் கருத வேண்டும்:}
+\Value{f(f(a,b),a)}{M}[s] & = \Assign{f}{M}(\Value{f(a, b)}{M}[s],
+\Value{a}{M}[s]) = \Assign{f}{M}(3, 1) = 3,
+\intertext{$3+1 > 3$ என்பதால். மேலும் $s(x) = 1$ என்றும்
+  $\Value{x}{M}[s] = s(x)$ என்றும் இருப்பதால்,}
+\Value{f(f(a,b),x)}{M}[s] & = \Assign{f}{M}(\Value{f(a, b)}{M}[s],
+\Value{x}{M}[s]) = \Assign{f}{M}(3, 1) = 3,
+\end{align*}
+
+ஒரு அணு !!{formula}~$R(t_1, t_2)$ நிறைவுறுத்தப்படுவது, அதன்
+வாதங்களின் மதிப்புகளான
+$\tuple{\Value{t_1}{M}[s], \Value{t_2}{M}[s]}$ என்ற சோடி
+$\Assign{R}{M}$ இன் !!a{element} ஆக இருக்கும்போதுதான். எனவே,
+எடுத்துக்காட்டாக, $\Sat{M}{R(b,f(a,b))}[s]$; ஏனெனில்
+$\tuple{\Value{b}{M}, \Value{f(a,b)}{M}} = \tuple{2, 3} \in
+\Assign{R}{M}$. ஆனால் $\Sat/{M}{R(x, f(a,b))}[s]$; ஏனெனில்
+$\tuple{1, 3} \notin \Assign{R}{M}[s]$.
+
+அணுவல்லாத !!{formula}~$!A$ நிறைவுறுத்தப்படுகிறதா என்பதைத் தீர்மானிக்க,
+முதன்மை இணைப்பிக்குப் பொருந்தும் தொகுத்தறிதல் வரையறையின் உட்பிரிவைப்
+பயன்படுத்த வேண்டும். உதாரணமாக, $R(a, a) \lif (R(b,
+x) \lor R(x, b))$ இன் முதன்மை இணைப்பி~$\lif$; மேலும்
+\begin{align*}
+  & \Sat{M}{R(a, a) \lif (R(b, x) \lor R(x, b))}[s] \text{ iff }\\
+  & \qquad
+  \Sat/{M}{R(a,a)}[s] \text{ or } \Sat{M}{R(b, x) \lor R(x, b)}[s]
+  \intertext{$\Sat{M}{R(a,a)}[s]$ (ஏனெனில் $\tuple{1,1} \in
+    \Assign{R}{M}$) என்பதால் விடையை இன்னும் தீர்மானிக்க முடியாது;
+    முதலில் $\Sat{M}{R(b, x) \lor R(x, b)}[s]$ உண்மையா என்பதை அறிய வேண்டும்:}
+  & \Sat{M}{R(b, x) \lor R(x, b)}[s] \text{ iff }\\
+  & \qquad \Sat{M}{R(b,x)}[s] \text{ or } \Sat{M}{R(x, b)}[s]
+  \intertext{இது உண்மை; ஏனெனில் $\Sat{M}{R(x, b)}[s]$
+    (மற்றும் $\tuple{1,2} \in \Assign{R}{M}$).}
+\end{align*}
+
+$s$ இன் $x$-மாறுபாடு என்பது, $x$ க்கு ஒதுக்கும் மதிப்பில் அதிகபட்சம்
+வேறுபடும் ஒரு மாறி ஒதுக்கீடு என்பதை நினைவுகூர்க. $\Domain{M}$ இன் ஒவ்வொரு
+!!{element} க்கும் $s$ இன் ஒரு $x$-மாறுபாடு உள்ளது:
+\begin{align*}
+  s_1 & = \Subst{s}{1}{x}, &
+  s_2 & = \Subst{s}{2}{x},\\
+  s_3 & = \Subst{s}{3}{x}, &
+  s_4 & = \Subst{s}{4}{x}.
+\end{align*}
+உதாரணமாக, $s_2(x) = 2$ மற்றும் $s_2(y) = s(y) = 1$ என்பது
+$x$ ஐத் தவிர்ந்த எல்லா மாறி~$y$ களுக்கும் பொருந்தும்.
+கட்டமைப்பு~$\Struct{M}$ க்கான $s$ இன் $x$-மாறுபாடுகள்~$s$ இவையே;
+$\Domain{M} = \{1, 2, 3, 4\}$. குறிப்பாக, $s_1 = s$ என்பதை நினைவில் கொள்க
+($s$ எப்போதும் தன்னுடைய ஒரு $x$-மாறுபாடாகும்).
+
+\iftag{prvEx}{%
+வாய்பாடு~$\lexists[x][!A(x)]$ நிறைவுறுத்தப்படுகிறதா என்பதைத்
+தீர்மானிக்க, குறைந்தது ஒரு $m \in \Domain M$ க்கு
+$\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ ஆகிறதா என்பதைப் பார்க்க வேண்டும். ஆகவே,
+  \[
+  \Sat{M}{\lexists[x][(R(b,x) \lor R(x,b))]}[s],
+  \]
+  $\Sat{M}{R(b,x) \lor R(x, b)}[\Subst{s}{1}{x}]$ என்பதால்
+  ($\Subst{s}{3}{x}$ ஐயும் தேர்ந்தெடுக்கலாம்). ஆனால்,
+  \[
+  \Sat/{M}{\lexists[x][(R(b,x) \land R(x,b))]}[s]
+  \]
+  எந்த $m \in \Domain{M}$ ஐத் தேர்ந்தெடுத்தாலும்
+  $\Sat/{M}{R(b,x) \land R(x,b)}[\Subst{s}{m}{x}]$.}{}
+
+\iftag{prvAll}{To determine if a universally quantified
+  !!{formula}~$\lforall[x][!A(x)]$ is satisfied, we have to determine
+  if $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ for all $m \in \Domain M$. So,
+  \[
+  \Sat{M}{\lforall[x][(R(x,a) \lif R(a,x))]}[s],
+  \]
+  since $\Sat{M}{R(x,a) \lif R(a,x)}[\Subst{s}{m}{x}]$ for all $m \in
+  \Domain M$. For $m = 1$, we have $\Sat{M}{R(a,x)}[\Subst{s}{1}{x}]$
+  so the consequent is true; for $m = 2$, $3$, and~$4$, we have
+  $\Sat/{M}{R(x,a)}[\Subst{s}{m}{x}]$, so the antecedent is false.
+  But,
+  \[
+  \Sat/{M}{\lforall[x][(R(a,x) \lif R(x,a))]}[s]
+  \]
+  since $\Sat/{M}{R(a,x) \lif R(x,a)}[\Subst{s}{2}{x}]$ (because
+  $\Sat{M}{R(a, x)}[\Subst{s}{2}{x}]$ and $\Sat/{M}{R(x,
+  a)}[\Subst{s}{2}{x}]$).}{}
+
+\iftag{defEx}{%
+!!{formula}~$\lexists[x][!A(x)]$ நிறைவுறுத்தப்படுகிறதா என்பதைத்
+தீர்மானிக்க, $\Sat{M}{\lnot \lforall[x][\lnot !A(x)]}[s]$ ஆகிறதா
+என்பதைப் பார்க்க வேண்டும். எடுத்துக்காட்டாக,
+  \[
+  \Sat{M}{\lexists[x][(R(b,x) \lor R(x,b))]}[s].
+  \]
+  முதலில், $\Sat{M}{R(b,x) \lor R(x, b)}[\Subst{s}{1}{x}]$
+  ($\Subst{s}{3}{x}$ ஐயும் தேர்ந்தெடுக்கலாம்). ஆகவே,
+  $\Sat/{M}{\lnot(R(b,x) \lor R(x,b))}[\Subst{s}{1}{x}]$; எனவே
+  $\Sat/{M}{\lforall[x][\lnot((R(b,x) \lor R(x,b))]}[s]$, மேலும்
+  $\Sat{M}{\lnot\lforall[x][\lnot((R(b,x) \lor
+  R(x,b))]}[s]$. மறுபுறம்,
+  \[
+  \Sat/{M}{\lexists[x][(R(b,x) \land R(x,b))],}[s].
+  \]
+  ஏனெனில் $\Sat{M}{\lforall[x][\lnot(R(b,x) \land
+  R(x,b))]}[s]$; எந்த $m \in \Domain M$ க்கும்
+  $\Sat{M}{R(b,x) \land R(x,b)}[\Subst{s}{m}{x}]$ ஆகாது. இந்த
+  எடுத்துக்காட்டுகளிலிருந்து, $\Sat{M}{\lexists[x][!A(x)]}[s]$ iff
+  $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ குறைந்தது ஒரு $m \in \Domain
+  M$ க்கு என்பதை ஊகிக்கலாம்.}{}
+
+\iftag{defAll}{%
+!!{formula}~$\lforall[x][!A(x)]$ நிறைவுறுத்தப்படுகிறதா என்பதைத்
+தீர்மானிக்க, $\Sat{M}{\lnot\lexists[x][\lnot !A(x)]}[s]$ ஆகிறதா
+என்பதைப் பார்க்க வேண்டும். எடுத்துக்காட்டாக,
+  \[
+  \Sat{M}{\lforall[x][(R(x,a) \lif R(a,x))]}[s],
+  \]
+  முதலில், ஒவ்வொரு $m \in \Domain M$ க்கும்
+  $\Sat{M}{R(x,a) \lif R(a,x)}[\Subst{s}{m}{x}]$
+  ($\Sat{M}{R(a,x)}[\Subst{s}{1}{x}]$ மற்றும்
+  $\Sat/{M}{R(a,x)}[\Subst{s}{m}{x}]$ என்பது $m = 2$, $3$, அல்லது~$4$).
+  ஆகவே, $\Sat{M}{\lnot(R(x,a) \lif R(a,x))}[\Subst{s}{m}{x}]$ ஆகும்
+  $m \in \Domain M$ எதுவும் இல்லை; எனவே
+  $\Sat/{M}{\lexists[x][\lnot(R(x,a) \lif R(a,x))]}[s]$. இதனால்
+  $\Sat{M}{\lnot\lexists[x][\lnot(R(x,a) \lif R(a,x))]}[s]$. மறுபுறம்,
+  \[
+  \Sat/{M}{\lforall[x][(R(a,x) \lif R(x,a))]}[s],
+  \]
+  ஏனெனில் $\Sat/{M}{R(a,x) \lif R(x,a)}[\Subst{s}{2}{x}]$; ஆகவே
+  $\Sat{M}{\lexists[x][\lnot(R(a,x) \lif R(x,a))]}[s]$. இந்த
+  எடுத்துக்காட்டுகளிலிருந்து, $\Sat{M}{\lforall[x][!A(x)]}[s]$
+  iff $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ ஒவ்வொரு $m \in \Domain
+  M$ க்கும் என்பதை ஊகிக்கலாம்.}{}
+
+இன்னும் சிக்கலான நிலையாக, பின்வருவதைக் கருதுக:
+\[
+\lforall[x][(R(a,x) \lif \lexists[y][R(x,y)])].
+\]
+$\Sat/{M}{R(a,x)}[\Subst{s}{3}{x}]$ மற்றும்
+$\Sat/{M}{R(a,x)}[\Subst{s}{4}{x}]$ என்பதால், நிபந்தனையின்
+பின்விளைவைப் பற்றி கவலைப்பட வேண்டிய சுவையான நிலைகள் $m = 1$
+மற்றும் $ = 2$ மட்டுமே. $\Sat{M}{\lexists[y][R(x,y)]}[\Subst{s}{1}{x}]$
+மெய்யா? குறைந்தது ஒரு $n \in \Domain M$ க்கு
+$\Sat{M}{R(x,y)}[\Subst{\Subst{s}{1}{x}}{n}{y}]$ என்றால் அது மெய்.
+உண்மையில், $n = 1$ என்று எடுத்தால்,
+$\Subst{\Subst{s}{1}{x}}{n}{y} = \Subst{s}{1}{y} =
+s$. $s(x) = 1$, $s(y) = 1$, மேலும்
+$\tuple{1,1} \in \Assign{R}{M}$ என்பதால் விடை ஆம்.
+
+$\Sat{M}{\lexists[y][R(x,y)]}[\Subst{s}{2}{x}]$ மெய்யா என்பதை
+தீர்மானிக்க, !!{variable} ஒதுக்கீடுகளான
+$\Subst{\Subst{s}{2}{x}}{n}{y}$ ஐப் பார்க்க வேண்டும். இங்கே $n = 1$
+என்றால், இந்த ஒதுக்கீடு~$s_2 = \Subst{s}{2}{x}$; இது $R(x,y)$ ஐ
+நிறைவுறுத்தாது ($s_2(x) =
+2$, $s_2(y) = 1$, மேலும் $\tuple{2,1}\notin \Assign{R}{M}$). ஆனால்,
+$\Subst{\Subst{s}{2}{x}}{3}{y} = \Subst{s_2}{3}{y}$ என்பதைக் கருதுக.
+$\Sat{M}{R(x,y)}[\Subst{s_2}{3}{y}]$; ஏனெனில் $\tuple{2,3} \in
+\Assign{R}{M}$, ஆகவே $\Sat{M}{\lexists[y][R(x,y)]}[s_2]$.
+
+எனவே, ஒவ்வொரு $n \in \Domain M$ க்கும்,
+$\Sat/{M}{R(a,x)}[\Subst{s}{m}{x}]$ ($m = 3$, $4$ என்றால்) அல்லது
+$\Sat{M}{\lexists[y][R(x,y)]}[\Subst{s}{m}{x}]$ ($m = 1$, $2$ என்றால்)
+என்பது பொருந்தும்; ஆகவே
+\[
+\Sat{M}{\lforall[x][(R(a,x) \lif \lexists[y][R(x,y)])]}[s].
+\]
+மறுபுறம்,
+\[
+\Sat/{M}{\lexists[x][(R(a,x) \land \lforall[y][R(x,y)])]}[s].
+\]
+$\Sat{M}{R(a,x)}[\Subst{s}{m}{x}]$ என்பது $m = 1$ மற்றும் $m =
+2$ க்கு மட்டுமே. ஆனால் இந்த இரு $m$ மதிப்புகளுக்கும், ஒரு $n \in
+\Domain M$, அதாவது $n = 4$, உள்ளது; அதனால்
+$\Sat/{M}{R(x,y)}[\Subst{\Subst{s}{m}{x}}{n}{y}]$; எனவே
+$\Sat/{M}{\lforall[y][R(x,y)]}[\Subst{s}{m}{x}]$ என்பது $m = 1$ மற்றும் $m =
+2$ க்கு. மொத்தத்தில், $\Sat{M}{R(a,x)
+\land \lforall[y][R(x,y)]}[\Subst{s}{m}{x}]$ ஆகும்
+$m \in \Domain M$ எதுவும் இல்லை.
+\end{ex}
+
+\iftag{defEx}{%
+\begin{prop}\ollabel{prop:sat-ex}
+$\Sat{M}{\lexists[x][!B(x)]}[s]$ iff $s$ இன் ஒரு $x$-மாறுபாடு~$s'$
+    உள்ளது; அதற்கு $\Sat{M}{!B(x)}[s']$.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+}{}
+
+\tagprob{defEx}
+\begin{prob}
+  \olref[fol][syn][sat]{prop:sat-ex} ஐ நிரூபிக்க.
+\end{prob}
+\tagendprob
+
+\iftag{defAll}{%
+\begin{prop}\ollabel{prop:sat-all}
+$\Sat{M}{\lforall[x][!B(x)]}[s]$ iff $s$ இன் ஒவ்வொரு
+$x$-மாறுபாடு~$s'$ க்கும் $\Sat{M}{!B(x)}[s']$.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+}{}
+
+\tagprob{defAll}
+\begin{prob}
+  \olref[fol][syn][sat]{prop:sat-all} ஐ நிரூபிக்க.
+\end{prob}
+\tagendprob
+
+\begin{prob}
+$\Lang L = \{c, f, A\}$ என்க; இதில் ஒரு !!{constant}, ஒரு-இட
+!!{function}, இரு-இட !!{predicate} ஆகியவை உள்ளன. மேலும்
+!!{structure}~$\Struct{M}$ பின்வருமாறு கொடுக்கப்பட்டுள்ளது:
+\begin{enumerate}
+\item $\Domain M = \{1, 2, 3\}$
+\item $\Assign{c}{M} = 3$
+\item $\Assign{f}{M}(1) = 2, \Assign{f}{M}(2) = 3, \Assign{f}{M}(3) = 2$
+\item $\Assign{A}{M} = \{\tuple{1, 2}, \tuple{2, 3}, \tuple{3, 3}\}$
+\end{enumerate}
+(a) எல்லா !!{variable}s~$v$ க்கும் $s(v) = 1$ என்க. பின்வரும்
+வாய்பாடு மெய்யா என்பதைத் தீர்மானிக்க:
+\[
+\Sat{M}{\lexists[x][(A(f(z), c) \lif \lforall[y][(A(y, x) \lor A(f(y),
+      x))])]}[s]
+\]
+ஏன் அல்லது ஏன் இல்லை என்பதை விளக்குக.
+
+(b) இந்த !!{formula} நிறைவுறுத்தப்படாத ஒரு வேறுபட்ட
+கட்டமைப்பு மற்றும் !!{variable} ஒதுக்கீட்டைக் கொடுக்க.
+\end{prob}
+
+\end{document}

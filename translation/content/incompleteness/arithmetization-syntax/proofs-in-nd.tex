@@ -1,0 +1,355 @@
+% Part: incompleteness
+% Chapter: arithmetization-syntax
+% Section: proofs-in-nd
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0287-S01
+
+\olfileid{inc}{art}{pnd}
+\olsection{இயல்பான வருவித்தலில் \usetoken{P}{derivation}}
+
+\begin{explain}
+!!{derivation}s ஐ எண்கணிதமாக்க, !!{derivation}s ஐ எண்களாகப்
+பிரதிநிதித்துவப்படுத்த வேண்டும். ஒவ்வோர் அனுமானமும் ஒன்று அல்லது இரண்டு
+சிட்டைகளைத் தாங்கும் !!{formula}s இன் மரங்களே !!{derivation}s என்பதால்,
+மீள்வரையறைப் பிரதிநிதித்துவமே மிகத் தெளிவான அணுகுமுறை: ஒரு
+!!{derivation} ஐ ஓர் அடுக்காகப் பிரதிநிதித்துவப்படுத்துகிறோம்; அதன் கூறுகள்
+கடைசி அனுமானத்தின் முன்கோள்களுக்கு இட்டுச்செல்லும் உடனடி
+உட்-!!{derivation}s இன் எண்ணிக்கை, அவற்றின் பிரதிநிதித்துவங்கள்,
+இறுதி-!!{formula}, கடைசி அனுமானத்தின் விடுவிப்புச் சிட்டை, மற்றும் கடைசி
+அனுமானத்தின் வகையைக் குறிக்கும் ஓர் எண்.
+\end{explain}
+
+\begin{defn}
+  $\delta$ இயல்பான வருவித்தலில் !!a{derivation} எனில், $\Gn{\delta}$
+  பின்வருமாறு தொகுத்தறிதலாக வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+  \item
+    எடுகோள்~$!A$ மட்டுமே $\delta$ வில் இருந்தால், $\Gn{\delta}$ என்பது
+    $\tuple{0, \Gn{!A}, n}$. அது ஓர் !!{undischarged} எடுகோள் எனில்
+    எண்~$n$ ஆனது~$0$; இல்லையெனில் அது எண்வடிவச் சிட்டை.
+  \item
+    பூச்சியம், ஒன்று, இரண்டு அல்லது மூன்று முன்கோள்களைக் கொண்ட ஓர்
+    அனுமானத்தில் $\delta$ முடிந்தால், முறையே $\Gn{\delta}$ என்பது
+    \begin{align*}
+      & \tuple{0, \Gn{!A}, n, k}, \\
+      & \tuple{1, \Gn{\delta_1}, \Gn{!A}, n, k}, \\
+      & \tuple{2, \Gn{\delta_1}, \Gn{\delta_2}, \Gn{!A}, n, k}, \text{ அல்லது}\\
+      & \tuple{3, \Gn{\delta_1}, \Gn{\delta_2}, \Gn{\delta_3}, \Gn{!A}, n,
+        k},
+    \end{align*}
+    இங்கு $\delta_1$, $\delta_2$, $\delta_3$ ஆகியவை $\delta$ வின்
+    கடைசி அனுமானத்தின் முன்கோளில் அல்லது முன்கோள்களில் முடியும்
+    உட்-!!{derivation}s; $!A$ என்பது $\delta$ வின் கடைசி அனுமானத்தின்
+    முடிவுரை; $n$ என்பது கடைசி அனுமானத்தின் விடுவிப்புச் சிட்டை
+    (அந்த அனுமானம் எந்த எடுகோளையும் விடுவிக்கவில்லை எனில்~$0$); கடைசி
+    அனுமானத்தில் பயன்படுத்தப்பட்ட விதியைப் பொறுத்து பின்வரும் அட்டவணை
+    $k$ ஐத் தருகிறது.
+
+    \begin{tabular}{lccccccc}
+      \text{விதி:} & \Intro{\land} & \Elim{\land} & \Intro{\lor} & \Elim{\lor} \\
+      $k$: & 1 & 2 & 3 & 4  \\[1.5ex]
+      \text{விதி:} &  \Intro{\lif} & \Elim{\lif} & \Intro{\lnot} & \Elim{\lnot} \\
+      $k$: & 5 & 6 & 7 & 8 \\[1.5ex]
+      \text{விதி:}  &  \FalseInt & \FalseCl & \Intro{\lforall} & \Elim{\lforall} \\
+      $k$: & 9 & 10 & 11 & 12 \\[1.5ex]
+      \text{விதி:} & \Intro{\lexists} & \Elim{\lexists} & \Intro{\eq} & \Elim{\eq} \\
+      $k$: & 13 & 14 & 15 & 16
+    \end{tabular}
+  \end{enumerate}
+\end{defn}
+
+\begin{ex}
+  மிக எளிய பின்வரும் !!{derivation} ஐக் கருதுக:
+  \begin{prooftree}
+    \AxiomC{$\Discharge{!A \land !B}{1}$}
+    \RightLabel{\Elim{\land}}
+    \UnaryInfC{$!A$}
+    \DischargeRule{\Intro{\lif}}{1}
+    \UnaryInfC{$(!A \land !B) \lif !A$}
+  \end{prooftree}
+  எடுகோளின் கோடல் எண் $d_0 = \tuple{0,
+    \Gn{!A \land !B}, 1}$ ஆக இருக்கும். $\Elim{\land}$ இன் முடிவுரையில்
+  முடியும் !!{derivation} இன் கோடல் எண் $d_1 = \tuple{1,
+     d_0, \Gn{!A}, 0, 2}$ ஆக இருக்கும் ($\Elim{\land}$ க்கு ஒரு
+  முன்கோள் இருப்பதால் $1$; முடிவுரை~$!A$ இன் கோடல் எண்; எந்த எடுகோளும்
+  விடுவிக்கப்படாததால் $0$; மேலும் $\Elim{\land}$ ஐக் குறியீடாக்கும் எண்
+  $2$). அப்போது முழு !!{derivation} இன் கோடல் எண்
+  $\tuple{1, d_1, \Gn{((!A \land !B) \lif
+      !A)}, 1, 5}$; அதாவது,
+  \[
+  \tuple{1, \tuple{1, \tuple{0, \Gn{(!A \land !B)}, 1}, \Gn{!A}, 0, 2},
+    \Gn{((!A \land !B) \lif !A)}, 1, 5}.
+  \]
+\end{ex}
+
+\begin{explain}
+!!{derivation}s கான ஒரு பிரதிநிதித்துவத்தைத் தீர்மானித்தபின், அத்தகைய
+!!{derivation}s இன் கோடல் எண்களை முதன்மை மீள்வரையறை முறையில் கையாளலாம்
+என்றும், அவற்றின் இன்றியமையாப் பண்புகளையும் தொடர்புகளையும் வெளிப்படுத்தலாம்
+என்றும் காட்ட வேண்டும். சில செயல்கள் எளியவை: எடுத்துக்காட்டாக,
+!!a{derivation} இன் கோடல் எண்~$d$ தரப்பட்டால்,
+$\fn{EndFmla}(d) = (d)_{(d)_0+1}$ அதன் இறுதி-!!{formula} வின் கோடல்
+எண்ணைத் தருகிறது; $\fn{DischargeLabel}(d) = (d)_{(d)_0 + 2}$ அதன்
+விடுவிப்புச் சிட்டையைத் தருகிறது; $\fn{LastRule}(d) = (d)_{(d)_0 + 3}$
+கடைசி அனுமானத்தின் வகையைக் குறிக்கும் எண்ணைத் தருகிறது. சில செயல்கள் மிகவும்
+கடினமானவை. அவற்றை எவ்வாறு செய்வது என்பதையாவது வரைகோடாகக் காட்டுவோம்.
+“$\delta$ என்பது~$\Gamma$ இலிருந்து~$!A$ இன் !!a{derivation}” என்ற
+தொடர்பு, $\delta$ மற்றும்~$!A$ இன் கோடல் எண்களின் முதன்மை மீள்வரையறைத்
+தொடர்பு என்று காட்டுவதே இலக்கு.
+\end{explain}
+
+\begin{prop}
+  பின்வரும் தொடர்புகள் முதன்மை மீள்வரையறையானவை:
+  \begin{enumerate}
+  \item சிட்டை~$n$ உடன் $!A$ ஆனது~$\delta$ வில் ஓர் எடுகோளாக
+    இடம்பெறுகிறது.
+  \item $\delta$ வில் சிட்டை~$n$ கொண்ட அனைத்து எடுகோள்களும்~$!A$
+    வடிவிலுள்ளவை (அதாவது, $\delta$ வில் சிட்டை~$n$ ஐப் பயன்படுத்தி
+    எடுகோள்~$!A$ ஐ !!{discharge} செய்யலாம்).
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  !!{formula}s இன் கோடல் எண்களுக்கும் !!{derivation}s இன் கோடல்
+  எண்களுக்கும் இடையிலான இவற்றிற்கு ஒத்த தொடர்புகள் முதன்மை
+  மீள்வரையறையானவை என்று காட்ட வேண்டும்.
+  \begin{enumerate}
+  \item கோடல் எண்~$d$ கொண்ட !!{derivation} இல் சிட்டை~$n$ இடப்பட்ட
+    ஓர் எடுகோளின் கோடல் எண்~$x$ ஆக இருந்தால் பொருந்தும்
+    $\fn{Assum}(x, d, n)$ முதன்மை மீள்வரையறையானது என்று காட்ட விரும்புகிறோம்.
+    கோடல் எண்~$\tuple{0, x, n}$ கொண்ட !!{derivation} ஆனது~$d$ இன்
+    ஓர் உட்-!!{derivation} ஆக இருந்தால் இது பொருந்தும். !!{derivation}s ஐ
+    நாம் குறியீடாக்கும் முறை,
+    % READER FALLBACK TA-READER-REF-012
+    \oliflabeldef{cmp:rec:tre:sec}{\olref[cmp][rec][tre]{sec}}{மரவுருக் குறியீடாக்கம் பற்றிய முந்தைய பிரிவு}
+    இல் அறிமுகப்படுத்திய
+    மரங்களின் குறியீடாக்கத்தின் ஒரு சிறப்பு நேர்வு என்பதை நினைவுகூர்க.
+    ஆகவே, முதன்மை மீள்வரையறைச் சார்பு $\fn{SubtreeSeq}(d)$ ஆனது~$d$ இன்
+    அனைத்து உட்-!!{derivation}s இன் கோடல் எண்களைக் கொண்ட ஒரு தொடரை
+    ($d$ ஐ மிஞ்சாத நீளமுடையதை) தருகிறது. எனவே பின்வருமாறு வரையறுக்கலாம்:
+    \[
+    \fn{Assum}(x, d, n) \defiff \bexists{i<d}{(\fn{SubtreeSeq}(d))_i =
+      \tuple{0, x, n}}.
+    \]
+  \item கோடல் எண்~$d$ கொண்ட !!{derivation} இல் சிட்டை~$n$ கொண்ட
+    அனைத்து எடுகோள்களும், கோடல் எண்~$x$ கொண்ட !!{formula} வாக இருந்தால்
+    பொருந்தும் $\fn{Discharge}(x, d, n)$ முதன்மை மீள்வரையறையானது என்று
+    காட்ட விரும்புகிறோம். ஆனால் இத்தொடர்பு
+    $\bforall{y<d}{(\fn{Assum}(y, d, n) \lif y = x)}$ பொருந்தினால்,
+    அப்போதும் அப்போது மட்டுமே பொருந்தும்.
+  \end{enumerate}
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:followsby}
+  கோடல் எண்~$d$ கொண்ட !!{derivation}~$\delta$ வின் கடைசி அனுமானம்
+  சரியாக இருந்தால், அப்போதும் அப்போது மட்டுமே பொருந்தும்
+  $\fn{Correct}(d)$ என்ற பண்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+  ஒவ்வோர் அனுமான விதி~$R$ க்கும் $\fn{FollowsBy}_R(d)$ என்ற தொடர்பு
+  முதன்மை மீள்வரையறையானது என்று இங்கு காட்ட வேண்டும். $d$ ஆனது
+  !!{derivation}~$\delta$ இன் கோடல் எண்ணாகவும், $\delta$ வின்
+  இறுதி-!!{formula} ஆனது அதன் உடனடி உட்-!!{derivation}s இலிருந்து~$R$ ஐச்
+  சரியாகப் பயன்படுத்திப் பின்தொடர்ந்ததாகவும் இருந்தால், அப்போதும் அப்போது
+  மட்டுமே $\fn{FollowsBy}_R(d)$ பொருந்தும்.
+
+  \Intro{\land} விதி ஓர் எளிய நேர்வு. சரியான $\Intro{\land}$
+  அனுமானத்தில் $\delta$ முடிந்தால், அது பின்வருமாறு தோன்றும்:
+  \begin{prooftree}
+    \AxiomC{}
+    \RightLabel{$\delta_1$}
+    \DeduceC{$!A$}
+
+    \AxiomC{}
+    \RightLabel{$\delta_2$}
+    \DeduceC{$!B$}
+
+    \RightLabel{\Intro\land}
+    \BinaryInfC{$!A \land !B$}
+  \end{prooftree}
+  அப்போது $\delta$ வின் கோடல் எண்~$d$ என்பது $\tuple{2, d_1, d_2,
+    \Gn{(!A \land !B)}, 0, k}$; இங்கு $\fn{EndFmla}(d_1) = \Gn{!A}$,
+  $\fn{EndFmla}(d_2) = \Gn{!B}$, $n=0$, மற்றும் $k=1$. எனவே
+  $\fn{FollowsBy}_{\Intro\land}(d)$ ஐப் பின்வருமாறு வரையறுக்கலாம்:
+  \begin{multline*}
+    (d)_0 = 2 \land \fn{DischargeLabel}(d) = 0 \land \fn{LastRule}(d) = 1 \land {}\\
+    \fn{EndFmla}(d) = {}\\
+    \Gn{(} \concat \fn{EndFmla}((d)_1) \concat \Gn{\land}
+    \concat \fn{EndFmla}((d)_2) \concat \Gn{)}.
+  \end{multline*}
+
+  மற்றோர் எளிய எடுத்துக்காட்டு $\Intro\eq$ விதி. எடுகோள்களைப் போலவே,
+  இதற்கு முன்கோள்கள் இல்லை; ஆகவே $(d)_0 = 0$. இதற்கு விடுவிப்புச்
+  சிட்டையும் இல்லை; அதாவது, $n=0$. எனினும், ஏதாவது மூடிய சொல்~$t$ க்கு
+  $!A$ ஆனது $\eq[t][t]$ வடிவில் இருக்க வேண்டும். இங்கு ஒரு முதன்மை
+  மீள்வரையறை வரையறை:
+  \begin{multline*}
+    (d)_0 = 0 \land \fn{DischargeLabel}(d) = 0 \land {}\\
+    \bexists{t<d}{(\fn{ClTerm}(t) \land
+      \fn{EndFmla}(d) = {}\\
+      \Gn{{\eq}(} \concat t \concat \Gn{,} \concat t \concat \Gn{)})}.
+  \end{multline*}
+
+  சற்றுச் சிக்கலான எடுத்துக்காட்டாக,
+  $\fn{FollowsBy}_{\Intro{\lif}}(d)$ ஐக் கருதுக. $\delta$ வின்
+  இறுதி-!!{formula} $(!A \lif !B)$ வடிவிலும், $\delta_1$ இன்
+  இறுதி-!!{formula}~$!B$ ஆகவும், சிட்டை~$n$ உடைய $\delta$ வின் ஒவ்வோர்
+  எடுகோளும்~$!A$ வடிவிலும் இருந்தால், அப்போதும் அப்போது மட்டுமே இது
+  பொருந்தும். இதைப் பின்வருமாறு முதன்மை மீள்வரையறை முறையில் வெளிப்படுத்தலாம்:
+  % SOURCE CORRECTION TA-INC-008: discharge label 0 denotes vacuous discharge.
+  \begin{multline*}
+    (d)_0 = 1 \land {}\\
+    \bexists{a<d}{((\fn{DischargeLabel}(d) = 0 \lor
+      \fn{Discharge}(a, (d)_1, \fn{DischargeLabel}(d))) \land {}}\\
+      \fn{EndFmla}(d) = (\Gn{(} \concat a \concat \Gn{\lif}
+      \concat \fn{EndFmla}((d)_1) \concat \Gn{)}))
+  \end{multline*}
+  ($a$ ஐ~$!A$ இன் கோடல் எண்ணாகக் கருதுக).
+
+  மற்றோர் எடுத்துக்காட்டாக, \Intro{\lexists} ஐக் கருதுக.
+  !!a{formula}~$!A$, ஒரு மூடிய சொல்~$t$, மற்றும் !!a{variable}~$x$
+  இருந்து, $\Subst{!A}{t}{x}$ ஆனது !!{derivation}~$\delta_1$ இன்
+  இறுதி-!!{formula} ஆகவும், $\lexists[x][!A]$ கடைசி அனுமானத்தின்
+  முடிவுரையாகவும் இருந்தால், அப்போதும் அப்போது மட்டுமே $\delta$ வின்
+  கடைசி அனுமானம் சரியானது. எனவே,
+  $\fn{FollowsBy}_{\Intro{\lexists}}(d)$ பொருந்துவது, அப்போதும் அப்போது
+  மட்டுமே,
+  \begin{multline*}
+    (d)_0 = 1 \land \fn{DischargeLabel}(d) = 0 \land {} \\
+    \bexists{a < d}{\bexists{x<d}{\bexists{t<d}{
+          (\fn{ClTerm}(t) \land \fn{Var}(x)  \land {}}}}\\
+    \fn{Subst}(a,t,x) = \fn{EndFmla}((d)_1) \land
+    \fn{EndFmla}(d) = (\Gn{\lexists} \concat x \concat a)).
+  \end{multline*}
+
+  அடுத்து, $\fn{Correct}(d)$ ஐப் பின்வருமாறு வரையறுக்கிறோம்:
+  % SOURCE CORRECTION TA-INC-006: group every rule/assumption branch under Sent.
+  \begin{multline*}
+    \fn{Sent}(\fn{EndFmla}(d)) \land {}\\
+    [ (\fn{LastRule}(d) = 1 \land
+    \fn{FollowsBy}_{\Intro\land}(d)) \lor \dots \lor {}\\
+    (\fn{LastRule}(d) = 16 \land \fn{FollowsBy}_{\Elim\eq}(d)) \lor {}\\
+    \bexists{n<d}{\bexists{x<d}{(d = \tuple{0, x, n})}}].
+  \end{multline*}
+  முதல் வரி, $d$ இன் இறுதி-!!{formula} ஒரு வாக்கியம் என்பதை
+  உறுதிசெய்கிறது. $d$ ஓர் எடுகோள் மட்டுமே ஆகும் நேர்வைக் கடைசி வரி
+  கையாளுகிறது.
+\end{proof}
+
+\begin{prob}
+  \olref[inc][art][pnd]{prop:followsby} இல் உள்ளவாறு பின்வரும் பண்புகளை
+  வரையறுக்க:
+  \begin{enumerate}
+  \item $\fn{FollowsBy}_{\Elim{\lif}}(d)$,
+  \item $\fn{FollowsBy}_{\Elim{\eq}}(d)$,
+  \item $\fn{FollowsBy}_{\Elim{\lor}}(d)$,
+  \item $\fn{FollowsBy}_{\Intro{\lforall}}(d)$.
+  \end{enumerate}
+  கடைசிப் பண்புக்கு, கோடல் எண்~$d$ கொண்ட !!{derivation} இன் கடைசி
+  அனுமானம் தனிமாறி நிபந்தனையை நிறைவுசெய்கிறதா என்பதையும் முதன்மை
+  மீள்வரையறை முறையில் சோதிக்கலாம் என்று காட்ட வேண்டும்; அதாவது,
+  $\Intro{\lforall}$ அனுமானத்தின் தனிமாறி~$a$, $d$ இன்
+  இறுதி-!!{formula} விலோ $d$ இன் திறந்த எடுகோளிலோ இடம்பெறக்கூடாது.
+  இதற்கு \olref[inc][art][pnd]{prop:openassum} இலுள்ள முதன்மை
+  மீள்வரையறைப் பயனிலை $\fn{OpenAssum}$ ஐப் பயன்படுத்தலாம்.
+\end{prob}
+
+\begin{prop}
+  \ollabel{prop:deriv}
+  $d$ ஆனது சரியான !!{derivation}~$\delta$ இன் கோடல் எண்ணாக இருந்தால்
+  பொருந்தும் $\fn{Deriv}(d)$ என்ற தொடர்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+  !!^a{derivation}~$\delta$ வின் ஒவ்வோர் அனுமானமும் ஒரு விதியின் சரியான
+  பயன்பாடாக, அதாவது அதன் ஒவ்வோர் உட்-!!{derivation} உம் ஒரு சரியான
+  அனுமானத்தில் முடிந்தால், $\delta$ சரியானது. ஆகவே,
+  $\fn{Deriv}(d)$ பொருந்தினால், அப்போதும் அப்போது மட்டுமே,
+  \[
+  \bforall{i<\len{\fn{SubtreeSeq}(d)}}{\fn{Correct}((\fn{SubtreeSeq}(d))_i)}
+  \]
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:openassum} கோடல் எண்~$d$ கொண்ட
+  !!{derivation}~$\delta$ வின் !!a{undischarged} எடுகோள்~$!A$ இன்
+  கோடல் எண்~$z$ ஆக இருந்தால் பொருந்தும் $\fn{OpenAssum}(z, d)$ என்ற
+  தொடர்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+  ஓர் எடுகோளின் நிகழ்வு, சிட்டை~$n$ உடன் $\delta$ வின் ஓர்
+  உட்-!!{derivation} இல் இடம்பெற்று, சிட்டை~$n$ ஐ விடுவிப்புச் சிட்டையாகக்
+  கொண்ட ஒரு விதியில் அந்த உட்-!!{derivation} முடிந்தால்,
+  !!{discharged} ஆகும். ஆகவே, அவ்வெடுகோளின் நிகழ்வுகளில் குறைந்தது ஒன்று
+  $\delta$ வில் !!{discharged} ஆகவில்லை எனில், $!A$ ஆனது~$\delta$ வின்
+  !!a{undischarged} எடுகோள். இங்கு கவனம் தேவை: $\delta$ ஆனது~$!A$ இன்
+  !!{discharged} நிகழ்வுகளையும் !!{undischarged} நிகழ்வுகளையும்
+  ஒருங்கே கொண்டிருக்கலாம்.
+
+  $\delta_0 = \delta$ ஆகவும், $\delta_k$ ஆனது ஏதாவது~$n$ க்கான
+  எடுகோள் $\Discharge{!A}{n}$ ஆகவும், $\delta_{i+1}$ ஆனது
+  $\delta_i$ இன் உடனடி உட்-!!{derivation} ஆகவும் இருக்கும் ஒரு தொடர்
+  $\delta_0$, \dots, $\delta_k$ ஐக் கருதுக. எந்த~$\delta_i$ உம்
+  சிட்டை~$n$ ஐ விடுவிப்புச் சிட்டையாகக் கொண்ட ஓர் அனுமானத்தில் முடியாத
+  இத்தகைய தொடர் இருந்தால், $!A$ ஆனது~$\delta$ வின்
+  !!a{undischarged} எடுகோள்.
+
+  முதன்மை மீள்வரையறைச் சார்பு $\fn{SubtreeSeq}(d)$ ஆனது~$\delta$ வின்
+  அனைத்து உட்-!!{derivation}s இன் கோடல் எண்களைக் கொண்ட ஒரு தொடரைத்
+  தருகிறது. $\delta$ வின் உட்-!!{derivation}s இன் கோடல் எண்களால் ஆன எந்தத்
+  தொடரும் அதன் ஒரு உட்தொடர். உட்தொடராக இருப்பது முதன்மை மீள்வரையறைத்
+  தொடர்பு: $\fn{Subseq}(s, s')$ பொருந்துவது, அப்போதும் அப்போது மட்டுமே,
+  $\bforall{i<\len{s}}{\lexists[j<\len{s'}][(s)_i = (s')_j]}$.
+  உடனடி உட்-!!{derivation} ஆக இருப்பதும் அவ்வாறே:
+  % SOURCE CORRECTION TA-INC-007: tuple slots 1 through arity hold immediate subderivations.
+  $\fn{Subderiv}(d, d')$ பொருந்துவது, அப்போதும் அப்போது மட்டுமே,
+  $\bexists{j<(d')_0}{d = (d')_{j+1}}$. எனவே
+  $\fn{OpenAssum}(z, d)$ ஐப் பின்வருமாறு வரையறுக்கலாம்:
+  % SOURCE CORRECTION TA-INC-009: label 0 explicitly marks an undischarged assumption.
+  \begin{multline*}
+    \bexists{s<\fn{SubtreeSeq}(d)}{(\fn{Subseq}(s, \fn{SubtreeSeq}(d))
+      \land (s)_0 = d \land {}} \\
+    \bexists{n<d}{((s)_{\len{s} \tsub 1} = \tuple{0, z, n} \land {}}\\
+      \bforall{i<(\len{s} \tsub 1)}{(\fn{Subderiv}((s)_{i+1}, (s)_i) \land {}}\\
+      (n = 0 \lor \fn{DischargeLabel}((s)_i) \neq n)))).
+  \end{multline*}
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:prf-prim-rec}
+  $\Gamma$ என்பது !!{sentence}s இன் முதன்மை மீள்வரையறைக் கணம் என்க.
+  அப்போது, “$x$ என்பது~$\Gamma$ விலுள்ள !!{undischarged} எடுகோள்களிலிருந்து
+  $!A$ க்கான !!a{derivation}~$\delta$ வின் குறியீடாகவும், $y$ என்பது~$!A$
+  இன் கோடல் எண்ணாகவும் உள்ளது” என்பதை வெளிப்படுத்தும்
+  $\Prf[\Gamma](x, y)$ என்ற தொடர்பு முதன்மை மீள்வரையறையானது.
+\end{prop}
+
+\begin{proof}
+  “$y \in \Gamma$” என்பது $R_\Gamma(y)$ என்ற முதன்மை மீள்வரையறைப்
+  பயனிலையால் தரப்படுகிறது என்க. $y$ என்பது ஒரு வாக்கியம்~$!A$ இன்
+  கோடல் எண்ணாகவும், $x$ என்பது இறுதி-!!{formula}~$!A$ ஐயும்
+  $\Gamma$ விலுள்ள அனைத்து !!{undischarged} எடுகோள்களையும் கொண்ட இயல்பான
+  வருவித்தல் !!{derivation} இன் குறியீடாகவும் இருந்தால், அப்போதும் அப்போது
+  மட்டுமே பொருந்தும் $\Prf[\Gamma](x, y)$ முதன்மை மீள்வரையறையானது என்று
+  காட்ட வேண்டும்.
+
+  \olref{prop:deriv} இன்படி, $x$ ஆனது இயல்பான வருவித்தலில் சரியான
+  !!{derivation}~$\delta$ இன் கோடல் எண்ணாக இருந்தால், அப்போதும் அப்போது
+  மட்டுமே பொருந்தும் $\fn{Deriv}(x)$ என்ற பண்பு முதன்மை
+  மீள்வரையறையானது. ஆகவே, $\Prf[\Gamma](x, y)$ ஐப் பின்வருமாறு
+  வரையறுக்கலாம்:
+  \begin{align*}
+    \Prf[\Gamma](x, y) \defiff {}
+    & \fn{Deriv}(x) \land \fn{EndFmla}(x) = y \land {} \\
+    & \bforall{z < x}{(\fn{OpenAssum}(z, x) \lif R_\Gamma(z))}.
+  \end{align*}
+\end{proof}
+
+\end{document}

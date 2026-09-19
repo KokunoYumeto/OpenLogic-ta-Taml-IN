@@ -1,0 +1,88 @@
+{
+  "schema": "openlogic-tamil-epub-readers/1",
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "source_total_units": 722,
+  "modified": "2026-09-10T00:00:00Z",
+  "readers": [
+    {
+      "slug": "sets",
+      "master": "tamil-batch001.tex",
+      "filename": "sets-ta-Taml-IN.epub",
+      "title": "திறந்த தருக்கவியல்: கணங்கள்",
+      "subtitle": "OpenLogic Tamil development reader — sets",
+      "first_unit": 4,
+      "last_unit": 10,
+      "unit_count": 7
+    },
+    {
+      "slug": "sets-functions-relations",
+      "master": "tamil-sfr.tex",
+      "filename": "sets-functions-relations-ta-Taml-IN.epub",
+      "title": "திறந்த தருக்கவியல்: கணங்கள், தொடர்புகள், சார்புகள், அளவு, எண்முறைமைகள், முடிவுறாத கணங்கள்",
+      "subtitle": "OpenLogic Tamil development reader — sets, relations, functions, size, arithmetization, and infinite sets",
+      "first_unit": 4,
+      "last_unit": 54,
+      "unit_count": 51
+    },
+    {
+      "slug": "proof-systems-sequent-natural-deduction-tableaux",
+      "master": "tamil-proof-systems-sequent.tex",
+      "filename": "proof-systems-sequent-natural-deduction-tableaux-ta-Taml-IN.epub",
+      "title": "திறந்த தருக்கவியல்: நிறுவல் முறைமைகள், தொடரணிக் கணியம், இயல்பான வருவித்தல், அட்டவணை மரங்கள்",
+      "subtitle": "OpenLogic Tamil development reader — proof systems, sequent calculus, natural deduction, and tableaux",
+      "first_unit": 63,
+      "last_unit": 111,
+      "unit_count": 49
+    },
+    {
+      "slug": "axiomatic-deduction",
+      "master": "tamil-axiomatic-deduction.tex",
+      "filename": "axiomatic-deduction-ta-Taml-IN.epub",
+      "title": "திறந்த தருக்கவியல்: அடிகோள் வருவித்தல்",
+      "subtitle": "OpenLogic Tamil development reader — axiomatic deduction",
+      "first_unit": 112,
+      "last_unit": 125,
+      "unit_count": 14
+    },
+    {
+      "slug": "computability",
+      "master": "tamil-computability.tex",
+      "filename": "computability-ta-Taml-IN.epub",
+      "title": "திறந்த தருக்கவியல்: கணிப்புத்தன்மை",
+      "subtitle": "OpenLogic Tamil development reader — computability",
+      "first_unit": 208,
+      "last_unit": 251,
+      "unit_count": 44
+    },
+    {
+      "slug": "turing-machines",
+      "master": "tamil-turing-machines.tex",
+      "filename": "turing-machines-ta-Taml-IN.epub",
+      "title": "திறந்த தருக்கவியல்: டியூரிங் பொறிகள்",
+      "subtitle": "OpenLogic Tamil development reader — Turing machines",
+      "first_unit": 252,
+      "last_unit": 273,
+      "unit_count": 22
+    },
+    {
+      "slug": "incompleteness-arithmetization",
+      "master": "tamil-incompleteness-arithmetization.tex",
+      "filename": "incompleteness-arithmetization-ta-Taml-IN.epub",
+      "title": "திறந்த தருக்கவியல்: எண்கணிதமயமாக்கல்",
+      "subtitle": "OpenLogic Tamil development reader — incompleteness and arithmetization",
+      "first_unit": 288,
+      "last_unit": 299,
+      "unit_count": 12
+    },
+    {
+      "slug": "representability-in-q",
+      "master": "tamil-representability-in-q.tex",
+      "filename": "representability-in-q-ta-Taml-IN.epub",
+      "title": "திறந்த தருக்கவியல்: Q-இல் பிரதிநிதித்துவப்படுத்தத்தக்க தன்மை",
+      "subtitle": "OpenLogic Tamil development reader — representability in Q",
+      "first_unit": 300,
+      "last_unit": 310,
+      "unit_count": 11
+    }
+  ]
+}

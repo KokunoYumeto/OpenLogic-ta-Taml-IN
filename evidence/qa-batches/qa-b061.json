@@ -1,0 +1,206 @@
+{
+  "batch_id": "TA-B061",
+  "units": [
+    {
+      "unit_id": "OLP-0138",
+      "source_sha256": "d3db70ccef0969cf026f4f67149b0cb6cde3a398935b6582f01e056b1904a41f",
+      "translation_sha256": "12f8455c5543c9010057236e3239c3826e8845236d6525829660cea00341c88a",
+      "source_bytes": 1601,
+      "translation_bytes": 3093,
+      "source_coverage_complete": true,
+      "segments": 2,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "FOL",
+        "and",
+        "axiomatic",
+        "beyond",
+        "calculus",
+        "completeness",
+        "deduction",
+        "include",
+        "introduction",
+        "logic",
+        "models",
+        "natural",
+        "open",
+        "part",
+        "proof",
+        "semantics",
+        "sequent",
+        "syntax",
+        "systems",
+        "tableaux",
+        "theories"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0139",
+      "source_sha256": "05b3d4c1cfef57b0df901d96638381e3ac936560b37dfcbc10404f152a19d7d5",
+      "translation_sha256": "55f6f4f49f36b6cc41a15067004303c4d1d66a1bc3256c25e53534378a94b530",
+      "source_bytes": 457,
+      "translation_bytes": 512,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0140",
+      "source_sha256": "04bfc243ce8ec9263cc7f805971d4193f93c9667a595a8bdae8a1cd1931ca4b2",
+      "translation_sha256": "c1c824e923345437bfe48c015526ec80e468574f24bc55ffd3adb9a2a66579dd",
+      "source_bytes": 4685,
+      "translation_bytes": 12213,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\lforall[x][(!A(x)\\lif!B(x)),\\lexists[x][!A(x)]\\Entails\\lexists[x][!B(x)]]$",
+        "$\\lforall[x][(!A(x)\\lif!B(x))$",
+        "$\\lforall[x][(!A(x)\\lif!B(x))$",
+        "$\\lexists[x][!B(x)]]$",
+        "$\\lexists[x][!B(x)]]$"
+      ],
+      "extra_math": [
+        "$\\lforall[x][(!A(x)\\lif!B(x))],\\lexists[x][!A(x)]\\Entails\\lexists[x][!B(x)]$",
+        "$\\lforall[x][(!A(x)\\lif!B(x))]$",
+        "$\\lforall[x][(!A(x)\\lif!B(x))]$",
+        "$\\lexists[x][!B(x)]$",
+        "$\\lexists[x][!B(x)]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "forall",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INT-001",
+          "unit_id": "OLP-0140",
+          "kind": "unbalanced-quantifier-scope",
+          "action": "Closed the universal premise before the comma and removed the stray bracket after the existential conclusion in the semantic-entailment example.",
+          "expected_missing_math": [
+            "$\\lforall[x][(!A(x)\\lif!B(x)),\\lexists[x][!A(x)]\\Entails\\lexists[x][!B(x)]]$"
+          ],
+          "expected_extra_math": [
+            "$\\lforall[x][(!A(x)\\lif!B(x))],\\lexists[x][!A(x)]\\Entails\\lexists[x][!B(x)]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The opening universal-formula bracket runs across the premise separator and entailment, while a compensating stray bracket follows the conclusion.",
+          "chosen_treatment": "தமிழ் பதிப்பு அனைத்தளவையிட்ட முதல் முன்கூற்றை காற்புள்ளிக்கு முன் மூடி, இருப்பளவையிட்ட முடிவுக்குப் பிந்தைய மிகை அடைப்புக்குறியை நீக்குகிறது.",
+          "alternatives_considered": "Treating the entire sequent as the scope of one universal quantifier despite the comma and entailment sign.",
+          "rationale": "The immediately following ant/insect prose identifies two premises and one conclusion, and the same three formulas recur with the intended balanced scopes.",
+          "precise_review_question": "Do the balanced brackets yield exactly the two-premise entailment described by the adjacent example?",
+          "location_needle": "SOURCE CORRECTION TA-INT-001"
+        },
+        {
+          "audit_id": "TA-INT-002",
+          "unit_id": "OLP-0140",
+          "kind": "unbalanced-derivation-formulas",
+          "action": "Balanced the universal premise and existential conclusion in the natural-deduction example.",
+          "expected_missing_math": [
+            "$\\lforall[x][(!A(x)\\lif!B(x))$",
+            "$\\lexists[x][!B(x)]]$"
+          ],
+          "expected_extra_math": [
+            "$\\lforall[x][(!A(x)\\lif!B(x))]$",
+            "$\\lexists[x][!B(x)]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The first displayed premise lacks its quantifier-closing bracket and the conclusion carries an extra bracket.",
+          "chosen_treatment": "தமிழ் பதிப்பு ஒவ்வொரு அளவையிட்ட வாய்பாட்டையும் அதன் சொந்த கணிதத் தொகுதிக்குள் சமநிலையான அடைப்புக்குறிகளுடன் தருகிறது.",
+          "alternatives_considered": "Preserving visibly malformed formulas in a pedagogical derivation example.",
+          "rationale": "The same valid argument is stated with balanced formulas immediately before and after this sentence.",
+          "precise_review_question": "Do the repaired premise and conclusion match the stated natural-deduction argument exactly?",
+          "location_needle": "SOURCE CORRECTION TA-INT-002"
+        },
+        {
+          "audit_id": "TA-INT-003",
+          "unit_id": "OLP-0140",
+          "kind": "unbalanced-metalogical-formulas",
+          "action": "Balanced the universal premise and existential conclusion in the final derivability-entailment biconditional.",
+          "expected_missing_math": [
+            "$\\lforall[x][(!A(x)\\lif!B(x))$",
+            "$\\lexists[x][!B(x)]]$"
+          ],
+          "expected_extra_math": [
+            "$\\lforall[x][(!A(x)\\lif!B(x))]$",
+            "$\\lexists[x][!B(x)]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The closing metalogical paragraph repeats the preceding missing universal bracket and extra existential bracket.",
+          "chosen_treatment": "தமிழ் மேல்தருக்கவியல் கூற்று இரு முன்கூற்றுகளையும் முடிவையும் தனித்தனி சமநிலையான வாய்பாடுகளாகப் பாதுகாக்கிறது.",
+          "alternatives_considered": "Retaining malformed delimiters that obscure the biconditional’s object-language formulas.",
+          "rationale": "The paragraph explicitly compares derivability with semantic entailment for the same valid argument already identified above.",
+          "precise_review_question": "Does the repair preserve the intended derivability-if-and-only-if-entailment claim with no scope change?",
+          "location_needle": "SOURCE CORRECTION TA-INT-003"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

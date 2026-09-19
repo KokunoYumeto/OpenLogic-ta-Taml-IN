@@ -1,0 +1,39 @@
+% SEGMENT OLP-0115-S01
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: axioms-rules-quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{axd}{qua}
+
+\olsection{அளவையடைகளுக்கான அடிகோள்களும் விதிகளும்}
+
+% SEGMENT OLP-0115-S02
+\begin{defn}[அளவையடைகளுக்கான அடிகோள்கள்]
+அளவையடைகளை ஆளும் \emph{அடிகோள்கள்} பின்வருவனவற்றின் அனைத்து
+நிகழ்வுகளும் ஆகும்:
+\begin{align}
+\ollabel{ax:q1} & \lforall[x][!B] \lif !B(t), \\
+\ollabel{ax:q2} & !B(t) \lif \lexists[x][!B].
+\end{align}
+இங்கு $t$ எந்த மூடிய உறுப்பாகவும் இருக்கலாம்.
+\end{defn}
+
+% SEGMENT OLP-0115-S03
+\begin{defn}[அளவையடைகளுக்கான விதிகள்]
+\item $!B \lif !A(a)$ ஏற்கெனவே !!{derivation} இல் வந்து, $a$ ஆனது
+  $\Gamma$ அல்லது~$!B$ இல் வரவில்லை எனில், $!B \lif
+  \lforall[x][!A(x)]$ ஒரு சரியான அனுமானப் படி.
+\item $!A(a) \lif !B$ ஏற்கெனவே !!{derivation} இல் வந்து, $a$ ஆனது
+  $\Gamma$ அல்லது~$!B$ இல் வரவில்லை எனில், $\lexists[x][!A(x)] \lif
+  !B$ ஒரு சரியான அனுமானப் படி.
+\end{defn}
+
+% SEGMENT OLP-0115-S04
+இவ்விரண்டில் எதனையும் ``\QR'' எனச் சுருக்கி எழுதுவோம்.
+
+\end{document}
+

@@ -1,0 +1,385 @@
+% Part: first-order-logic
+% Chapter: syntax-and-semantics
+% Section: assignments
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0164-S01
+
+\olfileid{fol}{syn}{ass}
+
+\olsection{மாறி ஒதுக்கீடுகள்}
+
+\begin{explain}
+ஒரு !!{variable} ஒதுக்கீடு~$s$, \emph{ஒவ்வொரு} மாறிக்கும் ஒரு
+மதிப்பை வழங்குகிறது---மேலும் மாறிகள் முடிவிலா எண்ணிக்கையில் உள்ளன.
+இது உண்மையில் அவசியமில்லை. !!{variable} ஒதுக்கீடுகள் அனைத்து
+!!{variable}s க்கும் மதிப்புகளை ஒதுக்க வேண்டும் என்று கூறுவது,
+கணக்கீடுகளை மிகவும் எளிதாக்குவதற்காகவே.
+ஒரு சொல்~$t$ இன் மதிப்பும், ஒரு !!{structure} இல் $s$ ஐச் சார்ந்து
+ஒரு !!a{formula}~$!A$ நிறைவுறுத்தப்படுகிறதா என்பதும், $t$ இல் உள்ள
+!!{variable}s மற்றும் $!A$ இன் கட்டற்ற !!{variable}s க்கு $s$ வழங்கும்
+ஒதுக்கீடுகளை மட்டுமே சார்ந்துள்ளன. அடுத்த இரண்டு கூற்றுகள் இதையே
+வெளிப்படுத்துகின்றன. ``சார்ந்துள்ளது'' என்ற கருத்தைத் துல்லியமாக்க,
+$t$ இல் உள்ள எல்லா மாறிகளிலும் ஒத்துப்போகும் எந்த இரண்டு மாறி
+ஒதுக்கீடுகளும் ஒரே மதிப்பைத் தருகின்றன என்றும், $!A$ இன் எல்லாக்
+கட்டற்ற மாறிகளிலும் இரண்டு ஒதுக்கீடுகள் ஒத்துப்போனால் ஒன்றைச் சார்ந்து
+$!A$ நிறைவுறுத்தப்படுவது மற்றொன்றைச் சார்ந்து நிறைவுறுத்தப்படுவதற்கு
+iff என்றும் காட்டுகிறோம்.
+\end{explain}
+
+\begin{prop}\ollabel{prop:valindep}
+ஒரு சொல்~$t$ இல் உள்ள !!{variable}s, $x_1$, \dots,~$x_n$ ஆகியவற்றுள்
+இருந்து, $i = 1$, \dots,~$n$ ஒவ்வொன்றுக்கும்
+$s_1(x_i) = s_2(x_i)$ எனில், $\Value{t}{M}[s_1]
+= \Value{t}{M}[s_2]$.
+\end{prop}
+
+\begin{proof}
+$t$ இன் சிக்கல்தன்மையின் மீதான தொகுத்தறிதலால் நிரூபிப்போம். அடிப்படை
+நிலையில், $t$ ஒரு !!a{constant} ஆகவோ $x_1$, \dots,~$x_n$ ஆகிய
+மாறிகளுள் ஒன்றாகவோ இருக்கலாம். $t = c$ எனில்,
+$\Value{t}{M}[s_1] = \Assign{c}{M} = \Value{t}{M}[s_2]$. $t = x_i$
+எனில், கூற்றின் கருதுகோளின்படி $s_1(x_i) = s_2(x_i)$; ஆகவே
+$\Value{t}{M}[s_1] = s_1(x_i) = s_2(x_i) = \Value{t}{M}[s_2]$.
+
+தொகுத்தறிதல் படியில், $t = \Atom{f}{t_1, \dots, t_k}$ என்றும்
+$t_1$, \dots, $t_k$ ஒவ்வொன்றுக்கும் கூற்று பொருந்துகிறது என்றும் கொள்க.
+அப்போது
+\begin{align*}
+  \Value{t}{M}[s_1] & = \Value{\Atom{f}{t_1, \dots, t_k}}{M}[s_1] \\
+  & = \Assign{f}{M}(\Value{t_1}{M}[s_1], \dots, \Value{t_k}{M}[s_1]).
+\intertext{$j = 1$, \dots,~$k$ ஒவ்வொன்றுக்கும், $t_j$ இன்
+    !!{variable}s, $x_1$, \dots,~$x_n$ ஆகியவற்றுள் உள்ளன.
+    தொகுத்தறிதல் கருதுகோளின்படி,
+    $\Value{t_j}{M}[s_1] = \Value{t_j}{M}[s_2]$. ஆகவே,}
+\Value{t}{M}[s_1] & = \Value{\Atom{f}{t_1, \dots, t_k}}{M}[s_1] \\
+  & = \Assign{f}{M}(\Value{t_1}{M}[s_1], \dots, \Value{t_k}{M}[s_1]) \\
+  & = \Assign{f}{M}(\Value{t_1}{M}[s_2], \dots, \Value{t_k}{M}[s_2]) \\
+  & = \Value{\Atom{f}{t_1, \dots, t_k}}{M}[s_2] = \Value{t}{M}[s_2].
+\end{align*}
+\end{proof}
+
+\begin{prop}\ollabel{prop:satindep}
+$!A$ இன் கட்டற்ற !!{variable}s, $x_1$, \dots,~$x_n$ ஆகியவற்றுள்
+இருந்து, $i = 1$, \dots,~$n$ ஒவ்வொன்றுக்கும்
+$s_1(x_i) = s_2(x_i)$ எனில், $\Sat{M}{!A}[s_1]$
+iff $\Sat{M}{!A}[s_2]$.
+\end{prop}
+
+\begin{proof}
+$!A$ இன் சிக்கல்தன்மையின் மீதான தொகுத்தறிதலைப் பயன்படுத்துகிறோம்.
+$!A$ அணுவாக இருக்கும் அடிப்படை நிலையில், $!A$ பின்வருவனுள் ஒன்றாகலாம்:
+\iftag{prvTrue}{$\ltrue$,}{}
+\iftag{prvFalse}{$\lfalse$,}{}
+$k$-இடப் பயனிலை $R$ மற்றும் சொற்கள் $t_1$, \dots,~$t_k$ க்கான
+$\Atom{R}{t_1, \dots, t_k}$, அல்லது சொற்கள் $t_1$ மற்றும்~$t_2$
+க்கான $\eq[t_1][t_2]$. கடைசி இரண்டு நிலைகளில், !!{biconditional} இன்
+முன்னோக்கு திசையை மட்டுமே காட்டுகிறோம்; பின்னோக்கு திசையின் நிரூபணம்
+சமச்சீரானது.
+
+\begin{enumerate}
+\tagitem{prvTrue}{%
+  \indcase{!A}{\ltrue}{$\Sat{M}{\indfrm}[s_1]$ மற்றும்
+    $\Sat{M}{\indfrm}[s_2]$ இரண்டுமே பொருந்தும்.}}{}
+
+\tagitem{prvFalse}{%
+  \indcase{!A}{\lfalse}{$\Sat/{M}{!A}[s_1]$ மற்றும்
+    $\Sat/{M}{!A}[s_2]$ இரண்டுமே பொருந்தும்.}}{}
+
+\item
+  \indcase{!A}{\Atom{R}{t_1, \ldots, t_k}}{
+    $\Sat{M}{\indfrm}[s_1]$ என்க. அப்போது
+    \[
+    \langle \Value{t_1}{M}[s_1], \ldots, \Value{t_k}{M}[s_1] \rangle
+    \in \Assign{R}{M}.
+    \]
+    $i = 1$, \dots,~$k$ ஒவ்வொன்றுக்கும், \olref{prop:valindep} இன்படி
+    $\Value{t_i}{M}[s_1] = \Value{t_i}{M}[s_2]$. ஆகவே
+    $\langle \Value{t_i}{M}[s_2], \ldots, \Value{t_k}{M}[s_2] \rangle
+    \in \Assign{R}{M}$ என்பதும், எனவே $\Sat{M}{\indfrm}[s_2]$ என்பதும்
+    கிடைக்கும்.}
+\item
+  \indcase{!A}{\eq[t_1][t_2]}{$\Sat{M}{\indfrm}[s_1]$ எனக் கொள்க.
+    அப்போது $\Value{t_1}{M}[s_1] = \Value{t_2}{M}[s_1]$. ஆகவே,
+    \begin{align*}
+      \Value{t_1}{M}[s_2] & = \Value{t_1}{M}[s_1]
+      & \text{(\olref{prop:valindep} இன்படி)} \\
+      & = \Value{t_2}{M}[s_1] 
+      & \text{($\Sat{M}{\eq[t_1][t_2]}[s_1]$ என்பதால்)}\\
+      &= \Value{t_2}{M}[s_2]
+      & \text{(\olref{prop:valindep} இன்படி),}
+    \end{align*}
+    எனவே $\Sat{M}{\eq[t_1][t_2]}[s_2]$.}
+\end{enumerate}
+
+இப்போது, $!A$ ஐவிடக் குறைந்த சிக்கல்தன்மையுள்ள எல்லா !!{formula}s
+$!B$ க்கும் $\Sat{M}{!B}[s_1]$ iff $\Sat{M}{!B}[s_2]$ எனக் கொள்க.
+$!A$ இன் முதன்மை இணைப்பியால் தீர்மானிக்கப்படும் நிலைகளாகத்
+தொகுத்தறிதல் படி அமைகிறது. ஒவ்வொரு நிலையிலும் !!{biconditional} இன்
+முன்னோக்கு திசையை மட்டுமே காட்டுகிறோம்; பின்னோக்கு திசையின் நிரூபணம்
+சமச்சீரானது. அளவையீட்டுக்குறிகளுக்கான நிலைகளைத் தவிர மற்ற எல்லா
+நிலைகளிலும், $!A$ இன் துணை-!!{formula}s~$!B$ க்குத் தொகுத்தறிதல்
+கருதுகோளைப் பயன்படுத்துகிறோம். $!B$ இன் கட்டற்ற மாறிகள் $!A$ இன்
+கட்டற்ற மாறிகளுள் உள்ளன. ஆகவே, $s_1$ மற்றும் $s_2$ ஆகியவை $!A$ இன்
+கட்டற்ற மாறிகளில் ஒத்துப்போனால், $!B$ இன் மாறிகளிலும் ஒத்துப்போகும்;
+எனவே $!B$ க்குத் தொகுத்தறிதல் கருதுகோள் பொருந்தும்.
+
+\begin{enumerate}
+\tagitem{defNot}{}{%
+  \iftag{probNot}{%
+    \indcase!{!A}{\lnot !B}{}}{%
+    \indcase{!A}{\lnot !B}{$\Sat{M}{\indfrm}[s_1]$ எனில்,
+      $\Sat/{M}{!B}[s_1]$; எனவே தொகுத்தறிதல் கருதுகோளின்படி
+      $\Sat/{M}{!B}[s_2]$; ஆகவே $\Sat{M}{\indfrm}[s_2]$.}}}
+
+\tagitem{defAnd}{}{%
+  \iftag{probAnd}{%
+    \indcase!{!A}{!B \land !C}{}}{%
+    \indcase{!A}{!B \land !C}{$\Sat{M}{\indfrm}[s_1]$ எனில்,
+      $\Sat{M}{!B}[s_1]$ மற்றும் $\Sat{M}{!C}[s_1]$; எனவே தொகுத்தறிதல்
+      கருதுகோளின்படி $\Sat{M}{!B}[s_2]$ மற்றும் $\Sat{M}{!C}[s_2]$.
+      ஆகவே, $\Sat{M}{\indfrm}[s_2]$.}}}
+
+\tagitem{defOr}{}{%
+  \iftag{probOr}{%
+    \indcase!{!A}{!B \lor !C}{}}{%
+    \indcase{!A}{!B \lor !C}{$\Sat{M}{\indfrm}[s_1]$ எனில்,
+      $\Sat{M}{!B}[s_1]$ அல்லது $\Sat{M}{!C}[s_1]$. தொகுத்தறிதல்
+      கருதுகோளின்படி, $\Sat{M}{!B}[s_2]$ அல்லது $\Sat{M}{!C}[s_2]$;
+      எனவே $\Sat{M}{\indfrm}[s_2]$.}}}
+
+\tagitem{defIf}{}{%
+  \iftag{probIf}{%
+    \indcase!{!A}{!B \lif !C}{}}{%
+    \indcase{!A}{!B \lif !C}{$\Sat{M}{\indfrm}[s_1]$ எனில்,
+    $\Sat/{M}{!B}[s_1]$ அல்லது $\Sat{M}{!C}[s_1]$. தொகுத்தறிதல்
+    கருதுகோளின்படி, $\Sat/{M}{!B}[s_2]$ அல்லது $\Sat{M}{!C}[s_2]$;
+    எனவே $\Sat{M}{\indfrm}[s_2]$.}}}
+
+\tagitem{defIff}{}{%
+  \iftag{probIff}{%
+    \indcase!{!A}{!B \liff !C}{}}{%
+    \indcase{!A}{!B \liff !C}{$\Sat{M}{\indfrm}[s_1]$ எனில்,
+      $\Sat{M}{!B}[s_1]$ மற்றும் $\Sat{M}{!C}[s_1]$ இரண்டுமோ, அல்லது
+      $\Sat/{M}{!B}[s_1]$ மற்றும் $\Sat/{M}{!C}[s_1]$ இரண்டுமோ பொருந்தும்.
+      தொகுத்தறிதல் கருதுகோளின்படி, $\Sat{M}{!B}[s_2]$ மற்றும்
+      $\Sat{M}{!C}[s_2]$ இரண்டுமோ, அல்லது $\Sat/{M}{!B}[s_2]$ மற்றும்
+      $\Sat/{M}{!C}[s_2]$ இரண்டுமோ பொருந்தும். இரு நிலைகளிலும்
+      $\Sat{M}{\indfrm}[s_2]$.}}}
+
+\tagitem{defEx}{}{%
+  \iftag{probEx}{%
+    \indcase!{!A}{\lexists[x][!B]}{}}{%
+    \indcase{!A}{\lexists[x][!B]}{$\Sat{M}{\indfrm}[s_1]$ எனில்,
+      $\Sat{M}{!B}[\Subst{s_1}{m}{x}]$ ஆகும் ஓர் $m \in \Domain{M}$
+      உள்ளது. $s_1' = \Subst{s_1}{m}{x}$ மற்றும் $s_2' =
+      \Subst{s_2}{m}{x}$ என்க. $!B$ இன் கட்டற்ற மாறிகள் $x_1$,
+      \dots, $x_n$, மற்றும் $x$ ஆகியவற்றுள் உள்ளன. $s_1'$ மற்றும்
+      $s_2'$ முறையே $s_1$ மற்றும்~$s_2$ இன் $x$-மாறுபாடுகள் என்பதாலும்,
+      கருதுகோளின்படி $s_1(x_i) = s_2(x_i)$ என்பதாலும்,
+      $s_1'(x_i) = s_2'(x_i)$. $s_1'$ மற்றும்~$s_2'$ ஐ நாம் வரையறுத்த
+      விதத்தால் $s_1'(x) = s_2'(x) = m$. அப்போது $!B$, $s_1'$ மற்றும்
+      $s_2'$ க்குத் தொகுத்தறிதல் கருதுகோள் பொருந்துவதால்
+      $\Sat{M}{!B}[s_2']$. மேலும் $s_2' = \Subst{s_2}{m}{x}$ என்பதால்,
+      $\Sat{M}{!B}[\Subst{s_2}{m}{x}]$ ஆகும் ஓர்
+      $m \in \Domain{M}$ உள்ளது; எனவே $\Sat{M}{\indfrm}[s_2]$.}}}
+
+\tagitem{defAll}{}{%
+  \iftag{probAll}{%
+    \indcase!{!A}{\lforall[x][!B]}{}}{%
+    \indcase{!A}{\lforall[x][!B]}{$\Sat{M}{\indfrm}[s_1]$ எனில்,
+      ஒவ்வொரு $m \in \Domain{M}$ க்கும்
+      $\Sat{M}{!B}[\Subst{s_1}{m}{x}]$. ஒவ்வொரு
+      $m \in \Domain{M}$ க்கும் $\Sat{M}{!B}[\Subst{s_2}{m}{x}]$
+      என்பதையும் காட்ட வேண்டும். ஆகவே, ஏதேனும் ஒரு
+      $m \in \Domain{M}$ ஐ எடுத்துக்கொண்டு, $s_1' = \Subst{s}{m}{x}$
+      மற்றும் $s_2' = \Subst{s}{m}{x}$ ஆகியவற்றைக் கருதுக.
+      $\Sat{M}{!B}[s_1']$. $!B$ இன் கட்டற்ற மாறிகள் $x_1$, \dots,
+      $x_n$, மற்றும் $x$ ஆகியவற்றுள் உள்ளன. $s_1'$ மற்றும் $s_2'$
+      முறையே $s_1$ மற்றும்~$s_2$ இன் $x$-மாறுபாடுகள் என்பதாலும்,
+      கருதுகோளின்படி $s_1(x_i) = s_2(x_i)$ என்பதாலும்
+      $s_1'(x_i) = s_2'(x_i)$. $s_1'$ மற்றும்~$s_2'$ ஐ வரையறுத்த
+      விதத்தால் $s_1'(x) = s_2'(x) = m$. அப்போது $!B$, $s_1'$, $s_2'$
+      ஆகியவற்றுக்குத் தொகுத்தறிதல் கருதுகோள் பொருந்துவதால்
+      $\Sat{M}{!B}[s_2']$. இது ஒவ்வொரு $m \in \Domain{M}$ க்கும்
+      பொருந்துகிறது; அதாவது, எல்லா~$m \in \Domain{M}$ க்கும்
+      $\Sat{M}{!B}[\Subst{s_2}{m}{x}]$; எனவே
+      $\Sat{M}{\indfrm}[s_2]$.}}}
+\end{enumerate}
+தொகுத்தறிதலால், $!A$ இன் கட்டற்ற !!{variable}s $x_1$, \dots, $x_n$
+ஆகியவற்றுள் இருந்து, $i = 1$, \dots,~$n$ ஒவ்வொன்றுக்கும்
+$s_1(x_i)=s_2(x_i)$ எனும்போதெல்லாம்
+$\Sat{M}{!A}[s_1]$ iff $\Sat{M}{!A}[s_2]$ என்று கிடைக்கிறது.
+\end{proof}
+
+\begin{probtag}{probNot,probOr,probAnd,probIf,probIff,probEx,probAll}
+\olref[fol][syn][ass]{prop:satindep} இன் நிரூபணத்தை நிறைவுசெய்க.
+\end{probtag}
+
+\begin{explain}
+!!^{sentence}s இல் கட்டற்ற மாறிகள் இல்லை; எனவே எந்த இரண்டு மாறி
+ஒதுக்கீடுகளும், ஒரு வாக்கியத்தின் எல்லாக் கட்டற்ற மாறிகளுக்கும்
+(அவற்றின் எண்ணிக்கை பூச்சியம்) ஒரேவற்றையே ஒதுக்குகின்றன.
+இப்போது நிரூபித்த கூற்றின்படி, ஒரு மாறி ஒதுக்கீட்டைச் சார்ந்து ஒரு
+!!a{sentence} ஒரு கட்டமைப்பில் நிறைவுறுத்தப்படுகிறதா என்பது அந்த
+ஒதுக்கீட்டிலிருந்து முற்றிலும் சார்பற்றது. இவ்வுண்மையைப் பதிவு
+செய்கிறோம். அடுத்து வரும், ஒரு மாறி ஒதுக்கீட்டைக் குறிப்பிடாத,
+!!a{structure} இல் !!a{sentence} நிறைவுறுத்தலின் வரையறையை இது
+நியாயப்படுத்துகிறது.
+\end{explain}
+
+\begin{cor}
+\ollabel{cor:sat-sentence}
+$!A$ ஒரு !!a{sentence} ஆகவும் $s$ ஒரு மாறி ஒதுக்கீடாகவும் இருந்தால்,
+ஒவ்வொரு மாறி ஒதுக்கீடு~$s'$ க்கும் $\Sat{M}{!A}[s]$ iff
+$\Sat{M}{!A}[s']$.
+\end{cor}
+
+\begin{proof}
+  $s'$ ஏதேனும் ஒரு மாறி ஒதுக்கீடாக இருக்கட்டும். $!A$ ஒரு
+  !!a{sentence} என்பதால் அதில் கட்டற்ற மாறிகள் இல்லை. ஆகவே ஒவ்வொரு
+  மாறி ஒதுக்கீடு~$s'$ உம், $s$ போலவே, $!A$ இன் எல்லாக் கட்டற்ற
+  மாறிகளுக்கும் அற்பமாக ஒரேவற்றை ஒதுக்குகிறது. எனவே
+  \olref{prop:satindep} இன் நிபந்தனை நிறைவேறுகிறது; இதனால்
+  $\Sat{M}{!A}[s]$ iff $\Sat{M}{!A}[s']$.
+\end{proof}
+
+\begin{defn}
+\ollabel{defn:satisfaction}
+$!A$ ஒரு !!a{sentence} எனில், எல்லா மாறி ஒதுக்கீடுகள்~$s$ க்கும்
+$\Sat{M}{!A}[s]$ iff, !!a{structure}~$\Struct M$ ஆனது $!A$ ஐ
+\emph{நிறைவுறுத்துகிறது}, $\Sat{M}{!A}$, என்கிறோம்.
+\end{defn}
+
+$\Sat{M}{!A}$ எனில், \emph{$!A$ ஆனது $\Struct{M}$ இல் மெய்} என்றும்
+சுருக்கமாகச் சொல்கிறோம். நிறைவுறுத்தல் என்ற கருத்து தனித்தனி
+!!{sentence}s இலிருந்து !!{sentence}s இன் தொகுப்புகளுக்கு இயல்பாக
+விரிகிறது.
+
+\begin{defn}
+\ollabel{defn:sat}
+$\Gamma$ என்பது !!{sentence}s~$\Gamma$ இன் தொகுப்பு எனில், எல்லா
+$!A \in \Gamma$ க்கும் $\Sat{M}{!A}$ iff, !!a{structure}~$\Struct M$
+ஆனது $\Gamma$ ஐ \emph{நிறைவுறுத்துகிறது}, $\Sat{M}{\Gamma}$, என்கிறோம்.
+\end{defn}
+
+\begin{prop}\ollabel{prop:sentence-sat-true}
+  $\Struct{M}$ ஒரு !!a{structure} ஆகவும், $!A$ ஒரு !!a{sentence}
+  ஆகவும், $s$ ஒரு மாறி ஒதுக்கீடாகவும் இருக்கட்டும்.
+  $\Sat{M}{!A}$ iff $\Sat{M}{!A}[s]$.
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][ass]{prop:sentence-sat-true} ஐ நிரூபிக்க.
+\end{prob}
+
+\begin{prop}\ollabel{prop:sat-quant}
+  $!A(x)$ இல் $x$ மட்டுமே கட்டற்றதாக உள்ளது என்றும், $\Struct M$
+  ஒரு !!a{structure} என்றும் கொள்க. அப்போது:
+  \begin{tagenumerate}{prvEx,prvAll}
+    \tagitem{prvEx}{$\Sat{M}{\lexists[x][!A(x)]}$ iff $\Sat{M}{!A(x)}[s]$
+      குறைந்தது ஒரு மாறி ஒதுக்கீடு~$s$ க்கு.}{}
+    \tagitem{prvAll}{$\Sat{M}{\lforall[x][!A(x)]}$ iff $\Sat{M}{!A(x)}[s]$
+  எல்லா மாறி ஒதுக்கீடுகள்~$s$ க்கும்.}{}
+\end{tagenumerate}
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[fol][syn][ass]{prop:sat-quant} ஐ நிரூபிக்க.
+\end{prob}
+
+\begin{prob}
+\DeclareRobustCommand{\VDash}{\mathrel{||}\joinrel\Relbar}  
+!!{function}s இல்லாத மொழி $\Lang L$ எனக் கொள்க. ஒரு
+!!{structure}~$\Struct M$, !!a{constant}~$c$ மற்றும்
+$a \in \Domain M$ கொடுக்கப்பட்டால், $\Assign{c}{M[a/c]} = a$
+என்பதைத் தவிர மற்றபடி $\Struct M$ போலவே இருக்கும் !!{structure} ஐ
+$\Struct M[a/c]$ என வரையறுக்க. !!{sentence}s~$!A$ க்கான
+$\Struct M \VDash !A$ ஐப் பின்வருமாறு வரையறுக்க:
+\begin{enumerate}
+\tagitem{prvFalse}{%
+  \indcase{!A}{\lfalse}{$\Struct{M} \VDash \indfrm$ அன்று.}}{}
+
+\tagitem{prvTrue}{%
+  \indcase{!A}{\ltrue}{$\Struct{M} \VDash \indfrm$.}}{}
+
+\item \indcase{!A}{\Atom{R}{d_1, \dots, d_n}}{$\Struct M \VDash \indfrm$
+  iff $\langle \Assign{d_1}{M}, \dots, \Assign{d_n}{M} \rangle \in
+  \Assign{R}{M}$.}
+
+\item \indcase{!A}{\eq[d_1][d_2]}{$\Struct M \VDash \indfrm$ iff
+  $\Assign{d_1}{M} = \Assign{d_2}{M}$.}
+
+\tagitem{prvNot}{%
+  \indcase{!A}{\lnot !B}{$\Struct{M} \VDash \indfrm$ iff
+    $\Struct{M} \VDash {!B}$ அன்று.}}{}
+
+\tagitem{prvAnd}{%
+  \indcase{!A}{(!B \land !C)}{$\Struct{M} \VDash
+    \indfrm$ iff $\Struct{M} \VDash!B$ மற்றும்
+    $\Struct{M} \VDash !C$.}}{}
+
+\tagitem{prvOr}{%
+  \indcase{!A}{(!B \lor !C)}{$\Struct{M} \VDash \indfrm$ iff
+    $\Struct{M} \VDash !B$ அல்லது $\Struct{M} \VDash !C$
+    (அல்லது இரண்டுமே).}}{}
+
+\tagitem{prvIf}{%
+  \indcase{!A}{(!B \lif !C)}{$\Struct{M} \VDash \indfrm$ iff
+    $\Struct {M} \VDash !B$ அன்று அல்லது $\Struct M \VDash !C$
+    (அல்லது இரண்டுமே).}}{}
+
+\tagitem{prvIff}{%
+  \indcase{!A}{(!B \liff !C)}{$\Struct{M} \VDash {\indfrm}$ iff
+    $\Struct{M} \VDash {!B}$ மற்றும் $\Struct{M} \VDash {!C}$ இரண்டுமே,
+    அல்லது $\Struct{M} \VDash {!B}$ மற்றும் $\Struct{M} \VDash {!C}$
+    இரண்டுமே அல்ல.}}{}
+
+\tagitem{prvAll}{%
+  \indcase{!A}{\lforall[x][!B]}{$c$ ஆனது $!B$ இல் தோன்றவில்லை எனில்,
+    $\Struct{M} \VDash {\indfrm}$ iff எல்லா $a \in \Domain{M}$ க்கும்
+    $\Struct{M[a/c]} \VDash \Subst{!B}{c}{x}$.}}{}
+
+\tagitem{prvEx}{%
+  \indcase{!A}{\lexists[x][!B]}{$\Struct{M} \VDash
+  {\indfrm}$ iff, $c$ ஆனது $!B$ இல் தோன்றவில்லை எனில்,
+  $\Struct{M[a/c]} \VDash \Subst{!B}{c}{x}$ ஆகும் ஓர்
+  $a \in \Domain M$ உள்ளது.}}{}
+\end{enumerate}
+$x_1$, \dots, $x_n$ ஆகியவை $!A$ இன் எல்லாக் கட்டற்ற !!{variable}s
+ஆகவும், $c_1$, \dots, $c_n$ ஆகியவை $!A$ இல் இல்லாத மாறிலிக்
+குறியீடுகளாகவும், $a_1$, \dots, $a_n \in \Domain M$ ஆகவும்,
+$s(x_i) = a_i$ ஆகவும் இருக்கட்டும்.
+
+$\Sat{M}{!A}[s]$ iff $\Struct M[a_1/c_1,\dots,a_n/c_n]
+\VDash \Subst{\Subst{!A}{c_1}{x_1}\dots}{c_n}{x_n}$ என்று காட்டுக.
+
+(மாறி ஒதுக்கீடுகள் இல்லாமலே முதல்தர தர்க்கத்திற்கு ஒரு பொருளியலை
+வழங்குவது சாத்தியம் என்பதை இக்கணக்கு காட்டுகிறது.)
+\end{prob}
+
+\begin{prob}
+$f$ ஆனது $!A(x,y)$ இல் இல்லாத ஒரு சார்புக் குறியீடு எனக் கொள்க.
+$\Sat{M}{\lforall[x][\lexists[y][!A(x,y)]]}$ ஆகும் ஒரு
+!!a{structure}~$\Struct{M}$ உள்ளது iff
+$\Sat{M'}{\lforall[x][!A(x,f(x))]}$ ஆகும் ஓர்~$\Struct M'$ உள்ளது
+என்று காட்டுக.
+
+(இக்கணக்கு ஸ்கோலெமின் தேற்றம் என அறியப்படுவதன் ஒரு சிறப்பு நிலை;
+$\lforall[x][!A(x,f(x))]$ என்பது
+$\lforall[x][\lexists[y][!A(x,y)]]$ இன் \emph{ஸ்கோலெம் இயல்பு வடிவம்}
+எனப்படுகிறது.)
+\end{prob}
+
+\end{document}

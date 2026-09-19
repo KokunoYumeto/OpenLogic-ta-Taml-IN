@@ -1,0 +1,82 @@
+% Part: turing-machines
+% Chapter: machines-computations
+% Section: halting-states
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0259-S01
+
+\olfileid{tur}{mac}{hal}
+\olsection{நிற்றல் நிலைகள்}
+
+\begin{explain}
+நிறைவேற்றுவதற்குக் கட்டளை இல்லாதபோது மட்டுமே நமது பொறிகள் நிற்கும்
+என்று நாம் வரையறுத்திருந்தாலும், டியூரிங் பொறிகளின் பொதுவான
+குறிப்பீடுகளில் $h \in Q$ ஆக உள்ள, ஒதுக்கப்பட்ட ஒரு
+\emph{நிற்றல் நிலை}~$h$ இருக்கும்.
+
+ஒரு நிற்றல் நிலையின் அடிப்படைக் கருத்து எளியது: பொறி தனது செயல்பாட்டை
+முடித்ததும் (அது உள்ளீட்டை ஏற்கத் தயாராக உள்ளது அல்லது வெளியீட்டை
+எழுதி முடித்துள்ளது), தான் நிற்கும் நிலை~$h$ குச் செல்கிறது. சில
+பொறிகளுக்கு இரு நிற்றல் நிலைகள் உள்ளன; ஒன்று உள்ளீட்டை ஏற்கவும்
+மற்றொன்று உள்ளீட்டை மறுக்கவும் பயன்படும்.
+\end{explain}
+
+\begin{ex}\emph{நிற்றல் நிலைகள்}.
+இக்கருத்தைத் தெளிவுபடுத்த, இரட்டை எண் பொறியில் ஒரு மாற்றத்துடன்
+தொடங்குவோம். உள்ளீடு இரட்டை எண்ணுடையதாக இருந்தால் பொறியை நிலை~$q_0$
+இல் நிற்கச் செய்வதற்குப் பதிலாக, பொறியை ஒரு நிற்றல் நிலைக்கு அனுப்பும்
+ஒரு கட்டளையைச் சேர்க்கலாம்.
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial, state]         (A)                     {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [below of=A] {$h$};
+
+  \path (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{R}} (B)
+  	    edge node {\TMtrans{\TMblank}{\TMblank}{N}} (C)
+        (B) edge [loop above] node {\TMtrans{\TMblank}{\TMblank}{R}} (B)
+            edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{R}} (A);
+\end{tikzpicture}
+\]
+
+எடுத்துக்காட்டை மேலும் விரிவாக்குவோம். உள்ளீடு ஒற்றை எண்ணுடையது என்று
+பொறி தீர்மானிக்கும்போது, அது ஒருபோதும் நிற்பதில்லை. கண்ணியில் இயங்கும்
+கட்டளையை, மறுப்பு நிலை~$r$ குச் செல்லும் ஒரு கட்டளையால் மாற்றுவதன் மூலம்,
+ஒரு \emph{மறுப்பு} நிலையைச் சேர்க்குமாறு பொறியை மாற்றலாம்.
+\[
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[fill=none,draw=black,text=black]
+
+  \node[initial,state]         (A)                     {$q_0$};
+  \node[state]         (B) [right of=A] {$q_1$};
+  \node[state]         (C) [below of=A] {$h$};
+  \node[state]         (D) [below of=B] {$r$};
+
+  \path (A) edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{R}} (B)
+  	    edge node {\TMtrans{\TMblank}{\TMblank}{N}} (C)
+        (B) edge node {\TMtrans{\TMblank}{\TMblank}{N}} (D)
+            edge [bend left] node {\TMtrans{\TMstroke}{\TMstroke}{R}} (A);
+\end{tikzpicture}
+\]
+\end{ex}
+
+\begin{explain}
+இது போன்ற நேர்வுகளில் ஒதுக்கப்பட்ட ஒரு நிற்றல் நிலையைச் சேர்ப்பது
+பயனளிக்கலாம்; ஏனெனில், குறிப்பிட்ட உள்ளீடுகளைப் பொறி எப்போது
+ஏற்கிறது அல்லது மறுக்கிறது என்பதை அது வெளிப்படையாக்குகிறது. எனினும்,
+ஒதுக்கப்பட்ட ஒரு நிற்றல் நிலையைச் சேர்ப்பதால் எந்தக் கணிப்புத் திறனும்
+கூடுவதில்லை. இதேபோல், நிற்றல் பற்றிய குறைவான முறைசார் கருத்துக்கும்
+அதற்கே உரிய பயன்கள் உள்ளன. இந்த அதிகாரத்தில் இதுவரை பயன்படுத்தப்பட்ட
+நிற்றலின் வரையறை, \emph{நிற்றல் சிக்கலுக்கான} நிறுவலை உள்ளுணர்வுக்கு
+இணங்கியதாகவும் எளிதில் எடுத்துக்காட்டக்கூடியதாகவும் ஆக்குகிறது.
+இதனால், நமது மூல வரையறையையே தொடர்ந்து பயன்படுத்துகிறோம்.
+\end{explain}
+
+\end{document}

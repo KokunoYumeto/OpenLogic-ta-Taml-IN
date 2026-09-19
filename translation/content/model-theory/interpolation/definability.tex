@@ -1,0 +1,145 @@
+% Part: model-theory
+% Chapter: interpolation
+% Section: definability
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0202-S01
+
+\olfileid{mod}{int}{def}
+
+\olsection{வரையறுக்கத்தக்கமைத் தேற்றம்}
+
+இடையீட்டுத் தேற்றத்தின் ஒரு முக்கியப் பயன்பாடு பெத்தின்
+வரையறுக்கத்தக்கமைத் தேற்றம். $n$-இடத் தொடர்பு~$R$ ஐ வரையறுக்க,
+$R$ இடம்பெறாத, $n$ கட்டிலா !!{variable}s கொண்ட !!a{formula}~$!C$
+ஒன்றைத் தரலாம். இது~$!C$ ஐக் கொண்டு~$R$ இன் \emph{வெளிப்படையான}
+வரையறையாக இருக்கும். பின்னர் $n$-இட !!{predicate}~$P$ ஐக் கொண்ட
+!!{language} ஒன்றின் கோட்பாடு~$\Sigma(P)$, முறைசாராக்கப்பட்ட
+வெளிப்படையான வரையறையை உட்கொண்டால் (அல்லது குறைந்தபட்சம் தருக்கமுறையாக
+உட்கிடையச் செய்தால்),~$P$ ஐ வெளிப்படையாக வரையறுக்கிறது என்றும்
+கூறலாம்; அதாவது,
+\[
+\Sigma(P) \Entails \lforall[x_1][\dots
+  \lforall[x_n][(\Atom{P}{x_1,\dots, x_n} \liff !C(x_1, \dots,
+    x_n))]].
+\]
+ஆனால் ஒரு தொடர்பை வரையறுக்க---முழுமையாகத் தீர்மானிக்க என்ற
+பொருளில்---வெளிப்படையான வரையறை ஒரு வழி மட்டுமே. எந்த மாதிரியிலும்
+~$P$ இன் பொருள்கோள், மீதமுள்ள !!{language} இன் பொருள்கோளால்
+நிலைநிறுத்தப்படுமாறும் ஒரு கோட்பாடு இருக்கலாம். ஒரு கோட்பாடு~$P$ இன்
+பொருள்கோளை இவ்வழியில் நிலைநிறுத்தும் போதெல்லாம்---~$P$ ஐ
+\emph{மறைமுகமாக வரையறுக்கும்} போதெல்லாம்---அது அப்பயனிலையை வெளிப்படையாகவும்
+வரையறுக்கிறது என்று வரையறுக்கத்தக்கமைத் தேற்றம் கூறுகிறது.
+
+\begin{defn}
+$\Lang{L}$ ஆனது !!{predicate}~$P$ ஐக் கொண்டிராத !!a{language}
+என்று கொள்க. $\Lang{L}
+\cup \{P\}$ இன் !!{sentence}s இன் கணம் $\Sigma(P)$, பின்வருமாறு
+அமையுமாறு $\Lang{L}$ இன் !!a{formula}~$!C(x_1, \dots, x_n)$ ஒன்று
+இருந்தால், எனில் மட்டுமே,~$P$ ஐ \emph{வெளிப்படையாக வரையறுக்கிறது}:
+\[
+\Sigma(P) \Entails \lforall[x_1][\dots
+  \lforall[x_n][(\Atom{P}{x_1,\dots, x_n} \liff !C(x_1, \dots,
+    x_n))]].
+\]
+\end{defn}
+
+\begin{defn}
+$\Lang{L}$ ஆனது !!{predicate}s~$P$ மற்றும்~$P'$ ஐக் கொண்டிராத
+!!a{language} என்று கொள்க. $\Lang{L} \cup \{P\}$ இன்
+!!{sentence}s இன் கணம் $\Sigma(P)$, பின்வருமாறு அமையுமானால், எனில்
+மட்டுமே, $P$ ஐ \emph{மறைமுகமாக வரையறுக்கிறது}:
+\[
+\Sigma(P) \cup \Sigma(P') \Entails \lforall[x_1][\dots
+  \lforall[x_n][(\Atom{P}{x_1,\dots, x_n} \liff \Atom{P'}{x_1,\dots,
+      x_n})]],
+\]
+இங்கே $\Sigma(P')$ என்பது $\Sigma(P)$ முழுவதிலும் $P$ ஐ $P'$ ஆல்
+ஒரே சீராக மாற்றுவதன் விளைவு.
+\end{defn}
+
+வேறுவிதமாகச் சொன்னால், எந்த மாதிரி $\Struct{M}$ மற்றும்
+$R, R' \subseteq
+\Domain{M}^n$ க்கும், $\Expan{M}{R} \Entails \Sigma(P)$ மற்றும்
+$\Expan{M}{R'} \Entails \Sigma(P')$ ஆகிய இரண்டும் பொருந்தினால்,
+$R=R'$; இங்கே $\Expan{M}{R}$ என்பது
+$\Assign{P}{M'} = R$ ஆகுமாறு $\Lang{L}$ ஐ
+$\Lang{L} \cup \{P\}$ ஆக விரிவாக்குவதற்கான
+!!{structure}~$\Struct{M'}$; $\Expan{M}{R'}$ உம் இதே போன்றது.
+
+\begin{thm}[பெத் வரையறுக்கத்தக்கமைத் தேற்றம்]
+$\Lang{L}
+  \cup\{P\}$-!!{formula}s இன் கணம் $\Sigma(P)$, $P$ ஐ மறைமுகமாக
+வரையறுத்தால், எனில் மட்டுமே, $\Sigma(P)$ ஆனது $P$ ஐ வெளிப்படையாக
+வரையறுக்கிறது.
+\end{thm}
+
+\begin{proof}
+$\Sigma(P)$ ஆனது $P$ ஐ வெளிப்படையாக வரையறுக்கிறது எனில்,
+\begin{align*}
+  \Sigma(P) & \Entails & \lforall[x_1][\dots \lforall[x_n]
+    [(\Atom{P}{x_1,\dots, x_n} \liff !C(x_1,\dots,x_n))]]\\
+  \Sigma(P') & \Entails & \lforall[x_1][\dots \lforall[x_n]
+    [(\Atom{P'}{x_1,\dots, x_n} \liff !C(x_1,\dots,x_n))]]
+\end{align*}
+ஆகிய இரண்டும் பொருந்துகின்றன; முடிவு பின்வருகிறது. மறுதலுக்கு,
+$\Sigma(P)$ ஆனது $P$ ஐ மறைமுகமாக வரையறுக்கிறது என்று கொள்க.
+முதலில் !!{constant}s $c_1$, \dots,~$c_n$ ஐ $\Lang{L}$ உடன்
+சேர்க்கிறோம். அப்போது
+\[
+\Sigma(P) \cup \Sigma(P') \Entails
+\Atom{P}{c_1, \dots, c_n} \to  \Atom{P'}{c_1, \dots, c_n}.
+\]
+இறுதிக்குட்பட்ட தன்மையின்படி, $\Delta_0 \subseteq \Sigma(P)$ மற்றும்
+$\Delta_1 \subseteq \Sigma(P')$ ஆகிய இறுதிக்குட்பட்ட கணங்கள்
+பின்வருமாறு உள்ளன:
+\[
+\Delta_0 \cup \Delta_1 \Entails
+\Atom{P}{c_1, \dots, c_n} \to \Atom{P'}{c_1, \dots, c_n}.
+\]
+$!A(P) \in \Delta_0$ அல்லது $!A(P') \in \Delta_1$ ஆகும் எல்லா
+!!{sentence}s $!A(P)$ இன் இணைப்பு $!D(P)$ ஆகட்டும்; மேலும்
+$!A(P) \in \Delta_0$ அல்லது $!A(P') \in \Delta_1$ ஆகும் எல்லா
+!!{sentence}s $!A(P')$ இன் இணைப்பு $!D(P')$ ஆகட்டும். அப்போது
+$!D(P) \land
+!D(P') \Entails \Atom{P}{c_1, \dots, c_n} \to P'c_1\dots c_n$.
+ஒவ்வொரு !!{predicate} உம் $\Entails$ இன் ஒரு பக்கத்தில் இடம்பெறுமாறு
+இதை மறுசீரமைக்கலாம்:
+\[
+!D(P) \land \Atom{P}{c_1, \dots, c_n} \Entails
+!D(P') \to \Atom{P'}{c_1, \dots, c_n}.
+\]
+கிரெய்கின் இடையீட்டுத் தேற்றப்படி, $P$ அல்லது $P'$ ஐக் கொண்டிராத
+!!a{sentence} $!C(c_1,\dots, c_n)$ ஒன்று பின்வருமாறு உள்ளது:
+\begin{align*}
+  !D(P) \land \Atom{P}{c_1, \dots, c_n} & \Entails !C(c_1,\dots, c_n); \\
+  !C(c_1,\dots, c_n) & \Entails !D(P') \to \Atom{P'}{c_1, \dots, c_n}.
+\end{align*}
+இவ்விரு உட்கிடத்தல்களில் முதலாவதிலிருந்து,
+$!D(P) \Entails
+\Atom{P}{c_1,\dots, c_n} \lif !C(c_1,\dots, c_n)$ கிடைக்கிறது.
+பிந்தையதிலிருந்து, $\Lang{L} \cup \{P\}$-மாதிரி
+$\Expan{M}{R}
+\Entails !A(P)$ எனில், எனில் மட்டுமே, அதற்குரிய
+$\Lang{L} \cup
+\{P'\}$-மாதிரி $\Expan{M}{R} \models !A(P')$ என்பதால்,
+$!C(c_1,\dots, c_n) \Entails !D(P) \lif \Atom{P}{c_1,\dots, c_n}$
+கிடைக்கிறது; இதிலிருந்து
+\[
+!D(P) \Entails !C(c_1,\dots,c_n) \to \Atom{P}{c_1,\dots, c_n}.
+\]
+இரண்டையும் சேர்த்தால்,
+$!D(P) \Entails \Atom{P}{c_1,\dots, c_n}
+\liff !C(c_1, \dots, c_n)$; ஓரியக்கத்தன்மை மற்றும்
+பொதுமைப்படுத்தலால்,
+\[
+\Sigma(P) \Entails
+\lforall[x_1][\dots\lforall[x_n][(\Atom{P}{x_1,\dots, x_n} \liff
+    !C(x_1,\dots, x_n))]].
+\]
+\end{proof}
+
+\end{document}

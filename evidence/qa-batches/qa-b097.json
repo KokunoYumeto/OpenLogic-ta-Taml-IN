@@ -1,0 +1,54 @@
+{
+  "batch_id": "TA-B097",
+  "units": [
+    {
+      "unit_id": "OLP-0193",
+      "source_sha256": "8042692c33d15f357d7099f1a247f5055734446d951eabc2d337a3ca19d629b8",
+      "translation_sha256": "7210551e3a3471256ec6058b39a0fb2353a29d87614daf1907113fbafa90601d",
+      "source_bytes": 7853,
+      "translation_bytes": 13682,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "definition",
+        "hypothesis",
+        "include",
+        "induction",
+        "isomorphism",
+        "logic",
+        "mar",
+        "mod",
+        "open",
+        "section",
+        "since",
+        "stm"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

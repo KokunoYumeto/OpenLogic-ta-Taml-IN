@@ -1,0 +1,139 @@
+% Part: first-order-logic
+% Chapter: lindstrom
+% Section: ls-property
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0206-S01
+
+\olfileid{mod}{lin}{lsp}
+
+\olsection{இறுதிக்குட்பட்ட தன்மை மற்றும் L\"owenheim--Skolem பண்புகள்}
+
+இப்போது இறுதிக்குட்பட்ட தன்மையையும் L\"owenheim--Skolem ஐயும்
+அருவத் தருக்கங்களின் நிலைக்கு நேரடியாக நீட்டிக்கிறோம்.
+
+\begin{defn}
+ஒவ்வொரு இறுதிக்குட்பட்ட $\Gamma_0 \subseteq \Gamma$ உம்
+நிறைவுறத்தக்கதாக இருக்கும்போதெல்லாம், $L(\Lang{L})$-!!{sentence}s
+இன் ஒவ்வொரு கணம் $\Gamma$ உம் நிறைவுறத்தக்கதாக இருந்தால்,
+அருவத் தருக்கம் $\tuple{L, \models_L}$ ஆனது
+\emph{இறுதிக்குட்பட்ட தன்மைப் பண்பைக்} கொண்டுள்ளது.
+\end{defn}
+
+\begin{defn}
+நிறைவுறத்தக்க எந்த $\Gamma$ உம் ஓர் !!a{enumerable} மாதிரியைக்
+கொண்டிருந்தால், $\tuple{L, \models_L}$ ஆனது
+\emph{கீழ்நோக்கிய L\"owenheim--Skolem பண்பைக்} கொண்டுள்ளது.
+\end{defn}
+
+
+\olref[bas][pis]{defn:partialisom} இலுள்ள பகுதி ஓரினச்சார்புக் கருத்துரு
+முற்றிலும் ``இயற்கணிதவியல்'' சார்ந்தது (அதாவது, மொழியின்
+!!{sentence}s ஐச் சுட்டாமல், !!{structure}s இன்
+!!{language}~$\Lang{L}$ வழங்கும் மாறிலிகளை மட்டுமே கொண்டு
+தரப்பட்டுள்ளது); எனவே அது அருவத் தருக்கங்களுக்கும் பொருந்துகிறது.
+முதல்வரிசைத் தருக்கத்தில், இரு !!{structure}s பகுதியாக ஓரினமானவை
+எனில் அவை அடிப்படையாகச் சமானமானவை என்று
+\olref[bas][pis]{thm:p-isom2} இலிருந்து அறிவோம். தன்னிச்சையான
+$!E \in L(\Lang{L})$ க்கு !!{formula}s மீதான தொகுத்தறிதல் கிடைக்காமல்
+போகலாம் என்பதால், அந்த நிரூபிப்பு அருவத் தருக்கங்களுக்குப் பொருந்தாது.
+இருந்தும் L\"owenheim--Skolem பண்பு பொருந்தினால் தேற்றம் மெய்யாகும்.
+
+\begin{thm}
+\ollabel{thm:abstract-p-isom}
+$\tuple{L, \models_L}$ ஆனது L\"owenheim--Skolem பண்புடைய இயல்பான
+தருக்கம் என்று கொள்க. அப்போது பகுதியாக ஓரினமான எந்த இரு
+!!{structure}s உம் $\tuple{L,
+  \models_L}$ இல் அடிப்படையாகச் சமானமானவை.
+\end{thm}
+
+\begin{proof}
+$\Struct{M} \simeq_p \Struct{N}$; ஆனால் ஏதேனும் $!E$ க்கு
+$\Struct{M} \models_L !E$ மற்றும் $\Struct{N} \not\models_L !E$
+என்று கொள்க. ஓரினப் பண்பின்படி $\Domain{M}$ மற்றும் $\Domain{N}$
+வெட்டாதவை என்று கொள்ளலாம்; விரிவாக்கப் பண்பின்படி,
+இறுதிக்குட்பட்ட !!{language}~$\Lang{L}$ ஒன்றிற்கு
+$!E \in L(\Lang{L})$ என்று கொள்ளலாம். $\Struct{M}$ மற்றும்
+$\Struct{N}$ இடையிலான பகுதி ஓரினச்சார்புகளின் கணம்
+$\mathcal{I}$ ஆகட்டும்; பொதுமை இழப்பின்றி, $p
+\in \mathcal{I}$ மற்றும் $q \subseteq p$ எனில்
+$q \in \mathcal{I}$ உம் பொருந்துகிறது என்று கொள்க.
+
+$\Domain{M}^{<\omega}$ என்பது~$\Domain{M}$ இன் !!{element}s இன்
+இறுதிக்குட்பட்ட தொடர்களின் கணம். $S$ என்பது
+$\Domain{M}^{<\omega}$ மீதான தொடரிணைப்பைக் குறிக்கும் மும்மை உறவாகட்டும்;
+அதாவது $\mathbf{a}, \mathbf{b},
+\mathbf{c} \in \Domain{M}^{<\omega}$ எனில், $\mathbf{c}$ ஆனது
+$\mathbf{a}$ மற்றும் $\mathbf{b}$ இன் தொடரிணைப்பாக இருந்தால், எனில்
+மட்டுமே, $S(\mathbf{a}, \mathbf{b},
+\mathbf{c})$ பொருந்தும். மேலும், $b \in M$ மற்றும்
+$\mathbf{a}, \mathbf{c} \in \Domain{M}^{<\omega}$ க்கு,
+$\mathbf{a} =
+a_1, \dots a_n$ மற்றும் $\mathbf{c} = a_1, \dots a_n, b$ எனில்,
+எனில் மட்டுமே, $T(\mathbf{a}, b, \mathbf{c})$ பொருந்துமாறு
+$T$ ஒரு மும்மை உறவாகட்டும். புதிய 3-இட !!{predicate}s $P$ மற்றும்
+$Q$ ஐத் தேர்க. பேரண்டம் $\Domain{M} \cup \Domain{M}^{<\omega}$ உடைய,
+$\Struct{M}$ ஐ உட்கட்டமைப்பாகக் கொண்ட, $P$ மற்றும் $Q$ ஐ
+தொடரிணைப்பு உறவுகள் $S$ மற்றும் $T$ ஆகப் பொருள்கொள்ளும்
+!!{structure} $\Struct{M}^*$ ஐ அமைக்க (எனவே $\Struct{M}^*$ ஆனது
+!!{language} $\Lang{L} \cup \{ P, Q\}$ இல் உள்ளது).
+
+$\Domain{N}^{<\omega}$, $S'$, $T'$, $P'$, $Q'$ மற்றும்
+$\Struct{N}^*$ ஐ ஒத்தவாறு வரையறுக்க. கருதுகோளின்படி
+$\Struct{M} \simeq_p
+\Struct{N}$ என்பதால், $\Domain{M}^{<\omega}$ மற்றும்
+$\Domain{N}^{<\omega}$ இடையில் பின்வருமாறு அமையும் உறவு $I$ உள்ளது:
+$\mathbf{a}$ மற்றும் $\mathbf{b}$ ஓரினமாக இருந்து
+\olref[bas][pis]{defn:partialisom} இன் முன்னும் பின்னும் நிபந்தனையை
+நிறைவுறுத்தினால், எனில் மட்டுமே, $I(\mathbf{a}, \mathbf{b})$
+பொருந்தும். இப்போது $\Struct{M}^*$ மற்றும் $\Struct{N}^*$ இன்
+!!{domain}s இன் ஒன்றிப்பை !!{domain} ஆகக் கொண்டு,
+$\Struct{M}^*$ மற்றும் $\Struct{N}^*$ ஐ உட்!!{structure}s ஆகக் கொண்ட
+!!{structure} $\Struct{M}$ ஐக் கொள்க.
+அதன் !!{language} கூடுதல் இரும !!{predicate}~$R$ ஒன்றைக் கொண்டு,
+அதை உறவு~$I$ ஆகப் பொருள்கொள்கிறது; மேலும் !!{domain}s
+$\Domain{M}^*$ மற்றும்~$\Domain{N}*$ ஐக் குறிக்கும் !!{predicate}s
+ஐயும் கொண்டுள்ளது.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[node distance=2cm, auto, thick, >=stealth']
+    \draw [rounded corners] (0,0) -- (8,0) -- (8,4) -- (0,4) --  cycle;
+    \draw (2,2) circle (0.5cm);
+    \draw (2,2) circle (1.25cm);
+    \draw (6,2) circle (0.5cm);
+    \draw (6,2) circle (1.25cm);
+    \path node at (0.75,3.5) {\large $\Struct{M}$};
+    \path node at (2,2) {\large $\Struct{M}$};
+    \path node at (6,2) {\large $\Struct{N}$};
+    \path node at (3.5,1) {\large $\Struct{M}^*$};
+    \path node at (7.5,1) {\large $\Struct{N}^*$};
+    \node (Idom) at (2.8,2) {};
+    \node (Irng) at (5.2,2) {};
+    \draw[<->, bend left] (Idom) to node {\large $I$} (Irng) ;
+  \end{tikzpicture}
+  \caption{உள்ளார்ந்த பகுதி ஓரினச்சார்புடன் கூடிய
+    !!{structure}~$\Struct{M}$.}
+\end{figure}
+
+!!{structure}~$\Struct{M}$ இன் !!{language} இல், பின்வரும்
+முக்கியமான இரண்டு \emph{முதல்வரிசை} !!{sentence}s உள்ளன:
+$\Struct{M} \models_L !E$ மற்றும் $\Struct{N} \not\models_L !E$
+என்று கூறி~$\Struct{M}$ இல் மெய்யாகும் $!D_1$ (இதற்குச்
+சார்பாக்கப் பண்பு தேவை); பகுதி ஓரினச்சார்பு~$I$ வழியாக
+$\Struct{M} \simeq_p \Struct{N}$ என்று கூறி~$\Struct{M}$ இல்
+மெய்யாகும் \emph{முதல்வரிசை} !!{sentence} $!D_2$.
+L\"owenheim--Skolem பண்பின்படி, $!D_1$ மற்றும் $!D_2$ ஆகிய இரண்டும்,
+$\Struct{M}_0 \models_L !E$ மற்றும் $\Struct{N}_0
+\not\models_L !E$ ஆகும் பகுதியாக ஓரினமான உட்கட்டமைப்புகள்
+$\Struct{M}_0$, $\Struct{N}_0$ கொண்ட ஓர் !!a{enumerable} மாதிரி
+$\Struct{M}_0$ இல் ஒருங்கே மெய்யாகின்றன. ஆனால்
+\olref[bas][pis]{thm:p-isom1} படி, !!{enumerable} பகுதியாக ஓரினமான
+!!{structure}s உண்மையில் ஓரினமானவை; இது இயல்பான அருவத் தருக்கங்களின்
+ஓரினப் பண்புடன் முரண்படுகிறது.
+\end{proof}
+
+\end{document}

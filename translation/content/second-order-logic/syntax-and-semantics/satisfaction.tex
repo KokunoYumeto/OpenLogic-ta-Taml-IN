@@ -1,0 +1,235 @@
+% Part: second-order-logic
+% Chapter: syntax-and-semantics
+% Section: satisfaction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0326-S01
+
+\olfileid{sol}{syn}{sat}
+
+\olsection{நிறைவுறுத்தல்}
+
+\begin{explain}
+இரண்டாம்தர !!{formula}s க்கான நிறைவுறுத்தல் உறவு
+$\Sat{M}{!A}[s]$ ஐ வரையறுக்க, இரண்டாம்தர !!{variable}s ஐயும்
+கையாளுமாறு வரையறைகளை நீட்டிக்க வேண்டும். !!a{structure} என்ற
+கருத்து முதல்தரத் தருக்கத்திற்கும் இரண்டாம்தரத் தருக்கத்திற்கும்
+ஒன்றே. மாறி மதிப்பீடுகள்~$s$ இல் மட்டும் ஒரு வேறுபாடு உள்ளது:
+அவை இப்போது முதல்தர !!{variable}s க்கு மட்டுமன்றி இரண்டாம்தர
+!!{variable}s க்கும் மதிப்புகளை அளிக்க வேண்டும்.
+\end{explain}
+
+\begin{defn}[மாறி மதிப்பீடு]
+!!a{structure}~$\Struct{M}$ க்கான \emph{மாறி மதிப்பீடு}~$s$ என்பது
+பின்வருமாறு பொருத்தும் ஒரு சார்பு:
+\begin{enumerate}
+\item ஒவ்வொரு பொருள் !!{variable}~$\Obj{v_i}$ ஐயும்~$\Domain M$ இன்
+  ஓர் உறுப்புக்கு, அதாவது $s(\Obj{v_i}) \in \Domain{M}$;
+\item ஒவ்வோர் $n$-இட உறவு மாறி~$\Obj{V_i^n}$ ஐயும்~$\Domain{M}$
+  மீதான ஓர் $n$-இட உறவுக்கு, அதாவது
+  $s(\Obj{V_i^n}) \subseteq \Domain{M}^n$;
+\item ஒவ்வோர் $n$-இடச் சார்பு மாறி~$\Obj{u_i^n}$ ஐயும்
+  $\Domain{M}$ இலிருந்து $\Domain{M}$ க்குச் செல்லும் ஓர் $n$-இடச்
+  சார்புக்கு, அதாவது
+  $s(\Obj{u_i^n})\colon \Domain{M}^n \to \Domain{M}$.
+\end{enumerate}
+\end{defn}
+
+\begin{explain}
+!!^a{structure} ஒவ்வொரு !!{constant} மற்றும் !!{function} க்கும்
+!!a{value} ஐ அளிக்கிறது; இரண்டாம்தர மாறி மதிப்பீடு ஒவ்வொரு பொருள்
+மற்றும் சார்பு மாறிக்கும் பொருள்களையும் சார்புகளையும் அளிக்கிறது.
+இவை ஒன்றாக ஒவ்வோர் உறுப்புக்கும் ஒரு மதிப்பை அளிக்க உதவுகின்றன.
+\end{explain}
+
+\begin{defn}[ஓர் உறுப்பின் \usetoken{S}{value}]
+$t$ என்பது மொழி~$\Lang L$ இன் உறுப்பாகவும், $\Struct M$ ஆனது
+~$\Lang L$ க்கான !!a{structure} ஆகவும், $s$ ஆனது~$\Struct M$
+க்கான !!a{variable} மதிப்பீடாகவும் இருந்தால், \emph{!!{value}}
+~$\Value{t}{M}[s]$ முதல்தர உறுப்புகளுக்கான வரையறையைப் போலவே,
+பின்வரும் விதியையும் சேர்த்து வரையறுக்கப்படுகிறது:
+\begin{quote}
+\indcase{t}{\Atom{u}{t_1, \ldots, t_n}}{
+\[
+\Value{\indfrm}{M}[s] = s(u)(\Value{t_1}{M}[s], \ldots,
+\Value{t_n}{M}[s]).
+\]}
+\end{quote}
+\end{defn}
+
+\begin{defn}[$x$-வேறுபாடு]
+$s$ என்பது !!a{structure}~$\Struct M$ க்கான !!a{variable}
+மதிப்பீடாக இருக்கட்டும். $x$ க்கு அளிக்கும் மதிப்பில் அதிகபட்சமாக
+மட்டுமே $s$ இலிருந்து வேறுபடும் $\Struct M$ க்கான எந்த
+!!{variable} மதிப்பீடு $s'$ உம்~$s$ இன் \emph{$x$-வேறுபாடு}
+எனப்படும். $s'$ ஆனது $s$ இன் $x$-வேறுபாடாக இருந்தால்
+$\varAssign{s'}{s}{x}$ என்று எழுதுகிறோம். (இரண்டாம்தர மாறிகள் $X$
+அல்லது $u$ க்கும் இதேபோல்.)
+\end{defn}
+
+\begin{defn}
+  $s$ என்பது !!a{structure}~$\Struct M$ க்கான !!a{variable}
+  மதிப்பீடாகவும், $m \in \Domain{M}$ ஆகவும் இருந்தால்,
+  மதிப்பீடு~$\Subst{s}{m}{x}$ என்பது பின்வருமாறு வரையறுக்கப்படும்
+  !!{variable} மதிப்பீடு:
+  \[\Subst{s}{m}{y} = \begin{cases}
+    m & \text{எனில் } y \ident x\\
+    s(y) & \text{மற்றபடி},
+  \end{cases}\]
+  $X$ ஓர் $n$-இட உறவு !!{variable} ஆகவும் $M \subseteq
+  \Domain{M}^n$ ஆகவும் இருந்தால், $\Subst{s}{M}{X}$ என்பது
+  பின்வருமாறு வரையறுக்கப்படும் !!{variable} மதிப்பீடு:
+  \[\Subst{s}{M}{y} = \begin{cases}
+    M & \text{எனில் } y \ident X\\
+    s(y) & \text{மற்றபடி}.
+  \end{cases}\]
+  $u$ ஓர் $n$-இடச் சார்பு !!{variable} ஆகவும்
+  $f\colon \Domain{M}^n \to \Domain{M}$ ஆகவும் இருந்தால்,
+  $\Subst{s}{f}{u}$ என்பது பின்வருமாறு வரையறுக்கப்படும்
+  !!{variable} மதிப்பீடு:
+  \[\Subst{s}{f}{y} = \begin{cases}
+    f & \text{எனில் } y \ident u\\
+    s(y) & \text{மற்றபடி}.
+  \end{cases}\]
+  ஒவ்வொரு நிலையிலும் $y$ எந்த முதல்தர அல்லது இரண்டாம்தர
+  !!{variable} ஆகவும் இருக்கலாம்.
+\end{defn}
+
+\begin{defn}[நிறைவுறுத்தல்]
+இரண்டாம்தர !!{formula}s~$!A$ க்கான நிறைவுறுத்தலின் வரையறை
+\olref[fol][syn][sat]{defn:satisfaction} ஐப் போன்றதே; பின்வருவனவும்
+அதில் சேர்க்கப்படுகின்றன:
+\begin{enumerate}
+\item \indcase{!A}{\Atom{X^n}{t_1, \dots, t_n}}{$\Sat{M}{\indfrm}[s]$
+  என்பது $\langle \Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s] \rangle \in
+  s(X^n)$ எனில், எனில் மட்டுமே.}
+\tagitem{prvAll}{%
+  \indcase{!A}{\lforall[X][!B]}{$\Sat{M}{\indfrm}[s]$ என்பது ஒவ்வொரு
+  $M \subseteq \Domain{M}^n$ க்கும்
+  $\Sat{M}{!B}[\Subst{s}{M}{X}]$ எனில், எனில் மட்டுமே.}}{}
+
+\tagitem{prvEx}{%
+  \indcase{!A}{\lexists[X][!B]}{$\Sat{M}{\indfrm}[s]$ என்பது
+  $\Sat{M}{!B}[\Subst{s}{M}{X}]$ ஆகுமாறு குறைந்தது ஓர்
+  $M \subseteq \Domain{M}^n$ இருந்தால், எனில் மட்டுமே.}}{}
+
+\tagitem{prvAll}{%
+  \indcase{!A}{\lforall[u][!B]}{$\Sat{M}{\indfrm}[s]$ என்பது ஒவ்வொரு
+  $f\colon \Domain{M}^n \to \Domain{M}$ க்கும்
+  $\Sat{M}{!B}[\Subst{s}{f}{u}]$ எனில், எனில் மட்டுமே.}}{}
+
+\tagitem{prvEx}{%
+  \indcase{!A}{\lexists[u][!B]}{$\Sat{M}{\indfrm}[s]$ என்பது
+  $\Sat{M}{!B}[\Subst{s}{f}{u}]$ ஆகுமாறு குறைந்தது ஒரு
+  $f\colon \Domain{M}^n \to \Domain{M}$ இருந்தால், எனில் மட்டுமே.}}{}
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+  !!{formula}~$\lforall[z][(\Atom{X}{z} \liff \lnot
+    \Atom{Y}{z})]$ ஐக் கருதுக. இதில் இரண்டாம்தர அளவையடைகள் இல்லை;
+  ஆனால் இரண்டாம்தர !!{variable}s $X$,~$Y$ உள்ளன (இங்கு அவை
+  $1$-இட மாறிகளாகக் கொள்ளப்படுகின்றன). இதற்கு ஒத்த முதல்தர
+  !!{sentence}~$\lforall[z][(\Atom{P}{z} \liff \lnot \Atom{R}{z})]$,
+  $P$ இன் பொருள்கோளின் கீழ் வரும் எதுவும்~$R$ இன் பொருள்கோளின்
+  கீழ் வராது என்றும், மறுதிசையிலும் அவ்வாறே என்றும் கூறுகிறது.
+  !!a{structure} இல் !!a{predicate}~$P$ இன் பொருள்கோள்
+  ~$\Assign{P}{M}$ என்ற பொருள்கோளால் அளிக்கப்படுகிறது. ஆனால் $X$,
+  ~ $Y$ போன்ற இரண்டாம்தர !!{variable}s க்கான பொருள்கோளை
+  !!{structure} தானாக அளிப்பதில்லை; !!a{variable} மதிப்பீடே
+  அளிக்கிறது. அந்த இரண்டாம்தர !!{formula}, !!a{sentence} அல்ல
+  (அதில் கட்டற்ற !!{variable}s $X$,~$Y$ உள்ளன). எனவே
+  !!a{structure}~$\Struct{M}$ மற்றும் !!a{variable} மதிப்பீடு~$s$
+  ஆகியவற்றைச் சார்ந்தே அது நிறைவுறுத்தப்படுகிறது.
+
+  ~$\Sat{M}{\lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})]}[s]$
+  என்பது~$s(X)$ இன் !!{element}s,~$s(Y)$ இன் !!{element}s ஆக
+  இல்லாமலும், மறுதிசையிலும் அவ்வாறே இருந்தால் பொருந்தும்; அதாவது,
+  $s(Y) = \Domain{M} \setminus s(X)$ எனில், எனில் மட்டுமே.
+  எடுத்துக்காட்டாக, $\Domain{M} = \{1, 2, 3\}$ எனக் கொள்க.
+  !!{predicate}s, !!{function}s, !!{constant}s எதுவும் இதில்
+  வராததால்,~$\Struct{M}$ இன் பொருட்களம் மட்டுமே தொடர்புடையது.
+  இப்போது $s_1(X) = \{1, 2\}$ மற்றும் $s_1(Y) = \{3\}$ எனில்,
+  $\Sat{M}{\lforall[z][(\Atom{X}{z}
+      \liff \lnot \Atom{Y}{z})]}[s_1]$.
+
+  மாறாக, $s_2(X) = \{1, 2\}$ மற்றும் $s_2(Y) = \{2, 3\}$ எனில்,
+  $\Sat/{M}{\lforall[z][(\Atom{X}{z} \liff \lnot
+      \Atom{Y}{z})]}[s_2]$. ஏனெனில்
+  $\Sat{M}{\Atom{X}{z}}[\Subst{s_2}{2}{z}]$
+  ($2 \in \Subst{s_2}{2}{z}(X)$ என்பதால்), ஆனால்
+  $\Sat/{M}{\lnot \Atom{Y}{z}}[\Subst{s_2}{2}{z}]$
+  ($2 \in \Subst{s_2}{2}{z}(Y)$ என்பதாலும்).
+\end{ex}
+
+\begin{ex}
+  ஏதோ ஓர் $N \subseteq \Domain{M}$ க்கு
+  $\Sat{M}{(\lexists[y][\Atom{Y}{y}] \land \lforall[z][(\Atom{X}{z}
+  \liff \lnot \Atom{Y}{z})])}[\Subst{s}{N}{Y}]$ எனில்,
+  $\Sat{M}{\lexists[Y][(\lexists[y][\Atom{Y}{y}] \land
+  \lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})])]}[s]$.
+  எந்த $N \neq \emptyset$ க்கும்
+  ($\Sat{M}{\lexists[y][\Atom{Y}{y}]}[\Subst{s}{N}{Y}]$ ஆகுமாறு),
+  மேலும் முந்தைய எடுத்துக்காட்டைப் போல
+  $N = \Domain{M} \setminus s(X)$ எனில் இது பொருந்தும்.
+  வேறு சொற்களில்,
+  $\Sat{M}{\lexists[Y][(\lexists[y][\Atom{Y}{y}] \land
+  \lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})])]}[s]$ என்பது
+  $\Domain{M} \setminus s(X)$ வெறுமையல்ல எனில், எனில் மட்டுமே;
+  அதாவது, $s(X) \neq \Domain{M}$. எனவே, எடுத்துக்காட்டாக,
+  $\Domain{M} = \{1, 2, 3\}$ மற்றும் $s(X) = \{1, 2\}$ எனில்
+  !!{formula} நிறைவுறுத்தப்படுகிறது; ஆனால்
+  $s(X) = \{1, 2, 3\} = \Domain{M}$ எனில் அவ்வாறு இல்லை.
+
+  $s(X) = \Domain{M}$ ஆகும்போதெல்லாம் !!{formula}
+  நிறைவுறுத்தப்படாததால், பின்வரும் !!{sentence} ஒருபோதும்
+  நிறைவுறுத்தப்படாது:
+  \[
+  \lforall[X][\lexists[Y][(\lexists[y][\Atom{Y}{y}] \land
+      \lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})])]]
+  \]
+  எந்த !!{structure}~$\Struct{M}$ க்கும், மதிப்பீடு
+  ~ $s(X) = \Domain{M}$ அந்த !!{sentence} ஐப் பொய்யாக்கும்.
+  மறுபுறம், பின்வரும் வாக்கியம் எந்த மதிப்பீடு~$s$ ஐச் சார்ந்தும்
+  நிறைவுறுத்தப்படுகிறது:
+  \[
+  \lexists[X][\lexists[Y][(\lexists[y][\Atom{Y}{y}] \land
+      \lforall[z][(\Atom{X}{z} \liff \lnot \Atom{Y}{z})])]]
+  \]
+  ஏனெனில் $M \subseteq \Domain{M}$ ஆனால்
+  $M \neq \Domain{M}$ ஆகுமாறு ஒரு மதிப்பை எப்போதும் காணலாம்
+  (எடுத்துக்காட்டாக, $M = \emptyset$).
+\end{ex}
+
+\begin{ex}
+  ஒவ்வொரு ஓரிட உறவும், அதாவது ஒவ்வொரு பண்பும், ஒவ்வொரு பொருளுக்கும்
+  பொருந்துகிறது என்று இரண்டாம்தர !!{sentence}
+  ~$\lforall[X][\lforall[y][X(y)]]$ கூறுகிறது. இது ஒருபோதும்
+  மெய்யல்ல என்பது தெளிவு. ஏனெனில் ஒவ்வொரு~$\Struct{M}$ இலும்,
+  $s(X) = \emptyset$ மற்றும் $s(y) = a \in \Domain{M}$ ஆகும் ஒரு
+  மாறி மதிப்பீடு~$s$ க்கு $\Sat/{M}{X(y)}[s]$.
+  இதன் பொருள், $!A \lif \lforall[X][\lforall[y][X(y)]]$ என்பது
+  இரண்டாம்தரத் தருக்கத்தில் $\lnot !A$ க்கு நிகரானது; அதாவது,
+  $\Sat{M}{!A \lif
+  \lforall[X][\lforall[y][X(y)]]}$ என்பது $\Sat{M}{\lnot !A}$ எனில்,
+  எனில் மட்டுமே. வேறு சொற்களில், இரண்டாம்தரத் தருக்கத்தில்
+  $\lforall$ மற்றும்~$\lif$ ஆகியவற்றைப் பயன்படுத்தி $\lnot$ ஐ
+  வரையறுக்கலாம்.
+\end{ex}
+
+\begin{prob}
+  இரண்டாம்தரத் தருக்கத்தில் $\lforall$ மற்றும்~$\lif$ ஆகியவை மற்ற
+  இணைப்பிகளை வரையறுக்க முடியும் என்று காட்டுக:
+  \begin{enumerate}
+    \item இரண்டாம்தரத் தருக்கத்தில் $!A \land !B$ என்பது
+    $\lforall[X][(!A \lif (!B \lif \lforall[x][X(x)])\lif
+    \lforall[x][X(x)])]$ க்கு நிகரானது என்று நிறுவுக.
+    \item $\lforall$, $\lif$ ஆகியவற்றை மட்டும் பயன்படுத்தி
+    $!A \lor !B$ க்கு நிகரான ஓர் இரண்டாம்தர வாய்பாட்டைக் காண்க.
+  \end{enumerate}
+\end{prob}
+
+\end{document}

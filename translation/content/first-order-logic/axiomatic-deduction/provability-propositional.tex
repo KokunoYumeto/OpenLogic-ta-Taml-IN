@@ -1,0 +1,91 @@
+% SEGMENT OLP-0122-S01
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: provability-propositional
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{ppr}}
+      {\olfileid{pl}{axd}{ppr}}
+
+\olsection{\usetoken{S}{derivability} மற்றும் கூற்று இணைப்புகள்}
+
+% SEGMENT OLP-0122-S02
+\begin{explain}
+  அடிகோள் வருவித்தலின் !!{derivability} உறவு~$\Proves$, கூற்று இணைப்புகள்
+  தொடர்பான சில அடிப்படை உண்மைகளை நிறுவும் அளவுக்கு வலிமையானது என்பதை
+  நிறுவுகிறோம். எடுத்துக்காட்டாக, $!A \land !B \Proves !A$ மற்றும் $!A,
+  !A \lif !B \Proves !B$ (மோடஸ் போனென்ஸ்). நிறைவுத் தேற்றத்தின்
+  நிறுவலுக்கு இந்த உண்மைகள் தேவை.
+\end{explain}
+
+% SEGMENT OLP-0122-S03
+\begin{prop}\ollabel{prop:provability-land}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-land-left} $!A \land !B \Proves
+    !A$, $!A \land !B \Proves !B$ ஆகிய இரண்டும்.
+  \item \ollabel{prop:provability-land-right} $!A, !B \Proves !A \land !B$.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    % SOURCE CORRECTION TA-AXD-005: the second projection uses ax:land2.
+    \item \olref[prp]{ax:land1}, \olref[prp]{ax:land2} ஆகியவற்றிலிருந்து
+      மோடஸ் போனென்ஸால்.
+  \item \olref[prp]{ax:land3} இலிருந்து மோடஸ் போனென்ஸை இருமுறை
+    பயன்படுத்துவதால்.
+  \end{enumerate}
+\end{proof}
+
+
+% SEGMENT OLP-0122-S04
+\begin{prop}\ollabel{prop:provability-lor}
+  \begin{enumerate}
+  \item $!A \lor !B, \lnot !A, \lnot !B$ முரணுடையது.
+  \item $!A \Proves !A \lor !B$, $!B \Proves !A \lor !B$ ஆகிய இரண்டும்.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  % SOURCE CORRECTION TA-AXD-006: this displayed instance is ax:lnot2.
+  \item \olref[prp]{ax:lnot2} இலிருந்து $\Proves \lnot !A \lif (!A
+    \lif \lfalse)$ மற்றும் $\Proves \lnot !B \lif (!B \lif \lfalse)$
+    கிடைக்கின்றன. எனவே கழித்தல் தேற்றத்தால் $\{\lnot !A\} \Proves !A
+    \lif \lfalse$ மற்றும் $\{\lnot !B\} \Proves !B \lif \lfalse$
+    கிடைக்கின்றன. \olref[prp]{ax:lor3} இலிருந்து $\{\lnot !A, \lnot
+    !B\} \Proves (!A \lor !B) \lif \lfalse$ கிடைக்கிறது. கழித்தல்
+    தேற்றத்தால் $\{!A \lor !B, \lnot !A, \lnot !B\} \Proves \lfalse$.
+  \item \olref[prp]{ax:lor1}, \olref[prp]{ax:lor2} ஆகியவற்றிலிருந்து
+    மோடஸ் போனென்ஸால்.
+  \end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0122-S05
+\begin{prop}\ollabel{prop:provability-lif}
+  \begin{enumerate}
+  \item \ollabel{prop:provability-lif-left}  $!A, !A \lif !B \Proves !B$.
+  \item \ollabel{prop:provability-lif-right}
+    $\lnot !A \Proves !A \lif !B$, $!B \Proves !A \lif !B$ ஆகிய இரண்டும்.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item பின்வருமாறு !!{derive} இயலும்:
+    \begin{derivation}
+      1. & $!A$ & \Hyp\\
+      2. & $!A \lif !B$ & \Hyp\\
+      3. & $!B$ & 1, 2, \MP
+    \end{derivation}
+    
+  \item முறையே \olref[prp]{ax:lnot2}, \olref[prp]{ax:lif1}, மற்றும்
+    கழித்தல் தேற்றத்தால்.
+  \end{enumerate}
+\end{proof}
+
+\end{document}
