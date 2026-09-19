@@ -1,0 +1,34 @@
+{
+  "schema": "openlogic-tamil-cumulative-tex-source-qa/1",
+  "result": "pass",
+  "release_commit": "b6eefd2cd47c305944554d99a9992ebe81a1e807",
+  "asset": {
+    "filename": "openlogic-ta-Taml-IN-cumulative-reader-203-units.tex",
+    "bytes": 2375873,
+    "sha256": "3fbd9a5ad1d95b18b9b4f34d07a89086c6cc7d3d8868f417f8cbc00f7d7b3feb"
+  },
+  "scope": {
+    "counted_reader_units": 203,
+    "structural_chapter_drivers": 3,
+    "exact_translation_blobs_verified": 206,
+    "unaccepted_drafts_included": 0
+  },
+  "embedded": {
+    "filecontents_blocks": 235,
+    "project_support_files": 14,
+    "editorial_note_files": 6,
+    "diagram_sources": 9,
+    "all_literal_executable_inputs_embedded": true,
+    "bibliography_and_style_embedded": true
+  },
+  "checks": {
+    "asset_identity": true,
+    "reader_unit_inventory": true,
+    "structural_driver_inventory": true,
+    "translation_payloads_match_release_commit": true,
+    "project_local_input_completeness": true,
+    "unaccepted_drafts_absent": true,
+    "personal_path_absent": true,
+    "pdf_rebuilt_for_packaging": false
+  }
+}

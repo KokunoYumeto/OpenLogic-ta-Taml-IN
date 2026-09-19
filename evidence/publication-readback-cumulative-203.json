@@ -12,8 +12,6 @@
   "release_page_final_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.4.0-cumulative-203",
   "expanded_assets_http_status": 200,
   "expanded_assets_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/expanded_assets/v0.4.0-cumulative-203",
-  "release_api_http_status": 200,
-  "release_api_url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tags/v0.4.0-cumulative-203",
   "asset_upload_sequence": [
     "openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf",
     "openlogic-ta-Taml-IN-v0.4.0-cumulative-203-source.zip"
@@ -25,6 +23,14 @@
       "sha256": "1b5f3bd1b1395b69a503665ac86e909dd1339ef954393375a4aa48708f70846b",
       "http_status": 200,
       "download_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v0.4.0-cumulative-203/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf",
+      "final_url_host": "release-assets.githubusercontent.com"
+    },
+    {
+      "filename": "openlogic-ta-Taml-IN-cumulative-reader-203-units.tex",
+      "bytes": 2375873,
+      "sha256": "3fbd9a5ad1d95b18b9b4f34d07a89086c6cc7d3d8868f417f8cbc00f7d7b3feb",
+      "http_status": 200,
+      "download_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v0.4.0-cumulative-203/openlogic-ta-Taml-IN-cumulative-reader-203-units.tex",
       "final_url_host": "release-assets.githubusercontent.com"
     },
     {
@@ -64,5 +70,24 @@
     "total_units": 722,
     "edition_complete": false
   },
-  "result": "pass"
+  "result": "pass",
+  "prominent_download_link_sequence": [
+    "openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf",
+    "openlogic-ta-Taml-IN-cumulative-reader-203-units.tex",
+    "openlogic-ta-Taml-IN-v0.4.0-cumulative-203-source.zip"
+  ],
+  "cumulative_tex_source": {
+    "anonymous_bytes_verified": true,
+    "counted_reader_units": 203,
+    "structural_chapter_drivers": 3,
+    "exact_translation_blobs_verified": 206,
+    "embedded_filecontents_blocks": 235,
+    "unaccepted_drafts_included": 0,
+    "source_receipt_bytes": 50767,
+    "source_receipt_sha256": "88a83f4205056da22454fa0ff9f851499930802206a558ddb1db59ccd581c137",
+    "qa_receipt_bytes": 1115,
+    "qa_receipt_sha256": "1367c6b33d6142df4cd653175984cb6dc3fdf846ce16318e10ae89b710668226",
+    "pdf_rebuilt_for_packaging": false
+  },
+  "release_page_request_url": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.4.0-cumulative-203"
 }

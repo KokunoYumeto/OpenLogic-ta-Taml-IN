@@ -1,7 +1,7 @@
 param(
   [Parameter(Mandatory=$true)][string]$Master,
   [Parameter(Mandatory=$true)][string]$ReaderSlug,
-  [ValidateSet('tex4ht','lua4ht')][string]$Backend='lua4ht',
+  [ValidateSet('tex4ht','lua4ht')][string]$Backend='tex4ht',
   [ValidateRange(1000,60000)][int]$AcquisitionTimeoutMs=60000,
   [ValidateRange(1,20)][int]$ProcessTimeoutMinutes=12,
   [string]$StateDirectory='C:\interlanguage-task-state\openlogic-ta-Taml-IN'
@@ -70,6 +70,10 @@ $receipt=[ordered]@{
 }
 
 try {
+  if($Backend -eq 'lua4ht'){
+    $lua4htStyle=(& kpsewhich lua4ht.sty 2>$null | Out-String).Trim()
+    if(-not $lua4htStyle){$receipt.status='backend-unavailable';throw 'lua4ht backend requested but lua4ht.sty is unavailable'}
+  }
   try {$owned=$mutex.WaitOne($AcquisitionTimeoutMs)}
   catch [Threading.AbandonedMutexException] {$owned=$true;$abandoned=$true}
   if(-not $owned){$receipt.status='slot-unavailable';throw 'TeX slot unavailable within bounded timeout'}
@@ -166,8 +170,12 @@ public class TamilEpubTeXJob {
   if($xhtml.Count -eq 0){$receipt.status='no-html-output';throw 'make4ht produced no HTML/XHTML output'}
   $receipt.status='generated'
 } catch {
-  if($receipt.status -eq 'starting'){$receipt.status='converter-exception'}
-  $receipt.error=$_.Exception.Message
+  $errorMessage=$_.Exception.Message
+  if($receipt.status -eq 'starting'){
+    if($errorMessage -like '*Captured TeX tree timeout*'){$receipt.status='converter-timeout'}
+    else{$receipt.status='converter-exception'}
+  }
+  $receipt.error=$errorMessage
 } finally {
   if($owned){$mutex.ReleaseMutex()}
   $mutex.Dispose()

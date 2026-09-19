@@ -8,7 +8,7 @@
     "adapter_sha256":  "4591ad25214e20ff913c7d443172e4220be33ef42dc2cbaf4fd3cac01536528a",
     "reader_slug":  "sets",
     "converter":  "make4ht",
-    "converter_version":  "",
+    "converter_version":  "make4ht version v0.4e",
     "backend":  "lua4ht",
     "options":  [
                     "lualatex",
@@ -18,16 +18,27 @@
                     "fn-in",
                     "no-shell-escape"
                 ],
-    "started_utc":  "2026-09-12T22:23:24.3265773Z",
-    "status":  "slot-unavailable",
+    "started_utc":  "2026-09-19T17:41:47.0640961Z",
+    "status":  "converter-failed",
     "abandoned_mutex":  false,
-    "exit_code":  null,
+    "exit_code":  1,
     "issues":  [
-
+                   {
+                       "line":  "! LaTeX Error: File `lua4ht.sty\u0027 not found.",
+                       "file":  "sets.log"
+                   },
+                   {
+                       "line":  "! Emergency stop.",
+                       "file":  "sets.log"
+                   },
+                   {
+                       "line":  "!  ==\u003e Fatal error occurred, bad output DVI file produced!",
+                       "file":  "sets.log"
+                   }
                ],
     "output_files":  [
 
                      ],
-    "error":  "TeX slot unavailable within bounded timeout",
-    "finished_utc":  "2026-09-12T22:24:24.3529073Z"
+    "error":  "make4ht failed with exit code 1",
+    "finished_utc":  "2026-09-19T17:41:48.7400192Z"
 }

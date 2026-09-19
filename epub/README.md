@@ -13,6 +13,11 @@ EPUB, and writes a packaging receipt. `audit_epub.py` performs independent ZIP,
 package, language, navigation, MathML, source-coverage, and local-link checks and
 runs EPUBCheck 5.3.0.
 
+The default conversion backend is `tex4ht` with LuaLaTeX. The optional
+`lua4ht` backend is accepted only when `kpsewhich lua4ht.sty` resolves it;
+otherwise the guarded receipt records `backend-unavailable` before any TeX
+engine is started.
+
 Pass the pinned validator as `--epubcheck-jar PATH`, or set the
 `EPUBCHECK_JAR` environment variable. The validator binary is not redistributed
 in this source tree.

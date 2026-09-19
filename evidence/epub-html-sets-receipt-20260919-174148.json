@@ -8,7 +8,8 @@
     "adapter_sha256":  "4591ad25214e20ff913c7d443172e4220be33ef42dc2cbaf4fd3cac01536528a",
     "reader_slug":  "sets",
     "converter":  "make4ht",
-    "converter_version":  "make4ht version v0.4e",
+    "converter_version":  "",
+    "backend":  "lua4ht",
     "options":  [
                     "lualatex",
                     "html5",
@@ -17,8 +18,8 @@
                     "fn-in",
                     "no-shell-escape"
                 ],
-    "started_utc":  "2026-09-12T22:11:07.8976953Z",
-    "status":  "converter-timeout",
+    "started_utc":  "2026-09-12T22:23:24.3265773Z",
+    "status":  "slot-unavailable",
     "abandoned_mutex":  false,
     "exit_code":  null,
     "issues":  [
@@ -27,11 +28,6 @@
     "output_files":  [
 
                      ],
-    "error":  "Exception calling \"Run\" with \"4\" argument(s): \"Captured TeX tree timeout\"",
-    "finished_utc":  "2026-09-12T22:23:08.7562673Z",
-    "historical_repair":  {
-                              "repaired_utc":  "2026-09-19T17:41:00Z",
-                              "original_status":  "starting",
-                              "reason":  "The captured TeX process tree reached the configured 12-minute bound; the original status did not classify the recorded timeout error."
-                          }
+    "error":  "TeX slot unavailable within bounded timeout",
+    "finished_utc":  "2026-09-12T22:24:24.3529073Z"
 }
