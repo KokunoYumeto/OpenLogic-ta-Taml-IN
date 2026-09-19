@@ -1,0 +1,167 @@
+% SEGMENT OLP-0416-S01
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: tautological-instances
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{tau}
+
+\olsection{மெய்ம நிகழ்வுகள்}
+
+\begin{explain}
+வாய்ப்புநிலையற்ற ஒரு வாய்பாடு ஒவ்வொரு மெய்மதிப்பு மதிப்பளிப்பிலும்
+மெய்யாக இருந்தால் அது ஒரு மெய்மம். ஒவ்வொரு மெய்மமும் ஒவ்வொரு மாதிரியின்
+ஒவ்வோர் உலகிலும் மெய்யாகும் என்பது தெளிவு. ஆனால் $\Box$,~$\Diamond$
+ஆகியவை இடம்பெறும் !!{formula}s க்கு மெய்மம் என்ற கருத்து
+வரையறுக்கப்படவில்லை. எடுத்துக்காட்டாக, விலக்கப்பட்ட நடுக் கொள்கையின் ஒரு
+நிகழ்வான $\Box p \lor \lnot \Box p$ செல்லுபடியாகுமா? ஒரு
+(வாய்ப்புநிலையற்ற) மெய்மத்தின் பதிலீட்டு நிகழ்வாக உள்ள !!a{formula} என்ற
+\emph{மெய்ம நிகழ்வு} என்னும் கருத்து இதற்கு உதவுகிறது. ஒவ்வொரு மெய்ம
+நிகழ்வும் செல்லுபடியாகும் என்பது வியப்புக்குரியதன்று; எனினும் அதனை
+நிறுவ வேண்டும்.
+\end{explain}
+
+\begin{defn}
+  $p_1$, \dots,~$p_n$ என்ற !!{propositional variable}s ஐக் கொண்ட ஒரு
+  வாய்ப்புநிலையற்ற மெய்மம்~$!A$ உம், $!D_1$, \dots,~$!D_n$ என்ற
+  !!{formula}s உம் இருந்து, $!B \ident
+  \SSubst{!A}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$ எனில்,
+  எனில் மட்டுமே, வாய்ப்புநிலை !!{formula}~$!B$ ஒரு \emph{மெய்ம நிகழ்வு}.
+\end{defn}
+
+\begin{lem}\ollabel{lem:valid-taut}
+  $!A$ என்பது $p_1$, \dots, $p_n$ என்ற !!{propositional variable}s ஐக்
+  கொண்ட ஒரு வாய்ப்புநிலையற்ற !!{formula} என்க; மேலும் $!D_1$, \dots,
+  $!D_n$ ஆகியவை வாய்ப்புநிலை !!{formula}s ஆகட்டும். எந்த
+  மதிப்பளிப்பு $\pAssign{v}$, மாதிரி $\mModel{M} = \tuple{W, R, V}$,
+  $w \in W$ ஆகியவற்றுக்கும், $\pAssign{v}(p_i) = \True$ எனில், எனில்
+  மட்டுமே, $\mSat{M}{!D_i}[w]$ எனில், $\pSat{v}{!A}$ எனில், எனில்
+  மட்டுமே,
+  $\mSat{M}{\SSubst{!A}{\subst{!D_1}{p_1}, \dots,
+      \subst{!D_n}{p_n}}}[w]$.
+\end{lem}
+
+\begin{proof}
+  $!A$ மீது தொகுத்தறிதலால்.
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\pSat/{v}{\lfalse}$
+      மற்றும் $\mSat/{M}{\lfalse}[w]$ ஆகிய இரண்டுமே மெய்யன்று.}}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\pSat{v}{\ltrue}$
+      மற்றும் $\mSat{M}{\ltrue}[w]$ ஆகிய இரண்டுமே மெய்.}}{}
+  \item \indcase{!A}{p_i}{%
+    \begin{align*}
+      \pSat{v}{p_i} \Leftrightarrow {} & \pAssign{v}(p_i) = \True \\
+      & \qquad \text{$\pSat{v}{p_i}$ இன் வரையறையால்}\\
+      \Leftrightarrow {} & \mSat{M}{!D_i}[w] \\
+      &\qquad \text{கருதுகோளால்}\\
+      \Leftrightarrow {} & \mSat{M}{\SSubst{p_i}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+      &\qquad \text{$\SSubst{p_i}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}} \ident !D_i$ என்பதால்}.
+      \end{align*}}
+  % SOURCE CORRECTION TA-NML-007: the negation induction case is governed by prvNot, not prvFalse.
+  % SOURCE CORRECTION TA-NML-008: the final equivalence uses the world-satisfaction definition, not propositional satisfaction.
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{%
+      \begin{align*}
+        \pSat{v}{\lnot !B} \Leftrightarrow {} & \pSat/{v}{!B}\\
+        &\qquad \text{$\pSat{v}{}$ இன் வரையறையால்};\\
+        \Leftrightarrow {} & \mSat/{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{தொகுத்தறிதல் கருதுகோளால்}\\
+        \Leftrightarrow {} &
+        \mSat{M}{\SSubst{\lnot !B}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ இன் வரையறையால்}.
+      \end{align*}}}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{%
+      \begin{align*}
+        \pSat{v}{!B \land !C} \Leftrightarrow {} &
+        \pSat{v}{!B} \text{ மற்றும் } \pSat{v}{!C}\\
+        &\qquad \text{$\pSat{v}{}$ இன் வரையறையால்}\\
+        \Leftrightarrow {} &
+        \mSat{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ மற்றும் } \\
+        & \mSat{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{தொகுத்தறிதல் கருதுகோளால்}\\
+        \Leftrightarrow{} &
+        \mSat{M}{\SSubst{(!B \land !C)}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ இன் வரையறையால்}.
+      \end{align*}}}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{%
+      \begin{align*}
+        \pSat{v}{!B \lor !C} \Leftrightarrow{} &
+        \pSat{v}{!B} \text{ அல்லது } \pSat{v}{!C}\\
+        &\qquad \text{$\pSat{v}{}$ இன் வரையறையால்};\\
+        \Leftrightarrow{} & \mSat{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ அல்லது }\\
+        & \mSat{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{தொகுத்தறிதல் கருதுகோளால்}\\
+        \Leftrightarrow{} &
+        \mSat{M}{\SSubst{(!B \lor !C)}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ இன் வரையறையால்}.
+      \end{align*}}}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{%
+      \begin{align*}
+        \pSat{v}{!B \lif !C} \Leftrightarrow{} &
+        \pSat/{v}{!B} \text{ அல்லது } \pSat{v}{!C}\\
+        &\qquad \text{$\pSat{v}{}$ இன் வரையறையால்}\\
+        \Leftrightarrow{} &
+        \mSat/{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ அல்லது }\\
+        & \mSat{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{தொகுத்தறிதல் கருதுகோளால்}\\
+        \Leftrightarrow{} &
+        \mSat{M}{\SSubst{(!B \lif !C)}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ இன் வரையறையால்}.
+      \end{align*}}}{}
+  % SOURCE CORRECTION TA-NML-009: the biconditional induction case starts with B iff C, not B if C.
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{%
+      \begin{align*}
+        \pSat{v}{!B \liff !C} \Leftrightarrow {} &
+        \text{ஒன்றில் } \pSat{v}{!B} \text{ மற்றும் } \pSat{v}{!C}\\
+        & \text{அல்லது } \pSat/{v}{!B} \text{ மற்றும் } \pSat/{v}{!C}\\
+        &\qquad \text{$\pSat{v}{}$ இன் வரையறையால்}\\
+        \Leftrightarrow {} &
+        \text{ஒன்றில் } \mSat{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ மற்றும் }\\
+        & \qquad \mSat{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &  \text{ அல்லது } \mSat/{M}{\SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+            \subst{!D_n}{p_n}}}[w] \text{ மற்றும் }\\
+        & \qquad \mSat/{M}{\SSubst{!C}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad\text{தொகுத்தறிதல் கருதுகோளால்}\\
+        \Leftrightarrow {} &
+        \mSat{M}{\SSubst{(!B \liff !C)}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}}[w]\\
+        &\qquad \text{$\mSat{M}{}[w]$ இன் வரையறையால்}.
+      \end{align*}}}{}
+  \end{enumerate}
+  \end{proof}
+
+\begin{prop}\ollabel{prop:valid-taut}
+  எல்லா மெய்ம நிகழ்வுகளும் செல்லுபடியாகும்.
+\end{prop}
+
+\begin{proof}
+  மறுதலையாக நிறுவுவோம். ஏதோ ஒரு மாதிரி $\mModel{M}$ மற்றும் உலகம்~$w$
+  ஆகியவற்றுக்கு
+  $\mSat/{M}{\SSubst{!A}{\subst{!D_1}{p_1}, \dots,
+  \subst{!D_n}{p_n}}}[w]$ ஆகுமாறு $!A$ இருப்பதாகக் கொள்க.
+  $\pAssign{v}(p_i) = \True$ எனில், எனில் மட்டுமே,
+  $\mSat{M}{!D_i}[w]$ ஆகுமாறு மதிப்பளிப்பு $\pAssign{v}$ ஐ வரையறுக்க
+  (மேலும் $q \notin \{p_1, \dots, p_n \}$ க்கு $\pAssign{v}$ ஏதேனும்
+  மதிப்புகளை அளிக்கிறது). அப்போது \olref{lem:valid-taut} இன்படி
+  $\pSat/{v}{!A}$; எனவே $!A$ ஒரு மெய்மம் அன்று.
+\end{proof}
+
+\end{document}

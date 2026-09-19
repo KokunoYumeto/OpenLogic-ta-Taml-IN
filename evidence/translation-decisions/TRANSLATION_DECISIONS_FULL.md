@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 393/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 404/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -2620,6 +2620,182 @@ Please double-check: **does replacing only the raw universal glyph command with 
 
 - `TA-OCC-7c7f34ca2f81bcab` — OLP-0095 / `OLP-0095-S09`; source `content/first-order-logic/natural-deduction/soundness.tex:205`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:223`; PDF page 57.
 
+## TA-NML-001 — The source writes 'that If' in the middle of a semicolon-linked sentence and later 'the truth of statement' where the ordinary noun phrase requires 'a statement.'
+
+Chosen rendering: **தமிழ் வரலாற்றுப் பத்தியில் ஒரே தொடரமைப்புடைய உட்கூறுகளையும், உலகில் ஒரு கூற்றின் மெய்மை என்ற முழுமையான பெயர்த்தொடரையும் இயல்பான இலக்கணத்தில் வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Both repairs are ordinary grammar and leave every historical and modal claim unchanged.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0409 (checked_supports)
+
+Alternatives: Treating the capital as a new sentence despite the preceding semicolon; construing statement as an uncountable technical substance.
+
+Please double-check: **does the Tamil preserve all Aristotle and Kripke claims while removing only the two grammatical disruptions?**
+
+- `TA-OCC-f1860d7fdf9e9111` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:27`; PDF page pending.
+
+## TA-NML-002 — The source marks denumerable with its plural token form immediately before the singular noun set.
+
+Chosen rendering: **தமிழ் கணத்தை வருணிக்கும் எண்ணத்தக்க பண்பை ஒருமை பெயரடையாகப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The following list p_0, p_1, p_2, ... is one denumerable set of propositional variables.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0410 (checked_supports)
+
+Alternatives: Treating 'denumerables' as a plural noun whose members form a set; pluralizing set.
+
+Please double-check: **does the repaired phrase state that the variable set itself is denumerable?**
+
+- `TA-OCC-d28435234bf391d1` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:19`; PDF page pending.
+
+## TA-NML-003 — The prvOr branch ends the formula not-A-or-B with a right parenthesis but has no matching left parenthesis.
+
+Chosen rendering: **தமிழ் வரையறுக்கும் பிரிப்புநிலையை இரு பொருந்திய அடைப்புக்குறிகளுக்குள் எழுதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The neighboring defined-connective clauses consistently parenthesize binary formulas, and adding the opening mark preserves that convention and the intended scope.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0410 (checked_supports)
+
+Alternatives: Deleting the final parenthesis; leaving the formula unbalanced.
+
+Please double-check: **is the repaired abbreviation exactly the parenthesized formula (not A or B)?**
+
+- `TA-OCC-b8c74b537e092f24` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:94`; PDF page pending.
+
+## TA-NML-004 — The biconditional formation clause uses the conditional feature tag prvIf even though the language definition and every neighboring connective clause use the matching connective tag.
+
+Chosen rendering: **தமிழ் இருவழிநிபந்தனைப் பதிலீட்டு உட்கூற்றை அதற்குரிய prvIff குறிச்சொல்லால் கட்டுப்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed formula uses liff throughout, and the stable language definition already identifies biconditionals with prvIff.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0411 (checked_supports)
+
+Alternatives: Leaving the biconditional clause controlled by prvIf; changing the formula itself to a conditional.
+
+Please double-check: **is the simultaneous-substitution biconditional case now enabled exactly with the biconditional feature?**
+
+- `TA-OCC-60b8cf1a1eada157` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:61`; PDF page pending.
+
+## TA-NML-005 — The first line of the second duality argument compares truth at w with a negated box-satisfaction expression that alone omits its required world argument; the next line and every other satisfaction claim in the proof include it.
+
+Chosen rendering: **தமிழ் முதல் சமவலத்தொடரின் இருபுறங்களிலும் ஒரே உலகம் $w$ ஐ வெளிப்படையாகக் குறிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The proposition concerns truth at a world, and the following equivalence immediately expands box-not-A at that same world.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0413 (checked_supports)
+
+Alternatives: Reading the right side as model-wide nontruth; removing [w] from the left side as well.
+
+Please double-check: **does the repaired equivalence consistently compare both formulas at world w?**
+
+- `TA-OCC-1f2adc0720fc3942` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:103`; PDF page pending.
+
+## TA-NML-006 — The file records only its section header, although its repository path and stable nml/syn/tru file id unambiguously identify the normal-modal-logic part and syntax-and-semantics chapter.
+
+Chosen rendering: **தமிழ் கோப்பு மேல்தகவலில் நிலையான பாதையும் nml/syn/tru அடையாளமும் காட்டும் பகுதியையும் அதிகாரத்தையும் சேர்க்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The repair makes this unit's nonexecuting metadata consistent with every neighboring section without changing content or identifiers.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0414 (checked_supports)
+
+Alternatives: Leaving the two metadata fields absent; changing the stable file id.
+
+Please double-check: **do the restored header fields agree with the file path and nml/syn/tru id?**
+
+- `TA-OCC-51d8a4abf98ebb75` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:2`; PDF page pending.
+
+## TA-NML-007 — The induction proof assigns its negation case to the falsity feature tag even though the case formula begins with lnot and the language uses prvNot for negation.
+
+Chosen rendering: **தமிழ் மறுப்பு நேர்வை அதற்குரிய prvNot குறிச்சொல்லால் கட்டுப்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The proof branch invokes the negation satisfaction clause, so it must track the negation feature independently of the falsity constant.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0416 (checked_supports)
+
+Alternatives: Leaving negation controlled by prvFalse; changing the case formula to falsity.
+
+Please double-check: **is the negation induction branch now enabled exactly with the negation feature?**
+
+- `TA-OCC-0d12ec7eff4a3260` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:65`; PDF page pending.
+
+## TA-NML-008 — The last equivalence in the negation branch introduces a modal substitution formula evaluated in M at w, but the source cites the definition of propositional satisfaction under v.
+
+Chosen rendering: **தமிழ் அந்த இறுதிச் சமவலத்தை $\mSat{M}{}[w]$ இன் மறுப்பு உட்கூற்றால் நியாயப்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The right side is explicitly an mSat expression with model M and world w, so its governing definition is world satisfaction.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0416 (checked_supports)
+
+Alternatives: Retaining pSat despite the modal model expression; changing the modal expression back to a propositional valuation.
+
+Please double-check: **does the final negation equivalence now cite the semantic relation it actually uses?**
+
+- `TA-OCC-1acccbd6c50596dd` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:66`; PDF page pending.
+
+## TA-NML-009 — The branch is labeled prvIff, its induction case is B iff C, its two truth cases are biconditional semantics, and its final substitution uses liff, but the opening satisfaction expression alone uses lif.
+
+Chosen rendering: **தமிழ் இருவழிநிபந்தனை நேர்வின் தொடக்கத்திலும் $!B \liff !C$ ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Only replacing the isolated connective makes the derivation a valid induction case for the stated formula constructor.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0416 (checked_supports)
+
+Alternatives: Changing the entire branch to conditional semantics; leaving the opening formula inconsistent with every subsequent line.
+
+Please double-check: **does the repaired derivation prove the biconditional case from start to finish?**
+
+- `TA-OCC-1b7feb46ed77c32d` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:126`; PDF page pending.
+
+## TA-NML-010 — The table has columns explicitly headed Valid Schemas and Invalid Schemas, and the following exercise asks for proofs of exactly those classifications, but the caption inserts unresolved editorial uncertainty before 'invalid.'
+
+Chosen rendering: **தமிழ் அட்டவணைத் தலைப்புகளுக்கும் உடனடுத்த பயிற்சிக்கும் ஒத்தவாறு செல்லுபடியான மற்றும் செல்லுபடியாகாத திட்டவடிவங்கள் என்று உறுதியாகப் பெயரிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Every listed first-column schema is valid and every listed second-column schema has an ordinary relational countermodel, matching the exercise's asserted division.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0417 (checked_supports)
+
+Alternatives: Retaining the editorial query in the published caption; weakening both column classifications.
+
+Please double-check: **does the repaired caption accurately state the two classifications already asserted by the table and exercise?**
+
+- `TA-OCC-8fe815227fb7a6fd` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:163`; PDF page pending.
+
+## TA-NML-011 — Every model definition in the chapter is an ordered triple, but the final one-world countermodel alone writes its three heterogeneous components as an unordered set.
+
+Chosen rendering: **தமிழ் இறுதி எதிரெடுத்துக்காட்டையும் $\tuple{W',R',V'}$ என்ற மாதிரி மும்மையாக எழுதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Component roles and order are fixed throughout the chapter, and the immediately following clauses separately identify W', R' and V'.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0418 (checked_supports)
+
+Alternatives: Treating the world set, relation and valuation as members of an unordered set; changing all earlier model definitions to set notation.
+
+Please double-check: **is the corrected countermodel typed consistently as an ordered model triple?**
+
+- `TA-OCC-2c601b6a631ba99f` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:74`; PDF page pending.
+
 ## TA-READER-REF-001 — The cumulative 51-unit reader omits the target history chapter, so the frozen cross-reference rendered as a literal question-mark pair.
 
 Chosen rendering: **இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவு என்ற விளக்கத் தொடர்.**
@@ -3700,6 +3876,10 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-d0b16864e64861b1` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:23`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:26`; PDF page pending.
 - `TA-OCC-5f90f15c19c725b3` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:25`; PDF page pending.
 - `TA-OCC-81d9d93915f473ce` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:53`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:59`; PDF page pending.
+- `TA-OCC-dcad05bddad84473` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:75`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:83`; PDF page pending.
+- `TA-OCC-ea7d269df7d82780` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:20`; PDF page pending.
+- `TA-OCC-d2d11b476a312ed1` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:24`; PDF page pending.
+- `TA-OCC-02452b3b82d4c231` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:23`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:27`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -4664,6 +4844,9 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-9dc0313ccf808f02` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:28`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:83`; PDF page pending.
 - `TA-OCC-46b1fead2f9e9caa` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:55`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:61`; PDF page pending.
 - `TA-OCC-8e1f6f479f1a77f7` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:68`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:78`; PDF page pending.
+- `TA-OCC-60152308a8252ad1` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:67`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:74`; PDF page pending.
+- `TA-OCC-5e39d68930e4c6d9` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:86`; PDF page pending.
+- `TA-OCC-534f348e60771a0e` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:88`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -4957,6 +5140,8 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-4dd971c65a080110` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:88`; PDF page pending.
 - `TA-OCC-783ee8376db729b5` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:21`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:26`; PDF page pending.
 - `TA-OCC-b7e712b8a91d5952` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:157`; PDF page pending.
+- `TA-OCC-f0a8ae43f0837e99` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:101`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:108`; PDF page pending.
+- `TA-OCC-24d084db2c9b66e3` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:43`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:47`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5815,6 +6000,12 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-0e1a82d52874f700` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:86`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:121`; PDF page pending.
 - `TA-OCC-f938541bce382192` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:86`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:129`; PDF page pending.
 - `TA-OCC-4209d0cdd9ebedb2` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:91`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:137`; PDF page pending.
+- `TA-OCC-5c0cd0bf2aab6faf` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:25`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:28`; PDF page pending.
+- `TA-OCC-f22e72f0d0b1d463` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:73`; PDF page pending.
+- `TA-OCC-0af49061458a8382` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:45`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:89`; PDF page pending.
+- `TA-OCC-ab3fdc37ea151ea0` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:46`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:104`; PDF page pending.
+- `TA-OCC-f328a356782833b1` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:46`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:120`; PDF page pending.
+- `TA-OCC-a1d599ee92b67d44` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:69`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:142`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -6168,6 +6359,21 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-439b8f54a9bcbbc9` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:140`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:163`; PDF page pending.
 - `TA-OCC-e8efe19b34548e08` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:147`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:193`; PDF page pending.
 - `TA-OCC-c086b21899eb621f` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:36`; PDF page pending.
+- `TA-OCC-b85ea053bef0ff0f` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-9774db7c4428ede9` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:66`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:72`; PDF page pending.
+- `TA-OCC-a1d9c53ecdc60b17` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:75`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; PDF page pending.
+- `TA-OCC-b9a0e146acaad3f3` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:75`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:82`; PDF page pending.
+- `TA-OCC-5468ea97bd990e8e` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:83`; PDF page pending.
+- `TA-OCC-b80fa64d76dc9e99` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:85`; PDF page pending.
+- `TA-OCC-78e57b7afa56289e` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:85`; PDF page pending.
+- `TA-OCC-311ea3367342c01a` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:87`; PDF page pending.
+- `TA-OCC-49289f5cc48a4ac4` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:89`; PDF page pending.
+- `TA-OCC-6cef6ac0754dbfb4` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:12`; PDF page pending.
+- `TA-OCC-6336ad258d4a0032` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:24`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:15`; PDF page pending.
+- `TA-OCC-ace86a65e50bed3e` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:24`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:16`; PDF page pending.
+- `TA-OCC-bd7fa7dc1ba3d16a` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:24`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:33`; PDF page pending.
+- `TA-OCC-4e73adc653536d13` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; PDF page pending.
+- `TA-OCC-dcd543332cb85c15` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:19`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:26`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -6419,6 +6625,7 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-9b130d9872a1cda0` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:72`; PDF page pending.
 - `TA-OCC-22b9603b73df358e` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:44`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:46`; PDF page pending.
 - `TA-OCC-cb04ed4be7f52584` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:49`; PDF page pending.
+- `TA-OCC-10ac3cd6219e9687` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:96`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -6923,6 +7130,8 @@ Please double-check: **do the listed uses of “கோட்டுரு / த�
 - `TA-OCC-04060f57d824b761` — OLP-0267 / `OLP-0267-S01`; source `content/turing-machines/undecidability/universal-tm.tex:1`; Tamil `translation/content/turing-machines/undecidability/universal-tm.tex:95`; PDF page pending.
 - `TA-OCC-e2f941e78a626622` — OLP-0267 / `OLP-0267-S01`; source `content/turing-machines/undecidability/universal-tm.tex:1`; Tamil `translation/content/turing-machines/undecidability/universal-tm.tex:137`; PDF page pending.
 - `TA-OCC-51cab3bf6f9e38d8` — OLP-0268 / `OLP-0268-S01`; source `content/turing-machines/undecidability/halting-problem.tex:1`; Tamil `translation/content/turing-machines/undecidability/halting-problem.tex:74`; PDF page pending.
+- `TA-OCC-663dcf2b6494ac02` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:35`; PDF page pending.
+- `TA-OCC-5df6cb98fb581d55` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:37`; PDF page pending.
 
 ## TA-T036 — tree / root / branch
 
@@ -9228,6 +9437,80 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-e889777a762b7f02` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:69`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:79`; PDF page pending.
 - `TA-OCC-aab3d33424713a74` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:70`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:80`; PDF page pending.
 - `TA-OCC-a8a82dad870faf26` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:232`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:234`; PDF page pending.
+- `TA-OCC-a985b113be352bd4` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:41`; PDF page pending.
+- `TA-OCC-1005314c57f71599` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:65`; PDF page pending.
+- `TA-OCC-2c934c0fcca7a582` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:34`; PDF page pending.
+- `TA-OCC-1a582e2f804b2ee8` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:37`; PDF page pending.
+- `TA-OCC-51f551a3fdcdf7ed` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:37`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:39`; PDF page pending.
+- `TA-OCC-a7579d74fbc1ae86` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:42`; PDF page pending.
+- `TA-OCC-fb802cde262cdd8b` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:41`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:44`; PDF page pending.
+- `TA-OCC-8d70568648f67caf` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:42`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:45`; PDF page pending.
+- `TA-OCC-731347023539e06a` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:44`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:47`; PDF page pending.
+- `TA-OCC-8b1191acc364a3de` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:45`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:48`; PDF page pending.
+- `TA-OCC-57332cb6254743bd` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:47`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:50`; PDF page pending.
+- `TA-OCC-cb7f8a6b61549694` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:51`; PDF page pending.
+- `TA-OCC-b1b1a0ca3dfd70be` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:50`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:53`; PDF page pending.
+- `TA-OCC-10d1375edcc9193e` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:51`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:54`; PDF page pending.
+- `TA-OCC-66fbd4e917776a49` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:53`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:56`; PDF page pending.
+- `TA-OCC-3a2f02c1869a0bb5` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:54`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:57`; PDF page pending.
+- `TA-OCC-b8bb5ea6db45911d` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:56`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:59`; PDF page pending.
+- `TA-OCC-679762414745a9f9` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:57`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:60`; PDF page pending.
+- `TA-OCC-c5b7b7e3630b1cd5` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:59`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:62`; PDF page pending.
+- `TA-OCC-177e9a254027bcea` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:63`; PDF page pending.
+- `TA-OCC-e11d913f70e067ef` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:62`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:65`; PDF page pending.
+- `TA-OCC-ea185b2d26c9e897` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:71`; PDF page pending.
+- `TA-OCC-9e2a59af9df9cf19` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:75`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:78`; PDF page pending.
+- `TA-OCC-6c86c8428dc6c611` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:79`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:82`; PDF page pending.
+- `TA-OCC-fbfc19c7467f997f` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:104`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:111`; PDF page pending.
+- `TA-OCC-4437760d70cc54f2` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:14`; PDF page pending.
+- `TA-OCC-221855804d42e089` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:16`; PDF page pending.
+- `TA-OCC-12fcefd44807b517` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:17`; PDF page pending.
+- `TA-OCC-68e496f605c1d9ef` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:23`; PDF page pending.
+- `TA-OCC-bea31e6fb4306cf8` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:24`; PDF page pending.
+- `TA-OCC-24e7db96c6d54585` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:70`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:77`; PDF page pending.
+- `TA-OCC-83eb1be6dc4d580e` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:15`; PDF page pending.
+- `TA-OCC-b3da008388212f26` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; PDF page pending.
+- `TA-OCC-91120be64cf69ccc` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:23`; PDF page pending.
+- `TA-OCC-497f19a6af0a76c7` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:46`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:53`; PDF page pending.
+- `TA-OCC-339deea560875293` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:56`; PDF page pending.
+- `TA-OCC-0f5d97a1a92ad5ac` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:120`; PDF page pending.
+- `TA-OCC-c03f2cdd182ac482` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:116`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:132`; PDF page pending.
+- `TA-OCC-1ac50ce5c4977d36` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:116`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:132`; PDF page pending.
+- `TA-OCC-cc5581d6aa3081ad` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:16`; PDF page pending.
+- `TA-OCC-fbf31388b511c744` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:21`; PDF page pending.
+- `TA-OCC-8aad439728d3ec15` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:72`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:78`; PDF page pending.
+- `TA-OCC-f1978d69eaa77b24` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:16`; PDF page pending.
+- `TA-OCC-61e61e447d65199a` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:19`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:20`; PDF page pending.
+- `TA-OCC-5f6dc9003e01df71` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:24`; PDF page pending.
+- `TA-OCC-b07ed3a41ea987de` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:38`; PDF page pending.
+- `TA-OCC-94921401803d7e73` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; PDF page pending.
+- `TA-OCC-98afad8c5b6349ae` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:18`; PDF page pending.
+- `TA-OCC-8bafc612fc9b1f96` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:21`; PDF page pending.
+- `TA-OCC-4231c7330e1dd0d8` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:27`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:30`; PDF page pending.
+- `TA-OCC-679e623d21a1dbdb` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:32`; PDF page pending.
+- `TA-OCC-2b539e0c5c4e22bf` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:37`; PDF page pending.
+- `TA-OCC-4e35a767a0c06ee5` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:37`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:38`; PDF page pending.
+- `TA-OCC-9f4b640aff7ad4e8` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; PDF page pending.
+- `TA-OCC-823f94ae11dc15e6` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:16`; PDF page pending.
+- `TA-OCC-3f78f4139380e3ff` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; PDF page pending.
+- `TA-OCC-34d47a608f222786` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:23`; PDF page pending.
+- `TA-OCC-c809e72b70e07af5` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:24`; PDF page pending.
+- `TA-OCC-256d7cdbfae2dda6` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:30`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:33`; PDF page pending.
+- `TA-OCC-cca46e08923f142d` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:34`; PDF page pending.
+- `TA-OCC-07ba7fe4c82a630e` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:77`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:82`; PDF page pending.
+- `TA-OCC-9f3b59e2fe6d007a` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:82`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:86`; PDF page pending.
+- `TA-OCC-e5375fdf5c138349` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:84`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:89`; PDF page pending.
+- `TA-OCC-81111ad10c39df68` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:118`; PDF page pending.
+- `TA-OCC-13c3f414ca5688e0` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:120`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:129`; PDF page pending.
+- `TA-OCC-652b468684d6471b` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:175`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:185`; PDF page pending.
+- `TA-OCC-de4f67866f5696cc` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; PDF page pending.
+- `TA-OCC-5e0d4d1c364ae11b` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:17`; PDF page pending.
+- `TA-OCC-72452451927ac569` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:24`; PDF page pending.
+- `TA-OCC-3b7c18a93478d7e2` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:24`; PDF page pending.
+- `TA-OCC-89c81795af1f851a` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:26`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:29`; PDF page pending.
+- `TA-OCC-d6166f11a41dbe12` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:34`; PDF page pending.
+- `TA-OCC-fbe7167f6838e4c9` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:45`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:49`; PDF page pending.
+- `TA-OCC-8d585701ddfc6c7d` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:49`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -10643,6 +10926,21 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-94dbe1610e6c9cd4` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:21`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:36`; PDF page pending.
 - `TA-OCC-fa2bf25fcd9aa37d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:21`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:63`; PDF page pending.
 - `TA-OCC-18beab6b06839dbd` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
+- `TA-OCC-9174cc47aaecece8` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-480c7459ed9e111f` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:72`; PDF page pending.
+- `TA-OCC-009b0d82aeb55958` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; PDF page pending.
+- `TA-OCC-d46785d480f609fd` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:82`; PDF page pending.
+- `TA-OCC-d61b4fd89751b6c9` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:83`; PDF page pending.
+- `TA-OCC-f2c23908aaf2d738` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:85`; PDF page pending.
+- `TA-OCC-795015a029729076` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:85`; PDF page pending.
+- `TA-OCC-8fcc209e1f1a386e` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:87`; PDF page pending.
+- `TA-OCC-9c4e68f637b93153` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:89`; PDF page pending.
+- `TA-OCC-85aabfa5c64eaa59` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:12`; PDF page pending.
+- `TA-OCC-6c76c4260f05be75` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:15`; PDF page pending.
+- `TA-OCC-8524528ce9165e0f` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:16`; PDF page pending.
+- `TA-OCC-3360aa62ccdad1f5` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:33`; PDF page pending.
+- `TA-OCC-8728b9a564977ce8` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; PDF page pending.
+- `TA-OCC-585cb29d446eee2f` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:26`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -12326,6 +12624,9 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-88aa97494c9d3ce2` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:37`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:53`; PDF page pending.
 - `TA-OCC-734c038e763c550d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:48`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:60`; PDF page pending.
 - `TA-OCC-6071afdccee33671` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:59`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:72`; PDF page pending.
+- `TA-OCC-09f48a68768fe033` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:86`; PDF page pending.
+- `TA-OCC-182078feb25bf2d1` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:25`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:27`; PDF page pending.
+- `TA-OCC-2aaa77435b049543` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:163`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -13433,6 +13734,7 @@ Please double-check: **is “காண்டோரின் வளைவழி /
 - `TA-OCC-d769dcf905da3450` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:52`; PDF page pending.
 - `TA-OCC-038353908579154b` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:55`; PDF page pending.
 - `TA-OCC-64650bcf29855600` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:56`; PDF page pending.
+- `TA-OCC-92aebc12a56b54ed` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:19`; PDF page pending.
 
 ## TA-T061 — pairing function / encode / code / decode
 
@@ -14175,6 +14477,27 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-624fd70e95a6dcf0` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:63`; PDF page pending.
 - `TA-OCC-fae4e4ae335245ce` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:34`; PDF page pending.
 - `TA-OCC-82c47f2983629f9e` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:13`; PDF page pending.
+- `TA-OCC-11dafc533a90ef87` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:61`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:14`; PDF page pending.
+- `TA-OCC-c5fe9a4059ee471f` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:63`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-df7ebb6e86a80e70` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:66`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:67`; PDF page pending.
+- `TA-OCC-bed464b675c10a35` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:66`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:74`; PDF page pending.
+- `TA-OCC-5d541d671d3d0b9f` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:17`; PDF page pending.
+- `TA-OCC-0c0beefea2737ee4` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:24`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; PDF page pending.
+- `TA-OCC-f5400d6bea1cb27e` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:20`; PDF page pending.
+- `TA-OCC-910e45155d73864c` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:25`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:22`; PDF page pending.
+- `TA-OCC-61fb102ccc0e593a` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:24`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:26`; PDF page pending.
+- `TA-OCC-e8ce1f7f191d6bf3` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:25`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:27`; PDF page pending.
+- `TA-OCC-cac8a14c02d0fccd` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:41`; PDF page pending.
+- `TA-OCC-1e7ee029c03be981` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:15`; PDF page pending.
+- `TA-OCC-699d2201043b96fe` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:17`; PDF page pending.
+- `TA-OCC-925f775be82bbed6` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:26`; PDF page pending.
+- `TA-OCC-f161aa15c5c55730` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:113`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:129`; PDF page pending.
+- `TA-OCC-d0df0d6a388b1804` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:57`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:62`; PDF page pending.
+- `TA-OCC-981058abe05fe5d1` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:20`; PDF page pending.
+- `TA-OCC-5ca167f0158f21c3` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:28`; PDF page pending.
+- `TA-OCC-dcfc47878bc292da` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:36`; PDF page pending.
+- `TA-OCC-27c2f90609a09a7c` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:23`; PDF page pending.
+- `TA-OCC-a46e0ebf8e1eadf6` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:54`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -14999,6 +15322,96 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-3fbcb0828963b9f5` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:48`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:43`; PDF page pending.
 - `TA-OCC-9d45f2427cae07ce` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:59`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:51`; PDF page pending.
 - `TA-OCC-ae679f999fbd0791` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:66`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:66`; PDF page pending.
+- `TA-OCC-7df0cdef369d6d69` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:32`; PDF page pending.
+- `TA-OCC-9c5cdd284e1b174d` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:32`; PDF page pending.
+- `TA-OCC-ac9b0b98d4469d58` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:33`; PDF page pending.
+- `TA-OCC-5138a89847d6e094` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:52`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:56`; PDF page pending.
+- `TA-OCC-e9f63eefa6bb0347` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:54`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:57`; PDF page pending.
+- `TA-OCC-027b3d9045e94765` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:54`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:58`; PDF page pending.
+- `TA-OCC-6ddbab62a959e0b8` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:61`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:59`; PDF page pending.
+- `TA-OCC-ce1fd58bd7bfeb0e` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:62`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:68`; PDF page pending.
+- `TA-OCC-f747544a59a8115a` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:67`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:68`; PDF page pending.
+- `TA-OCC-82ae3935cce28bbb` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:68`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:70`; PDF page pending.
+- `TA-OCC-3eeeb514082fc9dd` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:68`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:74`; PDF page pending.
+- `TA-OCC-f09657ce82a51c28` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:68`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:75`; PDF page pending.
+- `TA-OCC-92d5a5bc608e163d` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:68`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:90`; PDF page pending.
+- `TA-OCC-3f5a0fbca8a3d5ba` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:17`; PDF page pending.
+- `TA-OCC-8b32e8b30cad1577` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:17`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; PDF page pending.
+- `TA-OCC-7e55a7f239d07acc` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:17`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:17`; PDF page pending.
+- `TA-OCC-3dbf020955b9aed2` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:29`; PDF page pending.
+- `TA-OCC-688547cb8e8915e7` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:30`; PDF page pending.
+- `TA-OCC-7a40abf00678e2b5` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:12`; PDF page pending.
+- `TA-OCC-69fca5caf7554bd2` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:15`; PDF page pending.
+- `TA-OCC-a5de4e6da19b447f` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; PDF page pending.
+- `TA-OCC-b3c059aa3ab51fea` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:19`; PDF page pending.
+- `TA-OCC-fd27f3673cb04e31` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:47`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:23`; PDF page pending.
+- `TA-OCC-c22df2b0e24c6209` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:27`; PDF page pending.
+- `TA-OCC-f3bde9e73b55a679` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:28`; PDF page pending.
+- `TA-OCC-b2d724fba9e9f33d` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:41`; PDF page pending.
+- `TA-OCC-1a52c3b617908f4d` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:42`; PDF page pending.
+- `TA-OCC-0da9f094ffb42d9e` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:53`; PDF page pending.
+- `TA-OCC-621eea90243a9247` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:55`; PDF page pending.
+- `TA-OCC-db5b00e299973f21` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:55`; PDF page pending.
+- `TA-OCC-7339d0d3115d81f0` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:56`; PDF page pending.
+- `TA-OCC-3ca41fad5f6637e1` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:57`; PDF page pending.
+- `TA-OCC-0b8386e04ddda1cc` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:58`; PDF page pending.
+- `TA-OCC-300b77c52ea2d67b` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:64`; PDF page pending.
+- `TA-OCC-b2aa651fbefe13f5` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:13`; PDF page pending.
+- `TA-OCC-2ae1de5e599658e4` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:16`; PDF page pending.
+- `TA-OCC-6a82abbd8b968cb5` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:22`; PDF page pending.
+- `TA-OCC-405adfa13f0ad97c` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:33`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:28`; PDF page pending.
+- `TA-OCC-6a1080490a1018a2` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:33`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:30`; PDF page pending.
+- `TA-OCC-06cd8eb2f2cb4ac0` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:37`; PDF page pending.
+- `TA-OCC-af814e779e6a0df8` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:51`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:39`; PDF page pending.
+- `TA-OCC-049c75f91a042f2b` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:51`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:39`; PDF page pending.
+- `TA-OCC-ba964d5f17ebb5f4` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:72`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:42`; PDF page pending.
+- `TA-OCC-55ffc8448c3c25ab` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:73`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:56`; PDF page pending.
+- `TA-OCC-2d4b826a5f23fda0` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:73`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:57`; PDF page pending.
+- `TA-OCC-9a0a13bf974c49cd` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:73`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:79`; PDF page pending.
+- `TA-OCC-9c275792902b0b4a` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:16`; PDF page pending.
+- `TA-OCC-435261a915a7163a` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:19`; PDF page pending.
+- `TA-OCC-9e232a49330bc959` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:22`; PDF page pending.
+- `TA-OCC-6e4b7b96ecc54b4b` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:28`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:31`; PDF page pending.
+- `TA-OCC-a9db937bc6601db0` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:37`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:38`; PDF page pending.
+- `TA-OCC-682ef54c783a3ec4` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:37`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:39`; PDF page pending.
+- `TA-OCC-2e8b58f12108f5ba` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:12`; PDF page pending.
+- `TA-OCC-d485bd5f11192a61` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; PDF page pending.
+- `TA-OCC-8abf904ec3d0d4ea` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; PDF page pending.
+- `TA-OCC-a07ce0124df3d367` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:54`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; PDF page pending.
+- `TA-OCC-39d9fa01207f7d4e` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; PDF page pending.
+- `TA-OCC-557a58fb57730cc4` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:17`; PDF page pending.
+- `TA-OCC-e56eaf559e0c2309` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:18`; PDF page pending.
+- `TA-OCC-57d8c177e5dd1fee` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:21`; PDF page pending.
+- `TA-OCC-2987ff2952bf1072` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:22`; PDF page pending.
+- `TA-OCC-b31dd9f776a3765c` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:22`; PDF page pending.
+- `TA-OCC-45871f55209923bf` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:29`; PDF page pending.
+- `TA-OCC-b3f922a55dfb0c8e` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:32`; PDF page pending.
+- `TA-OCC-7f5f592b0e1c4dc4` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:51`; PDF page pending.
+- `TA-OCC-4a324ff61ddbbb77` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:53`; PDF page pending.
+- `TA-OCC-168e047c5c9d777e` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:152`; PDF page pending.
+- `TA-OCC-3fb048be45f3dce6` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:155`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:164`; PDF page pending.
+- `TA-OCC-d64580fbede80a7a` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:37`; PDF page pending.
+- `TA-OCC-b56168de6680138f` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:38`; PDF page pending.
+- `TA-OCC-701b2148d0260a06` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:39`; PDF page pending.
+- `TA-OCC-95b87b5e96044778` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:50`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:52`; PDF page pending.
+- `TA-OCC-c2fa573c39de6141` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:51`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:54`; PDF page pending.
+- `TA-OCC-c564e47ffa453c01` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:51`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:55`; PDF page pending.
+- `TA-OCC-e419acfb3c305daa` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:76`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:55`; PDF page pending.
+- `TA-OCC-0286a7bc544b2d34` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:110`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:80`; PDF page pending.
+- `TA-OCC-97cb76df9b585feb` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:110`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:81`; PDF page pending.
+- `TA-OCC-d7585e6c0d835833` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:112`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:117`; PDF page pending.
+- `TA-OCC-dbd9cd47def7c66b` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:113`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:118`; PDF page pending.
+- `TA-OCC-0775b43a293d3ee3` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:114`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:119`; PDF page pending.
+- `TA-OCC-9b01ff2e3dd08fee` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:114`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:120`; PDF page pending.
+- `TA-OCC-cff2789e8295f3b8` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:116`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:121`; PDF page pending.
+- `TA-OCC-2952b4bd9338e40a` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:117`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:121`; PDF page pending.
+- `TA-OCC-512d472721d607c2` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:175`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:122`; PDF page pending.
+- `TA-OCC-70c35ca6a663147e` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:175`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:125`; PDF page pending.
+- `TA-OCC-be995705278eb3a9` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:175`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:126`; PDF page pending.
+- `TA-OCC-50abe9bf38cbe6e9` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:175`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:186`; PDF page pending.
+- `TA-OCC-d9e395f8b4ff4843` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; PDF page pending.
+- `TA-OCC-5d4a625227c8e180` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; PDF page pending.
+- `TA-OCC-ddc42e8178f25319` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:17`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -15081,6 +15494,8 @@ Please double-check: **do the listed uses of “தருக்க இணைப�
 - `TA-OCC-7aa60daeb6694c22` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:28`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:38`; PDF page pending.
 - `TA-OCC-92bfe526c7d3d5fe` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:29`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:40`; PDF page pending.
 - `TA-OCC-71275edcaa6a1efc` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:33`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:178`; PDF page pending.
+- `TA-OCC-f713f2fb54706564` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:23`; PDF page pending.
+- `TA-OCC-b6cb95adc0cc0fbe` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:24`; PDF page pending.
 
 ## TA-T080 — conditional / biconditional
 
@@ -15116,6 +15531,9 @@ Please double-check: **do the listed uses of “நிபந்தனைக் �
 - `TA-OCC-1752b61c39a24f45` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:35`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:37`; PDF page pending.
 - `TA-OCC-070ea4cf79ae5519` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:34`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:60`; PDF page pending.
 - `TA-OCC-0946b9207480042b` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:55`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:62`; PDF page pending.
+- `TA-OCC-7dcbc959683e8370` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:24`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:26`; PDF page pending.
+- `TA-OCC-0605289387530a83` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:25`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:27`; PDF page pending.
+- `TA-OCC-8876e6424c4de825` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:50`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:54`; PDF page pending.
 
 ## TA-T081 — formula / atomic formula / compound formula
 
@@ -15886,6 +16304,76 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-ca729b83031f200f` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:109`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:117`; PDF page pending.
 - `TA-OCC-f79856e65e0bc23a` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:25`; PDF page pending.
 - `TA-OCC-92250f763614737e` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:39`; PDF page pending.
+- `TA-OCC-0ebdd9e8ece5380e` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:34`; PDF page pending.
+- `TA-OCC-83985aca15d36c50` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:37`; PDF page pending.
+- `TA-OCC-ac7fea533938133f` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:37`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:39`; PDF page pending.
+- `TA-OCC-395a10e91d143446` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:42`; PDF page pending.
+- `TA-OCC-5ebad040c9f804c5` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:41`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:44`; PDF page pending.
+- `TA-OCC-243d78f16f0b0410` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:42`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:45`; PDF page pending.
+- `TA-OCC-daf85bbb5ca4d6e7` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:44`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:47`; PDF page pending.
+- `TA-OCC-76d3e6fa725cb945` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:45`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:48`; PDF page pending.
+- `TA-OCC-d665ba13a0a9c4d4` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:47`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:50`; PDF page pending.
+- `TA-OCC-7e625ae8a74df993` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:51`; PDF page pending.
+- `TA-OCC-6b0969d1a92255d3` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:50`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:53`; PDF page pending.
+- `TA-OCC-a9bfb5edb5be5d26` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:51`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:54`; PDF page pending.
+- `TA-OCC-5f040d0fc019b34f` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:53`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:56`; PDF page pending.
+- `TA-OCC-85b4d079efe22e15` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:54`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:57`; PDF page pending.
+- `TA-OCC-583e960ea638578c` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:56`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:59`; PDF page pending.
+- `TA-OCC-84e84f9a90649a94` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:57`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:60`; PDF page pending.
+- `TA-OCC-0538b6bc12971089` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:59`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:62`; PDF page pending.
+- `TA-OCC-2b5210d7fb4f8d32` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:63`; PDF page pending.
+- `TA-OCC-81a46142caa86ccc` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:62`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:65`; PDF page pending.
+- `TA-OCC-5c691e8aa3995bdb` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:71`; PDF page pending.
+- `TA-OCC-b3196203b7c563ec` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:75`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:78`; PDF page pending.
+- `TA-OCC-9f7be03e0d63667a` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:79`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:82`; PDF page pending.
+- `TA-OCC-b31b9d1dc5b20f1b` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:104`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:111`; PDF page pending.
+- `TA-OCC-93d2d68aeedc2c23` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:14`; PDF page pending.
+- `TA-OCC-18da86b8144e148c` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:16`; PDF page pending.
+- `TA-OCC-3a56cd725d38d818` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:17`; PDF page pending.
+- `TA-OCC-8add8e0463538e4c` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:23`; PDF page pending.
+- `TA-OCC-db6f687a0f84a4d9` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:24`; PDF page pending.
+- `TA-OCC-ee2f4007aae2b790` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:70`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:77`; PDF page pending.
+- `TA-OCC-f4d91c438fa9cfc7` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:15`; PDF page pending.
+- `TA-OCC-d5b21e1fcf83fd0d` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; PDF page pending.
+- `TA-OCC-0bcce2f54e0c1699` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:23`; PDF page pending.
+- `TA-OCC-430a0653be24980e` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:46`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:53`; PDF page pending.
+- `TA-OCC-0872e38dbe1441c4` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:116`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:132`; PDF page pending.
+- `TA-OCC-1c811a50c4c1ad76` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:116`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:132`; PDF page pending.
+- `TA-OCC-d448ffeb068cd7ce` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:16`; PDF page pending.
+- `TA-OCC-41303b70a6affe9b` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:21`; PDF page pending.
+- `TA-OCC-4639637bcafd06db` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:72`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:78`; PDF page pending.
+- `TA-OCC-149f4fd348fabb46` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:16`; PDF page pending.
+- `TA-OCC-9bec952ba963a31f` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:19`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:20`; PDF page pending.
+- `TA-OCC-b74725a049541931` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:24`; PDF page pending.
+- `TA-OCC-ffbbda8c3e5d2f54` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:38`; PDF page pending.
+- `TA-OCC-4064cf5f01ca5fb0` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; PDF page pending.
+- `TA-OCC-06ef978871b74b05` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:18`; PDF page pending.
+- `TA-OCC-b0f0545dabd768a6` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:21`; PDF page pending.
+- `TA-OCC-2361cc1c835eae77` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:27`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:30`; PDF page pending.
+- `TA-OCC-5b0f5a9acc7fb888` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:32`; PDF page pending.
+- `TA-OCC-3dab4c8bd298deaf` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:37`; PDF page pending.
+- `TA-OCC-a1c7a6e4c740877f` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:37`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:38`; PDF page pending.
+- `TA-OCC-b251dbcc70369500` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; PDF page pending.
+- `TA-OCC-3362b7e83fef3fa7` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:16`; PDF page pending.
+- `TA-OCC-2b84714602a9b184` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; PDF page pending.
+- `TA-OCC-65b403037571ea31` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:23`; PDF page pending.
+- `TA-OCC-708a7a26f5638754` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:24`; PDF page pending.
+- `TA-OCC-24e37254b05b7ec3` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:30`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:33`; PDF page pending.
+- `TA-OCC-9302105f55d871ec` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:34`; PDF page pending.
+- `TA-OCC-51e5aa70210c14e4` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:77`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:82`; PDF page pending.
+- `TA-OCC-1d050d6cdae6f10d` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:82`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:86`; PDF page pending.
+- `TA-OCC-d6705cbdf1d60e23` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:84`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:89`; PDF page pending.
+- `TA-OCC-2770b77e2c0c64c3` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:118`; PDF page pending.
+- `TA-OCC-6e6adbc4af333295` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:120`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:129`; PDF page pending.
+- `TA-OCC-9522cabf9fd83a45` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:175`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:185`; PDF page pending.
+- `TA-OCC-c892080c4d3c2973` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; PDF page pending.
+- `TA-OCC-d84d11c44e3e807c` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:17`; PDF page pending.
+- `TA-OCC-726f123a7886e4f7` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:24`; PDF page pending.
+- `TA-OCC-90c47c19c4fc3759` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:24`; PDF page pending.
+- `TA-OCC-8776ed7399c2ead0` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:26`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:29`; PDF page pending.
+- `TA-OCC-f0d110086162c30e` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:34`; PDF page pending.
+- `TA-OCC-c7bc452a495e70dd` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:45`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:49`; PDF page pending.
+- `TA-OCC-498a3dcbf6589a53` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:49`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -16200,6 +16688,12 @@ Please double-check: **do the listed uses of “மெய்மம் / மு�
 - `TA-OCC-7d86fc51f0cfaac8` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:110`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:118`; PDF page pending.
 - `TA-OCC-bf284b320e772d75` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:111`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:126`; PDF page pending.
 - `TA-OCC-f4236212946e455b` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:119`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:132`; PDF page pending.
+- `TA-OCC-0b286037e1eb24c0` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; PDF page pending.
+- `TA-OCC-86ae9de6b167b5d3` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:18`; PDF page pending.
+- `TA-OCC-4f062ce483f4e0fd` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:17`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:29`; PDF page pending.
+- `TA-OCC-86c3c94152e09208` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:164`; PDF page pending.
+- `TA-OCC-f12aada22898a72b` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:101`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:108`; PDF page pending.
+- `TA-OCC-3a1de7351f8c6c29` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:43`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:47`; PDF page pending.
 
 ## TA-T085 — semantic entailment / semantic notions / semantic deduction theorem
 
@@ -19050,6 +19544,10 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-a36610ab2bee9ac3` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:35`; PDF page pending.
 - `TA-OCC-73086e658e42023a` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:83`; PDF page pending.
 - `TA-OCC-28f2e3798eed127d` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:87`; PDF page pending.
+- `TA-OCC-526958565099a2e0` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:41`; PDF page pending.
+- `TA-OCC-57a2da3bbe13bf03` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:65`; PDF page pending.
+- `TA-OCC-b432b13ceb53affb` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:56`; PDF page pending.
+- `TA-OCC-eeb02172689185b3` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:120`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -20186,6 +20684,18 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-f9068fd816b76b79` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:146`; PDF page pending.
 - `TA-OCC-e67d7ca68711e0f7` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:199`; PDF page pending.
 - `TA-OCC-d2024b601515ed69` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:34`; PDF page pending.
+- `TA-OCC-29b4049b0328aaf7` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:17`; PDF page pending.
+- `TA-OCC-5fe28848a7a8ccdc` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; PDF page pending.
+- `TA-OCC-82075683c07123ee` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:20`; PDF page pending.
+- `TA-OCC-63c6d1a277e43c95` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:41`; PDF page pending.
+- `TA-OCC-2d1ffde9eadb3476` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:15`; PDF page pending.
+- `TA-OCC-caf159c19458c5fe` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:17`; PDF page pending.
+- `TA-OCC-c0dfdbf632bdf373` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:26`; PDF page pending.
+- `TA-OCC-d35117bb568f72c3` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:113`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:129`; PDF page pending.
+- `TA-OCC-8d16b712c95160a8` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:57`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:62`; PDF page pending.
+- `TA-OCC-02dce899084b867e` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:28`; PDF page pending.
+- `TA-OCC-a0724ef37fd399c1` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:36`; PDF page pending.
+- `TA-OCC-2e06ac86311e3e34` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:23`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -20409,6 +20919,8 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-84bfe9843ce749a4` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:65`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:68`; PDF page pending.
 - `TA-OCC-f72bb3808c99b05d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:52`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:54`; PDF page pending.
 - `TA-OCC-9fe96083697f59ae` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:52`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:58`; PDF page pending.
+- `TA-OCC-2eea6337b1781068` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:65`; PDF page pending.
+- `TA-OCC-3add173b3a0ebfd5` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:17`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -21165,6 +21677,7 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-a30d463857919fbf` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:53`; PDF page pending.
 - `TA-OCC-1af5fc7cb3f7646a` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:60`; PDF page pending.
 - `TA-OCC-01076c6658b369a5` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:72`; PDF page pending.
+- `TA-OCC-546c00bd784ef045` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:163`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -23590,6 +24103,7 @@ Please double-check: **is “முறைப்படுத்தல் / கோ
 - `TA-OCC-ebad262f7459b281` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:93`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:110`; PDF page pending.
 - `TA-OCC-2811a5c05f50b972` — OLP-0336 / `OLP-0336-S01`; source `content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:2`; Tamil `translation/content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:10`; PDF page pending.
 - `TA-OCC-ded379c5bb8a6e0d` — OLP-0339 / `OLP-0339-S01`; source `content/second-order-logic/sol-and-set-theory/cardinalities.tex:44`; Tamil `translation/content/second-order-logic/sol-and-set-theory/cardinalities.tex:50`; PDF page pending.
+- `TA-OCC-1d348490bbdcb611` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:86`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:94`; PDF page pending.
 
 ## TA-T130 — axiomatized / axiomatizable / induction schema / Robinson Q / Peano arithmetic
 
@@ -24877,6 +25391,397 @@ Please double-check: **is “கட்டமைப்பு விதிகள�
 - `TA-OCC-c7bd252d0347d687` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:19`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
 - `TA-OCC-21126527e44da187` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:24`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
 - `TA-OCC-48613b7163e79434` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:30`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
+
+## TA-T166 — normal modal logic / modal proposition / modality / possibility / necessity / modal-free
+
+Chosen rendering: **இயல்பான வாய்ப்புநிலைத் தருக்கம் / வாய்ப்புநிலைக் கூற்று / வாய்ப்புநிலை / சாத்தியத்தன்மை / இன்றியமையாமை / வாய்ப்புநிலையற்ற**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: வாய்ப்புநிலைத் தருக்கம், சாத்தியம் and இன்றியமையாமை continue the terminology already used in the reviewed first-order beyond chapter, while the checked originals support the component logic, statement and connective register. இயல்பான marks the technical normal class provisionally; Box and Diamond formation and duality clauses fix the specialist meaning without relying on the ordinary adjective alone.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-TVA-N-6.3-OPEN (checked_context_only); TA-T166-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “இயல்பான வாய்ப்புநிலைத் தருக்கம் / வாய்ப்புநிலைக் கூற்று / வாய்ப்புநிலை / சாத்தியத்தன்மை / இன்றியமையாமை / வாய்ப்புநிலையற்ற” the established India-standard Tamil expression for “normal modal logic / modal proposition / modality / possibility / necessity / modal-free” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-e135d72026b45dd2` — OLP-0140 / `OLP-0140-S02`; source `content/first-order-logic/introduction/first-order-logic.tex:26`; Tamil `translation/content/first-order-logic/introduction/first-order-logic.tex:32`; PDF page pending.
+- `TA-OCC-ad3733cf6c24e0ac` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:31`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:13`; PDF page pending.
+- `TA-OCC-1993e2ae3b5402d0` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:38`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:34`; PDF page pending.
+- `TA-OCC-acb82fd253e7c621` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:47`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:34`; PDF page pending.
+- `TA-OCC-258cc2008308d47a` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:55`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:36`; PDF page pending.
+- `TA-OCC-505f18e91404ab83` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:55`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:42`; PDF page pending.
+- `TA-OCC-28ec898a5bac6e90` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:68`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:45`; PDF page pending.
+- `TA-OCC-11b54b94516c48e5` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:81`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:46`; PDF page pending.
+- `TA-OCC-544b8b08d2a004d1` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:81`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:55`; PDF page pending.
+- `TA-OCC-359c105946f7aed6` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:81`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:60`; PDF page pending.
+- `TA-OCC-686e7d073a4c6409` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:81`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:62`; PDF page pending.
+- `TA-OCC-38452b4700662cad` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:81`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:76`; PDF page pending.
+- `TA-OCC-664e3d3124346df8` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:81`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:89`; PDF page pending.
+- `TA-OCC-ccf35ed3c761fde6` — OLP-0407 / `OLP-0407-S01`; source `content/normal-modal-logic/normal-modal-logic.tex:7`; Tamil `translation/content/normal-modal-logic/normal-modal-logic.tex:8`; PDF page pending.
+- `TA-OCC-7ed1fb73540fa553` — OLP-0407 / `OLP-0407-S01`; source `content/normal-modal-logic/normal-modal-logic.tex:10`; Tamil `translation/content/normal-modal-logic/normal-modal-logic.tex:11`; PDF page pending.
+- `TA-OCC-9adc30079a6b7933` — OLP-0407 / `OLP-0407-S01`; source `content/normal-modal-logic/normal-modal-logic.tex:10`; Tamil `translation/content/normal-modal-logic/normal-modal-logic.tex:12`; PDF page pending.
+- `TA-OCC-9c5cdace36cff830` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:14`; PDF page pending.
+- `TA-OCC-1ed2ece09fe34373` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:14`; PDF page pending.
+- `TA-OCC-bbcd339065bc0eac` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-bf36522d550f67ab` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:22`; PDF page pending.
+- `TA-OCC-d8535fc2c21c8dc6` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:28`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:22`; PDF page pending.
+- `TA-OCC-4e891cfc3525f80b` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:22`; PDF page pending.
+- `TA-OCC-928a974aac209014` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:23`; PDF page pending.
+- `TA-OCC-011b6771d6c7e594` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:28`; PDF page pending.
+- `TA-OCC-f80c28fa00eb5e9f` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:50`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:29`; PDF page pending.
+- `TA-OCC-045b57252eb82cdd` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:57`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-a7f6a90c1e539b0d` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:79`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-44918d6560ad9c01` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:31`; PDF page pending.
+- `TA-OCC-d245ec9921f937ac` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:37`; PDF page pending.
+- `TA-OCC-a56b653255856429` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:46`; PDF page pending.
+- `TA-OCC-6de3f26c34e11f6a` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:53`; PDF page pending.
+- `TA-OCC-1f13f48896d18a07` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:60`; PDF page pending.
+- `TA-OCC-1e80addd2cabb018` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:63`; PDF page pending.
+- `TA-OCC-71f7a4aaeca1277e` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:65`; PDF page pending.
+- `TA-OCC-a55e121ae37ca34d` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:66`; PDF page pending.
+- `TA-OCC-65d7cea286e11eae` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:77`; PDF page pending.
+- `TA-OCC-89dd85ed74a8944d` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:81`; PDF page pending.
+- `TA-OCC-bd035340e43cca49` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:86`; PDF page pending.
+- `TA-OCC-cc4ed33ef33cb828` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:87`; PDF page pending.
+- `TA-OCC-bac5d9e398cb84f9` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:89`; PDF page pending.
+- `TA-OCC-6ccd48e32529b3b4` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:90`; PDF page pending.
+- `TA-OCC-19a06b802e3e4a82` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:94`; PDF page pending.
+- `TA-OCC-80188d1a22c492eb` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:97`; PDF page pending.
+- `TA-OCC-cd91b71993029974` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:98`; PDF page pending.
+- `TA-OCC-158fdc779d195c96` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:101`; PDF page pending.
+- `TA-OCC-973db5b6d7178276` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:103`; PDF page pending.
+- `TA-OCC-cde9c182a3ba7d04` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:105`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:12`; PDF page pending.
+- `TA-OCC-6f4163194e69cd7f` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:105`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:15`; PDF page pending.
+- `TA-OCC-d08e2ab8c01072b5` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:105`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:28`; PDF page pending.
+- `TA-OCC-79cf1e6f057e4469` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:105`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:29`; PDF page pending.
+- `TA-OCC-69ff348fcbd854d4` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:105`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:34`; PDF page pending.
+- `TA-OCC-4baaca949ad69394` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:105`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:112`; PDF page pending.
+- `TA-OCC-f5d6154dcdf49c2f` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:23`; PDF page pending.
+- `TA-OCC-b4aff9f793fefb58` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:24`; PDF page pending.
+- `TA-OCC-d2cd3bb242ab0d39` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:14`; PDF page pending.
+- `TA-OCC-e4765b6b3e3fc393` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:21`; PDF page pending.
+- `TA-OCC-6633130ce872b5bf` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:14`; PDF page pending.
+- `TA-OCC-c51b248ecaef02cf` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:15`; PDF page pending.
+- `TA-OCC-2ff8a8cb389d4c29` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:19`; PDF page pending.
+- `TA-OCC-d5a6b4ddc801ed3c` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:19`; PDF page pending.
+- `TA-OCC-51202631d1af2f56` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; PDF page pending.
+- `TA-OCC-9b896345c5e288fd` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:28`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:21`; PDF page pending.
+- `TA-OCC-65ea2e9c07bb1865` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:29`; PDF page pending.
+- `TA-OCC-666990e3a0edad5a` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:32`; PDF page pending.
+- `TA-OCC-67341f42323f059e` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:37`; PDF page pending.
+- `TA-OCC-984225e854d9c06c` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:38`; PDF page pending.
+- `TA-OCC-19d2813fbaff674f` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; PDF page pending.
+- `TA-OCC-356ce1d69af7033c` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:96`; PDF page pending.
+
+## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
+
+Chosen rendering: **சாத்தியமான உலகம் / அணுகுறவு / கிரிப்கே பொருண்மையியல் / தொடர்புக் கட்டமைப்பு / மெய்மையியல், அறிவுநிலை மற்றும் இயக்கநிலைத் தருக்கம் / ஒத்திசைவுக் கோட்பாடு / வாய்ப்புநிலைத் திட்டவடிவம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: சாத்தியமான உலகம் and அணுகுறவு continue the reviewed edition's earlier Kripke exposition. The checked originals support relation, structure, truth and inference components but do not directly attest the full modal compounds. Accessibility and correspondence are fixed by the stated world-to-world R clause and the exact reflexivity/schema example; the provisional compounds remain open to expert correction.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-TVA-N-6.3-OPEN (checked_context_only); TA-T167-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “சாத்தியமான உலகம் / அணுகுறவு / கிரிப்கே பொருண்மையியல் / தொடர்புக் கட்டமைப்பு / மெய்மையியல், அறிவுநிலை மற்றும் இயக்கநிலைத் தருக்கம் / ஒத்திசைவுக் கோட்பாடு / வாய்ப்புநிலைத் திட்டவடிவம்” the established India-standard Tamil expression for “possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-503f8a3be821223d` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:44`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:50`; PDF page pending.
+- `TA-OCC-39d0822f8d20f9b5` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:83`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:94`; PDF page pending.
+- `TA-OCC-14331f727fefafbc` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:85`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:96`; PDF page pending.
+- `TA-OCC-a162c16906b1f5fd` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:62`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:72`; PDF page pending.
+- `TA-OCC-5316aefe1c8cebf3` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:66`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:82`; PDF page pending.
+- `TA-OCC-b59289e2540b28d8` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:85`; PDF page pending.
+- `TA-OCC-3d52a31493601b58` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:73`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:85`; PDF page pending.
+- `TA-OCC-95435f1e42c92ca0` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:74`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:90`; PDF page pending.
+- `TA-OCC-7d468506d07df58c` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:75`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:94`; PDF page pending.
+- `TA-OCC-3056d8fc2bca9324` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:77`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:96`; PDF page pending.
+- `TA-OCC-0b254d3e60d5f41a` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:25`; PDF page pending.
+- `TA-OCC-2a31021fe4d72b45` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:19`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:22`; PDF page pending.
+- `TA-OCC-ee19af477b39b72b` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:25`; PDF page pending.
+
+## TA-T168 — simultaneous substitution / iterated substitution / instance / substitution instance
+
+Chosen rendering: **ஒரேநேரப் பதிலீடு / அடுத்தடுத்த பதிலீடு / நிகழ்வு / பதிலீட்டு நிகழ்வு**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: ஒரேநேரப் பதிலீடு and நிகழ்வு continue the reviewed propositional and axiomatic-deduction usage already present in the Tamil edition. The complete induction fixes simultaneous replacement, while the two worked orders distinguish அடுத்தடுத்த பதிலீடு without relying on the ordinary-language contrast alone.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-T168-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “ஒரேநேரப் பதிலீடு / அடுத்தடுத்த பதிலீடு / நிகழ்வு / பதிலீட்டு நிகழ்வு” the established India-standard Tamil expression for “simultaneous substitution / iterated substitution / instance / substitution instance” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-42ebb1f352c62994` — OLP-0115 / `OLP-0115-S02`; source `content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/axioms-rules-quantifiers.tex:17`; PDF page pending.
+- `TA-OCC-cbe6f8eb8d04c9de` — OLP-0116 / `OLP-0116-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:20`; PDF page pending.
+- `TA-OCC-530c593c786e1768` — OLP-0116 / `OLP-0116-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:22`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:32`; PDF page pending.
+- `TA-OCC-b46dbdbc18e36b0f` — OLP-0116 / `OLP-0116-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:29`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:33`; PDF page pending.
+- `TA-OCC-d46f93371af60ff8` — OLP-0116 / `OLP-0116-S03`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:43`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:48`; PDF page pending.
+- `TA-OCC-d0b03ad89a0884d3` — OLP-0116 / `OLP-0116-S04`; source `content/first-order-logic/axiomatic-deduction/proving-things.tex:63`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things.tex:74`; PDF page pending.
+- `TA-OCC-1f5c6ee3cb494e47` — OLP-0117 / `OLP-0117-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:20`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:22`; PDF page pending.
+- `TA-OCC-e34f462e16745d5f` — OLP-0117 / `OLP-0117-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:27`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:24`; PDF page pending.
+- `TA-OCC-16a987c1d79c916a` — OLP-0117 / `OLP-0117-S02`; source `content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:29`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proving-things-quant.tex:29`; PDF page pending.
+- `TA-OCC-0fdb3e7e536a072d` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:62`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:71`; PDF page pending.
+- `TA-OCC-d538f6d4c378fd51` — OLP-0125 / `OLP-0125-S06`; source `content/first-order-logic/axiomatic-deduction/identity.tex:52`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:59`; PDF page pending.
+- `TA-OCC-fbea7fbb18038072` — OLP-0128 / `OLP-0128-S11`; source `content/first-order-logic/completeness/outline.tex:142`; Tamil `translation/content/first-order-logic/completeness/outline.tex:148`; PDF page pending.
+- `TA-OCC-fd6f2e14d3917923` — OLP-0130 / `OLP-0130-S10`; source `content/first-order-logic/completeness/henkin-expansions.tex:153`; Tamil `translation/content/first-order-logic/completeness/henkin-expansions.tex:168`; PDF page pending.
+- `TA-OCC-0abc19333794acbe` — OLP-0130 / `OLP-0130-S10`; source `content/first-order-logic/completeness/henkin-expansions.tex:155`; Tamil `translation/content/first-order-logic/completeness/henkin-expansions.tex:171`; PDF page pending.
+- `TA-OCC-4cbfcaab542abdf1` — OLP-0132 / `OLP-0132-S05`; source `content/first-order-logic/completeness/construction-of-model.tex:103`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:111`; PDF page pending.
+- `TA-OCC-db4d0d79d814eaef` — OLP-0132 / `OLP-0132-S05`; source `content/first-order-logic/completeness/construction-of-model.tex:105`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:113`; PDF page pending.
+- `TA-OCC-99b9320e3e3239ea` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:30`; PDF page pending.
+- `TA-OCC-11eaeb5be12888d6` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:36`; PDF page pending.
+- `TA-OCC-ca2e847856fc6a43` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:39`; PDF page pending.
+- `TA-OCC-458a1c98457f25f5` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:40`; PDF page pending.
+- `TA-OCC-4bee60d8c55257bd` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:42`; PDF page pending.
+- `TA-OCC-2597d130119fe922` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:42`; PDF page pending.
+- `TA-OCC-6241655de0b174f4` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:43`; PDF page pending.
+- `TA-OCC-63adc28993b88e2d` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:44`; PDF page pending.
+- `TA-OCC-5cda0562bf8d9fb7` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:46`; PDF page pending.
+- `TA-OCC-987340d75d3d2c3c` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:47`; PDF page pending.
+- `TA-OCC-c0f160ac9edd4ac5` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:49`; PDF page pending.
+- `TA-OCC-ec25b7ca757bf470` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:51`; PDF page pending.
+- `TA-OCC-727d09c6388938dc` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:52`; PDF page pending.
+- `TA-OCC-38f0c15ab8051552` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:55`; PDF page pending.
+- `TA-OCC-c550597ed6269612` — OLP-0144 / `OLP-0144-S01`; source `content/first-order-logic/introduction/sentences.tex:1`; Tamil `translation/content/first-order-logic/introduction/sentences.tex:56`; PDF page pending.
+- `TA-OCC-681d5b1cf3504d0e` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:85`; PDF page pending.
+- `TA-OCC-c2642878dc07740b` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:92`; PDF page pending.
+- `TA-OCC-91eb768c141ba1a1` — OLP-0153 / `OLP-0153-S01`; source `content/first-order-logic/syntax-and-semantics/unique-readability.tex:25`; Tamil `translation/content/first-order-logic/syntax-and-semantics/unique-readability.tex:47`; PDF page pending.
+- `TA-OCC-295bf5a4f15fd676` — OLP-0153 / `OLP-0153-S01`; source `content/first-order-logic/syntax-and-semantics/unique-readability.tex:44`; Tamil `translation/content/first-order-logic/syntax-and-semantics/unique-readability.tex:47`; PDF page pending.
+- `TA-OCC-0c5b31cf304b3011` — OLP-0153 / `OLP-0153-S01`; source `content/first-order-logic/syntax-and-semantics/unique-readability.tex:44`; Tamil `translation/content/first-order-logic/syntax-and-semantics/unique-readability.tex:196`; PDF page pending.
+- `TA-OCC-34e85ec2a3316f69` — OLP-0154 / `OLP-0154-S01`; source `content/first-order-logic/syntax-and-semantics/main-operator.tex:53`; Tamil `translation/content/first-order-logic/syntax-and-semantics/main-operator.tex:59`; PDF page pending.
+- `TA-OCC-127cd61c7a25c9db` — OLP-0154 / `OLP-0154-S01`; source `content/first-order-logic/syntax-and-semantics/main-operator.tex:53`; Tamil `translation/content/first-order-logic/syntax-and-semantics/main-operator.tex:67`; PDF page pending.
+- `TA-OCC-5295fe2588823202` — OLP-0155 / `OLP-0155-S01`; source `content/first-order-logic/syntax-and-semantics/subformulas.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/subformulas.tex:76`; PDF page pending.
+- `TA-OCC-02fea4aba7e5b6c6` — OLP-0155 / `OLP-0155-S01`; source `content/first-order-logic/syntax-and-semantics/subformulas.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/subformulas.tex:77`; PDF page pending.
+- `TA-OCC-0cac74e7284bdd59` — OLP-0155 / `OLP-0155-S01`; source `content/first-order-logic/syntax-and-semantics/subformulas.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/subformulas.tex:84`; PDF page pending.
+- `TA-OCC-7f2398840c3afae4` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:197`; PDF page pending.
+- `TA-OCC-6bf477f8f9e125f0` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:205`; PDF page pending.
+- `TA-OCC-058e3e93f137a031` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:14`; PDF page pending.
+- `TA-OCC-d7dcac485caadddf` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:16`; PDF page pending.
+- `TA-OCC-66a4d7cbada2753b` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:20`; PDF page pending.
+- `TA-OCC-ebd72cc48983b149` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:23`; PDF page pending.
+- `TA-OCC-10521e3d497124b1` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:26`; PDF page pending.
+- `TA-OCC-37ee95f6a146a371` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:29`; PDF page pending.
+- `TA-OCC-cee657ebf0685257` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:29`; PDF page pending.
+- `TA-OCC-b088f867721789eb` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:32`; PDF page pending.
+- `TA-OCC-622e4c638e6b28bf` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:32`; PDF page pending.
+- `TA-OCC-debc93c50ef18446` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:37`; PDF page pending.
+- `TA-OCC-08bb7b55bf091cb7` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:43`; PDF page pending.
+- `TA-OCC-d1ef985b94564ae5` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:47`; PDF page pending.
+- `TA-OCC-683577f7352bd7aa` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:48`; PDF page pending.
+- `TA-OCC-e7e03c1521b94a6f` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:51`; PDF page pending.
+- `TA-OCC-2665bd35ba0171fb` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:52`; PDF page pending.
+- `TA-OCC-d36a329bc48eaa2c` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:58`; PDF page pending.
+- `TA-OCC-cff52947ae81af81` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:84`; PDF page pending.
+- `TA-OCC-8ad91bc88245595a` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:87`; PDF page pending.
+- `TA-OCC-9965a380d46843ce` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:87`; PDF page pending.
+- `TA-OCC-f3b1b7921feda43e` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:88`; PDF page pending.
+- `TA-OCC-d843ff928522ec32` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:94`; PDF page pending.
+- `TA-OCC-494e19d5d52ad72e` — OLP-0158 / `OLP-0158-S01`; source `content/first-order-logic/syntax-and-semantics/substitution.tex:105`; Tamil `translation/content/first-order-logic/syntax-and-semantics/substitution.tex:15`; PDF page pending.
+- `TA-OCC-d9d7ef4c8cdcede9` — OLP-0158 / `OLP-0158-S01`; source `content/first-order-logic/syntax-and-semantics/substitution.tex:121`; Tamil `translation/content/first-order-logic/syntax-and-semantics/substitution.tex:33`; PDF page pending.
+- `TA-OCC-93f7383362dd4393` — OLP-0158 / `OLP-0158-S01`; source `content/first-order-logic/syntax-and-semantics/substitution.tex:121`; Tamil `translation/content/first-order-logic/syntax-and-semantics/substitution.tex:51`; PDF page pending.
+- `TA-OCC-1feecfbab9b06b98` — OLP-0158 / `OLP-0158-S01`; source `content/first-order-logic/syntax-and-semantics/substitution.tex:124`; Tamil `translation/content/first-order-logic/syntax-and-semantics/substitution.tex:105`; PDF page pending.
+- `TA-OCC-ca5df08187f03574` — OLP-0158 / `OLP-0158-S01`; source `content/first-order-logic/syntax-and-semantics/substitution.tex:124`; Tamil `translation/content/first-order-logic/syntax-and-semantics/substitution.tex:126`; PDF page pending.
+- `TA-OCC-928e939e71604a62` — OLP-0158 / `OLP-0158-S01`; source `content/first-order-logic/syntax-and-semantics/substitution.tex:124`; Tamil `translation/content/first-order-logic/syntax-and-semantics/substitution.tex:129`; PDF page pending.
+- `TA-OCC-eda777133a790956` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:125`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:129`; PDF page pending.
+- `TA-OCC-4f557c09481f3b46` — OLP-0192 / `OLP-0192-S01`; source `content/model-theory/models-of-arithmetic/introduction.tex:25`; Tamil `translation/content/model-theory/models-of-arithmetic/introduction.tex:60`; PDF page pending.
+- `TA-OCC-89d52079a1975fd9` — OLP-0222 / `OLP-0222-S01`; source `content/computability/recursive-functions/other-recursions.tex:22`; Tamil `translation/content/computability/recursive-functions/other-recursions.tex:24`; PDF page pending.
+- `TA-OCC-0e19f94e4eab8082` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:41`; Tamil `translation/content/incompleteness/introduction/definitions.tex:138`; PDF page pending.
+- `TA-OCC-31819677ace2d96f` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:130`; Tamil `translation/content/incompleteness/introduction/definitions.tex:142`; PDF page pending.
+- `TA-OCC-00c84646fec204d8` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:133`; Tamil `translation/content/incompleteness/introduction/definitions.tex:147`; PDF page pending.
+- `TA-OCC-8de71f63d81f36b2` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:138`; Tamil `translation/content/incompleteness/introduction/definitions.tex:227`; PDF page pending.
+- `TA-OCC-fc3acfe2a4afd9d4` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:142`; Tamil `translation/content/incompleteness/introduction/definitions.tex:240`; PDF page pending.
+- `TA-OCC-b3a03c346fc06b4f` — OLP-0284 / `OLP-0284-S01`; source `content/incompleteness/arithmetization-syntax/coding-formulas.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-formulas.tex:87`; PDF page pending.
+- `TA-OCC-16ba583a03a405dd` — OLP-0285 / `OLP-0285-S01`; source `content/incompleteness/arithmetization-syntax/substitution.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/substitution.tex:14`; PDF page pending.
+- `TA-OCC-06e807f330588fa0` — OLP-0287 / `OLP-0287-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:287`; PDF page pending.
+- `TA-OCC-a3539ea8c2b3821b` — OLP-0287 / `OLP-0287-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:290`; PDF page pending.
+- `TA-OCC-2cec6aa44d11e457` — OLP-0287 / `OLP-0287-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:293`; PDF page pending.
+- `TA-OCC-32a0f3aab32182d4` — OLP-0287 / `OLP-0287-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:293`; PDF page pending.
+- `TA-OCC-65553bf3a356c6b2` — OLP-0308 / `OLP-0308-S01`; source `content/incompleteness/theories-computability/first-incompleteness.tex:1`; Tamil `translation/content/incompleteness/theories-computability/first-incompleteness.tex:38`; PDF page pending.
+- `TA-OCC-938cbb83d275ca10` — OLP-0319 / `OLP-0319-S01`; source `content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:91`; Tamil `translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:106`; PDF page pending.
+- `TA-OCC-54fa86b407d21b01` — OLP-0320 / `OLP-0320-S01`; source `content/incompleteness/incompleteness-provability/lob-thm.tex:37`; Tamil `translation/content/incompleteness/incompleteness-provability/lob-thm.tex:51`; PDF page pending.
+- `TA-OCC-76b67322e759f539` — OLP-0320 / `OLP-0320-S01`; source `content/incompleteness/incompleteness-provability/lob-thm.tex:43`; Tamil `translation/content/incompleteness/incompleteness-provability/lob-thm.tex:54`; PDF page pending.
+- `TA-OCC-8eacb38d139736c4` — OLP-0320 / `OLP-0320-S01`; source `content/incompleteness/incompleteness-provability/lob-thm.tex:43`; Tamil `translation/content/incompleteness/incompleteness-provability/lob-thm.tex:55`; PDF page pending.
+- `TA-OCC-a242153994645e3d` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:1`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:66`; PDF page pending.
+- `TA-OCC-c476da1992bd60e9` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:1`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:69`; PDF page pending.
+- `TA-OCC-a2b0511ee329bb18` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:16`; PDF page pending.
+- `TA-OCC-e747cd8a94de7819` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:17`; PDF page pending.
+- `TA-OCC-8592e40509c4d734` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:20`; PDF page pending.
+- `TA-OCC-ab57eaa1cd08c753` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:21`; PDF page pending.
+- `TA-OCC-a7a1b852dae53060` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:30`; PDF page pending.
+- `TA-OCC-1770f61cdb2b6c06` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:31`; PDF page pending.
+- `TA-OCC-a3879a8582392cf2` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:33`; PDF page pending.
+- `TA-OCC-00099067dc12eb6e` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:33`; PDF page pending.
+- `TA-OCC-521bebbf08cbf373` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:42`; PDF page pending.
+- `TA-OCC-fe8d7e705cec561c` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:43`; PDF page pending.
+- `TA-OCC-b4a365d121e66e12` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:47`; PDF page pending.
+- `TA-OCC-993992e469b30ddd` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:47`; PDF page pending.
+- `TA-OCC-fa2f10d7df1b9ea0` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:49`; PDF page pending.
+- `TA-OCC-f468a0e99faea4c0` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:50`; PDF page pending.
+- `TA-OCC-2425f1bb160a0ef3` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:1`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:40`; PDF page pending.
+- `TA-OCC-484fcc3672f8395b` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:126`; PDF page pending.
+- `TA-OCC-0aa34bf2691bf50b` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:147`; PDF page pending.
+- `TA-OCC-1d88c246ef717821` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:225`; PDF page pending.
+- `TA-OCC-5920584eb7a1ffdf` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:70`; PDF page pending.
+- `TA-OCC-5bed24fa4f8a268b` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:88`; PDF page pending.
+- `TA-OCC-a3af889e64098c63` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:24`; PDF page pending.
+- `TA-OCC-e76a5459fb4487c8` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:124`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:255`; PDF page pending.
+- `TA-OCC-ad076936e1032d9e` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:12`; PDF page pending.
+- `TA-OCC-16702562f81d5282` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:14`; PDF page pending.
+- `TA-OCC-7d8582c8bf58a83c` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:15`; PDF page pending.
+- `TA-OCC-da85e66fbfea8893` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:71`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:18`; PDF page pending.
+- `TA-OCC-fccac5782f6a5ec4` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:71`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:78`; PDF page pending.
+- `TA-OCC-0f53f8ebb7c7f80a` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:85`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:92`; PDF page pending.
+- `TA-OCC-1bce2132ee4989e9` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:86`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:92`; PDF page pending.
+- `TA-OCC-4b4e7ab9e9a51c0f` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:3`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:12`; PDF page pending.
+- `TA-OCC-518f361b616af991` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:22`; PDF page pending.
+- `TA-OCC-72d5c03de7400925` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:18`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:23`; PDF page pending.
+- `TA-OCC-1fd02498552e72de` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:32`; PDF page pending.
+- `TA-OCC-244f3e2fc9026f1f` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:152`; PDF page pending.
+- `TA-OCC-65b9d54f6bd3300b` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; PDF page pending.
+- `TA-OCC-b7b5fafff85eab4c` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:25`; PDF page pending.
+- `TA-OCC-b0e5c4a427cacecb` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:37`; PDF page pending.
+- `TA-OCC-6e1307f0710c7c27` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:28`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:51`; PDF page pending.
+- `TA-OCC-c9284bcdafd524d7` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:87`; PDF page pending.
+- `TA-OCC-25300f6defc52254` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:93`; PDF page pending.
+- `TA-OCC-35d8b15679e67a03` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:81`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:104`; PDF page pending.
+- `TA-OCC-8549f0c0525d647f` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:82`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:120`; PDF page pending.
+- `TA-OCC-4950625b94d0f1c6` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:82`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:122`; PDF page pending.
+- `TA-OCC-cecd30a905b249f8` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:89`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:125`; PDF page pending.
+- `TA-OCC-bc88a26d1bba0fdc` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:94`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:186`; PDF page pending.
+
+## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
+
+Chosen rendering: **தொடர்புசார் மாதிரி / தொடர்புசார் பொருண்மையியல் / ஓர் உலகில் மெய்மை / ஒரு மாதிரியில் மெய்மை / இலிருந்து அணுகத்தக்கது / வெறுமைவழி மெய் / வாய்ப்புநிலை இருமைத்தன்மை**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: தொடர்புசார் continues the reviewed model-theory relational register, while மாதிரி, மெய்மை, உலகம் and அணுகுறவு continue established edition usage. The M,w satisfaction induction, empty-successor box case and Box/Diamond equivalences fix the remaining compounds exactly; வெறுமைவழி is retained as an explicit provisional rendering of vacuous truth.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-TVA-N-6.3-OPEN (checked_context_only); TA-T169-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தொடர்புசார் மாதிரி / தொடர்புசார் பொருண்மையியல் / ஓர் உலகில் மெய்மை / ஒரு மாதிரியில் மெய்மை / இலிருந்து அணுகத்தக்கது / வெறுமைவழி மெய் / வாய்ப்புநிலை இருமைத்தன்மை” the established India-standard Tamil expression for “relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-92ec2047d868bda0` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:12`; PDF page pending.
+- `TA-OCC-61e56f2f97c343b3` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:15`; PDF page pending.
+- `TA-OCC-64c616f112d15292` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:12`; PDF page pending.
+- `TA-OCC-ae74d843220920c9` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:9`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:13`; PDF page pending.
+- `TA-OCC-8ac15ccb6898b053` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:23`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:26`; PDF page pending.
+- `TA-OCC-09d26211f9f744c8` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; PDF page pending.
+
+## TA-T170 — modal validity / valid in a class of models / tautology / tautological instance / schema / characteristic formula / closed under modus ponens
+
+Chosen rendering: **வாய்ப்புநிலைச் செல்லுபடித்தன்மை / மாதிரிகளின் ஒரு வகுப்பில் செல்லுபடியாகும் / மெய்மம் / மெய்ம நிகழ்வு / திட்டவடிவம் / பண்புறுத்தும் வாய்பாடு / மோடஸ் போனென்ஸின் கீழ் மூடப்பட்டது**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: செல்லுபடித்தன்மை, மெய்மம், திட்டவடிவம் and மோடஸ் போனென்ஸ் continue reviewed edition usage. The all-model/all-world clause fixes modal validity, the complete simultaneous-substitution definition fixes மெய்ம நிகழ்வு, and schema membership plus the displayed characteristic formula fixes பண்புறுத்தும் வாய்பாடு without relying on unattested specialist headwords alone.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-T170-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வாய்ப்புநிலைச் செல்லுபடித்தன்மை / மாதிரிகளின் ஒரு வகுப்பில் செல்லுபடியாகும் / மெய்மம் / மெய்ம நிகழ்வு / திட்டவடிவம் / பண்புறுத்தும் வாய்பாடு / மோடஸ் போனென்ஸின் கீழ் மூடப்பட்டது” the established India-standard Tamil expression for “modal validity / valid in a class of models / tautology / tautological instance / schema / characteristic formula / closed under modus ponens” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-ea8b8cfadd2239ff` — OLP-0057 / `OLP-0057-S04`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:65`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-9317d5b1e7160592` — OLP-0057 / `OLP-0057-S04`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:66`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:72`; PDF page pending.
+- `TA-OCC-a5287706e9ceffd1` — OLP-0062 / `OLP-0062-S01`; source `content/propositional-logic/syntax-and-semantics/semantic-notions.tex:20`; Tamil `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:22`; PDF page pending.
+- `TA-OCC-71c8acc5603ed0ca` — OLP-0062 / `OLP-0062-S03`; source `content/propositional-logic/syntax-and-semantics/semantic-notions.tex:48`; Tamil `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:52`; PDF page pending.
+- `TA-OCC-c93b93338c26f903` — OLP-0081 / `OLP-0081-S01`; source `content/first-order-logic/sequent-calculus/soundness.tex:22`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:24`; PDF page 29.
+- `TA-OCC-c149673a46d0f063` — OLP-0081 / `OLP-0081-S15`; source `content/first-order-logic/sequent-calculus/soundness.tex:348`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:378`; PDF page 35.
+- `TA-OCC-301e5049736bd725` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:22`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:23`; PDF page 55.
+- `TA-OCC-6805eba32f8c51ca` — OLP-0095 / `OLP-0095-S15`; source `content/first-order-logic/natural-deduction/soundness.tex:293`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:316`; PDF page 59.
+- `TA-OCC-c8e29dfefae7650d` — OLP-0109 / `OLP-0109-S01`; source `content/first-order-logic/tableaux/soundness.tex:22`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:23`; PDF page 83.
+- `TA-OCC-169989ce94ac7c68` — OLP-0109 / `OLP-0109-S12`; source `content/first-order-logic/tableaux/soundness.tex:206`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:246`; PDF page 87.
+- `TA-OCC-8865b9071a6f2fb7` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:19`; PDF page pending.
+- `TA-OCC-817d282627f7b61c` — OLP-0124 / `OLP-0124-S10`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:121`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:147`; PDF page pending.
+- `TA-OCC-4fd186eddb852fd1` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:45`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:50`; PDF page pending.
+- `TA-OCC-e1f4d085b3ef3aca` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:46`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:53`; PDF page pending.
+- `TA-OCC-08d3a366174a9bd3` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:57`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:67`; PDF page pending.
+- `TA-OCC-ca9779e84ee13e1a` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; PDF page pending.
+- `TA-OCC-a6c86ff0bf7f9e41` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:39`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:41`; PDF page pending.
+- `TA-OCC-5aac63c50bf2e4bf` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:75`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:84`; PDF page pending.
+- `TA-OCC-673131ccae0d459b` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:71`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:80`; PDF page pending.
+- `TA-OCC-2a39c3d68feae1c1` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:136`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:152`; PDF page pending.
+- `TA-OCC-cd2ca543b3068744` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:136`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:160`; PDF page pending.
+- `TA-OCC-d912bdaa3bed9c2d` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:105`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:110`; PDF page pending.
+- `TA-OCC-42ac34735d526e71` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:110`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:118`; PDF page pending.
+- `TA-OCC-4d1cdc18a3af29ef` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:111`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:126`; PDF page pending.
+- `TA-OCC-b9a716313dbbc017` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:113`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:132`; PDF page pending.
+- `TA-OCC-c409c33fc87ad5e8` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:12`; PDF page pending.
+- `TA-OCC-f5e2402dbd1d0115` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:16`; PDF page pending.
+- `TA-OCC-b40b1da0556cb5ba` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:18`; PDF page pending.
+- `TA-OCC-93767bcf83afda58` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:17`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:22`; PDF page pending.
+- `TA-OCC-2a23358d899a9cde` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:20`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:29`; PDF page pending.
+- `TA-OCC-5683c921fbfef99a` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:32`; PDF page pending.
+- `TA-OCC-bbdf6a4e9a2dd25b` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:152`; PDF page pending.
+- `TA-OCC-677ee409d23998f1` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:27`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:164`; PDF page pending.
+- `TA-OCC-b3a2bdee6c5eb6d2` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:3`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:17`; PDF page pending.
+- `TA-OCC-c440bd9790e3f8bb` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:33`; PDF page pending.
+- `TA-OCC-7b2dc2a57c4b3721` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:38`; PDF page pending.
+- `TA-OCC-765296099ac6fa47` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:39`; PDF page pending.
+- `TA-OCC-f9df35f1fd590ad3` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:44`; PDF page pending.
+- `TA-OCC-b2f6f7e03f232203` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:26`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:65`; PDF page pending.
+- `TA-OCC-da25107e49814db1` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:28`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:88`; PDF page pending.
+- `TA-OCC-b3506848b2dc7bcb` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:117`; PDF page pending.
+- `TA-OCC-8a51d7e49c6bdade` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:118`; PDF page pending.
+
+## TA-T171 — entailment / entails / counterexample / class of models / reflexive model
+
+Chosen rendering: **பின்விளைவு / இலிருந்து பின்விளைகிறது / எதிரெடுத்துக்காட்டு / மாதிரிகளின் வகுப்பு / தற்சார்பு மாதிரி**
+
+Kind: `terminology`; confidence: `medium`; provisional: `false`; priority: `normal`.
+
+Intended sense and rationale: பின்விளைவு and எதிரெடுத்துக்காட்டு continue the reviewed propositional and first-order semantic register. The universal model-and-world clause fixes local modal consequence, while the two explicit failing models fix the negated relation; தற்சார்பு continues established relation terminology.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-TVA-N-6.3-OPEN (checked_context_only)
+
+Alternatives: None recorded.
+
+Please double-check: **do the listed uses of “பின்விளைவு / இலிருந்து பின்விளைகிறது / எதிரெடுத்துக்காட்டு / மாதிரிகளின் வகுப்பு / தற்சார்பு மாதிரி” preserve the OpenLogic sense of “entailment / entails / counterexample / class of models / reflexive model” and read naturally in India-standard mathematical Tamil?**
+
+- `TA-OCC-37a1610b10a65c57` — OLP-0057 / `OLP-0057-S04`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:66`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-e45ffc63992aaf85` — OLP-0064 / `OLP-0064-S01`; source `content/first-order-logic/proof-systems/introduction.tex:17`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:18`; PDF page 4.
+- `TA-OCC-a73e142a3c78551e` — OLP-0064 / `OLP-0064-S04`; source `content/first-order-logic/proof-systems/introduction.tex:57`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:62`; PDF page 5.
+- `TA-OCC-c8eae7cdd7e7394f` — OLP-0064 / `OLP-0064-S05`; source `content/first-order-logic/proof-systems/introduction.tex:67`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:79`; PDF page 5.
+- `TA-OCC-fa9ed536b95487e5` — OLP-0077 / `OLP-0077-S01`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:22`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:22`; PDF page 24.
+- `TA-OCC-5f0d38234e345509` — OLP-0081 / `OLP-0081-S01`; source `content/first-order-logic/sequent-calculus/soundness.tex:1`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:26`; PDF page 30.
+- `TA-OCC-17a8c3bffb023466` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:22`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:22`; PDF page 50.
+- `TA-OCC-7e5e50c7eab7e7c3` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:25`; PDF page 55.
+- `TA-OCC-813a47c0e871e08a` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:140`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:156`; PDF page 57.
+- `TA-OCC-626c9ec3e6d1d00e` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:169`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:191`; PDF page 57.
+- `TA-OCC-0a110050eb238821` — OLP-0104 / `OLP-0104-S12`; source `content/first-order-logic/tableaux/proving-things-quant.tex:228`; Tamil `translation/content/first-order-logic/tableaux/proving-things-quant.tex:251`; PDF page 74.
+- `TA-OCC-94909f080e56f953` — OLP-0105 / `OLP-0105-S01`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:22`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:22`; PDF page 76.
+- `TA-OCC-369da96a947db098` — OLP-0109 / `OLP-0109-S01`; source `content/first-order-logic/tableaux/soundness.tex:1`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:25`; PDF page 84.
+- `TA-OCC-24eddbb7fec0df15` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:17`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:19`; PDF page pending.
+- `TA-OCC-84440183e126f498` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:15`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:26`; PDF page pending.
+- `TA-OCC-2ef0ba9025f939dd` — OLP-0127 / `OLP-0127-S02`; source `content/first-order-logic/completeness/introduction.tex:15`; Tamil `translation/content/first-order-logic/completeness/introduction.tex:19`; PDF page pending.
+- `TA-OCC-778cb05f23615cef` — OLP-0127 / `OLP-0127-S03`; source `content/first-order-logic/completeness/introduction.tex:24`; Tamil `translation/content/first-order-logic/completeness/introduction.tex:40`; PDF page pending.
+- `TA-OCC-9526a26ee4781fe3` — OLP-0127 / `OLP-0127-S04`; source `content/first-order-logic/completeness/introduction.tex:49`; Tamil `translation/content/first-order-logic/completeness/introduction.tex:57`; PDF page pending.
+- `TA-OCC-69c6c944066d2867` — OLP-0127 / `OLP-0127-S04`; source `content/first-order-logic/completeness/introduction.tex:49`; Tamil `translation/content/first-order-logic/completeness/introduction.tex:58`; PDF page pending.
+- `TA-OCC-9fec07aba6e1646d` — OLP-0130 / `OLP-0130-S01`; source `content/first-order-logic/completeness/henkin-expansions.tex:28`; Tamil `translation/content/first-order-logic/completeness/henkin-expansions.tex:29`; PDF page pending.
+- `TA-OCC-bb90ac26e09bf209` — OLP-0147 / `OLP-0147-S03`; source `content/first-order-logic/introduction/models-theories.tex:56`; Tamil `translation/content/first-order-logic/introduction/models-theories.tex:58`; PDF page pending.
+- `TA-OCC-4ee844dc0aa27880` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:36`; Tamil `translation/content/incompleteness/introduction/definitions.tex:86`; PDF page pending.
+- `TA-OCC-ea0703f8a74981a9` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:36`; Tamil `translation/content/incompleteness/introduction/definitions.tex:120`; PDF page pending.
+- `TA-OCC-ca82dcf667cd2b15` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:45`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:50`; PDF page pending.
+- `TA-OCC-dd50f647ee07fcdd` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:202`; PDF page pending.
+- `TA-OCC-8dfe8cef8b414b54` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:156`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:158`; PDF page pending.
+- `TA-OCC-2265045b3cc332e1` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:59`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:156`; PDF page pending.
+- `TA-OCC-573242f119ff3d24` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:60`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:203`; PDF page pending.
+- `TA-OCC-0ffe17a6d87676a6` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-1739208620072d2c` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:31`; PDF page pending.
+- `TA-OCC-ed21bdcf8ad9f66a` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:37`; PDF page pending.
+- `TA-OCC-2111f33f36953d85` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:3`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:12`; PDF page pending.
+- `TA-OCC-132dcde404c9d287` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; PDF page pending.
+- `TA-OCC-fc2328e5600626dc` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:69`; PDF page pending.
+- `TA-OCC-39b2b63b49434e1a` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:73`; PDF page pending.
+- `TA-OCC-0ad72562c4eb41b1` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:23`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:76`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-19T21:18:32.202806+00:00",
+  "date_utc": "2026-09-19T22:00:12.825947+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2017,6 +2017,66 @@
       "unit_id": "OLP-0406",
       "source_sha256": "7ec37019c2bc225b2cd247dbee140a3ba8e39b319c8e5c49e5b635dc669659e7",
       "translation_sha256": "27d4cc4b2f8fa1b5dc8b8fcc0f82f4d231ef05cb87f4df18872b2b2331645ff1"
+    },
+    {
+      "unit_id": "OLP-0407",
+      "source_sha256": "8dcd5a551f104cbdeb2a3bf027ce4b2a203c2dffcc5f93a0827bdcda7e230604",
+      "translation_sha256": "9eec14a37a9b1afa65c1e7db1e9ac5c59fabf441d81359407e100f0792882901"
+    },
+    {
+      "unit_id": "OLP-0408",
+      "source_sha256": "73c9e7bc1748596070d4745cc798ffc55a7e7cc5317ba18c0ea62adb53eb2a58",
+      "translation_sha256": "d937ce9404c7e0c2d34e2b87ed53ab93bfa844269d2eb9b7217fb097c6419743"
+    },
+    {
+      "unit_id": "OLP-0409",
+      "source_sha256": "472bb6066a6995031744114d0238d83c60eb6a3d241d8e77571c59a4b912fed6",
+      "translation_sha256": "b49d8e5f6fc5e65a97b3931faad6b2aa3005380bb4bb73bd13784d991ea1db9b"
+    },
+    {
+      "unit_id": "OLP-0410",
+      "source_sha256": "a75f481c6e175130df3c9145984ca245a8156503d2cb9ff833bd77c39b9529ab",
+      "translation_sha256": "438b2818ec6fefa9911882bb59bedabf9fbc4821168c79e6d8897163b01ed278"
+    },
+    {
+      "unit_id": "OLP-0411",
+      "source_sha256": "c06b8018d76c34c2242503d94f209cc4c6c731542e9eab27a099b2e794fa30ff",
+      "translation_sha256": "7df87a264971c866e50aee3e3887465f675f57fcb2adcc4ec8080bcd8835d424"
+    },
+    {
+      "unit_id": "OLP-0412",
+      "source_sha256": "e8bc152c0c35fa129babf11ba07aa8a42fc867905526c126d93bb50ea2cfc2cf",
+      "translation_sha256": "aa10823247de9b11138952d884d125e6595490e45b7ffcbcbf616554ee48fb6b"
+    },
+    {
+      "unit_id": "OLP-0413",
+      "source_sha256": "4c1ea773c2dd5106ceba1ec676dfadbbae432fc9d56b528a4a6b00f2c270fd50",
+      "translation_sha256": "0d0ec44f8cd64ea74593049b8104edd23ee2a7a42701c63e62aea35ccb0ab58a"
+    },
+    {
+      "unit_id": "OLP-0414",
+      "source_sha256": "12c305069df324d6b4346d4cf1d7ef7e1ee8c6f44479959de738f8a76323cbd6",
+      "translation_sha256": "a98385542037f1001b37af23faaf36af1cc2f317f39d3f77d7e047527a31b7d8"
+    },
+    {
+      "unit_id": "OLP-0415",
+      "source_sha256": "ac462d167fe4acb6dee2adad68ff523384f14e0bd9976bad5d48fe34f2af8bab",
+      "translation_sha256": "fb0473512eafe5570775ef681eae2bf172555d78a8938cb3d653d2b5a470d280"
+    },
+    {
+      "unit_id": "OLP-0416",
+      "source_sha256": "d951c14acce27168cd66ef02bdecd76610bb803879b399ec08e82183aa8732aa",
+      "translation_sha256": "8b25a08f9d0036f3966a67dd75ce33ffd214acb3dbffedd9c10c503192dd0ee4"
+    },
+    {
+      "unit_id": "OLP-0417",
+      "source_sha256": "2644661ac31c8a11b18826df77ecd26332c0b3452f584d08260c01ee4fe727dc",
+      "translation_sha256": "577cf48472fd76625e131b71e010f676da953b4e8b227072791f7b59de979f28"
+    },
+    {
+      "unit_id": "OLP-0418",
+      "source_sha256": "825d28934a3a8ef5f7f6775e0624e97ede3be1ae9c0dc7af64883becb0bcfdee",
+      "translation_sha256": "bdb28d2532d65a802dfdf30653381809fcc3d05562079c344788fb20c29f2211"
     }
   ],
   "samples": [
@@ -5498,6 +5558,90 @@
       "assessment": "Every premise and conclusion in the complete rule displays and the final Łukasiewicz derivation remain structurally exact; TA-MVL-027 corrects only copied part metadata.",
       "translation_segment_sha256": "2fc84bbd3833a7d35051a1b133f8e6e0ef7b81eea8ba628b041574dc0898a665",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0407-S01",
+      "reverse_paraphrase": "The normal-modal-logic part presents classical correspondence theory and imports syntax and semantics, frame definability, axiom systems, completeness, filtrations, tableaux, and sequent calculus.",
+      "assessment": "The editorial scope, attribution, all seven imports, and their order remain intact.",
+      "translation_segment_sha256": "24d08230efaf9bf2b18aae5c7a38308dd6e5f380f0435ed311b53df7e97ba4d2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0408-S01",
+      "reverse_paraphrase": "The syntax-and-semantics chapter imports ten sections from the historical introduction and modal language through schemas and entailment.",
+      "assessment": "Every imported component and the stable nml/syn hierarchy remain intact.",
+      "translation_segment_sha256": "25dd3d06310b4f788d3f1ecbe72e9f42f41f01f72e6cb4aa29f7e47bf0ebd4ab",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0409-S01",
+      "reverse_paraphrase": "Modal logic studies necessity, possibility, and other unary modalities; the historical path runs from Aristotle and Lewis through Carnap to Kripke’s accessibility semantics, which supports correspondence between frame properties and modal schemas.",
+      "assessment": "All examples, historical claims, strict implication, iterated-modality limitation, possible-world clause, applications, and D/T/B/4/5 correspondence scope remain. TA-NML-001 repairs only ordinary prose defects.",
+      "translation_segment_sha256": "1578395a19b8e42bbc6c8cc2129b2b6c1a473040ecbcf95043140be440c49a87",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0410-S01",
+      "reverse_paraphrase": "The basic modal language extends propositional formulas with Box and Diamond, gives inductive formation clauses, defines optional connectives by abbreviations, makes Box and Diamond dual, and calls formulas without either operator modal-free.",
+      "assessment": "Every tag-sensitive primitive and defined branch remains exact. TA-NML-002 restores number agreement and TA-NML-003 balances the conditional’s defining disjunction.",
+      "translation_segment_sha256": "78aa0efe1fd743326cf4d29433d62158b4baca64ec07783878464647a27f478b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0411-S01",
+      "reverse_paraphrase": "A substitution instance simultaneously replaces every occurrence of each listed propositional variable by its assigned modal formula; the worked example shows why this differs from either order of iterated substitution.",
+      "assessment": "Every inductive case and all three worked substitution results remain exact. TA-NML-004 assigns the biconditional case to its matching prvIff feature tag.",
+      "translation_segment_sha256": "a8fadb9ab024d66028571692e5564228fbccd80347ab9d155ac8ef2569b96748",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0412-S01",
+      "reverse_paraphrase": "A relational model is a nonempty set of worlds with a binary accessibility relation and a valuation assigning each propositional variable the worlds where it is true; arrows and node labels depict these data.",
+      "assessment": "The model triple, accessibility and valuation clauses, concrete W/R/V data, TikZ graph, and caption remain intact.",
+      "translation_segment_sha256": "78fc574bec5e68b9335c6fad695308eb66f7121420e1cedec8d39b23b5424336",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0413-S01",
+      "reverse_paraphrase": "Truth at a world is defined inductively: propositional clauses are classical, Box quantifies over every accessible successor, and Diamond over at least one; empty successor sets make Box vacuously true, and the two operators satisfy the stated dualities.",
+      "assessment": "Every satisfaction clause, exercise formula, duality step, and indistinguishable-world problem remains exact. TA-NML-005 restores the omitted world argument in the second duality proof.",
+      "translation_segment_sha256": "d6a15344bc0bede82c9a8dc50192a0e15db81401f734f9168ce47bb130ae4b5f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0414-S01",
+      "reverse_paraphrase": "A formula is true in a model when it is true at every world; model truth excludes model truth of its negation and supports modus ponens, although the converses fail, as the concrete models illustrate.",
+      "assessment": "The universal-world definition, both proposition clauses, counterexamples, three-world diagram, and six schema questions remain. TA-NML-006 restores only the omitted header metadata.",
+      "translation_segment_sha256": "58de8525fa8673764ac82739c1bbf98687cfd23fbb5ec6bb39b73347d1b87b32",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0415-S01",
+      "reverse_paraphrase": "A formula is valid in a class of models when it is true at every world of every model in that class; validity descends to subclasses and is closed under necessitation.",
+      "assessment": "The all-model/all-world scope, reflexive-model example, subclass proposition, necessitation proof, and both problem sets remain exact.",
+      "translation_segment_sha256": "3b24a85b69544ef2ab258ce589d37bae4b17d56be7fa03b45efcf3f3fdec4694",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0416-S01",
+      "reverse_paraphrase": "A tautological instance substitutes arbitrary modal formulas into a modal-free propositional tautology; induction transfers propositional truth under a matching assignment to truth at a world, proving every such instance valid.",
+      "assessment": "Every atomic and connective induction line and the contraposition argument remain. TA-NML-007 through TA-NML-009 repair the negation tag, its semantic citation, and the biconditional opening formula.",
+      "translation_segment_sha256": "5c558dab01d537d3b344416e25bc1677d33019aad556dd088b806ccd27a6b694",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0417-S01",
+      "reverse_paraphrase": "A schema is exactly the substitution closure of a characteristic modal formula; K and duality are valid schemas, validity is substitution closed, and truth of a schema in one model can be stronger than truth of its characteristic formula there.",
+      "assessment": "The set-builder definition, K proof, substitution-model construction, counterexample, valid/invalid table, and exercises remain. TA-NML-010 removes only an editorial query from the caption.",
+      "translation_segment_sha256": "bc2a40eaad688294c30da015336792f00697a48a94e69c0f380a4f92eddfd739",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0418-S01",
+      "reverse_paraphrase": "Local modal entailment preserves truth at the same arbitrary world in every model; the worked proof establishes one entailment, while a diagram and a one-world empty-relation model refute another.",
+      "assessment": "The universal consequence definition, contradiction proof, both countermodels, figure, caption, and final exercises remain. TA-NML-011 restores ordered model-triple notation.",
+      "translation_segment_sha256": "f937d6d5026af76c6d15ae0daa9c173a5cbf5251934e790bf5dc2ece66bd47e9",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -6070,11 +6214,43 @@
     {
       "unit_id": "OLP-0406",
       "issue": "The selected propositional-rules file retains copied first-order metadata although its stable id and all rules belong to many-valued logic. Tamil corrects the part header under TA-MVL-027."
+    },
+    {
+      "unit_id": "OLP-0409",
+      "issue": "The historical introduction capitalizes “If” inside a coordinated Aristotle clause and later omits the article before “statement.” Tamil restores ordinary sentence grammar under TA-NML-001."
+    },
+    {
+      "unit_id": "OLP-0410",
+      "issue": "The language definition uses a plural denumerable token before singular “set” and leaves the prvOr conditional abbreviation with an unmatched closing parenthesis. Tamil uses the singular modifier and adds the matching opening parenthesis under TA-NML-002 and TA-NML-003."
+    },
+    {
+      "unit_id": "OLP-0411",
+      "issue": "The simultaneous-substitution induction labels its biconditional clause with the conditional feature tag prvIf. Tamil uses the matching prvIff tag under TA-NML-004."
+    },
+    {
+      "unit_id": "OLP-0413",
+      "issue": "The second modal-duality proof omits the world argument from one negated box-satisfaction expression although the proposition and next line are explicitly evaluated at w. Tamil restores [w] under TA-NML-005."
+    },
+    {
+      "unit_id": "OLP-0414",
+      "issue": "The truth-in-a-model file omits its part and chapter header comments despite an unambiguous path and nml/syn/tru file id. Tamil restores the metadata under TA-NML-006."
+    },
+    {
+      "unit_id": "OLP-0416",
+      "issue": "The tautological-instance induction assigns the negation case to prvFalse, cites propositional rather than model satisfaction for its last negation step, and begins the biconditional case with B implies C. Tamil repairs these under TA-NML-007 through TA-NML-009."
+    },
+    {
+      "unit_id": "OLP-0417",
+      "issue": "The valid/invalid schema table caption contains an unresolved editorial “(or?)” although its headings and following exercise assert the classification. Tamil removes the query under TA-NML-010."
+    },
+    {
+      "unit_id": "OLP-0418",
+      "issue": "The final one-world countermodel writes W-prime, R-prime and V-prime as an unordered set although every model in the chapter is an ordered triple. Tamil restores tuple notation under TA-NML-011."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "403 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 319 frozen units still require completion.",
+  "remaining": "415 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 307 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -6425,6 +6601,76 @@
         "structural_metadata_matches_part": true,
         "propositional_metadata_matches_part": true,
         "selected_logic_rule_families_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0407",
+        "OLP-0408",
+        "OLP-0409",
+        "OLP-0410"
+      ],
+      "correction_ids": [
+        "TA-NML-001",
+        "TA-NML-002",
+        "TA-NML-003"
+      ],
+      "status": "pass",
+      "checks": {
+        "part_imports_all_seven_chapters": true,
+        "kripke_accessibility_clause_preserved": true,
+        "correspondence_scope_preserved": true,
+        "denumerable_set_uses_singular_token": true,
+        "defined_conditional_is_balanced": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0411",
+        "OLP-0412",
+        "OLP-0413",
+        "OLP-0414"
+      ],
+      "correction_ids": [
+        "TA-NML-004",
+        "TA-NML-005",
+        "TA-NML-006"
+      ],
+      "status": "pass",
+      "checks": {
+        "biconditional_substitution_uses_iff_feature": true,
+        "simultaneous_and_both_iterated_orders_remain": true,
+        "relational_model_data_and_accessibility_remain": true,
+        "box_diamond_world_clauses_and_vacuity_remain": true,
+        "second_duality_step_has_world_argument": true,
+        "model_truth_is_universal_over_worlds": true,
+        "truth_in_model_metadata_is_complete": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0415",
+        "OLP-0416",
+        "OLP-0417",
+        "OLP-0418"
+      ],
+      "correction_ids": [
+        "TA-NML-007",
+        "TA-NML-008",
+        "TA-NML-009",
+        "TA-NML-010",
+        "TA-NML-011"
+      ],
+      "status": "pass",
+      "checks": {
+        "validity_quantifies_models_and_worlds": true,
+        "necessitation_rule_and_proof_remain": true,
+        "tautology_negation_branch_uses_not_and_modal_semantics": true,
+        "tautology_biconditional_branch_starts_with_liff": true,
+        "K_dual_and_substitution_closure_remain": true,
+        "schema_caption_has_resolved_classification": true,
+        "local_entailment_uses_same_model_world": true,
+        "one_world_countermodel_is_ordered_triple": true
       }
     }
   ]

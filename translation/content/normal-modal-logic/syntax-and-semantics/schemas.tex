@@ -1,0 +1,194 @@
+% SEGMENT OLP-0417-S01
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: schemas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{sch}
+
+\olsection{திட்டவடிவங்களும் செல்லுபடித்தன்மையும்}
+
+\begin{defn}
+  ஏதோ ஒரு வாய்ப்புநிலை !!{formula}~$!C$ இன் பதிலீட்டு நிகழ்வுகள்
+  அனைத்தையும், அவற்றை மட்டுமே கொண்ட !!{formula}s இன் கணமே ஒரு
+  \emph{திட்டவடிவம்}; அதாவது,
+  \[
+  \Setabs{!B}{\lexists[!D_1], \dots, \lexists[!D_n] \left(!B =
+  \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \right) }.
+  \]
+  !!{formula}~$!C$ ஆனது அந்தத் திட்டவடிவத்தின் \emph{பண்புறுத்தும்}
+  !!{formula} எனப்படுகிறது; !!{propositional variable}s இன் பெயர்மாற்றம்
+  வரையில் அது தனித்தது. !!^a{formula}~$!A$ அந்தக் கணத்தின் உறுப்பாக
+  இருந்தால், அது ஒரு திட்டவடிவத்தின் \emph{நிகழ்வு}.
+\end{defn}
+
+$!C$ இன் அணுக் கூறுகளுக்குப் பதிலாக `$!A$', `$!B$',~\dots, ஆகியவற்றை
+இடுவதால் கிடைக்கும் மேல்மொழிக் கோவையால் ஒரு திட்டவடிவத்தைக் குறிப்பது
+வசதியானது. ஆகவே, எடுத்துக்காட்டாக, பின்வருவன திட்டவடிவங்களைக் குறிக்கின்றன:
+`$!A$', `$!A \lif \Box!A$', `$!A \lif (!B \lif !A)$'. அவை முறையே
+$p$, $p \lif \Box p$, $p \lif (q \lif p)$ என்ற பண்புறுத்தும்
+!!{formula}s க்கு ஒத்தவை. `$!A$' என்ற திட்டவடிவம் \emph{எல்லா}
+!!{formula}s இன் கணத்தையும் குறிக்கிறது.
+
+\begin{defn}
+  ஒரு திட்டவடிவத்தின் எல்லா நிகழ்வுகளும் ஒரு மாதிரியில் மெய்யாக இருந்தால்,
+  எனில் மட்டுமே, அந்தத் திட்டவடிவம் அம்மாதிரியில் \emph{மெய்}; மேலும் ஒரு
+  திட்டவடிவம் ஒவ்வொரு மாதிரியிலும் மெய்யாக இருந்தால், எனில் மட்டுமே, அது
+  \emph{செல்லுபடியாகும்}.
+\end{defn}
+
+\begin{prop}\ollabel{prop:Kvalid}
+  பின்வரும் திட்டவடிவம் \Ax{K} செல்லுபடியாகும்:
+  \begin{equation*}
+  \Box(!A \lif !B) \lif (\Box !A \lif \Box !B). \tag{\Ax{K}}
+  \end{equation*}
+\end{prop}
+
+\begin{proof}
+  திட்டவடிவத்தின் எல்லா நிகழ்வுகளும் ஒவ்வொரு மாதிரியின் ஒவ்வோர் உலகிலும்
+  மெய்யாகின்றன என்று நாம் காட்ட வேண்டும். ஆகவே $\mModel{M} =
+  \tuple{W,R,V}$ மற்றும் $w \in W$ ஆகியவை ஏதேனுமாக இருக்கட்டும். ஒரு
+  நிபந்தனைக் கூற்று ஓர் உலகில் மெய்யாகும் என்று காட்ட, அதன் முன்கூறு
+  மெய்யென்று கொண்டு அதன் பின்கூறும் மெய்யென்று காட்டுகிறோம். இந்நேர்வில்,
+  $\mSat{M}{\Box(!A \lif !B)}[w]$ மற்றும் $\mSat{M}{\Box !A}[w]$ என்க.
+  $\mSat{M}{\Box !B}[w]$ என்று நாம் காட்ட வேண்டும். எனவே $Rww'$ ஆகும்
+  ஏதேனும் ஒரு $w'$ ஐக் கொள்க. முதல் கருதுகோளால்
+  $\mSat{M}{!A \lif !B}[w']$; இரண்டாம் கருதுகோளால்
+  $\mSat{M}{!A}[w']$. இதிலிருந்து $\mSat{M}{!B}[w']$ பின்வருகிறது. $w'$
+  ஏதேனுமாக இருந்ததால், $\mSat{M}{\Box !B}[w]$.
+\end{proof}
+
+\begin{prop}\ollabel{prop:Dual-valid}
+  பின்வரும் திட்டவடிவம் \Dual{} செல்லுபடியாகும்:
+  \begin{equation*}
+  \Diamond !A \liff \lnot\Box\lnot !A. \tag{\Dual}
+  \end{equation*}
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[nml][syn][sch]{prop:Dual-valid} ஐ நிறுவுக.
+\end{prob}
+
+\begin{prop}\ollabel{prop:soundMP}
+  $!A$ மற்றும் $!A \lif !B$ ஆகியவை ஒரு மாதிரியின் ஓர் உலகில் மெய்யாக
+  இருந்தால், $!B$ உம் அவ்வுலகில் மெய்யாகும். ஆகவே செல்லுபடியான
+  !!{formula}s மோடஸ் போனென்ஸின் கீழ் மூடப்பட்டவை.
+\end{prop}
+
+\begin{prop}\ollabel{prop:valid-instances}
+  !!^a{formula}~$!A$ செல்லுபடியாகும் என்பது, அப்போதும் அப்போது மட்டுமே,
+  அதன் எல்லாப் பதிலீட்டு நிகழ்வுகளும் செல்லுபடியாகும். வேறு சொற்களில்,
+  ஒரு திட்டவடிவம் செல்லுபடியாகும் என்பது, அப்போதும் அப்போது மட்டுமே, அதன்
+  பண்புறுத்தும் !!{formula} செல்லுபடியாகும்.
+\end{prop}
+
+\begin{proof}
+  $!A$ தனக்கே ஒரு பதிலீட்டு நிகழ்வு என்பதால், ``எனில்'' திசை தெளிவு.
+
+  ``எனில் மட்டுமே'' திசையை நிறுவ, பின்வருவதைக் காட்டுகிறோம்:
+  $\mModel{M} = \tuple{W, R, V}$ ஒரு வாய்ப்புநிலை மாதிரியாகவும்,
+  $!B \ident
+  \SSubst{!A}{\subst{!D_1}{p_1},\dots,\subst{!D_n}{p_n}}$ ஆனது~$!A$ இன்
+  ஒரு பதிலீட்டு நிகழ்வாகவும் இருக்கட்டும். $V'(p_i) =
+  \Setabs{w}{\mSat{M}{!D_i}[w]}$ என்று வைத்து $\mModel{M'} = \tuple{W,
+  R, V'}$ ஐ வரையறுக்க. அப்போது எந்த~$w \in W$ க்கும்
+  $\mSat{M}{!B}[w]$ எனில், எனில் மட்டுமே, $\mSat{M'}{!A}[w]$.
+  (நிறுவலைப் பயிற்சியாக விடுகிறோம்.) இப்போது $!A$ செல்லுபடியாகவும்,
+  $!A$ இன் ஏதோ ஒரு பதிலீட்டு நிகழ்வு $!B$ செல்லுபடியாகாமலும் இருப்பதாகக்
+  கொள்க. அப்போது ஏதோ ஒரு
+  $\mModel{M} = \tuple{W, R, V}$ மற்றும் ஏதோ ஒரு $w \in W$ க்கு
+  $\mSat/{M}{!B}[w]$. ஆனால் மேற்கூற்றின்படி $\mSat/{M'}{!A}[w]$; எனவே
+  $!A$ செல்லுபடியன்று. இது ஒரு முரண்பாடு.
+\end{proof}
+
+\begin{prob}
+  \olref[nml][syn][sch]{prop:valid-instances} இன் நிறுவலிலுள்ள ``எனில்
+  மட்டுமே'' பகுதியில் கூறப்பட்ட மேற்கூற்றை நிறுவுக. (குறிப்பு:~$!A$ மீது
+  தொகுத்தறிதலைப் பயன்படுத்துக.)
+\end{prob}
+
+எனினும், ஒரு திட்டவடிவம் ஒரு மாதிரியில் மெய்யாகும் என்பது, அப்போதும்
+அப்போது மட்டுமே, அதன் பண்புறுத்தும் வாய்பாடு அம்மாதிரியில் மெய்யாகும்
+என்பது சரியன்று. ``எனில் மட்டுமே'' திசை மெய்யே: $!A$ இன் ஒவ்வொரு
+நிகழ்வும்~$\mModel{M}$ இல் மெய்யாக இருந்தால், $!A$ தானும்~$\mModel{M}$
+இல் மெய்யாகும். ஆனால் $!A$ ஆனது~$\mModel{M}$ இல் மெய்யாகவும், $!A$ இன்
+ஏதோ ஒரு நிகழ்வு~$\mModel{M}$ இன் ஏதோ ஓர் உலகில் பொய்யாகவும் இருக்கலாம்.
+மிக எளிய ஓர் எதிரெடுத்துக்காட்டாக, $w$ என்ற ஒரே ஓர் உலகையும்
+$V(p) = \{w\}$ ஐயும் கொண்ட மாதிரியில்~$p$ ஐக் கருதுக; அதனால் $w$ இல்
+$p$ மெய். ஆனால் $\lfalse$ ஆனது~$p$ இன் ஒரு நிகழ்வு; அது~$w$ இல்
+மெய்யன்று.
+
+\begin{prob}
+  பின்வரும் !!{formula}s எதுவும் செல்லுபடியாகாது என்று காட்டுக:
+  \begin{enumerate}
+    \item[\Ax{D}:] \quad $\Box p \lif \Diamond p$;
+    \item[\Ax{T}:] \quad $\Box p \lif p$;
+    \item[\Ax{B}:] \quad $p \lif \Box\Diamond p$;
+    \item[\Ax{4}:] \quad $\Box p \lif \Box \Box p$;
+    \item[\Ax{5}:] \quad $\Diamond p \lif \Box \Diamond
+      p$.
+  \end{enumerate}
+\end{prob}
+
+\begin{table}[t]
+    \centering
+    \begin{tabular}{| l || l |}
+      \hline
+      {\emph{செல்லுபடியான திட்டவடிவங்கள்}} & {\emph{செல்லுபடியாகாத திட்டவடிவங்கள்}} \\
+      \hline\hline
+      $\Box(!A \lif !B) \lif (\Diamond !A \lif \Diamond !B)$
+      & $\Box (!A \lor !B) \lif (\Box !A \lor \Box !B)$ \\
+      $\Diamond (!A \lif !B) \lif (\Box !A \lif \Diamond
+      !B)$
+      & $(\Diamond !A \land \Diamond !B) \lif \Diamond (!A
+      \land !B)$\\
+      $\Box (!A \land !B) \liff (\Box !A \land \Box !B)$
+      & $!A \lif \Box !A$ \\
+      $\Box !A \lif \Box (!B \lif !A)$
+      & $\Box \Diamond !A \lif !B$ \\
+      $\lnot \Diamond !A \lif \Box (!A \lif !B)$
+      & $\Box \Box !A \lif \Box !A$ \\
+      $\Diamond (!A \lor !B) \liff (\Diamond !A \lor
+      \Diamond !B)$
+      & $\Box \Diamond !A \lif \Diamond \Box !A$. \\
+      \hline
+    \end{tabular}
+    % SOURCE CORRECTION TA-NML-010: remove the source's editorial uncertainty; both columns are explicitly classified and exercised below.
+    \caption{செல்லுபடியான மற்றும் செல்லுபடியாகாத திட்டவடிவங்கள்.}
+    \ollabel{tab:valid-invalidSchemas}
+\end{table}
+
+\begin{prob}%\ollabel{ex:in/validSchemas}
+  \olref[nml][syn][sch]{tab:valid-invalidSchemas} இன் முதல் நெடுக்கையில்
+  உள்ள திட்டவடிவங்கள் செல்லுபடியாகின்றன என்றும், இரண்டாம் நெடுக்கையில்
+  உள்ளவை செல்லுபடியாகவில்லை என்றும் நிறுவுக.
+\end{prob}
+
+\begin{prob}
+  பின்வரும் திட்டவடிவங்கள் செல்லுபடியாகின்றனவா, செல்லுபடியாகவில்லையா என்று
+  தீர்மானிக்க:
+  \begin{enumerate}
+  \item $(\Diamond !A \lif \Box !B) \lif (\Box !A \lif \Box
+    !B)$;
+  \item $\Diamond(!A \lif !B) \lor \Box(!B \lif !A)$.
+  \end{enumerate}
+\end{prob}
+
+\begin{prob}
+  பின்வரும் ஒவ்வொரு திட்டவடிவத்திற்கும், அந்த !!{formula} வின் ஒவ்வொரு
+  நிகழ்வும் $\mModel{M}$ இல் மெய்யாகுமாறு ஒரு மாதிரி $\mModel{M}$ ஐக்
+  காண்க:
+  \begin{enumerate}
+  \item $p \lif \Diamond\Diamond p$;
+  \item $\Diamond p \lif \Box p$.
+  \end{enumerate}
+\end{prob}
+
+\end{document}

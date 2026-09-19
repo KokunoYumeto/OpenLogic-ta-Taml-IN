@@ -1,0 +1,108 @@
+% SEGMENT OLP-0411-S01
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{sub}
+
+\olsection{ஒரேநேரப் பதிலீடு}
+
+!!a{formula}~$!A$ இன் ஓர் \emph{நிகழ்வு} என்பது, $!A$ இல் வரும் ஒவ்வொரு
+!!a{propositional variable} இன் எல்லா நிகழ்வுகளையும் வேறு ஏதோ ஓர்
+!!{formula} ஆல் பதிலிடுவதன் விளைவு. செல்லுபடித்தன்மையைப் பற்றியும்
+!!{derivability} ஐப் பற்றியும் விவாதிக்கும்போது, !!{formula}s இன்
+நிகழ்வுகளை நாம் அடிக்கடி குறிப்பிடுவோம். எனவே இக்கருத்தைத் துல்லியமாக
+வரையறுப்பது பயனுள்ளது.
+
+\begin{defn}\ollabel{def:subst-inst}
+  $!A$ என்பது $p_1$, \dots, $p_n$ ஆகியவற்றுள் உள்ள !!{propositional
+    variable}s மட்டுமே இடம்பெறும் ஒரு வாய்ப்புநிலை !!{formula} ஆகவும்,
+  $!D_1$, \dots, $!D_n$ ஆகியவையும் வாய்ப்புநிலை !!{formula}s ஆகவும்
+  இருக்கும்போது, $!A$ இல் ஒவ்வொரு $p_i$ க்குப் பதிலாகவும் $!D_i$ ஐ
+  ஒரேநேரத்தில் பதிலிடுவதன் விளைவாக
+  $\SSubst{!A}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$ ஐ
+  வரையறுக்கிறோம். முறையாகச் சொன்னால், இது $!A$ மீதான தொகுத்தறிதல்
+  வரையறை:
+  \begin{enumerate}
+    \tagitem{prvFalse}{\indcase{!A}{\lfalse}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ என்பது $\lfalse$.}}{}
+    \tagitem{prvTrue}{\indcase{!A}{\ltrue}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ என்பது $\ltrue$.}}{}
+    \item \indcase{!A}{q}{$i = 1$, \dots,~$n$ அனைத்திற்கும் $q
+      \not\ident p_i$ எனில், $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+        \subst{!D_n}{p_n}}$ என்பது $q$.}
+    \item \indcase{!A}{p_i}{$\SSubst{\indfrm}{\subst{!D_1}{p_1},
+        \dots, \subst{!D_n}{p_n}}$ என்பது $!D_i$.}
+    \tagitem{prvNot}{\indcase{!A}{\lnot !B}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$
+        என்பது $\lnot \SSubst{!B}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$.}}{}
+    \tagitem{prvAnd}{\indcase{!A}{(!B \land
+        !C)}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ என்பது
+        \[(\SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \land
+          \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}).\]}}{}
+    \tagitem{prvOr}{\indcase{!A}{(!B \lor
+          !C)}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ என்பது
+        \[(\SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \lor
+          \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}).\]}}{}
+    \tagitem{prvIf}{\indcase{!A}{(!B \lif
+          !C)}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ என்பது
+        \[(\SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \lif
+          \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}).\]}}{}
+    % SOURCE CORRECTION TA-NML-004: the biconditional formation case is governed by prvIff, not prvIf.
+    \tagitem{prvIff}{\indcase{!A}{(!B \liff
+          !C)}{$\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots,
+          \subst{!D_n}{p_n}}$ என்பது
+        \[(\SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}} \liff
+          \SSubst{!C}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}).\]}}{}
+    \item \indcase{!A}{\Box !B}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$
+        என்பது $\Box
+        \SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}.$}
+    \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}{%
+        $\SSubst{\indfrm}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}$
+        என்பது $\Diamond
+        \SSubst{!B}{\subst{!D_1}{p_1}, \dots, \subst{!D_n}{p_n}}.$}}{}
+  \end{enumerate}
+  $\SSubst{!A}{\subst{!D_1}{p_1}, \dots,
+    \subst{!D_n}{p_n}}$ என்ற !!{formula}, $!A$ இன் ஒரு
+  \emph{பதிலீட்டு நிகழ்வு} எனப்படுகிறது.
+\end{defn}
+
+\begin{ex}
+  $!A$ என்பது $p_1 \lif \Box(p_1 \land p_2)$ என்றும், $!D_1$ என்பது
+  $\Diamond(p_2 \lif p_3)$ என்றும், $!D_2$ என்பது $\lnot\Box p_1$ என்றும்
+  கொள்க. அப்போது $\SSubst{!A}{\subst{!D_1}{p_1}, \subst{!D_2}{p_2}}$
+  என்பது
+  \begin{align*}
+    \Diamond(p_2 \lif p_3) &
+    \lif \Box(\Diamond(p_2 \lif p_3) \land \lnot\Box p_1)
+    \intertext{ஆகும்; அதேவேளை $\SSubst{!A}{\subst{!D_2}{p_1}, \subst{!D_1}{p_2}}$ என்பது}
+    \lnot\Box p_1 &
+    \lif \Box(\lnot\Box p_1 \land \Diamond(p_2 \lif p_3))
+    \intertext{ஆகும். பொதுவாக, ஒரேநேரப் பதிலீடும் அடுத்தடுத்த பதிலீடும்
+      ஒன்றல்ல என்பதைக் கவனிக்க. எடுத்துக்காட்டாக, மேலுள்ள
+      $\SSubst{!A}{\subst{!D_1}{p_1}, \subst{!D_2}{p_2}}$ ஐப் பின்வரும்
+      $\Subst{(\Subst{!A}{!D_1}{p_1})}{!D_2}{p_2}$ உடன் ஒப்பிடுக:}
+    \Diamond(p_2 \lif p_3) & \Subst{\lif \Box(\Diamond(p_2 \lif p_3) \land p_2)}{\lnot\Box p_1}{p_2}, \text{ அதாவது,}\\
+    \Diamond(\lnot\Box p_1 \lif p_3) &
+    \lif \Box(\Diamond(\lnot\Box p_1
+    \lif p_3) \land \lnot\Box p_1)\\
+    \intertext{மேலும் இதைப் பின்வரும் $\Subst{(\Subst{!A}{!D_2}{p_2})}{!D_1}{p_1}$ உடனும் ஒப்பிடுக:}
+    p_1 & \lif \Subst{\Box(p_1 \land \lnot\Box p_1)}{\Diamond(p_2 \lif p_3)}{p_1}, \text{ அதாவது,}\\
+    \Diamond(p_2 \lif p_3) &
+    \lif \Box(\Diamond(p_2
+    \lif p_3) \land \lnot\Box\Diamond(p_2 \lif p_3)).
+  \end{align*}
+\end{ex}
+
+\end{document}

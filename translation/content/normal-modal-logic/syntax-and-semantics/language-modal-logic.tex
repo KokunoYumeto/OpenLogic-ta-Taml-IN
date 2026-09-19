@@ -1,0 +1,114 @@
+% SEGMENT OLP-0410-S01
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: language-modal-logic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{lan}
+
+\olsection{அடிப்படை வாய்ப்புநிலைத் தருக்கத்தின் மொழி}
+
+\begin{defn}
+வாய்ப்புநிலைத் தருக்கத்தின் அடிப்படை மொழியில் பின்வருவன உள்ளன:
+\begin{enumerate}
+  \tagitem{prvFalse}{!!{falsity} க்கான கூற்று மாறிலி~$\lfalse$.}{}
+  \tagitem{prvTrue}{!!{truth} க்கான கூற்று மாறிலி~$\ltrue$.}{}
+% SOURCE CORRECTION TA-NML-002: use the singular denumerable modifier before set.
+  \item !!{propositional variable}s ஐக் கொண்ட ஒரு !!{denumerable} கணம்:
+    $\Obj p_0$, $\Obj p_1$, $\Obj p_2$, \dots
+  \item கூற்று இணைப்பிகள்: \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (மறுப்பு)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (இணையல்)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (பிரிப்புநிலை)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}.
+  \tagitem{prvBox}{வாய்ப்புநிலைச் செயலி~$\Box$.}{}
+  \tagitem{prvDiamond}{வாய்ப்புநிலைச் செயலி~$\Diamond$.}{}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+அடிப்படை வாய்ப்புநிலை மொழியின் \emph{!!^{formula}s} பின்வருமாறு
+தொகுத்தறிந்து வரையறுக்கப்படுகின்றன:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ ஓர் அணு !!{formula}.}{}
+
+\tagitem{prvTrue}{$\ltrue$ ஓர் அணு !!{formula}.}{}
+
+\item ஒவ்வொரு !!{propositional variable}~$\Obj p_i$ உம் ஓர் (அணு)
+!!{formula}.
+
+\tagitem{prvNot}{$!A$ ஓர் !!a{formula} எனில், $\lnot !A$ உம் ஓர்
+  !!a{formula}.}{}
+
+\tagitem{prvAnd}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \land
+  !B)$ ஓர் !!a{formula}.}{}
+
+\tagitem{prvOr}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \lor !B)$
+  ஓர் !!a{formula}.}{}
+
+\tagitem{prvIf}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \lif !B)$
+  ஓர் !!a{formula}.}{}
+
+\tagitem{prvIff}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \liff !B)$
+  ஓர் !!a{formula}.}{}
+
+\tagitem{prvBox}{$!A$ ஓர் !!a{formula} எனில், $\Box !A$ உம் ஓர்
+  !!a{formula}.}{}
+
+\tagitem{prvDiamond}{$!A$ ஓர் !!a{formula} எனில், $\Diamond !A$ உம் ஓர்
+  !!a{formula}.}{}
+
+\tagitem{limitClause}{வேறெதுவும் ஓர் !!a{formula} அன்று.}{}
+\end{enumerate}
+\end{defn}
+
+\begin{tagblock}{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defBox,defDiamond}
+\begin{defn}
+வரையறுக்கப்பட்ட செயலிகளைக் கொண்டு கட்டப்பட்ட வாய்பாடுகள் பின்வருமாறு
+பொருள்கொள்ளப்பட வேண்டும்:
+
+\begin{tagenumerate}{defTrue,defFalse,defNot,defOr,defAnd,defIf,defIff,defBox,defDiamond}
+
+\tagitem{defTrue}{$\ltrue$ என்பது
+  \iftag{prvFalse}{$\lnot\lfalse$}{$(!A \lor \lnot !A)$; இங்கு
+    $!A$ ஏதோ ஒரு நிலையான அணு !!{formula}} என்பதன் சுருக்கம்.}{}
+
+\tagitem{defFalse}{$\lfalse$ என்பது
+  \iftag{prvTrue}{$\lnot\ltrue$}{$(!A \land \lnot !A)$; இங்கு
+    $!A$ ஏதோ ஒரு நிலையான அணு !!{formula}} என்பதன் சுருக்கம்.}{}
+
+\tagitem{defNot}{$\lnot !A$ என்பது $!A \lif \lfalse$ என்பதன் சுருக்கம்.}{}
+
+\tagitem{defOr}{$!A \lor !B$ என்பது
+  \iftag{prvAnd}{$\lnot(\lnot !A \land \lnot !B)$}{$\lnot !A \lif
+    !B$} என்பதன் சுருக்கம்.}{}
+
+\tagitem{defAnd}{$!A \land !B$ என்பது
+  \iftag{prvOr}{$\lnot(\lnot !A \lor \lnot !B)$}{$\lnot (!A \lif
+    \lnot !B)$} என்பதன் சுருக்கம்.}{}
+
+% SOURCE CORRECTION TA-NML-003: balance the parenthesized disjunction defining the conditional.
+\tagitem{defIf}{$!A \lif !B$ என்பது
+  \iftag{prvOr}{$(\lnot !A \lor !B)$}{$\lnot (!A \land \lnot !B)$}
+  என்பதன் சுருக்கம்.}{}
+
+\tagitem{defIff}{$!A \liff !B$ என்பது $(!A \lif !B) \land (!B
+  \lif !A)$ என்பதன் சுருக்கம்.}{}
+
+\tagitem{defBox}{$\Box !A$ என்பது $\lnot\Diamond\lnot !A$ என்பதன்
+சுருக்கம். }{}
+
+\tagitem{defDiamond}{$\Diamond !A$ என்பது $\lnot\Box\lnot !A$ என்பதன்
+சுருக்கம்.}{}
+\end{tagenumerate}
+\end{defn}
+\end{tagblock}
+
+!!a{formula}~$!A$ இல் $\Box$ அல்லது $\Diamond$ இடம்பெறாவிட்டால், அது
+\emph{வாய்ப்புநிலையற்றது} என்கிறோம்.
+
+\end{document}

@@ -1,0 +1,143 @@
+% SEGMENT OLP-0413-S01
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: truth-at-w
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{trw}
+
+\olsection{ஓர் உலகில் மெய்மை}
+
+ஒவ்வொரு வாய்ப்புநிலை மாதிரியும் அதிலுள்ள எந்தெந்த உலகங்களில் எந்தெந்த
+வாய்ப்புநிலை !!{formula}s மெய்யெனக் கொள்ளப்படுகின்றன என்பதைத்
+தீர்மானிக்கிறது. ``மாதிரி~$\mModel{M}$ ஆனது உலகம்~$w$ இல்
+!!{formula}~$!A$ ஐ மெய்யாக்குகிறது'' என்ற உறவே தொடர்புசார்
+பொருண்மையியலின் அடிப்படைக் கருத்து. இந்த உறவு தொகுத்தறிந்து
+வரையறுக்கப்படுகிறது; வாய்ப்புநிலையற்ற செயலிகளுக்கு மெய்மை அட்டவணைகளைப்
+பயன்படுத்தும் வழக்கமான விளக்கத்துடன் இது ஒன்றுகிறது.
+
+\begin{defn}\ollabel{defn:mmodels}
+  $\mModel M$ இல் $w$-இல் !!a{formula}~$!A$ இன் \emph{மெய்மை},
+  குறியீட்டில் $\mSat{M}{!A}[w]$, பின்வருமாறு தொகுத்தறிந்து
+  வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\mSat{M}{\lfalse}[w]$ ஒருபோதும் மெய்யன்று.}}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\mSat{M}{\ltrue}[w]$ எப்போதும் மெய்.}}{}
+  \item $\mSat{M}{p}[w]$ எனில், எனில் மட்டுமே, $w \in V(p)$.
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat/{M}{!B}[w]$}.}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[w]$
+    எனில், எனில் மட்டுமே, $\mSat{M}{!B}[w]$ மற்றும் $\mSat{M}{!C}[w]$}.}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[w]$
+    எனில், எனில் மட்டுமே, $\mSat{M}{!B}[w]$ அல்லது $\mSat{M}{!C}[w]$}
+    (அல்லது இரண்டுமே).}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[w]$
+    எனில், எனில் மட்டுமே, $\mSat/{M}{!B}[w]$ அல்லது $\mSat{M}{!C}[w]$}.}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[w]$
+    எனில், எனில் மட்டுமே, $\mSat{M}{!B}[w]$, $\mSat{M}{!C}[w]$ ஆகிய
+    இரண்டும் மெய் அல்லது
+    $\mSat{M}{!B}[w]$, $\mSat{M}{!C}[w]$ ஆகிய இரண்டுமே மெய்யல்ல}.}{}
+  \item\ollabel{defn:sub:mmodels-box}
+    \indcase{!A}{\Box !B}{$\mSat{M}{\indfrm}[w]$ எனில், எனில் மட்டுமே,
+    $Rww'$ ஆகும் எல்லா $w' \in W$ க்கும் $\mSat{M}{!B}[w']$.}
+  \item\ollabel{defn:sub:mmodels-diamond}
+    \indcase{!A}{\Diamond !B}{$\mSat{M}{\indfrm}[w]$ எனில், எனில் மட்டுமே,
+    $Rww'$ ஆகும் குறைந்தது ஒரு $w' \in W$ க்கு $\mSat{M}{!B}[w']$.}
+  \end{enumerate}
+\end{defn}
+
+உட்கூறு~\olref{defn:sub:mmodels-box} இன்படி, $Rww'$ ஆகும் எந்த~$w'$ உம்
+இல்லாதபோதெல்லாம் !!a{formula}~$\Box !B$ ஆனது~$w$ இல் மெய்யாகும் என்பதைக்
+கவனிக்க. இத்தகைய நேர்வில் $\Box !B$ ஆனது~$w$ இல் \emph{வெறுமைவழி}
+மெய்யாகும். மேலும், $!B$ மெய்யாக இல்லாவிட்டாலும் $\Box !B$ ஆனது~$w$ இல்
+நிறைவுறுத்தப்படலாம். $!B$ ஆனது~$w$ இல் மெய்யாக இருப்பது $\Diamond !B$
+ஆனது~$w$ இல் மெய்யாக இருப்பதற்கு உத்தரவாதமளிக்காது. எனினும், $Rww$
+எனில், எடுத்துக்காட்டாக $R$ தற்சார்புடையது எனில், இது மெய்யாகும். $Rww'$
+ஆகும் $w'$ எதுவும் இல்லையெனில், எந்த~$!A$ க்கும்
+$\mSat/{M}{\Diamond !A}[w]$.
+
+\begin{prob}
+  \olref[nml][syn][rel]{fig:simple} இல் உள்ள மாதிரியைக் கருதுக. கீழுள்ள
+  எவை மெய்யாகும்?
+    \begin{enumerate}
+    \item $\mSat{M}{q}[w_1]$;
+    \item $\mSat{M}{\lnot q}[w_3]$;
+    \item $\mSat{M}{p \lor q}[w_1]$;
+    \item $\mSat{M}{\Box (p \lor q)}[w_1]$;
+    \item $\mSat{M}{\Box q}[w_3]$;
+    \item $\mSat{M}{\Box \bot}[w_3]$;
+    \item $\mSat{M}{\Diamond q}[w_1]$;
+    \item $\mSat{M}{\Box q}[w_1]$;
+    \item $\mSat{M}{\lnot \Box\Box \lnot q}[w_1]$.
+    \end{enumerate}
+\end{prob}
+
+% Box மற்றும் Diamond இன் இருமைத்தன்மையை நிறுவுக
+\begin{tagblock}{prvDiamond}
+\begin{prop}\ollabel{prop:dual}
+  \begin{enumerate}
+  \item $\mSat{M}{\Box !A}[w]$ எனில், எனில் மட்டுமே,
+    $\mSat{M}{\lnot\Diamond\lnot !A}[w]$.
+  \item $\mSat{M}{\Diamond !A}[w]$ எனில், எனில் மட்டுமே,
+    $\mSat{M}{\lnot\Box\lnot !A}[w]$.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $\mSat{M}{\lnot\Diamond\lnot !A}[w]$ எனில், எனில் மட்டுமே,
+    $\mSat/{M}{\Diamond\lnot !A}[w]$; இது $\mSat{M}{}[w]$ இன்
+    வரையறையால் கிடைக்கும். $\mSat{M}{\Diamond\lnot !A}[w]$ எனில், எனில்
+    மட்டுமே, $Rww'$ ஆகும் ஏதோ ஒரு $w'$ க்கு $\mSat{M}{\lnot !A}[w']$.
+    எனவே $\mSat/{M}{\Diamond\lnot !A}[w]$ எனில், எனில் மட்டுமே, $Rww'$
+    ஆகும் எல்லா $w'$ க்கும் $\mSat/{M}{\lnot !A}[w']$. மேலும்,
+    $\mSat/{M}{\lnot !A}[w']$ எனில், எனில் மட்டுமே,
+    $\mSat{M}{!A}[w']$. இவற்றைச் சேர்த்தால்,
+    $\mSat{M}{\lnot\Diamond\lnot !A}[w]$ எனில், எனில் மட்டுமே, $Rww'$
+    ஆகும் எல்லா $w'$ க்கும் $\mSat{M}{!A}[w']$. $\mSat{M}{}[w]$ இன்
+    வரையறையால் மீண்டும், இந்நிலை எனில், எனில் மட்டுமே,
+    $\mSat{M}{\Box !A}[w]$.
+    % SOURCE CORRECTION TA-NML-005: restore the world argument on the negated box-satisfaction formula.
+    \item \iftag{probDiamond}{பயிற்சி.}{$\mSat{M}{\lnot\Box\lnot !A}[w]$
+      எனில், எனில் மட்டுமே, $\mSat/{M}{\Box\lnot !A}[w]$.
+      $\mSat{M}{\Box\lnot !A}[w]$ எனில், எனில் மட்டுமே, $Rww'$ ஆகும்
+      எல்லா $w'$ க்கும் $\mSat{M}{\lnot !A}[w']$. எனவே,
+      $\mSat/{M}{\Box\lnot !A}[w]$ எனில், எனில் மட்டுமே, $Rww'$ ஆகும்
+      ஏதோ ஒரு $w'$ க்கு $\mSat/{M}{\lnot !A}[w']$. மேலும்
+      $\mSat/{M}{\lnot !A}[w']$ எனில், எனில் மட்டுமே,
+      $\mSat{M}{!A}[w']$. இவற்றைச் சேர்த்தால்,
+      $\mSat{M}{\lnot\Box\lnot !A}[w]$ எனில், எனில் மட்டுமே, $Rww'$ ஆகும்
+      ஏதோ ஒரு~$w'$ க்கு $\mSat{M}{!A}[w']$. $\mSat{M}{}[w]$ இன்
+      வரையறையால் மீண்டும், இந்நிலை எனில், எனில் மட்டுமே,
+      $\mSat{M}{\Diamond !A}[w]$.}
+  \end{enumerate}
+\end{proof}
+
+\begin{probtag}{probDiamond}
+  \olref[nml][syn][trw]{prop:dual} இன் நிறுவலை நிறைவுசெய்க.
+\end{probtag}
+\end{tagblock}
+
+\begin{prob}
+  $\mModel{M} = \tuple{W, R, V}$ ஒரு மாதிரியாக இருக்கட்டும்; மேலும் $w_1,
+  w_2 \in W$ பின்வருமாறு இருப்பதாகக் கொள்க:
+  \begin{enumerate}
+  \item $w_1 \in V(p)$ எனில், எனில் மட்டுமே, $w_2 \in V(p)$ (ஒவ்வொரு
+    !!{propositional variable} $p$ க்கும்); மேலும்
+  \item எல்லா $w \in W$ க்கும்: $Rw_1w$ எனில், எனில் மட்டுமே, $Rw_2w$.
+  \end{enumerate}
+  !!{formula}s மீது தொகுத்தறிதலைப் பயன்படுத்தி, எல்லா !!{formula}s $!A$
+  க்கும் $\mSat{M}{!A}[w_1]$ எனில், எனில் மட்டுமே,
+  $\mSat{M}{!A}[w_2]$ என்று
+  காட்டுக.
+\end{prob}
+
+\begin{probtag}{prvDiamond}
+  $\mModel{M} = \tuple{W, R, V}$ ஆகட்டும். $\mSat{M}{\lnot\Diamond !A}[w]$
+  எனில், எனில் மட்டுமே, $\mSat{M}{\Box\lnot!A}[w]$ என்று காட்டுக.
+\end{probtag}
+
+\end{document}

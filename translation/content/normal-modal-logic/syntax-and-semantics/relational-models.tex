@@ -1,0 +1,59 @@
+% SEGMENT OLP-0412-S01
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: relational-models
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{rel}
+
+\olsection{தொடர்புசார் மாதிரிகள்}
+
+இயல்பான வாய்ப்புநிலைத் தருக்கங்களின் பொருண்மையியலுக்குரிய அடிப்படைக்
+கருத்து ஒரு \emph{தொடர்புசார் மாதிரி} ஆகும். இருநிலை ``அணுகுறவால்''
+தொடர்புபடுத்தப்பட்ட உலகங்களின் கணமும், எந்தெந்த உலகங்களில் எந்தெந்த
+!!{propositional variable}s ``மெய்'' எனக் கொள்ளப்படுகின்றன என்பதைத்
+தீர்மானிக்கும் ஒரு மதிப்பளிப்பும் இதில் அடங்கும்.
+
+\begin{defn}
+  அடிப்படை வாய்ப்புநிலை மொழிக்கான ஒரு \emph{மாதிரி} என்பது $\mModel{M}
+  = \tuple{W, R, V}$ என்ற மும்மை; இங்கு
+  \begin{enumerate}
+  \item $W$ என்பது ``உலகங்களைக்'' கொண்ட ஒரு வெறுமையற்ற கணம்;
+  \item $R$ என்பது $W$ மீதான ஓர் இருநிலை அணுகுறவு; மேலும்
+  \item $V$ என்பது ஒவ்வொரு !!{propositional variable}~$p$ க்கும்
+    சாத்தியமான உலகங்களின் கணம் $V(p)$ ஐ மதிப்பளிக்கும் ஒரு சார்பு.
+  \end{enumerate}
+  $Rww'$ மெய்யாகும்போது, $w$ இலிருந்து $w'$ ஐ \emph{அணுகலாம்} என்கிறோம்.
+  $w \in V(p)$ ஆகும்போது, $w$ இல் $p$ \emph{மெய்} என்கிறோம்.
+\end{defn}
+
+எளிய வரைபடங்களைக் கொண்டு மாதிரிகளைச் சித்தரிக்க முடிவதே தொடர்புசார்
+பொருண்மையியலின் பெரும் நன்மை; \olref{fig:simple} இல் உள்ள வரைபடம் இதற்கு
+ஓர் எடுத்துக்காட்டு. உலகங்கள் முனைகளால் குறிக்கப்படுகின்றன; $w$ இலிருந்து
+$w'$ க்கு ஓர் அம்பு இருந்தால், எனில் மட்டுமே, உலகம்~$w$ இலிருந்து
+உலகம்~$w'$ ஐ அணுகலாம். மேலும், $w \in V(p)$ ஆகும்போது ஒரு முனைக்கு
+(உலகத்துக்கு)~$\mTrue{p}$ என்றும், இல்லையெனில்~\mFalse{p} என்றும்
+குறியிடுகிறோம். $W = \{w_1, w_2, w_3\}$, $R = \{\tuple{w_1,
+  w_2},\tuple{w_1, w_3}\}$, $V(p) = \{w_1, w_2\}$, $V(q) = \{w_2\}$
+ஆகியவற்றைக் கொண்ட மாதிரியை \olref{fig:simple} சித்தரிக்கிறது.
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={[align=right]right:\mTrue{p}\\ \mFalse{q}}]{$w_1$};
+      \node[world] (w2) [label={[align=right]right:\mTrue{p}\\ \mTrue{q}},
+        above right=of w1]{$w_2$};
+      \node[world] (w3) [label={[align=right]right:\mFalse{p}\\ \mFalse{q}},
+        below right=of w1] {$w_3$};
+      \draw[->] (w1) to (w2);
+      \draw[->] (w1) to (w3);
+    \end{tikzpicture}
+  \end{center}
+  \caption{ஓர் எளிய மாதிரி.}
+  \ollabel{fig:simple}
+\end{figure}
+
+\end{document}

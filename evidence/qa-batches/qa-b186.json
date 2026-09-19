@@ -1,0 +1,298 @@
+{
+  "batch_id": "TA-B186",
+  "units": [
+    {
+      "unit_id": "OLP-0415",
+      "source_sha256": "ac462d167fe4acb6dee2adad68ff523384f14e0bd9976bad5d48fe34f2af8bab",
+      "translation_sha256": "fb0473512eafe5570775ef681eae2bf172555d78a8938cb3d653d2b5a470d280",
+      "source_bytes": 2914,
+      "translation_bytes": 6524,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Rww",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0416",
+      "source_sha256": "d951c14acce27168cd66ef02bdecd76610bb803879b399ec08e82183aa8732aa",
+      "translation_sha256": "8b25a08f9d0036f3966a67dd75ce33ffd214acb3dbffedd9c10c503192dd0ee4",
+      "source_bytes": 6733,
+      "translation_bytes": 10115,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\pSat{v}{\\lnot!B}\\Leftrightarrow{}&\\pSat/{v}{!B}\\\\&\\qquad$\\pSat{v}{}$;\\\\\\Leftrightarrow{}&\\mSat/{M}{\\SSubst{!B}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad\\\\\\Leftrightarrow{}&\\mSat{M}{\\SSubst{\\lnot!B}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad$\\pSat{v}{}$.\\end{align*}",
+        "\\begin{align*}\\pSat{v}{!B\\lif!C}\\Leftrightarrow{}&\\pSat{v}{!B}\\pSat{v}{!C}\\\\&\\pSat/{v}{!B}\\pSat/{v}{!C}\\\\&\\qquad$\\pSat{v}{}$\\\\\\Leftrightarrow{}&\\mSat{M}{\\SSubst{!B}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad\\mSat{M}{\\SSubst{!C}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\mSat/{M}{\\SSubst{!B}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad\\mSat/{M}{\\SSubst{!C}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad\\\\\\Leftrightarrow{}&\\mSat{M}{\\SSubst{(!B\\liff!C)}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad$\\mSat{M}{}[w]$.\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\pSat{v}{\\lnot!B}\\Leftrightarrow{}&\\pSat/{v}{!B}\\\\&\\qquad$\\pSat{v}{}$;\\\\\\Leftrightarrow{}&\\mSat/{M}{\\SSubst{!B}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad\\\\\\Leftrightarrow{}&\\mSat{M}{\\SSubst{\\lnot!B}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad$\\mSat{M}{}[w]$.\\end{align*}",
+        "\\begin{align*}\\pSat{v}{!B\\liff!C}\\Leftrightarrow{}&\\pSat{v}{!B}\\pSat{v}{!C}\\\\&\\pSat/{v}{!B}\\pSat/{v}{!C}\\\\&\\qquad$\\pSat{v}{}$\\\\\\Leftrightarrow{}&\\mSat{M}{\\SSubst{!B}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad\\mSat{M}{\\SSubst{!C}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\mSat/{M}{\\SSubst{!B}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad\\mSat/{M}{\\SSubst{!C}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad\\\\\\Leftrightarrow{}&\\mSat{M}{\\SSubst{(!B\\liff!C)}{\\subst{!D_1}{p_1},\\dots,\\subst{!D_n}{p_n}}}[w]\\\\&\\qquad$\\mSat{M}{}[w]$.\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "propositional",
+        "section",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-007",
+          "unit_id": "OLP-0416",
+          "kind": "tautological-instance-negation-wrong-feature-tag",
+          "action": "Changed the negation induction case tag from prvFalse to prvNot.",
+          "identifier_replacements": [
+            {
+              "from": "\\tagitem{prvFalse}{\\indcase{!A}{\\lnot !B}",
+              "to": "\\tagitem{prvNot}{\\indcase{!A}{\\lnot !B}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The induction proof assigns its negation case to the falsity feature tag even though the case formula begins with lnot and the language uses prvNot for negation.",
+          "chosen_treatment": "தமிழ் மறுப்பு நேர்வை அதற்குரிய prvNot குறிச்சொல்லால் கட்டுப்படுத்துகிறது.",
+          "alternatives_considered": "Leaving negation controlled by prvFalse; changing the case formula to falsity.",
+          "rationale": "The proof branch invokes the negation satisfaction clause, so it must track the negation feature independently of the falsity constant.",
+          "precise_review_question": "Is the negation induction branch now enabled exactly with the negation feature?",
+          "location_needle": "SOURCE CORRECTION TA-NML-007"
+        },
+        {
+          "audit_id": "TA-NML-008",
+          "unit_id": "OLP-0416",
+          "kind": "negation-case-wrong-satisfaction-definition-citation",
+          "action": "Changed the final negation-case justification from propositional satisfaction to truth at a world.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\qquad$\\pSat{v}{}$.\\end{align*}",
+              "to": "\\qquad$\\mSat{M}{}[w]$.\\end{align*}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\pSat"
+          ],
+          "expected_extra_commands": [
+            "\\mSat"
+          ],
+          "source_issue_or_choice": "The last equivalence in the negation branch introduces a modal substitution formula evaluated in M at w, but the source cites the definition of propositional satisfaction under v.",
+          "chosen_treatment": "தமிழ் அந்த இறுதிச் சமவலத்தை $\\mSat{M}{}[w]$ இன் மறுப்பு உட்கூற்றால் நியாயப்படுத்துகிறது.",
+          "alternatives_considered": "Retaining pSat despite the modal model expression; changing the modal expression back to a propositional valuation.",
+          "rationale": "The right side is explicitly an mSat expression with model M and world w, so its governing definition is world satisfaction.",
+          "precise_review_question": "Does the final negation equivalence now cite the semantic relation it actually uses?",
+          "location_needle": "SOURCE CORRECTION TA-NML-008"
+        },
+        {
+          "audit_id": "TA-NML-009",
+          "unit_id": "OLP-0416",
+          "kind": "biconditional-case-left-side-uses-conditional",
+          "action": "Changed the propositional formula at the start of the biconditional induction case from B implies C to B iff C.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\pSat{v}{!B\\lif!C}\\Leftrightarrow{}&\\pSat{v}{!B}",
+              "to": "\\pSat{v}{!B\\liff!C}\\Leftrightarrow{}&\\pSat{v}{!B}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\lif"
+          ],
+          "expected_extra_commands": [
+            "\\liff"
+          ],
+          "source_issue_or_choice": "The branch is labeled prvIff, its induction case is B iff C, its two truth cases are biconditional semantics, and its final substitution uses liff, but the opening satisfaction expression alone uses lif.",
+          "chosen_treatment": "தமிழ் இருவழிநிபந்தனை நேர்வின் தொடக்கத்திலும் $!B \\liff !C$ ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Changing the entire branch to conditional semantics; leaving the opening formula inconsistent with every subsequent line.",
+          "rationale": "Only replacing the isolated connective makes the derivation a valid induction case for the stated formula constructor.",
+          "precise_review_question": "Does the repaired derivation prove the biconditional case from start to finish?",
+          "location_needle": "SOURCE CORRECTION TA-NML-009"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\pSat",
+        "\\lif"
+      ],
+      "extra_commands": [
+        "\\mSat",
+        "\\liff"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0417",
+      "source_sha256": "2644661ac31c8a11b18826df77ecd26332c0b3452f584d08260c01ee4fe727dc",
+      "translation_sha256": "577cf48472fd76625e131b71e010f676da953b4e8b227072791f7b59de979f28",
+      "source_bytes": 6462,
+      "translation_bytes": 13118,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Rww",
+        "equation",
+        "include",
+        "logic",
+        "nml",
+        "open",
+        "propositional",
+        "sch",
+        "section",
+        "syn",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-010",
+          "unit_id": "OLP-0417",
+          "kind": "schema-table-caption-editorial-uncertainty",
+          "action": "Removed the parenthetical '(or?)' from the caption naming the valid and invalid schema columns.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The table has columns explicitly headed Valid Schemas and Invalid Schemas, and the following exercise asks for proofs of exactly those classifications, but the caption inserts unresolved editorial uncertainty before 'invalid.'",
+          "chosen_treatment": "தமிழ் அட்டவணைத் தலைப்புகளுக்கும் உடனடுத்த பயிற்சிக்கும் ஒத்தவாறு செல்லுபடியான மற்றும் செல்லுபடியாகாத திட்டவடிவங்கள் என்று உறுதியாகப் பெயரிடுகிறது.",
+          "alternatives_considered": "Retaining the editorial query in the published caption; weakening both column classifications.",
+          "rationale": "Every listed first-column schema is valid and every listed second-column schema has an ordinary relational countermodel, matching the exercise's asserted division.",
+          "precise_review_question": "Does the repaired caption accurately state the two classifications already asserted by the table and exercise?",
+          "location_needle": "SOURCE CORRECTION TA-NML-010"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0418",
+      "source_sha256": "825d28934a3a8ef5f7f6775e0624e97ede3be1ae9c0dc7af64883becb0bcfdee",
+      "translation_sha256": "bdb28d2532d65a802dfdf30653381809fcc3d05562079c344788fb20c29f2211",
+      "source_bytes": 3406,
+      "translation_bytes": 6257,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mModel{M'}=\\{W',R',V'\\}$"
+      ],
+      "extra_math": [
+        "$\\mModel{M'}=\\tuple{W',R',V'}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Rww",
+        "above",
+        "include",
+        "label",
+        "left",
+        "logic",
+        "modal",
+        "open",
+        "right",
+        "section",
+        "world"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-011",
+          "unit_id": "OLP-0418",
+          "kind": "countermodel-model-data-wrong-delimiters",
+          "action": "Changed the model display from set braces around W', R', V' to the established ordered triple notation.",
+          "expected_missing_math": [
+            "$\\mModel{M'}=\\{W',R',V'\\}$"
+          ],
+          "expected_extra_math": [
+            "$\\mModel{M'}=\\tuple{W',R',V'}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\tuple"
+          ],
+          "source_issue_or_choice": "Every model definition in the chapter is an ordered triple, but the final one-world countermodel alone writes its three heterogeneous components as an unordered set.",
+          "chosen_treatment": "தமிழ் இறுதி எதிரெடுத்துக்காட்டையும் $\\tuple{W',R',V'}$ என்ற மாதிரி மும்மையாக எழுதுகிறது.",
+          "alternatives_considered": "Treating the world set, relation and valuation as members of an unordered set; changing all earlier model definitions to set notation.",
+          "rationale": "Component roles and order are fixed throughout the chapter, and the immediately following clauses separately identify W', R' and V'.",
+          "precise_review_question": "Is the corrected countermodel typed consistently as an ordered model triple?",
+          "location_needle": "SOURCE CORRECTION TA-NML-011"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\tuple"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

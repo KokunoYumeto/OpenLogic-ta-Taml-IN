@@ -1,0 +1,91 @@
+% SEGMENT OLP-0418-S01
+% Part: normal-modal-logic
+% Chapter: syntax-and-semantics
+% Section: entailment
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{syn}{ent}
+
+\olsection{பின்விளைவு}
+
+\begin{explain}
+  ஓர் உலகில் மெய்மை என்ற வரையறையைக் கொண்டு, !!{formula}s க்கு இடையிலான
+  பின்விளைவு உறவை வரையறுக்கலாம். $!B$ மெய்யாகும்போதெல்லாம் $!A$ உம்
+  மெய்யாக இருந்தால், எனில் மட்டுமே, !!^a{formula}~$!B$ இலிருந்து~$!A$
+  பின்விளைகிறது. இங்கு ``போதெல்லாம்'' என்பது ``நாம் எந்த மாதிரியைக்
+  கருதினாலும்'' என்பதையும் ``அந்த மாதிரியில் எந்த உலகைக் கருதினாலும்''
+  என்பதையும் குறிக்கிறது.
+\end{explain}
+
+\begin{defn}
+  $\Gamma$ என்பது !!{formula}s இன் கணமாகவும் $!A$ ஓர் !!a{formula}
+  ஆகவும் இருக்கட்டும். ஒவ்வொரு மாதிரி $\mModel{M} = \tuple{W, R, V}$
+  மற்றும் உலகம் $w \in W$ ஆகியவற்றுக்கும், ஒவ்வொரு $!B \in \Gamma$
+  க்கும் $\mSat{M}{!B}[w]$ எனில் $\mSat{M}{!A}[w]$ ஆகும்போது, எனில்
+  மட்டுமே, $\Gamma$ இலிருந்து~$!A$ \emph{பின்விளைகிறது}; குறியீட்டில்:
+  $\Gamma \Entails !A$. $\Gamma$ இல் $!B$ என்ற ஒற்றை !!{formula}
+  இருந்தால், $!B \Entails !A$ என்று எழுதுகிறோம்.
+\end{defn}
+
+\begin{ex}
+  ஒரு !!a{formula} இலிருந்து மற்றொன்று பின்விளைகிறது என்று காட்ட, எல்லா
+  மாதிரிகளையும் பற்றி $\mSat{M}{}[w]$ இன் வரையறையைப் பயன்படுத்தி நாம்
+  காரணங்கூற வேண்டும். எடுத்துக்காட்டாக, $p \lif \Diamond p \Entails
+  \Box\lnot p \lif \lnot p$ என்று காட்ட, பின்வருமாறு காரணங்கூறலாம்:
+  $\mModel{M} = \tuple{W, R, V}$ என்ற ஒரு மாதிரியையும் $w \in W$ ஐயும்
+  கருதி, $\mSat{M}{p \lif \Diamond p}[w]$ என்க. $\mSat{M}{\Box\lnot p
+  \lif \lnot p}[w]$ என்று நாம் காட்ட வேண்டும். அவ்வாறு இல்லையெனக் கொள்க.
+  அப்போது $\mSat{M}{\Box\lnot p}[w]$ மற்றும் $\mSat/{M}{\lnot p}[w]$.
+  $\mSat/{M}{\lnot p}[w]$ என்பதால் $\mSat{M}{p}[w]$. கருதுகோளின்படி
+  $\mSat{M}{p \lif \Diamond p}[w]$; ஆகவே $\mSat{M}{\Diamond p}[w]$.
+  $\mSat{M}{\Diamond p}[w]$ இன் வரையறையால், $Rww'$ ஆகவும்
+  $\mSat{M}{p}[w']$ ஆகவும் இருக்கும் ஏதோ ஒரு $w'$ உள்ளது. மேலும்
+  $\mSat{M}{\Box \lnot p}[w]$ என்பதால் $\mSat{M}{\lnot p}[w']$; இது
+  ஒரு முரண்பாடு.
+
+  !!a{formula}~$!B$ இலிருந்து மற்றொரு வாய்பாடு~$!A$ பின்விளையவில்லை என்று
+  காட்ட, ஓர் எதிரெடுத்துக்காட்டைக் கொடுக்க வேண்டும்; அதாவது, ஏதோ ஓர்
+  உலகம்~$w \in W$ இல் $\mSat{M}{!B}[w]$ ஆனால் $\mSat/{M}{!A}[w]$ என்று
+  காட்டும் ஒரு மாதிரி $\mModel{M} = \tuple{W, R, V}$. $p \lif \Diamond
+  p \Entails/ \Box p \lif p$ என்று காட்டுவோம். \olref{fig:counterex} இல்
+  உள்ள மாதிரியைக் கருதுக. $\mSat{M}{\Diamond p}[w_1]$; ஆகவே
+  $\mSat{M}{p \lif \Diamond p}[w_1]$. எனினும்,
+  $\mSat{M}{\Box p}[w_1]$ ஆனால் $\mSat/{M}{p}[w_1]$ என்பதால்,
+  $\mSat/{M}{\Box p \lif p}[w_1]$.
+  \begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label=right:\mFalse{p}]{$w_1$};
+      \node[world] (w2) [label=right:\mTrue{p}, above left=of w1]{$w_2$};
+      \node[world] (w3) [label=right:\mTrue{p}, above right=of w1] {$w_3$};
+      \draw[->] (w1) to (w2);
+      \draw[->] (w1) to (w3);
+    \end{tikzpicture}
+  \end{center}
+  \caption{$p \lif \Diamond p
+  \Entails \Box p \lif p$ என்பதற்கான எதிரெடுத்துக்காட்டு.}
+  \ollabel{fig:counterex}
+  \end{figure}
+
+  பெரும்பாலும் மிக எளிய எதிரெடுத்துக்காட்டுகளே போதும்.
+  % SOURCE CORRECTION TA-NML-011: use the model triple notation established throughout the chapter.
+  $W' = \{w\}$, $R' = \emptyset$, $V'(p) = \emptyset$ ஆகியவற்றைக் கொண்ட
+  மாதிரி $\mModel{M'} = \tuple{W', R', V'}$ உம் ஓர் எதிரெடுத்துக்காட்டு:
+  $\mSat/{M'}{p}[w]$ என்பதால் $\mSat{M'}{p \lif \Diamond p}[w]$.
+  எந்த உலகத்தையும்~$w$ இலிருந்து அணுக முடியாததால்,
+  $\mSat{M'}{\Box p}[w]$; எனவே $\mSat/{M'}{\Box p \lif p}[w]$.
+\end{ex}
+
+\begin{prob}
+  $\Box (!A \land !B) \Entails \Box !A$ என்று காட்டுக.
+\end{prob}
+
+\begin{prob}
+  $\Box (p \lif q) \Entails/ p \lif \Box q$ மற்றும் $p \lif \Box
+  q \Entails/\Box (p \lif q)$ என்று காட்டுக.
+\end{prob}
+
+\end{document}

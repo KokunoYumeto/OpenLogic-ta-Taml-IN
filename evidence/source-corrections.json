@@ -3616,6 +3616,210 @@
       "rationale": "No quantifier or first-order rule occurs; every rule is determined by a finite truth-function matrix.",
       "precise_review_question": "Does the corrected header agree with the mvl id and the displayed propositional rules?",
       "location_needle": "SOURCE CORRECTION TA-MVL-027"
+    },
+    {
+      "audit_id": "TA-NML-001",
+      "unit_id": "OLP-0409",
+      "kind": "modal-history-ordinary-prose-defects",
+      "action": "Normalized the stray capital in a coordinated Aristotle clause and supplied the missing article in the later truth-at-a-world explanation.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source writes 'that If' in the middle of a semicolon-linked sentence and later 'the truth of statement' where the ordinary noun phrase requires 'a statement.'",
+      "chosen_treatment": "தமிழ் வரலாற்றுப் பத்தியில் ஒரே தொடரமைப்புடைய உட்கூறுகளையும், உலகில் ஒரு கூற்றின் மெய்மை என்ற முழுமையான பெயர்த்தொடரையும் இயல்பான இலக்கணத்தில் வழங்குகிறது.",
+      "alternatives_considered": "Treating the capital as a new sentence despite the preceding semicolon; construing statement as an uncountable technical substance.",
+      "rationale": "Both repairs are ordinary grammar and leave every historical and modal claim unchanged.",
+      "precise_review_question": "Does the Tamil preserve all Aristotle and Kripke claims while removing only the two grammatical disruptions?",
+      "location_needle": "SOURCE CORRECTION TA-NML-001"
+    },
+    {
+      "audit_id": "TA-NML-002",
+      "unit_id": "OLP-0410",
+      "kind": "denumerable-set-number-agreement",
+      "action": "Used the singular denumerable modifier before set.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source marks denumerable with its plural token form immediately before the singular noun set.",
+      "chosen_treatment": "தமிழ் கணத்தை வருணிக்கும் எண்ணத்தக்க பண்பை ஒருமை பெயரடையாகப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Treating 'denumerables' as a plural noun whose members form a set; pluralizing set.",
+      "rationale": "The following list p_0, p_1, p_2, ... is one denumerable set of propositional variables.",
+      "precise_review_question": "Does the repaired phrase state that the variable set itself is denumerable?",
+      "location_needle": "SOURCE CORRECTION TA-NML-002"
+    },
+    {
+      "audit_id": "TA-NML-003",
+      "unit_id": "OLP-0410",
+      "kind": "defined-conditional-unmatched-parenthesis",
+      "action": "Added the missing opening parenthesis around the disjunction defining the conditional.",
+      "expected_missing_math": ["$\\lnot!A\\lor!B)$"],
+      "expected_extra_math": ["$(\\lnot!A\\lor!B)$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The prvOr branch ends the formula not-A-or-B with a right parenthesis but has no matching left parenthesis.",
+      "chosen_treatment": "தமிழ் வரையறுக்கும் பிரிப்புநிலையை இரு பொருந்திய அடைப்புக்குறிகளுக்குள் எழுதுகிறது.",
+      "alternatives_considered": "Deleting the final parenthesis; leaving the formula unbalanced.",
+      "rationale": "The neighboring defined-connective clauses consistently parenthesize binary formulas, and adding the opening mark preserves that convention and the intended scope.",
+      "precise_review_question": "Is the repaired abbreviation exactly the parenthesized formula (not A or B)?",
+      "location_needle": "SOURCE CORRECTION TA-NML-003"
+    },
+    {
+      "audit_id": "TA-NML-004",
+      "unit_id": "OLP-0411",
+      "kind": "biconditional-substitution-wrong-feature-tag",
+      "action": "Changed the biconditional induction case tag from prvIf to prvIff.",
+      "identifier_replacements": [
+        {
+          "from": "\\tagitem{prvIf}{\\indcase{!A}{(!B \\liff",
+          "to": "\\tagitem{prvIff}{\\indcase{!A}{(!B \\liff",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The biconditional formation clause uses the conditional feature tag prvIf even though the language definition and every neighboring connective clause use the matching connective tag.",
+      "chosen_treatment": "தமிழ் இருவழிநிபந்தனைப் பதிலீட்டு உட்கூற்றை அதற்குரிய prvIff குறிச்சொல்லால் கட்டுப்படுத்துகிறது.",
+      "alternatives_considered": "Leaving the biconditional clause controlled by prvIf; changing the formula itself to a conditional.",
+      "rationale": "The displayed formula uses liff throughout, and the stable language definition already identifies biconditionals with prvIff.",
+      "precise_review_question": "Is the simultaneous-substitution biconditional case now enabled exactly with the biconditional feature?",
+      "location_needle": "SOURCE CORRECTION TA-NML-004"
+    },
+    {
+      "audit_id": "TA-NML-005",
+      "unit_id": "OLP-0413",
+      "kind": "duality-proof-missing-world-argument",
+      "action": "Restored [w] on the negated satisfaction claim for box-not-A in the second duality proof.",
+      "expected_missing_math": ["$\\mSat/{M}{\\Box\\lnot!A}$"],
+      "expected_extra_math": ["$\\mSat/{M}{\\Box\\lnot!A}[w]$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The first line of the second duality argument compares truth at w with a negated box-satisfaction expression that alone omits its required world argument; the next line and every other satisfaction claim in the proof include it.",
+      "chosen_treatment": "தமிழ் முதல் சமவலத்தொடரின் இருபுறங்களிலும் ஒரே உலகம் $w$ ஐ வெளிப்படையாகக் குறிப்பிடுகிறது.",
+      "alternatives_considered": "Reading the right side as model-wide nontruth; removing [w] from the left side as well.",
+      "rationale": "The proposition concerns truth at a world, and the following equivalence immediately expands box-not-A at that same world.",
+      "precise_review_question": "Does the repaired equivalence consistently compare both formulas at world w?",
+      "location_needle": "SOURCE CORRECTION TA-NML-005"
+    },
+    {
+      "audit_id": "TA-NML-006",
+      "unit_id": "OLP-0414",
+      "kind": "truth-in-model-missing-header-metadata",
+      "action": "Added the omitted part and chapter header comments while retaining the existing section metadata.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The file records only its section header, although its repository path and stable nml/syn/tru file id unambiguously identify the normal-modal-logic part and syntax-and-semantics chapter.",
+      "chosen_treatment": "தமிழ் கோப்பு மேல்தகவலில் நிலையான பாதையும் nml/syn/tru அடையாளமும் காட்டும் பகுதியையும் அதிகாரத்தையும் சேர்க்கிறது.",
+      "alternatives_considered": "Leaving the two metadata fields absent; changing the stable file id.",
+      "rationale": "The repair makes this unit's nonexecuting metadata consistent with every neighboring section without changing content or identifiers.",
+      "precise_review_question": "Do the restored header fields agree with the file path and nml/syn/tru id?",
+      "location_needle": "SOURCE CORRECTION TA-NML-006"
+    },
+    {
+      "audit_id": "TA-NML-007",
+      "unit_id": "OLP-0416",
+      "kind": "tautological-instance-negation-wrong-feature-tag",
+      "action": "Changed the negation induction case tag from prvFalse to prvNot.",
+      "identifier_replacements": [
+        {
+          "from": "\\tagitem{prvFalse}{\\indcase{!A}{\\lnot !B}",
+          "to": "\\tagitem{prvNot}{\\indcase{!A}{\\lnot !B}",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The induction proof assigns its negation case to the falsity feature tag even though the case formula begins with lnot and the language uses prvNot for negation.",
+      "chosen_treatment": "தமிழ் மறுப்பு நேர்வை அதற்குரிய prvNot குறிச்சொல்லால் கட்டுப்படுத்துகிறது.",
+      "alternatives_considered": "Leaving negation controlled by prvFalse; changing the case formula to falsity.",
+      "rationale": "The proof branch invokes the negation satisfaction clause, so it must track the negation feature independently of the falsity constant.",
+      "precise_review_question": "Is the negation induction branch now enabled exactly with the negation feature?",
+      "location_needle": "SOURCE CORRECTION TA-NML-007"
+    },
+    {
+      "audit_id": "TA-NML-008",
+      "unit_id": "OLP-0416",
+      "kind": "negation-case-wrong-satisfaction-definition-citation",
+      "action": "Changed the final negation-case justification from propositional satisfaction to truth at a world.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\qquad$\\pSat{v}{}$.\\end{align*}",
+          "to": "\\qquad$\\mSat{M}{}[w]$.\\end{align*}",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\pSat"],
+      "expected_extra_commands": ["\\mSat"],
+      "source_issue_or_choice": "The last equivalence in the negation branch introduces a modal substitution formula evaluated in M at w, but the source cites the definition of propositional satisfaction under v.",
+      "chosen_treatment": "தமிழ் அந்த இறுதிச் சமவலத்தை $\\mSat{M}{}[w]$ இன் மறுப்பு உட்கூற்றால் நியாயப்படுத்துகிறது.",
+      "alternatives_considered": "Retaining pSat despite the modal model expression; changing the modal expression back to a propositional valuation.",
+      "rationale": "The right side is explicitly an mSat expression with model M and world w, so its governing definition is world satisfaction.",
+      "precise_review_question": "Does the final negation equivalence now cite the semantic relation it actually uses?",
+      "location_needle": "SOURCE CORRECTION TA-NML-008"
+    },
+    {
+      "audit_id": "TA-NML-009",
+      "unit_id": "OLP-0416",
+      "kind": "biconditional-case-left-side-uses-conditional",
+      "action": "Changed the propositional formula at the start of the biconditional induction case from B implies C to B iff C.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\pSat{v}{!B\\lif!C}\\Leftrightarrow{}&\\pSat{v}{!B}",
+          "to": "\\pSat{v}{!B\\liff!C}\\Leftrightarrow{}&\\pSat{v}{!B}",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\lif"],
+      "expected_extra_commands": ["\\liff"],
+      "source_issue_or_choice": "The branch is labeled prvIff, its induction case is B iff C, its two truth cases are biconditional semantics, and its final substitution uses liff, but the opening satisfaction expression alone uses lif.",
+      "chosen_treatment": "தமிழ் இருவழிநிபந்தனை நேர்வின் தொடக்கத்திலும் $!B \\liff !C$ ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Changing the entire branch to conditional semantics; leaving the opening formula inconsistent with every subsequent line.",
+      "rationale": "Only replacing the isolated connective makes the derivation a valid induction case for the stated formula constructor.",
+      "precise_review_question": "Does the repaired derivation prove the biconditional case from start to finish?",
+      "location_needle": "SOURCE CORRECTION TA-NML-009"
+    },
+    {
+      "audit_id": "TA-NML-010",
+      "unit_id": "OLP-0417",
+      "kind": "schema-table-caption-editorial-uncertainty",
+      "action": "Removed the parenthetical '(or?)' from the caption naming the valid and invalid schema columns.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The table has columns explicitly headed Valid Schemas and Invalid Schemas, and the following exercise asks for proofs of exactly those classifications, but the caption inserts unresolved editorial uncertainty before 'invalid.'",
+      "chosen_treatment": "தமிழ் அட்டவணைத் தலைப்புகளுக்கும் உடனடுத்த பயிற்சிக்கும் ஒத்தவாறு செல்லுபடியான மற்றும் செல்லுபடியாகாத திட்டவடிவங்கள் என்று உறுதியாகப் பெயரிடுகிறது.",
+      "alternatives_considered": "Retaining the editorial query in the published caption; weakening both column classifications.",
+      "rationale": "Every listed first-column schema is valid and every listed second-column schema has an ordinary relational countermodel, matching the exercise's asserted division.",
+      "precise_review_question": "Does the repaired caption accurately state the two classifications already asserted by the table and exercise?",
+      "location_needle": "SOURCE CORRECTION TA-NML-010"
+    },
+    {
+      "audit_id": "TA-NML-011",
+      "unit_id": "OLP-0418",
+      "kind": "countermodel-model-data-wrong-delimiters",
+      "action": "Changed the model display from set braces around W', R', V' to the established ordered triple notation.",
+      "expected_missing_math": ["$\\mModel{M'}=\\{W',R',V'\\}$"],
+      "expected_extra_math": ["$\\mModel{M'}=\\tuple{W',R',V'}$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\tuple"],
+      "source_issue_or_choice": "Every model definition in the chapter is an ordered triple, but the final one-world countermodel alone writes its three heterogeneous components as an unordered set.",
+      "chosen_treatment": "தமிழ் இறுதி எதிரெடுத்துக்காட்டையும் $\\tuple{W',R',V'}$ என்ற மாதிரி மும்மையாக எழுதுகிறது.",
+      "alternatives_considered": "Treating the world set, relation and valuation as members of an unordered set; changing all earlier model definitions to set notation.",
+      "rationale": "Component roles and order are fixed throughout the chapter, and the immediately following clauses separately identify W', R' and V'.",
+      "precise_review_question": "Is the corrected countermodel typed consistently as an ordered model triple?",
+      "location_needle": "SOURCE CORRECTION TA-NML-011"
     }
   ],
   "by_unit": {
@@ -3729,6 +3933,14 @@
     "OLP-0403": ["TA-MVL-021", "TA-MVL-022"],
     "OLP-0404": ["TA-MVL-023", "TA-MVL-024", "TA-MVL-025"],
     "OLP-0405": ["TA-MVL-026"],
-    "OLP-0406": ["TA-MVL-027"]
+    "OLP-0406": ["TA-MVL-027"],
+    "OLP-0409": ["TA-NML-001"],
+    "OLP-0410": ["TA-NML-002", "TA-NML-003"],
+    "OLP-0411": ["TA-NML-004"],
+    "OLP-0413": ["TA-NML-005"],
+    "OLP-0414": ["TA-NML-006"],
+    "OLP-0416": ["TA-NML-007", "TA-NML-008", "TA-NML-009"],
+    "OLP-0417": ["TA-NML-010"],
+    "OLP-0418": ["TA-NML-011"]
   }
 }
