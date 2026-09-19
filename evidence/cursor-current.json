@@ -359,10 +359,10 @@
   "turing_machines_reader_verified_units": 22,
   "incompleteness_arithmetization_reader_verified_units": 12,
   "representability_in_q_reader_verified_units": 11,
-  "release_verified_units": 100,
-  "published_source_units": 108,
+  "release_verified_units": 203,
+  "published_source_units": 343,
   "checkpoint": "CHECKPOINT-CURRENT.json",
-  "public_release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.3.0-proof-systems",
+  "public_release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.4.0-cumulative-203",
   "live_build_handle": null,
   "next_contiguous_unit": "OLP-0347",
   "next_actions": [
