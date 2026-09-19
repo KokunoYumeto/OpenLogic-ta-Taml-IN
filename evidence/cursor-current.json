@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-cursor/4",
-  "phase": "v0.3.0-published-working-tree-343-units-textually-and-semantically-verified-continuing-corpus",
+  "phase": "v0.3.0-published-working-tree-349-units-textually-and-semantically-verified-continuing-corpus",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified_units": 722,
   "total_units": 722,
@@ -347,10 +347,16 @@
     "OLP-0343",
     "OLP-0344",
     "OLP-0345",
-    "OLP-0346"
+    "OLP-0346",
+    "OLP-0347",
+    "OLP-0348",
+    "OLP-0349",
+    "OLP-0350",
+    "OLP-0351",
+    "OLP-0352"
   ],
-  "translated_units": 343,
-  "semantic_reviewed_units": 343,
+  "translated_units": 349,
+  "semantic_reviewed_units": 349,
   "reader_verified_distinct_units": 203,
   "combined_reader_verified_units": 51,
   "proof_systems_reader_verified_units": 49,
@@ -364,9 +370,9 @@
   "checkpoint": "CHECKPOINT-CURRENT.json",
   "public_release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.4.0-cumulative-203",
   "live_build_handle": null,
-  "next_contiguous_unit": "OLP-0347",
+  "next_contiguous_unit": "OLP-0353",
   "next_actions": [
-    "Continue OLP-0347 (content/lambda-calculus/introduction/currying.tex) with actual consulted canon",
+    "Continue OLP-0353 (content/lambda-calculus/introduction/primitive-recursion.tex) with actual consulted canon",
     "Continue the lambda-calculus part from the next contiguous unit",
     "Extend the reader and repeat protected build plus all-page QA at the next worthwhile tranche",
     "Finish, audit, render and publish reflowable EPUB3 editions of every bounded reader",
@@ -374,8 +380,8 @@
     "Preserve existing release tags and assets while completing all remaining units without duplication"
   ],
   "unresolved": [
-    "379 source units remain untranslated",
-    "140 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
+    "373 source units remain untranslated",
+    "146 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
     "The 7 verified readers are interim checkpoints, not the full edition",
     "Reflowable EPUB3 production, validation and publication remain in progress for the exact bounded readers",
     "Advanced provisional terminology requires ongoing contextual canon consultation",

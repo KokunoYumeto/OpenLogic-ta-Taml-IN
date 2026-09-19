@@ -2363,6 +2363,81 @@
       "rationale": "The corrected definition agrees with the source's own immediately following example and preserves the standard nearest-matching-binder rule without changing either displayed term.",
       "precise_review_question": "Does the Tamil definition classify y and x as free and z as bound in (lambda z. y z)x, including under nested abstractions with repeated variable names?",
       "location_needle": "SOURCE CORRECTION TA-LAM-002"
+    },
+    {
+      "audit_id": "TA-LAM-003",
+      "unit_id": "OLP-0347",
+      "kind": "wrong-substitution-body-variable",
+      "action": "Replaced the otherwise unused P in the final iterated substitution with the function body N used throughout the derivation.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "\\Subst{\\Subst{P}{M_1}{x_1}\\ldots}{M_n}{x_n}",
+          "to": "\\Subst{\\Subst{N}{M_1}{x_1}\\ldots}{M_n}{x_n}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The general construction introduces N as the function body and substitutes into N in the preceding line, but the final line switches to an otherwise undeclared P.",
+      "chosen_treatment": "தமிழ் இறுதி இடைநிறுத்தல் கோவையில் முன் வரையறுக்கப்பட்ட உடல் N ஐத் தொடர்ந்து பயன்படுத்துகிறது.",
+      "alternatives_considered": "Keeping the undeclared P; renaming every earlier occurrence of N to P.",
+      "rationale": "The preceding abstraction, first substitution step and explanatory sentence uniquely identify N as the body receiving all substitutions.",
+      "precise_review_question": "Does replacing only P by N make the final iterated substitution the result of applying all n arguments to the displayed abstraction?",
+      "location_needle": "SOURCE CORRECTION TA-LAM-003"
+    },
+    {
+      "audit_id": "TA-LAM-004",
+      "unit_id": "OLP-0348",
+      "kind": "arity-variable-mismatch",
+      "action": "Called f k-place rather than n-ary, matching its k displayed arguments.",
+      "expected_missing_math": ["$n$"],
+      "expected_extra_math": ["$k$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The definition introduces f(x_0,...,x_{k-1}) and quantifies over k inputs but calls the function n-ary, leaving n undeclared in the definition.",
+      "chosen_treatment": "தமிழ் வரையறை காட்டப்பட்ட k உள்ளீடுகளுடன் பொருந்துமாறு f ஐ k-இட பகுதிச் சார்பு எனக் கூறுகிறது.",
+      "alternatives_considered": "Keeping undeclared n; changing every displayed k and k-1 to n and n-1.",
+      "rationale": "The function signature, numeral sequence and reduction formula consistently use k, so the arity adjective is the isolated mismatch.",
+      "precise_review_question": "Does k-place give f exactly the number of arguments displayed everywhere else in the definition?",
+      "location_needle": "SOURCE CORRECTION TA-LAM-004"
+    },
+    {
+      "audit_id": "TA-LAM-005",
+      "unit_id": "OLP-0348",
+      "kind": "spurious-application-comma",
+      "action": "Removed the comma between F and its first Church-numeral argument in the undefined case.",
+      "expected_missing_math": ["$F,\\num{n_0}\\,\\num{n_1}\\dots\\num{n_{k-1}}$"],
+      "expected_extra_math": ["$F\\,\\num{n_0}\\,\\num{n_1}\\dots\\num{n_{k-1}}$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The defined case applies F directly to the k numeral arguments, while the undefined case inserts a comma after F even though the remaining arguments are identical and lambda application has no comma separator.",
+      "chosen_treatment": "தமிழ் வரையறையின் இரு நிலைகளிலும் F அதே எண்ணுரு உள்ளீடுகள் மீது நேரடியாகச் செயல்படுத்தப்படுகிறது.",
+      "alternatives_considered": "Keeping the comma as mathematical punctuation; inserting commas between all arguments.",
+      "rationale": "The two cases must concern the same lambda term on the same input sequence, differing only in whether reduction reaches a numeral or lacks a normal form.",
+      "precise_review_question": "Does the corrected undefined case test exactly the same application F num(n_0)...num(n_{k-1}) as the defined case?",
+      "location_needle": "SOURCE CORRECTION TA-LAM-005"
+    },
+    {
+      "audit_id": "TA-LAM-006",
+      "unit_id": "OLP-0349",
+      "kind": "missing-numeral-argument-braces",
+      "action": "Grouped each indexed input m_i as the full argument of the Church-numeral macro in the initial search term.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\numm_0", "to": "\\num{m_0}", "count": 1},
+        {"from": "\\numm_{n-1}", "to": "\\num{m_{n-1}}", "count": 1}
+      ],
+      "source_issue_or_choice": "The first search-term formula writes the numeral macro without braces around m_0 and m_{n-1}, although the later formula in the same proof correctly groups both indexed inputs.",
+      "chosen_treatment": "தமிழ் முதல் தேடல் சொல்லிலும் ஒவ்வொரு m_i முழுவதையும் எண்ணுருக் குறியின் ஒரே உள்ளீடாகக் குழுவாக்குகிறது.",
+      "alternatives_considered": "Leaving each subscript outside the numeral macro; removing braces from the later correct occurrence.",
+      "rationale": "The proof searches reductions of X applied to the Church numerals of the complete input numbers, and the repeated formula supplies the exact intended grouping.",
+      "precise_review_question": "Do the braces make both indexed inputs Church numerals of m_0 and m_{n-1}, matching the later search-sequence formula?",
+      "location_needle": "SOURCE CORRECTION TA-LAM-006"
     }
   ],
   "by_unit": {
@@ -2432,6 +2507,9 @@
     "OLP-0338": ["TA-SOL-005"],
     "OLP-0339": ["TA-SOL-006"],
     "OLP-0340": ["TA-SOL-004", "TA-SOL-007", "TA-SOL-008", "TA-SOL-009"],
-    "OLP-0344": ["TA-LAM-001", "TA-LAM-002"]
+    "OLP-0344": ["TA-LAM-001", "TA-LAM-002"],
+    "OLP-0347": ["TA-LAM-003"],
+    "OLP-0348": ["TA-LAM-004", "TA-LAM-005"],
+    "OLP-0349": ["TA-LAM-006"]
   }
 }

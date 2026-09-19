@@ -1,0 +1,33 @@
+% SEGMENT OLP-0351-S01
+% Part: lambda-calculus
+% Chapter: introduction
+% Section: basic-pr-lambda
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{int}{bas}
+\olsection{அடிப்படை முதன்மை மீள்வரையறைச் சார்புகள் \usetoken{S}{lambda definable}}
+
+\begin{lem}
+சார்புகள் $\Zero$, $\Succ$, $\Proj{n}{i}$ ஆகியவை !!{lambda definable}.
+\end{lem}
+
+\begin{proof}
+$\Zero$ என்பது $\lambd[x][\lambd[y][y]]$ மட்டுமே.
+
+அடுத்தெண் சார்பு~$\Succ$ ஆனது
+$\fn{Succ}(u) = \lambd[x][\lambd[y][x(uxy)]]$ ஆல் வரையறுக்கப்படுகிறது.
+இது ஏன் செயல்படுகிறது என்று நீங்கள் சிந்திக்க வேண்டும். மீள்செயல்படுத்தியாகக்
+கருதப்படும் ஒவ்வோர் எண்ணுரு $\num{n}$ மற்றும் ஒவ்வொரு சார்பு~$f$ க்கும்,
+$\fn{Succ}(\num{n},f)$ ஆனது உள்ளீடு~$y$ மீது,~$y$ இலிருந்து தொடங்கி $f$ ஐ
+$n$ முறை செயல்படுத்திவிட்டு, பின்னர் அதை மேலும் ஒருமுறை செயல்படுத்தும் சார்பு.
+
+வீழ்த்தல்களைப் பற்றி வேறெதுவும் கூறத் தேவையில்லை:
+$\fn{Proj}^n_i(x_0, \dots, x_{n-1}) = x_i$. வேறு சொற்களில், நமது
+மரபுகளின்படி $\fn{Proj}^n_i$ என்பது
+$\lambd[x_0][\dots \lambd[x_{n-1}][x_i]]$ என்ற லாம்டா சொல்.
+\end{proof}
+
+\end{document}

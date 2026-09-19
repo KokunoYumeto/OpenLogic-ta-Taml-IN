@@ -1,0 +1,338 @@
+{
+  "batch_id": "TA-B170",
+  "units": [
+    {
+      "unit_id": "OLP-0347",
+      "source_sha256": "218fab4af4b5c2a49ffe9e7d4ffdc6bb2dd1f88046b71dad2097b5de62b1f5f9",
+      "translation_sha256": "b61d03e4cc261c70ca32125a01418f690ad57db7dd98ae80f012788f488359a5",
+      "source_bytes": 3104,
+      "translation_bytes": 6989,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{multline*}(\\lambd[x_1][\\lambd[x_2][\\ldots\\lambd[x_n][N]]])M_1\\dotsM_n\\bredone\\\\\\begin{aligned}\\bredone{}&(\\Subst{(\\lambd[x_2][\\ldots\\lambd[x_n][N]])}{M_1}{x_1})M_2\\dotsM_n\\\\\\eqs{}&(\\lambd[x_2][\\ldots\\lambd[x_n][\\Subst{N}{M_1}{x_1}]])M_2\\dotsM_n\\\\\\vdots&\\\\\\bredone{}&\\Subst{\\Subst{P}{M_1}{x_1}\\ldots}{M_n}{x_n}\\end{aligned}\\end{multline*}"
+      ],
+      "extra_math": [
+        "\\begin{multline*}(\\lambd[x_1][\\lambd[x_2][\\ldots\\lambd[x_n][N]]])M_1\\dotsM_n\\bredone\\\\\\begin{aligned}\\bredone{}&(\\Subst{(\\lambd[x_2][\\ldots\\lambd[x_n][N]])}{M_1}{x_1})M_2\\dotsM_n\\\\\\eqs{}&(\\lambd[x_2][\\ldots\\lambd[x_n][\\Subst{N}{M_1}{x_1}]])M_2\\dotsM_n\\\\\\vdots&\\\\\\bredone{}&\\Subst{\\Subst{N}{M_1}{x_1}\\ldots}{M_n}{x_n}\\end{aligned}\\end{multline*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-003",
+          "unit_id": "OLP-0347",
+          "kind": "wrong-substitution-body-variable",
+          "action": "Replaced the otherwise unused P in the final iterated substitution with the function body N used throughout the derivation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\Subst{\\Subst{P}{M_1}{x_1}\\ldots}{M_n}{x_n}",
+              "to": "\\Subst{\\Subst{N}{M_1}{x_1}\\ldots}{M_n}{x_n}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The general construction introduces N as the function body and substitutes into N in the preceding line, but the final line switches to an otherwise undeclared P.",
+          "chosen_treatment": "தமிழ் இறுதி இடைநிறுத்தல் கோவையில் முன் வரையறுக்கப்பட்ட உடல் N ஐத் தொடர்ந்து பயன்படுத்துகிறது.",
+          "alternatives_considered": "Keeping the undeclared P; renaming every earlier occurrence of N to P.",
+          "rationale": "The preceding abstraction, first substitution step and explanatory sentence uniquely identify N as the body receiving all substitutions.",
+          "precise_review_question": "Does replacing only P by N make the final iterated substitution the result of applying all n arguments to the displayed abstraction?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-003"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0348",
+      "source_sha256": "fefc26aa72359b62bcc486490e018cb534d6e24aad01cadde4672b5cd99b244a",
+      "translation_sha256": "56c5a264abc8ae77980fbdf0490049b769f65bb53cf28adee25c7a2bed76a64c",
+      "source_bytes": 1892,
+      "translation_bytes": 4498,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$n$",
+        "$F,\\num{n_0}\\,\\num{n_1}\\dots\\num{n_{k-1}}$"
+      ],
+      "extra_math": [
+        "$k$",
+        "$F\\,\\num{n_0}\\,\\num{n_1}\\dots\\num{n_{k-1}}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "definable",
+        "define",
+        "defined",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-004",
+          "unit_id": "OLP-0348",
+          "kind": "arity-variable-mismatch",
+          "action": "Called f k-place rather than n-ary, matching its k displayed arguments.",
+          "expected_missing_math": [
+            "$n$"
+          ],
+          "expected_extra_math": [
+            "$k$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The definition introduces f(x_0,...,x_{k-1}) and quantifies over k inputs but calls the function n-ary, leaving n undeclared in the definition.",
+          "chosen_treatment": "தமிழ் வரையறை காட்டப்பட்ட k உள்ளீடுகளுடன் பொருந்துமாறு f ஐ k-இட பகுதிச் சார்பு எனக் கூறுகிறது.",
+          "alternatives_considered": "Keeping undeclared n; changing every displayed k and k-1 to n and n-1.",
+          "rationale": "The function signature, numeral sequence and reduction formula consistently use k, so the arity adjective is the isolated mismatch.",
+          "precise_review_question": "Does k-place give f exactly the number of arguments displayed everywhere else in the definition?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-004"
+        },
+        {
+          "audit_id": "TA-LAM-005",
+          "unit_id": "OLP-0348",
+          "kind": "spurious-application-comma",
+          "action": "Removed the comma between F and its first Church-numeral argument in the undefined case.",
+          "expected_missing_math": [
+            "$F,\\num{n_0}\\,\\num{n_1}\\dots\\num{n_{k-1}}$"
+          ],
+          "expected_extra_math": [
+            "$F\\,\\num{n_0}\\,\\num{n_1}\\dots\\num{n_{k-1}}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The defined case applies F directly to the k numeral arguments, while the undefined case inserts a comma after F even though the remaining arguments are identical and lambda application has no comma separator.",
+          "chosen_treatment": "தமிழ் வரையறையின் இரு நிலைகளிலும் F அதே எண்ணுரு உள்ளீடுகள் மீது நேரடியாகச் செயல்படுத்தப்படுகிறது.",
+          "alternatives_considered": "Keeping the comma as mathematical punctuation; inserting commas between all arguments.",
+          "rationale": "The two cases must concern the same lambda term on the same input sequence, differing only in whether reduction reaches a numeral or lacks a normal form.",
+          "precise_review_question": "Does the corrected undefined case test exactly the same application F num(n_0)...num(n_{k-1}) as the defined case?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-005"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0349",
+      "source_sha256": "20e9d844a65445b937ae3cf5547d1a336428f25a1fcc69813dcb186101918a5b",
+      "translation_sha256": "24c529a9f3172568adfa990b7b19032d717405d2a14b312864440698fb00d54e",
+      "source_bytes": 1648,
+      "translation_bytes": 3667,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$X\\numm_0\\ldots\\numm_{n-1}$"
+      ],
+      "extra_math": [
+        "$X\\num{m_0}\\ldots\\num{m_{n-1}}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "definable",
+        "defined",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-006",
+          "unit_id": "OLP-0349",
+          "kind": "missing-numeral-argument-braces",
+          "action": "Grouped each indexed input m_i as the full argument of the Church-numeral macro in the initial search term.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\numm_0",
+              "to": "\\num{m_0}",
+              "count": 1
+            },
+            {
+              "from": "\\numm_{n-1}",
+              "to": "\\num{m_{n-1}}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The first search-term formula writes the numeral macro without braces around m_0 and m_{n-1}, although the later formula in the same proof correctly groups both indexed inputs.",
+          "chosen_treatment": "தமிழ் முதல் தேடல் சொல்லிலும் ஒவ்வொரு m_i முழுவதையும் எண்ணுருக் குறியின் ஒரே உள்ளீடாகக் குழுவாக்குகிறது.",
+          "alternatives_considered": "Leaving each subscript outside the numeral macro; removing braces from the later correct occurrence.",
+          "rationale": "The proof searches reductions of X applied to the Church numerals of the complete input numbers, and the repeated formula supplies the exact intended grouping.",
+          "precise_review_question": "Do the braces make both indexed inputs Church numerals of m_0 and m_{n-1}, matching the later search-sequence formula?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-006"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0350",
+      "source_sha256": "dc8ed2fba6b292e6a4e46bd081300c14b388a8109cbe617cee7a4e513d73743c",
+      "translation_sha256": "9f03ddfbd5f22d8d9cffb26e723e108b4abecf514a4a8c74221536f7d610c143",
+      "source_bytes": 1704,
+      "translation_bytes": 3749,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Mxyz",
+        "definable",
+        "defined",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0351",
+      "source_sha256": "a763e494e2c1d8863885e8a3f68cef4a9b9cfeb1c59d0de0c1f9a198fdaed862",
+      "translation_sha256": "8180f8a0a371b405d66453049a8cc58bbd4ab9804cb6a7ae31dbd41432b0c869",
+      "source_bytes": 996,
+      "translation_bytes": 1923,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "definable",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section",
+        "uxy"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0352",
+      "source_sha256": "cb8cd3db3bf994933f1de1eeb3a9f99e108b3699ea8d53f7218f9861ea3e2b61",
+      "translation_sha256": "ad64e6795263367a29ca5dab15916e23330ea9df2f880ee4aa8cc4d846056e7a",
+      "source_bytes": 854,
+      "translation_bytes": 1574,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "definable",
+        "define",
+        "defined",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,16 +1,16 @@
 {
   "schema": "openlogic-translation-decision-qa/1.0.0",
-  "generated_utc": "2026-09-06T20:20:09.508249+00:00",
+  "generated_utc": "2026-09-19T18:29:44.958799+00:00",
   "status": "PASS",
   "edition_id": "openlogic-ta-Taml-IN",
   "coverage_state": "partial",
   "counts": {
-    "decisions": 169,
-    "occurrences": 6940,
-    "source_units": 122,
+    "decisions": 286,
+    "occurrences": 17855,
+    "source_units": 342,
     "reader_units_with_mapped_pages": 49,
-    "available_reader_occurrences": 2757,
-    "pending_reader_occurrences": 4183
+    "available_reader_occurrences": 2834,
+    "pending_reader_occurrences": 15021
   },
   "normative_schema": {
     "bytes": 10787,
@@ -43,23 +43,23 @@
   "surfaces": {
     "START_HERE.md": {
       "bytes": 915,
-      "sha256": "cc75b1a4d2cb3b7e8e8568fe5d92fb819e4a4571f111f9888c2c8807cad18522"
+      "sha256": "a9cdc55a2fa48916143b0a00670dba33179441c33167314345ddd9551bcf02ab"
     },
     "TRANSLATION_DECISIONS_FULL.md": {
-      "bytes": 1809794,
-      "sha256": "fca238a506ffa79d84fbca2ab749eb52794fd65ef30f05d439d8f549f40cd606"
+      "bytes": 4547505,
+      "sha256": "31ca74e5b575fb62bb577cbadf4e5a5ac04aeeacb2b26d060485d6178489974c"
     },
     "PRIORITY_REVIEW.md": {
-      "bytes": 1037963,
-      "sha256": "db2e5c6d8ce7e030fd5eef7afdf19215d1263638920827044914d3a66149a72c"
+      "bytes": 2814274,
+      "sha256": "1fabea7be2d5feb82394062285713044ffcdd2a42fca9d88aea67157e1877876"
     },
     "DECISION_OCCURRENCES.csv": {
-      "bytes": 5532400,
-      "sha256": "638322656bd31f12c41b2802902e38533591ac1a392aaa5a4a46bb604aa2647d"
+      "bytes": 14365044,
+      "sha256": "911aa751787ddf8c6b17b3f20e66d17a1dacabe0050cb20122ebce77cff5d34b"
     },
     "DECISIONS.json": {
-      "bytes": 22707049,
-      "sha256": "1814896ec7d8264927605ed278cdd1f04d51b793e2a8fb110c2707d34b60b98f"
+      "bytes": 57091406,
+      "sha256": "93b7c8c9d1cd7cf658ad0274936427b8de2b15b0a6163318b8b2dcb442d6126a"
     },
     "translation-decision.schema.json": {
       "bytes": 10787,

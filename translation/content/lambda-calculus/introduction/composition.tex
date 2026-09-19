@@ -1,0 +1,32 @@
+% SEGMENT OLP-0352-S01
+% Part: lambda-calculus
+% Chapter: introduction
+% Section: composition
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{int}{com}
+\olsection{\usetoken{S}{lambda definable} சார்புகள் சேர்ப்பின் கீழ் மூடியவை}
+
+\begin{lem}
+!!{lambda definable} சார்புகள் சேர்ப்பின் கீழ் மூடியவை.
+\end{lem}
+
+\begin{proof}
+$f$ ஆனது $h$, $g_0,$ \dots,~$g_{k-1}$ ஆகியவற்றிலிருந்து சேர்ப்பால்
+வரையறுக்கப்படுகிறது என்று கொள்க. $h$, $g_0$, \dots,~$g_{k-1}$ ஆகியவற்றை
+முறையே $H$, $G_0$, \dots,~$G_{k-1}$ ஆல் !!{lambda defined} ஆக உள்ளன என்ற
+கருதுகோளில், ~$f$ ஐ !!{lambda define}s என்று அமையும் ஒரு சொல்~$F$ ஐக்
+கண்டறிய வேண்டும். ஆனால்~$F$ ஐ
+வெறுமனே பின்வருமாறு வரையறுக்கலாம்:
+\[
+F(x_0, \dots, x_{l-1}) = H(G_0(x_0, \dots, x_{l-1}),
+\dots, G_{k-1}(x_0, \dots, x_{l-1})).
+\]
+வேறு சொற்களில், லாம்டா கலனத்தின் மொழி சேர்ப்பைப் பிரதிநிதித்துவப்படுத்த
+மிகவும் பொருத்தமானது.
+\end{proof}
+
+\end{document}

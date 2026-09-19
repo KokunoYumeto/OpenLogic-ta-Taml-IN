@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-13T05:52:11.360791+00:00",
+  "date_utc": "2026-09-19T18:28:59.185171+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -1717,6 +1717,36 @@
       "unit_id": "OLP-0346",
       "source_sha256": "6c6e2b92cf64a4352de9fe746fc9bbac51c02c79351e9c97ddea3b4c3991b6dc",
       "translation_sha256": "8b18daf6d8dd5681b171a3b081e1670a9595bd279701898999ddf6784824c5e6"
+    },
+    {
+      "unit_id": "OLP-0347",
+      "source_sha256": "218fab4af4b5c2a49ffe9e7d4ffdc6bb2dd1f88046b71dad2097b5de62b1f5f9",
+      "translation_sha256": "b61d03e4cc261c70ca32125a01418f690ad57db7dd98ae80f012788f488359a5"
+    },
+    {
+      "unit_id": "OLP-0348",
+      "source_sha256": "fefc26aa72359b62bcc486490e018cb534d6e24aad01cadde4672b5cd99b244a",
+      "translation_sha256": "56c5a264abc8ae77980fbdf0490049b769f65bb53cf28adee25c7a2bed76a64c"
+    },
+    {
+      "unit_id": "OLP-0349",
+      "source_sha256": "20e9d844a65445b937ae3cf5547d1a336428f25a1fcc69813dcb186101918a5b",
+      "translation_sha256": "24c529a9f3172568adfa990b7b19032d717405d2a14b312864440698fb00d54e"
+    },
+    {
+      "unit_id": "OLP-0350",
+      "source_sha256": "dc8ed2fba6b292e6a4e46bd081300c14b388a8109cbe617cee7a4e513d73743c",
+      "translation_sha256": "9f03ddfbd5f22d8d9cffb26e723e108b4abecf514a4a8c74221536f7d610c143"
+    },
+    {
+      "unit_id": "OLP-0351",
+      "source_sha256": "a763e494e2c1d8863885e8a3f68cef4a9b9cfeb1c59d0de0c1f9a198fdaed862",
+      "translation_sha256": "8180f8a0a371b405d66453049a8cc58bbd4ab9804cb6a7ae31dbd41432b0c869"
+    },
+    {
+      "unit_id": "OLP-0352",
+      "source_sha256": "cb8cd3db3bf994933f1de1eeb3a9f99e108b3699ea8d53f7218f9861ea3e2b61",
+      "translation_sha256": "ad64e6795263367a29ca5dab15916e23330ea9df2f880ee4aa8cc4d846056e7a"
     }
   ],
   "samples": [
@@ -4778,6 +4808,48 @@
       "assessment": "The theorem, corollary, proof, common-reduct definition and least-equivalence characterization preserve every reduction direction.",
       "translation_segment_sha256": "c02bd650ed41ed879ef2b874063d2a902fd8556c4fd47fcb367091404ae2d454",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0347-S01",
+      "reverse_paraphrase": "Currying represents a multi-argument function by nested one-argument abstractions whose values are themselves functions; applying lambda x.lambda y.x to M and N reduces to M.",
+      "assessment": "The addition illustration, first-projection reduction and general n-argument substitution are preserved; TA-LAM-003 keeps the declared body N in the final iterated substitution.",
+      "translation_segment_sha256": "3278b325dd43894021324a4293f378944d455d0aba596a7ea28489e7e8998743",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0348-S01",
+      "reverse_paraphrase": "A Church numeral n iterates its input function n times, and a lambda term defines a partial k-place numerical function exactly when defined inputs reduce to the corresponding numeral and undefined inputs have no normal form.",
+      "assessment": "The numeral encoding and both directions of the computability equivalence remain explicit; TA-LAM-004 aligns the arity with k and TA-LAM-005 removes the spurious application comma.",
+      "translation_segment_sha256": "03268d12ee1805398886cf31a88b72ce55626113188662fedbbb27e39b390551",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0349-S01",
+      "reverse_paraphrase": "Every lambda-definable partial function is computable by systematically enumerating finite beta-reduction paths until a Church numeral is reached, with the search itself encodable by primitive-recursive syntax operations.",
+      "assessment": "The breadth-by-depth search, undefined case, Church-thesis shortcut and recursive alternative retain their separate roles; TA-LAM-006 groups each indexed input as one numeral-macro argument.",
+      "translation_segment_sha256": "fa5815a7df6a86e54464756ad2a55c97a0da71cc26de709a703a566b1cbda307",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0350-S01",
+      "reverse_paraphrase": "Every partial computable function is lambda-definable once the initial functions and closure under composition, primitive recursion and unbounded search are established.",
+      "assessment": "The Kleene-normal-form reduction and the conventional M(x,y,z) notation preserve the distinction between suggestive arity and the untyped calculus itself.",
+      "translation_segment_sha256": "2463fd58b88edd3c809a3c33681c188207f3b82ef485242954d39b7be6b0cb31",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0351-S01",
+      "reverse_paraphrase": "Zero, successor and every projection function are lambda-definable: zero ignores its iterator, successor applies it once more, and a projection returns its selected input.",
+      "assessment": "All three defining lambda terms, the Church-numeral iterator explanation and the projection indices are preserved exactly.",
+      "translation_segment_sha256": "bf820c7f27e8abac2a7e487348133fc42e044387f6fe0b343412072effc79d92",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0352-S01",
+      "reverse_paraphrase": "Lambda-definable functions are closed under composition by feeding the same l inputs to each G_i and applying H to the resulting k values.",
+      "assessment": "The arities, indexed component functions and complete defining equation for F preserve the recursive-function composition schema.",
+      "translation_segment_sha256": "1280b353b4c019d85e411f56fc0de115918d17d25c13e6455f3597db05d3f185",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -5174,11 +5246,23 @@
     {
       "unit_id": "OLP-0344",
       "issue": "The second notation convention says 'From example' where grammar requires 'For example.' More substantively, the frozen binding definition says every variable inside any lambda scope is bound, although its adjoining (lambda z. y z)x example treats y as free. Tamil repairs the typo under TA-LAM-001 and states the nearest enclosing same-variable binder rule under TA-LAM-002 without changing the examples."
+    },
+    {
+      "unit_id": "OLP-0347",
+      "issue": "The final currying reduction substitutes into undeclared P although the abstraction body and preceding step use N. Tamil retains N throughout under TA-LAM-003."
+    },
+    {
+      "unit_id": "OLP-0348",
+      "issue": "The lambda-definability definition calls a k-argument function n-ary and inserts a comma between F and its first argument only in the undefined case. Tamil aligns the arity with k under TA-LAM-004 and restores direct application under TA-LAM-005."
+    },
+    {
+      "unit_id": "OLP-0349",
+      "issue": "The initial search term leaves indexed subscripts outside two Church-numeral macro arguments, while its later repetition groups them correctly. Tamil groups the complete indexed inputs under TA-LAM-006."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "Three hundred forty-three source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 379 frozen units still require completion.",
+  "remaining": "349 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 373 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -5224,6 +5308,26 @@
         "no_matching_binder_is_free": true,
         "adjoining_example_preserved": true,
         "example_classification_preserved": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0347",
+        "OLP-0348",
+        "OLP-0349"
+      ],
+      "correction_ids": [
+        "TA-LAM-003",
+        "TA-LAM-004",
+        "TA-LAM-005",
+        "TA-LAM-006"
+      ],
+      "status": "pass",
+      "checks": {
+        "iterated_substitution_uses_declared_body": true,
+        "arity_matches_displayed_k_arguments": true,
+        "undefined_case_has_direct_application": true,
+        "indexed_inputs_are_full_numeral_arguments": true
       }
     }
   ]
