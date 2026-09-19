@@ -1,0 +1,53 @@
+% SEGMENT OLP-0357-S01
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: terms
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{trm}
+\olsection{சொற்கள்}
+
+லாம்டா கலனத்தின் சொற்கள், எண்ணிலாத மாறிகள் $\Obj{v_0}$, $\Obj{v_1}$,
+\dots, ``$\lambd$'' என்ற குறி, அடைப்புக்குறிகள் ஆகியவற்றிலிருந்து
+தொகுத்தறிதல் முறையில் கட்டப்படுகின்றன. மாறிகளைக் குறிக்க $x$, $y$, $z$,
+\dots{} ஐயும், சொற்களைக் குறிக்க $M$, $N$, $P$, \dots{} ஐயும் பயன்படுத்துவோம்.
+% SOURCE CORRECTION TA-LAM-011: Tamil silently resolves the frozen spelling errors “desginate” and “demnostrates” without changing either claim.
+
+\begin{defn}[சொற்கள்] \ollabel{defn:term}
+லாம்டா கலனத்தின் \emph{சொற்களின்} கணம் பின்வருமாறு தொகுத்தறிதல் முறையில்
+வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item \ollabel{defn:term-var} $x$ ஒரு மாறி எனில், $x$ ஒரு சொல்.
+  \item \ollabel{defn:term-abs} $x$ ஒரு மாறியாகவும் $M$ ஒரு சொல்லாகவும்
+    இருந்தால், $(\lambd[x][M])$ ஒரு சொல்.
+  \item \ollabel{defn:term-app} $M$, $N$ இரண்டும் சொற்கள் எனில்,
+    $(MN)$ ஒரு சொல்.
+\end{enumerate}
+\end{defn}
+
+ஒரு சொல் $(\lambd[x][M])$ ஆனது \olref{defn:term-abs} இன்படி அமைக்கப்பட்டால்,
+அது ஓர் \emph{அருவமாக்கத்தின்} விளைவு என்கிறோம்; $\lambd[x]$ இல் உள்ள
+$x$ ஓர் \emph{!!{parameter}} எனப்படுகிறது. \olref{defn:term-app} இன்படி
+அமைக்கப்பட்ட சொல் $(MN)$ ஒரு \emph{செயல்படுத்தலின்} விளைவு.
+
+மேலே வரையறுக்கப்பட்ட சொற்களில் எல்லா அடைப்புக்குறிகளும் எழுதப்பட்டுள்ளன.
+$(\lambd[x][((\lambd[x][x])(\lambd[x][(xx)]))])$ என்ற சொல் காட்டுவதுபோல்,
+இது மிகவும் சிரமமானதாகலாம். அடைப்புக்குறிகளைத் தவிர்ப்பதற்கான மரபுகளை
+அறிமுகப்படுத்துவோம். எனினும், அதிகாரப்பூர்வ வரையறை ஒரு சொல்
+\olref{defn:term} இன்படி எவ்வாறு கட்டப்பட்டது என்பதை எளிதாகத் தீர்மானிக்க
+உதவுகிறது. எடுத்துக்காட்டாக,
+$(\lambd[x][((\lambd[x][x])(\lambd[x][(xx)]))])$ என்ற சொல்லை அமைக்கும்
+கடைசிப் படி அருவமாக்கமாகவே இருக்க வேண்டும்; அதில் !!{parameter}~$x$.
+இது $((\lambd[x][x])(\lambd[x][(xx)]))$ என்ற சொல்லிலிருந்து அருவமாக்கத்தால்
+கிடைக்கிறது; அந்தச் சொல் இரண்டு சொற்களின் செயல்படுத்தல். அந்த இரு சொற்களும்
+ஒவ்வொன்றாக ஓர் அருவமாக்கத்தின் விளைவு; இவ்வாறே தொடர்கிறது.
+
+\begin{prob}
+$(\lambd[g][(\lambd[x][(g (x x))])
+  (\lambd[x][(g (x x))])])$ எவ்வாறு அமைக்கப்படுகிறது என்பதை விவரிக்க.
+\end{prob}
+
+\end{document}

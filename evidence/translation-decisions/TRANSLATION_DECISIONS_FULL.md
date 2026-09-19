@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 342/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 371/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -1452,6 +1452,662 @@ Please double-check: **do the braces make both indexed inputs Church numerals of
 
 - `TA-OCC-7f31659e48cbcd00` — OLP-0349 / `OLP-0349-S01`; source `content/lambda-calculus/introduction/lambda-computable.tex:1`; Tamil `translation/content/lambda-calculus/introduction/lambda-computable.tex:22`; PDF page pending.
 
+## TA-LAM-007 — The recursive schema uses x as its first argument and vector z as the unchanged auxiliary parameters, but the source step calls h with scalar z, which is otherwise undeclared and duplicates the following vector z role.
+
+Chosen rendering: **தமிழ் மீள்வரையறைப் படியில் h இன் முதல் உள்ளீடாக மீள்வரையறைச் சுட்டெண் x ஐப் பயன்படுத்துகிறது; துணை அளவுருத் திசையன் இறுதி உள்ளீடாகத் தொடர்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The immediately following target equation calls H with numeral n, the current recursion index, followed by the preceding value and the parameter vector, uniquely fixing x as the intended first input here.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0353 (checked_supports)
+
+Alternatives: Keeping the undeclared scalar z; dropping h's first input; changing every recursion index x to z.
+
+Please double-check: **does h(x,f(x,vector z),vector z) match the subsequent H(n,F(n,vector z),vector z) equation without changing the recursion arity?**
+
+- `TA-OCC-06e13560ba2d2bd8` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:1`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:18`; PDF page pending.
+
+## TA-LAM-008 — The paragraph assumes G and H already define g and h, then asks for another term H for f; every displayed equation and the remainder of the proof call the new term F.
+
+Chosen rendering: **தமிழ், படிச் சார்புக்கான H ஐ மாற்றாமல் வைத்து, தேடப்படும் f-ஐ வரையறுக்கும் சொல்லை F எனக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: F is used consistently in the two displays immediately following the sentence and throughout the construction, while H remains the step-function term.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0353 (checked_supports)
+
+Alternatives: Keeping both distinct terms named H; renaming the established step term and all subsequent equations.
+
+Please double-check: **does changing only the sought-term name from H to F remove the collision and agree with every subsequent equation?**
+
+- `TA-OCC-630dd26a8309602d` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:1`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:23`; PDF page pending.
+
+## TA-LAM-009 — Here v stands for the preceding recursively obtained function F(n), whose inputs are the absorbed auxiliary parameters; the source instead applies v to u and the parameter vector, adding an argument not present in F(n, vector z).
+
+Chosen rendering: **தமிழ் H(u,v) வரையறையில் முந்திய மதிப்புச் சார்பு v ஐ துணை அளவுருத் திசையன் மீது மட்டும் செயல்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The target equation H(n,F(n)) must expand at vector z to H'(n,F(n)(vector z),vector z); applying v to u again would duplicate the fixed recursion index.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0353 (checked_supports)
+
+Alternatives: Keeping v(u,vector z); redefining v to include the recursion index despite F(n) already fixing it.
+
+Please double-check: **does v(vector z) make the absorbed-parameter equation extensionally identical to the preceding F(n+1,vector z) recursion?**
+
+- `TA-OCC-fccec38185b42ea6` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:1`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:36`; PDF page pending.
+
+## TA-LAM-010 — The lemma assumes only that f is lambda-definable, which may represent any partial computable function; the proof abruptly calls f primitive recursive even though it uses only the existence of a defining lambda term F.
+
+Chosen rendering: **தமிழ், துணைத்தேற்றத்தின் கருதுகோள்படி f லாம்டா-வரையறுக்கத்தக்கது என்பதிலிருந்து F இருப்பதைப் பெறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The next sentence needs exactly a lambda term F defining f, supplied directly by the stated hypothesis, and no primitive-recursive construction is used later.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0355 (checked_supports)
+
+Alternatives: Strengthening the lemma to primitive-recursive f; retaining an unused stronger claim that is not established.
+
+Please double-check: **does the corrected premise justify the existence of F while preserving the lemma's full lambda-definable scope?**
+
+- `TA-OCC-41e8c2ee4b294bc3` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:1`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:35`; PDF page pending.
+
+## TA-LAM-011 — The introductory notation sentence and later parenthesized-term sentence each contain an ordinary English spelling error whose intended word is unambiguous from grammar and context.
+
+Chosen rendering: **தமிழ் முறையே 'குறிக்க' மற்றும் 'காட்டுவதுபோல்' என்று நோக்கப்பட்ட பொருளை வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Both corrections are lexical spelling repairs and leave the term grammar, examples, formulas and protected identifiers unchanged.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0357 (checked_supports)
+
+Alternatives: Transliterating the misspellings; introducing an unrelated technical distinction.
+
+Please double-check: **does the Tamil prose preserve only the obvious meanings designate and demonstrates without adding a formal claim?**
+
+- `TA-OCC-3b2efeb337b3c104` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:1`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:17`; PDF page pending.
+
+## TA-LAM-012 — The second abbreviation convention begins 'From example,' where grammar and the immediately following illustration require 'For example.'
+
+Chosen rendering: **தமிழ் உரை இதனை 'எடுத்துக்காட்டாக' என்று வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The correction introduces the existing displayed term as an example and changes no syntax convention or formula.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0359 (checked_supports)
+
+Alternatives: Preserving an ungrammatical directional phrase with no coherent role in the convention.
+
+Please double-check: **does the Tamil sentence introduce lambda x.MNP as an example of widest abstraction scope?**
+
+- `TA-OCC-3e2a9a3ad4765210` — OLP-0359 / `OLP-0359-S01`; source `content/lambda-calculus/syntax/abbreviated-syntax.tex:1`; Tamil `translation/content/lambda-calculus/syntax/abbreviated-syntax.tex:25`; PDF page pending.
+
+## TA-LAM-013 — The definition says that if lambda x.M occurs inside N, the corresponding occurrence of N is its scope; however, N is the containing term, while every later example and the standard formation clause identify M, the abstraction body, as the scope.
+
+Chosen rendering: **தமிழ் வரையறை லாம்டா அருவத்தின் உடலான M நிகழ்வையே அதன் வீச்சாகக் குறிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The immediately following nested-abstraction examples calculate each scope as the relevant body, and the binding definition requires precisely that region.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0360 (checked_supports)
+
+Alternatives: Calling the entire containing term N the scope; renaming the containing term to M and the body to N throughout.
+
+Please double-check: **does identifying M as the scope agree with all nested examples and exclude unrelated material elsewhere in N?**
+
+- `TA-OCC-7b6b88723cc2db58` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:24`; PDF page pending.
+
+## TA-LAM-014 — The proof case assumes M has the form lambda y.P and every adjacent expression uses P, but one premise refers to Q, which is not introduced in the case.
+
+Chosen rendering: **தமிழ் நிறுவல், அறிவிக்கப்பட்ட அருவ உடல் P இன் கட்டற்ற மாறிகளையே பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The theorem hypothesis applied to M=lambda y.P yields the needed fact about P, and the inductive hypothesis is invoked on that same body.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0361 (checked_supports)
+
+Alternatives: Keeping the undefined Q; renaming every P in the proof case to Q.
+
+Please double-check: **does x notin FV(P) supply exactly the premise needed for the displayed induction step?**
+
+- `TA-OCC-014a8ac527cfbbf5` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:1`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:81`; PDF page pending.
+
+## TA-LAM-015 — The theorem is about substituting N for x, but the application case switches to y; the abstraction case swaps the binder and substituted variable, and its displayed induction line removes the wrong variables and cites the wrong freshness condition.
+
+Chosen rendering: **தமிழ் முழுவதும் இடைநிறுத்தப்படும் மாறியாக x ஐயும் அருவத்தின் கட்டு மாறியாக y ஐயும் வைத்துத் தொகுத்தறிதல் சமன்பாட்டைச் சரிசெய்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Definition defn:substitution-4 and the theorem conclusion uniquely fix x as the substituted variable, while definedness fixes y notin FV(N); applying the inductive hypothesis then gives the corrected set calculation.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0361 (checked_supports)
+
+Alternatives: Changing the theorem globally to substitution for y; retaining the malformed set equation; treating the closing parenthesis as mathematical notation.
+
+Please double-check: **does the corrected calculation derive (FV(lambda y.P) minus {x}) union FV(N) under exactly x in FV(lambda y.P) and y notin FV(N)?**
+
+- `TA-OCC-b009e2082bbda6d4` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:1`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:104`; PDF page pending.
+
+## TA-LAM-016 — The source includes 'reflexitive,' 'refering,' 'we there is,' and malformed alpha-conversion clauses, while the surrounding definitions and formulas fix their intended meanings.
+
+Chosen rendering: **தமிழ் அவற்றை முறையே தற்சுட்டு, சுட்டுகின்றன, ஒன்று உள்ளது, மற்றும் இலக்கணமுள்ள மாற்றக் கூற்றுகளாக வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: These are ordinary prose repairs and do not alter a relation, premise, conclusion, identifier or displayed term.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0362 (checked_supports)
+
+Alternatives: Transliterating the spelling errors; treating the malformed clauses as additional formal conditions.
+
+Please double-check: **does the Tamil prose retain each stated alpha-conversion claim without adding a new condition?**
+
+- `TA-OCC-4a24718d04803bff` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:76`; PDF page pending.
+
+## TA-LAM-017 — The chapter otherwise uses the FV macro uniformly; the five bare FV strings would be parsed as multiplied letters or an undefined textual notation rather than the defined free-variable operator.
+
+Chosen rendering: **தமிழ் எல்லா ஐந்து இடங்களிலும் பதிப்பின் வரையறுக்கப்பட்ட \FV குறிமானத்தையே பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Each occurrence is used with exactly the same set-valued free-variable meaning as the adjacent macro-form occurrences.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0362 (checked_supports)
+
+Alternatives: Leaving FV as italic letter multiplication; converting every existing FV macro in the chapter to bare letters.
+
+Please double-check: **do all restored macros denote the free-variable set of precisely the original argument?**
+
+- `TA-OCC-92e1df68e13c5434` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:127`; PDF page pending.
+
+## TA-LAM-018 — Lemma lem:sub:R and the induction hypothesis establish alpha-equivalence of the middle substitutions, not literal syntactic equality, and the theorem itself promises only alpha-equivalence.
+
+Chosen rendering: **தமிழ் கணக்கீட்டின் வரையறைச் சமப்படிகளைச் சமக்குறியுடனும், மேற்கோள் காட்டப்பட்ட முடிவுகள் தரும் இரண்டு படிகளை \aeq குறியுடனும் வேறுபடுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The first and last steps unfold the substitution definition, while only the two middle steps change representatives and therefore require alpha-equivalence.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0362 (checked_supports)
+
+Alternatives: Strengthening the cited results to literal equality; replacing all four comparison signs by alpha-equivalence.
+
+Please double-check: **do the two \aeq steps match exactly the strengths of lem:sub:R and the induction hypothesis?**
+
+- `TA-OCC-a9aee2b94dd21632` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:271`; PDF page pending.
+
+## TA-LAM-019 — The corollary introduces another pair M'', R'' but tests definedness of the already established first pair M', R' and gives no relation between R'' and R.
+
+Chosen rendering: **தமிழ் இரண்டாம் ஜோடியின் இரு உறுப்புகளுக்குமான தேவையான சமான நிபந்தனைகளையும், அதே ஜோடியின் இடைநிறுத்தல் வரையறுக்கப்பட்டிருப்பதையும் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding theorem states exactly these hypotheses for an alternative pair, and the corollary's conclusion compares the substitutions formed from the two respective pairs.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0362 (checked_supports)
+
+Alternatives: Repeating the first pair's already known definedness; omitting any constraint on R'' while comparing its substitution.
+
+Please double-check: **do the repaired hypotheses make the corollary an immediate instance of thm:sub for the second pair?**
+
+- `TA-OCC-8dcf9b8a0c0f9629` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:286`; PDF page pending.
+
+## TA-LAM-020 — The source says the outer abstraction 'is on binds,' the inner one 'binds the variable is,' calls an abstraction an 'abstract,' and has several missing or wrong inflections.
+
+Chosen rendering: **தமிழ் வெளிப்புற அருவம் x ஐயும் உட்புற அருவம் y ஐயும் கட்டுவதாகவும், அவற்றுக்கிடையிலான அருவ நிலைகளின் எண்ணிக்கையே சுட்டெண் எனவும் தெளிவாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The following y x to 0 1 example uniquely determines the intended binders and the zero-based level convention.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0363 (checked_supports)
+
+Alternatives: Preserving the malformed clauses literally; reversing the displayed zero and one indices.
+
+Please double-check: **does the Tamil explanation assign index 0 to y and index 1 to x for exactly the stated nesting reason?**
+
+- `TA-OCC-65b3b8adc1b09b9a` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:1`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:32`; PDF page pending.
+
+## TA-LAM-021 — The source includes 'equivalance,' 'substition,' subject-agreement errors, and the prose abbreviation 'etc.' inside a mathematical span.
+
+Chosen rendering: **தமிழ் வழக்கமான எழுத்துப்பிழைகளை நோக்கப்பட்ட பொருளில் வழங்கி, பிரதிநிதிக் குறிமானங்களை மட்டும் கணித முறையில் வைத்து 'முதலியவற்றையும்' என்பதை உரையாகக் கொடுக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Moving the abbreviation changes no representative notation, class membership or mathematical operation.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0364 (checked_supports)
+
+Alternatives: Leaving the English abbreviation in the Tamil sentence; treating the misspellings as new technical words.
+
+Please double-check: **does the revised sentence still introduce indexed representatives only when more than one is needed?**
+
+- `TA-OCC-9a95f0e66c95d681` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:1`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:18`; PDF page pending.
+
+## TA-LAM-022 — These formulas reuse the free-variable operation defined with the FV macro in the preceding sections; bare italic letters would not invoke that operation.
+
+Chosen rendering: **தமிழ் வகுப்புகளுக்கான கட்டற்ற மாறி வரையறையிலும் அதன் சாராமைச் சான்றிலும் அதே \FV குறிமானத்தைத் தொடர்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The cited alpha-invariance theorem and substitution freshness clause both explicitly concern the already defined free-variable set.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0364 (checked_supports)
+
+Alternatives: Keeping bare letter products; removing the FV macro from the rest of the lambda-syntax chapter.
+
+Please double-check: **do the restored macros preserve each original argument while making all four statements use the chapter's defined operator?**
+
+- `TA-OCC-c20709bfe8412a80` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:1`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:45`; PDF page pending.
+
+## TA-LAM-023 — The first row ends with an equals sign and no expression, while the following row begins with another equals sign; the prose cites eq:1 as the substitution expression itself and eq:2 as the representative replacement.
+
+Chosen rendering: **தமிழ் முதல் வரியில் இடைநிறுத்தல் கோவைக்கு மட்டும் eq:1 சிட்டையை வைத்துப், அடுத்த வரியிலிருந்து சமத் தொடரைத் தொடங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The repair preserves both labels and every expression while making the displayed chain syntactically complete.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0364 (checked_supports)
+
+Alternatives: Leaving two adjacent dangling equality signs; duplicating the second-row expression on the first row.
+
+Please double-check: **does the first row now name the possibly undefined term and the second row state the class-level equality described immediately below?**
+
+- `TA-OCC-f6b7865336bcf315` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:1`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:69`; PDF page pending.
+
+## TA-LAM-024 — The final sentence of the natural-strategy digression contains an ordinary misspelling whose intended word is fixed by repeated uses of strategy in the same paragraph.
+
+Chosen rendering: **தமிழ் நோக்கப்பட்ட உத்தி என்ற பொருளை வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The repair changes no strategy definition, redex choice or normalization claim.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0365 (checked_supports)
+
+Alternatives: Transliterating the misspelling; treating it as a distinct reduction method.
+
+Please double-check: **does the Tamil sentence continue to say that the natural strategy is the default unless another strategy is specified?**
+
+- `TA-OCC-a01663c387785e3b` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:101`; PDF page pending.
+
+## TA-LAM-025 — The section otherwise uses the defined free-variable operator, whereas bare FV(M) and FV(MN) would be parsed as ordinary multiplied letters rather than set-valued notation.
+
+Chosen rendering: **தமிழ் மூன்று புதுமாறி நிபந்தனைகளிலும் வரையறுக்கப்பட்ட \FV குறிமானத்தைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Eta contraction and extensionality require exactly the absence of x from the displayed free-variable sets.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0366 (checked_supports)
+
+Alternatives: Leaving bare italic letters; removing the macro from the earlier lambda-syntax sections.
+
+Please double-check: **do the restored macros preserve the original M and MN arguments in all three freshness conditions?**
+
+- `TA-OCC-722157dfc8fb3930` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:27`; PDF page pending.
+
+## TA-LAM-026 — The definition and theorem use the ext macro, but two proof occurrences instead typeset the letters ext as variables; the surrounding prose also says 'reflexivity and transitive' and contains minor agreement errors.
+
+Chosen rendering: **தமிழ் எல்லா இடங்களிலும் அதே \ext விதிக்குறியைப் பயன்படுத்தி, உரையை இலக்கணத்துடன் வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Both repaired occurrences explicitly refer back to the single extensionality rule just defined.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0366 (checked_supports)
+
+Alternatives: Treating e, x and t as a product; renaming the rule everywhere to plain letters.
+
+Please double-check: **do both repaired symbols name the same extensionality extension used in the theorem?**
+
+- `TA-OCC-048a9eef2dd92596` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:77`; PDF page pending.
+
+## TA-LAM-027 — The source says a relation 'are' rules, the property 'states is that,' and a grid's height 'is' m+1, while the formulas unambiguously fix each intended claim.
+
+Chosen rendering: **தமிழ் குறைத்தல் தொடர்பை கணக்கீட்டு விதிகளாகவும், ஒன்றுகூடும் மதிப்புக் கூற்றையும், கட்டத்தின் உயரம் மற்றும் அகலத்தையும் இலக்கணத்துடன் வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: These repairs change no relation, grid dimension or reduction path.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0368 (checked_supports)
+
+Alternatives: Preserving broken agreement; reading the extra verbs as additional mathematical predicates.
+
+Please double-check: **does the Tamil explanation still derive unique normal forms from the exact Church–Rosser diamond stated in the definition?**
+
+- `TA-OCC-849bd1add740529e` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:28`; PDF page pending.
+
+## TA-LAM-028 — The rule appears inside the inductive definition of parallel reduction but uses a different beta arrow; every later invocation of defn:bredpar2 assumes N parallel-reduces to N'.
+
+Chosen rendering: **தமிழ் வரையறுக்கப்படும் \bredpar தொடர்பையே முன்னிபந்தனையிலும் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Reflexivity and both induction proofs require abstraction closure for parallel reduction itself, uniquely fixing the intended premise.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0369 (checked_supports)
+
+Alternatives: Changing every later proof invocation to the unrelated arrow; defining a new arrow only for this clause.
+
+Please double-check: **does N bredpar N' make clause 2 support exactly the abstraction cases used later?**
+
+- `TA-OCC-802a4360ce5d41c0` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:24`; PDF page pending.
+
+## TA-LAM-029 — The desired statement immediately before the unfolded form substitutes R' on the right, and the induction hypothesis transforms both N to N' and R to R', but the source unfolded target reverts to R.
+
+Chosen rendering: **தமிழ் வலப்பக்க அருவத்தின் உடலிலும் குறைக்கப்பட்ட மாற்றுச் சொல் R' ஐத் தொடர்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Unfolding substitution under the abstraction changes only its presentation and must retain the same R' argument as the preceding formula.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0369 (checked_supports)
+
+Alternatives: Dropping the premise R parallel-reduces to R'; changing the lemma conclusion to retain R.
+
+Please double-check: **does the corrected unfolded target follow directly from the induction hypothesis and abstraction closure?**
+
+- `TA-OCC-f5b1dad1efacd806` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:95`; PDF page pending.
+
+## TA-LAM-030 — The case already defines M' as Subst(N',Q',x), then lists M' again among component variables while N' is used in the contractum and premise without being listed.
+
+Chosen rendering: **தமிழ் கூறுப்பட்டியலில் தேவையான N' ஐ அறிமுகப்படுத்தி, முடிவுச் சொல் M' இன் தேவையற்ற மறுநிகழ்வை நீக்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The parallel-reduction premise N bredpar N' and the contractum Subst(N',Q',x) uniquely identify the missing component name.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0370 (checked_supports)
+
+Alternatives: Leaving N' undeclared; renaming every N' in the case to M'.
+
+Please double-check: **does replacing only the repeated list entry introduce every variable used by the case without changing its conclusion?**
+
+- `TA-OCC-d563577ea2fb5aeb` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:47`; PDF page pending.
+
+## TA-LAM-031 — The abstraction clause repeats the unrelated arrow error from parallel beta reduction; all freshness conditions omit the defined FV macro; and the first eta compatibility case uses N without including it among the introduced components.
+
+Chosen rendering: **தமிழ் வரையறுக்கப்படும் இணைநிலை βη தொடர்பைப் பயன்படுத்தி, நான்கு கட்டற்ற-மாறி நிபந்தனைகளையும் ஒரே குறிமானத்தில் எழுதி, தேவைப்படும் N ஐ அறிமுகப்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The reflexivity and induction proofs invoke abstraction closure for beredpar, the conditions all denote the established free-variable set, and N is the body in lambda x.Nx and the premise N beredpar N'.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0371 (checked_supports)
+
+Alternatives: Changing every later proof to the unrelated beta arrow; treating FV as letter multiplication; leaving N undeclared.
+
+Please double-check: **do these repairs make the definition and both eta proof cases use exactly their stated parallel relation, body and freshness condition?**
+
+- `TA-OCC-496c4f92ffe60c51` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:32`; PDF page pending.
+
+## TA-LAM-032 — The proof explicitly calls the case eta-conversion and cites the eta-contraction definition but writes the beta-contraction relation; the next proof again typesets FV as bare letters.
+
+Chosen rendering: **தமிழ் η நிகழ்வில் \eredone ஐயும், புதுமாறி நிபந்தனையில் \FV குறிமானத்தையும் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The cited eta rule is precisely lambda x.Nx contracting to N, while reflexivity supplies the premise needed by the parallel eta clause.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0372 (checked_supports)
+
+Alternatives: Calling beta contraction eta conversion; changing the cited definition; leaving FV as a letter product.
+
+Please double-check: **does the corrected eta case now follow from parallel reflexivity and defn:beredpar5 exactly as claimed?**
+
+- `TA-OCC-7185e6f04f881b7b` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:26`; PDF page pending.
+
+## TA-LAM-033 — The definition explicitly gives a no-normal-form branch when f is undefined and the preceding sentence says it generalizes to partial functions, but its signature uses the total-function arrow.
+
+Chosen rendering: **தமிழ் பதிப்பில் ஏற்கெனவே வரையறுக்கப்பட்ட பகுதிச் சார்பு அம்பை பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The partial arrow makes the signature agree with both branches without changing the domain, codomain or arity.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0374 (checked_supports)
+
+Alternatives: Deleting the undefined branch; restricting the definition to total functions while later theorems claim partial functions.
+
+Please double-check: **does the partial arrow align the signature with the undefined-input clause while preserving all total cases?**
+
+- `TA-OCC-c53029a5e9415c94` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:63`; PDF page pending.
+
+## TA-LAM-034 — The sentence introduces and types the constant function c_k but its intervening equation switches to an otherwise unnamed c.
+
+Chosen rendering: **தமிழ் பெயர், வகை, வரையறை மூன்றிலும் c_k ஐத் தொடர்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The subscript records the constant output k and is present in both the defining lambda term C_k and the function type.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0374 (checked_supports)
+
+Alternatives: Renaming C_k and both other c_k occurrences to c; leaving the defining equation attached to an undeclared function.
+
+Please double-check: **does c_k(n)=k define exactly the function named and typed on the same sentence?**
+
+- `TA-OCC-ae36098865fd48fa` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:79`; PDF page pending.
+
+## TA-LAM-035 — The displayed term binds a and b but repeats a as both the Church iterator and the addend, so its value is a squared and is independent of b.
+
+Chosen rendering: **தமிழ் சொல் a முறை b ஐக் கூட்டி, இரு உள்ளீடுகளின் பெருக்கலைத் தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Either a(Add b)0 or b(Add a)0 represents multiplication; changing the repeated inner a to b is the smallest repair and matches the operand order already displayed.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0375 (checked_supports)
+
+Alternatives: Iterating addition of a b times; preserving the term that ignores b.
+
+Please double-check: **does a(Add b)0 reduce to the Church numeral for a times b for every pair of Church-numeral inputs?**
+
+- `TA-OCC-07c2fee5a9f500ed` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:124`; PDF page pending.
+
+## TA-LAM-036 — The defining term initializes the iteration with a pair of Church numerals, but the explanatory prose twice replaces them by bare object-language zeros, which are not lambda terms in this encoding.
+
+Chosen rendering: **தமிழ் விளக்கம் இரு இடங்களிலும் சர்ச் பூச்சியங்களின் ஜோடியையே பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The reduction starts from exactly the displayed pair tuple(num 0,num 0), and the pair constructor requires lambda terms as components.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0376 (checked_supports)
+
+Alternatives: Treating the bare zeros as an unexplained shorthand; changing the displayed initializer to nonterms.
+
+Please double-check: **do both repaired prose tuples now denote exactly the initializer and its n=0 result?**
+
+- `TA-OCC-d35e3b0d7a4453a7` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:47`; PDF page pending.
+
+## TA-LAM-037 — The signature declares an n-place relation while both reduction clauses and their truth condition quantify k inputs ending at n_k.
+
+Chosen rendering: **தமிழ் வரையறை எல்லா இடங்களிலும் k-இடத் தொடர்பைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Changing only the exponent to k aligns the signature with all three immediately following argument lists without changing any bound variable.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0377 (checked_supports)
+
+Alternatives: Renaming every n_i argument and bound to use an n endpoint; leaving the arity inconsistent.
+
+Please double-check: **does Nat^k make the relation arity agree with every occurrence of n_1 through n_k?**
+
+- `TA-OCC-85eae097a91d126e` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:27`; PDF page pending.
+
+## TA-LAM-038 — The sentence says the singleton relation holds of '0 and 0 only,' duplicating the same mathematical argument.
+
+Chosen rendering: **தமிழ் $0$ க்கு மட்டுமே அத்தொடர்பு அமையும் என்று ஒருமுறை தெளிவாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The adjacent equation IsZero={0} and unary lambda term both uniquely determine a one-element extension.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0377 (checked_supports)
+
+Alternatives: Repeating zero twice; inventing a second input for the unary singleton relation.
+
+Please double-check: **does the repaired sentence state exactly the singleton extension shown by IsZero={0}?**
+
+- `TA-OCC-df832808ed158b90` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:38`; PDF page pending.
+
+## TA-LAM-039 — The k functions g_0 through g_(k-1) are paired with k+1 terms G_0 through G_k, and the conclusion calls the term H lambda-definable although lambda-definability is a property of the function h.
+
+Chosen rendering: **தமிழ் பட்டியலை G_{k-1} இல் முடித்து, h சார்பே லாம்டா-வரையறுக்கத்தக்கது என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed composition uses exactly G_0 through G_(k-1), and the proof immediately introduces H as the term that lambda-defines h.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0378 (checked_supports)
+
+Alternatives: Adding an undeclared g_k; calling H a numerical function instead of the representing lambda term.
+
+Please double-check: **do the repaired statement and proof now pair each g_i with exactly one G_i and distinguish h from its defining term H?**
+
+- `TA-OCC-68746e14ff79817e` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:33`; PDF page pending.
+
+## TA-LAM-040 — The lemma declares g to have the n+2 inputs required for the recursion step, but the defining equation instead applies h to n+2 inputs and the prose then says h is iterated.
+
+Chosen rendering: **தமிழ் தொடரிப்படியில் g ஐப் பயன்படுத்தி, அதை படிச் சார்பு என்று விளக்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Every subsequent reduction uses G(n,m,h(n,m)) and concludes from g(n,m,h(n,m))=h(n,m+1), uniquely fixing g as the intended step function.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0378 (checked_supports)
+
+Alternatives: Changing the declared arity of h and abandoning the standard primitive-recursion schema; renaming g away.
+
+Please double-check: **does the g-based successor clause agree with the later D-state reduction and the declared n+2 arity?**
+
+- `TA-OCC-b8509777d4b0febb` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:70`; PDF page pending.
+
+## TA-LAM-041 — The example binds a and b but ignores b, and inserts a bare arithmetic zero where the surrounding pure lambda terms require the Church numeral.
+
+Chosen rendering: **தமிழ் இரு உள்ளீடுகளையும் பயன்படுத்தி சர்ச் பூச்சியத்திலிருந்து கூட்டலை மீளச்செய்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding arithmetic section establishes a(Add b)(num 0) as the alternative multiplication construction, and the present paragraph requires a pure lambda term after expansion.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0379 (checked_supports)
+
+Alternatives: Preserving a term for a squared; treating bare 0 as an unexplained lambda constant.
+
+Please double-check: **does the repaired example both depend on a and b and remain expressible as a pure lambda term after expanding its abbreviations?**
+
+- `TA-OCC-26efecdfa6f97b30` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:23`; PDF page pending.
+
+## TA-LAM-042 — The frozen display closes lambda n immediately after the true branch, leaving the factorial multiplication as a separate unconnected align row rather than the false branch of IsZero.
+
+Chosen rendering: **தமிழ் விரிவாக்கப்பட்ட மீளழைப்பை வெளிப்புற அருவத்தின் உடலிலுள்ள பொய்க் கிளையாக வைத்திருக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding factorial equation and the paragraph's promised self-substitution uniquely determine one lambda body containing both selector branches.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0379 (checked_supports)
+
+Alternatives: Treating the second row as an unrelated expression; deleting the recursive branch.
+
+Please double-check: **does the repaired expansion represent exactly one substitution of the full factorial expression for the recursive Fac occurrence?**
+
+- `TA-OCC-2155deafb44de59c` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:37`; PDF page pending.
+
+## TA-LAM-043 — Immediately after defining Church's combinator as Y_C, the comparison switches to Y, contradicting the preceding theorem that Turing's Y directly reduces to g(Yg).
+
+Chosen rendering: **தமிழ் இரு ஒப்பீட்டுக் கூற்றுகளிலும் சர்ச்சின் Y_C குறியையே பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The next calculation derives exactly the two stated properties for Y_Cg, while the earlier theorem distinguishes Turing's stronger directed reduction.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0379 (checked_supports)
+
+Alternatives: Reversing the proved theorem for Turing's Y; renaming Church's definition to Y and creating a symbol collision.
+
+Please double-check: **do the Y_C claims now match the immediately following common-reduct calculation without contradicting the Turing-Y theorem?**
+
+- `TA-OCC-914ef01ecfcda0e6` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:164`; PDF page pending.
+
+## TA-LAM-044 — The lemma defines g and the term H represents that same function, but the proof opening abruptly says it will lambda-define h, which is never introduced.
+
+Chosen rendering: **தமிழ் நிறுவல் முழுவதும் சிறுமமாக்கலால் வரையறுக்கப்பட்ட g சார்பையே தொடர்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed minimization equation and final H reduction both identify the target as the lemma's g.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0380 (checked_supports)
+
+Alternatives: Renaming the lemma's g and every final value to h; leaving the proof target undeclared.
+
+Please double-check: **does using g in the proof opening align its target with the lemma and the representing term H?**
+
+- `TA-OCC-8614e1b11dde1c90` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:32`; PDF page pending.
+
+## TA-LAM-045 — The Search display opens a parenthesized recursive call but closes the lambda bodies directly after Succ y, leaving the call unbalanced.
+
+Chosen rendering: **தமிழ் Search சொல்லில் மீளழைப்பின் வல அடைப்புக்குறியைச் சேர்த்து, பின்னர் இரு அருவங்களையும் மூடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The adjoining prose and two reduction branches require the false selector branch to be the complete recursive call g vec-x (Succ y).
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0380 (checked_supports)
+
+Alternatives: Deleting the opening parenthesis; treating the closing square bracket as a round parenthesis.
+
+Please double-check: **is the repaired body balanced and does IsZero receive exactly the zero test, y, and recursive-call branches?**
+
+- `TA-OCC-19d5486b4a9260bf` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:33`; PDF page pending.
+
+## TA-LAM-046 — The source compares plural partial recursive functions with singular 'general recursive function' and then splits 'When g(x) is undefined' from its meaning clause as a sentence fragment.
+
+Chosen rendering: **தமிழ் பலவின ஒப்புமையையும் வரையறுக்கப்படாத நிலையின் விளக்கத்தையும் முழுமையான வாக்கியங்களாக வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The surrounding paragraph unambiguously contrasts the two function classes and equates undefined g(x) with absence of a normal form for Gx.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0381 (checked_supports)
+
+Alternatives: Preserving broken number agreement and the fragment; treating the fragment as a new mathematical condition.
+
+Please double-check: **does the repaired prose preserve exactly the regularity distinction and undefined-value interpretation?**
+
+- `TA-OCC-224ca48c11815ba7` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:15`; PDF page pending.
+
+## TA-LAM-047 — The proof misspells 'systematically' and says two functions 'maps' natural numbers to and from Church-numeral codes.
+
+Chosen rendering: **தமிழ் கோடல் எண் ஒதுக்கீட்டை முறையாக என்றும், இரு மாற்றுச் சார்புகளையும் பலவின ஒத்திசைவுடன் விளக்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The prime-power coding supplies the systematic assignment, and toChurch and fromChurch are explicitly two separate functions.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0382 (checked_supports)
+
+Alternatives: Preserving the spelling and agreement errors; construing only one of the two named functions as the subject.
+
+Please double-check: **does the Tamil proof keep both directions of the Church-code conversion distinct while describing the Gödel coding systematically?**
+
+- `TA-OCC-d4b4e2e03e9da70e` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:24`; PDF page pending.
+
 ## TA-ND-001 — The source says that a sentence stands below one, two, or three other sequents, although the surrounding text and displayed natural-deduction rules use sentences as the premises.
 
 Chosen rendering: **தமிழ் உரை ஒன்று, இரண்டு அல்லது மூன்று மற்ற வாக்கியங்களின் கீழ் ஒரு வாக்கியம் நிற்பதாகத் திருத்துகிறது.**
@@ -2581,6 +3237,8 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-90b93d2bbd405966` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:27`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:113`; PDF page pending.
 - `TA-OCC-7bd40103447c008a` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:27`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:113`; PDF page pending.
 - `TA-OCC-02ded30bde3052ef` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:13`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:14`; PDF page pending.
+- `TA-OCC-aeca4be78feb31dd` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:18`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:20`; PDF page pending.
+- `TA-OCC-cc7a30eb539aa453` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:52`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:58`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -3069,6 +3727,9 @@ Please double-check: **do the listed uses of “உறுப்பு” preserv
 - `TA-OCC-e380e5a33e8c1495` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:29`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:79`; PDF page pending.
 - `TA-OCC-4c81781e35f0bdb6` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:30`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:137`; PDF page pending.
 - `TA-OCC-dccdde0fa6ded47d` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:31`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:139`; PDF page pending.
+- `TA-OCC-39dbbed987dff85b` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:24`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:25`; PDF page pending.
+- `TA-OCC-3b816191d28509ad` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:20`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:21`; PDF page pending.
+- `TA-OCC-357689b800e0fa47` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:26`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:27`; PDF page pending.
 
 ## TA-T003 — empty set
 
@@ -3518,6 +4179,13 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-bc8adf3fb77303cf` — OLP-0328 / `OLP-0328-S01`; source `content/second-order-logic/syntax-and-semantics/expressive-power.tex:36`; Tamil `translation/content/second-order-logic/syntax-and-semantics/expressive-power.tex:57`; PDF page pending.
 - `TA-OCC-7de8d122fd34b032` — OLP-0329 / `OLP-0329-S01`; source `content/second-order-logic/syntax-and-semantics/inf-count.tex:14`; Tamil `translation/content/second-order-logic/syntax-and-semantics/inf-count.tex:70`; PDF page pending.
 - `TA-OCC-44028467ab6919b8` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:31`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:33`; PDF page pending.
+- `TA-OCC-08a840ee60c06cfc` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:32`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:34`; PDF page pending.
+- `TA-OCC-4a1a0cb84bb7dae8` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:196`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:200`; PDF page pending.
+- `TA-OCC-4947c3fbe7ebe56e` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:197`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:201`; PDF page pending.
+- `TA-OCC-245b806977749389` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:41`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:45`; PDF page pending.
+- `TA-OCC-8993be50f97035fa` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:95`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:97`; PDF page pending.
+- `TA-OCC-aecefe9225f5fd23` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:118`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:124`; PDF page pending.
+- `TA-OCC-7b487c30d8ca6440` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:45`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:63`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -4216,6 +4884,11 @@ Please double-check: **do the listed uses of “சேர்ப்பு / வ�
 - `TA-OCC-6c49ecd5fa69fd67` — OLP-0337 / `OLP-0337-S01`; source `content/second-order-logic/sol-and-set-theory/introduction.tex:19`; Tamil `translation/content/second-order-logic/sol-and-set-theory/introduction.tex:22`; PDF page pending.
 - `TA-OCC-e96ac46fbc7497f7` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:1`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:23`; PDF page pending.
 - `TA-OCC-dcb5857dc93ac3f8` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:1`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:26`; PDF page pending.
+- `TA-OCC-f6cafd2c59f3ffab` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:14`; PDF page pending.
+- `TA-OCC-6dc501e2ff93e47b` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:155`; PDF page pending.
+- `TA-OCC-4324167c728d6ba9` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:14`; PDF page pending.
+- `TA-OCC-c355fa02ca16ef68` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:71`; PDF page pending.
+- `TA-OCC-10ae3f8b4ba6ee50` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:13`; PDF page pending.
 
 ## TA-T019 — Cartesian product / ordered pair
 
@@ -4257,6 +4930,7 @@ Please double-check: **do the listed uses of “கார்டீசியன�
 - `TA-OCC-4d9f83cdec394413` — OLP-0046 / `OLP-0046-S04`; source `content/sets-functions-relations/arithmetization/reflections.tex:39`; Tamil `translation/content/sets-functions-relations/arithmetization/reflections.tex:47`; PDF page pending.
 - `TA-OCC-2ff81a075bdaf2eb` — OLP-0046 / `OLP-0046-S05`; source `content/sets-functions-relations/arithmetization/reflections.tex:70`; Tamil `translation/content/sets-functions-relations/arithmetization/reflections.tex:84`; PDF page pending.
 - `TA-OCC-5d17becd189e3667` — OLP-0046 / `OLP-0046-S05`; source `content/sets-functions-relations/arithmetization/reflections.tex:70`; Tamil `translation/content/sets-functions-relations/arithmetization/reflections.tex:85`; PDF page pending.
+- `TA-OCC-dd3cb332c96141b5` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:45`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:48`; PDF page pending.
 
 ## TA-T020 — tuple / recursive definition
 
@@ -4602,6 +5276,56 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-4902fead62031d6f` — OLP-0335 / `OLP-0335-S01`; source `content/second-order-logic/metatheory/loewenheim-skolem.tex:16`; Tamil `translation/content/second-order-logic/metatheory/loewenheim-skolem.tex:19`; PDF page pending.
 - `TA-OCC-c7d336df1cc32da9` — OLP-0336 / `OLP-0336-S01`; source `content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:12`; Tamil `translation/content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:15`; PDF page pending.
 - `TA-OCC-0e6adb4c5765823d` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:1`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:15`; PDF page pending.
+- `TA-OCC-1216771561f7b222` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:52`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:136`; PDF page pending.
+- `TA-OCC-8beb36182908e303` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:1`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:15`; PDF page pending.
+- `TA-OCC-3fccc9e0488d9721` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:1`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:20`; PDF page pending.
+- `TA-OCC-d816c65515ffce01` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:22`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:71`; PDF page pending.
+- `TA-OCC-39af3c038d39b6a8` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:28`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:81`; PDF page pending.
+- `TA-OCC-6d7f1090bfb1ca15` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:108`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:58`; PDF page pending.
+- `TA-OCC-36f249aecbf496f7` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:68`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:24`; PDF page pending.
+- `TA-OCC-7a7efd7190ca0965` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:69`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:72`; PDF page pending.
+- `TA-OCC-ddf27d56126fbc38` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:69`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:89`; PDF page pending.
+- `TA-OCC-46661a91918798c8` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:89`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:108`; PDF page pending.
+- `TA-OCC-9e87ec188dd67252` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:92`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:128`; PDF page pending.
+- `TA-OCC-6ad7e38bebed352f` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:100`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:161`; PDF page pending.
+- `TA-OCC-be6ced80cc430cf9` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:101`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:169`; PDF page pending.
+- `TA-OCC-ccd2f576a752033e` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:101`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:178`; PDF page pending.
+- `TA-OCC-5ba9b8c03545181b` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:69`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:56`; PDF page pending.
+- `TA-OCC-b18885446f40b8a2` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:116`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:71`; PDF page pending.
+- `TA-OCC-e5a671c903d583af` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:117`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:84`; PDF page pending.
+- `TA-OCC-ed0e9ea7e66f6f32` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:117`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:120`; PDF page pending.
+- `TA-OCC-760cafc7b0d9ce93` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:145`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:160`; PDF page pending.
+- `TA-OCC-90b516ab571b9b5f` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:148`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:241`; PDF page pending.
+- `TA-OCC-ca6fcc92b3be22fc` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:155`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:247`; PDF page pending.
+- `TA-OCC-3db56b072a5274ed` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:266`; PDF page pending.
+- `TA-OCC-7c657691015083f3` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:1`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:35`; PDF page pending.
+- `TA-OCC-322678863183b8ac` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:31`; PDF page pending.
+- `TA-OCC-159747fc3e79eea4` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:105`; PDF page pending.
+- `TA-OCC-eef87f98b4ca14e0` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:43`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:18`; PDF page pending.
+- `TA-OCC-5e68fd67f14191d4` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:45`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:56`; PDF page pending.
+- `TA-OCC-b7236d821eed80c5` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:79`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:85`; PDF page pending.
+- `TA-OCC-58b1a6acf936ee1b` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:80`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:96`; PDF page pending.
+- `TA-OCC-29518d03068149a1` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:80`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:105`; PDF page pending.
+- `TA-OCC-8c047eb234f73c7b` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:90`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:118`; PDF page pending.
+- `TA-OCC-d0520561ca56ac14` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:90`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:126`; PDF page pending.
+- `TA-OCC-80024ed777f74437` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:98`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:130`; PDF page pending.
+- `TA-OCC-0fe0d4bd368488b9` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:98`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:135`; PDF page pending.
+- `TA-OCC-32751c96328efc24` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:100`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:148`; PDF page pending.
+- `TA-OCC-96d875733aa5f257` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:16`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:28`; PDF page pending.
+- `TA-OCC-6a8bb81f8941c2e1` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:35`; PDF page pending.
+- `TA-OCC-9d9e84f2bb0ac621` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:27`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:40`; PDF page pending.
+- `TA-OCC-5c13c77455e58442` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:27`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:48`; PDF page pending.
+- `TA-OCC-63dc0bd8dd816f2e` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:37`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:20`; PDF page pending.
+- `TA-OCC-96ba5a2aa31da0b4` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:39`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:68`; PDF page pending.
+- `TA-OCC-7df4a136379fb316` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:77`; PDF page pending.
+- `TA-OCC-dd1fedf7bd24c5a4` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:86`; PDF page pending.
+- `TA-OCC-237fc26ae7c1939b` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:93`; PDF page pending.
+- `TA-OCC-844af637074cb25b` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:20`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; PDF page pending.
+- `TA-OCC-82ecddff3434c1dc` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:34`; PDF page pending.
+- `TA-OCC-70d49f5de6a1f8b8` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:40`; PDF page pending.
+- `TA-OCC-0dbf080f3ac737bf` — OLP-0373 / `OLP-0373-S01`; source `content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; PDF page pending.
+- `TA-OCC-71907be74fcef18d` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:118`; PDF page pending.
+- `TA-OCC-e68e6e4bf1305bc5` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:29`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:130`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -4932,6 +5656,21 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-3612e7d1d175b5ca` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:36`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:141`; PDF page pending.
 - `TA-OCC-5228d35a12892d37` — OLP-0346 / `OLP-0346-S01`; source `content/lambda-calculus/introduction/church-rosser.tex:35`; Tamil `translation/content/lambda-calculus/introduction/church-rosser.tex:36`; PDF page pending.
 - `TA-OCC-4d414c027b70292e` — OLP-0346 / `OLP-0346-S01`; source `content/lambda-calculus/introduction/church-rosser.tex:37`; Tamil `translation/content/lambda-calculus/introduction/church-rosser.tex:39`; PDF page pending.
+- `TA-OCC-c1b8459379345fdd` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:12`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:13`; PDF page pending.
+- `TA-OCC-eeffd39b8e0ab83c` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:29`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:31`; PDF page pending.
+- `TA-OCC-a2d889c511c798be` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:30`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:80`; PDF page pending.
+- `TA-OCC-4218a9c644aa7ddc` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:42`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:181`; PDF page pending.
+- `TA-OCC-11aadc7e24395e4d` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:19`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:14`; PDF page pending.
+- `TA-OCC-cd1793d6ade69920` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:12`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:13`; PDF page pending.
+- `TA-OCC-d6d9650df4000c9f` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:20`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:43`; PDF page pending.
+- `TA-OCC-59dfb5473d0d891f` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:29`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:51`; PDF page pending.
+- `TA-OCC-d7c545d4a987af6f` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:40`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:54`; PDF page pending.
+- `TA-OCC-61e376ef10fc9fc9` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:16`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:17`; PDF page pending.
+- `TA-OCC-fbdbdc1de2ab483a` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:23`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:24`; PDF page pending.
+- `TA-OCC-8983ac0738ead7cc` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:52`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:53`; PDF page pending.
+- `TA-OCC-64a36090106b8360` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:11`; PDF page pending.
+- `TA-OCC-78b50da1288a6921` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:28`; PDF page pending.
+- `TA-OCC-b27517ab14cf3619` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:35`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:39`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -5164,6 +5903,24 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-b830e50940f8c1a2` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:126`; PDF page pending.
 - `TA-OCC-539aecfd42704142` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:128`; PDF page pending.
 - `TA-OCC-f9faafbb67cd232e` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:143`; PDF page pending.
+- `TA-OCC-77d54bc536743a4a` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:74`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:75`; PDF page pending.
+- `TA-OCC-bf8804ae76136f92` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:177`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:75`; PDF page pending.
+- `TA-OCC-b1ef9afb97872516` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:177`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:79`; PDF page pending.
+- `TA-OCC-c9db3a4534694a03` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:177`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:181`; PDF page pending.
+- `TA-OCC-373e7d45b48d2699` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:177`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:182`; PDF page pending.
+- `TA-OCC-cffca58601f8a299` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:177`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:182`; PDF page pending.
+- `TA-OCC-e823feae922152e5` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:33`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:37`; PDF page pending.
+- `TA-OCC-72a4209ec6e81192` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:34`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:37`; PDF page pending.
+- `TA-OCC-e4aa9d93b7044849` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:28`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:32`; PDF page pending.
+- `TA-OCC-5d265b157dd3bbc8` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:29`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:32`; PDF page pending.
+- `TA-OCC-5d6df99f35471ad9` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:30`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:33`; PDF page pending.
+- `TA-OCC-5c57e96e6ebd1cda` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:30`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:33`; PDF page pending.
+- `TA-OCC-03f07b08ee067400` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:53`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:54`; PDF page pending.
+- `TA-OCC-1bac0b3aeecc92c7` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:52`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:56`; PDF page pending.
+- `TA-OCC-f5ee2b2919e96451` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:56`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:60`; PDF page pending.
+- `TA-OCC-90531b6b49f35567` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:62`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:66`; PDF page pending.
+- `TA-OCC-9b130d9872a1cda0` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:72`; PDF page pending.
+- `TA-OCC-22b9603b73df358e` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:44`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:46`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -5195,6 +5952,9 @@ Please double-check: **do the listed uses of “சமானத் தொடர�
 - `TA-OCC-43756f4703710baf` — OLP-0048 / `OLP-0048-S07`; source `content/sets-functions-relations/arithmetization/cauchy.tex:109`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:147`; PDF page pending.
 - `TA-OCC-39de69a72a884446` — OLP-0346 / `OLP-0346-S01`; source `content/lambda-calculus/introduction/church-rosser.tex:35`; Tamil `translation/content/lambda-calculus/introduction/church-rosser.tex:36`; PDF page pending.
 - `TA-OCC-984619a826acdd9e` — OLP-0346 / `OLP-0346-S01`; source `content/lambda-calculus/introduction/church-rosser.tex:37`; Tamil `translation/content/lambda-calculus/introduction/church-rosser.tex:39`; PDF page pending.
+- `TA-OCC-829c037ac7c12ab8` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:176`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:181`; PDF page pending.
+- `TA-OCC-7d66557d279c204d` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:40`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:43`; PDF page pending.
+- `TA-OCC-d511f68b826c469e` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:51`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:54`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -5315,6 +6075,8 @@ Please double-check: **is “சமான வகுப்பு / ஈவுக�
 - `TA-OCC-227199c6317be218` — OLP-0048 / `OLP-0048-S11`; source `content/sets-functions-relations/arithmetization/cauchy.tex:161`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:203`; PDF page pending.
 - `TA-OCC-5f13602a50b25caa` — OLP-0048 / `OLP-0048-S13`; source `content/sets-functions-relations/arithmetization/cauchy.tex:169`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:213`; PDF page pending.
 - `TA-OCC-81c564cab1b22998` — OLP-0133 / `OLP-0133-S09`; source `content/first-order-logic/completeness/identity.tex:120`; Tamil `translation/content/first-order-logic/completeness/identity.tex:130`; PDF page pending.
+- `TA-OCC-b5040dec8f2f148a` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:10`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:11`; PDF page pending.
+- `TA-OCC-5a13ddffec635944` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:41`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:43`; PDF page pending.
 
 ## TA-T031 — modular arithmetic
 
@@ -5961,6 +6723,9 @@ Please double-check: **is “தலைகீழ்த் தொடர்பு /
 - `TA-OCC-b09d68fa86207f42` — OLP-0343 / `OLP-0343-S01`; source `content/lambda-calculus/introduction/overview.tex:58`; Tamil `translation/content/lambda-calculus/introduction/overview.tex:34`; PDF page pending.
 - `TA-OCC-4fcd5a3cf5778990` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:1`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:23`; PDF page pending.
 - `TA-OCC-13e644a899764ce6` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:1`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:35`; PDF page pending.
+- `TA-OCC-540aa4d2866b5947` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:1`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:45`; PDF page pending.
+- `TA-OCC-03a6ca1978c8d2f5` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:1`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:61`; PDF page pending.
+- `TA-OCC-21586e6a029eaa3a` — OLP-0359 / `OLP-0359-S01`; source `content/lambda-calculus/syntax/abbreviated-syntax.tex:1`; Tamil `translation/content/lambda-calculus/syntax/abbreviated-syntax.tex:20`; PDF page pending.
 
 ## TA-T040 — reflexive closure / transitive closure
 
@@ -7872,6 +8637,38 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-9a2ffd471583e303` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:102`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:121`; PDF page pending.
 - `TA-OCC-e0e062a87e3fd90d` — OLP-0343 / `OLP-0343-S01`; source `content/lambda-calculus/introduction/overview.tex:14`; Tamil `translation/content/lambda-calculus/introduction/overview.tex:16`; PDF page pending.
 - `TA-OCC-9e16068923f4f9bb` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:14`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:15`; PDF page pending.
+- `TA-OCC-8f409fe0bc0c7f22` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:52`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:35`; PDF page pending.
+- `TA-OCC-215223b121b54474` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:20`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:39`; PDF page pending.
+- `TA-OCC-e0162deaf43d8153` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:63`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:50`; PDF page pending.
+- `TA-OCC-c4ec202404c27581` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:68`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:97`; PDF page pending.
+- `TA-OCC-2193fdac0226afb2` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:89`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:138`; PDF page pending.
+- `TA-OCC-be28ddddddf1ba7d` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:92`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:184`; PDF page pending.
+- `TA-OCC-3858bcc8503ebad1` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:117`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:31`; PDF page pending.
+- `TA-OCC-8022c676cd72afa6` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:43`; PDF page pending.
+- `TA-OCC-761c9bb3ee100673` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:117`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:120`; PDF page pending.
+- `TA-OCC-e324005cf93a26f3` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:152`; PDF page pending.
+- `TA-OCC-05ab4113021837f2` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:160`; PDF page pending.
+- `TA-OCC-b7f35ec53423f753` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:177`; PDF page pending.
+- `TA-OCC-3a2df526c6a2e97e` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:258`; PDF page pending.
+- `TA-OCC-f1f3a791f9873cf1` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:277`; PDF page pending.
+- `TA-OCC-4b21cc430f068a45` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:1`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:78`; PDF page pending.
+- `TA-OCC-22c71365bcd4cd9a` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:20`; PDF page pending.
+- `TA-OCC-0cd3d41cc0d3c438` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:69`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:23`; PDF page pending.
+- `TA-OCC-c1c6fe0e2ec1c7df` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:57`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:20`; PDF page pending.
+- `TA-OCC-3bd83cddae6df756` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:83`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:53`; PDF page pending.
+- `TA-OCC-65a185f60eed482a` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:83`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:55`; PDF page pending.
+- `TA-OCC-5bf1eb9c6298894a` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:80`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:85`; PDF page pending.
+- `TA-OCC-ec25bb364f21f6c1` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:80`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:111`; PDF page pending.
+- `TA-OCC-50b594c797f71fd3` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:110`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:118`; PDF page pending.
+- `TA-OCC-ac12c8499861a22a` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:110`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:156`; PDF page pending.
+- `TA-OCC-b0a8035b08729cf9` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:27`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:28`; PDF page pending.
+- `TA-OCC-2f2688c7e6f4dccb` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:27`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:77`; PDF page pending.
+- `TA-OCC-3642aff8c6abce54` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:68`; PDF page pending.
+- `TA-OCC-2d5b3bc820bbf3da` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:83`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:86`; PDF page pending.
+- `TA-OCC-b3a657f04f75b7f8` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; PDF page pending.
+- `TA-OCC-3cae375bc6eb81b7` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:32`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:34`; PDF page pending.
+- `TA-OCC-6a33c98fe3a6fb09` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:54`; PDF page pending.
+- `TA-OCC-bca7d29291b0cd61` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:53`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -8391,6 +9188,32 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-58c7c142764baf43` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:14`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:14`; PDF page pending.
 - `TA-OCC-7b3b9a04da3c1325` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:14`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:19`; PDF page pending.
 - `TA-OCC-4a80b02dd3f0ae74` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:19`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:26`; PDF page pending.
+- `TA-OCC-358b1dbcaf390d37` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:27`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:25`; PDF page pending.
+- `TA-OCC-0342c3ca1481cec2` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:36`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:40`; PDF page pending.
+- `TA-OCC-a793835335851baf` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:85`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:85`; PDF page pending.
+- `TA-OCC-3e410066c28d146f` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:115`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:122`; PDF page pending.
+- `TA-OCC-4f5999935144a046` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:53`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:56`; PDF page pending.
+- `TA-OCC-b5c0cd1e22319129` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:34`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:30`; PDF page pending.
+- `TA-OCC-27747d2936413f13` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:34`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:37`; PDF page pending.
+- `TA-OCC-6bf18cab34bfac4e` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:1`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:89`; PDF page pending.
+- `TA-OCC-098e31cb50f990b0` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:31`; PDF page pending.
+- `TA-OCC-6e2ae0d6c08a3f70` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:54`; PDF page pending.
+- `TA-OCC-44e778f8c7c67c8b` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:55`; PDF page pending.
+- `TA-OCC-a655da40bcc5b308` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:66`; PDF page pending.
+- `TA-OCC-161ce3cdcf8e22d0` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:67`; PDF page pending.
+- `TA-OCC-01d2e425385f79d2` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:68`; PDF page pending.
+- `TA-OCC-7c46069c4075977f` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:70`; PDF page pending.
+- `TA-OCC-6a7cd35207240b81` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:47`; PDF page pending.
+- `TA-OCC-e0deacdb35482eeb` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:48`; PDF page pending.
+- `TA-OCC-b1b292030c9ccc3c` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:16`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:16`; PDF page pending.
+- `TA-OCC-41e382987d842086` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:16`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:18`; PDF page pending.
+- `TA-OCC-bb2943e1f642924d` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:22`; PDF page pending.
+- `TA-OCC-b079cf1e8b820b98` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:42`; PDF page pending.
+- `TA-OCC-a01e9810506a9ecd` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:33`; PDF page pending.
+- `TA-OCC-28e86142ee70eea0` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:41`; PDF page pending.
+- `TA-OCC-c28913d4005d0ef2` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:58`; PDF page pending.
+- `TA-OCC-a9fe23dad925e366` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:22`; PDF page pending.
+- `TA-OCC-796ecb011c2a655c` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:29`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:31`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -8503,6 +9326,19 @@ Please double-check: **do the listed uses of “தொடரி / முன்�
 - `TA-OCC-2086b1efbedca2e6` — OLP-0329 / `OLP-0329-S01`; source `content/second-order-logic/syntax-and-semantics/inf-count.tex:1`; Tamil `translation/content/second-order-logic/syntax-and-semantics/inf-count.tex:132`; PDF page pending.
 - `TA-OCC-e4e1bfdda4dca047` — OLP-0347 / `OLP-0347-S01`; source `content/lambda-calculus/introduction/currying.tex:1`; Tamil `translation/content/lambda-calculus/introduction/currying.tex:23`; PDF page pending.
 - `TA-OCC-5ff9f6c56334c02f` — OLP-0347 / `OLP-0347-S01`; source `content/lambda-calculus/introduction/currying.tex:1`; Tamil `translation/content/lambda-calculus/introduction/currying.tex:36`; PDF page pending.
+- `TA-OCC-ef6fef1744d40602` — OLP-0356 / `OLP-0356-S01`; source `content/lambda-calculus/syntax/syntax.tex:1`; Tamil `translation/content/lambda-calculus/syntax/syntax.tex:9`; PDF page pending.
+- `TA-OCC-ea912b864c5f3c5a` — OLP-0359 / `OLP-0359-S01`; source `content/lambda-calculus/syntax/abbreviated-syntax.tex:1`; Tamil `translation/content/lambda-calculus/syntax/abbreviated-syntax.tex:11`; PDF page pending.
+- `TA-OCC-05ac7591fffcf4d4` — OLP-0359 / `OLP-0359-S01`; source `content/lambda-calculus/syntax/abbreviated-syntax.tex:1`; Tamil `translation/content/lambda-calculus/syntax/abbreviated-syntax.tex:14`; PDF page pending.
+- `TA-OCC-534a638d6d477cde` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:80`; PDF page pending.
+- `TA-OCC-dd04521a2f1cdb07` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:15`; PDF page pending.
+- `TA-OCC-ede7588b1011f3b9` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:19`; PDF page pending.
+- `TA-OCC-8a188b63ae921214` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:56`; PDF page pending.
+- `TA-OCC-9f78497930f16c43` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:88`; PDF page pending.
+- `TA-OCC-2e301491262eeca8` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:88`; PDF page pending.
+- `TA-OCC-1ff3325c79c78b35` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:144`; PDF page pending.
+- `TA-OCC-96080b003a1339d5` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:11`; PDF page pending.
+- `TA-OCC-cae3e29d47091841` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:40`; PDF page pending.
+- `TA-OCC-7fca11e6d1fbfa69` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:46`; PDF page pending.
 
 ## TA-T044 — sequence / closure: recovered alternatives
 
@@ -9181,6 +10017,55 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-2e78103496c4e61d` — OLP-0346 / `OLP-0346-S01`; source `content/lambda-calculus/introduction/church-rosser.tex:1`; Tamil `translation/content/lambda-calculus/introduction/church-rosser.tex:39`; PDF page pending.
 - `TA-OCC-d95726051d0af29d` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:32`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:34`; PDF page pending.
 - `TA-OCC-315bf0733bbb3564` — OLP-0349 / `OLP-0349-S01`; source `content/lambda-calculus/introduction/lambda-computable.tex:31`; Tamil `translation/content/lambda-calculus/introduction/lambda-computable.tex:26`; PDF page pending.
+- `TA-OCC-1767ae6e96d6b70b` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:10`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:95`; PDF page pending.
+- `TA-OCC-e46759028b856017` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:1`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:46`; PDF page pending.
+- `TA-OCC-faae0effa482ba0e` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:1`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:32`; PDF page pending.
+- `TA-OCC-912a965ec1cc1ff9` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:13`; PDF page pending.
+- `TA-OCC-b8087ca4ea6c8404` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:30`; PDF page pending.
+- `TA-OCC-a3766389e86e1882` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:31`; PDF page pending.
+- `TA-OCC-1735e27ffbbbe031` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:43`; PDF page pending.
+- `TA-OCC-2344dbc35140a441` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:75`; PDF page pending.
+- `TA-OCC-eef6b8f9f3c656b0` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:80`; PDF page pending.
+- `TA-OCC-db796b4ba4e9e6df` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:181`; PDF page pending.
+- `TA-OCC-c2c7b4c40d86afba` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:189`; PDF page pending.
+- `TA-OCC-1e0823ab44c730c2` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:192`; PDF page pending.
+- `TA-OCC-d057ae4db2818fb8` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:193`; PDF page pending.
+- `TA-OCC-883aaee2ea0fc5bc` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:1`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:58`; PDF page pending.
+- `TA-OCC-288e1484e244ec9c` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:1`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:21`; PDF page pending.
+- `TA-OCC-8808aa76cee6dd80` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:1`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:23`; PDF page pending.
+- `TA-OCC-a7f6fbba3008edfb` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:14`; PDF page pending.
+- `TA-OCC-79430473c132b90d` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:20`; PDF page pending.
+- `TA-OCC-376c44b93a86f0df` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:37`; PDF page pending.
+- `TA-OCC-2732fdcc2f519418` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:99`; PDF page pending.
+- `TA-OCC-5891d2d16ac4366c` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:106`; PDF page pending.
+- `TA-OCC-62090d01e7ccb087` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:118`; PDF page pending.
+- `TA-OCC-2eb3826560a57757` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:130`; PDF page pending.
+- `TA-OCC-c1e20bb646b961a9` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:70`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:13`; PDF page pending.
+- `TA-OCC-6f4f882772c0e925` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:75`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:23`; PDF page pending.
+- `TA-OCC-7a025a678a4a0c5c` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:75`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:33`; PDF page pending.
+- `TA-OCC-b8f58761d6aba4b1` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:75`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:43`; PDF page pending.
+- `TA-OCC-0c11016f698a365d` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:75`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:47`; PDF page pending.
+- `TA-OCC-f9500e25dd8d4fbd` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:75`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:51`; PDF page pending.
+- `TA-OCC-c55e6e4eea23635c` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:75`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:54`; PDF page pending.
+- `TA-OCC-aeab6b3083991fcf` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:75`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:58`; PDF page pending.
+- `TA-OCC-8e86071519710622` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:17`; PDF page pending.
+- `TA-OCC-e37d0712e04bce98` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:24`; PDF page pending.
+- `TA-OCC-66b8e00409a134d8` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:25`; PDF page pending.
+- `TA-OCC-633ad80c47466e76` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:53`; PDF page pending.
+- `TA-OCC-4425b851c7fd97dd` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:54`; PDF page pending.
+- `TA-OCC-01cdc4c1de9a4066` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:39`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:56`; PDF page pending.
+- `TA-OCC-235adc618b264f8a` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:39`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:60`; PDF page pending.
+- `TA-OCC-345d4316cbddab8b` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:39`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:67`; PDF page pending.
+- `TA-OCC-0083ef71011328c5` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:39`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:72`; PDF page pending.
+- `TA-OCC-63e03015d9073e1d` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:46`; PDF page pending.
+- `TA-OCC-bade41ac5efbd1b9` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:11`; PDF page pending.
+- `TA-OCC-c58a0ebb15d0986a` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:28`; PDF page pending.
+- `TA-OCC-2899b524212b2686` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:39`; PDF page pending.
+- `TA-OCC-a1df362f97a9b906` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:148`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:101`; PDF page pending.
+- `TA-OCC-19edff496df88108` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:102`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:32`; PDF page pending.
+- `TA-OCC-6ae3b2fa1ca100f1` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:106`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:43`; PDF page pending.
+- `TA-OCC-1618425ad785e506` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:106`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:102`; PDF page pending.
+- `TA-OCC-12ec8ac3d86d7a66` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:24`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:25`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -10670,6 +11555,115 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-faed2f34b3ed8d37` — OLP-0351 / `OLP-0351-S01`; source `content/lambda-calculus/introduction/basic-pr-lambda.tex:20`; Tamil `translation/content/lambda-calculus/introduction/basic-pr-lambda.tex:25`; PDF page pending.
 - `TA-OCC-7d9b7ea456097e0f` — OLP-0352 / `OLP-0352-S01`; source `content/lambda-calculus/introduction/composition.tex:10`; Tamil `translation/content/lambda-calculus/introduction/composition.tex:11`; PDF page pending.
 - `TA-OCC-5a4cf74246a1a0da` — OLP-0352 / `OLP-0352-S01`; source `content/lambda-calculus/introduction/composition.tex:10`; Tamil `translation/content/lambda-calculus/introduction/composition.tex:14`; PDF page pending.
+- `TA-OCC-260f871754f4f7de` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:10`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:11`; PDF page pending.
+- `TA-OCC-5f0686b441833de9` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:10`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:14`; PDF page pending.
+- `TA-OCC-ac34e426c82b02f3` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:14`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:16`; PDF page pending.
+- `TA-OCC-33b22691761462a7` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:14`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:64`; PDF page pending.
+- `TA-OCC-60e1ad7a9231a56e` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:16`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:81`; PDF page pending.
+- `TA-OCC-2d39e18726e362de` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:10`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:11`; PDF page pending.
+- `TA-OCC-c4ec221d915c8b32` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:10`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:23`; PDF page pending.
+- `TA-OCC-99d633da3a7902b6` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:22`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:25`; PDF page pending.
+- `TA-OCC-034c65b59492ccde` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:12`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:13`; PDF page pending.
+- `TA-OCC-0fcb2feb8cc1b6f3` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:12`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:13`; PDF page pending.
+- `TA-OCC-8919dc925c4e46d1` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:13`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:15`; PDF page pending.
+- `TA-OCC-4af819d07c9e0e5b` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:13`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:84`; PDF page pending.
+- `TA-OCC-6ec7205c7dbfded6` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:14`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:16`; PDF page pending.
+- `TA-OCC-cff353fc74229198` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:13`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:97`; PDF page pending.
+- `TA-OCC-50ed7c25776f8d90` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:94`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:102`; PDF page pending.
+- `TA-OCC-287babb9f76bb317` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:86`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:91`; PDF page pending.
+- `TA-OCC-0866333e7b5f4361` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:86`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:92`; PDF page pending.
+- `TA-OCC-a52bedce76b32b97` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:87`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:94`; PDF page pending.
+- `TA-OCC-bd8face24d280e5e` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:13`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:61`; PDF page pending.
+- `TA-OCC-32cce4e36e26b07d` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:23`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:23`; PDF page pending.
+- `TA-OCC-66ab3318b376f9b7` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:23`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:26`; PDF page pending.
+- `TA-OCC-b58cf938023867ae` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:71`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:74`; PDF page pending.
+- `TA-OCC-758f480eaf5b8230` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:13`; PDF page pending.
+- `TA-OCC-5907441638b0ff5b` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:15`; PDF page pending.
+- `TA-OCC-8afc8615f053f03e` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:18`; PDF page pending.
+- `TA-OCC-c6df52297e10c48e` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:19`; PDF page pending.
+- `TA-OCC-51b345ac513191ba` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:21`; PDF page pending.
+- `TA-OCC-70a5d7f6d73ac30b` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:22`; PDF page pending.
+- `TA-OCC-941ea2f4273c7b48` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:48`; PDF page pending.
+- `TA-OCC-e3ceab2cb28e929d` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:50`; PDF page pending.
+- `TA-OCC-0971cc605d16a343` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:56`; PDF page pending.
+- `TA-OCC-4630e86b719a11e7` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:59`; PDF page pending.
+- `TA-OCC-f3b157819eca1bf5` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:59`; PDF page pending.
+- `TA-OCC-f64b09b813248eca` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:39`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:76`; PDF page pending.
+- `TA-OCC-b1c4be6e26d2f6fc` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:39`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:77`; PDF page pending.
+- `TA-OCC-4398cb4c85fc05af` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:39`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:81`; PDF page pending.
+- `TA-OCC-ab9702d3358f241a` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:49`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:82`; PDF page pending.
+- `TA-OCC-8443cbe7e0a7c188` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:49`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:84`; PDF page pending.
+- `TA-OCC-092edd47e82207dd` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:55`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:85`; PDF page pending.
+- `TA-OCC-3675fc331d158031` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:11`; PDF page pending.
+- `TA-OCC-97f6848b4ef42c15` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:15`; PDF page pending.
+- `TA-OCC-d949e389e41d2f76` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:26`; PDF page pending.
+- `TA-OCC-17531df1f5a3d9ca` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:26`; PDF page pending.
+- `TA-OCC-f561e84f8a393755` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:14`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:61`; PDF page pending.
+- `TA-OCC-337fadbdf280f2de` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:72`; PDF page pending.
+- `TA-OCC-9a848801276a5718` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:19`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:22`; PDF page pending.
+- `TA-OCC-ddebf9c1888f3981` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:19`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:29`; PDF page pending.
+- `TA-OCC-c9d5be4569d9af09` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:20`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:36`; PDF page pending.
+- `TA-OCC-717f5c310aec58ae` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:27`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:46`; PDF page pending.
+- `TA-OCC-2a14d6c15882d5d0` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:20`; PDF page pending.
+- `TA-OCC-9d21c3ceb4cf1514` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:46`; PDF page pending.
+- `TA-OCC-25696e66d345c50e` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:60`; PDF page pending.
+- `TA-OCC-9df8116fd785468e` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:62`; PDF page pending.
+- `TA-OCC-8db7440b93915b3d` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:80`; PDF page pending.
+- `TA-OCC-34f23a44797b71ba` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:11`; PDF page pending.
+- `TA-OCC-3c51882693620e2c` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:13`; PDF page pending.
+- `TA-OCC-c3040e455e834481` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:14`; PDF page pending.
+- `TA-OCC-f3c090d354f1188d` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:15`; PDF page pending.
+- `TA-OCC-8d1877fd2769974d` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:19`; PDF page pending.
+- `TA-OCC-ad95d6e09191dde8` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:34`; PDF page pending.
+- `TA-OCC-42e51b9748b01187` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:34`; PDF page pending.
+- `TA-OCC-2839114edb7de528` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:56`; PDF page pending.
+- `TA-OCC-5080b1d58fcb3dbf` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:58`; PDF page pending.
+- `TA-OCC-2572e511b9d63a3e` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:62`; PDF page pending.
+- `TA-OCC-7abfb79c086d0bd1` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:32`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:62`; PDF page pending.
+- `TA-OCC-cbd7052da7fa5517` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:64`; PDF page pending.
+- `TA-OCC-6c08c37dd509b580` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:82`; PDF page pending.
+- `TA-OCC-77718b7998236cb3` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:58`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:91`; PDF page pending.
+- `TA-OCC-40309c347168fd8b` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:58`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:92`; PDF page pending.
+- `TA-OCC-a9cbf422fe921f84` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:60`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:94`; PDF page pending.
+- `TA-OCC-cc6d6fa528502db1` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:71`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:149`; PDF page pending.
+- `TA-OCC-9683504236fe48bf` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:76`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:153`; PDF page pending.
+- `TA-OCC-6b468d4f6527958f` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:76`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:155`; PDF page pending.
+- `TA-OCC-ecb5e19550f1ab10` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:45`; PDF page pending.
+- `TA-OCC-3c3f24ffedeaa021` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:45`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:55`; PDF page pending.
+- `TA-OCC-3c2069434afc1c85` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:45`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:56`; PDF page pending.
+- `TA-OCC-d71684f6eb79451a` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:49`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:57`; PDF page pending.
+- `TA-OCC-985a43a19c4f649c` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:13`; PDF page pending.
+- `TA-OCC-68a6967a10d8ff2c` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:15`; PDF page pending.
+- `TA-OCC-859fc436ea360813` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:15`; PDF page pending.
+- `TA-OCC-3f891c7fc3fdf6ec` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:16`; PDF page pending.
+- `TA-OCC-5ac51a45c7371e37` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:17`; PDF page pending.
+- `TA-OCC-6e8b284eeb5df9ba` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:30`; PDF page pending.
+- `TA-OCC-720c731eaa37c074` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:16`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:42`; PDF page pending.
+- `TA-OCC-73acb53abaf8fe10` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:17`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:64`; PDF page pending.
+- `TA-OCC-78d06f0f859c9935` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:30`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:68`; PDF page pending.
+- `TA-OCC-a14a4c2b4f05febc` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:31`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:71`; PDF page pending.
+- `TA-OCC-58b781646005e39d` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:11`; PDF page pending.
+- `TA-OCC-bdce0a2e6e33ea42` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:13`; PDF page pending.
+- `TA-OCC-f1a2cfaf4ad84bff` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:14`; PDF page pending.
+- `TA-OCC-83e602306a076832` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:16`; PDF page pending.
+- `TA-OCC-23f7a498146ebe70` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:17`; PDF page pending.
+- `TA-OCC-ece3dcf8f6bd521c` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:19`; PDF page pending.
+- `TA-OCC-974120853bc10430` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:22`; PDF page pending.
+- `TA-OCC-07bca461249818ec` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:24`; PDF page pending.
+- `TA-OCC-7223804b56ffad93` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:14`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:27`; PDF page pending.
+- `TA-OCC-c8cc72f1406a1342` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:28`; PDF page pending.
+- `TA-OCC-2d9cf70bb1310876` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:35`; PDF page pending.
+- `TA-OCC-d69a76dcafebfc2a` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:16`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:37`; PDF page pending.
+- `TA-OCC-d314eaf1574a039c` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:16`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:38`; PDF page pending.
+- `TA-OCC-90fe0e9545741883` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:20`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:43`; PDF page pending.
+- `TA-OCC-4344b3d3a28a40b1` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:11`; PDF page pending.
+- `TA-OCC-e3596da822857e2e` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; PDF page pending.
+- `TA-OCC-e75ab31c6c111ccb` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:15`; PDF page pending.
+- `TA-OCC-a545ae2b9cbd1967` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:15`; PDF page pending.
+- `TA-OCC-457145dc43d68654` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:18`; PDF page pending.
+- `TA-OCC-6323c8e790449e64` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; PDF page pending.
+- `TA-OCC-00f395bcde1a77ee` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:17`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:36`; PDF page pending.
+- `TA-OCC-cae5e9a84a419a81` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:36`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -11209,6 +12203,10 @@ Please double-check: **is “பகுதிச் சார்பு / மு�
 - `TA-OCC-e8c0455100d8599f` — OLP-0349 / `OLP-0349-S01`; source `content/lambda-calculus/introduction/lambda-computable.tex:14`; Tamil `translation/content/lambda-calculus/introduction/lambda-computable.tex:15`; PDF page pending.
 - `TA-OCC-8abbec89800dde4a` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:14`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:15`; PDF page pending.
 - `TA-OCC-87b3dbd1a2bdb6eb` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:18`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:26`; PDF page pending.
+- `TA-OCC-62ecb83292208e6c` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:58`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:59`; PDF page pending.
+- `TA-OCC-49c4640bd3413213` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:58`; PDF page pending.
+- `TA-OCC-19b94a7748db1d80` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:28`; PDF page pending.
+- `TA-OCC-1213e412de969b32` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:18`; PDF page pending.
 
 ## TA-T055 — Axiom of Choice
 
@@ -11747,6 +12745,8 @@ Please double-check: **is “காண்டோரின் வளைவழி /
 - `TA-OCC-f474b594de2bcadd` — OLP-0282 / `OLP-0282-S01`; source `content/incompleteness/arithmetization-syntax/coding-symbols.tex:38`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-symbols.tex:38`; PDF page pending.
 - `TA-OCC-0744002a4c83345f` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:52`; PDF page pending.
 - `TA-OCC-a0ceaffcdab6f21c` — OLP-0287 / `OLP-0287-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:49`; PDF page pending.
+- `TA-OCC-ef896765145d579e` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:65`; PDF page pending.
+- `TA-OCC-4936f60963db8112` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:66`; PDF page pending.
 
 ## TA-T061 — pairing function / encode / code / decode
 
@@ -11902,6 +12902,34 @@ Please double-check: **is “குறைத்தல்” the established Indi
 - `TA-OCC-ed3034d5c2341962` — OLP-0349 / `OLP-0349-S01`; source `content/lambda-calculus/introduction/lambda-computable.tex:23`; Tamil `translation/content/lambda-calculus/introduction/lambda-computable.tex:25`; PDF page pending.
 - `TA-OCC-16761fb34ddd17f7` — OLP-0349 / `OLP-0349-S01`; source `content/lambda-calculus/introduction/lambda-computable.tex:24`; Tamil `translation/content/lambda-calculus/introduction/lambda-computable.tex:26`; PDF page pending.
 - `TA-OCC-b308c4d371da1c09` — OLP-0349 / `OLP-0349-S01`; source `content/lambda-calculus/introduction/lambda-computable.tex:36`; Tamil `translation/content/lambda-calculus/introduction/lambda-computable.tex:38`; PDF page pending.
+- `TA-OCC-6f3bdee50eedfe57` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:10`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:11`; PDF page pending.
+- `TA-OCC-bd1ba03d69e62c83` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:15`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:16`; PDF page pending.
+- `TA-OCC-dbcf7dda3acf1142` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:32`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:35`; PDF page pending.
+- `TA-OCC-afd3144055ace884` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:33`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:36`; PDF page pending.
+- `TA-OCC-594af3be93ba5c8d` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:90`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:93`; PDF page pending.
+- `TA-OCC-4a9efe3b1f09cbad` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:16`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:30`; PDF page pending.
+- `TA-OCC-955e23414259fb99` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:27`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:31`; PDF page pending.
+- `TA-OCC-f647794f6c4c200e` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:35`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:23`; PDF page pending.
+- `TA-OCC-77e5e38d16fdd552` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:3`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:12`; PDF page pending.
+- `TA-OCC-eb67222a5209e28d` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:11`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:14`; PDF page pending.
+- `TA-OCC-bffa09b70c716515` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:13`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:17`; PDF page pending.
+- `TA-OCC-10969b8dfba755e6` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:16`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:18`; PDF page pending.
+- `TA-OCC-32e458b5679e5adf` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:17`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:32`; PDF page pending.
+- `TA-OCC-f6e1043522c5e5f8` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:29`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:39`; PDF page pending.
+- `TA-OCC-8971e39b1f0dcada` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:30`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:40`; PDF page pending.
+- `TA-OCC-9e17ff8eb9d9aa2d` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:32`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:67`; PDF page pending.
+- `TA-OCC-cea350a618bfaa4a` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:3`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:12`; PDF page pending.
+- `TA-OCC-f28e7d0e538cf667` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:11`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:42`; PDF page pending.
+- `TA-OCC-a0b9eac20f12435f` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:3`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:12`; PDF page pending.
+- `TA-OCC-b0b397e05d86ca53` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:11`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:14`; PDF page pending.
+- `TA-OCC-155e94487064eb90` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:14`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:18`; PDF page pending.
+- `TA-OCC-1bc096198223beaa` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:14`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:19`; PDF page pending.
+- `TA-OCC-8034c8ebb7a6af81` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:3`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:12`; PDF page pending.
+- `TA-OCC-51a3d8b6c90467a7` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:11`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:14`; PDF page pending.
+- `TA-OCC-691163d31d432dec` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:71`; PDF page pending.
+- `TA-OCC-b7184a33dbb5cf4f` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:89`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:89`; PDF page pending.
+- `TA-OCC-d1ab6f6cf00f83fe` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:102`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:102`; PDF page pending.
+- `TA-OCC-d7d814b002b40f56` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:106`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:106`; PDF page pending.
 
 ## TA-T067 — equinumerous / equinumerosity
 
@@ -12136,6 +13164,9 @@ Please double-check: **is “பரிமாற்று வளையம் / �
 - `TA-OCC-ee79ae0302e4e6f4` — OLP-0290 / `OLP-0290-S01`; source `content/incompleteness/representability-in-q/introduction.tex:30`; Tamil `translation/content/incompleteness/representability-in-q/introduction.tex:32`; PDF page pending.
 - `TA-OCC-65ac7b3c0db75b36` — OLP-0324 / `OLP-0324-S01`; source `content/second-order-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/second-order-logic/syntax-and-semantics/introduction.tex:24`; PDF page pending.
 - `TA-OCC-9749d12fc9543225` — OLP-0325 / `OLP-0325-S01`; source `content/second-order-logic/syntax-and-semantics/terms-formulas.tex:40`; Tamil `translation/content/second-order-logic/syntax-and-semantics/terms-formulas.tex:45`; PDF page pending.
+- `TA-OCC-1296aa164196165f` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:16`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:16`; PDF page pending.
+- `TA-OCC-cda562aa0e70b92e` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:13`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:14`; PDF page pending.
+- `TA-OCC-180b56824e630f07` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:76`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:81`; PDF page pending.
 
 ## TA-T074 — Cauchy sequence / limit / tends to zero / monotone increasing or decreasing / decimal expansion
 
@@ -12389,6 +13420,8 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-1be092cc33c77047` — OLP-0337 / `OLP-0337-S01`; source `content/second-order-logic/sol-and-set-theory/introduction.tex:17`; Tamil `translation/content/second-order-logic/sol-and-set-theory/introduction.tex:18`; PDF page pending.
 - `TA-OCC-6f66d02d7a09d79b` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:70`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:85`; PDF page pending.
 - `TA-OCC-6bcba1e2d24e845c` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:132`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:170`; PDF page pending.
+- `TA-OCC-f3aa8a8998f4b2ae` — OLP-0354 / `OLP-0354-S01`; source `content/lambda-calculus/introduction/fixed-point-combinator.tex:37`; Tamil `translation/content/lambda-calculus/introduction/fixed-point-combinator.tex:42`; PDF page pending.
+- `TA-OCC-a07759a21de36d36` — OLP-0373 / `OLP-0373-S01`; source `content/lambda-calculus/lambda-definability/lambda-definability.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -13004,6 +14037,23 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-8b2ca3c36073271e` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:145`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:184`; PDF page pending.
 - `TA-OCC-e1d7445b5d2bda35` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:147`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:185`; PDF page pending.
 - `TA-OCC-d5b90b58dce30542` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:150`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:189`; PDF page pending.
+- `TA-OCC-faa0c41733550755` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:80`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:85`; PDF page pending.
+- `TA-OCC-54010bc2ab49c911` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:11`; PDF page pending.
+- `TA-OCC-750ae2298673340b` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:13`; PDF page pending.
+- `TA-OCC-9801daef7f156503` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:19`; PDF page pending.
+- `TA-OCC-8e6af3f23dc287a0` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:21`; PDF page pending.
+- `TA-OCC-4c310132a2bb289b` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:14`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:53`; PDF page pending.
+- `TA-OCC-5fe8921214645ed1` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:54`; PDF page pending.
+- `TA-OCC-d4041c76e237fe0e` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:62`; PDF page pending.
+- `TA-OCC-ebbb805ac9f45dc3` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:64`; PDF page pending.
+- `TA-OCC-5011e79699398d63` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:19`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:65`; PDF page pending.
+- `TA-OCC-6b8c8b4788f3cc5a` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:20`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:70`; PDF page pending.
+- `TA-OCC-72b2d13ffcc9a301` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:20`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:73`; PDF page pending.
+- `TA-OCC-1e45200adc0d6eb3` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:21`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:75`; PDF page pending.
+- `TA-OCC-39db0475a2055995` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:78`; PDF page pending.
+- `TA-OCC-b3b264e4201ee522` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:28`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:79`; PDF page pending.
+- `TA-OCC-5587f557aab487e4` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:35`; PDF page pending.
+- `TA-OCC-a8a3510f7cf6c5f8` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:14`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -13068,6 +14118,9 @@ Please double-check: **do the listed uses of “தருக்க இணைப�
 - `TA-OCC-57a652509208ffc8` — OLP-0309 / `OLP-0309-S01`; source `content/incompleteness/theories-computability/inseparability.tex:15`; Tamil `translation/content/incompleteness/theories-computability/inseparability.tex:16`; PDF page pending.
 - `TA-OCC-6df9f9cbfbbeb330` — OLP-0316 / `OLP-0316-S01`; source `content/incompleteness/incompleteness-provability/rosser-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/rosser-thm.tex:36`; PDF page pending.
 - `TA-OCC-57d109c556930de3` — OLP-0316 / `OLP-0316-S01`; source `content/incompleteness/incompleteness-provability/rosser-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/rosser-thm.tex:55`; PDF page pending.
+- `TA-OCC-e76261b000ec1c8e` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:50`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:54`; PDF page pending.
+- `TA-OCC-1c4c91a59312b6cd` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:50`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:54`; PDF page pending.
+- `TA-OCC-d6e362260d458cb0` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:74`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:79`; PDF page pending.
 
 ## TA-T080 — conditional / biconditional
 
@@ -14157,6 +15210,7 @@ Please double-check: **is “தனித்த வாசிப்புத்�
 - `TA-OCC-a8530800c5c882c3` — OLP-0060 / `OLP-0060-S06`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:126`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:132`; PDF page pending.
 - `TA-OCC-a7f61d7ae8081703` — OLP-0060 / `OLP-0060-S06`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:129`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:136`; PDF page pending.
 - `TA-OCC-1e2cd62f2f4f4104` — OLP-0060 / `OLP-0060-S07`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:144`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:152`; PDF page pending.
+- `TA-OCC-1b27d95eeaa38a56` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:10`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:51`; PDF page pending.
 
 ## TA-T087 — uniform substitution / local determination / monotonicity
 
@@ -14902,6 +15956,17 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-c1651f3fcde0bb30` — OLP-0334 / `OLP-0334-S01`; source `content/second-order-logic/metatheory/compactness.tex:23`; Tamil `translation/content/second-order-logic/metatheory/compactness.tex:26`; PDF page pending.
 - `TA-OCC-da3a2c37e47d0008` — OLP-0335 / `OLP-0335-S01`; source `content/second-order-logic/metatheory/loewenheim-skolem.tex:16`; Tamil `translation/content/second-order-logic/metatheory/loewenheim-skolem.tex:19`; PDF page pending.
 - `TA-OCC-2552587bc2ba375b` — OLP-0336 / `OLP-0336-S01`; source `content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:12`; Tamil `translation/content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:15`; PDF page pending.
+- `TA-OCC-d43ffee8cf509a87` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:117`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:120`; PDF page pending.
+- `TA-OCC-7c9da1167e70a334` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:160`; PDF page pending.
+- `TA-OCC-ffa731b4f3138d5b` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:80`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:85`; PDF page pending.
+- `TA-OCC-9418fc913818c6b3` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:110`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:118`; PDF page pending.
+- `TA-OCC-c18f295f1d78096a` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:27`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:28`; PDF page pending.
+- `TA-OCC-1a0f620dc657fe25` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:68`; PDF page pending.
+- `TA-OCC-055e49fdbdabce08` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:83`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:86`; PDF page pending.
+- `TA-OCC-6a5ccc25161eb81a` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; PDF page pending.
+- `TA-OCC-6a98c281ae940645` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:32`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:34`; PDF page pending.
+- `TA-OCC-459fc78598da8a2a` — OLP-0373 / `OLP-0373-S01`; source `content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; PDF page pending.
+- `TA-OCC-d897af24aa558cd8` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:130`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -15471,6 +16536,13 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-ad356eecb5e191b1` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:143`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:180`; PDF page pending.
 - `TA-OCC-1760fc73410324e4` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:147`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:184`; PDF page pending.
 - `TA-OCC-22717250cae3a5ce` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:150`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:189`; PDF page pending.
+- `TA-OCC-6b7f499ee5a538c5` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:1`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:78`; PDF page pending.
+- `TA-OCC-8a60a9fedb390307` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:89`; PDF page pending.
+- `TA-OCC-bf99b054c353f476` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:96`; PDF page pending.
+- `TA-OCC-bf9cbbee7a4aa1b1` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:98`; PDF page pending.
+- `TA-OCC-1368dde297e512b7` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:100`; PDF page pending.
+- `TA-OCC-6c7f4fdee6b895a3` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:102`; PDF page pending.
+- `TA-OCC-02e3859698430710` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:105`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -16835,6 +17907,29 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-ffa06e0b54aeef6b` — OLP-0338 / `OLP-0338-S01`; source `content/second-order-logic/sol-and-set-theory/comparing-sets.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/comparing-sets.tex:87`; PDF page pending.
 - `TA-OCC-c14d755d947950bb` — OLP-0339 / `OLP-0339-S01`; source `content/second-order-logic/sol-and-set-theory/cardinalities.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/cardinalities.tex:33`; PDF page pending.
 - `TA-OCC-a582a5829288b6a1` — OLP-0339 / `OLP-0339-S01`; source `content/second-order-logic/sol-and-set-theory/cardinalities.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/cardinalities.tex:44`; PDF page pending.
+- `TA-OCC-06db1dcb75b9a729` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:1`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:35`; PDF page pending.
+- `TA-OCC-d19c1db5a94d3baf` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:1`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:39`; PDF page pending.
+- `TA-OCC-107c869c9c8d35c0` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:1`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:50`; PDF page pending.
+- `TA-OCC-f9c1329966ce5aba` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:1`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:97`; PDF page pending.
+- `TA-OCC-f26d1076c37bf00b` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:1`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:138`; PDF page pending.
+- `TA-OCC-da5f4104910f803f` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:1`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:184`; PDF page pending.
+- `TA-OCC-9e3bf847001c3397` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:31`; PDF page pending.
+- `TA-OCC-4035437c106a0a45` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:43`; PDF page pending.
+- `TA-OCC-880b26da28381d1d` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:152`; PDF page pending.
+- `TA-OCC-a5177ac26532824e` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:177`; PDF page pending.
+- `TA-OCC-b3120d2a2745fa6c` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:258`; PDF page pending.
+- `TA-OCC-e64a368467e192a8` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:1`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:277`; PDF page pending.
+- `TA-OCC-2be40d7f4f31aa53` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:1`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:78`; PDF page pending.
+- `TA-OCC-fc2ab9e5d9f84193` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:20`; PDF page pending.
+- `TA-OCC-36dd506abafab232` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:23`; PDF page pending.
+- `TA-OCC-e2bcaef86231eef6` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:20`; PDF page pending.
+- `TA-OCC-6fbc8c256fd56e53` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:53`; PDF page pending.
+- `TA-OCC-40f961221e77cc54` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:55`; PDF page pending.
+- `TA-OCC-b886dec878593172` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:111`; PDF page pending.
+- `TA-OCC-8a679910108e57bb` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:156`; PDF page pending.
+- `TA-OCC-0ebbd6469e60f98b` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:77`; PDF page pending.
+- `TA-OCC-42cbe122756c9485` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:54`; PDF page pending.
+- `TA-OCC-76812f0697ed3bdb` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:53`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -17158,6 +18253,13 @@ Please double-check: **is “தருக்க விதி / கட்டம�
 - `TA-OCC-4d7d9c8c0766a74c` — OLP-0255 / `OLP-0255-S01`; source `content/turing-machines/machines-computations/representing-tms.tex:1`; Tamil `translation/content/turing-machines/machines-computations/representing-tms.tex:177`; PDF page pending.
 - `TA-OCC-754b10fa29440ba4` — OLP-0337 / `OLP-0337-S01`; source `content/second-order-logic/sol-and-set-theory/introduction.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/introduction.tex:22`; PDF page pending.
 - `TA-OCC-3f73250e92fa972e` — OLP-0345 / `OLP-0345-S01`; source `content/lambda-calculus/introduction/reduction.tex:28`; Tamil `translation/content/lambda-calculus/introduction/reduction.tex:29`; PDF page pending.
+- `TA-OCC-5ed22d1cb994b2f6` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:17`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:18`; PDF page pending.
+- `TA-OCC-10555f31a5c0c9dd` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:18`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:19`; PDF page pending.
+- `TA-OCC-5c1118b8b5214fce` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:28`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:44`; PDF page pending.
+- `TA-OCC-1d272e07a491e818` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:42`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:122`; PDF page pending.
+- `TA-OCC-b6ba21d8c2fe1cf1` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:18`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:20`; PDF page pending.
+- `TA-OCC-e743f46ef0f42bc3` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:20`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:22`; PDF page pending.
+- `TA-OCC-e92d093b0c8dc137` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:35`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:37`; PDF page pending.
 
 ## TA-T099 — eigenvariable / eigenvariable condition
 
@@ -17871,6 +18973,79 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-551c568e697a3f04` — OLP-0345 / `OLP-0345-S01`; source `content/lambda-calculus/introduction/reduction.tex:15`; Tamil `translation/content/lambda-calculus/introduction/reduction.tex:15`; PDF page pending.
 - `TA-OCC-bc6d05d49d779b9b` — OLP-0345 / `OLP-0345-S01`; source `content/lambda-calculus/introduction/reduction.tex:16`; Tamil `translation/content/lambda-calculus/introduction/reduction.tex:16`; PDF page pending.
 - `TA-OCC-6754ca8ad3c1859c` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:36`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:35`; PDF page pending.
+- `TA-OCC-7ed6366b86496d08` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:1`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:64`; PDF page pending.
+- `TA-OCC-fae4212a345fcc78` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:46`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:49`; PDF page pending.
+- `TA-OCC-f17aff3684e3c052` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:13`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:13`; PDF page pending.
+- `TA-OCC-ed83a7326f9c0f7a` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:15`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:15`; PDF page pending.
+- `TA-OCC-99055c148a7695b7` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:20`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:23`; PDF page pending.
+- `TA-OCC-371154625f12a31c` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:22`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:24`; PDF page pending.
+- `TA-OCC-a780aceb9f891003` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:19`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:20`; PDF page pending.
+- `TA-OCC-119a426fd1d271e9` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:25`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:25`; PDF page pending.
+- `TA-OCC-1425e952c863ff8d` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:32`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:32`; PDF page pending.
+- `TA-OCC-179666a736b1e376` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:39`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:38`; PDF page pending.
+- `TA-OCC-3d57e4a9f9f2e3a8` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:61`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:60`; PDF page pending.
+- `TA-OCC-8ea73302755e78ff` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:65`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:66`; PDF page pending.
+- `TA-OCC-79fc6d272afe6aef` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:67`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:67`; PDF page pending.
+- `TA-OCC-9af7c2860887cadf` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:90`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:90`; PDF page pending.
+- `TA-OCC-7b8e877a59cf798c` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:91`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:91`; PDF page pending.
+- `TA-OCC-ac5aefc173d008b2` — OLP-0359 / `OLP-0359-S01`; source `content/lambda-calculus/syntax/abbreviated-syntax.tex:25`; Tamil `translation/content/lambda-calculus/syntax/abbreviated-syntax.tex:27`; PDF page pending.
+- `TA-OCC-4cdade25bd600898` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:3`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:11`; PDF page pending.
+- `TA-OCC-9eaa5494395077d5` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:10`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:31`; PDF page pending.
+- `TA-OCC-063cfdc3410ee4be` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:29`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:33`; PDF page pending.
+- `TA-OCC-edfafe9a892eb1b9` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:31`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:53`; PDF page pending.
+- `TA-OCC-d8125c249e508109` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:51`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:53`; PDF page pending.
+- `TA-OCC-a31aaa8f931e3d18` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:52`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:57`; PDF page pending.
+- `TA-OCC-cf99eb929edcd069` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:55`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:58`; PDF page pending.
+- `TA-OCC-a0d13753c4955398` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:56`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:72`; PDF page pending.
+- `TA-OCC-b76eded3ef178f20` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:69`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:79`; PDF page pending.
+- `TA-OCC-15b77a268f219c0e` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:76`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:80`; PDF page pending.
+- `TA-OCC-fa8999b33c35be44` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:77`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:83`; PDF page pending.
+- `TA-OCC-88e9903291829af5` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:81`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:88`; PDF page pending.
+- `TA-OCC-90cdd866ce4d6797` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:86`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:96`; PDF page pending.
+- `TA-OCC-1c20b824ad9959cd` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:94`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:97`; PDF page pending.
+- `TA-OCC-4e739e2d8be6ec59` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:95`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:97`; PDF page pending.
+- `TA-OCC-a85091f1368bf4c5` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:13`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:14`; PDF page pending.
+- `TA-OCC-750f4ad3dca8da09` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:13`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:14`; PDF page pending.
+- `TA-OCC-c38502fe86c05558` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:15`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:14`; PDF page pending.
+- `TA-OCC-6123697890628444` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:18`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:18`; PDF page pending.
+- `TA-OCC-4ff7021bb727e01a` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:22`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:23`; PDF page pending.
+- `TA-OCC-db36ee236cd7a38c` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:38`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:40`; PDF page pending.
+- `TA-OCC-0c206f7b2f5cfe6e` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:50`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:53`; PDF page pending.
+- `TA-OCC-ce315ff5ebf26d01` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:51`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:54`; PDF page pending.
+- `TA-OCC-3101436055687047` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:71`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:74`; PDF page pending.
+- `TA-OCC-0323b96e119cd8b1` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:103`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:110`; PDF page pending.
+- `TA-OCC-bd8200c66085696f` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:155`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:163`; PDF page pending.
+- `TA-OCC-9ceb55b69a5669c5` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:15`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:15`; PDF page pending.
+- `TA-OCC-9c878f9d6b3cbe8e` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:16`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:15`; PDF page pending.
+- `TA-OCC-79f98fb650d2e2bb` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:18`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:19`; PDF page pending.
+- `TA-OCC-7aff2f16f32c72ff` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:25`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:26`; PDF page pending.
+- `TA-OCC-1b843266505f3d5d` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:40`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:41`; PDF page pending.
+- `TA-OCC-d9fd9c53d407f550` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:41`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:42`; PDF page pending.
+- `TA-OCC-20d37cf61b5c3859` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:55`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:55`; PDF page pending.
+- `TA-OCC-7cdc9f4a8b1777b2` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:56`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:56`; PDF page pending.
+- `TA-OCC-063ebb97339398f9` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:95`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:97`; PDF page pending.
+- `TA-OCC-908807881abab50e` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:98`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:101`; PDF page pending.
+- `TA-OCC-aa73b4b4030c2fb3` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:183`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:187`; PDF page pending.
+- `TA-OCC-3b17bcd7eb3cc85b` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:185`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:189`; PDF page pending.
+- `TA-OCC-7dc9176fc1ef1855` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:189`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:190`; PDF page pending.
+- `TA-OCC-3e6d4e6ccdd7fa40` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:222`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:192`; PDF page pending.
+- `TA-OCC-2c1d0b34000abd65` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:235`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:193`; PDF page pending.
+- `TA-OCC-53dc2ed4f08bbfc5` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:236`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:227`; PDF page pending.
+- `TA-OCC-53a9e65cf9f9a33f` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:236`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:243`; PDF page pending.
+- `TA-OCC-7f1867592aa2bc6a` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:236`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:246`; PDF page pending.
+- `TA-OCC-a669825f448a54b5` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:16`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:17`; PDF page pending.
+- `TA-OCC-abde1fedbc7c01e8` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:25`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:26`; PDF page pending.
+- `TA-OCC-bf571f2d2daf35e9` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:25`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:27`; PDF page pending.
+- `TA-OCC-78f7b6c720722549` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:48`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:51`; PDF page pending.
+- `TA-OCC-1bad3903de474bc8` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:49`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:52`; PDF page pending.
+- `TA-OCC-f22a040abb851da0` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:67`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:70`; PDF page pending.
+- `TA-OCC-1d57b8a62bc44dd9` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:68`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:71`; PDF page pending.
+- `TA-OCC-271e684d4626cc7a` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:71`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:74`; PDF page pending.
+- `TA-OCC-33296a85aaa0eb54` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:71`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:75`; PDF page pending.
+- `TA-OCC-b450f3ec4f0ca612` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:21`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:23`; PDF page pending.
+- `TA-OCC-f10e54ef7dcffdcf` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:41`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:43`; PDF page pending.
+- `TA-OCC-8bc19575474c81c5` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:29`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:30`; PDF page pending.
+- `TA-OCC-988b22ba319bfa41` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:76`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -18089,6 +19264,8 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-ef2a7837d8694379` — OLP-0335 / `OLP-0335-S01`; source `content/second-order-logic/metatheory/loewenheim-skolem.tex:14`; Tamil `translation/content/second-order-logic/metatheory/loewenheim-skolem.tex:28`; PDF page pending.
 - `TA-OCC-898acb5941fe1bd5` — OLP-0337 / `OLP-0337-S01`; source `content/second-order-logic/sol-and-set-theory/introduction.tex:21`; Tamil `translation/content/second-order-logic/sol-and-set-theory/introduction.tex:24`; PDF page pending.
 - `TA-OCC-7393b186888b858b` — OLP-0338 / `OLP-0338-S01`; source `content/second-order-logic/sol-and-set-theory/comparing-sets.tex:77`; Tamil `translation/content/second-order-logic/sol-and-set-theory/comparing-sets.tex:89`; PDF page pending.
+- `TA-OCC-c5c0a81acddb859d` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:223`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:228`; PDF page pending.
+- `TA-OCC-31096a7ff7a1b018` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:63`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:83`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -18781,6 +19958,15 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-71f518c689e49977` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:15`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:115`; PDF page pending.
 - `TA-OCC-a834ca8ec4365be7` — OLP-0347 / `OLP-0347-S01`; source `content/lambda-calculus/introduction/currying.tex:1`; Tamil `translation/content/lambda-calculus/introduction/currying.tex:29`; PDF page pending.
 - `TA-OCC-a1d8cda2600a35d1` — OLP-0347 / `OLP-0347-S01`; source `content/lambda-calculus/introduction/currying.tex:1`; Tamil `translation/content/lambda-calculus/introduction/currying.tex:33`; PDF page pending.
+- `TA-OCC-429e26fc1b3dd91e` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:15`; PDF page pending.
+- `TA-OCC-9bf88f90da61e49d` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:84`; PDF page pending.
+- `TA-OCC-3358d4bd6dba6888` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:23`; PDF page pending.
+- `TA-OCC-457e29727fb6a607` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:26`; PDF page pending.
+- `TA-OCC-bdbdc5395e2af897` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:91`; PDF page pending.
+- `TA-OCC-6cde6950ef3abcb0` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:92`; PDF page pending.
+- `TA-OCC-b82728a901d51ead` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:94`; PDF page pending.
+- `TA-OCC-517e5f0a6e17b480` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:55`; PDF page pending.
+- `TA-OCC-3fccbc60dfea8fdb` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:35`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -19347,6 +20533,8 @@ Please double-check: **is “கணிப்புத்தன்மை / கண
 - `TA-OCC-abefce0435fe5944` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:3`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:11`; PDF page pending.
 - `TA-OCC-54d4893a6d4f457f` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:10`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:15`; PDF page pending.
 - `TA-OCC-76f4aef2b486d64e` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:13`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:19`; PDF page pending.
+- `TA-OCC-ba4883f56fda6b48` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:79`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:84`; PDF page pending.
+- `TA-OCC-2560ad4eb3d2293e` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:81`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:86`; PDF page pending.
 
 ## TA-T114 — recursive definition / primitive recursion / partial recursive function / general recursive function
 
@@ -19766,6 +20954,47 @@ Please double-check: **is “மீள்வரையறை / முதன்ம
 - `TA-OCC-836ea757c343214f` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:27`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:24`; PDF page pending.
 - `TA-OCC-ceafec4f07cc0d7e` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:27`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:26`; PDF page pending.
 - `TA-OCC-9fe11b165357ed62` — OLP-0351 / `OLP-0351-S01`; source `content/lambda-calculus/introduction/basic-pr-lambda.tex:1`; Tamil `translation/content/lambda-calculus/introduction/basic-pr-lambda.tex:11`; PDF page pending.
+- `TA-OCC-fb4b5af0c3b45ed9` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:10`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:11`; PDF page pending.
+- `TA-OCC-9e8d98be557d96f7` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:12`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:13`; PDF page pending.
+- `TA-OCC-ac11bdb773007672` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:75`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:81`; PDF page pending.
+- `TA-OCC-e7861aada9dbd358` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:14`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:11`; PDF page pending.
+- `TA-OCC-901551bd8ed93fcb` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:70`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:14`; PDF page pending.
+- `TA-OCC-b196200f61848ecb` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:89`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:15`; PDF page pending.
+- `TA-OCC-e6048077afd5e7f5` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:148`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:19`; PDF page pending.
+- `TA-OCC-71fff9ef08ccecf9` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:148`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:56`; PDF page pending.
+- `TA-OCC-218a9c7af032b27f` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:148`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:64`; PDF page pending.
+- `TA-OCC-cfaa1cd2f2d20117` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:148`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:76`; PDF page pending.
+- `TA-OCC-433b19aea57bfb8c` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:148`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:95`; PDF page pending.
+- `TA-OCC-33465490452b1acc` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:148`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:149`; PDF page pending.
+- `TA-OCC-913a186815882360` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:148`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:156`; PDF page pending.
+- `TA-OCC-a1c1ebcd2ed1a35c` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:21`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:15`; PDF page pending.
+- `TA-OCC-296adda341736260` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:22`; PDF page pending.
+- `TA-OCC-0957a9b93cb31f9b` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:48`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:35`; PDF page pending.
+- `TA-OCC-141971bc4e59560b` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:139`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:45`; PDF page pending.
+- `TA-OCC-9549879d5ec20e06` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:139`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:47`; PDF page pending.
+- `TA-OCC-d9540c1386900dc5` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:139`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:139`; PDF page pending.
+- `TA-OCC-0cdef7f3194942d8` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:139`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:140`; PDF page pending.
+- `TA-OCC-d8aa8a3a2ca0c1bd` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:14`; PDF page pending.
+- `TA-OCC-12581301ace185c5` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:14`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:15`; PDF page pending.
+- `TA-OCC-f715ee301a047fca` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:15`; PDF page pending.
+- `TA-OCC-01b9249ac531a8b9` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:60`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:64`; PDF page pending.
+- `TA-OCC-dc0868bd81bfbd03` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:67`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:71`; PDF page pending.
+- `TA-OCC-843102378399b344` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:11`; PDF page pending.
+- `TA-OCC-84166bf0508f56f2` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:13`; PDF page pending.
+- `TA-OCC-185c51838a00f361` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:14`; PDF page pending.
+- `TA-OCC-14731576632eaf6e` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:14`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:17`; PDF page pending.
+- `TA-OCC-99c65cb9a3b5daaa` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:20`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:22`; PDF page pending.
+- `TA-OCC-8e612e0d69458584` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:21`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:24`; PDF page pending.
+- `TA-OCC-eba5e9f574f66a5a` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:32`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:37`; PDF page pending.
+- `TA-OCC-f01b15641d83a786` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:35`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:38`; PDF page pending.
+- `TA-OCC-86b7bb74a3de1164` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:39`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:43`; PDF page pending.
+- `TA-OCC-02d5169171b3c57c` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:11`; PDF page pending.
+- `TA-OCC-293121011f14edcc` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; PDF page pending.
+- `TA-OCC-8547afbe9deb082e` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:28`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:15`; PDF page pending.
+- `TA-OCC-f124567c80b1f5d9` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:19`; PDF page pending.
+- `TA-OCC-3b9277b1f909acb8` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:29`; PDF page pending.
+- `TA-OCC-3a065e5005854806` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; PDF page pending.
+- `TA-OCC-8acbcae3a96293f6` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:37`; PDF page pending.
 
 ## TA-T115 — characteristic function / bounded quantification / bounded minimization / projection function
 
@@ -19840,6 +21069,22 @@ Please double-check: **is “கணக்கீட்டுச் சுட்�
 - `TA-OCC-73960b1736f25fad` — OLP-0273 / `OLP-0273-S01`; source `content/turing-machines/undecidability/trakhtenbrot.tex:17`; Tamil `translation/content/turing-machines/undecidability/trakhtenbrot.tex:20`; PDF page pending.
 - `TA-OCC-8a9aac5897b30725` — OLP-0346 / `OLP-0346-S01`; source `content/lambda-calculus/introduction/church-rosser.tex:19`; Tamil `translation/content/lambda-calculus/introduction/church-rosser.tex:22`; PDF page pending.
 - `TA-OCC-982d887b10a407cc` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:38`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:43`; PDF page pending.
+- `TA-OCC-81897d14740974b0` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:1`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:70`; PDF page pending.
+- `TA-OCC-88db02fa4594032d` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:50`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:53`; PDF page pending.
+- `TA-OCC-007dc5adfc2334ef` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:50`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:53`; PDF page pending.
+- `TA-OCC-8656d1fe5115c37f` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:23`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:38`; PDF page pending.
+- `TA-OCC-88bb3a934c32e9a2` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:37`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:44`; PDF page pending.
+- `TA-OCC-fac905536a9610cf` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:40`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:47`; PDF page pending.
+- `TA-OCC-491fa7671489018b` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:46`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:73`; PDF page pending.
+- `TA-OCC-d9b56ec1bdca6484` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:111`; PDF page pending.
+- `TA-OCC-107b43e5f093f66a` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:70`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:75`; PDF page pending.
+- `TA-OCC-88213551a262efcb` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:26`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:29`; PDF page pending.
+- `TA-OCC-5870105fe81d5aac` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:27`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:30`; PDF page pending.
+- `TA-OCC-f32c5911d4a44f44` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:29`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:33`; PDF page pending.
+- `TA-OCC-a62cf0f554d76754` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:35`; PDF page pending.
+- `TA-OCC-926b1fae6ab630f5` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:27`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:30`; PDF page pending.
+- `TA-OCC-7f891094d20c7742` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:39`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:44`; PDF page pending.
+- `TA-OCC-ddc2f6ecaa85288a` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:40`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:45`; PDF page pending.
 
 ## TA-T117 — computably enumerable / semi-decidable / domain / range
 
@@ -20014,6 +21259,12 @@ Please double-check: **is “கணிக்கத்தக்கவாறு �
 - `TA-OCC-04494bac7efbbfe8` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:93`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:111`; PDF page pending.
 - `TA-OCC-6f9e6b47c56631e9` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:1`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:40`; PDF page pending.
 - `TA-OCC-ebe5772f4a2a5996` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:1`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:67`; PDF page pending.
+- `TA-OCC-3a61afd448351798` — OLP-0359 / `OLP-0359-S01`; source `content/lambda-calculus/syntax/abbreviated-syntax.tex:1`; Tamil `translation/content/lambda-calculus/syntax/abbreviated-syntax.tex:24`; PDF page pending.
+- `TA-OCC-bfb6019e78eb8a06` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:23`; PDF page pending.
+- `TA-OCC-7d6ddec6aead2c09` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:26`; PDF page pending.
+- `TA-OCC-cbe461d8898b1819` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:45`; PDF page pending.
+- `TA-OCC-a4a67d929d04a4f7` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:46`; PDF page pending.
+- `TA-OCC-a3584f8587a6cf42` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:69`; PDF page pending.
 
 ## TA-T118 — many-one reduction / one-one reduction / Turing reducibility / Karp reducibility / Cook reducibility
 
@@ -20112,6 +21363,29 @@ Please double-check: **is “நிலைப்புள்ளி / தன்க
 - `TA-OCC-f40716949c2cb144` — OLP-0320 / `OLP-0320-S01`; source `content/incompleteness/incompleteness-provability/lob-thm.tex:93`; Tamil `translation/content/incompleteness/incompleteness-provability/lob-thm.tex:110`; PDF page pending.
 - `TA-OCC-e59e6ffbd5306d6b` — OLP-0320 / `OLP-0320-S01`; source `content/incompleteness/incompleteness-provability/lob-thm.tex:93`; Tamil `translation/content/incompleteness/incompleteness-provability/lob-thm.tex:146`; PDF page pending.
 - `TA-OCC-e52a01bb75b5bb59` — OLP-0321 / `OLP-0321-S01`; source `content/incompleteness/incompleteness-provability/tarski-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/tarski-thm.tex:104`; PDF page pending.
+- `TA-OCC-00d5dec82e129f46` — OLP-0354 / `OLP-0354-S01`; source `content/lambda-calculus/introduction/fixed-point-combinator.tex:3`; Tamil `translation/content/lambda-calculus/introduction/fixed-point-combinator.tex:11`; PDF page pending.
+- `TA-OCC-bc05a099d90d45ef` — OLP-0354 / `OLP-0354-S01`; source `content/lambda-calculus/introduction/fixed-point-combinator.tex:10`; Tamil `translation/content/lambda-calculus/introduction/fixed-point-combinator.tex:11`; PDF page pending.
+- `TA-OCC-49fdf84bcc31db93` — OLP-0354 / `OLP-0354-S01`; source `content/lambda-calculus/introduction/fixed-point-combinator.tex:33`; Tamil `translation/content/lambda-calculus/introduction/fixed-point-combinator.tex:36`; PDF page pending.
+- `TA-OCC-3302d6a49dc1b35f` — OLP-0354 / `OLP-0354-S01`; source `content/lambda-calculus/introduction/fixed-point-combinator.tex:38`; Tamil `translation/content/lambda-calculus/introduction/fixed-point-combinator.tex:43`; PDF page pending.
+- `TA-OCC-cbf9fd9800110230` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:1`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:23`; PDF page pending.
+- `TA-OCC-0b78404e7e87e649` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:1`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:25`; PDF page pending.
+- `TA-OCC-73c45594d697d1e4` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:1`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:44`; PDF page pending.
+- `TA-OCC-0a711f4e65f05042` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:94`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:96`; PDF page pending.
+- `TA-OCC-9bddbcd90ff74855` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:96`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:97`; PDF page pending.
+- `TA-OCC-05e756db507cc77c` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:21`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:12`; PDF page pending.
+- `TA-OCC-988e70e8edd6494f` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:67`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:57`; PDF page pending.
+- `TA-OCC-0f0f2efea739bc0f` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:157`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:58`; PDF page pending.
+- `TA-OCC-1973a44e2ef8f481` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:163`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:60`; PDF page pending.
+- `TA-OCC-54d4e6ded2cf06b5` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:163`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:66`; PDF page pending.
+- `TA-OCC-d65a4c8693f04ff7` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:163`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:74`; PDF page pending.
+- `TA-OCC-da9e118218f676e6` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:163`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:86`; PDF page pending.
+- `TA-OCC-a5f348ccbc81517a` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:163`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:110`; PDF page pending.
+- `TA-OCC-1599d8aba5fedf0a` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:163`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:148`; PDF page pending.
+- `TA-OCC-098d4651167a941d` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:163`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:165`; PDF page pending.
+- `TA-OCC-26160c3d6b7bca7c` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:31`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:34`; PDF page pending.
+- `TA-OCC-c98617cd88a3f9e5` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:37`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:41`; PDF page pending.
+- `TA-OCC-6bc81f2e4731e54d` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:37`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:41`; PDF page pending.
+- `TA-OCC-340969f9d16d210f` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:37`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:42`; PDF page pending.
 
 ## TA-T121 — Turing machine / tape / read-write head / transition function / instruction set
 
@@ -20812,6 +22086,12 @@ Please double-check: **is “தரநிலை டியூரிங் பொ�
 - `TA-OCC-5bcb0e5acb4df017` — OLP-0268 / `OLP-0268-S01`; source `content/turing-machines/undecidability/halting-problem.tex:14`; Tamil `translation/content/turing-machines/undecidability/halting-problem.tex:17`; PDF page pending.
 - `TA-OCC-a986861d1c0d64f8` — OLP-0268 / `OLP-0268-S01`; source `content/turing-machines/undecidability/halting-problem.tex:14`; Tamil `translation/content/turing-machines/undecidability/halting-problem.tex:144`; PDF page pending.
 - `TA-OCC-167b91ac86ec3464` — OLP-0283 / `OLP-0283-S01`; source `content/incompleteness/arithmetization-syntax/coding-terms.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-terms.tex:82`; PDF page pending.
+- `TA-OCC-20e8ff939d6a7201` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:11`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:12`; PDF page pending.
+- `TA-OCC-58320ba73ca35af9` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:17`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:18`; PDF page pending.
+- `TA-OCC-4b65cf9a513fc85a` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:21`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:22`; PDF page pending.
+- `TA-OCC-99bff0dc6b15a1b2` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:21`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:43`; PDF page pending.
+- `TA-OCC-5913186cfb2929a1` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:21`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:51`; PDF page pending.
+- `TA-OCC-87e4d9f94278115d` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:21`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:70`; PDF page pending.
 
 ## TA-T126 — halting function / halting problem / diagonal argument / unsolvable
 
@@ -21398,6 +22678,12 @@ Please double-check: **is “குறிக் குறியீடு / க�
 - `TA-OCC-e4d26478c4e137e0` — OLP-0316 / `OLP-0316-S01`; source `content/incompleteness/incompleteness-provability/rosser-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/rosser-thm.tex:107`; PDF page pending.
 - `TA-OCC-a8a5379fedba7d63` — OLP-0316 / `OLP-0316-S01`; source `content/incompleteness/incompleteness-provability/rosser-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/rosser-thm.tex:162`; PDF page pending.
 - `TA-OCC-ec7ab724fb90067b` — OLP-0316 / `OLP-0316-S01`; source `content/incompleteness/incompleteness-provability/rosser-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/rosser-thm.tex:163`; PDF page pending.
+- `TA-OCC-9645394ee5381e5e` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:27`; PDF page pending.
+- `TA-OCC-d82985d76f010a52` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:28`; PDF page pending.
+- `TA-OCC-377c8b80e30140c4` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:30`; PDF page pending.
+- `TA-OCC-c220b5f850037d68` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:32`; PDF page pending.
+- `TA-OCC-3f5cc0f487f15c81` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:40`; PDF page pending.
+- `TA-OCC-a442ecd85ccc7a04` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:48`; PDF page pending.
 
 ## TA-T134 — derivation code / end-sequent / immediate subderivation / last-rule code / eigenvariable condition / proof predicate
 
@@ -21538,6 +22824,8 @@ Please double-check: **is “ஒழுங்கான சிறுமமாக�
 - `TA-OCC-ecbe09f06ba56ecb` — OLP-0293 / `OLP-0293-S01`; source `content/incompleteness/representability-in-q/prim-rec.tex:13`; Tamil `translation/content/incompleteness/representability-in-q/prim-rec.tex:54`; PDF page pending.
 - `TA-OCC-480f7d42cca49294` — OLP-0296 / `OLP-0296-S01`; source `content/incompleteness/representability-in-q/minimization-representable.tex:10`; Tamil `translation/content/incompleteness/representability-in-q/minimization-representable.tex:12`; PDF page pending.
 - `TA-OCC-8675a0e8111d162b` — OLP-0297 / `OLP-0297-S01`; source `content/incompleteness/representability-in-q/comp-representable.tex:22`; Tamil `translation/content/incompleteness/representability-in-q/comp-representable.tex:23`; PDF page pending.
+- `TA-OCC-a4212b7a936f296c` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:14`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:14`; PDF page pending.
+- `TA-OCC-d916f2d97dfe933a` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:16`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:72`; PDF page pending.
 
 ## TA-T138 — omega-consistent / bounded existential formula / bounded universal formula / Delta-zero formula / Sigma-one formula / Pi-one formula / Sigma-one completeness
 
@@ -21692,6 +22980,41 @@ Please double-check: **is “டார்ஸ்கியின் வரைய�
 - `TA-OCC-06c2342e93f939f3` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:26`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:26`; PDF page pending.
 - `TA-OCC-12bc15e734a1df96` — OLP-0351 / `OLP-0351-S01`; source `content/lambda-calculus/introduction/basic-pr-lambda.tex:13`; Tamil `translation/content/lambda-calculus/introduction/basic-pr-lambda.tex:14`; PDF page pending.
 - `TA-OCC-10b967c2478ab62d` — OLP-0352 / `OLP-0352-S01`; source `content/lambda-calculus/introduction/composition.tex:13`; Tamil `translation/content/lambda-calculus/introduction/composition.tex:14`; PDF page pending.
+- `TA-OCC-a65988de7c590598` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:75`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:81`; PDF page pending.
+- `TA-OCC-6b93555ba80f4278` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:13`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:14`; PDF page pending.
+- `TA-OCC-4e32e33ddd094748` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:17`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:18`; PDF page pending.
+- `TA-OCC-2f8e0ae1da38ca66` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:13`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:34`; PDF page pending.
+- `TA-OCC-15b9840bea868395` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:58`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:58`; PDF page pending.
+- `TA-OCC-7953ba4c27c25ddd` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:80`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:84`; PDF page pending.
+- `TA-OCC-655d37e75d6994ee` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:81`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:85`; PDF page pending.
+- `TA-OCC-2ea42fbfd77a427e` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:14`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:15`; PDF page pending.
+- `TA-OCC-b119b5da1f67f2d2` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:58`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:61`; PDF page pending.
+- `TA-OCC-96859d111b16e573` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:91`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:95`; PDF page pending.
+- `TA-OCC-3fa1ae6ba15bdba6` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:29`; PDF page pending.
+- `TA-OCC-deaabbc069548eac` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:36`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:40`; PDF page pending.
+- `TA-OCC-7be84f390ffa557a` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:19`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:20`; PDF page pending.
+- `TA-OCC-bbd1213e78e823d8` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:36`; PDF page pending.
+- `TA-OCC-798127041e12fe1d` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:35`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:38`; PDF page pending.
+- `TA-OCC-f7d54608f3b0685f` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:55`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:58`; PDF page pending.
+- `TA-OCC-f78c6628702d5ed3` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:59`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:63`; PDF page pending.
+- `TA-OCC-b2c3adc4e3057f7f` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:61`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:66`; PDF page pending.
+- `TA-OCC-d41f76bdb94d0fde` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:142`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:149`; PDF page pending.
+- `TA-OCC-6490af7cd97c19a4` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:146`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:154`; PDF page pending.
+- `TA-OCC-31d20c906f316bcb` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:147`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:155`; PDF page pending.
+- `TA-OCC-26b55a8aeda701ba` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:15`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:16`; PDF page pending.
+- `TA-OCC-43967abc65cab53a` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:17`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:16`; PDF page pending.
+- `TA-OCC-0d521936841ffd64` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:21`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:18`; PDF page pending.
+- `TA-OCC-4393908e5c62b8d9` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:22`; PDF page pending.
+- `TA-OCC-041954c340b69f76` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:60`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:26`; PDF page pending.
+- `TA-OCC-32b82318dee776ec` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:65`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:64`; PDF page pending.
+- `TA-OCC-960e371971b62484` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:66`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:69`; PDF page pending.
+- `TA-OCC-b65e106addb188f1` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:66`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:71`; PDF page pending.
+- `TA-OCC-8579ad3041aeafdf` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:20`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:23`; PDF page pending.
+- `TA-OCC-1bc3a013eaa1619b` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:24`; PDF page pending.
+- `TA-OCC-42692682b25a4d1c` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:39`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:43`; PDF page pending.
+- `TA-OCC-ecadcb2d8efe51e1` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; PDF page pending.
+- `TA-OCC-c3a93ba36e50d315` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:14`; PDF page pending.
+- `TA-OCC-f1eed706813b407b` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:19`; PDF page pending.
 
 ## TA-T143 — second-order logic / object variable / relation variable / function variable / standard semantics
 
@@ -21973,6 +23296,11 @@ Please double-check: **is “லாம்டா கலனம் / லாம்�
 - `TA-OCC-dd05a53bec88487b` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:26`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:35`; PDF page pending.
 - `TA-OCC-28d0a7d5860cd6eb` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:12`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:13`; PDF page pending.
 - `TA-OCC-fe52ae6bfc40b0bc` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:49`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:53`; PDF page pending.
+- `TA-OCC-a34751cc2cf4f958` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:12`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:45`; PDF page pending.
+- `TA-OCC-e235d6ece8e38e96` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:31`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:61`; PDF page pending.
+- `TA-OCC-59ef27e5d073da53` — OLP-0359 / `OLP-0359-S01`; source `content/lambda-calculus/syntax/abbreviated-syntax.tex:19`; Tamil `translation/content/lambda-calculus/syntax/abbreviated-syntax.tex:20`; PDF page pending.
+- `TA-OCC-32a3d58d20d2b437` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:12`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:13`; PDF page pending.
+- `TA-OCC-18b534f4e9332feb` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:13`; PDF page pending.
 
 ## TA-T153 — lambda term / alpha-equivalent / bound and free variable / capture-avoiding substitution
 
@@ -21997,6 +23325,21 @@ Please double-check: **is “லாம்டா சொல் / α-சமான�
 - `TA-OCC-51f415e329b76c73` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:21`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:21`; PDF page pending.
 - `TA-OCC-cdf2878a64b5cb0c` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:24`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:24`; PDF page pending.
 - `TA-OCC-b6b95b82b34c393f` — OLP-0351 / `OLP-0351-S01`; source `content/lambda-calculus/introduction/basic-pr-lambda.tex:29`; Tamil `translation/content/lambda-calculus/introduction/basic-pr-lambda.tex:30`; PDF page pending.
+- `TA-OCC-fbadf4e29cc42215` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:21`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:54`; PDF page pending.
+- `TA-OCC-9be6e4ba810c791e` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:48`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:58`; PDF page pending.
+- `TA-OCC-5db94a2c0abd9a63` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:48`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:100`; PDF page pending.
+- `TA-OCC-6b8d70a0414da4c3` — OLP-0354 / `OLP-0354-S01`; source `content/lambda-calculus/introduction/fixed-point-combinator.tex:12`; Tamil `translation/content/lambda-calculus/introduction/fixed-point-combinator.tex:13`; PDF page pending.
+- `TA-OCC-42cbbc0c2a730b66` — OLP-0355 / `OLP-0355-S01`; source `content/lambda-calculus/introduction/minimization.tex:22`; Tamil `translation/content/lambda-calculus/introduction/minimization.tex:37`; PDF page pending.
+- `TA-OCC-869eaac737dff5a9` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:13`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:14`; PDF page pending.
+- `TA-OCC-f99e622b56714529` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:15`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:16`; PDF page pending.
+- `TA-OCC-bcb2fd056994b0bb` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:40`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:61`; PDF page pending.
+- `TA-OCC-1fce8a2e12cb69c0` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:38`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:39`; PDF page pending.
+- `TA-OCC-27641389741f5e72` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:62`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:65`; PDF page pending.
+- `TA-OCC-18f91cca7b1321de` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:31`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:30`; PDF page pending.
+- `TA-OCC-5f3d0befda835220` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:44`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:33`; PDF page pending.
+- `TA-OCC-72869622b4de6277` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:44`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:44`; PDF page pending.
+- `TA-OCC-2d4a43b79a91685f` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:29`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:30`; PDF page pending.
+- `TA-OCC-8e33b3497e7a8de7` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:26`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:28`; PDF page pending.
 
 ## TA-T154 — beta contraction / redex / contractum / beta reduction / beta normal form / Church–Rosser property
 
@@ -22014,6 +23357,13 @@ Please double-check: **is “β-சுருக்கல் / ரெடெக்
 
 - `TA-OCC-4f1a69860ede2b5b` — OLP-0345 / `OLP-0345-S01`; source `content/lambda-calculus/introduction/reduction.tex:28`; Tamil `translation/content/lambda-calculus/introduction/reduction.tex:30`; PDF page pending.
 - `TA-OCC-d68263a69590dd2f` — OLP-0345 / `OLP-0345-S01`; source `content/lambda-calculus/introduction/reduction.tex:29`; Tamil `translation/content/lambda-calculus/introduction/reduction.tex:31`; PDF page pending.
+- `TA-OCC-78de9e99a1f21a48` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:24`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:25`; PDF page pending.
+- `TA-OCC-ed1a237260e9f882` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:35`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:32`; PDF page pending.
+- `TA-OCC-7d243f29472c3e5a` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:33`; PDF page pending.
+- `TA-OCC-e138bdd84ad961ee` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:34`; PDF page pending.
+- `TA-OCC-0532a124eb938d6a` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:39`; PDF page pending.
+- `TA-OCC-d9984097f4351bb4` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:29`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:31`; PDF page pending.
+- `TA-OCC-46624062ebc531d1` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:89`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:89`; PDF page pending.
 
 ## TA-T155 — currying / Church numeral / iterator / lambda-definable function
 
@@ -22035,6 +23385,78 @@ Please double-check: **is “கரியாக்கம் / சர்ச் �
 - `TA-OCC-79446b658edaae67` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:19`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:21`; PDF page pending.
 - `TA-OCC-f3a214b906085ad3` — OLP-0348 / `OLP-0348-S01`; source `content/lambda-calculus/introduction/lambda-definability.tex:24`; Tamil `translation/content/lambda-calculus/introduction/lambda-definability.tex:24`; PDF page pending.
 - `TA-OCC-7005d93f7396e288` — OLP-0351 / `OLP-0351-S01`; source `content/lambda-calculus/introduction/basic-pr-lambda.tex:23`; Tamil `translation/content/lambda-calculus/introduction/basic-pr-lambda.tex:22`; PDF page pending.
+- `TA-OCC-734a4d9b102fb5ab` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:90`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:91`; PDF page pending.
+- `TA-OCC-b74a41c949906888` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:24`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:23`; PDF page pending.
+- `TA-OCC-e026aadbe1980c37` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:24`; PDF page pending.
+- `TA-OCC-f87839679f31700f` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:28`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:28`; PDF page pending.
+- `TA-OCC-7b148fa001d7bead` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:38`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:38`; PDF page pending.
+- `TA-OCC-6261114b481aebab` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:40`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:40`; PDF page pending.
+- `TA-OCC-06b85c4f05cdbb4a` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:45`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:43`; PDF page pending.
+- `TA-OCC-3e446a61e19ba91b` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:47`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:44`; PDF page pending.
+- `TA-OCC-e3975aab77794b4e` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:53`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:47`; PDF page pending.
+- `TA-OCC-d84b172c3075ac13` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:53`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:53`; PDF page pending.
+- `TA-OCC-035f297e33abbc0e` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:26`; PDF page pending.
+- `TA-OCC-8f3bc6479fba970c` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:26`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:27`; PDF page pending.
+- `TA-OCC-f313e28b351d369c` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:77`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:27`; PDF page pending.
+- `TA-OCC-ed6bc4ce95c5090a` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:98`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:73`; PDF page pending.
+- `TA-OCC-d0f8c7a010cbdd68` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:104`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:81`; PDF page pending.
+- `TA-OCC-4c32783c091fcef6` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:138`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:103`; PDF page pending.
+- `TA-OCC-1124b033a1ca85a5` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:138`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:111`; PDF page pending.
+- `TA-OCC-55380adf1d20c0b6` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:138`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:144`; PDF page pending.
+- `TA-OCC-bed4f70de5b76e04` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:40`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:44`; PDF page pending.
+- `TA-OCC-0b1cb93c768a4024` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:40`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:44`; PDF page pending.
+- `TA-OCC-d36f2487eac0ce0c` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:73`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:78`; PDF page pending.
+- `TA-OCC-f5f29b8d19e4cd6f` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:73`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:78`; PDF page pending.
+- `TA-OCC-36e4fadce9fbff81` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:30`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:39`; PDF page pending.
+- `TA-OCC-32c0dac645419609` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:35`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:45`; PDF page pending.
+
+## TA-T156 — eta contraction / eta conversion / extensionality / parallel beta reduction / beta-complete development
+
+Chosen rendering: **η-சுருக்கல் / η-மாற்றம் / விரிவுநிலை / இணைநிலை β-குறைத்தல் / β-முழுமை வளர்த்தல்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: விரிவுநிலை continues the reviewed edition term, while the checked originals support the component function, equivalence, proof and composition register but do not directly attest the specialist lambda-rewriting compounds. The eta rule is fixed by lambda x.Mx reducing to M under its freshness condition; parallel beta reduction and complete development are fixed by their inductive clauses and common-development proof.
+
+Authority basis: TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P19 (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports); TA-SC11-P41-COMPOSITION (checked_context_only); TA-T156-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “η-சுருக்கல் / η-மாற்றம் / விரிவுநிலை / இணைநிலை β-குறைத்தல் / β-முழுமை வளர்த்தல்” the established India-standard Tamil expression for “eta contraction / eta conversion / extensionality / parallel beta reduction / beta-complete development” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-ca56ffc6786d909f` — OLP-0165 / `OLP-0165-S01`; source `content/first-order-logic/syntax-and-semantics/extensionality.tex:11`; Tamil `translation/content/first-order-logic/syntax-and-semantics/extensionality.tex:13`; PDF page pending.
+- `TA-OCC-717fbb05a3652aef` — OLP-0165 / `OLP-0165-S01`; source `content/first-order-logic/syntax-and-semantics/extensionality.tex:14`; Tamil `translation/content/first-order-logic/syntax-and-semantics/extensionality.tex:16`; PDF page pending.
+- `TA-OCC-ea07f2f602593dba` — OLP-0165 / `OLP-0165-S01`; source `content/first-order-logic/syntax-and-semantics/extensionality.tex:21`; Tamil `translation/content/first-order-logic/syntax-and-semantics/extensionality.tex:23`; PDF page pending.
+- `TA-OCC-3b2d234e709ae486` — OLP-0165 / `OLP-0165-S01`; source `content/first-order-logic/syntax-and-semantics/extensionality.tex:28`; Tamil `translation/content/first-order-logic/syntax-and-semantics/extensionality.tex:30`; PDF page pending.
+- `TA-OCC-b1f20f7aa9206316` — OLP-0165 / `OLP-0165-S01`; source `content/first-order-logic/syntax-and-semantics/extensionality.tex:29`; Tamil `translation/content/first-order-logic/syntax-and-semantics/extensionality.tex:55`; PDF page pending.
+- `TA-OCC-9bb76480b7797555` — OLP-0170 / `OLP-0170-S01`; source `content/first-order-logic/models-theories/theories.tex:1`; Tamil `translation/content/first-order-logic/models-theories/theories.tex:87`; PDF page pending.
+- `TA-OCC-e88d2b2cf390645b` — OLP-0172 / `OLP-0172-S01`; source `content/first-order-logic/models-theories/set-theory.tex:45`; Tamil `translation/content/first-order-logic/models-theories/set-theory.tex:47`; PDF page pending.
+- `TA-OCC-85e4a030debaf386` — OLP-0172 / `OLP-0172-S01`; source `content/first-order-logic/models-theories/set-theory.tex:55`; Tamil `translation/content/first-order-logic/models-theories/set-theory.tex:58`; PDF page pending.
+- `TA-OCC-a16da14ba8a2e14a` — OLP-0172 / `OLP-0172-S01`; source `content/first-order-logic/models-theories/set-theory.tex:61`; Tamil `translation/content/first-order-logic/models-theories/set-theory.tex:64`; PDF page pending.
+- `TA-OCC-da3f1d51683fac94` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:47`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:50`; PDF page pending.
+- `TA-OCC-9ee340056259015a` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:50`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:53`; PDF page pending.
+- `TA-OCC-0cc369930ffa3a4c` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:62`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:65`; PDF page pending.
+- `TA-OCC-fb25e186d3ab83b5` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:71`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:73`; PDF page pending.
+
+## TA-T157 — Church-encoded pair / selector / access function
+
+Chosen rendering: **சர்ச்-குறியாக்கப்பட்ட ஜோடி / தேர்வி / அணுகுச் சார்பு**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: ஜோடி, சார்பு and the true/false vocabulary are supported by the checked originals, but no exact Tamil attestation was found for these lambda-encoding roles. The pair equation defines a function that supplies two components to its argument; Fst and Snd define the two access functions; and true and false define selectors by returning the first or second input. The provisional compounds remain explicit and open to expert correction.
+
+Authority basis: TA-SC11-P6 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-T157-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “சர்ச்-குறியாக்கப்பட்ட ஜோடி / தேர்வி / அணுகுச் சார்பு” the established India-standard Tamil expression for “Church-encoded pair / selector / access function” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-70e6636fb009e92b` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:68`; PDF page pending.
+- `TA-OCC-93222df255d34d2e` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:27`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:29`; PDF page pending.
+- `TA-OCC-32613713467d23a4` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:35`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:36`; PDF page pending.
+- `TA-OCC-86c5e3f5fc465cf1` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:19`; PDF page pending.
+- `TA-OCC-410241ccf34746d2` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:59`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:65`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

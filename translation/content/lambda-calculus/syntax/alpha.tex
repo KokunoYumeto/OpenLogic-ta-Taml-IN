@@ -1,0 +1,293 @@
+% SEGMENT OLP-0362-S01
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: alpha
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{alp}
+\olsection{$\alpha$-மாற்றம்}
+
+$\lambd[x][x]$ க்கும் $\lambd[y][y]$ க்கும் இடையிலான தொடர்பு என்ன? இரண்டும்
+சமனிச் சார்பைக் குறிக்கின்றன. அவை தொடரமைப்பின்படி வெவ்வேறு சொற்களே. அவற்றின்
+கட்டுண்ட மாறியின் பெயரில் மட்டுமே அவை வேறுபடுகின்றன; ஒன்றின் கட்டுண்ட மாறியை
+``மறுபெயரிடுவதால்'' மற்றொன்று கிடைக்கிறது. இது \emph{$\alpha$-மாற்றம்}
+எனப்படுகிறது.
+
+\begin{defn}[கட்டுண்ட மாறியின் மாற்றம், $\aconvone$]
+  சொல் $M$ ஆனது $\lambd[x][N]$ இன் ஒரு நிகழ்வைக் கொண்டிருந்து,
+  $y \notin \FV{N}$ ஆகவும் $\Subst{N}{y}{x}$ வரையறுக்கப்பட்டதாகவும்
+  இருந்தால், இந்த நிகழ்வை
+  \begin{equation*}
+    \lambd[y][\Subst{N}{y}{x}]
+  \end{equation*}
+  ஆல் மாற்றி $M'$ ஐப் பெறுவது \emph{கட்டுண்ட மாறியின் மாற்றம்} எனப்பட்டு,
+  $M \redone[\alpha] M'$ என்று எழுதப்படுகிறது.
+\end{defn}
+
+\begin{defn}[ஒரு தொடர்பின் இசைவு]
+  சொற்களின்மீதான தொடர்பு $R$ பின்வரும் நிபந்தனைகளை நிறைவுசெய்தால் அது
+  \emph{இசைவானது} எனப்படுகிறது:
+  \begin{enumerate}
+  \item $R N N'$ எனில் $R \lambd[x][N] \lambd[x][N']$
+  \item $R P P'$ எனில் $R (PQ) (P'Q)$
+  \item $R Q Q'$ எனில் $R (PQ) (PQ')$
+  \end{enumerate}
+\end{defn}
+
+ஆகவே வரையறையை மீண்டும் கூறுவோம்:
+\begin{defn}[கட்டுண்ட மாறியின் மாற்றம், $\aconvone$]
+  \emph{கட்டுண்ட மாறியின் மாற்றம்} ($\redone[\alpha]$) என்பது சொற்களின்மீதான,
+  பின்வரும் நிபந்தனையை நிறைவுசெய்யும் மிகச்சிறிய இசைவான தொடர்பாகும்:
+  \begin{align*}
+    &\lambd[x][N] \redone[\alpha] \lambd[y][\Subst{N}{y}{x}] && \text{
+      $x \neq y$, $y \notin \FV{N}$ எனில்} \\
+    & &&\text{மேலும் $\Subst{N}{y}{x}$ வரையறுக்கப்பட்டிருந்தால்}
+  \end{align*}
+\end{defn}
+
+இங்கு ``மிகச்சிறிய'' என்பது, இசைவாலும் கூடுதல் நிபந்தனையாலும் தேவைப்படும்
+ஜோடிகளை மட்டுமே இத்தொடர்பு கொண்டிருக்கும்; வேறெதையும் கொண்டிருக்காது என்பதாகும்.
+ஆகவே இத்தொடர்பைப் பின்வருமாறும் வரையறுக்கலாம்:
+
+\begin{defn}[கட்டுண்ட மாறியின் மாற்றம், $\aconvone$] \ollabel{defn:aconvone}
+  \emph{கட்டுண்ட மாறியின் மாற்றம்} ($\aconvone$) பின்வருமாறு தொகுத்தறிதல்
+  முறையில் வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+  \item $N \aconvone N'$ எனில் $\lambd[x][N] \aconvone
+    \lambd[x][N']$ \ollabel{defn:aconvone1}
+  \item $P \aconvone P'$ எனில் $(PQ) \aconvone (P'Q)$ \ollabel{defn:aconvone2}
+  \item $Q \aconvone Q'$ எனில் $(PQ) \aconvone (PQ')$ \ollabel{defn:aconvone3}
+  \item $x \neq y$, $y \notin \FV{N}$ ஆகவும் $\Subst{N}{y}{x}$
+    வரையறுக்கப்பட்டதாகவும் இருந்தால்,
+    $\lambd[x][N] \redone[\alpha] \lambd[y][\Subst{N}{y}{x}]$.
+    \ollabel{defn:aconvone4}
+  \end{enumerate}
+\end{defn}
+
+இவ்வரையறைகள் சமானமானவை; ஆனால் நிறுவலைப் பயிற்சியாக விடுகிறோம். இனி
+தொகுத்தறிதல் வரையறையைப் பயன்படுத்துவோம்.
+
+\begin{defn}[$\alpha$-மாற்றம், $\aconv$]
+  \emph{$\alpha$-மாற்றம்} ($\aconv$) என்பது $\aconvone$ ஐக் கொண்டிருக்கும்,
+  சொற்களின்மீதான மிகச்சிறிய தற்சுட்டு மற்றும் கடப்புத் தொடர்பாகும்.
+  % SOURCE CORRECTION TA-LAM-016: Tamil resolves the frozen prose misspellings and malformed English clauses without changing their mathematical claims.
+\end{defn}
+
+மேலேபோல, ``மிகச்சிறிய'' என்பது கடப்புத்தன்மையாலும் $\aconvone$ ஆலும்
+தேவைப்படும் ஜோடிகளை மட்டுமே தொடர்பு கொண்டிருக்கும் என்பதாகும்; இது பின்வரும்
+சமானமான வரையறைக்கு வழிவகுக்கிறது:
+
+\begin{defn}[$\alpha$-மாற்றம், $\aconv$] \ollabel{defn:aconv}
+  \emph{$\alpha$-மாற்றம்} ($\aconv$) பின்வருமாறு தொகுத்தறிதல் முறையில்
+  வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+  \item $P \aconv Q$ மற்றும் $Q \aconv R$ எனில், $P \aconv R$.
+    \ollabel{defn:aconv1}
+  \item $P \aconvone Q$ எனில், $P \aconv Q$. \ollabel{defn:aconv2}
+  \item $P \aconv P$. \ollabel{defn:aconv3}
+  \end{enumerate}
+\end{defn}
+
+\begin{ex}
+  $\lambd[x][f x]$ ஆனது $\lambd[y][f y]$ ஆக $\alpha$-மாறுகிறது; மறுதிசையிலும்
+  அவ்வாறே. முறைசாரா விதத்தில் கூறினால், இரண்டும் ஓர் உள்ளீட்டை ஏற்று, அந்த
+  உள்ளீட்டின் $f$ ஐத் திருப்பித்தரும் சார்புகள்; இங்கு அவை சூழல் மாறி~$f$ ஐச்
+  சுட்டுகின்றன.
+
+  $\lambd[x][f x]$ ஆனது $\lambd[x][g x]$ ஆக $\alpha$-மாறாது. முறைசாரா
+  விதத்தில் கூறினால், அவை முறையே சூழல் மாறிகள் $f$,~$g$ ஐச் சுட்டுகின்றன;
+  இதனால் அவை வெவ்வேறு சார்புகள்: $f$ உம் $g$ உம் வெவ்வேறாக உள்ள சூழல்களில்
+  அவை வெவ்வேறு விதத்தில் நடந்துகொள்கின்றன.
+\end{ex}
+
+\begin{prob}
+  பின்வரும் சொல் ஜோடிகள் $\alpha$-மாற்றத்தக்கவையா?
+  \begin{enumerate}
+  \item $\lambd[x][\lambd[y][x]]$ மற்றும் $\lambd[y][\lambd[x][y]]$
+  \item $\lambd[x][\lambd[y][x]]$ மற்றும் $\lambd[c][\lambd[b][a]]$
+  \item $\lambd[x][\lambd[y][x]]$ மற்றும் $\lambd[c][\lambd[b][a]]$
+  \end{enumerate}
+\end{prob}
+
+\begin{lem}\ollabel{lem:fv-one}
+  $P \aconvone Q$ எனில் $\FV{P} = \FV{Q}$.
+\end{lem}
+
+\begin{proof}
+  $P \aconvone Q$ இன் !!{derivation} மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+  \begin{enumerate}
+  \item கடைசி விதி \olref{defn:aconvone4} எனில், $P$ ஆனது
+    $\lambd[x][N]$ வடிவிலும் $Q$ ஆனது
+    $\lambd[y][\Subst{N}{y}{x}]$ வடிவிலும் இருக்கும்; இங்கு $x \neq y$,
+    $y \notin \FV{N}$, மேலும் $\Subst{N}{y}{x}$ வரையறுக்கப்பட்டுள்ளது.
+    $x \in \FV{N}$ ஆகுமா என்பதைப் பொறுத்து நிகழ்வுகளைப் பிரிக்கிறோம்:
+    % SOURCE CORRECTION TA-LAM-017: restore the FV macro omitted at five formula occurrences in the frozen source.
+    \begin{enumerate}
+    \item $x \in \FV{N}$ எனில்:
+      \begin{align*}
+        \FV{\lambd[y][\Subst{N}{y}{x}]} &=
+        \FV{\Subst{N}{y}{x}} \setminus \{y\} \\
+        & = ((\FV{N} \setminus \{x\}) \cup \{y\}) \setminus \{y\}
+         && \text{ \olref[sub]{thm:infv} இன்படி} \\
+        & = \FV{N} \setminus \{x\} \\
+        & = \FV{\lambd[x][N]}
+      \end{align*}
+    \item $x \notin \FV{N}$ எனில்:
+      \begin{align*}
+        \FV{\lambd[y][\Subst{N}{y}{x}]}
+        & = \FV{\Subst{N}{y}{x}} \setminus \{y\} \\
+        & = \FV{N} \setminus \{x\}
+         && \text{\olref[sub]{thm:notinfv} இன்படி} \\
+        & = \FV{\lambd[x][N]}.
+      \end{align*}
+    \end{enumerate}
+  \item மற்ற மூன்று நிகழ்வுகள் பயிற்சிகளாக விடப்படுகின்றன.
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][alp]{lem:fv-one} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{lem}\ollabel{lem:inv}
+  $P \aconvone Q$ எனில் $Q \aconvone P$.
+\end{lem}
+
+\begin{proof}
+  $P \aconvone Q$ இன் !!{derivation} மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+  \begin{enumerate}
+  \item கடைசி விதி \olref{defn:aconvone4} எனில், $P$ ஆனது
+    $\lambd[x][N]$ வடிவிலும் $Q$ ஆனது
+    $\lambd[y][\Subst{N}{y}{x}]$ வடிவிலும் இருக்கும்; இங்கு $x \neq y$,
+    $y \notin \FV{N}$, மேலும் $\Subst{N}{y}{x}$ வரையறுக்கப்பட்டுள்ளது.
+    முதலில், \olref[sub]{thm:clr} இன்படி $y \notin
+    \FV{\Subst{N}{y}{x}}$. \olref[sub]{thm:inv} இன்படி
+    $\Subst{\Subst{N}{y}{x}}{x}{y}$ வரையறுக்கப்பட்டிருப்பது மட்டுமல்லாமல்,
+    அது~$N$ க்குச் சமமாகவும் உள்ளது. பின்னர் \olref{defn:aconvone4} இன்படி,
+    $\lambd[y][\Subst{N}{y}{x}]
+    \aconvone \lambd[x][\Subst{\Subst{N}{y}{x}}{x}{y}] =
+    \lambd[x][N]$.
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][alp]{lem:inv} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{thm}
+  $\alpha$-மாற்றம் சொற்களின்மீதான ஒரு சமானத் தொடர்பு; அதாவது, அது தற்சுட்டு,
+  சமச்சீர், கடப்பு ஆகிய பண்புகளைக் கொண்டது.
+\end{thm}
+
+\begin{proof}
+  \begin{enumerate}
+  \item ஒவ்வொரு சொல் $M$ க்கும், கட்டுண்ட மாறிகளில் \emph{பூச்சிய} மாற்றங்கள்
+    செய்து $M$ ஐ~$M$ ஆக மாற்றலாம்.
+  \item கட்டுண்ட மாறிகளில் செய்யப்பட்ட தொடர் மாற்றங்களால் $P$ ஆனது~$Q$ ஆக
+    $\alpha$-மாறினால், அந்த மாற்றங்களை எதிர் வரிசையில்
+    (\olref{lem:inv} இன்படி) புரட்டி, $Q$ இலிருந்து~$P$ ஐப் பெறலாம்.
+  \item கட்டுண்ட மாறிகளில் செய்யப்பட்ட தொடர் மாற்றங்களால் $P$ ஆனது~$Q$ ஆகவும்,
+    மற்றொரு தொடர் மாற்றங்களால் $Q$ ஆனது~$R$ ஆகவும் $\alpha$-மாறினால், முதல்
+    தொடரைச் செய்து பின்னர் இரண்டாம் தொடரைச் செய்வதன் மூலம் $P$ ஐ~$R$ ஆக
+    மாற்றலாம்.
+  \end{enumerate}
+\end{proof}
+
+இனி $M$ உம் $N$ உம் \emph{$\alpha$-சமானமானவை}, $M \aeq N$, என்று கூறுவது,
+$M$ ஆனது~$N$ ஆக $\alpha$-மாறும் அப்போதும் அப்போது மட்டுமே (நாம் சற்றுமுன்
+காட்டியபடி, இது $N$ ஆனது~$M$ ஆக $\alpha$-மாறும் அப்போதும் அப்போது மட்டுமே).
+
+\begin{thm}\ollabel{thm:fv}
+  $M \aeq N$ எனில், $\FV{M} = \FV{N}$.
+\end{thm}
+
+\begin{proof}
+  \olref{lem:fv-one} இலிருந்து உடனடியாகக் கிடைக்கிறது.
+\end{proof}
+
+\begin{lem}\ollabel{lem:sub:R}
+  $R \aeq R'$ ஆகவும் $\Subst{M}{R}{y}$ வரையறுக்கப்பட்டதாகவும் இருந்தால்,
+  $\Subst{M}{R'}{y}$ வரையறுக்கப்பட்டு $\Subst{M}{R}{y}$ க்கு
+  $\alpha$-சமானமாக இருக்கும்.
+\end{lem}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][alp]{lem:sub:R} ஐ நிறுவுக.
+\end{prob}
+
+\olref[sub]{sec} இல் சில நிகழ்வுகளில் இடைநிறுத்தல் வரையறுக்கப்படவில்லை என்பதை
+நினைவுகொள்க. எனினும், சொற்கள்மீது $\alpha$-மாற்றத்தைப் பயன்படுத்தி கட்டுண்ட
+மாறிகளை மறுபெயரிடுவதன் மூலம் இடைநிறுத்தலை எப்போதும் வரையறுக்கப்பட்டதாகச்
+செய்யலாம். பின்வரும் தேற்றம் காட்டுவதுபோல், விளைவு $\alpha$-சமானத்தைப்
+பேணுகிறது:
+
+\begin{thm}\ollabel{thm:sub}
+  எந்த $M$, $R$,~$y$ க்கும், $M \aeq M'$ ஆகவும் $\Subst{M'}{R}{y}$
+  வரையறுக்கப்பட்டதாகவும் அமையும் ஓர் $M'$ உள்ளது. மேலும்,
+  $M'' \aeq M$ ஆகவும் $R''$ உடன் $\Subst{M''}{R''}{y}$
+  வரையறுக்கப்பட்டதாகவும், மேலும் $R'' \aeq R$ ஆகவும் அமையும் மற்றொரு ஜோடி
+  இருந்தால்,
+  $\Subst{M'}{R}{y} \aeq \Subst{M''}{R''}{y}$.
+\end{thm}
+
+\begin{proof}
+  $M$ இன் அமைப்பின்மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்:
+  \begin{enumerate}
+  \item $M$ ஒரு மாறி~$z$: பயிற்சி.
+  \item $M$ ஆனது $\lambd[x][N]$ வடிவுடையது எனக் கொள்க. $x$, $y$
+    இரண்டிலிருந்தும் வேறான, $z \notin \FV{N}$ மற்றும்
+    $z \notin \FV{R}$ ஆக அமையும் ஒரு மாறி $z$ ஐத் தேர்ந்தெடுக்க.
+    தொகுத்தறிதல் கருதுகோளின்படி, $N' \aeq N$ ஆகவும்
+    $\Subst{N'}{z}{x}$ வரையறுக்கப்பட்டதாகவும் அமையும் ஓர் $N'$ உள்ளது.
+    அப்போது \olref{defn:aconvone}\olref{defn:aconvone1} இன்படி,
+    $\lambd[x][N] \aeq \lambd[x][N']$ உம் ஆகும். இப்போது
+    \olref{defn:aconvone}\olref{defn:aconvone4} இன்படி,
+    $\lambd[x][N'] \aeq \lambd[z][\Subst{N'}{z}{x}]$. ஏனெனில்
+    $z \ne x$, $z \notin \FV{N'}$, மேலும் $\Subst{N'}{z}{x}$
+    வரையறுக்கப்பட்டுள்ளது. இறுதியாக, $z \neq y$ மற்றும்
+    $z \notin \FV{R}$ என்பதால்,
+    $\Subst{\lambd[z][\Subst{N'}{z}{x}]}{R}{y}$ வரையறுக்கப்பட்டுள்ளது.
+
+    இதே நிபந்தனைகளை நிறைவுசெய்யும் மற்றோர் $N''$, $R''$ இருந்தால்,
+    \begin{multline*}
+      \Subst{(\lambd[z][\Subst{N''}{z}{x}])}{R''}{y} =\\
+    \begin{aligned}
+      &= \lambd[z][\Subst{\Subst{N''}{z}{x}}{R''}{y}] \\
+      &\aeq \lambd[z][\Subst{\Subst{N''}{z}{x}}{R}{y}] && \text{
+        \olref{lem:sub:R} இன்படி}\\
+      &\aeq\lambd[z][\Subst{\Subst{N'}{z}{x}}{R}{y}]
+      && \text{தொகுத்தறிதல்
+        கருதுகோளின்படி}\\
+      &=\Subst{(\lambd[z][\Subst{N'}{z}{x}])}{R}{y}
+    \end{aligned}
+    \end{multline*}
+    % SOURCE CORRECTION TA-LAM-018: the two middle comparison steps are alpha-equivalences, as the cited lemma and induction hypothesis state, rather than literal equalities.
+    \item $M$ ஆனது $(PQ)$ வடிவுடையது: பயிற்சி.
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][alp]{thm:sub} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{cor}\ollabel{cor:sub}
+  எந்த $M$, $R$,~$y$ க்கும், $M' \aeq M$, $R \aeq R'$ ஆகவும்
+  $\Subst{M'}{R'}{y}$ வரையறுக்கப்பட்டதாகவும் அமையும் $M'$, $R'$ ஜோடி ஒன்று
+  உள்ளது. மேலும், $M'' \aeq M$, $R'' \aeq R$ ஆகவும்
+  $\Subst{M''}{R''}{y}$ வரையறுக்கப்பட்டதாகவும் அமையும் மற்றொரு ஜோடி இருந்தால்,
+  $\Subst{M'}{R'}{y} \aeq \Subst{M''}{R''}{y}$.
+  % SOURCE CORRECTION TA-LAM-019: the second-pair premise must constrain R'' and its own substitution, not repeat the first pair's substitution.
+\end{cor}
+
+\begin{proof}
+  \olref{thm:sub} இலிருந்து உடனடியாகக் கிடைக்கிறது.
+\end{proof}
+
+\end{document}

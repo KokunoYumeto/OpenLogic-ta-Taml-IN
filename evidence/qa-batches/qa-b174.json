@@ -1,0 +1,406 @@
+{
+  "batch_id": "TA-B174",
+  "units": [
+    {
+      "unit_id": "OLP-0365",
+      "source_sha256": "42355f0467bb8d19038e3cadd4b5f0d2ce58720cbed3130cb74f86f7be4fc0dd",
+      "translation_sha256": "03170c996888feb884dbe765a00b3c8f8df75b9dc19f9bf0f2e2de4ecebb99b9",
+      "source_bytes": 4784,
+      "translation_bytes": 10640,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "alp",
+        "include",
+        "lam",
+        "logic",
+        "open",
+        "section",
+        "syn",
+        "xxy"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-024",
+          "unit_id": "OLP-0365",
+          "kind": "prose-spelling-error",
+          "action": "Read the frozen spelling 'stratuegy' as 'strategy.'",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The final sentence of the natural-strategy digression contains an ordinary misspelling whose intended word is fixed by repeated uses of strategy in the same paragraph.",
+          "chosen_treatment": "தமிழ் நோக்கப்பட்ட உத்தி என்ற பொருளை வழங்குகிறது.",
+          "alternatives_considered": "Transliterating the misspelling; treating it as a distinct reduction method.",
+          "rationale": "The repair changes no strategy definition, redex choice or normalization claim.",
+          "precise_review_question": "Does the Tamil sentence continue to say that the natural strategy is the default unless another strategy is specified?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-024"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0366",
+      "source_sha256": "a6027d321bb141166a89ae598a60f8cc559b5b74922b47f5932fe464a91eb978",
+      "translation_sha256": "26729830dc8bdb231545fcf25bc0db09650bec77eef7a9c6a0e02f9c597d3c52",
+      "source_bytes": 2962,
+      "translation_bytes": 6356,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\lambd[x][Mx]\\eredoneMx\\notinFV(M)\\]",
+        "$x\\notinFV(MN)$",
+        "$ext$",
+        "$\\equal[ext]$",
+        "$x\\notinFV(M)$"
+      ],
+      "extra_math": [
+        "\\[\\lambd[x][Mx]\\eredoneMx\\notin\\FV{M}\\]",
+        "$x\\notin\\FV{MN}$",
+        "$\\equal[\\ext]$",
+        "$\\ext$",
+        "$x\\notin\\FV{M}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-025",
+          "unit_id": "OLP-0366",
+          "kind": "omitted-free-variable-macros",
+          "action": "Restored the FV macro in all three eta and extensionality freshness conditions.",
+          "expected_missing_math": [
+            "\\[\\lambd[x][Mx]\\eredoneMx\\notinFV(M)\\]",
+            "$x\\notinFV(MN)$",
+            "$x\\notinFV(M)$"
+          ],
+          "expected_extra_math": [
+            "\\[\\lambd[x][Mx]\\eredoneMx\\notin\\FV{M}\\]",
+            "$x\\notin\\FV{MN}$",
+            "$x\\notin\\FV{M}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\FV",
+            "\\FV",
+            "\\FV"
+          ],
+          "source_issue_or_choice": "The section otherwise uses the defined free-variable operator, whereas bare FV(M) and FV(MN) would be parsed as ordinary multiplied letters rather than set-valued notation.",
+          "chosen_treatment": "தமிழ் மூன்று புதுமாறி நிபந்தனைகளிலும் வரையறுக்கப்பட்ட \\FV குறிமானத்தைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Leaving bare italic letters; removing the macro from the earlier lambda-syntax sections.",
+          "rationale": "Eta contraction and extensionality require exactly the absence of x from the displayed free-variable sets.",
+          "precise_review_question": "Do the restored macros preserve the original M and MN arguments in all three freshness conditions?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-025"
+        },
+        {
+          "audit_id": "TA-LAM-026",
+          "unit_id": "OLP-0366",
+          "kind": "extensionality-rule-symbol-and-prose-errors",
+          "action": "Used the defined extensionality-rule macro at the two frozen bare ext occurrences and resolved adjoining ordinary grammar errors.",
+          "expected_missing_math": [
+            "$ext$",
+            "$\\equal[ext]$"
+          ],
+          "expected_extra_math": [
+            "$\\equal[\\ext]$",
+            "$\\ext$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\ext",
+            "\\ext"
+          ],
+          "source_issue_or_choice": "The definition and theorem use the ext macro, but two proof occurrences instead typeset the letters ext as variables; the surrounding prose also says 'reflexivity and transitive' and contains minor agreement errors.",
+          "chosen_treatment": "தமிழ் எல்லா இடங்களிலும் அதே \\ext விதிக்குறியைப் பயன்படுத்தி, உரையை இலக்கணத்துடன் வழங்குகிறது.",
+          "alternatives_considered": "Treating e, x and t as a product; renaming the rule everywhere to plain letters.",
+          "rationale": "Both repaired occurrences explicitly refer back to the single extensionality rule just defined.",
+          "precise_review_question": "Do both repaired symbols name the same extensionality extension used in the theorem?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-026"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\FV",
+        "\\FV",
+        "\\FV",
+        "\\ext",
+        "\\ext"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0367",
+      "source_sha256": "f9a7362d873c4feed67ac0350ebb3c3cf3ddfd6046c4a7d0ef55e7086038ddf5",
+      "translation_sha256": "a281db7f2a65e7f1287f28326d6c973cdda77cdfdc570124ec500654fdf85dd8",
+      "source_bytes": 385,
+      "translation_bytes": 428,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0368",
+      "source_sha256": "8f2880db2bb1ecb7dc07bf844e6da844d82b48289a5f36270d20588d826deb6f",
+      "translation_sha256": "d81ea5c607353efdbbfe46db4dc2576c0e06311f91198a9fd544111982a5bce9",
+      "source_bytes": 3491,
+      "translation_bytes": 7758,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-027",
+          "unit_id": "OLP-0368",
+          "kind": "prose-agreement-errors",
+          "action": "Resolved malformed agreement in the computational reading and grid-construction prose.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says a relation 'are' rules, the property 'states is that,' and a grid's height 'is' m+1, while the formulas unambiguously fix each intended claim.",
+          "chosen_treatment": "தமிழ் குறைத்தல் தொடர்பை கணக்கீட்டு விதிகளாகவும், ஒன்றுகூடும் மதிப்புக் கூற்றையும், கட்டத்தின் உயரம் மற்றும் அகலத்தையும் இலக்கணத்துடன் வழங்குகிறது.",
+          "alternatives_considered": "Preserving broken agreement; reading the extra verbs as additional mathematical predicates.",
+          "rationale": "These repairs change no relation, grid dimension or reduction path.",
+          "precise_review_question": "Does the Tamil explanation still derive unique normal forms from the exact Church–Rosser diamond stated in the definition?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-027"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0369",
+      "source_sha256": "37905b8d25e97bb2554d4df43321bbcefd55816a7d89fe85279c4119a7871f52",
+      "translation_sha256": "9fb17b10567dedaf83ffed66f3e689e8fbf1433b3f0301d8abc1941023afdae1",
+      "source_bytes": 6191,
+      "translation_bytes": 11039,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$N\\xrightarrow{\\beta}N'$",
+        "$\\lambd[x][\\Subst{N}{R}{y}]\\bredpar\\lambd[x][\\Subst{N'}{R}{y}]$"
+      ],
+      "extra_math": [
+        "$N\\bredparN'$",
+        "$\\lambd[x][\\Subst{N}{R}{y}]\\bredpar\\lambd[x][\\Subst{N'}{R'}{y}]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "lam",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-028",
+          "unit_id": "OLP-0369",
+          "kind": "parallel-abstraction-rule-uses-unrelated-arrow",
+          "action": "Used parallel beta reduction in the premise of its abstraction-closure rule.",
+          "expected_missing_math": [
+            "$N\\xrightarrow{\\beta}N'$"
+          ],
+          "expected_extra_math": [
+            "$N\\bredparN'$"
+          ],
+          "expected_missing_commands": [
+            "\\beta",
+            "\\xrightarrow"
+          ],
+          "expected_extra_commands": [
+            "\\bredpar"
+          ],
+          "source_issue_or_choice": "The rule appears inside the inductive definition of parallel reduction but uses a different beta arrow; every later invocation of defn:bredpar2 assumes N parallel-reduces to N'.",
+          "chosen_treatment": "தமிழ் வரையறுக்கப்படும் \\bredpar தொடர்பையே முன்னிபந்தனையிலும் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Changing every later proof invocation to the unrelated arrow; defining a new arrow only for this clause.",
+          "rationale": "Reflexivity and both induction proofs require abstraction closure for parallel reduction itself, uniquely fixing the intended premise.",
+          "precise_review_question": "Does N bredpar N' make clause 2 support exactly the abstraction cases used later?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-028"
+        },
+        {
+          "audit_id": "TA-LAM-029",
+          "unit_id": "OLP-0369",
+          "kind": "substitution-compatibility-target-keeps-old-replacement",
+          "action": "Used R' in the unfolded right-hand substitution, matching the lemma conclusion and induction hypothesis.",
+          "expected_missing_math": [
+            "$\\lambd[x][\\Subst{N}{R}{y}]\\bredpar\\lambd[x][\\Subst{N'}{R}{y}]$"
+          ],
+          "expected_extra_math": [
+            "$\\lambd[x][\\Subst{N}{R}{y}]\\bredpar\\lambd[x][\\Subst{N'}{R'}{y}]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The desired statement immediately before the unfolded form substitutes R' on the right, and the induction hypothesis transforms both N to N' and R to R', but the source unfolded target reverts to R.",
+          "chosen_treatment": "தமிழ் வலப்பக்க அருவத்தின் உடலிலும் குறைக்கப்பட்ட மாற்றுச் சொல் R' ஐத் தொடர்கிறது.",
+          "alternatives_considered": "Dropping the premise R parallel-reduces to R'; changing the lemma conclusion to retain R.",
+          "rationale": "Unfolding substitution under the abstraction changes only its presentation and must retain the same R' argument as the preceding formula.",
+          "precise_review_question": "Does the corrected unfolded target follow directly from the induction hypothesis and abstraction closure?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-029"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\beta",
+        "\\xrightarrow"
+      ],
+      "extra_commands": [
+        "\\bredpar"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0370",
+      "source_sha256": "c51e50d16a675080277053003c33dc22951be9a43bb9910cc1bf1dff6e05f361",
+      "translation_sha256": "7f0fbf277ec52e4587bb700489797e16c571b071548074b25dd1ba7281017439",
+      "source_bytes": 2941,
+      "translation_bytes": 4839,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$M'$"
+      ],
+      "extra_math": [
+        "$N'$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "dap",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-030",
+          "unit_id": "OLP-0370",
+          "kind": "contractum-variable-list-repeats-result-name",
+          "action": "Introduced N' in the parallel-redex case instead of redundantly listing the already defined result M' a second time.",
+          "expected_missing_math": [
+            "$M'$"
+          ],
+          "expected_extra_math": [
+            "$N'$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The case already defines M' as Subst(N',Q',x), then lists M' again among component variables while N' is used in the contractum and premise without being listed.",
+          "chosen_treatment": "தமிழ் கூறுப்பட்டியலில் தேவையான N' ஐ அறிமுகப்படுத்தி, முடிவுச் சொல் M' இன் தேவையற்ற மறுநிகழ்வை நீக்குகிறது.",
+          "alternatives_considered": "Leaving N' undeclared; renaming every N' in the case to M'.",
+          "rationale": "The parallel-reduction premise N bredpar N' and the contractum Subst(N',Q',x) uniquely identify the missing component name.",
+          "precise_review_question": "Does replacing only the repeated list entry introduce every variable used by the case without changing its conclusion?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-030"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

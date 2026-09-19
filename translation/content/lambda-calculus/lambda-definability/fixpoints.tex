@@ -1,0 +1,179 @@
+% SEGMENT OLP-0379-S01
+% Part: lambda-calculus
+% Chapter: lambda-definability
+% Section: fixpoints
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{ldf}{fp}
+
+\olsection{நிலைப்புள்ளிகள்}
+
+பின்வரும் பண்பைக் கொண்ட $\fn{Fac}$ என்ற சொல்லாகக் காரணியச் சார்பை
+மீள்வரையறையால் வரையறுக்க விரும்புகிறோம் என்று கொள்க:
+\[
+\fn{Fac} \ident \lambd[n][\fn{IsZero}\, n\, \num 1 (\fn{Mult}\, n (\fn{Fac}(\fn{Pred} \, n)))]
+\]
+அதாவது, $n = 0$ எனில் $n$ இன் காரணியம் $1$; இல்லையெனில் அது $n$ மடங்கு
+$n-1$ இன் காரணியம். ஆனால் இவ்விதத்தில் $\fn{Fac}$ என்ற சொல்லை வரையறுக்க
+முடியாது; ஏனெனில் வலப்பக்கத்திலேயே $\fn{Fac}$ வருகிறது. இத்தகைய
+தன்குறிப்பைக் கொண்ட மீள்வரையறைகள் லாம்டா கலனத்தின் பகுதி அல்ல.
+% SOURCE CORRECTION TA-LAM-041: use both operands and the Church-zero term in the nonrecursive multiplication example.
+எடுத்துக்காட்டாக, ஒரு சொல்லைப் பின்வருமாறு வரையறுப்பது
+\[
+\fn{Mult} \ident \lambd[ab][a (\fn{Add}\, b) \num{0}]
+\]
+வலப்பக்கத்தில் $\fn{Add}$ போன்ற முன்பே வரையறுக்கப்பட்ட சொற்களை மட்டுமே
+கொண்டுள்ளது. $\fn{Add}$ ஐ அதன் வரையறுக்கும் சொல்லால் பதிலிட்டு எப்போதும்
+நீக்கலாம். இதனால் $\fn{Mult}$ என்பது ஒரு தூய லாம்டா சொல்லாகக் கிடைக்கும்.
+$\fn{Add}$ தானே வரையறுக்கப்பட்ட சொற்களைக் கொண்டிருந்தால்
+($\fn{Add}'$ அவ்வாறு கொண்டிருப்பதுபோல்), இச்செயல்முறையைத் தொடர்ந்து இறுதியில்
+ஒரு தூய லாம்டா சொல்லை அடையலாம்.
+
+ஆனால் மேலுள்ள $\fn{Fac}$ வரையறையைப் போன்ற மீள்வரையறைகளுக்கு இது மெய்யல்ல.
+வலப்பக்கத்தில் வரும் $\fn{Fac}$ ஐ $\fn{Fac}$ இன் வரையறையாலேயே பதிலிட்டால்,
+% SOURCE CORRECTION TA-LAM-042: keep the recursive expansion inside the body of the outer abstraction.
+பின்வருவது கிடைக்கிறது:
+\begin{align*}
+  \fn{Fac} & \ident \lambd[n][\fn{IsZero}\, n\, \num{1} (\fn{Mult}\, n ((\lambd[n][\fn{IsZero} \, n \, \num 1\, (\fn{Mult}\, n\, (\fn{Fac} (\fn{Pred}\, n)))]) (\fn{Pred}\, n)))]
+\end{align*}
+இப்போதும் வலப்பக்கத்திலிருந்து $\fn{Fac}$ நீங்கவில்லை. இச்செயல்முறையை
+மீண்டும் மீண்டும் செய்தால், வரையறை தொடர்ந்து நீள்கிறது; ஒருபோதும் ஒரு தூய
+லாம்டா சொல்லாக முடிவதில்லை. ஆகவே இவ்விதத்தில் காரணியத்தை அல்லது பொதுவாக
+மீள்வரையறைச் சார்புகளை வரையறுப்பது நடைமுறைக்கு ஒவ்வாதது.
+
+எனினும், மீள்வரையறை நமக்கு ஒன்றைக் கூறுகிறது. காரணியச் சார்பைப்
+பிரதிநிதித்துவப்படுத்தும் சொல் $f$ ஒன்று இருக்குமானால், பின்வரும் சொல்
+\[
+\fn{Fac}' \ident \lambd[g][\lambd[n][\fn{IsZero} \, n \, \num 1\, (\fn{Mult} \, n\, (g (\fn{Pred} n)))]]
+\]
+$f$ மீது செயல்படுத்தப்படும்போது, அதாவது $\fn{Fac}'\,f$ என்பதும் காரணியச்
+சார்பைப் பிரதிநிதித்துவப்படுத்தும். வேறு சொற்களில், ஒரு சார்பை ஏற்று ஒரு
+சார்பைத் திருப்பித்தரும் சார்பாக $\fn{Fac}'$ ஐக் கருதினால், $f$ காரணியச்
+சார்பாக இருக்கும் நிபந்தனையில் $\fn{Fac'}\, f$ இன் மதிப்பு~$f$ மட்டுமே.
+$\fn{Fac}' \, f \equal[\beta] f$ என்ற பண்புள்ள சார்பு~$f$ ஐ
+$\fn{Fac}'$ இன் \emph{நிலைப்புள்ளி} என்கிறோம். ஆகவே காரணியச் சார்பு
+$\fn{Fac}'$ இன் ஒரு நிலைப்புள்ளி.
+
+கொடுக்கப்பட்ட சொல்லின் நிலைப்புள்ளிகளைக் கணிக்கும் சொற்கள் லாம்டா கலனத்தில்
+உள்ளன. அச்சொற்களைக் கொண்டு $\fn{Fac}'$ போன்ற ஒரு சொல்லை காரணியத்தின்
+வரையறையாக மாற்றலாம்.
+
+\begin{defn}
+  \ollabel{defn:Turing-Y}
+  \emph{Y-சேர்ப்பான்} என்பது பின்வரும் சொல்:
+  \[
+  Y \ident (\lambd[ux][x(uux)])(\lambd[ux][x(uux)]).
+  \]
+\end{defn}
+
+\begin{thm}
+  எந்தச் சொல் $g$ க்கும் $Yg \red g(Yg)$ என்ற பண்பு $Y$ க்கு உள்ளது.
+  ஆகவே $Yg$ எப்போதும்~$g$ இன் ஒரு நிலைப்புள்ளி.
+\end{thm}
+
+\begin{proof}
+  $(\lambd[ux][x(uux)])$ ஐ~$U$ எனச் சுருக்கி எழுதுவோம்; அப்போது
+  $Y \ident UU$. எனவே
+  \begin{align*}
+    Y g &\ident (\lambd[ux][x(uux)])U\,g \\
+    &\red (\lambd[x][x(UUx)])g\\
+    & \red g(UUg) \ident g(Yg).
+  \end{align*}
+  $g(Yg)$, $Yg$ இரண்டும் $g(Yg)$ ஆகக் குறைவதால்
+  $g(Yg) \equal[\beta] Yg$. ஆகவே $Yg$ என்பது~$g$ இன் ஒரு நிலைப்புள்ளி.
+\end{proof}
+
+$Yg$ ஒரு ரெடெக்ஸ் என்பதால், குறைத்தல் முடிவுறாமல் தொடரலாம்:
+\begin{align*}
+  Y g &\red g (Y g) \\
+    &\red g (g (Y g)) \\
+    &\red g(g (g (Y g)))\\
+    &\ldots
+\end{align*}
+எனவே $Yg$ என்பதை $g$ தன்னையே முடிவுறாமல் பலமுறை செயல்படுத்துவதாகக்
+கருதலாம். அதன் மீது~$g$ ஐ மேலும் ஒருமுறை செயல்படுத்தினால்,
+ஒருவகையில் சொல்வதானால், புதிதாக எதையும் செய்வதில்லை. $Yg$ மீது முடிவுறாமல்
+பலமுறை செயல்படுத்தப்பட்ட~$g$ மீது மீண்டும்~$g$ ஐச் செயல்படுத்தினாலும்,
+அது $Yg$ மீது முடிவுறாமல் பலமுறை செயல்படுத்தப்பட்ட~$g$ ஆகவே உள்ளது.
+
+மேலே~$Yg$ இலிருந்து தொடங்கும் $\beta$-குறைத்தல் படிகளின் தொடர் முடிவுறாதது
+என்பதைக் கவனிக்க. ஆகவே $Yg$ ஐ ஏதேனும் ஒரு சொல்லின்மீது செயல்படுத்தி
+$(Yg)N$ ஐக் கருதினால், அச்சொல்லும் $(g(Yg))N$, $(g(g(Yg)))N$, \dots\
+என முடிவுறாமல் பல வேறு சொற்களாகக் குறையும். இருப்பினும்,
+\emph{வேறொரு} குறைத்தல் படித்தொடர் ஓர் இயல்புவடிவில் முடிவடைவது
+சாத்தியமே.
+
+காரணியத்தை எடுத்துக்கொள்க. $\fn{Fac}$ ஐ $Y\, \fn{Fac}'$ என, அதாவது
+$\fn{Fac'}$ இன் ஒரு நிலைப்புள்ளியாக, வரையறுக்க. அப்போது:
+\begin{align*}
+  \fn{Fac}\,\num 3
+  &\red Y\, \fn{Fac}' \, \num 3 \\
+  &\red \fn{Fac}' (Y \,\fn{Fac}') \, \num 3 \\
+  &\ident (\lambd[x][\lambd[n][\fn{IsZero} \, n\, \num 1\,
+      (\fn{Mult}\, n\, (x (\fn{Pred}\, n)))]]) \, \fn{Fac} \, \num 3\\
+  & \red \fn{IsZero} \, \num 3\, \num 1\,
+      (\fn{Mult}\, \num 3\, (\fn{Fac} (\fn{Pred}\, \num 3))) \\
+  &\red  \fn{Mult}\, \num 3 \, (\fn{Fac} \, \num 2).
+  \intertext{இதேபோல்,}
+  \fn{Fac}\,\num 2
+  &\red  \fn{Mult}\, \num 2 \, (\fn{Fac} \, \num 1) \\
+  \fn{Fac}\,\num 1
+  &\red  \fn{Mult}\, \num 1 \, (\fn{Fac} \, \num 0)
+  \intertext{ஆனால்}
+  \fn{Fac}\,\num 0
+  &\red \fn{Fac}' (Y \,\fn{Fac}') \, \num 0 \\
+  &\ident (\lambd[x][\lambd[n][\fn{IsZero} \, n\, \num 1\,
+      (\fn{Mult}\, n\, (x (\fn{Pred}\, n)))]]) \, \fn{Fac} \, \num 0\\
+  & \red \fn{IsZero} \, \num 0\, \num 1\,
+      (\fn{Mult}\, \num 0\, (\fn{Fac} (\fn{Pred}\, \num 0))).\\
+  &\red \num 1.
+  \intertext{எனவே எல்லாவற்றையும் சேர்த்து}
+  \fn{Fac}\,\num 3
+  &\red  \fn{Mult}\, \num 3 \,
+  (\fn{Mult} \, \num 2\, (\fn{Mult} \, \num 1\, \num 1)).
+\end{align*}
+
+$\fn{Fac'}$ க்குப் பொருந்துவது ஒவ்வொரு மீள்வரையறைக்கும் பொருந்தும்.
+பின்வரும் மீள்வரையறைச் சமன்பாடு நம்மிடம் உள்ளதாகக் கொள்க:
+\begin{align*}
+g\,x_1\dots x_n & \equal[\beta] N
+\intertext{இங்கு $N$ ஆனது~$g$, $x_1$, \dots,~$x_n$ ஆகியவற்றைக்
+கொண்டிருக்கலாம். அப்போது பின்வருமாறு அமையும்
+$G \ident (Y \lambd[g][\lambd[x_1\dots x_n][N]])$ என்ற சொல் எப்போதும்
+உள்ளது:}
+G\,x_1 \dots x_n & \equal[\beta] \Subst{N}{G}{g}.
+\intertext{ஏனெனில் நிலைப்புள்ளித் தேற்றத்தின்படி,}
+G \ident (Y \lambd[g][\lambd[x_1\dots x_n][N]]) & \red \lambd[g][\lambd[x_1\dots x_n][N]](Y \lambd[g][\lambd[x_1\dots x_n][N]])\\
+& \ident (\lambd[g][\lambd[x_1\dots x_n][N]])\,G
+\intertext{எனவே}
+G\,x_1 \dots x_n
+& \red (\lambd[g][\lambd[x_1\dots x_n][N]])\,G\,x_1\dots x_n\\
+& \red (\lambd[x_1\dots x_n][\Subst{N}{G}{g}])\,x_1\dots x_n\\
+  & \red \Subst{N}{G}{g}.
+\end{align*}
+
+\olref{defn:Turing-Y} இல் உள்ள $Y$ சேர்ப்பானை ஆலன் டியூரிங்
+கண்டறிந்தார். அலான்சோ சர்ச் வேறொரு வடிவத்தை முன்மொழிந்தார்; அதை~$Y_C$ என்று
+அழைப்போம்:
+\[
+Y_C \ident \lambd[g][(\lambd[x][g(xx)])(\lambd[x][g(xx)])].
+\]
+% SOURCE CORRECTION TA-LAM-043: the comparison is about Church's Y_C, not the Turing combinator Y that the preceding theorem proves reduces directly.
+சர்ச்சின் சேர்ப்பான் டியூரிங்கின் சேர்ப்பானைவிடச் சற்று வலிமை குறைந்தது:
+$Y_Cg \equal[\beta] g(Y_Cg)$; ஆனால் $Y_Cg \bred g(Y_Cg)$ அல்ல.
+$V$ என்பது $\lambd[x][g(xx)]$ என்ற சொல்லாக இருக்கட்டும்; அப்போது
+$Y_C \ident \lambd[g][VV]$. எனவே
+\begin{align*}
+  VV & \ident (\lambd[x][g(xx)])V \red g(VV)
+  \text{ ஆகவே}\\
+  Y_C g & \ident (\lambd[g][VV])g \red VV \red g(VV), \text{ ஆனால் மேலும்}\\
+  g(Y_C g) & \ident g((\lambd[g][VV])g) \red g(VV).
+\end{align*}
+வேறு சொற்களில், $Y_Cg$, $g(Y_Cg)$ இரண்டும் $g(VV)$ என்ற பொதுச் சொல்லுக்குக்
+குறைகின்றன; எனவே $Y_Cg \equal[\beta] g(Y_Cg)$. பயன்பாடுகளுக்கு இது
+பெரும்பாலும் போதுமானது.
+
+\end{document}

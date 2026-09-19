@@ -1,0 +1,307 @@
+{
+  "batch_id": "TA-B177",
+  "units": [
+    {
+      "unit_id": "OLP-0378",
+      "source_sha256": "dbedc0b45f7d2ce9eebd36a219fe22b532ddebb6082fb4bf356afc612f4e294d",
+      "translation_sha256": "df0c547ca4bc4e01114b9bd7ea893dcdc7b8bd4ac3b10ed62e52f74b68c7cbf2",
+      "source_bytes": 5835,
+      "translation_bytes": 10176,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$G_k$",
+        "$H$",
+        "\\begin{align*}h(x_1,\\dots,x_n,0)&=f(x_1,\\dots,x_n)\\\\h(x_1,\\dots,x_n,y+1)&=h(x_1,\\dots,x_n,y,h(x_1,\\dots,x_n,y)).\\end{align*}"
+      ],
+      "extra_math": [
+        "$G_{k-1}$",
+        "$g$",
+        "\\begin{align*}h(x_1,\\dots,x_n,0)&=f(x_1,\\dots,x_n)\\\\h(x_1,\\dots,x_n,y+1)&=g(x_1,\\dots,x_n,y,h(x_1,\\dots,x_n,y)).\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "definable",
+        "define",
+        "include",
+        "lam",
+        "lambda",
+        "ldf",
+        "logic",
+        "open",
+        "prf",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-039",
+          "unit_id": "OLP-0378",
+          "kind": "composition-term-list-and-conclusion-mismatch",
+          "action": "Ended the defining-term list at G_(k-1) and stated that the composed function h, rather than its representing term H, is lambda-definable.",
+          "expected_missing_math": [
+            "$G_k$",
+            "$H$"
+          ],
+          "expected_extra_math": [
+            "$G_{k-1}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The k functions g_0 through g_(k-1) are paired with k+1 terms G_0 through G_k, and the conclusion calls the term H lambda-definable although lambda-definability is a property of the function h.",
+          "chosen_treatment": "தமிழ் பட்டியலை G_{k-1} இல் முடித்து, h சார்பே லாம்டா-வரையறுக்கத்தக்கது என்று கூறுகிறது.",
+          "alternatives_considered": "Adding an undeclared g_k; calling H a numerical function instead of the representing lambda term.",
+          "rationale": "The displayed composition uses exactly G_0 through G_(k-1), and the proof immediately introduces H as the term that lambda-defines h.",
+          "precise_review_question": "Do the repaired statement and proof now pair each g_i with exactly one G_i and distinguish h from its defining term H?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-039"
+        },
+        {
+          "audit_id": "TA-LAM-040",
+          "unit_id": "OLP-0378",
+          "kind": "primitive-recursion-step-calls-wrong-function",
+          "action": "Applied the stipulated step function g in the successor clause and its informal explanation.",
+          "expected_missing_math": [
+            "\\begin{align*}h(x_1,\\dots,x_n,0)&=f(x_1,\\dots,x_n)\\\\h(x_1,\\dots,x_n,y+1)&=h(x_1,\\dots,x_n,y,h(x_1,\\dots,x_n,y)).\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "$g$",
+            "\\begin{align*}h(x_1,\\dots,x_n,0)&=f(x_1,\\dots,x_n)\\\\h(x_1,\\dots,x_n,y+1)&=g(x_1,\\dots,x_n,y,h(x_1,\\dots,x_n,y)).\\end{align*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The lemma declares g to have the n+2 inputs required for the recursion step, but the defining equation instead applies h to n+2 inputs and the prose then says h is iterated.",
+          "chosen_treatment": "தமிழ் தொடரிப்படியில் g ஐப் பயன்படுத்தி, அதை படிச் சார்பு என்று விளக்குகிறது.",
+          "alternatives_considered": "Changing the declared arity of h and abandoning the standard primitive-recursion schema; renaming g away.",
+          "rationale": "Every subsequent reduction uses G(n,m,h(n,m)) and concludes from g(n,m,h(n,m))=h(n,m+1), uniquely fixing g as the intended step function.",
+          "precise_review_question": "Does the g-based successor clause agree with the later D-state reduction and the declared n+2 arity?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-040"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0379",
+      "source_sha256": "d826387d4284ef13679ef5b91a22bb7551c193c2e8c8356201ceb1df72a46b93",
+      "translation_sha256": "0cc60350fc15c9765a54b83c5a76543d5d60abfe9a5345cee6f99d75c8e61fc4",
+      "source_bytes": 6921,
+      "translation_bytes": 13358,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\fn{Mult}\\ident\\lambd[ab][a(\\fn{Add}\\,a)0]\\]",
+        "\\begin{align*}\\fn{Fac}&\\ident\\lambd[n][\\fn{IsZero}\\,n\\,\\num{1}]\\\\&\\qquad(\\fn{Mult}\\,n((\\lambd[n][\\fn{IsZero}\\,n\\,\\num1\\,(\\fn{Mult}\\,n\\,(\\fn{Fac}(\\fn{Pred}\\,n)))])(\\fn{Pred}\\,n)))\\end{align*}",
+        "$Yg\\equal[\\beta]g(Yg)$",
+        "$Yg\\bredg(Yg)$"
+      ],
+      "extra_math": [
+        "\\[\\fn{Mult}\\ident\\lambd[ab][a(\\fn{Add}\\,b)\\num{0}]\\]",
+        "\\begin{align*}\\fn{Fac}&\\ident\\lambd[n][\\fn{IsZero}\\,n\\,\\num{1}(\\fn{Mult}\\,n((\\lambd[n][\\fn{IsZero}\\,n\\,\\num1\\,(\\fn{Mult}\\,n\\,(\\fn{Fac}(\\fn{Pred}\\,n)))])(\\fn{Pred}\\,n)))]\\end{align*}",
+        "$Y_Cg\\equal[\\beta]g(Y_Cg)$",
+        "$Y_Cg\\bredg(Y_Cg)$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Fac",
+        "UUg",
+        "UUx",
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "uux"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-041",
+          "unit_id": "OLP-0379",
+          "kind": "nonrecursive-multiplication-example-ignores-b-and-uses-bare-zero",
+          "action": "Used b as the iterated addend and the Church-zero term in the example of an eliminable nonrecursive definition.",
+          "expected_missing_math": [
+            "\\[\\fn{Mult}\\ident\\lambd[ab][a(\\fn{Add}\\,a)0]\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\fn{Mult}\\ident\\lambd[ab][a(\\fn{Add}\\,b)\\num{0}]\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\num"
+          ],
+          "source_issue_or_choice": "The example binds a and b but ignores b, and inserts a bare arithmetic zero where the surrounding pure lambda terms require the Church numeral.",
+          "chosen_treatment": "தமிழ் இரு உள்ளீடுகளையும் பயன்படுத்தி சர்ச் பூச்சியத்திலிருந்து கூட்டலை மீளச்செய்கிறது.",
+          "alternatives_considered": "Preserving a term for a squared; treating bare 0 as an unexplained lambda constant.",
+          "rationale": "The preceding arithmetic section establishes a(Add b)(num 0) as the alternative multiplication construction, and the present paragraph requires a pure lambda term after expansion.",
+          "precise_review_question": "Does the repaired example both depend on a and b and remain expressible as a pure lambda term after expanding its abbreviations?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-041"
+        },
+        {
+          "audit_id": "TA-LAM-042",
+          "unit_id": "OLP-0379",
+          "kind": "factorial-expansion-closes-outer-abstraction-before-else-branch",
+          "action": "Kept the multiplication branch and expanded recursive call inside the body of the outer lambda abstraction.",
+          "expected_missing_math": [
+            "\\begin{align*}\\fn{Fac}&\\ident\\lambd[n][\\fn{IsZero}\\,n\\,\\num{1}]\\\\&\\qquad(\\fn{Mult}\\,n((\\lambd[n][\\fn{IsZero}\\,n\\,\\num1\\,(\\fn{Mult}\\,n\\,(\\fn{Fac}(\\fn{Pred}\\,n)))])(\\fn{Pred}\\,n)))\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{align*}\\fn{Fac}&\\ident\\lambd[n][\\fn{IsZero}\\,n\\,\\num{1}(\\fn{Mult}\\,n((\\lambd[n][\\fn{IsZero}\\,n\\,\\num1\\,(\\fn{Mult}\\,n\\,(\\fn{Fac}(\\fn{Pred}\\,n)))])(\\fn{Pred}\\,n)))]\\end{align*}"
+          ],
+          "expected_missing_commands": [
+            "\\qquad"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen display closes lambda n immediately after the true branch, leaving the factorial multiplication as a separate unconnected align row rather than the false branch of IsZero.",
+          "chosen_treatment": "தமிழ் விரிவாக்கப்பட்ட மீளழைப்பை வெளிப்புற அருவத்தின் உடலிலுள்ள பொய்க் கிளையாக வைத்திருக்கிறது.",
+          "alternatives_considered": "Treating the second row as an unrelated expression; deleting the recursive branch.",
+          "rationale": "The preceding factorial equation and the paragraph's promised self-substitution uniquely determine one lambda body containing both selector branches.",
+          "precise_review_question": "Does the repaired expansion represent exactly one substitution of the full factorial expression for the recursive Fac occurrence?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-042"
+        },
+        {
+          "audit_id": "TA-LAM-043",
+          "unit_id": "OLP-0379",
+          "kind": "church-combinator-comparison-names-turing-symbol",
+          "action": "Used Y_C in both claims about Church's combinator.",
+          "expected_missing_math": [
+            "$Yg\\equal[\\beta]g(Yg)$",
+            "$Yg\\bredg(Yg)$"
+          ],
+          "expected_extra_math": [
+            "$Y_Cg\\equal[\\beta]g(Y_Cg)$",
+            "$Y_Cg\\bredg(Y_Cg)$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Immediately after defining Church's combinator as Y_C, the comparison switches to Y, contradicting the preceding theorem that Turing's Y directly reduces to g(Yg).",
+          "chosen_treatment": "தமிழ் இரு ஒப்பீட்டுக் கூற்றுகளிலும் சர்ச்சின் Y_C குறியையே பயன்படுத்துகிறது.",
+          "alternatives_considered": "Reversing the proved theorem for Turing's Y; renaming Church's definition to Y and creating a symbol collision.",
+          "rationale": "The next calculation derives exactly the two stated properties for Y_Cg, while the earlier theorem distinguishes Turing's stronger directed reduction.",
+          "precise_review_question": "Do the Y_C claims now match the immediately following common-reduct calculation without contradicting the Turing-Y theorem?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-043"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\qquad"
+      ],
+      "extra_commands": [
+        "\\num"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0380",
+      "source_sha256": "4da3bef314009bbd93701e19fa66ff1bd7dc718427fa1ddd06d223b2aaf9b7f6",
+      "translation_sha256": "c989057be92734aa07016dc8ba372078a316334622a8a6846cf5c14c2117b5c7",
+      "source_bytes": 2488,
+      "translation_bytes": 4750,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$h$",
+        "\\begin{align*}\\fn{Search}&\\ident\\lambd[g][\\lambd[f\\,\\vec{x}\\,y][\\fn{IsZero}(f\\,\\vec{x}\\,y)\\,y\\,(g\\,\\vec{x}(\\fn{Succ}\\,y)]]\\\\H&\\ident\\lambd[\\vecx][(Y\\,\\fn{Search})F\\,\\vec{x}\\,\\num{0}],\\end{align*}"
+      ],
+      "extra_math": [
+        "$g$",
+        "\\begin{align*}\\fn{Search}&\\ident\\lambd[g][\\lambd[f\\,\\vec{x}\\,y][\\fn{IsZero}(f\\,\\vec{x}\\,y)\\,y\\,(g\\,\\vec{x}(\\fn{Succ}\\,y))]]\\\\H&\\ident\\lambd[\\vecx][(Y\\,\\fn{Search})F\\,\\vec{x}\\,\\num{0}],\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "definable",
+        "define",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "prf",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-044",
+          "unit_id": "OLP-0380",
+          "kind": "minimization-proof-target-switches-to-undeclared-h",
+          "action": "Kept g as the function being lambda-defined in the proof.",
+          "expected_missing_math": [
+            "$h$"
+          ],
+          "expected_extra_math": [
+            "$g$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The lemma defines g and the term H represents that same function, but the proof opening abruptly says it will lambda-define h, which is never introduced.",
+          "chosen_treatment": "தமிழ் நிறுவல் முழுவதும் சிறுமமாக்கலால் வரையறுக்கப்பட்ட g சார்பையே தொடர்கிறது.",
+          "alternatives_considered": "Renaming the lemma's g and every final value to h; leaving the proof target undeclared.",
+          "rationale": "The displayed minimization equation and final H reduction both identify the target as the lemma's g.",
+          "precise_review_question": "Does using g in the proof opening align its target with the lemma and the representing term H?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-044"
+        },
+        {
+          "audit_id": "TA-LAM-045",
+          "unit_id": "OLP-0380",
+          "kind": "search-term-missing-closing-parenthesis",
+          "action": "Closed the recursive call g(vec x, Succ y) before closing the two lambda abstractions.",
+          "expected_missing_math": [
+            "\\begin{align*}\\fn{Search}&\\ident\\lambd[g][\\lambd[f\\,\\vec{x}\\,y][\\fn{IsZero}(f\\,\\vec{x}\\,y)\\,y\\,(g\\,\\vec{x}(\\fn{Succ}\\,y)]]\\\\H&\\ident\\lambd[\\vecx][(Y\\,\\fn{Search})F\\,\\vec{x}\\,\\num{0}],\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{align*}\\fn{Search}&\\ident\\lambd[g][\\lambd[f\\,\\vec{x}\\,y][\\fn{IsZero}(f\\,\\vec{x}\\,y)\\,y\\,(g\\,\\vec{x}(\\fn{Succ}\\,y))]]\\\\H&\\ident\\lambd[\\vecx][(Y\\,\\fn{Search})F\\,\\vec{x}\\,\\num{0}],\\end{align*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The Search display opens a parenthesized recursive call but closes the lambda bodies directly after Succ y, leaving the call unbalanced.",
+          "chosen_treatment": "தமிழ் Search சொல்லில் மீளழைப்பின் வல அடைப்புக்குறியைச் சேர்த்து, பின்னர் இரு அருவங்களையும் மூடுகிறது.",
+          "alternatives_considered": "Deleting the opening parenthesis; treating the closing square bracket as a round parenthesis.",
+          "rationale": "The adjoining prose and two reduction branches require the false selector branch to be the complete recursive call g vec-x (Succ y).",
+          "precise_review_question": "Is the repaired body balanced and does IsZero receive exactly the zero test, y, and recursive-call branches?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-045"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

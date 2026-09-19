@@ -1,0 +1,147 @@
+% SEGMENT OLP-0375-S01
+% Part: lambda-calculus
+% Chapter: lambda-definablity
+% Section: arithmetical-functions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{rep}{arf}
+\olsection{\usetoken{S}{lambda definable} எண்கணிதச் சார்புகள்}
+
+\begin{prop}
+  \ollabel{prop:succ-ld}
+  தொடரிச் சார்பு~$\Succ$ ஆனது !!{lambda definable}.
+\end{prop}
+
+\begin{proof}
+தொடரிச் சார்பை !!{lambda define}s ஒரு சொல்
+\begin{align*}
+  \fn{Succ} & \ident \lambd[a][\lambd[fx][f ({a} f x)]].
+  \intertext{நமது குறுக்கக் குறிமான மரபுகளின்படி, இது பின்வருவதன் சுருக்கம்:}
+  \fn{Succ} & \ident \lambd[a][\lambd[f][\lambd[x][(f (({a} f) x))]]].
+  \intertext{$\fn{Succ}$ என்பது ஓர் எண்~$a$ ஐ உள்ளீடாக ஏற்று,
+    $\lambd[fx][f ({a} f x)]$ என்ற மற்றொரு சார்பாக மதிப்பிடப்படும் ஒரு
+    சார்பு. அந்தச் சார்பு தானாகவே ஒரு சர்ச் எண்ணுரு அல்ல. எனினும்,
+    உள்ளீடு $a$ ஒரு சர்ச் எண்ணுருவாக இருந்தால், அது ஒரு சர்ச் எண்ணுருவாகக்
+    குறைகிறது. பின்வருவதைக் கருதுக:}
+   (\lambd[a][\lambd[fx][f ({a} f x)]])\,\num{n} & \redone
+   \lambd[fx][f ({\num{n}} f x)].
+   \intertext{உட்பொதிந்த சொல் $\num{n}fx$ ஒரு ரெடெக்ஸ்; ஏனெனில்
+     $\num{n}$ என்பது $\lambd[fx][f^nx]$. ஆகவே
+     $\num{n}fx \redone f^nx$; முழுச் சொல்லுக்கும்}
+   \fn{Succ}\, \num n & \red \lambd[fx][f(f^n(x))],
+\end{align*}
+அதாவது, $\num{n+1}$ கிடைக்கிறது.
+\end{proof}
+
+\begin{ex}
+  $\fn{Succ}$ ஐ~$\num{0}$ மீது, அதாவது $\lambd[fx][x]$ மீது,
+  செயல்படுத்தும்போது என்ன நிகழ்கிறது என்று பார்ப்போம். சொற்களை முழுமையாக
+  விரித்தெழுதுவோம்:
+  \begin{align*}
+    \fn{Succ}\, \num{0} & \ident (\lambd[a][\lambd[f][\lambd[x][(f (({a} f) x))]]])(\lambd[f][\lambd[x][x]])\\
+    & \redone \lambd[f][\lambd[x][(f (({(\lambd[f][\lambd[x][x]])} f) x))]] \\
+    & \redone \lambd[f][\lambd[x][(f ({(\lambd[x][x])} x))]] \\
+    & \redone \lambd[f][\lambd[x][(f x)]] \ident \num{1}\\
+  \end{align*}
+\end{ex}
+
+\begin{prob}
+  சொல்
+  \begin{align*}
+    \fn{Succ}' & \ident \lambd[{n}][\lambd[fx][{n} f (f x)]]
+  \end{align*}
+  தொடரிச் சார்பை !!{lambda define}s. ஏன் என்று விளக்குக.
+\end{prob}
+
+\begin{prop}
+  \ollabel{prop:add-ld}
+  கூட்டல் சார்பு~$\Add$ ஆனது !!{lambda definable}.
+\end{prop}
+
+\begin{proof}
+கூட்டலைப் பின்வரும் சொற்கள் !!{lambda define} செய்கின்றன:
+\begin{align*}
+  \fn{Add} & \ident \lambd[{a}{b}][\lambd[fx][{a} f ({b} f x)]]
+\intertext{அல்லது, மாற்றாக,}
+  \fn{Add}' & \ident \lambd[{a}{b}][{a}\, \fn{Succ} \, {b}].
+\intertext{முதல் கூட்டல் பின்வருமாறு செயல்படுகிறது: $\fn{Add}$ முதலில்
+  ${a}$, ${b}$ என்ற இரண்டு எண்களை ஏற்கிறது. அதன் விளைவு $f$, $x$
+  ஆகியவற்றை ஏற்று $af(bfx)$ ஐத் திருப்பித்தரும் சார்பு. $a$, $b$ ஆகியவை
+  $\num{n}$, $\num{m}$ என்ற சர்ச் எண்ணுருக்களாக இருந்தால், இது
+  $f^{n+m}(x)$ ஆகக் குறைகிறது; இது $f^{n}(f^{m}(x))$ குச் சர்வசமம்.
+  படிப்படியாக எழுதினால்:}
+  (\lambd[{a}{b}][\lambd[fx][{a} f ({b} f x)]])\num n\,\num m & \redone
+  \lambd[fx][\num{n}\, f (\num {m}\, f x)] \\
+  & \redone \lambd[fx][\num{n}\, f (f^m x)] \\
+  & \redone \lambd[fx][f^n (f^m x)] \ident \num {n+m}.
+\intertext{கூட்டலின் இரண்டாம் பிரதிநிதித்துவமான $\fn{Add'}$ வேறுவிதமாகச்
+  செயல்படுகிறது. $\num{n}$, $\num{m}$ என்ற இரண்டு சர்ச் எண்ணுருக்கள்மீது
+  செயல்படுத்தினால்,}
+\fn{Add}' \num n \,\num m
+& \redone \num{n}\, \fn{Succ}\, \num{m}.
+\intertext{ஆனால் $\num{n} f x$ எப்போதும் $f^n(x)$ ஆகக் குறைகிறது. ஆகவே,}
+  \num{n}\,  \fn{Succ}\, \num{m} & \red \fn{Succ}^n(\num{m}).
+\end{align*}
+$\fn{Succ}$ தொடரிச் சார்பை !!{lambda define}s என்பதாலும், தொடரிச் சார்பை
+$m$ மீது $n$ முறை செயல்படுத்துவது $n+m$ ஐத் தருவதாலும், இது இறுதியில்
+~$\num{n+m}$ ஆகக் குறைகிறது.
+\end{proof}
+
+\begin{prop}
+  \ollabel{prop:mult-ld}
+  பெருக்கல் பின்வரும் சொல்லால் !!{lambda definable}:
+  \[
+  \fn{Mult} \ident \lambd[ab][\lambd[fx][a (b f) x]]
+  \]
+\end{prop}
+
+\begin{proof}
+  இது எவ்வாறு செயல்படுகிறது என்பதைக் காண, $\fn{Mult}$ ஐ
+  $\num{n}$, $\num{m}$ என்ற சர்ச் எண்ணுருக்கள்மீது செயல்படுத்துவதாகக்
+  கொள்க. $\fn{Mult} \, \num{n} \, \num{m}$ ஆனது
+  $\lambd[fx][\num{n}(\num{m}\, f)x]$ ஆகக் குறைகிறது.
+  சொல் $\num{m} f$ ஆனது தனது உள்ளீட்டின்மீது $f$ ஐ $m$ முறை
+  செயல்படுத்தும் ஒரு சார்பை வரையறுக்கிறது. இதன் விளைவாக,
+  $\num{n} (\num{m} f) x$ ஆனது “$f$ ஐ $m$ முறை செயல்படுத்து” என்ற
+  சார்பையே~$x$ மீது $n$ முறை செயல்படுத்துகிறது. வேறு சொற்களில்,
+  $f$ ஐ $x$ மீது $n\cdot m$ முறை செயல்படுத்துகிறோம். கிடைக்கும்
+  இயல்புவடிவம் சர்ச் எண்ணுரு $\num{nm}$ மட்டுமே.
+\end{proof}
+
+\begin{editorial}
+உண்மையில், $\eta$-குறைத்தலால் இச்சொல்லை மேலும் எளிமைப்படுத்தலாம்:
+\[
+  \fn{Mult} \ident \lambd[ab][\lambd[f][a (b f)]].
+\]
+
+ஆனால் அதற்கு முதலில் $\eta$-குறைத்தலை விளக்க வேண்டும்.
+\end{editorial}
+
+\begin{prob}
+% SOURCE CORRECTION TA-LAM-035: iterate addition of b a times; the frozen term repeats a and therefore ignores b.
+பின்வரும் சொல்லால் பெருக்கலை !!{lambda define} செய்யலாம்:
+\[
+  \fn{Mult}' \ident \lambd[ab][a (\fn{Add}\, b) \num{0}].
+\]
+இது ஏன் செயல்படுகிறது என்று விளக்குக.
+\end{prob}
+
+அடுக்கேற்றத்தின் $\lambd$-சொல் வரையறை வியக்கத்தக்க அளவுக்கு எளியது:
+\[
+  \fn{Exp} \ident \lambd[be][e b].
+\]
+முதல் உள்ளீடு $b$ அடிமானம்; இரண்டாம் உள்ளீடு~$e$ அடுக்கு. எண்களுக்கான நமது
+குறியாக்கத்தின்படி $e f$ என்பது உள்ளுணர்வில் $f^e$. இதைப் புரிந்துகொள்வது
+கடினமாக இருந்தால், மீள்செய்யப்பட்ட பெருக்கலால் அடுக்கேற்றத்தைப் பின்வருமாறும்
+வரையறுக்கலாம்:
+\[
+  \fn{Exp}' \ident \lambd[be][e (\fn{Mult}\, b) \num{1}].
+\]
+
+சர்ச் எண்ணுருக்கள்மீதான முன்னி, கழித்தல் ஆகியவற்றின் வரையறைகள் நாம்
+நினைப்பதுபோல் எளியவை அல்ல: அவற்றுக்கு ஜோடிகளின் குறியாக்கம் தேவை.
+
+\end{document}

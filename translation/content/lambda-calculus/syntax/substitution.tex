@@ -1,0 +1,187 @@
+% SEGMENT OLP-0361-S01
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: substitution
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{sub}
+\olsection{இடைநிறுத்தல்}
+
+\begin{explain}
+கட்டற்ற மாறிகள் சூழல் மாறிகளுக்கான சுட்டுகள்; எனவே ஒரு கட்டற்ற மாறியின்
+இடத்தில் ஒரு குறிப்பிட்ட மதிப்பைப் பயன்படுத்துவது பொருத்தமானது. எடுத்துக்காட்டாக,
+$\lambd[x][f x]$ இல் உள்ள $f$ ஐச் சமனிச் சார்பு $\lambd[y][y]$ போன்ற ஒரு
+குறிப்பிட்ட சொல்லால் மாற்ற விரும்பலாம். இதன் விளைவாக
+$\lambd[x][(\lambd[y][y]) x]$ கிடைக்கிறது. கட்டற்ற மாறிகளை லாம்டா சொற்களால்
+மாற்றும் செயல்முறை இடைநிறுத்தல் எனப்படுகிறது.
+\end{explain}
+
+\begin{defn}[இடைநிறுத்தல்] \ollabel{defn:substitution}
+  சொல் $M$ இல் மாறி $x$ க்குப் பதிலாகச் சொல் $N$ ஐ
+  \emph{இடைநிறுத்துவது}, $\Subst{M}{N}{x}$, பின்வருமாறு தொகுத்தறிதல்
+  முறையில் வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+    \item $\Subst{x}{N}{x} = N$. \ollabel{defn:substitution-1}
+    \item $\Subst{y}{N}{x}  = y$, $x \neq y$ எனில். \ollabel{defn:substitution-2}
+    \item $\Subst{PQ}{N}{x}  = (\Subst{P}{N}{x}) (\Subst{Q}{N}{x})$.
+      \ollabel{def:substitution-3}
+    \item $\Subst{(\lambd[y][P])}{N}{x} = \lambd[y][\Subst{P}{N}{x}]$,
+      $x \neq y$ மற்றும் $y \notin \FV{N}$ எனில்; இல்லையெனில் இது
+      வரையறுக்கப்படாது.
+      \ollabel{defn:substitution-4}
+  \end{enumerate}
+\end{defn}
+
+\begin{explain}
+\olref{defn:substitution}\olref{defn:substitution-4} இல் $x \neq y$ என்று
+கோருகிறோம்; ஏனெனில் $M$ இல் மாறி~$x$ இன் \emph{கட்டுண்ட} நிகழ்வுகளை~$N$
+ஆல் மாற்ற விரும்பவில்லை. எடுத்துக்காட்டாக,
+$\Subst{\lambd[x][x]}{y}{x}$ என்ற இடைநிறுத்தலைக் கணக்கிட்டால், அதன் விளைவு
+$\lambd[x][y]$ ஆகாமல் வெறுமனே $\lambd[x][x]$ ஆக இருக்க வேண்டும்.
+
+$\lambd[y][P]$ இல்~$x$ க்குப் பதிலாக $N$ ஐ இடைநிறுத்தும்போது,
+$y \notin \FV{N}$ என்றும் கோருகிறோம். எடுத்துக்காட்டாக,
+$\lambd[y][x]$ இல் $x$ க்குப் பதிலாக $y$ ஐ, அதாவது
+$\Subst{\lambd[y][x]}{y}{x}$ ஐ, இடைநிறுத்த முடியாது; ஏனெனில் அது
+$\lambd[y][y]$ ஐ விளைவிக்கும். அந்தச் சொல் ஓர் உள்ளீட்டை ஏற்று அதையே நேரடியாகத்
+திருப்பித்தரும் சார்பைக் குறிக்கிறது. ஆனால் $\lambd[y][x]$ என்ற சொல் எப்போதும்
+சொல்~$x$ ஐ (அல்லது $x$ எதைக் குறிக்கிறதோ அதை) திருப்பித்தரும் சார்பைக்
+குறிக்கிறது. ஆகவே, நாம் உண்மையில் விரும்பும் விளைவு ஓர் உள்ளீட்டை ஏற்று,
+அதைப் புறக்கணித்து, சூழல் மாறி~$y$ ஐத் திருப்பித்தரும் சார்பாகும். இதைச்
+சரியாகச் செய்ய, முதலில் கட்டுண்ட மாறி~$y$ ஐ ``மறுபெயரிட'' வேண்டும்.
+\end{explain}
+
+\begin{prob}
+  பின்வரும் இடைநிறுத்தல்களின் விளைவு என்ன?
+  \begin{enumerate}
+  \item $\Subst{\lambd[y][x(\lambd[w][vwx])]}{(uv)}{x}$
+  \item $\Subst{\lambd[y][x(\lambd[x][x])]}{(\lambd[y][xy])}{x}$
+  \item $\Subst{y(\lambd[v][xv])}{(\lambd[y][vy])}{x}$
+  \end{enumerate}
+\end{prob}
+
+\begin{thm} \ollabel{thm:notinfv}
+  $x \notin \FV{M}$ எனில், இடப்பக்கம் வரையறுக்கப்பட்டிருக்கும்போது,
+  $\FV{\Subst{M}{N}{x}} = \FV{M}$.
+\end{thm}
+
+\begin{proof}
+  $M$ இன் அமைப்பின்மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+  \begin{enumerate}
+  \item $M$ ஒரு மாறி: பயிற்சி.
+  \item $M$ ஆனது $(PQ)$ வடிவுடையது: பயிற்சி.
+  \item $M$ ஆனது $\lambd[y][P]$ வடிவுடையது; மேலும்
+    $\Subst{\lambd[y][P]}{N}{x}$ வரையறுக்கப்பட்டுள்ளதால், அது
+    $\lambd[y][\Subst{P}{N}{x}]$ ஆகவே இருக்க வேண்டும். ஆகவே
+    $\Subst{P}{N}{x}$ வரையறுக்கப்பட்டிருக்க வேண்டும்; மேலும்,
+    $x \neq y$ மற்றும் $x \notin \FV{P}$. அப்போது:
+    % SOURCE CORRECTION TA-LAM-014: P, not the undefined Q, is the abstraction body whose free variables are used here.
+    \begin{multline*}
+      \FV{\Subst{\lambd[y][P]}{N}{x}} = \\
+    \begin{aligned}
+      & = \FV{\lambd[y][\Subst{P}{N}{x}]} &&
+      \text{\olref{defn:substitution-4} இன்படி}\\
+      & = \FV{\Subst{P}{N}{x}} \setminus \{y\} &&
+      \text{\olref[fv]{def:fv}\olref[fv]{def:fv2} இன்படி}\\
+      & = \FV{P} \setminus \{y\} && \text{தொகுத்தறிதல் கருதுகோளின்படி} \\
+      & = \FV{\lambd[y][P]} && \text{\olref[fv]{def:fv}\olref[fv]{def:fv2} இன்படி}
+    \end{aligned}
+    \end{multline*}
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][sub]{thm:notinfv} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{thm} \ollabel{thm:infv}
+  $x \in \FV{M}$ எனில், இடப்பக்கம் வரையறுக்கப்பட்டிருப்பதாகக் கொண்டு,
+  $\FV{\Subst{M}{N}{x}} = (\FV{M} \setminus
+  \{x\}) \cup \FV{N}$.
+  % SOURCE CORRECTION TA-LAM-015: repair the stray parenthesis and consistently use x as the substituted variable and y as the abstraction binder throughout the proof.
+\end{thm}
+
+\begin{proof}
+  $M$ இன் அமைப்பின்மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+  \begin{enumerate}
+  \item $M$ ஒரு மாறி: பயிற்சி.
+  \item $M$ ஆனது $PQ$ வடிவுடையது: $\Subst{(PQ)}{N}{x}$
+    வரையறுக்கப்பட்டுள்ளதால், இரண்டு இடைநிறுத்தல்களும் வரையறுக்கப்பட்ட நிலையில்
+    அது $(\Subst{P}{N}{x})(\Subst{Q}{N}{x})$ ஆகவே இருக்க வேண்டும். மேலும்,
+    $x \in \FV{PQ}$ என்பதால், $x \in \FV{P}$ அல்லது $x \in \FV{Q}$
+    அல்லது இரண்டும். மீதியைப் பயிற்சியாக விடுகிறோம்.
+  \item $M$ ஆனது $\lambd[y][P]$ வடிவுடையது.
+    $\Subst{\lambd[y][P]}{N}{x}$ வரையறுக்கப்பட்டுள்ளதால், அது
+    $\lambd[y][\Subst{P}{N}{x}]$ ஆகவே இருக்க வேண்டும்; இங்கு
+    $\Subst{P}{N}{x}$ வரையறுக்கப்பட்டுள்ளது, $x \neq y$, மேலும்
+    $y \notin \FV{N}$. அத்துடன் $x \in
+    \FV{\lambd[y][P]}$ என்பதால், $x \in \FV{P}$ உம் ஆகும். இப்போது:
+    \begin{multline*}
+      \FV{\Subst{(\lambd[y][P])}{N}{x}} = \\
+      \begin{aligned}
+      & = \FV{\lambd[y][\Subst{P}{N}{x}]} \\
+      & = \FV{\Subst{P}{N}{x}} \setminus \{y\} \\
+      & = ((\FV{P} \setminus \{x\}) \cup \FV{N}) \setminus \{y\}
+       && \text{தொகுத்தறிதல் கருதுகோளின்படி} \\
+      & = (\FV{P} \setminus \{x, y\}) \cup \FV{N}
+       && y \notin \FV{N} \\
+      & = (\FV{\lambd[y][P]} \setminus \{x\}) \cup \FV{N}
+      \end{aligned}
+      \end{multline*}
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][sub]{thm:infv} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{thm}\ollabel{thm:clr}
+  வலப்பக்கம் வரையறுக்கப்பட்டு $x \notin \FV{N}$ எனில்,
+  $x \notin \FV{\Subst{M}{N}{x}}$.
+\end{thm}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][sub]{thm:clr} ஐ நிறுவுக.
+\end{prob}
+
+
+\begin{thm}\ollabel{thm:inv}
+  $\Subst{M}{y}{x}$ வரையறுக்கப்பட்டு $y \notin \FV{M}$ எனில்,
+  $\Subst{\Subst{M}{y}{x}}{x}{y} = M$.
+\end{thm}
+
+\begin{proof}
+  $M$ இன் அமைப்பின்மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+  \begin{enumerate}
+  \item $M$ ஒரு மாறி $z$: பயிற்சி.
+  \item $M$ ஆனது $(PQ)$ வடிவுடையது. அப்போது:
+    \begin{align*}
+      \Subst{\Subst{(PQ)}{y}{x}}{x}{y}
+      &=\Subst{((\Subst{P}{y}{x})(\Subst{Q}{y}{x}))}{x}{y} \\
+      &= (\Subst{\Subst{P}{y}{x}}{x}{y})(\Subst{\Subst{Q}{y}{x}}{x}{y}) \\
+      &= (PQ) \text{ தொகுத்தறிதல் கருதுகோளின்படி}
+    \end{align*}
+  \item $M$ ஆனது $\lambd[z][N]$ வடிவுடையது.
+    $\Subst{\lambd[z][N]}{y}{x}$ வரையறுக்கப்பட்டுள்ளதால்,
+    $z \neq y$ என்று அறிகிறோம். ஆகவே:
+    \begin{align*}
+      \Subst{\Subst{(\lambd[z][N])}{y}{x}}{x}{y}\\
+      & = \Subst{(\lambd[z][\Subst{N}{y}{x}])}{x}{y} \\
+      & = \lambd[z][\Subst{\Subst{N}{y}{x}}{x}{y}] \\
+      &= \lambd[z][N] \text{ தொகுத்தறிதல் கருதுகோளின்படி}
+    \end{align*}
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][syn][sub]{thm:inv} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\end{document}

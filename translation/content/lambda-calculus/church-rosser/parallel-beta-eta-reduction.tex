@@ -1,0 +1,104 @@
+% SEGMENT OLP-0371-S01
+% Part: lambda-calculus
+% Chapter: church-rosser
+% Section: parallel-beta-eta-reduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{cr}{pbe}
+
+\olsection{இணைநிலை $\beta\eta$-குறைத்தல்}
+
+இப்பகுதியில் $\beta\eta$-குறைத்தலுக்குரிய இணைநிலைக் குறைத்தல் கருத்தான
+இணைநிலை $\beta\eta$-குறைத்தலுக்குச் சர்ச்--ரோசர் பண்பு உள்ளது என்பதை
+நிறுவுவோம்.
+
+\begin{defn}[இணைநிலை $\beta\eta$-குறைத்தல், $\beredpar$] \ollabel{defn:beredpar}
+  சொற்களின்மீதான \emph{இணைநிலை $\beta\eta$-குறைத்தல்} ($\beredpar$)
+  பின்வருமாறு தொகுத்தறிதல் முறையில் வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+    \item \ollabel{defn:beredpar1} $x \beredpar x$.
+    \item \ollabel{defn:beredpar2} $N \beredpar N'$ எனில்
+      $\lambd[x][N] \beredpar \lambd[x][N']$.
+    \item \ollabel{defn:beredpar3} $P \beredpar P'$, $Q \beredpar Q'$ எனில்
+      $PQ \beredpar P'Q'$.
+    \item \ollabel{defn:beredpar4} $N \beredpar N'$, $Q \beredpar Q'$ எனில்
+      $(\lambd[x][N])Q \beredpar \Subst{N'}{Q'}{x}$.
+    \item \ollabel{defn:beredpar5} $N \beredpar N'$ எனில்
+      $\lambd[x][Nx] \beredpar N'$; இங்கு $x \notin \FV{N}$.
+  \end{enumerate}
+  % SOURCE CORRECTION TA-LAM-031: use the parallel beta-eta relation in its abstraction rule, restore the FV macro in all four freshness conditions, and introduce N in the first eta proof case.
+\end{defn}
+
+\begin{thm}\ollabel{thm:refl}
+  $M \beredpar M$.
+\end{thm}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[lam][cr][pbe]{thm:refl} ஐ நிறுவுக.
+\end{prob}
+
+\begin{defn}[$\beta\eta$-முழுமை வளர்த்தல்]\ollabel{defn:becd}
+  $M$ இன் \emph{$\beta\eta$-முழுமை வளர்த்தல்}~$\becd{M}$ பின்வருமாறு
+  வரையறுக்கப்படுகிறது:
+  \begin{align}
+    \becd{x} &= x \ollabel{defn:becd1} \\
+    \becd{(\lambd[x][N])} &= \lambd[x][\becd{N}] \ollabel{defn:becd2}\\
+    \becd{(PQ)} &= \becd{P}\becd{Q} && \text{$P$ ஒரு $\lambd$-அருவமாக இல்லையெனில்}
+    \ollabel{defn:becd3} \\
+    \becd{((\lambd[x][N])Q)} &= \Subst{\becd{N}}{\becd{Q}}{x}
+                             \ollabel{defn:becd4} \\
+    \becd{(\lambd[x][Nx])} &= \becd{N} \ollabel{defn:becd5} & \text{$x
+                                                      \notin \FV{N}$ எனில்}
+  \end{align}
+\end{defn}
+
+\begin{lem}\ollabel{lem:comp}
+  $M \beredpar M'$, $R \beredpar R'$ எனில், $\Subst{M}{R}{y}
+  \beredpar \Subst{M'}{R'}{y}$.
+\end{lem}
+
+\begin{proof}
+  $M \beredpar M'$ இன் !!{derivation} மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+
+  முதல் நான்கு நிகழ்வுகளும் \olref[pb]{lem:comp} இல் உள்ளவற்றைப் போலவே.
+  கடைசி விதி \olref{defn:beredpar5} எனில், $M$ என்பது
+  $\lambd[x][Nx]$; $M'$ என்பது ஏதோ $x$, $N$,~$N'$ க்கான $N'$; இங்கு
+  $x \notin \FV{N}$, $N \beredpar N'$. நாம்
+  $\Subst{(\lambd[x][Nx])}{R}{y} \beredpar \Subst{N'}{R'}{y}$,
+  அதாவது $\lambd[x][\Subst{N}{R}{y} x] \beredpar
+  \Subst{N'}{R'}{y}$, என்று காட்ட வேண்டும். இது
+  \olref{defn:beredpar}\olref{defn:beredpar5} மற்றும் தொகுத்தறிதல்
+  கருதுகோளிலிருந்து பின்வருகிறது.
+\end{proof}
+
+\begin{lem}\ollabel{lem:cont}
+  $M \beredpar M'$ எனில் $M' \beredpar \becd{M}$.
+\end{lem}
+
+\begin{proof}
+  $M \beredpar M'$ இன் !!{derivation} மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+
+  முதல் நான்கு நிகழ்வுகளும் \olref[pb]{lem:cont} இல் உள்ளவற்றைப் போலவே.
+  கடைசி விதி \olref{defn:beredpar5} எனில், $M$ என்பது
+  $\lambd[x][Nx]$; $M'$ என்பது ஏதோ $x$, $N$, $N'$ க்கான $N'$; இங்கு
+  $x \notin \FV{N}$, $N \beredpar N'$. நாம் $N' \beredpar
+  \becd{(\lambd[x][Nx])}$, அதாவது $N' \beredpar \becd{N}$, என்று காட்ட
+  வேண்டும்; இது தொகுத்தறிதல் கருதுகோளிலிருந்து உடனடியாகப் பின்வருகிறது.
+\end{proof}
+
+\begin{thm}\ollabel{thm:cr}
+  $\beredpar$ ஆனது சர்ச்--ரோசர் பண்பைக் கொண்டுள்ளது.
+\end{thm}
+
+\begin{proof}
+  \olref{lem:cont} இலிருந்து உடனடியாகக் கிடைக்கிறது.
+\end{proof}
+
+\end{document}

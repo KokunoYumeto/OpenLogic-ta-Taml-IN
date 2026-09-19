@@ -1,0 +1,151 @@
+% SEGMENT OLP-0353-S01
+% Part: lambda-calculus
+% Chapter: introduction
+% Section: primitive-recursion
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{int}{pr}
+\olsection{\usetoken{S}{lambda definable} சார்புகள் முதன்மை மீள்வரையறையின் கீழ் மூடியவை}
+
+முதன்மை மீள்வரையறையைப் பொறுத்தவரை, இறுதியாக நாம் ஓரளவு வேலை செய்ய
+வேண்டும். படிப்படியாகச் செல்ல வேண்டியிருக்கும். முன்புபோல, சார்புகள் $g$
+மற்றும்~$h$ ஐ முறையே !!{lambda define} செய்யும் சொற்கள் $G$ மற்றும்~$H$
+ஏற்கெனவே உள்ளன என்ற கருதுகோளில், பின்வருமாறு வரையறுக்கப்படும் சார்பு~$f$ ஐ
+!!{lambda define}s ஒரு சொல்~$F$ நமக்கு வேண்டும்.
+% SOURCE CORRECTION TA-LAM-007: the recursive-step argument is x, not the parameter vector z.
+\begin{align*}
+f(0, \vec z) & = g(\vec z) \\
+f(x+1, \vec z) & = h(x, f(x,\vec z), \vec z).
+\end{align*}
+% SOURCE CORRECTION TA-LAM-008: F is the sought term; H already names the step-function term.
+எனவே பொதுவாக, லாம்டா சொற்கள் $G'$ மற்றும்~$H'$ கொடுக்கப்பட்டால், ஒவ்வோர்
+இயல் எண்~$n$ க்கும் பின்வருவன அமையுமாறு ஒரு சொல்~$F$ ஐக் கண்டால் போதும்:
+\begin{align*}
+F(\num{0}, \vec z) & \equiv G(\vec z) \\
+F(\overline{n+1}, \vec z) & \equiv H(\num{n}, F(\num{n}, \vec z), \vec z)
+\end{align*}
+$G'$ மற்றும்~$H'$ ஆகியவை $g$ மற்றும்~$h$ ஐ !!{lambda define} செய்கின்றன
+என்பதால், $\vec z$ க்குப் பதிலாக எண்ணுருக்கள் $\num{\vec m}$ ஐ
+இடைநிறுத்தும்போதெல்லாம், $F(\num{n+1}, \num{\vec m})$ சரியான விடைக்கு
+இயல்பாக்கப்படும்.
+
+ஆனால் இதற்கு, பின்வருவனவற்றை நிறைவுசெய்யும் சொல்~$F$ ஒன்றைக் கண்டாலே போதும்:
+% SOURCE CORRECTION TA-LAM-009: v represents the preceding value as a function of the parameter vector, so it is applied only to that vector.
+\begin{align*}
+F(\num 0) & \equiv G \\
+F(\overline {n+1}) & \equiv H(\num{n},F(\num{n}))
+\intertext{ஒவ்வோர் இயல் எண் $n$ க்கும்; இங்கு}
+G & = \lambd[\vec z][G'(\vec z)] \text{ மற்றும்}\\
+H(u,v) & = \lambd[\vec z][H'(u,v(\vec z),\vec z)].
+\end{align*}
+வேறு சொற்களில், லாம்டா கலனத்தின் உத்திகளைக் கொண்டு கூடுதல் அளவுருக்கள்
+$\vec z$ பற்றிக் கவலைப்படுவதைத் தவிர்க்கலாம்---அவை லாம்டா குறிமானத்திற்குள்
+உட்கவரப்படுகின்றன.
+
+சொல் $F$ ஐ வரையறுப்பதற்கு முன்பு, வரிசைப்படுத்தப்பட்ட ஜோடிகளைக் கையாளும்
+ஒரு செயல்முறை நமக்குத் தேவை. அதை அடுத்த துணைத்தேற்றம் தருகிறது.
+
+\begin{lem}
+லாம்டா சொற்களின் ஒவ்வொரு ஜோடி $M$, $N$ க்கும்
+$D(M,N)(\num{0}) \red M$ மற்றும் $D(M,N)(\num{1}) \red N$ ஆக அமையும்
+ஒரு லாம்டா சொல் $D$ உள்ளது.
+\end{lem}
+
+\begin{proof}
+முதலில், லாம்டா சொல் $K$ ஐப் பின்வருமாறு வரையறுக்க:
+\[
+K(y) = \lambd[x][y].
+\]
+வேறு சொற்களில், $K$ என்பது $\lambd[y][\lambd[x][y]]$ என்ற சொல். இதை
+வேறுவிதமாகப் பார்த்தால், ஒவ்வொரு $M$ க்கும் $K(M)$ என்பது எந்த உள்ளீட்டிலும்
+~$M$ ஐத் திருப்பித்தரும் மாறிலிச் சார்பு.
+
+இப்போது $D(x,y,z)$ ஐ $D(x,y,z) = z (K(y))x$ என வரையறுக்க. அப்போது
+\begin{align*}
+D(M,N,\num 0) & \red \num 0 (K(N)) M \red M \text{ மற்றும்}\\
+D(M,N,\num 1) & \red \num 1 (K(N)) M \red K(N) M \red N,
+\end{align*}
+தேவையானவாறே கிடைக்கின்றன.
+\end{proof}
+
+$D(M,N)$ என்பது ஜோடி $\tuple{M, N}$ ஐப் பிரதிநிதித்துவப்படுத்துகிறது என்பதே
+கருத்து. $P$ அத்தகைய ஒரு ஜோடியைப் பிரதிநிதித்துவப்படுத்துவதாகக் கொண்டால்,
+$P(\num 0)$ மற்றும் $P(\num 1)$ ஆகியவை இடது, வலது வீழ்த்தல்கள் $(P)_0$,
+$(P)_1$ ஐப் பிரதிநிதித்துவப்படுத்துகின்றன. பின்னுள்ள இக்குறிமானங்களையே
+பயன்படுத்துவோம்.
+
+\begin{lem}
+!!{lambda definable} சார்புகள் முதன்மை மீள்வரையறையின் கீழ் மூடியவை.
+\end{lem}
+
+\begin{proof}
+ஏதேனும் சொற்கள் $G$, $H$ கொடுக்கப்பட்டால், ஒவ்வோர் இயல் எண்~$n$ க்கும்
+\begin{align*}
+F(\num{0}) & \equiv G \\
+F(\num{n+1}) & \equiv H(\num{n}, F(\num{n}))
+\end{align*}
+ஆக அமையும் ஒரு சொல் $F$ ஐக் கண்டறிய முடியும் என்று காட்ட வேண்டும். தோராயமான
+கருத்து, எண்ணுருக்களை மீள்செயல்படுத்திகளாகப் பயன்படுத்தி
+\[
+\tuple{\num 0, F(\num 0)}, \tuple{\num 1, F(\num 1)}, \dots,
+\]
+என்ற \emph{ஜோடிகளின்} தொடர்களைக் கணிப்பதாகும். முதல் ஜோடி
+$\tuple{\num 0, G}$ மட்டுமே என்பதைக் கவனிக்க. ஒரு ஜோடி
+$\tuple{\num{n}, F(\num{n})}$ கொடுக்கப்பட்டால், அடுத்த ஜோடி
+$\tuple{\num{n+1}, F(\num{n+1})}$ ஆனது
+$\tuple{\num{n+1}, H(\num{n}, F(\num{n}))}$ குச் சமானமாக இருக்க வேண்டும்.
+இந்த ஒருபடிநிலை மாற்றத்தைச் செய்யும் லாம்டா சொல்~$T$ ஒன்றை வடிவமைப்போம்.
+
+விவரங்கள் பின்வருமாறு. $T(u)$ ஐ
+\[
+T(u) = \tuple{S((u)_0), H((u)_0,(u)_1)}.
+\]
+என வரையறுக்க. இப்போது எந்த எண்~$n$ க்கும்
+\[
+T(\tuple{\num{n}, M}) \red \tuple{\num{n+1}, H(\num{n}, M)}.
+\]
+என்பதை எளிதாகச் சரிபார்க்கலாம். மேலே கூறியபடி, $G$, $H$ கொடுக்கப்பட்டால்,
+~$F(u)$ ஐ
+\[
+F(u) = (u(T,\tuple{\num 0, G}))_1.
+\]
+என வரையறுக்க. வேறு சொற்களில், உள்ளீடு~$\num{n}$ மீது $F$ ஆனது
+$\tuple{\num 0, G}$ இல் $T$ ஐ $n$ முறை மீளச்செயல்படுத்தி, பின்னர் இரண்டாம்
+கூற்றைத் திருப்பித்தருகிறது. தொடக்கத்தில் நமக்கு
+\begin{enumerate}
+\item $\num{0} (T, \tuple{\num 0, G}) \equiv \tuple{\num{0}, G}$
+\item $F(\num{0}) \equiv G$
+\end{enumerate}
+கிடைக்கின்றன. $n$ மீதான தொகுத்தறிதலால், ஒவ்வோர் இயல் எண்ணுக்கும் பின்வருவன
+அமையும் என்று காட்டலாம்:
+\begin{enumerate}
+\item $\num{n+1}(T, \tuple{\num{0}, G}) \equiv \tuple{\num{n+1}, F(\num{n+1})}$
+\item $F(\num{n+1}) \equiv H(\num{n}, F(\num{n}))$
+\end{enumerate}
+இரண்டாம் கூறுக்கு,
+\begin{align*}
+F(\num{n+1}) & \red (\num{n+1}(T, \tuple{\num 0, G}))_1 \\
+& \equiv (T(\num{n} (T, \tuple{\num 0, G})))_1 \\
+& \equiv (T(\tuple{\num{n}, F(\num{n})}))_1 \\
+& \equiv (\tuple{\num{n+1}, H(\num{n}, F(\num{n}))})_1 \\
+& \equiv H(\num{n}, F(\num{n})).
+\end{align*}
+இங்கு கடைசிக்கு முந்திய வரியில் தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்தியுள்ளோம்.
+முதல் கூறுக்கு,
+\begin{align*}
+\num{n+1} (T, \tuple{\num 0, G}) &
+\equiv T(\num{n} (T, \tuple{\num 0, G})) \\
+& \equiv T( \tuple{\num{n}, F(\num{n})}) \\
+& \equiv \tuple{\num{n+1}, H(\num{n}, F(\num{n}))} \\
+& \equiv \tuple{\num{n+1}, F(\num{n+1})}.
+\end{align*}
+இங்கு கடைசி வரியில் இரண்டாம் கூறைப் பயன்படுத்தியுள்ளோம். ஆகவே
+$F(\num 0) \equiv G$ என்றும், ஒவ்வொரு $n$ க்கும்
+$F(\num {n+1}) \equiv H(\num n, F(\num{n}))$ என்றும் காட்டியுள்ளோம்;
+இதுவே நமக்குத் தேவையானது.
+\end{proof}
+
+\end{document}

@@ -1,0 +1,309 @@
+{
+  "batch_id": "TA-B175",
+  "units": [
+    {
+      "unit_id": "OLP-0371",
+      "source_sha256": "88130e362effc83767b2fae97dcab4b6ae13f657a7d7a43da2df13883c9d54f2",
+      "translation_sha256": "2333aba5efee5beefbcd2078f124d5614651b78bc99f18005467f13c47128b3b",
+      "source_bytes": 3412,
+      "translation_bytes": 5383,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$N\\xrightarrow{\\beta}N'$",
+        "$x\\notinFV(N)$",
+        "$x\\notinFV(N)$",
+        "$x\\notinFV(N)$",
+        "\\begin{align}\\becd{x}&=x\\ollabel{defn:becd1}\\\\\\becd{(\\lambd[x][N])}&=\\lambd[x][\\becd{N}]\\ollabel{defn:becd2}\\\\\\becd{(PQ)}&=\\becd{P}\\becd{Q}&&$P$$\\lambd$\\ollabel{defn:becd3}\\\\\\becd{((\\lambd[x][N])Q)}&=\\Subst{\\becd{N}}{\\becd{Q}}{x}\\ollabel{defn:becd4}\\\\\\becd{(\\lambd[x][Nx])}&=\\becd{N}\\ollabel{defn:becd5}&$x\\notinFV(N)$\\end{align}"
+      ],
+      "extra_math": [
+        "$N\\beredparN'$",
+        "$x\\notin\\FV{N}$",
+        "$x\\notin\\FV{N}$",
+        "$x\\notin\\FV{N}$",
+        "\\begin{align}\\becd{x}&=x\\ollabel{defn:becd1}\\\\\\becd{(\\lambd[x][N])}&=\\lambd[x][\\becd{N}]\\ollabel{defn:becd2}\\\\\\becd{(PQ)}&=\\becd{P}\\becd{Q}&&$P$$\\lambd$\\ollabel{defn:becd3}\\\\\\becd{((\\lambd[x][N])Q)}&=\\Subst{\\becd{N}}{\\becd{Q}}{x}\\ollabel{defn:becd4}\\\\\\becd{(\\lambd[x][Nx])}&=\\becd{N}\\ollabel{defn:becd5}&$x\\notin\\FV{N}$\\end{align}",
+        "$N$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "lam",
+        "logic",
+        "open",
+        "pbe",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-031",
+          "unit_id": "OLP-0371",
+          "kind": "parallel-beta-eta-rule-notation-and-premise-repairs",
+          "action": "Used parallel beta-eta reduction in its abstraction rule, restored four FV macros, and introduced N in the first eta proof case.",
+          "expected_missing_math": [
+            "$N\\xrightarrow{\\beta}N'$",
+            "$x\\notinFV(N)$",
+            "$x\\notinFV(N)$",
+            "$x\\notinFV(N)$",
+            "\\begin{align}\\becd{x}&=x\\ollabel{defn:becd1}\\\\\\becd{(\\lambd[x][N])}&=\\lambd[x][\\becd{N}]\\ollabel{defn:becd2}\\\\\\becd{(PQ)}&=\\becd{P}\\becd{Q}&&$P$$\\lambd$\\ollabel{defn:becd3}\\\\\\becd{((\\lambd[x][N])Q)}&=\\Subst{\\becd{N}}{\\becd{Q}}{x}\\ollabel{defn:becd4}\\\\\\becd{(\\lambd[x][Nx])}&=\\becd{N}\\ollabel{defn:becd5}&$x\\notinFV(N)$\\end{align}"
+          ],
+          "expected_extra_math": [
+            "$N\\beredparN'$",
+            "$x\\notin\\FV{N}$",
+            "$x\\notin\\FV{N}$",
+            "$x\\notin\\FV{N}$",
+            "\\begin{align}\\becd{x}&=x\\ollabel{defn:becd1}\\\\\\becd{(\\lambd[x][N])}&=\\lambd[x][\\becd{N}]\\ollabel{defn:becd2}\\\\\\becd{(PQ)}&=\\becd{P}\\becd{Q}&&$P$$\\lambd$\\ollabel{defn:becd3}\\\\\\becd{((\\lambd[x][N])Q)}&=\\Subst{\\becd{N}}{\\becd{Q}}{x}\\ollabel{defn:becd4}\\\\\\becd{(\\lambd[x][Nx])}&=\\becd{N}\\ollabel{defn:becd5}&$x\\notin\\FV{N}$\\end{align}",
+            "$N$"
+          ],
+          "expected_missing_commands": [
+            "\\beta",
+            "\\xrightarrow"
+          ],
+          "expected_extra_commands": [
+            "\\beredpar",
+            "\\FV",
+            "\\FV",
+            "\\FV",
+            "\\FV"
+          ],
+          "source_issue_or_choice": "The abstraction clause repeats the unrelated arrow error from parallel beta reduction; all freshness conditions omit the defined FV macro; and the first eta compatibility case uses N without including it among the introduced components.",
+          "chosen_treatment": "தமிழ் வரையறுக்கப்படும் இணைநிலை βη தொடர்பைப் பயன்படுத்தி, நான்கு கட்டற்ற-மாறி நிபந்தனைகளையும் ஒரே குறிமானத்தில் எழுதி, தேவைப்படும் N ஐ அறிமுகப்படுத்துகிறது.",
+          "alternatives_considered": "Changing every later proof to the unrelated beta arrow; treating FV as letter multiplication; leaving N undeclared.",
+          "rationale": "The reflexivity and induction proofs invoke abstraction closure for beredpar, the conditions all denote the established free-variable set, and N is the body in lambda x.Nx and the premise N beredpar N'.",
+          "precise_review_question": "Do these repairs make the definition and both eta proof cases use exactly their stated parallel relation, body and freshness condition?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-031"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\beta",
+        "\\xrightarrow"
+      ],
+      "extra_commands": [
+        "\\beredpar",
+        "\\FV",
+        "\\FV",
+        "\\FV",
+        "\\FV"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0372",
+      "source_sha256": "2eee11e77e3bb3052a2e139079f26cb22c1126577b4418f88918a3ede85a3cf4",
+      "translation_sha256": "e6df25a4ebcc6de37056a42afa77bf94b3ac00d08936ed28f497eb19f07fc12b",
+      "source_bytes": 1521,
+      "translation_bytes": 2685,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$M\\bredoneM'$",
+        "$x\\notinFV(N)$"
+      ],
+      "extra_math": [
+        "$M\\eredoneM'$",
+        "$x\\notin\\FV{N}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "dap",
+        "eta",
+        "include",
+        "logic",
+        "open",
+        "pbe",
+        "section",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-032",
+          "unit_id": "OLP-0372",
+          "kind": "eta-case-names-beta-contraction-and-omits-fv-macro",
+          "action": "Used eta contraction in the eta case and restored the FV macro in its freshness premise.",
+          "expected_missing_math": [
+            "$M\\bredoneM'$",
+            "$x\\notinFV(N)$"
+          ],
+          "expected_extra_math": [
+            "$M\\eredoneM'$",
+            "$x\\notin\\FV{N}$"
+          ],
+          "expected_missing_commands": [
+            "\\bredone"
+          ],
+          "expected_extra_commands": [
+            "\\eredone",
+            "\\FV"
+          ],
+          "source_issue_or_choice": "The proof explicitly calls the case eta-conversion and cites the eta-contraction definition but writes the beta-contraction relation; the next proof again typesets FV as bare letters.",
+          "chosen_treatment": "தமிழ் η நிகழ்வில் \\eredone ஐயும், புதுமாறி நிபந்தனையில் \\FV குறிமானத்தையும் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Calling beta contraction eta conversion; changing the cited definition; leaving FV as a letter product.",
+          "rationale": "The cited eta rule is precisely lambda x.Nx contracting to N, while reflexivity supplies the premise needed by the parallel eta clause.",
+          "precise_review_question": "Does the corrected eta case now follow from parallel reflexivity and defn:beredpar5 exactly as claimed?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-032"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\bredone"
+      ],
+      "extra_commands": [
+        "\\eredone",
+        "\\FV"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0373",
+      "source_sha256": "42df17a2d1c3ff9e2f53676b6bad10a9b10e7787f70d6371a2f60d0a22a78708",
+      "translation_sha256": "9b51d53255a0f27598cb3ee1c7833e2501b815f3bf4402d2b6ffe477b3d4ae03",
+      "source_bytes": 704,
+      "translation_bytes": 1121,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0374",
+      "source_sha256": "ff7c8dba694a6e61b7d6445949a00ed6e61c5ddc1af1bcabcc7e0587ed1cb2d2",
+      "translation_sha256": "b1a9d6e71778f1bb69bd163775e006a4c2c876a71452bf85eb492b4b3531f594",
+      "source_bytes": 3596,
+      "translation_bytes": 8517,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$f\\colon\\Nat^k\\to\\Nat$",
+        "$c(n)=k$"
+      ],
+      "extra_math": [
+        "$f\\colon\\Nat^k\\pto\\Nat$",
+        "$c_k(n)=k$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "definable",
+        "define",
+        "defined",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-033",
+          "unit_id": "OLP-0374",
+          "kind": "partial-function-given-total-arrow",
+          "action": "Used the edition's partial-function arrow for the function whose undefined inputs are handled in the definition.",
+          "expected_missing_math": [
+            "$f\\colon\\Nat^k\\to\\Nat$"
+          ],
+          "expected_extra_math": [
+            "$f\\colon\\Nat^k\\pto\\Nat$"
+          ],
+          "expected_missing_commands": [
+            "\\to"
+          ],
+          "expected_extra_commands": [
+            "\\pto"
+          ],
+          "source_issue_or_choice": "The definition explicitly gives a no-normal-form branch when f is undefined and the preceding sentence says it generalizes to partial functions, but its signature uses the total-function arrow.",
+          "chosen_treatment": "தமிழ் பதிப்பில் ஏற்கெனவே வரையறுக்கப்பட்ட பகுதிச் சார்பு அம்பை பயன்படுத்துகிறது.",
+          "alternatives_considered": "Deleting the undefined branch; restricting the definition to total functions while later theorems claim partial functions.",
+          "rationale": "The partial arrow makes the signature agree with both branches without changing the domain, codomain or arity.",
+          "precise_review_question": "Does the partial arrow align the signature with the undefined-input clause while preserving all total cases?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-033"
+        },
+        {
+          "audit_id": "TA-LAM-034",
+          "unit_id": "OLP-0374",
+          "kind": "constant-function-subscript-dropped",
+          "action": "Used c_k in the defining equation for the already named constant function c_k.",
+          "expected_missing_math": [
+            "$c(n)=k$"
+          ],
+          "expected_extra_math": [
+            "$c_k(n)=k$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The sentence introduces and types the constant function c_k but its intervening equation switches to an otherwise unnamed c.",
+          "chosen_treatment": "தமிழ் பெயர், வகை, வரையறை மூன்றிலும் c_k ஐத் தொடர்கிறது.",
+          "alternatives_considered": "Renaming C_k and both other c_k occurrences to c; leaving the defining equation attached to an undeclared function.",
+          "rationale": "The subscript records the constant output k and is present in both the defining lambda term C_k and the function type.",
+          "precise_review_question": "Does c_k(n)=k define exactly the function named and typed on the same sentence?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-034"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\to"
+      ],
+      "extra_commands": [
+        "\\pto"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,457 @@
+{
+  "batch_id": "TA-B173",
+  "units": [
+    {
+      "unit_id": "OLP-0361",
+      "source_sha256": "8e6a232737d4b0c58a03fd1ab2bedc120e159c21e6d17cd30ed58fd4615ec8bd",
+      "translation_sha256": "23f029bc7fea62f9b499412d26b97ec1517687472e842246bcf16388c235811d",
+      "source_bytes": 6399,
+      "translation_bytes": 11321,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$x\\notin\\FV{Q}$",
+        "$x\\in\\FV{M})$",
+        "$\\Subst{(PQ)}{N}{y}$",
+        "$y\\in\\FV{\\lambd[x][P]}$",
+        "$y\\in\\FV{P}$",
+        "\\begin{multline*}\\FV{\\Subst{(\\lambd[y][P])}{N}{x}}=\\\\\\begin{aligned}&=\\FV{\\lambd[y][\\Subst{P}{N}{x}]}\\\\&=\\FV{\\Subst{P}{N}{x}}\\setminus\\{y\\}\\\\&=((\\FV{P}\\setminus\\{y\\})\\cup(\\FV{N}\\setminus\\{x\\})&&\\\\&=(\\FV{P}\\setminus\\{x,y\\})\\cup\\FV{N}&&x\\notin\\FV{N}\\\\&=(\\FV{\\lambd[y][P]}\\setminus\\{x\\})\\cup\\FV{N}\\end{aligned}\\end{multline*}"
+      ],
+      "extra_math": [
+        "$x\\notin\\FV{P}$",
+        "$x\\in\\FV{M}$",
+        "$\\Subst{(PQ)}{N}{x}$",
+        "$x\\in\\FV{P}$",
+        "$x\\in\\FV{\\lambd[y][P]}$",
+        "\\begin{multline*}\\FV{\\Subst{(\\lambd[y][P])}{N}{x}}=\\\\\\begin{aligned}&=\\FV{\\lambd[y][\\Subst{P}{N}{x}]}\\\\&=\\FV{\\Subst{P}{N}{x}}\\setminus\\{y\\}\\\\&=((\\FV{P}\\setminus\\{x\\})\\cup\\FV{N})\\setminus\\{y\\}&&\\\\&=(\\FV{P}\\setminus\\{x,y\\})\\cup\\FV{N}&&y\\notin\\FV{N}\\\\&=(\\FV{\\lambd[y][P]}\\setminus\\{x\\})\\cup\\FV{N}\\end{aligned}\\end{multline*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "lam",
+        "logic",
+        "multline",
+        "open",
+        "section",
+        "sub",
+        "syn",
+        "vwx"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-014",
+          "unit_id": "OLP-0361",
+          "kind": "undefined-abstraction-body-variable",
+          "action": "Used P, the declared abstraction body, instead of the undefined Q in the free-variable premise.",
+          "expected_missing_math": [
+            "$x\\notin\\FV{Q}$"
+          ],
+          "expected_extra_math": [
+            "$x\\notin\\FV{P}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proof case assumes M has the form lambda y.P and every adjacent expression uses P, but one premise refers to Q, which is not introduced in the case.",
+          "chosen_treatment": "தமிழ் நிறுவல், அறிவிக்கப்பட்ட அருவ உடல் P இன் கட்டற்ற மாறிகளையே பயன்படுத்துகிறது.",
+          "alternatives_considered": "Keeping the undefined Q; renaming every P in the proof case to Q.",
+          "rationale": "The theorem hypothesis applied to M=lambda y.P yields the needed fact about P, and the inductive hypothesis is invoked on that same body.",
+          "precise_review_question": "Does x notin FV(P) supply exactly the premise needed for the displayed induction step?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-014"
+        },
+        {
+          "audit_id": "TA-LAM-015",
+          "unit_id": "OLP-0361",
+          "kind": "substitution-free-variable-proof-variable-mismatches",
+          "action": "Removed the stray parenthesis and consistently used x as the substituted variable and y as the abstraction binder, including the correct inductive free-variable equation.",
+          "expected_missing_math": [
+            "$x\\in\\FV{M})$",
+            "$\\Subst{(PQ)}{N}{y}$",
+            "$y\\in\\FV{\\lambd[x][P]}$",
+            "$y\\in\\FV{P}$",
+            "\\begin{multline*}\\FV{\\Subst{(\\lambd[y][P])}{N}{x}}=\\\\\\begin{aligned}&=\\FV{\\lambd[y][\\Subst{P}{N}{x}]}\\\\&=\\FV{\\Subst{P}{N}{x}}\\setminus\\{y\\}\\\\&=((\\FV{P}\\setminus\\{y\\})\\cup(\\FV{N}\\setminus\\{x\\})&&\\\\&=(\\FV{P}\\setminus\\{x,y\\})\\cup\\FV{N}&&x\\notin\\FV{N}\\\\&=(\\FV{\\lambd[y][P]}\\setminus\\{x\\})\\cup\\FV{N}\\end{aligned}\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "$x\\in\\FV{M}$",
+            "$\\Subst{(PQ)}{N}{x}$",
+            "$x\\in\\FV{P}$",
+            "$x\\in\\FV{\\lambd[y][P]}$",
+            "\\begin{multline*}\\FV{\\Subst{(\\lambd[y][P])}{N}{x}}=\\\\\\begin{aligned}&=\\FV{\\lambd[y][\\Subst{P}{N}{x}]}\\\\&=\\FV{\\Subst{P}{N}{x}}\\setminus\\{y\\}\\\\&=((\\FV{P}\\setminus\\{x\\})\\cup\\FV{N})\\setminus\\{y\\}&&\\\\&=(\\FV{P}\\setminus\\{x,y\\})\\cup\\FV{N}&&y\\notin\\FV{N}\\\\&=(\\FV{\\lambd[y][P]}\\setminus\\{x\\})\\cup\\FV{N}\\end{aligned}\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The theorem is about substituting N for x, but the application case switches to y; the abstraction case swaps the binder and substituted variable, and its displayed induction line removes the wrong variables and cites the wrong freshness condition.",
+          "chosen_treatment": "தமிழ் முழுவதும் இடைநிறுத்தப்படும் மாறியாக x ஐயும் அருவத்தின் கட்டு மாறியாக y ஐயும் வைத்துத் தொகுத்தறிதல் சமன்பாட்டைச் சரிசெய்கிறது.",
+          "alternatives_considered": "Changing the theorem globally to substitution for y; retaining the malformed set equation; treating the closing parenthesis as mathematical notation.",
+          "rationale": "Definition defn:substitution-4 and the theorem conclusion uniquely fix x as the substituted variable, while definedness fixes y notin FV(N); applying the inductive hypothesis then gives the corrected set calculation.",
+          "precise_review_question": "Does the corrected calculation derive (FV(lambda y.P) minus {x}) union FV(N) under exactly x in FV(lambda y.P) and y notin FV(N)?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-015"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0362",
+      "source_sha256": "f17619c4515bbbc583990680fd46c1d57191327b0f4a3cce347b2a327a6d0dda",
+      "translation_sha256": "b22c7850ddfa1e0c9950601165c2ff8adf4efa3e99bc50b68b32422422d59c66",
+      "source_bytes": 10131,
+      "translation_bytes": 19320,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$x\\inFV(N)$",
+        "$x\\notinFV(N)$",
+        "\\begin{align*}\\FV{\\lambd[y][\\Subst{N}{y}{x}]}&=FV{\\Subst{N}{y}{x}}\\setminus\\{y\\}\\\\&=\\FV{N}\\setminus\\{x\\}&&\\\\&=\\FV{\\lambd[x][N]}.\\end{align*}",
+        "$R''$",
+        "$z\\notinFV(N')$",
+        "$z\\notinFV(R)$",
+        "\\begin{multline*}\\Subst{(\\lambd[z][\\Subst{N''}{z}{x}])}{R''}{y}=\\\\\\begin{aligned}&=\\lambd[z][\\Subst{\\Subst{N''}{z}{x}}{R''}{y}]\\\\&=\\lambd[z][\\Subst{\\Subst{N''}{z}{x}}{R}{y}]&&\\\\&=\\lambd[z][\\Subst{\\Subst{N'}{z}{x}}{R}{y}]&&\\\\&=\\Subst{(\\lambd[z][\\Subst{N'}{z}{x}])}{R}{y}\\end{aligned}\\end{multline*}",
+        "$\\Subst{M'}{R'}{y}$"
+      ],
+      "extra_math": [
+        "$x\\in\\FV{N}$",
+        "$x\\notin\\FV{N}$",
+        "\\begin{align*}\\FV{\\lambd[y][\\Subst{N}{y}{x}]}&=\\FV{\\Subst{N}{y}{x}}\\setminus\\{y\\}\\\\&=\\FV{N}\\setminus\\{x\\}&&\\\\&=\\FV{\\lambd[x][N]}.\\end{align*}",
+        "$\\Subst{M''}{R''}{y}$",
+        "$R''\\aeqR$",
+        "$z\\notin\\FV{R}$",
+        "$z\\notin\\FV{N'}$",
+        "\\begin{multline*}\\Subst{(\\lambd[z][\\Subst{N''}{z}{x}])}{R''}{y}=\\\\\\begin{aligned}&=\\lambd[z][\\Subst{\\Subst{N''}{z}{x}}{R''}{y}]\\\\&\\aeq\\lambd[z][\\Subst{\\Subst{N''}{z}{x}}{R}{y}]&&\\\\&\\aeq\\lambd[z][\\Subst{\\Subst{N'}{z}{x}}{R}{y}]&&\\\\&=\\Subst{(\\lambd[z][\\Subst{N'}{z}{x}])}{R}{y}\\end{aligned}\\end{multline*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "alp",
+        "equation",
+        "include",
+        "lam",
+        "logic",
+        "multline",
+        "open",
+        "section",
+        "sub",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-016",
+          "unit_id": "OLP-0362",
+          "kind": "prose-spelling-and-grammar-errors",
+          "action": "Read the frozen misspellings and malformed English clauses according to their unambiguous mathematical context.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source includes 'reflexitive,' 'refering,' 'we there is,' and malformed alpha-conversion clauses, while the surrounding definitions and formulas fix their intended meanings.",
+          "chosen_treatment": "தமிழ் அவற்றை முறையே தற்சுட்டு, சுட்டுகின்றன, ஒன்று உள்ளது, மற்றும் இலக்கணமுள்ள மாற்றக் கூற்றுகளாக வழங்குகிறது.",
+          "alternatives_considered": "Transliterating the spelling errors; treating the malformed clauses as additional formal conditions.",
+          "rationale": "These are ordinary prose repairs and do not alter a relation, premise, conclusion, identifier or displayed term.",
+          "precise_review_question": "Does the Tamil prose retain each stated alpha-conversion claim without adding a new condition?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-016"
+        },
+        {
+          "audit_id": "TA-LAM-017",
+          "unit_id": "OLP-0362",
+          "kind": "omitted-free-variable-macros",
+          "action": "Restored the FV macro at five formula occurrences where the frozen source typesets bare letters FV.",
+          "expected_missing_math": [
+            "$x\\inFV(N)$",
+            "$x\\notinFV(N)$",
+            "\\begin{align*}\\FV{\\lambd[y][\\Subst{N}{y}{x}]}&=FV{\\Subst{N}{y}{x}}\\setminus\\{y\\}\\\\&=\\FV{N}\\setminus\\{x\\}&&\\\\&=\\FV{\\lambd[x][N]}.\\end{align*}",
+            "$z\\notinFV(N')$",
+            "$z\\notinFV(R)$"
+          ],
+          "expected_extra_math": [
+            "$x\\in\\FV{N}$",
+            "$x\\notin\\FV{N}$",
+            "\\begin{align*}\\FV{\\lambd[y][\\Subst{N}{y}{x}]}&=\\FV{\\Subst{N}{y}{x}}\\setminus\\{y\\}\\\\&=\\FV{N}\\setminus\\{x\\}&&\\\\&=\\FV{\\lambd[x][N]}.\\end{align*}",
+            "$z\\notin\\FV{R}$",
+            "$z\\notin\\FV{N'}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\FV",
+            "\\FV",
+            "\\FV",
+            "\\FV",
+            "\\FV"
+          ],
+          "source_issue_or_choice": "The chapter otherwise uses the FV macro uniformly; the five bare FV strings would be parsed as multiplied letters or an undefined textual notation rather than the defined free-variable operator.",
+          "chosen_treatment": "தமிழ் எல்லா ஐந்து இடங்களிலும் பதிப்பின் வரையறுக்கப்பட்ட \\FV குறிமானத்தையே பயன்படுத்துகிறது.",
+          "alternatives_considered": "Leaving FV as italic letter multiplication; converting every existing FV macro in the chapter to bare letters.",
+          "rationale": "Each occurrence is used with exactly the same set-valued free-variable meaning as the adjacent macro-form occurrences.",
+          "precise_review_question": "Do all restored macros denote the free-variable set of precisely the original argument?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-017"
+        },
+        {
+          "audit_id": "TA-LAM-018",
+          "unit_id": "OLP-0362",
+          "kind": "alpha-equivalence-written-as-equality",
+          "action": "Used alpha-equivalence for the two comparison steps justified by the alpha-equivalence lemma and induction hypothesis.",
+          "expected_missing_math": [
+            "\\begin{multline*}\\Subst{(\\lambd[z][\\Subst{N''}{z}{x}])}{R''}{y}=\\\\\\begin{aligned}&=\\lambd[z][\\Subst{\\Subst{N''}{z}{x}}{R''}{y}]\\\\&=\\lambd[z][\\Subst{\\Subst{N''}{z}{x}}{R}{y}]&&\\\\&=\\lambd[z][\\Subst{\\Subst{N'}{z}{x}}{R}{y}]&&\\\\&=\\Subst{(\\lambd[z][\\Subst{N'}{z}{x}])}{R}{y}\\end{aligned}\\end{multline*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{multline*}\\Subst{(\\lambd[z][\\Subst{N''}{z}{x}])}{R''}{y}=\\\\\\begin{aligned}&=\\lambd[z][\\Subst{\\Subst{N''}{z}{x}}{R''}{y}]\\\\&\\aeq\\lambd[z][\\Subst{\\Subst{N''}{z}{x}}{R}{y}]&&\\\\&\\aeq\\lambd[z][\\Subst{\\Subst{N'}{z}{x}}{R}{y}]&&\\\\&=\\Subst{(\\lambd[z][\\Subst{N'}{z}{x}])}{R}{y}\\end{aligned}\\end{multline*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\aeq",
+            "\\aeq"
+          ],
+          "source_issue_or_choice": "Lemma lem:sub:R and the induction hypothesis establish alpha-equivalence of the middle substitutions, not literal syntactic equality, and the theorem itself promises only alpha-equivalence.",
+          "chosen_treatment": "தமிழ் கணக்கீட்டின் வரையறைச் சமப்படிகளைச் சமக்குறியுடனும், மேற்கோள் காட்டப்பட்ட முடிவுகள் தரும் இரண்டு படிகளை \\aeq குறியுடனும் வேறுபடுத்துகிறது.",
+          "alternatives_considered": "Strengthening the cited results to literal equality; replacing all four comparison signs by alpha-equivalence.",
+          "rationale": "The first and last steps unfold the substitution definition, while only the two middle steps change representatives and therefore require alpha-equivalence.",
+          "precise_review_question": "Do the two \\aeq steps match exactly the strengths of lem:sub:R and the induction hypothesis?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-018"
+        },
+        {
+          "audit_id": "TA-LAM-019",
+          "unit_id": "OLP-0362",
+          "kind": "corollary-second-pair-premise-repeats-first-pair",
+          "action": "Required R'' to be alpha-equivalent to R and required the substitution formed from the second pair M'', R'' to be defined.",
+          "expected_missing_math": [
+            "$R''$",
+            "$\\Subst{M'}{R'}{y}$"
+          ],
+          "expected_extra_math": [
+            "$\\Subst{M''}{R''}{y}$",
+            "$R''\\aeqR$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\aeq"
+          ],
+          "source_issue_or_choice": "The corollary introduces another pair M'', R'' but tests definedness of the already established first pair M', R' and gives no relation between R'' and R.",
+          "chosen_treatment": "தமிழ் இரண்டாம் ஜோடியின் இரு உறுப்புகளுக்குமான தேவையான சமான நிபந்தனைகளையும், அதே ஜோடியின் இடைநிறுத்தல் வரையறுக்கப்பட்டிருப்பதையும் கூறுகிறது.",
+          "alternatives_considered": "Repeating the first pair's already known definedness; omitting any constraint on R'' while comparing its substitution.",
+          "rationale": "The preceding theorem states exactly these hypotheses for an alternative pair, and the corollary's conclusion compares the substitutions formed from the two respective pairs.",
+          "precise_review_question": "Do the repaired hypotheses make the corollary an immediate instance of thm:sub for the second pair?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-019"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\FV",
+        "\\FV",
+        "\\FV",
+        "\\FV",
+        "\\FV",
+        "\\aeq",
+        "\\aeq",
+        "\\aeq"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0363",
+      "source_sha256": "7a9ea3ae6329f8dc7620476401d748941516cf27e5ec29a48f57d422dd7d9d35",
+      "translation_sha256": "8aa7afd402c2533b4dd7fc1125f4cb7227443a90f15aa6812aa8f56e9460cf6e",
+      "source_bytes": 2956,
+      "translation_bytes": 7023,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-020",
+          "unit_id": "OLP-0363",
+          "kind": "de-bruijn-prose-grammar-errors",
+          "action": "Resolved the frozen malformed binder sentences and ordinary inflection errors according to the displayed zero-based example.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says the outer abstraction 'is on binds,' the inner one 'binds the variable is,' calls an abstraction an 'abstract,' and has several missing or wrong inflections.",
+          "chosen_treatment": "தமிழ் வெளிப்புற அருவம் x ஐயும் உட்புற அருவம் y ஐயும் கட்டுவதாகவும், அவற்றுக்கிடையிலான அருவ நிலைகளின் எண்ணிக்கையே சுட்டெண் எனவும் தெளிவாகக் கூறுகிறது.",
+          "alternatives_considered": "Preserving the malformed clauses literally; reversing the displayed zero and one indices.",
+          "rationale": "The following y x to 0 1 example uniquely determines the intended binders and the zero-based level convention.",
+          "precise_review_question": "Does the Tamil explanation assign index 0 to y and index 1 to x for exactly the stated nesting reason?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-020"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0364",
+      "source_sha256": "6b58e0943a9203c2d90bc0c533f880effdb583993134da6c2448cc3aad79fc67",
+      "translation_sha256": "00bb6aff4d0fcdf034c610043986d79acf77e8f9d8e596344816d3fa0d3ffb87",
+      "source_bytes": 3530,
+      "translation_bytes": 8797,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\rep{M}[0],\\rep{M}[1],etc.$",
+        "$FV(M)$",
+        "$FV(\\rep{M})$",
+        "$FV(\\rep{M}[0])=FV(\\rep{M}[1])$",
+        "\\begin{align}\\Subst{\\lambd[x][x]}{y}{x}&=\\ollabel{eq:1}\\\\&=\\Subst{\\lambd[z][z]}{y}{x}\\ollabel{eq:2}\\\\&=\\lambd[z][\\Subst{z}{y}{x}]\\\\&=\\lambd[z][z]\\end{align}",
+        "$x\\notinFV(R)$"
+      ],
+      "extra_math": [
+        "$\\rep{M}[0],\\rep{M}[1]$",
+        "$\\FV{M}$",
+        "$\\FV{\\rep{M}}$",
+        "$\\FV{\\rep{M}[0]}=\\FV{\\rep{M}[1]}$",
+        "\\begin{align}\\Subst{\\lambd[x][x]}{y}{x}&\\ollabel{eq:1}\\\\&=\\Subst{\\lambd[z][z]}{y}{x}\\ollabel{eq:2}\\\\&=\\lambd[z][\\Subst{z}{y}{x}]\\\\&=\\lambd[z][z]\\end{align}",
+        "$x\\notin\\FV{R}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "alp",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-021",
+          "unit_id": "OLP-0364",
+          "kind": "prose-spelling-agreement-and-math-mode-wording",
+          "action": "Resolved ordinary spelling and agreement errors and moved 'etc.' out of math mode as translated prose.",
+          "expected_missing_math": [
+            "$\\rep{M}[0],\\rep{M}[1],etc.$"
+          ],
+          "expected_extra_math": [
+            "$\\rep{M}[0],\\rep{M}[1]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source includes 'equivalance,' 'substition,' subject-agreement errors, and the prose abbreviation 'etc.' inside a mathematical span.",
+          "chosen_treatment": "தமிழ் வழக்கமான எழுத்துப்பிழைகளை நோக்கப்பட்ட பொருளில் வழங்கி, பிரதிநிதிக் குறிமானங்களை மட்டும் கணித முறையில் வைத்து 'முதலியவற்றையும்' என்பதை உரையாகக் கொடுக்கிறது.",
+          "alternatives_considered": "Leaving the English abbreviation in the Tamil sentence; treating the misspellings as new technical words.",
+          "rationale": "Moving the abbreviation changes no representative notation, class membership or mathematical operation.",
+          "precise_review_question": "Does the revised sentence still introduce indexed representatives only when more than one is needed?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-021"
+        },
+        {
+          "audit_id": "TA-LAM-022",
+          "unit_id": "OLP-0364",
+          "kind": "omitted-free-variable-macros",
+          "action": "Restored the FV macro in the class definition, its well-definedness equation, and the representative freshness condition.",
+          "expected_missing_math": [
+            "$FV(M)$",
+            "$FV(\\rep{M})$",
+            "$FV(\\rep{M}[0])=FV(\\rep{M}[1])$",
+            "$x\\notinFV(R)$"
+          ],
+          "expected_extra_math": [
+            "$\\FV{M}$",
+            "$\\FV{\\rep{M}}$",
+            "$\\FV{\\rep{M}[0]}=\\FV{\\rep{M}[1]}$",
+            "$x\\notin\\FV{R}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\FV",
+            "\\FV",
+            "\\FV",
+            "\\FV",
+            "\\FV"
+          ],
+          "source_issue_or_choice": "These formulas reuse the free-variable operation defined with the FV macro in the preceding sections; bare italic letters would not invoke that operation.",
+          "chosen_treatment": "தமிழ் வகுப்புகளுக்கான கட்டற்ற மாறி வரையறையிலும் அதன் சாராமைச் சான்றிலும் அதே \\FV குறிமானத்தைத் தொடர்கிறது.",
+          "alternatives_considered": "Keeping bare letter products; removing the FV macro from the rest of the lambda-syntax chapter.",
+          "rationale": "The cited alpha-invariance theorem and substitution freshness clause both explicitly concern the already defined free-variable set.",
+          "precise_review_question": "Do the restored macros preserve each original argument while making all four statements use the chapter's defined operator?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-022"
+        },
+        {
+          "audit_id": "TA-LAM-023",
+          "unit_id": "OLP-0364",
+          "kind": "dangling-equality-sign",
+          "action": "Removed the equality sign whose first displayed row has no right-hand side; the next row supplies the equality to the chosen representative.",
+          "expected_missing_math": [
+            "\\begin{align}\\Subst{\\lambd[x][x]}{y}{x}&=\\ollabel{eq:1}\\\\&=\\Subst{\\lambd[z][z]}{y}{x}\\ollabel{eq:2}\\\\&=\\lambd[z][\\Subst{z}{y}{x}]\\\\&=\\lambd[z][z]\\end{align}"
+          ],
+          "expected_extra_math": [
+            "\\begin{align}\\Subst{\\lambd[x][x]}{y}{x}&\\ollabel{eq:1}\\\\&=\\Subst{\\lambd[z][z]}{y}{x}\\ollabel{eq:2}\\\\&=\\lambd[z][\\Subst{z}{y}{x}]\\\\&=\\lambd[z][z]\\end{align}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The first row ends with an equals sign and no expression, while the following row begins with another equals sign; the prose cites eq:1 as the substitution expression itself and eq:2 as the representative replacement.",
+          "chosen_treatment": "தமிழ் முதல் வரியில் இடைநிறுத்தல் கோவைக்கு மட்டும் eq:1 சிட்டையை வைத்துப், அடுத்த வரியிலிருந்து சமத் தொடரைத் தொடங்குகிறது.",
+          "alternatives_considered": "Leaving two adjacent dangling equality signs; duplicating the second-row expression on the first row.",
+          "rationale": "The repair preserves both labels and every expression while making the displayed chain syntactically complete.",
+          "precise_review_question": "Does the first row now name the possibly undefined term and the second row state the class-level equality described immediately below?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-023"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\FV",
+        "\\FV",
+        "\\FV",
+        "\\FV",
+        "\\FV"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

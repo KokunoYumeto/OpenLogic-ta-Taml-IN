@@ -1,0 +1,208 @@
+{
+  "batch_id": "TA-B171",
+  "units": [
+    {
+      "unit_id": "OLP-0353",
+      "source_sha256": "04e8bc4bc52bc324158574551382bba00a369aeeda5fed708541e702746e4350",
+      "translation_sha256": "009a197ae2ed92a0eca7a30c418b0fce38983d3294cc4b5a5658b935ad77dd32",
+      "source_bytes": 5062,
+      "translation_bytes": 10357,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$H$",
+        "\\begin{align*}f(0,\\vecz)&=g(\\vecz)\\\\f(x+1,\\vecz)&=h(z,f(x,\\vecz),\\vecz).\\end{align*}",
+        "\\begin{align*}F(\\num0)&\\equivG\\\\F(\\overline{n+1})&\\equivH(\\num{n},F(\\num{n}))$n$G&=\\lambd[\\vecz][G'(\\vecz)]\\\\H(u,v)&=\\lambd[\\vecz][H'(u,v(u,\\vecz),\\vecz)].\\end{align*}"
+      ],
+      "extra_math": [
+        "$F$",
+        "\\begin{align*}f(0,\\vecz)&=g(\\vecz)\\\\f(x+1,\\vecz)&=h(x,f(x,\\vecz),\\vecz).\\end{align*}",
+        "\\begin{align*}F(\\num0)&\\equivG\\\\F(\\overline{n+1})&\\equivH(\\num{n},F(\\num{n}))$n$G&=\\lambd[\\vecz][G'(\\vecz)]\\\\H(u,v)&=\\lambd[\\vecz][H'(u,v(\\vecz),\\vecz)].\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "definable",
+        "define",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-007",
+          "unit_id": "OLP-0353",
+          "kind": "recursive-step-index-replaced-by-parameter-vector",
+          "action": "Restored x as the recursion index passed to h in the defining step for f(x+1, vector z).",
+          "expected_missing_math": [
+            "\\begin{align*}f(0,\\vecz)&=g(\\vecz)\\\\f(x+1,\\vecz)&=h(z,f(x,\\vecz),\\vecz).\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{align*}f(0,\\vecz)&=g(\\vecz)\\\\f(x+1,\\vecz)&=h(x,f(x,\\vecz),\\vecz).\\end{align*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The recursive schema uses x as its first argument and vector z as the unchanged auxiliary parameters, but the source step calls h with scalar z, which is otherwise undeclared and duplicates the following vector z role.",
+          "chosen_treatment": "தமிழ் மீள்வரையறைப் படியில் h இன் முதல் உள்ளீடாக மீள்வரையறைச் சுட்டெண் x ஐப் பயன்படுத்துகிறது; துணை அளவுருத் திசையன் இறுதி உள்ளீடாகத் தொடர்கிறது.",
+          "alternatives_considered": "Keeping the undeclared scalar z; dropping h's first input; changing every recursion index x to z.",
+          "rationale": "The immediately following target equation calls H with numeral n, the current recursion index, followed by the preceding value and the parameter vector, uniquely fixing x as the intended first input here.",
+          "precise_review_question": "Does h(x,f(x,vector z),vector z) match the subsequent H(n,F(n,vector z),vector z) equation without changing the recursion arity?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-007"
+        },
+        {
+          "audit_id": "TA-LAM-008",
+          "unit_id": "OLP-0353",
+          "kind": "sought-term-name-collides-with-step-term",
+          "action": "Named the sought term F rather than H because H already denotes the term defining the step function h.",
+          "expected_missing_math": [
+            "$H$"
+          ],
+          "expected_extra_math": [
+            "$F$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The paragraph assumes G and H already define g and h, then asks for another term H for f; every displayed equation and the remainder of the proof call the new term F.",
+          "chosen_treatment": "தமிழ், படிச் சார்புக்கான H ஐ மாற்றாமல் வைத்து, தேடப்படும் f-ஐ வரையறுக்கும் சொல்லை F எனக் கூறுகிறது.",
+          "alternatives_considered": "Keeping both distinct terms named H; renaming the established step term and all subsequent equations.",
+          "rationale": "F is used consistently in the two displays immediately following the sentence and throughout the construction, while H remains the step-function term.",
+          "precise_review_question": "Does changing only the sought-term name from H to F remove the collision and agree with every subsequent equation?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-008"
+        },
+        {
+          "audit_id": "TA-LAM-009",
+          "unit_id": "OLP-0353",
+          "kind": "preceding-value-function-given-extra-argument",
+          "action": "Applied v only to the auxiliary parameter vector in the absorbed-parameter definition of H(u,v).",
+          "expected_missing_math": [
+            "\\begin{align*}F(\\num0)&\\equivG\\\\F(\\overline{n+1})&\\equivH(\\num{n},F(\\num{n}))$n$G&=\\lambd[\\vecz][G'(\\vecz)]\\\\H(u,v)&=\\lambd[\\vecz][H'(u,v(u,\\vecz),\\vecz)].\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{align*}F(\\num0)&\\equivG\\\\F(\\overline{n+1})&\\equivH(\\num{n},F(\\num{n}))$n$G&=\\lambd[\\vecz][G'(\\vecz)]\\\\H(u,v)&=\\lambd[\\vecz][H'(u,v(\\vecz),\\vecz)].\\end{align*}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Here v stands for the preceding recursively obtained function F(n), whose inputs are the absorbed auxiliary parameters; the source instead applies v to u and the parameter vector, adding an argument not present in F(n, vector z).",
+          "chosen_treatment": "தமிழ் H(u,v) வரையறையில் முந்திய மதிப்புச் சார்பு v ஐ துணை அளவுருத் திசையன் மீது மட்டும் செயல்படுத்துகிறது.",
+          "alternatives_considered": "Keeping v(u,vector z); redefining v to include the recursion index despite F(n) already fixing it.",
+          "rationale": "The target equation H(n,F(n)) must expand at vector z to H'(n,F(n)(vector z),vector z); applying v to u again would duplicate the fixed recursion index.",
+          "precise_review_question": "Does v(vector z) make the absorbed-parameter equation extensionally identical to the preceding F(n+1,vector z) recursion?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-009"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0354",
+      "source_sha256": "632b1f356b9a9b2147e82bc3b39a3442220ab78ffbede6baa28390cf1b759327",
+      "translation_sha256": "acdf68d72880a542b6b933a5a5f767a2ac066f46b4bf424eebebadfde0cca46d",
+      "source_bytes": 1088,
+      "translation_bytes": 2336,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "xxg"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0355",
+      "source_sha256": "e0fbbc26c033f303410498fec8dd8dda3d610e0ced8df38d1de1189a8d590bf1",
+      "translation_sha256": "d6795620391ae9cbf6ed949adb039bad51b91943c267bed4d5e59d9f4db07dfb",
+      "source_bytes": 2208,
+      "translation_bytes": 4678,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "definable",
+        "define",
+        "defined",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-010",
+          "unit_id": "OLP-0355",
+          "kind": "unsupported-primitive-recursive-assumption",
+          "action": "Invoked the lemma's lambda-definability assumption instead of asserting that f is primitive recursive.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The lemma assumes only that f is lambda-definable, which may represent any partial computable function; the proof abruptly calls f primitive recursive even though it uses only the existence of a defining lambda term F.",
+          "chosen_treatment": "தமிழ், துணைத்தேற்றத்தின் கருதுகோள்படி f லாம்டா-வரையறுக்கத்தக்கது என்பதிலிருந்து F இருப்பதைப் பெறுகிறது.",
+          "alternatives_considered": "Strengthening the lemma to primitive-recursive f; retaining an unused stronger claim that is not established.",
+          "rationale": "The next sentence needs exactly a lambda term F defining f, supplied directly by the stated hypothesis, and no primitive-recursive construction is used later.",
+          "precise_review_question": "Does the corrected premise justify the existence of F while preserving the lemma's full lambda-definable scope?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-010"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

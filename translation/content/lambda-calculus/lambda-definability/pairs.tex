@@ -1,0 +1,58 @@
+% SEGMENT OLP-0376-S01
+% Part: lambda-calculus
+% Chapter: lambda-definability
+% Section: pairs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{ldf}{pai}
+\olsection{ஜோடிகளும் முன்னியும்}
+
+\begin{defn}
+$M$, $N$ ஆகியவற்றின் ஜோடி ($\tuple{M,N}$ என எழுதப்படும்) பின்வருமாறு
+வரையறுக்கப்படுகிறது:
+\[
+\tuple{M,N} \ident \lambd[f][fMN].
+\]
+\end{defn}
+
+உள்ளுணர்வில் இது ஒரு சார்பை ஏற்று, அந்தச் சார்பை ஜோடியின் இரு உறுப்புகள்மீதும்
+செயல்படுத்தும் சார்பு. இக்கருத்தைப் பின்பற்றி, இரண்டு சொற்களை ஏற்று அவற்றைக்
+கொண்ட ஜோடியைத் திருப்பித்தரும் பின்வரும் கட்டமைப்பியைப் பெறுகிறோம்:
+\[
+  \fn{Pair} \ident \lambd[mn][\lambd[f][fmn]]
+\]
+ஒரு ஜோடி கொடுக்கப்பட்டால், அதன் உறுப்புகளையும் மீட்டெடுக்க வேண்டும்.
+இதற்காக, ஒரு ஜோடியை உள்ளீடாக ஏற்று அதன் முதல் அல்லது இரண்டாம் உறுப்பைத்
+திருப்பித்தரும் இரண்டு அணுகுச் சார்புகள் தேவை:
+\begin{align*}
+  \fn{Fst} & \ident \lambd[p][p(\lambd[mn][m])]\\
+  \fn{Snd} & \ident \lambd[p][p(\lambd[mn][n])]
+\end{align*}
+
+\begin{prob}
+  அணுகுச் சார்புகள் $\fn{Fst}$, $\fn{Snd}$ ஏன் செயல்படுகின்றன என்று
+  விளக்குக.
+\end{prob}
+
+இப்போது ஜோடிகளைக் கொண்டு முன்னிச் சார்பை !!{lambda define} செய்யலாம்:
+\[
+  \fn{Pred} \ident \lambd[n][\fn{Fst}(n (\lambd[p][\tuple{\fn{Snd}\, {p}, \fn{Succ}(\fn{Snd}\, {p})}]) \tuple{\num 0, \num 0})]
+\]
+$\num n\, f x$ ஆனது $f^{n}(x)$ ஆகக் குறைகிறது என்பதை நினைவுகூர்க. இங்கு
+$f$ என்பது ஒரு ஜோடி $p$ ஐ ஏற்று, $p$ இன் இரண்டாம் கூறையும் அந்த இரண்டாம்
+கூறின் தொடரியையும் கொண்ட ஒரு புதிய ஜோடியைத் திருப்பித்தரும் சார்பு;
+% SOURCE CORRECTION TA-LAM-036: both prose tuples are lambda terms, so their zeros are Church numerals as in the displayed initializer.
+$x$ என்பது $\tuple{\num 0,\num 0}$ என்ற ஜோடி. ஆகவே $n=0$ எனில் விளைவு
+$\tuple{\num 0,\num 0}$; இல்லையெனில்
+$\tuple{\num{n-1}, \num n}$. பின்னர் $\fn{Pred}$ அந்த விளைவின் முதல்
+கூறைத் திருப்பித்தருகிறது.
+
+$a$ மீது $\fn{Pred}$ ஐ $b$ முறை செயல்படுத்துவதால் கழித்தலை வரையறுக்கலாம்:
+\[
+\fn{Sub} \ident \lambd[ab][b \fn{Pred}\, a].
+\]
+
+\end{document}

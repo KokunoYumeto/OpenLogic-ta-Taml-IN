@@ -1,0 +1,167 @@
+% SEGMENT OLP-0369-S01
+% Part: lambda-calculus
+% Chapter: church-rosser
+% Section: parallel-beta-reduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{cr}{pb}
+
+\olsection{இணைநிலை $\beta$-குறைத்தல்}
+
+\emph{இணைநிலை $\beta$-குறைத்தல்} என்ற கருத்தை அறிமுகப்படுத்தி, அதற்குச்
+சர்ச்--ரோசர் பண்பு உள்ளது என்பதை நிறுவுவோம்.
+
+\begin{defn}[இணைநிலை $\beta$-குறைத்தல், $\bredpar$] \ollabel{defn:bredpar}
+  சொற்களின் இணைநிலைக் குறைத்தல் ($\bredpar$) பின்வருமாறு தொகுத்தறிதல்
+  முறையில் வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+    \item \ollabel{defn:bredpar1} $x \bredpar x$.
+    \item \ollabel{defn:bredpar2} $N \bredpar N'$ எனில்
+      $\lambd[x][N] \bredpar \lambd[x][N']$.
+      % SOURCE CORRECTION TA-LAM-028: use the relation being defined in the abstraction closure rule; later proofs invoke this clause with parallel reduction, not an unrelated beta arrow.
+    \item \ollabel{defn:bredpar3} $P \bredpar P'$, $Q \bredpar Q'$ எனில்
+      $PQ \bredpar P'Q'$.
+    \item \ollabel{defn:bredpar4} $N \bredpar N'$, $Q \bredpar Q'$ எனில்
+      $(\lambd[x][N])Q \bredpar \Subst{N'}{Q'}{x}$.
+  \end{enumerate}
+\end{defn}
+
+இணைநிலை $\beta$-குறைத்தல், ஒரு சொல்லிலுள்ள எத்தனை ரெடெக்ஸ்களையும் ஒரே படியில்
+குறைக்க அனுமதிக்கிறது. மூலச் சொல்லில் நிகழும் ரெடெக்ஸ்களை மட்டுமே சுருக்க
+முடியும்; இணைநிலை $\beta$-குறைத்தலால் புதிதாக எழும் ரெடெக்ஸ்களை அதே படியில்
+சுருக்க முடியாது என்ற பொருளில் இது $\beta$-குறைத்தலிலிருந்து வேறுபடுகிறது.
+எடுத்துக்காட்டாக, $(\lambd[f][fx])(\lambd[y][y])$ என்ற சொல்லை இணைநிலையில்
+அதே சொல்லாகவோ $(\lambd[y][y])x$ ஆகவோ மட்டுமே $\beta$-குறைக்க முடியும்;
+மேற்கொண்டு~$x$ ஆகக் குறைக்க முடியாது. அது $\beta$-குறைத்தலில்~$x$ ஆகக்
+குறைந்தாலும், இந்த ரெடெக்ஸ் ஓர் இணைநிலை $\beta$-குறைத்தல் படிக்குப் பிறகே
+எழுகிறது. எனினும், இரண்டாவது இணைநிலை $\beta$-குறைத்தல் படி~$x$ ஐத் தருகிறது.
+
+\begin{thm}\ollabel{thm:refl}
+  $M \bredpar M$.
+\end{thm}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[lam][cr][pb]{thm:refl} ஐ நிறுவுக.
+\end{prob}
+
+\begin{defn}[$\beta$-முழுமை வளர்த்தல்]\ollabel{defn:bcd}
+  $M$ இன் \emph{$\beta$-முழுமை வளர்த்தல்}~$\bcd{M}$ பின்வருமாறு
+  தொகுத்தறிதல் முறையில் வரையறுக்கப்படுகிறது:
+  \begin{align}
+    \bcd{x} &= x \ollabel{defn:bcd1} \\
+    \bcd{(\lambd[x][N])} &= \lambd[x][\bcd{N}] \ollabel{defn:bcd2}\\
+    \bcd{(PQ)} &= \bcd{P}\bcd{Q} && \text{$P$ ஒரு $\lambd$-அருவமாக இல்லையெனில்}
+    \ollabel{defn:bcd3} \\
+    \bcd{((\lambd[x][N])Q)} &= \Subst{\bcd{N}}{\bcd{Q}}{x} \ollabel{defn:bcd4}
+  \end{align}
+\end{defn}
+
+ஒரு சொல்லின் $\beta$-முழுமை வளர்த்தல், அதன் பெயர் குறிப்பிடுவதுபோல், ஒரு
+“முழுமையான இணைநிலைக் குறைத்தல்.” இணைநிலை $\beta$-குறைத்தலில் ஒரு ரெடெக்ஸைச்
+சுருக்காமல் விட இன்னும் தேர்விருக்கிறது; ஆனால் முழுமை வளர்த்தலில் அவை
+அனைத்தையும் கட்டாயமாகச் சுருக்க வேண்டும். ஆகவே
+$(\lambd[f][fx])(\lambd[y][y])$ இன் முழுமை வளர்த்தல் அதே சொல் அல்ல;
+$(\lambd[y][y])x$ ஆகும்.
+
+\begin{editorial}
+  ($\lambd$-)சொற்களின்மீது சார்புகளை மறுநிகழ்வு முறையில் எவ்வாறு
+  வரையறுப்பது என்பதை இன்னும் அறிமுகப்படுத்தவில்லை என்ற சிக்கல் இவ்வரையறைக்கு
+  உள்ளது. எதிர்காலத்தில் சரிசெய்யப்படும்.
+\end{editorial}
+
+\begin{lem}\ollabel{lem:comp}
+  $M \bredpar M'$, $R \bredpar R'$ எனில், $\Subst{M}{R}{y}
+  \bredpar \Subst{M'}{R'}{y}$.
+\end{lem}
+
+\begin{proof}
+  $M \bredpar M'$ இன் !!{derivation} மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+  \begin{enumerate}
+    \item கடைசிப் படி \olref{defn:bredpar1}: பயிற்சி.
+    \item கடைசிப் படி \olref{defn:bredpar2}: அப்போது $M$ என்பது
+      $\lambd[x][N]$; $M'$ என்பது $\lambd[x][N']$; இங்கு
+      $N \bredpar N'$. நாம்
+      $\Subst{(\lambd[x][N])}{R}{y} \bredpar
+      \Subst{(\lambd[x][N'])}{R'}{y}$, அதாவது
+      $\lambd[x][\Subst{N}{R}{y}] \bredpar
+      \lambd[x][\Subst{N'}{R'}{y}]$, என்று நிறுவ வேண்டும்.
+      % SOURCE CORRECTION TA-LAM-029: the unfolded target uses R', matching the stated right-hand substitution and the induction hypothesis.
+      இது \olref{defn:bredpar2} மற்றும் தொகுத்தறிதல் கருதுகோளிலிருந்து
+      உடனடியாகப் பின்வருகிறது.
+    \item கடைசிப் படி \olref{defn:bredpar3}: பயிற்சி.
+    \item கடைசிப் படி \olref{defn:bredpar4}: $M$ என்பது
+      $(\lambd[x][N])Q$; $M'$ என்பது $\Subst{N'}{Q'}{x}$. நாம்
+      $\Subst{((\lambd[x][N])Q)}{R}{y} \bredpar
+      \Subst{\Subst{N'}{Q'}{x}}{R'}{y}$, அதாவது
+      $(\lambd[x][\Subst{N}{R}{y}])\Subst{Q}{R}{y} \bredpar
+      \Subst{\Subst{N'}{R'}{y}}{\Subst{Q'}{R'}{y}}{x}$, என்று நிறுவ வேண்டும்.
+      இது \olref{defn:bredpar4} மற்றும் தொகுத்தறிதல் கருதுகோளிலிருந்து
+      பின்வருகிறது.
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][cr][pb]{lem:comp} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{lem}\ollabel{lem:cont}
+  $M \bredpar M'$ எனில் $M' \bredpar \bcd{M}$.
+\end{lem}
+\begin{proof}
+  $M \bredpar M'$ இன் !!{derivation} மீது தொகுத்தறிதல் முறையில் நிறுவுவோம்.
+  \begin{enumerate}
+    \item கடைசி விதி \olref{defn:bredpar1}: பயிற்சி.
+    \item கடைசி விதி \olref{defn:bredpar2}: $M$ என்பது
+      $\lambd[x][N]$; $M'$ என்பது $\lambd[x][N']$; மேலும்
+      $N \bredpar N'$. நாம் $\lambd[x][N'] \bredpar
+      \bcd{(\lambd[x][N])}$, அதாவது \olref{defn:bcd2} இன்படி
+      $\lambd[x][N'] \bredpar \lambd[x][\bcd{N}]$, என்று காட்ட வேண்டும்.
+      இது \olref{defn:bredpar2} மற்றும் தொகுத்தறிதல் கருதுகோளிலிருந்து
+      பின்வருகிறது.
+    \item கடைசி விதி \olref{defn:bredpar3}: $M$ என்பது $PQ$; $M'$ என்பது,
+      $P \bredpar P'$, $Q \bredpar Q'$ ஆக அமையும் ஏதோ $P$, $Q$, $P'$,
+      $Q'$ க்கான $P'Q'$. தொகுத்தறிதல் கருதுகோளின்படி,
+      $P' \bredpar \bcd{P}$ மற்றும் $Q' \bredpar \bcd{Q}$.
+      \begin{enumerate}
+        \item ஏதோ $x$, $N$ க்கு $P$ என்பது $\lambd[x][N]$ எனில்,
+          ஏதோ $N'$ க்கு $P'$ என்பது $\lambd[x][N']$ ஆகவும்
+          $N \bredpar N'$ ஆகவும் இருக்க வேண்டும். தொகுத்தறிதல்
+          கருதுகோளின்படி $N' \bredpar \bcd{N}$ மற்றும்
+          $Q' \bredpar \bcd{Q}$. அப்போது \olref{defn:bredpar4} இன்படி
+          $(\lambd[x][N'])Q' \bredpar
+          \Subst{\bcd{N}}{\bcd{Q}}{x}$.
+        \item $P$ ஒரு $\lambd$-அருவமாக இல்லையெனில்,
+          \olref{defn:bredpar3} இன்படி $P'Q' \bredpar
+          \bcd{P}\bcd{Q}$; மேலும் \olref{defn:bcd3} இன்படி வலப்பக்கம்
+          $\bcd{PQ}$.
+      \end{enumerate}
+    \item கடைசி விதி \olref{defn:bredpar4}: $M$ என்பது
+      $(\lambd[x][N])Q$; $M'$ என்பது ஏதோ $x$, $N$, $Q$, $N'$,~$Q'$
+      க்கான $\Subst{N'}{Q'}{x}$; இங்கு $N \bredpar N'$, $Q \bredpar
+      Q'$. தொகுத்தறிதல் கருதுகோளின்படி $N' \bredpar \bcd{N}$ மற்றும்
+      $Q' \bredpar \bcd{Q}$. \olref{lem:comp} இன்படி
+      $\Subst{N'}{Q'}{x} \bredpar \Subst{\bcd{N}}{\bcd{Q}}{x}$;
+      அதன் வலப்பக்கம் துல்லியமாக $\bcd{((\lambd[x][N])Q)}$.
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[lam][cr][pb]{lem:cont} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{thm}\ollabel{thm:cr}
+  $\bredpar$ ஆனது சர்ச்--ரோசர் பண்பைக் கொண்டுள்ளது.
+\end{thm}
+
+\begin{proof}
+  \olref{lem:cont} இலிருந்து உடனடியாகக் கிடைக்கிறது.
+\end{proof}
+
+\end{document}

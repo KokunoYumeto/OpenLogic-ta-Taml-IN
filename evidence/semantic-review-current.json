@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-19T18:28:59.185171+00:00",
+  "date_utc": "2026-09-19T20:11:41.456079+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -1747,6 +1747,156 @@
       "unit_id": "OLP-0352",
       "source_sha256": "cb8cd3db3bf994933f1de1eeb3a9f99e108b3699ea8d53f7218f9861ea3e2b61",
       "translation_sha256": "ad64e6795263367a29ca5dab15916e23330ea9df2f880ee4aa8cc4d846056e7a"
+    },
+    {
+      "unit_id": "OLP-0353",
+      "source_sha256": "04e8bc4bc52bc324158574551382bba00a369aeeda5fed708541e702746e4350",
+      "translation_sha256": "009a197ae2ed92a0eca7a30c418b0fce38983d3294cc4b5a5658b935ad77dd32"
+    },
+    {
+      "unit_id": "OLP-0354",
+      "source_sha256": "632b1f356b9a9b2147e82bc3b39a3442220ab78ffbede6baa28390cf1b759327",
+      "translation_sha256": "acdf68d72880a542b6b933a5a5f767a2ac066f46b4bf424eebebadfde0cca46d"
+    },
+    {
+      "unit_id": "OLP-0355",
+      "source_sha256": "e0fbbc26c033f303410498fec8dd8dda3d610e0ced8df38d1de1189a8d590bf1",
+      "translation_sha256": "d6795620391ae9cbf6ed949adb039bad51b91943c267bed4d5e59d9f4db07dfb"
+    },
+    {
+      "unit_id": "OLP-0356",
+      "source_sha256": "8d4b46380a30f99e21a4eff935d0e8b3a5c23655709070cdd8aa5c63be62327e",
+      "translation_sha256": "d725b2ee0c9c3e0c74a03f67fc56bb55f1817b0ed8168dc422058fb8ebec7ce4"
+    },
+    {
+      "unit_id": "OLP-0357",
+      "source_sha256": "145fce509501861988851ee8a42591b3ec7e2acd4f570f34004c5c459b491ecb",
+      "translation_sha256": "6aa3778a923b96bab479e0aa300eaba6fe2f288c93adfd2674e12ffe3a964a51"
+    },
+    {
+      "unit_id": "OLP-0358",
+      "source_sha256": "a11a3822afc6fd0e95f81b2040023d553f0682b5b099b7c75511d4b2a720b7f7",
+      "translation_sha256": "51406cb960d2e5b4eb637ea94f91f6c7ff204298e2ec55d4bab701b91609f687"
+    },
+    {
+      "unit_id": "OLP-0359",
+      "source_sha256": "89683422a361faf74ad312ab557f265f94eb9541fcc3bd3fadbfaf1437bd9c46",
+      "translation_sha256": "44c4ac3f6a2f8be7faaebb2fc27ea904c8283a5840d012141c91fcaeac08f465"
+    },
+    {
+      "unit_id": "OLP-0360",
+      "source_sha256": "5443d1f42424315debd308ca068a3f74dde17a2045bc0b71cb94c6d70d53990c",
+      "translation_sha256": "664da5932d64a6d74a24f397ddfab6124cd1dfe5b06df437b9f4d5c3b5b31f3d"
+    },
+    {
+      "unit_id": "OLP-0361",
+      "source_sha256": "8e6a232737d4b0c58a03fd1ab2bedc120e159c21e6d17cd30ed58fd4615ec8bd",
+      "translation_sha256": "23f029bc7fea62f9b499412d26b97ec1517687472e842246bcf16388c235811d"
+    },
+    {
+      "unit_id": "OLP-0362",
+      "source_sha256": "f17619c4515bbbc583990680fd46c1d57191327b0f4a3cce347b2a327a6d0dda",
+      "translation_sha256": "b22c7850ddfa1e0c9950601165c2ff8adf4efa3e99bc50b68b32422422d59c66"
+    },
+    {
+      "unit_id": "OLP-0363",
+      "source_sha256": "7a9ea3ae6329f8dc7620476401d748941516cf27e5ec29a48f57d422dd7d9d35",
+      "translation_sha256": "8aa7afd402c2533b4dd7fc1125f4cb7227443a90f15aa6812aa8f56e9460cf6e"
+    },
+    {
+      "unit_id": "OLP-0364",
+      "source_sha256": "6b58e0943a9203c2d90bc0c533f880effdb583993134da6c2448cc3aad79fc67",
+      "translation_sha256": "00bb6aff4d0fcdf034c610043986d79acf77e8f9d8e596344816d3fa0d3ffb87"
+    },
+    {
+      "unit_id": "OLP-0365",
+      "source_sha256": "42355f0467bb8d19038e3cadd4b5f0d2ce58720cbed3130cb74f86f7be4fc0dd",
+      "translation_sha256": "03170c996888feb884dbe765a00b3c8f8df75b9dc19f9bf0f2e2de4ecebb99b9"
+    },
+    {
+      "unit_id": "OLP-0366",
+      "source_sha256": "a6027d321bb141166a89ae598a60f8cc559b5b74922b47f5932fe464a91eb978",
+      "translation_sha256": "26729830dc8bdb231545fcf25bc0db09650bec77eef7a9c6a0e02f9c597d3c52"
+    },
+    {
+      "unit_id": "OLP-0367",
+      "source_sha256": "f9a7362d873c4feed67ac0350ebb3c3cf3ddfd6046c4a7d0ef55e7086038ddf5",
+      "translation_sha256": "a281db7f2a65e7f1287f28326d6c973cdda77cdfdc570124ec500654fdf85dd8"
+    },
+    {
+      "unit_id": "OLP-0368",
+      "source_sha256": "8f2880db2bb1ecb7dc07bf844e6da844d82b48289a5f36270d20588d826deb6f",
+      "translation_sha256": "d81ea5c607353efdbbfe46db4dc2576c0e06311f91198a9fd544111982a5bce9"
+    },
+    {
+      "unit_id": "OLP-0369",
+      "source_sha256": "37905b8d25e97bb2554d4df43321bbcefd55816a7d89fe85279c4119a7871f52",
+      "translation_sha256": "9fb17b10567dedaf83ffed66f3e689e8fbf1433b3f0301d8abc1941023afdae1"
+    },
+    {
+      "unit_id": "OLP-0370",
+      "source_sha256": "c51e50d16a675080277053003c33dc22951be9a43bb9910cc1bf1dff6e05f361",
+      "translation_sha256": "7f0fbf277ec52e4587bb700489797e16c571b071548074b25dd1ba7281017439"
+    },
+    {
+      "unit_id": "OLP-0371",
+      "source_sha256": "88130e362effc83767b2fae97dcab4b6ae13f657a7d7a43da2df13883c9d54f2",
+      "translation_sha256": "2333aba5efee5beefbcd2078f124d5614651b78bc99f18005467f13c47128b3b"
+    },
+    {
+      "unit_id": "OLP-0372",
+      "source_sha256": "2eee11e77e3bb3052a2e139079f26cb22c1126577b4418f88918a3ede85a3cf4",
+      "translation_sha256": "e6df25a4ebcc6de37056a42afa77bf94b3ac00d08936ed28f497eb19f07fc12b"
+    },
+    {
+      "unit_id": "OLP-0373",
+      "source_sha256": "42df17a2d1c3ff9e2f53676b6bad10a9b10e7787f70d6371a2f60d0a22a78708",
+      "translation_sha256": "9b51d53255a0f27598cb3ee1c7833e2501b815f3bf4402d2b6ffe477b3d4ae03"
+    },
+    {
+      "unit_id": "OLP-0374",
+      "source_sha256": "ff7c8dba694a6e61b7d6445949a00ed6e61c5ddc1af1bcabcc7e0587ed1cb2d2",
+      "translation_sha256": "b1a9d6e71778f1bb69bd163775e006a4c2c876a71452bf85eb492b4b3531f594"
+    },
+    {
+      "unit_id": "OLP-0375",
+      "source_sha256": "1c5db87c79c1edc7766be8031d7c6e35498be393367e2651c9b37950d5db7d24",
+      "translation_sha256": "e924e531729b307a016d8b200258620d306c85f7d97ceb949d2b878e3c0a2e1b"
+    },
+    {
+      "unit_id": "OLP-0376",
+      "source_sha256": "4d2fd1df669f4a9a40328ebd0a7fcea1e38576e6b32acc5a5692626b934032cb",
+      "translation_sha256": "4f47afef85d3ae57fa44a738234ad0f43031c06a0ccf5641900e962213423fce"
+    },
+    {
+      "unit_id": "OLP-0377",
+      "source_sha256": "c59cf879d08ccb846c28886a957ffee1a5256157e9a160af104606743eb9006c",
+      "translation_sha256": "3f35df4bccaa3d064fd970101a5d8bfc9e6510e058790ae9aa93adbac94fa5ab"
+    },
+    {
+      "unit_id": "OLP-0378",
+      "source_sha256": "dbedc0b45f7d2ce9eebd36a219fe22b532ddebb6082fb4bf356afc612f4e294d",
+      "translation_sha256": "df0c547ca4bc4e01114b9bd7ea893dcdc7b8bd4ac3b10ed62e52f74b68c7cbf2"
+    },
+    {
+      "unit_id": "OLP-0379",
+      "source_sha256": "d826387d4284ef13679ef5b91a22bb7551c193c2e8c8356201ceb1df72a46b93",
+      "translation_sha256": "0cc60350fc15c9765a54b83c5a76543d5d60abfe9a5345cee6f99d75c8e61fc4"
+    },
+    {
+      "unit_id": "OLP-0380",
+      "source_sha256": "4da3bef314009bbd93701e19fa66ff1bd7dc718427fa1ddd06d223b2aaf9b7f6",
+      "translation_sha256": "c989057be92734aa07016dc8ba372078a316334622a8a6846cf5c14c2117b5c7"
+    },
+    {
+      "unit_id": "OLP-0381",
+      "source_sha256": "a74678e3cced4a3650d799dae58d106964e63ddd9fd71b739a51531ef73325f0",
+      "translation_sha256": "da554c0fe6b567045e5bc8254462ee718fd43058502d0250184a4574da28838b"
+    },
+    {
+      "unit_id": "OLP-0382",
+      "source_sha256": "ff6f9c3dbe4c11e42b9528b74afa11ecc68978c3c76211000b8e8f279ad1db07",
+      "translation_sha256": "1191369ce2f62291046c747392422f84b6e7a8e4eb865602b4560b417789db25"
     }
   ],
   "samples": [
@@ -4850,6 +5000,216 @@
       "assessment": "The arities, indexed component functions and complete defining equation for F preserve the recursive-function composition schema.",
       "translation_segment_sha256": "1280b353b4c019d85e411f56fc0de115918d17d25c13e6455f3597db05d3f185",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0353-S01",
+      "reverse_paraphrase": "Lambda-definable functions are closed under primitive recursion by absorbing auxiliary parameters, encoding pairs, and iterating a transition that carries both the current numeral and recursive value.",
+      "assessment": "Both reduction equations, the pair selectors, base case and two-part induction remain explicit; TA-LAM-007–009 restore the recursion index, sought-term name and absorbed preceding-value application.",
+      "translation_segment_sha256": "e85d5a26115b1b96d4242ea9f3e65ca25436959d2134faef4aab96d3a669d40b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0354-S01",
+      "reverse_paraphrase": "A fixed-point combinator maps any lambda term g to a term beta-equivalent to g applied to that same term; the Curry and Turing variants satisfy respectively common-reduct and direct-reduction forms.",
+      "assessment": "The diagonal construction, both Y terms and the distinction between beta equivalence and one-way reduction are preserved.",
+      "translation_segment_sha256": "ba2327998ef27c851b2f21d21661d521d93d386fcd75c3ac9bea3b9030b4c045",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0355-S01",
+      "reverse_paraphrase": "Lambda-definable functions are closed under minimization by using a fixed point to search successive numerals until the defining term returns zero, diverging when the minimum is undefined.",
+      "assessment": "The selector D, free parameter x, fixed-point equation and zero-versus-positive branches remain exact; TA-LAM-010 uses the lemma’s actual lambda-definability hypothesis.",
+      "translation_segment_sha256": "fec38815d62ece57ad70016a1a4cf2e4a73334c02674009c13e745d28ca9207f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0356-S01",
+      "reverse_paraphrase": "The formal lambda-syntax chapter proceeds through terms, unique readability, abbreviation, free variables, substitution, alpha conversion, de Bruijn notation, revised terms, beta reduction and eta reduction.",
+      "assessment": "All ten imports remain present once and in frozen-source order.",
+      "translation_segment_sha256": "154079f64185e00de4fca5d76dc01d61ce5a2db895abf08258f10ae48bdfa6eb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0357-S01",
+      "reverse_paraphrase": "Fully parenthesized lambda terms are generated uniquely from variables by abstraction and application, with the abstraction variable designated as its parameter.",
+      "assessment": "All three formation clauses, the decomposition example and formation exercise preserve their exact parentheses and identifiers; TA-LAM-011 repairs two ordinary spelling errors.",
+      "translation_segment_sha256": "dd8d6a2952e59cba5a606dc9066733e527d35a77a864d01723eff08f4190b685",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0358-S01",
+      "reverse_paraphrase": "Unique readability follows because a term begins with a variable or parenthesis, no proper initial part is a term, and abstraction and application have distinguishable outer forms.",
+      "assessment": "The formation induction handles variables, abstractions and applications separately and preserves every cross-reference and decomposition.",
+      "translation_segment_sha256": "36a6c751b8b166869026d387321bcfb985f87d1f51b419f54ebae6dbb43c7df5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0359-S01",
+      "reverse_paraphrase": "Abbreviated lambda syntax associates application to the left, gives abstraction widest scope and allows multiple binders to abbreviate nested abstractions.",
+      "assessment": "Both expansion examples preserve every term and parenthesis; TA-LAM-012 repairs the repeated frozen “From example” typo.",
+      "translation_segment_sha256": "d9a9a212290852fe043078485a0d5587e766cad85c945d1e5cbf6c31f084a195",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0360-S01",
+      "reverse_paraphrase": "A variable occurrence is free exactly when no matching lambda abstraction scopes over it; free-variable sets are defined recursively for variables, abstractions and applications, and a term with none is closed.",
+      "assessment": "Every nested-binding example, FV equation, exercise and environment explanation is retained; TA-LAM-013 identifies the abstraction body M as the scope rather than its containing term N.",
+      "translation_segment_sha256": "be18cf0949a6d7afdf89d49575d8c7fb442e433bee316dbc31ced038218ffc2f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0361-S01",
+      "reverse_paraphrase": "Capture-sensitive substitution replaces only free occurrences, is undefined when a binder would capture a free variable of the inserted term, and obeys the stated free-variable and inverse-renaming laws.",
+      "assessment": "All four inductive clauses, three exercises and four theorems remain present; TA-LAM-014–015 repair the abstraction-body name and consistently distinguish substituted variable x from binder y in the free-variable proofs.",
+      "translation_segment_sha256": "b2c9b5b764325e982f63e61a98e37c02f3d0a5a7ff0c75114ab474fbae341c32",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0362-S01",
+      "reverse_paraphrase": "Alpha conversion is the reflexive-transitive closure of compatible one-step bound-variable renaming, preserves free variables, is symmetric, and makes capture-avoiding substitution total up to alpha equivalence.",
+      "assessment": "All closure clauses, examples, exercises and substitution results remain complete; TA-LAM-016–019 repair prose, FV notation, two equality signs and the alternative-pair premise without strengthening the stated equivalence results.",
+      "translation_segment_sha256": "bb6c796ec01fe080b4c92f5723486b70b8270e3487520fe8c81242a27a28ea87",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0363-S01",
+      "reverse_paraphrase": "A De Bruijn term replaces a bound variable by the zero-based number of abstraction levels between its occurrence and binder; mutually directed maps translate between ordinary and indexed syntax.",
+      "assessment": "The example maps y x to 0 1, both three-clause translations and the alpha-invariance proposition remain exact; TA-LAM-020 resolves only the frozen malformed binder prose.",
+      "translation_segment_sha256": "5be9300aa66100d4e979ea8ad60b797b6bee54aca76c9182bd917d917912d76f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0364-S01",
+      "reverse_paraphrase": "Lambda terms are henceforth quotient classes under alpha equivalence, with abstraction, application, free variables and substitution defined independently of chosen representatives.",
+      "assessment": "The representative notation, well-definedness claims, substitution example and distinction between lowercase-lambda and uppercase-Lambda terms remain explicit; TA-LAM-021–023 repair prose, FV notation and a dangling equality sign.",
+      "translation_segment_sha256": "28a2ec3b56d013d8d8a9ca50aea38feddf64c829446b29d1404f427fb481d8a1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0365-S01",
+      "reverse_paraphrase": "Beta contraction replaces a redex by capture-avoiding substitution; its reflexive-transitive closure is beta reduction, beta-normal terms admit no contraction, and beta equivalence also permits inverse contractions.",
+      "assessment": "All four reduction examples, the leftmost natural strategy, seven equivalence rules and extended-relation notation remain complete; TA-LAM-024 repairs only the frozen spelling of strategy.",
+      "translation_segment_sha256": "face35a9d67e29a2a6c5ccf71ff50edfaa027517294c29599936131ece730b6d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0366-S01",
+      "reverse_paraphrase": "Eta contraction identifies lambda x.Mx with M when x is not free in M, and adjoining eta conversion to beta equivalence yields exactly the same relation as adjoining the extensionality rule.",
+      "assessment": "Both inclusions in the equivalence proof retain their freshness requirements; TA-LAM-025–026 restore the FV and ext rule macros.",
+      "translation_segment_sha256": "2fc9035bacfea212797f7126810e54257d7de58a361fa86489c5f3dd41da0d49",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0367-S01",
+      "reverse_paraphrase": "The Church–Rosser chapter proceeds from definitions through parallel beta reduction, ordinary beta reduction, parallel beta-eta reduction and ordinary beta-eta reduction.",
+      "assessment": "All five imports remain present once and in frozen-source order.",
+      "translation_segment_sha256": "2ecd1a680dae15049cb147597c3eeb05ad924dae6df28b9c95b1c23ebfb220ca",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0368-S01",
+      "reverse_paraphrase": "A relation has the Church–Rosser property when two one-step descendants have a common one-step descendant; the property passes to its transitive closure by filling a rectangular grid of common descendants.",
+      "assessment": "The computational-value interpretation, arithmetic example, unique-normal-form argument and m-by-n grid proof preserve every reduction direction; TA-LAM-027 repairs prose agreement only.",
+      "translation_segment_sha256": "b374120dceb5bf5292364d278dd0ffd2e15958cdebb619ba89ebc9f20f518ef4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0369-S01",
+      "reverse_paraphrase": "Parallel beta reduction simultaneously contracts any selection of redexes already present in a term, while complete development contracts all of them; every parallel reduct further reduces in parallel to that complete development.",
+      "assessment": "The four inductive rules, substitution-compatibility lemma, complete-development equations and confluence proof remain present; TA-LAM-028–029 repair the abstraction premise and the reduced replacement term.",
+      "translation_segment_sha256": "bcd26a92479a945609ff88e74bfb5d0fd4815d3623ec4f42e435be969d55e372",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0370-S01",
+      "reverse_paraphrase": "One-step beta reduction is included in parallel beta reduction, every parallel step expands into ordinary beta reduction, and these inclusions transfer Church–Rosser confluence to ordinary beta reduction.",
+      "assessment": "All stated lemmas and both containment chains remain present; TA-LAM-030 introduces N-prime in the final induction case. The frozen proof of one-step inclusion treats only a root redex although beta contraction was defined as a compatible relation, so its missing contextual cases remain flagged.",
+      "translation_segment_sha256": "aa752edb107878ade0a4fecca9f2349e9c1c12bedb35e605ac06faa22ab27a50",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0371-S01",
+      "reverse_paraphrase": "Parallel beta-eta reduction adds simultaneous eta contraction to parallel beta contraction, and every parallel reduct reaches the beta-eta complete development, yielding the Church–Rosser property.",
+      "assessment": "All five rules, five development clauses and both induction lemmas remain present; TA-LAM-031 repairs the abstraction relation, FV notation and a missing body variable. The frozen complete-development clauses for general and eta abstractions overlap and remain flagged.",
+      "translation_segment_sha256": "88edcf10c6062c1b68e177a9a9364aa15d44f9161dcd5037dda63beeaa0b4105",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0372-S01",
+      "reverse_paraphrase": "One-step beta-eta reduction embeds in parallel beta-eta reduction, every parallel step is an ordinary beta-eta reduction, and the shared transitive closure inherits Church–Rosser confluence.",
+      "assessment": "The eta case, containment lemma and final transfer preserve their reduction directions; TA-LAM-032 uses eta contraction and the FV macro. The frozen parallel-to-ordinary proof states only its eta case and leaves the first four cases implicit.",
+      "translation_segment_sha256": "5b6ed52743e884d327ba7f84732fe7603b9df21b42d193f826c6ed0a44c361bc",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0373-S01",
+      "reverse_paraphrase": "The experimental lambda-definability chapter develops Church numerals, arithmetic functions, pairs, truth values, primitive recursion, fixed points, minimization and the equivalence with partial recursive functions.",
+      "assessment": "All nine active imports, the commented list import and the full editorial warning remain present once and in frozen-source order.",
+      "translation_segment_sha256": "8dacba37115f891204eed1446d6756b60e85e192614af91d0e3993c51e90dd4f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0374-S01",
+      "reverse_paraphrase": "Church numerals encode natural numbers as iterators, and a lambda term defines a partial k-place function when defined inputs reduce to the corresponding numeral while undefined inputs have no normal form.",
+      "assessment": "The numeral examples, confluence-based uniqueness, constant and identity functions, and computability equivalence remain explicit; TA-LAM-033–034 restore the partial arrow and constant-function subscript.",
+      "translation_segment_sha256": "e4f9a4bf9165c9cf3f42d729a171b2f2c59f04b4031b84c323fc60b7a1a200a2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0375-S01",
+      "reverse_paraphrase": "Church numerals support lambda definitions of successor, addition, multiplication and exponentiation by iterating the encoded operation the required number of times.",
+      "assessment": "Both successor encodings, both addition encodings, the multiplication and exponentiation explanations, every worked reduction and all exercises remain present. TA-LAM-035 makes the alternative multiplication term depend on both operands.",
+      "translation_segment_sha256": "78b70a7535817916db9fb4cdd74dd8328a8e6146598b41dd1e4f79fc3b4029e5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0376-S01",
+      "reverse_paraphrase": "A Church-encoded pair supplies its two components to a selector; first and second projections then support predecessor by iterating pairs of consecutive numerals, and repeated predecessor defines truncated subtraction.",
+      "assessment": "The pair constructor, both access functions, predecessor initializer and output pairs, and subtraction term retain their exact roles. TA-LAM-036 keeps both explanatory zero pairs inside the Church encoding.",
+      "translation_segment_sha256": "7bf68345b43dd4060f226ba8f88c42ce70d132d87909131d9c8a10fed6d3492e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0377-S01",
+      "reverse_paraphrase": "True and false are two-argument selectors; lambda-definable k-place relations reduce to those selectors, while IsZero, negation and conjunction operate on the same representation.",
+      "assessment": "Both truth selectors, the two relation branches, the IsZero iteration argument, the Boolean terms, their input restriction and the disjunction exercise remain complete. TA-LAM-037–038 align the arity with k and state the singleton IsZero extension once.",
+      "translation_segment_sha256": "c8a42b55b38a1e1976246cc5cd95d997c984034c5a42dcf6a20968a2384461d6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0378-S01",
+      "reverse_paraphrase": "Basic primitive-recursive functions have direct lambda encodings, composition substitutes their defining terms, and primitive recursion iterates a pair containing the current counter and accumulated value.",
+      "assessment": "The zero, successor and projection terms, composition exercise, D-state induction and final projection calculation remain complete. TA-LAM-039–040 align the term list, function-level conclusion and recursive step with the declared arities.",
+      "translation_segment_sha256": "d1072904ddd9d3fb177f07f5556c6044cd0b8012157527e9e9bed779c8245c65",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0379-S01",
+      "reverse_paraphrase": "A fixed-point combinator turns a self-referential recursive equation into a lambda term: Turing’s Y reduces directly to g(Yg), while Church’s Y_C is beta-equivalent to g(Y_Cg) through a common reduct.",
+      "assessment": "The factorial motivation and evaluation, infinite reduction path, general recursive-equation construction and both combinators remain explicit. TA-LAM-041–043 repair the multiplication example, factorial expansion and Y_C comparison.",
+      "translation_segment_sha256": "34dd887199c28b65ce33f7ec3c9cf240f9c774e82094511c227496803ba3be12",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0380-S01",
+      "reverse_paraphrase": "Regular minimization is lambda-definable by a fixed-point search that returns the current numeral when f is zero and otherwise recurs at its successor; regularity guarantees that the search terminates.",
+      "assessment": "The minimization equation, Search and H terms, both reduction branches, least-witness explanation and closure proposition remain present. TA-LAM-044–045 keep g as the target and balance the recursive call.",
+      "translation_segment_sha256": "587e293e8374b658c83ce7e3d25db6e449e0bb4dac5baefbd9f915f8ebd0d595",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0381-S01",
+      "reverse_paraphrase": "Partial recursive functions are lambda-definable, but a direct compositional encoding can erase divergence when the outer term ignores its argument, so a stricter construction is required.",
+      "assessment": "The regular-versus-unbounded distinction, no-normal-form convention, constant-function counterexample and theorem without proof remain explicit. TA-LAM-046 resolves only prose agreement and sentence structure.",
+      "translation_segment_sha256": "54f6e27b013cbc64f02fd525c58edebf43e9e6912931bd2dc321e4be08156503",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0382-S01",
+      "reverse_paraphrase": "Every lambda-definable partial function is partial recursive by coding lambda terms, partially normalizing their Gödel numbers, and converting between natural numbers and Church-numeral codes.",
+      "assessment": "The normalize, toChurch and fromChurch stages, application-code construction, defined and undefined branches, and final decoding remain complete. TA-LAM-047 repairs spelling and plural agreement only.",
+      "translation_segment_sha256": "fc3bd395bc6952f1f1688e92cee66f4d1d115be4b52dadb1f109be8f9363562e",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -5258,11 +5618,111 @@
     {
       "unit_id": "OLP-0349",
       "issue": "The initial search term leaves indexed subscripts outside two Church-numeral macro arguments, while its later repetition groups them correctly. Tamil groups the complete indexed inputs under TA-LAM-006."
+    },
+    {
+      "unit_id": "OLP-0353",
+      "issue": "The primitive-recursion setup passes undeclared scalar z where the recursion index x is required, asks for a new term H although H already names the step term, and applies the preceding-value function v to an extra recursion-index argument. Tamil repairs these under TA-LAM-007 through TA-LAM-009."
+    },
+    {
+      "unit_id": "OLP-0355",
+      "issue": "The minimization lemma assumes lambda-definability but its proof abruptly calls f primitive recursive, although only a defining lambda term is used. Tamil invokes the stated hypothesis under TA-LAM-010."
+    },
+    {
+      "unit_id": "OLP-0357",
+      "issue": "The terms section contains the ordinary spelling errors 'desginate' and 'demnostrates.' Tamil renders their unambiguous intended meanings under TA-LAM-011."
+    },
+    {
+      "unit_id": "OLP-0359",
+      "issue": "The second abbreviation convention again says 'From example' where grammar requires 'For example.' Tamil repairs the typo under TA-LAM-012."
+    },
+    {
+      "unit_id": "OLP-0360",
+      "issue": "The scope definition calls the containing term N the scope of lambda x although the abstraction body M is the scope used by every subsequent binding example. Tamil restores M under TA-LAM-013."
+    },
+    {
+      "unit_id": "OLP-0361",
+      "issue": "The free-variable proofs use an undefined Q, switch the substituted variable from x to y, swap binder and substitution variables, and give a malformed inductive set equation. Tamil repairs these consistently under TA-LAM-014 and TA-LAM-015."
+    },
+    {
+      "unit_id": "OLP-0362",
+      "issue": "The alpha-conversion section has ordinary prose errors, five omitted FV macros, two literal equality signs where only alpha equivalence is proved, and a corollary that repeats the first pair instead of constraining the second. Tamil repairs these under TA-LAM-016 through TA-LAM-019."
+    },
+    {
+      "unit_id": "OLP-0363",
+      "issue": "The De Bruijn explanation has malformed binder clauses and ordinary inflection errors. Tamil resolves them under TA-LAM-020 while retaining the displayed zero-based indexing convention."
+    },
+    {
+      "unit_id": "OLP-0364",
+      "issue": "The quotient-term section has prose errors, free-variable formulas lacking their macro, prose left in math mode, and a displayed row ending in an equality sign with no right-hand side. Tamil repairs these under TA-LAM-021 through TA-LAM-023."
+    },
+    {
+      "unit_id": "OLP-0365",
+      "issue": "The natural-strategy digression misspells 'strategy' once. Tamil restores its unambiguous intended meaning under TA-LAM-024."
+    },
+    {
+      "unit_id": "OLP-0366",
+      "issue": "The eta and extensionality freshness conditions omit the FV macro three times, two proof occurrences omit the ext rule macro, and the adjoining prose has ordinary grammar errors. Tamil repairs these under TA-LAM-025 and TA-LAM-026."
+    },
+    {
+      "unit_id": "OLP-0368",
+      "issue": "The computational reading and grid proof contain several subject-agreement errors. Tamil resolves the prose under TA-LAM-027 without changing any reduction path or grid dimension."
+    },
+    {
+      "unit_id": "OLP-0369",
+      "issue": "The abstraction clause of parallel reduction uses an unrelated beta arrow although every later proof invokes parallel reduction, and the substitution-compatibility proof retains R where its conclusion and induction hypothesis require R-prime. Tamil repairs these under TA-LAM-028 and TA-LAM-029."
+    },
+    {
+      "unit_id": "OLP-0370",
+      "issue": "The final parallel-redex case lists M-prime twice and omits N-prime; Tamil restores N-prime under TA-LAM-030. More substantively, the proof that one-step beta reduction implies parallel beta reduction handles only a root redex, although beta contraction was defined as a compatible relation; Tamil preserves that incomplete proof pending addition of its contextual induction cases."
+    },
+    {
+      "unit_id": "OLP-0371",
+      "issue": "The abstraction rule uses an unrelated beta arrow, four freshness formulas omit the FV macro, and the first eta proof case leaves N undeclared; Tamil repairs these under TA-LAM-031. The complete-development definition also gives overlapping unconditional clauses for a general abstraction and an eta-redex abstraction, so Tamil preserves that ambiguity pending an explicit priority or disjoint side condition."
+    },
+    {
+      "unit_id": "OLP-0372",
+      "issue": "The eta case is written with beta contraction and a later freshness condition omits the FV macro; Tamil repairs both under TA-LAM-032. The proof from parallel to ordinary beta-eta reduction discusses only rule 5 and leaves rules 1–4 unstated, unlike its beta analogue; Tamil preserves that abbreviated proof."
+    },
+    {
+      "unit_id": "OLP-0374",
+      "issue": "The lambda-definability definition uses a total-function arrow despite its undefined-input branch, and the constant function c_k is defined once with the undeclared c. Tamil restores the partial arrow and c_k under TA-LAM-033 and TA-LAM-034."
+    },
+    {
+      "unit_id": "OLP-0375",
+      "issue": "The alternative multiplication term binds a and b but repeats a as both iterator and addend, making the result independent of b. Tamil uses a(Add b)0 under TA-LAM-035."
+    },
+    {
+      "unit_id": "OLP-0376",
+      "issue": "The predecessor explanation twice uses pairs of bare zeros although the defining initializer contains Church numerals and every pair component must be a lambda term. Tamil restores Church zeros under TA-LAM-036."
+    },
+    {
+      "unit_id": "OLP-0377",
+      "issue": "The relation definition declares Nat^n but applies the term to k arguments, and the IsZero sentence duplicates zero in its singleton characterization. Tamil aligns the arity and removes the duplicate under TA-LAM-037 and TA-LAM-038."
+    },
+    {
+      "unit_id": "OLP-0378",
+      "issue": "The composition lemma lists an extra G_k and assigns lambda-definability to the term H rather than the function h; its primitive-recursion equation and explanation then call h where the declared step function is g. Tamil repairs these under TA-LAM-039 and TA-LAM-040."
+    },
+    {
+      "unit_id": "OLP-0379",
+      "issue": "The nonrecursive multiplication example ignores b and uses a bare zero, the factorial self-expansion closes its outer abstraction before the else branch, and the Church-combinator comparison mistakenly names Turing’s Y. Tamil repairs these under TA-LAM-041 through TA-LAM-043."
+    },
+    {
+      "unit_id": "OLP-0380",
+      "issue": "The minimization proof switches from the defined function g to undeclared h, and its Search term leaves the recursive call parenthesis open. Tamil repairs both under TA-LAM-044 and TA-LAM-045."
+    },
+    {
+      "unit_id": "OLP-0381",
+      "issue": "The comparison uses singular “general recursive function” for a plural class and the undefined-g case is split into a sentence fragment. Tamil restores ordinary agreement and sentence structure under TA-LAM-046."
+    },
+    {
+      "unit_id": "OLP-0382",
+      "issue": "The arithmetization sketch misspells “systematically” and gives a singular verb to the two Church-code conversion functions. Tamil restores the intended prose under TA-LAM-047."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "349 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 373 frozen units still require completion.",
+  "remaining": "379 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 343 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -5328,6 +5788,190 @@
         "arity_matches_displayed_k_arguments": true,
         "undefined_case_has_direct_application": true,
         "indexed_inputs_are_full_numeral_arguments": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0353",
+        "OLP-0355"
+      ],
+      "correction_ids": [
+        "TA-LAM-007",
+        "TA-LAM-008",
+        "TA-LAM-009",
+        "TA-LAM-010"
+      ],
+      "status": "pass",
+      "checks": {
+        "recursive_step_uses_index_x": true,
+        "sought_term_is_F": true,
+        "preceding_value_gets_only_parameters": true,
+        "minimization_uses_stated_hypothesis": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0357",
+        "OLP-0359",
+        "OLP-0360"
+      ],
+      "correction_ids": [
+        "TA-LAM-011",
+        "TA-LAM-012",
+        "TA-LAM-013"
+      ],
+      "status": "pass",
+      "checks": {
+        "term_spelling_meanings_restored": true,
+        "abbreviation_introduced_as_example": true,
+        "scope_is_abstraction_body": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0361",
+        "OLP-0362",
+        "OLP-0363",
+        "OLP-0364"
+      ],
+      "correction_ids": [
+        "TA-LAM-014",
+        "TA-LAM-015",
+        "TA-LAM-016",
+        "TA-LAM-017",
+        "TA-LAM-018",
+        "TA-LAM-019",
+        "TA-LAM-020",
+        "TA-LAM-021",
+        "TA-LAM-022",
+        "TA-LAM-023"
+      ],
+      "status": "pass",
+      "checks": {
+        "substitution_abstraction_body_is_P": true,
+        "free_variable_proof_keeps_x_substituted": true,
+        "alpha_fv_uses_defined_macro": true,
+        "alpha_comparison_steps_use_aeq": true,
+        "corollary_checks_second_pair": true,
+        "de_bruijn_example_is_zero_based": true,
+        "class_free_variables_use_macro": true,
+        "eq1_has_no_dangling_equality": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0365",
+        "OLP-0366",
+        "OLP-0368",
+        "OLP-0369",
+        "OLP-0370"
+      ],
+      "correction_ids": [
+        "TA-LAM-024",
+        "TA-LAM-025",
+        "TA-LAM-026",
+        "TA-LAM-027",
+        "TA-LAM-028",
+        "TA-LAM-029",
+        "TA-LAM-030"
+      ],
+      "status": "pass",
+      "checks": {
+        "natural_strategy_wording_restored": true,
+        "eta_freshness_uses_fv_macro": true,
+        "extensionality_uses_rule_macro": true,
+        "cr_grid_directions_preserved": true,
+        "parallel_abstraction_rule_uses_bredpar": true,
+        "compatibility_target_uses_R_prime": true,
+        "contractum_component_list_includes_N_prime": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0371",
+        "OLP-0372",
+        "OLP-0374"
+      ],
+      "correction_ids": [
+        "TA-LAM-031",
+        "TA-LAM-032",
+        "TA-LAM-033",
+        "TA-LAM-034"
+      ],
+      "status": "pass",
+      "checks": {
+        "parallel_eta_abstraction_rule_uses_beredpar": true,
+        "parallel_eta_freshness_uses_fv": true,
+        "eta_case_uses_eta_contraction": true,
+        "partial_definition_uses_partial_arrow": true,
+        "constant_function_keeps_subscript": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0375",
+        "OLP-0376",
+        "OLP-0377"
+      ],
+      "correction_ids": [
+        "TA-LAM-035",
+        "TA-LAM-036",
+        "TA-LAM-037",
+        "TA-LAM-038"
+      ],
+      "status": "pass",
+      "checks": {
+        "successor_reduction_reaches_next_numeral": true,
+        "alternative_multiplication_uses_both_operands": true,
+        "pair_accessors_preserved": true,
+        "predecessor_prose_uses_church_zero_pairs": true,
+        "relation_arity_matches_k_arguments": true,
+        "truth_selectors_preserved": true,
+        "iszero_singleton_stated_once": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0378",
+        "OLP-0379",
+        "OLP-0380"
+      ],
+      "correction_ids": [
+        "TA-LAM-039",
+        "TA-LAM-040",
+        "TA-LAM-041",
+        "TA-LAM-042",
+        "TA-LAM-043",
+        "TA-LAM-044",
+        "TA-LAM-045"
+      ],
+      "status": "pass",
+      "checks": {
+        "composition_term_list_ends_at_k_minus_one": true,
+        "primitive_step_uses_g": true,
+        "nonrecursive_mult_uses_b_and_church_zero": true,
+        "factorial_expansion_stays_inside_abstraction": true,
+        "church_comparison_uses_Y_C": true,
+        "minimization_target_is_g": true,
+        "search_recursive_call_is_balanced": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0381",
+        "OLP-0382"
+      ],
+      "correction_ids": [
+        "TA-LAM-046",
+        "TA-LAM-047"
+      ],
+      "status": "pass",
+      "checks": {
+        "constant_outer_term_counterexample_preserved": true,
+        "partial_recursive_theorem_preserved": true,
+        "systematic_godel_assignment_stated": true,
+        "both_church_code_directions_preserved": true,
+        "undefined_normalization_preserved": true
       }
     }
   ]

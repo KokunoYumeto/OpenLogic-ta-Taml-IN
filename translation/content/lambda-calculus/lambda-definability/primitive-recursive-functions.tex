@@ -1,0 +1,159 @@
+% SEGMENT OLP-0378-S01
+% Part: lambda-calculus
+% Chapter: lambda-definability
+% Section: primitive-recursive-functions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{ldf}{prf}
+\olsection{முதன்மை மீள்வரையறைச் சார்புகள் \usetoken{S}{lambda definable}}
+
+அடிப்படைச் சார்புகளான $\Zero$, $\Succ$, $\Proj{n}{i}$ ஆகியவற்றிலிருந்து
+சேர்ப்பு, முதன்மை மீள்வரையறை ஆகியவற்றால் வரையறுக்கக்கூடிய சார்புகளே முதன்மை
+மீள்வரையறைச் சார்புகள் என்பதை நினைவுகூர்க.
+
+\begin{lem}
+  \ollabel{lem:basic}
+  அடிப்படை முதன்மை மீள்வரையறைச் சார்புகளான $\Zero$, $\Succ$ மற்றும்
+  வீழ்த்தல்கள்~$\Proj{n}{i}$ ஆகியவை !!{lambda definable}.
+\end{lem}
+
+\begin{proof}
+அவற்றைப் பின்வரும் சொற்கள் !!{lambda define} செய்கின்றன:
+\begin{align*}
+  \fn{Zero} & \ident \lambd[a][\lambd[fx][x]]\\
+  \fn{Succ} & \ident \lambd[a][\lambd[fx][f (a f x)]] \\
+  \fn{Proj}^n_i & \ident \lambd[x_0\dots x_{n-1}][x_i]
+\end{align*}
+\end{proof}
+
+\begin{lem}
+  % SOURCE CORRECTION TA-LAM-039: the defining-term list ends at G_{k-1}, and the function h—not its representing term H—is lambda-definable.
+  \ollabel{lem:comp} $k$-இடச் சார்பு $f$, $n$-இடச் சார்புகள்
+  $g_0, \dots, g_{k-1}$ ஆகியவை முறையே $F$, $G_0$, \dots, $G_{k-1}$
+  என்ற சொற்களால் !!{lambda definable} என்றும், அவற்றிலிருந்து சேர்ப்பால்
+  $h$ வரையறுக்கப்படுகிறது என்றும் கொள்க. அப்போது $h$ ஆனது
+  !!{lambda definable}.
+\end{lem}
+
+\begin{proof}
+  $h$ ஐப் பின்வரும் சொல் !!{lambda define}s:
+  \[
+  H \ident \lambd[x_0 \dots x_{n-1}][F\, (G_0 x_0 \dots
+    x_{n-1}) \dots (G_{k-1} x_0 \dots x_{n-1})]
+  \]
+  இக்கூற்றைச் சரிபார்ப்பதை ஒரு பயிற்சியாக விடுகிறோம்.
+\end{proof}
+
+\begin{prob}
+  $H\num{n_0}\dots\num{n_{n-1}} \red \num{h(n_0, \dots,
+    n_{n-1})}$ என்று காட்டி \olref[lam][ldf][prf]{lem:comp} இன் நிறுவலை
+  நிறைவுசெய்க.
+\end{prob}
+
+$f$, $g_0$, \dots,~$g_{k-1}$ ஆகியவை முதன்மை மீள்வரையறைச் சார்புகளாக
+இருக்க வேண்டும் என்று \olref{lem:comp} கோரவில்லை என்பதைக் கவனிக்க. அவை
+முழுச் சார்புகளாகவும் !!{lambda definable} ஆகவும் இருப்பது மட்டுமே
+தேவைப்படுகிறது.
+
+\begin{lem}\ollabel{lem:prim}
+  $f$ ஓர் $n$-இடச் சார்பு என்றும், $g$ ஓர் $n+2$-இடச் சார்பு என்றும்,
+  அவை முறையே $F$, $G$ என்ற சொற்களால் !!{lambda definable} என்றும்,
+  $f$, $g$ ஆகியவற்றிலிருந்து முதன்மை மீள்வரையறையால் சார்பு~$h$
+  வரையறுக்கப்படுகிறது என்றும் கொள்க. அப்போது $h$ உம்
+  !!{lambda definable}.
+\end{lem}
+
+\begin{proof}
+  % SOURCE CORRECTION TA-LAM-040: the recursive step applies the given step function g, not h with the wrong arity.
+  $h$ பின்வருமாறு வரையறுக்கப்படுகிறது என்பதை நினைவுகூர்க:
+  \begin{align*}
+    h(x_1, \dots, x_n, 0) &= f(x_1, \dots, x_n)\\
+    h(x_1, \dots, x_n, y+1) & = g(x_1, \dots, x_n, y, h(x_1, \dots, x_n, y)).
+  \end{align*}
+  முறைசாரா வகையில் கூறினால், முதன்மை மீள்வரையறை $g$ என்ற படிச் சார்பின்
+  பயன்பாட்டை $y$ முறை மீளச்செய்து, $f(x_1,\dots,x_n)$ இலிருந்து தொடங்குகிறது.
+  இதுவும் ஒரு மீள்செயல்படுத்தியாக வரையறுக்கப்படும் சர்ச் எண்ணுருக்களின்
+  வரையறையை நினைவூட்டுகிறது.
+
+  எளிமைக்காக, $x$ என்ற ஒரே கூடுதல் உள்ளீட்டுக்கான வரையறையையும் நிறுவலையும்
+  தருகிறோம். சார்பு $h$ ஐப் பின்வருவது !!{lambda define}s:
+  \begin{align*}
+    H \ident & \lambd[x][\lambd[y][\fn{Snd} (y
+        D \tuple{\num{0}, F x})]]
+    \intertext{இங்கு}
+    D \ident & \lambd[p][\tuple{\fn{Succ} (\fn{Fst}\, p), (G x
+          (\fn{Fst}\, p) (\fn{Snd}\, p))}]
+  \end{align*}
+  நாம் பேணும் மீள்செயல்படுத்தல் நிலை ஒரு ஜோடி: அதன் முதல் கூறு தற்போதைய
+  $y$; இரண்டாம் கூறு அதற்குரிய~$h$ இன் மதிப்பு. மீள்செயல்படுத்தலின் ஒவ்வொரு
+  படியிலும் $y$, $h$ ஆகியவற்றின் புதிய மதிப்புகளைக் கொண்ட ஜோடியை
+  உருவாக்குகிறோம். மீள்செயல்படுத்தல் முடிந்ததும், ஜோடியின் இரண்டாம் கூறைத்
+  திருப்பித்தருகிறோம்; அதுவே $h$ இன் இறுதி மதிப்பு. இது உண்மையில் முதன்மை
+  மீள்வரையறையின் ஒரு பிரதிநிதித்துவம் என்று இப்போது நிறுவுவோம்.
+
+  ஏதேனும் $n$, $m$ க்கு $H\,\num{n}\,\num{m} \red
+  \num{h(n,m)}$ என்று நிறுவ வேண்டும். இதற்காக, $D_n \ident
+  \Subst{D}{\num{n}}{x}$ எனில் $D_n^m \tuple{\num{0}, F\, \num{n}} \red
+  \tuple{\num{m}, \num{h(n, m)}}$ என்று முதலில் காட்டுகிறோம். $m$ மீதான
+  தொகுத்தறிதலால் தொடர்கிறோம்.
+
+  $m=0$ எனில், $D_n^0 \tuple{\num{0}, F\, \num{n}} \red
+  \tuple{\num{0}, \num{h(n, 0)}}$ என்று வேண்டும். ஆனால்
+  $D_n^0 \tuple{\num{0}, F\, \num{n}}$ என்பது
+  $\tuple{\num{0}, F\, \num{n}}$ மட்டுமே. $F$ ஆனது~$f$ ஐ
+  !!{lambda define}s என்பதால், இது $\tuple{\num{0},
+    \num{f(n)}}$ ஆகக் குறைகிறது. மேலும் $f(n) = h(n, 0)$ என்பதால்,
+  இது $\tuple{\num{0}, \num{h(n,0)}}$.
+
+  இப்போது $D_n^m \tuple{\num{0}, F\, \num{n}} \red
+  \tuple{\num{m}, \num{h(n, m)}}$ என்று கொள்க.
+  $D_n^{m+1} \tuple{\num{0}, F\, \num{n}} \red
+  \tuple{\num{m+1}, \num{h(n, m+1)}}$ என்று காட்ட வேண்டும்.
+  \begin{align*}
+    D_n^{m+1} \tuple{\num{0}, F\, \num{n}}
+    & \ident D_n(D_n^{m} \tuple{\num{0}, F\, \num{n}})\\
+    & \red D_n\,\tuple{\num{m}, \num{h(n, m)}} \text{\qquad (தொகுத்தறிதல் கருதுகோளால்)}\\
+    & \ident (\lambd[p][
+      \tuple{
+        \fn{Succ} (\fn{Fst}\, p), (G \, \num{n} (\fn{Fst}\, p) (\fn{Snd}\, p))
+    }]) \tuple{\num{m}, \num{h(n,m)}}\\
+    & \redone
+    \tuple{\fn{Succ} (\fn{Fst}\, \tuple{\num{m}, \num{h(n,m)}}),\\
+      & \qquad (G \, \num{n} (\fn{Fst}\, \tuple{\num{m}, \num{h(n,m)}}) (\fn{Snd}\, \tuple{\num{m}, \num{h(n,m)}}))}\\
+    & \red
+    \tuple{\fn{Succ}\, \num{m}, (G \, \num{n} \,\num{m} \, \num{h(n,m)})}\\
+    & \red \tuple{\num{m+1}, \num{g(n, m, h(n, m))}}
+  \end{align*}
+  $g(n, m, h(n, m)) = h(n, m+1)$ என்பதால் நிறுவல் முடிகிறது.
+
+  இறுதியாக, பின்வருவதைக் கருதுக:
+  \begin{align*}
+    H\,\num n\,\num m &\ident \lambd[x][\lambd[y][\fn{Snd} (y
+        (\lambd[p].\tuple{\fn{Succ} (\fn{Fst}\, p), (G\, x\,
+          (\fn{Fst}\, p)\, (\fn{Snd}\, p))}) \tuple{\num{0}, F x})]]\\
+    & \qquad\,\num n\, \num m\\
+    & \red \fn{Snd} (\num m \,
+    \underbrace{(\lambd[p].\tuple{\fn{Succ} (\fn{Fst}\, p), (G \,\num n\,
+      (\fn{Fst}\, p) (\fn{Snd}\, p))})}_{D_n} \tuple{\num{0}, F \num n})\\
+    & \ident \fn{Snd} (\num m \, D_n\, \tuple{\num{0}, F \num n})\\
+    & \red \fn{Snd} \,(D_n^m  \tuple{\num{0}, F \num n})\\
+    & \red \fn{Snd} \,\tuple{\num{m}, \num{h(n, m)}} \\
+    & \red \num{h(n,m)}.
+  \end{align*}
+\end{proof}
+
+\begin{prop}
+  ஒவ்வொரு முதன்மை மீள்வரையறைச் சார்பும் !!{lambda definable}.
+\end{prop}
+
+\begin{proof}
+  \olref{lem:basic} இன்படி, எல்லா அடிப்படைச் சார்புகளும்
+  !!{lambda definable}. மேலும் \olref{lem:comp}, \olref{lem:prim}
+  ஆகியவற்றின்படி !!{lambda definable} சார்புகள் சேர்ப்பு, முதன்மை
+  மீள்வரையறை ஆகியவற்றின் கீழ் மூடியவை.
+\end{proof}
+
+\end{document}

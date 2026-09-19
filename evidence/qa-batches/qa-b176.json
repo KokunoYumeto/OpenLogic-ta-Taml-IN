@@ -1,0 +1,233 @@
+{
+  "batch_id": "TA-B176",
+  "units": [
+    {
+      "unit_id": "OLP-0375",
+      "source_sha256": "1c5db87c79c1edc7766be8031d7c6e35498be393367e2651c9b37950d5db7d24",
+      "translation_sha256": "e924e531729b307a016d8b200258620d306c85f7d97ceb949d2b878e3c0a2e1b",
+      "source_bytes": 4990,
+      "translation_bytes": 9166,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\fn{Mult}'\\ident\\lambd[ab][a(\\fn{Add}\\,a)\\num{0}].\\]"
+      ],
+      "extra_math": [
+        "\\[\\fn{Mult}'\\ident\\lambd[ab][a(\\fn{Add}\\,b)\\num{0}].\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Add",
+        "align",
+        "bfx",
+        "definable",
+        "define",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-035",
+          "unit_id": "OLP-0375",
+          "kind": "multiplication-term-ignores-second-operand",
+          "action": "Used b as the addend iterated a times in the alternative multiplication term.",
+          "expected_missing_math": [
+            "\\[\\fn{Mult}'\\ident\\lambd[ab][a(\\fn{Add}\\,a)\\num{0}].\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\fn{Mult}'\\ident\\lambd[ab][a(\\fn{Add}\\,b)\\num{0}].\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The displayed term binds a and b but repeats a as both the Church iterator and the addend, so its value is a squared and is independent of b.",
+          "chosen_treatment": "தமிழ் சொல் a முறை b ஐக் கூட்டி, இரு உள்ளீடுகளின் பெருக்கலைத் தருகிறது.",
+          "alternatives_considered": "Iterating addition of a b times; preserving the term that ignores b.",
+          "rationale": "Either a(Add b)0 or b(Add a)0 represents multiplication; changing the repeated inner a to b is the smallest repair and matches the operand order already displayed.",
+          "precise_review_question": "Does a(Add b)0 reduce to the Church numeral for a times b for every pair of Church-numeral inputs?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-035"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0376",
+      "source_sha256": "4d2fd1df669f4a9a40328ebd0a7fcea1e38576e6b32acc5a5692626b934032cb",
+      "translation_sha256": "4f47afef85d3ae57fa44a738234ad0f43031c06a0ccf5641900e962213423fce",
+      "source_bytes": 1745,
+      "translation_bytes": 3604,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\tuple{0,0}$",
+        "$\\tuple{0,0}$"
+      ],
+      "extra_math": [
+        "$\\tuple{\\num0,\\num0}$",
+        "$\\tuple{\\num0,\\num0}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "define",
+        "fMN",
+        "fmn",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-036",
+          "unit_id": "OLP-0376",
+          "kind": "predecessor-prose-uses-unencoded-zeros",
+          "action": "Used Church zeros in both prose tuples, matching the displayed initializer and keeping every component a lambda term.",
+          "expected_missing_math": [
+            "$\\tuple{0,0}$",
+            "$\\tuple{0,0}$"
+          ],
+          "expected_extra_math": [
+            "$\\tuple{\\num0,\\num0}$",
+            "$\\tuple{\\num0,\\num0}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\num",
+            "\\num",
+            "\\num",
+            "\\num"
+          ],
+          "source_issue_or_choice": "The defining term initializes the iteration with a pair of Church numerals, but the explanatory prose twice replaces them by bare object-language zeros, which are not lambda terms in this encoding.",
+          "chosen_treatment": "தமிழ் விளக்கம் இரு இடங்களிலும் சர்ச் பூச்சியங்களின் ஜோடியையே பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating the bare zeros as an unexplained shorthand; changing the displayed initializer to nonterms.",
+          "rationale": "The reduction starts from exactly the displayed pair tuple(num 0,num 0), and the pair constructor requires lambda terms as components.",
+          "precise_review_question": "Do both repaired prose tuples now denote exactly the initializer and its n=0 result?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-036"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\num",
+        "\\num",
+        "\\num",
+        "\\num"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0377",
+      "source_sha256": "c59cf879d08ccb846c28886a957ffee1a5256157e9a160af104606743eb9006c",
+      "translation_sha256": "3f35df4bccaa3d064fd970101a5d8bfc9e6510e058790ae9aa93adbac94fa5ab",
+      "source_bytes": 3170,
+      "translation_bytes": 7684,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$R\\subseteq\\Nat^n$",
+        "$0$"
+      ],
+      "extra_math": [
+        "$R\\subseteq\\Nat^k$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "definable",
+        "include",
+        "lambda",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-LAM-037",
+          "unit_id": "OLP-0377",
+          "kind": "relation-arity-index-mismatch",
+          "action": "Used Nat^k for the relation whose displayed arguments are n_1 through n_k.",
+          "expected_missing_math": [
+            "$R\\subseteq\\Nat^n$"
+          ],
+          "expected_extra_math": [
+            "$R\\subseteq\\Nat^k$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The signature declares an n-place relation while both reduction clauses and their truth condition quantify k inputs ending at n_k.",
+          "chosen_treatment": "தமிழ் வரையறை எல்லா இடங்களிலும் k-இடத் தொடர்பைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Renaming every n_i argument and bound to use an n endpoint; leaving the arity inconsistent.",
+          "rationale": "Changing only the exponent to k aligns the signature with all three immediately following argument lists without changing any bound variable.",
+          "precise_review_question": "Does Nat^k make the relation arity agree with every occurrence of n_1 through n_k?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-037"
+        },
+        {
+          "audit_id": "TA-LAM-038",
+          "unit_id": "OLP-0377",
+          "kind": "iszero-characterization-duplicates-zero",
+          "action": "Stated once that IsZero holds exactly of zero, removing the duplicated second zero from the frozen prose.",
+          "expected_missing_math": [
+            "$0$"
+          ],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The sentence says the singleton relation holds of '0 and 0 only,' duplicating the same mathematical argument.",
+          "chosen_treatment": "தமிழ் $0$ க்கு மட்டுமே அத்தொடர்பு அமையும் என்று ஒருமுறை தெளிவாகக் கூறுகிறது.",
+          "alternatives_considered": "Repeating zero twice; inventing a second input for the unary singleton relation.",
+          "rationale": "The adjacent equation IsZero={0} and unary lambda term both uniquely determine a one-element extension.",
+          "precise_review_question": "Does the repaired sentence state exactly the singleton extension shown by IsZero={0}?",
+          "location_needle": "SOURCE CORRECTION TA-LAM-038"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

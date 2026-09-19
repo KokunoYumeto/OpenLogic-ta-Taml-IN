@@ -1,0 +1,91 @@
+% SEGMENT OLP-0366-S01
+% Part: lambda-calculus
+% Chapter: syntax
+% Section: eta
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{lam}{syn}{eta}
+\olsection{$\eta$-மாற்றம்}
+
+$\lambda$ சொற்களின்மீது மற்றொரு தொடர்பும் உள்ளது. \olref[fv]{sec} இல்,
+ஓர் உள்ளீட்டை ஏற்று அதன்மீது $f$ ஐச் செயல்படுத்தும்
+$\lambd[x][(fx)]$ என்ற எடுத்துக்காட்டைப் பயன்படுத்தினோம். வேறு சொற்களில்,
+அது~$f$ போன்ற அதே சார்பாகும்: $\lambd[x][(fx)]N$ உம் $fN$ உம்~$fN$ ஆகவே
+குறைகின்றன. இக்கருத்தை எடுத்துரைக்க $\eta$-குறைத்தலையும்
+($\eta$-விரிவாக்கத்தையும்) பயன்படுத்துகிறோம்.
+
+\begin{defn}[$\eta$-சுருக்கல், $\eredone$]
+  \ollabel{defn:beredone}
+  \emph{$\eta$-சுருக்கல்} ($\eredone$) என்பது சொற்களின்மீதான, பின்வரும்
+  நிபந்தனையை நிறைவுசெய்யும் மிகச்சிறிய இசைவான தொடர்பாகும்:
+  \[
+    \lambd[x][M x] \eredone M \text{ எனில் } x \notin \FV{M}
+  \]
+  % SOURCE CORRECTION TA-LAM-025: restore the FV macro omitted from the three frozen freshness formulas.
+\end{defn}
+
+\begin{defn}[$\beta\eta$-குறைத்தல், $\bered$] \ollabel{defn:bered}
+  \emph{$\beta\eta$-குறைத்தல்} ($\bered$) என்பது $\bredone$, $\eredone$
+  இரண்டையும் கொண்டிருக்கும், சொற்களின்மீதான மிகச்சிறிய தற்சுட்டு, கடப்புத்
+  தொடர்பாகும்; அதாவது, தற்சுட்டு மற்றும் கடப்பு விதிகளுடன் பின்வரும் இரண்டு
+  விதிகளையும் கொண்டது:
+  \begin{enumerate}
+  \item $M \bredone N$ எனில் $M \bered N$. \ollabel{defn:bered3}
+  \item $M \eredone N$ எனில் $M \bered N$. \ollabel{defn:bered4}
+  \end{enumerate}
+
+\end{defn}
+
+\begin{defn}
+  சமானத் தொடர்பு $\equal$ ஐப் பின்வரும் $\eta$-மாற்ற விதியால் விரிவாக்குகிறோம்:
+  \[
+  \lambd[x][f x] \equal f
+  \]
+  விரிவாக்கப்பட்ட தொடர்பை $\equal[\eta]$ என்று குறிக்கிறோம்.
+\end{defn}
+
+$\eta$-சமானம் முக்கியமானது; ஏனெனில் அது லாம்டா சொற்களின் விரிவுநிலையுடன்
+தொடர்புடையது:
+
+\begin{defn}[விரிவுநிலை]
+  சமானத் தொடர்பு $\equal$ ஐப் பின்வரும் (\ext) விதியால் விரிவாக்குகிறோம்:
+  \begin{center}
+  $x \notin \FV{MN}$ எனில், $Mx \equal Nx$ என்பதிலிருந்து $M \equal N$.
+  \end{center}
+  விரிவாக்கப்பட்ட தொடர்பை $\equal[\ext]$ என்று குறிக்கிறோம்.
+\end{defn}
+
+தோராயமாகக் கூறினால், சார்புகளாகக் கருதப்படும் இரண்டு சொற்கள் ஒரே உள்ளீட்டிற்கு
+ஒரே விதத்தில் நடந்துகொண்டால், அவை சமமாகக் கருதப்பட வேண்டும் என்று இவ்விதி
+கூறுகிறது.
+
+இப்போது $\eta$ விதி விரிவுநிலையைத் துல்லியமாக வழங்குகிறது, வேறெதையும்
+சேர்க்கவில்லை என்பதை நிறுவுவோம்.
+
+\begin{thm}
+  $M \equal[\ext] N$ என்பது $M \equal[\eta] N$ என்பதற்கு நிகரானது.
+\end{thm}
+
+\begin{proof}
+  முதலில் $\equal[\eta]$ ஆனது விரிவுநிலை விதியின்கீழ் மூடியது என்று
+  நிறுவுவோம். அதாவது, $\ext$ விதி $\equal[\eta]$ க்கு எதையும் சேர்ப்பதில்லை.
+  அப்போது $\equal[\eta]$ ஆனது $\equal[\ext]$ ஐக் கொண்டிருக்கும்; மேலும்
+  $M \equal[\ext] N$ எனில், $M \equal[\eta] N$.
+  % SOURCE CORRECTION TA-LAM-026: use the defined \ext rule symbol at the two frozen bare “ext” occurrences and resolve the adjoining grammar errors.
+
+  $\equal[\eta]$ ஆனது \ext{} இன் கீழ் மூடியது என்று நிறுவ, \ext{} விதியால்
+  பெறப்பட்ட ஏதேனும் $M \equal N$ க்கு, முன்னிபந்தனையாக $Mx
+  \equal[\eta] Nx$ உள்ளது என்பதைக் கவனிக்க. பின்னர் $\equal$ இன் ஒரு விதியால்
+  $\lambd[x][Mx] \equal[\eta] \lambd[x][Nx]$ கிடைக்கிறது; இரு பக்கங்களிலும்
+  $\eta$ ஐப் பயன்படுத்துவதால் $M \equal[\eta] N$ கிடைக்கிறது.
+
+  இதேபோல், $\eta$ விதி $\equal[\ext]$ இல் அடங்கியிருப்பதை நிறுவுவோம்.
+  $x \notin \FV{M}$ ஆக அமையும் ஏதேனும் $\lambd[x][Mx]$, $M$ க்கும்,
+  $(\lambd[x][Mx])x \equal[\ext] Mx$ உள்ளது; ஆகவே \ext{} விதியால்
+  $\lambd[x][Mx] \equal[\ext] M$ கிடைக்கிறது.
+\end{proof}
+
+\end{document}
