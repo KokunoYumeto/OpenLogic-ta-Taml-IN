@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-checkpoint/4",
-  "date_utc": "2026-09-19T21:21:58.804059+00:00",
+  "date_utc": "2026-09-19T21:25:29.361402+00:00",
   "previous_goal_turn_classification": "progress",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified": 722,
@@ -132,10 +132,10 @@
   "representability_in_q_reader_build_qa": "tex-representability-in-q-receipt.json",
   "representability_in_q_reader_qa": "representability-in-q-render-qa.json",
   "release_verified_units": 203,
-  "published_source_units": 379,
-  "source_publication_readback": "publication-readback-lambda-379.json",
-  "source_publication_commit": "1d8e34e9b5ff4493b6df72718636d27d6846a56f",
-  "current_source_published": false,
+  "published_source_units": 403,
+  "source_publication_readback": "publication-readback-mvl-403.json",
+  "source_publication_commit": "5aa717357b2dc836ba1d4417b3ca49aa3a17bcf4",
+  "current_source_published": true,
   "edition_complete": false,
   "unit_artifacts": [
     {
@@ -19947,6 +19947,7 @@
     "PUBLICATION-READBACK-CUMULATIVE-203.json": "e8387506b836b9e15e98cad4150dd0161851d41c92800ddbc34f00e6d7e4b851",
     "PUBLICATION-READBACK-LAMBDA-349.json": "35961a14df576744accc73ae50cf037643abf37364606935ae73712a58ab2221",
     "PUBLICATION-READBACK-LAMBDA-379.json": "c4f7cb95abf9902721a1eb0a14cdaa160640fadf324ee5ecf034712daf72505b",
+    "PUBLICATION-READBACK-MVL-403.json": "82159aefc8b3f7aaf29dbbed93c8fe0bfccbaa7c13776c21d6f7b3cf8f488556",
     "TEX-AXIOMATIC-DEDUCTION-RECEIPT.json": "839faa95fd428faae1ac203268d0cfa80de57dedc4d7d1d2c124f0345bab3223",
     "AXIOMATIC-DEDUCTION-RENDER-QA.json": "6d3065c6941eaa7991ae53fc9c2a5d5d41980e3b8918fef7c03733a3c2f5fe1e",
     "TEX-COMPLETENESS-RECEIPT.json": "3cbac0105099271b35526f8b7d15db831b51552073162e3d70cb2b387f2debb3",
@@ -20201,7 +20202,7 @@
   },
   "publication": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.4.0-cumulative-203",
   "current_release_published": false,
-  "release_verification_scope": "The exact v0.4.0-cumulative-203 cumulative reader covers 203 distinct units in 384 pages, and the public repository contains all 379 accepted translated source units at source commit 1d8e34e9b5ff4493b6df72718636d27d6846a56f. The release assets and all 1468 files in that source commit were anonymously byte-verified.",
+  "release_verification_scope": "The exact v0.4.0-cumulative-203 cumulative reader covers 203 distinct units in 384 pages, and the public repository contains all 403 accepted translated source units at source commit 5aa717357b2dc836ba1d4417b3ca49aa3a17bcf4. The release assets and all 1498 files in that source commit were anonymously byte-verified.",
   "unresolved": [
     "319 source units remain untranslated",
     "200 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
