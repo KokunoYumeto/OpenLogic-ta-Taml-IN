@@ -1,0 +1,126 @@
+% SEGMENT OLP-0396-S01
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: goedel
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{thr}{god}
+
+\olsection{கோடல் தருக்கங்கள்}
+
+கர்ட் கோடல், உள்ளுணர்வுவாதத் தருக்கத்தில் செல்லுபடியாகும் எல்லா
+!!{formula}s ஐயும் ஒவ்வொன்றும் கொண்டதும், செவ்வியல் தருக்கத்தில்
+அடங்குவதுமான $n$-மதிப்புத் தருக்கங்களின் ஒரு தொடரை அறிமுகப்படுத்தினார்.
+அவற்றில் முதல் சுவையான தருக்கம் இதோ:
+
+\begin{defn}\ollabel{defn:goedel}
+\emph{$3$-மதிப்புக் கோடல் தருக்கம்}~$\LogGod$ பின்வரும் அணியைக் கொண்டு
+வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\lfalse$, $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட
+  செந்தரக் கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V = \{\True, \Undef, \False\}$.
+  \item $\True$ மட்டுமே நியமிக்கப்பட்ட மதிப்பு; அதாவது,
+  $V^+ = \{\True\}$.
+  \item $\lfalse$ க்கு $\tf{\lfalse} = \False$. மற்ற இணைப்பிகளுக்கான
+  வாய்மைச் சார்புகள் பின்வரும் அட்டவணைகளால் தரப்படுகின்றன:
+  \begin{center}
+    \begin{tabular}{c|c}
+      $\tf{\lnot}[\LogGod]$ & \\
+      \hline
+      $\True$ & $\False$ \\
+      $\Undef$ & $\False$ \\
+      $\False$ & $\True$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc}
+      $\tf{\land}[\LogGod]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\
+      $\Undef$ & $\Undef$ & $\Undef$ & $\False$\\
+      $\False$ & $\False$ & $\False$ & $\False$
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc}
+      $\tf{\lor}[\LogGod]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\True$ & $\True$ \\
+      $\Undef$ & $\True$ & $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ & $\Undef$ & $\False$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc}
+      $\tf{\lif}[\LogGod]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\
+      $\Undef$ & $\True$ & $\True$ & $\False$  \\
+      $\False$ & $\True$ & $\True$ & $\True$
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+$\land$, $\lor$ ஆகியவற்றின் மெய்மை அட்டவணைகள் லூகாசியேவிச்~(\L ukasiewicz)
+தருக்கத்திலும்
+வலு க்ளீனி தருக்கத்திலும் உள்ளவற்றைப் போலவே இருப்பதையும், ஆனால் $\lnot$,
+$\lif$ ஆகியவற்றின் மெய்மை அட்டவணைகள் ஒவ்வொன்றிலும் வேறுபடுவதையும் கவனிக்கலாம்.
+கோடல் தருக்கத்தில் $\tf{\lnot}(\Undef) = \False$.
+லூகாசியேவிச்~(\L ukasiewicz) தருக்கம்,
+க்ளீனி தருக்கம் ஆகியவற்றுக்கு மாறாக,
+$\tf{\lif}(\Undef, \False) = \False$; க்ளீனி தருக்கத்திற்கு மாறாக
+(ஆனால் லூகாசியேவிச்~(\L ukasiewicz) தருக்கத்தில் போல),
+$\tf{\lif}(\Undef,
+\Undef) = \True$.
+
+மேலே சுட்டிய உள்ளுணர்வுவாதத் தருக்கத் தொடர்பு உணர்த்துவதுபோல்,
+$\LogGod[3]$ உள்ளுணர்வுவாதத் தருக்கத்திற்கு நெருக்கமானது. எல்லா
+உள்ளுணர்வுவாத மெய்மங்களும்~$\LogGod[3]$ இல் மெய்மங்கள்; உள்ளுணர்வுவாதப்படி
+செல்லுபடியாகாத பல செவ்வியல் மெய்மங்களும்~$\LogGod[3]$ இல் மெய்மங்களாக
+இருக்கத் தவறுகின்றன. எடுத்துக்காட்டாக, பின்வருவன மெய்மங்கள் அல்ல:
+\begin{align*}
+  & p \lor \lnot p && (p \lif q) \lif (\lnot p \lor q) \\
+  & \lnot\lnot p \lif p && \lnot(\lnot p \land \lnot q) \lif (p \lor q) \\
+  & ((p \lif q) \lif p) \lif p && \lnot(p \lif q) \lif (p \land \lnot q)
+\end{align*}
+ஆனால் $\LogGod[3]$ இன் ஒவ்வொரு மெய்மமும் உள்ளுணர்வுவாதப்படி
+செல்லுபடியானது அன்று; எடுத்துக்காட்டாக, $\lnot\lnot p \lor \lnot p$ அல்லது
+$(p \lif q) \lor (q \lif p)$.
+
+\begin{prob}
+  பின்வருவன~$\LogGod[3]$ இன் மெய்மங்கள் என்பதைக் காட்டும் மெய்மை
+  அட்டவணைகளைத் தருக:
+  \begin{align*}
+    & \lnot\lnot p \lor \lnot p\\
+    & (p \lif q) \lor (q \lif p) \\
+    & \lnot(p \land q) \lif (\lnot p \lor \lnot q) \\
+    & (p \lif q) \lor (q \lif r) \lor (r \lif s)
+  \end{align*}
+\end{prob}
+
+\begin{prob}
+  பின்வருவன~$\LogGod[3]$ இன் மெய்மங்கள் அல்ல என்பதைக் காட்டும் மெய்மை
+  அட்டவணைகளைத் தருக:
+  \begin{align*}
+    & (p \lif q) \lif (\lnot p \lor q) \\
+    & \lnot(\lnot p \land \lnot q) \lif (p \lor q) \\
+    & ((p \lif q) \lif p) \lif p \\
+    & \lnot(p \lif q) \lif (p \land \lnot q)
+  \end{align*}
+\end{prob}
+
+\begin{prob}
+  பின்வரும் தொடர்புகளில் எவை கோடல் தருக்கத்தில் பொருந்துகின்றன? ஒவ்வொன்றுக்கும்
+  ஒரு மெய்மை அட்டவணை தருக.
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $p \lor q, \lnot p \Entails q$
+    \item $p \land q \Entails p$
+    \item $p \Entails p \land p$
+    \item $p \Entails p \lor q$
+  \end{enumerate}
+\end{prob}
+
+\end{document}

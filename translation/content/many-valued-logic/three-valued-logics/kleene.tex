@@ -1,0 +1,206 @@
+% SEGMENT OLP-0395-S01
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: kleene
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{thr}{skl}
+
+\olsection{க்ளீனி தருக்கங்கள்}
+
+% SOURCE CORRECTION TA-MVL-011: repair the missing “as” and malformed “the if” in the computational motivation.
+ஸ்டீவன் க்ளீனி, மெய்மதிப்புகளைக் கணிப்பீட்டுச் செயல்முறைகளின் விளைவுகளாகக்
+கருதும் ஒரு தருக்கத்தால் தூண்டப்பட்ட இரு மும்மதிப்புத் தருக்கங்களை
+அறிமுகப்படுத்தினார்: ஒரு செயல்முறை $\True$ அல்லது $\False$ ஐ விளைவாகத்
+தரலாம்; ஆனால் அது முடிவுறாமலும் போகலாம். அப்போது அதற்குரிய மெய்மதிப்பு
+வரையறுக்கப்படாதது; அதை மெய்மதிப்பு~$\Undef$ குறிக்கிறது.
+
+ஒரு கூற்று~$!A$ இன் மறுப்பைக் கணிக்க, முதலில்~$!A$ இன் மதிப்பைக் கணித்து,
+பின்னர் அதன் எதிர்மதிப்பைத் திருப்பித் தருவோம். $!A$ இனது கணிப்பீடு
+முடிவுறாவிட்டால், முழுச் செயல்முறையும் முடிவுறாது: ஆகவே $\Undef$ இன்
+மறுப்பு~$\Undef$.
+
+ஓர் இணையல்~$!A \land !B$ ஐக் கணிப்பதற்கு இரண்டு வாய்ப்புகள் உள்ளன:
+முதலில்~$!A$ ஐயும், பின்னர்~$!B$ ஐயும் கணித்து, இரண்டின் விளைவும்~$\True$
+எனில் முடிவை~$\True$ என்றும், இல்லையெனில்~$\False$ என்றும் கொள்ளலாம்.
+இரண்டு கணிப்பீடுகளில் ஏதேனும் ஒன்று முடிவுறத் தவறினால், முழுச்
+செயல்முறையும் முடிவுறத் தவறும். எனவே இந்நேர்வில் ஓர் இணையுறுப்பு
+வரையறுக்கப்படாததாக இருந்தால், இணையலும் அவ்வாறே இருக்கும். பிரிப்பிணைவுக்கும்
+இதே பொருந்தும்.
+
+ஆனால் $!A$, $!B$ ஆகியவற்றை இணைநிலையில் மதிப்பிட முடியுமானால் இன்னும்
+சிறப்பாகச் செய்யலாம். இரு செயல்முறைகளில் ஒன்று முடிவுற்று~$\False$ ஐத்
+திருப்பித் தந்தால், விடை பொய்யாகவே இருக்க வேண்டும் என்பதால் நிறுத்தலாம்.
+ஆகவே இந்நேர்வில், ஓர் இணையுறுப்பு பொய்யாக இருந்தால், மற்றது
+வரையறுக்கப்படாததாக இருந்தாலும் இணையல் பொய்யாகும். இதேபோல், பிரிப்பிணைவை
+இணைநிலையில் கணிக்கும்போது, இரண்டு பிரிப்புறுப்புகளில் ஒன்றுக்கான செயல்முறை
+மெய்யைத் திருப்பித் தந்தவுடன் நிறுத்தலாம்: அப்போது பிரிப்பிணைவு மெய்யாகவே
+இருக்க வேண்டும். எனவே ஒரு கூறு வரையறுக்கப்படாததாக இருந்தாலும் கூட்டுக்
+கூற்றின் விளைவை இந்நேர்வில் அறியலாம். இப்பொருள்கோளில்~$\Undef$ ஐ
+``வரையறுக்கப்படாதது'' என்பதற்குப் பதிலாக ``அறியப்படாதது'' என்று வாசிக்கலாம்.
+
+இவ்விரு பொருள்கோள்கள் க்ளீனியின் வலு தருக்கத்தையும் மெல் தருக்கத்தையும்
+தருகின்றன. நிபந்தனைவாக்கியம்~$\lnot !A \lor !B$ க்குச் சமானமாக
+வரையறுக்கப்படுகிறது.
+
+\begin{defn}
+\emph{வலு க்ளீனி தருக்கம்}~$\LogKs$ பின்வரும் அணியைக் கொண்டு
+வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட செந்தரக்
+  கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V = \{\True, \Undef, \False\}$.
+  \item $\True$ மட்டுமே நியமிக்கப்பட்ட மதிப்பு; அதாவது,
+  $V^+ = \{\True\}$.
+  \item வாய்மைச் சார்புகள் பின்வரும் அட்டவணைகளால் தரப்படுகின்றன:
+  \begin{center}
+    \begin{tabular}{c|c}
+      $\tf{\lnot}$ & \\
+      \hline
+      $\True$ & $\False$ \\
+      $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc}
+      $\tf{\land}[\LogKs]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\
+      $\Undef$ & $\Undef$ & $\Undef$ & $\False$\\
+      $\False$ & $\False$ & $\False$ & $\False$
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc}
+      $\tf{\lor}[\LogKs]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\True$ & $\True$ \\
+      $\Undef$ & $\True$ & $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ & $\Undef$ & $\False$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc}
+      $\tf{\lif}[\LogKs]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\
+      $\Undef$ & $\True$ & $\Undef$ & $\Undef$  \\
+      $\False$ & $\True$ & $\True$ & $\True$
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+\emph{மெல் க்ளீனி தருக்கம்}~$\LogKw$ பின்வரும் அணியைக் கொண்டு
+வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட செந்தரக்
+  கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V = \{\True, \Undef, \False\}$.
+  \item $\True$ மட்டுமே நியமிக்கப்பட்ட மதிப்பு; அதாவது,
+  $V^+ = \{\True\}$.
+  \item வாய்மைச் சார்புகள் பின்வரும் அட்டவணைகளால் தரப்படுகின்றன:
+  \begin{center}
+    \begin{tabular}{c|c}
+      $\tf{\lnot}$ & \\
+      \hline
+      $\True$ & $\False$ \\
+      $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc}
+      $\tf{\land}[\LogKw]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\
+      $\Undef$ & $\Undef$ & $\Undef$ & $\Undef$\\
+      $\False$ & $\False$ & $\Undef$ & $\False$
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc}
+      $\tf{\lor}[\LogKw]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\True$ \\
+      $\Undef$ & $\Undef$ & $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ & $\Undef$ & $\False$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc}
+      $\tf{\lif}[\LogKw]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\
+      $\Undef$ & $\Undef$ & $\Undef$ & $\Undef$  \\
+      $\False$ & $\True$ & $\Undef$ & $\True$
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+\begin{prop}
+  $\LogKs$, $\LogKw$ ஆகிய இரண்டிலும் மெய்மங்கள் இல்லை.
+\end{prop}
+
+\begin{proof}
+  எல்லா !!{propositional variable}s~$p$ க்கும்
+  $\pAssign v(p) = \Undef$ எனில், எந்த வாய்பாடு~$!A$ க்கும்
+  மெய்மதிப்பு~$\pValue v(!A) = \Undef$; ஏனெனில் இரண்டு தருக்கங்களிலும்
+  \[
+    \tf{\lnot}(\Undef) = \tf{\lor}(\Undef, \Undef) = \tf{\land}(\Undef,
+  \Undef) = \tf{\lif}(\Undef, \Undef) = \Undef
+  \]
+  $\LogKs$, $\LogKw$ இரண்டிலும் $\Undef \notin V^+$ என்பதால், இந்த
+  !!{valuation} இல்~$!A$ நியமிக்கப்பட்ட மதிப்பைப் பெறாது.
+\end{proof}
+
+மெல் க்ளீனி தருக்கத்திலும் வலு க்ளீனி தருக்கத்திலும் மெய்மங்கள் எதுவும்
+இல்லை என்றாலும், அவற்றுக்கு அற்பமல்லாத பின்விளைவு உறவுகள் உள்ளன.
+
+\begin{prob}
+  பின்வரும் தொடர்புகளில் எவை (a) வலு க்ளீனி தருக்கத்திலும்
+  (b) மெல் க்ளீனி தருக்கத்திலும் பொருந்துகின்றன? ஒவ்வொன்றுக்கும் ஒரு மெய்மை
+  அட்டவணை தருக.
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $p \lor q, \lnot p \Entails q$
+    \item $p \land q \Entails p$
+    \item $p \Entails p \land p$
+    \item $p \Entails p \lor q$
+  \end{enumerate}
+\end{prob}
+
+டிமிட்ரி போச்வார்~$\Undef$ ஐ ``பொருளற்றது'' என்று பொருள்கொண்டார்;
+பொய்யுரைப்பவன் முரணுரை போன்ற முரணுரைகளைத் தீர்ப்பதற்காக, முரணுரை
+வாக்கியங்கள்~$\Undef$ மதிப்பைப் பெறுகின்றன என்று விதித்து அதைப் பயன்படுத்த
+முயன்றார். அடிப்படையில் மெல் க்ளீனி தருக்கத்தைப் போன்ற, ஆனால் கூடுதல்
+இணைப்பிகளால் விரிவாக்கப்பட்ட ஒரு தருக்கத்தை அவர் அறிமுகப்படுத்தினார்.
+அவற்றில் இரண்டு ``புற மறுப்பு'', ``வரையறுக்கப்படாதது'' செயலி என்பவை:
+\begin{center}
+  \begin{tabular}{c|c}
+    $\tf{\sim}$ & \\
+    \hline
+    $\True$ & $\False$ \\
+    $\Undef$ & $\True$ \\
+    $\False$ & $\True$
+  \end{tabular}
+\quad
+  \begin{tabular}{c|c}
+    $\tf{+}$ & \\
+    \hline
+    $\True$ & $\False$ \\
+    $\Undef$ & $\True$ \\
+    $\False$ & $\False$
+  \end{tabular}
+\end{center}
+
+\begin{prob}
+  போச்வாரின் தருக்கத்தில் $\sim$ ஐ $\lnot$, $+$ ஆகியவற்றைக் கொண்டு
+  வரையறுக்க முடியுமா? அதாவது, !!{propositional variable}~$p$ ஐ மட்டுமே
+  கொண்டு, $\sim$ இல்லாமல், எப்போதும்~$\mathord{\sim}p$ இன் அதே
+  மெய்மதிப்பைப் பெறும் !!a{formula} ஒன்றைக் காண்க. உங்கள் விடை சரி என்பதைக்
+  காட்டும் மெய்மை அட்டவணையைத் தருக.
+\end{prob}
+
+
+\end{document}

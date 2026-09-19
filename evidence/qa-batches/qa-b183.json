@@ -1,0 +1,342 @@
+{
+  "batch_id": "TA-B183",
+  "units": [
+    {
+      "unit_id": "OLP-0402",
+      "source_sha256": "28775295786cbfede3893029fdd6742f84bb12ada787a5e5f61faba049c113e6",
+      "translation_sha256": "557155d6ea8260436ad472728af641298cd1be4ebd8aad173d2523b4723d5d45",
+      "source_bytes": 328,
+      "translation_bytes": 482,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-020",
+          "unit_id": "OLP-0402",
+          "kind": "many-valued-sequent-chapter-metadata",
+          "action": "Corrected the chapter header comment from three-valued-logics to sequent-calculus.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The driver has olchapter id mvl/seq and imports only sequent-calculus sections, but its copied source header names three-valued-logics.",
+          "chosen_treatment": "தமிழ் கோப்பு மேல்தகவலை அதன் seq அதிகார அடையாளத்துக்கும் நான்கு தொடரணிக் கணிய இறக்குமதிகளுக்கும் ஒத்திசைக்கிறது.",
+          "alternatives_considered": "Retaining the copied three-valued header; changing the stable seq chapter id.",
+          "rationale": "The stable id, title, file path, and every import identify the sequent-calculus chapter.",
+          "precise_review_question": "Does the corrected header agree with mvl/seq and the four imported sections?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-020"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0403",
+      "source_sha256": "d34708177650e4673f957d0b6ecdc9f210e4d65987e47f0694077c3d21ce63ef",
+      "translation_sha256": "99e968616d53d80ea05ef7b01262a50758d66b454bcb492c21f9ba19a4aebfc1",
+      "source_bytes": 3110,
+      "translation_bytes": 6105,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}!A_1,\\dots,!A_n&\\Sequent!B_1,\\dots,!B_n(!A_1\\land\\cdots\\land!A_m)&\\lif(!B_1\\lor\\cdots\\lor!B_n)\\end{align*}",
+        "$\\pValue(!A)=\\False$"
+      ],
+      "extra_math": [
+        "\\begin{align*}!A_1,\\dots,!A_m&\\Sequent!B_1,\\dots,!B_n(!A_1\\land\\cdots\\land!A_m)&\\lif(!B_1\\lor\\cdots\\lor!B_n)\\end{align*}",
+        "$\\pValuev(!A)=\\False$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-021",
+          "unit_id": "OLP-0403",
+          "kind": "sequent-antecedent-final-index",
+          "action": "Changed the final antecedent index in the displayed sequent from n to m.",
+          "normalized_math_replacements": [
+            {
+              "from": "!A_n&\\Sequent",
+              "to": "!A_m&\\Sequent",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The sequent display lists A_1 through A_n, but its immediately following interpretation conjoins A_1 through A_m while the succedent independently lists B_1 through B_n.",
+          "chosen_treatment": "தமிழ் முன்தொடரின் இறுதி உறுப்பை $A_m$ என்றும் பின்தொடரின் இறுதி உறுப்பை $B_n$ என்றும் வேறுபடுத்துகிறது.",
+          "alternatives_considered": "Changing the interpreted conjunction to A_n; forcing both sides to have equal lengths.",
+          "rationale": "Standard sequent notation permits independently sized antecedent and succedent sequences, and the following formula explicitly fixes their lengths as m and n.",
+          "precise_review_question": "Does the repaired display now match the A_1-through-A_m conjunction and independent B_1-through-B_n disjunction?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-021"
+        },
+        {
+          "audit_id": "TA-MVL-022",
+          "unit_id": "OLP-0403",
+          "kind": "initial-sequent-false-value-missing-valuation",
+          "action": "Restored v as the valuation argument of pValue in the false-value alternative.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\pValue(!A)=\\False",
+              "to": "\\pValuev(!A)=\\False",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The true alternative evaluates A under v, while the false alternative drops the valuation argument even though the sentence is proving every classical valuation satisfies A-sequent-A.",
+          "chosen_treatment": "தமிழ் மெய், பொய் ஆகிய இரு மாற்றுகளிலும் ஒரே மதிப்பீடு $v$ ஐ வெளிப்படையாகக் குறிப்பிடுகிறது.",
+          "alternatives_considered": "Leaving the false value unindexed; deleting v from the true alternative too.",
+          "rationale": "Both alternatives concern the value assigned to the same formula by the same arbitrary valuation.",
+          "precise_review_question": "Are both exhaustive classical truth-value alternatives now explicitly evaluated under v?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-022"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0404",
+      "source_sha256": "edaed42989f5e52e48f2d3a4c28b822e99df5c7fad3861cf31005e23791240a3",
+      "translation_sha256": "0f225b3dde5741ed53128feb63ca26b3a9be5164a8236d0180e7aaae8d57729e",
+      "source_bytes": 2934,
+      "translation_bytes": 6786,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma_1$"
+      ],
+      "extra_math": [
+        "$\\Gamma_i$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section",
+        "ukasiewicz"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-023",
+          "unit_id": "OLP-0404",
+          "kind": "many-valued-rules-part-metadata",
+          "action": "Corrected the part header comment from first-order-logic to many-valued-logic.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The file lies under many-valued-logic and has olfileid mvl/seq/rul, but its copied source header names first-order-logic.",
+          "chosen_treatment": "தமிழ் மேல்தகவல் mvl/seq/rul என்ற நிலையான அடையாளத்திற்குரிய பல்மதிப்புத் தருக்கப் பகுதியைப் பெயரிடுகிறது.",
+          "alternatives_considered": "Retaining the copied first-order header; changing the stable mvl file id.",
+          "rationale": "The whole section defines n-sided calculi for finite-valued matrices, not first-order quantifier rules.",
+          "precise_review_question": "Does the corrected part header agree with the mvl file id and n-valued content?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-023"
+        },
+        {
+          "audit_id": "TA-MVL-024",
+          "unit_id": "OLP-0404",
+          "kind": "n-sided-sequent-component-index-and-agreement",
+          "action": "Changed each Gamma_1 to each Gamma_i and made sequence singular.",
+          "expected_missing_math": [
+            "$\\Gamma_1$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma_i$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "After displaying Gamma_1 through Gamma_n, the source says each Gamma_1 is finite sequences, repeating the first component and using plural agreement.",
+          "chosen_treatment": "தமிழ் ஒவ்வொரு $\\Gamma_i$ உம் ஒரு முடிவுறு தொடராகும் என்று வரையறுக்கிறது.",
+          "alternatives_considered": "Constraining only Gamma_1; treating each component as several sequences.",
+          "rationale": "An n-sided sequent has one finite sequence in every indexed position, as the display and subsequent position-wise definitions require.",
+          "precise_review_question": "Does the repaired clause quantify over every indexed component and assign one sequence to each?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-024"
+        },
+        {
+          "audit_id": "TA-MVL-025",
+          "unit_id": "OLP-0404",
+          "kind": "nullary-connective-initial-sequent-ambiguous-emptiness",
+          "action": "Made explicit that every position other than the constant's truth-value position is empty.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says the constant appears in its associated truth-value space 'and is empty otherwise,' leaving the grammatical subject of 'is empty' unclear.",
+          "chosen_treatment": "தமிழ் மாறிலி அதற்குரிய இடத்தில் தோன்றும் என்றும் மற்ற எல்லா இடங்களும் வெறுமையாக இருக்கும் என்றும் கூறுகிறது.",
+          "alternatives_considered": "Saying the constant itself is empty; leaving unspecified which components are empty.",
+          "rationale": "The displayed ellipses and position semantics require a singleton constant in exactly one component and empty sequences elsewhere.",
+          "precise_review_question": "Does the clarified clause uniquely determine the nullary connective's initial n-sided sequent?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-025"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0405",
+      "source_sha256": "4acc6c8de469ff1e6aed5a5c65878c818fe79f9b14f8882b5031c45179375261",
+      "translation_sha256": "aa9a6f67cf747d81da7d38173b3f870adb5bfa265cee0ced014dbaeb6782de9e",
+      "source_bytes": 1782,
+      "translation_bytes": 2594,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-026",
+          "unit_id": "OLP-0405",
+          "kind": "many-valued-structural-rules-part-metadata",
+          "action": "Normalized the part header comment from many-valued-logics to the repository's many-valued-logic part name.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The file path and all neighboring files use the singular directory name many-valued-logic, while this copied header alone uses many-valued-logics.",
+          "chosen_treatment": "தமிழ் மேல்தகவல் களஞ்சியப் பாதையின் நிலையான many-valued-logic பெயரைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Retaining the isolated plural header; renaming the repository part and stable paths.",
+          "rationale": "This is a metadata normalization that leaves all executable identifiers and mathematical content unchanged.",
+          "precise_review_question": "Does the normalized header now match the actual part path?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-026"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0406",
+      "source_sha256": "7ec37019c2bc225b2cd247dbee140a3ba8e39b319c8e5c49e5b635dc669659e7",
+      "translation_sha256": "27d4cc4b2f8fa1b5dc8b8fcc0f82f4d231ef05cb87f4df18872b2b2331645ff1",
+      "source_bytes": 7938,
+      "translation_bytes": 9822,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "odel",
+        "open",
+        "section",
+        "ukasiewicz"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-027",
+          "unit_id": "OLP-0406",
+          "kind": "many-valued-propositional-rules-part-metadata",
+          "action": "Corrected the part header comment from first-order-logic to many-valued-logic.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The file has olfileid mvl/seq/prl and gives three-valued propositional rules, but its copied source header names first-order-logic.",
+          "chosen_treatment": "தமிழ் மேல்தகவல் mvl/seq/prl மற்றும் முழுப் பிரிவின் பல்மதிப்புக் கூற்று விதிகளுடன் ஒத்த many-valued-logic பகுதியைப் பெயரிடுகிறது.",
+          "alternatives_considered": "Retaining the copied first-order header; changing the stable mvl id.",
+          "rationale": "No quantifier or first-order rule occurs; every rule is determined by a finite truth-function matrix.",
+          "precise_review_question": "Does the corrected header agree with the mvl id and the displayed propositional rules?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-027"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

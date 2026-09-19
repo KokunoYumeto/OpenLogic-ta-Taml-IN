@@ -1,0 +1,113 @@
+% SEGMENT OLP-0400-S01
+% Part: many-valued-logic
+% SOURCE CORRECTION TA-MVL-017: correct the chapter metadata from three-valued-logics to infinite-valued-logics.
+% Chapter: infinite-valued-logics
+% Section: lukasiewicz
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{inf}{luk}
+
+\olsection{லூகாசியேவிச்~(\L ukasiewicz) தருக்கம்}
+
+\begin{editorial}
+  இது முடிவிலா மதிப்பு லூகாசியேவிச்~(\L ukasiewicz) தருக்கத்தைப் பற்றிய
+  சுருக்கமான, முழுமையடையாத பிரிவு.
+\end{editorial}
+
+\begin{defn}\ollabel{def:lukasiewicz} முடிவிலா மதிப்பு
+லூகாசியேவிச்~(\L ukasiewicz) தருக்கம்~$\LogLuk[\infty]$ பின்வரும்
+அணியைக் கொண்டு வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட செந்தரக்
+  கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V_\infty$.
+  \item $1$ மட்டுமே நியமிக்கப்பட்ட மதிப்பு; அதாவது, $V^+ = \{1\}$.
+  \item வாய்மைச் சார்புகள் பின்வரும் சார்புகளால் தரப்படுகின்றன:
+  \begin{align*}
+    \tf{\lnot}[\LogLuk](x) & = 1 - x\\
+    \tf{\land}[\LogLuk](x,y) & = \min(x,y)\\
+    \tf{\lor}[\LogLuk](x,y) & = \max(x,y)\\
+    \tf{\lif}[\LogLuk](x,y) & = \min(1,1-(x-y)) = \begin{cases}
+      1 & \text{எனில் } x \le y\\
+      1-(x-y) & \text{வேறெனில்.}
+    \end{cases}
+    \end{align*}
+\end{enumerate}
+$m$-மதிப்பு லூகாசியேவிச்~(\L ukasiewicz) தருக்கமும் இதேவாறு
+வரையறுக்கப்படுகிறது; ஆனால் அதில் $V = V_m$.
+\end{defn}
+
+\begin{prop}
+  \olref[thr][luk]{def:lukasiewicz} இல் வரையறுக்கப்பட்ட தருக்கம்
+  $\LogLuk[3]$, \olref{def:lukasiewicz} இல் வரையறுக்கப்பட்ட
+  $\LogLuk[3]$ உடன் ஒன்றே.
+\end{prop}
+
+\begin{proof}
+  \olref[thr][luk]{def:lukasiewicz} இல் இணைப்பிகளுக்காகத் தரப்பட்ட வாய்மை
+  அட்டவணைகளையும், \olref{def:lukasiewicz} இலுள்ள சமன்பாடுகள் தீர்மானிக்கும்
+  பின்வரும் வாய்மை அட்டவணைகளையும் ஒப்பிட்டால் இதைக் காணலாம்:
+  \begin{center}
+    \begin{tabular}{c|c} 
+      $\tf{\lnot}$ & \\ 
+      \hline  
+      $1$ & $0$ \\ 
+      $1/2$ & $1/2$ \\
+      $0$ & $1$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\land}[\LogLuk[3]]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1/2$ & $0$ \\ 
+      $1/2$ & $1/2$ & $1/2$ & $0$\\ 
+      $0$ & $0$ & $0$ & $0$ 
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc} 
+      $\tf{\lor}[\LogLuk[3]]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1$ & $1$ \\ 
+      $1/2$ & $1$ & $1/2$ & $1/2$ \\
+      $0$ & $1$ & $1/2$ & $0$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\lif}[\LogLuk[3]]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1/2$ & $0$ \\ 
+      $1/2$ & $1$ & $1$ & $1/2$  \\ 
+      $0$ & $1$ & $1$ & $1$ 
+    \end{tabular}
+  \end{center} 
+\end{proof}
+
+\begin{prop}\ollabel{prop:luk-infty-m}
+  $\Gamma \Entails[\LogLuk[\infty]] !B$ எனில், எல்லா~$m \ge 2$ க்கும்
+  $\Gamma \Entails[\LogLuk[m]] !B$.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[mvl][inf][luk]{prop:luk-infty-m} ஐ நிறுவுக.
+\end{prob}
+
+உண்மையில், இதன் மறுதலையும் அமைகிறது.
+
+முடிவிலா மதிப்பு லூகாசியேவிச்~(\L ukasiewicz) தருக்கமே மிகவும் பரவலாகப்
+பயன்படுத்தப்படும் மங்கல் தருக்கம். மங்கல் தருக்க இலக்கியத்தில்,
+நிபந்தனைவாக்கியம் பெரும்பாலும் $\lnot !A \lor !B$ என வரையறுக்கப்படுகிறது.
+அவ்வாறு வரையறுத்தால் முடிவிலா மதிப்பு வலு க்ளீனி தருக்கம் கிடைக்கும்.
+
+\begin{prob}
+  $(p \lif q) \lor (q \lif p)$ என்பது~$\LogLuk[\infty]$ இன் ஒரு
+  மெய்மம் என்று காட்டுக.
+\end{prob}
+
+\end{document}

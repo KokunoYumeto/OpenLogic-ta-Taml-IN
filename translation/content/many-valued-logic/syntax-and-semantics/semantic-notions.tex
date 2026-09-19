@@ -1,0 +1,73 @@
+% SEGMENT OLP-0390-S01
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: semantic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{sem}
+
+\olsection{பொருண்மைக் கருத்துகள்}
+
+ஒரு பல்மதிப்புத் தருக்கம்~$\Log L$ ஓர் அணியால் தரப்பட்டிருக்கிறது எனக்
+கொள்க. அப்போது~$\Log L$ க்கான வழக்கமான பொருண்மைக் கருத்துகளை வரையறுக்கலாம்.
+
+\begin{defn}
+\begin{enumerate}
+\item ஏதோ ஒரு~$\pAssign{v}$ க்கு $\pSat{v}{!A}$ எனில்,
+  !!^a{formula}~$!A$ \emph{நிறைவுறத்தக்கது}; எந்த~$\pAssign{v}$ க்கும்
+  $\pSat{v}{!A}$ இல்லை எனில் அது \emph{நிறைவுறத்தகாதது};
+\item எல்லா !!{valuation}s~$v$ க்கும் $\pSat{v}{!A}$ எனில்,
+  !!^a{formula}~$!A$ ஒரு \emph{மெய்மம்};
+\item $\Gamma$ என்பது !!{formula}s இன் கணம் எனில், $\pSat{v}{\Gamma}$
+  ஆக உள்ள ஒவ்வொரு !!{valuation}~$\pAssign{v}$ க்கும் $\pSat{v}{!A}$
+  என்பது, அப்போதும் அப்போது மட்டுமே, $\Gamma \Entails !A$
+  (``$\Gamma$ ஆனது $!A$ ஐப் பின்விளைவாகக் கொண்டுள்ளது'') என்க.
+\item $\Gamma$ என்பது !!{formula}s இன் கணம் எனில், $\pSat{v}{\Gamma}$
+  ஆக இருக்குமாறு !!a{valuation}~$\pAssign{v}$ இருந்தால் $\Gamma$
+  \emph{நிறைவுறத்தக்கது}; இல்லையெனில் $\Gamma$
+  \emph{நிறைவுறத்தகாதது}.
+\end{enumerate}
+\end{defn}
+
+செவ்வியல் தருக்கத்தின் நேர்வில் கிடைக்கும் இதே கருத்துகள் பற்றிய சில
+உண்மைகள் இங்கும் கிடைக்கின்றன:
+
+\begin{prop}
+\ollabel{prop:semanticalfacts}
+\begin{enumerate}
+\item $!A$ ஒரு மெய்மம் என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\emptyset \Entails !A$;
+\item $\Gamma$ நிறைவுறத்தக்கது எனில், $\Gamma$ வின் ஒவ்வொரு முடிவுறு
+  உட்கணமும் நிறைவுறத்தக்கது;
+\item\ollabel{def:monotonicity}%
+ஒருபோக்குத்தன்மை: $\Gamma \subseteq \Delta$
+  மற்றும் $\Gamma \Entails !A$ எனில், $\Delta \Entails !A$ உம்;
+\item\ollabel{def:Cut}%
+கடப்புப் பண்பு: $\Gamma \Entails !A$ மற்றும்
+  $\Delta \cup \{ !A\} \Entails !B$ எனில், $\Gamma \cup \Delta \Entails
+  !B$;
+\end{enumerate}
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[mvl][syn][sem]{prop:semanticalfacts} ஐ நிறுவுக.
+\end{prob}
+
+செவ்வியல் தருக்கத்தில் பின்விளைவையும் நிபந்தனைவாக்கியத்தையும் இணைக்கலாம்.
+எடுத்துக்காட்டாக, \emph{மோடஸ் போனென்ஸின்} செல்லுபடித்தன்மை நமக்குக்
+கிடைக்கிறது: $\Gamma \Entails !A$ மற்றும் $\Gamma \Entails !A \lif !B$
+எனில், $\Gamma \Entails !B$. செவ்வியல் தருக்கத்தில் $\Entails$ க்கும்
+$\lif$ க்கும் இடையிலான மற்றொரு முக்கியமான தொடர்பு பொருண்மைக் கழித்தல்
+தேற்றம்: $\Gamma \Entails !A \lif !B$ என்பது, அப்போதும் அப்போது மட்டுமே,
+$\Gamma \cup \{!A\} \Entails !B$. இம்முடிவுகள் பல்மதிப்புத்
+தருக்கங்களில் எப்போதும் \emph{கிடைப்பதில்லை}. அவை கிடைக்குமா என்பது
+வாய்மைச் சார்பு~$\tf{\lif}$ ஐச் சார்ந்தது.
+
+\end{document}

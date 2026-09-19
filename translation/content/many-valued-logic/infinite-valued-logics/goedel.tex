@@ -1,0 +1,135 @@
+% SEGMENT OLP-0401-S01
+% Part: many-valued-logic
+% SOURCE CORRECTION TA-MVL-018: correct both the chapter and section metadata to infinite-valued-logics/goedel.
+% Chapter: infinite-valued-logics
+% Section: goedel
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{inf}{god}
+
+\olsection{கோடல்~(G\"odel) தருக்கங்கள்}
+
+\begin{editorial}
+  இது முடிவிலா மதிப்பு கோடல்~(G\"odel) தருக்கத்தைப் பற்றிய சுருக்கமான,
+  முழுமையடையாத பிரிவு.
+\end{editorial}
+
+\begin{defn}\ollabel{def:goedel} முடிவிலா மதிப்பு கோடல்~(G\"odel)
+தருக்கம்~$\LogGod[\infty]$ பின்வரும் அணியைக் கொண்டு வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\lfalse$, $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட
+  செந்தரக் கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V_\infty$.
+  \item $1$ மட்டுமே நியமிக்கப்பட்ட மதிப்பு; அதாவது, $V^+ = \{1\}$.
+  \item வாய்மைச் சார்புகள் பின்வரும் சார்புகளால் தரப்படுகின்றன:
+% SOURCE CORRECTION TA-MVL-019: remove nested inline-math delimiters from the cases environment.
+  \begin{align*}
+    \tf{\lfalse} & = 0\\
+    \tf{\lnot}[\LogGod](x) & = \begin{cases}
+      1 & \text{எனில் } x =0\\
+      0 & \text{வேறெனில்}
+    \end{cases}\\
+    \tf{\land}[\LogGod](x,y) & = \min(x,y)\\
+    \tf{\lor}[\LogGod](x,y) & = \max(x,y)\\
+    \tf{\lif}[\LogGod](x,y) & = \begin{cases}
+      1 & \text{எனில் } x \le y\\
+      y & \text{வேறெனில்.}
+    \end{cases}
+    \end{align*}
+\end{enumerate}
+$m$-மதிப்பு கோடல்~(G\"odel) தருக்கமும் இதேவாறு வரையறுக்கப்படுகிறது;
+ஆனால் அதில் $V = V_m$.
+\end{defn}
+
+\begin{prop}
+  \olref[thr][god]{defn:goedel} இல் வரையறுக்கப்பட்ட தருக்கம்
+  $\LogGod[3]$, \olref{def:goedel} இல் வரையறுக்கப்பட்ட
+  $\LogGod[3]$ உடன் ஒன்றே.
+\end{prop}
+
+\begin{proof}
+  \olref[thr][god]{defn:goedel} இல் இணைப்பிகளுக்காகத் தரப்பட்ட வாய்மை
+  அட்டவணைகளையும், \olref{def:goedel} இலுள்ள சமன்பாடுகள் தீர்மானிக்கும்
+  பின்வரும் வாய்மை அட்டவணைகளையும் ஒப்பிட்டால் இதைக் காணலாம்:
+  \begin{center}
+    \begin{tabular}{c|c} 
+      $\tf{\lnot}[\LogGod[3]]$ & \\ 
+      \hline  
+      $1$ & $0$ \\ 
+      $1/2$ & $0$ \\
+      $0$ & $1$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\land}[\LogGod]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1/2$ & $0$ \\ 
+      $1/2$ & $1/2$ & $1/2$ & $0$\\ 
+      $0$ & $0$ & $0$ & $0$ 
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc} 
+      $\tf{\lor}[\LogGod]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1$ & $1$ \\ 
+      $1/2$ & $1$ & $1/2$ & $1/2$ \\
+      $0$ & $1$ & $1/2$ & $0$ 
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc} 
+      $\tf{\lif}[\LogGod]$ & $1$ & $1/2$ & $0$ \\ 
+      \hline 
+      $1$ & $1$ & $1/2$ & $0$ \\ 
+      $1/2$ & $1$ & $1$ & $0$  \\ 
+      $0$ & $1$ & $1$ & $1$ 
+    \end{tabular}
+  \end{center} 
+\end{proof}
+
+\begin{prop}\ollabel{prop:god-infty-m}
+  $\Gamma \Entails[\LogGod[\infty]] !B$ எனில், எல்லா~$m \ge 2$ க்கும்
+  $\Gamma \Entails[\LogGod[m]] !B$.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[mvl][inf][god]{prop:god-infty-m} ஐ நிறுவுக.
+\end{prob}
+
+உண்மையில், இதன் மறுதலையும் அமைகிறது.
+
+$\LogGod[3]$ ஐப் போலவே, $\LogGod[\infty]$ உம் உள்ளுணர்வுவாதத்தில்
+செல்லுபடியாகும் எல்லா !!{formula}s ஐயும் மெய்மங்களாகக் கொண்டுள்ளது;
+மேலும் பின்வரும் மெய்மமல்லாத எடுத்துக்காட்டுகள்~$\LogGod[\infty]$ இலும்
+மெய்மங்கள் அல்ல:
+\begin{align*}
+  & p \lor \lnot p && (p \lif q) \lif (\lnot p \lor q) \\
+  & \lnot\lnot p \lif p && \lnot(\lnot p \land \lnot q) \lif (p \lor q) \\
+  & ((p \lif q) \lif p) \lif p && \lnot(p \lif q) \lif (p \land \lnot q)
+\end{align*}
+உள்ளுணர்வுவாதத்தில் செல்லுபடியாகாவிட்டாலும் $\LogGod[3]$ இன் மெய்மமாக
+இருக்கும் $(p \lif q) \lor (q \lif p)$ என்ற !!{formula},
+$\LogGod[\infty]$ இலும் ஒரு மெய்மம். உண்மையில், உள்ளுணர்வுவாதத்
+தருக்கத்துடன் $(!A \lif !B) \lor (!B \lif !A)$ என்ற திட்டவடிவத்தைச்
+சேர்த்த தருக்கமாக~$\LogGod[\infty]$ ஐ வகைப்படுத்தலாம். இதை மைக்கேல்
+டம்மெட் நிறுவினார்; எனவே~$\LogGod[\infty]$ பெரும்பாலும் கோடல்--டம்மெட்
+தருக்கம்~(G\"odel--Dummett logic)~$\Log{LC}$ எனக் குறிப்பிடப்படுகிறது.
+
+\begin{prob}
+  $(p \lif q) \lor (q \lif p)$ என்பது~$\LogGod[\infty]$ இன் ஒரு
+  மெய்மம் என்று காட்டுக.
+\end{prob}
+
+\begin{prob}
+  $\LogGod[3]$ இன் மெய்மமான
+  $(p \lif q) \lor (q \lif r) \lor (r \lif s)$ என்பது
+  $\LogGod[\infty]$ இன் மெய்மம் அல்ல என்று காட்டுக.
+\end{prob}
+
+\end{document}

@@ -1,0 +1,54 @@
+% SEGMENT OLP-0405-S01
+% SOURCE CORRECTION TA-MVL-026: normalize the part metadata from many-valued-logics to many-valued-logic.
+% Part: many-valued-logic
+% Chapter: sequent-calculus
+% Section: structural-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{seq}{str}
+
+\olsection{கட்டமைப்பு விதிகள்}
+
+$n$-பக்கத் தொடரணிக் கணியத்திற்கான கட்டமைப்பு விதிகள், ஒவ்வோர் இடம்~$i$
+க்கும் செயல்படுவதைத் தவிர, செவ்வியல் நேர்வில் உள்ளவாறு செயல்படுகின்றன.
+
+\begin{defish}
+\begin{center}
+\AxiomC{$ \Gamma_1 \nSequent \dots \nSequent \phantom{!A,}\Gamma_i \nSequent \dots \nSequent \Gamma_n $}
+\RightLabel{$\iR{\Weakening}{i}$}
+\UnaryInfC{$\Gamma_1 \nSequent \dots \nSequent !A, \Gamma_i \nSequent \dots \nSequent \Gamma_n$}
+\DisplayProof
+\\[2ex]
+\AxiomC{$ \Gamma_1 \nSequent \dots \nSequent !A, !A, \Gamma_i \nSequent \dots \nSequent \Gamma_n $}
+\RightLabel{$\iR{\Contraction}{i}$}
+\UnaryInfC{$\Gamma_1 \nSequent \dots \nSequent \phantom{!A,}!A, \Gamma_i \nSequent
+\dots \nSequent \Gamma_n$}
+\DisplayProof
+\\[2ex]
+\AxiomC{$ \Gamma_1 \nSequent \dots \nSequent \Gamma_i, !A, !B, \Gamma_i' \nSequent \dots \nSequent \Gamma_n $}
+\RightLabel{$\iR{\Exchange}{i}$}
+\UnaryInfC{$\Gamma_1 \nSequent \dots \nSequent \Gamma_i, !B, !A, \Gamma_i' \nSequent \dots
+\nSequent \Gamma_n$}
+\DisplayProof
+\end{center}
+\end{defish}
+
+தளர்த்தல், சுருக்கல், இடமாற்றம் ஆகிய அனுமானங்களின் ஒரு தொடர் பெரும்பாலும்
+இரட்டை அனுமானக் கோடுகளால் குறிக்கப்படும்.
+
+தொடரணியில் $i \neq j$ என அமையும் வெவ்வேறு இடங்களின் ஒவ்வொரு சேர்க்கைக்கும்
+ஒன்றாக, \Cut{} விதி பல வடிவங்களில் வருகிறது:
+\begin{defish}
+\[
+\AxiomC{$ \Gamma_1 \nSequent \dots \nSequent !A, \Gamma_i \nSequent \dots \nSequent \Gamma_n $}
+\AxiomC{$ \Delta_1 \nSequent \dots \nSequent !A, \Delta_j \nSequent \dots \nSequent \Delta_n $}
+\RightLabel{$\iR{\Cut}{i,j}$}
+\BinaryInfC{$\Gamma_1,\Delta_1 \nSequent \dots \nSequent \Gamma_n, \Delta_n$}
+\DisplayProof
+\]
+\end{defish}
+
+\end{document}

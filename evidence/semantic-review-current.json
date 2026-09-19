@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-19T20:11:41.456079+00:00",
+  "date_utc": "2026-09-19T21:18:32.202806+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -1897,6 +1897,126 @@
       "unit_id": "OLP-0382",
       "source_sha256": "ff6f9c3dbe4c11e42b9528b74afa11ecc68978c3c76211000b8e8f279ad1db07",
       "translation_sha256": "1191369ce2f62291046c747392422f84b6e7a8e4eb865602b4560b417789db25"
+    },
+    {
+      "unit_id": "OLP-0383",
+      "source_sha256": "64d16fcddbc3bb42bb82976d92ce7c7a33af7b0dc1b1f5fd44deed261bd16c2e",
+      "translation_sha256": "d9fab1e524f6cc7273e241063773ecc5392403a8bf5043d828853d73c2efea56"
+    },
+    {
+      "unit_id": "OLP-0384",
+      "source_sha256": "d7f528c2e202a2248ae41206ad05eee374ec26fff3be1f6cd5c0b3ff8836fc06",
+      "translation_sha256": "660845f026e11c81764501f1ab729cb3154417573ff9ef6afc526c54e81db5f5"
+    },
+    {
+      "unit_id": "OLP-0385",
+      "source_sha256": "d53637e3cabd6f0a5973bfe4b7b6ec9adc7d4c8c3ca9aa68a5949b2f936ff14c",
+      "translation_sha256": "90f4339bf7c9d29deea3ec8119372bdb73956e59b8c57cc248440ef7ad7abe6e"
+    },
+    {
+      "unit_id": "OLP-0386",
+      "source_sha256": "5eab2399773774dcc0ad724bf710775b247fa781eddca68a814f39537880ff30",
+      "translation_sha256": "f5bccd932c56f58a8a77a9d204c31ee9a7f7fd516aa0ed73fb11db5cf2631e12"
+    },
+    {
+      "unit_id": "OLP-0387",
+      "source_sha256": "9cf70dccee9df26bf72e5f2ca8460f15bc02da829229ad2f338f0778a1b8143c",
+      "translation_sha256": "33e26eae6d4ff589ebc107d79b5ec69ce4d8179a6d8f1f860fabf0675d183d97"
+    },
+    {
+      "unit_id": "OLP-0388",
+      "source_sha256": "b52a35007f90b9c696d8f3396d4ebbf625e24983bbbbb806fdffa6837bd0f9a1",
+      "translation_sha256": "21b1433894f6cbe95325ed5dc279553345d267a349f832d9cec5f5e54cb48400"
+    },
+    {
+      "unit_id": "OLP-0389",
+      "source_sha256": "295efac982d3d4d6a5a4c2b910b3a37ecb85ce1b7925950db359034733498bb1",
+      "translation_sha256": "1bf2f1c2801be9b0abdc752eaca264c578d07522ab08b2f86763b9a1ac6b760a"
+    },
+    {
+      "unit_id": "OLP-0390",
+      "source_sha256": "897125a2b2dddc985219270cc16af490719261dc292857bbcb157d1ad899597d",
+      "translation_sha256": "59018dae82df87c25eaa9e40fc1ce14f9a7a75a246141d032fb3af6677c02212"
+    },
+    {
+      "unit_id": "OLP-0391",
+      "source_sha256": "1180052e6f39c499a3d55b43200ce6af0e92b3f2c5b55d416eaac29e96bb66a7",
+      "translation_sha256": "1d6d5928c366c976ccfb5cc0fc8868622e5cefbfc689467c64b12550d88f634b"
+    },
+    {
+      "unit_id": "OLP-0392",
+      "source_sha256": "24ee5d0ab52f218eb4750bea0441cbdaf05d19cfa480cf2f92376dc0c697ecc3",
+      "translation_sha256": "be9d4c4add05d8a9dc2406d5706bb629161ff6838f9325e816232310541ccf59"
+    },
+    {
+      "unit_id": "OLP-0393",
+      "source_sha256": "77b91c121cc775c602663a64f615c3604a32db5d61625d07dfc9ea30ab5047e1",
+      "translation_sha256": "2898291f97ff65cf561c5bf0e7b573459c3162649625d5ffad32200f5ca3ee53"
+    },
+    {
+      "unit_id": "OLP-0394",
+      "source_sha256": "fe499a0fa941ad8d370b2f0346660d76aad7b4aad999a54ea88f79cdacc2641a",
+      "translation_sha256": "0955b1bc92974244b411a7fce9dd3a1cdea1a5c8ed48f3944b357779abb4cc5a"
+    },
+    {
+      "unit_id": "OLP-0395",
+      "source_sha256": "0b632552858c410d3670357a0df7071cb5a3c5bd285681e86988ed07263852d7",
+      "translation_sha256": "61a248154103f5bcd90d8967680ba13c73906bf9506e13f2d725e14dff8e49cd"
+    },
+    {
+      "unit_id": "OLP-0396",
+      "source_sha256": "1075b4d66085bb613bcaf0ef498cf8b3705b84d9dfd3dfedf648847b39be9542",
+      "translation_sha256": "2245abf1185f52f03e6635b3df0d92679fdb11f218e74d886238f28efc1f5820"
+    },
+    {
+      "unit_id": "OLP-0397",
+      "source_sha256": "4345be8f1da0718c7667fcae18709d7e2688c5e576f07e3e043f36e7eb99216f",
+      "translation_sha256": "cedd4f1916ba67fc362c49ce25abcca3f9236ae8d3621ef9306c48f48b60b5f7"
+    },
+    {
+      "unit_id": "OLP-0398",
+      "source_sha256": "023a2c8bb60bba2541628de969f9e9e8c0be8c9df88786f9749b4c2b36c1cd84",
+      "translation_sha256": "b1c3ff719d040ac171c931b45e65d8de15494cd4778757b77e737ad76cd1ec5d"
+    },
+    {
+      "unit_id": "OLP-0399",
+      "source_sha256": "4ce56099c4d8b852148cfe24eb6d1ed00a03fce30c9e1770e52eadbd4412762c",
+      "translation_sha256": "ebe1d3b4e210803969648ad467d69d404d190699fe28705b87c6fc17f256604e"
+    },
+    {
+      "unit_id": "OLP-0400",
+      "source_sha256": "cd08c78b079f961505db9f62af56babd0570bf52682f8375f6ba4d340c2afcc6",
+      "translation_sha256": "9689aaccf5f62ac3b9eb42fa36fb6636eb022b99d04d51e465d040bc3db6bfc9"
+    },
+    {
+      "unit_id": "OLP-0401",
+      "source_sha256": "5d2ee265f4bec099c01297f7e6d605c3c0100e59a96cce2cf9636ec9fb9e186b",
+      "translation_sha256": "db495200c73d58f3b8a1c31fac31cd72fa17b3c37983deb6c5bf03a3ab0955c7"
+    },
+    {
+      "unit_id": "OLP-0402",
+      "source_sha256": "28775295786cbfede3893029fdd6742f84bb12ada787a5e5f61faba049c113e6",
+      "translation_sha256": "557155d6ea8260436ad472728af641298cd1be4ebd8aad173d2523b4723d5d45"
+    },
+    {
+      "unit_id": "OLP-0403",
+      "source_sha256": "d34708177650e4673f957d0b6ecdc9f210e4d65987e47f0694077c3d21ce63ef",
+      "translation_sha256": "99e968616d53d80ea05ef7b01262a50758d66b454bcb492c21f9ba19a4aebfc1"
+    },
+    {
+      "unit_id": "OLP-0404",
+      "source_sha256": "edaed42989f5e52e48f2d3a4c28b822e99df5c7fad3861cf31005e23791240a3",
+      "translation_sha256": "0f225b3dde5741ed53128feb63ca26b3a9be5164a8236d0180e7aaae8d57729e"
+    },
+    {
+      "unit_id": "OLP-0405",
+      "source_sha256": "4acc6c8de469ff1e6aed5a5c65878c818fe79f9b14f8882b5031c45179375261",
+      "translation_sha256": "aa9a6f67cf747d81da7d38173b3f870adb5bfa265cee0ced014dbaeb6782de9e"
+    },
+    {
+      "unit_id": "OLP-0406",
+      "source_sha256": "7ec37019c2bc225b2cd247dbee140a3ba8e39b319c8e5c49e5b635dc669659e7",
+      "translation_sha256": "27d4cc4b2f8fa1b5dc8b8fcc0f82f4d231ef05cb87f4df18872b2b2331645ff1"
     }
   ],
   "samples": [
@@ -5210,6 +5330,174 @@
       "assessment": "The normalize, toChurch and fromChurch stages, application-code construction, defined and undefined branches, and final decoding remain complete. TA-LAM-047 repairs spelling and plural agreement only.",
       "translation_segment_sha256": "fc3bd395bc6952f1f1688e92cee66f4d1d115be4b52dadb1f109be8f9363562e",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0383-S01",
+      "reverse_paraphrase": "The part driver introduces propositional many-valued logics as draft material and imports syntax and semantics, three-valued logics, infinite-valued logics, and sequent calculus in that order.",
+      "assessment": "Part scope, draft status, and all four imports are retained without presenting the material as a finished reader.",
+      "translation_segment_sha256": "9038119c7400d432b05bbfea55dadd1513457550a1c218da400bbba8dfe1c344",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0384-S01",
+      "reverse_paraphrase": "The chapter driver imports introduction, connectives, formulas, matrices, valuations and satisfaction, semantic notions, and sublogics in source order.",
+      "assessment": "All seven chapter components and their hierarchy remain intact.",
+      "translation_segment_sha256": "de502e74f9368ab2a1a9aedf2a02bcae1e1121a6e996406bec499396f7feb337",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0385-S01",
+      "reverse_paraphrase": "A many-valued logic extends the classical two-value setting by selecting a truth-value set, connective-specific truth functions, and a designated subset; satisfaction and consequence preserve designated values.",
+      "assessment": "The distinction among truth values, designated values, truth functions, satisfaction, tautology, and entailment is preserved. TA-MVL-001 repairs only agreement and the role/rule typo.",
+      "translation_segment_sha256": "7bc7421ad448982c5214666abb82949cadceb7436055e7259edf5f841f584902",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0386-S01",
+      "reverse_paraphrase": "A propositional language is a set of connectives with arities; nullary, unary, and binary connectives are distinguished, and many-valued languages may use several conjunctions or nonclassical operators.",
+      "assessment": "Every primitive symbol, tag branch, arity, and product-logic example remains; TA-MVL-002 repairs two prose defects only.",
+      "translation_segment_sha256": "54a9c90ce1c0adfaef548507fb4e25392fbd368178389350f797e073d7842481",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0387-S01",
+      "reverse_paraphrase": "Formulas are generated inductively from propositional variables, nullary connectives, and n-place connective applications, with no other formulas.",
+      "assessment": "Formation clauses, notation conventions, and all three displayed example formulas retain their exact operators and scopes.",
+      "translation_segment_sha256": "7a35a704faa4626b4ba947ddb869738ffd2437e841ee4fb98b048fb26cc569a8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0388-S01",
+      "reverse_paraphrase": "A matrix consists of a connective language, a nonempty truth-value set, a designated subset, and one V-to-V truth function of the appropriate arity for every connective.",
+      "assessment": "The classical matrix and all four truth tables remain exact; TA-MVL-003 restores plural agreement for the family of connective interpretations.",
+      "translation_segment_sha256": "aca5e5f3046b10103cc93a52650e0a0a594ec5a1f06f06431b3ec695eba84822",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0389-S01",
+      "reverse_paraphrase": "A valuation assigns each propositional variable a value in V; its recursive extension evaluates each connective through the matrix, and a formula is satisfied exactly when its value is designated.",
+      "assessment": "Assignment, recursive evaluation, and satisfaction remain distinct, including set satisfaction for every member of Gamma.",
+      "translation_segment_sha256": "ba3ddc81c330e9fa708f6e3766f0f53b0f28730e73f7bcb3ceddf0ebd4a5325c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0390-S01",
+      "reverse_paraphrase": "The standard satisfiability, tautology, and entailment notions are defined for a matrix logic; monotonicity and cut persist, while modus ponens and the semantic deduction theorem depend on the chosen conditional truth function.",
+      "assessment": "Quantifier directions and consequence contexts are preserved, and the final warning is not weakened into a universal failure claim.",
+      "translation_segment_sha256": "2b145e9a2376f177c55a7567ac5a2f40deb20407b39a9559bf9cdd378807a4d1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0391-S01",
+      "reverse_paraphrase": "On the fragment generated by the shared classical connectives, every Boolean-valued assignment gives the same values in L and classical logic; if True alone is designated among the two classical values, L-consequence is included in classical consequence.",
+      "assessment": "The induction cases and contrapositive countermodel match the repaired fragment scope. TA-MVL-004 through TA-MVL-006 make the valuation quantifier explicit, restrict the theorem to its proved language, and restore satisfaction notation.",
+      "translation_segment_sha256": "642b112a08346ca1239c6c12b312f7b726b700bc9978053e22f1b405f7c28692",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0392-S01",
+      "reverse_paraphrase": "The three-valued-logics chapter imports its introduction, Łukasiewicz, Kleene, Gödel, and multiple-designation sections in source order.",
+      "assessment": "All five chapter components and their hierarchy remain intact.",
+      "translation_segment_sha256": "d305a823d897888e1f816d4ed4990f032a1bbe71f4c14cbd18e506dc9cb8f549",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0393-S01",
+      "reverse_paraphrase": "Adding one third value to True and False leaves many choices for the four connective truth functions and for whether only True or both True and Undef are designated.",
+      "assessment": "The independent choices of operations and designated set are preserved rather than conflated.",
+      "translation_segment_sha256": "45ed3fb5c5eb959ab6091dc9f4711c6ebc4f6917ed73bd107a5d91438ed5072b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0394-S01",
+      "reverse_paraphrase": "Łukasiewicz uses a third value for future contingents, defines negation, conjunction, disjunction, and a reflexive conditional by a full matrix, then tests its classical and modal behavior.",
+      "assessment": "The historical motivation, quotation, footnote, every table and exercise, and the modal counterexample remain. TA-MVL-007 through TA-MVL-010 repair the duplicated conjunction order, prose defects, unmatched formula parenthesis, and spelling only.",
+      "translation_segment_sha256": "51b6db261066c0b041af4c6723a19e367e307754b2e9472b4686c8ff26ea2c3e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0395-S01",
+      "reverse_paraphrase": "Weak Kleene operations propagate nontermination sequentially, whereas strong Kleene conjunction and disjunction can return False or True from a terminating component evaluated in parallel; neither logic has a tautology when only True is designated.",
+      "assessment": "Both complete matrices, the all-Undef proof, consequence exercises, and Bochvar operators are preserved. TA-MVL-011 repairs only the computational-motivation prose.",
+      "translation_segment_sha256": "65bf7285ea4fe9f96aa4aaab89689390290b1f0db563d2276fe9427d376fbafa",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0396-S01",
+      "reverse_paraphrase": "Three-valued Gödel logic uses classical min/max-style conjunction and disjunction, maps Undef negation to False, and assigns Undef-implies-Undef True; it contains intuitionistic truths but also validates some nonintuitionistic formulas.",
+      "assessment": "The full matrix and every positive and negative truth-table exercise retain their exact formulas.",
+      "translation_segment_sha256": "f0ed20f8bb1dfc582db0676eaeeeb35a163993eb2d6da4259c245eb42a4d9521",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0397-S01",
+      "reverse_paraphrase": "Designating Undef as well as True yields LP, Halldén, R-Mingle, and a designated Gödel variant; LP has the classical tautologies but a paraconsistent consequence relation.",
+      "assessment": "All matrices and exercises remain, while TA-MVL-012 through TA-MVL-014 repair the atomic collapse proof and both duplicated-conjunct induction premises.",
+      "translation_segment_sha256": "713a57d591391d79d11f5a38c08dc53cbefe02bde949337031f8a3cea464b383",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0398-S01",
+      "reverse_paraphrase": "The infinite-valued-logics chapter imports its introduction, Łukasiewicz, and Gödel sections in source order.",
+      "assessment": "All three chapter components and the stable mvl/inf hierarchy remain intact; TA-MVL-015 corrects only the copied chapter-header metadata.",
+      "translation_segment_sha256": "f0febe97295a8389a515f9152f28a13617fddc505c13995f60a5e72e73ce086b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0399-S01",
+      "reverse_paraphrase": "Infinite-valued matrices may use all rational points in the unit interval, the finite evenly spaced subsets V_m, all real points in the interval, or other infinite subsets; only 1 is normally designated.",
+      "assessment": "The rational, finite, and real value sets and the distinction between absolute endpoints and intermediate values are preserved. TA-MVL-016 repairs the V_m numerator bound so the stated set has exactly m values.",
+      "translation_segment_sha256": "c9792b45c1617edc0a4421da07add8812080184ff9449d7f8766d7bfd439a174",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0400-S01",
+      "reverse_paraphrase": "Infinite-valued Łukasiewicz logic interprets negation by 1-x, conjunction and disjunction by minimum and maximum, and implication by min(1,1-(x-y)); each finite V_m restriction is defined analogously.",
+      "assessment": "The full matrix, comparison with the three-valued table, consequence inclusion, converse statement, fuzzy-logic note, and final tautology exercise remain; TA-MVL-017 corrects only copied metadata.",
+      "translation_segment_sha256": "da26c5fe291524eb9beb354b6577224fbb4b7e00cbb74a8ff801b846a034321a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0401-S01",
+      "reverse_paraphrase": "Infinite-valued Gödel logic uses crisp negation, minimum and maximum, and the ordered residual implication; it extends intuitionistic validity and is axiomatized over intuitionistic logic by comparability of implications.",
+      "assessment": "The complete matrix, finite restrictions, three-valued comparison, listed non-tautologies, Gödel--Dummett characterization, and both exercises remain. TA-MVL-018 and TA-MVL-019 repair copied metadata and nested math delimiters only.",
+      "translation_segment_sha256": "af31a7be0f8405654cd57b13622f6e5f6b3dded470b9eca3608343a3dfcc9faf",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0402-S01",
+      "reverse_paraphrase": "The many-valued sequent-calculus chapter imports its introduction, rules and proofs, structural rules, and selected propositional rules in source order.",
+      "assessment": "All four components and the stable mvl/seq hierarchy remain intact; TA-MVL-020 corrects only the copied chapter metadata.",
+      "translation_segment_sha256": "f24a46f3f26b8718307b729412dbf9a894173b5d8594fa32e126f9574e4c3f5e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0403-S01",
+      "reverse_paraphrase": "Classical two-sided sequents are read by false values on the left or true values on the right; an n-valued generalization gives one position to every truth value, so a three-sided sequent is satisfied when a formula in one component takes that component’s value.",
+      "assessment": "The classical interpretation, conditional rule motivation, alternative conjunction/disjunction rules, and three-position semantics are all preserved. TA-MVL-021 and TA-MVL-022 align the antecedent index and restore the valuation argument.",
+      "translation_segment_sha256": "2d652df8229113554ea773761e8b73893c998960c0f2e8b23045b834f48f7c27",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0404-S01",
+      "reverse_paraphrase": "An n-sided sequent contains one finite sentence sequence at each position, has diagonal formula initial sequents and nullary-connective initial sequents, and defines theoremhood and derivability by designated positions.",
+      "assessment": "Every position condition, proof-tree clause, designated-value theorem clause, finite-premise derivability clause, and Łukasiewicz example remains. TA-MVL-023 through TA-MVL-025 repair metadata, the component index, and an ambiguous emptiness clause.",
+      "translation_segment_sha256": "08c29bbd58f893b69dc2fc759358bc056c7f9612a8e7c3b0dd3fc2e6953e2304",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0405-S01",
+      "reverse_paraphrase": "Weakening, contraction, and exchange act independently at every position of an n-sided sequent, while cut removes one formula occurring in two distinct truth-value positions and combines all contexts.",
+      "assessment": "All three structural-rule schemata and the two-premise indexed cut schema remain exact; TA-MVL-026 normalizes only the part metadata.",
+      "translation_segment_sha256": "a709568647153597ba0e35f787aa8c0a957a74c25c5a0756761fbae4c4dc9c12",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0406-S01",
+      "reverse_paraphrase": "Connective rules are generated from their characteristic truth functions; the chapter gives every false, undefined, and true rule needed for negation, conjunction, disjunction, and the Łukasiewicz, strong Kleene, and Gödel conditionals.",
+      "assessment": "Every premise and conclusion in the complete rule displays and the final Łukasiewicz derivation remain structurally exact; TA-MVL-027 corrects only copied part metadata.",
+      "translation_segment_sha256": "2fc84bbd3833a7d35051a1b133f8e6e0ef7b81eea8ba628b041574dc0898a665",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -5718,11 +6006,75 @@
     {
       "unit_id": "OLP-0382",
       "issue": "The arithmetization sketch misspells “systematically” and gives a singular verb to the two Church-code conversion functions. Tamil restores the intended prose under TA-LAM-047."
+    },
+    {
+      "unit_id": "OLP-0385",
+      "issue": "The many-valued introduction has plural agreement failure in “this semantic building blocks” and says 1 plays the “rule” rather than the role of True. Tamil restores both intended readings under TA-MVL-001."
+    },
+    {
+      "unit_id": "OLP-0386",
+      "issue": "The connectives introduction says “a set supply” and “by tradition an convention.” Tamil gives the intended set of symbols and coordinated tradition-and-convention phrase under TA-MVL-002."
+    },
+    {
+      "unit_id": "OLP-0388",
+      "issue": "The matrix introduction uses singular “connective” although its definition supplies a truth function for each connective. Tamil restores the plural under TA-MVL-003."
+    },
+    {
+      "unit_id": "OLP-0391",
+      "issue": "The classical-fragment proposition leaves its valuation variable free, overstates agreement to arbitrary formulas despite proving only the shared-connective cases, and applies entailment between a valuation and formulas. Tamil quantifies the Boolean assignment condition, restricts the result to the proved fragment, and restores satisfaction notation under TA-MVL-004 through TA-MVL-006."
+    },
+    {
+      "unit_id": "OLP-0394",
+      "issue": "The Łukasiewicz section repeats one conjunction input order, has several ordinary prose defects, leaves an exercise formula with an unmatched parenthesis, and misspells possibility. Tamil repairs these under TA-MVL-007 through TA-MVL-010."
+    },
+    {
+      "unit_id": "OLP-0395",
+      "issue": "The Kleene motivation omits “as” in its outcome comparison and inserts a stray article before an if-clause. Tamil restores the intended computational reading under TA-MVL-011."
+    },
+    {
+      "unit_id": "OLP-0397",
+      "issue": "The LP proof falsely equates Undef with its Boolean collapse and repeats B where the conjunction cases require C. Tamil proves only the needed extreme-value implications and restores both C premises under TA-MVL-012 through TA-MVL-014."
+    },
+    {
+      "unit_id": "OLP-0398",
+      "issue": "The infinite-valued chapter driver retains a copied three-valued chapter header. Tamil aligns the metadata with its inf id and imports under TA-MVL-015."
+    },
+    {
+      "unit_id": "OLP-0399",
+      "issue": "The V_m comprehension allows n up to m with denominator m-1, yielding m+1 points and a value above 1 despite the stated m-point V_5 example. Tamil uses n<m under TA-MVL-016."
+    },
+    {
+      "unit_id": "OLP-0400",
+      "issue": "The infinite-valued Łukasiewicz file retains a copied three-valued chapter header. Tamil aligns the metadata with mvl/inf/luk under TA-MVL-017."
+    },
+    {
+      "unit_id": "OLP-0401",
+      "issue": "The infinite-valued Gödel file retains copied three-valued/Łukasiewicz headers and nests inline dollar delimiters inside an align/cases environment. Tamil corrects the metadata and removes only the redundant delimiters under TA-MVL-018 and TA-MVL-019."
+    },
+    {
+      "unit_id": "OLP-0402",
+      "issue": "The many-valued sequent-calculus driver retains a copied three-valued chapter header. Tamil aligns the metadata with mvl/seq under TA-MVL-020."
+    },
+    {
+      "unit_id": "OLP-0403",
+      "issue": "The introductory sequent ends its antecedent at A_n although the interpretation uses A_m, and its false-value alternative omits valuation v. Tamil restores the independent m/n lengths and valuation argument under TA-MVL-021 and TA-MVL-022."
+    },
+    {
+      "unit_id": "OLP-0404",
+      "issue": "The rules file retains first-order metadata, quantifies “each Gamma_1” instead of Gamma_i with faulty number agreement, and leaves unclear what is empty outside a nullary constant’s truth-value position. Tamil repairs these under TA-MVL-023 through TA-MVL-025."
+    },
+    {
+      "unit_id": "OLP-0405",
+      "issue": "The structural-rules header alone pluralizes the repository part name as many-valued-logics. Tamil normalizes it to the actual many-valued-logic path under TA-MVL-026."
+    },
+    {
+      "unit_id": "OLP-0406",
+      "issue": "The selected propositional-rules file retains copied first-order metadata although its stable id and all rules belong to many-valued logic. Tamil corrects the part header under TA-MVL-027."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "379 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 343 frozen units still require completion.",
+  "remaining": "403 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 319 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -5972,6 +6324,107 @@
         "systematic_godel_assignment_stated": true,
         "both_church_code_directions_preserved": true,
         "undefined_normalization_preserved": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0385",
+        "OLP-0386",
+        "OLP-0388",
+        "OLP-0391"
+      ],
+      "correction_ids": [
+        "TA-MVL-001",
+        "TA-MVL-002",
+        "TA-MVL-003",
+        "TA-MVL-004",
+        "TA-MVL-005",
+        "TA-MVL-006"
+      ],
+      "status": "pass",
+      "checks": {
+        "semantic_blocks_are_plural_and_one_plays_truth_role": true,
+        "primitive_supply_and_symbol_custom_repaired": true,
+        "matrix_has_truth_functions_for_connectives": true,
+        "boolean_condition_quantifies_every_variable": true,
+        "agreement_is_limited_to_common_fragment": true,
+        "countermodel_uses_satisfaction": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0394",
+        "OLP-0395",
+        "OLP-0397"
+      ],
+      "correction_ids": [
+        "TA-MVL-007",
+        "TA-MVL-008",
+        "TA-MVL-009",
+        "TA-MVL-010",
+        "TA-MVL-011",
+        "TA-MVL-012",
+        "TA-MVL-013",
+        "TA-MVL-014"
+      ],
+      "status": "pass",
+      "checks": {
+        "lukasiewicz_conjunction_lists_both_orders": true,
+        "lukasiewicz_exercise_formula_balanced": true,
+        "kleene_motivation_is_grammatical": true,
+        "lp_atomic_basis_avoids_false_triple_equality": true,
+        "lp_conjunction_cases_use_C": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0398",
+        "OLP-0399",
+        "OLP-0400",
+        "OLP-0401"
+      ],
+      "correction_ids": [
+        "TA-MVL-015",
+        "TA-MVL-016",
+        "TA-MVL-017",
+        "TA-MVL-018",
+        "TA-MVL-019"
+      ],
+      "status": "pass",
+      "checks": {
+        "chapter_metadata_matches_inf_path": true,
+        "finite_value_set_has_exactly_m_points": true,
+        "lukasiewicz_metadata_matches_inf_path": true,
+        "goedel_metadata_matches_inf_god": true,
+        "goedel_cases_avoid_nested_math": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0402",
+        "OLP-0403",
+        "OLP-0404",
+        "OLP-0405",
+        "OLP-0406"
+      ],
+      "correction_ids": [
+        "TA-MVL-020",
+        "TA-MVL-021",
+        "TA-MVL-022",
+        "TA-MVL-023",
+        "TA-MVL-024",
+        "TA-MVL-025",
+        "TA-MVL-026",
+        "TA-MVL-027"
+      ],
+      "status": "pass",
+      "checks": {
+        "driver_metadata_names_sequent_calculus": true,
+        "antecedent_length_and_valuation_are_explicit": true,
+        "every_component_is_indexed_and_other_constant_positions_empty": true,
+        "structural_metadata_matches_part": true,
+        "propositional_metadata_matches_part": true,
+        "selected_logic_rule_families_remain": true
       }
     }
   ]

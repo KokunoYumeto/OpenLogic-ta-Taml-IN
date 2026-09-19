@@ -1,0 +1,103 @@
+% SEGMENT OLP-0391-S01
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: sublogics
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{sub}
+
+\olsection{செவ்வியல் தருக்கம்~$\LogCL$ இன் உட்தருக்கங்களாகப் பல்மதிப்புத்
+தருக்கங்கள்}
+
+வழக்கமான பல்மதிப்புத் தருக்கங்கள் அனைத்தும், $\{\True, \False\}$ இலுள்ள
+உள்ளீடுகளுக்கான வாய்மைச் சார்பின் மதிப்பு செவ்வியல் வாய்மைச் சார்புகளுடன்
+ஒத்திருக்குமாறு அமைந்த அணிகளைக் கொண்டு வரையறுக்கப்படுகின்றன. குறிப்பாக,
+இத்தருக்கங்களில் $x \in \{\True, \False\}$ எனில்,
+$\tf{\lnot}[\Log L](x) =
+\tf{\lnot}[\LogCL](x)$; மேலும் $\star$ என்பது $\land$, $\lor$, $\lif$
+ஆகியவற்றில் ஏதேனும் ஒன்று எனில், $x, y \in \{\True, \False\}$ ஆகும்போது
+$\tf{\star}[\Log L](x,y) =
+\tf{\star}[\LogCL](x,y)$. வேறு சொற்களில், $\{\True,\False\}$ க்கு
+வரம்புறுத்தப்பட்ட $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றின் வாய்மைச்
+சார்புகள் செவ்வியல் வாய்மைச் சார்புகளே.
+
+\begin{prop}\ollabel{prop:mvl-cl}
+  ஒரு பல்மதிப்புத் தருக்கம்~$\Log L$ ஆனது அதன் மொழியில்
+  $\lnot$, $\land$, $\lor$, $\lif$ ஆகிய இணைப்பிகளைக் கொண்டுள்ளது என்றும்,
+  $\True, \False \in V$ என்றும், அதன் வாய்மைச் சார்புகள் பின்வருவனவற்றை
+  நிறைவுசெய்கின்றன என்றும் கொள்க:
+  \begin{enumerate}
+    \item\ollabel{prop:not} $x = \True$ அல்லது $x = \False$ எனில்,
+    $\tf{\lnot}[\Log L](x) = \tf{\lnot}[\LogCL](x)$;
+    \item\ollabel{prop:land} $\tf{\land}[\Log L](x,y) = \tf{\land}[\LogCL](x,y)$,
+    \item\ollabel{prop:lor} $\tf{\lor}[\Log L](x,y) = \tf{\lor}[\LogCL](x,y)$,
+    \item\ollabel{prop:lif} $\tf{\lif}[\Log L](x,y) = \tf{\lif}[\LogCL](x,y)$,
+    இங்கு $x, y \in \{\True, \False\}$.
+  \end{enumerate}
+  % SOURCE CORRECTION TA-MVL-004: quantify the Boolean-valued assignment condition over every propositional variable.
+  ஒவ்வொரு கூற்று மாறிக்கும் $\pAssign v(p) \in \{\True,\False\}$ என
+  அமையும்~$V$-மதிப்புடைய எந்த மதிப்பீடு~$\pAssign v$ க்கும்,
+  % SOURCE CORRECTION TA-MVL-005: state the common classical fragment required by the displayed induction cases.
+  மேலுள்ள நான்கு இணைப்பிகளை மட்டுமே கொண்டு கட்டப்பட்ட எந்த வாய்பாட்டுக்கும்
+  $\pValue v[\Log L](!A) = \pValue v[\LogCL](!A)$.
+\end{prop}
+
+\begin{proof}
+  $!A$ இன்மீதான தொகுத்தறிதலால் நிறுவுகிறோம்.
+  \begin{enumerate}
+  \item $!A \ident p$ என்பது அணுவாய்பாடு எனில்,
+  $\pValue v[\Log L](!A) =
+  \pAssign v(p) = \pValue
+  v[\LogCL](!A)$.
+  \item $!A \ident \lnot B$ எனில்,
+  \begin{align*}
+    \pValue v[\Log L](!A) & = \tf{\lnot}[\Log L](\pValue v[\Log L](!B)) & &\text{\olref[val]{defn:pValue} ஆல்}\\
+    & = \tf{\lnot}[\Log L](\pValue v[\LogCL](!B)) && \text{தொகுத்தறிதல் கருதுகோளால்}\\
+    & = \tf{\lnot}[\LogCL](\pValue v[\LogCL](!B))
+&&\text{\olref{prop:not} கருதுகோளால்,}\\
+&&&\text{ஏனெனில் $\pValue v[\LogCL](!B) \in \{\True, \False\}$,}\\
+& = \pValue v[\LogCL](!A) &&\text{\olref[val]{defn:pValue} ஆல்}.
+\end{align*}
+\item $!A \ident (!B \land !C)$ எனில்,
+\begin{align*}
+  \pValue v[\Log L](!A) & = \tf{\land}[\Log L](\pValue v[\Log L](!B), \pValue v[\Log L](!C)) & &\text{\olref[val]{defn:pValue} ஆல்}\\
+  & = \tf{\land}[\Log L](\pValue v[\LogCL](!B),\pValue v[\LogCL](!C)) && \text{தொகுத்தறிதல் கருதுகோளால்}\\
+  & = \tf{\land}[\LogCL](\pValue v[\LogCL](!B),\pValue v[\LogCL](!C))
+&&\text{\olref{prop:land} கருதுகோளால்,}\\
+&&&\text{ஏனெனில் $\pValue v[\LogCL](!B),\pValue v[\LogCL](!C) \in \{\True, \False\}$,}\\
+& = \pValue v[\LogCL](!A) &&\text{\olref[val]{defn:pValue} ஆல்}.
+\end{align*}
+\end{enumerate}
+$!A \ident (!B \lor !C)$ மற்றும் $!A \ident (!B \lif !C)$ ஆகிய
+நேர்வுகளும் இதேபோன்றவை.
+\end{proof}
+
+\begin{cor}
+  ஒரு பல்மதிப்புத் தருக்கம் \olref{prop:mvl-cl} இன் நிபந்தனைகளை
+  நிறைவுசெய்து, $\True \in V^+$ மற்றும் $\False \notin V^+$ எனவும்
+  இருந்தால், ${\Entails[\Log L]} \subseteq {\Entails[\LogCL]}$; அதாவது,
+  $\Gamma \Entails[\Log L] !B$ எனில் $\Gamma \Entails[\LogCL] !B$.
+  குறிப்பாக, $\Log L$ இன் செவ்வியல் துணைமொழியிலுள்ள ஒவ்வொரு மெய்மமும்
+  ஒரு செவ்வியல் மெய்மம்.
+\end{cor}
+
+\begin{proof}
+  முரண்மாற்றை நிறுவுகிறோம். $\Gamma \Entails/[\LogCL] !B$ எனக் கொள்க.
+  அப்போது, எல்லா $!A \in \Gamma$ க்கும்
+  $\pValue v[\LogCL](!A) = \True$ ஆகவும்
+  $\pValue v[\LogCL](!B) = \False$ ஆகவும் அமையும் ஏதோ ஓர்
+  !!{valuation}~$\pAssign v\colon \PVar \to
+  \{\True, \False\}$ உள்ளது. $\True,
+  \False \in V$ என்பதால், !!{valuation}~$\pAssign v$ ஆனது~$\Log L$
+  க்கும் !!a{valuation}. \olref{prop:mvl-cl} ஆல், எல்லா
+  $!A \in \Gamma$ க்கும் $\pValue v[\Log L](!A) =
+  \True$; மேலும் $\pValue v[\Log L](!B) = \False$.
+  % SOURCE CORRECTION TA-MVL-006: use satisfaction, rather than entailment, between a valuation and formulas.
+  $\True \in V^+$ மற்றும் $\False \notin V^+$ என்பதால்,
+  $\pSat{v}{\Gamma}[\Log L]$ மற்றும் $\pSat/{v}{!B}[\Log L]$; அதாவது,
+  $\Gamma \Entails/[\Log L] !B$.
+\end{proof}
+\end{document}

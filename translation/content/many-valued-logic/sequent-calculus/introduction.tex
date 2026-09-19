@@ -1,0 +1,89 @@
+% SEGMENT OLP-0403-S01
+% Part: many-valued-logic
+% Chapter: sequent-calculus
+% Section: introduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{seq}{int}
+
+\olsection{அறிமுகம்}
+
+செவ்வியல் தருக்கத்திற்கான தொடரணிக் கணியம் திறம்பட்ட, எளிய
+!!{derivation} முறைமை. ஒரு பல்மதிப்புத் தருக்கம் முடிவுறு எண்ணிக்கையிலான
+மெய்மதிப்புகளைக் கொண்ட ஓர் அணியால், அதாவது முடிவுறு~$V$ ஆல்,
+வரையறுக்கப்பட்டிருந்தால், அதற்கு ஒரு தொடரணிக் கணியத்தை வழங்க முடியும்.
+செவ்வியல் நேர்வில் தொடரணிகளின் பொருளையும் அனுமான விதிகளின் வடிவத்தையும்
+கருதுவதிலிருந்து இதை எவ்வாறு செய்வது என்ற எண்ணம் கிடைக்கிறது.
+
+ஒரு தொடரணி
+% SOURCE CORRECTION TA-MVL-021: use A_m as the final antecedent to match the interpreted conjunction.
+\begin{align*}
+    !A_1, \dots, !A_m & \Sequent !B_1, \dots, !B_n
+\intertext{பின்வரும் !!{formula} ஆகப் பொருள்கொள்ளப்படலாம் என்பதை இப்போது
+நினைவுகூர்க:}
+    (!A_1 \land \cdots \land !A_m) & \lif (!B_1 \lor \cdots \lor
+!B_n)
+\end{align*}
+வேறு சொற்களில், ஒரு தொடரணி~$\Gamma \Sequent \Delta$ ஐ
+!!^a{valuation}~$\pAssign{v}$ \emph{நிறைவுறுத்துவது}, அப்போதும் அப்போது
+மட்டுமே, ஏதோ~$!A \in \Gamma$ க்கு $\pValue{v}(!A) = \False$ அல்லது
+ஏதோ~$!A \in \Delta$ க்கு $\pValue{v}(!A) = \True$. இந்தப்
+பொருள்கோளின்படி, தொடக்கத் தொடரணிகள்~$!A \Sequent !A$ எப்போதும்
+நிறைவுறுத்தப்படுகின்றன; ஏனெனில் $\pValue v(!A) = \True$ அல்லது
+% SOURCE CORRECTION TA-MVL-022: restore the valuation argument in the false-value alternative.
+$\pValue v(!A) = \False$.
+
+பக்க வாய்பாடுகள்~$\Gamma$, $\Delta$ விடப்பட்ட நிலையில்,~$\Log{LK}$ இல்
+நிபந்தனைவாக்கியத்திற்கான அனுமான விதிகள் இவை:
+
+\begin{defish}
+    \Axiom$ \fCenter !A$
+    \Axiom$ !B \fCenter $
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$ !A \lif !B \fCenter $
+    \DisplayProof
+    \hfill
+    \Axiom$ !A \fCenter !B$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$ \fCenter !A \lif !B $
+    \DisplayProof
+\end{defish}
+
+மேலுள்ள ஒரு தொடரணியின் பொருண்மைப் பொருள்கோளைப் பயன்படுத்தினால்,
+$\pValue v(!A) = \True$, $\pValue v(!B) = \False$ எனில்,
+$\pValue v(!A \lif !B) = \False$ என்று $\LeftR{\lif}$ விதி கூறுவதாகப்
+படிக்கலாம். இதேபோல், $\pValue v(!A) = \False$ அல்லது
+$\pValue v(!B) = \True$ எனில், $\pValue v(!A \lif !B) = \True$ என்று
+$\RightR{\lif}$ விதி கூறுகிறது. உண்மையில், இந்த நிபந்தனைக் கூற்றுகள்
+இருவழிக் கூற்றுகளே. $\LeftR{\land}$, $\RightR{\lor}$ விதிகளின் செந்தர
+வடிவங்களில், அவற்றிற்கு ஒத்த நிபந்தனைக் கூற்றுகள் இருவழிக் கூற்றுகளாக
+இருக்காது. ஆனால் அவை இருவழிக் கூற்றுகளாக அமையும் பின்வரும் மாற்று வடிவங்கள்
+இந்த விதிகளுக்கு உள்ளன:
+
+\begin{defish}
+    \Axiom$!A, !B, \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\land}}
+    \UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+    \DisplayProof
+    \hfill
+    \Axiom$ \Gamma \fCenter \Delta, !A, !B$
+    \RightLabel{\RightR{\lor}}
+    \UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+    \DisplayProof
+\end{defish}
+
+இந்த அடிப்படை எண்ணத்தை ஓர்~$n$-மதிப்புத் தருக்கத்திற்குப் பயன்படுத்தினால்,
+இரண்டு இடங்களுக்குப் பதிலாக, ஒவ்வொரு மெய்மதிப்புக்கும் ஒன்றாக, $n$ இடங்களைக்
+கொண்ட ஒரு தொடரணிக் கணியம் கிடைக்கிறது. $V = \{\False, \Undef, \True\}$
+என்ற மும்மதிப்புத் தருக்கத்தில், ஒரு தொடரணி
+$\Gamma \mid \Pi \mid \Delta$ என்ற கோவை. அதை !!a{valuation}~$\pAssign v$
+நிறைவுறுத்துவது, அப்போதும் அப்போது மட்டுமே, ஏதோ~$!A \in \Gamma$ க்கு
+$\pValue{v}(!A) = \False$ அல்லது ஏதோ~$!A \in \Delta$ க்கு
+$\pValue{v}(!A) = \True$ அல்லது ஏதோ~$!A \in \Pi$ க்கு
+$\pValue{v}(!A) = \Undef$. எனவே தொடக்கத் தொடரணிகள்
+$!A \mid !A \mid !A$ எப்போதும் நிறைவுறுத்தப்படுகின்றன.
+
+\end{document}

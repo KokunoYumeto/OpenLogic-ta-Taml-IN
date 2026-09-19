@@ -1,0 +1,73 @@
+% SEGMENT OLP-0386-S01
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: connectives
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{con}
+
+\olsection{மொழிகளும் இணைப்பிகளும்}
+
+செவ்வியல் கூற்றுத் தருக்கமும் வேறு பல தருக்கங்களும் \emph{கூற்று
+மாறிலிகள்}, \emph{இணைப்பிகள்} ஆகியவற்றின் ஒரு கணத்தைப் பயன்படுத்துகின்றன.
+எடுத்துக்காட்டாக,
+பின்வருவனவற்றை மூலக் குறிகளாகப் பயன்படுத்துகிறோம்:
+\begin{enumerate}
+\tagitem{prvFalse}{!!{falsity}க்கான கூற்று மாறிலி~$\lfalse$.}{}
+\tagitem{prvTrue}{!!{truth}க்கான கூற்று மாறிலி~$\ltrue$.}{}
+\item தருக்க இணைப்பிகள்:
+  \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (மறுப்பு)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (இணையல்)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (பிரிப்பிணைவு)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}%
+\end{enumerate}
+\iftag{defNot,defOr,defAnd,defIf,defIff,defTrue,defFalse,defEx,defAll}{%
+மேலுள்ள மூல இணைப்பிகளுடன், பின்வருபவை போன்ற சுருக்கக்குறிகளாக
+வரையறுக்கப்பட்ட குறிகளையும் பயன்படுத்துகிறோம்:
+\startycommalist
+  \iftag{defNot}{\ycomma $\lnot$ (மறுப்பு)}{}%
+  \iftag{defAnd}{\ycomma $\land$ (இணையல்)}{}%
+  \iftag{defOr}{\ycomma $\lor$ (பிரிப்பிணைவு)}{}%
+  \iftag{defIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{defIff}{\ycomma $\liff$ (!!{biconditional})}{}%
+  \iftag{defFalse}{\ycomma $\lfalse$ (!!{falsity})}{}%
+  \iftag{defTrue}{\ycomma $\ltrue$ (!!{truth})}.}{}
+
+இதே இணைப்பிகள் பல்மதிப்புத் தருக்கங்களிலும் பயன்படுத்தப்படுகின்றன. ஆனால்,
+எடுத்துக்காட்டாக இணையலின் வெவ்வேறு வடிவங்களை ஒரே தருக்கத்தில் சேர்ப்பது
+பல நேரங்களில் பயனுள்ளது; அந்த வடிவங்களை வேறுபடுத்த வெவ்வேறு குறிகள் தேவை.
+சில பல்மதிப்புத் தருக்கங்களில் செவ்வியல் தருக்கத்தில் சமானம் இல்லாத
+இணைப்பிகளும் உள்ளன. ஆகவே வழக்கத்தைவிடச் சிறிது பொதுவாகக் கூறுவோம்.
+
+\begin{defn}
+  ஒரு \emph{கூற்று மொழி} என்பது \emph{இணைப்பிகளின்} கணம்~$\Lang L$ ஐக்
+  கொண்டது. ஒவ்வோர் இணைப்பி~$\star$ க்கும் ஓர் \emph{இடவெண்} உண்டு;
+  இடவெண்~$n$ கொண்ட இணைப்பியை \emph{$n$-இட இணைப்பி} என்போம்.
+  இடவெண்~$0$ கொண்ட இணைப்பிகளை \emph{மாறிலிகள்} என்றும், இடவெண்~$1$
+  கொண்ட இணைப்பிகளை \emph{ஓரிட இணைப்பிகள்} என்றும், இடவெண்~$2$ கொண்ட
+  இணைப்பிகளை \emph{ஈரிட இணைப்பிகள்} என்றும் கூறுகிறோம்.
+\end{defn}
+
+\begin{ex}
+  கூற்றுத் தருக்கத்தின் செந்தர மொழி~$\Lang L_0$ பின்வரும் இணைப்பிகளைக்
+  (அவற்றுக்குரிய இடவெண்களுடன்) கொண்டது:
+  $\lfalse$~($0$)
+  $\lnot$~($1$),
+  $\land$~($2$),
+  $\lor$~($2$),
+  $\lif$~($2$). நாம் கருதும் பெரும்பாலான தருக்கங்கள் இம்மொழியையே
+  பயன்படுத்தும்.
+  % SOURCE CORRECTION TA-MVL-002: repair “by tradition an convention” while retaining the source's intended symbol contrast.
+  மரபாலும் நடைமுறையாலும் சில தருக்கங்கள் சில இணைப்பிகளுக்கு வெவ்வேறு
+  குறிகளைப் பயன்படுத்துகின்றன. எடுத்துக்காட்டாக, பெருக்கல் தருக்கத்தில்
+  இணையலுக்கான குறி~$\land$ என்பதற்குப் பதிலாகப் பெரும்பாலும்~$\odot$ ஆகும்.
+  சில நேரங்களில் தீர்மானத்தன்மைச் செயலி~$\triangle$ ($1$-இடம்) போன்ற
+  புதிய செயலியைச் சேர்ப்பது வசதியாக இருக்கும்.
+\end{ex}
+
+\end{document}

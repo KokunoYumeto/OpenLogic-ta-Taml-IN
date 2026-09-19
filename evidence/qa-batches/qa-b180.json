@@ -1,0 +1,245 @@
+{
+  "batch_id": "TA-B180",
+  "units": [
+    {
+      "unit_id": "OLP-0388",
+      "source_sha256": "b52a35007f90b9c696d8f3396d4ebbf625e24983bbbbb806fdffa6837bd0f9a1",
+      "translation_sha256": "21b1433894f6cbe95325ed5dc279553345d267a349f832d9cec5f5e54cb48400",
+      "source_bytes": 2297,
+      "translation_bytes": 3896,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-003",
+          "unit_id": "OLP-0388",
+          "kind": "matrix-introduction-singular-connective",
+          "action": "Used the plural 'connectives' in the description of the matrix's truth functions.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The opening says a matrix has truth functions 'for its connective' although the next definition assigns one to each connective in the language.",
+          "chosen_treatment": "தமிழ் அணியில் அதன் இணைப்பிகள் ஒவ்வொன்றுக்குமான வாய்மைச் சார்புகள் உள்ளன என்று பலவினத்தில் கூறுகிறது.",
+          "alternatives_considered": "Reading the singular as restricting every language to one connective; treating all connective interpretations as one untyped function.",
+          "rationale": "The enumerated definition quantifies over every n-place connective and gives each its own arity-indexed truth function.",
+          "precise_review_question": "Does the plural repair agree with the following per-connective function clause without adding any semantic component?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-003"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0389",
+      "source_sha256": "295efac982d3d4d6a5a4c2b910b3a37ecb85ce1b7925950db359034733498bb1",
+      "translation_sha256": "1bf2f1c2801be9b0abdc752eaca264c578d07522ab08b2f86763b9a1ac6b760a",
+      "source_bytes": 1620,
+      "translation_bytes": 2820,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "propositional",
+        "section",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0390",
+      "source_sha256": "897125a2b2dddc985219270cc16af490719261dc292857bbcb157d1ad899597d",
+      "translation_sha256": "59018dae82df87c25eaa9e40fc1ce14f9a7a75a246141d032fb3af6677c02212",
+      "source_bytes": 2336,
+      "translation_bytes": 4680,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "mvl",
+        "open",
+        "section",
+        "sem",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0391",
+      "source_sha256": "1180052e6f39c499a3d55b43200ce6af0e92b3f2c5b55d416eaac29e96bb66a7",
+      "translation_sha256": "1d6d5928c366c976ccfb5cc0fc8868622e5cefbfc689467c64b12550d88f634b",
+      "source_bytes": 4032,
+      "translation_bytes": 7080,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\pAssignv\\Entails[\\LogL]\\Gamma$",
+        "$\\pAssignv\\Entails/[\\LogL]!B$"
+      ],
+      "extra_math": [
+        "$\\pSat{v}{\\Gamma}[\\LogL]$",
+        "$\\pSat/{v}{!B}[\\LogL]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "val"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-004",
+          "unit_id": "OLP-0391",
+          "kind": "boolean-valuation-condition-leaves-variable-free",
+          "action": "Made explicit that the valuation assigns a classical value to every propositional variable.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proposition writes the condition v(p) in {True, False} with p free, although its inductive conclusion ranges over arbitrary formulas.",
+          "chosen_treatment": "தமிழ் அந்த நிபந்தனை ஒவ்வொரு கூற்று மாறிக்கும் பொருந்த வேண்டும் என்று வெளிப்படையாகக் கூறுகிறது.",
+          "alternatives_considered": "Treating p as one fixed variable; silently relying on an unstated universal convention for the free letter.",
+          "rationale": "The atomic induction case needs the Boolean-value condition for whichever propositional variable occurs as the formula.",
+          "precise_review_question": "Does the explicit universal reading supply exactly the hypothesis used in every atomic-variable case?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-004"
+        },
+        {
+          "audit_id": "TA-MVL-005",
+          "unit_id": "OLP-0391",
+          "kind": "classical-agreement-theorem-overstates-language-scope",
+          "action": "Restricted the agreement and tautology claims to the common classical fragment generated by the four listed connectives.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proposition assumes that L contains the four classical connectives but allows additional connectives, then claims agreement for any formula while its proof treats only variables, negation, conjunction, disjunction and conditional. The corollary likewise calls every L-tautology classical even when it may use a nonclassical-only connective.",
+          "chosen_treatment": "தமிழ் முடிவை நான்கு பொதுவான இணைப்பிகளால் கட்டப்பட்ட செவ்வியல் துணைமொழி வாய்பாடுகளுக்கும் அதே துணைமொழியின் மெய்மங்களுக்கும் வரம்பிடுகிறது.",
+          "alternatives_considered": "Changing 'contains' to 'contains exactly' and excluding constants; inventing classical interpretations for every additional connective.",
+          "rationale": "The displayed induction has exactly the four connective cases, and classical evaluation is defined only on formulas of the shared language.",
+          "precise_review_question": "Is the repaired scope exactly the fragment justified by the induction and needed for the consequence inclusion?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-005"
+        },
+        {
+          "audit_id": "TA-MVL-006",
+          "unit_id": "OLP-0391",
+          "kind": "valuation-formula-relation-mistyped-as-entailment",
+          "action": "Used satisfaction and nonsatisfaction between the valuation and the premise set or conclusion formula.",
+          "expected_missing_math": [
+            "$\\pAssignv\\Entails[\\LogL]\\Gamma$",
+            "$\\pAssignv\\Entails/[\\LogL]!B$"
+          ],
+          "expected_extra_math": [
+            "$\\pSat{v}{\\Gamma}[\\LogL]$",
+            "$\\pSat/{v}{!B}[\\LogL]$"
+          ],
+          "expected_missing_commands": [
+            "\\pAssign",
+            "\\pAssign",
+            "\\Entails",
+            "\\Entails"
+          ],
+          "expected_extra_commands": [
+            "\\pSat",
+            "\\pSat"
+          ],
+          "source_issue_or_choice": "The final proof applies the entailment relation between a valuation and Gamma or B, although entailment was defined between a formula set and a formula; the preceding valuation clauses establish satisfaction instead.",
+          "chosen_treatment": "தமிழ் மதிப்பீடு முன்கோள் கணத்தை நிறைவுறுத்துகிறது என்றும் முடிவு வாய்பாட்டை நிறைவுறுத்தவில்லை என்றும் சரியான நிறைவுறுத்தல் குறியீட்டில் எழுதுகிறது.",
+          "alternatives_considered": "Treating the valuation as a singleton premise set; redefining entailment to accept valuations as its left argument.",
+          "rationale": "The proof constructs one Boolean-valued valuation that makes every premise designated and B undesignated, exactly the countermodel condition for failed entailment.",
+          "precise_review_question": "Do the two satisfaction statements now type-check and yield the final non-entailment claim directly?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-006"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\pAssign",
+        "\\pAssign",
+        "\\Entails",
+        "\\Entails"
+      ],
+      "extra_commands": [
+        "\\pSat",
+        "\\pSat"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 371/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 393/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -2108,6 +2108,438 @@ Please double-check: **does the Tamil proof keep both directions of the Church-c
 
 - `TA-OCC-d4b4e2e03e9da70e` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:24`; PDF page pending.
 
+## TA-MVL-001 — The source says 'With this semantic building blocks' and that 1 plays the 'rule' of True, where the surrounding explanations require 'these' and 'role'.
+
+Chosen rendering: **தமிழ் பொருண்மை அடிக்கட்டுகளைப் பலவினமாகக் குறிப்பிட்டு, 1 என்பது மெய்யின் இடத்தை வகிக்கிறது என்று தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The paragraph uses those semantic components to define several notions, and its numerical example concerns which value serves as truth rather than any inference rule.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0385 (checked_supports)
+
+Alternatives: Preserving the number disagreement; construing rule as a formal inference rule.
+
+Please double-check: **does the repaired Tamil preserve the semantic generalization while avoiding any suggestion that 1 is an inference rule?**
+
+- `TA-OCC-7bceec7a28cb2a24` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:49`; PDF page pending.
+
+## TA-MVL-002 — The source's 'a set supply' is grammatically malformed, and the example says 'by tradition an convention'.
+
+Chosen rendering: **தமிழ் கூற்று மாறிலிகளும் இணைப்பிகளும் அடங்கிய கணத்தையும், மரபாலும் நடைமுறையாலும் மாறும் குறிகளையும் தெளிவாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The immediately following enumeration supplies the set's members, while the product-logic example plainly attributes notation to tradition and convention.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0386 (checked_supports)
+
+Alternatives: Treating supply as a technical object; preserving 'an' as though it named a third basis for symbol choice.
+
+Please double-check: **does the Tamil retain exactly the listed primitive symbols and the intended reason for alternative notation?**
+
+- `TA-OCC-df8182e2832e71f5` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:65`; PDF page pending.
+
+## TA-MVL-003 — The opening says a matrix has truth functions 'for its connective' although the next definition assigns one to each connective in the language.
+
+Chosen rendering: **தமிழ் அணியில் அதன் இணைப்பிகள் ஒவ்வொன்றுக்குமான வாய்மைச் சார்புகள் உள்ளன என்று பலவினத்தில் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The enumerated definition quantifies over every n-place connective and gives each its own arity-indexed truth function.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0388 (checked_supports)
+
+Alternatives: Reading the singular as restricting every language to one connective; treating all connective interpretations as one untyped function.
+
+Please double-check: **does the plural repair agree with the following per-connective function clause without adding any semantic component?**
+
+- `TA-OCC-34622f32b2b44712` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; PDF page pending.
+
+## TA-MVL-004 — The proposition writes the condition v(p) in {True, False} with p free, although its inductive conclusion ranges over arbitrary formulas.
+
+Chosen rendering: **தமிழ் அந்த நிபந்தனை ஒவ்வொரு கூற்று மாறிக்கும் பொருந்த வேண்டும் என்று வெளிப்படையாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The atomic induction case needs the Boolean-value condition for whichever propositional variable occurs as the formula.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0391 (checked_supports)
+
+Alternatives: Treating p as one fixed variable; silently relying on an unstated universal convention for the free letter.
+
+Please double-check: **does the explicit universal reading supply exactly the hypothesis used in every atomic-variable case?**
+
+- `TA-OCC-01b18a8d3d0a6329` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:40`; PDF page pending.
+
+## TA-MVL-005 — The proposition assumes that L contains the four classical connectives but allows additional connectives, then claims agreement for any formula while its proof treats only variables, negation, conjunction, disjunction and conditional. The corollary likewise calls every L-tautology classical even when it may use a nonclassical-only connective.
+
+Chosen rendering: **தமிழ் முடிவை நான்கு பொதுவான இணைப்பிகளால் கட்டப்பட்ட செவ்வியல் துணைமொழி வாய்பாடுகளுக்கும் அதே துணைமொழியின் மெய்மங்களுக்கும் வரம்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed induction has exactly the four connective cases, and classical evaluation is defined only on formulas of the shared language.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0391 (checked_supports)
+
+Alternatives: Changing 'contains' to 'contains exactly' and excluding constants; inventing classical interpretations for every additional connective.
+
+Please double-check: **is the repaired scope exactly the fragment justified by the induction and needed for the consequence inclusion?**
+
+- `TA-OCC-b86a7fec2847b44b` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:43`; PDF page pending.
+
+## TA-MVL-006 — The final proof applies the entailment relation between a valuation and Gamma or B, although entailment was defined between a formula set and a formula; the preceding valuation clauses establish satisfaction instead.
+
+Chosen rendering: **தமிழ் மதிப்பீடு முன்கோள் கணத்தை நிறைவுறுத்துகிறது என்றும் முடிவு வாய்பாட்டை நிறைவுறுத்தவில்லை என்றும் சரியான நிறைவுறுத்தல் குறியீட்டில் எழுதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The proof constructs one Boolean-valued valuation that makes every premise designated and B undesignated, exactly the countermodel condition for failed entailment.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0391 (checked_supports)
+
+Alternatives: Treating the valuation as a singleton premise set; redefining entailment to accept valuations as its left argument.
+
+Please double-check: **do the two satisfaction statements now type-check and yield the final non-entailment claim directly?**
+
+- `TA-OCC-a5c8c6e22ba19404` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:98`; PDF page pending.
+
+## TA-MVL-007 — The prose discusses either conjunct being false, but the display repeats tf-land(False,Undef) instead of giving the reversed input order.
+
+Chosen rendering: **தமிழ் இரண்டாம் சமன்பாட்டில் வரையறுக்கப்படாத மதிப்பையும் பொய்மதிப்பையும் மறுதிசையில் அமைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The immediately preceding true/undefined display gives both orders, and the matrix table assigns False to both false/undefined orders.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0394 (checked_supports)
+
+Alternatives: Repeating the first ordered pair; omitting commutativity from the explanatory equations.
+
+Please double-check: **does the repaired display now state both symmetric false-conjunction cases shown by the matrix?**
+
+- `TA-OCC-6ace90ec04561d75` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:61`; PDF page pending.
+
+## TA-MVL-008 — The source leaves the parenthetical 'if the arguments are settled truth values' open and says 'had not trouble' rather than 'had no trouble'.
+
+Chosen rendering: **தமிழ் இடைச்செருகலை முழுமையாக மூடி, இரு திட்டங்களை விடத் தயங்கவில்லை என்ற இயல்பான பொருளைத் தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The surrounding comparison separates settled classical inputs from the later conditional case and contrasts accepted losses with reluctance to lose reflexivity.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0394 (checked_supports)
+
+Alternatives: Treating the remainder of the paragraph as parenthetical; construing 'not trouble' as a technical negation.
+
+Please double-check: **does the repaired prose preserve the contrast between accepted excluded-middle failures and retained A-implies-A?**
+
+- `TA-OCC-7f0627886b5e8514` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:81`; PDF page pending.
+
+## TA-MVL-009 — The first formula already closes its conjunction before the conditional and then contains one unmatched final right parenthesis.
+
+Chosen rendering: **தமிழ் வாய்பாட்டின் இறுதியில் உள்ள இணையற்ற வல அடைப்புக்குறியை நீக்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The exercise asks about a conditional whose antecedent is the contradictory conjunction and whose consequent is q.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0394 (checked_supports)
+
+Alternatives: Adding an unmatched opening parenthesis around the whole conditional; treating the extra mark as prose punctuation inside math.
+
+Please double-check: **is the corrected formula balanced with exactly the conjunction as antecedent?**
+
+- `TA-OCC-ec27cbc61bfbfa84` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:192`; PDF page pending.
+
+## TA-MVL-010 — The final paragraph begins 'However' twice and later misspells 'possibility' as 'possiblity'.
+
+Chosen rendering: **தமிழ் ஒரே மாறுகூற்றுடன் தொடங்கி கூடுதன்மை, கட்டாயத்தன்மை என்ற இரு மாதிரி வேறுபாடுகளையும் தெளிவாகக் குறிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Neither defect changes the stated countervaluation or the conclusion that three values remain insufficient.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0394 (checked_supports)
+
+Alternatives: Preserving the duplicated transition; treating the misspelling as a distinct modal notion.
+
+Please double-check: **does the Tamil retain the counterexample and the exact insufficiency conclusion after the prose repair?**
+
+- `TA-OCC-409b92095be64d84` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:253`; PDF page pending.
+
+## TA-MVL-011 — The source says truth values are 'thought of the outcomes' and later 'the if one conjunct is undefined'.
+
+Chosen rendering: **தமிழ் மெய்மதிப்புகளை கணிப்பீட்டுச் செயல்முறைகளின் விளைவுகளாகக் கூறி, ஒரு இணையுறுப்பு வரையறுக்கப்படாத நேர்வை முழுமையான வாக்கியமாக வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The following sequential and parallel procedures make both intended grammatical relations unambiguous.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0395 (checked_supports)
+
+Alternatives: Treating outcomes as objects directly identified with the thought; retaining the stray article as a technical marker.
+
+Please double-check: **does the repaired prose preserve the sequential nontermination motivation for weak Kleene operations?**
+
+- `TA-OCC-34b938f6e809230d` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:14`; PDF page pending.
+
+## TA-MVL-012 — The source asserts v(p)=v-prime(p), but its own definition maps v(p)=Undef to v-prime(p)=True, so that triple equality is false. The induction needs only preservation of the extreme values False and True.
+
+Chosen rendering: **தமிழ் இரு மதிப்பீடுகளின் அணுவாய்பாட்டு மதிப்புகளைத் தனித்தனியாக அவற்றின் ஒதுக்கீடுகளுடன் சமப்படுத்தி, தேவையான இரு உட்கிடைகளை v-prime இன் வரையறையிலிருந்து பெறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: When v(p) is False or True, the collapse definition preserves it; the Undef case is irrelevant to implications (a) and (b).
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0397 (checked_supports)
+
+Alternatives: Claiming Undef equals True; changing the collapse map and breaking the theorem; strengthening the induction to an unavailable equality.
+
+Please double-check: **does the repaired basis establish exactly (a) and (b) without asserting equality in the Undef case?**
+
+- `TA-OCC-2987eb652cae1521` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:95`; PDF page pending.
+
+## TA-MVL-013 — The false-conjunction case says B is false or B is false, although its induction conclusion and the strong Kleene table require B or C.
+
+Chosen rendering: **தமிழ் இரண்டாம் பிரிப்புறுப்பில் C இன் மதிப்பு பொய் என்று தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: A strong Kleene conjunction is false when either conjunct is false, and the next line already applies the induction hypothesis to B or C.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0397 (checked_supports)
+
+Alternatives: Repeating B and leaving the C branch unproved; changing the induction conclusion to mention B twice.
+
+Please double-check: **does the corrected disjunction cover both conjuncts and feed the stated classical conclusion?**
+
+- `TA-OCC-a2ca433e53e2a50d` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:119`; PDF page pending.
+
+## TA-MVL-014 — The true-conjunction case says B is true and B is true, although both conjuncts must be true and the next line invokes B and C.
+
+Chosen rendering: **தமிழ் இரண்டாம் இணையுறுப்பில் C இன் மதிப்பு மெய் என்று தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The strong Kleene conjunction table returns True exactly when both B and C are True.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0397 (checked_supports)
+
+Alternatives: Repeating B and leaving C unconstrained; changing the final conjunction to B-and-B.
+
+Please double-check: **does the repaired premise now justify the two classical True values and their conjunction?**
+
+- `TA-OCC-9471fc2631b0581a` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:127`; PDF page pending.
+
+## TA-MVL-015 — The driver imports the infinite-valued introduction, Łukasiewicz, and Gödel sections and has olchapter id inf, but its source header names three-valued-logics.
+
+Chosen rendering: **தமிழ் மொழிபெயர்ப்பின் கோப்பு மேல்தகவல் அதன் உண்மையான முடிவிலா மதிப்புத் தருக்கங்கள் அதிகாரத்தைப் பெயரிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The path, chapter id, title, and all three imports independently identify the infinite-valued chapter.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0398 (checked_supports)
+
+Alternatives: Retaining the copied three-valued header; treating the header as semantic chapter content.
+
+Please double-check: **does the corrected header now agree with the stable inf chapter id and imported files?**
+
+- `TA-OCC-04551d7dfc505b2b` — OLP-0398 / `OLP-0398-S01`; source `content/many-valued-logic/infinite-valued-logics/infinite-valued-logics.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/infinite-valued-logics.tex:3`; PDF page pending.
+
+## TA-MVL-016 — With denominator m-1, the source condition n less than or equal to m produces m+1 values and includes m/(m-1), which is above 1; the next line says V_5 has five evenly spaced values and lists numerators 0 through 4.
+
+Chosen rendering: **தமிழ் $n<m$ என்ற வரம்பைப் பயன்படுத்தி $V_m$ இல் சரியாக $m$ மதிப்புகளையும் அவை அனைத்தும் $[0,1]$ இலும் இருப்பதையும் உறுதிசெய்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: For natural numbers beginning at zero, n<m and n less than or equal to m-1 are equivalent; n<m is concise and exactly reproduces the displayed V_5 example.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0399 (checked_supports)
+
+Alternatives: Changing the denominator to m; retaining the above-one endpoint; using n less than or equal to m-1.
+
+Please double-check: **does the repaired comprehension yield exactly the m equally spaced points 0, 1/(m-1), through 1?**
+
+- `TA-OCC-1fc363cd542e21c1` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:18`; PDF page pending.
+
+## TA-MVL-017 — The file path, olfileid mvl/inf/luk, section definition, and matrices all identify infinite-valued Łukasiewicz logic, but the copied source header names the three-valued chapter.
+
+Chosen rendering: **தமிழ் கோப்பு மேல்தகவலை முடிவிலா மதிப்புத் தருக்கங்கள் அதிகாரத்துடன் ஒத்திசைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Correcting the nonexecuting header preserves every stable TeX identifier while making the metadata truthful.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0400 (checked_supports)
+
+Alternatives: Retaining the copied three-valued header; changing the stable inf file id.
+
+Please double-check: **does the header now name the chapter identified by mvl/inf/luk?**
+
+- `TA-OCC-921414a68efc7026` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:3`; PDF page pending.
+
+## TA-MVL-018 — The source header names the three-valued chapter and the Łukasiewicz section, although the path, olfileid mvl/inf/god, title, and content identify infinite-valued Gödel logic.
+
+Chosen rendering: **தமிழ் கோப்பு மேல்தகவல் முடிவிலா மதிப்புத் தருக்கங்கள் அதிகாரத்தையும் கோடல் பிரிவையும் சரியாகப் பெயரிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Both header labels are nonexecuting copy errors contradicted by every structural identifier and the complete section content.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0401 (checked_supports)
+
+Alternatives: Retaining both copied labels; changing the stable god file id to luk.
+
+Please double-check: **do the corrected chapter and section headers agree with mvl/inf/god and the Gödel matrices?**
+
+- `TA-OCC-550e2458b29df5b8` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:3`; PDF page pending.
+
+## TA-MVL-019 — The negation definition opens align* and cases math mode, then incorrectly opens inline math again around the two result values.
+
+Chosen rendering: **தமிழ் ஏற்கெனவே கணித நிலையில் உள்ள cases சூழலில் 1, 0 ஆகியவற்றை கூடுதல் டாலர் வரம்பிகள் இன்றி எழுதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Removing only the redundant delimiters preserves the function values and produces valid TeX structure.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0401 (checked_supports)
+
+Alternatives: Preserving invalid nested math shifts; moving the whole cases expression out of align math.
+
+Please double-check: **does the repaired cases expression keep results 1 and 0 while avoiding nested math mode?**
+
+- `TA-OCC-440b72d183ba1a37` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:28`; PDF page pending.
+
+## TA-MVL-020 — The driver has olchapter id mvl/seq and imports only sequent-calculus sections, but its copied source header names three-valued-logics.
+
+Chosen rendering: **தமிழ் கோப்பு மேல்தகவலை அதன் seq அதிகார அடையாளத்துக்கும் நான்கு தொடரணிக் கணிய இறக்குமதிகளுக்கும் ஒத்திசைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The stable id, title, file path, and every import identify the sequent-calculus chapter.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0402 (checked_supports)
+
+Alternatives: Retaining the copied three-valued header; changing the stable seq chapter id.
+
+Please double-check: **does the corrected header agree with mvl/seq and the four imported sections?**
+
+- `TA-OCC-13acf46d7617832c` — OLP-0402 / `OLP-0402-S01`; source `content/many-valued-logic/sequent-calculus/sequent-calculus.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/sequent-calculus.tex:3`; PDF page pending.
+
+## TA-MVL-021 — The sequent display lists A_1 through A_n, but its immediately following interpretation conjoins A_1 through A_m while the succedent independently lists B_1 through B_n.
+
+Chosen rendering: **தமிழ் முன்தொடரின் இறுதி உறுப்பை $A_m$ என்றும் பின்தொடரின் இறுதி உறுப்பை $B_n$ என்றும் வேறுபடுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Standard sequent notation permits independently sized antecedent and succedent sequences, and the following formula explicitly fixes their lengths as m and n.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0403 (checked_supports)
+
+Alternatives: Changing the interpreted conjunction to A_n; forcing both sides to have equal lengths.
+
+Please double-check: **does the repaired display now match the A_1-through-A_m conjunction and independent B_1-through-B_n disjunction?**
+
+- `TA-OCC-93e4954252adae6e` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:22`; PDF page pending.
+
+## TA-MVL-022 — The true alternative evaluates A under v, while the false alternative drops the valuation argument even though the sentence is proving every classical valuation satisfies A-sequent-A.
+
+Chosen rendering: **தமிழ் மெய், பொய் ஆகிய இரு மாற்றுகளிலும் ஒரே மதிப்பீடு $v$ ஐ வெளிப்படையாகக் குறிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Both alternatives concern the value assigned to the same formula by the same arbitrary valuation.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0403 (checked_supports)
+
+Alternatives: Leaving the false value unindexed; deleting v from the true alternative too.
+
+Please double-check: **are both exhaustive classical truth-value alternatives now explicitly evaluated under v?**
+
+- `TA-OCC-0daeffbfda5ce5c1` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:36`; PDF page pending.
+
+## TA-MVL-023 — The file lies under many-valued-logic and has olfileid mvl/seq/rul, but its copied source header names first-order-logic.
+
+Chosen rendering: **தமிழ் மேல்தகவல் mvl/seq/rul என்ற நிலையான அடையாளத்திற்குரிய பல்மதிப்புத் தருக்கப் பகுதியைப் பெயரிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The whole section defines n-sided calculi for finite-valued matrices, not first-order quantifier rules.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0404 (checked_supports)
+
+Alternatives: Retaining the copied first-order header; changing the stable mvl file id.
+
+Please double-check: **does the corrected part header agree with the mvl file id and n-valued content?**
+
+- `TA-OCC-87657ff50fb0ce5b` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:2`; PDF page pending.
+
+## TA-MVL-024 — After displaying Gamma_1 through Gamma_n, the source says each Gamma_1 is finite sequences, repeating the first component and using plural agreement.
+
+Chosen rendering: **தமிழ் ஒவ்வொரு $\Gamma_i$ உம் ஒரு முடிவுறு தொடராகும் என்று வரையறுக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: An n-sided sequent has one finite sequence in every indexed position, as the display and subsequent position-wise definitions require.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0404 (checked_supports)
+
+Alternatives: Constraining only Gamma_1; treating each component as several sequences.
+
+Please double-check: **does the repaired clause quantify over every indexed component and assign one sequence to each?**
+
+- `TA-OCC-3256d0136a63ae8e` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:24`; PDF page pending.
+
+## TA-MVL-025 — The source says the constant appears in its associated truth-value space 'and is empty otherwise,' leaving the grammatical subject of 'is empty' unclear.
+
+Chosen rendering: **தமிழ் மாறிலி அதற்குரிய இடத்தில் தோன்றும் என்றும் மற்ற எல்லா இடங்களும் வெறுமையாக இருக்கும் என்றும் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed ellipses and position semantics require a singleton constant in exactly one component and empty sequences elsewhere.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0404 (checked_supports)
+
+Alternatives: Saying the constant itself is empty; leaving unspecified which components are empty.
+
+Please double-check: **does the clarified clause uniquely determine the nullary connective's initial n-sided sequent?**
+
+- `TA-OCC-51bfb96354e1aa53` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:35`; PDF page pending.
+
+## TA-MVL-026 — The file path and all neighboring files use the singular directory name many-valued-logic, while this copied header alone uses many-valued-logics.
+
+Chosen rendering: **தமிழ் மேல்தகவல் களஞ்சியப் பாதையின் நிலையான many-valued-logic பெயரைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: This is a metadata normalization that leaves all executable identifiers and mathematical content unchanged.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0405 (checked_supports)
+
+Alternatives: Retaining the isolated plural header; renaming the repository part and stable paths.
+
+Please double-check: **does the normalized header now match the actual part path?**
+
+- `TA-OCC-3934872773300136` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:2`; PDF page pending.
+
+## TA-MVL-027 — The file has olfileid mvl/seq/prl and gives three-valued propositional rules, but its copied source header names first-order-logic.
+
+Chosen rendering: **தமிழ் மேல்தகவல் mvl/seq/prl மற்றும் முழுப் பிரிவின் பல்மதிப்புக் கூற்று விதிகளுடன் ஒத்த many-valued-logic பகுதியைப் பெயரிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: No quantifier or first-order rule occurs; every rule is determined by a finite truth-function matrix.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0406 (checked_supports)
+
+Alternatives: Retaining the copied first-order header; changing the stable mvl id.
+
+Please double-check: **does the corrected header agree with the mvl id and the displayed propositional rules?**
+
+- `TA-OCC-88339bdfd95d66cf` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:2`; PDF page pending.
+
 ## TA-ND-001 — The source says that a sentence stands below one, two, or three other sequents, although the surrounding text and displayed natural-deduction rules use sentences as the premises.
 
 Chosen rendering: **தமிழ் உரை ஒன்று, இரண்டு அல்லது மூன்று மற்ற வாக்கியங்களின் கீழ் ஒரு வாக்கியம் நிற்பதாகத் திருத்துகிறது.**
@@ -3239,6 +3671,35 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-02ded30bde3052ef` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:13`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:14`; PDF page pending.
 - `TA-OCC-aeca4be78feb31dd` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:18`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:20`; PDF page pending.
 - `TA-OCC-cc7a30eb539aa453` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:52`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:58`; PDF page pending.
+- `TA-OCC-ce26d3137f67c9f3` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:29`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:41`; PDF page pending.
+- `TA-OCC-5d68efd86459ed3b` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:37`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:55`; PDF page pending.
+- `TA-OCC-3fbaff3043208bb8` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:49`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:61`; PDF page pending.
+- `TA-OCC-d12878c20fbfbeeb` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:48`; PDF page pending.
+- `TA-OCC-1f69fab693437b35` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:15`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:16`; PDF page pending.
+- `TA-OCC-546da3c4a7baafd9` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:15`; PDF page pending.
+- `TA-OCC-2651553ce63f867c` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:24`; PDF page pending.
+- `TA-OCC-452a0db2026f07b1` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:25`; PDF page pending.
+- `TA-OCC-3ded42b834922a08` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:26`; PDF page pending.
+- `TA-OCC-f046c04e1550b13f` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:35`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:38`; PDF page pending.
+- `TA-OCC-a51dc350a5d3a075` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:15`; PDF page pending.
+- `TA-OCC-6428ad2638b36dc0` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:23`; PDF page pending.
+- `TA-OCC-be47a21365beea2b` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:39`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:44`; PDF page pending.
+- `TA-OCC-5011f18177d4c887` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:43`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:48`; PDF page pending.
+- `TA-OCC-39fc49602923fbad` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:24`; PDF page pending.
+- `TA-OCC-486ec94661075486` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:26`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:28`; PDF page pending.
+- `TA-OCC-d4857524623de883` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:61`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:93`; PDF page pending.
+- `TA-OCC-2386bd71d33fa2fe` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:50`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:55`; PDF page pending.
+- `TA-OCC-50e3df31f54e6b5b` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:94`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:101`; PDF page pending.
+- `TA-OCC-5618e715359aeab6` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:25`; PDF page pending.
+- `TA-OCC-d1751a96668b8aef` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:13`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:15`; PDF page pending.
+- `TA-OCC-ab185c4a4df15b82` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:24`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:27`; PDF page pending.
+- `TA-OCC-1ea8209f78792cac` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:35`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:40`; PDF page pending.
+- `TA-OCC-1adbf088671a72be` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:166`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:183`; PDF page pending.
+- `TA-OCC-b31be33e3afd3e31` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:16`; PDF page pending.
+- `TA-OCC-f28004188c1d6706` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:25`; PDF page pending.
+- `TA-OCC-d0b16864e64861b1` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:23`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:26`; PDF page pending.
+- `TA-OCC-5f90f15c19c725b3` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:25`; PDF page pending.
+- `TA-OCC-81d9d93915f473ce` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:53`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:59`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -3730,6 +4191,8 @@ Please double-check: **do the listed uses of “உறுப்பு” preserv
 - `TA-OCC-39dbbed987dff85b` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:24`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:25`; PDF page pending.
 - `TA-OCC-3b816191d28509ad` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:20`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:21`; PDF page pending.
 - `TA-OCC-357689b800e0fa47` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:26`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:27`; PDF page pending.
+- `TA-OCC-c28ada47db8dca15` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:15`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:29`; PDF page pending.
+- `TA-OCC-a02f4f23455ec4fc` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:16`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:17`; PDF page pending.
 
 ## TA-T003 — empty set
 
@@ -3810,6 +4273,8 @@ Please double-check: **do the listed uses of “உட்கணம்” preserv
 - `TA-OCC-1e5115c724d630a7` — OLP-0334 / `OLP-0334-S01`; source `content/second-order-logic/metatheory/compactness.tex:28`; Tamil `translation/content/second-order-logic/metatheory/compactness.tex:73`; PDF page pending.
 - `TA-OCC-f00996eca5d3e5d0` — OLP-0339 / `OLP-0339-S01`; source `content/second-order-logic/sol-and-set-theory/cardinalities.tex:16`; Tamil `translation/content/second-order-logic/sol-and-set-theory/cardinalities.tex:18`; PDF page pending.
 - `TA-OCC-ca0add98912b1929` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:14`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:116`; PDF page pending.
+- `TA-OCC-9cd13119c90a3425` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:16`; PDF page pending.
+- `TA-OCC-7460d4a5d80d80f8` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:55`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:62`; PDF page pending.
 
 ## TA-T005 — proper subset
 
@@ -4186,6 +4651,19 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-8993be50f97035fa` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:95`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:97`; PDF page pending.
 - `TA-OCC-aecefe9225f5fd23` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:118`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:124`; PDF page pending.
 - `TA-OCC-7b487c30d8ca6440` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:45`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:63`; PDF page pending.
+- `TA-OCC-b0d6a95a50794b6b` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:64`; PDF page pending.
+- `TA-OCC-4e422d93a22cec27` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:38`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:42`; PDF page pending.
+- `TA-OCC-9ef5c0b49441f6f9` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:44`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:49`; PDF page pending.
+- `TA-OCC-b3661d8fc069516f` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:24`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:26`; PDF page pending.
+- `TA-OCC-6c84743de1214ce8` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:39`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:41`; PDF page pending.
+- `TA-OCC-549b70d642875e90` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:66`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:68`; PDF page pending.
+- `TA-OCC-fd2c84e225f2463c` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:136`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:244`; PDF page pending.
+- `TA-OCC-ee19580d46c0e474` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:169`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:245`; PDF page pending.
+- `TA-OCC-4c67a852b43ec8d0` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:14`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:16`; PDF page pending.
+- `TA-OCC-c27e23018a53d262` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:204`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:225`; PDF page pending.
+- `TA-OCC-9dc0313ccf808f02` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:28`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:83`; PDF page pending.
+- `TA-OCC-46b1fead2f9e9caa` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:55`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:61`; PDF page pending.
+- `TA-OCC-8e1f6f479f1a77f7` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:68`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:78`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -4476,6 +4954,9 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-34d2b3df2d4f4100` — OLP-0313 / `OLP-0313-S01`; source `content/incompleteness/incompleteness-provability/introduction.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/introduction.tex:41`; PDF page pending.
 - `TA-OCC-b6066c2e4d1ed21c` — OLP-0313 / `OLP-0313-S01`; source `content/incompleteness/incompleteness-provability/introduction.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/introduction.tex:42`; PDF page pending.
 - `TA-OCC-d78cea777b73e010` — OLP-0313 / `OLP-0313-S01`; source `content/incompleteness/incompleteness-provability/introduction.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/introduction.tex:83`; PDF page pending.
+- `TA-OCC-4dd971c65a080110` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:88`; PDF page pending.
+- `TA-OCC-783ee8376db729b5` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:21`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:26`; PDF page pending.
+- `TA-OCC-b7e712b8a91d5952` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:157`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5326,6 +5807,14 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-0dbf080f3ac737bf` — OLP-0373 / `OLP-0373-S01`; source `content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; PDF page pending.
 - `TA-OCC-71907be74fcef18d` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:118`; PDF page pending.
 - `TA-OCC-e68e6e4bf1305bc5` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:29`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:130`; PDF page pending.
+- `TA-OCC-7a09ce81a7aee35e` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:41`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:58`; PDF page pending.
+- `TA-OCC-9c345486bfcc5bca` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:42`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:67`; PDF page pending.
+- `TA-OCC-41f9c1d294d3f7c8` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:58`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:100`; PDF page pending.
+- `TA-OCC-b707c4f5849f935b` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:81`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:105`; PDF page pending.
+- `TA-OCC-c20f670cc1340a49` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:81`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:110`; PDF page pending.
+- `TA-OCC-0e1a82d52874f700` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:86`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:121`; PDF page pending.
+- `TA-OCC-f938541bce382192` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:86`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:129`; PDF page pending.
+- `TA-OCC-4209d0cdd9ebedb2` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:91`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:137`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -5671,6 +6160,14 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-64a36090106b8360` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:10`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:11`; PDF page pending.
 - `TA-OCC-78b50da1288a6921` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:28`; PDF page pending.
 - `TA-OCC-b27517ab14cf3619` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:35`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:39`; PDF page pending.
+- `TA-OCC-0650e2b1816ca913` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:67`; PDF page pending.
+- `TA-OCC-a2c3ac83d2a80e09` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:191`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:209`; PDF page pending.
+- `TA-OCC-4e20eb4c478a01dd` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:150`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:161`; PDF page pending.
+- `TA-OCC-8bd7ce48b84619f4` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:108`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:78`; PDF page pending.
+- `TA-OCC-e89f278d9b9ccda8` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:108`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:115`; PDF page pending.
+- `TA-OCC-439b8f54a9bcbbc9` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:140`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:163`; PDF page pending.
+- `TA-OCC-e8efe19b34548e08` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:147`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:193`; PDF page pending.
+- `TA-OCC-c086b21899eb621f` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:36`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -5921,6 +6418,7 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-90531b6b49f35567` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:62`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:66`; PDF page pending.
 - `TA-OCC-9b130d9872a1cda0` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:72`; PDF page pending.
 - `TA-OCC-22b9603b73df358e` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:44`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:46`; PDF page pending.
+- `TA-OCC-cb04ed4be7f52584` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:49`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -8669,6 +9167,67 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-3cae375bc6eb81b7` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:32`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:34`; PDF page pending.
 - `TA-OCC-6a33c98fe3a6fb09` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:54`; PDF page pending.
 - `TA-OCC-bca7d29291b0cd61` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:53`; PDF page pending.
+- `TA-OCC-ef1ec323e0658dc3` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:16`; PDF page pending.
+- `TA-OCC-04d6476808b3ac8c` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; PDF page pending.
+- `TA-OCC-484e287b282cba10` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:23`; PDF page pending.
+- `TA-OCC-f5212f5ed903bb05` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:24`; PDF page pending.
+- `TA-OCC-0def95c10ad0feea` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:51`; PDF page pending.
+- `TA-OCC-cb9e3f4036775367` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:46`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:53`; PDF page pending.
+- `TA-OCC-eba6d88066c4916a` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:55`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:63`; PDF page pending.
+- `TA-OCC-7c156e6108b64fb0` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:63`; PDF page pending.
+- `TA-OCC-b230898539cec2b8` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:57`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:66`; PDF page pending.
+- `TA-OCC-74dc1eff6c06e233` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:68`; PDF page pending.
+- `TA-OCC-740ad22707047df6` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:46`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:68`; PDF page pending.
+- `TA-OCC-4eb867f17d3c44e2` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:55`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-b463a476d9721686` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:61`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-29791cf475048115` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:15`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:14`; PDF page pending.
+- `TA-OCC-3b9e742ee61ef372` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:15`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:16`; PDF page pending.
+- `TA-OCC-e02ee687d902a27d` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:19`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:20`; PDF page pending.
+- `TA-OCC-e772f5876b389753` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:22`; PDF page pending.
+- `TA-OCC-75e7bc8b1d418b29` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:24`; PDF page pending.
+- `TA-OCC-0563ad834ff96406` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:24`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:25`; PDF page pending.
+- `TA-OCC-a729913581dcda84` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:26`; PDF page pending.
+- `TA-OCC-3c00db266342ec22` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:19`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:39`; PDF page pending.
+- `TA-OCC-ba630cd5168b6c91` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:44`; PDF page pending.
+- `TA-OCC-20058a4d58fe258e` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:37`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:12`; PDF page pending.
+- `TA-OCC-f8e375d98a1d7285` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:43`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:39`; PDF page pending.
+- `TA-OCC-54eedefa57f5f69e` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:37`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:40`; PDF page pending.
+- `TA-OCC-0a8910606e94a5d4` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:43`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:41`; PDF page pending.
+- `TA-OCC-653aed3e817f9780` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:43`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:48`; PDF page pending.
+- `TA-OCC-c9d3385fc73d44a9` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:20`; PDF page pending.
+- `TA-OCC-48aef81513c8c9e5` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:20`; PDF page pending.
+- `TA-OCC-67f0479226deef70` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:21`; PDF page pending.
+- `TA-OCC-680fcba29c2aefe9` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; PDF page pending.
+- `TA-OCC-8e633248854ca78b` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:24`; PDF page pending.
+- `TA-OCC-845d02113956dc6d` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:26`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:28`; PDF page pending.
+- `TA-OCC-cd2f52627a53d97c` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:30`; PDF page pending.
+- `TA-OCC-6f1933d0281aa9d2` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:26`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:31`; PDF page pending.
+- `TA-OCC-f0ff43eba9dff90b` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:26`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:43`; PDF page pending.
+- `TA-OCC-dcc8b3c7089a7f09` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:26`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:44`; PDF page pending.
+- `TA-OCC-a386eeb309a339e5` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:41`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:31`; PDF page pending.
+- `TA-OCC-ad2b91144aab9e59` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:68`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; PDF page pending.
+- `TA-OCC-3e2815c85d15fd12` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:121`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:134`; PDF page pending.
+- `TA-OCC-2bf43d0a15138413` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:190`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:147`; PDF page pending.
+- `TA-OCC-bdfb21fb24c242be` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:190`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:201`; PDF page pending.
+- `TA-OCC-ecb45b2a8102763c` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:14`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:15`; PDF page pending.
+- `TA-OCC-b5cfc5968cd403f4` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:122`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:138`; PDF page pending.
+- `TA-OCC-5aca542d0a654194` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:122`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:146`; PDF page pending.
+- `TA-OCC-6859df4cc59dad5d` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:27`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:31`; PDF page pending.
+- `TA-OCC-a76d1730af894c3b` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:102`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:108`; PDF page pending.
+- `TA-OCC-465b0aa4d21185ae` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:109`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:117`; PDF page pending.
+- `TA-OCC-07449fd349f1558f` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:14`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:15`; PDF page pending.
+- `TA-OCC-4c76d2e903d1a566` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:25`; PDF page pending.
+- `TA-OCC-0965c7573723e2d7` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:14`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:31`; PDF page pending.
+- `TA-OCC-85fd057ccfd9b67c` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:35`; PDF page pending.
+- `TA-OCC-642464d14b7c0351` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:39`; PDF page pending.
+- `TA-OCC-2549e369a948f67d` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:83`; PDF page pending.
+- `TA-OCC-cab2c83f19ecc4eb` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:87`; PDF page pending.
+- `TA-OCC-a8c8b3057ef5707c` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:38`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:45`; PDF page pending.
+- `TA-OCC-55a5f661eee026cc` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:46`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:53`; PDF page pending.
+- `TA-OCC-e87cfed7165886f6` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:57`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:64`; PDF page pending.
+- `TA-OCC-e889777a762b7f02` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:69`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:79`; PDF page pending.
+- `TA-OCC-aab3d33424713a74` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:70`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:80`; PDF page pending.
+- `TA-OCC-a8a82dad870faf26` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:232`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:234`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -9214,6 +9773,12 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-c28913d4005d0ef2` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:58`; PDF page pending.
 - `TA-OCC-a9fe23dad925e366` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:22`; PDF page pending.
 - `TA-OCC-796ecb011c2a655c` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:29`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:31`; PDF page pending.
+- `TA-OCC-84e83b86041c5d74` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:23`; PDF page pending.
+- `TA-OCC-1272fac81cd71e36` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:29`; PDF page pending.
+- `TA-OCC-c3639f33dc749b52` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-e7845295a8d3469a` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-f583259076e3caf3` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:17`; PDF page pending.
+- `TA-OCC-330f8d6bc4c2192f` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:17`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -10066,6 +10631,18 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-6ae3b2fa1ca100f1` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:106`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:43`; PDF page pending.
 - `TA-OCC-1618425ad785e506` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:106`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:102`; PDF page pending.
 - `TA-OCC-12ec8ac3d86d7a66` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:24`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:25`; PDF page pending.
+- `TA-OCC-324f01d5c8eea88d` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:67`; PDF page pending.
+- `TA-OCC-cb005300c9497109` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:209`; PDF page pending.
+- `TA-OCC-275615eacfd0c74c` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:161`; PDF page pending.
+- `TA-OCC-803f2cd7da583a90` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:13`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:78`; PDF page pending.
+- `TA-OCC-a57a5be7e21a31d1` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:13`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:115`; PDF page pending.
+- `TA-OCC-3dc478c2b831b709` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:163`; PDF page pending.
+- `TA-OCC-58098656c000d620` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:193`; PDF page pending.
+- `TA-OCC-da6d5d35a749e190` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:14`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:16`; PDF page pending.
+- `TA-OCC-fd0f2540a26c8e1e` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:14`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:26`; PDF page pending.
+- `TA-OCC-94dbe1610e6c9cd4` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:21`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:36`; PDF page pending.
+- `TA-OCC-fa2bf25fcd9aa37d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:21`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:63`; PDF page pending.
+- `TA-OCC-18beab6b06839dbd` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -11664,6 +12241,91 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-6323c8e790449e64` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; PDF page pending.
 - `TA-OCC-00f395bcde1a77ee` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:17`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:36`; PDF page pending.
 - `TA-OCC-cae5e9a84a419a81` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:25`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:36`; PDF page pending.
+- `TA-OCC-8b64834264d0d77a` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:19`; PDF page pending.
+- `TA-OCC-e391fb72a3629943` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; PDF page pending.
+- `TA-OCC-20c142004064f8fa` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:23`; PDF page pending.
+- `TA-OCC-e55e1e92bbdba10f` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-cbce437c4b9f6cdd` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:32`; PDF page pending.
+- `TA-OCC-bb881cee11b87c70` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:42`; PDF page pending.
+- `TA-OCC-60d89b5e55b3f99d` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:47`; PDF page pending.
+- `TA-OCC-05429e3182fc722a` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:61`; PDF page pending.
+- `TA-OCC-7704a4b4a5926217` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:56`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:62`; PDF page pending.
+- `TA-OCC-59f5dec1268147e2` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-d2710253ed11c162` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:17`; PDF page pending.
+- `TA-OCC-bdb2b70d01bdf10d` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:28`; PDF page pending.
+- `TA-OCC-87fb017ddc7bea81` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:39`; PDF page pending.
+- `TA-OCC-8142fa64f059bb91` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:41`; PDF page pending.
+- `TA-OCC-04c47aab64d3770a` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:75`; PDF page pending.
+- `TA-OCC-5f2850741b3b32ca` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; PDF page pending.
+- `TA-OCC-ce6442dd0ecbd049` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:16`; PDF page pending.
+- `TA-OCC-d054d7041426d7af` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:18`; PDF page pending.
+- `TA-OCC-15d739f56ec100a8` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:24`; PDF page pending.
+- `TA-OCC-494bdc5a78140aa1` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:24`; PDF page pending.
+- `TA-OCC-2fe31778104b4d2f` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:38`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:41`; PDF page pending.
+- `TA-OCC-d84495ced130b2fc` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; PDF page pending.
+- `TA-OCC-19214ffb865b4c4a` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; PDF page pending.
+- `TA-OCC-77361fe168d17fc2` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:29`; PDF page pending.
+- `TA-OCC-be3315a6e49f49dc` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:71`; PDF page pending.
+- `TA-OCC-84a3e669c1414791` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:16`; PDF page pending.
+- `TA-OCC-5da2332183ddfbb3` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:16`; PDF page pending.
+- `TA-OCC-3b56cb3e13cd75cc` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:25`; PDF page pending.
+- `TA-OCC-da923ff917e9d114` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:25`; PDF page pending.
+- `TA-OCC-5fd917cc7b8992d6` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:30`; PDF page pending.
+- `TA-OCC-dce281cd5f6a3b67` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:42`; PDF page pending.
+- `TA-OCC-b6e0bf167feec08d` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:92`; PDF page pending.
+- `TA-OCC-78263bef71ea07d9` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:94`; PDF page pending.
+- `TA-OCC-5c9f84aac1fe6943` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:95`; PDF page pending.
+- `TA-OCC-c07368dd7b564f3c` — OLP-0393 / `OLP-0393-S01`; source `content/many-valued-logic/three-valued-logics/introduction.tex:13`; Tamil `translation/content/many-valued-logic/three-valued-logics/introduction.tex:14`; PDF page pending.
+- `TA-OCC-901c82b869fe7665` — OLP-0393 / `OLP-0393-S01`; source `content/many-valued-logic/three-valued-logics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/three-valued-logics/introduction.tex:17`; PDF page pending.
+- `TA-OCC-d13cc39cfa3780cd` — OLP-0393 / `OLP-0393-S01`; source `content/many-valued-logic/three-valued-logics/introduction.tex:15`; Tamil `translation/content/many-valued-logic/three-valued-logics/introduction.tex:18`; PDF page pending.
+- `TA-OCC-be578635ee5f0781` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:128`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:47`; PDF page pending.
+- `TA-OCC-7a323220b061a9ea` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:64`; PDF page pending.
+- `TA-OCC-f6548f218283050b` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:94`; PDF page pending.
+- `TA-OCC-cb799495f5c86ffe` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:96`; PDF page pending.
+- `TA-OCC-8012d8f7fab14aa1` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:128`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:141`; PDF page pending.
+- `TA-OCC-599b7e23f29f4a03` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:200`; PDF page pending.
+- `TA-OCC-1b70ea4591ec0953` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:56`; PDF page pending.
+- `TA-OCC-584ef77d08c89490` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:58`; PDF page pending.
+- `TA-OCC-65ccb5dc25fd0212` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:102`; PDF page pending.
+- `TA-OCC-9fb5c7502e8e9bfd` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:104`; PDF page pending.
+- `TA-OCC-d225837d5bdacab8` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:154`; PDF page pending.
+- `TA-OCC-8481f7b880203764` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:16`; PDF page pending.
+- `TA-OCC-8263015994107a2a` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:20`; PDF page pending.
+- `TA-OCC-3b02ccfb0547ba37` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:23`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:26`; PDF page pending.
+- `TA-OCC-e0bf87c1519600bc` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:25`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:29`; PDF page pending.
+- `TA-OCC-3863b2facd5c43ab` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:30`; PDF page pending.
+- `TA-OCC-fa25076dd08c6169` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:63`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:43`; PDF page pending.
+- `TA-OCC-5c0371adfe6a04fb` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:67`; PDF page pending.
+- `TA-OCC-5af6cc0ba71e31c8` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:63`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; PDF page pending.
+- `TA-OCC-cfa6e45850d6b57e` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:72`; PDF page pending.
+- `TA-OCC-7fed62e475911a19` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:75`; PDF page pending.
+- `TA-OCC-4f66fc3894af60ff` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:178`; PDF page pending.
+- `TA-OCC-89f341c7ee9c5756` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:186`; PDF page pending.
+- `TA-OCC-9028f6dbfb48ae88` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:202`; PDF page pending.
+- `TA-OCC-29f0dd2a43307353` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:209`; PDF page pending.
+- `TA-OCC-9e69191f947e53ba` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:209`; PDF page pending.
+- `TA-OCC-7114b467d15aefac` — OLP-0398 / `OLP-0398-S01`; source `content/many-valued-logic/infinite-valued-logics/infinite-valued-logics.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/infinite-valued-logics.tex:10`; PDF page pending.
+- `TA-OCC-471cf8fbd1cd87ea` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:23`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:16`; PDF page pending.
+- `TA-OCC-56a7d45580bcca39` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:23`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:20`; PDF page pending.
+- `TA-OCC-57e6be704990b4db` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:24`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:27`; PDF page pending.
+- `TA-OCC-69e89a239af966d1` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:25`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:28`; PDF page pending.
+- `TA-OCC-bdf60b83bcd680df` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:25`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:28`; PDF page pending.
+- `TA-OCC-2852882144afda08` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:25`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:39`; PDF page pending.
+- `TA-OCC-9f920a97f2be3001` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:25`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:103`; PDF page pending.
+- `TA-OCC-3dbc0e7e94f191c6` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:25`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:106`; PDF page pending.
+- `TA-OCC-f4ba481993af306e` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:16`; PDF page pending.
+- `TA-OCC-c88119232506efdb` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:20`; PDF page pending.
+- `TA-OCC-171ad7ccbd7729fd` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:23`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:26`; PDF page pending.
+- `TA-OCC-1a531e87c4d548af` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:24`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:27`; PDF page pending.
+- `TA-OCC-1a53715e2b813551` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:24`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:27`; PDF page pending.
+- `TA-OCC-0565302d9206eac4` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:24`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:43`; PDF page pending.
+- `TA-OCC-54d0fff9b3432f50` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:31`; PDF page pending.
+- `TA-OCC-5605961b8313b4f9` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:78`; PDF page pending.
+- `TA-OCC-ae3d43867e7de1f9` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:77`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:82`; PDF page pending.
+- `TA-OCC-3583bb7cd0afccbc` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:33`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:42`; PDF page pending.
+- `TA-OCC-88aa97494c9d3ce2` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:37`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:53`; PDF page pending.
+- `TA-OCC-734c038e763c550d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:48`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:60`; PDF page pending.
+- `TA-OCC-6071afdccee33671` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:59`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:72`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -12747,6 +13409,30 @@ Please double-check: **is “காண்டோரின் வளைவழி /
 - `TA-OCC-a0ceaffcdab6f21c` — OLP-0287 / `OLP-0287-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:49`; PDF page pending.
 - `TA-OCC-ef896765145d579e` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:65`; PDF page pending.
 - `TA-OCC-4936f60963db8112` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:66`; PDF page pending.
+- `TA-OCC-cdd1e051e6459b36` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:34`; PDF page pending.
+- `TA-OCC-e31fea3de3e90978` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:42`; PDF page pending.
+- `TA-OCC-665fd4e9677df9b9` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:96`; PDF page pending.
+- `TA-OCC-afb5f6b7831f3dd9` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:152`; PDF page pending.
+- `TA-OCC-0a006d1a5a40199e` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:158`; PDF page pending.
+- `TA-OCC-b4f3bfdcab25ceb9` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:211`; PDF page pending.
+- `TA-OCC-d6d317b5e53cf340` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:248`; PDF page pending.
+- `TA-OCC-fa577a80293d72c8` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:58`; PDF page pending.
+- `TA-OCC-7b7382f53e9cd13e` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:104`; PDF page pending.
+- `TA-OCC-b281a142a1ab3959` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:163`; PDF page pending.
+- `TA-OCC-44eccabdd62a9dac` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:202`; PDF page pending.
+- `TA-OCC-eefaf04054597158` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:29`; PDF page pending.
+- `TA-OCC-dc1f192cd8d97bbc` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:66`; PDF page pending.
+- `TA-OCC-1f4c25901ed26aea` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:69`; PDF page pending.
+- `TA-OCC-c3cf3ee0a396872c` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:94`; PDF page pending.
+- `TA-OCC-bfd90a86aed724dc` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:105`; PDF page pending.
+- `TA-OCC-d0635b3ef6e71b33` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:116`; PDF page pending.
+- `TA-OCC-84b9e62f1027e6cd` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:57`; PDF page pending.
+- `TA-OCC-8585c016c9e9e698` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:164`; PDF page pending.
+- `TA-OCC-adcee1620bdc9629` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:202`; PDF page pending.
+- `TA-OCC-e6111e63cef574f2` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:51`; PDF page pending.
+- `TA-OCC-d769dcf905da3450` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:52`; PDF page pending.
+- `TA-OCC-038353908579154b` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:55`; PDF page pending.
+- `TA-OCC-64650bcf29855600` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:56`; PDF page pending.
 
 ## TA-T061 — pairing function / encode / code / decode
 
@@ -12800,6 +13486,28 @@ Please double-check: **is “இணைமுடிவுறு / வாய்ம
 - `TA-OCC-6c3db521850cc3ef` — OLP-0031 / `OLP-0031-S09`; source `content/sets-functions-relations/size-of-sets/pairing.tex:92`; Tamil `translation/content/sets-functions-relations/size-of-sets/pairing.tex:112`; PDF page pending.
 - `TA-OCC-84267eb419976129` — OLP-0031 / `OLP-0031-S09`; source `content/sets-functions-relations/size-of-sets/pairing.tex:94`; Tamil `translation/content/sets-functions-relations/size-of-sets/pairing.tex:116`; PDF page pending.
 - `TA-OCC-000181af6ff9bd48` — OLP-0031 / `OLP-0031-S09`; source `content/sets-functions-relations/size-of-sets/pairing.tex:95`; Tamil `translation/content/sets-functions-relations/size-of-sets/pairing.tex:120`; PDF page pending.
+- `TA-OCC-78bf5e6473b02598` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:38`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:42`; PDF page pending.
+- `TA-OCC-e73e3b4b1d5e79d2` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:38`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:47`; PDF page pending.
+- `TA-OCC-dd4a732d351ca18e` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:28`; PDF page pending.
+- `TA-OCC-3dcf074acecf638a` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:38`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:41`; PDF page pending.
+- `TA-OCC-f66ee57411259ed5` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:71`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:75`; PDF page pending.
+- `TA-OCC-6425217035920660` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:68`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:71`; PDF page pending.
+- `TA-OCC-700e9f59b4d9f87c` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:15`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:16`; PDF page pending.
+- `TA-OCC-99aa7f7c496eb3bc` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:19`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:25`; PDF page pending.
+- `TA-OCC-ee55fe296d38b3d8` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:30`; PDF page pending.
+- `TA-OCC-eda7b2301af30eac` — OLP-0393 / `OLP-0393-S01`; source `content/many-valued-logic/three-valued-logics/introduction.tex:17`; Tamil `translation/content/many-valued-logic/three-valued-logics/introduction.tex:17`; PDF page pending.
+- `TA-OCC-f0c428d4278a8725` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:41`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:47`; PDF page pending.
+- `TA-OCC-208c1990f3db1cbc` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:84`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:96`; PDF page pending.
+- `TA-OCC-22b67721ac11f7cb` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:52`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:58`; PDF page pending.
+- `TA-OCC-828e26f58c246978` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:96`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:104`; PDF page pending.
+- `TA-OCC-fcb71e51a4957c39` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:29`; PDF page pending.
+- `TA-OCC-d348a08cf9813001` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:26`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:30`; PDF page pending.
+- `TA-OCC-6449bff8437a327d` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:37`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:43`; PDF page pending.
+- `TA-OCC-0877f284995ff3d9` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:66`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:72`; PDF page pending.
+- `TA-OCC-5c9c81f1c60cad2c` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:168`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:186`; PDF page pending.
+- `TA-OCC-9d195260f3a9cd42` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:189`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:209`; PDF page pending.
+- `TA-OCC-19679aa54bd88534` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:25`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:28`; PDF page pending.
+- `TA-OCC-54036d73d167cd2b` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:24`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:27`; PDF page pending.
 
 ## TA-T063 — triangular number
 
@@ -13422,6 +14130,51 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-6bcba1e2d24e845c` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:132`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:170`; PDF page pending.
 - `TA-OCC-f3aa8a8998f4b2ae` — OLP-0354 / `OLP-0354-S01`; source `content/lambda-calculus/introduction/fixed-point-combinator.tex:37`; Tamil `translation/content/lambda-calculus/introduction/fixed-point-combinator.tex:42`; PDF page pending.
 - `TA-OCC-a07759a21de36d36` — OLP-0373 / `OLP-0373-S01`; source `content/lambda-calculus/lambda-definability/lambda-definability.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; PDF page pending.
+- `TA-OCC-99c8c5827d035fc8` — OLP-0383 / `OLP-0383-S01`; source `content/many-valued-logic/many-valued-logic.tex:1`; Tamil `translation/content/many-valued-logic/many-valued-logic.tex:11`; PDF page pending.
+- `TA-OCC-ccfc6203e9399406` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-6fb8871e56791f76` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-703861f45098d532` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:17`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; PDF page pending.
+- `TA-OCC-72cbc60f7876fa11` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:19`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; PDF page pending.
+- `TA-OCC-da62f3cf85aa82d2` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:24`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:14`; PDF page pending.
+- `TA-OCC-04858ad9d526c185` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:14`; PDF page pending.
+- `TA-OCC-aa2133aec99da0a4` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:34`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:19`; PDF page pending.
+- `TA-OCC-e4d8b6d1382673aa` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:35`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:20`; PDF page pending.
+- `TA-OCC-69f7578da3c347ab` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:24`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:26`; PDF page pending.
+- `TA-OCC-c2da7b7c600a150a` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:27`; PDF page pending.
+- `TA-OCC-4c6ec962b49defb8` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:34`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:36`; PDF page pending.
+- `TA-OCC-949baa17ade11e05` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:35`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:37`; PDF page pending.
+- `TA-OCC-621c7d9aa1c0e3c9` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:35`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:48`; PDF page pending.
+- `TA-OCC-27e530c50a850322` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:35`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:57`; PDF page pending.
+- `TA-OCC-08a44e293810472c` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:16`; PDF page pending.
+- `TA-OCC-6d0ffc08b56fb85a` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:19`; PDF page pending.
+- `TA-OCC-fa443a68e15aac3e` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:21`; PDF page pending.
+- `TA-OCC-38db90c10cd0403e` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:37`; PDF page pending.
+- `TA-OCC-0a2ce427cebc9b61` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:17`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:17`; PDF page pending.
+- `TA-OCC-72c3f2a00699f8ce` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:41`; PDF page pending.
+- `TA-OCC-ed77a142cff691a2` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:123`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:29`; PDF page pending.
+- `TA-OCC-7893fc6ceb53708c` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:123`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:34`; PDF page pending.
+- `TA-OCC-bdb34606a1422adb` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:123`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:69`; PDF page pending.
+- `TA-OCC-acc608792bf7241a` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:123`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:92`; PDF page pending.
+- `TA-OCC-58f2269cc7aaecd6` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:123`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:134`; PDF page pending.
+- `TA-OCC-70687cc95f50d147` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:21`; PDF page pending.
+- `TA-OCC-e831d09bc2df31bb` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:54`; PDF page pending.
+- `TA-OCC-00b09d8b14ab1fc6` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:100`; PDF page pending.
+- `TA-OCC-8183ed733fc01fb7` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:146`; PDF page pending.
+- `TA-OCC-f0b7ec81af444afd` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:199`; PDF page pending.
+- `TA-OCC-5b8cd5d105b0c528` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:24`; PDF page pending.
+- `TA-OCC-949c694467db6f2c` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:55`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:26`; PDF page pending.
+- `TA-OCC-d5744936cb0d5e7f` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:55`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:39`; PDF page pending.
+- `TA-OCC-347fdc21f2aa91ab` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:55`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; PDF page pending.
+- `TA-OCC-2b6a95285b8de5ab` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:55`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:182`; PDF page pending.
+- `TA-OCC-ee88e5099d1bc1d7` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:25`; PDF page pending.
+- `TA-OCC-e10341b60c4d32c5` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:24`; PDF page pending.
+- `TA-OCC-19eca633bdd605c6` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:60`; PDF page pending.
+- `TA-OCC-0adfe09b68e86e10` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:61`; PDF page pending.
+- `TA-OCC-e3c1ef7a93f55af3` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:62`; PDF page pending.
+- `TA-OCC-d44ecf2918f5d036` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:62`; PDF page pending.
+- `TA-OCC-624fd70e95a6dcf0` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:63`; PDF page pending.
+- `TA-OCC-fae4e4ae335245ce` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:34`; PDF page pending.
+- `TA-OCC-82c47f2983629f9e` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:13`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -14054,6 +14807,198 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-b3b264e4201ee522` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:28`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:79`; PDF page pending.
 - `TA-OCC-5587f557aab487e4` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:35`; PDF page pending.
 - `TA-OCC-a8a3510f7cf6c5f8` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:14`; PDF page pending.
+- `TA-OCC-f4d66b888d216e65` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:17`; PDF page pending.
+- `TA-OCC-d8a1135ae90c85ce` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:19`; PDF page pending.
+- `TA-OCC-f8dd13b61cdb4488` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; PDF page pending.
+- `TA-OCC-3ec03f42f3361e4f` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; PDF page pending.
+- `TA-OCC-003c6cd5effa401a` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; PDF page pending.
+- `TA-OCC-e3280ef7a5053f4e` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:23`; PDF page pending.
+- `TA-OCC-84234ddb0b61fdc7` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:28`; PDF page pending.
+- `TA-OCC-4a877c2059309d44` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-bdb59a445a8f53fb` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:56`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:31`; PDF page pending.
+- `TA-OCC-44864635c4c7002d` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:32`; PDF page pending.
+- `TA-OCC-1b8bf5229339f57e` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:34`; PDF page pending.
+- `TA-OCC-1e9884911f0575ad` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:35`; PDF page pending.
+- `TA-OCC-aba0fc67603b5bb3` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:38`; PDF page pending.
+- `TA-OCC-7b9fe9af81dfd478` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:41`; PDF page pending.
+- `TA-OCC-ebeb1469b6ace495` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:45`; PDF page pending.
+- `TA-OCC-ac0f32cce6d94eb8` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:50`; PDF page pending.
+- `TA-OCC-5710221f52c5f949` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:53`; PDF page pending.
+- `TA-OCC-f60ccb34f7cc80d2` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:53`; PDF page pending.
+- `TA-OCC-13a96deb7c9cffd4` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:55`; PDF page pending.
+- `TA-OCC-8cbe982aa0390111` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:58`; PDF page pending.
+- `TA-OCC-4b57e1e2b8f75d06` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:59`; PDF page pending.
+- `TA-OCC-c0585463183315a7` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; PDF page pending.
+- `TA-OCC-397abee49616258f` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:56`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:62`; PDF page pending.
+- `TA-OCC-07152db38bf78404` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:67`; PDF page pending.
+- `TA-OCC-a93c4f3abca37ff0` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-9c1b163805335cfe` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:17`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:19`; PDF page pending.
+- `TA-OCC-b8395244a17d349d` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:20`; PDF page pending.
+- `TA-OCC-16024cc56cd640aa` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:36`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:38`; PDF page pending.
+- `TA-OCC-fcf2f43073e4a150` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:37`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:39`; PDF page pending.
+- `TA-OCC-60adcf69ae3ebd4b` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:15`; PDF page pending.
+- `TA-OCC-01140da8f9bb3faf` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:16`; PDF page pending.
+- `TA-OCC-4ee8ab5d27039c14` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:25`; PDF page pending.
+- `TA-OCC-b5b2c7b7b1b4cc9e` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:26`; PDF page pending.
+- `TA-OCC-7865845653507725` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:38`; PDF page pending.
+- `TA-OCC-eb02ac4084f02c7f` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:42`; PDF page pending.
+- `TA-OCC-02f258ac91aca800` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; PDF page pending.
+- `TA-OCC-d99ba672a889455c` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:15`; PDF page pending.
+- `TA-OCC-f1cda19c97acb88b` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:16`; PDF page pending.
+- `TA-OCC-7061e0a60a37a355` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:23`; PDF page pending.
+- `TA-OCC-8f02dfc687cbd12d` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:24`; PDF page pending.
+- `TA-OCC-e2dc5ee78e47e917` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:38`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:41`; PDF page pending.
+- `TA-OCC-25ba3be09ef7c340` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:44`; PDF page pending.
+- `TA-OCC-4bd16bbcfd77ce36` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; PDF page pending.
+- `TA-OCC-fc9baea99aeb5305` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; PDF page pending.
+- `TA-OCC-d30aca2ccecc419c` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; PDF page pending.
+- `TA-OCC-b0746c607833f88a` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:29`; PDF page pending.
+- `TA-OCC-b3f2e0f7e591344e` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:41`; PDF page pending.
+- `TA-OCC-7cca61b4cca55012` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; PDF page pending.
+- `TA-OCC-73ba840a949715a3` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:84`; PDF page pending.
+- `TA-OCC-6b890da01cf6deb9` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:92`; PDF page pending.
+- `TA-OCC-52ad78637e8b0824` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:94`; PDF page pending.
+- `TA-OCC-612973558f663bd0` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:95`; PDF page pending.
+- `TA-OCC-f54329fb76e84e0a` — OLP-0393 / `OLP-0393-S01`; source `content/many-valued-logic/three-valued-logics/introduction.tex:13`; Tamil `translation/content/many-valued-logic/three-valued-logics/introduction.tex:16`; PDF page pending.
+- `TA-OCC-83111a2dd46feb6d` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:128`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:15`; PDF page pending.
+- `TA-OCC-ddbe1e754cb4a57d` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:18`; PDF page pending.
+- `TA-OCC-7e8ba26c1f184c12` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:19`; PDF page pending.
+- `TA-OCC-a13960254a05894c` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:19`; PDF page pending.
+- `TA-OCC-32828441fcc71c81` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:21`; PDF page pending.
+- `TA-OCC-eb0f35dceff7354d` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:30`; PDF page pending.
+- `TA-OCC-dc0bae12a4b8c5dc` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:30`; PDF page pending.
+- `TA-OCC-7b13974c1d90e828` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:31`; PDF page pending.
+- `TA-OCC-1bf02bfda18a350f` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:33`; PDF page pending.
+- `TA-OCC-9af4d41bc6c6a7cb` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:35`; PDF page pending.
+- `TA-OCC-a5d8d437bd111baa` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:35`; PDF page pending.
+- `TA-OCC-15a722f64adb3628` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:35`; PDF page pending.
+- `TA-OCC-abf269ac12f3aa4d` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:36`; PDF page pending.
+- `TA-OCC-be811a123f339ea2` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:38`; PDF page pending.
+- `TA-OCC-8b6ba3840a876165` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:38`; PDF page pending.
+- `TA-OCC-8f59868e5e156a98` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:41`; PDF page pending.
+- `TA-OCC-344cb694781c7171` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:51`; PDF page pending.
+- `TA-OCC-1bbe0be5a703b365` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:53`; PDF page pending.
+- `TA-OCC-681c93622ebccbab` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:53`; PDF page pending.
+- `TA-OCC-1e01af4193c5c31c` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:60`; PDF page pending.
+- `TA-OCC-fc0fe62f78e07536` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:60`; PDF page pending.
+- `TA-OCC-ad8e203f2e90643e` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:64`; PDF page pending.
+- `TA-OCC-911b46f7784dc894` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:69`; PDF page pending.
+- `TA-OCC-c852a7c25d7d69aa` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:70`; PDF page pending.
+- `TA-OCC-080f30d8cae97631` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:72`; PDF page pending.
+- `TA-OCC-a1975bd6ae70de23` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:72`; PDF page pending.
+- `TA-OCC-c8e66bc8a853b3cc` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:73`; PDF page pending.
+- `TA-OCC-bf1fcdef7a548184` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:74`; PDF page pending.
+- `TA-OCC-4dd9bb9cd78ccf1a` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:74`; PDF page pending.
+- `TA-OCC-2748adb4435cba0b` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:75`; PDF page pending.
+- `TA-OCC-1ad714dfde816b7b` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:76`; PDF page pending.
+- `TA-OCC-c87ff485fcef9f51` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:76`; PDF page pending.
+- `TA-OCC-030754c9e19c9b56` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:80`; PDF page pending.
+- `TA-OCC-60cd2409d247e1db` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:93`; PDF page pending.
+- `TA-OCC-868668dec3d62673` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:135`; PDF page pending.
+- `TA-OCC-790d290cb413f69a` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:137`; PDF page pending.
+- `TA-OCC-e770db1260aad5fb` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:137`; PDF page pending.
+- `TA-OCC-2a0fa72b5bb72672` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:128`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:141`; PDF page pending.
+- `TA-OCC-efa70ef32868ceba` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:142`; PDF page pending.
+- `TA-OCC-03792f52e3115288` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:152`; PDF page pending.
+- `TA-OCC-a8d87590e9949f4f` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:156`; PDF page pending.
+- `TA-OCC-66b927bdd1cc5847` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:156`; PDF page pending.
+- `TA-OCC-d23620c1d8d3f0ce` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:157`; PDF page pending.
+- `TA-OCC-eba7718d5d137427` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:175`; PDF page pending.
+- `TA-OCC-0a19762bdf1ce709` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:189`; PDF page pending.
+- `TA-OCC-393a53101d04dc6a` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:189`; PDF page pending.
+- `TA-OCC-d8e497e630606fc7` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:199`; PDF page pending.
+- `TA-OCC-00ca4e786168eb2d` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:199`; PDF page pending.
+- `TA-OCC-1f1679986f15112c` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:200`; PDF page pending.
+- `TA-OCC-dcb8e9fe84469635` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:211`; PDF page pending.
+- `TA-OCC-b92c447b5f8468e6` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:243`; PDF page pending.
+- `TA-OCC-5d58a17893cc7ac9` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:244`; PDF page pending.
+- `TA-OCC-a0a8892434ada9a2` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:248`; PDF page pending.
+- `TA-OCC-119c504baf3e6b82` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:250`; PDF page pending.
+- `TA-OCC-4ebad525c7e49333` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:256`; PDF page pending.
+- `TA-OCC-72046f0bd679df16` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:258`; PDF page pending.
+- `TA-OCC-537f636551ab1b4e` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:261`; PDF page pending.
+- `TA-OCC-6e010ebe909ec23f` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:262`; PDF page pending.
+- `TA-OCC-64055176af921e9e` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:15`; PDF page pending.
+- `TA-OCC-3cbaff8d6f01298f` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:18`; PDF page pending.
+- `TA-OCC-174e18c26cb1beab` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:19`; PDF page pending.
+- `TA-OCC-f97c08fc4e783f34` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:36`; PDF page pending.
+- `TA-OCC-82c273d82e743a79` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:37`; PDF page pending.
+- `TA-OCC-1238ee2df1c15d2c` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:38`; PDF page pending.
+- `TA-OCC-44231118840ffcb3` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:40`; PDF page pending.
+- `TA-OCC-0b2f93998cf944de` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:40`; PDF page pending.
+- `TA-OCC-2ca42bbefed796df` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:55`; PDF page pending.
+- `TA-OCC-0dbac6689640d5f9` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:101`; PDF page pending.
+- `TA-OCC-85dadf9a9fb5d101` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:142`; PDF page pending.
+- `TA-OCC-e3f8cac9107896b3` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:148`; PDF page pending.
+- `TA-OCC-ee0c6f4e407d36fd` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:154`; PDF page pending.
+- `TA-OCC-bbc70bb9436e2fec` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:157`; PDF page pending.
+- `TA-OCC-133c6c80d1c494b0` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:162`; PDF page pending.
+- `TA-OCC-e7381d64f3365aa8` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:174`; PDF page pending.
+- `TA-OCC-d4e6cc3caa3d2ad9` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:201`; PDF page pending.
+- `TA-OCC-a4f9521b711fc87c` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:202`; PDF page pending.
+- `TA-OCC-9d6c5b815db62ebb` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:25`; PDF page pending.
+- `TA-OCC-abb9ef2cd3114c70` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:66`; PDF page pending.
+- `TA-OCC-86e61dd8f14c69b9` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:69`; PDF page pending.
+- `TA-OCC-86a885ac65f52fbb` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:80`; PDF page pending.
+- `TA-OCC-de509617d19bbd7b` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:23`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:80`; PDF page pending.
+- `TA-OCC-f9c208f1630789f8` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:23`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:81`; PDF page pending.
+- `TA-OCC-846cbb8d17822830` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:24`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:81`; PDF page pending.
+- `TA-OCC-39ae3af7089b5b4d` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:31`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:82`; PDF page pending.
+- `TA-OCC-5d6a0a4be31cbbfe` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:31`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:88`; PDF page pending.
+- `TA-OCC-76cf2a2b55a48e04` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:32`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:93`; PDF page pending.
+- `TA-OCC-63fc4cd9c967142b` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:33`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:93`; PDF page pending.
+- `TA-OCC-08f71aa83179ac7d` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:33`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:104`; PDF page pending.
+- `TA-OCC-1e52c13b3b9d4772` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:37`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:104`; PDF page pending.
+- `TA-OCC-ecfee657517c5cd5` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:37`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:116`; PDF page pending.
+- `TA-OCC-8150abf70fd1514c` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:14`; PDF page pending.
+- `TA-OCC-5f10b5be247105e9` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:63`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:15`; PDF page pending.
+- `TA-OCC-7a9edae669e509d1` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:16`; PDF page pending.
+- `TA-OCC-7257b8fb1827dfac` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:17`; PDF page pending.
+- `TA-OCC-ac9c6b09d6ccecfa` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:27`; PDF page pending.
+- `TA-OCC-55d9763f5cbdbd0d` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:40`; PDF page pending.
+- `TA-OCC-e02c1fce640e18b9` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:57`; PDF page pending.
+- `TA-OCC-99d6dd1da5d87d07` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:58`; PDF page pending.
+- `TA-OCC-de2bfec6375ace00` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:60`; PDF page pending.
+- `TA-OCC-67d9690187ed4bc1` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; PDF page pending.
+- `TA-OCC-603abd25921b4cf4` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:67`; PDF page pending.
+- `TA-OCC-f123ce0e3dffcb45` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:63`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; PDF page pending.
+- `TA-OCC-e24269ecb8179c89` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:73`; PDF page pending.
+- `TA-OCC-268aec38fc7c4c4f` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:75`; PDF page pending.
+- `TA-OCC-a4ce2bfa521b2c1e` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:152`; PDF page pending.
+- `TA-OCC-3453bdcdf9e89f72` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:152`; PDF page pending.
+- `TA-OCC-a6ca4bcd7e702a8f` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:155`; PDF page pending.
+- `TA-OCC-4684634b1f9e8121` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:160`; PDF page pending.
+- `TA-OCC-a5b36d6ef7239bcb` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:164`; PDF page pending.
+- `TA-OCC-24908158e27bedcb` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:183`; PDF page pending.
+- `TA-OCC-85b16b01c6bb1344` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:202`; PDF page pending.
+- `TA-OCC-a804281d7d89eabf` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:13`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:14`; PDF page pending.
+- `TA-OCC-1e87662a4743e783` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:13`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-7a2959bddeea2949` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:21`; PDF page pending.
+- `TA-OCC-173dabf4f504b162` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:25`; PDF page pending.
+- `TA-OCC-22f5d5d2b2b3bd45` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:19`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:28`; PDF page pending.
+- `TA-OCC-d3d61229d21784ec` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-5b1721e39bcf0f8e` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-83f62f6adb7dfb67` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:25`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:34`; PDF page pending.
+- `TA-OCC-5abd90357f984aae` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:32`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:36`; PDF page pending.
+- `TA-OCC-6419c5a8ef822765` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:23`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:26`; PDF page pending.
+- `TA-OCC-8f984bd6c446b794` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:23`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:110`; PDF page pending.
+- `TA-OCC-e5ae29aa65391ca8` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:25`; PDF page pending.
+- `TA-OCC-fab7764704ae455c` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:22`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:108`; PDF page pending.
+- `TA-OCC-5f140e943f45aea0` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:48`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:109`; PDF page pending.
+- `TA-OCC-210c306979d009a8` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:48`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:110`; PDF page pending.
+- `TA-OCC-9b28dd154b7915d7` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:49`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:116`; PDF page pending.
+- `TA-OCC-d5f77aa7c0f01ae1` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:49`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:118`; PDF page pending.
+- `TA-OCC-d90cb55255b78fc2` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:49`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:126`; PDF page pending.
+- `TA-OCC-6f8f65719a4e410c` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:49`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:130`; PDF page pending.
+- `TA-OCC-ec3805fe710a48da` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:49`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:132`; PDF page pending.
+- `TA-OCC-e03075b53c99289a` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:16`; PDF page pending.
+- `TA-OCC-64f1a611c2c33884` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:31`; PDF page pending.
+- `TA-OCC-0c400fa6807ccfd7` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:77`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:79`; PDF page pending.
+- `TA-OCC-a4e3f65e0f9b55a1` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:77`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:82`; PDF page pending.
+- `TA-OCC-7a3bc832881d9166` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:37`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:36`; PDF page pending.
+- `TA-OCC-3fbcb0828963b9f5` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:48`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:43`; PDF page pending.
+- `TA-OCC-9d45f2427cae07ce` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:59`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:51`; PDF page pending.
+- `TA-OCC-ae679f999fbd0791` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:66`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:66`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -14121,6 +15066,21 @@ Please double-check: **do the listed uses of “தருக்க இணைப�
 - `TA-OCC-e76261b000ec1c8e` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:50`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:54`; PDF page pending.
 - `TA-OCC-1c4c91a59312b6cd` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:50`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:54`; PDF page pending.
 - `TA-OCC-d6e362260d458cb0` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:74`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:79`; PDF page pending.
+- `TA-OCC-f515deae4f939f5a` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:19`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:23`; PDF page pending.
+- `TA-OCC-cc56e5bce7e8cf26` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:24`; PDF page pending.
+- `TA-OCC-99cdbd811270a3e5` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:25`; PDF page pending.
+- `TA-OCC-975f60866abaec3c` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:33`; PDF page pending.
+- `TA-OCC-2eef170ed2147aa9` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:31`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:34`; PDF page pending.
+- `TA-OCC-5b0dd5f3789c3c04` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:32`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:35`; PDF page pending.
+- `TA-OCC-78aa96496a9f266c` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:42`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:49`; PDF page pending.
+- `TA-OCC-67528c07be213067` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:45`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:53`; PDF page pending.
+- `TA-OCC-d489414a590349cf` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:45`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:60`; PDF page pending.
+- `TA-OCC-6cfb20f04084730b` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:19`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:24`; PDF page pending.
+- `TA-OCC-6c317ccebd34d966` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:22`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:26`; PDF page pending.
+- `TA-OCC-e09d6dca850ff4b6` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:24`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:31`; PDF page pending.
+- `TA-OCC-7aa60daeb6694c22` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:28`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:38`; PDF page pending.
+- `TA-OCC-92bfe526c7d3d5fe` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:29`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:40`; PDF page pending.
+- `TA-OCC-71275edcaa6a1efc` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:33`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:178`; PDF page pending.
 
 ## TA-T080 — conditional / biconditional
 
@@ -14150,6 +15110,12 @@ Please double-check: **do the listed uses of “நிபந்தனைக் �
 - `TA-OCC-1fb02d94fe1833cb` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:71`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:79`; PDF page pending.
 - `TA-OCC-fbcf975705b328a7` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:110`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:121`; PDF page pending.
 - `TA-OCC-7ad6402f3d7911f5` — OLP-0180 / `OLP-0180-S01`; source `content/first-order-logic/beyond/modal-logics.tex:13`; Tamil `translation/content/first-order-logic/beyond/modal-logics.tex:21`; PDF page pending.
+- `TA-OCC-a1c4f214a218b95a` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:24`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:26`; PDF page pending.
+- `TA-OCC-228aba4c10f2b4da` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:27`; PDF page pending.
+- `TA-OCC-0fbcc60fbd564680` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:34`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:36`; PDF page pending.
+- `TA-OCC-1752b61c39a24f45` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:35`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:37`; PDF page pending.
+- `TA-OCC-070ea4cf79ae5519` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:34`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:60`; PDF page pending.
+- `TA-OCC-0946b9207480042b` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:55`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:62`; PDF page pending.
 
 ## TA-T081 — formula / atomic formula / compound formula
 
@@ -14887,6 +15853,39 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-b0e6e56fd4ef2cf0` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:52`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:64`; PDF page pending.
 - `TA-OCC-24f1c303e1824977` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:58`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:70`; PDF page pending.
 - `TA-OCC-5498ca48a1a8a631` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:102`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:121`; PDF page pending.
+- `TA-OCC-886a1e40018abf12` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:16`; PDF page pending.
+- `TA-OCC-eeaccac141fad299` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; PDF page pending.
+- `TA-OCC-e7048ad3110d29ce` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:23`; PDF page pending.
+- `TA-OCC-6c654dae159df14a` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:46`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:53`; PDF page pending.
+- `TA-OCC-777539b8cfab17ca` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:55`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:63`; PDF page pending.
+- `TA-OCC-a8dfc559d90ad174` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:57`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:66`; PDF page pending.
+- `TA-OCC-234c32a20384c6b9` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:68`; PDF page pending.
+- `TA-OCC-683ee3ce6ef84155` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:61`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-bbb8e55961ac9ceb` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:15`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:14`; PDF page pending.
+- `TA-OCC-dcf498976ff7341a` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:15`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:16`; PDF page pending.
+- `TA-OCC-a78c811ff5f38c21` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:19`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:20`; PDF page pending.
+- `TA-OCC-f7cfc3cba7ab8ec4` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:22`; PDF page pending.
+- `TA-OCC-2e42ba4f30308a98` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:24`; PDF page pending.
+- `TA-OCC-de28635b88ce81f1` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:24`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:25`; PDF page pending.
+- `TA-OCC-1e28fbf528d77c68` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:26`; PDF page pending.
+- `TA-OCC-00bb53bd23737e27` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:19`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:39`; PDF page pending.
+- `TA-OCC-7f9a7183415d6214` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:44`; PDF page pending.
+- `TA-OCC-e17f58520bb1fb38` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:37`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:40`; PDF page pending.
+- `TA-OCC-d6a2e617c9f6cd9d` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:43`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:48`; PDF page pending.
+- `TA-OCC-be25aecc2573ffad` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:20`; PDF page pending.
+- `TA-OCC-da9b4cb079d87237` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; PDF page pending.
+- `TA-OCC-ccff0a353cb36903` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:24`; PDF page pending.
+- `TA-OCC-023bc22145fd9f88` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:26`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:28`; PDF page pending.
+- `TA-OCC-c789340da7ab287a` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:121`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:134`; PDF page pending.
+- `TA-OCC-ac11a3511da66b5e` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:190`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:147`; PDF page pending.
+- `TA-OCC-890d4ea6aca953f8` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:190`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:201`; PDF page pending.
+- `TA-OCC-2aa2875201222420` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:14`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:15`; PDF page pending.
+- `TA-OCC-6ebe367e2ac9e25f` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:122`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:138`; PDF page pending.
+- `TA-OCC-1314af5b4c6e17a3` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:27`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:31`; PDF page pending.
+- `TA-OCC-1f78eec8103e333b` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:102`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:108`; PDF page pending.
+- `TA-OCC-ca729b83031f200f` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:109`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:117`; PDF page pending.
+- `TA-OCC-f79856e65e0bc23a` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:25`; PDF page pending.
+- `TA-OCC-92250f763614737e` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:23`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:39`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -14960,6 +15959,31 @@ Please double-check: **is “மெய்மதிப்பு ஒதுக்�
 - `TA-OCC-37f7b4f2d0d0e29d` — OLP-0136 / `OLP-0136-S13`; source `content/first-order-logic/completeness/compactness-direct.tex:122`; Tamil `translation/content/first-order-logic/completeness/compactness-direct.tex:142`; PDF page pending.
 - `TA-OCC-88d5cb2d9b140529` — OLP-0136 / `OLP-0136-S13`; source `content/first-order-logic/completeness/compactness-direct.tex:134`; Tamil `translation/content/first-order-logic/completeness/compactness-direct.tex:154`; PDF page pending.
 - `TA-OCC-edb017dc688dd6c9` — OLP-0138 / `OLP-0138-S01`; source `content/first-order-logic/first-order-logic.tex:14`; Tamil `translation/content/first-order-logic/first-order-logic.tex:15`; PDF page pending.
+- `TA-OCC-6df48f699fe27d38` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:19`; PDF page pending.
+- `TA-OCC-57f36fca38a87bc5` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; PDF page pending.
+- `TA-OCC-840aa0817e30f19d` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:23`; PDF page pending.
+- `TA-OCC-23f7c8aa127aad99` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-e4d335d904938477` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:56`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:62`; PDF page pending.
+- `TA-OCC-660877ccb9cf9eff` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-6fda13322cc97cb3` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; PDF page pending.
+- `TA-OCC-b5abcdfbda074417` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:16`; PDF page pending.
+- `TA-OCC-d0b7ae2bf5389e7c` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:24`; PDF page pending.
+- `TA-OCC-79b095de79a35877` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:24`; PDF page pending.
+- `TA-OCC-6ba43e84267a6638` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:38`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:41`; PDF page pending.
+- `TA-OCC-2ca6f5b8621267a0` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; PDF page pending.
+- `TA-OCC-14cb42f19ccbfad2` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; PDF page pending.
+- `TA-OCC-2715b7e311b084b1` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:29`; PDF page pending.
+- `TA-OCC-c5ba2052bcbd06fe` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:92`; PDF page pending.
+- `TA-OCC-f51e922c4ffbf6c3` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:94`; PDF page pending.
+- `TA-OCC-6986a876436658f8` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:95`; PDF page pending.
+- `TA-OCC-b2904a34c5ddf6ec` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:128`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:141`; PDF page pending.
+- `TA-OCC-9f65e193dd49b668` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:200`; PDF page pending.
+- `TA-OCC-6a636043a21ed536` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:154`; PDF page pending.
+- `TA-OCC-3c31aeed1a999bb6` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:67`; PDF page pending.
+- `TA-OCC-9191fb5962976687` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:63`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; PDF page pending.
+- `TA-OCC-c5f89428c9f4eb12` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:75`; PDF page pending.
+- `TA-OCC-159919c246a0d15d` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:31`; PDF page pending.
+- `TA-OCC-a80cd3d5c1fa256b` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:77`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:82`; PDF page pending.
 
 ## TA-T083 — satisfaction / satisfiable / unsatisfiable
 
@@ -15104,6 +16128,12 @@ Please double-check: **is “நிறைவுறுத்தல் / நிற
 - `TA-OCC-3a08ef069d00a516` — OLP-0327 / `OLP-0327-S01`; source `content/second-order-logic/syntax-and-semantics/semantic-notions.tex:34`; Tamil `translation/content/second-order-logic/syntax-and-semantics/semantic-notions.tex:37`; PDF page pending.
 - `TA-OCC-c4b64bf7c3595ea0` — OLP-0327 / `OLP-0327-S01`; source `content/second-order-logic/syntax-and-semantics/semantic-notions.tex:35`; Tamil `translation/content/second-order-logic/syntax-and-semantics/semantic-notions.tex:39`; PDF page pending.
 - `TA-OCC-68509679fe30329e` — OLP-0327 / `OLP-0327-S01`; source `content/second-order-logic/syntax-and-semantics/semantic-notions.tex:35`; Tamil `translation/content/second-order-logic/syntax-and-semantics/semantic-notions.tex:40`; PDF page pending.
+- `TA-OCC-c503b5af9d84faa5` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:11`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:12`; PDF page pending.
+- `TA-OCC-bb0cbebe743ea7d9` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:36`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:39`; PDF page pending.
+- `TA-OCC-514e1bbfb75a05a2` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:20`; PDF page pending.
+- `TA-OCC-16e011ca909d4623` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:20`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:30`; PDF page pending.
+- `TA-OCC-37244583c7bca2ee` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:43`; PDF page pending.
+- `TA-OCC-9f2c1e914d0b61e0` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:29`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:44`; PDF page pending.
 
 ## TA-T084 — tautology / contradiction / contingent
 
@@ -15157,6 +16187,19 @@ Please double-check: **do the listed uses of “மெய்மம் / மு�
 - `TA-OCC-8fd7f8ad28d416ee` — OLP-0305 / `OLP-0305-S01`; source `content/incompleteness/theories-computability/extensions-of-q-not-decidable.tex:16`; Tamil `translation/content/incompleteness/theories-computability/extensions-of-q-not-decidable.tex:39`; PDF page pending.
 - `TA-OCC-2b10d979100d33ae` — OLP-0310 / `OLP-0310-S01`; source `content/incompleteness/theories-computability/consis-with-q.tex:32`; Tamil `translation/content/incompleteness/theories-computability/consis-with-q.tex:35`; PDF page pending.
 - `TA-OCC-7820dffa1543f6a2` — OLP-0310 / `OLP-0310-S01`; source `content/incompleteness/theories-computability/consis-with-q.tex:46`; Tamil `translation/content/incompleteness/theories-computability/consis-with-q.tex:50`; PDF page pending.
+- `TA-OCC-2b915eba37b57702` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:45`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:50`; PDF page pending.
+- `TA-OCC-35ac1e6bafa2638b` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:46`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:53`; PDF page pending.
+- `TA-OCC-fba8d825039134ac` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:57`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:67`; PDF page pending.
+- `TA-OCC-4a982b1ed9f35179` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:21`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:23`; PDF page pending.
+- `TA-OCC-f6704831d4aa2690` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:39`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:41`; PDF page pending.
+- `TA-OCC-3959b11dc12a575f` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:75`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:84`; PDF page pending.
+- `TA-OCC-8ef8eec225231d9b` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:19`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:80`; PDF page pending.
+- `TA-OCC-a1e3a017d3a995ed` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:136`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:152`; PDF page pending.
+- `TA-OCC-506b14f22710ee5f` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:136`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:160`; PDF page pending.
+- `TA-OCC-31e7ee3b72e579f9` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:105`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:110`; PDF page pending.
+- `TA-OCC-7d86fc51f0cfaac8` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:110`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:118`; PDF page pending.
+- `TA-OCC-bf284b320e772d75` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:111`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:126`; PDF page pending.
+- `TA-OCC-f4236212946e455b` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:119`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:132`; PDF page pending.
 
 ## TA-T085 — semantic entailment / semantic notions / semantic deduction theorem
 
@@ -15176,6 +16219,7 @@ Please double-check: **is “பொருண்மைப் பின்வி�
 - `TA-OCC-100d93093238a7ed` — OLP-0062 / `OLP-0062-S01`; source `content/propositional-logic/syntax-and-semantics/semantic-notions.tex:11`; Tamil `translation/content/propositional-logic/syntax-and-semantics/semantic-notions.tex:12`; PDF page pending.
 - `TA-OCC-d31c5c1a2f510b5c` — OLP-0127 / `OLP-0127-S02`; source `content/first-order-logic/completeness/introduction.tex:15`; Tamil `translation/content/first-order-logic/completeness/introduction.tex:19`; PDF page pending.
 - `TA-OCC-eaa475d8da3781ff` — OLP-0166 / `OLP-0166-S01`; source `content/first-order-logic/syntax-and-semantics/semantic-notions.tex:3`; Tamil `translation/content/first-order-logic/syntax-and-semantics/semantic-notions.tex:118`; PDF page pending.
+- `TA-OCC-6df493b99b307ca1` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:11`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:12`; PDF page pending.
 
 ## TA-T086 — unique readability / parsing / formation sequence
 
@@ -15232,6 +16276,7 @@ Please double-check: **is “சீரான பிரதியீடு / உ�
 - `TA-OCC-e9a605c571268bde` — OLP-0105 / `OLP-0105-S06`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:82`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:89`; PDF page 77.
 - `TA-OCC-5bae125431107465` — OLP-0118 / `OLP-0118-S07`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:52`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:62`; PDF page pending.
 - `TA-OCC-42daa72e25da2c18` — OLP-0129 / `OLP-0129-S05`; source `content/first-order-logic/completeness/complete-consistent-sets.tex:55`; Tamil `translation/content/first-order-logic/completeness/complete-consistent-sets.tex:60`; PDF page pending.
+- `TA-OCC-b965cb7deadfc402` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:43`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:46`; PDF page pending.
 
 ## TA-T088 — derivation / proof / inference
 
@@ -15967,6 +17012,14 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-6a98c281ae940645` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:32`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:34`; PDF page pending.
 - `TA-OCC-459fc78598da8a2a` — OLP-0373 / `OLP-0373-S01`; source `content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; PDF page pending.
 - `TA-OCC-d897af24aa558cd8` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:130`; PDF page pending.
+- `TA-OCC-114298f304a54607` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:58`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:137`; PDF page pending.
+- `TA-OCC-d2eb4bed34f2f2ce` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:14`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:15`; PDF page pending.
+- `TA-OCC-faa59d6232bc4ef9` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:38`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:45`; PDF page pending.
+- `TA-OCC-b83871b7ef99bce7` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:46`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:53`; PDF page pending.
+- `TA-OCC-99f538496d8bb42d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:57`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:64`; PDF page pending.
+- `TA-OCC-7670180d847e29a1` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:69`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:79`; PDF page pending.
+- `TA-OCC-6082f3ffc748880b` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:70`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:80`; PDF page pending.
+- `TA-OCC-5154bc3a005416f9` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:232`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:234`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -16543,6 +17596,19 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-1368dde297e512b7` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:100`; PDF page pending.
 - `TA-OCC-6c7f4fdee6b895a3` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:102`; PDF page pending.
 - `TA-OCC-02e3859698430710` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:105`; PDF page pending.
+- `TA-OCC-ec8566a26a788b00` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:43`; PDF page pending.
+- `TA-OCC-4f38963f3d271a87` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:18`; PDF page pending.
+- `TA-OCC-0ab0fc7ad34f67b9` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:23`; PDF page pending.
+- `TA-OCC-652dc303df8e50c6` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:23`; PDF page pending.
+- `TA-OCC-eb2f9c4f9191fe3f` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:29`; PDF page pending.
+- `TA-OCC-3dc3e5a80630c86d` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:30`; PDF page pending.
+- `TA-OCC-120cd566b0bfa272` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:35`; PDF page pending.
+- `TA-OCC-381f5140f5ce061c` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:14`; PDF page pending.
+- `TA-OCC-c9ee935f312d90f0` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:15`; PDF page pending.
+- `TA-OCC-e0ebc1015dd41e21` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:16`; PDF page pending.
+- `TA-OCC-6a163a17b5dfb2fb` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:16`; PDF page pending.
+- `TA-OCC-a9734f4d2ebdf891` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:26`; PDF page pending.
+- `TA-OCC-206b819f2322f361` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:62`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -16995,6 +18061,39 @@ Please double-check: **is “தொடரணி / தொடரணிக் க�
 - `TA-OCC-3da3d3bd8a10c772` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:100`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:281`; PDF page pending.
 - `TA-OCC-0122e83fc2bdc66c` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:104`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:282`; PDF page pending.
 - `TA-OCC-14486df316ffaf32` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:118`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:286`; PDF page pending.
+- `TA-OCC-05f8c3449c31daa0` — OLP-0402 / `OLP-0402-S01`; source `content/many-valued-logic/sequent-calculus/sequent-calculus.tex:8`; Tamil `translation/content/many-valued-logic/sequent-calculus/sequent-calculus.tex:10`; PDF page pending.
+- `TA-OCC-537c0e865e51f772` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:2`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:14`; PDF page pending.
+- `TA-OCC-4e96665789261393` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:17`; PDF page pending.
+- `TA-OCC-df21a950e2f1efc7` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:18`; PDF page pending.
+- `TA-OCC-7e73be6dbaba163d` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:16`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:21`; PDF page pending.
+- `TA-OCC-6f6e27cff43cb463` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:16`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:30`; PDF page pending.
+- `TA-OCC-b73fac3688a154d4` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:17`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:34`; PDF page pending.
+- `TA-OCC-ef85211a78554af7` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:20`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:55`; PDF page pending.
+- `TA-OCC-945b3f9501530e71` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:22`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:80`; PDF page pending.
+- `TA-OCC-2485bb642166ae7f` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:28`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:81`; PDF page pending.
+- `TA-OCC-aa6a7a942725fa66` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:28`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:86`; PDF page pending.
+- `TA-OCC-44efc9f461808b8e` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:2`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:18`; PDF page pending.
+- `TA-OCC-9938c0a55cc95579` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:16`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:19`; PDF page pending.
+- `TA-OCC-4cfe564a26e7831c` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:17`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:29`; PDF page pending.
+- `TA-OCC-3ffcf49db99fb12d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:25`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:30`; PDF page pending.
+- `TA-OCC-54ff9a5410bd1e04` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:25`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:32`; PDF page pending.
+- `TA-OCC-eb3e333e63048619` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:26`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:38`; PDF page pending.
+- `TA-OCC-d38db502191e1645` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:26`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:39`; PDF page pending.
+- `TA-OCC-5a7a688ec02c30a4` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:26`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:44`; PDF page pending.
+- `TA-OCC-099eae4bef7f5c0d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:31`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:45`; PDF page pending.
+- `TA-OCC-85a1570fe0f95a77` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:38`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:45`; PDF page pending.
+- `TA-OCC-2af38bd3691b4d39` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:38`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:46`; PDF page pending.
+- `TA-OCC-f82d7a47cd15c187` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:39`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:46`; PDF page pending.
+- `TA-OCC-e37d255a8d28944d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:39`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:47`; PDF page pending.
+- `TA-OCC-bdc6fa53c0a574a6` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:40`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:52`; PDF page pending.
+- `TA-OCC-cc5e4008536fe1f4` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:40`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:64`; PDF page pending.
+- `TA-OCC-3e725c57b0e55151` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:40`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:73`; PDF page pending.
+- `TA-OCC-c1a379f996bb8df8` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:41`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:73`; PDF page pending.
+- `TA-OCC-ecd1824dcfcc7482` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:47`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:79`; PDF page pending.
+- `TA-OCC-583b66810774bc09` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:2`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:15`; PDF page pending.
+- `TA-OCC-a8b2a517f3081b97` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:42`; PDF page pending.
+- `TA-OCC-c2e39d792d50e25b` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:2`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:15`; PDF page pending.
+- `TA-OCC-b672ace9ce89cd88` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:18`; PDF page pending.
 
 ## TA-T092 — natural deduction / introduction rule / elimination rule
 
@@ -17930,6 +19029,27 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-0ebbd6469e60f98b` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:77`; PDF page pending.
 - `TA-OCC-42cbe122756c9485` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:1`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:54`; PDF page pending.
 - `TA-OCC-76812f0697ed3bdb` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:53`; PDF page pending.
+- `TA-OCC-ea1a46e3f982b8a6` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:24`; PDF page pending.
+- `TA-OCC-1a53f41ba3bbaef7` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:51`; PDF page pending.
+- `TA-OCC-58dfa1cd7f581f4b` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:63`; PDF page pending.
+- `TA-OCC-e319f29bf89578b0` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:68`; PDF page pending.
+- `TA-OCC-f2ebce980207931e` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-ab414f36de9bbb8d` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:12`; PDF page pending.
+- `TA-OCC-d2576df9d5f06669` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:39`; PDF page pending.
+- `TA-OCC-9ad57284b4e7ef70` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:41`; PDF page pending.
+- `TA-OCC-05c67e0c7e63bc00` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:20`; PDF page pending.
+- `TA-OCC-0ab2603c4be9bbe5` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:21`; PDF page pending.
+- `TA-OCC-835b6e11c483adf5` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:30`; PDF page pending.
+- `TA-OCC-7d693b36111c27ed` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:31`; PDF page pending.
+- `TA-OCC-826ed14699eda90c` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:43`; PDF page pending.
+- `TA-OCC-bc0564644b7461b3` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:44`; PDF page pending.
+- `TA-OCC-207434ee16e65f59` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:31`; PDF page pending.
+- `TA-OCC-847197441e1eb02c` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; PDF page pending.
+- `TA-OCC-1c7f2fbf0728c8b3` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:146`; PDF page pending.
+- `TA-OCC-7ccd3556e298278d` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:31`; PDF page pending.
+- `TA-OCC-a36610ab2bee9ac3` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:35`; PDF page pending.
+- `TA-OCC-73086e658e42023a` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:83`; PDF page pending.
+- `TA-OCC-28f2e3798eed127d` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:87`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -18260,6 +19380,11 @@ Please double-check: **is “தருக்க விதி / கட்டம�
 - `TA-OCC-b6ba21d8c2fe1cf1` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:18`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:20`; PDF page pending.
 - `TA-OCC-e743f46ef0f42bc3` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:20`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:22`; PDF page pending.
 - `TA-OCC-e92d093b0c8dc137` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:35`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:37`; PDF page pending.
+- `TA-OCC-8606724641dd56dd` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:11`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:13`; PDF page pending.
+- `TA-OCC-1844df2346fba597` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:15`; PDF page pending.
+- `TA-OCC-4006d6e360c218fe` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:19`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
+- `TA-OCC-06f52df1e20c282b` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:24`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
+- `TA-OCC-d17aabda6b38c263` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:30`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
 
 ## TA-T099 — eigenvariable / eigenvariable condition
 
@@ -19046,6 +20171,21 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-f10e54ef7dcffdcf` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:41`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:43`; PDF page pending.
 - `TA-OCC-8bc19575474c81c5` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:29`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:30`; PDF page pending.
 - `TA-OCC-988b22ba319bfa41` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:76`; PDF page pending.
+- `TA-OCC-48d1fcde06b04d14` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-bb665139aeaa1056` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:17`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; PDF page pending.
+- `TA-OCC-c55540863ac732a4` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:19`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; PDF page pending.
+- `TA-OCC-8d7b587cb461b05f` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:15`; PDF page pending.
+- `TA-OCC-72d88948aa910e7d` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:19`; PDF page pending.
+- `TA-OCC-6c32e743615ee19d` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:20`; PDF page pending.
+- `TA-OCC-2c16773c96ede934` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:51`; PDF page pending.
+- `TA-OCC-18c5d5655b9866d7` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:19`; PDF page pending.
+- `TA-OCC-9303001dfc7ac5a6` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:21`; PDF page pending.
+- `TA-OCC-9c47207ee6c44e43` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:17`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:17`; PDF page pending.
+- `TA-OCC-51d97debeb5e2a42` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:41`; PDF page pending.
+- `TA-OCC-b0c865a783d5cd8b` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:123`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:134`; PDF page pending.
+- `TA-OCC-f9068fd816b76b79` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:146`; PDF page pending.
+- `TA-OCC-e67d7ca68711e0f7` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:138`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:199`; PDF page pending.
+- `TA-OCC-d2024b601515ed69` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:34`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -19266,6 +20406,9 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-7393b186888b858b` — OLP-0338 / `OLP-0338-S01`; source `content/second-order-logic/sol-and-set-theory/comparing-sets.tex:77`; Tamil `translation/content/second-order-logic/sol-and-set-theory/comparing-sets.tex:89`; PDF page pending.
 - `TA-OCC-c5c0a81acddb859d` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:223`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:228`; PDF page pending.
 - `TA-OCC-31096a7ff7a1b018` — OLP-0368 / `OLP-0368-S01`; source `content/lambda-calculus/church-rosser/definitions-and-properties.tex:63`; Tamil `translation/content/lambda-calculus/church-rosser/definitions-and-properties.tex:83`; PDF page pending.
+- `TA-OCC-84bfe9843ce749a4` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:65`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:68`; PDF page pending.
+- `TA-OCC-f72bb3808c99b05d` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:52`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:54`; PDF page pending.
+- `TA-OCC-9fe96083697f59ae` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:52`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:58`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -19967,6 +21110,61 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-b82728a901d51ead` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:94`; PDF page pending.
 - `TA-OCC-517e5f0a6e17b480` — OLP-0379 / `OLP-0379-S01`; source `content/lambda-calculus/lambda-definability/fixpoints.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/fixpoints.tex:55`; PDF page pending.
 - `TA-OCC-3fccbc60dfea8fdb` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:35`; PDF page pending.
+- `TA-OCC-f42480b7f3b6ee7a` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:19`; PDF page pending.
+- `TA-OCC-4126b1bafe524015` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:20`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:21`; PDF page pending.
+- `TA-OCC-f1978510aab07889` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:23`; PDF page pending.
+- `TA-OCC-95cff1b017dfd911` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:30`; PDF page pending.
+- `TA-OCC-50dcf3654fafb2f1` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:18`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:61`; PDF page pending.
+- `TA-OCC-0501ca10ced5bc57` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:56`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:62`; PDF page pending.
+- `TA-OCC-390b5326a0c07d76` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
+- `TA-OCC-4929a63bcee43ac4` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:39`; PDF page pending.
+- `TA-OCC-6c91aaa17120392a` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; PDF page pending.
+- `TA-OCC-7ebd3cfbf3be98f7` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:16`; PDF page pending.
+- `TA-OCC-703ad0ab432035f1` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:24`; PDF page pending.
+- `TA-OCC-069433dff0b8a655` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:38`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:41`; PDF page pending.
+- `TA-OCC-6b900a558adee548` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:22`; PDF page pending.
+- `TA-OCC-81311d9283eaf3d2` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:25`; PDF page pending.
+- `TA-OCC-ad05db6774d57087` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:27`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:29`; PDF page pending.
+- `TA-OCC-c8d5bd1899b184be` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:16`; PDF page pending.
+- `TA-OCC-e8205f3bf736c97b` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:42`; PDF page pending.
+- `TA-OCC-9c0a8d419d7d3898` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:80`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:92`; PDF page pending.
+- `TA-OCC-e2c505b16deb5547` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:94`; PDF page pending.
+- `TA-OCC-3f5c669100997fdc` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:95`; PDF page pending.
+- `TA-OCC-4ccf517f7a4b006d` — OLP-0393 / `OLP-0393-S01`; source `content/many-valued-logic/three-valued-logics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/introduction.tex:14`; PDF page pending.
+- `TA-OCC-00b8fc9d94d3f84b` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:128`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:64`; PDF page pending.
+- `TA-OCC-bedbe3ea3646910a` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:94`; PDF page pending.
+- `TA-OCC-72972f1301f82e66` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:128`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:141`; PDF page pending.
+- `TA-OCC-c9919c24ad051d74` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:184`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:200`; PDF page pending.
+- `TA-OCC-557df95a63d71dfe` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:56`; PDF page pending.
+- `TA-OCC-d95fb5571a13da24` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:102`; PDF page pending.
+- `TA-OCC-45a99ff22a1d2cd8` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:146`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:154`; PDF page pending.
+- `TA-OCC-e6b01f5c7da27600` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:16`; PDF page pending.
+- `TA-OCC-4c85a57e2116cc94` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:20`; PDF page pending.
+- `TA-OCC-fd556ec2f3952369` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:26`; PDF page pending.
+- `TA-OCC-a524668b14fdef4e` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:67`; PDF page pending.
+- `TA-OCC-7f29a4ee1f6860d4` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:63`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; PDF page pending.
+- `TA-OCC-7bae3829e9e23e44` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:75`; PDF page pending.
+- `TA-OCC-1670264ff90c211e` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:61`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:178`; PDF page pending.
+- `TA-OCC-ccd48c47446ea0cf` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:63`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:202`; PDF page pending.
+- `TA-OCC-b1c8e98a2fd530a1` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:209`; PDF page pending.
+- `TA-OCC-98d80cb264790bcb` — OLP-0398 / `OLP-0398-S01`; source `content/many-valued-logic/infinite-valued-logics/infinite-valued-logics.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/infinite-valued-logics.tex:10`; PDF page pending.
+- `TA-OCC-891b96bcc612eb7c` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:16`; PDF page pending.
+- `TA-OCC-c1d1b15f3e5709a2` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:20`; PDF page pending.
+- `TA-OCC-ac3fac70e492d6ce` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:27`; PDF page pending.
+- `TA-OCC-a2b9df81731d7991` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:39`; PDF page pending.
+- `TA-OCC-97db4393dbe1db3c` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:103`; PDF page pending.
+- `TA-OCC-8f8d27e957a1239b` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:106`; PDF page pending.
+- `TA-OCC-d3d107175d482fa1` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:16`; PDF page pending.
+- `TA-OCC-2f1d82aedb94da6e` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:20`; PDF page pending.
+- `TA-OCC-0e2210dd86dba1fe` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:26`; PDF page pending.
+- `TA-OCC-1e49f3bf6cb924ad` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:43`; PDF page pending.
+- `TA-OCC-facce04a148a2541` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:31`; PDF page pending.
+- `TA-OCC-76d854a3388a4b86` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:78`; PDF page pending.
+- `TA-OCC-228ccd832dd29c3c` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:77`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:82`; PDF page pending.
+- `TA-OCC-327092a961ac3364` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:42`; PDF page pending.
+- `TA-OCC-a30d463857919fbf` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:53`; PDF page pending.
+- `TA-OCC-1af5fc7cb3f7646a` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:60`; PDF page pending.
+- `TA-OCC-01076c6658b369a5` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:72`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -21985,6 +23183,9 @@ Please double-check: **is “தீர்மானிக்கப்பட்ட
 - `TA-OCC-1984fe3af0aabd57` — OLP-0262 / `OLP-0262-S01`; source `content/turing-machines/machines-computations/variants.tex:38`; Tamil `translation/content/turing-machines/machines-computations/variants.tex:42`; PDF page pending.
 - `TA-OCC-eb5f60f478d38f31` — OLP-0262 / `OLP-0262-S01`; source `content/turing-machines/machines-computations/variants.tex:38`; Tamil `translation/content/turing-machines/machines-computations/variants.tex:43`; PDF page pending.
 - `TA-OCC-0a9a69d5c1446368` — OLP-0293 / `OLP-0293-S01`; source `content/incompleteness/representability-in-q/prim-rec.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/prim-rec.tex:12`; PDF page pending.
+- `TA-OCC-0dfdc2d9654283e2` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:64`; PDF page pending.
+- `TA-OCC-74c62aacab88491a` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:245`; PDF page pending.
+- `TA-OCC-9df1642b71c809af` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:257`; PDF page pending.
 
 ## TA-T125 — standard Turing machine / index / universal Turing machine / decode
 
@@ -23457,6 +24658,225 @@ Please double-check: **is “சர்ச்-குறியாக்கப்�
 - `TA-OCC-32613713467d23a4` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:35`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:36`; PDF page pending.
 - `TA-OCC-86c5e3f5fc465cf1` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:19`; PDF page pending.
 - `TA-OCC-410241ccf34746d2` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:59`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:65`; PDF page pending.
+
+## TA-T158 — many-valued logic / designated truth value / truth-value matrix / arity / determinateness operator
+
+Chosen rendering: **பல்மதிப்புத் தருக்கம் / நியமிக்கப்பட்ட மெய்மதிப்பு / மெய்மதிப்பு அணி / இடவெண் / தீர்மானத்தன்மைச் செயலி**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked school passages directly support mathematical-logic, truth-value, connective, truth-table and function vocabulary but do not attest the complete many-valued specialist compounds. The chapter defines a many-valued logic by a nonempty value set, its designated subset and one truth function for each connective; இடவெண் is immediately fixed by the n-place clause, and the unary determinateness operator is introduced by its symbol and role. The compounds remain explicit provisional choices open to expert correction.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-T158-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “பல்மதிப்புத் தருக்கம் / நியமிக்கப்பட்ட மெய்மதிப்பு / மெய்மதிப்பு அணி / இடவெண் / தீர்மானத்தன்மைச் செயலி” the established India-standard Tamil expression for “many-valued logic / designated truth value / truth-value matrix / arity / determinateness operator” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-26c7eee08108c630` — OLP-0282 / `OLP-0282-S01`; source `content/incompleteness/arithmetization-syntax/coding-symbols.tex:19`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-symbols.tex:21`; PDF page pending.
+- `TA-OCC-2c76501952e12620` — OLP-0282 / `OLP-0282-S01`; source `content/incompleteness/arithmetization-syntax/coding-symbols.tex:25`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-symbols.tex:28`; PDF page pending.
+- `TA-OCC-2df015eef4a23970` — OLP-0383 / `OLP-0383-S01`; source `content/many-valued-logic/many-valued-logic.tex:7`; Tamil `translation/content/many-valued-logic/many-valued-logic.tex:8`; PDF page pending.
+- `TA-OCC-23559f34f02083d1` — OLP-0385 / `OLP-0385-S01`; source `content/many-valued-logic/syntax-and-semantics/introduction.tex:25`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/introduction.tex:43`; PDF page pending.
+- `TA-OCC-06c2a013b61ed0c1` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:39`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:49`; PDF page pending.
+- `TA-OCC-43e140e159a178b1` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:42`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:50`; PDF page pending.
+- `TA-OCC-e6abe930dd1d6b38` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:48`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:51`; PDF page pending.
+- `TA-OCC-cf32a39b7902f493` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:49`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:51`; PDF page pending.
+- `TA-OCC-3833f57c5c919406` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:50`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:52`; PDF page pending.
+- `TA-OCC-8c16c3b4a8c1cc33` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:51`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:58`; PDF page pending.
+- `TA-OCC-233b8a65b7952b62` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:52`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:69`; PDF page pending.
+- `TA-OCC-5b4c117af97f0367` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:15`; PDF page pending.
+- `TA-OCC-f6f8f2984abc71bb` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:16`; PDF page pending.
+- `TA-OCC-8abcd3bf945616c9` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:26`; PDF page pending.
+- `TA-OCC-2d1e4e10063cf51b` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:23`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:23`; PDF page pending.
+- `TA-OCC-152e8ae8ac33e1a4` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:40`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:44`; PDF page pending.
+- `TA-OCC-18bd378384f44aa1` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:14`; PDF page pending.
+- `TA-OCC-447583bd92ba8a72` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:11`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:28`; PDF page pending.
+- `TA-OCC-09bf1efc2770044a` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:13`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:79`; PDF page pending.
+- `TA-OCC-e2b007b5789f0f72` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:14`; PDF page pending.
+- `TA-OCC-3d9817aee57060e9` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:14`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:15`; PDF page pending.
+
+## TA-T159 — sublogic / common classical fragment
+
+Chosen rendering: **உட்தருக்கம் / பொதுச் செவ்வியல் துணைமொழி**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked passages support logic, connectives, semantic consequence and restriction vocabulary but do not directly attest these metalogical compounds. Here the common fragment consists exactly of formulas formed with the four shared connectives, and the sublogic claim is the displayed inclusion of many-valued consequence in classical consequence on that fragment. The Tamil terms are therefore fixed by the theorem rather than claimed as independently attested headwords.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-T159-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “உட்தருக்கம் / பொதுச் செவ்வியல் துணைமொழி” the established India-standard Tamil expression for “sublogic / common classical fragment” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-675473792ae346ee` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:3`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:12`; PDF page pending.
+- `TA-OCC-d488a31f4883fcf7` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:11`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:83`; PDF page pending.
+
+## TA-T160 — three-valued logic / undefined or unknown truth value / strong and weak Kleene logic / Łukasiewicz logic / Gödel logic
+
+Chosen rendering: **மும்மதிப்புத் தருக்கம் / வரையறுக்கப்படாத அல்லது அறியப்படாத மெய்மதிப்பு / வலு மற்றும் மெல் க்ளீனி தருக்கம் / லூகாசியேவிச் தருக்கம் / கோடல் தருக்கம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked Tamil passages support logic, truth value, connectives, truth tables and semantic classifications, but not the named three-valued systems as complete headwords. Each system is identified by its full matrix; the strong/weak distinction is fixed by parallel versus sequential computation, and Undef is explicitly distinguished as nontermination or unknown information. Personal names are transparently transliterated and accompanied by the source's Latin-script Łukasiewicz form where the TeX command is structurally preserved.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-T160-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “மும்மதிப்புத் தருக்கம் / வரையறுக்கப்படாத அல்லது அறியப்படாத மெய்மதிப்பு / வலு மற்றும் மெல் க்ளீனி தருக்கம் / லூகாசியேவிச் தருக்கம் / கோடல் தருக்கம்” the established India-standard Tamil expression for “three-valued logic / undefined or unknown truth value / strong and weak Kleene logic / Łukasiewicz logic / Gödel logic” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-cdc24235d6f72e37` — OLP-0393 / `OLP-0393-S01`; source `content/many-valued-logic/three-valued-logics/introduction.tex:14`; Tamil `translation/content/many-valued-logic/three-valued-logics/introduction.tex:15`; PDF page pending.
+- `TA-OCC-6aae3dc790308313` — OLP-0396 / `OLP-0396-S01`; source `content/many-valued-logic/three-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/goedel.tex:20`; PDF page pending.
+
+## TA-T161 — future contingent / modal possibility and necessity / logic of paradox / logic of nonsense / paraconsistent / principle of explosion
+
+Chosen rendering: **எதிர்கால நிச்சயமற்ற / மாதிரி கூடுதன்மை மற்றும் கட்டாயத்தன்மை / முரணுரையின் தருக்கம் / பொருளின்மையின் தருக்கம் / முரண்பொறைத் தருக்கம் / வெடிப்புக் கொள்கை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked originals support the component logic, truth, possibility-style ordinary register, contradiction and inference vocabulary but do not attest these complete specialist phrases. The sea-battle and Warsaw passages define future contingency; the Diamond and Box tables define possibility and necessity; LP and Halldén matrices define the two named logics; and failure of not-p,p entail q fixes paraconsistency and explosion. The compounds remain explicit provisional choices open to expert correction.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-TVA-N-6.3-OPEN (checked_context_only); TA-T161-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “எதிர்கால நிச்சயமற்ற / மாதிரி கூடுதன்மை மற்றும் கட்டாயத்தன்மை / முரணுரையின் தருக்கம் / பொருளின்மையின் தருக்கம் / முரண்பொறைத் தருக்கம் / வெடிப்புக் கொள்கை” the established India-standard Tamil expression for “future contingent / modal possibility and necessity / logic of paradox / logic of nonsense / paraconsistent / principle of explosion” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-ddcb007046ddd384` — OLP-0119 / `OLP-0119-S09`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:103`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:121`; PDF page pending.
+- `TA-OCC-7f578a3b14effea4` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:19`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:20`; PDF page pending.
+- `TA-OCC-74fbeea95d254b5c` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:43`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:48`; PDF page pending.
+- `TA-OCC-00a8cd2d4399d239` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:46`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:49`; PDF page pending.
+- `TA-OCC-f16f39ccc298f62d` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:60`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:52`; PDF page pending.
+- `TA-OCC-7e2e563aeb669599` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:69`; PDF page pending.
+- `TA-OCC-ca5224df9679e912` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:20`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:22`; PDF page pending.
+- `TA-OCC-4937688ab2024a1e` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:31`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:35`; PDF page pending.
+- `TA-OCC-2906694ad6d05bad` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:141`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:157`; PDF page pending.
+- `TA-OCC-4bc910799fd07ae9` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:142`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:158`; PDF page pending.
+
+## TA-T162 — infinite-valued logic / m-valued logic / evenly spaced truth values / fuzzy logic
+
+Chosen rendering: **முடிவிலா மதிப்புத் தருக்கம் / m-மதிப்புத் தருக்கம் / சீரான இடைவெளியில் அமைந்த மெய்மதிப்புகள் / மங்கல் தருக்கம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked Tamil passages support logic, truth values, number systems, tables and functions, but do not attest these complete specialist compounds. The displayed V-infinity, V-m and real unit-interval sets fix the finite/infinite value distinctions exactly; மங்கல் is the transparent Tamil rendering of fuzzy and remains explicitly provisional for expert correction.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-SC11-P6 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-T162-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “முடிவிலா மதிப்புத் தருக்கம் / m-மதிப்புத் தருக்கம் / சீரான இடைவெளியில் அமைந்த மெய்மதிப்புகள் / மங்கல் தருக்கம்” the established India-standard Tamil expression for “infinite-valued logic / m-valued logic / evenly spaced truth values / fuzzy logic” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-48afe1d30527bc54` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:98`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:104`; PDF page pending.
+
+## TA-T163 — infinite-valued Łukasiewicz logic / infinite-valued Gödel logic / Gödel–Dummett logic / linearity schema
+
+Chosen rendering: **முடிவிலா மதிப்பு லூகாசியேவிச் தருக்கம் / முடிவிலா மதிப்பு கோடல் தருக்கம் / கோடல்--டம்மெட் தருக்கம் / நேரியத் திட்டவடிவம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `false`; priority: `normal`.
+
+Intended sense and rationale: No checked Tamil source directly attests the full named systems. The Łukasiewicz and Gödel names are transparently transliterated and accompanied by source spellings where structural TeX commands require them; their matrices fix every connective, while the displayed comparable-implications schema fixes Gödel--Dummett logic. The system names remain open to expert correction without ambiguity about mathematical content.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports)
+
+Alternatives: None recorded.
+
+Please double-check: **do the listed uses of “முடிவிலா மதிப்பு லூகாசியேவிச் தருக்கம் / முடிவிலா மதிப்பு கோடல் தருக்கம் / கோடல்--டம்மெட் தருக்கம் / நேரியத் திட்டவடிவம்” preserve the OpenLogic sense of “infinite-valued Łukasiewicz logic / infinite-valued Gödel logic / Gödel–Dummett logic / linearity schema” and read naturally in India-standard mathematical Tamil?**
+
+- `TA-OCC-c4aedf2491894805` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:119`; PDF page pending.
+- `TA-OCC-b0d7f6b1f0fce5d5` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:121`; PDF page pending.
+
+## TA-T164 — n-sided sequent / n-sided sequent calculus / position corresponding to a truth value / initial sequent
+
+Chosen rendering: **n-பக்கத் தொடரணி / n-பக்கத் தொடரணிக் கணியம் / ஒரு மெய்மதிப்பிற்கு ஒத்த இடம் / தொடக்கத் தொடரணி**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: தொடரணி, தொடரணிக் கணியம், தொடக்கத் தொடரணி and the inference/proof register continue established usage in the Tamil edition. The checked originals do not attest the n-sided specialist compound, so n-பக்கத் is fixed by the displayed Gamma_1-through-Gamma_n form and the explicit one-position-per-truth-value satisfaction clause.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T164-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “n-பக்கத் தொடரணி / n-பக்கத் தொடரணிக் கணியம் / ஒரு மெய்மதிப்பிற்கு ஒத்த இடம் / தொடக்கத் தொடரணி” the established India-standard Tamil expression for “n-sided sequent / n-sided sequent calculus / position corresponding to a truth value / initial sequent” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-5d16f9a50672a0e1` — OLP-0070 / `OLP-0070-S04`; source `content/first-order-logic/sequent-calculus/rules-and-proofs.tex:52`; Tamil `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:59`; PDF page 13.
+- `TA-OCC-3ef4e67d2f505085` — OLP-0070 / `OLP-0070-S04`; source `content/first-order-logic/sequent-calculus/rules-and-proofs.tex:53`; Tamil `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:60`; PDF page 13.
+- `TA-OCC-fcffb657a3e2cf80` — OLP-0070 / `OLP-0070-S05`; source `content/first-order-logic/sequent-calculus/rules-and-proofs.tex:64`; Tamil `translation/content/first-order-logic/sequent-calculus/rules-and-proofs.tex:72`; PDF page 14.
+- `TA-OCC-e21e612146210227` — OLP-0074 / `OLP-0074-S01`; source `content/first-order-logic/sequent-calculus/derivations.tex:16`; Tamil `translation/content/first-order-logic/sequent-calculus/derivations.tex:17`; PDF page 17.
+- `TA-OCC-8d24697b5d620ec7` — OLP-0074 / `OLP-0074-S01`; source `content/first-order-logic/sequent-calculus/derivations.tex:19`; Tamil `translation/content/first-order-logic/sequent-calculus/derivations.tex:20`; PDF page 17.
+- `TA-OCC-b8e302d6ed2340a5` — OLP-0074 / `OLP-0074-S02`; source `content/first-order-logic/sequent-calculus/derivations.tex:27`; Tamil `translation/content/first-order-logic/sequent-calculus/derivations.tex:29`; PDF page 17.
+- `TA-OCC-f4ceccaffb45518b` — OLP-0074 / `OLP-0074-S03`; source `content/first-order-logic/sequent-calculus/derivations.tex:38`; Tamil `translation/content/first-order-logic/sequent-calculus/derivations.tex:42`; PDF page 17.
+- `TA-OCC-bc163b2b09c97dc6` — OLP-0075 / `OLP-0075-S01`; source `content/first-order-logic/sequent-calculus/proving-things.tex:39`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:38`; PDF page 19.
+- `TA-OCC-76a60eab95cadf0f` — OLP-0075 / `OLP-0075-S02`; source `content/first-order-logic/sequent-calculus/proving-things.tex:91`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:91`; PDF page 19.
+- `TA-OCC-e41337d441f37f8b` — OLP-0075 / `OLP-0075-S03`; source `content/first-order-logic/sequent-calculus/proving-things.tex:154`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:210`; PDF page 21.
+- `TA-OCC-6634ae1333218df5` — OLP-0075 / `OLP-0075-S04`; source `content/first-order-logic/sequent-calculus/proving-things.tex:270`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:271`; PDF page 21.
+- `TA-OCC-084fc03ab29595a7` — OLP-0076 / `OLP-0076-S01`; source `content/first-order-logic/sequent-calculus/proving-things-quant.tex:23`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things-quant.tex:22`; PDF page 23.
+- `TA-OCC-14b3aa8095194e64` — OLP-0076 / `OLP-0076-S01`; source `content/first-order-logic/sequent-calculus/proving-things-quant.tex:23`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things-quant.tex:60`; PDF page 23.
+- `TA-OCC-8d0e81bf19f89e3a` — OLP-0077 / `OLP-0077-S06`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:84`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:93`; PDF page 25.
+- `TA-OCC-1baf2252157abc83` — OLP-0081 / `OLP-0081-S03`; source `content/first-order-logic/sequent-calculus/soundness.tex:62`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:65`; PDF page 30.
+- `TA-OCC-096c290e52ea34a2` — OLP-0081 / `OLP-0081-S03`; source `content/first-order-logic/sequent-calculus/soundness.tex:62`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:66`; PDF page 30.
+- `TA-OCC-102bb83534e3133f` — OLP-0082 / `OLP-0082-S01`; source `content/first-order-logic/sequent-calculus/identity.tex:13`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:14`; PDF page 35.
+- `TA-OCC-acb434664b804ac4` — OLP-0082 / `OLP-0082-S01`; source `content/first-order-logic/sequent-calculus/identity.tex:16`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:17`; PDF page 35.
+- `TA-OCC-98bfbce7d61fe9e9` — OLP-0082 / `OLP-0082-S01`; source `content/first-order-logic/sequent-calculus/identity.tex:17`; Tamil `translation/content/first-order-logic/sequent-calculus/identity.tex:18`; PDF page 35.
+- `TA-OCC-5d5339e44cb2317b` — OLP-0083 / `OLP-0083-S01`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:14`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:15`; PDF page 36.
+- `TA-OCC-e40deff9cbb39d89` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:18`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:21`; PDF page 36.
+- `TA-OCC-97fb7a8602232d0a` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:37`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:38`; PDF page pending.
+- `TA-OCC-56ff4e3fe696984e` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:79`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:82`; PDF page pending.
+- `TA-OCC-66450abceb44b7f8` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:118`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:128`; PDF page pending.
+- `TA-OCC-7982832e9e6b04f1` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:214`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:222`; PDF page pending.
+- `TA-OCC-9d118573ccb02d3e` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:30`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:34`; PDF page pending.
+- `TA-OCC-94c0a94e5dd5bfc6` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:80`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:86`; PDF page pending.
+- `TA-OCC-4ceefc98a46db76f` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:25`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:29`; PDF page pending.
+- `TA-OCC-8c49158463b7df6a` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:26`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:30`; PDF page pending.
+- `TA-OCC-4cb8b3e15e46265b` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:40`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:46`; PDF page pending.
+
+## TA-T165 — structural rules / weakening / contraction / exchange / cut rule / characteristic truth function
+
+Chosen rendering: **கட்டமைப்பு விதிகள் / தளர்த்தல் / சுருக்கல் / இடமாற்றம் / வெட்டு விதி / பண்புறுத்தும் வாய்மைச் சார்பு**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The structural-rule Tamil terms continue the already reviewed sequent-calculus edition vocabulary. The checked sources support inference, proof, connective, truth-table and function usage; பண்புறுத்தும் வாய்மைச் சார்பு is fixed in place by the statement that the same truth function yields the same connective rules across logics.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T165-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கட்டமைப்பு விதிகள் / தளர்த்தல் / சுருக்கல் / இடமாற்றம் / வெட்டு விதி / பண்புறுத்தும் வாய்மைச் சார்பு” the established India-standard Tamil expression for “structural rules / weakening / contraction / exchange / cut rule / characteristic truth function” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-0b0ec5fda823b917` — OLP-0073 / `OLP-0073-S01`; source `content/first-order-logic/sequent-calculus/structural-rules.tex:13`; Tamil `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:14`; PDF page 16.
+- `TA-OCC-52d14e6da54392c6` — OLP-0073 / `OLP-0073-S02`; source `content/first-order-logic/sequent-calculus/structural-rules.tex:23`; Tamil `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:25`; PDF page 16.
+- `TA-OCC-31346de873ffe493` — OLP-0073 / `OLP-0073-S03`; source `content/first-order-logic/sequent-calculus/structural-rules.tex:37`; Tamil `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:40`; PDF page 16.
+- `TA-OCC-ea0853e5bd8d0ea5` — OLP-0073 / `OLP-0073-S03`; source `content/first-order-logic/sequent-calculus/structural-rules.tex:41`; Tamil `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:54`; PDF page 16.
+- `TA-OCC-4fb9ba14b3d5d912` — OLP-0073 / `OLP-0073-S03`; source `content/first-order-logic/sequent-calculus/structural-rules.tex:46`; Tamil `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:68`; PDF page 16.
+- `TA-OCC-e77e7f0a55fb0796` — OLP-0073 / `OLP-0073-S03`; source `content/first-order-logic/sequent-calculus/structural-rules.tex:51`; Tamil `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:68`; PDF page 16.
+- `TA-OCC-9463df8d6c68e9fe` — OLP-0073 / `OLP-0073-S03`; source `content/first-order-logic/sequent-calculus/structural-rules.tex:55`; Tamil `translation/content/first-order-logic/sequent-calculus/structural-rules.tex:68`; PDF page 16.
+- `TA-OCC-51cac972fcfd3424` — OLP-0075 / `OLP-0075-S04`; source `content/first-order-logic/sequent-calculus/proving-things.tex:253`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:254`; PDF page 21.
+- `TA-OCC-ea778cb9af164483` — OLP-0075 / `OLP-0075-S04`; source `content/first-order-logic/sequent-calculus/proving-things.tex:271`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:272`; PDF page 21.
+- `TA-OCC-305d25d24bbe6ed7` — OLP-0077 / `OLP-0077-S04`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:45`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:52`; PDF page 25.
+- `TA-OCC-ee8893b4d5c339f8` — OLP-0077 / `OLP-0077-S04`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:45`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:52`; PDF page 25.
+- `TA-OCC-53f17cad1f3a9ee1` — OLP-0077 / `OLP-0077-S04`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:45`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:52`; PDF page 25.
+- `TA-OCC-6502beaebc6b5f0e` — OLP-0077 / `OLP-0077-S04`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:57`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:73`; PDF page 25.
+- `TA-OCC-4ba4b62e2e903b59` — OLP-0077 / `OLP-0077-S04`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:59`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:74`; PDF page 25.
+- `TA-OCC-ac70b119941565fd` — OLP-0079 / `OLP-0079-S03`; source `content/first-order-logic/sequent-calculus/provability-propositional.tex:83`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-propositional.tex:86`; PDF page 28.
+- `TA-OCC-af9b11608f831e22` — OLP-0079 / `OLP-0079-S03`; source `content/first-order-logic/sequent-calculus/provability-propositional.tex:84`; Tamil `translation/content/first-order-logic/sequent-calculus/provability-propositional.tex:86`; PDF page 28.
+- `TA-OCC-e4eb1d7efbb3dee3` — OLP-0081 / `OLP-0081-S04`; source `content/first-order-logic/sequent-calculus/soundness.tex:75`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:79`; PDF page 30.
+- `TA-OCC-8d33a51e1f09f89e` — OLP-0100 / `OLP-0100-S05`; source `content/first-order-logic/tableaux/propositional-rules.tex:77`; Tamil `translation/content/first-order-logic/tableaux/propositional-rules.tex:82`; PDF page 63.
+- `TA-OCC-8a6170c1afa31b3d` — OLP-0345 / `OLP-0345-S01`; source `content/lambda-calculus/introduction/reduction.tex:28`; Tamil `translation/content/lambda-calculus/introduction/reduction.tex:29`; PDF page pending.
+- `TA-OCC-4d37d8488cd8912b` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:17`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:18`; PDF page pending.
+- `TA-OCC-21f64dad2df4a72c` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:18`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:19`; PDF page pending.
+- `TA-OCC-2493280a326812c1` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:28`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:44`; PDF page pending.
+- `TA-OCC-6d21d946f54680ae` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:42`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:122`; PDF page pending.
+- `TA-OCC-6d7e80a9172a8eb5` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:18`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:20`; PDF page pending.
+- `TA-OCC-27ffbd0e6035b6ed` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:20`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:22`; PDF page pending.
+- `TA-OCC-23cece6f59517e49` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:35`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:37`; PDF page pending.
+- `TA-OCC-b8eb0b7f2f7aaa02` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:11`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:13`; PDF page pending.
+- `TA-OCC-cfcafc8d39f5eb36` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:15`; PDF page pending.
+- `TA-OCC-c7bd252d0347d687` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:19`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
+- `TA-OCC-21126527e44da187` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:24`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
+- `TA-OCC-48613b7163e79434` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:30`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

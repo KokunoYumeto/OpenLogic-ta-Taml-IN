@@ -1,0 +1,403 @@
+{
+  "batch_id": "TA-B181",
+  "units": [
+    {
+      "unit_id": "OLP-0392",
+      "source_sha256": "24ee5d0ab52f218eb4750bea0441cbdaf05d19cfa480cf2f92376dc0c697ecc3",
+      "translation_sha256": "be9d4c4add05d8a9dc2406d5706bb629161ff6838f9325e816232310541ccf59",
+      "source_bytes": 336,
+      "translation_bytes": 413,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0393",
+      "source_sha256": "77b91c121cc775c602663a64f615c3604a32db5d61625d07dfc9ea30ab5047e1",
+      "translation_sha256": "2898291f97ff65cf561c5bf0e7b573459c3162649625d5ffad32200f5ca3ee53",
+      "source_bytes": 763,
+      "translation_bytes": 1723,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0394",
+      "source_sha256": "fe499a0fa941ad8d370b2f0346660d76aad7b4aad999a54ea88f79cdacc2641a",
+      "translation_sha256": "0955b1bc92974244b411a7fce9dd3a1cdea1a5c8ed48f3944b357779abb4cc5a",
+      "source_bytes": 10066,
+      "translation_bytes": 20329,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\tf{\\land}(\\False,\\Undef)=\\tf{\\land}(\\False,\\Undef)=\\False.\\]",
+        "$(\\lnotp\\landp)\\lifq)$"
+      ],
+      "extra_math": [
+        "\\[\\tf{\\land}(\\False,\\Undef)=\\tf{\\land}(\\Undef,\\False)=\\False.\\]",
+        "$(\\lnotp\\landp)\\lifq$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "ccc",
+        "cccccc",
+        "include",
+        "logic",
+        "luk",
+        "mvl",
+        "open",
+        "propositional",
+        "section",
+        "thr",
+        "ukasiewicz",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-007",
+          "unit_id": "OLP-0394",
+          "kind": "lukasiewicz-conjunction-equation-repeats-argument-order",
+          "action": "Used the symmetric undefined/false argument order in the second conjunction equation.",
+          "expected_missing_math": [
+            "\\[\\tf{\\land}(\\False,\\Undef)=\\tf{\\land}(\\False,\\Undef)=\\False.\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\tf{\\land}(\\False,\\Undef)=\\tf{\\land}(\\Undef,\\False)=\\False.\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The prose discusses either conjunct being false, but the display repeats tf-land(False,Undef) instead of giving the reversed input order.",
+          "chosen_treatment": "தமிழ் இரண்டாம் சமன்பாட்டில் வரையறுக்கப்படாத மதிப்பையும் பொய்மதிப்பையும் மறுதிசையில் அமைக்கிறது.",
+          "alternatives_considered": "Repeating the first ordered pair; omitting commutativity from the explanatory equations.",
+          "rationale": "The immediately preceding true/undefined display gives both orders, and the matrix table assigns False to both false/undefined orders.",
+          "precise_review_question": "Does the repaired display now state both symmetric false-conjunction cases shown by the matrix?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-007"
+        },
+        {
+          "audit_id": "TA-MVL-008",
+          "unit_id": "OLP-0394",
+          "kind": "lukasiewicz-exposition-prose-defects",
+          "action": "Closed the settled-value parenthesis in prose and restored the intended idiom that Łukasiewicz had no trouble giving up two schemata.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source leaves the parenthetical 'if the arguments are settled truth values' open and says 'had not trouble' rather than 'had no trouble'.",
+          "chosen_treatment": "தமிழ் இடைச்செருகலை முழுமையாக மூடி, இரு திட்டங்களை விடத் தயங்கவில்லை என்ற இயல்பான பொருளைத் தருகிறது.",
+          "alternatives_considered": "Treating the remainder of the paragraph as parenthetical; construing 'not trouble' as a technical negation.",
+          "rationale": "The surrounding comparison separates settled classical inputs from the later conditional case and contrasts accepted losses with reluctance to lose reflexivity.",
+          "precise_review_question": "Does the repaired prose preserve the contrast between accepted excluded-middle failures and retained A-implies-A?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-008"
+        },
+        {
+          "audit_id": "TA-MVL-009",
+          "unit_id": "OLP-0394",
+          "kind": "lukasiewicz-exercise-unmatched-parenthesis",
+          "action": "Removed the unmatched closing parenthesis after q in the first exercise formula.",
+          "expected_missing_math": [
+            "$(\\lnotp\\landp)\\lifq)$"
+          ],
+          "expected_extra_math": [
+            "$(\\lnotp\\landp)\\lifq$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The first formula already closes its conjunction before the conditional and then contains one unmatched final right parenthesis.",
+          "chosen_treatment": "தமிழ் வாய்பாட்டின் இறுதியில் உள்ள இணையற்ற வல அடைப்புக்குறியை நீக்குகிறது.",
+          "alternatives_considered": "Adding an unmatched opening parenthesis around the whole conditional; treating the extra mark as prose punctuation inside math.",
+          "rationale": "The exercise asks about a conditional whose antecedent is the contradictory conjunction and whose consequent is q.",
+          "precise_review_question": "Is the corrected formula balanced with exactly the conjunction as antecedent?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-009"
+        },
+        {
+          "audit_id": "TA-MVL-010",
+          "unit_id": "OLP-0394",
+          "kind": "modal-assessment-repeated-transition-and-spelling",
+          "action": "Removed the duplicated transition word and restored the intended spelling of possibility.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The final paragraph begins 'However' twice and later misspells 'possibility' as 'possiblity'.",
+          "chosen_treatment": "தமிழ் ஒரே மாறுகூற்றுடன் தொடங்கி கூடுதன்மை, கட்டாயத்தன்மை என்ற இரு மாதிரி வேறுபாடுகளையும் தெளிவாகக் குறிப்பிடுகிறது.",
+          "alternatives_considered": "Preserving the duplicated transition; treating the misspelling as a distinct modal notion.",
+          "rationale": "Neither defect changes the stated countervaluation or the conclusion that three values remain insufficient.",
+          "precise_review_question": "Does the Tamil retain the counterexample and the exact insufficiency conclusion after the prose repair?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-010"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0395",
+      "source_sha256": "0b632552858c410d3670357a0df7071cb5a3c5bd285681e86988ed07263852d7",
+      "translation_sha256": "61a248154103f5bcd90d8967680ba13c73906bf9506e13f2d725e14dff8e49cd",
+      "source_bytes": 6879,
+      "translation_bytes": 12948,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "ccc",
+        "include",
+        "logic",
+        "open",
+        "propositional",
+        "section",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-011",
+          "unit_id": "OLP-0395",
+          "kind": "kleene-computational-motivation-prose-defects",
+          "action": "Restored the missing comparison preposition and removed the stray article before the undefined-conjunct condition.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says truth values are 'thought of the outcomes' and later 'the if one conjunct is undefined'.",
+          "chosen_treatment": "தமிழ் மெய்மதிப்புகளை கணிப்பீட்டுச் செயல்முறைகளின் விளைவுகளாகக் கூறி, ஒரு இணையுறுப்பு வரையறுக்கப்படாத நேர்வை முழுமையான வாக்கியமாக வழங்குகிறது.",
+          "alternatives_considered": "Treating outcomes as objects directly identified with the thought; retaining the stray article as a technical marker.",
+          "rationale": "The following sequential and parallel procedures make both intended grammatical relations unambiguous.",
+          "precise_review_question": "Does the repaired prose preserve the sequential nontermination motivation for weak Kleene operations?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-011"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0396",
+      "source_sha256": "1075b4d66085bb613bcaf0ef498cf8b3705b84d9dfd3dfedf648847b39be9542",
+      "translation_sha256": "2245abf1185f52f03e6635b3df0d92679fdb11f218e74d886238f28efc1f5820",
+      "source_bytes": 4106,
+      "translation_bytes": 6916,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "ccc",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "ukasiewicz"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0397",
+      "source_sha256": "4345be8f1da0718c7667fcae18709d7e2688c5e576f07e3e043f36e7eb99216f",
+      "translation_sha256": "cedd4f1916ba67fc362c49ce25abcca3f9236ae8d3621ef9306c48f48b60b5f7",
+      "source_bytes": 8320,
+      "translation_bytes": 15573,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\pValuev(!A)[\\LogKs]=\\pAssignv(p)=\\pValue{v'}(!A)[\\LogCL]$",
+        "$\\pValuev(!B)[\\LogKs]=\\True$",
+        "$\\pValuev(!B)[\\LogKs]=\\False$"
+      ],
+      "extra_math": [
+        "$\\pValuev(!A)[\\LogKs]=\\pAssignv(p)$",
+        "$\\pValue{v'}(!A)[\\LogCL]=\\pAssign{v'}(p)$",
+        "$\\pValuev(!C)[\\LogKs]=\\False$",
+        "$\\pValuev(!C)[\\LogKs]=\\True$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Mingle",
+        "include",
+        "logic",
+        "mul",
+        "mvl",
+        "open",
+        "section",
+        "sub",
+        "syn",
+        "thr",
+        "ukasiewicz",
+        "val"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-012",
+          "unit_id": "OLP-0397",
+          "kind": "lp-proof-atomic-basis-invalid-triple-equality",
+          "action": "Separated the two evaluation equalities and invoked the definition of v-prime to prove only the required True and False implications.",
+          "expected_missing_math": [
+            "$\\pValuev(!A)[\\LogKs]=\\pAssignv(p)=\\pValue{v'}(!A)[\\LogCL]$"
+          ],
+          "expected_extra_math": [
+            "$\\pValuev(!A)[\\LogKs]=\\pAssignv(p)$",
+            "$\\pValue{v'}(!A)[\\LogCL]=\\pAssign{v'}(p)$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\pAssign"
+          ],
+          "source_issue_or_choice": "The source asserts v(p)=v-prime(p), but its own definition maps v(p)=Undef to v-prime(p)=True, so that triple equality is false. The induction needs only preservation of the extreme values False and True.",
+          "chosen_treatment": "தமிழ் இரு மதிப்பீடுகளின் அணுவாய்பாட்டு மதிப்புகளைத் தனித்தனியாக அவற்றின் ஒதுக்கீடுகளுடன் சமப்படுத்தி, தேவையான இரு உட்கிடைகளை v-prime இன் வரையறையிலிருந்து பெறுகிறது.",
+          "alternatives_considered": "Claiming Undef equals True; changing the collapse map and breaking the theorem; strengthening the induction to an unavailable equality.",
+          "rationale": "When v(p) is False or True, the collapse definition preserves it; the Undef case is irrelevant to implications (a) and (b).",
+          "precise_review_question": "Does the repaired basis establish exactly (a) and (b) without asserting equality in the Undef case?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-012"
+        },
+        {
+          "audit_id": "TA-MVL-013",
+          "unit_id": "OLP-0397",
+          "kind": "lp-proof-false-conjunction-repeats-left-conjunct",
+          "action": "Used C as the second potentially false conjunct.",
+          "expected_missing_math": [
+            "$\\pValuev(!B)[\\LogKs]=\\False$"
+          ],
+          "expected_extra_math": [
+            "$\\pValuev(!C)[\\LogKs]=\\False$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The false-conjunction case says B is false or B is false, although its induction conclusion and the strong Kleene table require B or C.",
+          "chosen_treatment": "தமிழ் இரண்டாம் பிரிப்புறுப்பில் C இன் மதிப்பு பொய் என்று தருகிறது.",
+          "alternatives_considered": "Repeating B and leaving the C branch unproved; changing the induction conclusion to mention B twice.",
+          "rationale": "A strong Kleene conjunction is false when either conjunct is false, and the next line already applies the induction hypothesis to B or C.",
+          "precise_review_question": "Does the corrected disjunction cover both conjuncts and feed the stated classical conclusion?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-013"
+        },
+        {
+          "audit_id": "TA-MVL-014",
+          "unit_id": "OLP-0397",
+          "kind": "lp-proof-true-conjunction-repeats-left-conjunct",
+          "action": "Used C as the second true conjunct.",
+          "expected_missing_math": [
+            "$\\pValuev(!B)[\\LogKs]=\\True$"
+          ],
+          "expected_extra_math": [
+            "$\\pValuev(!C)[\\LogKs]=\\True$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The true-conjunction case says B is true and B is true, although both conjuncts must be true and the next line invokes B and C.",
+          "chosen_treatment": "தமிழ் இரண்டாம் இணையுறுப்பில் C இன் மதிப்பு மெய் என்று தருகிறது.",
+          "alternatives_considered": "Repeating B and leaving C unconstrained; changing the final conjunction to B-and-B.",
+          "rationale": "The strong Kleene conjunction table returns True exactly when both B and C are True.",
+          "precise_review_question": "Does the repaired premise now justify the two classical True values and their conjunction?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-014"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\pAssign"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

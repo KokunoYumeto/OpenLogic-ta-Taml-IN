@@ -1,0 +1,53 @@
+% SEGMENT OLP-0389-S01
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: valuations-sat
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{val}
+
+\olsection{\usetoken{P}{valuation} மற்றும் நிறைவுறுத்தல்}
+
+\begin{defn}[!!^{valuation}s]
+$V$ என்பது மெய்மதிப்புகளின் ஒரு கணம் என்க. $\Lang{L}$ இலிருந்து~$V$
+க்குச் செல்லும் ஓர் \emph{!!{valuation}} என்பது மொழியின்
+!!{propositional variable}s ஒவ்வொன்றுக்கும்~$V$ இன் !!a{element} ஐ
+ஒதுக்கும் சார்பு~$\pAssign{v}$; அதாவது, $\pAssign{v} \colon
+\PVar \to V$.
+\end{defn}
+
+\begin{defn}\ollabel{defn:pValue}
+  பல்மதிப்புத் தருக்கம்~$\Log L$ இன் மெய்மதிப்புகளின் கணம்~$V$ க்குள்
+  செல்லும் !!a{valuation}~$\pAssign{v}$ தரப்பட்டால், மதிப்பீட்டுச் சார்பு
+  $\pValue{v} \colon \Frm[L] \to V$ ஐப் பின்வருமாறு தொகுத்தறிதலாக
+  வரையறுக்க:
+  \begin{enumerate}
+    \item $\pValue{v}(\Obj p_n) = \pAssign{v}(\Obj p_n)$;
+    \item $\star$ என்பது $0$-இட இணைப்பி எனில்,
+    $\pValue{v}(\star)  = \tf{\star}[\Log L]$;
+    \item $\star$ என்பது $n$-இட இணைப்பி எனில்,
+    \[
+      \pValue{v}(\star(!A_1, \dots, !A_n)) = \tf{\star}[\Log L]
+      (\pValue{v}(!A_1), \dots, \pValue{v}(!A_n)).
+    \]
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}[நிறைவுறுத்தல்]
+\ollabel{defn:satisfaction} !!{formula}~$!A$ ஐ
+  !!a{valuation}~$\pAssign{v}$ \emph{நிறைவுறுத்துகிறது}, அதாவது
+  $\pSat{v}{!A}[\Log L]$ என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\pValue{v}(!A)[\Log L] \in V^+$; இங்கு $V^+$ என்பது~$\Log L$ இன்
+  நியமிக்கப்பட்ட மெய்மதிப்புகளின் கணம்.
+
+  ``$\pSat{v}{!A}[\Log L]$ அன்று'' என்பதைக் குறிக்க
+  $\pSat/{v}{!A}[\Log L]$ என எழுதுகிறோம். $\Gamma$ என்பது
+  !!{formula}s இன் கணம் எனில், ஒவ்வொரு~$!A \in \Gamma$ க்கும்
+  $\pSat{v}{!A}[\Log L]$ என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\pSat{v}{\Gamma}[\Log L]$.
+\end{defn}
+
+\end{document}

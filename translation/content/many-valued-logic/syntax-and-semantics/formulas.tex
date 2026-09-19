@@ -1,0 +1,47 @@
+% SEGMENT OLP-0387-S01
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: formulas
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{fml}
+
+\olsection{\usetoken{P}{formula}}
+
+\begin{defn}[வாய்பாடு]
+\ollabel{defn:formulas}
+கூற்று மொழி~$\Lang L$ இன் \emph{!!{formula}s} அடங்கிய கணம்~$\Frm[L]$
+பின்வருமாறு தொகுத்தறிதலாக வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+\item ஒவ்வொரு !!{propositional variable}~$\Obj p_i$ உம் ஓர் அணு
+  !!{formula}.
+\item $\Lang L$ இன் ஒவ்வொரு $0$-இட இணைப்பியும் (கூற்று மாறிலியும்)
+  ஓர் அணு !!{formula}.
+\item $\star$ என்பது~$\Lang L$ இன் ஓர் $n$-இட இணைப்பியாகவும், $!A_1$,
+\dots, $!A_n$ ஆகியவை !!{formula}s ஆகவும் இருந்தால்,
+$\star(!A_1, \dots, !A_n)$ என்பது !!a{formula}.
+\tagitem{limitClause}{வேறு எதுவும் !!a{formula} அன்று.}{}
+\end{enumerate}
+$\star$ ஒரு $1$-இட இணைப்பி எனில், $\star(!A_1)$ என்பதைப் பெரும்பாலும்
+$\star !A_1$ என்றே எழுதுவோம். $\star$ ஒரு $2$-இட இணைப்பி எனில்,
+$\star(!A_1,!A_2)$ என்பதைப் பெரும்பாலும் $(!A_1 \star !A_2)$ என்று
+எழுதுவோம்.
+\end{defn}
+
+வழக்கம்போல், மிக வெளிப்புற அடைப்புக்குறிகளைப் பல நேரங்களில் எழுதாமல்
+விடுவோம்.
+
+\begin{ex}
+  செந்தர மொழி~$\Lang{L_0}$ இல், $\Obj p_1 \lif (\Obj p_1
+  \land \lnot \Obj p_2)$ ஒரு வாய்பாடு. பெருக்கல் தருக்கத்தின் மொழியில்
+  அதை $\Obj p_1 \lif (\Obj p_1 \odot
+  \lnot \Obj p_2)$ என்று எழுதுவோம். மொழியில் $1$-இட
+  $\triangle$ ஐச் சேர்த்தால், $\triangle (\Obj p_1
+  \land \Obj p_2) \lif (\triangle \Obj p_1 \land \triangle \Obj p_2)$
+  போன்ற வாய்பாடுகளும் கிடைக்கும்.
+\end{ex}
+
+\end{document}

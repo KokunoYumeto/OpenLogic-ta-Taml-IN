@@ -1,0 +1,82 @@
+% SEGMENT OLP-0404-S01
+% SOURCE CORRECTION TA-MVL-023: correct the part metadata from first-order-logic to many-valued-logic.
+% Part: many-valued-logic
+% Chapter: sequent-calculus
+% Section: rules-and-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{seq}{rul}
+
+\olsection{விதிகள் மற்றும் \usetoken{P}{derivation}}
+
+பின்வருவனவற்றில், $\Gamma, \Delta, \Pi, \Lambda$ ஆகியவை
+!!{sentence}s இன் முடிவுறு தொடர்களைக் குறிப்பனவாக இருக்கட்டும்.
+
+\begin{defn}[பக்கத் தொடரணி]
+ஓர் \emph{$n$-பக்கத் தொடரணி} என்பது
+\[
+\Gamma_1 \nSequent \dots \nSequent \Gamma_n
+\]
+என்ற வடிவிலான கோவை;
+% SOURCE CORRECTION TA-MVL-024: quantify over Gamma_i and use the singular sequence.
+இங்கு ஒவ்வொரு~$\Gamma_i$ உம் மொழி~$\Lang L$ இன் !!{sentence}s ஐக் கொண்ட
+முடிவுறு (வெறுமையாகவும் இருக்கக்கூடிய) தொடர்.
+\end{defn}
+
+\begin{defn}[தொடக்கத் தொடரணி]
+ஓர் \emph{$n$-பக்கத் தொடக்கத் தொடரணி} என்பது, மொழியிலுள்ள எந்த
+!!{sentence}~$!A$ க்கும், $!A \nSequent \dots \nSequent !A$ என்ற
+வடிவிலுள்ள ஓர்~$n$-பக்கத் தொடரணி.
+
+மொழியில் ஒரு கூற்று மாறிலியான $0$-இட இணைப்பி~$\star$ இருந்தால்,
+% SOURCE CORRECTION TA-MVL-025: state explicitly that every other position is empty.
+$\tf{\star} \in V$ உடன் தொடர்புடைய மெய்மதிப்பிற்கான இடத்தில்~$\star$
+தோன்றியும் மற்ற எல்லா இடங்களும் வெறுமையாகவும் உள்ள
+$\dots \nSequent \star \nSequent \dots$ என்ற தொடரணியையும் தொடக்கத்
+தொடரணியாகக் கொள்கிறோம்.
+\end{defn}
+
+ஓர்~$n$-மதிப்புத் தருக்கம்~$\Log{L}$ இன் ஒவ்வோர் இணைப்பிக்கும், அந்த
+இணைப்பி~$\Log{L}$ இல் பெறக்கூடிய ஒவ்வொரு மெய்மதிப்பிற்கும் ஒரு தருக்க
+விதி உண்டு. $\Log{L}$ க்கான $n$-பக்கத் தொடரணிக் கணியத்திலுள்ள
+!!^{derivation}s தொடரணிகளின் மரங்கள். அவற்றின் உச்சியிலுள்ள தொடரணிகள்
+தொடக்கத் தொடரணிகளாக இருக்கும்; ஒரு தொடரணி வேறு ஒன்று அல்லது அதற்கு மேற்பட்ட
+தொடரணிகளுக்குக் கீழே இருந்தால், அது~$\Log{L}$ இன் இணைப்பிகளுக்கான ஓர்
+அனுமான விதியால் அவற்றிலிருந்து சரியாகப் பின்வர வேண்டும்.
+
+\begin{defn}[தேற்றங்கள்]
+!!^a{sentence}~$!A$ ஆனது, $\Log{L}$ இன் நியமிக்கப்பட்ட மெய்மதிப்பிற்கு
+ஒத்த ஒவ்வோர் இடத்திலும்~$!A$ ஐக் கொண்ட $n$-பக்கத் தொடரணிக்கு
+!!a{derivation} ஒன்று இருந்தால், $n$-மதிப்புத் தருக்கம்~$\Log{L}$ இன்
+ஒரு \emph{தேற்றம்}. $!A$ ஒரு தேற்றமெனில் $\Proves[\Log{L}] !A$ என்றும்,
+தேற்றமல்ல எனில் $\Proves/[\Log{L}] !A$ என்றும் எழுதுகிறோம்.
+\end{defn}
+
+\begin{defn}[!!^{derivability}]
+ஒரு கணம்~$\Gamma$ இலுள்ள !!{sentence}s இலிருந்து !!^a{sentence}~$!A$
+ஓர்~$n$-மதிப்புத் தருக்கம்~$\Log{L}$ இல் \emph{!!{derivable}}, அதாவது
+$\Gamma \Proves[\Log{L}] !A$, என்பது, அப்போதும் அப்போது மட்டுமே,
+$\Gamma_0 \subseteq \Gamma$ என்ற முடிவுறு உட்கணம் ஒன்றும்,
+$\Gamma_0$ இலுள்ள !!{sentence}s ஐக் கொண்ட $\Gamma_0'$ என்ற தொடர் ஒன்றும்
+இருந்து, பின்வரும் தொடரணிக்கு !!a{derivation} ஒன்று இருக்கும்:
+\[ \Lambda_1 \nSequent \dots \nSequent \Lambda_n \]
+இங்கு $i$ ஆம் இடம் ஒரு நியமிக்கப்பட்ட மெய்மதிப்பிற்கு ஒத்திருந்தால்
+$\Lambda_i$ என்பது~$!A$ ஆகவும், மற்றபடி $\Gamma_0'$ ஆகவும் இருக்கும்.
+$!A$ ஆனது~$\Gamma$ இலிருந்து !!{derivable} அல்ல எனில்
+$\Gamma \Proves/ !A$ என்று எழுதுகிறோம்.
+\end{defn}
+
+எடுத்துக்காட்டாக, $3$-மதிப்பு லூகாசியேவிச்~(\L ukasiewicz) தருக்கத்திற்கு
+ஒரு $3$-பக்கத் தொடரணிக் கணியம் உண்டு. $3$-பக்கத் தொடரணி
+$\Gamma \nSequent \Pi \nSequent \Delta$ இல், $\Gamma$ ஆனது~$\False$
+க்கும், $\Delta$ ஆனது~$\True$ க்கும், $\Pi$ ஆனது~$\Undef$ க்கும்
+ஒத்துள்ளது. அடிக்கோள்கள் $!A \nSequent !A \nSequent !A$. $\True$ மட்டுமே
+நியமிக்கப்பட்டுள்ளதால், $\Gamma \Proves[\LogLuk[3]] !A$ என்பது,
+அப்போதும் அப்போது மட்டுமே, $\Gamma \nSequent \Gamma \nSequent !A$ என்ற
+தொடரணிக்கு !!a{derivation} ஒன்று உண்டு. ($\Undef$ உம் நியமிக்கப்பட்டிருந்தால்,
+$\Gamma \nSequent !A \nSequent !A$ க்கு !!a{derivation} ஒன்று தேவைப்படும்.)
+
+\end{document}

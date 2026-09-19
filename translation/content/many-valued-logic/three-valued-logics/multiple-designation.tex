@@ -1,0 +1,232 @@
+% SEGMENT OLP-0397-S01
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: multiple-designation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{thr}{mul}
+
+\olsection{$\True$ ஐ மட்டும் நியமிக்காமல் இருத்தல்}
+
+இதுவரை நாம் கண்ட தருக்கங்கள் அனைத்திலும் நியமிக்கப்பட்ட மெய்மதிப்புகளின்
+கணம்~$V^+ = \{\True\}$ ஆக இருந்தது; அதாவது, ஒன்றின் மெய்மதிப்பு~$\True$
+எனில், அப்போதும் அப்போது மட்டுமே, அது மெய்யாகக் கணக்கிடப்படுகிறது. ஆனால்
+ஒன்று~$\False$ ஆக இல்லாவிட்டாலே அதை மெய்யாகவும் ஒருவர் கணக்கிடலாம். அப்போது,
+எடுத்துக்காட்டாக, அணியில் $V^+ = \{\True, \Undef\}$ என்று விதிப்பதன் மூலம்
+ஒரு தருக்கம் கிடைக்கும்.
+
+\begin{defn}
+\emph{முரணுரையின் தருக்கம்}~$\LogLP$ பின்வரும் அணியைக் கொண்டு
+வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட செந்தரக்
+  கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V = \{\True, \Undef, \False\}$.
+  \item $\True$, $\Undef$ ஆகியவை நியமிக்கப்பட்டவை; அதாவது,
+  $V^+ = \{\True, \Undef\}$.
+  \item வாய்மைச் சார்புகள் வலு க்ளீனி தருக்கத்தில் உள்ளவற்றைப் போன்றவை.
+\end{enumerate}
+\end{defn}
+
+\begin{defn}
+ஹால்டேனின் \emph{பொருளின்மையின் தருக்கம்}~$\LogHal$ பின்வரும் அணியைக் கொண்டு
+வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\lnot$, $\land$, $\lor$, $\lif$ மற்றும் ஒரு $1$-இட இணைப்பி~$+$
+  ஆகியவற்றைக் கொண்ட செந்தரக் கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V = \{\True, \Undef, \False\}$.
+  \item $\True$, $\Undef$ ஆகியவை நியமிக்கப்பட்டவை; அதாவது,
+  $V^+ = \{\True, \Undef\}$.
+  \item வாய்மைச் சார்புகள் மெல் க்ளீனி தருக்கத்தில் உள்ளவற்றைப் போன்றவை;
+  கூடுதலாக ``பொருளற்றது'' செயலி உள்ளது:
+  \begin{center}
+    \begin{tabular}{c|c}
+    $\tf{+}$ & \\
+    \hline
+    $\True$ & $\False$ \\
+    $\Undef$ & $\True$ \\
+    $\False$ & $\False$
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+மெய்மை அட்டவணைகளைப் பகிர்ந்துகொள்ளும் க்ளீனி தருக்கங்களுக்கு மாறாக, இவற்றில்
+மெய்மங்கள் \emph{உள்ளன}.
+
+\begin{prop}\ollabel{prop:LP-taut-CL} $\LogLP$ இன் மெய்மங்கள் செவ்வியல்
+  கூற்றுத் தருக்கத்தின் மெய்மங்களே.
+\end{prop}
+
+\begin{proof}
+  \olref[syn][sub]{prop:mvl-cl} ஆல், $\Entails[\LogLP] !A$ எனில்
+  $\Entails[\LogCL] !A$. மறுதிசையைக் காட்ட, $\pValue v(!A)[\LogKs] =
+  \False$ ஆக அமையும் !!a{valuation}~$\pAssign v\colon \PVar \to
+  \{\False, \True, \Undef\}$ இருந்தால், $\pValue {v'}(!A)[\LogCL] =
+  \False$ ஆக அமையும் !!a{valuation}~$\pAssign {v'}\colon \PVar \to
+  \{\False, \True\}$ ஒன்று உண்டு என்று காட்டுகிறோம். இது $\LogLP$ க்கான
+  முடிவை நிறுவுகிறது; ஏனெனில் $\LogKs$, $\LogLP$ ஆகியவற்றுக்கு ஒரே
+  வரையறைமுறை வாய்மைச் சார்புகள் உள்ளன; $\LogLP$ இல் நியமிக்கப்படாத ஒரே
+  மெய்மதிப்பு~$\False$ (இதுவே $\LogLP$ க்கும்~$\LogKs$ க்கும் இடையிலான
+  ஒரே வேறுபாடு). ஆகவே $\Entails/[\LogLP] !A$ எனில், ஏதோ ஒரு
+  !!{valuation}~$\pAssign v$ க்கு $\pValue v(!A)[\LogLP] = \pValue
+  v[\LogKs](!A) = \False$. நாம் நிறுவும் கூற்றால்,
+  $\pValue{v'}[\LogCL](!A) = \False$; அதாவது,
+  $\Entails/[\LogCL] !A$.
+
+  அக்கூற்றை நிறுவ முதலில் $\pAssign {v'}$ ஐப் பின்வருமாறு வரையறுக்கிறோம்:
+  \[
+    \pAssign {v'}(p) =
+    \begin{cases}
+    \True & \text{பின்வரும் நிலையில்: } \pAssign {v}(p) \in \{\True, \Undef\}\\
+    \False & \text{இல்லையெனில்}
+  \end{cases}
+  \]
+  இப்போது $!A$ இன்மீதான தொகுத்தறிதலால் பின்வருவனவற்றைக் காட்டுகிறோம்:
+  (a)~$\pValue v(!A)[\LogKs] = \False$ எனில்
+  $\pValue {v'}(!A)[\LogCL] = \False$; (b)~$\pValue v(!A)[\LogKs] =
+  \True$ எனில் $\pValue {v'}(!A)[\LogCL] = \True$.
+  \begin{enumerate}
+    \item தொகுத்தறிதலின் அடிப்படை: $!A \ident p$.
+    \olref[syn][val]{defn:pValue} ஆல்,
+    % SOURCE CORRECTION TA-MVL-012: the source's triple equality fails when v(p)=Undef; use the definition of v' to establish only the two required implications.
+    $\pValue v(!A)[\LogKs] = \pAssign v(p)$ மற்றும்
+    $\pValue {v'}(!A)[\LogCL] = \pAssign {v'}(p)$; எனவே அந்த
+    மதிப்பீட்டின் வரையறை (a), (b) இரண்டையும் நேரடியாகத் தருகிறது.
+
+    தொகுத்தறிதல் படிக்கு, பின்வரும் நேர்வுகளைக் கருதுக:
+    \item $!A \ident \lnot !B$.
+    \begin{enumerate}
+      \item $\pValue v(\lnot!B)[\LogKs] = \False$ என்க.
+      $\tf{\lnot}[\LogKs]$ இன் வரையறையால்,
+      $\pValue v(!B)[\LogKs]  = \True$. தொகுத்தறிதல் கருதுகோளின்
+      நேர்வு~(b) ஆல் $\pValue {v'}(!B)[\LogCL]  = \True$; ஆகவே
+      $\pValue {v'}(\lnot !B)[\LogCL] = \False$.
+      \item $\pValue v(\lnot!B)[\LogKs] = \True$ என்க.
+      $\tf{\lnot}[\LogKs]$ இன் வரையறையால்,
+      $\pValue v(!B)[\LogKs]  = \False$. தொகுத்தறிதல் கருதுகோளின்
+      நேர்வு~(a) ஆல் $\pValue {v'}(!B)[\LogCL]  = \False$; ஆகவே
+      $\pValue {v'}(\lnot !B)[\LogCL] = \True$.
+    \end{enumerate}
+
+    \item $!A \ident (!B \land !C)$.
+    \begin{enumerate}
+      \item $\pValue v(!B \land !C)[\LogKs] = \False$ என்க.
+      $\tf{\land}[\LogKs]$ இன் வரையறையால்,
+      % SOURCE CORRECTION TA-MVL-013: the second false conjunct is C, not a repeated B.
+      $\pValue v(!B)[\LogKs]  = \False$ அல்லது
+      $\pValue v(!C)[\LogKs]  = \False$. தொகுத்தறிதல் கருதுகோளின்
+      நேர்வு~(a) ஆல், $\pValue {v'}(!B)[\LogCL]  = \False$ அல்லது
+      $\pValue {v'}(!C)[\LogCL]  = \False$; ஆகவே
+      $\pValue {v'}(!B \land !C)[\LogCL] = \False$.
+      \item $\pValue v(!B \land !C)[\LogKs] = \True$ என்க.
+      $\tf{\land}[\LogKs]$ இன் வரையறையால்,
+      % SOURCE CORRECTION TA-MVL-014: the second true conjunct is C, not a repeated B.
+      $\pValue v(!B)[\LogKs]  = \True$ மற்றும்
+      $\pValue v(!C)[\LogKs]  = \True$. தொகுத்தறிதல் கருதுகோளின்
+      நேர்வு~(b) ஆல், $\pValue {v'}(!B)[\LogCL]  = \True$ மற்றும்
+      $\pValue {v'}(!C)[\LogCL]  = \True$; ஆகவே
+      $\pValue {v'}(!B \land !C)[\LogCL] = \True$.
+    \end{enumerate}
+  \end{enumerate}
+
+  மற்ற இரு நேர்வுகளும் இதேபோன்றவை; அவை பயிற்சிகளாக விடப்படுகின்றன.
+  மாற்றாக, மேலுள்ள நிறுவல் $\lnot$, $\land$ ஆகியவற்றை மட்டும் கொண்ட எல்லா
+  !!{formula}s க்கும் முடிவை நிறுவுகிறது. இப்போது $\LogKs$, $\LogCL$
+  இரண்டிலும், எந்த~$\pAssign v$ க்கும்,
+  $\pValue v(!B \lor !C) = \pValue v(\lnot(\lnot!B \land \lnot !C))$
+  மற்றும் $\pValue v(!B \lif !C) = \pValue v(\lnot(!B \land \lnot !C))$
+  என்ற உண்மைகளைப் பயன்படுத்தலாம்.
+\end{proof}
+
+\begin{prob}
+  \olref[mvl][thr][mul]{prop:LP-taut-CL} இன் நிறுவலை நிறைவுசெய்க; அதாவது,
+  $!A \ident (!B \lor !C)$, $!A \ident (!B \lif !C)$ ஆகிய நேர்வுகளுக்கு
+  (a), (b) ஆகியவற்றை நிறுவுக.
+\end{prob}
+
+\begin{prob}
+ஒவ்வொரு செவ்வியல் மெய்மமும்~$\LogHal$ இல் ஒரு மெய்மம் என்று நிறுவுக.
+\end{prob}
+
+அவற்றுக்கு செவ்வியல் தருக்கத்தின் அதே மெய்மங்கள் இருந்தாலும், அவற்றின்
+பின்விளைவு உறவுகள் வேறுபடுகின்றன. எடுத்துக்காட்டாக, $\LogLP$ ஆனது
+$\lnot p, p \Entails/ q$ என்ற பொருளில் \emph{முரண்பொறைத் தருக்கம்}; ஆகவே
+வெடிப்புக் கொள்கை~$\lnot !A, !A \Entails !B$ பொதுவாகப் பொருந்தாது.
+(சில $!A$, $!B$ நேர்வுகளில் அது பொருந்தும்; எடுத்துக்காட்டாக, $!B$ ஒரு
+மெய்மம் எனில்.)
+
+\begin{prob}
+  பின்வரும் தொடர்புகளில் எவை (a)~$\LogLP$ இலும் (b)~$\LogHal$ இலும்
+  பொருந்துகின்றன? ஒவ்வொன்றுக்கும் ஒரு மெய்மை அட்டவணை தருக.
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $\lnot q, p \lif q \Entails \lnot p$
+    \item $p \lor q, \lnot p \Entails q$
+    \item $\lnot p, p \Entails q$
+    \item $p \Entails p \lor q$
+    \item $p \lif q, q\lif r \Entails p \lif r$
+  \end{enumerate}
+\end{prob}
+
+$\LogLuk[3]$ இல்~$\Undef$ ஐ நியமிக்கப்பட்டதாக ஆக்கினால் என்ன நிகழும்?
+
+\begin{defn}
+  \emph{3-மதிப்பு R-Mingle தருக்கம்}~$\LogRM[3]$ பின்வரும் அணியைக்
+  கொண்டு வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+    \item $\lfalse$, $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட
+    செந்தரக் கூற்று மொழி~$\Lang L_0$.
+    \item மெய்மதிப்புகளின் கணம்~$V = \{\True, \Undef, \False\}$.
+    \item $\True$, $\Undef$ ஆகியவை நியமிக்கப்பட்டவை; அதாவது,
+    $V^+ = \{\True, \Undef\}$.
+    \item வாய்மைச் சார்புகள் லூகாசியேவிச்~(\L ukasiewicz)
+    தருக்கம்~$\LogLuk[3]$ இல்
+    உள்ளவற்றைப் போன்றவை.
+  \end{enumerate}
+\end{defn}
+
+\begin{prob}
+  பின்வரும் தொடர்புகளில் எவை~$\LogRM[3]$ இல் பொருந்துகின்றன?
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $p \lor q, \lnot p \Entails q$
+    \item $\lnot p, p \Entails q$
+    \item $p \Entails p \lor q$
+  \end{enumerate}
+\end{prob}
+
+வெவ்வேறு மெய்மை அட்டவணைகள் சில நேரங்களில் நியமிக்கப்பட்ட மதிப்புகளை மட்டும்
+மாற்றுவதன் மூலம் ஒரே தருக்கத்தை (பின்விளைவு உறவை) உருவாக்கலாம்.
+எடுத்துக்காட்டாக, கோடல் தருக்கத்தில் $\{\True\}$ என்பதற்குப் பதிலாக
+$V^+ = \{\True, \Undef\}$ எனக் கொண்டால் இது நிகழ்கிறது.
+
+\begin{prop}\ollabel{prop:gl-udes}
+  $V = \{\False, \Undef,\True\}$, $V^+=\{\True,
+  \Undef\}$ மற்றும் $3$-மதிப்புக் கோடல் தருக்கத்தின் வாய்மைச் சார்புகள்
+  ஆகியவற்றைக் கொண்ட அணி செவ்வியல் தருக்கத்தை வரையறுக்கிறது.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  கோடல் தருக்கத்தைப் போலவே, ஆனால் $V^+=\{\True,\Undef\}$ என
+  வரையறுக்கப்பட்ட தருக்கம்~$\Log L$ க்கு
+  $\Gamma \Entails/[\Log L] !B$ எனில்
+  $\Gamma \Entails/[\LogCL] !B$ என்று காட்டுவதன் மூலம்
+  \olref[mvl][thr][mul]{prop:gl-udes} ஐ நிறுவுக.
+  \olref[mvl][thr][mul]{prop:LP-taut-CL} இன் கருத்துகளைப் பயன்படுத்துக;
+  ஆனால் (a), (b) ஆகிய பண்புகளை நிறுவுவதற்குப் பதிலாக,
+  $\pValue v(!A)[\LogGod] = \False$ என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\pValue {v'}(!A)[\LogCL] = \False$ என்று காட்டுக (எனவே
+  $\pValue v(!A)[\LogGod] \in \{\True,\Undef\}$ என்பது, அப்போதும்
+  அப்போது மட்டுமே, $\pValue {v'}(!A)[\LogCL] = \True$). இது ஏன்
+  கூற்றை நிறுவுகிறது என்று விளக்குக.
+\end{prob}
+
+\end{document}

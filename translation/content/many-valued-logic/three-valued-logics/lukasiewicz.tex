@@ -1,0 +1,265 @@
+% SEGMENT OLP-0394-S01
+% Part: many-valued-logic
+% Chapter: three-valued-logics
+% Section: lukasiewicz
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{thr}{luk}
+
+\olsection{லூகாசியேவிச்~(\L ukasiewicz) தருக்கம்}
+
+பல்மதிப்புத் தருக்கத்திற்கான முதல் வெளியிடப்பட்ட, விரிவாக உருவாக்கப்பட்ட
+முன்மொழிவுகளில் ஒன்றை போலந்து மெய்யியலாளர் யான் லூகாசியேவிச்~(\L
+ukasiewicz) 1921 இல் வழங்கினார். அரிஸ்டாட்டிலின் கடற்போர் சிக்கல்
+லூகாசியேவிச்~(\L ukasiewicz) அவர்களைத் தூண்டியது:
+\emph{இன்று}, ``நாளை ஒரு கடற்போர் நிகழும்'' என்ற வாக்கியம் மெய்யும் அன்று,
+பொய்யும் அன்று என்று தோன்றுகிறது; அதன் மெய்மதிப்பு இன்னும்
+தீர்மானிக்கப்படவில்லை. இத்தகைய ``எதிர்கால நிச்சயமற்ற'' வாக்கியங்களுக்கு
+மூன்றாவது மெய்மதிப்பை அறிமுகப்படுத்த லூகாசியேவிச்~(\L ukasiewicz)
+முன்மொழிந்தார்.
+\begin{quote}
+அடுத்த ஆண்டின் ஒரு குறிப்பிட்ட நேரத்தில் வார்சாவில் நான் இருப்பது,
+எடுத்துக்காட்டாக டிசம்பர் 21 நண்பகலில் நான் இருப்பது, தற்போதைய நேரத்தில்
+நேர்முகமாகவும் எதிர்முகமாகவும் தீர்மானிக்கப்படவில்லை என்று முரண்பாடின்றி
+நான் கருதலாம். ஆகவே, கொடுக்கப்பட்ட நேரத்தில் நான் வார்சாவில் இருப்பது
+கூடியதே, ஆனால் கட்டாயமன்று. இந்தக் கருதுகோளின்படி, ``அடுத்த ஆண்டு டிசம்பர்
+21 நண்பகலில் நான் வார்சாவில் இருப்பேன்'' என்ற கூற்று தற்போதைய நேரத்தில்
+மெய்யும் அன்றாகவும், பொய்யும் அன்றாகவும் இருக்கலாம். ஏனெனில் அது இப்போது
+மெய்யாக இருந்தால், எதிர்காலத்தில் நான் வார்சாவில் இருப்பது கட்டாயமாக
+இருக்க வேண்டும்; இது கருதுகோளுக்கு முரணானது. மறுபுறம், அது இப்போது
+பொய்யாக இருந்தால், எதிர்காலத்தில் நான் வார்சாவில் இருப்பது கூடாததாக
+இருக்க வேண்டும்; இதுவும் கருதுகோளுக்கு முரணானது. ஆகவே கருதப்படும் கூற்று
+இப்போது மெய்யும் அன்று, பொய்யும் அன்று; அது ``0'' அல்லது பொய்மையிலிருந்தும்
+``1'' அல்லது மெய்மையிலிருந்தும் வேறுபட்ட மூன்றாவது மதிப்பைப் பெற வேண்டும்.
+இம்மதிப்பை ``$\frac{1}{2}$.'' என்று நாம் குறிக்கலாம். அது ``கூடியது''
+என்பதைப் பிரதிநிதித்துவப்படுத்தி, ``மெய்'', ``பொய்'' ஆகியவற்றுடன் மூன்றாவது
+மதிப்பாக இணைகிறது.
+\end{quote}
+லூகாசியேவிச்~(\L ukasiewicz) அவர்களின் மூன்றாவது மெய்மதிப்பிற்கு
+நாம்~$\Undef$ ஐப் பயன்படுத்துவோம்.\footnote{இங்கு லூகாசியேவிச்~(\L
+ukasiewicz) ``கூடியது'' என்பதை இன்றைக்கு
+வழக்கமில்லாத பொருளில், அதாவது கூடியதே ஆனால் கட்டாயமன்று என்ற பொருளில்,
+பயன்படுத்துகிறார்.}
+
+$\lnot$, $\land$, $\lor$ ஆகிய இணைப்பிகளுக்கான வாய்மைச் சார்புகளை இந்தப்
+பொருள்கோளில் எளிதாகத் தீர்மானிக்கலாம்: எதிர்கால நிச்சயமற்ற வாக்கியத்தின்
+மறுப்பும் எதிர்கால நிச்சயமற்ற வாக்கியமே; ஆகவே
+$\tf{\lnot}(\Undef) = \Undef$. ஓர் இணையலின் ஓர் இணையுறுப்பு
+தீர்மானிக்கப்படாமலும் மற்றது மெய்யாகவும் இருந்தால், இணையலும்
+தீர்மானிக்கப்படாததே---எதிர்கால நிச்சயமற்ற இணையுறுப்பு எவ்வாறு முடிவடைகிறது
+என்பதைப் பொறுத்து, இணையல் மெய்யாகவும் முடிவடையலாம், பொய்யாகவும் முடிவடையலாம்.
+ஆகவே
+\[
+    \tf{\land}(\True, \Undef) =
+\tf{\land}(\Undef, \True) =
+\Undef.
+\]
+மற்ற இணையுறுப்பு பொய்யாக இருந்தால், இணையல் மெய்யாக முடியாது; ஆகவே
+% SOURCE CORRECTION TA-MVL-007: restore the symmetric undefined/false argument order in the second conjunction equation.
+\[\tf{\land}(\False, \Undef) =
+\tf{\land}(\Undef, \False) = \False.\]
+மற்ற மதிப்புகள்---உள்ளீடுகள் தீர்மானிக்கப்பட்ட மெய்மதிப்புகளான~$\True$
+அல்லது~$\False$ ஆக இருக்கும்போது---செவ்வியல் தருக்கத்தில் உள்ளவற்றைப் போலவே
+அமைகின்றன.
+
+நிபந்தனைவாக்கியத்தைப் பொறுத்தவரை நிலைமை சற்றுச் சிக்கலானது. $q$ ஓர்
+எதிர்கால நிச்சயமற்ற கூற்று என்க. $p$ பொய்யாக இருந்தால், $q$ எவ்வாறு
+முடிவடைந்தாலும் $p \lif q$ மெய்யாகும்; ஆகவே
+$\tf{\lif}(\False, \Undef) = \True$ என அமைக்க வேண்டும். மேலும் $p$
+மெய்யாக இருந்தால், $q$ எவ்வாறு முடிவடைந்தாலும் $q \lif p$ மெய்யாகும்;
+ஆகவே $\tf{\lif}(\Undef, \True) = \True$. $p$ மெய்யாக இருந்தால்,
+$p \lif q$ மெய்யாகவோ பொய்யாகவோ முடிவடையலாம்; ஆகவே
+$\tf{\lif}(\True, \Undef) = \Undef$. இதேபோல், $p$ பொய்யாக இருந்தால்,
+$q \lif p$ மெய்யாகவோ பொய்யாகவோ முடிவடையலாம்; ஆகவே
+$\tf{\lif}(\Undef, \False) = \Undef$. $p$, $q$ இரண்டும் எதிர்கால
+நிச்சயமற்றவையாக இருக்கும் நேர்வு மட்டும் எஞ்சுகிறது. இந்த நோக்கத்தின்
+அடிப்படையில், இந்த நேர்வில் உண்மையில்~$\Undef$ ஐயே ஒதுக்க வேண்டும்.
+ஆனால் அப்படிச் செய்தால் $!A \lif !A$ ஒரு மெய்மம் \emph{அன்று}.
+% SOURCE CORRECTION TA-MVL-008: repair ordinary parenthesis, agreement, and “had not trouble” prose defects.
+லூகாசியேவிச்~(\L ukasiewicz) $!A \lor \lnot !A$,
+$\lnot(!A \land \lnot !A)$ ஆகியவற்றைக்
+கைவிடத் தயங்கவில்லை; ஆனால் $!A \lif !A$ ஐக் கைவிடத் தயங்கினார். ஆகவே அவர்
+$\tf{\lif}(\Undef, \Undef) = \True$ என்று விதித்தார்.
+
+\begin{defn}\ollabel{def:lukasiewicz}
+மும்மதிப்பு லூகாசியேவிச்~(\L ukasiewicz) தருக்கம் பின்வரும் அணியைக் கொண்டு
+வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட செந்தரக்
+  கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V = \{\True, \Undef, \False\}$.
+  \item $\True$ மட்டுமே நியமிக்கப்பட்ட மதிப்பு; அதாவது,
+  $V^+ = \{\True\}$.
+  \item வாய்மைச் சார்புகள் பின்வரும் அட்டவணைகளால் தரப்படுகின்றன:
+  \begin{center}
+    \begin{tabular}{c|c}
+      $\tf{\lnot}$ & \\
+      \hline
+      $\True$ & $\False$ \\
+      $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc}
+      $\tf{\land}[\LogLuk[3]]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\
+      $\Undef$ & $\Undef$ & $\Undef$ & $\False$\\
+      $\False$ & $\False$ & $\False$ & $\False$
+    \end{tabular}
+    \\[2ex]
+    \begin{tabular}{c|ccc}
+      $\tf{\lor}[\LogLuk[3]]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\True$ & $\True$ \\
+      $\Undef$ & $\True$ & $\Undef$ & $\Undef$ \\
+      $\False$ & $\True$ & $\Undef$ & $\False$
+    \end{tabular}
+    \quad
+    \begin{tabular}{c|ccc}
+      $\tf{\lif}[\LogLuk[3]]$ & $\True$ & $\Undef$ & $\False$ \\
+      \hline
+      $\True$ & $\True$ & $\Undef$ & $\False$ \\
+      $\Undef$ & $\True$ & $\True$ & $\Undef$  \\
+      $\False$ & $\True$ & $\True$ & $\True$
+    \end{tabular}
+  \end{center}
+\end{enumerate}
+\end{defn}
+
+$\lnot$, $\land$, $\lor$ ஆகியவற்றை மட்டுமே கொண்ட எந்த
+!!{formula}~$!A$ உம், அதன் எல்லா !!{propositional variable}s க்கும்
+$\Undef$ ஒதுக்கப்பட்டால் மெய்மதிப்பு~$\Undef$ ஐப் பெறும் என்பதை எளிதாகக்
+காணலாம். எடுத்துக்காட்டாக, $p \lor \lnot p$, $\lnot(p
+\land \lnot p)$ என்ற செவ்வியல் மெய்மங்கள் $\LogLuk[3]$ இல் மெய்மங்கள்
+அல்ல; ஏனெனில் $\pAssign v(p) = \Undef$ ஆகும்போதெல்லாம்
+$\pValue{v}(!A) = \Undef$.
+
+$\pAssign v(p) = \True$ அல்லது $\False$ ஆக உள்ள !!{valuation}s இல்,
+$\pValue v(!A)$ அதன் செவ்வியல் மெய்மதிப்புடன் ஒத்திருக்கும்.
+
+\begin{prop}
+  $!A$ இல் உள்ள எல்லா $p$ க்கும்
+  $\pAssign v(p) \in \{\True, \False\}$ எனில்,
+  $\pValue v(!A)[\LogLuk[3]] = \pValue v(!A)[\LogCL]$.
+\end{prop}
+
+\begin{prob}\label{mvl:thr:luk:prob:luk-iff} $\LogLuk[3]$ இல்
+  $\pValue v(!A \liff !B) = \pValue v((!A \lif !B) \land (!B \lif
+  !A))$ என்று வரையறுக்கிறோம் என்க. $\liff$ இன் மெய்மை அட்டவணை என்னவாக
+  இருக்கும்?
+\end{prob}
+
+பல செவ்வியல் மெய்மங்கள்~\LogLuk[3] இலும் \emph{மெய்மங்களே}; எடுத்துக்காட்டாக,
+$\lnot p \lif (p \lif q)$. செவ்வியல் தருக்கத்தில் போலவே, இதை மெய்மை
+அட்டவணைகளைக் கொண்டு சரிபார்க்கலாம்:
+\begin{center}
+\begin{tabular}{cc|cccccc}
+  $p$ & $q$ & $\lnot$ & $p$ & $\lif$ & $\smash{(}p$ & $\lif$ & $q\smash{)}$ \\ \hline
+  \True & \True & \False & \True & \True & \True & \True & \True \\
+  \True & \Undef & \False & \True & \True & \True & \Undef & \Undef \\
+  \True & \False & \False & \True & \True & \True & \False & \False \\
+  \Undef & \True & \Undef & \Undef & \True & \Undef & \True & \True \\
+  \Undef & \Undef & \Undef & \Undef & \True & \Undef & \True & \Undef \\
+  \Undef & \False & \Undef & \Undef & \True & \Undef & \Undef & \False \\
+  \False & \True & \True & \False & \True & \False & \True & \True \\
+  \False & \Undef & \True & \False & \True & \False & \True & \Undef \\
+  \False & \False & \True & \False & \True & \False & \True & \False \\
+\end{tabular}
+\end{center}
+
+\begin{prob}
+  பின்வருவன~\LogLuk[3] இல் மெய்மங்கள் என்று காட்டுக:
+  \begin{enumerate}
+    \item $p \lif (q \lif p)$
+    \item\label{mvl:thr:luk:prob:luk-taut-2} $\lnot(p \land q) \liff (\lnot p \lor \lnot q)$
+    \item\label{mvl:thr:luk:prob:luk-taut-3} $\lnot(p \lor q) \liff (\lnot p \land \lnot q)$
+  \end{enumerate}
+  (\olref[mvl][thr][luk]{prob:luk-taut-2},
+  \olref[mvl][thr][luk]{prob:luk-taut-3} ஆகியவற்றில்,
+  $!A \liff !B$ என்பதை $(!A \lif !B) \land (!B \lif !A)$ என்பதற்கான
+  சுருக்கமாகக் கொள்க; அல்லது \olref[mvl][thr][luk]{prob:luk-iff} க்கான
+  உங்கள் தீர்வைப் பயன்படுத்துக.)
+\end{prob}
+
+\begin{prob}
+  பின்வரும் செவ்வியல் மெய்மங்கள்~\LogLuk[3] இல் மெய்மங்கள் அல்ல என்று
+  காட்டுக:
+  \begin{enumerate}
+    % SOURCE CORRECTION TA-MVL-009: remove the unmatched closing parenthesis after q.
+    \item $(\lnot p \land p) \lif q$
+    \item $((p \lif q) \lif p) \lif p$
+    \item $(p \lif (p \lif q)) \lif (p \lif q)$
+  \end{enumerate}
+\end{prob}
+
+எல்லாச் செவ்வியல் மெய்மங்களும்~$\LogLuk[3]$ இல் மெய்மங்கள் அல்ல என்றாலும்,
+அவை ஒவ்வொரு !!{valuation} இலும் குறைந்தபட்சம்~$\True$ அல்லது~$\Undef$
+மதிப்பைப் பெற வேண்டும் என்று ஒருவர் எண்ணலாம். இதுவும் சரியன்று. ஒரு
+எதிரெடுத்துக்காட்டு:
+\[
+  \lnot(p \lif \lnot p) \lor \lnot(\lnot p \lif p)
+\]
+$p$ ஆனது~$\Undef$ ஆக இருந்தால் இது~$\False$.
+
+\begin{prob}
+  பின்வரும் தொடர்புகளில் எவை லூகாசியேவிச்~(\L ukasiewicz) தருக்கத்தில்
+  பொருந்துகின்றன?
+  ஒவ்வொன்றுக்கும் ஒரு மெய்மை அட்டவணை தருக.
+  \begin{enumerate}
+    \item $p, p \lif q \Entails q$
+    \item $\lnot\lnot p \Entails p$
+    \item $p \land q \Entails p$
+    \item $p \Entails p \land p$
+    \item $p \Entails p \lor q$
+  \end{enumerate}
+\end{prob}
+
+தமது மும்மதிப்பு முறைமையின் அடிப்படையில் கூடுதன்மைக்கான தருக்கம் ஒன்றைக்
+கட்டமைக்க லூகாசியேவிச்~(\L ukasiewicz) விரும்பினார். அதற்காக
+``$!A$ கூடியது'' என்பதற்கான
+ஓரிட இணைப்பி~$\Diamond !A$ ஐயும், அதற்குரிய ``$!A$ கட்டாயமானது''
+என்பதற்கான~$\Box !A$ ஐயும் அறிமுகப்படுத்தினார்:
+\begin{center}
+  \begin{tabular}{c|c}
+    $\tf{\Diamond}$ & \\
+    \hline
+    $\True$ & $\True$ \\
+    $\Undef$ & $\True$ \\
+    $\False$ & $\False$
+  \end{tabular}
+  \quad
+  \begin{tabular}{c|c}
+    $\tf{\Box}$ & \\
+    \hline
+    $\True$ & $\True$ \\
+    $\Undef$ & $\False$ \\
+    $\False$ & $\False$
+  \end{tabular}
+\end{center}
+வேறு சொற்களில், $p$ ஏற்கெனவே பொய் என்று தீர்மானிக்கப்படவில்லை எனில்,
+அப்போதும் அப்போது மட்டுமே, அது கூடியது; $p$ ஏற்கெனவே மெய் என்று
+தீர்மானிக்கப்பட்டிருந்தால், அப்போதும் அப்போது மட்டுமே, அது கட்டாயமானது.
+
+\begin{prob}
+  $\Box$, $\Diamond$ ஆகியவற்றின் மெய்மை அட்டவணைகளால் விரிவாக்கப்பட்ட
+  ~\LogLuk[3] இல் $\Box p \liff \lnot\Diamond \lnot p$, $\Diamond p \liff
+  \lnot \Box \lnot p$ ஆகியவை மெய்மங்கள் என்று காட்டுக.
+\end{prob}
+
+% SOURCE CORRECTION TA-MVL-010: remove repeated “However” and restore the spelling of possibility.
+ஆனால் இம்முன்மொழியப்பட்ட மாதிரி தருக்கத்தின் குறைபாடுகள் விரைவில்
+வெளிப்பட்டன: நிகழ்வுகள் எவ்வாறு முடிந்தாலும், $p \land \lnot p$ ஒருபோதும்
+மெய்யாக முடியாது. எனவே அது இப்போது தீர்மானிக்கப்படாமல் (அதனால்
+தீர்மானமற்றதாக) இருந்தாலும், கூடாததாகக் கணக்கிடப்பட வேண்டும்; அதாவது,
+$\lnot \Diamond(p \land \lnot p)$ ஒரு மெய்மமாக இருக்க வேண்டும். ஆனால்
+$\pAssign v(p) = \Undef$ எனில்,
+$\pValue v(\lnot \Diamond(p \land \lnot p)) = \Undef$. கூடுதன்மை,
+கட்டாயத்தன்மை போன்ற மாதிரி வேறுபாடுகளுக்கு இரண்டு மெய்மதிப்புகள் போதாது
+என்பதில் லூகாசியேவிச்~(\L ukasiewicz) சரியாக இருந்தாலும், மூன்றாவது மெய்மதிப்பை
+அறிமுகப்படுத்துவதும் போதாது.
+
+\end{document}

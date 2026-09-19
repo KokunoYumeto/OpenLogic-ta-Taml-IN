@@ -1,0 +1,275 @@
+{
+  "batch_id": "TA-B182",
+  "units": [
+    {
+      "unit_id": "OLP-0398",
+      "source_sha256": "023a2c8bb60bba2541628de969f9e9e8c0be8c9df88786f9749b4c2b36c1cd84",
+      "translation_sha256": "b1c3ff719d040ac171c931b45e65d8de15494cd4778757b77e737ad76cd1ec5d",
+      "source_bytes": 287,
+      "translation_bytes": 490,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-015",
+          "unit_id": "OLP-0398",
+          "kind": "infinite-valued-chapter-driver-metadata",
+          "action": "Corrected the chapter header comment from three-valued-logics to infinite-valued-logics.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The driver imports the infinite-valued introduction, Łukasiewicz, and Gödel sections and has olchapter id inf, but its source header names three-valued-logics.",
+          "chosen_treatment": "தமிழ் மொழிபெயர்ப்பின் கோப்பு மேல்தகவல் அதன் உண்மையான முடிவிலா மதிப்புத் தருக்கங்கள் அதிகாரத்தைப் பெயரிடுகிறது.",
+          "alternatives_considered": "Retaining the copied three-valued header; treating the header as semantic chapter content.",
+          "rationale": "The path, chapter id, title, and all three imports independently identify the infinite-valued chapter.",
+          "precise_review_question": "Does the corrected header now agree with the stable inf chapter id and imported files?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-015"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0399",
+      "source_sha256": "4ce56099c4d8b852148cfe24eb6d1ed00a03fce30c9e1770e52eadbd4412762c",
+      "translation_sha256": "ebe1d3b4e210803969648ad467d69d404d190699fe28705b87c6fc17f256604e",
+      "source_bytes": 1303,
+      "translation_bytes": 3153,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}V_\\infty&=\\Setabs{\\frac{n}{m}}{n,m\\in\\Natn\\lem}.V_m&=\\Setabs{\\frac{n}{m-1}}{n\\in\\Natn\\lem}$V_5$$5$V_5&=\\{0,\\frac{1}{4},\\frac{1}{2},\\frac{3}{4},1\\}.\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}V_\\infty&=\\Setabs{\\frac{n}{m}}{n,m\\in\\Natn\\lem}.V_m&=\\Setabs{\\frac{n}{m-1}}{n\\in\\Natn<m}$V_5$$5$V_5&=\\{0,\\frac{1}{4},\\frac{1}{2},\\frac{3}{4},1\\}.\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-016",
+          "unit_id": "OLP-0399",
+          "kind": "finite-value-set-off-by-one-bound",
+          "action": "Changed the numerator bound in V_m from n less than or equal to m to n less than m.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\Setabs{\\frac{n}{m-1}}{n\\in\\Natn\\lem}",
+              "to": "\\Setabs{\\frac{n}{m-1}}{n\\in\\Natn<m}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\le"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "With denominator m-1, the source condition n less than or equal to m produces m+1 values and includes m/(m-1), which is above 1; the next line says V_5 has five evenly spaced values and lists numerators 0 through 4.",
+          "chosen_treatment": "தமிழ் $n<m$ என்ற வரம்பைப் பயன்படுத்தி $V_m$ இல் சரியாக $m$ மதிப்புகளையும் அவை அனைத்தும் $[0,1]$ இலும் இருப்பதையும் உறுதிசெய்கிறது.",
+          "alternatives_considered": "Changing the denominator to m; retaining the above-one endpoint; using n less than or equal to m-1.",
+          "rationale": "For natural numbers beginning at zero, n<m and n less than or equal to m-1 are equivalent; n<m is concise and exactly reproduces the displayed V_5 example.",
+          "precise_review_question": "Does the repaired comprehension yield exactly the m equally spaced points 0, 1/(m-1), through 1?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-016"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\le"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0400",
+      "source_sha256": "cd08c78b079f961505db9f62af56babd0570bf52682f8375f6ba4d340c2afcc6",
+      "translation_sha256": "9689aaccf5f62ac3b9eb42fa36fb6636eb022b99d04d51e465d040bc3db6bfc9",
+      "source_bytes": 3022,
+      "translation_bytes": 5156,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "ccc",
+        "include",
+        "inf",
+        "logic",
+        "luk",
+        "mvl",
+        "open",
+        "section",
+        "thr",
+        "ukasiewicz"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-017",
+          "unit_id": "OLP-0400",
+          "kind": "infinite-lukasiewicz-chapter-metadata",
+          "action": "Corrected the chapter header comment from three-valued-logics to infinite-valued-logics.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The file path, olfileid mvl/inf/luk, section definition, and matrices all identify infinite-valued Łukasiewicz logic, but the copied source header names the three-valued chapter.",
+          "chosen_treatment": "தமிழ் கோப்பு மேல்தகவலை முடிவிலா மதிப்புத் தருக்கங்கள் அதிகாரத்துடன் ஒத்திசைக்கிறது.",
+          "alternatives_considered": "Retaining the copied three-valued header; changing the stable inf file id.",
+          "rationale": "Correcting the nonexecuting header preserves every stable TeX identifier while making the metadata truthful.",
+          "precise_review_question": "Does the header now name the chapter identified by mvl/inf/luk?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-017"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0401",
+      "source_sha256": "5d2ee265f4bec099c01297f7e6d605c3c0100e59a96cce2cf9636ec9fb9e186b",
+      "translation_sha256": "db495200c73d58f3b8a1c31fac31cd72fa17b3c37983deb6c5bf03a3ab0955c7",
+      "source_bytes": 3866,
+      "translation_bytes": 6496,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\tf{\\lfalse}&=0\\\\\\tf{\\lnot}[\\LogGod](x)&=\\begin{cases}$1$&x=0\\\\$0$&\\end{cases}\\\\\\tf{\\land}[\\LogGod](x,y)&=\\min(x,y)\\\\\\tf{\\lor}[\\LogGod](x,y)&=\\max(x,y)\\\\\\tf{\\lif}[\\LogGod](x,y)&=\\begin{cases}1&x\\ley\\\\y&\\end{cases}\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\tf{\\lfalse}&=0\\\\\\tf{\\lnot}[\\LogGod](x)&=\\begin{cases}1&x=0\\\\0&\\end{cases}\\\\\\tf{\\land}[\\LogGod](x,y)&=\\min(x,y)\\\\\\tf{\\lor}[\\LogGod](x,y)&=\\max(x,y)\\\\\\tf{\\lif}[\\LogGod](x,y)&=\\begin{cases}1&x\\ley\\\\y&\\end{cases}\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Dummett",
+        "align",
+        "ccc",
+        "god",
+        "include",
+        "inf",
+        "logic",
+        "mvl",
+        "odel",
+        "open",
+        "section",
+        "thr"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MVL-018",
+          "unit_id": "OLP-0401",
+          "kind": "infinite-goedel-file-metadata",
+          "action": "Corrected the copied chapter and section header comments to infinite-valued-logics and goedel.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source header names the three-valued chapter and the Łukasiewicz section, although the path, olfileid mvl/inf/god, title, and content identify infinite-valued Gödel logic.",
+          "chosen_treatment": "தமிழ் கோப்பு மேல்தகவல் முடிவிலா மதிப்புத் தருக்கங்கள் அதிகாரத்தையும் கோடல் பிரிவையும் சரியாகப் பெயரிடுகிறது.",
+          "alternatives_considered": "Retaining both copied labels; changing the stable god file id to luk.",
+          "rationale": "Both header labels are nonexecuting copy errors contradicted by every structural identifier and the complete section content.",
+          "precise_review_question": "Do the corrected chapter and section headers agree with mvl/inf/god and the Gödel matrices?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-018"
+        },
+        {
+          "audit_id": "TA-MVL-019",
+          "unit_id": "OLP-0401",
+          "kind": "goedel-negation-cases-nested-math-delimiters",
+          "action": "Removed inline dollar delimiters around 1 and 0 inside the existing align/cases math environment.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\begin{cases}$1$&",
+              "to": "\\begin{cases}1&",
+              "count": 1
+            },
+            {
+              "from": "$0$&\\end{cases}",
+              "to": "0&\\end{cases}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The negation definition opens align* and cases math mode, then incorrectly opens inline math again around the two result values.",
+          "chosen_treatment": "தமிழ் ஏற்கெனவே கணித நிலையில் உள்ள cases சூழலில் 1, 0 ஆகியவற்றை கூடுதல் டாலர் வரம்பிகள் இன்றி எழுதுகிறது.",
+          "alternatives_considered": "Preserving invalid nested math shifts; moving the whole cases expression out of align math.",
+          "rationale": "Removing only the redundant delimiters preserves the function values and produces valid TeX structure.",
+          "precise_review_question": "Does the repaired cases expression keep results 1 and 0 while avoiding nested math mode?",
+          "location_needle": "SOURCE CORRECTION TA-MVL-019"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

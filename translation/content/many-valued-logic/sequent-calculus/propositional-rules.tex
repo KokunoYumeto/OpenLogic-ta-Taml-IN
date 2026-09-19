@@ -1,0 +1,237 @@
+% SEGMENT OLP-0406-S01
+% SOURCE CORRECTION TA-MVL-027: correct the part metadata from first-order-logic to many-valued-logic.
+% Part: many-valued-logic
+% Chapter: sequent-calculus
+% Section: propositional-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{seq}{prl}
+
+\olsection{தேர்ந்தெடுக்கப்பட்ட தருக்கங்களுக்கான கூற்று விதிகள்}
+
+ஓர்~$n$-பக்கத் தொடரணிக் கணியத்தில் ஓர் இணைப்பிக்கான அனுமான விதிகள், அந்த
+இணைப்பியைப் பண்புறுத்தும் வாய்மைச் சார்பை மட்டுமே சார்ந்துள்ளன. ஆகவே சில
+இணைப்பி வெவ்வேறு தருக்கங்களில் ஒரே வாய்மைச் சார்பால் வரையறுக்கப்பட்டால்,
+அந்த இணைப்பிக்கான $n$-பக்கத் தொடரணி விதிகள் அத்தருக்கங்களில் ஒன்றே.
+
+\subsection{$\lnot$ க்கான விதிகள்}
+
+$\lnot$ க்கான பின்வரும் விதிகள் லூகாசியேவிச்~(\L ukasiewicz), க்ளீனி
+தருக்கங்களுக்கும் அவற்றின் மாறுபாடுகளுக்கும் பொருந்துகின்றன.
+
+\begin{defish}
+  \begin{center}
+\AxiomC{$ \Gamma \nSequent \Pi \nSequent \Delta, !A $}
+\RightLabel{\iR{\lnot}{\False}}
+\UnaryInfC{$ \lnot !A, \Gamma \nSequent \Pi \nSequent \Delta$}
+\DisplayProof
+\\[2ex]
+\AxiomC{$ \Gamma \nSequent !A, \Pi \nSequent \Delta $}
+\RightLabel{\iR{\lnot}{\Undef}}
+\UnaryInfC{$\Gamma \nSequent \lnot !A, \Pi \nSequent \Delta$}
+\DisplayProof
+\\[2ex]
+\AxiomC{$!A, \Gamma \nSequent \Pi \nSequent \Delta$}
+\RightLabel{\iR{\lnot}{\True}}
+\UnaryInfC{$\Gamma \nSequent \Pi \nSequent \Delta,  \lnot !A$}
+\DisplayProof
+  \end{center}
+\end{defish}
+
+$\lnot$ க்கான பின்வரும் விதிகள் கோடல்~(G\"odel) தருக்கத்திற்குப்
+பொருந்துகின்றன.
+
+\begin{defish}
+\AxiomC{$ \Gamma \nSequent !A, \Pi \nSequent \Delta, !A $}
+\RightLabel{\iR{\lnot}{\False}[\LogGod]}
+\UnaryInfC{$ \lnot !A, \Gamma \nSequent \Pi \nSequent \Delta$}
+\DisplayProof
+\hfill
+\AxiomC{$!A, \Gamma \nSequent \Pi \nSequent \Delta$}
+\RightLabel{\iR{\lnot}{\True}[\LogGod]}
+\UnaryInfC{$\Gamma \nSequent \Pi \nSequent \Delta,  \lnot !A$}
+\DisplayProof
+\hfill
+\end{defish}
+
+(கோடல்~(G\"odel) தருக்கத்தில், $\lnot !A$ ஆனது~$\Undef$ என்ற மதிப்பை
+ஒருபோதும் பெற முடியாது; ஆகவே நடு இடத்திற்கான விதி இல்லை.)
+
+\subsection{$\land$ க்கான விதிகள்}
+
+இவை லூகாசியேவிச்~(\L ukasiewicz), வலு க்ளீனி, கோடல்~(G\"odel)
+தருக்கங்களில்~$\land$ க்கான விதிகள்.
+
+\begin{defish}
+\begin{center}
+  \AxiomC{$!A, !B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \RightLabel{$\iR{\land}{\False}$}
+  \UnaryInfC{$!A \land !B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \DisplayProof
+\\[2ex]
+  \AxiomC{$\Gamma \nSequent !A, \Pi \nSequent !A, \Delta$}
+  \AxiomC{$\Gamma \nSequent !B, \Pi \nSequent !B, \Delta$}
+  \AxiomC{$\Gamma \nSequent !A, !B, \Pi \nSequent \Delta$}
+  \RightLabel{$\iR\land\Undef$}
+  \TrinaryInfC{$\Gamma \nSequent !A \land !B, \Pi \nSequent \Delta$}
+  \DisplayProof
+  \\[2ex]  
+  \AxiomC{$\Gamma \nSequent \Pi \nSequent \Delta, !A$}
+  \AxiomC{$\Gamma \nSequent \Pi \nSequent \Delta, !B$}
+  \RightLabel{$\iR\land\True$}
+  \BinaryInfC{$\Gamma \nSequent \Pi \nSequent \Delta, !A \land !B$}
+  \DisplayProof
+\end{center}
+\end{defish}
+
+\subsection{$\lor$ க்கான விதிகள்}
+
+இவை லூகாசியேவிச்~(\L ukasiewicz), வலு க்ளீனி, கோடல்~(G\"odel)
+தருக்கங்களில்~$\lor$ க்கான விதிகள்.
+
+\begin{defish}
+\begin{center}
+ \AxiomC{$!A, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \AxiomC{$!B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \RightLabel{$\iR\lor\False$}
+  \BinaryInfC{$!A \lor !B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \DisplayProof
+\\[2ex]
+  \AxiomC{$!A, \Gamma \nSequent !A, \Pi \nSequent \Delta$}
+  \AxiomC{$!B, \Gamma \nSequent !B, \Pi \nSequent \Delta$}
+  \AxiomC{$\Gamma \nSequent !A, !B, \Pi \nSequent \Delta$}
+  \RightLabel{$\iR\lor\Undef$}
+  \TrinaryInfC{$\Gamma \nSequent !A \lor !B, \Pi \nSequent \Delta$}
+  \DisplayProof
+  \\[2ex]  
+  \AxiomC{$\Gamma \nSequent \Pi \nSequent \Delta, !A, !B$}
+  \RightLabel{$\iR\lor\True$}
+  \UnaryInfC{$\Gamma \nSequent \Pi \nSequent \Delta, !A \lor !B$}
+  \DisplayProof
+\end{center}
+\end{defish}
+
+\subsection{$\lif$ க்கான விதிகள்}
+
+இவை லூகாசியேவிச்~(\L ukasiewicz) தருக்கத்தில்~$\lif$ க்கான விதிகள்.
+
+\begin{defish}
+\begin{center}
+  \AxiomC{$\Gamma \nSequent \Pi \nSequent \Delta, !A$}
+  \AxiomC{$!B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \RightLabel{$\iR\lif\False[\LogLuk[3]]$}
+  \BinaryInfC{$!A \lif !B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \DisplayProof
+  \\[2ex]
+  \AxiomC{$\Gamma \nSequent !A, !B, \Pi \nSequent \Delta$}
+  \AxiomC{$!B, \Gamma \nSequent \Pi \nSequent \Delta, !A$}
+  \RightLabel{$\iR\lif\Undef[\LogLuk[3]]$}
+  \BinaryInfC{$\Gamma \nSequent !A \lif !B, \Pi \nSequent \Delta$}
+  \DisplayProof
+\\[2ex]
+  \AxiomC{$!A, \Gamma \nSequent !B, \Pi \nSequent \Delta, !B$}
+  \AxiomC{$!A, \Gamma \nSequent !A, \Pi \nSequent \Delta, !B$}
+  \RightLabel{$\iR{\lif}{\True}[\LogLuk[3]]$}
+  \BinaryInfC{$\Gamma \nSequent \Pi \nSequent \Delta, !A \lif !B$}
+  \DisplayProof
+\end{center}
+\end{defish}
+
+இவை வலு க்ளீனி தருக்கத்தில்~$\lif$ க்கான விதிகள்.
+
+\begin{defish}
+\begin{center}
+  \AxiomC{$\Gamma \nSequent \Pi \nSequent \Delta, !A$}
+  \AxiomC{$!B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \RightLabel{$\iR\lif\False[\LogKs]$}
+  \BinaryInfC{$!A \lif !B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \DisplayProof
+  \\[2ex]
+  \AxiomC{$!B, \Gamma \nSequent !B, \Pi \nSequent \Delta$}
+  \AxiomC{$\Gamma \nSequent !A, !B, \Pi \nSequent \Delta$}
+  \AxiomC{$\Gamma \nSequent !A, \Pi \nSequent \Delta, !A$}
+  \RightLabel{$\iR\lif\Undef[\LogKs]$}
+  \TrinaryInfC{$\Gamma \nSequent !A \lif !B, \Pi \nSequent \Delta$}
+  \DisplayProof
+\\[2ex]
+  \AxiomC{$!A, \Gamma \nSequent \Pi \nSequent \Delta, !B$}
+  \RightLabel{$\iR{\lif}{\True}[\LogKs]$}
+  \UnaryInfC{$\Gamma \nSequent \Pi \nSequent \Delta, !A \lif !B$}
+  \DisplayProof
+\end{center}
+\end{defish}
+
+இவை கோடல்~(G\"odel) தருக்கத்தில்~$\lif$ க்கான விதிகள்.
+
+\begin{defish}
+\begin{center}
+  \AxiomC{$\Gamma \nSequent !A, \Pi \nSequent \Delta, !A$}
+  \AxiomC{$!B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \RightLabel{$\iR\lif\False[\LogGod[3]]$}
+  \BinaryInfC{$!A \lif !B, \Gamma \nSequent \Pi \nSequent \Delta$}
+  \DisplayProof
+  \\[2ex]
+  \AxiomC{$\Gamma \nSequent !B, \Pi \nSequent \Delta$}
+  \AxiomC{$\Gamma \nSequent \Pi \nSequent \Delta, !A$}
+  \RightLabel{$\iR\lif\Undef[\LogGod[3]]$}
+  \BinaryInfC{$\Gamma \nSequent !A \lif !B, \Pi \nSequent \Delta$}
+  \DisplayProof
+\\[2ex]
+  \AxiomC{$!A, \Gamma \nSequent !B, \Pi \nSequent \Delta, !B$}
+  \AxiomC{$!A, \Gamma \nSequent !A, \Pi \nSequent \Delta, !B$}
+  \RightLabel{$\iR{\lif}{\True}[\LogGod[3]]$}
+  \BinaryInfC{$\Gamma \nSequent \Pi \nSequent \Delta, !A \lif !B$}
+  \DisplayProof
+\end{center}
+\end{defish}
+
+
+\begin{sidewaysfigure}
+  \begin{center}  
+  \AxiomC{$A \nSequent A \nSequent A$}
+  \RightLabel{\iR \Weakening \True}
+  \UnaryInfC{$A \nSequent A \nSequent B, A$}
+  \RightLabel{\iR \Weakening \Undef}
+  \UnaryInfC{$A \nSequent B, A \nSequent B, A$}
+  \RightLabel{\iR \Weakening \Undef}
+  \UnaryInfC{$A \nSequent A, B, A \nSequent B, A$}
+  \AxiomC{$A \nSequent A \nSequent A$}
+  \RightLabel{\iR \Weakening \True}
+  \UnaryInfC{$A \nSequent A \nSequent A, A$}
+  \RightLabel{\iR \Weakening \True}
+  \UnaryInfC{$A \nSequent A \nSequent B, A, A$}
+  \RightLabel{\iR \Weakening \False}
+  \UnaryInfC{$B, A \nSequent A \nSequent B, A, A$}
+  \RightLabel{$\iR\lif\Undef$}
+  \BinaryInfC{$A \nSequent A \lif B, A \nSequent B, A$}
+  \AxiomC{$B \nSequent B \nSequent B$}
+  \RightLabel{\iR \Weakening \Undef}
+  \UnaryInfC{$B \nSequent A, B \nSequent B$}
+  \RightLabel{\iR \Exchange \Undef}
+  \UnaryInfC{$B \nSequent B, A \nSequent B$}
+  \RightLabel{\iR \Weakening \Undef}
+  \UnaryInfC{$B \nSequent A, B, A \nSequent B$}
+  \RightLabel{\iR \Weakening \False}
+  \UnaryInfC{$A, B \nSequent A, B, A \nSequent B$}
+  \RightLabel{\iR \Exchange \False}
+  \UnaryInfC{$B, A \nSequent A, B, A \nSequent B$}
+  \AxiomC{$A \nSequent A \nSequent A$}
+  \RightLabel{\iR \Weakening \True}
+  \UnaryInfC{$A \nSequent A \nSequent B, A$}
+  \RightLabel{\iR \Weakening \False}
+  \UnaryInfC{$B, A \nSequent A \nSequent B, A$}
+  \RightLabel{\iR \Weakening \False}
+  \UnaryInfC{$B, B, A \nSequent A \nSequent B, A$}
+  \RightLabel{$\iR\lif\Undef$}
+  \BinaryInfC{$B, A \nSequent A \lif B, A \nSequent B$}
+  \RightLabel{$\iR\lif\False$}
+  \BinaryInfC{$A \lif B, A \nSequent A \lif B, A \nSequent B$}
+  \DisplayProof
+  \end{center}
+  \caption{$\LogLuk[3]$ இலுள்ள !!{derivation} எடுத்துக்காட்டு}
+\end{sidewaysfigure}
+
+\end{document}

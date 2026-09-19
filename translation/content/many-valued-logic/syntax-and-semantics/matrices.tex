@@ -1,0 +1,80 @@
+% SEGMENT OLP-0388-S01
+% Part: many-valued-logic
+% Chapter: syntax-and-semantics
+% Section: matrices
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{mvl}{syn}{mat}
+
+\olsection{அணிகள்}
+
+% SOURCE CORRECTION TA-MVL-003: use the plural “connectives,” as required by the following per-connective clause.
+ஒரு பல்மதிப்புத் தருக்கம் அதன் மொழி, அதன் மெய்மதிப்புகளின் கணம்~$V$,
+நியமிக்கப்பட்ட மெய்மதிப்புகளின் ஓர் உட்கணம், அதன் இணைப்பிகளுக்கான வாய்மைச்
+சார்புகள் ஆகியவற்றால் வரையறுக்கப்படுகிறது. இக்கூறுகள் அனைத்தையும் சேர்த்து
+ஓர் \emph{அணி} என்கிறோம்.
+
+\begin{defn}[அணி]
+\ollabel{defn:matrix}
+தருக்கம்~$\Log L$ க்கான ஓர் \emph{அணி} பின்வருவனவற்றைக் கொண்டது:
+\begin{enumerate}
+\item மொழி~$\Lang L$ ஐ அமைக்கும் இணைப்பிகளின் ஒரு கணம்;
+\item மெய்மதிப்புகள் அடங்கிய வெறுமையற்ற கணம்~$V \neq \emptyset$;
+\item நியமிக்கப்பட்ட மெய்மதிப்புகள் அடங்கிய கணம்~$V^+ \subseteq V$;
+\item $\Lang L$ இல் உள்ள ஒவ்வோர் $n$-இட இணைப்பி~$\star$ க்கும் ஒரு
+வாய்மைச் சார்பு~$\tf{\star} : V^n \to V$. $n = 0$ எனில்,
+$\tf{\star}$ என்பது~$V$ இன் ஓர் உறுப்பு மட்டுமே.
+\end{enumerate}
+\end{defn}
+
+\begin{ex}
+செவ்வியல் தருக்கம்~\LogCL{} க்கான அணி பின்வருவனவற்றைக் கொண்டது:
+\begin{enumerate}
+  \item $\lfalse$, $\lnot$, $\land$, $\lor$, $\lif$ ஆகியவற்றைக் கொண்ட
+  செந்தரக் கூற்று மொழி~$\Lang L_0$.
+  \item மெய்மதிப்புகளின் கணம்~$V = \{\True, \False\}$.
+  \item $\True$ மட்டுமே நியமிக்கப்பட்ட மதிப்பு; அதாவது,
+  $V^+ = \{\True\}$.
+  \item $\lfalse$ க்கு $\tf{\lfalse} = \False$. மற்ற வாய்மைச் சார்புகள்
+  வழக்கமான மெய்மை அட்டவணைகளால் தரப்படுகின்றன
+  (\olref{fig:tf-CL} ஐக் காண்க).
+\end{enumerate}
+\begin{figure}
+  \begin{center}
+      \begin{tabular}{c|c}
+        $\tf{\lnot}$ & \\
+        \hline
+        $\True$ & $\False$ \\
+        $\False$ & $\True$
+      \end{tabular}
+      \quad
+      \begin{tabular}{c|cc}
+        $\tf{\land}$ & $\True$ & $\False$ \\
+        \hline
+        $\True$ & $\True$ & $\False$ \\
+        $\False$ & $\False$ & $\False$
+      \end{tabular}
+      \quad
+      \begin{tabular}{c|cc}
+        $\tf{\lor}$ & $\True$ & $\False$ \\
+        \hline
+        $\True$ & $\True$ & $\True$ \\
+        $\False$ & $\True$ & $\False$
+      \end{tabular}
+      \quad
+      \begin{tabular}{c|cc}
+        $\tf{\lif}$ & $\True$ & $\False$ \\
+        \hline
+        $\True$ & $\True$ & $\False$ \\
+        $\False$ & $\True$ & $\True$
+      \end{tabular}
+    \end{center}
+    \caption{செவ்வியல் தருக்கம்~$\LogCL$ க்கான வாய்மைச் சார்புகள்.}
+    \ollabel{fig:tf-CL}
+  \end{figure}
+  \end{ex}
+
+\end{document}
