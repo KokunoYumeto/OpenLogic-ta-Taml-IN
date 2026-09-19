@@ -1,0 +1,27 @@
+% SEGMENT OLP-0438-S01
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: provability-from-set
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{prg}
+
+\olsection{ஒரு \usetoken{P}{formula}-கணத்திலிருந்து \usetoken{S}{derivability}}
+
+ஒரு முறைமை~$\Sigma$ இல் !!a{formula} இன் நிறுவத்தக்கதன்மை பற்றிய கருத்தை
+\olref[prf][prs]{sec} இல் வரையறுத்தோம். இப்போது, ஒரு கணம்~$\Gamma$ இலுள்ள
+!!{formula}s இலிருந்து~$\Sigma$ இல் நிறுவத்தக்கதன்மைக்கு இக்கருத்தை
+விரிவாக்குகிறோம்.
+
+\begin{defn}\ollabel{defn:Gammaproves}
+  $!B_1$, \dots, $!B_n \in \Gamma$ ஏதேனும் இருந்து,
+  $\Sigma \Proves !B_1 \lif (!B_2 \lif \cdots (!B_n \lif !A)
+  \cdots)$ ஆக இருந்தால், இருந்தால் மட்டுமே, !!^a{formula}~$!A$ ஆனது
+  ஒரு முறைமை~$\Sigma$ இல் !!{formula}s கொண்ட கணம்~$\Gamma$ இலிருந்து
+  !!{derivable} எனப்படுகிறது; இதை~$\Gamma \Proves[\Sigma] !A$ என எழுதுகிறோம்.
+\end{defn}
+
+\end{document}

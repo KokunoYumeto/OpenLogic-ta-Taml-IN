@@ -1,0 +1,42 @@
+% SEGMENT OLP-0434-S01
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: duals
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{dua}
+
+\olsection{இருமை \usetoken{P}{formula}}
+
+\begin{defn}\ollabel{def:duals}
+  \Ax{T}, \Ax{B}, \Ax{4}, \Ax{5} என்ற !!{formula}s ஒவ்வொன்றுக்கும்,
+  கீழொட்டிட்ட வைரத்தால் குறிக்கப்படும் ஓர் \emph{இருமை} பின்வருமாறு உள்ளது:
+  \begin{align}
+    \tag{\Ax{T_\Diamond}} p & \lif \Diamond p\\
+    \tag{\Ax{B_\Diamond}} \Diamond\Box p & \lif p\\
+    \tag{\Ax{4_\Diamond}} \Diamond\Diamond p & \lif \Diamond p\\
+    \tag{\Ax{5_\Diamond}} \Diamond\Box p & \lif \Box p
+    \end{align}
+\end{defn}
+
+மேலுள்ள இருமை !!{formula}s ஒவ்வொன்றும், அதற்குரிய !!a{formula} இல்
+$p$ க்குப் பதிலாக $\lnot p$ ஐப் பதிலிட்டு, முரண்மாற்றி,
+$\lnot\Box\lnot$ ஐ~$\Diamond$ ஆலும் $\lnot\Diamond\lnot$ ஐ~$\Box$ ஆலும்
+பதிலிடுவதால் பெறப்படுகிறது. \Ax{D}, அதாவது $\Box!A \lif \Diamond!A$,
+இந்தப் பொருளில் தனக்குத்தானே இருமையாகும்.
+
+\begin{prop}\ollabel{prop:dualsys}
+  \olref[nml][prf][dua]{def:duals} இலுள்ள ஒவ்வொரு !!a{formula}~$!A$ க்கும்,
+  $\Log{K}!A = \Log{K}!A_{\Diamond}$.
+\end{prop}
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+\begin{prob}
+  \olref[nml][prf][dua]{prop:dualsys} ஐ நிறுவுக.
+\end{prob}
+
+\end{document}

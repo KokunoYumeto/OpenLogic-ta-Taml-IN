@@ -1,0 +1,176 @@
+% SEGMENT OLP-0432-S01
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: derived-rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{der}
+
+\olsection{பெறப்பட்ட விதிகள்}
+
+!!{derivation}s ஐக் கண்டறிவதும் எழுதுவதும் கடினமாகவும், சிக்கலாகவும்,
+மீண்டும் மீண்டும் செய்ய வேண்டியதாகவும் இருப்பது தெளிவு. எடுத்துக்காட்டாக,
+மிகப் பல நேரங்களில் $!A \lif !B$ இலிருந்து $\Box !A \lif \Box !B$ க்கு
+செல்ல, அதாவது விதி~\RK{} ஐப் பயன்படுத்த, விரும்புகிறோம். இதற்கு முதலில்
+\Nec{} ஐப் பயன்படுத்தி, பின்னர்~\Ax{K} இன் பொருத்தமான நிகழ்வைப் பதிவு
+செய்து, அதன்பின்~\MP{} ஐப் பயன்படுத்த வேண்டும். $!A \lif !B$,
+$!B \lif !C$ ஆகியவற்றிலிருந்து $!A \lif !C$ க்குச் செல்ல, பின்வரும்
+(நீண்ட) மெய்ம நிகழ்வைப் பதிவு செய்ய வேண்டும்:
+\[
+(!A \lif !B) \lif ((!B \lif !C) \lif (!A \lif !C))
+\]
+பின்னர்~\MP{} ஐ இருமுறை பயன்படுத்த வேண்டும். நிகரானது என்று நாம் அறிந்த
+ஒரு வாய்பாட்டால் ஒரு துணை-!!a{formula} ஐப் பதிலிடவும் அடிக்கடி
+விரும்புகிறோம்; எடுத்துக்காட்டாக,
+\iftag{prvDiamond}{$\Diamond !A$ ஐ $\lnot\Box\lnot !A$ ஆல்}{$\Box !A$ ஐ
+$\lnot\Diamond\lnot !A$ ஆல்} அல்லது $\lnot\lnot !A$ ஐ~$!A$ ஆல் பதிலிடலாம்.
+ஆகவே உண்மையான !!a{derivation} ஐ முழுமையாக எழுதுவதற்குப் பதிலாக,
+இடைநிலைப் படிகள் ஏன் !!{derivable} என்பதை மட்டும் பதிவு செய்வது வசதியானது.
+இதற்காக, !!{derivability} பற்றிய சில உண்மைகளைத் தொகுப்போம்.
+
+\begin{prop}
+  $\Log{K} \Proves !A_1$, \dots, $\Log{K} \Proves !A_n$ எனவும்,
+  $!B$ ஆனது $!A_1$, \dots, $!A_n$ ஆகியவற்றிலிருந்து கூற்றுத் தருக்கத்தால்
+  பின்வருகிறது எனவும் இருந்தால், $\Log{K} \Proves !B$.
+\end{prop}
+
+\begin{proof}
+  $!B$ ஆனது $!A_1$, \dots,~$!A_n$ ஆகியவற்றிலிருந்து கூற்றுத் தருக்கத்தால்
+  பின்வருகிறது எனில்,
+  \[
+  !A_1 \lif (!A_2 \lif \cdots (!A_n \lif !B)\dots)
+  \]
+  ஒரு மெய்ம நிகழ்வாகும். \MP{} ஐ~$n$ முறை பயன்படுத்தினால்~$!B$ இன்
+  ஒரு !!a{derivation} கிடைக்கும்.
+\end{proof}
+
+இக்கூற்றின் பயன்பாட்டை~\PL{} ஆல் குறிப்போம்.
+
+\begin{prop}
+  $\Log{K} \Proves !A_1 \lif (!A_2 \lif \cdots (!A_{n-1} \lif
+  !A_n)\dots)$ எனில், $\Log{K} \Proves \Box !A_1 \lif (\Box !A_2 \lif
+  \cdots (\Box !A_{n-1} \lif \Box !A_n)\dots)$.
+\end{prop}
+
+\begin{proof}
+  \olref[nor]{prop:rk} இன் நிறுவலில் செய்ததைப் போலவே, $n$ மீதான
+  தொகுத்தறிதலால்.
+\end{proof}
+
+இக்கூற்றின் பயன்பாட்டை~\RK{} ஆல் குறிப்போம். !!{derivability} முடிவுகளை
+மேலும் எளிதாக நிறுவ இம்முடிவுகள் எவ்வாறு உதவுகின்றன என்பதை விளக்குவோம்.
+
+\begin{prop}
+  $\Log{K} \Proves (\Box!A \land \Box!B) \lif \Box (!A \land !B)$
+\end{prop}
+
+\begin{proof}
+  \begin{derivation}
+    1. & $\Log{K} \Proves !A \lif (!B \lif (!A \land !B))$ & \Taut \\
+    2. & $\Log{K} \Proves \Box!A \lif (\Box !B \lif \Box(!A \land !B)))$ & \RK, 1\\
+    3. & $\Log{K} \Proves (\Box!A \land \Box!B) \lif \Box(!A \land !B)$ & \PL, 2
+  \end{derivation}
+\end{proof}
+
+% SOURCE CORRECTION TA-NML-017: the conclusion substitutes !B, the formula stated in the equivalence, not an unrelated metavariable B.
+\begin{prop}\ollabel{prop:rewriting}
+  $\Log{K} \Proves !A \liff !B$ மற்றும் $\Log{K} \Proves
+  \Subst{!C}{!A}{q}$ எனில், $\Log{K} \Proves \Subst{!C}{!B}{q}$.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  $!C$ இன் சிக்கல்தன்மை மீதான தொகுத்தறிதலால், $\Log{K} \Proves
+  !A \liff !B$ எனில் $\Log{K} \Proves \Subst{!C}{!A}{q} \liff
+  \Subst{!C}{!B}{q}$ என்று நிறுவி,
+  \olref[nml][prf][der]{prop:rewriting} ஐ நிறுவுக.
+\end{prob}
+
+% SOURCE CORRECTION TA-NML-018: the replacement label names the inserted formula first, matching the displayed transformation and worked example.
+ஒரு !!a{formula} க்குள்~$\Diamond$ ஐ~$\Box$ ஆக (அல்லது மறுதலையாக)
+மாற்றவோ, இரட்டை மறுதலைகளை நீக்கவோ விரும்பும்போது இக்கூற்று குறிப்பாகப்
+பயன்படும். இனிவரும் இடங்களில்,~$!C(!A)$ என்பதற்குப் பதிலாக~$!C(!B)$ ஐ
+மீளெழுதும்போதெல்லாம், \olref{prop:rewriting} இன் பயன்பாட்டை
+“$!B$ for $!A$” என்று குறிப்போம். வேறு சொற்களில், “$!B$ for $!A$” என்பது
+பின்வருவதைச் சுருக்குகிறது:
+  \begin{derivation}
+    & $\Proves !C(!A)$ \\
+    & $\Proves !A \liff !B$\\
+    & $\Proves !C(!B)$ & \olref{prop:rewriting} ஆல்
+  \end{derivation}
+எடுத்துக்காட்டாக:
+
+\begin{prop}
+  $\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$
+\end{prop}
+
+\begin{proof}
+  \iftag{prvDiamond}{% Diamond ஆதிநிலையானது
+  \begin{derivation}
+    1. & $\Log{K} \Proves \Diamond \lnot p \liff \lnot\Box\lnot\lnot p$ &
+    \Dual\\
+    2. & $\Log{K} \Proves \lnot \Box \lnot\lnot p \lif \Diamond \lnot p$ & \PL, 1\\
+    3. & $\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$ & $p$ for $\lnot\lnot p$\\
+  \end{derivation}
+  }{% Diamond வரையறுக்கப்பட்டுள்ளது
+  \begin{derivation}
+    1. & $\Log{K} \Proves \lnot \Box \lnot\lnot p \lif \Diamond \lnot p$ & \Taut\\
+    2. & $\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$ & $p$ for $\lnot\lnot p$\\
+  \end{derivation}
+  வரி~$1$ இலுள்ள !!a{formula}, $q$ க்குப் பதிலாக
+  $\Box\lnot\lnot p$ ஐப் பதிலிடுவதால் கிடைக்கும்
+  $\lnot q \lif \lnot q$ இன் ஒரு நிகழ்வாகும். $\Diamond\lnot p$ உம்
+  $\lnot\Box\lnot\lnot p$ உம் ஒன்றே; ஏனெனில்~$\Diamond$ ஆனது
+  $\lnot\Box\lnot$ என வரையறுக்கப்பட்டுள்ளது.}
+\end{proof}
+
+மேலுள்ள !!{derivation} இன் கடைசிப் படியான “$p$ for $\lnot\lnot p$”
+என்பது பின்வருவதன் சுருக்கம்:
+  \begin{derivation}
+    & $\Log{K} \Proves \lnot \Box \lnot\lnot p \lif \Diamond \lnot
+    p$\\
+    & $\Log{K} \Proves \lnot\lnot p \liff p$ & \Taut\\
+    & $\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$ & \olref{prop:rewriting} ஆல்
+  \end{derivation}
+\olref{prop:rewriting} இல் $!C(q)$, $!A$, $!B$ வகிக்கும் பாத்திரங்களை
+இங்கு முறையே $\lnot \Box q \lif \Diamond \lnot p$,
+$\lnot\lnot p$, மற்றும்~$p$ வகிக்கின்றன.
+
+ஒரு !!a{formula} துணை-!!a{formula}~$\lnot\Diamond !A$ ஐக் கொண்டிருக்கும்போது,
+$\Log{K} \Proves \lnot\Diamond !A \liff \Box\lnot !A$ என்பதால்,
+\olref{prop:rewriting} ஐப் பயன்படுத்தி அதை~$\Box\lnot !A$ ஆல் பதிலிடலாம்.
+இதையும் இதுபோன்ற பதிலிடுதல்களையும் “$\Box\lnot$ for
+$\lnot\Diamond$” என்று மட்டும் குறிப்போம்.
+
+!!{derivability} முடிவுகளைத் திட்டவடிவமுறையில் நிறுவலாம் என்பதைப் பின்வரும்
+கூற்று நியாயப்படுத்துகிறது. எடுத்துக்காட்டாக, முந்தைய கூற்று
+$\Log{K} \Proves \lnot\Box p \lif \Diamond \lnot p$ என்பதை மட்டும்
+நிறுவவில்லை; ஏதேனும்~$!A$ க்கு $\Log{K} \Proves \lnot\Box !A \lif
+\Diamond \lnot !A$ என்பதையும் நிறுவுகிறது.
+
+\begin{prop}
+  $!A$ ஆனது~$!B$ இன் ஒரு பதிலீட்டு நிகழ்வாகவும், $\Log{K} \Proves !B$
+  எனவும் இருந்தால், $\Log{K} \Proves !A$.
+\end{prop}
+
+\begin{proof}
+  $!B$ இன் !!{derivation} இன் நீளம் மீதான தொகுத்தறிதலால், ஒரு
+  பதிலீட்டை முழு !!a{derivation} க்கும் பயன்படுத்துவதால் மீண்டும் ஒரு
+  சரியான !!a{derivation} கிடைக்கும் என்பதைச் சரிபார்ப்பது சலிப்பூட்டினாலும்
+  வழக்கமானது. குறிப்பாக, மெய்ம நிகழ்வுகளின் பதிலீட்டு நிகழ்வுகள் தாமும்
+  மெய்ம நிகழ்வுகள்; \iftag{prvDiamond}{\Dual{} மற்றும்~}{}\Ax{K} இன்
+  நிகழ்வுகளின் பதிலீட்டு நிகழ்வுகள் தாமும்
+  \iftag{prvDiamond}{\Dual{} மற்றும்~}{}\Ax{K} இன் நிகழ்வுகள்; மேலும்
+  முன்னுறுப்பு(கள்), முடிவு இரண்டிலும் !!{propositional variable}s க்குப்
+  பதிலாக !!{formula}s ஐப் பதிலிடும்போது~\MP{}, \Nec{} இன் பயன்பாடுகள்
+  சரியாகவே இருக்கின்றன.
+\end{proof}
+
+
+\end{document}

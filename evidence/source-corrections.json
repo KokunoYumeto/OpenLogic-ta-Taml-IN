@@ -3889,6 +3889,220 @@
       "rationale": "Moving only the delimiter preserves the valuation choice and gives the prose and formula separately balanced punctuation.",
       "precise_review_question": "Is the explanatory parenthesis now outside the complete V(q)=emptyset formula?",
       "location_needle": "SOURCE CORRECTION TA-NML-014"
+    },
+    {
+      "audit_id": "TA-NML-015",
+      "unit_id": "OLP-0429",
+      "kind": "least-logic-proposition-omits-normality",
+      "action": "Restored 'normal' in the proposition asserting the least modal logic containing the stated schema instances.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proposition says only 'modal logic', but its proof takes the intersection of normal modal logics and the immediately following definition identifies the result as the smallest normal modal logic.",
+      "chosen_treatment": "தமிழ் கூற்றில் மிகச்சிறிய இயல்பான வாய்ப்புநிலைத் தருக்கம் என்று வெளிப்படையாகக் கூறுகிறது.",
+      "alternatives_considered": "Keeping the weaker proposition while presenting a proof of a stronger and differently defined result; weakening the proof and following definition.",
+      "rationale": "Normality is essential to the construction and is explicitly used on both sides of the proposition.",
+      "precise_review_question": "Does the corrected proposition now state the same normal-modal-logic result that its proof establishes?",
+      "location_needle": "SOURCE CORRECTION TA-NML-015"
+    },
+    {
+      "audit_id": "TA-NML-016",
+      "unit_id": "OLP-0430",
+      "kind": "K-schema-membership-loses-axiom-macro",
+      "action": "Restored the K axiom-schema macro in the membership conclusion of the normality proof.",
+      "normalized_math_replacements": [
+        {
+          "from": "K\\in\\Sigma",
+          "to": "\\Ax{K}\\in\\Sigma",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\Ax"],
+      "source_issue_or_choice": "The premise proves the axiom schema Ax{K}, but the conclusion changes it to an unrelated plain formula letter K before asserting membership in Sigma.",
+      "chosen_treatment": "தமிழ் நிறுவல் முன்னுறுப்பிலும் உறுப்புச் சேர்க்கை முடிவிலும் ஒரே அடிகோள் திட்டவடிவம்~$\\Ax{K}$ ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Retaining plain K as though it were a modal formula; changing the preceding provability claim away from the axiom schema.",
+      "rationale": "The proof is establishing that the set of derivable formulas contains the K schema required for normality.",
+      "precise_review_question": "Does the corrected membership line retain the same K axiom schema proved immediately before it?",
+      "location_needle": "SOURCE CORRECTION TA-NML-016"
+    },
+    {
+      "audit_id": "TA-NML-017",
+      "unit_id": "OLP-0432",
+      "kind": "rewriting-conclusion-drops-formula-sigil",
+      "action": "Restored the formula metavariable sigil on B in the rewriting proposition's conclusion.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\Subst{!C}{B}{q}",
+          "to": "\\Subst{!C}{!B}{q}",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The hypothesis relates formula metavariables !A and !B, and every surrounding substitution uses formula metavariables, but the conclusion alone writes plain B.",
+      "chosen_treatment": "தமிழ் மீளெழுதுதல் கூற்றின் முடிவில் முன்னுறுப்பிலுள்ள அதே வாய்பாட்டு மீமாறி~$!B$ ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Treating plain B as a distinct object despite the stated A/B equivalence; dropping the sigil from every other occurrence.",
+      "rationale": "The proposition substitutes equivalent modal formulas into the same context, so both substitution arguments must be formula metavariables.",
+      "precise_review_question": "Does the corrected conclusion substitute the same formula !B introduced by the equivalence hypothesis?",
+      "location_needle": "SOURCE CORRECTION TA-NML-017"
+    },
+    {
+      "audit_id": "TA-NML-018",
+      "unit_id": "OLP-0432",
+      "kind": "rewriting-abbreviation-reverses-replacement-label",
+      "action": "Changed the prose abbreviation from 'A for B' to 'B for A' so it matches the displayed transformation from C(A) to C(B).",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The displayed derivation starts with C(A) and ends with C(B), and the subsequent worked example says 'p for double-negation' when replacing double-negation by p; the general label states the opposite order.",
+      "chosen_treatment": "தமிழ் $!C(!A)$ ஐ~$!C(!B)$ ஆக மாற்றுவதை “$!B$ for $!A$” என்று குறிக்கிறது.",
+      "alternatives_considered": "Keeping the reversed label despite the display and worked example; reversing the actual derivation instead.",
+      "rationale": "The replacement shorthand must name the inserted formula first and the replaced formula second, as the chapter's own concrete example does.",
+      "precise_review_question": "Does the corrected shorthand now agree with both C(A)-to-C(B) and the later p-for-double-negation example?",
+      "location_needle": "SOURCE CORRECTION TA-NML-018"
+    },
+    {
+      "audit_id": "TA-NML-019",
+      "unit_id": "OLP-0437",
+      "kind": "D-axiom-proof-uses-system-macro",
+      "action": "Changed the cited derivability premise from a modal system named D to the D axiom schema.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\Log{KT}\\Proves\\Log{D}",
+          "to": "\\Log{KT}\\Proves\\Ax{D}",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\Log"],
+      "expected_extra_commands": ["\\Ax"],
+      "source_issue_or_choice": "The cited result states that KT derives the D axiom schema, but this proof changes its object to a logic-system macro.",
+      "chosen_treatment": "தமிழ் உட்கண நிறுவலில் மேற்கோள் காட்டப்பட்ட அதே அடிகோள் திட்டவடிவம்~$\\Ax{D}$ ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Treating a modal system as the object of the formula-derivability relation; altering the cited result.",
+      "rationale": "Deriving the D schema is exactly what lets every KD theorem be reproduced in KT.",
+      "precise_review_question": "Does the corrected premise derive the D axiom schema rather than a system named D?",
+      "location_needle": "SOURCE CORRECTION TA-NML-019"
+    },
+    {
+      "audit_id": "TA-NML-020",
+      "unit_id": "OLP-0437",
+      "kind": "non-derivability-theorem-uses-system-macros-for-axioms",
+      "action": "Changed the two theorem conclusions from systems named 4 and 5 to axiom schemata 4 and 5.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\Log{KTB}\\Proves/\\Log{4}",
+          "to": "\\Log{KTB}\\Proves/\\Ax{4}",
+          "count": 1
+        },
+        {
+          "from": "\\Log{KTB}\\Proves/\\Log{5}",
+          "to": "\\Log{KTB}\\Proves/\\Ax{5}",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\Log", "\\Log"],
+      "expected_extra_commands": ["\\Ax", "\\Ax"],
+      "source_issue_or_choice": "The proof supplies countermodels to instances of Ax4 and Ax5, whereas the theorem statement applies formula non-derivability notation to Log4 and Log5.",
+      "chosen_treatment": "தமிழ் தேற்றத்தில் வருவிக்கப்படாத பொருள்களை~$\\Ax{4}$, $\\Ax{5}$ என்ற அடிகோள் திட்டவடிவங்களாக எழுதுகிறது.",
+      "alternatives_considered": "Keeping logic systems as arguments of formula derivability; changing the proof into a claim about unnamed systems.",
+      "rationale": "The following two satisfaction failures directly refute the displayed axiom instances and thereby their schemata.",
+      "precise_review_question": "Does the theorem now state non-derivability of Ax4 and Ax5, matching its countermodels?",
+      "location_needle": "SOURCE CORRECTION TA-NML-020"
+    },
+    {
+      "audit_id": "TA-NML-021",
+      "unit_id": "OLP-0437",
+      "kind": "Ax4-countermodel-uses-wrong-conditional-command",
+      "action": "Changed the Ax4 counterexample from the generic arrow command to the chapter's object-language conditional.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\Boxp\\to\\Box\\Boxp",
+          "to": "\\Boxp\\lif\\Box\\Boxp",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\to"],
+      "expected_extra_commands": ["\\lif"],
+      "source_issue_or_choice": "The theorem and every other instance of Ax4 use the object-language connective lif, but this one countermodel display alone uses to.",
+      "chosen_treatment": "தமிழ் எதிர்மாதிரி வாய்பாட்டிலும்~$\\lif$ என்ற அதே பொருள்மொழி இணைப்பியைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Leaving a different arrow command in the same axiom schema; changing all Ax4 displays to the generic arrow.",
+      "rationale": "The satisfaction claim must evaluate an instance of the formally defined Ax4 schema.",
+      "precise_review_question": "Is the falsified formula now exactly an Ax4 instance using the established conditional?",
+      "location_needle": "SOURCE CORRECTION TA-NML-021"
+    },
+    {
+      "audit_id": "TA-NML-022",
+      "unit_id": "OLP-0439",
+      "kind": "rule-T-label-and-condition-commented-out",
+      "action": "Restored the visible emphasized Rule T label and expressed the omitted conditional relation in the translated item.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\emph"],
+      "source_issue_or_choice": "A percent sign after the item label comments out both the intended emphasized 'Rule T' heading and the word 'If', leaving the list item without its named property or conditional introduction.",
+      "chosen_treatment": "தமிழ் உருப்படியில்~\\emph{விதி T} என்ற தலைப்பை வெளிப்படுத்தி, முன்னுறுப்புகளை நிபந்தனை வாக்கியமாக எழுதுகிறது.",
+      "alternatives_considered": "Preserving the accidental hidden heading and malformed prose; deleting the corresponding rule from the property list.",
+      "rationale": "The following paragraph cites this item as a named rule, and its displayed premises and conclusion plainly form a conditional claim.",
+      "precise_review_question": "Does the corrected fifth item visibly state Rule T as a conditional derivability property?",
+      "location_needle": "SOURCE CORRECTION TA-NML-022"
+    },
+    {
+      "audit_id": "TA-NML-023",
+      "unit_id": "OLP-0439",
+      "kind": "rule-T-tautology-uses-wrong-first-conditional-command",
+      "action": "Changed the first connective in the Rule T tautological instance to the chapter's object-language conditional.",
+      "normalized_math_replacements": [
+        {
+          "from": "!A_1\\to(!A_2\\lif",
+          "to": "!A_1\\lif(!A_2\\lif",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\to"],
+      "expected_extra_commands": ["\\lif"],
+      "source_issue_or_choice": "The nested object-language conditional uses lif at every later level, but the outermost connective alone uses the generic arrow command.",
+      "chosen_treatment": "தமிழ் மெய்ம நிகழ்வின் வெளிப்புறத்திலும் உட்புறங்களிலும்~$\\lif$ ஐ ஒரேபடியாகப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Retaining mixed connective commands in one recursively nested formula; replacing every inner connective with the generic arrow.",
+      "rationale": "Rule T relies on one nested formula built from the formally defined object-language conditional.",
+      "precise_review_question": "Does the corrected Rule T tautology use lif at every conditional level?",
+      "location_needle": "SOURCE CORRECTION TA-NML-023"
+    },
+    {
+      "audit_id": "TA-NML-024",
+      "unit_id": "OLP-0440",
+      "kind": "consistency-proof-uses-wrong-conditional-command",
+      "action": "Changed the first deduction-theorem conclusion to the chapter's object-language conditional.",
+      "normalized_math_replacements": [
+        {
+          "from": "!A\\to\\lfalse",
+          "to": "!A\\lif\\lfalse",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\to"],
+      "expected_extra_commands": ["\\lif"],
+      "source_issue_or_choice": "The paired deduction-theorem conclusion and the tautological instance immediately below use lif, but the first conclusion alone uses the generic arrow command.",
+      "chosen_treatment": "தமிழ் இரு கழித்தல்-தேற்ற முடிவுகளிலும்~$\\lif$ என்ற அதே பொருள்மொழி இணைப்பியைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Leaving one of the paired conclusions in a different notation; changing the paired conclusion and tautological instance to the generic arrow.",
+      "rationale": "Both assumptions are discharged by the same deduction theorem and feed the same object-language tautology.",
+      "precise_review_question": "Do both deduction-theorem conclusions now use the conditional required by the following tautology?",
+      "location_needle": "SOURCE CORRECTION TA-NML-024"
     }
   ],
   "by_unit": {
@@ -4012,6 +4226,12 @@
     "OLP-0417": ["TA-NML-010"],
     "OLP-0418": ["TA-NML-011"],
     "OLP-0423": ["TA-NML-012", "TA-NML-014"],
-    "OLP-0426": ["TA-NML-013"]
+    "OLP-0426": ["TA-NML-013"],
+    "OLP-0429": ["TA-NML-015"],
+    "OLP-0430": ["TA-NML-016"],
+    "OLP-0432": ["TA-NML-017", "TA-NML-018"],
+    "OLP-0437": ["TA-NML-019", "TA-NML-020", "TA-NML-021"],
+    "OLP-0439": ["TA-NML-022", "TA-NML-023"],
+    "OLP-0440": ["TA-NML-024"]
   }
 }

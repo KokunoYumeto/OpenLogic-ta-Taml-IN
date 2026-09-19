@@ -1,0 +1,109 @@
+% SEGMENT OLP-0435-S01
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: proofs-modal-systems
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{prs}
+
+\olsection{வாய்ப்புநிலை அமைப்புகளில் நிறுவல்கள்}
+
+இப்போது~\Log{K} அல்லாத வாய்ப்புநிலைத் தருக்க அமைப்புகளிலுள்ள நிறுவல்களுக்கு
+வருகிறோம்.
+
+\begin{prop}\ollabel{prop:S5facts}
+பின்வரும் வருவிக்கத்தக்கதன்மை முடிவுகள் கிடைக்கின்றன:
+  \begin{enumerate}
+  \item $\Log{KT5} \Proves \Ax{B}$;
+  \item $\Log{KT5} \Proves \Ax{4}$;
+  \item $\Log{KDB4} \Proves \Ax{T}$;
+  \item $\Log{KB4} \Proves \Ax{5}$;
+  \item $\Log{KB5} \Proves \Ax{4}$;
+  \item \ollabel{prop:S5facts-KT-D}$\Log{KT} \Proves \Ax{D}$.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  ஒவ்வொன்றுக்கும் நிறுவல்களைக் கொடுக்கிறோம்.
+  \begin{enumerate}
+    \item $\Log{KT5} \Proves \Ax{B}$:
+      \begin{derivation}
+        1. & $\Log{KT5} \Proves \Diamond!A \lif \Box\Diamond!A$ & \Ax{5}\\
+        2. & $\Log{KT5} \Proves !A \lif \Diamond!A$ & $\Ax{T_\Diamond}$\\
+        3. & $\Log{KT5} \Proves !A \lif \Box\Diamond!A$ & \PL, 2, 1.
+      \end{derivation}
+    \item $\Log{KT5} \Proves \Ax{4}$:
+      \begin{derivation}
+        1. &$\Log{KT5} \Proves \Diamond\Box!A \lif \Box\Diamond\Box!A$ & \Ax{5}
+        இல் $p$ க்குப் பதிலாக $\Box!A$\\
+        2. & $\Log{KT5} \Proves \Box!A \lif \Diamond\Box!A$ & $\Ax{T_\Diamond}$
+        இல் $p$ க்குப் பதிலாக $\Box!A$\\
+        3. & $\Log{KT5} \Proves \Box!A \lif \Box\Diamond\Box!A$ & \PL, 2, 1\\
+        4. & $\Log{KT5} \Proves \Diamond\Box!A \lif \Box!A$ & $\Ax{5_\Diamond}$\\
+        5. & $\Log{KT5} \Proves \Box\Diamond\Box!A \lif \Box\Box!A$ & \RK{}, 4 \\
+        6. & $\Log{KT5} \Proves \Box!A \lif \Box\Box!A$ & \PL, 3, 5. \\
+      \end{derivation}
+    \item $\Log{KDB4} \Proves \Ax{T}$:
+      \begin{derivation}
+        1. & $\Log{KDB4} \Proves \Diamond\Box!A \lif !A $ & $\Ax{B_\Diamond}$ \\
+        2. & $\Log{KDB4} \Proves \Box\Box!A \lif \Diamond\Box!A$ & $\Ax{D}$
+        இல் $p$ க்குப் பதிலாக $\Box!A$\\
+        3. & $\Log{KDB4} \Proves \Box\Box!A \lif !A$ & \PL, 1, 2\\
+        4. & $\Log{KDB4} \Proves \Box!A \lif \Box\Box!A$ & \Ax{4} \\
+        5. & $\Log{KDB4} \Proves \Box!A \lif !A$ & \PL, 4, 3. \\
+      \end{derivation}
+    \item $\Log{KB4} \Proves \Ax{5}$:
+      \begin{derivation}
+        1. & $\Log{KB4} \Proves \Diamond!A \lif \Box \Diamond\Diamond!A$ & \Ax{B}
+        இல் $p$ க்குப் பதிலாக $\Diamond!A$\\
+        2. & $\Log{KB4} \Proves \Diamond\Diamond !A \lif \Diamond !A$ &
+        $\Ax{4_\Diamond}$ \\
+        3. & $\Log{KB4} \Proves \Box\Diamond\Diamond !A \lif \Box \Diamond!A$ &
+        \RK{}, 2 \\
+        4. & $\Log{KB4} \Proves \Diamond!A \lif \Box\Diamond!A$ & \PL, 1, 3.
+      \end{derivation}
+    \item $\Log{KB5} \Proves \Ax{4}$:
+      \begin{derivation}
+        1. & $\Log{KB5} \Proves \Box!A \lif \Box\Diamond\Box !A$ & \Ax{B} இல்
+        $p$ க்குப் பதிலாக $\Box!A$ \\
+        2. & $\Log{KB5} \Proves  \Diamond\Box!A \lif \Box !A$ &
+        $\Ax{5_\Diamond}$\\
+        3. & $\Log{KB5} \Proves  \Box\Diamond\Box!A \lif \Box\Box !A$ & \RK{}, 2 \\
+        4. & $\Log{KB5} \Proves  \Box!A \lif \Box\Box!A$ & \PL, 1, 3.
+      \end{derivation}
+    \item $\Log{KT} \Proves \Ax{D}$:
+      \begin{derivation}
+        1. & $\Log{KT} \Proves \Box !A \lif !A$ & \Ax{T} \\
+        2. & $\Log{KT} \Proves !A \lif \Diamond!A$ & $\Ax{T_\Diamond}$ \\
+        3. & $\Log{KT} \Proves \Box !A \lif \Diamond !A$ &  \PL, 1, 2
+      \end{derivation}
+  \end{enumerate}
+\end{proof}
+
+\begin{defn}
+  மரபைப் பின்பற்றி, \Log{S4} ஐ அமைப்பு~\Log{KT4} என்றும், \Log{S5} ஐ
+  அமைப்பு~\Log{KTB4} என்றும் வரையறுக்கிறோம்.
+\end{defn}
+
+செவ்வியல் அமைப்பு~\Log{S5} க்குப் பல நிகரான அடிகோளாக்கங்கள் உள்ளன என்பதைப்
+பின்வரும் கூற்று காட்டுகிறது. அடிகோள்களின் பல்வேறு சேர்க்கைகள் அனைத்தும்
+சமானத் தொடர்புகளைச் சிறப்பிப்பதால் இது வியப்பூட்டாது
+(காண்க \olref[frd][es5]{prop:equivalences}).
+
+\begin{prop}\ollabel{prop:S5}
+  $\Log{KTB4} = \Log{KT5} = \Log{KDB4} = \Log{KDB5}$.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[nml][prf][prs]{prop:S5} ஐ நிறுவுக.
+\end{prob}
+
+
+\end{document}

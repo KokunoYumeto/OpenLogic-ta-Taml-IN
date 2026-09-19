@@ -1,0 +1,67 @@
+% SEGMENT OLP-0440-S01
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: consistency
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{con}
+
+\olsection{முரணின்மை}
+
+முரணின்மை, !!{formula}s கொண்ட கணங்களின் ஒரு முக்கியமான பண்பாகும்.
+$\lfalse$ போன்ற ஒரு முரண்பாடு ஒரு !!{formula}s கணத்திலிருந்து
+!!{derivable} எனில், அந்தக் கணம் முரணுடையது; இல்லையெனில் அது முரணற்றது.
+ஒரு கணம் முரணுடையது எனில், அதன் !!{formula}s அனைத்தும் ஒரு மாதிரியின்
+ஓர் உலகில் ஒருசேர மெய்யாக இருக்க முடியாது. நிறைவுத் தேற்றத்திற்காக அதன்
+மறுதலையை நிறுவுகிறோம்: ஒவ்வொரு முரணற்ற கணமும் ஒரு மாதிரியின் ஓர் உலகில்,
+அதாவது “நியம மாதிரி”யில், மெய்யாகும்.
+
+\begin{defn}
+  $\Gamma \Proves/[\Sigma] \lfalse$ எனில், எனில் மட்டுமே, ஒரு கணம்
+  $\Gamma$ ஆனது முறைமை~$\Sigma$ க்குச் சார்பாக \emph{முரணற்றது}, அல்லது
+  நாம் கூறவிருப்பதுபோல், $\Sigma$-முரணற்றது எனப்படுகிறது.
+\end{defn}
+
+எடுத்துக்காட்டாக, $\{ \Box(p \lif q), \Box p, \lnot\Box q \}$ என்ற கணம்
+கூற்றுத் தருக்கத்துக்குச் சார்பாக முரணற்றது; ஆனால்
+\Log{K}-முரணற்றது அல்ல. அதேபோல், $\{ \Diamond p, \Box\Diamond
+p \lif q, \lnot q \}$ என்ற கணம்~\Log{K5}-முரணற்றது அல்ல.
+
+\begin{prop}\ollabel{prop:consistencyfacts}
+  $\Gamma$ ஒரு !!{formula}s கணமாக இருக்கட்டும். அப்போது:
+  \begin{enumerate}
+  \item $\Gamma$ ஆனது~$\Sigma$-முரணற்றது என்பது, அப்போதும் அப்போது மட்டுமே,
+    $\Gamma \Proves/[\Sigma] !A$ ஆக இருக்கும் ஏதோவொரு !!{formula}~$!A$
+    உள்ளது;
+  \item \ollabel{prop:consistencyfacts-b}%
+    $\Gamma \Proves[\Sigma] !A$ என்பது, அப்போதும் அப்போது மட்டுமே,
+    $\Gamma \cup \{ \lnot!A \}$ ஆனது~$\Sigma$-முரணற்றது அல்ல;
+  \item \ollabel{prop:consistencyfacts-c}%
+    $\Gamma$ ஆனது~$\Sigma$-முரணற்றது எனில், எந்த !!{formula}~$!A$ க்கும்,
+    $\Gamma \cup \{ !A \}$ அல்லது $\Gamma \cup \{ \lnot!A \}$
+    ஆகியவற்றில் ஒன்று~$\Sigma$-முரணற்றது.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  செவ்வியல் கூற்றுத் தருக்கத்தைப் பயன்படுத்தி இவ்வுண்மைகள் எளிதாகப்
+  பின்வருகின்றன. \olref{prop:consistencyfacts-c} க்கான வாதத்தைத் தருகிறோம்.
+  எதிர்நிலைமாற்ற முறையில் சென்று, $\Gamma \cup \{ !A \}$ ஆனது
+  $\Sigma$-முரணற்றது அல்ல என்றும், $\Gamma \cup \{ \lnot!A \}$ ஆனது
+  $\Sigma$-முரணற்றது அல்ல என்றும் கொள்க.
+  அப்போது \olref{prop:consistencyfacts-b} படி, $\Gamma, !A
+  \Proves[\Sigma] \lfalse$, $\Gamma, \lnot !A \Proves[\Sigma]
+  \lfalse$ ஆகிய இரண்டும் கிடைக்கின்றன. கழித்தல் தேற்றத்தின்படி,
+  % SOURCE CORRECTION TA-NML-024: use the chapter's object-language conditional in the first deduction-theorem result.
+  $\Gamma \Proves[\Sigma] !A \lif \lfalse$ மற்றும்
+  $\Gamma \Proves[\Sigma] \lnot!A \lif \lfalse$. ஆனால் $(!A \lif
+  \lfalse) \lif ((\lnot!A \lif \lfalse) \lif \lfalse)$ ஒரு மெய்ம
+  நிகழ்வாகும்; ஆகவே
+  \olref[prp]{prop:derivabilityfacts}\olref[prp]{prop:derivabilityfacts-ruleT}
+  படி, $\Gamma \Proves[\Sigma] \lfalse$.
+\end{proof}
+
+\end{document}

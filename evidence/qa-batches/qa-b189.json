@@ -1,0 +1,197 @@
+{
+  "batch_id": "TA-B189",
+  "units": [
+    {
+      "unit_id": "OLP-0427",
+      "source_sha256": "cbbd3a3ac813625c2cf55ccd7bdde41407008f7fb46b51ef302525f6160383ec",
+      "translation_sha256": "e886b8db122e476f9574bbc20feae5ad8a5705bbfee488ff1a58c8d226772661",
+      "source_bytes": 566,
+      "translation_bytes": 600,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0428",
+      "source_sha256": "554f263088c8e6e98b5cd4e9bf341c5497f787d11f9d136b07fceb1671a36068",
+      "translation_sha256": "c7ac6a3adde329e3a2b01360e08cbba32f782528c5a6c5081f7db269455178a5",
+      "source_bytes": 3673,
+      "translation_bytes": 9551,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0429",
+      "source_sha256": "6bcccf354cf8966f674c16ad3c6196a62ebcf8ca9545418d60ef08adf89e3819",
+      "translation_sha256": "ae5f9c00e48795cc030839b838057d8b2b9d021255cf9280bf759a02a78e6816",
+      "source_bytes": 4374,
+      "translation_bytes": 10300,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "nml",
+        "nor",
+        "open",
+        "prf",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-015",
+          "unit_id": "OLP-0429",
+          "kind": "least-logic-proposition-omits-normality",
+          "action": "Restored 'normal' in the proposition asserting the least modal logic containing the stated schema instances.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proposition says only 'modal logic', but its proof takes the intersection of normal modal logics and the immediately following definition identifies the result as the smallest normal modal logic.",
+          "chosen_treatment": "தமிழ் கூற்றில் மிகச்சிறிய இயல்பான வாய்ப்புநிலைத் தருக்கம் என்று வெளிப்படையாகக் கூறுகிறது.",
+          "alternatives_considered": "Keeping the weaker proposition while presenting a proof of a stronger and differently defined result; weakening the proof and following definition.",
+          "rationale": "Normality is essential to the construction and is explicitly used on both sides of the proposition.",
+          "precise_review_question": "Does the corrected proposition now state the same normal-modal-logic result that its proof establishes?",
+          "location_needle": "SOURCE CORRECTION TA-NML-015"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0430",
+      "source_sha256": "bf3926886e2d6d2740ceb631fc5c5618fe300fb0d6813fe2b30367072c45d66a",
+      "translation_sha256": "d85a958cbe76fd7bcb6f0ddcdcc5c4f372a5e39312328e96510615401411c3cd",
+      "source_bytes": 4443,
+      "translation_bytes": 9769,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$K\\in\\Sigma$"
+      ],
+      "extra_math": [
+        "$\\Ax{K}\\in\\Sigma$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-016",
+          "unit_id": "OLP-0430",
+          "kind": "K-schema-membership-loses-axiom-macro",
+          "action": "Restored the K axiom-schema macro in the membership conclusion of the normality proof.",
+          "normalized_math_replacements": [
+            {
+              "from": "K\\in\\Sigma",
+              "to": "\\Ax{K}\\in\\Sigma",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\Ax"
+          ],
+          "source_issue_or_choice": "The premise proves the axiom schema Ax{K}, but the conclusion changes it to an unrelated plain formula letter K before asserting membership in Sigma.",
+          "chosen_treatment": "தமிழ் நிறுவல் முன்னுறுப்பிலும் உறுப்புச் சேர்க்கை முடிவிலும் ஒரே அடிகோள் திட்டவடிவம்~$\\Ax{K}$ ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Retaining plain K as though it were a modal formula; changing the preceding provability claim away from the axiom schema.",
+          "rationale": "The proof is establishing that the set of derivable formulas contains the K schema required for normality.",
+          "precise_review_question": "Does the corrected membership line retain the same K axiom schema proved immediately before it?",
+          "location_needle": "SOURCE CORRECTION TA-NML-016"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\Ax"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

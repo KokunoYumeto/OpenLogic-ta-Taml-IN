@@ -1,0 +1,160 @@
+% SEGMENT OLP-0437-S01
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: systems-distinct
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{dis}
+
+\olsection{அமைப்புகள் வேறுபட்டவை என்று காட்டுதல்}
+
+வாய்ப்புநிலைத் தருக்கத்தின் இரண்டு அமைப்புகள் உண்மையில் ஒரே அமைப்பே என்று
+எவ்வாறு நிறுவுவது என்பதை~\olref[prs]{sec} இல் கண்டோம்.
+இரு வாய்ப்புநிலை அமைப்புகள்~$\Sigma$, $\Sigma'$ வேறுபட்டவை என்று காட்ட,
+$\Sigma' \Proves !A$ ஆகவும்~$\Sigma$ இன் ஒரு மாதிரியில் பொய்யாகவும்
+இருக்கும் !!a{formula}~$!A$ ஐக் காணலாம் என்பதை~\olref[snd]{thm:soundness}
+நமக்குத் தருகிறது.
+
+\begin{prop}
+  $\Log{KD} \subsetneq \Log{KT}$
+\end{prop}
+
+\begin{proof} எல்லாத் தற்சுட்டுத் தொடர்புகளும் தொடரானவை என்ற பொருண்மையியல்
+  உண்மையின் தொடரியல் நிகர் இது. $\Log{KD} \subseteq \Log{KT}$ என்று
+  காட்ட, $\Log{KD} \Proves !B$ என்பது $\Log{KT} \Proves !B$ என்பதைக்
+  குறிக்கிறது என்று காண வேண்டும். இது
+  \olref[prs]{prop:S5facts}\olref[prs]{prop:S5facts-KT-D} இல் காட்டியபடி,
+  $\Log{KT} \Proves \Ax{D}$ என்பதிலிருந்து பின்வருகிறது.
+  % SOURCE CORRECTION TA-NML-019: the cited result proves the D axiom schema, not a modal system named D.
+  உள்ளடக்கம் முறையானது என்று காட்ட, சரித்தன்மையின்படி
+  (\olref[snd]{thm:soundness}), \Ax{T}, அதாவது $\Box p \lif p$, பொய்யாகும்
+  ஒரு~\Log{KD} மாதிரியைத் தருவது போதும் (இதை ஓர் எளிய பயிற்சியாக
+  விடுகிறோம்); ஏனெனில் அப்போது சரித்தன்மையின்படி $\Log{KD}
+  \Proves/ \Box p \lif p$.
+\end{proof}
+
+\begin{prop}
+  $\Log{KB} \neq \Log{K4}$.
+\end{prop}
+
+\begin{proof}
+  \Ax{4} இன் ஏதோவொரு நிகழ்வு பொய்யாகும் ஒரு சமச்சீர் மாதிரியைக்
+  கட்டமைக்கிறோம். அந்த நிகழ்வு~\Log{K4} க்கு !!{derivable} ஆனது ஆனால்
+  \Log{KB} இல் அவ்வாறில்லை என்பது தெளிவாதலால்,
+  $\Log{K4} \nsubseteq \Log{KB}$ என்பது பின்வரும்.
+  \olref{fig:Bnot4} இலுள்ள சமச்சீர் மாதிரி~$\mModel{M}$ ஐக் கருதுக.
+  மாதிரி சமச்சீரானதால், \Ax{K},~\Ax{B} ஆகியவை~$\mModel{M}$ இல் மெய்யாகும்
+  (முறையே \olref[syn][sch]{prop:Kvalid},
+  \olref[frd][acc]{thm:soundschemas} ஆகியவற்றின்படி). இருப்பினும்,
+  $\mSat/{M}{\Box p \lif \Box\Box p}[w_1]$.
+\end{proof}
+
+\begin{figure}[htpb]
+  \centering
+  \begin{tikzpicture}[modal]
+    \node[world] (w1) [label=above:\mFalse{p},
+    label={below:$\mSat{{}}{\Box p}$\\ $\mSat/{{}}{\Box\Box p}$}] {$w_1$};
+    \node[world] (w2) [label=above:\mTrue{p},
+      label=below:$\mSat/{{}}{\Box p}$, right=of w1]{$w_2$};
+    \draw[->, bend left] (w1) to (w2);
+    \draw[->, bend left] (w2) to (w1);
+  \end{tikzpicture}
+  \caption{\Ax{4} இன் ஒரு நிகழ்வைப் பொய்யாக்கும் சமச்சீர் மாதிரி.}
+  \ollabel{fig:Bnot4}
+\end{figure}
+
+% SOURCE CORRECTION TA-NML-020: the theorem concerns axiom schemata 4 and 5, not modal systems named 4 and 5.
+\begin{thm}\ollabel{thm:KTBnot45}
+  $\Log{KTB} \Proves/ \Ax{4}$ மற்றும் $\Log{KTB} \Proves/ \Ax{5}$.
+\end{thm}
+
+\begin{proof}
+  \olref[frd][acc]{thm:soundschemas} படி, ஒவ்வொரு தற்சுட்டுச் சமச்சீர்
+  மாதிரியிலும் \Ax{T}, \Ax{B} ஆகியவற்றின் எல்லா நிகழ்வுகளும் முறையே
+  மெய்யாகும் என்பதை அறிவோம். எனவே சரித்தன்மையின்படி,~\Ax{4} இன் ஏதோவொரு
+  நிகழ்வு பொய்யாகும் உலகைக் கொண்ட ஒரு தற்சுட்டுச் சமச்சீர் மாதிரியையும்,
+  அதேபோல்~\Ax{5} க்கான ஒரு மாதிரியையும் கண்டால் போதும். இரு கூற்றுகளுக்கும்
+  ஒரே மாதிரியைப் பயன்படுத்துகிறோம். \olref{fig:KTBnot45} இலுள்ள சமச்சீரான,
+  தற்சுட்டான மாதிரியைக் கருதுக. அப்போது
+  % SOURCE CORRECTION TA-NML-021: use the chapter's object-language conditional in the Ax4 instance.
+  $\mSat/{M}{\Box p \lif \Box \Box p}[w_1]$; ஆகவே~\Ax{4} ஆனது~$w_1$
+  இல் பொய்யாகும். அதேபோல், $\mSat/{M}{\Diamond
+    \lnot p \lif \Box \Diamond \lnot p}[w_2]$; எனவே $!A = \lnot p$
+  எனும்~\Ax{5} இன் நிகழ்வு~$w_2$ இல் பொய்யாகும்.
+\end{proof}
+
+\begin{figure}[htpb]
+  \centering
+  \begin{tikzpicture}[modal]
+    \node[world] (w1) [label={right:\mTrue{p}},
+      label={below: $\mSat{{}}{\Box p}$\\
+        $\mSat/{{}}{\Box\Box p}$\\
+        $\mSat/{{}}{\Diamond\lnot p}$}] {$w_1$};
+    \draw[reflexive above] (w1) to (w1);
+    \node[world] (w2) [label={right:\mTrue{p}}, label={below:
+        $\mSat{{}}{\Diamond\lnot p}$\\
+        $\mSat/{{}}{\Box\Diamond\lnot p}$}, right=of w1] {$w_2$} ;
+    \draw[reflexive above] (w2) to (w2);
+    \node[world] (w3) [label={right:\mFalse{p}},right=of w2] {$w_3$};
+    \draw[reflexive above] (w3) to (w3);
+    \draw[->, bend left] (w1) to (w2);
+    \draw[->, bend left] (w2) to (w3);
+    \draw[->, bend left] (w3) to (w2);
+    \draw[->, bend left] (w2) to (w1);
+  \end{tikzpicture}
+  \caption{\olref{thm:KTBnot45} க்கான மாதிரி.}
+  \ollabel{fig:KTBnot45}
+\end{figure}
+
+\begin{thm}\ollabel{thm:KD5not4}
+  $\Log{KD5} \neq \Log{KT4} = \Log{S4}$.
+\end{thm}
+
+\begin{proof}
+  \olref[frd][acc]{thm:soundschemas} படி, \Ax{D},~\Ax{5} ஆகியவற்றின்
+  எல்லா நிகழ்வுகளும் எல்லாத் தொடரான யூக்ளிடிய மாதிரிகளிலும் மெய்யாகும்
+  என்பதை அறிவோம். எனவே~\Ax{4} இன் ஏதோவொரு நிகழ்வு பொய்யாகும் உலகைக்
+  கொண்ட ஒரு தொடரான யூக்ளிடிய மாதிரியைக் கண்டால் போதும்.
+  \olref{fig:KD5not4} இலுள்ள மாதிரியைக் கருதுக; அப்போது
+  $\mSat/{M}{\Box p \lif \Box\Box p}[w_1]$ என்பதைக் கவனிக்க.
+\end{proof}
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}[modal]
+    \node[world] (w2) [label=north west:\mTrue{p}]{$w_2$} ;
+    \draw[reflexive left] (w2) to (w2);
+    \node[world] (w1) [label=right:\mFalse{p},
+      label=below:{$\mSat{{}}{\Box p}, \mSat/{{}}{\Box\Box p}$},
+      below right=of w2]{$w_1$};
+    \node[world] (w3) [label=north east:\mTrue{p}, above right=of w1]{$w_3$} ;
+    \draw[reflexive right] (w3) to (w3);
+    \node[world] (w4) [label=right:\mFalse{p},above right=of w2]{$w_4$};
+    \draw[reflexive above] (w4) to (w4);
+    \draw[->] (w1) to (w2);
+    \draw[->] (w1) to (w3);
+    \draw[->, bend left=15] (w2) to (w3);
+    \draw[->, bend left=15] (w3) to (w2);
+    \draw[->, bend left=15] (w2) to (w4);
+    \draw[->, bend left=15] (w4) to (w2);
+    \draw[->, bend left=15] (w3) to (w4);
+    \draw[->, bend left=15] (w4) to (w3);
+  \end{tikzpicture}
+  \caption{\olref{thm:KD5not4} க்கான மாதிரி.}
+  \ollabel{fig:KD5not4}
+\end{figure}
+
+\begin{prob}
+  $3$ உலகுகளைக் கொண்ட ஒரு மாதிரியைப் பயன்படுத்தி,
+  \olref[nml][prf][dis]{thm:KD5not4} க்கு மாற்று நிறுவல் ஒன்றைக் கொடுக்க.
+\end{prob}
+
+\begin{prob}
+  $\Log{KT4} \Proves/ \Ax{B}$, $\Log{KT4} \Proves/ \Ax{5}$ ஆகிய
+  இரண்டையும் காட்டும் ஒரேயொரு தற்சுட்டுத் தொடர் மாதிரியைத் தருக.
+\end{prob}
+
+\end{document}

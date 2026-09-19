@@ -1,0 +1,55 @@
+% SEGMENT OLP-0439-S01
+% Part: normal-modal-logic
+% Chapter: axioms-systems
+% Section: provability-properties
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{prf}{prp}
+
+\olsection{\usetoken{S}{derivability} இன் பண்புகள்}
+
+\begin{prop}\ollabel{prop:derivabilityfacts}
+  $\Sigma$ ஒரு வாய்ப்புநிலை அமைப்பாகவும்,~$\Gamma$ வாய்ப்புநிலை
+  !!{formula}s கொண்ட ஒரு கணமாகவும் இருக்கட்டும். பின்வரும் பண்புகள்
+  செல்லுபடியாகும்:
+  \begin{enumerate}
+  \item\ollabel{prop:derivabilityfacts-monotonicity} \emph{ஒருபோக்குத்தன்மை}:
+    $\Gamma \Proves[\Sigma] !A$ மற்றும் $\Gamma \subseteq \Delta$ எனில்,
+    $\Delta \Proves[\Sigma] !A$;
+  \item\ollabel{prop:derivabilityfacts-reflexivity}
+    \emph{தற்சுட்டுத்தன்மை}: $!A \in \Gamma$ எனில், $\Gamma
+    \Proves[\Sigma] !A$;
+  \item\ollabel{prop:derivabilityfacts-cut} \emph{வெட்டு}: $\Gamma
+    \Proves[\Sigma] !A$ மற்றும் $\Delta \cup \{!A\} \Proves[\Sigma] !B$
+    எனில், $\Gamma \cup \Delta \Proves[\Sigma] !B$;
+  \item\ollabel{prop:derivabilityfacts-deduction} \emph{கழித்தல் தேற்றம்}:
+    $\Gamma \cup \{!B\} \Proves[\Sigma] !A$ என்பது, அப்போதும் அப்போது
+    மட்டுமே, $\Gamma \Proves[\Sigma] !B \lif !A$;
+  % SOURCE CORRECTION TA-NML-022: restore the Rule T label and conditional that the source accidentally comments out.
+  \item \ollabel{prop:derivabilityfacts-ruleT} \emph{விதி T}:
+    $\Gamma \Proves[\Sigma] !A_1$, \dots, $\Gamma
+    \Proves[\Sigma] !A_n$ எனவும்,
+    % SOURCE CORRECTION TA-NML-023: use the chapter's object-language conditional throughout the tautological instance.
+    $!A_1 \lif (!A_2 \lif \cdots (!A_n \lif !B)\cdots)$ ஒரு மெய்ம
+    நிகழ்வாகவும் இருந்தால், $\Gamma \Proves[\Sigma] !B$.
+  \end{enumerate}
+\end{prop}
+
+நிறுவல் ஓர் எளிய பயிற்சி. எடுத்துக்காட்டாக, $\Gamma \Proves[\Sigma]
+!A \lor !B$ மற்றும் $\Gamma \Proves[\Sigma] \lnot !A$ எனில்,
+$\Gamma \Proves[\Sigma] !B$ என்பதைப் பகுதி
+\olref{prop:derivabilityfacts-ruleT}, \olref{prop:derivabilityfacts} இல்
+நமக்குத் தருகிறது. மேலும்,
+இனிவரும் இடங்களில் $\Gamma \cup \{ !A\} \Proves[\Sigma] !B$ என்பதற்குப்
+பதிலாக $\Gamma, !A \Proves[\Sigma] !B$ என எழுதுவோம்.
+
+\begin{defn}
+  $\Gamma \Proves[\Sigma] !A$ என்பது $!A \in \Gamma$ என்பதைக்
+  குறித்தால், குறித்தால் மட்டுமே, ஒரு கணம்~$\Gamma$ ஆனது முறைமை~$\Sigma$
+  க்குச் சார்பாக \emph{வருவித்தலின் கீழ் மூடப்பட்டுள்ளது} எனப்படுகிறது.
+\end{defn}
+
+\end{document}

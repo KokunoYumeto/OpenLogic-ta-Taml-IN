@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-19T22:53:26.544580+00:00",
+  "date_utc": "2026-09-19T23:32:53.640740+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2117,6 +2117,76 @@
       "unit_id": "OLP-0426",
       "source_sha256": "1b4691078284c0f45e4ec808398c3952649ec79732167d7b2d6a1ce7ad974490",
       "translation_sha256": "4832abfdd691181f5668df03940857fe01790de2f637c8bf9ca78b2bdc880ea3"
+    },
+    {
+      "unit_id": "OLP-0427",
+      "source_sha256": "cbbd3a3ac813625c2cf55ccd7bdde41407008f7fb46b51ef302525f6160383ec",
+      "translation_sha256": "e886b8db122e476f9574bbc20feae5ad8a5705bbfee488ff1a58c8d226772661"
+    },
+    {
+      "unit_id": "OLP-0428",
+      "source_sha256": "554f263088c8e6e98b5cd4e9bf341c5497f787d11f9d136b07fceb1671a36068",
+      "translation_sha256": "c7ac6a3adde329e3a2b01360e08cbba32f782528c5a6c5081f7db269455178a5"
+    },
+    {
+      "unit_id": "OLP-0429",
+      "source_sha256": "6bcccf354cf8966f674c16ad3c6196a62ebcf8ca9545418d60ef08adf89e3819",
+      "translation_sha256": "ae5f9c00e48795cc030839b838057d8b2b9d021255cf9280bf759a02a78e6816"
+    },
+    {
+      "unit_id": "OLP-0430",
+      "source_sha256": "bf3926886e2d6d2740ceb631fc5c5618fe300fb0d6813fe2b30367072c45d66a",
+      "translation_sha256": "d85a958cbe76fd7bcb6f0ddcdcc5c4f372a5e39312328e96510615401411c3cd"
+    },
+    {
+      "unit_id": "OLP-0431",
+      "source_sha256": "c320ad89ad9b3c091d61aceebf38dc3626e52bcf4d66d23cf7c356646090393d",
+      "translation_sha256": "19515b6ad677022c498c90ccea4fa39084cf9515db7ee45eedf19439cb42287c"
+    },
+    {
+      "unit_id": "OLP-0432",
+      "source_sha256": "ee93bd761e5cfd7c4f8b6084821dddb812fcf712c8c0733964d5d7e8bed143b8",
+      "translation_sha256": "8f542f749fa9decaedd77fc52edbb4b05f2afb1b4ee892f6e436cc5ad5a46479"
+    },
+    {
+      "unit_id": "OLP-0433",
+      "source_sha256": "75ea00c1a293c5648d59722ef93fb3a0c0b5b4a003e638f656fa4e1c11eddd4e",
+      "translation_sha256": "bb5472da46886c7eb450f21815b9bbf7d56c30da3299bc48966a201a44e586ed"
+    },
+    {
+      "unit_id": "OLP-0434",
+      "source_sha256": "f008b31a37a4d325a5a3983a340e7bb8037b7b892af4b107822aaebb0ec08849",
+      "translation_sha256": "a9e080744e3dbe5edeb456031cb455ffd369e038fb57f78bf81f8f4a20bcf677"
+    },
+    {
+      "unit_id": "OLP-0435",
+      "source_sha256": "12956456e135cb022e30070608a0aa8c6b08a72c2cc9d2c63729816da57bf4f9",
+      "translation_sha256": "cf6eca846cd757c40f8f53eba714ecd4360ca42deef3402d29892ec29d2cc48a"
+    },
+    {
+      "unit_id": "OLP-0436",
+      "source_sha256": "ff44b1e495e2dca06b0c6e7fed1c5dab9971288a8c3bef061f00f7f025f61d17",
+      "translation_sha256": "80d67e5b40e23116907c209786f7fcdf0591e534836c19becdbe137123d46737"
+    },
+    {
+      "unit_id": "OLP-0437",
+      "source_sha256": "5242bad1abef085ce60944f529370410d12a911fbe55fa1047a29fca3c7b214b",
+      "translation_sha256": "ff1214867724d943c986a62acbe914c37acf3a5444c6a0126eadc7920f3c8656"
+    },
+    {
+      "unit_id": "OLP-0438",
+      "source_sha256": "de08bf7a3bc7b183438d82d4678a9fc80a4b8efbb072cb25c0e49d10d296f540",
+      "translation_sha256": "8c3ba1c8f4f8af0fb1b9e212dbc0ca3e925a147f27d92deb1d12aa00505a1685"
+    },
+    {
+      "unit_id": "OLP-0439",
+      "source_sha256": "2054b1d871723e1845690d3dc42bf9e44a994965341fc3e6505e0c91c1b3a246",
+      "translation_sha256": "5d20fd8b8a36736a600157af0e9fa4911a9f160ef2b48269dc1f621eaa0d3d3d"
+    },
+    {
+      "unit_id": "OLP-0440",
+      "source_sha256": "410cd2532bf8c2ba318f476f6e9192064021f16e0a42aa297015bb41851e889b",
+      "translation_sha256": "2b8f7bb119a8effeccbda420b1d8e8ceaf28132e29e7b87b5888436f6face682"
     }
   ],
   "samples": [
@@ -5738,6 +5808,104 @@
       "assessment": "Every recursive clause, model-to-structure proposition, second-order closure construction, reflexivity example, and undecidability observation remain. TA-NML-013 restores the true induction case.",
       "translation_segment_sha256": "0f0edae8d7acc306a017c7d7ebe20523cb47e1b8811509c12a060f13813c7b72",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0427-S01",
+      "reverse_paraphrase": "The axiomatic-derivation chapter imports thirteen sections, from its introduction and normal logics through derivability properties and consistency, in source order.",
+      "assessment": "All thirteen chapter components and the stable nml/prf hierarchy remain intact.",
+      "translation_segment_sha256": "de0eb505613d207e66b986f60eb610d49a164690b3b5c13dff28bf59909e7322",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0428-S01",
+      "reverse_paraphrase": "Hilbert-style modal derivations proceed from tautological or axiom-schema instances by modus ponens and necessitation; derivability is intended to coincide with validity, with soundness one direction and completeness the converse.",
+      "assessment": "Both inference schemata, the four derivation-line cases, the derivability notation, and the soundness/completeness distinction remain exact.",
+      "translation_segment_sha256": "184f5046eac783c6d88195a58df5531cfc0b0bf75111a37c456816b6744aa622",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0429-S01",
+      "reverse_paraphrase": "A modal logic contains tautologies and is closed under substitution and modus ponens; it is normal when it also contains K and duality and is closed under necessitation, yielding RK and the least normal modal systems.",
+      "assessment": "The closure definitions, RK induction, not-Diamond-bottom exercise, intersection construction, and K-system notation remain. TA-NML-015 restores normality to the least-logic proposition proved by the source.",
+      "translation_segment_sha256": "aebf66b3e0f17f73356a6f1bc57e533abb5c3fac2daa4a5dde87827604442ab2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0430-S01",
+      "reverse_paraphrase": "The formulas derivable in K with added axiom schemata are exactly the least normal modal logic containing those schemata; the two inclusions follow by induction and by verifying every normal-logic closure condition.",
+      "assessment": "The derivability definition and both inclusion arguments preserve tautologies, modus ponens, uniform substitution, K, duality, and necessitation. TA-NML-016 restores the K axiom-schema macro in the membership step.",
+      "translation_segment_sha256": "1311047cb84d29e19f4b6a14a46616485410e1b452d12ad44864ed2187f69f79",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0431-S01",
+      "reverse_paraphrase": "Explicit K derivations establish box weakening, box distribution over conjunction in both directions, and the relevant Box–Diamond dual implication for every primitive/defined operator configuration.",
+      "assessment": "Every numbered derivation line, justification, cited propositional tautology, feature-sensitive branch, and final exercise remains exact.",
+      "translation_segment_sha256": "a8fdc20e6f89786e11255ececdee8a3517e2ed01cb5ba5a9f2f0ef8934a25409",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0432-S01",
+      "reverse_paraphrase": "Propositional consequence and RK become derived proof rules; equivalent formulas may be rewritten inside a context, and uniform substitution preserves K-derivability.",
+      "assessment": "The PL and RK derivations, conjunction example, rewriting proposition and exercise, duality example, replacement abbreviations, and substitution-induction proof remain. TA-NML-017 restores the formula sigil on B and TA-NML-018 aligns the replacement label with the displayed C(A)-to-C(B) direction.",
+      "translation_segment_sha256": "2d7932c9c8db428d190c9d89b6942042ed687b5bfb5b7774acae148f5b085417",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0433-S01",
+      "reverse_paraphrase": "Further K proofs distribute necessary implications over possibility and establish both directions between Diamond of a disjunction and the disjunction of Diamonds.",
+      "assessment": "All four displayed derivations, their PL/RK/duality justifications, operator-rewriting steps, and the three closing exercises remain exact.",
+      "translation_segment_sha256": "438e58ce9dccd87bb0d96021fea025307383797bd07c2ec356a6fdd9a8ad458b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0434-S01",
+      "reverse_paraphrase": "T, B, 4, and 5 each have a displayed Diamond dual obtained by substitution, contraposition, and duality rewriting; adjoining either member of a pair to K generates the same modal system.",
+      "assessment": "All four tagged dual formulas, the self-duality of D, the equality proposition, proof exercise, and stable references remain exact.",
+      "translation_segment_sha256": "1a328d172a6350fabfc8b0c27b5f072251d6ce5f8fb2fc81080a674123b2661a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0435-S01",
+      "reverse_paraphrase": "Concrete derivations relate modal systems by proving B and 4 in KT5, T in KDB4, 5 in KB4, 4 in KB5, and D in KT; these results yield standard S4/S5 definitions and equivalent axiomatizations of S5.",
+      "assessment": "Every numbered proof line and substitution justification remains, together with the S4 and S5 definitions, the KTB4=KT5=KDB4=KDB5 proposition, and its exercise.",
+      "translation_segment_sha256": "c8207e4d98b07eaa259596670bf163eb415026830c8b62ce3242cb5a2de8604a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0436-S01",
+      "reverse_paraphrase": "Soundness says that if each added axiom schema is valid in its corresponding model class, every formula derivable in the combined modal system is valid in the intersection of those classes.",
+      "assessment": "The proof induction preserves every base case, modus ponens, necessitation, the class-intersection restriction, and all semantic citations.",
+      "translation_segment_sha256": "e873c62b4cfec32a159cc635085f2fecbb1657bd8e5988c8f60dfa2d72d56105",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0437-S01",
+      "reverse_paraphrase": "Soundness separates modal systems by countermodels: the chapter proves KD is a proper subsystem of KT, KB differs from K4, KTB derives neither 4 nor 5, and KD5 differs from S4.",
+      "assessment": "All three countermodel diagrams, valuations, accessibility properties, satisfaction failures, captions, and exercises remain. TA-NML-019 through TA-NML-021 restore the D/4/5 schema macros and the Ax4 conditional.",
+      "translation_segment_sha256": "12e4f675f2bb880c3830ab82003d05219679fd6d12004d8bb5b2f622cc8952da",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0438-S01",
+      "reverse_paraphrase": "Derivability from a premise set Gamma in a modal system Sigma is defined through finitely many premises B1 through Bn whose nested conditional to A is derivable in Sigma.",
+      "assessment": "The finite-premise quantification, nested conditional, indexed derivability notation, and iff direction remain exact.",
+      "translation_segment_sha256": "330288d3c14b133ef5c30322a06e1772d7b963b2d69cc29c6f5216ab40f182fb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0439-S01",
+      "reverse_paraphrase": "Derivability from sets is monotone and reflexive, satisfies cut and the deduction theorem, supports Rule T, and defines deductive closure relative to a modal system.",
+      "assessment": "All five structural properties, the disjunctive-syllogism example, premise-adjoining abbreviation, and closure definition remain. TA-NML-022 restores the hidden Rule T heading and TA-NML-023 normalizes its outer conditional.",
+      "translation_segment_sha256": "eb9746ade481e541de595d6c4224f34ea82817dbdea6c5e788895d4c5166a7e9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0440-S01",
+      "reverse_paraphrase": "A set is Sigma-consistent exactly when it does not derive false; classical propositional reasoning characterizes consistency by non-derivability, negated extensions, and the existence of a consistent A or not-A extension.",
+      "assessment": "Both examples, all three equivalences or extension claims, and the contraposition proof through deduction and Rule T remain. TA-NML-024 normalizes the first discharged conditional.",
+      "translation_segment_sha256": "81e6f1baa9773fcf5b4cfd6ad689ca58464161b378be2b938ce18fdb2f32100a",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -6350,11 +6518,35 @@
     {
       "unit_id": "OLP-0426",
       "issue": "The standard-translation induction repeats false in the true case. Tamil restores the true constant under TA-NML-013."
+    },
+    {
+      "unit_id": "OLP-0429",
+      "issue": "The least-logic proposition omits normality although its proof intersects normal modal logics and the following definition states the normal result. Tamil restores the missing qualifier under TA-NML-015."
+    },
+    {
+      "unit_id": "OLP-0430",
+      "issue": "The normality proof derives the K axiom schema but then writes plain K in its membership conclusion. Tamil retains the axiom-schema macro under TA-NML-016."
+    },
+    {
+      "unit_id": "OLP-0432",
+      "issue": "The rewriting proposition drops the formula sigil from B in its conclusion, and the prose abbreviation reverses the displayed C(A)-to-C(B) replacement order. Tamil restores !B and uses the inserted-first label under TA-NML-017 and TA-NML-018."
+    },
+    {
+      "unit_id": "OLP-0437",
+      "issue": "The separation proofs write a modal system where the cited result derives AxD, state non-derivability of systems Log4 and Log5 where the proof refutes axiom schemata, and use a generic arrow in one Ax4 instance. Tamil restores AxD, Ax4, Ax5 and the object-language conditional under TA-NML-019 through TA-NML-021."
+    },
+    {
+      "unit_id": "OLP-0439",
+      "issue": "The Rule T item comments out its visible heading and conditional introduction, and its outermost connective alone uses a generic arrow. Tamil restores the named conditional property and uses the object-language conditional throughout under TA-NML-022 and TA-NML-023."
+    },
+    {
+      "unit_id": "OLP-0440",
+      "issue": "The first deduction-theorem result uses a generic arrow although the paired result and following tautology use the object-language conditional. Tamil normalizes the connective under TA-NML-024."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "423 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 299 frozen units still require completion.",
+  "remaining": "437 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 285 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -6818,6 +7010,76 @@
         "equivalence_characterizations_and_S5_restriction_remain": true,
         "standard_translation_modal_clauses_and_true_case_are_correct": true,
         "satisfaction_preservation_and_monadic_second_order_closure_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0427",
+        "OLP-0428",
+        "OLP-0429",
+        "OLP-0430",
+        "OLP-0431"
+      ],
+      "correction_ids": [
+        "TA-NML-015",
+        "TA-NML-016"
+      ],
+      "status": "pass",
+      "checks": {
+        "driver_imports_all_thirteen_sections": true,
+        "modus_ponens_necessitation_and_derivability_are_defined": true,
+        "normal_logic_closures_and_RK_remain": true,
+        "least_logic_proposition_explicitly_requires_normality": true,
+        "derivable_set_is_exactly_the_modal_system": true,
+        "K_membership_retains_axiom_schema": true,
+        "explicit_K_derivations_preserve_core_results": true,
+        "all_feature_sensitive_duality_branches_and_exercises_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0432",
+        "OLP-0433",
+        "OLP-0434",
+        "OLP-0435"
+      ],
+      "correction_ids": [
+        "TA-NML-017",
+        "TA-NML-018"
+      ],
+      "status": "pass",
+      "checks": {
+        "PL_RK_and_uniform_substitution_results_remain": true,
+        "rewriting_uses_formula_B_and_inserted_first_label": true,
+        "four_additional_K_results_and_exercises_remain": true,
+        "all_dual_formulas_and_generated_system_equality_remain": true,
+        "modal_system_derivations_and_S4_S5_axiomatizations_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0436",
+        "OLP-0437",
+        "OLP-0438",
+        "OLP-0439",
+        "OLP-0440"
+      ],
+      "correction_ids": [
+        "TA-NML-019",
+        "TA-NML-020",
+        "TA-NML-021",
+        "TA-NML-022",
+        "TA-NML-023",
+        "TA-NML-024"
+      ],
+      "status": "pass",
+      "checks": {
+        "soundness_intersects_axiom_model_classes_and_handles_both_rules": true,
+        "system_separation_uses_axiom_schemata_and_object_conditional": true,
+        "all_three_countermodels_and_two_exercises_remain": true,
+        "finite_premise_derivability_definition_remains": true,
+        "five_derivability_properties_and_rule_T_repair_remain": true,
+        "consistency_characterizations_and_extension_argument_remain": true
       }
     }
   ]

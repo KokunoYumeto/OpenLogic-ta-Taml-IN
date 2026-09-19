@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 412/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 426/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -2844,6 +2844,166 @@ Please double-check: **is the explanatory parenthesis now outside the complete V
 
 - `TA-OCC-177d9fff31511717` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:55`; PDF page pending.
 
+## TA-NML-015 — The proposition says only 'modal logic', but its proof takes the intersection of normal modal logics and the immediately following definition identifies the result as the smallest normal modal logic.
+
+Chosen rendering: **தமிழ் கூற்றில் மிகச்சிறிய இயல்பான வாய்ப்புநிலைத் தருக்கம் என்று வெளிப்படையாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Normality is essential to the construction and is explicitly used on both sides of the proposition.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0429 (checked_supports)
+
+Alternatives: Keeping the weaker proposition while presenting a proof of a stronger and differently defined result; weakening the proof and following definition.
+
+Please double-check: **does the corrected proposition now state the same normal-modal-logic result that its proof establishes?**
+
+- `TA-OCC-f4b00564af6bf840` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:112`; PDF page pending.
+
+## TA-NML-016 — The premise proves the axiom schema Ax{K}, but the conclusion changes it to an unrelated plain formula letter K before asserting membership in Sigma.
+
+Chosen rendering: **தமிழ் நிறுவல் முன்னுறுப்பிலும் உறுப்புச் சேர்க்கை முடிவிலும் ஒரே அடிகோள் திட்டவடிவம்~$\Ax{K}$ ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The proof is establishing that the set of derivable formulas contains the K schema required for normality.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0430 (checked_supports)
+
+Alternatives: Retaining plain K as though it were a modal formula; changing the preceding provability claim away from the axiom schema.
+
+Please double-check: **does the corrected membership line retain the same K axiom schema proved immediately before it?**
+
+- `TA-OCC-94d67c7f099c8d4b` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:94`; PDF page pending.
+
+## TA-NML-017 — The hypothesis relates formula metavariables !A and !B, and every surrounding substitution uses formula metavariables, but the conclusion alone writes plain B.
+
+Chosen rendering: **தமிழ் மீளெழுதுதல் கூற்றின் முடிவில் முன்னுறுப்பிலுள்ள அதே வாய்பாட்டு மீமாறி~$!B$ ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The proposition substitutes equivalent modal formulas into the same context, so both substitution arguments must be formula metavariables.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0432 (checked_supports)
+
+Alternatives: Treating plain B as a distinct object despite the stated A/B equivalence; dropping the sigil from every other occurrence.
+
+Please double-check: **does the corrected conclusion substitute the same formula !B introduced by the equivalence hypothesis?**
+
+- `TA-OCC-e8ede77c78ea1cb9` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:78`; PDF page pending.
+
+## TA-NML-018 — The displayed derivation starts with C(A) and ends with C(B), and the subsequent worked example says 'p for double-negation' when replacing double-negation by p; the general label states the opposite order.
+
+Chosen rendering: **தமிழ் $!C(!A)$ ஐ~$!C(!B)$ ஆக மாற்றுவதை “$!B$ for $!A$” என்று குறிக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The replacement shorthand must name the inserted formula first and the replaced formula second, as the chapter's own concrete example does.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0432 (checked_supports)
+
+Alternatives: Keeping the reversed label despite the display and worked example; reversing the actual derivation instead.
+
+Please double-check: **does the corrected shorthand now agree with both C(A)-to-C(B) and the later p-for-double-negation example?**
+
+- `TA-OCC-b2a844cf19507165` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:95`; PDF page pending.
+
+## TA-NML-019 — The cited result states that KT derives the D axiom schema, but this proof changes its object to a logic-system macro.
+
+Chosen rendering: **தமிழ் உட்கண நிறுவலில் மேற்கோள் காட்டப்பட்ட அதே அடிகோள் திட்டவடிவம்~$\Ax{D}$ ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Deriving the D schema is exactly what lets every KD theorem be reproduced in KT.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0437 (checked_supports)
+
+Alternatives: Treating a modal system as the object of the formula-derivability relation; altering the cited result.
+
+Please double-check: **does the corrected premise derive the D axiom schema rather than a system named D?**
+
+- `TA-OCC-42222d07fe0b9f5f` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:31`; PDF page pending.
+
+## TA-NML-020 — The proof supplies countermodels to instances of Ax4 and Ax5, whereas the theorem statement applies formula non-derivability notation to Log4 and Log5.
+
+Chosen rendering: **தமிழ் தேற்றத்தில் வருவிக்கப்படாத பொருள்களை~$\Ax{4}$, $\Ax{5}$ என்ற அடிகோள் திட்டவடிவங்களாக எழுதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The following two satisfaction failures directly refute the displayed axiom instances and thereby their schemata.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0437 (checked_supports)
+
+Alternatives: Keeping logic systems as arguments of formula derivability; changing the proof into a claim about unnamed systems.
+
+Please double-check: **does the theorem now state non-derivability of Ax4 and Ax5, matching its countermodels?**
+
+- `TA-OCC-c297cb31d8a51234` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:69`; PDF page pending.
+
+## TA-NML-021 — The theorem and every other instance of Ax4 use the object-language connective lif, but this one countermodel display alone uses to.
+
+Chosen rendering: **தமிழ் எதிர்மாதிரி வாய்பாட்டிலும்~$\lif$ என்ற அதே பொருள்மொழி இணைப்பியைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The satisfaction claim must evaluate an instance of the formally defined Ax4 schema.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0437 (checked_supports)
+
+Alternatives: Leaving a different arrow command in the same axiom schema; changing all Ax4 displays to the generic arrow.
+
+Please double-check: **is the falsified formula now exactly an Ax4 instance using the established conditional?**
+
+- `TA-OCC-3e1027061593b3c6` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:82`; PDF page pending.
+
+## TA-NML-022 — A percent sign after the item label comments out both the intended emphasized 'Rule T' heading and the word 'If', leaving the list item without its named property or conditional introduction.
+
+Chosen rendering: **தமிழ் உருப்படியில்~\emph{விதி T} என்ற தலைப்பை வெளிப்படுத்தி, முன்னுறுப்புகளை நிபந்தனை வாக்கியமாக எழுதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The following paragraph cites this item as a named rule, and its displayed premises and conclusion plainly form a conditional claim.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0439 (checked_supports)
+
+Alternatives: Preserving the accidental hidden heading and malformed prose; deleting the corresponding rule from the property list.
+
+Please double-check: **does the corrected fifth item visibly state Rule T as a conditional derivability property?**
+
+- `TA-OCC-e0a0f8773bbd1b63` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:31`; PDF page pending.
+
+## TA-NML-023 — The nested object-language conditional uses lif at every later level, but the outermost connective alone uses the generic arrow command.
+
+Chosen rendering: **தமிழ் மெய்ம நிகழ்வின் வெளிப்புறத்திலும் உட்புறங்களிலும்~$\lif$ ஐ ஒரேபடியாகப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Rule T relies on one nested formula built from the formally defined object-language conditional.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0439 (checked_supports)
+
+Alternatives: Retaining mixed connective commands in one recursively nested formula; replacing every inner connective with the generic arrow.
+
+Please double-check: **does the corrected Rule T tautology use lif at every conditional level?**
+
+- `TA-OCC-d4223d96cf7da5ca` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:35`; PDF page pending.
+
+## TA-NML-024 — The paired deduction-theorem conclusion and the tautological instance immediately below use lif, but the first conclusion alone uses the generic arrow command.
+
+Chosen rendering: **தமிழ் இரு கழித்தல்-தேற்ற முடிவுகளிலும்~$\lif$ என்ற அதே பொருள்மொழி இணைப்பியைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Both assumptions are discharged by the same deduction theorem and feed the same object-language tautology.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0440 (checked_supports)
+
+Alternatives: Leaving one of the paired conclusions in a different notation; changing the paired conclusion and tautological instance to the generic arrow.
+
+Please double-check: **do both deduction-theorem conclusions now use the conditional required by the following tautology?**
+
+- `TA-OCC-eee0a669ee60ff3f` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:58`; PDF page pending.
+
 ## TA-READER-REF-001 — The cumulative 51-unit reader omits the target history chapter, so the frozen cross-reference rendered as a literal question-mark pair.
 
 Chosen rendering: **இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவு என்ற விளக்கத் தொடர்.**
@@ -3935,6 +4095,18 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-af7c9ecd855b6e30` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:116`; PDF page pending.
 - `TA-OCC-b6c7791fe89d0717` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:54`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:55`; PDF page pending.
 - `TA-OCC-c9dc251e230737b9` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:103`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:134`; PDF page pending.
+- `TA-OCC-fc0b02db2bf23eb1` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:34`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:38`; PDF page pending.
+- `TA-OCC-65608e9e17f2a16d` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:76`; PDF page pending.
+- `TA-OCC-b9bff6cc5a556492` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:84`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:92`; PDF page pending.
+- `TA-OCC-c318a6af8ae07ee9` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:28`; PDF page pending.
+- `TA-OCC-68899d292fc4122f` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:15`; PDF page pending.
+- `TA-OCC-9be67f05caaa7cc1` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:23`; PDF page pending.
+- `TA-OCC-35e87674b1a8f4f5` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:51`; PDF page pending.
+- `TA-OCC-871447e96960ae87` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:16`; PDF page pending.
+- `TA-OCC-7ff0da7024ae7d0f` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:17`; PDF page pending.
+- `TA-OCC-b3042d8bc7bb5d0c` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:23`; PDF page pending.
+- `TA-OCC-8961be9af1dd9d94` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:28`; PDF page pending.
+- `TA-OCC-47d94114e3a5a1ea` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:22`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:31`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -4428,6 +4600,8 @@ Please double-check: **do the listed uses of “உறுப்பு” preserv
 - `TA-OCC-357689b800e0fa47` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:26`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:27`; PDF page pending.
 - `TA-OCC-c28ada47db8dca15` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:15`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:29`; PDF page pending.
 - `TA-OCC-a02f4f23455ec4fc` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:16`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:17`; PDF page pending.
+- `TA-OCC-118fb5f386289434` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; PDF page pending.
+- `TA-OCC-f13ede3a167f9dba` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:17`; PDF page pending.
 
 ## TA-T003 — empty set
 
@@ -4902,6 +5076,8 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-60152308a8252ad1` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:67`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:74`; PDF page pending.
 - `TA-OCC-5e39d68930e4c6d9` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:86`; PDF page pending.
 - `TA-OCC-534f348e60771a0e` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:88`; PDF page pending.
+- `TA-OCC-8b6f39b7a945ef57` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:36`; PDF page pending.
+- `TA-OCC-22dcac21a7cbf17e` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:35`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:40`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -5200,6 +5376,8 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-601d95fdecce99f9` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:62`; PDF page pending.
 - `TA-OCC-eade720591ec0612` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:90`; PDF page pending.
 - `TA-OCC-f43a6b9c5490c517` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:105`; PDF page pending.
+- `TA-OCC-c96f38f7b191b860` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:26`; PDF page pending.
+- `TA-OCC-8c9db3e5714626ca` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:15`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5488,6 +5666,19 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-51b3008bf7690e87` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:96`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:109`; PDF page pending.
 - `TA-OCC-76c7b57ede584925` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:101`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:109`; PDF page pending.
 - `TA-OCC-44a17b733ad2540b` — OLP-0333 / `OLP-0333-S01`; source `content/second-order-logic/metatheory/undecidability-and-axiomatizability.tex:32`; Tamil `translation/content/second-order-logic/metatheory/undecidability-and-axiomatizability.tex:35`; PDF page pending.
+- `TA-OCC-404af5b660d46fdb` — OLP-0427 / `OLP-0427-S01`; source `content/normal-modal-logic/axioms-systems/axioms-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/axioms-systems.tex:9`; PDF page pending.
+- `TA-OCC-f924a6ecc5b85ad9` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:27`; PDF page pending.
+- `TA-OCC-a4eddaa05d2ed47b` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:31`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:35`; PDF page pending.
+- `TA-OCC-3624dd0d05396567` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:38`; PDF page pending.
+- `TA-OCC-ddded5e26558bb5b` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:39`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:45`; PDF page pending.
+- `TA-OCC-aa2678da65ccf20b` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:41`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:46`; PDF page pending.
+- `TA-OCC-eed06586a5ab7cdf` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:43`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:48`; PDF page pending.
+- `TA-OCC-6c77a8495f507624` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:76`; PDF page pending.
+- `TA-OCC-a55ddbcf023088a1` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:14`; PDF page pending.
+- `TA-OCC-1603acedf2a086a1` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; PDF page pending.
+- `TA-OCC-26e03a725a5fefd7` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:21`; PDF page pending.
+- `TA-OCC-5956cf96063ba33a` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:23`; PDF page pending.
+- `TA-OCC-f75e21bbac93b83d` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
 
 ## TA-T018 — union / intersection / disjoint
 
@@ -5613,6 +5804,8 @@ Please double-check: **do the listed uses of “சேர்ப்பு / வ�
 - `TA-OCC-4324167c728d6ba9` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:14`; PDF page pending.
 - `TA-OCC-c355fa02ca16ef68` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:71`; PDF page pending.
 - `TA-OCC-10ae3f8b4ba6ee50` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:13`; PDF page pending.
+- `TA-OCC-52cd261322fe64aa` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:109`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:124`; PDF page pending.
+- `TA-OCC-5f1ab74174f6819d` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:25`; PDF page pending.
 
 ## TA-T019 — Cartesian product / ordered pair
 
@@ -6064,6 +6257,27 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-ab3fdc37ea151ea0` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:46`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:104`; PDF page pending.
 - `TA-OCC-f328a356782833b1` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:46`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:120`; PDF page pending.
 - `TA-OCC-a1d599ee92b67d44` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:69`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:142`; PDF page pending.
+- `TA-OCC-fca342b993d92646` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:22`; PDF page pending.
+- `TA-OCC-20f665ca682f4345` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:72`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:90`; PDF page pending.
+- `TA-OCC-9bfeb80fc167af3a` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; PDF page pending.
+- `TA-OCC-bbce90a7bc403365` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:66`; PDF page pending.
+- `TA-OCC-0bf099817b1dc59c` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:12`; PDF page pending.
+- `TA-OCC-c5ad29bc0c722f38` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:14`; PDF page pending.
+- `TA-OCC-52fce2e497ed1d43` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:16`; PDF page pending.
+- `TA-OCC-ba4033017171b564` — OLP-0433 / `OLP-0433-S01`; source `content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:12`; PDF page pending.
+- `TA-OCC-680dc02d0156303b` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:12`; PDF page pending.
+- `TA-OCC-dc9c7ed737c2cac4` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:14`; PDF page pending.
+- `TA-OCC-416e898809fe1e5e` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:30`; PDF page pending.
+- `TA-OCC-f2e0a7be650b12c9` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:31`; PDF page pending.
+- `TA-OCC-b39a9d7a3d899afd` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:34`; PDF page pending.
+- `TA-OCC-d1da0560f15cbc76` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:34`; PDF page pending.
+- `TA-OCC-132e244150263a5f` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:47`; PDF page pending.
+- `TA-OCC-30c20faf7e4371b1` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:47`; PDF page pending.
+- `TA-OCC-f235c07865335c3e` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:52`; PDF page pending.
+- `TA-OCC-24da5250e2d622f7` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:52`; PDF page pending.
+- `TA-OCC-0804511aefc65c35` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:56`; PDF page pending.
+- `TA-OCC-68513e2d890f2ec2` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:152`; PDF page pending.
+- `TA-OCC-25efd5bd66666baf` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:41`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -6465,6 +6679,10 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-bf9e42f304ac699a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:77`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
 - `TA-OCC-a01779ab49b6ffc1` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:90`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:113`; PDF page pending.
 - `TA-OCC-1036a33aa6bb888a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:96`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:122`; PDF page pending.
+- `TA-OCC-6a65d92b31b062de` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:41`; PDF page pending.
+- `TA-OCC-ac9d750d58604de4` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:48`; PDF page pending.
+- `TA-OCC-2c6d827076fc2cba` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:91`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:93`; PDF page pending.
+- `TA-OCC-599a9d3cdc5f3453` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:24`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:25`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -6795,6 +7013,16 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-8af9359b3e761f56` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:59`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:65`; PDF page pending.
 - `TA-OCC-ef2062d61e2b2e77` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:123`; PDF page pending.
 - `TA-OCC-a624c3031e4c1c5b` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:123`; PDF page pending.
+- `TA-OCC-af852d148e340f24` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:24`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:25`; PDF page pending.
+- `TA-OCC-5cd37cfdbc476688` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:41`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:44`; PDF page pending.
+- `TA-OCC-ea2b20f678b226dd` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:48`; PDF page pending.
+- `TA-OCC-d3d41c1cf72f9d6e` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:45`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:65`; PDF page pending.
+- `TA-OCC-3a100859702069ba` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:61`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:75`; PDF page pending.
+- `TA-OCC-c47ae977bf71acad` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:71`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:75`; PDF page pending.
+- `TA-OCC-1092443fdb02577b` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:71`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:78`; PDF page pending.
+- `TA-OCC-fa8b3b76d5cc8abf` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:72`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:78`; PDF page pending.
+- `TA-OCC-f4373667f4f27e05` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:73`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:157`; PDF page pending.
+- `TA-OCC-93338b25dc46f7fe` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:23`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -6839,6 +7067,7 @@ Please double-check: **do the listed uses of “சமானத் தொடர�
 - `TA-OCC-937ef6ab34de50ed` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:70`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:77`; PDF page pending.
 - `TA-OCC-f1517e56449809d7` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:71`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:102`; PDF page pending.
 - `TA-OCC-b49aa29bce6587b3` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
+- `TA-OCC-fddc8ba8c3df65f7` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:91`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:93`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -9766,6 +9995,111 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-71ed0fdd6d7f5236` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:119`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:104`; PDF page pending.
 - `TA-OCC-a922bdf22459003f` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:109`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:112`; PDF page pending.
 - `TA-OCC-afc07bad89f8b411` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:119`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:122`; PDF page pending.
+- `TA-OCC-765f2ce886c4c0d0` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:16`; PDF page pending.
+- `TA-OCC-139b501b2fffd759` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:22`; PDF page pending.
+- `TA-OCC-f1200f454b61727c` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:26`; PDF page pending.
+- `TA-OCC-ccdbad8708054b34` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:27`; PDF page pending.
+- `TA-OCC-2cf4a17701f3a630` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:24`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:28`; PDF page pending.
+- `TA-OCC-0f65725922228414` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:31`; PDF page pending.
+- `TA-OCC-612949fa09f6c8c2` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:32`; PDF page pending.
+- `TA-OCC-6719f2655379bf81` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:34`; PDF page pending.
+- `TA-OCC-b07960517ac1f9a0` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:34`; PDF page pending.
+- `TA-OCC-98c32668580995a1` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:35`; PDF page pending.
+- `TA-OCC-c9e1857bbafb162b` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:31`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:36`; PDF page pending.
+- `TA-OCC-d1082bb3e0c684ba` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:36`; PDF page pending.
+- `TA-OCC-0848106b724dda48` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:36`; PDF page pending.
+- `TA-OCC-c1eda1582c7c09b4` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:38`; PDF page pending.
+- `TA-OCC-5853ea2c047ca5e3` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:54`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:59`; PDF page pending.
+- `TA-OCC-50576aea2e24503e` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:54`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:60`; PDF page pending.
+- `TA-OCC-604eded03c05867a` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:65`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:71`; PDF page pending.
+- `TA-OCC-873df49d4999e9b3` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:65`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:72`; PDF page pending.
+- `TA-OCC-5118240cfd2e8110` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:76`; PDF page pending.
+- `TA-OCC-0eb061d3ab34c3f0` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:71`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:77`; PDF page pending.
+- `TA-OCC-f3163362d1090730` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:75`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:81`; PDF page pending.
+- `TA-OCC-dd901903a2234dce` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:76`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:82`; PDF page pending.
+- `TA-OCC-a30af006b03459e4` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:78`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:84`; PDF page pending.
+- `TA-OCC-966a74dd12caf9bd` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:87`; PDF page pending.
+- `TA-OCC-b003aa84c5ad980c` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:92`; PDF page pending.
+- `TA-OCC-85ae4083d4a64ca8` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:86`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:94`; PDF page pending.
+- `TA-OCC-04d1a78768cfd35a` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:87`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:95`; PDF page pending.
+- `TA-OCC-fcbf85ceb819900f` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:96`; PDF page pending.
+- `TA-OCC-9511421d04a1fd13` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:14`; PDF page pending.
+- `TA-OCC-88cc9426d3c47777` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:15`; PDF page pending.
+- `TA-OCC-bace5cf6ba8948a0` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:19`; PDF page pending.
+- `TA-OCC-9ef7e7d9c014a2b4` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:24`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:28`; PDF page pending.
+- `TA-OCC-5916453644d8f0cb` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:32`; PDF page pending.
+- `TA-OCC-a59d66c1dbd50be4` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:38`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:42`; PDF page pending.
+- `TA-OCC-e6205c8dccdda979` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:41`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:45`; PDF page pending.
+- `TA-OCC-ce8a45ac082353a0` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:46`; PDF page pending.
+- `TA-OCC-eda4cc638624c585` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:47`; PDF page pending.
+- `TA-OCC-03a950b6e680e1a1` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:102`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:114`; PDF page pending.
+- `TA-OCC-0a47360b07e9e2e5` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:122`; PDF page pending.
+- `TA-OCC-84329df2c7414483` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; PDF page pending.
+- `TA-OCC-22805406b075b61e` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:15`; PDF page pending.
+- `TA-OCC-dc950acf91329dc3` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:15`; PDF page pending.
+- `TA-OCC-70af15771c0ee6bb` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:25`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:28`; PDF page pending.
+- `TA-OCC-920fbab00d027bbb` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:31`; PDF page pending.
+- `TA-OCC-d5ef041c72377303` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:31`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:32`; PDF page pending.
+- `TA-OCC-4ffd09f9a7726613` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:36`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:38`; PDF page pending.
+- `TA-OCC-0c36cbe8675c3da2` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:43`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:46`; PDF page pending.
+- `TA-OCC-86fd43d7b4608b35` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:47`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:51`; PDF page pending.
+- `TA-OCC-6d4755581d60f0b0` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:48`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:52`; PDF page pending.
+- `TA-OCC-8a3bba8a1085ea41` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:48`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:52`; PDF page pending.
+- `TA-OCC-d1bbd401dc707fb8` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:52`; PDF page pending.
+- `TA-OCC-4a1828f6d8c3d136` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:54`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:59`; PDF page pending.
+- `TA-OCC-60f85e34c86df1ba` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:56`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:60`; PDF page pending.
+- `TA-OCC-b0557c9d62d954d8` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:55`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:60`; PDF page pending.
+- `TA-OCC-748fb8e92500a8f0` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:76`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:82`; PDF page pending.
+- `TA-OCC-013f088fa7592eed` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:80`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:86`; PDF page pending.
+- `TA-OCC-eb611a258fbe3259` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:81`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:87`; PDF page pending.
+- `TA-OCC-1535f4dcd3294289` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:82`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:88`; PDF page pending.
+- `TA-OCC-10f2e6fa8b25835c` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:82`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:88`; PDF page pending.
+- `TA-OCC-9906ee1384c51d64` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:83`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:89`; PDF page pending.
+- `TA-OCC-e4b878f46dd22e0e` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:84`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:90`; PDF page pending.
+- `TA-OCC-3980dff331bb9ca8` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:92`; PDF page pending.
+- `TA-OCC-8608642987ae2ed2` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:16`; PDF page pending.
+- `TA-OCC-9f59a4e2826e595a` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:55`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:56`; PDF page pending.
+- `TA-OCC-a34a97e8b15966b7` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:82`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:84`; PDF page pending.
+- `TA-OCC-ecbd57ffe0a867ab` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:112`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:115`; PDF page pending.
+- `TA-OCC-a5d2cdec9fe6774c` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:128`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:132`; PDF page pending.
+- `TA-OCC-79f42d058259d7ad` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:142`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:146`; PDF page pending.
+- `TA-OCC-1ffe9559c2155d02` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:151`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:154`; PDF page pending.
+- `TA-OCC-bfbe2f6d71b07f78` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:151`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:154`; PDF page pending.
+- `TA-OCC-097b3fbdb972342c` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:14`; PDF page pending.
+- `TA-OCC-157e11ee461641df` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:26`; PDF page pending.
+- `TA-OCC-3a73d11918c522e7` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:27`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:30`; PDF page pending.
+- `TA-OCC-e293b87426a00696` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:43`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:47`; PDF page pending.
+- `TA-OCC-a034465cd414df2e` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:90`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:96`; PDF page pending.
+- `TA-OCC-b9287de11c5684a6` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:92`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:126`; PDF page pending.
+- `TA-OCC-ebb4a39f49b9c4f7` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:124`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:133`; PDF page pending.
+- `TA-OCC-be4b70ca9860ac38` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:136`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:145`; PDF page pending.
+- `TA-OCC-8f2a66bb9cbddcd6` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:136`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:145`; PDF page pending.
+- `TA-OCC-f2967ca4be03a0ba` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:155`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:163`; PDF page pending.
+- `TA-OCC-78eed6a9ff38eca1` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:156`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:164`; PDF page pending.
+- `TA-OCC-e530c174696665df` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:157`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:165`; PDF page pending.
+- `TA-OCC-68919bf8e784f77b` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:171`; PDF page pending.
+- `TA-OCC-f6e4997b5a51e2ee` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:15`; PDF page pending.
+- `TA-OCC-bb093844d59ccffc` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:25`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:25`; PDF page pending.
+- `TA-OCC-4756d9d1a98172c2` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:26`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:25`; PDF page pending.
+- `TA-OCC-0c940af336725c42` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:32`; PDF page pending.
+- `TA-OCC-33dd9d0d6fe12ac0` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:14`; PDF page pending.
+- `TA-OCC-bc9e7221fa181552` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:16`; PDF page pending.
+- `TA-OCC-1fdcb57d466b5aaa` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:17`; PDF page pending.
+- `TA-OCC-c7fd8e4dedd0d8ca` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:19`; PDF page pending.
+- `TA-OCC-b89b370bd344c329` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:47`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:50`; PDF page pending.
+- `TA-OCC-b619f45cc75b9800` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:18`; PDF page pending.
+- `TA-OCC-ea6ee28d3c94dfe1` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:14`; PDF page pending.
+- `TA-OCC-aa86254e4061742a` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:16`; PDF page pending.
+- `TA-OCC-f691156ab91b756c` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:22`; PDF page pending.
+- `TA-OCC-6eff109d13472514` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:23`; PDF page pending.
+- `TA-OCC-422a4e529f8e0712` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:16`; PDF page pending.
+- `TA-OCC-7ed2eeedc09ef477` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:14`; PDF page pending.
+- `TA-OCC-3889ea3446192f1b` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:15`; PDF page pending.
+- `TA-OCC-16bc93bc193ce1af` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:17`; PDF page pending.
+- `TA-OCC-6e8e206ed9cddd51` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:18`; PDF page pending.
+- `TA-OCC-c81f9bb132853f4e` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:34`; PDF page pending.
+- `TA-OCC-fcf72f0c64387061` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:36`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:37`; PDF page pending.
+- `TA-OCC-cae5a1de45e8e372` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:43`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -10319,6 +10653,8 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-330f8d6bc4c2192f` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:17`; PDF page pending.
 - `TA-OCC-5e1b23bdde50e5f5` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:29`; PDF page pending.
 - `TA-OCC-10e92ad3b172d992` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:89`; PDF page pending.
+- `TA-OCC-83916229d70200ac` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:30`; PDF page pending.
+- `TA-OCC-ee60e1294c8fd3e9` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:164`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -10444,6 +10780,7 @@ Please double-check: **do the listed uses of “தொடரி / முன்�
 - `TA-OCC-96080b003a1339d5` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:11`; PDF page pending.
 - `TA-OCC-cae3e29d47091841` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:40`; PDF page pending.
 - `TA-OCC-7fca11e6d1fbfa69` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:46`; PDF page pending.
+- `TA-OCC-d180ee2e846e0efa` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:26`; PDF page pending.
 
 ## TA-T044 — sequence / closure: recovered alternatives
 
@@ -11264,6 +11601,12 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-ce11298f2eb29961` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
 - `TA-OCC-0fee9d431ddf4e90` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:113`; PDF page pending.
 - `TA-OCC-77b7bcb83f3f1b79` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:122`; PDF page pending.
+- `TA-OCC-0cbf3adb331cead2` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:21`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:41`; PDF page pending.
+- `TA-OCC-664c4d09e5b47320` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:27`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:48`; PDF page pending.
+- `TA-OCC-3d1f50235af0f492` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; PDF page pending.
+- `TA-OCC-3f6f8bbaf0161c02` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:93`; PDF page pending.
+- `TA-OCC-d451ddcb053b5e0d` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:25`; PDF page pending.
+- `TA-OCC-fa67c62b0233d81c` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:157`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -14829,6 +15172,18 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-a77e9631cab36f3b` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:41`; PDF page pending.
 - `TA-OCC-565ab518481c2a3c` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:81`; PDF page pending.
 - `TA-OCC-e9974a6658067a54` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; PDF page pending.
+- `TA-OCC-a2554d4306068daa` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:17`; PDF page pending.
+- `TA-OCC-9186248d3167fbb8` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:38`; PDF page pending.
+- `TA-OCC-026c94fc98255bc3` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:36`; PDF page pending.
+- `TA-OCC-df9e58e3e9cd7583` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:41`; PDF page pending.
+- `TA-OCC-c45816b6a8e9742a` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:152`; PDF page pending.
+- `TA-OCC-7fca89da4f8d5b95` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:152`; PDF page pending.
+- `TA-OCC-e37b6435d71bc0d3` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:170`; PDF page pending.
+- `TA-OCC-a88659cef74a4acf` — OLP-0433 / `OLP-0433-S01`; source `content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:92`; PDF page pending.
+- `TA-OCC-7b9228038e96bce8` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
+- `TA-OCC-607a5cf051ae26ca` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:79`; PDF page pending.
+- `TA-OCC-7573e2f516bc20c5` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:29`; PDF page pending.
+- `TA-OCC-4a9e1e8588a40975` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:50`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:50`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -15790,6 +16145,56 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-515a0e6d7b69a265` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:129`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:133`; PDF page pending.
 - `TA-OCC-7d4b786dd9a3432b` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:147`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:135`; PDF page pending.
 - `TA-OCC-b424c7fc55f4acef` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:147`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:152`; PDF page pending.
+- `TA-OCC-019362c0e8c7497a` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:16`; PDF page pending.
+- `TA-OCC-9622b64f1740e837` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:19`; PDF page pending.
+- `TA-OCC-a4c8c212d0c18de7` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:34`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:38`; PDF page pending.
+- `TA-OCC-9156f719821edfc7` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:39`; PDF page pending.
+- `TA-OCC-07623c45f34c9ea7` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:39`; PDF page pending.
+- `TA-OCC-083e748437559474` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:86`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:44`; PDF page pending.
+- `TA-OCC-f47dd9d13028b2c0` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:86`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:80`; PDF page pending.
+- `TA-OCC-6398cae9915e01bd` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:86`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:93`; PDF page pending.
+- `TA-OCC-5c2864d3c5829933` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:86`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:94`; PDF page pending.
+- `TA-OCC-b84940a534ee6b29` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:23`; PDF page pending.
+- `TA-OCC-ab0c23e3d40bfa99` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:30`; PDF page pending.
+- `TA-OCC-161b10da8af9491c` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:63`; PDF page pending.
+- `TA-OCC-2c1e1871c6873610` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:63`; PDF page pending.
+- `TA-OCC-a4976c35b5a47129` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:64`; PDF page pending.
+- `TA-OCC-e171dec9b6c58216` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:96`; PDF page pending.
+- `TA-OCC-8e4d03644e002a4f` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; PDF page pending.
+- `TA-OCC-b9baae5193b327a9` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:29`; PDF page pending.
+- `TA-OCC-916eed00663a4fb1` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:53`; PDF page pending.
+- `TA-OCC-77bdf5533274fd3f` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:77`; PDF page pending.
+- `TA-OCC-db25a53610852334` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:77`; PDF page pending.
+- `TA-OCC-9c5341f1d8fab675` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:79`; PDF page pending.
+- `TA-OCC-fd032a3b07bb4dde` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:56`; PDF page pending.
+- `TA-OCC-7d32bf59b35927bf` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:84`; PDF page pending.
+- `TA-OCC-45b6431f47a9810b` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:115`; PDF page pending.
+- `TA-OCC-d7c562b54bfb9e8c` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:133`; PDF page pending.
+- `TA-OCC-3a8a592674ba06db` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:146`; PDF page pending.
+- `TA-OCC-5b7d687e5a467554` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:21`; PDF page pending.
+- `TA-OCC-c50e4cd2af6cb80d` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:46`; PDF page pending.
+- `TA-OCC-365d63da8bfd36e9` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:166`; PDF page pending.
+- `TA-OCC-050d81d88067da47` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:167`; PDF page pending.
+- `TA-OCC-c7dcdcb69ca4d5cb` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:18`; PDF page pending.
+- `TA-OCC-6ac272767cee8531` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:19`; PDF page pending.
+- `TA-OCC-0ec48cb62f57e1fe` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:35`; PDF page pending.
+- `TA-OCC-a6437949bda80837` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:38`; PDF page pending.
+- `TA-OCC-6038eceb5c73f004` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:48`; PDF page pending.
+- `TA-OCC-9d8e95f0c755206e` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:45`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:17`; PDF page pending.
+- `TA-OCC-952cd8aa9ed50390` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:71`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:33`; PDF page pending.
+- `TA-OCC-10fae5d45c89578c` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:44`; PDF page pending.
+- `TA-OCC-0a559129c5914950` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:49`; PDF page pending.
+- `TA-OCC-7ca8eda8d6e13f14` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:65`; PDF page pending.
+- `TA-OCC-d42b11df13455519` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:77`; PDF page pending.
+- `TA-OCC-71d15667b1c7ab0e` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:78`; PDF page pending.
+- `TA-OCC-a0ea7879f3e752c4` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:84`; PDF page pending.
+- `TA-OCC-7c38f85a0d285265` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:86`; PDF page pending.
+- `TA-OCC-60c77f3e22de890a` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:118`; PDF page pending.
+- `TA-OCC-be22457b327140a0` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:119`; PDF page pending.
+- `TA-OCC-b5ef622a17327a94` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:36`; PDF page pending.
+- `TA-OCC-521ab2feb98f3b31` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:18`; PDF page pending.
+- `TA-OCC-34b02ce523a0ff1c` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:20`; PDF page pending.
+- `TA-OCC-34b7829b1c56dbd9` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:61`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -16806,6 +17211,73 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-d102fbfbdff87859` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:74`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:75`; PDF page pending.
 - `TA-OCC-c12ec5d96c6ea142` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:109`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:112`; PDF page pending.
 - `TA-OCC-535432e87da79226` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:119`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:122`; PDF page pending.
+- `TA-OCC-e3d58a912cc983ad` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:16`; PDF page pending.
+- `TA-OCC-0ccf6f211cacf371` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:22`; PDF page pending.
+- `TA-OCC-627e04f477123ee6` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:32`; PDF page pending.
+- `TA-OCC-33a7430d48a4563d` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:34`; PDF page pending.
+- `TA-OCC-c819fa7ae6051382` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:31`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:36`; PDF page pending.
+- `TA-OCC-78fa3c239ccd9812` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:36`; PDF page pending.
+- `TA-OCC-4ab9d906d01e7d4a` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:38`; PDF page pending.
+- `TA-OCC-801a87f75b2aaddc` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:54`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:59`; PDF page pending.
+- `TA-OCC-96d32256d243fa01` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:54`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:60`; PDF page pending.
+- `TA-OCC-e5807f96621b257f` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:65`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:71`; PDF page pending.
+- `TA-OCC-f9ed3b4a3b4d363d` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:65`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:72`; PDF page pending.
+- `TA-OCC-94ca81fd79eaef07` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:71`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:77`; PDF page pending.
+- `TA-OCC-b2bff1ff98e2e986` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:75`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:81`; PDF page pending.
+- `TA-OCC-214d6f7483ee689e` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:76`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:82`; PDF page pending.
+- `TA-OCC-ac791d1bd8c5d67f` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:78`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:84`; PDF page pending.
+- `TA-OCC-427c0f8f922eef42` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:92`; PDF page pending.
+- `TA-OCC-b1b2eae7cab481f3` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:86`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:94`; PDF page pending.
+- `TA-OCC-ee47de3ed79c2327` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:14`; PDF page pending.
+- `TA-OCC-b394a34d2a99a6ed` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:15`; PDF page pending.
+- `TA-OCC-09e02434c2198ff9` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:19`; PDF page pending.
+- `TA-OCC-776873fca856369c` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:24`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:28`; PDF page pending.
+- `TA-OCC-3874f6eb4447b057` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:32`; PDF page pending.
+- `TA-OCC-6435df5cf104c5dd` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:38`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:42`; PDF page pending.
+- `TA-OCC-35d4eb0e3bfbc9a9` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:41`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:45`; PDF page pending.
+- `TA-OCC-775169d8052bc76a` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:102`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:114`; PDF page pending.
+- `TA-OCC-54da24376be6972a` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:111`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:122`; PDF page pending.
+- `TA-OCC-c7b114525836d93e` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:15`; PDF page pending.
+- `TA-OCC-4dbb017296b9f478` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:25`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:28`; PDF page pending.
+- `TA-OCC-42883692b29f43bd` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:31`; PDF page pending.
+- `TA-OCC-6cb58167c9205580` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:31`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:32`; PDF page pending.
+- `TA-OCC-3c892f9bf533164f` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:48`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:52`; PDF page pending.
+- `TA-OCC-acff2e588085e760` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:48`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:52`; PDF page pending.
+- `TA-OCC-928f51b47531e445` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:52`; PDF page pending.
+- `TA-OCC-467e9cec24929f3b` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:55`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:60`; PDF page pending.
+- `TA-OCC-272ac6c8d73d1c87` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:82`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:88`; PDF page pending.
+- `TA-OCC-91b47d24beccec02` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:16`; PDF page pending.
+- `TA-OCC-77a281cc32417ce3` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:55`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:56`; PDF page pending.
+- `TA-OCC-39bdae1c93948bf4` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:82`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:84`; PDF page pending.
+- `TA-OCC-9f9f8d4f6811733e` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:112`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:115`; PDF page pending.
+- `TA-OCC-541672253993b62a` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:128`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:132`; PDF page pending.
+- `TA-OCC-aafff57406880af8` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:142`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:146`; PDF page pending.
+- `TA-OCC-e3b451de7461cc3f` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:151`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:154`; PDF page pending.
+- `TA-OCC-921e10abb1d28386` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:26`; PDF page pending.
+- `TA-OCC-76607a93db53613f` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:90`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:96`; PDF page pending.
+- `TA-OCC-62a2002f2a4acd5f` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:92`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:126`; PDF page pending.
+- `TA-OCC-a1a518b3a4a14f3a` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:136`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:145`; PDF page pending.
+- `TA-OCC-93cb26cc51f0337f` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:136`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:145`; PDF page pending.
+- `TA-OCC-48b5f49bba69e838` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:171`; PDF page pending.
+- `TA-OCC-d02bdbc4d56e90c3` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:15`; PDF page pending.
+- `TA-OCC-d562bedf1cb41fc1` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:25`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:25`; PDF page pending.
+- `TA-OCC-78afaa41edd74730` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:26`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:25`; PDF page pending.
+- `TA-OCC-c759df3b63d2bc0a` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:32`; PDF page pending.
+- `TA-OCC-ace1b16e6433b1b8` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:16`; PDF page pending.
+- `TA-OCC-f8f01f37db37b6f3` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:19`; PDF page pending.
+- `TA-OCC-8a3ad2fbd84754c4` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:47`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:50`; PDF page pending.
+- `TA-OCC-c034cafcdeb78de7` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:18`; PDF page pending.
+- `TA-OCC-0169b9ba3500a09b` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:14`; PDF page pending.
+- `TA-OCC-df811c834a9fc3be` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:16`; PDF page pending.
+- `TA-OCC-9a1c2e1b2f3c76f8` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:22`; PDF page pending.
+- `TA-OCC-9c63ecf0d9b105c1` — OLP-0438 / `OLP-0438-S01`; source `content/normal-modal-logic/axioms-systems/provability-from-set.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-from-set.tex:23`; PDF page pending.
+- `TA-OCC-67c10163f2b06dbc` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:16`; PDF page pending.
+- `TA-OCC-cefde829193e54b3` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:14`; PDF page pending.
+- `TA-OCC-431d1695e5b3a0a1` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:15`; PDF page pending.
+- `TA-OCC-ee5c04ea8129d24a` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:17`; PDF page pending.
+- `TA-OCC-af07c70f0ab986c7` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:34`; PDF page pending.
+- `TA-OCC-833c83cff1493aa2` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:36`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:37`; PDF page pending.
+- `TA-OCC-4ca414b599d96c5e` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:43`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -17126,6 +17598,8 @@ Please double-check: **do the listed uses of “மெய்மம் / மு�
 - `TA-OCC-86c3c94152e09208` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:164`; PDF page pending.
 - `TA-OCC-f12aada22898a72b` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:101`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:108`; PDF page pending.
 - `TA-OCC-3a1de7351f8c6c29` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:43`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:47`; PDF page pending.
+- `TA-OCC-4955dbedda21a2bf` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:71`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:77`; PDF page pending.
+- `TA-OCC-64ea25562817348d` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:15`; PDF page pending.
 
 ## TA-T085 — semantic entailment / semantic notions / semantic deduction theorem
 
@@ -17203,6 +17677,7 @@ Please double-check: **is “சீரான பிரதியீடு / உ�
 - `TA-OCC-5bae125431107465` — OLP-0118 / `OLP-0118-S07`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:52`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:62`; PDF page pending.
 - `TA-OCC-42daa72e25da2c18` — OLP-0129 / `OLP-0129-S05`; source `content/first-order-logic/completeness/complete-consistent-sets.tex:55`; Tamil `translation/content/first-order-logic/completeness/complete-consistent-sets.tex:60`; PDF page pending.
 - `TA-OCC-b965cb7deadfc402` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:43`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:46`; PDF page pending.
+- `TA-OCC-f47a8c0527f68df1` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:19`; PDF page pending.
 
 ## TA-T088 — derivation / proof / inference
 
@@ -17946,6 +18421,53 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-7670180d847e29a1` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:69`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:79`; PDF page pending.
 - `TA-OCC-6082f3ffc748880b` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:70`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:80`; PDF page pending.
 - `TA-OCC-5154bc3a005416f9` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:232`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:234`; PDF page pending.
+- `TA-OCC-c4ab397ddf607d1c` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:22`; PDF page pending.
+- `TA-OCC-fcca699d0205055b` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:26`; PDF page pending.
+- `TA-OCC-676a00278ae10b96` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:27`; PDF page pending.
+- `TA-OCC-7d1d54c9002db1b3` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:24`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:28`; PDF page pending.
+- `TA-OCC-d195c86437545384` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:31`; PDF page pending.
+- `TA-OCC-4996ac9fd9ee2b51` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:34`; PDF page pending.
+- `TA-OCC-1f6e1939770c61af` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:35`; PDF page pending.
+- `TA-OCC-ce960b77ee467f5a` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:36`; PDF page pending.
+- `TA-OCC-6fe7ec2ab06e7551` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:76`; PDF page pending.
+- `TA-OCC-956f12edc670678d` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:87`; PDF page pending.
+- `TA-OCC-e937b92d28fc662c` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:87`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:95`; PDF page pending.
+- `TA-OCC-5875fd46c1c50b94` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; PDF page pending.
+- `TA-OCC-497b45c5f886c361` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:15`; PDF page pending.
+- `TA-OCC-dc3994cf2f0c833c` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:36`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:38`; PDF page pending.
+- `TA-OCC-c4e73e4b9fe1c785` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:43`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:46`; PDF page pending.
+- `TA-OCC-40b5b7c730effcbe` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:47`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:51`; PDF page pending.
+- `TA-OCC-2d6e57907a1d751b` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:54`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:59`; PDF page pending.
+- `TA-OCC-30824033d6a402d0` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:56`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:60`; PDF page pending.
+- `TA-OCC-a83ed28ce50f2d72` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:76`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:82`; PDF page pending.
+- `TA-OCC-b9921d414b4a71e0` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:80`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:86`; PDF page pending.
+- `TA-OCC-00d6a5cefa4a0610` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:81`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:87`; PDF page pending.
+- `TA-OCC-e83cbcdd52b339bc` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:82`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:88`; PDF page pending.
+- `TA-OCC-d0f194e16e263edd` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:83`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:89`; PDF page pending.
+- `TA-OCC-12914c873a2b370b` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:84`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:90`; PDF page pending.
+- `TA-OCC-b7b2400bdc63d6a9` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:151`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:12`; PDF page pending.
+- `TA-OCC-62aa17d33bccb6f6` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:151`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:14`; PDF page pending.
+- `TA-OCC-c03627edaccbb3b4` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:151`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:16`; PDF page pending.
+- `TA-OCC-eb34ae1181eb319b` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:151`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:154`; PDF page pending.
+- `TA-OCC-13206092d1f58a84` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:14`; PDF page pending.
+- `TA-OCC-d9b199b0df5c084e` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:27`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:30`; PDF page pending.
+- `TA-OCC-d61ab0fee6e1b6cf` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:43`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:47`; PDF page pending.
+- `TA-OCC-42ef567ff3c7da04` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:124`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:133`; PDF page pending.
+- `TA-OCC-03388682a6163d99` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:155`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:163`; PDF page pending.
+- `TA-OCC-86c41b192d922be0` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:156`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:164`; PDF page pending.
+- `TA-OCC-db4c617471968636` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:157`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:165`; PDF page pending.
+- `TA-OCC-93a266171df9c99d` — OLP-0433 / `OLP-0433-S01`; source `content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:12`; PDF page pending.
+- `TA-OCC-0d85d175842595f1` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:12`; PDF page pending.
+- `TA-OCC-b16267f111d37868` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:14`; PDF page pending.
+- `TA-OCC-46bab55582a9d719` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:30`; PDF page pending.
+- `TA-OCC-312e39480e69c52c` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:14`; PDF page pending.
+- `TA-OCC-b1cdb929bae98e87` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:17`; PDF page pending.
+- `TA-OCC-7258b92fee448570` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:31`; PDF page pending.
+- `TA-OCC-300deaf7c4ccc3ed` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:34`; PDF page pending.
+- `TA-OCC-ea3a99b0fd92ad04` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:47`; PDF page pending.
+- `TA-OCC-6a5e382da793a7f8` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:52`; PDF page pending.
+- `TA-OCC-98fd27b1e7086e04` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:152`; PDF page pending.
+- `TA-OCC-091e1c00413978f0` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:41`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -18537,6 +19059,11 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-206b819f2322f361` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:62`; PDF page pending.
 - `TA-OCC-2bdfb8aa92a1bf48` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:44`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:29`; PDF page pending.
 - `TA-OCC-1f269d942db89655` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:69`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:68`; PDF page pending.
+- `TA-OCC-3aeb7d3c0df0647a` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:81`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:84`; PDF page pending.
+- `TA-OCC-3222232a35e1e51c` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:163`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:63`; PDF page pending.
+- `TA-OCC-47f3339659939d31` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:163`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:151`; PDF page pending.
+- `TA-OCC-2308c3c1dd7c99b3` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:163`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:170`; PDF page pending.
+- `TA-OCC-f7e032d873d8162f` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:18`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -18810,6 +19337,19 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-d9e0643c3920e4ff` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:94`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:109`; PDF page pending.
 - `TA-OCC-865eb47a16aa9183` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:96`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:109`; PDF page pending.
 - `TA-OCC-bf4aae646285fc63` — OLP-0333 / `OLP-0333-S01`; source `content/second-order-logic/metatheory/undecidability-and-axiomatizability.tex:32`; Tamil `translation/content/second-order-logic/metatheory/undecidability-and-axiomatizability.tex:35`; PDF page pending.
+- `TA-OCC-24dba78d91f5f86e` — OLP-0427 / `OLP-0427-S01`; source `content/normal-modal-logic/axioms-systems/axioms-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/axioms-systems.tex:9`; PDF page pending.
+- `TA-OCC-06ad8c2adca7f8b8` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:27`; PDF page pending.
+- `TA-OCC-e321f80370c8ec38` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:31`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:35`; PDF page pending.
+- `TA-OCC-6200373c8b12b3ad` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:38`; PDF page pending.
+- `TA-OCC-280c4ae788e9d264` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:39`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:45`; PDF page pending.
+- `TA-OCC-ac21c4933faff043` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:41`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:46`; PDF page pending.
+- `TA-OCC-6e990b9cb6b479ee` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:43`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:48`; PDF page pending.
+- `TA-OCC-9f24644ee54d3827` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:76`; PDF page pending.
+- `TA-OCC-484a533918e327c6` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:14`; PDF page pending.
+- `TA-OCC-0ff23d661e9ffc56` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; PDF page pending.
+- `TA-OCC-6f0a291f78fe2757` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:21`; PDF page pending.
+- `TA-OCC-eb33fd72520914f4` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:23`; PDF page pending.
+- `TA-OCC-d7af1651a2a008aa` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -19992,6 +20532,18 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-32b585694882ed1f` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:57`; PDF page pending.
 - `TA-OCC-f9a640d96a142b8d` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:58`; PDF page pending.
 - `TA-OCC-381bc8a6bab4e478` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:104`; PDF page pending.
+- `TA-OCC-bfb788bc680118ff` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:26`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:30`; PDF page pending.
+- `TA-OCC-22dbdd6e02a8fddf` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:27`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:96`; PDF page pending.
+- `TA-OCC-1e90784ed5089a50` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:87`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:96`; PDF page pending.
+- `TA-OCC-906495b6ff32a7cf` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:46`; PDF page pending.
+- `TA-OCC-5ef6b94aecebf040` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:47`; PDF page pending.
+- `TA-OCC-f4dcfe222101209d` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:92`; PDF page pending.
+- `TA-OCC-cce148179565aa34` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:12`; PDF page pending.
+- `TA-OCC-4eafeebb87404743` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:21`; PDF page pending.
+- `TA-OCC-9de4a8338b731d01` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:32`; PDF page pending.
+- `TA-OCC-c3bf48cd58ddb0f7` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:35`; PDF page pending.
+- `TA-OCC-67e20a5504aa8598` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:30`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:77`; PDF page pending.
+- `TA-OCC-0efd26b222d5a5d2` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:18`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -20065,6 +20617,8 @@ Please double-check: **is “முரணின்மை / முரணுடை
 - `TA-OCC-c2d8ec974374a5ec` — OLP-0319 / `OLP-0319-S01`; source `content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:114`; Tamil `translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:135`; PDF page pending.
 - `TA-OCC-7efaa4b2f47d0f32` — OLP-0319 / `OLP-0319-S01`; source `content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:116`; Tamil `translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:137`; PDF page pending.
 - `TA-OCC-ce1cf74ac8b1368c` — OLP-0319 / `OLP-0319-S01`; source `content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:117`; Tamil `translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:139`; PDF page pending.
+- `TA-OCC-357d9823f3e27364` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:12`; PDF page pending.
+- `TA-OCC-28a3cee30e844f4e` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:14`; PDF page pending.
 
 ## TA-T096 — quantifier
 
@@ -20327,6 +20881,8 @@ Please double-check: **is “தருக்க விதி / கட்டம�
 - `TA-OCC-4006d6e360c218fe` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:19`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
 - `TA-OCC-06f52df1e20c282b` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:24`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
 - `TA-OCC-d17aabda6b38c263` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:30`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:39`; PDF page pending.
+- `TA-OCC-4b56f5d690dd8c99` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:124`; PDF page pending.
+- `TA-OCC-78a9f11057248260` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:25`; PDF page pending.
 
 ## TA-T099 — eigenvariable / eigenvariable condition
 
@@ -21142,6 +21698,7 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-2e06ac86311e3e34` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:23`; PDF page pending.
 - `TA-OCC-78af213f56cd371a` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; PDF page pending.
 - `TA-OCC-e4aa9aecbe97e070` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; PDF page pending.
+- `TA-OCC-238d2abb42de1929` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:170`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -21368,6 +21925,17 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-2eea6337b1781068` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:65`; PDF page pending.
 - `TA-OCC-3add173b3a0ebfd5` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:17`; PDF page pending.
 - `TA-OCC-fdb45487205144e7` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:68`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:74`; PDF page pending.
+- `TA-OCC-f9cead6745790413` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:21`; PDF page pending.
+- `TA-OCC-b95d8df8f929dfbf` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:22`; PDF page pending.
+- `TA-OCC-6dc03e9358461ce1` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:24`; PDF page pending.
+- `TA-OCC-e1742c27c778a383` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:32`; PDF page pending.
+- `TA-OCC-d8a6db468053e826` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:59`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:63`; PDF page pending.
+- `TA-OCC-1a38e72fdcd8369b` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:143`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:151`; PDF page pending.
+- `TA-OCC-de535ed6d18f080f` — OLP-0433 / `OLP-0433-S01`; source `content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:15`; PDF page pending.
+- `TA-OCC-67338a2441ef511f` — OLP-0433 / `OLP-0433-S01`; source `content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:90`; Tamil `translation/content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:92`; PDF page pending.
+- `TA-OCC-d078f900ee82b789` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:18`; PDF page pending.
+- `TA-OCC-21a82798a0760671` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:21`; PDF page pending.
+- `TA-OCC-79f4e4aafcd68ce0` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:28`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -21436,6 +22004,8 @@ Please double-check: **is “மோடஸ் போனென்ஸ்” the est
 - `TA-OCC-b8ef880cde135887` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:127`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:142`; PDF page pending.
 - `TA-OCC-b9a22768b3a20c9b` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:27`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:30`; PDF page pending.
 - `TA-OCC-4aa6f0a71eec91a6` — OLP-0122 / `OLP-0122-S02`; source `content/first-order-logic/axiomatic-deduction/provability-propositional.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/provability-propositional.tex:21`; PDF page pending.
+- `TA-OCC-24ca00b868a2c400` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:47`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:52`; PDF page pending.
+- `TA-OCC-6e04ab6c924ae893` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:21`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:24`; PDF page pending.
 
 ## TA-T105 — deduction theorem / generalized deduction theorem
 
@@ -21461,6 +22031,7 @@ Please double-check: **is “கழித்தல் தேற்றம் / �
 - `TA-OCC-ec3b9008bec40587` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:85`; PDF page pending.
 - `TA-OCC-9a5c7340b8d9ea37` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:95`; PDF page pending.
 - `TA-OCC-4035550b4e0e3ec4` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:79`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:129`; PDF page pending.
+- `TA-OCC-b4090b4c77d60ab3` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:26`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:28`; PDF page pending.
 
 ## TA-T106 — free for (capture-avoiding substitutability)
 
@@ -25961,6 +26532,55 @@ Please double-check: **is “இயல்பான வாய்ப்புந�
 - `TA-OCC-c27e9db078157606` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:20`; PDF page pending.
 - `TA-OCC-9d54a66c6f88aee7` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:57`; PDF page pending.
 - `TA-OCC-c49e0c4ceb96cbe3` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:75`; PDF page pending.
+- `TA-OCC-1b3f6b25ed2f25af` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:14`; PDF page pending.
+- `TA-OCC-cc7f70561bf0b740` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:14`; PDF page pending.
+- `TA-OCC-3a48c6b16ca5a94a` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:28`; PDF page pending.
+- `TA-OCC-c8d045e0c0c74c97` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:40`; PDF page pending.
+- `TA-OCC-ca8d0ff568f44228` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:42`; PDF page pending.
+- `TA-OCC-3edf1ff22564dfbb` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:42`; PDF page pending.
+- `TA-OCC-15a424bce3b60730` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:45`; PDF page pending.
+- `TA-OCC-d4b72ca1393f1ef4` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:45`; PDF page pending.
+- `TA-OCC-c2856a2f74660083` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:49`; PDF page pending.
+- `TA-OCC-5847079e80a3fe10` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:93`; PDF page pending.
+- `TA-OCC-f2adf152b9d12103` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:12`; PDF page pending.
+- `TA-OCC-5c3b02db0a55bf2c` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:43`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:14`; PDF page pending.
+- `TA-OCC-5e4bcbc9d92fbd84` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:63`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:16`; PDF page pending.
+- `TA-OCC-680d47675811a449` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:74`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:22`; PDF page pending.
+- `TA-OCC-05d90f49ad227b56` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:84`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:27`; PDF page pending.
+- `TA-OCC-bac256d2aba73c9c` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:94`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:28`; PDF page pending.
+- `TA-OCC-4afbd5a8373d2e79` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:109`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:41`; PDF page pending.
+- `TA-OCC-ddf07e0068b3e9bd` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:116`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:42`; PDF page pending.
+- `TA-OCC-75fc2b8c1940ba1c` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:47`; PDF page pending.
+- `TA-OCC-e68023a78d5fddd8` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:48`; PDF page pending.
+- `TA-OCC-763ceb8dea88b544` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:52`; PDF page pending.
+- `TA-OCC-fcbe8e537daa0cf2` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:69`; PDF page pending.
+- `TA-OCC-cdf2c378cf2002f5` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:81`; PDF page pending.
+- `TA-OCC-68457ff4ee20c702` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:93`; PDF page pending.
+- `TA-OCC-d9f83c021495c0ff` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:104`; PDF page pending.
+- `TA-OCC-469df60d80bf0975` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:116`; PDF page pending.
+- `TA-OCC-bf78c38e931da8f1` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:121`; PDF page pending.
+- `TA-OCC-d1cc64954942c0ea` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:124`; PDF page pending.
+- `TA-OCC-568cec272c43c021` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:128`; PDF page pending.
+- `TA-OCC-0684fb14ae27cb7b` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:129`; PDF page pending.
+- `TA-OCC-192eabbbd892436b` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:131`; PDF page pending.
+- `TA-OCC-c26c610a97fe9ee0` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:12`; PDF page pending.
+- `TA-OCC-76cae61b9b71f316` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:14`; PDF page pending.
+- `TA-OCC-52d28006d3614666` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; PDF page pending.
+- `TA-OCC-1ebc2109f91a8762` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:21`; PDF page pending.
+- `TA-OCC-49c9ff502c7524b0` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:22`; PDF page pending.
+- `TA-OCC-3ae4e4ba6fe9bc13` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:27`; PDF page pending.
+- `TA-OCC-784ad0973d7f18ac` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:64`; PDF page pending.
+- `TA-OCC-af3968ca648a1943` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:67`; PDF page pending.
+- `TA-OCC-6a84049a64d35b4f` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:73`; PDF page pending.
+- `TA-OCC-38fef3c8b9ad2849` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:91`; PDF page pending.
+- `TA-OCC-18c9dfdaf568bf49` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:14`; PDF page pending.
+- `TA-OCC-45aaadaa8e61862f` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:12`; PDF page pending.
+- `TA-OCC-47a61504c362a97c` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:14`; PDF page pending.
+- `TA-OCC-a9b03cf03fc75314` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:15`; PDF page pending.
+- `TA-OCC-b5bc32b94c6509eb` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:14`; PDF page pending.
+- `TA-OCC-e6701b77eb6832e1` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:16`; PDF page pending.
+- `TA-OCC-f8b6a6ba1e8d2948` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:15`; PDF page pending.
+- `TA-OCC-b4c583b50b3fb787` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:15`; PDF page pending.
 
 ## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
 
@@ -26164,6 +26784,41 @@ Please double-check: **is “ஒரேநேரப் பதிலீடு / �
 - `TA-OCC-ce1575bc2ba22084` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:98`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:103`; PDF page pending.
 - `TA-OCC-35f0a0023211642f` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:98`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:115`; PDF page pending.
 - `TA-OCC-20b2fa1c1570131c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:100`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:188`; PDF page pending.
+- `TA-OCC-e4c372fdb80fa206` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:40`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:44`; PDF page pending.
+- `TA-OCC-9773f6cd01070e05` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:48`; PDF page pending.
+- `TA-OCC-00dedab781769ae2` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:80`; PDF page pending.
+- `TA-OCC-44d712ee3b34bdb3` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:74`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:81`; PDF page pending.
+- `TA-OCC-631e537ed4138471` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:23`; PDF page pending.
+- `TA-OCC-43073d1d0d0e8f58` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:40`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:44`; PDF page pending.
+- `TA-OCC-b19c902c0096c5b6` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:85`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:94`; PDF page pending.
+- `TA-OCC-9132d1d6feafb463` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:87`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:96`; PDF page pending.
+- `TA-OCC-522316f880cfb684` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:103`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:115`; PDF page pending.
+- `TA-OCC-781f79ccdd5a39f2` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:109`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:121`; PDF page pending.
+- `TA-OCC-a7ed43a4b3e40bfd` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; PDF page pending.
+- `TA-OCC-4afac5b7025b8d4c` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:73`; PDF page pending.
+- `TA-OCC-dd24035712890df3` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:77`; PDF page pending.
+- `TA-OCC-4ef7f8e947207ca9` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:87`; PDF page pending.
+- `TA-OCC-c36a7fd5c57d4cf8` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:55`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:56`; PDF page pending.
+- `TA-OCC-27f262903011e418` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:82`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:85`; PDF page pending.
+- `TA-OCC-4aa200a41da23234` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:112`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:116`; PDF page pending.
+- `TA-OCC-537a0b6a2bc4d6c7` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:129`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:133`; PDF page pending.
+- `TA-OCC-f126c7a1ec1dc82c` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:143`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:146`; PDF page pending.
+- `TA-OCC-21a7a053a62dbd90` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:166`; PDF page pending.
+- `TA-OCC-ca88638f2f223193` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:166`; PDF page pending.
+- `TA-OCC-e5037f6e96f8b4ff` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:167`; PDF page pending.
+- `TA-OCC-daed7a5e83ea3690` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:168`; PDF page pending.
+- `TA-OCC-1a521cc7cadc7746` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:99`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:168`; PDF page pending.
+- `TA-OCC-b96bcb902364ce3b` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:118`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:169`; PDF page pending.
+- `TA-OCC-46fbcec74bd2ef6b` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:17`; PDF page pending.
+- `TA-OCC-069877c5d76e9a79` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:21`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:22`; PDF page pending.
+- `TA-OCC-d361f076fd6bb8f1` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:38`; PDF page pending.
+- `TA-OCC-f98a5b517696d13a` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:41`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:44`; PDF page pending.
+- `TA-OCC-8d16ebc4769041f8` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:45`; PDF page pending.
+- `TA-OCC-460bc13a57c49789` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:61`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:76`; PDF page pending.
+- `TA-OCC-e424cc9013557d60` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:70`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:78`; PDF page pending.
+- `TA-OCC-3d7f2be66329b27b` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:73`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:86`; PDF page pending.
+- `TA-OCC-564f1cd1ad7d0af4` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:78`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:118`; PDF page pending.
+- `TA-OCC-d70ef25e94ac438b` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:110`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:119`; PDF page pending.
 
 ## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
 
@@ -26185,6 +26840,8 @@ Please double-check: **is “தொடர்புசார் மாதிர�
 - `TA-OCC-ae74d843220920c9` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:9`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:13`; PDF page pending.
 - `TA-OCC-8ac15ccb6898b053` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:23`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:26`; PDF page pending.
 - `TA-OCC-09d26211f9f744c8` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; PDF page pending.
+- `TA-OCC-ca3be169de97ced9` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:63`; PDF page pending.
+- `TA-OCC-15dafb4837ccd4e2` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:64`; PDF page pending.
 
 ## TA-T170 — modal validity / valid in a class of models / tautology / tautological instance / schema / characteristic formula / closed under modus ponens
 
@@ -26244,6 +26901,14 @@ Please double-check: **is “வாய்ப்புநிலைச் செ�
 - `TA-OCC-8a51d7e49c6bdade` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:118`; PDF page pending.
 - `TA-OCC-c8792d17fb125c1e` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:57`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:59`; PDF page pending.
 - `TA-OCC-1d38dce1ee2b6110` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:50`; PDF page pending.
+- `TA-OCC-d1db8531476c5995` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:47`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:80`; PDF page pending.
+- `TA-OCC-e68667f83adab6ec` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:23`; PDF page pending.
+- `TA-OCC-fcb04db1d84a87d6` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:21`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:96`; PDF page pending.
+- `TA-OCC-cf64da63b1e808c7` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:77`; PDF page pending.
+- `TA-OCC-bd94d54f8bd4da8e` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:49`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:77`; PDF page pending.
+- `TA-OCC-44e6627a938ba1ce` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:166`; PDF page pending.
+- `TA-OCC-e73c83165d3a905b` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:167`; PDF page pending.
+- `TA-OCC-d2bf66ea6c9241a2` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:38`; PDF page pending.
 
 ## TA-T171 — entailment / entails / counterexample / class of models / reflexive model
 
@@ -26299,6 +26964,8 @@ Please double-check: **do the listed uses of “பின்விளைவு /
 - `TA-OCC-2e2fc0ddafe6ec6c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:94`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:97`; PDF page pending.
 - `TA-OCC-9ab7cd98a47c2edc` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:51`; PDF page pending.
 - `TA-OCC-2f4ae15af55bc1d6` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:155`; PDF page pending.
+- `TA-OCC-edbf2e53893335c3` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:23`; PDF page pending.
+- `TA-OCC-9b85ee23663ad7fb` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:25`; PDF page pending.
 
 ## TA-T172 — frame / based on a frame / validity in a frame / frame definability / correspondence fact
 
@@ -26333,6 +27000,7 @@ Please double-check: **is “சட்டகம் / சட்டகத்தை
 - `TA-OCC-7a8f71bf8dbb049d` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:130`; PDF page pending.
 - `TA-OCC-f37c45d26be871d7` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:138`; PDF page pending.
 - `TA-OCC-e7d1c23c95d55848` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:2`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
+- `TA-OCC-6315e372676ea9ec` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:19`; PDF page pending.
 
 ## TA-T173 — euclidean relation / weakly dense / weakly connected / weakly directed / diamond property / confluence
 
@@ -26388,6 +27056,67 @@ Please double-check: **is “முதல்தரத்தில் வரை�
 - `TA-OCC-c2d521cbf370b9cd` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:15`; PDF page pending.
 - `TA-OCC-6c917deabd7df0b8` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:26`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:26`; PDF page pending.
 - `TA-OCC-e48e8092f1d0003a` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:120`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:155`; PDF page pending.
+
+## TA-T175 — Hilbert-type derivation system / necessitation / normal modal logic / minimal normal modal logic / modal system
+
+Chosen rendering: **ஹில்பர்ட் வகை வருவித்தல் முறைமை / இன்றியமையாக்கல் / இயல்பான வாய்ப்புநிலைத் தருக்கம் / குறைந்தபட்ச இயல்பான வாய்ப்புநிலைத் தருக்கம் / வாய்ப்புநிலை அமைப்பு**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: வருவித்தல், முறைமை, அடிகோள், அனுமான விதி and modal-logic vocabulary continue the reviewed edition register. The displayed A/Box A inference fixes இன்றியமையாக்கல்; closure under tautologies, substitution, modus ponens, K, Dual and that rule fixes இயல்பான வாய்ப்புநிலைத் தருக்கம்; and the least such logic containing the named schema instances fixes வாய்ப்புநிலை அமைப்பு. The full compounds are not claimed as direct headword attestations.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T175-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “ஹில்பர்ட் வகை வருவித்தல் முறைமை / இன்றியமையாக்கல் / இயல்பான வாய்ப்புநிலைத் தருக்கம் / குறைந்தபட்ச இயல்பான வாய்ப்புநிலைத் தருக்கம் / வாய்ப்புநிலை அமைப்பு” the established India-standard Tamil expression for “Hilbert-type derivation system / necessitation / normal modal logic / minimal normal modal logic / modal system” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-249ae2c751cfd32c` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:43`; PDF page pending.
+- `TA-OCC-f0d496841d4c1914` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:39`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:49`; PDF page pending.
+- `TA-OCC-87a5139f0789c3d5` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:65`; PDF page pending.
+- `TA-OCC-2cf16370de6517b3` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:93`; PDF page pending.
+- `TA-OCC-a684ede27c811cdd` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:43`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:104`; PDF page pending.
+- `TA-OCC-bfec11dee1d0a3d8` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:53`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:129`; PDF page pending.
+- `TA-OCC-56a3efae61c489d9` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:12`; PDF page pending.
+- `TA-OCC-4052acc16488c0f8` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:22`; PDF page pending.
+- `TA-OCC-f2c5fc5861b9bdb8` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:24`; PDF page pending.
+- `TA-OCC-c0296fa0e0cb4599` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:27`; PDF page pending.
+- `TA-OCC-a01707f7027c8061` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:22`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:73`; PDF page pending.
+- `TA-OCC-7025406529086c57` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:12`; PDF page pending.
+- `TA-OCC-c1440cef8c2edabb` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:16`; PDF page pending.
+
+## TA-T176 — derived rule / rewriting / schematic derivability / dual formula / equivalent axiomatization
+
+Chosen rendering: **பெறப்பட்ட விதி / மீளெழுதுதல் / திட்டவடிவமுறை வருவிக்கத்தக்கதன்மை / இருமை வாய்பாடு / நிகரான அடிகோளாக்கம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: விதி, வாய்பாடு, அடிகோள், நிகர் and the derivation register continue reviewed usage. The proved admissible shortcuts fix பெறப்பட்ட விதி; the substitution-context proposition fixes மீளெழுதுதல்; arbitrary uniform instances fix திட்டவடிவமுறை வருவிக்கத்தக்கதன்மை; and the displayed Box/Diamond transformations and equal generated systems fix இருமை வாய்பாடு and நிகரான அடிகோளாக்கம்.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T176-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “பெறப்பட்ட விதி / மீளெழுதுதல் / திட்டவடிவமுறை வருவிக்கத்தக்கதன்மை / இருமை வாய்பாடு / நிகரான அடிகோளாக்கம்” the established India-standard Tamil expression for “derived rule / rewriting / schematic derivability / dual formula / equivalent axiomatization” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-caaa24e5963fcfaf` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:12`; PDF page pending.
+
+## TA-T177 — sound derivation system / system distinction / derivability from a set / deductively closed / canonical model
+
+Chosen rendering: **சரியான வருவித்தல் முறைமை / அமைப்பு வேறுபாடு / ஒரு கணத்திலிருந்து வருவிக்கத்தக்கதன்மை / வருவித்தலின் கீழ் மூடப்பட்ட / நியம மாதிரி**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: சரித்தன்மை, வருவித்தல், முறைமை and கணம் continue the reviewed edition register. Validity of every derivable formula fixes சரியான வருவித்தல் முறைமை; separating systems by a sound countermodel fixes அமைப்பு வேறுபாடு; the displayed finite-premise conditional defines ஒரு கணத்திலிருந்து வருவிக்கத்தக்கதன்மை; the membership implication defines வருவித்தலின் கீழ் மூடப்பட்ட; and the following completeness construction fixes நியம மாதிரி. The full specialist compounds are not claimed as direct headword attestations.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T177-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “சரியான வருவித்தல் முறைமை / அமைப்பு வேறுபாடு / ஒரு கணத்திலிருந்து வருவிக்கத்தக்கதன்மை / வருவித்தலின் கீழ் மூடப்பட்ட / நியம மாதிரி” the established India-standard Tamil expression for “sound derivation system / system distinction / derivability from a set / deductively closed / canonical model” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-dc7a9b6400612509` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:45`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:52`; PDF page pending.
+- `TA-OCC-2b07ab9fa0e42d23` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:20`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

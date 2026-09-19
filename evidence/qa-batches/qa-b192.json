@@ -1,0 +1,406 @@
+{
+  "batch_id": "TA-B192",
+  "units": [
+    {
+      "unit_id": "OLP-0436",
+      "source_sha256": "ff44b1e495e2dca06b0c6e7fed1c5dab9971288a8c3bef061f00f7f025f61d17",
+      "translation_sha256": "80d67e5b40e23116907c209786f7fcdf0591e534836c19becdbe137123d46737",
+      "source_bytes": 2494,
+      "translation_bytes": 5355,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "sch",
+        "section",
+        "syn",
+        "tau",
+        "val"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0437",
+      "source_sha256": "5242bad1abef085ce60944f529370410d12a911fbe55fa1047a29fca3c7b214b",
+      "translation_sha256": "ff1214867724d943c986a62acbe914c37acf3a5444c6a0126eadc7920f3c8656",
+      "source_bytes": 5642,
+      "translation_bytes": 9447,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Log{KT}\\Proves\\Log{D}$",
+        "$\\Log{KTB}\\Proves/\\Log{4}$",
+        "$\\Log{KTB}\\Proves/\\Log{5}$",
+        "$\\mSat/{M}{\\Boxp\\to\\Box\\Boxp}[w_1]$"
+      ],
+      "extra_math": [
+        "$\\Log{KT}\\Proves\\Ax{D}$",
+        "$\\mSat/{M}{\\Boxp\\lif\\Box\\Boxp}[w_1]$",
+        "$\\Log{KTB}\\Proves/\\Ax{4}$",
+        "$\\Log{KTB}\\Proves/\\Ax{5}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "above",
+        "acc",
+        "below",
+        "bend",
+        "dis",
+        "east",
+        "frd",
+        "htpb",
+        "include",
+        "label",
+        "left",
+        "logic",
+        "modal",
+        "nml",
+        "north",
+        "open",
+        "prf",
+        "prs",
+        "reflexive",
+        "right",
+        "sch",
+        "section",
+        "snd",
+        "syn",
+        "west",
+        "world"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-019",
+          "unit_id": "OLP-0437",
+          "kind": "D-axiom-proof-uses-system-macro",
+          "action": "Changed the cited derivability premise from a modal system named D to the D axiom schema.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\Log{KT}\\Proves\\Log{D}",
+              "to": "\\Log{KT}\\Proves\\Ax{D}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\Log"
+          ],
+          "expected_extra_commands": [
+            "\\Ax"
+          ],
+          "source_issue_or_choice": "The cited result states that KT derives the D axiom schema, but this proof changes its object to a logic-system macro.",
+          "chosen_treatment": "தமிழ் உட்கண நிறுவலில் மேற்கோள் காட்டப்பட்ட அதே அடிகோள் திட்டவடிவம்~$\\Ax{D}$ ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating a modal system as the object of the formula-derivability relation; altering the cited result.",
+          "rationale": "Deriving the D schema is exactly what lets every KD theorem be reproduced in KT.",
+          "precise_review_question": "Does the corrected premise derive the D axiom schema rather than a system named D?",
+          "location_needle": "SOURCE CORRECTION TA-NML-019"
+        },
+        {
+          "audit_id": "TA-NML-020",
+          "unit_id": "OLP-0437",
+          "kind": "non-derivability-theorem-uses-system-macros-for-axioms",
+          "action": "Changed the two theorem conclusions from systems named 4 and 5 to axiom schemata 4 and 5.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\Log{KTB}\\Proves/\\Log{4}",
+              "to": "\\Log{KTB}\\Proves/\\Ax{4}",
+              "count": 1
+            },
+            {
+              "from": "\\Log{KTB}\\Proves/\\Log{5}",
+              "to": "\\Log{KTB}\\Proves/\\Ax{5}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\Log",
+            "\\Log"
+          ],
+          "expected_extra_commands": [
+            "\\Ax",
+            "\\Ax"
+          ],
+          "source_issue_or_choice": "The proof supplies countermodels to instances of Ax4 and Ax5, whereas the theorem statement applies formula non-derivability notation to Log4 and Log5.",
+          "chosen_treatment": "தமிழ் தேற்றத்தில் வருவிக்கப்படாத பொருள்களை~$\\Ax{4}$, $\\Ax{5}$ என்ற அடிகோள் திட்டவடிவங்களாக எழுதுகிறது.",
+          "alternatives_considered": "Keeping logic systems as arguments of formula derivability; changing the proof into a claim about unnamed systems.",
+          "rationale": "The following two satisfaction failures directly refute the displayed axiom instances and thereby their schemata.",
+          "precise_review_question": "Does the theorem now state non-derivability of Ax4 and Ax5, matching its countermodels?",
+          "location_needle": "SOURCE CORRECTION TA-NML-020"
+        },
+        {
+          "audit_id": "TA-NML-021",
+          "unit_id": "OLP-0437",
+          "kind": "Ax4-countermodel-uses-wrong-conditional-command",
+          "action": "Changed the Ax4 counterexample from the generic arrow command to the chapter's object-language conditional.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\Boxp\\to\\Box\\Boxp",
+              "to": "\\Boxp\\lif\\Box\\Boxp",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\to"
+          ],
+          "expected_extra_commands": [
+            "\\lif"
+          ],
+          "source_issue_or_choice": "The theorem and every other instance of Ax4 use the object-language connective lif, but this one countermodel display alone uses to.",
+          "chosen_treatment": "தமிழ் எதிர்மாதிரி வாய்பாட்டிலும்~$\\lif$ என்ற அதே பொருள்மொழி இணைப்பியைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Leaving a different arrow command in the same axiom schema; changing all Ax4 displays to the generic arrow.",
+          "rationale": "The satisfaction claim must evaluate an instance of the formally defined Ax4 schema.",
+          "precise_review_question": "Is the falsified formula now exactly an Ax4 instance using the established conditional?",
+          "location_needle": "SOURCE CORRECTION TA-NML-021"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Log",
+        "\\Log",
+        "\\Log",
+        "\\to"
+      ],
+      "extra_commands": [
+        "\\Ax",
+        "\\Ax",
+        "\\Ax",
+        "\\lif"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0438",
+      "source_sha256": "de08bf7a3bc7b183438d82d4678a9fc80a4b8efbb072cb25c0e49d10d296f540",
+      "translation_sha256": "8c3ba1c8f4f8af0fb1b9e212dbc0ca3e925a147f27d92deb1d12aa00505a1685",
+      "source_bytes": 802,
+      "translation_bytes": 1439,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "prf",
+        "prs",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0439",
+      "source_sha256": "2054b1d871723e1845690d3dc42bf9e44a994965341fc3e6505e0c91c1b3a246",
+      "translation_sha256": "5d20fd8b8a36736a600157af0e9fa4911a9f160ef2b48269dc1f621eaa0d3d3d",
+      "source_bytes": 1954,
+      "translation_bytes": 3390,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!A_1\\to(!A_2\\lif\\cdots(!A_n\\lif!B)\\cdots)$"
+      ],
+      "extra_math": [
+        "$!A_1\\lif(!A_2\\lif\\cdots(!A_n\\lif!B)\\cdots)$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-022",
+          "unit_id": "OLP-0439",
+          "kind": "rule-T-label-and-condition-commented-out",
+          "action": "Restored the visible emphasized Rule T label and expressed the omitted conditional relation in the translated item.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\emph"
+          ],
+          "source_issue_or_choice": "A percent sign after the item label comments out both the intended emphasized 'Rule T' heading and the word 'If', leaving the list item without its named property or conditional introduction.",
+          "chosen_treatment": "தமிழ் உருப்படியில்~\\emph{விதி T} என்ற தலைப்பை வெளிப்படுத்தி, முன்னுறுப்புகளை நிபந்தனை வாக்கியமாக எழுதுகிறது.",
+          "alternatives_considered": "Preserving the accidental hidden heading and malformed prose; deleting the corresponding rule from the property list.",
+          "rationale": "The following paragraph cites this item as a named rule, and its displayed premises and conclusion plainly form a conditional claim.",
+          "precise_review_question": "Does the corrected fifth item visibly state Rule T as a conditional derivability property?",
+          "location_needle": "SOURCE CORRECTION TA-NML-022"
+        },
+        {
+          "audit_id": "TA-NML-023",
+          "unit_id": "OLP-0439",
+          "kind": "rule-T-tautology-uses-wrong-first-conditional-command",
+          "action": "Changed the first connective in the Rule T tautological instance to the chapter's object-language conditional.",
+          "normalized_math_replacements": [
+            {
+              "from": "!A_1\\to(!A_2\\lif",
+              "to": "!A_1\\lif(!A_2\\lif",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\to"
+          ],
+          "expected_extra_commands": [
+            "\\lif"
+          ],
+          "source_issue_or_choice": "The nested object-language conditional uses lif at every later level, but the outermost connective alone uses the generic arrow command.",
+          "chosen_treatment": "தமிழ் மெய்ம நிகழ்வின் வெளிப்புறத்திலும் உட்புறங்களிலும்~$\\lif$ ஐ ஒரேபடியாகப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Retaining mixed connective commands in one recursively nested formula; replacing every inner connective with the generic arrow.",
+          "rationale": "Rule T relies on one nested formula built from the formally defined object-language conditional.",
+          "precise_review_question": "Does the corrected Rule T tautology use lif at every conditional level?",
+          "location_needle": "SOURCE CORRECTION TA-NML-023"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\to"
+      ],
+      "extra_commands": [
+        "\\emph",
+        "\\lif"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0440",
+      "source_sha256": "410cd2532bf8c2ba318f476f6e9192064021f16e0a42aa297015bb41851e889b",
+      "translation_sha256": "2b8f7bb119a8effeccbda420b1d8e8ceaf28132e29e7b87b5888436f6face682",
+      "source_bytes": 2493,
+      "translation_bytes": 4878,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma\\Proves[\\Sigma]!A\\to\\lfalse$"
+      ],
+      "extra_math": [
+        "$\\Gamma\\Proves[\\Sigma]!A\\lif\\lfalse$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "prp",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-024",
+          "unit_id": "OLP-0440",
+          "kind": "consistency-proof-uses-wrong-conditional-command",
+          "action": "Changed the first deduction-theorem conclusion to the chapter's object-language conditional.",
+          "normalized_math_replacements": [
+            {
+              "from": "!A\\to\\lfalse",
+              "to": "!A\\lif\\lfalse",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\to"
+          ],
+          "expected_extra_commands": [
+            "\\lif"
+          ],
+          "source_issue_or_choice": "The paired deduction-theorem conclusion and the tautological instance immediately below use lif, but the first conclusion alone uses the generic arrow command.",
+          "chosen_treatment": "தமிழ் இரு கழித்தல்-தேற்ற முடிவுகளிலும்~$\\lif$ என்ற அதே பொருள்மொழி இணைப்பியைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Leaving one of the paired conclusions in a different notation; changing the paired conclusion and tautological instance to the generic arrow.",
+          "rationale": "Both assumptions are discharged by the same deduction theorem and feed the same object-language tautology.",
+          "precise_review_question": "Do both deduction-theorem conclusions now use the conditional required by the following tautology?",
+          "location_needle": "SOURCE CORRECTION TA-NML-024"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\to"
+      ],
+      "extra_commands": [
+        "\\lif"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

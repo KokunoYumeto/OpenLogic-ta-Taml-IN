@@ -10,9 +10,9 @@
     "pass": true
   },
   "translation_coverage": {
-    "drafted": 423,
-    "textual_invariants_pass": 423,
-    "semantic_reviewed": 423,
+    "drafted": 437,
+    "textual_invariants_pass": 437,
+    "semantic_reviewed": 437,
     "reader_verified_distinct": 203,
     "combined_reader_verified": 51,
     "proof_systems_reader_verified": 49,
@@ -29,8 +29,8 @@
   "source_content_hashes_verified": 722,
   "canon_sources": 9,
   "canon_passages": 51,
-  "term_decisions": 174,
-  "aligned_segments": 1309,
+  "term_decisions": 177,
+  "aligned_segments": 1323,
   "semantic_review": "semantic-review-current.json",
   "build_qa": "tex-b001-receipt.json",
   "current_checkpoint": "checkpoint-current.json",
@@ -42,10 +42,10 @@
   "combined_build_qa": "tex-sfr-patch-receipt.json",
   "combined_render_qa": "sfr-render-qa.json",
   "proof_systems_reader_build_attempt": "TEX-PROOF-SYSTEMS-ND-RECEIPT.json",
-  "translation_decisions": 387,
-  "translation_decision_occurrences": 20693,
+  "translation_decisions": 400,
+  "translation_decision_occurrences": 21227,
   "reader_page_mapped_occurrences": 2891,
-  "reader_page_pending_occurrences": 17802,
+  "reader_page_pending_occurrences": 18336,
   "proof_systems_build_qa": "tex-proof-systems-tableaux-receipt.json",
   "proof_systems_render_qa": "proof-systems-tableaux-render-qa.json",
   "axiomatic_deduction_build_qa": "tex-axiomatic-deduction-receipt.json",
@@ -60,5 +60,5 @@
   "representability_in_q_render_qa": "representability-in-q-render-qa.json",
   "cumulative_reader_qa": "cumulative-reader-render-qa.json",
   "source_publication_readback": "publication-readback-nml-423.json",
-  "current_source_published": true
+  "current_source_published": false
 }
