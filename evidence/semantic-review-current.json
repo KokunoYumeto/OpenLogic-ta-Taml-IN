@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-19T22:00:12.825947+00:00",
+  "date_utc": "2026-09-19T22:53:26.544580+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2031,7 +2031,7 @@
     {
       "unit_id": "OLP-0409",
       "source_sha256": "472bb6066a6995031744114d0238d83c60eb6a3d241d8e77571c59a4b912fed6",
-      "translation_sha256": "b49d8e5f6fc5e65a97b3931faad6b2aa3005380bb4bb73bd13784d991ea1db9b"
+      "translation_sha256": "1b982801aee6b0e8d112fc73e424f6955b55765584eb7523661b2b5b852c1055"
     },
     {
       "unit_id": "OLP-0410",
@@ -2051,7 +2051,7 @@
     {
       "unit_id": "OLP-0413",
       "source_sha256": "4c1ea773c2dd5106ceba1ec676dfadbbae432fc9d56b528a4a6b00f2c270fd50",
-      "translation_sha256": "0d0ec44f8cd64ea74593049b8104edd23ee2a7a42701c63e62aea35ccb0ab58a"
+      "translation_sha256": "36f4a74814ace635e83d846882f5bbcda78bb8153667a667d6490be06f139562"
     },
     {
       "unit_id": "OLP-0414",
@@ -2061,7 +2061,7 @@
     {
       "unit_id": "OLP-0415",
       "source_sha256": "ac462d167fe4acb6dee2adad68ff523384f14e0bd9976bad5d48fe34f2af8bab",
-      "translation_sha256": "fb0473512eafe5570775ef681eae2bf172555d78a8938cb3d653d2b5a470d280"
+      "translation_sha256": "9b62dc72e34ab5bfb4ba7fc8417824324903f7794fe12e39921e455752398de0"
     },
     {
       "unit_id": "OLP-0416",
@@ -2077,6 +2077,46 @@
       "unit_id": "OLP-0418",
       "source_sha256": "825d28934a3a8ef5f7f6775e0624e97ede3be1ae9c0dc7af64883becb0bcfdee",
       "translation_sha256": "bdb28d2532d65a802dfdf30653381809fcc3d05562079c344788fb20c29f2211"
+    },
+    {
+      "unit_id": "OLP-0419",
+      "source_sha256": "5e089c8eb5f039c6b93afdf7ce93b306c63b172427f89b4b9433dc6a860bcbf4",
+      "translation_sha256": "21365aa9e30a7ce8eb0d77ee7e684ac78c39d68edd5f71f113f10b8f0e8ac944"
+    },
+    {
+      "unit_id": "OLP-0420",
+      "source_sha256": "a61229335a4a2f9fc6815e7e058fe5c6d7ff75c46f265f1e7cd609e4f83ce6ff",
+      "translation_sha256": "8c269a937b31186cc3cdb10f55933c19b5786b61b8f17fedea07fb362446de96"
+    },
+    {
+      "unit_id": "OLP-0421",
+      "source_sha256": "eca3a45ea91f4840016751d184f7c2b82c1d1141c2164c1dce4c8775fcf49622",
+      "translation_sha256": "b16b54f21290191402e1f587596203895bf7e140ba0d5fbc43eb8766549c1678"
+    },
+    {
+      "unit_id": "OLP-0422",
+      "source_sha256": "2dab4bab23543be815492a62159b5e44069c50f55fee06e8a866446634a75b39",
+      "translation_sha256": "22ab8b16695332b9ab93d727ed6111f0aab43069ea40f7c5e1b69cf62a881c36"
+    },
+    {
+      "unit_id": "OLP-0423",
+      "source_sha256": "a107f2b5ce681ff056d243b0cd68955cdf997d66276ce17b74207164b1af6d8c",
+      "translation_sha256": "59d9d3b7a26718ec0c5634d9ab3497f7d6210334b53bd60406322a9fffca52ee"
+    },
+    {
+      "unit_id": "OLP-0424",
+      "source_sha256": "9c5c15840f4ad33863a32492fc8e16e7d4ce9b530bce2501a86b3f9466742358",
+      "translation_sha256": "90072f52c846974b1f31f6f7c37abaa32dde4aff07dab8a6daf47c0db2cd75b9"
+    },
+    {
+      "unit_id": "OLP-0425",
+      "source_sha256": "057897c91d88ced3eebfd46a08cba8c26a80da294f8870f37e08146e01f39798",
+      "translation_sha256": "d21dddac9a2efd2c4cfae2e978ff831958fcf426c4ac97bbb6ddb057af8dbc8c"
+    },
+    {
+      "unit_id": "OLP-0426",
+      "source_sha256": "1b4691078284c0f45e4ec808398c3952649ec79732167d7b2d6a1ce7ad974490",
+      "translation_sha256": "4832abfdd691181f5668df03940857fe01790de2f637c8bf9ca78b2bdc880ea3"
     }
   ],
   "samples": [
@@ -5577,7 +5617,7 @@
       "segment_id": "OLP-0409-S01",
       "reverse_paraphrase": "Modal logic studies necessity, possibility, and other unary modalities; the historical path runs from Aristotle and Lewis through Carnap to Kripke’s accessibility semantics, which supports correspondence between frame properties and modal schemas.",
       "assessment": "All examples, historical claims, strict implication, iterated-modality limitation, possible-world clause, applications, and D/T/B/4/5 correspondence scope remain. TA-NML-001 repairs only ordinary prose defects.",
-      "translation_segment_sha256": "1578395a19b8e42bbc6c8cc2129b2b6c1a473040ecbcf95043140be440c49a87",
+      "translation_segment_sha256": "02839ab2fd5c3858a32c080f4c8a38d095242388d76f54f9b5d3a1b688148d60",
       "status": "author-reviewed"
     },
     {
@@ -5605,7 +5645,7 @@
       "segment_id": "OLP-0413-S01",
       "reverse_paraphrase": "Truth at a world is defined inductively: propositional clauses are classical, Box quantifies over every accessible successor, and Diamond over at least one; empty successor sets make Box vacuously true, and the two operators satisfy the stated dualities.",
       "assessment": "Every satisfaction clause, exercise formula, duality step, and indistinguishable-world problem remains exact. TA-NML-005 restores the omitted world argument in the second duality proof.",
-      "translation_segment_sha256": "d6a15344bc0bede82c9a8dc50192a0e15db81401f734f9168ce47bb130ae4b5f",
+      "translation_segment_sha256": "870b0d0da2337e75e41ed2287724b2f7f7b8e0e13f396c9801c7ffb5397ed941",
       "status": "author-reviewed"
     },
     {
@@ -5619,7 +5659,7 @@
       "segment_id": "OLP-0415-S01",
       "reverse_paraphrase": "A formula is valid in a class of models when it is true at every world of every model in that class; validity descends to subclasses and is closed under necessitation.",
       "assessment": "The all-model/all-world scope, reflexive-model example, subclass proposition, necessitation proof, and both problem sets remain exact.",
-      "translation_segment_sha256": "3b24a85b69544ef2ab258ce589d37bae4b17d56be7fa03b45efcf3f3fdec4694",
+      "translation_segment_sha256": "72f7e08c63a8c3729cca0b8e46a5890780d09a5f9ea275bf781013fe262216f3",
       "status": "author-reviewed"
     },
     {
@@ -5641,6 +5681,62 @@
       "reverse_paraphrase": "Local modal entailment preserves truth at the same arbitrary world in every model; the worked proof establishes one entailment, while a diagram and a one-world empty-relation model refute another.",
       "assessment": "The universal consequence definition, contradiction proof, both countermodels, figure, caption, and final exercises remain. TA-NML-011 restores ordered model-triple notation.",
       "translation_segment_sha256": "f937d6d5026af76c6d15ae0daa9c173a5cbf5251934e790bf5dc2ece66bd47e9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0419-S01",
+      "reverse_paraphrase": "The frame-definability chapter imports its introduction, accessibility properties, frames, modal definability, first-order definability, S5 equivalence analysis, and second-order definability in source order.",
+      "assessment": "All seven chapter components and the stable nml/frd hierarchy remain intact.",
+      "translation_segment_sha256": "c7bea50305584e9501ede98d731ca92a65758d7e3397e4c91eac8b663679b0e3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0420-S01",
+      "reverse_paraphrase": "A frame removes the valuation from a relational model; validity on a frame quantifies over every model based on it, and exactly the reflexive frames validate the T formula Box p implies p.",
+      "assessment": "The motivating failure at model level, countervaluation, frame pair, based-on relation, frame-validity definition, and correspondence claim remain exact.",
+      "translation_segment_sha256": "3e529acb702f06cca373d6d889f3e9c6689ce8f54be6f8d7ae0bcec2a6ce8a9e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0421-S01",
+      "reverse_paraphrase": "Serial, reflexive, symmetric, transitive, and Euclidean relations validate D, T, B, 4, and 5 respectively; five further properties correspond to their displayed formulas, while model truth alone need not recover the relation property.",
+      "assessment": "Both correspondence tables, the full B proof, the nonreflexive two-world substitution counterexample, relation explanations, figure, and exercises remain.",
+      "translation_segment_sha256": "c39bd5b8527732ee2e00ec87d12c038e484010793ea3e45a33ca441a1a09ab4d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0422-S01",
+      "reverse_paraphrase": "A frame is a nonempty world set with a binary accessibility relation; a model is based on it when it adds a valuation, and frame or frame-class validity ranges over every such based model.",
+      "assessment": "Both definitions, the distinction between model truth and frame validity, the T example, and the reduction to class-of-model validity remain exact.",
+      "translation_segment_sha256": "d6a791d7c58cc8d057c1249cdf5fa77eda264662f0b961f6e4e2ed1dadaf746e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0423-S01",
+      "reverse_paraphrase": "The converse correspondence proofs construct valuations showing that validity of D, T, B, 4, and 5 forces seriality, reflexivity, symmetry, transitivity, and Euclideanness; combined formulas then characterize systems such as S4 and S5.",
+      "assessment": "All five countervaluation arguments, combined-logic consequences, relation facts, and exercises remain. TA-NML-012 and TA-NML-014 restore a world argument and repair an inline-formula boundary.",
+      "translation_segment_sha256": "ccabeeb8a6076ccca59d7a895c057d69e4be5fb485d09c8b3540ab0c39af032c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0424-S01",
+      "reverse_paraphrase": "First-order frame definability and modal frame definability do not coincide: the Loeb formula defines transitive converse-well-founded frames, which compactness shows are not first-order definable, while universal frames are first-order but not modally definable.",
+      "assessment": "The formal definition, Loeb formula, infinite-chain compactness argument, universal-relation sentence, and comparison with equivalence frames remain exact.",
+      "translation_segment_sha256": "8b038e1b9a14137dc33f8f4d5c6842249d41348fc6f599100ae3eba024ed99e1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0425-S01",
+      "reverse_paraphrase": "Equivalence relations admit several equivalent property combinations, and S5 has the same valid formulas on equivalence frames as on universal frames because any failure restricts to the offending world’s equivalence class.",
+      "assessment": "All equivalence characterizations, proof exercises, equivalence-class partition facts, S5 proposition, restricted countermodel, and figure remain exact.",
+      "translation_segment_sha256": "49d1180a8e43504da720e503172ab85b061f8a4b29381be2cb4f8ab961e31f2e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0426-S01",
+      "reverse_paraphrase": "The standard translation maps Box to a universal successor clause and Diamond to an existential successor clause; it preserves satisfaction and converts every modally definable frame class into a monadic second-order definable class.",
+      "assessment": "Every recursive clause, model-to-structure proposition, second-order closure construction, reflexivity example, and undecidability observation remain. TA-NML-013 restores the true induction case.",
+      "translation_segment_sha256": "0f0edae8d7acc306a017c7d7ebe20523cb47e1b8811509c12a060f13813c7b72",
       "status": "author-reviewed"
     }
   ],
@@ -6246,11 +6342,19 @@
     {
       "unit_id": "OLP-0418",
       "issue": "The final one-world countermodel writes W-prime, R-prime and V-prime as an unordered set although every model in the chapter is an ordered triple. Tamil restores tuple notation under TA-NML-011."
+    },
+    {
+      "unit_id": "OLP-0423",
+      "issue": "The D correspondence proof omits the world argument from a boxed satisfaction claim, and the T countervaluation closes a prose parenthesis inside inline math. Tamil restores [w] and moves the parenthesis outside the formula under TA-NML-012 and TA-NML-014."
+    },
+    {
+      "unit_id": "OLP-0426",
+      "issue": "The standard-translation induction repeats false in the true case. Tamil restores the true constant under TA-NML-013."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "415 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 307 frozen units still require completion.",
+  "remaining": "423 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 299 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -6671,6 +6775,49 @@
         "schema_caption_has_resolved_classification": true,
         "local_entailment_uses_same_model_world": true,
         "one_world_countermodel_is_ordered_triple": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0419",
+        "OLP-0420",
+        "OLP-0421",
+        "OLP-0422"
+      ],
+      "correction_ids": [],
+      "status": "pass",
+      "checks": {
+        "driver_imports_all_seven_sections": true,
+        "frame_removes_valuation_and_validity_quantifies_based_models": true,
+        "reflexivity_corresponds_exactly_to_T": true,
+        "five_classical_correspondences_remain": true,
+        "B_symmetry_proof_and_model_level_converse_failure_remain": true,
+        "five_additional_relation_properties_remain": true,
+        "formal_frame_based_on_and_class_validity_definitions_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0423",
+        "OLP-0424",
+        "OLP-0425",
+        "OLP-0426"
+      ],
+      "correction_ids": [
+        "TA-NML-012",
+        "TA-NML-013",
+        "TA-NML-014"
+      ],
+      "status": "pass",
+      "checks": {
+        "all_five_converse_correspondences_and_combined_logics_remain": true,
+        "D_world_argument_restored": true,
+        "T_countervaluation_parenthesis_is_outside_math": true,
+        "first_order_definition_and_Loeb_compactness_argument_remain": true,
+        "universal_relation_is_first_order_but_not_modally_definable": true,
+        "equivalence_characterizations_and_S5_restriction_remain": true,
+        "standard_translation_modal_clauses_and_true_case_are_correct": true,
+        "satisfaction_preservation_and_monadic_second_order_closure_remain": true
       }
     }
   ]

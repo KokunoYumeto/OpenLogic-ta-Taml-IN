@@ -1,0 +1,194 @@
+% SEGMENT OLP-0421-S01
+% Part: normal-modal-logic
+% Chapter: frame-correspondence
+% Section: properties-accessibility
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{frd}{acc}
+
+\olsection{அணுகுறவுகளின் பண்புகள்}
+
+பல வாய்ப்புநிலை !!{formula}s, அணுகுறவின் எளிய, நன்கு அறிமுகமான பண்புகளுக்குக்
+கூட, சிறப்பியல்பாக அமைகின்றன. ஒரு திசையில், ஒரு குறிப்பிட்ட பண்பைக் கொண்ட
+எந்த மாதிரியும் அதற்குரிய ஒரு !!a{formula} ஐயும் (அதன் எல்லாப் பதிலீட்டு
+நிகழ்வுகளையும்) மெய்யாக்குகிறது என்பது இதன் பொருள். அணுகுறவுகளின் ஐந்து
+செவ்வியல் வகைகளையும், அவை மெய்யாக இருப்பதை உறுதிசெய்யும் வாய்பாடுகளையும்
+கொண்டு தொடங்குகிறோம்.
+
+\begin{thm}\ollabel{thm:soundschemas}
+  $\mModel{M} = \tuple{W, R, V}$ ஒரு மாதிரியாக இருக்கட்டும்.
+  \olref{tab:five} இன் இடப்பக்கத்திலுள்ள பண்பு~$R$ க்கு இருந்தால்,
+  வலப்பக்கத்திலுள்ள !!a{formula} இன் ஒவ்வொரு நிகழ்வும்~$\mModel{M}$ இல்
+  மெய்யாகும்.
+\end{thm}
+
+\begin{table}[t]
+    \begin{tabular}{| l || l |}
+      \hline
+      {\emph{$R$ \dots எனில்}} & {\emph{\dots ஆனது~$\mModel{M}$ இல் மெய்யாகும்:}} \\
+      \hline \hline
+      \emph{தொடர் பண்புள்ளது}: $\forall u \exists v Ruv$ & \hbox to.43\textwidth
+           {$\Box p \lif \Diamond p$ \hfill (\Ax{D})} \\
+      \hline
+      \emph{தற்சுட்டுப் பண்புள்ளது}: $\forall w Rww$
+      & \hbox to.43\textwidth
+          {$\Box p \lif p$ \hfill (\Ax{T})} \\
+      \hline
+      \emph{சமச்சீர்ப் பண்புள்ளது}: &  \hbox to .43\textwidth
+           {$p \lif \Box\Diamond p$ \hfill (\Ax{B})} \\
+           $\forall u\forall v(Ruv \lif Rvu)$ & \\
+      \hline
+      \emph{கடப்புப் பண்புள்ளது}: & \hbox to.43\textwidth
+           {$\Box p \lif \Box \Box p$ \hfill (\Ax{4})} \\
+      $\forall u \forall v \forall w ((Ruv \land Rvw) \lif Ruw)$ & \\
+      \hline
+      \emph{யூக்ளிடியப் பண்புள்ளது}: & \hbox to .43\textwidth
+        {$\Diamond p \lif \Box\Diamond p$ \hfill (\Ax{5})} \\
+      $\forall w \forall u \forall v ((Rwu \land Rwv) \lif Ruv)$ &\\
+      \hline
+    \end{tabular}
+    \caption{ஐந்து ஒத்திசைவு உண்மைகள்.}
+    \ollabel{tab:five}
+  \end{table}
+
+
+\begin{proof}
+  \Ax{B} க்கான நேர்வு இதோ: இந்தத் திட்டவடிவம் ஒரு மாதிரியில் மெய்யாகும்
+  என்று காட்ட, அதன் எல்லா நிகழ்வுகளும் மாதிரியிலுள்ள எல்லா உலகங்களிலும்
+  மெய்யாகும் என்று காட்ட வேண்டும். ஆகவே $!A \lif \Box\Diamond !A$ என்பது
+  \Ax{B} இன் தரப்பட்ட ஒரு நிகழ்வாகவும், $w \in W$ ஒரு ஏதேனும் உலகமாகவும்
+  இருக்கட்டும். $w$ இல் $\Box \Diamond !A$ மெய்யாகும் என்று காட்டுவதற்காக,
+  அதன் முன்னுறுப்பு~$!A$ ஆனது $w$ இல் மெய்யாக உள்ளது என்க. எனவே $w$
+  இலிருந்து அணுகத்தக்க எல்லா $w'$ களிலும் $\Diamond !A$ மெய்யாகும் என்று
+  காட்ட வேண்டும். இப்போது, $Rww'$ ஆகும் எந்த $w'$ க்கும், சமச்சீர்ப் பண்பு
+  என்ற கருதுகோளைப் பயன்படுத்தி $Rw'w$ உம் கிடைக்கிறது (காண்க
+  \olref{fig:Bsymm}). $\mSat{M}{!A}[w]$ என்பதால்,
+  $\mSat{M}{\Diamond !A}[w']$. $Rww'$ ஆகும் ஏதேனும் உலகமாக $w'$ இருந்ததால்,
+  $\mSat{M}{\Box\Diamond!A}[w]$.
+
+  மற்ற நேர்வுகளைப் பயிற்சிகளாக விடுகிறோம்.
+\end{proof}
+
+\begin{prob}
+  \olref[nml][frd][acc]{thm:soundschemas} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={below:$\mSat{{}}{\formula{A}}$\\
+          $\mSat{{}}{\Box\Diamond \formula{A}}$}] {$w$};
+      \node[world] (w2) [label=below:{$\mSat{{}}{\Diamond \formula{A}}$},
+        right=of w1] {$w'$};
+      \draw[->, bend left] (w1) to (w2);
+      \draw[->, bend left] (w2) to (w1);
+    \end{tikzpicture}
+  \end{center}
+\caption{சமச்சீர்ப் பண்பிலிருந்து பெறும் வாதம்.}
+\ollabel{fig:Bsymm}
+\end{figure}
+
+\olref{thm:soundschemas} இன் மறுதலை உட்கிடைகள் செல்லாது என்பதைக்
+கவனிக்க: ஒரு மாதிரி ஒரு திட்டவடிவத்தை மெய்யாக்கினால், அந்த மாதிரியின்
+அணுகுறவிற்கு அதற்குரிய பண்பு இருக்கும் என்பது உண்மையல்ல. \Ax{T} மற்றும்
+தற்சுட்டு மாதிரிகளின் நேர்வில், \Ax{T} தானே தவறும் ஒரு மாதிரிக்கான
+எடுத்துக்காட்டைக் கொடுப்பது எளிது: $W = \{w\}$ என்றும் $V(p) = \emptyset$
+என்றும் கொள்க. அப்போது $R$ தற்சுட்டுப் பண்புடையதல்ல; ஆனால்
+$\mSat{M}{\Box p}[w]$ மற்றும் $\mSat/{M}{p}[w]$. எனினும், இங்கு
+\Ax{T} இன் ஓர் நிகழ்வு மட்டுமே~$\mModel{M}$ இல் தவறுகிறது; எடுத்துக்காட்டாக,
+$\Box \lnot p \lif \lnot p$ போன்ற மற்ற நிகழ்வுகள் மெய்யாகின்றன.
+\Ax{T} இன் \emph{ஒவ்வொரு பதிலீட்டு நிகழ்வும்}~$\mModel{M}$ இல் மெய்யாகவும்,
+$\mModel{M}$ தற்சுட்டுப் பண்பற்றதாகவும் இருக்கும் எடுத்துக்காட்டுகளைக்
+கொடுப்பது கடினம். ஆனால் அத்தகைய மாதிரிகளும் உள்ளன:
+
+\begin{prop}\ollabel{prop:reflexive}
+  $\mModel{M} = \tuple{W, R, V}$ என்பது $W = \{u, v\}$ ஆகும் ஒரு மாதிரியாக
+  இருக்கட்டும்; இங்கு உலகங்கள் $u$, $v$ ஆகியவை~$R$ ஆல் தொடர்புபடுத்தப்பட்டுள்ளன:
+  அதாவது $Ruv$, $Rvu$ இரண்டும் உள்ளன. எல்லா $p$ க்கும் $u \in V(p)
+  \Leftrightarrow v \in V(p)$ என்க. அப்போது:
+  \begin{enumerate}
+  \item எல்லா $!A$ க்கும், $\mSat{M}{!A}[u]$ எனில், எனில் மட்டுமே,
+    $\mSat{M}{!A}[v]$ ($!A$ மீதான தொகுத்தறிதலைப் பயன்படுத்துக).
+  \item \Ax{T} இன் ஒவ்வொரு நிகழ்வும்~$\mModel{M}$ இல் மெய்யாகும்.
+  \end{enumerate}
+  $\mModel{M}$ தற்சுட்டுப் பண்புடையதல்ல (உண்மையில் அது
+  \emph{எங்கும் தற்சுட்டற்றது}) என்பதால், \Ax{T} இன் நேர்வில்
+  \olref{thm:soundschemas} இன் மறுதலை தவறுகிறது (\olref{thm:soundschemas}
+  இல் குறிப்பிடப்பட்டுள்ள மற்ற திட்டவடிவங்களில் சிலவற்றுக்கும்---அனைத்திற்கும்
+  அல்ல---இதே போன்ற வாதங்களைக் கொடுக்கலாம்).
+\end{prop}
+
+\begin{prob}
+  \olref[nml][frd][acc]{prop:reflexive} இலுள்ள கூற்றுகளை நிறுவுக.
+\end{prob}
+
+ஐந்து செவ்வியல் !!{formula}s ஆன \Ax{D}, \Ax{T}, \Ax{B}, \Ax{4},
+\Ax{5} ஆகியவற்றில் நாம் கவனம் செலுத்தப்போகிறோம் என்றாலும், அணுகுறவுகளின்
+மேலும் சில பண்புகளை \olref{tab:anotherfive} இல் பதிவு செய்கிறோம்.
+ஒவ்வோர் உலகிலிருந்தும் அதிகபட்சம் ஓர் உலகை மட்டுமே அணுக முடிந்தால்,
+அணுகுறவு~$R$ பகுதிச் சார்பாக உள்ளது. ஒவ்வோர் உலகிலிருந்தும் சரியாக
+ஓர் உலகை அணுக முடிந்தால், அதைச் சார்பாக உள்ளது என்கிறோம். (ஆகவே,
+தொடர் பண்பும் பகுதிச் சார்புப் பண்பும் இரண்டையும் கொண்டவையே துல்லியமாகச்
+சார்புகளாகும்.) அணுகுறவு ஒரு (பகுதிச்) சார்பைப் போலச் செயல்படுவதால் அவை
+``சார்புகள்'' எனப்படுகின்றன. $Ruv$ ஆகும்போதெல்லாம் $u$, $v$ ஆகியவற்றுக்கு
+``இடையில்'' ஒரு~$w$ இருந்தால், ஒரு தொடர்பு தளர்வாக அடர்ந்தது.
+எனவே தளர்வாக அடர்ந்த தொடர்புகள் ஒரு பொருளில் கடப்புத் தொடர்புகளுக்கு
+எதிரானவை: கடப்புத் தொடர்பில்,~$w$ வழியான மாற்றுப்பாதையில் $u$ இலிருந்து
+$v$ ஐ அடைய முடியும்போதெல்லாம், $u$ இலிருந்து $v$ ஐ நேரடியாக அடையலாம்;
+தளர்வாக அடர்ந்த தொடர்பில், $u$ இலிருந்து $v$ ஐ நேரடியாக அடைய
+முடியும்போதெல்லாம், ஏதோ~$w$ வழியான மாற்றுப்பாதையிலும் அதை அடையலாம்.
+ஏதோ ஓர் உலகம்~$w$ இலிருந்து $u$, $v$ ஆகிய உலகங்களை அடைய
+முடியும்போதெல்லாம், $u$, $v$ இரண்டிலிருந்தும் ஒரு பொது உலகம்~$t$ ஐ அடைய
+முடிந்தால், தொடர்பு தளர்வாகத் திசைப்படுத்தப்பட்டது; இது சில நேரங்களில்
+``வைரப் பண்பு'' அல்லது ``சங்கமம்'' எனப்படுகிறது.
+
+\begin{table}[t]
+    \begin{tabular}{| p{.50\textwidth} || p{.43\textwidth} |}
+      \hline
+      {\emph{$R$ \dots எனில்}} & {\emph{\dots ஆனது~$\mModel{M}$ இல் மெய்யாகும்:}} \\
+      \hline \hline
+      \emph{பகுதிச் சார்பாக உள்ளது}: &
+      \multirow{2}{*}{$\Diamond p \lif \Box p$} \\
+      $ \forall w \forall u \forall v ((Rwu \land Rwv) \lif u =v )$ & \\
+      \hline
+      \multirow{2}{*}{\emph{சார்பாக உள்ளது}: $\forall w \exists v \forall u(Rwu \liff \eq[u][v]) $}
+      & \multirow{2}{*}{$\Diamond p \liff \Box p$} \\
+      & \\
+      \hline
+      \emph{தளர்வாக அடர்ந்தது}: &  \multirow{2}{*}{$\Box \Box p \lif
+        \Box p$} \\
+      $\forall u\forall v(Ruv \lif \exists w(Ruw \land Rwv))$ & \\
+      \hline
+      \emph{தளர்வாக இணைந்தது}: &
+      \multirow{3}{*}{\hbox to.43\textwidth{$
+        \begin{array}{@{}l@{}}
+          \Box ((p \land \Box p) \lif q) \lor {} \\
+          \qquad \Box ((q \land \Box q) \lif p)
+        \end{array}$ \hfill (\Ax{L})}
+      } \\
+      $\forall w \forall u \forall v ((Rwu \land Rwv) \lif {}$ &\\
+      \qquad $(Ruv \lor u=v \lor Rvu))$ & \\
+      \hline
+      \emph{தளர்வாகத் திசைப்படுத்தப்பட்டது}: & \multirow{3}{*}{\hbox to .43\textwidth
+        {$\Diamond\Box p \lif \Box\Diamond p$\hfill (\Ax{G})}} \\
+      $\forall w \forall u \forall v ((Rwu \land Rwv) \lif {}$ & \\
+      \qquad $\exists t (Rut \land Rvt))$ & \\
+      \hline
+    \end{tabular}
+    \caption{மேலும் ஐந்து ஒத்திசைவு உண்மைகள்.}
+    \ollabel{tab:anotherfive}
+  \end{table}
+
+\begin{prob}
+  $\mModel{M} = \tuple{W, R, V}$ ஒரு மாதிரியாக இருக்கட்டும். $R$ ஆனது
+  \olref[nml][frd][acc]{tab:anotherfive} இன் இடப்பக்கப் பண்புகளை
+  நிறைவுசெய்தால், அதற்குரிய வலப்பக்க வாய்பாட்டின் ஒவ்வொரு நிகழ்வும்
+  $\mModel{M}$ இல் மெய்யாகும் என்று காட்டுக.
+\end{prob}
+
+
+
+\end{document}

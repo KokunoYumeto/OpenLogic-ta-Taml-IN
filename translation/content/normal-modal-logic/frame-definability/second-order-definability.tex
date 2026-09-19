@@ -1,0 +1,160 @@
+% SEGMENT OLP-0426-S01
+% Part: normal-modal-logic
+% Chapter: frame-correspondence
+% Section: standard-translation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{frd}{st}
+
+\olsection{இரண்டாம்தர வரையறுக்கத்தன்மை}
+
+வாய்ப்புநிலை வாய்பாடுகளால் வரையறுக்கத்தக்க ஒவ்வொரு சட்டகப் பண்பும்
+முதல்தரத்தில் வரையறுக்கத்தக்கது அல்ல. எனினும், ஓரிடப் பயனிலைகளின்மீது
+அளவையிடுதலை (அதாவது, ஓரிட இரண்டாம்தர அளவையிடுதலை) அனுமதித்தால்,
+வாய்ப்புநிலையில் வரையறுக்கத்தக்க எல்லாச் சட்டகப் பண்புகளையும் வரையறுக்கலாம்.
+ஓர் உலகில் ஒரு வாய்ப்புநிலை !!a{formula} மெய்யாகும் நிபந்தனைகளுக்கும்
+முதல்தர !!{formula}s க்கும் இடையிலான முறைப்படியான உறவைப் பயன்படுத்துவதே
+இதற்கான உத்தி. இது, வாய்ப்புநிலை வாய்பாடுகளின் முதல்தரத் தரநிலை
+மொழிபெயர்ப்பு எனப்படுகிறது. இம்மொழியில் அணுகுறவுக்கான ஈரிடை
+!!{predicate}~$Q$ மட்டுமன்றி,~$!A$ இல் வரும் !!{propositional variable}s
+$\Obj p_i$ க்கான ஓரிட !!{predicate}~$P_i$ உம் இருக்கும்.
+
+\begin{defn}
+  \emph{தரநிலை மொழிபெயர்ப்பு}~$\ST_x(!A)$ தொகுத்தறிவாகப் பின்வருமாறு
+  வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\ST_x(\indfrm) = \lfalse$.}}{}
+  % SOURCE CORRECTION TA-NML-013: the true induction case must display \ltrue, not repeat \lfalse.
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\ST_x(\indfrm) = \ltrue$.}}{}
+  \item \indcase{!A}{\Obj p_i}{$\ST_x(\indfrm) = \Atom{P_i}{x}$.}
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\ST_x(\indfrm) = \lnot \ST_x(!B)$.}}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\ST_x(\indfrm) = (\ST_x(!B)
+      \land \ST_x(!C))$.}}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\ST_x(\indfrm) = (\ST_x(!B)
+      \lor \ST_x(!C))$.}}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\ST_x(\indfrm) = (\ST_x(!B)
+      \lif \ST_x(!C))$.}}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\ST_x(\indfrm) = (\ST_x(!B)
+      \liff \ST_x(!C))}$.}{}
+  \tagitem{prvBox}{\indcase{!A}{\Box !B}{$\ST_x(\indfrm) =
+      \lforall[y][(\Atom{Q}{x,y} \lif \ST_y(!B))]$.}}{}
+  \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}{$\ST_x(\indfrm) =
+      \lexists[y][(\Atom{Q}{x,y} \land \ST_y(!B))]$.}}{}
+  \end{enumerate}
+\end{defn}
+
+எடுத்துக்காட்டாக, $\ST_x(\Box p \lif p)$ என்பது
+$\lforall[y][(\Atom{Q}{x,y} \lif \Atom{P}{y})] \lif \Atom{P}{x}$.
+$\ST_x(!A)$ இன் மொழிக்கான எந்த !!a{structure} க்கும் ஒரு பொருட்களம்,
+$Q$ க்கு அளிக்கப்படும் ஓர் ஈரிடை உறவு, ஓரிட !!{predicate}s~$P_i$ க்கு
+அளிக்கப்படும் பொருட்களத்தின் உட்கணங்கள் ஆகியவை தேவை. வேறு சொற்களில்,
+அத்தகைய ஒரு !!a{structure} இன் கூறுகள் துல்லியமாக~$!A$ க்கான ஒரு
+மாதிரியின் கூறுகளே: பொருட்களம் உலகங்களின் கணம்;~$Q$ க்கு அளிக்கப்படும்
+ஈரிடை உறவு அணுகுறவு;~$P_i$ க்கு அளிக்கப்படும் உட்கணங்கள் மதிப்பீடுகள்
+$V(\Obj p_i)$ தான். வாய்ப்புநிலை மாதிரியில்~$!A$ நிறைவுறுவதும் அதற்குரிய
+!!a{structure} இல் $\ST_x(!A)$ நிறைவுறுவதும் ஒத்துப்போவது வியப்பல்ல:
+
+\begin{prop}\ollabel{prop:st}
+  $\mModel{M} = \tuple{W, R, V}$ என்க. $\Domain{M'} = W$,
+  $\Assign{Q}{M'} = R$, $\Assign{P_i}{M'} = V(\Obj p_i)$ ஆகியவற்றைக் கொண்ட
+  முதல்தர !!a{structure} $\Struct{M'}$ ஆகவும், $s(x) = w$ ஆகவும் இருக்கட்டும்.
+  அப்போது
+  \[
+  \mSat{M}{!A}[w] \text{ எனில், எனில் மட்டுமே, } \Sat{M'}{\ST_x(!A)}[s]
+  \]
+\end{prop}
+
+\begin{proof}
+  $!A$ மீதான தொகுத்தறிதலால்.
+\end{proof}
+
+\begin{prop}
+  $!A$ ஒரு வாய்ப்புநிலை !!a{formula} ஆகவும், $\mModel{F} = \tuple{W, R}$
+  ஒரு சட்டகமாகவும் இருக்கட்டும். $\Domain{F'} = W$, $\Assign{Q}{F'} = R$
+  ஆகியவற்றைக் கொண்ட முதல்தர !!a{structure} $\Struct{F'}$ ஆக இருக்கட்டும்;
+  மேலும், $!A'$ என்பது பின்வரும் இரண்டாம்தர வாய்பாடாக இருக்கட்டும்:
+  \[
+  \lforall[X_1][\dots\lforall[X_n][\lforall[x][
+        \SSubst{\ST_x(!A)}{\subst{X_1}{P_1}, \dots,
+          \subst{X_n}{P_n}}]]],
+  \]
+  இங்கு $P_1$, \dots, $P_n$ என்பவை~$\ST_x(!A)$ இல் உள்ள எல்லா ஓரிட
+  !!{predicate}s. அப்போது
+  \[
+  \mModel{F} \Entails !A \text{ எனில், எனில் மட்டுமே, } \Sat{F'}{!A'}
+  \]
+\end{prop}
+
+\begin{proof}
+  $i = 1$, \dots,~$n$ க்கு $\Assign{P_i}{M'} \subseteq W$ ஆகும் ஒவ்வொரு
+  !!a{structure}~$\mModel{M'}$ க்கும், $s(x) \in W$ ஆகும் ஒவ்வொரு~$s$
+  க்கும் $\Sat{M'}{\ST_x(!A)}[s]$ எனில், எனில் மட்டுமே, $\Sat{F'}{!A'}$.
+  \olref{prop:st} ஆல், இது~$\mModel{F}$ ஐ அடிப்படையாகக் கொண்ட எல்லா
+  மாதிரிகள்~$\mModel{M}$ க்கும் ஒவ்வோர் உலகம்~$w \in W$ க்கும்
+  $\mSat{M}{!A}[w]$ எனும்போது, எனும்போது மட்டுமே, அமையும்; அதாவது
+  $\mModel{F} \Entails !A$.
+\end{proof}
+
+\begin{defn}
+  ஒற்றை ஈரிடை !!{predicate}~$P$ உம், ஓரிடக் கண மாறிகளின்மீதான
+  அளவையீடுகள் மட்டும் கொண்ட இரண்டாம்தர மொழியில் ஒரு !!a{sentence}~$!A$
+  இருந்து, பின்வரும் நிபந்தனையை நிறைவுசெய்தால் சட்டகங்களின் வகுப்பு
+  $\mClass{F}$ \emph{இரண்டாம்தரத்தில் வரையறுக்கத்தக்கது}: $\Domain{M} = W$,
+  $\Assign{P}{M} = R$ ஆகியவற்றைக் கொண்ட !!a{structure}~$\Struct{M}$ இல்
+  $\Sat{M}{!A}$ எனில், எனில் மட்டுமே, $\mModel{F} = \tuple{W, R} \in
+  \mClass{F}$.
+\end{defn}
+
+\begin{cor}
+  சட்டகங்களின் ஒரு வகுப்பு !!a{formula}~$!A$ ஆல் வரையறுக்கத்தக்கது எனில்,
+  அதற்குரிய அணுகுறவுகளின் வகுப்பு ஓரிட இரண்டாம்தர வாக்கியத்தால்
+  வரையறுக்கத்தக்கது.
+\end{cor}
+
+\begin{proof}
+  முந்தைய நிறுவலிலுள்ள ஓரிட இரண்டாம்தர வாக்கியம்~$!A'$ வேண்டிய பண்பைக்
+  கொண்டுள்ளது.
+\end{proof}
+
+ஓர் எடுத்துக்காட்டாக, $\Box p \lif p$ என்ற !!a{formula} ஐ மீண்டும் கருதுக.
+அது தற்சுட்டுப் பண்பை வரையறுக்கிறது. தற்சுட்டுப் பண்பு
+$\lforall[x][\Atom{Q}{x,x}]$ என்ற !!a{sentence} ஆல் முதல்தரத்தில்
+வரையறுக்கத்தக்கது என்பது தெளிவு. ஆனால் பின்வரும் ஓரிட இரண்டாம்தர
+!!a{sentence} ஆலும் அதை வரையறுக்கலாம்:
+\[
+\lforall[X][\lforall[x][(\lforall[y][(\Atom{Q}{x,y} \lif \Atom{X}{y})]
+    \lif \Atom{X}{x})]].
+\]
+இதன் பொருள் இந்த இரு வாக்கியங்களும் நிகரானவை என்பதே. இதை நேரடியாக எவ்வாறு
+உறுதிப்படுத்தலாம் என்பது இதோ: முதலில், ஓர் !!a{structure}~$\Struct{M}$ இல்
+இரண்டாம்தர வாக்கியம் மெய்யாகிறது என்க. $x$, $X$ இரண்டும் எல்லாமை
+அளவையிடப்பட்டுள்ளதால், மீதிப் பகுதி எந்த $x \in W$ க்கும் எந்தக் கணம்
+$X \subseteq W$ க்கும் மெய்யாக வேண்டும்; எடுத்துக்காட்டாக, $R =
+\Assign{Q}{M}$ எனும்போது $\Setabs{z}{Rxz}$ என்ற கணத்திற்கு. ஆகவே,
+$s(x) \in W$, $s(X) = \Setabs{z}{Rxz}$ என அமையும் எந்த~$s$ க்கும்
+$\Sat{M}{\lforall[y][(\Atom{Q}{x,y} \lif \Atom{X}{y})] \lif
+    \Atom{X}{x}}$. ஆனால் $s(X)$ ஐ நாம் தேர்ந்தெடுத்த விதத்தால் இது
+$\Sat{M}{\lforall[y][(\Atom{Q}{x,y} \lif \Atom{Q}{x,y})] \lif
+    \Atom{Q}{x,x}}[s]$ என்பதாகும். முன்னுறுப்பு செல்லுபடியாக இருப்பதால்,
+இது $\Atom{Q}{x,x}$ க்கு நிகர். $s(x)$ ஏதேனுமாக இருப்பதால்,
+$\Sat{M}{\lforall[x][\Atom{Q}{x,x}]}$.
+
+இப்போது $\Sat{M}{\lforall[x][\Atom{Q}{x,x}]}$ எனக் கொண்டு,
+$\Sat{M}{\lforall[X][\lforall[x][(\lforall[y][(\Atom{Q}{x,y} \lif
+        \Atom{X}{y})] \lif \Atom{X}{x})]]}$ என்று காட்டுக. ஏதேனும் ஒரு
+மதிப்பீடு~$s$ ஐ எடுத்து, $\Sat{M}{\lforall[y][(\Atom{Q}{x,y} \lif
+    \Atom{X}{y})]}[s]$ என்க. $s'(y) = s(x)$ ஆகும்~$s$ இன் $y$-மாற்றி
+$s'$ ஆக இருக்கட்டும்; $\Sat{M}{\Atom{Q}{x,y} \lif \Atom{X}{y}}[s']$,
+அதாவது $\Sat{M}{\Atom{Q}{x,x} \lif \Atom{X}{x}}[s]$, நமக்கு உள்ளது.
+$\Sat{M}{\lforall[x][\Atom{Q}{x,x}]}$ என்பதால் முன்னுறுப்பு மெய்; எனவே
+$\Sat{M}{\Atom{X}{x}}[s]$. இதுவே நாம் காட்ட வேண்டியது.
+
+வரையறுக்கத்தக்க சில சட்டக வகுப்புகள் முதல்தரத்தில் வரையறுக்கத்தக்கவை
+அல்ல என்பதால்,~$!A'$ என்ற வடிவிலுள்ள ஒவ்வொரு ஓரிட இரண்டாம்தர
+!!a{sentence} உம் ஒரு முதல்தர !!a{sentence} க்கு நிகரானது அல்ல. எவை
+நிகரானவை என்று தீர்மானிப்பதற்கான திறன்மிக்க முறை எதுவும் இல்லை.
+
+\end{document}

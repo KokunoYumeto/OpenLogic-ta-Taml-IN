@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 404/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 412/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -2796,6 +2796,54 @@ Please double-check: **is the corrected countermodel typed consistently as an or
 
 - `TA-OCC-2c601b6a631ba99f` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:74`; PDF page pending.
 
+## TA-NML-012 — The paired Diamond satisfaction claim and the implication failure are both explicitly evaluated at w, but the preceding Box claim alone omits its world parameter.
+
+Chosen rendering: **தமிழ் தொடர் பண்புக்கான முரண்பாட்டு வாதத்தில் பெட்டி வாய்பாட்டையும் அதே உலகம்~$w$ இல் மதிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The assumption is that w has no accessible successor, which makes Box A true and Diamond A false specifically at w.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0423 (checked_supports)
+
+Alternatives: Leaving the Box claim without the world required by the chapter's satisfaction notation; deleting w from the paired Diamond claim.
+
+Please double-check: **are both modal satisfaction claims in the seriality contradiction now evaluated at the same world w?**
+
+- `TA-OCC-2d4286c7399d8e8d` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:46`; PDF page pending.
+
+## TA-NML-013 — The branch is tagged prvTrue and translates its input to ltrue, but its induction-case pattern incorrectly repeats lfalse from the preceding branch.
+
+Chosen rendering: **தமிழ் prvTrue நேர்வின் உள்ளீட்டையும் விளைவையும் $\ltrue$ ஆக ஒத்திசைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: A recursive standard translation needs one distinct base case for each truth constant, and the branch body already identifies this as the true case.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0426 (checked_supports)
+
+Alternatives: Retaining two false-constant branches; changing the branch tag and translation result to false.
+
+Please double-check: **does the corrected standard-translation definition now contain distinct false and true base cases?**
+
+- `TA-OCC-0d8c4493d645f0fd` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:30`; PDF page pending.
+
+## TA-NML-014 — The opening parenthesis begins in prose before 'when q is other than p', but the source closes it inside the math span after emptyset.
+
+Chosen rendering: **தமிழ் $V(q)=\emptyset$ என்ற வாய்பாட்டை முடித்த பிறகு உரை அடைப்புக்குறியை மூடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Moving only the delimiter preserves the valuation choice and gives the prose and formula separately balanced punctuation.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0423 (checked_supports)
+
+Alternatives: Keeping an unmatched right parenthesis inside the formula; deleting the parenthesis around the explanatory clause.
+
+Please double-check: **is the explanatory parenthesis now outside the complete V(q)=emptyset formula?**
+
+- `TA-OCC-177d9fff31511717` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:55`; PDF page pending.
+
 ## TA-READER-REF-001 — The cumulative 51-unit reader omits the target history chapter, so the frozen cross-reference rendered as a literal question-mark pair.
 
 Chosen rendering: **இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவு என்ற விளக்கத் தொடர்.**
@@ -3880,6 +3928,13 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-ea7d269df7d82780` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:18`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:20`; PDF page pending.
 - `TA-OCC-d2d11b476a312ed1` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:24`; PDF page pending.
 - `TA-OCC-02452b3b82d4c231` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:23`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:27`; PDF page pending.
+- `TA-OCC-ad76b1ea5e1fa995` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:16`; PDF page pending.
+- `TA-OCC-b0619345c8d8d6ae` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:131`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:146`; PDF page pending.
+- `TA-OCC-a987d6f7e00cee88` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:133`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:149`; PDF page pending.
+- `TA-OCC-6aba300b47916254` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:135`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:160`; PDF page pending.
+- `TA-OCC-af7c9ecd855b6e30` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:116`; PDF page pending.
+- `TA-OCC-b6c7791fe89d0717` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:54`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:55`; PDF page pending.
+- `TA-OCC-c9dc251e230737b9` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:103`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:134`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -5142,6 +5197,9 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-b7e712b8a91d5952` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:1`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:157`; PDF page pending.
 - `TA-OCC-f0a8ae43f0837e99` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:101`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:108`; PDF page pending.
 - `TA-OCC-24d084db2c9b66e3` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:43`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:47`; PDF page pending.
+- `TA-OCC-601d95fdecce99f9` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:62`; PDF page pending.
+- `TA-OCC-eade720591ec0612` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:90`; PDF page pending.
+- `TA-OCC-f43a6b9c5490c517` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:105`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -6374,6 +6432,39 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-bd7fa7dc1ba3d16a` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:24`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:33`; PDF page pending.
 - `TA-OCC-4e73adc653536d13` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; PDF page pending.
 - `TA-OCC-dcd543332cb85c15` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:19`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:26`; PDF page pending.
+- `TA-OCC-a5302c057adbb09b` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:11`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:109`; PDF page pending.
+- `TA-OCC-d4aabe647cd6e0c0` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:137`; PDF page pending.
+- `TA-OCC-4318c6d2318c5ec3` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:138`; PDF page pending.
+- `TA-OCC-1bfd54eda7f274f5` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:93`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:138`; PDF page pending.
+- `TA-OCC-00efb2118bc28a07` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:128`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:145`; PDF page pending.
+- `TA-OCC-c5f0e3b1202e4646` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:153`; PDF page pending.
+- `TA-OCC-e32664ee19e96b33` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:48`; PDF page pending.
+- `TA-OCC-5db68d8364c21c5d` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:43`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:48`; PDF page pending.
+- `TA-OCC-c31c7f6c80b26cdc` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:45`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:50`; PDF page pending.
+- `TA-OCC-c343f9e49df2719f` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:46`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:53`; PDF page pending.
+- `TA-OCC-2bac46b93a6e1d01` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:46`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:55`; PDF page pending.
+- `TA-OCC-46359eaba7c7ad65` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:47`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:90`; PDF page pending.
+- `TA-OCC-d2c8f6dc1743f91f` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:11`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:12`; PDF page pending.
+- `TA-OCC-0c49e672104413a4` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:20`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:21`; PDF page pending.
+- `TA-OCC-3cc2301d22cd29de` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:26`; PDF page pending.
+- `TA-OCC-e5318452aa87f25a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:27`; PDF page pending.
+- `TA-OCC-0b833cf77758a37d` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:28`; PDF page pending.
+- `TA-OCC-de096539370a55ae` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:24`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:34`; PDF page pending.
+- `TA-OCC-31963eab7ed50223` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:36`; PDF page pending.
+- `TA-OCC-479bfbf91f200cbf` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:42`; PDF page pending.
+- `TA-OCC-8f4cf97911a8a699` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:33`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:75`; PDF page pending.
+- `TA-OCC-dbec9e96547404cc` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:35`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:75`; PDF page pending.
+- `TA-OCC-b7b60810c1dfcdd4` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:41`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:76`; PDF page pending.
+- `TA-OCC-1f32690c2e5a3ad9` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:67`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:77`; PDF page pending.
+- `TA-OCC-01c15fbffebeb5e2` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:70`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:78`; PDF page pending.
+- `TA-OCC-48a727deb0f8b6f2` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:71`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:79`; PDF page pending.
+- `TA-OCC-364a32ee3ba26fb3` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:71`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:98`; PDF page pending.
+- `TA-OCC-2f4ad129ab825b4e` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:102`; PDF page pending.
+- `TA-OCC-8f3f5b5fc9692345` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:73`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:102`; PDF page pending.
+- `TA-OCC-638137b68009dbce` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:74`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:104`; PDF page pending.
+- `TA-OCC-bf9e42f304ac699a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:77`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
+- `TA-OCC-a01779ab49b6ffc1` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:90`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:113`; PDF page pending.
+- `TA-OCC-1036a33aa6bb888a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:96`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:122`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -6626,6 +6717,84 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-22b9603b73df358e` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:44`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:46`; PDF page pending.
 - `TA-OCC-cb04ed4be7f52584` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:49`; PDF page pending.
 - `TA-OCC-10ac3cd6219e9687` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:96`; PDF page pending.
+- `TA-OCC-b0a4479f19d8dbb0` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:100`; PDF page pending.
+- `TA-OCC-f74fd186922153d9` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:51`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:58`; PDF page pending.
+- `TA-OCC-a2a2368a6514553a` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:30`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:30`; PDF page pending.
+- `TA-OCC-1a8b60a24e065dd9` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:33`; PDF page pending.
+- `TA-OCC-2b132802fbb5d2c2` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:17`; PDF page pending.
+- `TA-OCC-a615dc86b8893889` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:21`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:21`; PDF page pending.
+- `TA-OCC-76ddbaef29a5547d` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:26`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:28`; PDF page pending.
+- `TA-OCC-229b2dbb8d1c7ab2` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:27`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:30`; PDF page pending.
+- `TA-OCC-ab80765415a3b81d` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:33`; PDF page pending.
+- `TA-OCC-e675bfae1da52aa7` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:36`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:39`; PDF page pending.
+- `TA-OCC-d2f61e2707ffa549` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:36`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:40`; PDF page pending.
+- `TA-OCC-56d1c2b8b985c4a9` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:57`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:62`; PDF page pending.
+- `TA-OCC-13434c4351e84cf8` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:36`; PDF page pending.
+- `TA-OCC-0d4cd6c4b0d1d3ae` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:38`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:40`; PDF page pending.
+- `TA-OCC-cc6958c8661a1336` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:42`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:44`; PDF page pending.
+- `TA-OCC-8d4b8b1cf208fbac` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:94`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:66`; PDF page pending.
+- `TA-OCC-8d5bfc19d7f05a97` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:96`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:90`; PDF page pending.
+- `TA-OCC-4b1dfadc3c401278` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:101`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:97`; PDF page pending.
+- `TA-OCC-5dc03d480cec5509` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:104`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:99`; PDF page pending.
+- `TA-OCC-46c00c382e31c539` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:114`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:104`; PDF page pending.
+- `TA-OCC-3d2d2b9b0a6d639c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:122`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:117`; PDF page pending.
+- `TA-OCC-62a4d80955a25812` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:136`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:138`; PDF page pending.
+- `TA-OCC-54bf52b85e79f969` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:136`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:139`; PDF page pending.
+- `TA-OCC-3bc65e24e01e9441` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:33`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:36`; PDF page pending.
+- `TA-OCC-5bd2c4eb418590b6` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:38`; PDF page pending.
+- `TA-OCC-37c435084c989ea1` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:35`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:39`; PDF page pending.
+- `TA-OCC-b7ea17dd038691c2` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:36`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:40`; PDF page pending.
+- `TA-OCC-59266db4bb4f3be9` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:56`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:62`; PDF page pending.
+- `TA-OCC-e9478bcdb3138e00` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:58`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:65`; PDF page pending.
+- `TA-OCC-c5aec5a047935dc1` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:130`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:138`; PDF page pending.
+- `TA-OCC-ff9f234d03b49cce` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:130`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:138`; PDF page pending.
+- `TA-OCC-ddecea51cd615273` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:136`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:144`; PDF page pending.
+- `TA-OCC-1e7696b4392cb0e0` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:136`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:144`; PDF page pending.
+- `TA-OCC-528d038b50d1380c` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:138`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:146`; PDF page pending.
+- `TA-OCC-6f2ee727a2d206ef` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:138`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:147`; PDF page pending.
+- `TA-OCC-71881b5adf486edf` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:144`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:153`; PDF page pending.
+- `TA-OCC-baff0b06462aaf2f` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:153`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:162`; PDF page pending.
+- `TA-OCC-21899ef326ab5e38` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:154`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:163`; PDF page pending.
+- `TA-OCC-6fcc4d6a90c3d0de` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:154`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:163`; PDF page pending.
+- `TA-OCC-74f2c2f1bc6b8101` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:156`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:165`; PDF page pending.
+- `TA-OCC-7509ddb9d2702ceb` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:15`; PDF page pending.
+- `TA-OCC-2e746e531359750f` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:42`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:19`; PDF page pending.
+- `TA-OCC-95f7815f7464515b` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:51`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:23`; PDF page pending.
+- `TA-OCC-9aaf9483a6a4141b` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:53`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:45`; PDF page pending.
+- `TA-OCC-0cccb1e9a6c6e01c` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:66`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:55`; PDF page pending.
+- `TA-OCC-6e77f66ae9aee696` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:81`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:57`; PDF page pending.
+- `TA-OCC-fdd97b0b6b9eb7e7` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:82`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:71`; PDF page pending.
+- `TA-OCC-ef7c3ed45b9dcfd4` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:82`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:87`; PDF page pending.
+- `TA-OCC-6ceeacb8baba444c` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:82`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:87`; PDF page pending.
+- `TA-OCC-4ebfac44d1c917ab` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:82`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:87`; PDF page pending.
+- `TA-OCC-2c9880b55f3eea8b` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:89`; PDF page pending.
+- `TA-OCC-b1beeb08947892db` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:89`; PDF page pending.
+- `TA-OCC-687be85a276b64b0` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:89`; PDF page pending.
+- `TA-OCC-a9470e9ec77d7e12` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:20`; PDF page pending.
+- `TA-OCC-e663b88f161267ff` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:20`; PDF page pending.
+- `TA-OCC-1104078d6076bfa0` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:20`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:20`; PDF page pending.
+- `TA-OCC-471470096ea73a52` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:24`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:25`; PDF page pending.
+- `TA-OCC-d51b5a3b07f01349` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:24`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:25`; PDF page pending.
+- `TA-OCC-3e382dca16ec5a55` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:24`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:25`; PDF page pending.
+- `TA-OCC-fa526b77e799cef4` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:29`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:31`; PDF page pending.
+- `TA-OCC-73fb0e35650a7c85` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:30`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:31`; PDF page pending.
+- `TA-OCC-f3558a161871f1fb` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:30`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:31`; PDF page pending.
+- `TA-OCC-cbadb9c1e7d7d8d0` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:42`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:43`; PDF page pending.
+- `TA-OCC-dcfe4b6241f56196` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:43`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:44`; PDF page pending.
+- `TA-OCC-56f65d30b58a6963` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:44`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:45`; PDF page pending.
+- `TA-OCC-57c5cc5efd1ba04f` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:44`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:45`; PDF page pending.
+- `TA-OCC-e84915b3031e73be` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:55`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:57`; PDF page pending.
+- `TA-OCC-52a8bdf9ba3156f8` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:55`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:57`; PDF page pending.
+- `TA-OCC-1f752a00893c5d62` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:56`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:59`; PDF page pending.
+- `TA-OCC-76d0f68a0c3d2ea4` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:57`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:60`; PDF page pending.
+- `TA-OCC-aff243b44b30537b` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:57`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:61`; PDF page pending.
+- `TA-OCC-e8da4ded4d4cf424` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:58`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:62`; PDF page pending.
+- `TA-OCC-72bb1eb8a486322d` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:58`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:63`; PDF page pending.
+- `TA-OCC-69ce5ab375411da3` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:59`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:64`; PDF page pending.
+- `TA-OCC-3549764384363bdc` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:59`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:64`; PDF page pending.
+- `TA-OCC-8af9359b3e761f56` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:59`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:65`; PDF page pending.
+- `TA-OCC-ef2062d61e2b2e77` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:123`; PDF page pending.
+- `TA-OCC-a624c3031e4c1c5b` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:123`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -6660,6 +6829,16 @@ Please double-check: **do the listed uses of “சமானத் தொடர�
 - `TA-OCC-829c037ac7c12ab8` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:176`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:181`; PDF page pending.
 - `TA-OCC-7d66557d279c204d` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:40`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:43`; PDF page pending.
 - `TA-OCC-d511f68b826c469e` — OLP-0366 / `OLP-0366-S01`; source `content/lambda-calculus/syntax/eta.tex:51`; Tamil `translation/content/lambda-calculus/syntax/eta.tex:54`; PDF page pending.
+- `TA-OCC-978e6a7dcaca24f6` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:11`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:12`; PDF page pending.
+- `TA-OCC-2dcbdb06042f1a68` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:20`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:21`; PDF page pending.
+- `TA-OCC-b72757121941c578` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:26`; PDF page pending.
+- `TA-OCC-72a56536f2433c46` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:34`; PDF page pending.
+- `TA-OCC-a31f2e17e1489bf2` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:35`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:36`; PDF page pending.
+- `TA-OCC-c5aa2d4b64174e28` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:41`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:42`; PDF page pending.
+- `TA-OCC-4e2b58c9c9458b4a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:67`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:75`; PDF page pending.
+- `TA-OCC-937ef6ab34de50ed` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:70`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:77`; PDF page pending.
+- `TA-OCC-f1517e56449809d7` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:71`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:102`; PDF page pending.
+- `TA-OCC-b49aa29bce6587b3` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -6731,6 +6910,7 @@ Please double-check: **is “எங்கும் தற்சுட்டற�
 - `TA-OCC-7572cb7bd102bb49` — OLP-0047 / `OLP-0047-S07`; source `content/sets-functions-relations/arithmetization/checking-details.tex:101`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:128`; PDF page pending.
 - `TA-OCC-e2af762bcc50ab2c` — OLP-0169 / `OLP-0169-S01`; source `content/first-order-logic/models-theories/expressing-props-of-structures.tex:1`; Tamil `translation/content/first-order-logic/models-theories/expressing-props-of-structures.tex:54`; PDF page pending.
 - `TA-OCC-e9fca1f432597e59` — OLP-0169 / `OLP-0169-S01`; source `content/first-order-logic/models-theories/expressing-props-of-structures.tex:1`; Tamil `translation/content/first-order-logic/models-theories/expressing-props-of-structures.tex:65`; PDF page pending.
+- `TA-OCC-c6669abde75f69fb` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:115`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:118`; PDF page pending.
 
 ## TA-T029 — connectivity (relation)
 
@@ -6782,6 +6962,9 @@ Please double-check: **is “சமான வகுப்பு / ஈவுக�
 - `TA-OCC-81c564cab1b22998` — OLP-0133 / `OLP-0133-S09`; source `content/first-order-logic/completeness/identity.tex:120`; Tamil `translation/content/first-order-logic/completeness/identity.tex:130`; PDF page pending.
 - `TA-OCC-b5040dec8f2f148a` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:10`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:11`; PDF page pending.
 - `TA-OCC-5a13ddffec635944` — OLP-0364 / `OLP-0364-S01`; source `content/lambda-calculus/syntax/term-revisited.tex:41`; Tamil `translation/content/lambda-calculus/syntax/term-revisited.tex:43`; PDF page pending.
+- `TA-OCC-15cebe995e561167` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:78`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:87`; PDF page pending.
+- `TA-OCC-89bc4d609f224d1f` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:82`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:88`; PDF page pending.
+- `TA-OCC-77b47b4e3409dc39` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:146`; PDF page pending.
 
 ## TA-T031 — modular arithmetic
 
@@ -6947,6 +7130,14 @@ Please double-check: **is “மெய்ப்பொருளியல் ச�
 - `TA-OCC-3f08e71a00b3ee52` — OLP-0328 / `OLP-0328-S01`; source `content/second-order-logic/syntax-and-semantics/expressive-power.tex:65`; Tamil `translation/content/second-order-logic/syntax-and-semantics/expressive-power.tex:72`; PDF page pending.
 - `TA-OCC-7fdb4d865e79c157` — OLP-0328 / `OLP-0328-S01`; source `content/second-order-logic/syntax-and-semantics/expressive-power.tex:67`; Tamil `translation/content/second-order-logic/syntax-and-semantics/expressive-power.tex:74`; PDF page pending.
 - `TA-OCC-bfe615dfa30da637` — OLP-0337 / `OLP-0337-S01`; source `content/second-order-logic/sol-and-set-theory/introduction.tex:18`; Tamil `translation/content/second-order-logic/sol-and-set-theory/introduction.tex:21`; PDF page pending.
+- `TA-OCC-0c804df51b530fa5` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:18`; PDF page pending.
+- `TA-OCC-49a4e596c3ea6c85` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:27`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:27`; PDF page pending.
+- `TA-OCC-1dd742444abbb330` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:21`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:15`; PDF page pending.
+- `TA-OCC-3140ba424d35d105` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:21`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; PDF page pending.
+- `TA-OCC-f9bf784b7884feb0` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:23`; PDF page pending.
+- `TA-OCC-115574f7ad0cb9b9` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:52`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:52`; PDF page pending.
+- `TA-OCC-056e2615e112732d` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:85`; PDF page pending.
+- `TA-OCC-50b0f999e69b2e10` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; PDF page pending.
 
 ## TA-T033 — set-theoretic reductionism
 
@@ -9511,6 +9702,70 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-d6166f11a41dbe12` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:34`; PDF page pending.
 - `TA-OCC-fbe7167f6838e4c9` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:45`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:49`; PDF page pending.
 - `TA-OCC-8d585701ddfc6c7d` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:49`; PDF page pending.
+- `TA-OCC-776bf26026790b07` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:15`; PDF page pending.
+- `TA-OCC-92c8c55e721ec4a7` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:22`; PDF page pending.
+- `TA-OCC-afe7c6f0f3c931b2` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:51`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:56`; PDF page pending.
+- `TA-OCC-ddc6e236e7a7d552` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:56`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:60`; PDF page pending.
+- `TA-OCC-1b90b90b28dbda83` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:14`; PDF page pending.
+- `TA-OCC-40fcff591b01483c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:16`; PDF page pending.
+- `TA-OCC-b8ac7cdfc6ad174f` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:18`; PDF page pending.
+- `TA-OCC-cc1d0893df2bcfbc` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:24`; PDF page pending.
+- `TA-OCC-bf0b7cd1bffdbe11` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:76`; PDF page pending.
+- `TA-OCC-18234268fad627f9` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:125`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:128`; PDF page pending.
+- `TA-OCC-3a7d7ee54efe4ba2` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:188`; PDF page pending.
+- `TA-OCC-39bec8206abdf853` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:44`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:50`; PDF page pending.
+- `TA-OCC-c4b7e315aa056637` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:16`; PDF page pending.
+- `TA-OCC-f231e87f99ca85d1` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:19`; PDF page pending.
+- `TA-OCC-4633f297b9f5469f` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:32`; PDF page pending.
+- `TA-OCC-6baa6c8c2f773db0` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:105`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:114`; PDF page pending.
+- `TA-OCC-ad37ac2fe2fa1a03` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:111`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:120`; PDF page pending.
+- `TA-OCC-5401d27abb0c3646` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:113`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:122`; PDF page pending.
+- `TA-OCC-0d444bb01c5205a0` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:115`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:124`; PDF page pending.
+- `TA-OCC-bcc6dcb1001ed280` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:120`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:129`; PDF page pending.
+- `TA-OCC-ac3e02b7dd7a80b1` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:132`; PDF page pending.
+- `TA-OCC-80a3b4dc522ee276` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:124`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:133`; PDF page pending.
+- `TA-OCC-ab64652d73a18407` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:132`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:141`; PDF page pending.
+- `TA-OCC-4976a91377ea57bb` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:133`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:142`; PDF page pending.
+- `TA-OCC-b99e813bd34e5185` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:134`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:143`; PDF page pending.
+- `TA-OCC-45a6300670c5e23f` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:136`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:146`; PDF page pending.
+- `TA-OCC-e4e0d66192904cfe` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:149`; PDF page pending.
+- `TA-OCC-c2abfda2b7a4a5fc` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:143`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:152`; PDF page pending.
+- `TA-OCC-57099c5bb892c09b` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:14`; PDF page pending.
+- `TA-OCC-c5a715c9c0c981ff` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:16`; PDF page pending.
+- `TA-OCC-b0ad9ecdf543237f` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:18`; PDF page pending.
+- `TA-OCC-9ac85613144aefc7` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:22`; PDF page pending.
+- `TA-OCC-1c658775755cd362` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:28`; PDF page pending.
+- `TA-OCC-d0578c013fee9619` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:33`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:36`; PDF page pending.
+- `TA-OCC-30b8566585159637` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:36`; PDF page pending.
+- `TA-OCC-395121358dccacd5` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:41`; PDF page pending.
+- `TA-OCC-6da2a1b2b1845428` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:51`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:56`; PDF page pending.
+- `TA-OCC-f5187756f5b76b92` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:54`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:59`; PDF page pending.
+- `TA-OCC-cfe40a7cc544eafd` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:59`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:64`; PDF page pending.
+- `TA-OCC-97e7dc6448dda0bb` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:33`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:68`; PDF page pending.
+- `TA-OCC-64d143ec5b961d9a` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:75`; PDF page pending.
+- `TA-OCC-8c1817e14ae15409` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:51`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:85`; PDF page pending.
+- `TA-OCC-abcb4116626f99b4` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:54`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:87`; PDF page pending.
+- `TA-OCC-522a65497880cb17` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:59`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:88`; PDF page pending.
+- `TA-OCC-95bf46d68fcb2fa9` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:91`; PDF page pending.
+- `TA-OCC-9a2c9b964f3183b4` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:16`; PDF page pending.
+- `TA-OCC-bc770550c2574e70` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:22`; PDF page pending.
+- `TA-OCC-683e0e2fa2e13f4d` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:32`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:33`; PDF page pending.
+- `TA-OCC-15f66502eeed10f8` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:36`; PDF page pending.
+- `TA-OCC-0312d26cc56eba7c` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:78`; PDF page pending.
+- `TA-OCC-4968596ffe1ceece` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:79`; PDF page pending.
+- `TA-OCC-7e5abfc9ce6d9484` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:89`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:95`; PDF page pending.
+- `TA-OCC-ea6349229bed6510` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:99`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:108`; PDF page pending.
+- `TA-OCC-51e2ca2c48b7d0bc` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:112`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:118`; PDF page pending.
+- `TA-OCC-0874fde0e6ab70ef` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:14`; PDF page pending.
+- `TA-OCC-92560623a3aec591` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; PDF page pending.
+- `TA-OCC-8a3e1bbf1dd30c1a` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:19`; PDF page pending.
+- `TA-OCC-da7263572f7fbe9d` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:20`; PDF page pending.
+- `TA-OCC-d03edfe3d5071dd0` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:74`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:57`; PDF page pending.
+- `TA-OCC-6342249d22ad40ac` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:109`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:58`; PDF page pending.
+- `TA-OCC-7d36a0af690ba85f` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:74`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:75`; PDF page pending.
+- `TA-OCC-71ed0fdd6d7f5236` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:119`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:104`; PDF page pending.
+- `TA-OCC-a922bdf22459003f` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:109`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:112`; PDF page pending.
+- `TA-OCC-afc07bad89f8b411` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:119`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:122`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -10062,6 +10317,8 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-e7845295a8d3469a` — OLP-0399 / `OLP-0399-S01`; source `content/many-valued-logic/infinite-valued-logics/introduction.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/introduction.tex:30`; PDF page pending.
 - `TA-OCC-f583259076e3caf3` — OLP-0400 / `OLP-0400-S01`; source `content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/lukasiewicz.tex:17`; PDF page pending.
 - `TA-OCC-330f8d6bc4c2192f` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:17`; PDF page pending.
+- `TA-OCC-5e1b23bdde50e5f5` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:29`; PDF page pending.
+- `TA-OCC-10e92ad3b172d992` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:89`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -10941,6 +11198,72 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-3360aa62ccdad1f5` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:33`; PDF page pending.
 - `TA-OCC-8728b9a564977ce8` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:17`; PDF page pending.
 - `TA-OCC-585cb29d446eee2f` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:26`; PDF page pending.
+- `TA-OCC-2b97d941d0801a57` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:33`; PDF page pending.
+- `TA-OCC-e7a1a6ce36949d8e` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:109`; PDF page pending.
+- `TA-OCC-edb53317cf377c24` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:134`; PDF page pending.
+- `TA-OCC-b32d6b171e57f3c6` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:137`; PDF page pending.
+- `TA-OCC-5d1594149a8eebdc` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:138`; PDF page pending.
+- `TA-OCC-b9c2805c034fd4f2` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:138`; PDF page pending.
+- `TA-OCC-e06c86a811d7ff78` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:139`; PDF page pending.
+- `TA-OCC-052d60b1754aaa6a` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:141`; PDF page pending.
+- `TA-OCC-85aa2dbc2589e1ec` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:145`; PDF page pending.
+- `TA-OCC-39d550e3342a14e8` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:105`; PDF page pending.
+- `TA-OCC-5b49a87f5fcbb1c4` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:107`; PDF page pending.
+- `TA-OCC-e97ead4a19fa753a` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:110`; PDF page pending.
+- `TA-OCC-18101984566f1642` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:153`; PDF page pending.
+- `TA-OCC-bc32f227fb0eb5c5` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:153`; PDF page pending.
+- `TA-OCC-e30f8b7ec3ba609b` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:162`; PDF page pending.
+- `TA-OCC-cf51a1767afca8c2` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:168`; PDF page pending.
+- `TA-OCC-d8fafa8a88871953` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:43`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:47`; PDF page pending.
+- `TA-OCC-3f9932b3f154754d` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:48`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:48`; PDF page pending.
+- `TA-OCC-d1069897f23cb053` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:48`; PDF page pending.
+- `TA-OCC-82dcd3a92445f033` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:49`; PDF page pending.
+- `TA-OCC-ba929eac53a4ab3c` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:50`; PDF page pending.
+- `TA-OCC-642d5d05356f7e90` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:52`; PDF page pending.
+- `TA-OCC-db06f47fd6f828ed` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:53`; PDF page pending.
+- `TA-OCC-f482e50fb40e57b0` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:55`; PDF page pending.
+- `TA-OCC-4e784595ae60bca4` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:79`; PDF page pending.
+- `TA-OCC-b571cad3b787f9c9` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:82`; PDF page pending.
+- `TA-OCC-f2565d0d08e6b9cb` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:84`; PDF page pending.
+- `TA-OCC-94323ce21cf72f33` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:86`; PDF page pending.
+- `TA-OCC-2cf9fa2acfc341e4` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:89`; PDF page pending.
+- `TA-OCC-6d7fe58070892529` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:90`; PDF page pending.
+- `TA-OCC-c94eee7dc3d35493` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:91`; PDF page pending.
+- `TA-OCC-cb9660993442faeb` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:12`; PDF page pending.
+- `TA-OCC-36af5d4b74ec94cd` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:14`; PDF page pending.
+- `TA-OCC-dac34932162c5486` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:21`; PDF page pending.
+- `TA-OCC-4862231d63d9037d` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:26`; PDF page pending.
+- `TA-OCC-a7005198b0521f11` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:27`; PDF page pending.
+- `TA-OCC-118ae232e7237748` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:28`; PDF page pending.
+- `TA-OCC-407f47ebb457dc12` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:32`; PDF page pending.
+- `TA-OCC-fe1815ce53d309b2` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:34`; PDF page pending.
+- `TA-OCC-43e842bfff6e7a6d` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:36`; PDF page pending.
+- `TA-OCC-b79fa519bea40d82` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:42`; PDF page pending.
+- `TA-OCC-5c7d8157c587e6ab` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:44`; PDF page pending.
+- `TA-OCC-25ceda6a0c3180ba` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:45`; PDF page pending.
+- `TA-OCC-2391d70d437bad3f` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:59`; PDF page pending.
+- `TA-OCC-dbd3eafdde3b5bd5` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:64`; PDF page pending.
+- `TA-OCC-2e2578ed60db24a1` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:71`; PDF page pending.
+- `TA-OCC-46a85da67b7421e9` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:75`; PDF page pending.
+- `TA-OCC-c68d9d813bff7520` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:75`; PDF page pending.
+- `TA-OCC-cc3bb9d384c880fc` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:76`; PDF page pending.
+- `TA-OCC-10dea545e1896dfd` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:76`; PDF page pending.
+- `TA-OCC-33e051d544e72048` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:77`; PDF page pending.
+- `TA-OCC-39c963d7eb2f6490` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:77`; PDF page pending.
+- `TA-OCC-48491e733cfd0812` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:78`; PDF page pending.
+- `TA-OCC-bb220c3b3d1d31d2` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:79`; PDF page pending.
+- `TA-OCC-4d7f8af091bebaa6` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:82`; PDF page pending.
+- `TA-OCC-1818a7d013392ddf` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:87`; PDF page pending.
+- `TA-OCC-59cfa0a36223ad8b` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:94`; PDF page pending.
+- `TA-OCC-9f95d177fb75e22a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:96`; PDF page pending.
+- `TA-OCC-c46dde1d02d0df1b` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:98`; PDF page pending.
+- `TA-OCC-698cd6c607b2ac75` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:102`; PDF page pending.
+- `TA-OCC-0d05ba574c730918` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:102`; PDF page pending.
+- `TA-OCC-f4c6a264af66e6d6` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:103`; PDF page pending.
+- `TA-OCC-689692b22216ed7a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:104`; PDF page pending.
+- `TA-OCC-ce11298f2eb29961` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
+- `TA-OCC-0fee9d431ddf4e90` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:113`; PDF page pending.
+- `TA-OCC-77b7bcb83f3f1b79` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:122`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -12627,6 +12950,9 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-09f48a68768fe033` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:86`; PDF page pending.
 - `TA-OCC-182078feb25bf2d1` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:25`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:27`; PDF page pending.
 - `TA-OCC-2aaa77435b049543` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:163`; PDF page pending.
+- `TA-OCC-e9ebecb6ba0a20dd` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:87`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:134`; PDF page pending.
+- `TA-OCC-784c9e75b3e0b2f6` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:116`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:135`; PDF page pending.
+- `TA-OCC-3e92af97f96dae21` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:116`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:136`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -13170,6 +13496,7 @@ Please double-check: **is “பகுதிச் சார்பு / மு�
 - `TA-OCC-49c4640bd3413213` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:58`; PDF page pending.
 - `TA-OCC-19b94a7748db1d80` — OLP-0381 / `OLP-0381-S01`; source `content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:3`; Tamil `translation/content/lambda-calculus/lambda-definability/partial-recursive-functions.tex:28`; PDF page pending.
 - `TA-OCC-1213e412de969b32` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:18`; PDF page pending.
+- `TA-OCC-af485e5782372351` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:134`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:134`; PDF page pending.
 
 ## TA-T055 — Axiom of Choice
 
@@ -14498,6 +14825,10 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-dcfc47878bc292da` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:36`; PDF page pending.
 - `TA-OCC-27c2f90609a09a7c` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:23`; PDF page pending.
 - `TA-OCC-a46e0ebf8e1eadf6` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:54`; PDF page pending.
+- `TA-OCC-4c1f2ec321be66fa` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:125`; PDF page pending.
+- `TA-OCC-a77e9631cab36f3b` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:41`; PDF page pending.
+- `TA-OCC-565ab518481c2a3c` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:81`; PDF page pending.
+- `TA-OCC-e9974a6658067a54` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -15354,7 +15685,7 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-db5b00e299973f21` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:55`; PDF page pending.
 - `TA-OCC-7339d0d3115d81f0` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:56`; PDF page pending.
 - `TA-OCC-3ca41fad5f6637e1` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:57`; PDF page pending.
-- `TA-OCC-0b8386e04ddda1cc` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:58`; PDF page pending.
+- `TA-OCC-6731c0d7e8d5d608` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:58`; PDF page pending.
 - `TA-OCC-300b77c52ea2d67b` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:48`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:64`; PDF page pending.
 - `TA-OCC-b2aa651fbefe13f5` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:13`; PDF page pending.
 - `TA-OCC-2ae1de5e599658e4` — OLP-0414 / `OLP-0414-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-in-model.tex:16`; PDF page pending.
@@ -15412,6 +15743,53 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-d9e395f8b4ff4843` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; PDF page pending.
 - `TA-OCC-5d4a625227c8e180` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; PDF page pending.
 - `TA-OCC-ddc42e8178f25319` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:17`; PDF page pending.
+- `TA-OCC-57eddcacd7854186` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:15`; PDF page pending.
+- `TA-OCC-e359cd9a73ce225b` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:20`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:19`; PDF page pending.
+- `TA-OCC-ea3126a3e1e6b8b2` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:20`; PDF page pending.
+- `TA-OCC-9269efafcaa5c062` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:23`; PDF page pending.
+- `TA-OCC-c19b01a70168aad2` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:25`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:25`; PDF page pending.
+- `TA-OCC-652b1b4458971948` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:26`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:27`; PDF page pending.
+- `TA-OCC-2af2cc22bf9f2329` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:28`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:28`; PDF page pending.
+- `TA-OCC-4ce4079beb2f29e0` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:30`; PDF page pending.
+- `TA-OCC-b27f7f3becbc9853` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:32`; PDF page pending.
+- `TA-OCC-2a6cc9308e0b1a11` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:38`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:34`; PDF page pending.
+- `TA-OCC-7af204ab7bb488ab` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:41`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:38`; PDF page pending.
+- `TA-OCC-5a54699e9d142717` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:41`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:42`; PDF page pending.
+- `TA-OCC-faa1beb1ed7c815d` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:42`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:43`; PDF page pending.
+- `TA-OCC-f64ae7e6daa568e7` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:42`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:44`; PDF page pending.
+- `TA-OCC-a3baa7c906861671` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:42`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:45`; PDF page pending.
+- `TA-OCC-a4a901725aa10a09` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:42`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:46`; PDF page pending.
+- `TA-OCC-7575b2a881bef1c4` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:17`; PDF page pending.
+- `TA-OCC-8201475fc0755e0c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:18`; PDF page pending.
+- `TA-OCC-e41c0a9890d0ae42` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:29`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:25`; PDF page pending.
+- `TA-OCC-f414ecdeb48acc3c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:57`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:31`; PDF page pending.
+- `TA-OCC-110459be7c90d765` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:58`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:59`; PDF page pending.
+- `TA-OCC-6e58c68010ed5766` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:61`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:61`; PDF page pending.
+- `TA-OCC-742c8e3c727e314a` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:62`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:63`; PDF page pending.
+- `TA-OCC-89e720142b94f762` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:62`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:64`; PDF page pending.
+- `TA-OCC-80ea1bed1df5af3b` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:92`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:65`; PDF page pending.
+- `TA-OCC-5f3bbc6002afbffc` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:99`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:95`; PDF page pending.
+- `TA-OCC-e12e060188a24d04` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:100`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:102`; PDF page pending.
+- `TA-OCC-4d20ccbae994fb4e` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:112`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:103`; PDF page pending.
+- `TA-OCC-4e9a868bb1d86d21` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:148`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:115`; PDF page pending.
+- `TA-OCC-fec1ea6def62c6b7` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:186`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:151`; PDF page pending.
+- `TA-OCC-21938d2bc7333647` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:186`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:189`; PDF page pending.
+- `TA-OCC-fc5a6fce2407e9fb` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:33`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:37`; PDF page pending.
+- `TA-OCC-e847e619f4463bbc` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:37`; PDF page pending.
+- `TA-OCC-0185c7a3623be01a` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:59`; PDF page pending.
+- `TA-OCC-5579ba041442a102` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:52`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:84`; PDF page pending.
+- `TA-OCC-47c6352580036cb2` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:76`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:88`; PDF page pending.
+- `TA-OCC-2015721ad845eda3` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:101`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:110`; PDF page pending.
+- `TA-OCC-94364a276d73e78c` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:111`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:120`; PDF page pending.
+- `TA-OCC-7620c47dc48a8d1d` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:124`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:133`; PDF page pending.
+- `TA-OCC-10ac89bac32716e0` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:18`; PDF page pending.
+- `TA-OCC-3e891a36e0f78deb` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:19`; PDF page pending.
+- `TA-OCC-49ceeb82b183c47c` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:19`; PDF page pending.
+- `TA-OCC-f8d28e61803331e7` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:20`; PDF page pending.
+- `TA-OCC-8ef531672b86d2fb` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; PDF page pending.
+- `TA-OCC-515a0e6d7b69a265` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:129`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:133`; PDF page pending.
+- `TA-OCC-7d4b786dd9a3432b` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:147`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:135`; PDF page pending.
+- `TA-OCC-b424c7fc55f4acef` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:147`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:152`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -16374,6 +16752,60 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-f0d110086162c30e` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:34`; PDF page pending.
 - `TA-OCC-c7bc452a495e70dd` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:45`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:49`; PDF page pending.
 - `TA-OCC-498a3dcbf6589a53` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:49`; PDF page pending.
+- `TA-OCC-7d48109069841c7e` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:15`; PDF page pending.
+- `TA-OCC-a7c2c0beaa8dd925` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:22`; PDF page pending.
+- `TA-OCC-ef14e3057989bcf6` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:51`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:56`; PDF page pending.
+- `TA-OCC-f7dc4fca7fe78314` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:56`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:60`; PDF page pending.
+- `TA-OCC-c893a101f54b04e1` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:14`; PDF page pending.
+- `TA-OCC-4487b186cd1f5a1f` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:16`; PDF page pending.
+- `TA-OCC-d520186a0d041197` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:18`; PDF page pending.
+- `TA-OCC-59e4c2ca3c122238` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:24`; PDF page pending.
+- `TA-OCC-41cfcbddd8cc7b32` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:125`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:128`; PDF page pending.
+- `TA-OCC-9bb43e9aa37f1f23` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:44`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:50`; PDF page pending.
+- `TA-OCC-7c66aec1a3433e44` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:16`; PDF page pending.
+- `TA-OCC-458eeba29ad7772c` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:19`; PDF page pending.
+- `TA-OCC-8745819fe5688c74` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:32`; PDF page pending.
+- `TA-OCC-d6ac3fcedb61824f` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:105`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:114`; PDF page pending.
+- `TA-OCC-214ff04e4e57c6e8` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:111`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:120`; PDF page pending.
+- `TA-OCC-dfddf506cf479419` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:113`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:122`; PDF page pending.
+- `TA-OCC-ce0921b1a46ed4a5` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:115`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:124`; PDF page pending.
+- `TA-OCC-c3b0565bda2393ea` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:120`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:129`; PDF page pending.
+- `TA-OCC-c9601dd29763446b` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:124`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:133`; PDF page pending.
+- `TA-OCC-121227cbae2f0d88` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:132`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:141`; PDF page pending.
+- `TA-OCC-43f5bb0e2322f405` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:133`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:142`; PDF page pending.
+- `TA-OCC-6a90042eb1437e26` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:134`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:143`; PDF page pending.
+- `TA-OCC-d29d32443543ff84` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:136`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:146`; PDF page pending.
+- `TA-OCC-8c61412d34ebad02` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:149`; PDF page pending.
+- `TA-OCC-4cea8965c3e93983` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:143`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:152`; PDF page pending.
+- `TA-OCC-7d2435a9918f59ee` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:14`; PDF page pending.
+- `TA-OCC-aeeb161982359cfa` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:16`; PDF page pending.
+- `TA-OCC-18fa853a0dda24e5` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:18`; PDF page pending.
+- `TA-OCC-b53771f3500e50f9` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:33`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:36`; PDF page pending.
+- `TA-OCC-77ecd3077ab20f67` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:36`; PDF page pending.
+- `TA-OCC-0f14b2c8b582d938` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:41`; PDF page pending.
+- `TA-OCC-e23a0f7dfc6107b7` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:51`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:56`; PDF page pending.
+- `TA-OCC-0a87aa42e032bcce` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:54`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:59`; PDF page pending.
+- `TA-OCC-2d73fb4dec2206a7` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:59`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:64`; PDF page pending.
+- `TA-OCC-bd4f6b786bd94169` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:85`; PDF page pending.
+- `TA-OCC-48ab6b6bdc470ea8` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:87`; PDF page pending.
+- `TA-OCC-d654acec7af9abc3` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:33`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:88`; PDF page pending.
+- `TA-OCC-76099b525b68f6f6` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:91`; PDF page pending.
+- `TA-OCC-b7a719dd9fa4e3da` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:16`; PDF page pending.
+- `TA-OCC-022dd19d07dba58b` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:22`; PDF page pending.
+- `TA-OCC-06dd05856ea25a27` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:32`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:33`; PDF page pending.
+- `TA-OCC-4b35bc3aa1b46971` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:34`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:36`; PDF page pending.
+- `TA-OCC-202368df2c433d79` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:78`; PDF page pending.
+- `TA-OCC-474d2db3801f1d0a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:79`; PDF page pending.
+- `TA-OCC-dce586890943d08a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:89`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:95`; PDF page pending.
+- `TA-OCC-f2caae6a53b6d59e` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:99`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:108`; PDF page pending.
+- `TA-OCC-62809922f7176ef1` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:112`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:118`; PDF page pending.
+- `TA-OCC-e5831635b328aee8` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:14`; PDF page pending.
+- `TA-OCC-8e2011cc3b064911` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; PDF page pending.
+- `TA-OCC-741e16b874b7b01d` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:19`; PDF page pending.
+- `TA-OCC-0b7a37b5d0fbe549` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:20`; PDF page pending.
+- `TA-OCC-d102fbfbdff87859` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:74`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:75`; PDF page pending.
+- `TA-OCC-c12ec5d96c6ea142` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:109`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:112`; PDF page pending.
+- `TA-OCC-535432e87da79226` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:119`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:122`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -18103,6 +18535,8 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-6a163a17b5dfb2fb` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:16`; PDF page pending.
 - `TA-OCC-a9734f4d2ebdf891` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:26`; PDF page pending.
 - `TA-OCC-206b819f2322f361` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:62`; PDF page pending.
+- `TA-OCC-2bdfb8aa92a1bf48` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:44`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:29`; PDF page pending.
+- `TA-OCC-1f269d942db89655` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:69`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:68`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -19548,6 +19982,16 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-57a2da3bbe13bf03` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:65`; PDF page pending.
 - `TA-OCC-b432b13ceb53affb` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:56`; PDF page pending.
 - `TA-OCC-eeb02172689185b3` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:120`; PDF page pending.
+- `TA-OCC-e9d7e6e2f1abc534` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:76`; PDF page pending.
+- `TA-OCC-42bc0fc267f0cd3d` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:188`; PDF page pending.
+- `TA-OCC-912333faf475c7ab` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:132`; PDF page pending.
+- `TA-OCC-753129f143b737d8` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:22`; PDF page pending.
+- `TA-OCC-434206c6a1d63a9d` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:28`; PDF page pending.
+- `TA-OCC-0410f22cdcec1b59` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:68`; PDF page pending.
+- `TA-OCC-09dfd61042a488d8` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:75`; PDF page pending.
+- `TA-OCC-32b585694882ed1f` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:57`; PDF page pending.
+- `TA-OCC-f9a640d96a142b8d` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:58`; PDF page pending.
+- `TA-OCC-381bc8a6bab4e478` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:104`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -20696,6 +21140,8 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-02dce899084b867e` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:29`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:28`; PDF page pending.
 - `TA-OCC-a0724ef37fd399c1` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:36`; PDF page pending.
 - `TA-OCC-2e06ac86311e3e34` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:23`; PDF page pending.
+- `TA-OCC-78af213f56cd371a` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; PDF page pending.
+- `TA-OCC-e4aa9aecbe97e070` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -20921,6 +21367,7 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-9fe96083697f59ae` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:52`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:58`; PDF page pending.
 - `TA-OCC-2eea6337b1781068` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:60`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:65`; PDF page pending.
 - `TA-OCC-3add173b3a0ebfd5` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:16`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:17`; PDF page pending.
+- `TA-OCC-fdb45487205144e7` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:68`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:74`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -21678,6 +22125,15 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-1af5fc7cb3f7646a` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:60`; PDF page pending.
 - `TA-OCC-01076c6658b369a5` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:1`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:72`; PDF page pending.
 - `TA-OCC-546c00bd784ef045` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:163`; PDF page pending.
+- `TA-OCC-dd27aebc81fb2c71` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:18`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:18`; PDF page pending.
+- `TA-OCC-91f009687ed56967` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:27`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:27`; PDF page pending.
+- `TA-OCC-57144463e3ac9e2b` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:21`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; PDF page pending.
+- `TA-OCC-2eed883a385f42bd` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:23`; PDF page pending.
+- `TA-OCC-b48002b7e784d8ec` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:21`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:51`; PDF page pending.
+- `TA-OCC-5fae6aa046f85702` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:52`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:52`; PDF page pending.
+- `TA-OCC-fa3881010c3fa933` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:55`; PDF page pending.
+- `TA-OCC-620bbe02dfe7ca69` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:85`; PDF page pending.
+- `TA-OCC-ccf7fbcdad91236e` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -24730,6 +25186,19 @@ Please double-check: **is “டார்ஸ்கியின் வரைய�
 - `TA-OCC-ecadcb2d8efe51e1` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; PDF page pending.
 - `TA-OCC-c3a93ba36e50d315` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:14`; PDF page pending.
 - `TA-OCC-f1eed706813b407b` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:19`; PDF page pending.
+- `TA-OCC-859722cbd8d0d283` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:25`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:29`; PDF page pending.
+- `TA-OCC-45a11d0f9084052c` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:35`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:37`; PDF page pending.
+- `TA-OCC-5121cd97d1b0fcad` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:36`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:38`; PDF page pending.
+- `TA-OCC-e665e4daeeb2d4ac` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:36`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:84`; PDF page pending.
+- `TA-OCC-a0bf42ccf44737a1` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:14`; PDF page pending.
+- `TA-OCC-8a088626a2f5f878` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:15`; PDF page pending.
+- `TA-OCC-df5095ea133dced1` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:17`; PDF page pending.
+- `TA-OCC-e0270eff6b30bbc8` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:100`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:105`; PDF page pending.
+- `TA-OCC-3b2ff82d963748ae` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:109`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:112`; PDF page pending.
+- `TA-OCC-d7e529c94fbee519` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:110`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:114`; PDF page pending.
+- `TA-OCC-bf07f050780ce6a8` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:120`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:125`; PDF page pending.
+- `TA-OCC-85746b51583d6b17` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:121`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:155`; PDF page pending.
+- `TA-OCC-52123dcb5c8107fb` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:150`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:155`; PDF page pending.
 
 ## TA-T143 — second-order logic / object variable / relation variable / function variable / standard semantics
 
@@ -24874,6 +25343,7 @@ Please double-check: **is “மீக்கோட்பாடு / அடிக
 - `TA-OCC-74c1183476dae6a8` — OLP-0334 / `OLP-0334-S01`; source `content/second-order-logic/metatheory/compactness.tex:18`; Tamil `translation/content/second-order-logic/metatheory/compactness.tex:30`; PDF page pending.
 - `TA-OCC-394bf3377cf093fd` — OLP-0334 / `OLP-0334-S01`; source `content/second-order-logic/metatheory/compactness.tex:26`; Tamil `translation/content/second-order-logic/metatheory/compactness.tex:31`; PDF page pending.
 - `TA-OCC-dc10e3df100908f4` — OLP-0334 / `OLP-0334-S01`; source `content/second-order-logic/metatheory/compactness.tex:27`; Tamil `translation/content/second-order-logic/metatheory/compactness.tex:60`; PDF page pending.
+- `TA-OCC-c826d7fd54ba358a` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:68`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:74`; PDF page pending.
 
 ## TA-T147 — second-order arithmetic / induction axiom / categorical / nonstandard number
 
@@ -25474,6 +25944,23 @@ Please double-check: **is “இயல்பான வாய்ப்புந�
 - `TA-OCC-984225e854d9c06c` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:38`; PDF page pending.
 - `TA-OCC-19d2813fbaff674f` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:15`; PDF page pending.
 - `TA-OCC-356ce1d69af7033c` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:96`; PDF page pending.
+- `TA-OCC-4feb7389aaa38694` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:15`; PDF page pending.
+- `TA-OCC-fd76961632f2db95` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:14`; PDF page pending.
+- `TA-OCC-b866b6124d517c03` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:139`; PDF page pending.
+- `TA-OCC-69ea85707d03b971` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:14`; PDF page pending.
+- `TA-OCC-6abe26f59bf2fb94` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:35`; PDF page pending.
+- `TA-OCC-7e90e0ce2fd10734` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:38`; PDF page pending.
+- `TA-OCC-77713b12b5b31e5c` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:85`; PDF page pending.
+- `TA-OCC-b4b3363bd73679f6` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:16`; PDF page pending.
+- `TA-OCC-668d1a481384f130` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:17`; PDF page pending.
+- `TA-OCC-a47e4b3c837007b2` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:18`; PDF page pending.
+- `TA-OCC-2dbcbf14f95f750a` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:72`; PDF page pending.
+- `TA-OCC-c624f59497493f79` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:14`; PDF page pending.
+- `TA-OCC-2a1becbb173e0f74` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:17`; PDF page pending.
+- `TA-OCC-e1e4de773c0cbc4c` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:18`; PDF page pending.
+- `TA-OCC-c27e9db078157606` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:20`; PDF page pending.
+- `TA-OCC-9d54a66c6f88aee7` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:57`; PDF page pending.
+- `TA-OCC-c49e0c4ceb96cbe3` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:75`; PDF page pending.
 
 ## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
 
@@ -25502,6 +25989,21 @@ Please double-check: **is “சாத்தியமான உலகம் / �
 - `TA-OCC-0b254d3e60d5f41a` — OLP-0412 / `OLP-0412-S01`; source `content/normal-modal-logic/syntax-and-semantics/relational-models.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/relational-models.tex:25`; PDF page pending.
 - `TA-OCC-2a31021fe4d72b45` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:19`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:22`; PDF page pending.
 - `TA-OCC-ee19af477b39b72b` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:25`; PDF page pending.
+- `TA-OCC-4fccce9ef3771800` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:14`; PDF page pending.
+- `TA-OCC-c4c59e9e86945aec` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:17`; PDF page pending.
+- `TA-OCC-4aaab3f4da145f1a` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:21`; PDF page pending.
+- `TA-OCC-455582a13aed43de` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:11`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:12`; PDF page pending.
+- `TA-OCC-eee71c3160805009` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:17`; PDF page pending.
+- `TA-OCC-6a238ca06fdd277c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:93`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:129`; PDF page pending.
+- `TA-OCC-ac69661879592347` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:128`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:132`; PDF page pending.
+- `TA-OCC-27b7481f06bac6f9` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:133`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:135`; PDF page pending.
+- `TA-OCC-325db38c1f3eb04b` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:34`; PDF page pending.
+- `TA-OCC-fb0ca7ac1e867284` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:17`; PDF page pending.
+- `TA-OCC-0b2b724a253c53e5` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:13`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:14`; PDF page pending.
+- `TA-OCC-f505d5523c9699c4` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:32`; PDF page pending.
+- `TA-OCC-e64b019402613cd3` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:21`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:21`; PDF page pending.
+- `TA-OCC-4c33c9c1bfaa99d8` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:55`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:56`; PDF page pending.
+- `TA-OCC-c1593cd19965422e` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:110`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:113`; PDF page pending.
 
 ## TA-T168 — simultaneous substitution / iterated substitution / instance / substitution instance
 
@@ -25653,6 +26155,15 @@ Please double-check: **is “ஒரேநேரப் பதிலீடு / �
 - `TA-OCC-4950625b94d0f1c6` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:82`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:122`; PDF page pending.
 - `TA-OCC-cecd30a905b249f8` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:89`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:125`; PDF page pending.
 - `TA-OCC-bc88a26d1bba0fdc` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:94`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:186`; PDF page pending.
+- `TA-OCC-01f39dc36bf8aceb` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:24`; PDF page pending.
+- `TA-OCC-3afa95cb81fc617c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:17`; PDF page pending.
+- `TA-OCC-ed54da8ff05eb3dc` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:24`; PDF page pending.
+- `TA-OCC-94ddcef6c4ad34df` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:60`; PDF page pending.
+- `TA-OCC-e73e2556bc17f028` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:58`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:101`; PDF page pending.
+- `TA-OCC-263eaef954d5156d` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:59`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:102`; PDF page pending.
+- `TA-OCC-ce1575bc2ba22084` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:98`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:103`; PDF page pending.
+- `TA-OCC-35f0a0023211642f` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:98`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:115`; PDF page pending.
+- `TA-OCC-20b2fa1c1570131c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:100`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:188`; PDF page pending.
 
 ## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
 
@@ -25731,20 +26242,22 @@ Please double-check: **is “வாய்ப்புநிலைச் செ�
 - `TA-OCC-da25107e49814db1` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:28`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:88`; PDF page pending.
 - `TA-OCC-b3506848b2dc7bcb` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:31`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:117`; PDF page pending.
 - `TA-OCC-8a51d7e49c6bdade` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:35`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:118`; PDF page pending.
+- `TA-OCC-c8792d17fb125c1e` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:57`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:59`; PDF page pending.
+- `TA-OCC-1d38dce1ee2b6110` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:31`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:50`; PDF page pending.
 
 ## TA-T171 — entailment / entails / counterexample / class of models / reflexive model
 
-Chosen rendering: **பின்விளைவு / இலிருந்து பின்விளைகிறது / எதிரெடுத்துக்காட்டு / மாதிரிகளின் வகுப்பு / தற்சார்பு மாதிரி**
+Chosen rendering: **பின்விளைவு / இலிருந்து பின்விளைகிறது / எதிரெடுத்துக்காட்டு / மாதிரிகளின் வகுப்பு / தற்சுட்டு மாதிரி**
 
-Kind: `terminology`; confidence: `medium`; provisional: `false`; priority: `normal`.
+Kind: `terminology`; confidence: `high`; provisional: `false`; priority: `low`.
 
-Intended sense and rationale: பின்விளைவு and எதிரெடுத்துக்காட்டு continue the reviewed propositional and first-order semantic register. The universal model-and-world clause fixes local modal consequence, while the two explicit failing models fix the negated relation; தற்சார்பு continues established relation terminology.
+Intended sense and rationale: பின்விளைவு and எதிரெடுத்துக்காட்டு continue the reviewed propositional and first-order semantic register. The universal model-and-world clause fixes local modal consequence, while the two explicit failing models fix the negated relation. தற்சுட்டு is the directly attested SCERT term for reflexive relations and is used consistently for accessibility relations and their models.
 
-Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-TVA-N-6.3-OPEN (checked_context_only)
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-TVA-N-6.3-OPEN (checked_context_only)
 
 Alternatives: None recorded.
 
-Please double-check: **do the listed uses of “பின்விளைவு / இலிருந்து பின்விளைகிறது / எதிரெடுத்துக்காட்டு / மாதிரிகளின் வகுப்பு / தற்சார்பு மாதிரி” preserve the OpenLogic sense of “entailment / entails / counterexample / class of models / reflexive model” and read naturally in India-standard mathematical Tamil?**
+Please double-check: **do the listed uses of “பின்விளைவு / இலிருந்து பின்விளைகிறது / எதிரெடுத்துக்காட்டு / மாதிரிகளின் வகுப்பு / தற்சுட்டு மாதிரி” preserve the OpenLogic sense of “entailment / entails / counterexample / class of models / reflexive model” and read naturally in India-standard mathematical Tamil?**
 
 - `TA-OCC-37a1610b10a65c57` — OLP-0057 / `OLP-0057-S04`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:66`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:69`; PDF page pending.
 - `TA-OCC-e45ffc63992aaf85` — OLP-0064 / `OLP-0064-S01`; source `content/first-order-logic/proof-systems/introduction.tex:17`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:18`; PDF page 4.
@@ -25776,12 +26289,105 @@ Please double-check: **do the listed uses of “பின்விளைவு /
 - `TA-OCC-573242f119ff3d24` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:60`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:203`; PDF page pending.
 - `TA-OCC-0ffe17a6d87676a6` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:15`; PDF page pending.
 - `TA-OCC-1739208620072d2c` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:32`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:31`; PDF page pending.
-- `TA-OCC-ed21bdcf8ad9f66a` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:37`; PDF page pending.
+- `TA-OCC-36a16e06306db29d` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:39`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:33`; PDF page pending.
+- `TA-OCC-ed21bdcf8ad9f66a` — OLP-0415 / `OLP-0415-S01`; source `content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:40`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/modal-validity.tex:37`; PDF page pending.
 - `TA-OCC-2111f33f36953d85` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:3`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:12`; PDF page pending.
 - `TA-OCC-132dcde404c9d287` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:11`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:16`; PDF page pending.
 - `TA-OCC-fc2328e5600626dc` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:69`; PDF page pending.
 - `TA-OCC-39b2b63b49434e1a` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:73`; PDF page pending.
 - `TA-OCC-0ad72562c4eb41b1` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:23`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:76`; PDF page pending.
+- `TA-OCC-2e2fc0ddafe6ec6c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:94`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:97`; PDF page pending.
+- `TA-OCC-9ab7cd98a47c2edc` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:51`; PDF page pending.
+- `TA-OCC-2f4ae15af55bc1d6` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:155`; PDF page pending.
+
+## TA-T172 — frame / based on a frame / validity in a frame / frame definability / correspondence fact
+
+Chosen rendering: **சட்டகம் / சட்டகத்தை அடிப்படையாகக் கொண்ட / சட்டகத்தில் செல்லுபடித்தன்மை / சட்டக வரையறுக்கத்தன்மை / ஒத்திசைவு உண்மை**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: சட்டகம், மாதிரி, உறவு, மெய்மை and செல்லுபடித்தன்மை continue the reviewed mathematical and logical register. The exact pair F=<W,R>, based-model triple <W,R,V>, and universal valuation clause define the modal-frame senses; the full compounds are not claimed as direct headword attestations.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-T172-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “சட்டகம் / சட்டகத்தை அடிப்படையாகக் கொண்ட / சட்டகத்தில் செல்லுபடித்தன்மை / சட்டக வரையறுக்கத்தன்மை / ஒத்திசைவு உண்மை” the established India-standard Tamil expression for “frame / based on a frame / validity in a frame / frame definability / correspondence fact” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-d08b599d34b1b12e` — OLP-0137 / `OLP-0137-S05`; source `content/first-order-logic/completeness/downward-ls.tex:48`; Tamil `translation/content/first-order-logic/completeness/downward-ls.tex:57`; PDF page pending.
+- `TA-OCC-cc421f3875ffa517` — OLP-0419 / `OLP-0419-S01`; source `content/normal-modal-logic/frame-definability/frame-definability.tex:2`; Tamil `translation/content/normal-modal-logic/frame-definability/frame-definability.tex:9`; PDF page pending.
+- `TA-OCC-dd4667bdf8ea0324` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:2`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:50`; PDF page pending.
+- `TA-OCC-69cbbd6938723774` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:45`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:53`; PDF page pending.
+- `TA-OCC-0c8930c8446930bb` — OLP-0420 / `OLP-0420-S01`; source `content/normal-modal-logic/frame-definability/introduction.tex:45`; Tamil `translation/content/normal-modal-logic/frame-definability/introduction.tex:55`; PDF page pending.
+- `TA-OCC-3cfef237770aa5ee` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:2`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:53`; PDF page pending.
+- `TA-OCC-93d1d3739d368df8` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:51`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:181`; PDF page pending.
+- `TA-OCC-8673f5fd9f302187` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:2`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:15`; PDF page pending.
+- `TA-OCC-987d6a082a444fc4` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:3`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:18`; PDF page pending.
+- `TA-OCC-4f64815bf62a5196` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:11`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:28`; PDF page pending.
+- `TA-OCC-7c0bc182494545a2` — OLP-0422 / `OLP-0422-S01`; source `content/normal-modal-logic/frame-definability/frames.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/frames.tex:46`; PDF page pending.
+- `TA-OCC-2505d07d6558d81d` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:2`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:12`; PDF page pending.
+- `TA-OCC-95bbf390cd85b6b1` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:11`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:15`; PDF page pending.
+- `TA-OCC-33659bade23050ad` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:11`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:32`; PDF page pending.
+- `TA-OCC-edcd378957477c88` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:14`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:87`; PDF page pending.
+- `TA-OCC-a7cf8acfee29536c` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:16`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:121`; PDF page pending.
+- `TA-OCC-7a8f71bf8dbb049d` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:17`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:130`; PDF page pending.
+- `TA-OCC-f37c45d26be871d7` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:138`; PDF page pending.
+- `TA-OCC-e7d1c23c95d55848` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:2`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
+
+## TA-T173 — euclidean relation / weakly dense / weakly connected / weakly directed / diamond property / confluence
+
+Chosen rendering: **யூக்ளிடியப் பண்புள்ள தொடர்பு / தளர்வாக அடர்ந்த / தளர்வாக இணைந்த / தளர்வாகத் திசைப்படுத்தப்பட்ட / வைரப் பண்பு / சங்கமம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The consulted SCERT pages directly anchor relation, reflexive, symmetric, transitive and function terminology but do not attest these complete specialist compounds. Each provisional Tamil phrase is fixed by its displayed first-order condition; வைரப் பண்பு and சங்கமம் are explicitly presented as alternate names for the common-successor condition.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P35-KINDS-EXAMPLES (checked_context_only); TA-T173-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “யூக்ளிடியப் பண்புள்ள தொடர்பு / தளர்வாக அடர்ந்த / தளர்வாக இணைந்த / தளர்வாகத் திசைப்படுத்தப்பட்ட / வைரப் பண்பு / சங்கமம்” the established India-standard Tamil expression for “euclidean relation / weakly dense / weakly connected / weakly directed / diamond property / confluence” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-79ccd695c88e4a62` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:134`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:137`; PDF page pending.
+- `TA-OCC-0c6ac81cac831675` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:135`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:138`; PDF page pending.
+- `TA-OCC-4e16953ced658e4a` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:138`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:141`; PDF page pending.
+- `TA-OCC-6f90cd3923e6154c` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:140`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:145`; PDF page pending.
+- `TA-OCC-d6cb37803f9223eb` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:143`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:146`; PDF page pending.
+- `TA-OCC-f4db1724ff9888a3` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:143`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:146`; PDF page pending.
+- `TA-OCC-2b3917caa17d29dd` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:158`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:161`; PDF page pending.
+- `TA-OCC-456371e1f2591795` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:162`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:165`; PDF page pending.
+- `TA-OCC-82f787da0e572d09` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:172`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:175`; PDF page pending.
+- `TA-OCC-7d503532b21e3a41` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:156`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:166`; PDF page pending.
+- `TA-OCC-c561c5ea81dfbc37` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:157`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:167`; PDF page pending.
+
+## TA-T174 — first-order definable / converse well-founded / universal frame / Loeb formula / standard translation / monadic second-order definable
+
+Chosen rendering: **முதல்தரத்தில் வரையறுக்கத்தக்க / எதிர்திசையில் நன்கு நிறுவப்பட்ட / அனைத்துத் தொடர்புச் சட்டகம் / லோப் வாய்பாடு / தரநிலை மொழிபெயர்ப்பு / ஓரிட இரண்டாம்தரத்தில் வரையறுக்கத்தக்க**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked originals support the relation, function, quantifier, truth and inference components, while the edition already establishes முதல்தர and இரண்டாம்தர. Exact satisfaction biconditionals define both definability notions; the prohibited infinite forward R-chain defines converse well-foundedness; the all-pairs condition defines universal frames; and the recursive ST clauses define standard translation. The specialist compounds and proper name remain open to expert correction.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-T174-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “முதல்தரத்தில் வரையறுக்கத்தக்க / எதிர்திசையில் நன்கு நிறுவப்பட்ட / அனைத்துத் தொடர்புச் சட்டகம் / லோப் வாய்பாடு / தரநிலை மொழிபெயர்ப்பு / ஓரிட இரண்டாம்தரத்தில் வரையறுக்கத்தக்க” the established India-standard Tamil expression for “first-order definable / converse well-founded / universal frame / Loeb formula / standard translation / monadic second-order definable” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-4aae2c9c707a6293` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:25`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:29`; PDF page pending.
+- `TA-OCC-73479ecdec2bbcdf` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:35`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:37`; PDF page pending.
+- `TA-OCC-72cd96645514f362` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:42`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:38`; PDF page pending.
+- `TA-OCC-a4de7347c048b506` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:46`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:41`; PDF page pending.
+- `TA-OCC-29bdd6d3636266bd` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:47`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:45`; PDF page pending.
+- `TA-OCC-5d81d27f47cf15d6` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:52`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:51`; PDF page pending.
+- `TA-OCC-4b9313289783ca84` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:53`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:53`; PDF page pending.
+- `TA-OCC-d0924d9551c71a65` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:66`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:55`; PDF page pending.
+- `TA-OCC-248a08e58031c071` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:76`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:58`; PDF page pending.
+- `TA-OCC-ab8afc53c2124ee4` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:77`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:72`; PDF page pending.
+- `TA-OCC-755224e7bfac83a6` — OLP-0424 / `OLP-0424-S01`; source `content/normal-modal-logic/frame-definability/first-order-definability.tex:79`; Tamil `translation/content/normal-modal-logic/frame-definability/first-order-definability.tex:78`; PDF page pending.
+- `TA-OCC-c2d521cbf370b9cd` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:15`; PDF page pending.
+- `TA-OCC-6c917deabd7df0b8` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:26`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:26`; PDF page pending.
+- `TA-OCC-e48e8092f1d0003a` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:120`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:155`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

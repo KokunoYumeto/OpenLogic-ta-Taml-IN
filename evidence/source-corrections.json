@@ -3820,6 +3820,75 @@
       "rationale": "Component roles and order are fixed throughout the chapter, and the immediately following clauses separately identify W', R' and V'.",
       "precise_review_question": "Is the corrected countermodel typed consistently as an ordered model triple?",
       "location_needle": "SOURCE CORRECTION TA-NML-011"
+    },
+    {
+      "audit_id": "TA-NML-012",
+      "unit_id": "OLP-0423",
+      "kind": "seriality-proof-omitted-world-argument",
+      "action": "Restored the omitted world argument on the boxed satisfaction claim in the seriality contradiction.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\mSat{M}{\\Box!A}",
+          "to": "\\mSat{M}{\\Box!A}[w]",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The paired Diamond satisfaction claim and the implication failure are both explicitly evaluated at w, but the preceding Box claim alone omits its world parameter.",
+      "chosen_treatment": "தமிழ் தொடர் பண்புக்கான முரண்பாட்டு வாதத்தில் பெட்டி வாய்பாட்டையும் அதே உலகம்~$w$ இல் மதிப்பிடுகிறது.",
+      "alternatives_considered": "Leaving the Box claim without the world required by the chapter's satisfaction notation; deleting w from the paired Diamond claim.",
+      "rationale": "The assumption is that w has no accessible successor, which makes Box A true and Diamond A false specifically at w.",
+      "precise_review_question": "Are both modal satisfaction claims in the seriality contradiction now evaluated at the same world w?",
+      "location_needle": "SOURCE CORRECTION TA-NML-012"
+    },
+    {
+      "audit_id": "TA-NML-013",
+      "unit_id": "OLP-0426",
+      "kind": "standard-translation-true-case-repeats-false",
+      "action": "Changed the induction-case input under prvTrue from the false constant to the true constant.",
+      "identifier_replacements": [
+        {
+          "from": "\\tagitem{prvTrue}{\\indcase{!A}{\\lfalse}",
+          "to": "\\tagitem{prvTrue}{\\indcase{!A}{\\ltrue}",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\lfalse"],
+      "expected_extra_commands": ["\\ltrue"],
+      "source_issue_or_choice": "The branch is tagged prvTrue and translates its input to ltrue, but its induction-case pattern incorrectly repeats lfalse from the preceding branch.",
+      "chosen_treatment": "தமிழ் prvTrue நேர்வின் உள்ளீட்டையும் விளைவையும் $\\ltrue$ ஆக ஒத்திசைக்கிறது.",
+      "alternatives_considered": "Retaining two false-constant branches; changing the branch tag and translation result to false.",
+      "rationale": "A recursive standard translation needs one distinct base case for each truth constant, and the branch body already identifies this as the true case.",
+      "precise_review_question": "Does the corrected standard-translation definition now contain distinct false and true base cases?",
+      "location_needle": "SOURCE CORRECTION TA-NML-013"
+    },
+    {
+      "audit_id": "TA-NML-014",
+      "unit_id": "OLP-0423",
+      "kind": "valuation-example-parenthesis-inside-math",
+      "action": "Moved the prose-closing parenthesis outside the inline formula defining the arbitrary valuation example.",
+      "normalized_math_replacements": [
+        {
+          "from": "V(q)=\\emptyset)",
+          "to": "V(q)=\\emptyset",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The opening parenthesis begins in prose before 'when q is other than p', but the source closes it inside the math span after emptyset.",
+      "chosen_treatment": "தமிழ் $V(q)=\\emptyset$ என்ற வாய்பாட்டை முடித்த பிறகு உரை அடைப்புக்குறியை மூடுகிறது.",
+      "alternatives_considered": "Keeping an unmatched right parenthesis inside the formula; deleting the parenthesis around the explanatory clause.",
+      "rationale": "Moving only the delimiter preserves the valuation choice and gives the prose and formula separately balanced punctuation.",
+      "precise_review_question": "Is the explanatory parenthesis now outside the complete V(q)=emptyset formula?",
+      "location_needle": "SOURCE CORRECTION TA-NML-014"
     }
   ],
   "by_unit": {
@@ -3941,6 +4010,8 @@
     "OLP-0414": ["TA-NML-006"],
     "OLP-0416": ["TA-NML-007", "TA-NML-008", "TA-NML-009"],
     "OLP-0417": ["TA-NML-010"],
-    "OLP-0418": ["TA-NML-011"]
+    "OLP-0418": ["TA-NML-011"],
+    "OLP-0423": ["TA-NML-012", "TA-NML-014"],
+    "OLP-0426": ["TA-NML-013"]
   }
 }

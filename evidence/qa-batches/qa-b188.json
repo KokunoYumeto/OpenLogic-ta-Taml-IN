@@ -1,0 +1,271 @@
+{
+  "batch_id": "TA-B188",
+  "units": [
+    {
+      "unit_id": "OLP-0423",
+      "source_sha256": "a107f2b5ce681ff056d243b0cd68955cdf997d66276ce17b74207164b1af6d8c",
+      "translation_sha256": "59d9d3b7a26718ec0c5634d9ab3497f7d6210334b53bd60406322a9fffca52ee",
+      "source_bytes": 7786,
+      "translation_bytes": 17788,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mSat{M}{\\Box!A}$",
+        "$V(q)=\\emptyset)$"
+      ],
+      "extra_math": [
+        "$\\mSat{M}{\\Box!A}[w]$",
+        "$V(q)=\\emptyset$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Ruv",
+        "Ruw",
+        "Ruy",
+        "Ruz",
+        "Rvu",
+        "Rvw",
+        "Rwu",
+        "Rwv",
+        "Rww",
+        "acc",
+        "def",
+        "frd",
+        "include",
+        "logic",
+        "nml",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-012",
+          "unit_id": "OLP-0423",
+          "kind": "seriality-proof-omitted-world-argument",
+          "action": "Restored the omitted world argument on the boxed satisfaction claim in the seriality contradiction.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\mSat{M}{\\Box!A}",
+              "to": "\\mSat{M}{\\Box!A}[w]",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The paired Diamond satisfaction claim and the implication failure are both explicitly evaluated at w, but the preceding Box claim alone omits its world parameter.",
+          "chosen_treatment": "தமிழ் தொடர் பண்புக்கான முரண்பாட்டு வாதத்தில் பெட்டி வாய்பாட்டையும் அதே உலகம்~$w$ இல் மதிப்பிடுகிறது.",
+          "alternatives_considered": "Leaving the Box claim without the world required by the chapter's satisfaction notation; deleting w from the paired Diamond claim.",
+          "rationale": "The assumption is that w has no accessible successor, which makes Box A true and Diamond A false specifically at w.",
+          "precise_review_question": "Are both modal satisfaction claims in the seriality contradiction now evaluated at the same world w?",
+          "location_needle": "SOURCE CORRECTION TA-NML-012"
+        },
+        {
+          "audit_id": "TA-NML-014",
+          "unit_id": "OLP-0423",
+          "kind": "valuation-example-parenthesis-inside-math",
+          "action": "Moved the prose-closing parenthesis outside the inline formula defining the arbitrary valuation example.",
+          "normalized_math_replacements": [
+            {
+              "from": "V(q)=\\emptyset)",
+              "to": "V(q)=\\emptyset",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The opening parenthesis begins in prose before 'when q is other than p', but the source closes it inside the math span after emptyset.",
+          "chosen_treatment": "தமிழ் $V(q)=\\emptyset$ என்ற வாய்பாட்டை முடித்த பிறகு உரை அடைப்புக்குறியை மூடுகிறது.",
+          "alternatives_considered": "Keeping an unmatched right parenthesis inside the formula; deleting the parenthesis around the explanatory clause.",
+          "rationale": "Moving only the delimiter preserves the valuation choice and gives the prose and formula separately balanced punctuation.",
+          "precise_review_question": "Is the explanatory parenthesis now outside the complete V(q)=emptyset formula?",
+          "location_needle": "SOURCE CORRECTION TA-NML-014"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0424",
+      "source_sha256": "9c5c15840f4ad33863a32492fc8e16e7d4ce9b530bce2501a86b3f9466742358",
+      "translation_sha256": "90072f52c846974b1f31f6f7c37abaa32dde4aff07dab8a6daf47c0db2cd75b9",
+      "source_bytes": 3895,
+      "translation_bytes": 10021,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Ruv",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0425",
+      "source_sha256": "057897c91d88ced3eebfd46a08cba8c26a80da294f8870f37e08146e01f39798",
+      "translation_sha256": "d21dddac9a2efd2c4cfae2e978ff831958fcf426c4ac97bbb6ddb057af8dbc8c",
+      "source_bytes": 5743,
+      "translation_bytes": 12654,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Ruv",
+        "Rww",
+        "and",
+        "auto",
+        "bounding",
+        "box",
+        "controls",
+        "corners",
+        "cycle",
+        "distance",
+        "fill",
+        "frd",
+        "gray",
+        "include",
+        "intersections",
+        "logic",
+        "name",
+        "nml",
+        "node",
+        "open",
+        "path",
+        "prf",
+        "prop",
+        "prs",
+        "rounded",
+        "section",
+        "thick",
+        "univ",
+        "use",
+        "very"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0426",
+      "source_sha256": "1b4691078284c0f45e4ec808398c3952649ec79732167d7b2d6a1ce7ad974490",
+      "translation_sha256": "4832abfdd691181f5668df03940857fe01790de2f637c8bf9ca78b2bdc880ea3",
+      "source_bytes": 6676,
+      "translation_bytes": 12671,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "propositional",
+        "section",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-013",
+          "unit_id": "OLP-0426",
+          "kind": "standard-translation-true-case-repeats-false",
+          "action": "Changed the induction-case input under prvTrue from the false constant to the true constant.",
+          "identifier_replacements": [
+            {
+              "from": "\\tagitem{prvTrue}{\\indcase{!A}{\\lfalse}",
+              "to": "\\tagitem{prvTrue}{\\indcase{!A}{\\ltrue}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\lfalse"
+          ],
+          "expected_extra_commands": [
+            "\\ltrue"
+          ],
+          "source_issue_or_choice": "The branch is tagged prvTrue and translates its input to ltrue, but its induction-case pattern incorrectly repeats lfalse from the preceding branch.",
+          "chosen_treatment": "தமிழ் prvTrue நேர்வின் உள்ளீட்டையும் விளைவையும் $\\ltrue$ ஆக ஒத்திசைக்கிறது.",
+          "alternatives_considered": "Retaining two false-constant branches; changing the branch tag and translation result to false.",
+          "rationale": "A recursive standard translation needs one distinct base case for each truth constant, and the branch body already identifies this as the true case.",
+          "precise_review_question": "Does the corrected standard-translation definition now contain distinct false and true base cases?",
+          "location_needle": "SOURCE CORRECTION TA-NML-013"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\lfalse"
+      ],
+      "extra_commands": [
+        "\\ltrue"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}
