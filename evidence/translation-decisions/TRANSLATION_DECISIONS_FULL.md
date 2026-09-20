@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 529/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 540/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -4902,6 +4902,70 @@ Please double-check: **does the inactive proof conclude x is a member of upperca
 
 - `TA-OCC-bdba0af58e8b05e3` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:1`; Tamil `translation/content/set-theory/z/arbintersections.tex:58`; PDF page pending.
 
+## TA-STH-010 — The displayed map is f: A_{a_2} to B_{b_2}; B_{b_2} is therefore its codomain, not its domain.
+
+Chosen rendering: **தமிழ் வாக்கியம் B_{b_2} ஐ f இன் துணைச்சார்பகம் என்று சரியாகக் குறிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The conclusion b_1 lessdot b_2 follows because f(a_1) lies in B_{b_2}, the codomain initial segment.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0551 (checked_supports)
+
+Alternatives: Preserving the source's domain/codomain slip.
+
+Please double-check: **does the proof identify B_{b_2} as the codomain of f?**
+
+- `TA-OCC-91a7d7db6d2a1e7a` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:1`; Tamil `translation/content/set-theory/ordinals/iso.tex:151`; PDF page pending.
+
+## TA-STH-011 — The source says that alpha has a least element ‘which is phi’; phi is a formula, while the intended element satisfies phi.
+
+Chosen rendering: **தமிழ், alpha-வில் phi-ஐ நிறைவுசெய்யும் உறுப்புகளுள் மீச்சிறு உறுப்பு உள்ளது என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The theorem seeks a least ordinal for which phi holds, and the preceding case split guarantees the relevant subset is nonempty.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0553 (checked_supports)
+
+Alternatives: Literally identifying an ordinal element with the formula phi.
+
+Please double-check: **does the proof choose the membership-least element among those satisfying phi?**
+
+- `TA-OCC-90bf778235c8755d` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:63`; PDF page pending.
+
+## TA-STH-012 — The source says ‘only the Axioms we provided introduced so far,’ combining two competing constructions and omitting the needed preposition.
+
+Chosen rendering: **தமிழ், இதுவரை அறிமுகப்படுத்திய அடிகோள்களை மட்டும் பயன்படுத்தி முடிவை நிறுவ முடியாது என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The next sentence introduces Replacement precisely because the preceding axiom stock is insufficient.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0554 (checked_supports)
+
+Alternatives: Preserving the duplicated verbs or treating ‘provided’ as a mathematical condition.
+
+Please double-check: **does the sentence state that the prior axioms alone do not prove the desired representation theorem?**
+
+- `TA-OCC-3a33d81efda5a5fd` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:1`; Tamil `translation/content/set-theory/ordinals/replacement.tex:20`; PDF page pending.
+
+## TA-STH-013 — The chapter defines an order-isomorphism as a function between carrier sets; the source instead types this one map as landing in the ordered pair <B, lessdot>.
+
+Chosen rendering: **தமிழ் சூத்திரம் ஓரினச்சார்பை f: beta to B என்று வகைப்படுத்தி, lessdot-ஐ பேணப்படும் வரிசைத் தொடர்பாக வைத்திருக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The following restriction uses values f(alpha) as members of B and initial-segment indices, so the carrier B is the required codomain.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0556 (checked_supports)
+
+Alternatives: Treating the ordered structure pair itself as the codomain set; leaving this one map inconsistent with the chapter's definition.
+
+Please double-check: **is f typed as a function from beta to the carrier B?**
+
+- `TA-OCC-48eb9af450179982` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:1`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:72`; PDF page pending.
+
 ## TA-T001 — set
 
 Chosen rendering: **கணம்**
@@ -5703,6 +5767,23 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-625c11bc71f1362f` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:15`; Tamil `translation/content/set-theory/z/nat.tex:31`; PDF page pending.
 - `TA-OCC-58e3f113035b529b` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:25`; Tamil `translation/content/set-theory/z/nat.tex:51`; PDF page pending.
 - `TA-OCC-2f689d6930552b8c` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:38`; Tamil `translation/content/set-theory/z/arbintersections.tex:44`; PDF page pending.
+- `TA-OCC-939b71c03b2e7871` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:20`; Tamil `translation/content/set-theory/ordinals/vn.tex:25`; PDF page pending.
+- `TA-OCC-50f56bd977d874f5` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:20`; Tamil `translation/content/set-theory/ordinals/vn.tex:30`; PDF page pending.
+- `TA-OCC-ae221138566bbd8b` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:132`; Tamil `translation/content/set-theory/ordinals/basic.tex:146`; PDF page pending.
+- `TA-OCC-5168a3faf9cd2ae0` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:137`; Tamil `translation/content/set-theory/ordinals/basic.tex:152`; PDF page pending.
+- `TA-OCC-1f91e40f4fb19a82` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:147`; Tamil `translation/content/set-theory/ordinals/basic.tex:162`; PDF page pending.
+- `TA-OCC-dd73260e952fb2dc` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:151`; Tamil `translation/content/set-theory/ordinals/basic.tex:166`; PDF page pending.
+- `TA-OCC-e3c2323f072c7349` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:159`; Tamil `translation/content/set-theory/ordinals/basic.tex:176`; PDF page pending.
+- `TA-OCC-e0c9637bf855813e` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:168`; Tamil `translation/content/set-theory/ordinals/basic.tex:187`; PDF page pending.
+- `TA-OCC-fa39af5002706dd3` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:41`; Tamil `translation/content/set-theory/ordinals/replacement.tex:52`; PDF page pending.
+- `TA-OCC-0a24dabf5fefc7a3` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:44`; Tamil `translation/content/set-theory/ordinals/replacement.tex:52`; PDF page pending.
+- `TA-OCC-35970d0ec1e83f57` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:44`; Tamil `translation/content/set-theory/ordinals/replacement.tex:67`; PDF page pending.
+- `TA-OCC-77067a6669d0caf2` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:57`; Tamil `translation/content/set-theory/ordinals/replacement.tex:76`; PDF page pending.
+- `TA-OCC-bd14fa7914df7f5e` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:27`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:30`; PDF page pending.
+- `TA-OCC-f9dd32ecbae95527` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:34`; Tamil `translation/content/set-theory/ordinals/opps.tex:37`; PDF page pending.
+- `TA-OCC-365599def8f63cce` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:66`; Tamil `translation/content/set-theory/ordinals/opps.tex:70`; PDF page pending.
+- `TA-OCC-935bde9b58a68625` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:79`; Tamil `translation/content/set-theory/ordinals/opps.tex:84`; PDF page pending.
+- `TA-OCC-4b526a88e2cab6f9` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:87`; Tamil `translation/content/set-theory/ordinals/opps.tex:92`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -6243,6 +6324,28 @@ Please double-check: **do the listed uses of “உறுப்பு” preserv
 - `TA-OCC-1c59367dfe06b747` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:1`; Tamil `translation/content/set-theory/z/milestone.tex:19`; PDF page pending.
 - `TA-OCC-f5677e06bebbac2d` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:32`; Tamil `translation/content/set-theory/z/nat.tex:38`; PDF page pending.
 - `TA-OCC-f1b49a696a138bf0` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:1`; Tamil `translation/content/set-theory/z/arbintersections.tex:38`; PDF page pending.
+- `TA-OCC-c7f0c31e02c0fb67` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:36`; Tamil `translation/content/set-theory/ordinals/idea.tex:37`; PDF page pending.
+- `TA-OCC-fd14258417cfbe85` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:36`; Tamil `translation/content/set-theory/ordinals/idea.tex:40`; PDF page pending.
+- `TA-OCC-324d640c06f07c5a` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:15`; Tamil `translation/content/set-theory/ordinals/wo.tex:18`; PDF page pending.
+- `TA-OCC-89b4ec25c2dca2b1` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:15`; Tamil `translation/content/set-theory/ordinals/wo.tex:37`; PDF page pending.
+- `TA-OCC-48b48093ffb97c86` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:38`; Tamil `translation/content/set-theory/ordinals/wo.tex:43`; PDF page pending.
+- `TA-OCC-01796f2d445ce287` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:40`; Tamil `translation/content/set-theory/ordinals/wo.tex:45`; PDF page pending.
+- `TA-OCC-d898549cd0f31fd8` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:42`; Tamil `translation/content/set-theory/ordinals/wo.tex:48`; PDF page pending.
+- `TA-OCC-415e1545184ebfd0` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:43`; Tamil `translation/content/set-theory/ordinals/wo.tex:50`; PDF page pending.
+- `TA-OCC-09dc1e37bd353278` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:58`; Tamil `translation/content/set-theory/ordinals/wo.tex:66`; PDF page pending.
+- `TA-OCC-2e58cbda41e1d1f7` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:80`; Tamil `translation/content/set-theory/ordinals/iso.tex:89`; PDF page pending.
+- `TA-OCC-7171d0ed3d34130e` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:158`; Tamil `translation/content/set-theory/ordinals/iso.tex:177`; PDF page pending.
+- `TA-OCC-f68f2cacd23230f6` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:159`; Tamil `translation/content/set-theory/ordinals/iso.tex:179`; PDF page pending.
+- `TA-OCC-42686d14be5d5703` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:14`; Tamil `translation/content/set-theory/ordinals/basic.tex:15`; PDF page pending.
+- `TA-OCC-fd3a05f7aad1b0a0` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:14`; Tamil `translation/content/set-theory/ordinals/basic.tex:44`; PDF page pending.
+- `TA-OCC-f48988a7d2f62a7d` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:56`; Tamil `translation/content/set-theory/ordinals/basic.tex:61`; PDF page pending.
+- `TA-OCC-ae8d0c25d5f53aed` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:56`; Tamil `translation/content/set-theory/ordinals/basic.tex:61`; PDF page pending.
+- `TA-OCC-0130e6eab2488792` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:56`; Tamil `translation/content/set-theory/ordinals/basic.tex:186`; PDF page pending.
+- `TA-OCC-d866fd38fd129c95` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:56`; Tamil `translation/content/set-theory/ordinals/basic.tex:188`; PDF page pending.
+- `TA-OCC-a5886110b64d9d50` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:56`; Tamil `translation/content/set-theory/ordinals/basic.tex:200`; PDF page pending.
+- `TA-OCC-01156b80cf529a6f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:56`; Tamil `translation/content/set-theory/ordinals/basic.tex:229`; PDF page pending.
+- `TA-OCC-1e4449a9c11d8de0` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:73`; Tamil `translation/content/set-theory/ordinals/opps.tex:78`; PDF page pending.
+- `TA-OCC-1bc7285986f5cd9d` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:86`; Tamil `translation/content/set-theory/ordinals/opps.tex:91`; PDF page pending.
 
 ## TA-T003 — empty set
 
@@ -6326,6 +6429,8 @@ Please double-check: **do the listed uses of “உட்கணம்” preserv
 - `TA-OCC-9cd13119c90a3425` — OLP-0388 / `OLP-0388-S01`; source `content/many-valued-logic/syntax-and-semantics/matrices.tex:14`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/matrices.tex:16`; PDF page pending.
 - `TA-OCC-7460d4a5d80d80f8` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:55`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:62`; PDF page pending.
 - `TA-OCC-5d34c0288f182a0e` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:99`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:111`; PDF page pending.
+- `TA-OCC-884b13abf735f7de` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:15`; Tamil `translation/content/set-theory/ordinals/wo.tex:42`; PDF page pending.
+- `TA-OCC-29905e76cf91959f` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:66`; Tamil `translation/content/set-theory/ordinals/replacement.tex:78`; PDF page pending.
 
 ## TA-T005 — proper subset
 
@@ -7108,6 +7213,18 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-e3f398ea6a02c8cc` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:1`; Tamil `translation/content/set-theory/z/separation.tex:51`; PDF page pending.
 - `TA-OCC-3f53c1cc99717744` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:1`; Tamil `translation/content/set-theory/z/separation.tex:67`; PDF page pending.
 - `TA-OCC-3025b3fa2a55e3df` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:1`; Tamil `translation/content/set-theory/z/separation.tex:70`; PDF page pending.
+- `TA-OCC-fe20a85fb07d50e4` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:161`; Tamil `translation/content/set-theory/ordinals/iso.tex:86`; PDF page pending.
+- `TA-OCC-84a9207c3407552f` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:161`; Tamil `translation/content/set-theory/ordinals/iso.tex:93`; PDF page pending.
+- `TA-OCC-ba62eb0b41dde279` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:161`; Tamil `translation/content/set-theory/ordinals/iso.tex:175`; PDF page pending.
+- `TA-OCC-22b3dbd5014b95ee` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:161`; Tamil `translation/content/set-theory/ordinals/iso.tex:180`; PDF page pending.
+- `TA-OCC-b72ed8a16d8ddc70` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:159`; Tamil `translation/content/set-theory/ordinals/basic.tex:166`; PDF page pending.
+- `TA-OCC-1e01bfc111b7d0bc` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:163`; Tamil `translation/content/set-theory/ordinals/basic.tex:171`; PDF page pending.
+- `TA-OCC-50723d2e2045bf3f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:163`; Tamil `translation/content/set-theory/ordinals/basic.tex:177`; PDF page pending.
+- `TA-OCC-7fd3ccd53b02b12f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:163`; Tamil `translation/content/set-theory/ordinals/basic.tex:181`; PDF page pending.
+- `TA-OCC-ef92604b93e9eadf` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:163`; Tamil `translation/content/set-theory/ordinals/basic.tex:182`; PDF page pending.
+- `TA-OCC-803e87df5e950e41` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:163`; Tamil `translation/content/set-theory/ordinals/basic.tex:201`; PDF page pending.
+- `TA-OCC-e89b18e45de22cee` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:1`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:19`; PDF page pending.
+- `TA-OCC-c4e9f48c737486e8` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:41`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -7448,6 +7565,15 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-80d6aaf13340955b` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:10`; Tamil `translation/content/set-theory/z/nat.tex:25`; PDF page pending.
 - `TA-OCC-5cb1432fece08df3` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:20`; Tamil `translation/content/set-theory/z/nat.tex:26`; PDF page pending.
 - `TA-OCC-7c60e277b7117caa` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:21`; Tamil `translation/content/set-theory/z/nat.tex:30`; PDF page pending.
+- `TA-OCC-532130e1aa22db60` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:16`; Tamil `translation/content/set-theory/ordinals/replacement.tex:16`; PDF page pending.
+- `TA-OCC-e47958ed5c22f218` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:20`; Tamil `translation/content/set-theory/ordinals/replacement.tex:22`; PDF page pending.
+- `TA-OCC-f97082fd28d24c57` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:21`; Tamil `translation/content/set-theory/ordinals/replacement.tex:23`; PDF page pending.
+- `TA-OCC-7898494300f4dc08` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:26`; Tamil `translation/content/set-theory/ordinals/replacement.tex:36`; PDF page pending.
+- `TA-OCC-1d22d472223ea159` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:29`; Tamil `translation/content/set-theory/ordinals/replacement.tex:78`; PDF page pending.
+- `TA-OCC-0e532ce678194cf0` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:33`; Tamil `translation/content/set-theory/ordinals/replacement.tex:81`; PDF page pending.
+- `TA-OCC-20fd00d69efdd5c8` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:10`; Tamil `translation/content/set-theory/ordinals/milestone.tex:11`; PDF page pending.
+- `TA-OCC-fb8f25e0ebbb32ec` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:15`; PDF page pending.
+- `TA-OCC-3e4e59429538f496` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:16`; PDF page pending.
 
 ## TA-T018 — union / intersection / disjoint
 
@@ -7588,6 +7714,9 @@ Please double-check: **do the listed uses of “சேர்ப்பு / வ�
 - `TA-OCC-67d3a65645292d86` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:13`; Tamil `translation/content/set-theory/z/milestone.tex:20`; PDF page pending.
 - `TA-OCC-6b8bcc1d37ac51e7` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:6`; Tamil `translation/content/set-theory/z/arbintersections.tex:11`; PDF page pending.
 - `TA-OCC-60e84704dd28fb66` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:12`; Tamil `translation/content/set-theory/z/arbintersections.tex:59`; PDF page pending.
+- `TA-OCC-488776197f64fc54` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:1`; Tamil `translation/content/set-theory/ordinals/iso.tex:28`; PDF page pending.
+- `TA-OCC-ef87f03d6c0471d8` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:41`; Tamil `translation/content/set-theory/ordinals/replacement.tex:82`; PDF page pending.
+- `TA-OCC-2bc32448964fa2c1` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:16`; PDF page pending.
 
 ## TA-T019 — Cartesian product / ordered pair
 
@@ -7632,6 +7761,7 @@ Please double-check: **do the listed uses of “கார்டீசியன�
 - `TA-OCC-dd3cb332c96141b5` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:45`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:48`; PDF page pending.
 - `TA-OCC-e8d508066c860f9b` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:28`; Tamil `translation/content/set-theory/z/powerset.tex:35`; PDF page pending.
 - `TA-OCC-a55afb75fb7c1531` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:52`; Tamil `translation/content/set-theory/z/nat.tex:58`; PDF page pending.
+- `TA-OCC-3218f1be0d2754ee` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:64`; Tamil `translation/content/set-theory/ordinals/replacement.tex:74`; PDF page pending.
 
 ## TA-T020 — tuple / recursive definition
 
@@ -8122,6 +8252,17 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-e6853bb8bca918a5` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:100`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:106`; PDF page pending.
 - `TA-OCC-f23db441a0387fbe` — OLP-0532 / `OLP-0532-S01`; source `content/set-theory/story/russells-paradox-again.tex:23`; Tamil `translation/content/set-theory/story/russells-paradox-again.tex:46`; PDF page pending.
 - `TA-OCC-ed830bdbd541d160` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:74`; Tamil `translation/content/set-theory/z/infinity-again.tex:85`; PDF page pending.
+- `TA-OCC-a3eda21d42822b72` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:37`; Tamil `translation/content/set-theory/ordinals/wo.tex:69`; PDF page pending.
+- `TA-OCC-130dc4e1fe240534` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:10`; Tamil `translation/content/set-theory/ordinals/basic.tex:10`; PDF page pending.
+- `TA-OCC-e02790ccc2c801fc` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:10`; Tamil `translation/content/set-theory/ordinals/basic.tex:46`; PDF page pending.
+- `TA-OCC-8c6a8774e6133299` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:17`; Tamil `translation/content/set-theory/ordinals/basic.tex:59`; PDF page pending.
+- `TA-OCC-af8e3db4880ea2cf` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:28`; Tamil `translation/content/set-theory/ordinals/basic.tex:87`; PDF page pending.
+- `TA-OCC-1e1c025425743253` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:35`; Tamil `translation/content/set-theory/ordinals/basic.tex:87`; PDF page pending.
+- `TA-OCC-6a204a672291a76a` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:37`; Tamil `translation/content/set-theory/ordinals/basic.tex:105`; PDF page pending.
+- `TA-OCC-d765d38e829b6549` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:43`; Tamil `translation/content/set-theory/ordinals/basic.tex:112`; PDF page pending.
+- `TA-OCC-ce9f0ecbf1677744` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:43`; Tamil `translation/content/set-theory/ordinals/basic.tex:214`; PDF page pending.
+- `TA-OCC-f0762482ba2f472e` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:32`; Tamil `translation/content/set-theory/ordinals/opps.tex:44`; PDF page pending.
+- `TA-OCC-19fdd32700659890` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:39`; Tamil `translation/content/set-theory/ordinals/opps.tex:46`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -8584,6 +8725,11 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-0252bea4c65b9708` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:20`; PDF page pending.
 - `TA-OCC-42d923ae1563b8d1` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:51`; Tamil `translation/content/set-theory/z/powerset.tex:63`; PDF page pending.
 - `TA-OCC-0da95b57ae0be01d` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:52`; Tamil `translation/content/set-theory/z/nat.tex:59`; PDF page pending.
+- `TA-OCC-a1a72d772a0cb33c` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:11`; Tamil `translation/content/set-theory/ordinals/wo.tex:13`; PDF page pending.
+- `TA-OCC-e2ed65bc56926ad6` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:22`; Tamil `translation/content/set-theory/ordinals/wo.tex:24`; PDF page pending.
+- `TA-OCC-5bbc642835cef743` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:37`; Tamil `translation/content/set-theory/ordinals/iso.tex:39`; PDF page pending.
+- `TA-OCC-b1f15494d0e465bc` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:37`; Tamil `translation/content/set-theory/ordinals/iso.tex:73`; PDF page pending.
+- `TA-OCC-cae67b19fb4dda05` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:25`; Tamil `translation/content/set-theory/ordinals/basic.tex:29`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -8695,6 +8841,7 @@ Please double-check: **do the listed uses of “சார்பகம் / வ�
 - `TA-OCC-39c32a396c5c3676` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:29`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:33`; PDF page pending.
 - `TA-OCC-f1b721a5471b769e` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:30`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:33`; PDF page pending.
 - `TA-OCC-546f78330b242990` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:93`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:111`; PDF page pending.
+- `TA-OCC-c8ff631101e01623` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:134`; Tamil `translation/content/set-theory/ordinals/iso.tex:149`; PDF page pending.
 
 ## TA-T025 — reflexive / symmetric / transitive
 
@@ -8986,6 +9133,24 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-f4ca8381d6c60e3f` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:15`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:12`; PDF page pending.
 - `TA-OCC-350bd3e79ace939f` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:15`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:16`; PDF page pending.
 - `TA-OCC-b340a480a52535d8` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:15`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:51`; PDF page pending.
+- `TA-OCC-eb098bcc5abb14d5` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:34`; Tamil `translation/content/set-theory/ordinals/wo.tex:38`; PDF page pending.
+- `TA-OCC-b0b24e3199b745b2` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:34`; Tamil `translation/content/set-theory/ordinals/wo.tex:49`; PDF page pending.
+- `TA-OCC-0804f2d9d325f869` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:34`; Tamil `translation/content/set-theory/ordinals/wo.tex:51`; PDF page pending.
+- `TA-OCC-2638bd5882cce995` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:27`; Tamil `translation/content/set-theory/ordinals/vn.tex:30`; PDF page pending.
+- `TA-OCC-0ccafae8bb8d8aa4` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:28`; Tamil `translation/content/set-theory/ordinals/vn.tex:30`; PDF page pending.
+- `TA-OCC-82ea9dfcb905812d` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:19`; Tamil `translation/content/set-theory/ordinals/basic.tex:20`; PDF page pending.
+- `TA-OCC-fab66536be5efc01` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:22`; Tamil `translation/content/set-theory/ordinals/basic.tex:24`; PDF page pending.
+- `TA-OCC-89ec208bfbbb0a9d` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:23`; Tamil `translation/content/set-theory/ordinals/basic.tex:26`; PDF page pending.
+- `TA-OCC-a9baee4f8b1c2e22` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:25`; Tamil `translation/content/set-theory/ordinals/basic.tex:29`; PDF page pending.
+- `TA-OCC-ff8f90a3bfda9dcc` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:97`; Tamil `translation/content/set-theory/ordinals/basic.tex:107`; PDF page pending.
+- `TA-OCC-968d21e020a5bcd2` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:132`; Tamil `translation/content/set-theory/ordinals/basic.tex:146`; PDF page pending.
+- `TA-OCC-97ae16b386ff539b` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:137`; Tamil `translation/content/set-theory/ordinals/basic.tex:151`; PDF page pending.
+- `TA-OCC-4b093c0282a1b5e9` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:153`; Tamil `translation/content/set-theory/ordinals/basic.tex:169`; PDF page pending.
+- `TA-OCC-8893cd69669f9370` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:191`; Tamil `translation/content/set-theory/ordinals/basic.tex:210`; PDF page pending.
+- `TA-OCC-616bdd1869fccb16` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:38`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:41`; PDF page pending.
+- `TA-OCC-51958f3e167a321a` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:34`; Tamil `translation/content/set-theory/ordinals/opps.tex:36`; PDF page pending.
+- `TA-OCC-a3e9e4274cacefa8` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:85`; Tamil `translation/content/set-theory/ordinals/opps.tex:90`; PDF page pending.
+- `TA-OCC-0626ae3013434ab4` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:86`; Tamil `translation/content/set-theory/ordinals/opps.tex:92`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -9031,6 +9196,7 @@ Please double-check: **do the listed uses of “சமானத் தொடர�
 - `TA-OCC-f1517e56449809d7` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:71`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:102`; PDF page pending.
 - `TA-OCC-b49aa29bce6587b3` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:72`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
 - `TA-OCC-fddc8ba8c3df65f7` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:91`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:93`; PDF page pending.
+- `TA-OCC-8b5e59d96e5f6309` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:37`; Tamil `translation/content/set-theory/ordinals/iso.tex:39`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -9103,6 +9269,8 @@ Please double-check: **is “எங்கும் தற்சுட்டற�
 - `TA-OCC-e2af762bcc50ab2c` — OLP-0169 / `OLP-0169-S01`; source `content/first-order-logic/models-theories/expressing-props-of-structures.tex:1`; Tamil `translation/content/first-order-logic/models-theories/expressing-props-of-structures.tex:54`; PDF page pending.
 - `TA-OCC-e9fca1f432597e59` — OLP-0169 / `OLP-0169-S01`; source `content/first-order-logic/models-theories/expressing-props-of-structures.tex:1`; Tamil `translation/content/first-order-logic/models-theories/expressing-props-of-structures.tex:65`; PDF page pending.
 - `TA-OCC-c6669abde75f69fb` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:115`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:118`; PDF page pending.
+- `TA-OCC-b118883aa2710ebf` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:34`; Tamil `translation/content/set-theory/ordinals/wo.tex:38`; PDF page pending.
+- `TA-OCC-779f690c4a4cb8a5` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:34`; Tamil `translation/content/set-theory/ordinals/wo.tex:51`; PDF page pending.
 
 ## TA-T029 — connectivity (relation)
 
@@ -9122,6 +9290,8 @@ Please double-check: **is “ஒப்பிடத்தக்க பண்ப�
 - `TA-OCC-33f685278998e678` — OLP-0014 / `OLP-0014-S07`; source `content/sets-functions-relations/relations/special-properties.tex:57`; Tamil `translation/content/sets-functions-relations/relations/special-properties.tex:77`; PDF page pending.
 - `TA-OCC-58c3346618e32c11` — OLP-0016 / `OLP-0016-S06`; source `content/sets-functions-relations/relations/orders.tex:45`; Tamil `translation/content/sets-functions-relations/relations/orders.tex:57`; PDF page pending.
 - `TA-OCC-2059db31ddd66a6d` — OLP-0047 / `OLP-0047-S07`; source `content/sets-functions-relations/arithmetization/checking-details.tex:101`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:130`; PDF page pending.
+- `TA-OCC-43b0eb0947faf738` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:1`; Tamil `translation/content/set-theory/ordinals/wo.tex:15`; PDF page pending.
+- `TA-OCC-a25e8f5d76cf9cba` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:1`; Tamil `translation/content/set-theory/ordinals/wo.tex:44`; PDF page pending.
 
 ## TA-T030 — equivalence class / quotient
 
@@ -9444,6 +9614,7 @@ Please double-check: **is “முன்வரிசை / பகுதி வ�
 - `TA-OCC-31b58d05c0fb6923` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:52`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:58`; PDF page pending.
 - `TA-OCC-d07d2bffceaec444` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:59`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:64`; PDF page pending.
 - `TA-OCC-30f3dc26ce964910` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:44`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:48`; PDF page pending.
+- `TA-OCC-a61e7698248092ca` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:180`; PDF page pending.
 
 ## TA-T035 — graph / directed graph / vertex / edge
 
@@ -9965,6 +10136,25 @@ Please double-check: **is “மீச்சிறு உறுப்பு / �
 - `TA-OCC-aeadf6ffe2318eff` — OLP-0196 / `OLP-0196-S01`; source `content/model-theory/models-of-arithmetic/models-of-pa.tex:1`; Tamil `translation/content/model-theory/models-of-arithmetic/models-of-pa.tex:116`; PDF page pending.
 - `TA-OCC-2676746faf616ea5` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:54`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:59`; PDF page pending.
 - `TA-OCC-217707035a6360f2` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:13`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:14`; PDF page pending.
+- `TA-OCC-e392b4adba954e90` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:11`; Tamil `translation/content/set-theory/ordinals/wo.tex:7`; PDF page pending.
+- `TA-OCC-a54ecc7569d6e8b4` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:33`; Tamil `translation/content/set-theory/ordinals/wo.tex:28`; PDF page pending.
+- `TA-OCC-9501804877df8819` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:48`; Tamil `translation/content/set-theory/ordinals/wo.tex:37`; PDF page pending.
+- `TA-OCC-7723eedb3ff1a2c1` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:9`; PDF page pending.
+- `TA-OCC-9a8404da62979c4c` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:14`; PDF page pending.
+- `TA-OCC-2f28d1060e3f34d9` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:17`; PDF page pending.
+- `TA-OCC-88a31417cfb69e98` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:64`; PDF page pending.
+- `TA-OCC-33545ea2cbf2f793` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:107`; PDF page pending.
+- `TA-OCC-99039e487ab7a3e7` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:126`; PDF page pending.
+- `TA-OCC-14203a7e87f6d351` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:130`; PDF page pending.
+- `TA-OCC-94d85c610ffd411f` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:155`; PDF page pending.
+- `TA-OCC-556abd29129c864f` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:161`; PDF page pending.
+- `TA-OCC-6bec9f12128a2b1b` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:1`; Tamil `translation/content/set-theory/ordinals/vn.tex:10`; PDF page pending.
+- `TA-OCC-6369f64ae9a38f93` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:1`; Tamil `translation/content/set-theory/ordinals/vn.tex:38`; PDF page pending.
+- `TA-OCC-30e1bd1e5f0927b9` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:1`; Tamil `translation/content/set-theory/ordinals/vn.tex:40`; PDF page pending.
+- `TA-OCC-99dc4e8862862925` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:19`; Tamil `translation/content/set-theory/ordinals/basic.tex:223`; PDF page pending.
+- `TA-OCC-35768784c496d80e` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:1`; Tamil `translation/content/set-theory/ordinals/replacement.tex:10`; PDF page pending.
+- `TA-OCC-a35f7d6caad8374a` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:15`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:52`; PDF page pending.
+- `TA-OCC-3a42e6689c98c7e9` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:15`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:60`; PDF page pending.
 
 ## TA-T038 — successor / predecessor / initial segment
 
@@ -10005,6 +10195,16 @@ Please double-check: **is “அடுத்துறுப்பு / முந
 - `TA-OCC-26ddba5c25cd69bf` — OLP-0047 / `OLP-0047-S16`; source `content/sets-functions-relations/arithmetization/checking-details.tex:185`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:232`; PDF page pending.
 - `TA-OCC-660413e2ee88655a` — OLP-0059 / `OLP-0059-S02`; source `content/propositional-logic/syntax-and-semantics/preliminaries.tex:51`; Tamil `translation/content/propositional-logic/syntax-and-semantics/preliminaries.tex:55`; PDF page pending.
 - `TA-OCC-7309c0a10fd3f3ce` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:46`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:51`; PDF page pending.
+- `TA-OCC-4e8cfcab5d3ce864` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:64`; Tamil `translation/content/set-theory/ordinals/iso.tex:71`; PDF page pending.
+- `TA-OCC-b5b2e8f79c3a198e` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:64`; Tamil `translation/content/set-theory/ordinals/iso.tex:72`; PDF page pending.
+- `TA-OCC-c7f295eb5281fe14` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:65`; Tamil `translation/content/set-theory/ordinals/iso.tex:78`; PDF page pending.
+- `TA-OCC-d1cdaefb4c3fd964` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:70`; Tamil `translation/content/set-theory/ordinals/iso.tex:103`; PDF page pending.
+- `TA-OCC-b0671f74df1ad137` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:92`; Tamil `translation/content/set-theory/ordinals/iso.tex:156`; PDF page pending.
+- `TA-OCC-9b4e9306a900677b` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:139`; Tamil `translation/content/set-theory/ordinals/iso.tex:174`; PDF page pending.
+- `TA-OCC-b2d1b3f876e4d446` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:155`; Tamil `translation/content/set-theory/ordinals/iso.tex:175`; PDF page pending.
+- `TA-OCC-0c46922d27667880` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:156`; Tamil `translation/content/set-theory/ordinals/iso.tex:176`; PDF page pending.
+- `TA-OCC-191b56278998ea44` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:19`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:22`; PDF page pending.
+- `TA-OCC-ac728cd7e3933361` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:25`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:28`; PDF page pending.
 
 ## TA-T039 — inverse / relative product / restriction / application of relation
 
@@ -12869,6 +13069,19 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-dd8ff0563bf5e56d` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:16`; Tamil `translation/content/set-theory/z/separation.tex:23`; PDF page pending.
 - `TA-OCC-7ab8d6c70f51b664` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:20`; Tamil `translation/content/set-theory/z/separation.tex:27`; PDF page pending.
 - `TA-OCC-48149288777f6411` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:28`; Tamil `translation/content/set-theory/z/separation.tex:35`; PDF page pending.
+- `TA-OCC-3a525deb0ff44e5c` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:37`; Tamil `translation/content/set-theory/ordinals/wo.tex:12`; PDF page pending.
+- `TA-OCC-75af645aac6cd611` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:45`; Tamil `translation/content/set-theory/ordinals/wo.tex:55`; PDF page pending.
+- `TA-OCC-5d2374d7f6ecebaf` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:48`; Tamil `translation/content/set-theory/ordinals/wo.tex:74`; PDF page pending.
+- `TA-OCC-db2ff15dc0d6af0c` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:33`; Tamil `translation/content/set-theory/ordinals/iso.tex:15`; PDF page pending.
+- `TA-OCC-303124d29cf314a7` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:17`; Tamil `translation/content/set-theory/ordinals/basic.tex:47`; PDF page pending.
+- `TA-OCC-c40d4feab6979286` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:28`; Tamil `translation/content/set-theory/ordinals/basic.tex:61`; PDF page pending.
+- `TA-OCC-fa02f2cf1ae1d37f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:35`; Tamil `translation/content/set-theory/ordinals/basic.tex:141`; PDF page pending.
+- `TA-OCC-03aa6d350bee0e3b` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:37`; Tamil `translation/content/set-theory/ordinals/basic.tex:190`; PDF page pending.
+- `TA-OCC-ce695fb9c26e0179` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:21`; Tamil `translation/content/set-theory/ordinals/replacement.tex:23`; PDF page pending.
+- `TA-OCC-b9a04d2d6b980e40` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:33`; Tamil `translation/content/set-theory/ordinals/replacement.tex:35`; PDF page pending.
+- `TA-OCC-e7417ec25e013de8` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:39`; Tamil `translation/content/set-theory/ordinals/replacement.tex:42`; PDF page pending.
+- `TA-OCC-faa3473d5af0f79f` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:14`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:34`; PDF page pending.
+- `TA-OCC-d5dc3d75b46cc324` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:32`; Tamil `translation/content/set-theory/ordinals/opps.tex:47`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -13489,6 +13702,15 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-b2d644ec923d05a1` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:13`; Tamil `translation/content/set-theory/z/nat.tex:19`; PDF page pending.
 - `TA-OCC-0bca679337952743` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:13`; Tamil `translation/content/set-theory/z/nat.tex:57`; PDF page pending.
 - `TA-OCC-a4aa9ac35301db07` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:15`; Tamil `translation/content/set-theory/z/nat.tex:58`; PDF page pending.
+- `TA-OCC-a8396ab41a36c431` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:23`; Tamil `translation/content/set-theory/ordinals/introduction.tex:22`; PDF page pending.
+- `TA-OCC-723697b7546dba31` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:8`; Tamil `translation/content/set-theory/ordinals/idea.tex:9`; PDF page pending.
+- `TA-OCC-928f1aa5bde5fa7f` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:26`; Tamil `translation/content/set-theory/ordinals/wo.tex:27`; PDF page pending.
+- `TA-OCC-ad78830d3669ad08` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:26`; Tamil `translation/content/set-theory/ordinals/wo.tex:38`; PDF page pending.
+- `TA-OCC-9ed0a7cbd5298588` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:26`; Tamil `translation/content/set-theory/ordinals/wo.tex:51`; PDF page pending.
+- `TA-OCC-fe43659c3c230045` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:26`; Tamil `translation/content/set-theory/ordinals/wo.tex:69`; PDF page pending.
+- `TA-OCC-8cd23b093212ac55` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:20`; Tamil `translation/content/set-theory/ordinals/vn.tex:20`; PDF page pending.
+- `TA-OCC-c4aecb7abd29ecd9` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:8`; Tamil `translation/content/set-theory/ordinals/basic.tex:9`; PDF page pending.
+- `TA-OCC-2e365ed997fded36` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:8`; Tamil `translation/content/set-theory/ordinals/basic.tex:9`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -13636,6 +13858,9 @@ Please double-check: **do the listed uses of “தொடரி / முன்�
 - `TA-OCC-f574145161d82f90` — OLP-0526 / `OLP-0526-S01`; source `content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:67`; PDF page pending.
 - `TA-OCC-f7a7d16d0fa68a7e` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:39`; PDF page pending.
 - `TA-OCC-81fad1ae6cf061ed` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:39`; PDF page pending.
+- `TA-OCC-6e7157d59fd0647a` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:1`; Tamil `translation/content/set-theory/ordinals/idea.tex:23`; PDF page pending.
+- `TA-OCC-202a65641015aeab` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:11`; PDF page pending.
+- `TA-OCC-486735b291c8bb3a` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:74`; PDF page pending.
 
 ## TA-T044 — sequence / closure: recovered alternatives
 
@@ -14571,6 +14796,21 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-b734ffbbee74715f` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:68`; PDF page pending.
 - `TA-OCC-6da2103b6d9f460e` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:1`; Tamil `translation/content/set-theory/z/infinity-again.tex:150`; PDF page pending.
 - `TA-OCC-f9554f99a26e6120` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:1`; Tamil `translation/content/set-theory/z/nat.tex:59`; PDF page pending.
+- `TA-OCC-d05c0a2969a6b79d` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:1`; Tamil `translation/content/set-theory/ordinals/introduction.tex:17`; PDF page pending.
+- `TA-OCC-b5319898dd8058e3` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:19`; Tamil `translation/content/set-theory/ordinals/idea.tex:20`; PDF page pending.
+- `TA-OCC-e58b1f433de9b3bf` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:22`; Tamil `translation/content/set-theory/ordinals/idea.tex:40`; PDF page pending.
+- `TA-OCC-da46d6fa16b8b277` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:38`; Tamil `translation/content/set-theory/ordinals/idea.tex:45`; PDF page pending.
+- `TA-OCC-dcd015148d3c9bba` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:39`; Tamil `translation/content/set-theory/ordinals/idea.tex:64`; PDF page pending.
+- `TA-OCC-e0a8b60bb4b87603` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:61`; Tamil `translation/content/set-theory/ordinals/idea.tex:64`; PDF page pending.
+- `TA-OCC-5627f1138813ea1b` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:61`; Tamil `translation/content/set-theory/ordinals/idea.tex:65`; PDF page pending.
+- `TA-OCC-b52951df07d3ff80` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:62`; Tamil `translation/content/set-theory/ordinals/idea.tex:67`; PDF page pending.
+- `TA-OCC-a722d0417cd47a22` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:1`; Tamil `translation/content/set-theory/ordinals/wo.tex:13`; PDF page pending.
+- `TA-OCC-685833cac30a3b92` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:1`; Tamil `translation/content/set-theory/ordinals/wo.tex:24`; PDF page pending.
+- `TA-OCC-eebaec97622aeaad` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:1`; Tamil `translation/content/set-theory/ordinals/iso.tex:39`; PDF page pending.
+- `TA-OCC-b96fa4ddf29c275d` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:1`; Tamil `translation/content/set-theory/ordinals/iso.tex:65`; PDF page pending.
+- `TA-OCC-ebbb12257945323d` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:1`; Tamil `translation/content/set-theory/ordinals/iso.tex:73`; PDF page pending.
+- `TA-OCC-0080aae1894a28f4` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:11`; Tamil `translation/content/set-theory/ordinals/basic.tex:29`; PDF page pending.
+- `TA-OCC-df3c6ee460b75443` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:176`; Tamil `translation/content/set-theory/ordinals/basic.tex:116`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -16318,6 +16558,11 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-1f08c7ff23849714` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:98`; Tamil `translation/content/set-theory/z/infinity-again.tex:111`; PDF page pending.
 - `TA-OCC-8e5a02c9b33545cd` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:34`; Tamil `translation/content/set-theory/z/nat.tex:39`; PDF page pending.
 - `TA-OCC-ee0f523a1c1b10e9` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:52`; Tamil `translation/content/set-theory/z/nat.tex:58`; PDF page pending.
+- `TA-OCC-db459fa4d928ab8d` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:14`; Tamil `translation/content/set-theory/ordinals/iso.tex:15`; PDF page pending.
+- `TA-OCC-a5b692989ca442ba` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:22`; Tamil `translation/content/set-theory/ordinals/iso.tex:25`; PDF page pending.
+- `TA-OCC-0de805619d0ead35` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:59`; Tamil `translation/content/set-theory/ordinals/replacement.tex:45`; PDF page pending.
+- `TA-OCC-db67176610780de8` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:63`; Tamil `translation/content/set-theory/ordinals/replacement.tex:76`; PDF page pending.
+- `TA-OCC-f8889a7082e7aefb` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:27`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:30`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -16645,6 +16890,8 @@ Please double-check: **is “ஒன்றுக்கொன்றான மே�
 - `TA-OCC-6edee1a110ab0c80` — OLP-0197 / `OLP-0197-S01`; source `content/model-theory/models-of-arithmetic/computable-models.tex:70`; Tamil `translation/content/model-theory/models-of-arithmetic/computable-models.tex:75`; PDF page pending.
 - `TA-OCC-e70541c5bae3cc52` — OLP-0282 / `OLP-0282-S01`; source `content/incompleteness/arithmetization-syntax/coding-symbols.tex:23`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-symbols.tex:26`; PDF page pending.
 - `TA-OCC-308c6a65cf14567b` — OLP-0338 / `OLP-0338-S01`; source `content/second-order-logic/sol-and-set-theory/comparing-sets.tex:47`; Tamil `translation/content/second-order-logic/sol-and-set-theory/comparing-sets.tex:54`; PDF page pending.
+- `TA-OCC-bf245bc40c5b1682` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:14`; Tamil `translation/content/set-theory/ordinals/iso.tex:15`; PDF page pending.
+- `TA-OCC-69e1a5db31d30c18` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:22`; Tamil `translation/content/set-theory/ordinals/iso.tex:25`; PDF page pending.
 
 ## TA-T050 — graph of a function / image of a set
 
@@ -16732,6 +16979,8 @@ Please double-check: **do the listed uses of “இருபுறச் சா�
 - `TA-OCC-67fa40f741fca58d` — OLP-0197 / `OLP-0197-S01`; source `content/model-theory/models-of-arithmetic/computable-models.tex:70`; Tamil `translation/content/model-theory/models-of-arithmetic/computable-models.tex:75`; PDF page pending.
 - `TA-OCC-9d79f190328ce810` — OLP-0282 / `OLP-0282-S01`; source `content/incompleteness/arithmetization-syntax/coding-symbols.tex:23`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-symbols.tex:26`; PDF page pending.
 - `TA-OCC-61ce607ae29b9ee3` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:1`; Tamil `translation/content/set-theory/story/urelements.tex:51`; PDF page pending.
+- `TA-OCC-7a26a84bb335ab5f` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:14`; Tamil `translation/content/set-theory/ordinals/iso.tex:15`; PDF page pending.
+- `TA-OCC-bac80bdd1bbee21b` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:22`; Tamil `translation/content/set-theory/ordinals/iso.tex:25`; PDF page pending.
 
 ## TA-T052 — composition of functions
 
@@ -17886,6 +18135,11 @@ Please double-check: **is “வரிசைப்படுத்தப்பட
 - `TA-OCC-6cf6fa01716dc6a0` — OLP-0048 / `OLP-0048-S16`; source `content/sets-functions-relations/arithmetization/cauchy.tex:183`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:271`; PDF page pending.
 - `TA-OCC-767f059cfac18044` — OLP-0048 / `OLP-0048-S16`; source `content/sets-functions-relations/arithmetization/cauchy.tex:184`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:287`; PDF page pending.
 - `TA-OCC-6cd4e0ad3c159bcb` — OLP-0048 / `OLP-0048-S16`; source `content/sets-functions-relations/arithmetization/cauchy.tex:184`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:295`; PDF page pending.
+- `TA-OCC-36157bcc8fea67b7` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:70`; Tamil `translation/content/set-theory/ordinals/opps.tex:75`; PDF page pending.
+- `TA-OCC-c7900884397feb4c` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:72`; Tamil `translation/content/set-theory/ordinals/opps.tex:77`; PDF page pending.
+- `TA-OCC-6f22644d02edcc54` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:74`; Tamil `translation/content/set-theory/ordinals/opps.tex:80`; PDF page pending.
+- `TA-OCC-dedcfe1e89f5fafc` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:75`; Tamil `translation/content/set-theory/ordinals/opps.tex:81`; PDF page pending.
+- `TA-OCC-e060a147bcf06c01` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:75`; Tamil `translation/content/set-theory/ordinals/opps.tex:103`; PDF page pending.
 
 ## TA-T072 — Dedekind cut / proper initial segment / greatest lower bound
 
@@ -17906,6 +18160,9 @@ Please double-check: **is “டெடெகிண்ட் வெட்டு /
 - `TA-OCC-fe2f873d519dade1` — OLP-0047 / `OLP-0047-S16`; source `content/sets-functions-relations/arithmetization/checking-details.tex:185`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:232`; PDF page pending.
 - `TA-OCC-0434d453793abc4d` — OLP-0048 / `OLP-0048-S01`; source `content/sets-functions-relations/arithmetization/cauchy.tex:13`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:14`; PDF page pending.
 - `TA-OCC-4a202703d467c0ff` — OLP-0053 / `OLP-0053-S03`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:32`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:37`; PDF page pending.
+- `TA-OCC-70993cd76e71b9a0` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:70`; Tamil `translation/content/set-theory/ordinals/iso.tex:78`; PDF page pending.
+- `TA-OCC-b36fba6ac023c6b4` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:19`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:22`; PDF page pending.
+- `TA-OCC-d056a392e222467d` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:25`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:28`; PDF page pending.
 
 ## TA-T073 — commutative ring / ordered ring / ordered field; associativity, commutativity, identity, inverse, distributivity, trichotomy
 
@@ -17993,6 +18250,8 @@ Please double-check: **is “பரிமாற்று வளையம் / �
 - `TA-OCC-1296aa164196165f` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:16`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:16`; PDF page pending.
 - `TA-OCC-cda562aa0e70b92e` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:13`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:14`; PDF page pending.
 - `TA-OCC-180b56824e630f07` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:76`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:81`; PDF page pending.
+- `TA-OCC-c51ab5bf7fa943c5` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:74`; Tamil `translation/content/set-theory/ordinals/basic.tex:81`; PDF page pending.
+- `TA-OCC-17cf037f7b049415` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:202`; Tamil `translation/content/set-theory/ordinals/basic.tex:223`; PDF page pending.
 
 ## TA-T074 — Cauchy sequence / limit / tends to zero / monotone increasing or decreasing / decimal expansion
 
@@ -18043,6 +18302,10 @@ Please double-check: **is “கோஷி தொடர் / எல்லை / �
 - `TA-OCC-7e133df986a6ab04` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:116`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:211`; PDF page pending.
 - `TA-OCC-9a8d98b18e97613a` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:17`; PDF page pending.
 - `TA-OCC-c2fa803b656d1d41` — OLP-0321 / `OLP-0321-S01`; source `content/incompleteness/incompleteness-provability/tarski-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/tarski-thm.tex:132`; PDF page pending.
+- `TA-OCC-b3c2195856cf9e08` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:6`; Tamil `translation/content/set-theory/ordinals/opps.tex:7`; PDF page pending.
+- `TA-OCC-a4e6446058611f95` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:15`; Tamil `translation/content/set-theory/ordinals/opps.tex:18`; PDF page pending.
+- `TA-OCC-65f9ab84f0127063` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:49`; Tamil `translation/content/set-theory/ordinals/opps.tex:52`; PDF page pending.
+- `TA-OCC-c003d21580ab73c2` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:59`; Tamil `translation/content/set-theory/ordinals/opps.tex:63`; PDF page pending.
 
 ## TA-T075 — Dedekind infinite / Hilbert hotel
 
@@ -21276,6 +21539,12 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-2b0c6cbef9ff2c0b` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:16`; Tamil `translation/content/set-theory/z/separation.tex:23`; PDF page pending.
 - `TA-OCC-8b28d51fdc47501a` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:20`; Tamil `translation/content/set-theory/z/separation.tex:27`; PDF page pending.
 - `TA-OCC-47682590e6cfa9bf` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:28`; Tamil `translation/content/set-theory/z/separation.tex:35`; PDF page pending.
+- `TA-OCC-ecc8b76162a2d81c` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:48`; Tamil `translation/content/set-theory/ordinals/wo.tex:55`; PDF page pending.
+- `TA-OCC-ebb683b200440a52` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:63`; Tamil `translation/content/set-theory/ordinals/wo.tex:74`; PDF page pending.
+- `TA-OCC-651e16c43c6a2b55` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:44`; Tamil `translation/content/set-theory/ordinals/basic.tex:47`; PDF page pending.
+- `TA-OCC-f2bd81e2730f68b8` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:21`; Tamil `translation/content/set-theory/ordinals/replacement.tex:23`; PDF page pending.
+- `TA-OCC-3bcdfcc0b8024825` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:33`; Tamil `translation/content/set-theory/ordinals/replacement.tex:35`; PDF page pending.
+- `TA-OCC-aade2c1579e85f98` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:39`; Tamil `translation/content/set-theory/ordinals/replacement.tex:42`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -22646,6 +22915,9 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-e5f7a0b39f0656f6` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:100`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:106`; PDF page pending.
 - `TA-OCC-c9614983e5e873da` — OLP-0526 / `OLP-0526-S01`; source `content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:14`; Tamil `translation/content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:21`; PDF page pending.
 - `TA-OCC-548274d6809bc355` — OLP-0532 / `OLP-0532-S01`; source `content/set-theory/story/russells-paradox-again.tex:23`; Tamil `translation/content/set-theory/story/russells-paradox-again.tex:46`; PDF page pending.
+- `TA-OCC-f1433d1327c75e6d` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:17`; Tamil `translation/content/set-theory/ordinals/basic.tex:59`; PDF page pending.
+- `TA-OCC-64cf4f084147c855` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:28`; Tamil `translation/content/set-theory/ordinals/basic.tex:87`; PDF page pending.
+- `TA-OCC-19f8a0a1350de735` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:35`; Tamil `translation/content/set-theory/ordinals/basic.tex:214`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -23386,6 +23658,17 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-3c402d372887ece3` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:17`; Tamil `translation/content/set-theory/z/story.tex:21`; PDF page pending.
 - `TA-OCC-0a6c66eacde9505d` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:19`; Tamil `translation/content/set-theory/z/story.tex:22`; PDF page pending.
 - `TA-OCC-8c840be3927a1ad2` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:1`; Tamil `translation/content/set-theory/z/nat.tex:20`; PDF page pending.
+- `TA-OCC-fb6608db146d7b38` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:1`; Tamil `translation/content/set-theory/ordinals/iso.tex:103`; PDF page pending.
+- `TA-OCC-c015e0397e279507` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:1`; Tamil `translation/content/set-theory/ordinals/iso.tex:126`; PDF page pending.
+- `TA-OCC-ad18908f2e206e28` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:95`; Tamil `translation/content/set-theory/ordinals/basic.tex:11`; PDF page pending.
+- `TA-OCC-dd7d94ec101e0f9e` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:98`; Tamil `translation/content/set-theory/ordinals/basic.tex:42`; PDF page pending.
+- `TA-OCC-652457ba7d3842de` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:101`; Tamil `translation/content/set-theory/ordinals/basic.tex:124`; PDF page pending.
+- `TA-OCC-a9c8d2405267150f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:101`; Tamil `translation/content/set-theory/ordinals/basic.tex:174`; PDF page pending.
+- `TA-OCC-53557d1663126cea` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:101`; Tamil `translation/content/set-theory/ordinals/basic.tex:195`; PDF page pending.
+- `TA-OCC-04d1317fbf889779` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:101`; Tamil `translation/content/set-theory/ordinals/basic.tex:199`; PDF page pending.
+- `TA-OCC-cb60aa6c174b5d46` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:1`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:49`; PDF page pending.
+- `TA-OCC-2ff2c3b095d05591` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:21`; PDF page pending.
+- `TA-OCC-9ea3d3009dd6e110` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:81`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -23710,6 +23993,15 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-f80a592fadaa3106` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:10`; Tamil `translation/content/set-theory/z/nat.tex:25`; PDF page pending.
 - `TA-OCC-8239ea286f750bb9` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:20`; Tamil `translation/content/set-theory/z/nat.tex:26`; PDF page pending.
 - `TA-OCC-d2428aff269f726c` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:21`; Tamil `translation/content/set-theory/z/nat.tex:30`; PDF page pending.
+- `TA-OCC-4eb9297e61546093` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:16`; Tamil `translation/content/set-theory/ordinals/replacement.tex:16`; PDF page pending.
+- `TA-OCC-a27dbd08f9552774` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:20`; Tamil `translation/content/set-theory/ordinals/replacement.tex:22`; PDF page pending.
+- `TA-OCC-71a5389f7d6869f5` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:21`; Tamil `translation/content/set-theory/ordinals/replacement.tex:23`; PDF page pending.
+- `TA-OCC-efccd5265d7f0f7a` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:26`; Tamil `translation/content/set-theory/ordinals/replacement.tex:36`; PDF page pending.
+- `TA-OCC-65fe648eff5f70c4` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:29`; Tamil `translation/content/set-theory/ordinals/replacement.tex:78`; PDF page pending.
+- `TA-OCC-f3c2fbf51ecf7218` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:33`; Tamil `translation/content/set-theory/ordinals/replacement.tex:81`; PDF page pending.
+- `TA-OCC-5946a72019a798ed` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:10`; Tamil `translation/content/set-theory/ordinals/milestone.tex:11`; PDF page pending.
+- `TA-OCC-426e4b0758ac4c30` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:15`; PDF page pending.
+- `TA-OCC-61c4e558ec9a7a9f` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:16`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -25282,6 +25574,13 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-65e2619278456e10` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:28`; PDF page pending.
 - `TA-OCC-dd64ed8279a892b5` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:81`; PDF page pending.
 - `TA-OCC-05e7426118a3de60` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:47`; PDF page pending.
+- `TA-OCC-d69f9acb524bad87` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:1`; Tamil `translation/content/set-theory/ordinals/wo.tex:12`; PDF page pending.
+- `TA-OCC-44c086e571b8a137` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:1`; Tamil `translation/content/set-theory/ordinals/iso.tex:15`; PDF page pending.
+- `TA-OCC-462f0b6ec4a5ddaa` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:61`; PDF page pending.
+- `TA-OCC-d29b040150a4cbca` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:141`; PDF page pending.
+- `TA-OCC-ee6c0f5fa548f0d7` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:190`; PDF page pending.
+- `TA-OCC-593c5417fae854cb` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:1`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:34`; PDF page pending.
+- `TA-OCC-c0ac2d951730d1af` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:47`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -26509,6 +26808,7 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-c639f3c7f7fced78` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:37`; PDF page pending.
 - `TA-OCC-f755929e8eb45d43` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:1`; Tamil `translation/content/set-theory/story/predicativity.tex:114`; PDF page pending.
 - `TA-OCC-f191b459a4437c29` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:64`; Tamil `translation/content/set-theory/story/urelements.tex:72`; PDF page pending.
+- `TA-OCC-556ed6db6b70241d` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:41`; Tamil `translation/content/set-theory/ordinals/replacement.tex:45`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -27541,6 +27841,7 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-933be7e0420b4c03` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:1`; Tamil `translation/content/set-theory/story/predicativity.tex:23`; PDF page pending.
 - `TA-OCC-f41aa2e484e1656b` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:27`; PDF page pending.
 - `TA-OCC-d3614978793a4cf2` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:62`; PDF page pending.
+- `TA-OCC-564ea0c84379dd0f` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:1`; Tamil `translation/content/set-theory/ordinals/replacement.tex:45`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -29994,6 +30295,7 @@ Please double-check: **is “முறைப்படுத்தல் / கோ
 - `TA-OCC-1c4161214fd4d4d3` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:10`; Tamil `translation/content/set-theory/z/milestone.tex:19`; PDF page pending.
 - `TA-OCC-29216d90335a2e4d` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:50`; Tamil `translation/content/set-theory/z/nat.tex:57`; PDF page pending.
 - `TA-OCC-2af27baba775ca77` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:53`; Tamil `translation/content/set-theory/z/nat.tex:59`; PDF page pending.
+- `TA-OCC-85cf349605b6cf08` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:11`; Tamil `translation/content/set-theory/ordinals/milestone.tex:15`; PDF page pending.
 
 ## TA-T130 — axiomatized / axiomatizable / induction schema / Robinson Q / Peano arithmetic
 
@@ -31063,6 +31365,7 @@ Please double-check: **is “η-சுருக்கல் / η-மாற்ற
 - `TA-OCC-a7b278d1e8990752` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:31`; PDF page pending.
 - `TA-OCC-e47d604277cbdcaa` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:39`; PDF page pending.
 - `TA-OCC-032be2af40e73a3e` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:45`; PDF page pending.
+- `TA-OCC-e099c6f1ec569470` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:15`; PDF page pending.
 
 ## TA-T157 — Church-encoded pair / selector / access function
 
@@ -33005,6 +33308,7 @@ Please double-check: **is “கோள மாதிரி / கோளங்க�
 - `TA-OCC-4ae53f88faf5a5f2` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:55`; PDF page pending.
 - `TA-OCC-48aa2e9e0dfb2541` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:58`; PDF page pending.
 - `TA-OCC-2d338556472f837b` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:1`; Tamil `translation/content/set-theory/z/milestone.tex:20`; PDF page pending.
+- `TA-OCC-ecb65ef12c4a8ff5` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:1`; Tamil `translation/content/set-theory/ordinals/milestone.tex:16`; PDF page pending.
 
 ## TA-T199 — truth-functional / vacuously true / non-vacuously true / monotonic conditional / transitive conditional
 
@@ -33179,6 +33483,13 @@ Please double-check: **is “படிநிலைமுறைக் கணக�
 - `TA-OCC-6004bc76ab1e0402` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:112`; Tamil `translation/content/set-theory/z/infinity-again.tex:134`; PDF page pending.
 - `TA-OCC-cffac4fbad894b88` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:117`; Tamil `translation/content/set-theory/z/infinity-again.tex:135`; PDF page pending.
 - `TA-OCC-eb5f0f055ff764b0` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:118`; Tamil `translation/content/set-theory/z/infinity-again.tex:142`; PDF page pending.
+- `TA-OCC-6f0e97247b72b49e` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:13`; Tamil `translation/content/set-theory/ordinals/introduction.tex:14`; PDF page pending.
+- `TA-OCC-c27aea75cc09bcfc` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:14`; Tamil `translation/content/set-theory/ordinals/introduction.tex:14`; PDF page pending.
+- `TA-OCC-14d9c27b309414a1` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:16`; Tamil `translation/content/set-theory/ordinals/introduction.tex:17`; PDF page pending.
+- `TA-OCC-6248e22d7207651f` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:16`; Tamil `translation/content/set-theory/ordinals/introduction.tex:18`; PDF page pending.
+- `TA-OCC-eb21171c65ff7397` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:17`; Tamil `translation/content/set-theory/ordinals/introduction.tex:18`; PDF page pending.
+- `TA-OCC-3712127a7e2be632` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:18`; Tamil `translation/content/set-theory/ordinals/introduction.tex:19`; PDF page pending.
+- `TA-OCC-85866750b905b486` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:20`; Tamil `translation/content/set-theory/ordinals/idea.tex:21`; PDF page pending.
 
 ## TA-T202 — urelement / pure set theory / reductive foundational goal
 
@@ -33269,6 +33580,7 @@ Please double-check: **is “பிரிப்பு அடிகோள் த�
 - `TA-OCC-c89f1bc4485e279c` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:56`; Tamil `translation/content/set-theory/z/separation.tex:67`; PDF page pending.
 - `TA-OCC-49f2153a8f0d27dc` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:61`; Tamil `translation/content/set-theory/z/separation.tex:73`; PDF page pending.
 - `TA-OCC-2cfc1d9d20944230` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:64`; Tamil `translation/content/set-theory/z/separation.tex:76`; PDF page pending.
+- `TA-OCC-f2ade20450773d03` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:63`; Tamil `translation/content/set-theory/ordinals/wo.tex:74`; PDF page pending.
 
 ## TA-T206 — Zermelo set theory / Z minus
 
@@ -33290,6 +33602,8 @@ Please double-check: **do the listed uses of “செர்மேலோ கண�
 - `TA-OCC-d8d974bd4317afce` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:17`; Tamil `translation/content/set-theory/z/milestone.tex:33`; PDF page pending.
 - `TA-OCC-d44736cb18a2516c` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:19`; Tamil `translation/content/set-theory/z/milestone.tex:37`; PDF page pending.
 - `TA-OCC-392b4c123591abb7` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:1`; Tamil `translation/content/set-theory/z/arbintersections.tex:14`; PDF page pending.
+- `TA-OCC-7550e078c8c9628d` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:1`; Tamil `translation/content/set-theory/ordinals/replacement.tex:78`; PDF page pending.
+- `TA-OCC-dfca249d8001f4b7` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:20`; Tamil `translation/content/set-theory/ordinals/milestone.tex:18`; PDF page pending.
 
 ## TA-T207 — Axiom of Union / Axiom of Pairs / Axiom of Powersets / no last stage
 
@@ -33331,6 +33645,8 @@ Please double-check: **is “முடிவிலி அடிகோள் / �
 - `TA-OCC-00af4efa89e95b06` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:124`; PDF page pending.
 - `TA-OCC-d23197652d7d202f` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:20`; Tamil `translation/content/set-theory/z/nat.tex:25`; PDF page pending.
 - `TA-OCC-6aa8a349766fb48e` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:30`; Tamil `translation/content/set-theory/z/nat.tex:30`; PDF page pending.
+- `TA-OCC-abc9ba386eb0daee` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:17`; Tamil `translation/content/set-theory/ordinals/introduction.tex:14`; PDF page pending.
+- `TA-OCC-a8c41240683ef3dd` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:18`; Tamil `translation/content/set-theory/ordinals/introduction.tex:18`; PDF page pending.
 
 ## TA-T209 — set-theoretic simulation / Benacerraf problem / alternative representations
 
@@ -33366,6 +33682,236 @@ Alternatives: None recorded.
 Please double-check: **is “தன்னிச்சையான வெட்டு / வரம்பிட்ட பிரிப்பு வரையறை / ஒரு சார்பின் கீழான மூடல்” the established India-standard Tamil expression for “arbitrary intersection / bounded Separation definition / closure under a function” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
 
 - `TA-OCC-a14dcb2b5d00ad4e` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:93`; Tamil `translation/content/set-theory/z/separation.tex:107`; PDF page pending.
+
+## TA-T211 — ordinal / transfinite ordinal / order type
+
+Chosen rendering: **வரிசையெண் / முடிவிலிக்கடந்த வரிசையெண் / வரிசை வகை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: வரிசை, எண், வகை and the natural-number register are established components in the checked canon. The omega, omega-plus-one and omega-plus-omega examples establish the general order-type sense, while transitivity plus membership well-ordering defines the von Neumann objects exactly. The complete specialist headwords are not claimed as directly attested Tamil terms.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-AU-ANALYSIS-COUNTABLE-Q1 (checked_supports); TA-AU-ANALYSIS-COUNTABLE-Q11 (checked_context_only); TA-T211-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வரிசையெண் / முடிவிலிக்கடந்த வரிசையெண் / வரிசை வகை” the established India-standard Tamil expression for “ordinal / transfinite ordinal / order type” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-22516f1da9f1e9ba` — OLP-0547 / `OLP-0547-S01`; source `content/set-theory/ordinals/ordinals.tex:7`; Tamil `translation/content/set-theory/ordinals/ordinals.tex:8`; PDF page pending.
+- `TA-OCC-6e266bfec41140c7` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:2`; Tamil `translation/content/set-theory/ordinals/introduction.tex:25`; PDF page pending.
+- `TA-OCC-9a9d4f8e788573e2` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:9`; Tamil `translation/content/set-theory/ordinals/introduction.tex:26`; PDF page pending.
+- `TA-OCC-6ccf24c330f9fe2c` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:24`; Tamil `translation/content/set-theory/ordinals/introduction.tex:27`; PDF page pending.
+- `TA-OCC-d0d7bf7f1b56f960` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:5`; Tamil `translation/content/set-theory/ordinals/idea.tex:7`; PDF page pending.
+- `TA-OCC-9c357658527553c4` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:5`; Tamil `translation/content/set-theory/ordinals/vn.tex:7`; PDF page pending.
+- `TA-OCC-dc1fbb015553cc43` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:6`; Tamil `translation/content/set-theory/ordinals/vn.tex:12`; PDF page pending.
+- `TA-OCC-aa4802ea85226e1d` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:8`; Tamil `translation/content/set-theory/ordinals/vn.tex:21`; PDF page pending.
+- `TA-OCC-c8dfd6a466a6a820` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:11`; Tamil `translation/content/set-theory/ordinals/vn.tex:25`; PDF page pending.
+- `TA-OCC-2318b08fc17606c6` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:28`; Tamil `translation/content/set-theory/ordinals/vn.tex:32`; PDF page pending.
+- `TA-OCC-14d5de91832be870` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:32`; Tamil `translation/content/set-theory/ordinals/vn.tex:35`; PDF page pending.
+- `TA-OCC-8474a4da01f9e183` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:33`; Tamil `translation/content/set-theory/ordinals/vn.tex:36`; PDF page pending.
+- `TA-OCC-22567608be685867` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:39`; Tamil `translation/content/set-theory/ordinals/vn.tex:43`; PDF page pending.
+- `TA-OCC-ec46e10c153b9c2f` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:45`; Tamil `translation/content/set-theory/ordinals/vn.tex:50`; PDF page pending.
+- `TA-OCC-f79c8588732201a8` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:48`; Tamil `translation/content/set-theory/ordinals/vn.tex:52`; PDF page pending.
+- `TA-OCC-2c04057ffcfddd5a` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:49`; Tamil `translation/content/set-theory/ordinals/vn.tex:53`; PDF page pending.
+- `TA-OCC-65795af9b980867b` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:49`; Tamil `translation/content/set-theory/ordinals/vn.tex:54`; PDF page pending.
+- `TA-OCC-4e526b922f5669d9` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:49`; Tamil `translation/content/set-theory/ordinals/vn.tex:57`; PDF page pending.
+- `TA-OCC-6b9c66ee3eecc67b` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:51`; Tamil `translation/content/set-theory/ordinals/vn.tex:57`; PDF page pending.
+- `TA-OCC-1283aff97910780f` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:53`; Tamil `translation/content/set-theory/ordinals/vn.tex:62`; PDF page pending.
+- `TA-OCC-12309cd24229c2da` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:58`; Tamil `translation/content/set-theory/ordinals/vn.tex:63`; PDF page pending.
+- `TA-OCC-7615eb4bcd3333f0` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:5`; Tamil `translation/content/set-theory/ordinals/basic.tex:7`; PDF page pending.
+- `TA-OCC-3cf75f5d4ecba8be` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:6`; Tamil `translation/content/set-theory/ordinals/basic.tex:9`; PDF page pending.
+- `TA-OCC-30981f54e3d3d9c2` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:8`; Tamil `translation/content/set-theory/ordinals/basic.tex:10`; PDF page pending.
+- `TA-OCC-c73f790569d3ca46` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:9`; Tamil `translation/content/set-theory/ordinals/basic.tex:15`; PDF page pending.
+- `TA-OCC-fc508f7a2ed6ab4e` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:14`; Tamil `translation/content/set-theory/ordinals/basic.tex:15`; PDF page pending.
+- `TA-OCC-007509bfbd4cfe84` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:14`; Tamil `translation/content/set-theory/ordinals/basic.tex:19`; PDF page pending.
+- `TA-OCC-501e5408bbfdaa93` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:18`; Tamil `translation/content/set-theory/ordinals/basic.tex:34`; PDF page pending.
+- `TA-OCC-aab68efa4b9a4370` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:26`; Tamil `translation/content/set-theory/ordinals/basic.tex:35`; PDF page pending.
+- `TA-OCC-bdb36a7956da58b0` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:31`; Tamil `translation/content/set-theory/ordinals/basic.tex:43`; PDF page pending.
+- `TA-OCC-8436ee05233287b1` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:32`; Tamil `translation/content/set-theory/ordinals/basic.tex:52`; PDF page pending.
+- `TA-OCC-4aa341ebbfe1590f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:41`; Tamil `translation/content/set-theory/ordinals/basic.tex:58`; PDF page pending.
+- `TA-OCC-4da855b6c5326d2f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:49`; Tamil `translation/content/set-theory/ordinals/basic.tex:60`; PDF page pending.
+- `TA-OCC-c84e0c060bafe9ed` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:54`; Tamil `translation/content/set-theory/ordinals/basic.tex:62`; PDF page pending.
+- `TA-OCC-1d6b109cb0877cc6` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:56`; Tamil `translation/content/set-theory/ordinals/basic.tex:82`; PDF page pending.
+- `TA-OCC-4a7550a074d36b7d` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:57`; Tamil `translation/content/set-theory/ordinals/basic.tex:92`; PDF page pending.
+- `TA-OCC-ae0e106bbe026597` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:58`; Tamil `translation/content/set-theory/ordinals/basic.tex:93`; PDF page pending.
+- `TA-OCC-5a0da450f04e4d8a` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:60`; Tamil `translation/content/set-theory/ordinals/basic.tex:94`; PDF page pending.
+- `TA-OCC-61c7421bf84b17c5` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:76`; Tamil `translation/content/set-theory/ordinals/basic.tex:97`; PDF page pending.
+- `TA-OCC-4ea2156deda682bc` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:84`; Tamil `translation/content/set-theory/ordinals/basic.tex:98`; PDF page pending.
+- `TA-OCC-1e30853fc2599bf7` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:85`; Tamil `translation/content/set-theory/ordinals/basic.tex:99`; PDF page pending.
+- `TA-OCC-693281937621a09d` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:86`; Tamil `translation/content/set-theory/ordinals/basic.tex:104`; PDF page pending.
+- `TA-OCC-5f083be0ab2a57f3` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:88`; Tamil `translation/content/set-theory/ordinals/basic.tex:130`; PDF page pending.
+- `TA-OCC-5ea296688d6f49fe` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:89`; Tamil `translation/content/set-theory/ordinals/basic.tex:145`; PDF page pending.
+- `TA-OCC-6aa30f3ba82f39db` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:90`; Tamil `translation/content/set-theory/ordinals/basic.tex:145`; PDF page pending.
+- `TA-OCC-ba5ed849b6f604e5` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:94`; Tamil `translation/content/set-theory/ordinals/basic.tex:151`; PDF page pending.
+- `TA-OCC-26f30beee0a5a85a` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:117`; Tamil `translation/content/set-theory/ordinals/basic.tex:157`; PDF page pending.
+- `TA-OCC-6295d7010d5b9627` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:128`; Tamil `translation/content/set-theory/ordinals/basic.tex:162`; PDF page pending.
+- `TA-OCC-f70cc1ffeecfb4e8` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:132`; Tamil `translation/content/set-theory/ordinals/basic.tex:166`; PDF page pending.
+- `TA-OCC-9a32a442f63bfd1b` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:132`; Tamil `translation/content/set-theory/ordinals/basic.tex:168`; PDF page pending.
+- `TA-OCC-04614f0ed83725ae` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:137`; Tamil `translation/content/set-theory/ordinals/basic.tex:170`; PDF page pending.
+- `TA-OCC-e5bb627644b79e90` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:142`; Tamil `translation/content/set-theory/ordinals/basic.tex:176`; PDF page pending.
+- `TA-OCC-13b14dfcf435a69e` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:147`; Tamil `translation/content/set-theory/ordinals/basic.tex:180`; PDF page pending.
+- `TA-OCC-88ec9afaaca59de3` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:151`; Tamil `translation/content/set-theory/ordinals/basic.tex:186`; PDF page pending.
+- `TA-OCC-c2b58afb622a6aa2` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:152`; Tamil `translation/content/set-theory/ordinals/basic.tex:191`; PDF page pending.
+- `TA-OCC-a658c49854d47f41` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:153`; Tamil `translation/content/set-theory/ordinals/basic.tex:195`; PDF page pending.
+- `TA-OCC-ae8ef364f821735f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:160`; Tamil `translation/content/set-theory/ordinals/basic.tex:199`; PDF page pending.
+- `TA-OCC-3a4a8d02a685ed58` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:165`; Tamil `translation/content/set-theory/ordinals/basic.tex:205`; PDF page pending.
+- `TA-OCC-c174b8adfbe768ca` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:168`; Tamil `translation/content/set-theory/ordinals/basic.tex:218`; PDF page pending.
+- `TA-OCC-fcc7e19f7ae24960` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:172`; Tamil `translation/content/set-theory/ordinals/basic.tex:223`; PDF page pending.
+- `TA-OCC-533422043d2c7be9` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:176`; Tamil `translation/content/set-theory/ordinals/basic.tex:229`; PDF page pending.
+- `TA-OCC-491f74580f732ebd` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:180`; Tamil `translation/content/set-theory/ordinals/basic.tex:230`; PDF page pending.
+- `TA-OCC-5e3d0be77feb8509` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:5`; Tamil `translation/content/set-theory/ordinals/replacement.tex:9`; PDF page pending.
+- `TA-OCC-c61247fbac88e57c` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:8`; Tamil `translation/content/set-theory/ordinals/replacement.tex:9`; PDF page pending.
+- `TA-OCC-5d20af1872558c58` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:8`; Tamil `translation/content/set-theory/ordinals/replacement.tex:12`; PDF page pending.
+- `TA-OCC-96943fa0b6f13a74` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:12`; Tamil `translation/content/set-theory/ordinals/replacement.tex:14`; PDF page pending.
+- `TA-OCC-d1b49d892039b388` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:5`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:7`; PDF page pending.
+- `TA-OCC-7cb329c3d3c30269` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:6`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:7`; PDF page pending.
+- `TA-OCC-22fd176659dabed3` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:11`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:13`; PDF page pending.
+- `TA-OCC-058dc1d1719ca519` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:17`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:19`; PDF page pending.
+- `TA-OCC-c392e1b759fe695f` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:18`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:20`; PDF page pending.
+- `TA-OCC-6ff9bf1d7cb72f17` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:20`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:23`; PDF page pending.
+- `TA-OCC-b6c1266bb50e7e6a` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:26`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:29`; PDF page pending.
+- `TA-OCC-0d1a3c4afa7ffb71` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:32`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:29`; PDF page pending.
+- `TA-OCC-b592b6339c6a1069` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:36`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:34`; PDF page pending.
+- `TA-OCC-a278ebe5424c166c` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:49`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:40`; PDF page pending.
+- `TA-OCC-ce141e2aaaeeee46` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:50`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:52`; PDF page pending.
+- `TA-OCC-aa419c8a2ce0717e` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:50`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:54`; PDF page pending.
+- `TA-OCC-02c8c5d8788bf964` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:5`; Tamil `translation/content/set-theory/ordinals/opps.tex:7`; PDF page pending.
+- `TA-OCC-07f1d52b680a405b` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:6`; Tamil `translation/content/set-theory/ordinals/opps.tex:9`; PDF page pending.
+- `TA-OCC-059634682e206bdd` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:8`; Tamil `translation/content/set-theory/ordinals/opps.tex:13`; PDF page pending.
+- `TA-OCC-f9f55d03c3781f06` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:12`; Tamil `translation/content/set-theory/ordinals/opps.tex:14`; PDF page pending.
+- `TA-OCC-b70c4ac6e32b91cf` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:14`; Tamil `translation/content/set-theory/ordinals/opps.tex:16`; PDF page pending.
+- `TA-OCC-28ad73aa815607fa` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:14`; Tamil `translation/content/set-theory/ordinals/opps.tex:17`; PDF page pending.
+- `TA-OCC-346f4c50c38ef2c3` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:15`; Tamil `translation/content/set-theory/ordinals/opps.tex:18`; PDF page pending.
+- `TA-OCC-b6b386ac399e5417` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:16`; Tamil `translation/content/set-theory/ordinals/opps.tex:25`; PDF page pending.
+- `TA-OCC-0d462eaf35dd001e` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:23`; Tamil `translation/content/set-theory/ordinals/opps.tex:28`; PDF page pending.
+- `TA-OCC-65fda47fe679863c` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:26`; Tamil `translation/content/set-theory/ordinals/opps.tex:29`; PDF page pending.
+- `TA-OCC-8674a45697947ffd` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:27`; Tamil `translation/content/set-theory/ordinals/opps.tex:36`; PDF page pending.
+- `TA-OCC-7217d86fa6b738bb` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:34`; Tamil `translation/content/set-theory/ordinals/opps.tex:38`; PDF page pending.
+- `TA-OCC-332f8c558dbfe102` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:35`; Tamil `translation/content/set-theory/ordinals/opps.tex:50`; PDF page pending.
+- `TA-OCC-29198f99a020828c` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:47`; Tamil `translation/content/set-theory/ordinals/opps.tex:52`; PDF page pending.
+- `TA-OCC-b0d4ef09ea891322` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:49`; Tamil `translation/content/set-theory/ordinals/opps.tex:60`; PDF page pending.
+- `TA-OCC-e392b3cced0bd241` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:56`; Tamil `translation/content/set-theory/ordinals/opps.tex:60`; PDF page pending.
+- `TA-OCC-0acdd7fc31598ef1` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:57`; Tamil `translation/content/set-theory/ordinals/opps.tex:63`; PDF page pending.
+- `TA-OCC-298e967ce0217517` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:59`; Tamil `translation/content/set-theory/ordinals/opps.tex:70`; PDF page pending.
+- `TA-OCC-b85ab296bc2e7d14` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:66`; Tamil `translation/content/set-theory/ordinals/opps.tex:84`; PDF page pending.
+- `TA-OCC-e41642383303b440` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:79`; Tamil `translation/content/set-theory/ordinals/opps.tex:85`; PDF page pending.
+- `TA-OCC-213723902ee9d99e` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:79`; Tamil `translation/content/set-theory/ordinals/opps.tex:85`; PDF page pending.
+- `TA-OCC-78edfc80f2ca6cf0` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:80`; Tamil `translation/content/set-theory/ordinals/opps.tex:90`; PDF page pending.
+- `TA-OCC-aad8d402ed15cce4` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:85`; Tamil `translation/content/set-theory/ordinals/opps.tex:91`; PDF page pending.
+- `TA-OCC-3b344805ce5d0bf8` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:86`; Tamil `translation/content/set-theory/ordinals/opps.tex:91`; PDF page pending.
+- `TA-OCC-c810804d7ff7c6b1` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:86`; Tamil `translation/content/set-theory/ordinals/opps.tex:92`; PDF page pending.
+- `TA-OCC-4f2e7397556a4e00` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:87`; Tamil `translation/content/set-theory/ordinals/opps.tex:93`; PDF page pending.
+- `TA-OCC-513929c6e2973af4` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:87`; Tamil `translation/content/set-theory/ordinals/opps.tex:98`; PDF page pending.
+
+## TA-T212 — well-order / order-isomorphism / proper and improper initial segment
+
+Chosen rendering: **நன்கு வரிசைப்படுத்தல் / வரிசை ஓரினச்சார்பு / தகு மற்றும் தகா தொடக்கத் துண்டு**
+
+Kind: `terminology`; confidence: `medium`; provisional: `false`; priority: `normal`.
+
+Intended sense and rationale: நன்கு வரிசைப்படுத்தல் and தகு தொடக்கத் துண்டு continue TA-T037 and TA-T072. ஓரினச்சார்பு continues the edition's model-theory register; here the bijection and order-preservation biconditional define the specialized வரிசை compound. Proper and improper segments are explicitly distinguished by whether they end below an element or are the whole carrier.
+
+Authority basis: TA-SC11-P3 (checked_supports); TA-SC11-P19 (checked_context_only); TA-SC11-P24-INVERSE (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-SC11-P41-COMPOSITION (checked_context_only); TA-SC11-P42-COMPOSITION (checked_context_only); TA-SC11-P44-FUNCTION-INVERSE (checked_context_only); TA-SC11-P45-FUNCTION-INVERSE (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports)
+
+Alternatives: None recorded.
+
+Please double-check: **do the listed uses of “நன்கு வரிசைப்படுத்தல் / வரிசை ஓரினச்சார்பு / தகு மற்றும் தகா தொடக்கத் துண்டு” preserve the OpenLogic sense of “well-order / order-isomorphism / proper and improper initial segment” and read naturally in India-standard mathematical Tamil?**
+
+- `TA-OCC-468f5c72d722b6ec` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:11`; Tamil `translation/content/set-theory/ordinals/wo.tex:7`; PDF page pending.
+- `TA-OCC-e19c562281676e79` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:33`; Tamil `translation/content/set-theory/ordinals/wo.tex:28`; PDF page pending.
+- `TA-OCC-a0c59c095ed39718` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:6`; Tamil `translation/content/set-theory/ordinals/iso.tex:7`; PDF page pending.
+- `TA-OCC-acbf6dc14d2a1c09` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:9`; PDF page pending.
+- `TA-OCC-68ddae0189a92de0` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:17`; Tamil `translation/content/set-theory/ordinals/iso.tex:14`; PDF page pending.
+- `TA-OCC-4733e45c1b2269b1` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:17`; PDF page pending.
+- `TA-OCC-6f026e3fefde588d` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:20`; PDF page pending.
+- `TA-OCC-34a140e21a9cdfac` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:23`; PDF page pending.
+- `TA-OCC-1916932cb2c3eb24` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:64`; PDF page pending.
+- `TA-OCC-d70c2e0c82677d18` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:107`; PDF page pending.
+- `TA-OCC-ba76bb01dd7367bb` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:126`; PDF page pending.
+- `TA-OCC-72afe1d030357ccf` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:130`; PDF page pending.
+- `TA-OCC-48a401be5b5c4604` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:155`; PDF page pending.
+- `TA-OCC-6d4e304b9cfbb364` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:21`; Tamil `translation/content/set-theory/ordinals/iso.tex:161`; PDF page pending.
+- `TA-OCC-f05db49bfe67c7d0` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:1`; Tamil `translation/content/set-theory/ordinals/vn.tex:10`; PDF page pending.
+- `TA-OCC-c52d21d62e223e3d` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:1`; Tamil `translation/content/set-theory/ordinals/vn.tex:38`; PDF page pending.
+- `TA-OCC-80c0b804639f63e0` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:1`; Tamil `translation/content/set-theory/ordinals/vn.tex:40`; PDF page pending.
+- `TA-OCC-09a9a6f9473fa885` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:19`; Tamil `translation/content/set-theory/ordinals/basic.tex:223`; PDF page pending.
+- `TA-OCC-7c27bb11d05836e4` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:1`; Tamil `translation/content/set-theory/ordinals/replacement.tex:10`; PDF page pending.
+- `TA-OCC-619d5738bbc58d45` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:15`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:52`; PDF page pending.
+- `TA-OCC-5fd6f8e03a8e55ca` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:15`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:60`; PDF page pending.
+
+## TA-T213 — transitive set / transfinite induction / trichotomy for ordinals
+
+Chosen rendering: **கடப்புப் பண்புடைய கணம் / முடிவிலிக்கடந்த தொகுத்தறிதல் / வரிசையெண்களின் முக்கூற்றுப் பண்பு**
+
+Kind: `terminology`; confidence: `medium`; provisional: `false`; priority: `normal`.
+
+Intended sense and rationale: கடப்புப் பண்பு and முக்கூற்றுப் பண்பு continue TA-T025 and TA-T073, while தொகுத்தறிதல் is established edition usage. The subset condition defines a transitive set, the least-counterexample scheme fixes transfinite induction, and the three membership alternatives fix ordinal trichotomy without relying on the Tamil labels alone.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P19 (checked_context_only); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports)
+
+Alternatives: None recorded.
+
+Please double-check: **do the listed uses of “கடப்புப் பண்புடைய கணம் / முடிவிலிக்கடந்த தொகுத்தறிதல் / வரிசையெண்களின் முக்கூற்றுப் பண்பு” preserve the OpenLogic sense of “transitive set / transfinite induction / trichotomy for ordinals” and read naturally in India-standard mathematical Tamil?**
+
+- `TA-OCC-b97194829bd2ca6b` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:43`; Tamil `translation/content/set-theory/ordinals/basic.tex:46`; PDF page pending.
+- `TA-OCC-b6e41decbeca49cf` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:132`; Tamil `translation/content/set-theory/ordinals/basic.tex:146`; PDF page pending.
+- `TA-OCC-1e347fd79ee82f40` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:34`; Tamil `translation/content/set-theory/ordinals/opps.tex:44`; PDF page pending.
+- `TA-OCC-0ccb5a0f5a0eecd2` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:41`; Tamil `translation/content/set-theory/ordinals/opps.tex:46`; PDF page pending.
+- `TA-OCC-39a6b48d520c9190` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:43`; Tamil `translation/content/set-theory/ordinals/opps.tex:92`; PDF page pending.
+
+## TA-T214 — Scheme of Replacement / ZF minus / image under a term
+
+Chosen rendering: **மாற்றீட்டு அடிகோள் திட்டம் / ZF நீக்கம் / ஒரு சொல்லின் கீழான பிம்பக் கணம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: அடிகோள், திட்டம், வாய்பாடு, சொல், சார்பு and கணத்தின் பிம்பம் continue the checked canon and edition register. The unique-output antecedent and image-set consequent define Replacement exactly; the surrounding term/function distinction prevents the scheme from collapsing into ordinary set-coded function image. ZF-minus is fixed by its full axiom inventory.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P19 (checked_context_only); TA-SC11-P26-FUNCTION (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P33-KINDS (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-T214-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “மாற்றீட்டு அடிகோள் திட்டம் / ZF நீக்கம் / ஒரு சொல்லின் கீழான பிம்பக் கணம்” the established India-standard Tamil expression for “Scheme of Replacement / ZF minus / image under a term” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-6782694393d25632` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:20`; Tamil `translation/content/set-theory/ordinals/replacement.tex:22`; PDF page pending.
+
+## TA-T215 — successor ordinal / limit ordinal / least strict upper bound
+
+Chosen rendering: **பின்வரிசை வரிசையெண் / எல்லை வரிசையெண் / மீச்சிறு கண்டிப்பான மேல்வரம்பு**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: பின்வரிசையுறுப்பு continues TA-T208 and எல்லை and மீச்சிறு follow checked analysis/order usage. The union-with-singleton formula defines successors, the nonempty nonsuccessor clause defines limits, and the union of all successors in X is proved to be the least ordinal strictly above every member of X.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-AU-ANALYSIS-COUNTABLE-Q11 (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports); TA-T215-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “பின்வரிசை வரிசையெண் / எல்லை வரிசையெண் / மீச்சிறு கண்டிப்பான மேல்வரம்பு” the established India-standard Tamil expression for “successor ordinal / limit ordinal / least strict upper bound” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-6470bada32c36614` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:6`; Tamil `translation/content/set-theory/ordinals/opps.tex:7`; PDF page pending.
+- `TA-OCC-72547d3cd3473edf` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:16`; Tamil `translation/content/set-theory/ordinals/opps.tex:17`; PDF page pending.
+- `TA-OCC-b8cb390b1d0fd2fa` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:49`; Tamil `translation/content/set-theory/ordinals/opps.tex:52`; PDF page pending.
+- `TA-OCC-bbb827204756ebbe` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:59`; Tamil `translation/content/set-theory/ordinals/opps.tex:63`; PDF page pending.
+- `TA-OCC-e1b596362e286d31` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:70`; Tamil `translation/content/set-theory/ordinals/opps.tex:75`; PDF page pending.
+
+## TA-T216 — Burali–Forti paradox / set of all ordinals
+
+Chosen rendering: **புராலி--ஃபோர்ட்டி முரணுரை / எல்லா வரிசையெண்களையும் கொண்ட கணம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `false`; priority: `normal`.
+
+Intended sense and rationale: The proper names are transliterated and முரணுரை continues the edition's paradox register. The proof explicitly derives O in O from the supposition that O contains every ordinal, so the mathematical content is carried by the argument rather than the label.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P19 (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports)
+
+Alternatives: None recorded.
+
+Please double-check: **do the listed uses of “புராலி--ஃபோர்ட்டி முரணுரை / எல்லா வரிசையெண்களையும் கொண்ட கணம்” preserve the OpenLogic sense of “Burali–Forti paradox / set of all ordinals” and read naturally in India-standard mathematical Tamil?**
+
+- `TA-OCC-cc6d7dded9f9a02c` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:151`; Tamil `translation/content/set-theory/ordinals/basic.tex:161`; PDF page pending.
+- `TA-OCC-fb3f8ebf5e3019ca` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:151`; Tamil `translation/content/set-theory/ordinals/basic.tex:162`; PDF page pending.
+- `TA-OCC-d9a9fa9c43cab7cd` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:151`; Tamil `translation/content/set-theory/ordinals/basic.tex:166`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

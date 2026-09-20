@@ -1,0 +1,120 @@
+{
+  "schema": "openlogic-tamil-render-qa/1",
+  "result": "pass",
+  "review_date": "2026-09-21",
+  "scope": {
+    "reader_units": 11,
+    "first_unit": "OLP-0547",
+    "last_unit": "OLP-0557",
+    "programme_completed_units": 554,
+    "total_frozen_units": 722,
+    "unit_ids": ["OLP-0547", "OLP-0548", "OLP-0549", "OLP-0550", "OLP-0551", "OLP-0552", "OLP-0553", "OLP-0554", "OLP-0555", "OLP-0556", "OLP-0557"],
+    "reader": "build/tamil-set-theory-ordinals.pdf",
+    "public_reader": "readers/set-theory-ordinals-ta-Taml-IN.pdf",
+    "source_master": "build/tamil-set-theory-ordinals.tex"
+  },
+  "tex_guard": {
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "receipt": "TEX-SET-THEORY-ORDINALS-RECEIPT.json",
+    "receipt_bytes": 5701,
+    "receipt_sha256": "78b9ed6fe5f9f217f067d8ee53110f19368d41a9e22292b6d4b3faa390a65f79",
+    "engine": "xelatex",
+    "passes": 3,
+    "bibtex": true,
+    "status": "built",
+    "final_pass_undefined_references": 0,
+    "missing_character_messages": 0,
+    "overfull_messages": 0,
+    "underfull_messages": 1,
+    "benign_requested_file_warnings": 2
+  },
+  "master": {
+    "bytes": 10718,
+    "sha256": "787ff2d1d88395eeba523ec7ff3f6ec9a7fa5b45bfebc4ede8c35c222ae2ebaa"
+  },
+  "pdf": {
+    "path": "readers/set-theory-ordinals-ta-Taml-IN.pdf",
+    "bytes": 204055,
+    "sha256": "b08e4f4515644c5c965cd51304bebab705251206a501e405518196bb7f9e0e6a",
+    "pages": 17,
+    "page_size": "A4",
+    "fonts_embedded": true,
+    "tamil_fonts_unicode_mapped": true,
+    "metadata": {
+      "title": "OpenLogic Tamil: Ordinals",
+      "subject": "Machine translation; OLP-0547 through OLP-0557; 11 of 722 frozen source units",
+      "author": "OpenLogic Tamil translation programme"
+    }
+  },
+  "renders": [
+    {"page": 1, "bytes": 152527, "sha256": "5a706302661cf195ccc08bc86a7a5abde3e17d815b696b491a2f6361f41c6656"},
+    {"page": 2, "bytes": 92254, "sha256": "39fd05a5736d555b7c23f06f2d488df600ce326428aad7c2eda10015bd1f356b"},
+    {"page": 3, "bytes": 389440, "sha256": "f768024734644eeecf49fe8e459763684f474befb72d6e12ea9f4518e0d25688"},
+    {"page": 4, "bytes": 455705, "sha256": "d33d2ca178e1a96700be1144ad96c96237412c703c5116264eb5a01c6cd83e4b"},
+    {"page": 5, "bytes": 472195, "sha256": "0998965c7e7afb16d108b080b3ede37daced4d2ae6faec679b37fb6e5ff9f8e1"},
+    {"page": 6, "bytes": 549427, "sha256": "427cac5a7ebb9f56652cfc17afa8c721678d0e8f62a6a2fd14a9cded667ddd6d"},
+    {"page": 7, "bytes": 478771, "sha256": "d1d25d158e3cc96962c132e4a7d65d2cf8885511c18a29c2de5669ef48e41827"},
+    {"page": 8, "bytes": 547471, "sha256": "ce125017a9801d8a53ef5f8f1201b1863aec4b6d2d06055a4311dc939d8c93c3"},
+    {"page": 9, "bytes": 443806, "sha256": "6280cba01d40c2862226a5ce33849c4daeca7272a4fe0de08b634b244addd583"},
+    {"page": 10, "bytes": 561317, "sha256": "617ec4fee47a6099cfb8a2da544ea84ee5d5fd46b7a3b62eb1caa6b7ba2a7b94"},
+    {"page": 11, "bytes": 508462, "sha256": "f88d2b224296a85c377ed1e1e83e7d82a2097a70d6e84576622db6f288529503"},
+    {"page": 12, "bytes": 470871, "sha256": "cb1850e79b4ff1daf6bc4be01fb96f1a2b11fae4bb2c12efb9a7b94c947dda86"},
+    {"page": 13, "bytes": 524500, "sha256": "89f4c2fd8422144efcf2a59eede1bf0af8c4889235e113dd0e9d63323ad42830"},
+    {"page": 14, "bytes": 521453, "sha256": "0eaca92e7f24772cbacf43ce57e22fd486bb5244f02c4f9cf2940539a739ed25"},
+    {"page": 15, "bytes": 417932, "sha256": "b3289294f46412ae2a9297c8af97284713e9ac16232fd0203015d4c443e118c9"},
+    {"page": 16, "bytes": 295344, "sha256": "cd851fc309be26943c788ae1713218d9a6b75a6126d5f2725373e24ba4f2034d"},
+    {"page": 17, "bytes": 129077, "sha256": "d8a086d844787f7b29e92eaad824bc6159d9abac8e2bf0d33649052e3a3e7d9f"}
+  ],
+  "visual_review": {
+    "complete": true,
+    "basis": "All 17 final page PNGs were directly inspected at original rendered detail after the final guarded rebuild.",
+    "tamil_shaping_and_pulli": "pass",
+    "page_edges_and_clipping": "pass",
+    "headings_and_page_breaks": "pass",
+    "formulas": "pass",
+    "footnotes": "pass",
+    "bibliography": "pass",
+    "internal_cross_references": "pass",
+    "visible_placeholders_absent": true,
+    "visible_untranslated_stage_fallback_absent": true
+  },
+  "copy_search": {
+    "extractor": "Poppler pdftotext -layout",
+    "text_bytes": 74190,
+    "text_sha256": "1aeb367d24f133ba5bae9c3bf1b7852aa99b427514eaab4cab0245fd4f90fe63",
+    "unicode_nfc": true,
+    "replacement_character_absent": true,
+    "tamil_phrase_checks": {
+      "வரிசையெண்கள்": true,
+      "நன்கு வரிசைப்படுத்தல்கள்": true,
+      "வரிசை ஓரினச்சார்புகள்": true,
+      "ஃபான் நாய்மனின் வரிசையெண் கட்டமைப்பு": true,
+      "முடிவிலிக்கடந்த தொகுத்தறிதல்": true,
+      "மாற்றீட்டு அடிகோள் திட்டம்": true,
+      "வரிசை வகைகளாக வரிசையெண்கள்": true,
+      "பின்வரிசை மற்றும் எல்லை வரிசையெண்கள்": true,
+      "புராலி": true,
+      "ஃபோர்ட்டி": true
+    },
+    "formula_token_checks": {
+      "universal_quantifier": true,
+      "existential_quantifier": true,
+      "membership": true,
+      "nonmembership": true,
+      "empty_set": true,
+      "union": true,
+      "subset": true,
+      "biconditional": true,
+      "implication": true,
+      "omega": true,
+      "phi": true,
+      "alpha": true,
+      "beta": true
+    },
+    "limitations": [
+      "The embedded Computer Modern symbol fonts have no ToUnicode maps, although the embedded Tamil fonts and the representative mathematical glyphs checked here are copyable with Poppler.",
+      "PyMuPDF and pdfplumber are not certified to recover every Tamil phrase that Poppler recovers from XeTeX ActualText, so universal copy behavior across PDF engines is not claimed."
+    ]
+  },
+  "status": "pass-with-documented-cross-reader-copy-limitations"
+}

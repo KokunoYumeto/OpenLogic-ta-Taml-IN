@@ -5564,6 +5564,77 @@
       "rationale": "Both the target biconditional and Separation definition use C, so the final membership claim must use the same set.",
       "precise_review_question": "Does the inactive proof conclude x is a member of uppercase C?",
       "location_needle": "SOURCE CORRECTION TA-STH-009"
+    },
+    {
+      "audit_id": "TA-STH-010",
+      "unit_id": "OLP-0551",
+      "kind": "order-isomorphism-codomain-word",
+      "action": "Corrected ‘domain’ to ‘codomain’ in the initial-segment comparison proof.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The displayed map is f: A_{a_2} to B_{b_2}; B_{b_2} is therefore its codomain, not its domain.",
+      "chosen_treatment": "தமிழ் வாக்கியம் B_{b_2} ஐ f இன் துணைச்சார்பகம் என்று சரியாகக் குறிப்பிடுகிறது.",
+      "alternatives_considered": "Preserving the source's domain/codomain slip.",
+      "rationale": "The conclusion b_1 lessdot b_2 follows because f(a_1) lies in B_{b_2}, the codomain initial segment.",
+      "precise_review_question": "Does the proof identify B_{b_2} as the codomain of f?",
+      "location_needle": "SOURCE CORRECTION TA-STH-010"
+    },
+    {
+      "audit_id": "TA-STH-011",
+      "unit_id": "OLP-0553",
+      "kind": "transfinite-induction-predicate-grammar",
+      "action": "Rendered the least element as satisfying phi rather than being phi.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says that alpha has a least element ‘which is phi’; phi is a formula, while the intended element satisfies phi.",
+      "chosen_treatment": "தமிழ், alpha-வில் phi-ஐ நிறைவுசெய்யும் உறுப்புகளுள் மீச்சிறு உறுப்பு உள்ளது என்று கூறுகிறது.",
+      "alternatives_considered": "Literally identifying an ordinal element with the formula phi.",
+      "rationale": "The theorem seeks a least ordinal for which phi holds, and the preceding case split guarantees the relevant subset is nonempty.",
+      "precise_review_question": "Does the proof choose the membership-least element among those satisfying phi?",
+      "location_needle": "SOURCE CORRECTION TA-STH-011"
+    },
+    {
+      "audit_id": "TA-STH-012",
+      "unit_id": "OLP-0554",
+      "kind": "replacement-motivation-garbled-axiom-clause",
+      "action": "Rendered the malformed phrase as ‘using only the axioms introduced so far.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says ‘only the Axioms we provided introduced so far,’ combining two competing constructions and omitting the needed preposition.",
+      "chosen_treatment": "தமிழ், இதுவரை அறிமுகப்படுத்திய அடிகோள்களை மட்டும் பயன்படுத்தி முடிவை நிறுவ முடியாது என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.",
+      "alternatives_considered": "Preserving the duplicated verbs or treating ‘provided’ as a mathematical condition.",
+      "rationale": "The next sentence introduces Replacement precisely because the preceding axiom stock is insufficient.",
+      "precise_review_question": "Does the sentence state that the prior axioms alone do not prove the desired representation theorem?",
+      "location_needle": "SOURCE CORRECTION TA-STH-012"
+    },
+    {
+      "audit_id": "TA-STH-013",
+      "unit_id": "OLP-0556",
+      "kind": "ordinal-representation-isomorphism-codomain",
+      "action": "Changed the isomorphism codomain from the ordered pair <B, lessdot> to its carrier B.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\tuple", "\\lessdot"],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$f\\colon\\beta\\to\\tuple{B,\\lessdot}$",
+          "to": "$f\\colon\\beta\\toB$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The chapter defines an order-isomorphism as a function between carrier sets; the source instead types this one map as landing in the ordered pair <B, lessdot>.",
+      "chosen_treatment": "தமிழ் சூத்திரம் ஓரினச்சார்பை f: beta to B என்று வகைப்படுத்தி, lessdot-ஐ பேணப்படும் வரிசைத் தொடர்பாக வைத்திருக்கிறது.",
+      "alternatives_considered": "Treating the ordered structure pair itself as the codomain set; leaving this one map inconsistent with the chapter's definition.",
+      "rationale": "The following restriction uses values f(alpha) as members of B and initial-segment indices, so the carrier B is the required codomain.",
+      "precise_review_question": "Is f typed as a function from beta to the carrier B?",
+      "location_needle": "SOURCE CORRECTION TA-STH-013"
     }
   ],
   "by_unit": {
@@ -5743,6 +5814,10 @@
     "OLP-0539": ["TA-STH-006"],
     "OLP-0541": ["TA-STH-007"],
     "OLP-0545": ["TA-STH-008"],
-    "OLP-0546": ["TA-STH-009"]
+    "OLP-0546": ["TA-STH-009"],
+    "OLP-0551": ["TA-STH-010"],
+    "OLP-0553": ["TA-STH-011"],
+    "OLP-0554": ["TA-STH-012"],
+    "OLP-0556": ["TA-STH-013"]
   }
 }

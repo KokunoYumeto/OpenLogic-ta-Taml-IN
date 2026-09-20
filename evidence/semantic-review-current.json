@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T21:51:26.685112+00:00",
+  "date_utc": "2026-09-20T22:29:49.648190+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2717,6 +2717,61 @@
       "unit_id": "OLP-0546",
       "source_sha256": "866857905e11e5f329a248326ba04ba14f293b388bd8e3573caaf05fb2b7d56d",
       "translation_sha256": "93b0c3602bfd8bfb5457b3f542f48feaeafb9ff109984dd585911ee9796606be"
+    },
+    {
+      "unit_id": "OLP-0547",
+      "source_sha256": "bacf063dff89b8bdbe263ce56294e66b10e208d4bccc9ce81119aaa9968e0d63",
+      "translation_sha256": "a0044c0dbb80a91bdd9549dcb84bce05b7ab676d8b13d3c8c1450c74358980bd"
+    },
+    {
+      "unit_id": "OLP-0548",
+      "source_sha256": "9538b3e7fbf0ee81a67a6cf2cb46524cc37de36875009504088390d21e5df86e",
+      "translation_sha256": "7b24214c2b8b56872f582daf16c1a2b19a2397325422e7afc4ec0493f3f76b79"
+    },
+    {
+      "unit_id": "OLP-0549",
+      "source_sha256": "69629365d22ecab6b74fa4d3896d24ad71371c5f9c079fc79ac18f4655c63c11",
+      "translation_sha256": "bfb6a080c20b8723d406712d808b4527fada5e121228b4340f0d25c70e93a404"
+    },
+    {
+      "unit_id": "OLP-0550",
+      "source_sha256": "31ff99cf24d9c18e905626855bdb8c9bfeb7c2a5c2814387a6c36ccf54df0313",
+      "translation_sha256": "77a65929ea056c42a534afdd26695c357c1d3aab706ace81bcc788b0aad59f04"
+    },
+    {
+      "unit_id": "OLP-0551",
+      "source_sha256": "eb57a72aed6e4ff2398fe8d9c52239c79d2578df37c5e4bb891568381a41cb39",
+      "translation_sha256": "9c7ad1655cb4a00163c70c1d93b4386a48556d21efc374d877a4713c848f624c"
+    },
+    {
+      "unit_id": "OLP-0552",
+      "source_sha256": "1a1ffe53bdfd51d0ee3ad7a818981d6cc2b54405c92a219a4295fa48b1393529",
+      "translation_sha256": "ddf12639aee6556f7b1703062b1973be086274d85102d0deb8649ec1ac15d1fa"
+    },
+    {
+      "unit_id": "OLP-0553",
+      "source_sha256": "7a9d1d198227e2de1a2af719417ae7d81ffc2c727e6da7d992b194f44a7f19c1",
+      "translation_sha256": "4bf6572e9cc310ab6a7df269adac5e25fcf0202ac343c291a8c3e7757350d227"
+    },
+    {
+      "unit_id": "OLP-0554",
+      "source_sha256": "c081b7ac20726b738ce2fb496ad29e836a72883160c847b828582e4de0218523",
+      "translation_sha256": "8c1e9255597339fe0345947dc6b205b8b7f3a29acece9eb5cacadca7445740d6"
+    },
+    {
+      "unit_id": "OLP-0555",
+      "source_sha256": "3f99ff5c244929fec27396ee3ff21b3b2bb76a56cada018c045a5d5459e6f289",
+      "translation_sha256": "62de0c76c1d20002b597378975ba27b82de3593a96d3f93f4b8e307dc2d5f681"
+    },
+    {
+      "unit_id": "OLP-0556",
+      "source_sha256": "9a123198cbfcd0000eb27804a39148d5ee5fb7ad41cf7cff04ad78ea320dfcd6",
+      "translation_sha256": "d6429bcf92e2dd966e1fb0d39991d933b78ba137f09bbf35bb3d07b608873c30"
+    },
+    {
+      "unit_id": "OLP-0557",
+      "source_sha256": "f53aa4197833752c4ecdd3d7755c8e13cdec164fd68d0261dac26290a95cd171",
+      "translation_sha256": "809974393970dd2dee5e227694d7f6c7816c0b503306a1119c8f28927098ce9d"
     }
   ],
   "samples": [
@@ -7178,6 +7233,83 @@
       "assessment": "The defining biconditional, witness argument, closure application and uppercase-C correction remain exact.",
       "translation_segment_sha256": "a4c601060e729a7d043cf1a8105d1c6ece65028fca6151409d7f07931335ba4f",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0547-S01",
+      "reverse_paraphrase": "The ordinals chapter proceeds from motivation and well-orders through order-isomorphisms, von Neumann ordinals, Replacement, order types, and successor and limit ordinals.",
+      "assessment": "All ten section imports and the chapter-ending hook remain in source order.",
+      "translation_segment_sha256": "4c4a3078184d0537bf3c3e481eb175911630b4999bc84d079f592ae1685d7b55",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0548-S01",
+      "reverse_paraphrase": "Once the hierarchy reaches its first infinite stage, the no-last-stage principle forces later stages and thereby invokes numbers beyond all natural numbers, motivating transfinite ordinals.",
+      "assessment": "The two stage principles, repeated powerset progression and stated chapter aim remain distinct.",
+      "translation_segment_sha256": "43c84140aef6a2f1566cf4de54b1a0b71a086f7741bb4ae53ba200b4f136ad1c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0549-S01",
+      "reverse_paraphrase": "The ordinary natural-number order has type omega; moving zero after every positive integer gives omega plus one, while placing all evens before all odds gives omega plus omega.",
+      "assessment": "All three order diagrams, their element orders and the last-element distinction remain exact.",
+      "translation_segment_sha256": "08a5cd20abff112b1e2fccefbd579bd7f66799da255a8baec57b7a7847311eff",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0550-S01",
+      "reverse_paraphrase": "A relation well-orders A when it is connected and every nonempty subset has a minimal element; connectedness turns that element into the unique least member and supports well-order induction.",
+      "assessment": "Both defining clauses, strict-order consequences, contrapositive induction proof and parameter footnote remain.",
+      "translation_segment_sha256": "941fe002c933d3a6b5119320fbc40c91b8400846b16ae2a2b924935b9935ed17",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0551-S01",
+      "reverse_paraphrase": "An order-isomorphism is an order-preserving bijection; well-orders have unique isomorphisms, are never isomorphic to proper initial segments, and any two well-orders are comparable by initial segments.",
+      "assessment": "Composition, uniqueness, restriction, segment comparison, Separation construction and the codomain correction remain exact.",
+      "translation_segment_sha256": "a7ae17dfbb3bc5576317674552cc2cd5ddadd4ee97653598216a7db6d84a939d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0552-S01",
+      "reverse_paraphrase": "A von Neumann ordinal is a transitive set well-ordered by membership; the first such sets are the natural numbers, while the same definition admits transfinite ordinals.",
+      "assessment": "Both hoped-for order-type laws, the transitivity definition, restricted membership relation and representation caveat remain.",
+      "translation_segment_sha256": "ab12d382969ec57c7c3936fbc24bf83cb384d21f517e95ebaeb7c2fcb250d538",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0553-S01",
+      "reverse_paraphrase": "Every member of an ordinal is an ordinal; membership supports transfinite induction and trichotomy, yet all ordinals cannot form a set because that set would be an ordinal containing itself.",
+      "assessment": "The member lemma, least-counterexample repair, double induction, Burali–Forti proof and final comparability results remain exact.",
+      "translation_segment_sha256": "f50ba22e4d545adfadb69533b36358e4554c4542f38dfee0627c8bf34fd3bc46",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0554-S01",
+      "reverse_paraphrase": "Replacement sends every member of a set through a uniquely defined formula or term to form its image set, even when the term is not a set-coded function.",
+      "assessment": "Both schema formulations, term-image corollary, function distinction, footnotes and malformed-source repair remain.",
+      "translation_segment_sha256": "844fe31fe594f74305dba38374a70d0b74921ee29eaefecced0199eafd1184ba",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0555-S01",
+      "reverse_paraphrase": "ZF-minus consists of Extensionality, Union, Pairs, Powersets, Infinity and every instance of both Separation and Replacement.",
+      "assessment": "The complete axiom inventory and the Fraenkel–Skolem historical attribution remain explicit.",
+      "translation_segment_sha256": "6aaa3ea2d9877fc5bb3bd75d2daa5918e17edbbe854657b704336d05c56d1a63",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0556-S01",
+      "reverse_paraphrase": "Replacement constructs an isomorphism from an ordinal domain onto any minimal counterexample well-order, proving that every well-order has a unique ordinal order type.",
+      "assessment": "The minimal-segment construction, function set, transitivity argument, two order-type laws and carrier-codomain correction remain exact.",
+      "translation_segment_sha256": "4916edc98884755fc944ab037eb3185f62a0bb93fd89cfa260566a71e16486e1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0557-S01",
+      "reverse_paraphrase": "The successor of alpha is alpha union its singleton; nonzero nonsuccessors are limits, and the union of all successors from X is the least ordinal strictly above every member of X.",
+      "assessment": "The successor proposition, three-case induction, lsub definition, strict/non-strict footnote and upper-bound proof remain exact.",
+      "translation_segment_sha256": "38eb8252fb65d94d916292f2df0c2fe640a084903b05d683f317fabe233e1e2b",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -8014,14 +8146,30 @@
     {
       "unit_id": "OLP-0546",
       "issue": "The inactive explanatory proof concludes with lowercase c although the constructed set is C. Tamil restores uppercase C under TA-STH-009."
+    },
+    {
+      "unit_id": "OLP-0551",
+      "issue": "The initial-segment comparison says B_b2 is the domain of f although the displayed map makes it the codomain. Tamil restores codomain under TA-STH-010."
+    },
+    {
+      "unit_id": "OLP-0553",
+      "issue": "The transfinite-induction proof calls the least element “phi” although phi is a formula that the intended element satisfies. Tamil states the satisfaction relation under TA-STH-011."
+    },
+    {
+      "unit_id": "OLP-0554",
+      "issue": "The Replacement motivation combines “provided” and “introduced” into a malformed axiom clause. Tamil states that the axioms introduced so far are insufficient under TA-STH-012."
+    },
+    {
+      "unit_id": "OLP-0556",
+      "issue": "The final order-type proof types an isomorphism as mapping into the ordered pair <B, lessdot>, contrary to the chapter definition and following use of values in B. Tamil restores carrier B under TA-STH-013."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "543 source units now pass textual and author semantic QA. Nine exact PDF readers visually verify 221 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 179 frozen units still require completion.",
+  "remaining": "554 source units now pass textual and author semantic QA. Ten exact PDF readers visually verify 232 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 168 frozen units still require completion.",
   "visual_reader_coverage": {
-    "reader_count": 9,
-    "distinct_unit_count": 221,
+    "reader_count": 10,
+    "distinct_unit_count": 232,
     "readers": [
       {
         "name": "combined sets/relations/functions",
@@ -8058,6 +8206,10 @@
       {
         "name": "set theory: Zermelo axioms",
         "distinct_units": 10
+      },
+      {
+        "name": "set theory: ordinals",
+        "distinct_units": 11
       }
     ]
   },
@@ -8966,6 +9118,41 @@
         "zminus_axiom_inventory_remains": true,
         "zermelo_von_neumann_encodings_and_benacerraf_point_remain": true,
         "arbitrary_intersection_biconditional_witness_and_uppercase_c_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0547",
+        "OLP-0548",
+        "OLP-0549",
+        "OLP-0550",
+        "OLP-0551",
+        "OLP-0552",
+        "OLP-0553",
+        "OLP-0554",
+        "OLP-0555",
+        "OLP-0556",
+        "OLP-0557"
+      ],
+      "correction_ids": [
+        "TA-STH-010",
+        "TA-STH-011",
+        "TA-STH-012",
+        "TA-STH-013"
+      ],
+      "status": "pass",
+      "checks": {
+        "ordinals_driver_preserves_all_ten_sections": true,
+        "post_infinite_stage_and_transfinite_motivation_remain": true,
+        "three_omega_orderings_and_diagrams_remain": true,
+        "well_order_definition_consequences_and_induction_remain": true,
+        "order_isomorphism_initial_segments_comparability_and_repair_remain": true,
+        "von_neumann_transitivity_ordinal_definition_and_naturals_remain": true,
+        "ordinal_induction_trichotomy_burali_forti_and_repair_remain": true,
+        "replacement_schemata_term_image_distinction_and_repair_remain": true,
+        "zfminus_axiom_inventory_and_history_remain": true,
+        "ordinal_representation_order_type_laws_and_repair_remain": true,
+        "successor_limit_induction_and_lsub_remain": true
       }
     }
   ]

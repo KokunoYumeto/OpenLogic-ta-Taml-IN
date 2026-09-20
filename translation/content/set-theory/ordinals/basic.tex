@@ -1,0 +1,233 @@
+% SEGMENT OLP-0553-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ordinals}{basic}
+\olsection{வரிசையெண்களின் அடிப்படைப் பண்புகள்}
+
+முதல் சில வரிசையெண்கள் இயல் எண்களே என்று கண்டோம். இயல் எண்கள்மீது
+செல்லுபடியாகும் தொகுத்தறிதல் கொள்கையை நீட்டிப்பதே வரிசையெண்களின் கோட்பாட்டை
+உருவாக்குவதற்கான முதன்மைக் காரணம். தொடக்கநிலை முடிவுகளின் ஒரு தொடரின்
+வழியாக இதை நோக்கி முன்னேறுவோம்.
+
+\begin{lem}\ollabel{ordmemberord}
+ஒரு வரிசையெண்ணின் ஒவ்வோர் !!{element} உம் ஒரு வரிசையெண்.
+\end{lem}
+
+\begin{proof}
+$\alpha$ ஒரு வரிசையெண் என்றும் $b \in \alpha$ என்றும் கொள்வோம்.
+$\alpha$ கடப்புப் பண்புடையதால் $b \subseteq \alpha$. ஆகவே $\in$ ஆனது
+$\alpha$ ஐ நன்கு வரிசைப்படுத்துவதால், $\in$ ஆனது $b$ ஐயும் நன்கு
+வரிசைப்படுத்துகிறது.
+
+$b$ கடப்புப் பண்புடையது என்று காண, $x \in c \in b$ எனக் கொள்வோம்.
+$b \subseteq \alpha$ என்பதால் $c \in \alpha$. மீண்டும் $\alpha$
+கடப்புப் பண்புடையதால் $c \subseteq \alpha$; எனவே $x \in \alpha$.
+ஆகவே $x, c, b \in \alpha$. ஆனால் $\in$ ஆனது $\alpha$ ஐ நன்கு
+வரிசைப்படுத்துவதால், \olref[sth][ordinals][wo]{wo:strictorder} இன்படி
+$\in$ ஆனது $\alpha$ மீதான கடப்புப் பண்புடைய தொடர்பு. எனவே $x \in c
+\in b$ என்பதிலிருந்து $x \in b$. பொதுமைப்படுத்தினால், $c \subseteq b$.
+\end{proof}
+
+\begin{cor}\ollabel{ordissetofsmallerord}
+எந்த வரிசையெண்~$\alpha$ க்கும்,
+$\alpha = \Setabs{\beta \in \alpha}{\beta \text{ ஒரு வரிசையெண்}}$.
+\end{cor}
+
+\begin{proof}
+\olref{ordmemberord} இலிருந்து உடனடியாகப் பின்வருகிறது.
+\end{proof}
+
+அடுத்த இரண்டு முதன்மை முடிவுகளான \olref{ordinductionschema},
+\olref{ordtrichotomy} ஆகியவற்றின் தோராயமான கருத்து, வரிசையெண்களையே
+உறுப்புறவு நன்கு வரிசைப்படுத்துகிறது என்பதாகும்:
+
+\begin{thm}[முடிவிலிக்கடந்த தொகுத்தறிதல்]\ollabel{ordinductionschema}
+எந்த வாய்பாடு $\phi(x)$ க்கும்:	
+\[
+	\text{எனில் }\exists \alpha \phi(\alpha)\text{, அப்போது }\exists \alpha(\phi(\alpha)
+	\land  (\forall \beta \in \alpha) \lnot \phi(\beta))
+\]
+இங்கே காட்டப்பட்ட அளவீடுகள் வரிசையெண்களுக்கு மறைமுகமாகக்
+கட்டுப்படுத்தப்பட்டுள்ளன.
+\end{thm}
+
+\begin{proof}
+%\olref{ordinductionschema1}. 
+ஏதோ ஒரு வரிசையெண் $\alpha$ க்கு $\phi(\alpha)$ எனக் கொள்வோம்.
+$ (\forall \beta \in \alpha) \lnot \phi(\beta)$ எனில், நிறுவல்
+முடிந்தது. இல்லையெனில், $\alpha$ ஒரு வரிசையெண் என்பதால், அதில்
+$\phi$-ஐ நிறைவுசெய்யும் உறுப்புகளில் ஓர் $\in$-மீச்சிறு !!{element}
+உண்டு; \olref{ordmemberord} இன்படி இதுவும் ஒரு வரிசையெண்.
+% SOURCE CORRECTION TA-STH-011: the least element satisfies phi; it is not “which is phi.”
+%	\olref{ordinductionschema2}. Suppose there is some ordinal
+%	$\gamma$ such that $\lnot\phi(\gamma)$. Then by
+%	\olref{ordinductionschema1}, there is an $\in$-minimal ordinal
+%	$\alpha$ for which $\lnot\phi(\alpha)$. So $(\forall \beta <
+%	\alpha) \phi(\beta)$, rendering the antecedent of the conditional
+%	false.
+\end{proof}
+\noindent
+\olref{ordinductionschema} ஐப் பின்வரும் திட்டமாகவும் சமமாக
+வெளிப்படுத்தலாம் என்பதைக் கவனியுங்கள்:
+\[
+\text{எனில் }\forall \alpha((\forall \beta \in \alpha)\phi(\beta) \lif 
+\phi(\alpha))\text{, அப்போது }\forall \alpha\phi(\alpha)
+\]
+இதற்கு \olref{ordinductionschema} இல் $\lnot\phi(\alpha)$ ஐ எடுத்துக்கொண்டு,
+பின்னர் தொடக்கநிலைத் தருக்கச் செயல்முறைகளைச் செய்தால் போதும்.
+
+\begin{thm}[முக்கூற்றுப் பண்பு]\ollabel{ordtrichotomy}
+எந்த வரிசையெண்கள் $\alpha$, $\beta$ க்கும்
+$\alpha \in \beta \lor \alpha = \beta \lor \beta \in \alpha$.
+\end{thm}
+
+\begin{proof}
+இது இரட்டைத் தொகுத்தறிதல் நிறுவல்; அதாவது
+\olref{ordinductionschema} ஐ இருமுறை பயன்படுத்துகிறோம். $x \in y \lor
+x = y \lor y \in x$ எனில், அப்போது, அப்போது மட்டுமே, $x$ ஆனது $y$
+உடன் \emph{ஒப்பிடத்தக்கது} என்று கூறுவோம்.
+
+தொகுத்தறிதலுக்காக, $\alpha$ விலுள்ள ஒவ்வொரு வரிசையெண்ணும்
+\emph{ஒவ்வொரு} வரிசையெண்ணுடனும் ஒப்பிடத்தக்கது எனக் கொள்வோம். மேலும் ஒரு
+தொகுத்தறிதலுக்காக, $\beta$ விலுள்ள ஒவ்வொரு வரிசையெண்ணுடனும் $\alpha$
+ஒப்பிடத்தக்கது எனக் கொள்வோம். $\alpha$ ஆனது $\beta$ உடன் ஒப்பிடத்தக்கது
+என்று காட்டுவோம். $\beta$ மீதான தொகுத்தறிதலால், $\alpha$ ஒவ்வொரு
+வரிசையெண்ணுடனும் ஒப்பிடத்தக்கது என்று பின்வரும்; அதன்பின் $\alpha$ மீதான
+தொகுத்தறிதலால், தேவைப்பட்டவாறு, \emph{ஒவ்வொரு} வரிசையெண்ணும்
+\emph{ஒவ்வொரு} வரிசையெண்ணுடனும் ஒப்பிடத்தக்கது என்று பின்வரும்.
+$\alpha \notin \beta$, $\beta \notin \alpha$ என்று கொண்டு,
+$\alpha = \beta$ என்று காட்டினால் போதும்.
+
+$\alpha \subseteq \beta$ என்று காட்ட, $\gamma \in \alpha$ ஐ
+நிலைப்படுத்துங்கள்; \olref{ordmemberord} இன்படி இது ஒரு வரிசையெண்.
+ஆகவே முதல் தொகுத்தறிதல் கருதுகோளின்படி, $\gamma$ ஆனது $\beta$ உடன்
+ஒப்பிடத்தக்கது. ஆனால் $\gamma = \beta$ அல்லது $\beta \in \gamma$
+என்ற இரண்டில் எது உண்மையானாலும், $\alpha$ கடப்புப் பண்புடையது என்பதைத்
+தேவைப்பட்டால் பயன்படுத்தி, $\beta \in \alpha$ என்று பின்வரும்; இது நமது
+கருதுகோளுக்கு முரணானது. எனவே $\gamma \in \beta$. பொதுமைப்படுத்தினால்,
+$\alpha \subseteq \beta$.
+
+இரண்டாவது தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்தும் முற்றிலும் இதேபோன்ற
+பகுத்தறிதல், $\beta \subseteq \alpha$ என்று காட்டுகிறது. எனவே
+$\alpha = \beta$.
+\end{proof}\noindent
+இதனால், $\in$ ஒரு வரிசைப்படுத்தும் தொடர்பாகச் செயல்படுவதால்,
+$\alpha \in \beta$ என்பதற்குப் பதிலாகச் சில நேரங்களில் $\alpha <\beta$
+என்று எழுதுவோம். பழக்கம் என்பதையும், $\alpha \in \beta \lor \alpha =
+\beta$ என்று எழுதுவதைவிட $\alpha \leq \beta$ என்று எழுதுவது எளிது
+என்பதையும் தவிர, இதற்கு ஆழமான காரணங்கள் இல்லை.\footnote{$\alpha
+\mathrel{\underline{\in}} \beta$ என்று எழுதலாம்; ஆனால் அது முற்றிலும்
+தரநிலையற்றதாக இருக்கும்.}
+
+நமது கடைசி முடிவுகளிலிருந்து விரைவாகப் பின்வரும் இரண்டு விளைவுகள் இதோ;
+முதலாவது நமது புதிய குறியீட்டைப் பயன்படுத்துகிறது:
+
+\begin{cor}\ollabel{ordordered}
+$\exists \alpha\phi(\alpha)$ எனில், $\exists \alpha(\phi(\alpha)
+\land \forall \beta(\phi(\beta) \lif \alpha \leq \beta))$.
+மேலும், எந்த வரிசையெண்கள் $\alpha, \beta, \gamma$ க்கும்,
+$\alpha \notin \alpha$ மற்றும் $\alpha \in \beta \in \gamma \lif
+\alpha \in \gamma$ ஆகிய இரண்டும் உண்மை.
+\end{cor}
+
+\begin{proof}
+\olref[wo]{wo:strictorder} போலவே.
+\end{proof}
+
+\begin{prob}
+\olref[sth][ordinals][basic]{ordtrichotomy} இன் நிறுவலில் உள்ள
+``முற்றிலும் இதேபோன்ற பகுத்தறிதலை'' நிறைவுசெய்க.
+\end{prob}
+
+\begin{cor}\ollabel{corordtransitiveord}
+$A$ ஒரு வரிசையெண் எனில், எனில் மட்டுமே, $A$ வரிசையெண்களைக் கொண்ட
+கடப்புப் பண்புடைய கணம்.
+\end{cor}
+
+\begin{proof}
+\emph{இடமிருந்து வலம்.} \olref{ordmemberord} இன்படி.
+\emph{வலமிருந்து இடம்.} $A$ வரிசையெண்களைக் கொண்ட கடப்புப் பண்புடைய
+கணம் எனில், \olref{ordinductionschema}, \olref{ordtrichotomy}
+ஆகியவற்றின்படி $\in$ ஆனது $A$ ஐ நன்கு வரிசைப்படுத்துகிறது.
+\end{proof}
+
+\olref{ordinductionschema}, \olref{ordtrichotomy} ஆகியவை $\in$ ஆனது
+வரிசையெண்களை நன்கு வரிசைப்படுத்துகிறது என்று கூறுவதாக நாம் சுருக்கினோம்.
+ஆனால் பின்வரும் முடிவின் காரணமாக, இவ்வகைக் கூற்றைப் பற்றி நாம்
+\emph{மிகவும் எச்சரிக்கையாக} இருக்க வேண்டும்:
+
+\begin{thm}[புராலி--ஃபோர்ட்டி முரணுரை]\ollabel{buraliforti}
+எல்லா வரிசையெண்களையும் கொண்ட கணம் எதுவும் இல்லை.
+\end{thm}
+
+\begin{proof}
+முரண் மூலம் நிறுவும் பொருட்டு, $O$ எல்லா வரிசையெண்களையும் கொண்ட கணம்
+எனக் கொள்வோம். $\alpha \in \beta \in O$ எனில்,
+\olref{ordmemberord} இன்படி $\alpha$ ஒரு வரிசையெண்; ஆகவே
+$\alpha \in O$. எனவே $O$ கடப்புப் பண்புடையது; இதனால்
+\olref{corordtransitiveord} இன்படி $O$ ஒரு வரிசையெண். ஆகவே $O \in O$;
+இது \olref{ordordered} உடன் முரண்படுகிறது.
+\end{proof}
+\noindent
+இந்த முடிவு \citeauthor{Burali-Forti1897} என்பவரின் பெயரால்
+அழைக்கப்படுகிறது. ஆனால் 1899 இல் டெடெகிண்டிற்கு எழுதிய கடிதத்தில்,
+எல்லா வரிசையெண்களையும் கொண்ட ஒரு கணம் உள்ளது என்ற அனுமானத்திலுள்ள
+\emph{முரண்பாட்டை} முதன்முதலில் தெளிவாகக் கண்டவர் காண்டரே. ஃபான்
+ஹெயெனூர்ட் விளக்குவது போல:
+\begin{quote}
+  வரிசையெண்களின் இயல்பான வரிசை ஒரு பகுதி வரிசை மட்டுமே என்ற முடிவை,
+  \emph{முரண்வழி நிறுவலால்}, நிறுவுவதாகவே புராலி--ஃபோர்ட்டி அந்த
+  முரண்பாட்டைக் கருதினார்.
+  \citep[p.~105]{Heijenoort1967}
+\end{quote}
+புராலி--ஃபோர்ட்டியின் தவறை ஒதுக்கிவிட்டு, மேற்கண்டவற்றைப் பின்வருமாறு
+சுருக்கலாம். வரிசையெண்கள், உறுப்புறவால் தனித்தனியாக நன்கு
+வரிசைப்படுத்தப்பட்ட கணங்கள்; ஒரு கணத்தைத் தொகுப்பாக அமைக்காமலேயே,
+உறுப்புறவால் ஒட்டுமொத்தமாகவும் நன்கு வரிசைப்படுத்தப்பட்டவை.
+
+இதை நிறைவுசெய்ய, \olref{ordinductionschema},
+\olref{ordtrichotomy} ஆகியவற்றிலிருந்து பின்வரும் வரிசையெண்களின் இன்னும்
+சில அடிப்படைப் பண்புகளைப் பார்ப்போம்.
+
+\begin{prop}
+வரிசையெண்களைக் கொண்ட கண்டிப்பாக இறங்கும் எந்தத் தொடரும் முடிவுறு தொடராகும்.
+\end{prop}
+
+\begin{proof}
+வரிசையெண்களைக் கொண்ட முடிவுறாத கண்டிப்பாக இறங்கும் எந்தத் தொடருக்கும்
+$\alpha_0 > \alpha_1 > \alpha_2 > \ldots$ ஒரு $<$-குறும உறுப்பு
+இல்லை; இது \olref{ordinductionschema} உடன் முரண்படுகிறது.
+\end{proof}
+
+\begin{prop}\ollabel{ordinalsaresubsets}
+எந்த வரிசையெண்கள் $\alpha, \beta$ க்கும்
+$\alpha \subseteq \beta \lor \beta \subseteq \alpha$.
+\end{prop}
+
+\begin{proof}
+$\alpha \in \beta$ எனில், $\beta$ கடப்புப் பண்புடையதால்
+$\alpha \subseteq \beta$. இதேபோல, $\beta \in \alpha$ எனில்
+$\beta \subseteq \alpha$. மேலும் $\alpha = \beta$ எனில்,
+$\alpha \subseteq \beta$, $\beta \subseteq \alpha$ ஆகிய இரண்டும்
+உண்மை. ஆகவே \olref{ordtrichotomy} இன்படி நிறுவல் முடிந்தது.
+\end{proof}
+
+\begin{prop}\ollabel{ordisoidentity}
+எந்த வரிசையெண்கள் $\alpha, \beta$ க்கும், $\alpha = \beta$ எனில்,
+எனில் மட்டுமே, $\ordeq{\alpha}{\beta}$.
+\end{prop}
+
+\begin{proof}
+வரிசையெண்கள் நன்கு வரிசைப்படுத்தல்கள்; எனவே முக்கூற்றுப் பண்பு
+(\olref[basic]{ordtrichotomy}), \olref[iso]{wellordnotinitial}
+ஆகியவற்றிலிருந்து இது உடனே பின்வருகிறது.
+\end{proof}
+
+\begin{prob}\ollabel{probunionordinalsordinal}
+$X$ இன் ஒவ்வோர் உறுப்பும் ஒரு வரிசையெண் எனில், $\bigcup X$ ஒரு
+வரிசையெண் என்று நிறுவுக.
+\end{prob}
+
+\end{document}

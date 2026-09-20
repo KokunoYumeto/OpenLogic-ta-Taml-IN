@@ -1,0 +1,84 @@
+% SEGMENT OLP-0556-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ordinals}{ordtype}
+\olsection{வரிசை வகைகளாக வரிசையெண்கள்}
+
+மாற்றீட்டைப் பெற்றுள்ளதால், இப்போது $\ZFminus$ இல் செயல்பட்டு, நாம்
+நோக்கமாகக் கொண்டிருந்த முடிவை இறுதியாக நிறுவலாம்:
+
+\begin{thm}\ollabel{thmOrdinalRepresentation}
+ஒவ்வொரு நன்கு வரிசைப்படுத்தலும் ஒரே ஒரு வரிசையெண்ணுக்கு ஓரினமானது.
+\end{thm}
+
+\begin{proof}
+$\tuple{A, <}$ ஒரு நன்கு வரிசைப்படுத்தலாகட்டும்.
+\olref[basic]{ordisoidentity} இன்படி, அது அதிகபட்சம் ஒரே ஒரு
+வரிசையெண்ணுக்கு ஓரினமாக இருக்க முடியும். ஆகவே, முரண் மூலம் நிறுவும்
+பொருட்டு, $\tuple{A, <}$ \emph{எந்த} வரிசையெண்ணுக்கும் ஓரினமானதல்ல
+எனக் கொள்வோம். முதலில் ``$\tuple{A, <}$ ஐ இயன்றவரை சிறிதாக்குவோம்.''
+விரிவாக: ஏதோ ஒரு தகு தொடக்கத் துண்டு $\tuple{A_a, <_a}$ எந்த
+வரிசையெண்ணுக்கும் ஓரினமானதல்ல எனில், அப்பண்பைக் கொண்ட ஒரு மீச்சிறு
+$a \in A$ உண்டு; அப்போது $B = A_a$, $\mathord{\lessdot} =
+\mathord{<_a}$ என்க. அவ்வாறில்லையெனில், $B = A$, $\mathord{\lessdot} =
+\mathord{<}$ என்க.
+
+வரையறையின்படி, $B$ இன் ஒவ்வொரு தகு தொடக்கத் துண்டும் ஏதோ ஒரு
+வரிசையெண்ணுக்கு ஓரினமானது; மேலே கண்டபடி அந்த வரிசையெண் ஒரே ஒன்றுதான்.
+எனவே மாற்றீட்டின்படி, பின்வரும் கணம் இருக்கிறது; அது ஒரு சார்பும் ஆகும்:
+\[
+	f = \Setabs{\tuple{\beta, b}}{b \in B\text{ மற்றும் }\ordeq{\beta}{\tuple{B_b, \lessdot_b}}}
+\]
+முரணை நிறைவுசெய்ய, ஏதோ ஒரு வரிசையெண் $\alpha$ க்கு $f$ ஆனது
+$\alpha \to B$ என்ற ஓரினச்சார்பு என்று காட்டுவோம்.
+
+$\ran{f} = B$ என்பது தெளிவு. மேலும் \olref[iso]{lemordsegments}
+இன்படி, $f$ வரிசையைப் பேணுகிறது; அதாவது $\gamma \in \beta$ எனில்,
+எனில் மட்டுமே, $f(\gamma) \lessdot f(\beta)$. $\dom{f}$ ஒரு
+வரிசையெண் என்று காட்ட, \olref[basic]{corordtransitiveord} இன்படி
+$\dom{f}$ கடப்புப் பண்புடையது என்று காட்டினால் போதும். எனவே
+$\beta \in \dom{f}$ ஐ நிலைப்படுத்துங்கள்; அதாவது, ஏதோ ஒரு $b$ க்கு
+$\ordeq{\beta}{\tuple{B_b, \lessdot_b}}$. $\gamma \in \beta$ எனில்,
+\olref[iso]{wellordinitialsegment} இன்படி $\gamma \in \dom{f}$;
+பொதுமைப்படுத்தினால், $\beta \subseteq \dom{f}$.
+\end{proof}
+
+\olref[vn]{sec} முதலே நாம் வழங்க விரும்பிய பின்வரும் வரையறையை இந்த
+முடிவு அனுமதிக்கிறது:
+
+\begin{defn}
+$\tuple{A, <}$ ஒரு நன்கு வரிசைப்படுத்தல் எனில், அதன் வரிசை வகையான
+$\ordtype{A, <}$ என்பது $\ordeq{\tuple{A, < }}{\alpha}$ ஆக அமையும்
+ஒரே வரிசையெண் $\alpha$.
+\end{defn}
+
+மேலும், இந்த வரையறை இரண்டு பயனுள்ள கொள்கைகளை அனுமதிக்கிறது:
+
+\begin{cor}\ollabel{ordtypesworklikeyouwant}
+$\tuple{A, <}$ மற்றும் $\tuple{B, \lessdot}$ நன்கு வரிசைப்படுத்தல்கள்
+எனில்:
+\begin{align*}
+	\ordtype{A, <} = \ordtype{B, \lessdot}&\text{ எனில், எனில் மட்டுமே, }\ordeq{\tuple{A, <}}{\tuple{B, \lessdot}}\\
+	\ordtype{A, <} \in \ordtype{B, \lessdot}&\text{ எனில், எனில் மட்டுமே, }\ordeq{\tuple{A, <}}{\tuple{B_b, \lessdot_b}}\text{ ஏதோ ஓர் }b \in B
+\end{align*}
+\end{cor}
+
+\begin{proof}
+\olref[basic]{ordisoidentity} இன்படி ஒன்றாதல் உண்மை. இரண்டாவது கூற்றை
+நிறுவ, $\ordtype{A, <} = \alpha$, $\ordtype{B, \lessdot} = \beta$
+என்க; மேலும் $f \colon \beta \to B$ நமது ஓரினச்சார்பாகட்டும்.
+% SOURCE CORRECTION TA-STH-013: the isomorphism's codomain is the carrier B, not the ordered pair <B, lessdot>.
+அப்போது:
+\begin{align*}
+	\alpha \in \beta&\text{ எனில், எனில் மட்டுமே, }\funrestrictionto{f}{\alpha} \colon \alpha \to B_{f(\alpha)}\text{ ஓர் ஓரினச்சார்பு}\\
+	&\text{ எனில், எனில் மட்டுமே, }\ordeq{\tuple{A, <}}{\tuple{B_{f(\alpha)}, \lessdot_{f(\alpha)}}}\\
+	&\text{ எனில், எனில் மட்டுமே, }\ordeq{\tuple{A, <}}{\tuple{B_b, \lessdot_b}}\text{ ஏதோ ஒரு $b \in B$ க்கு}
+\end{align*}
+இது \olref[iso]{ordisounique},
+\olref[iso]{wellordinitialsegment},
+\olref[basic]{ordissetofsmallerord} ஆகியவற்றிலிருந்து பின்வருகிறது.
+\end{proof}
+
+\end{document}

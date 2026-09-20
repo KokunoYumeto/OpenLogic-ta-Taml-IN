@@ -1,0 +1,106 @@
+% SEGMENT OLP-0557-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ordinals}{opps}
+\olsection{பின்வரிசை மற்றும் எல்லை வரிசையெண்கள்}
+
+அடுத்த சில அத்தியாயங்களில் வரிசையெண்களைப் பெருமளவில் பயன்படுத்துவோம்.
+ஆகவே சில எளிய கருத்துகளை அறிமுகப்படுத்துவது உதவும்.
+
+\begin{defn}
+எந்த வரிசையெண் $\alpha$ க்கும், அதன் \emph{பின்வரிசையுறுப்பு}
+$\ordsucc{\alpha} =\alpha \cup \{\alpha\}$. ஏதோ ஒரு வரிசையெண்~$\beta$
+க்கு $\ordsucc{\beta} = \alpha$ எனில், $\alpha$ ஒரு
+\emph{பின்வரிசை} வரிசையெண் என்கிறோம். $\alpha$ வெறுமையாகவும் இல்லாமல்,
+பின்வரிசை வரிசையெண்ணாகவும் இல்லாவிட்டால், அப்போது, அப்போது மட்டுமே,
+$\alpha$ ஓர் \emph{எல்லை} வரிசையெண் என்கிறோம்.
+\end{defn}
+\noindent
+இதுவே \emph{பின்வரிசையுறுப்பின்} சரியான கருத்து என்பதைப் பின்வரும் முடிவு
+காட்டுகிறது:
+
+\begin{prop}
+எந்த வரிசையெண் $\alpha$ க்கும்:
+\begin{enumerate}
+	\item $\alpha \in \ordsucc{\alpha}$;
+	\item $\ordsucc{\alpha}$ ஒரு வரிசையெண்;
+	\item $\alpha \in \beta \in \ordsucc{\alpha}$ ஆக அமையும் வரிசையெண்
+	$\beta$ எதுவும் இல்லை.
+	\end{enumerate}
+\end{prop}
+
+\begin{proof}
+$\alpha \in \alpha \cup \{\alpha\} = \ordsucc{\alpha}$ என்பது
+நேரடியானது. அதேபோல், $\ordsucc{\alpha}$ வரிசையெண்களைக் கொண்ட கடப்புப்
+பண்புடைய கணம்; ஆகவே \olref[basic]{corordtransitiveord} இன்படி அது ஒரு
+வரிசையெண். மேலும் $\alpha \in \beta \in \ordsucc{\alpha}$ என்பது
+இயலாது; ஏனெனில் அப்போது $\beta \in \alpha$ அல்லது
+$\beta = \alpha$ ஆக வேண்டும்; இது \olref[basic]{ordordered} உடன்
+முரண்படுகிறது.
+\end{proof}
+\noindent
+முடிவிலிக்கடந்த தொகுத்தறிதல் நிறுவலின் ஒரு மாறுபாட்டையும் இது அனுமதிக்கிறது:
+
+\begin{thm}[எளிய முடிவிலிக்கடந்த தொகுத்தறிதல்]\ollabel{simpletransrecursion}
+$\phi(x)$ பின்வரும் நிபந்தனைகளை நிறைவுசெய்யும் வாய்பாடாகட்டும்:
+\begin{enumerate}
+	\item $\phi(\emptyset)$; மற்றும்
+	\item எந்த வரிசையெண் $\alpha$ க்கும், $\phi(\alpha)$ எனில்
+	$\phi(\ordsucc{\alpha})$; மற்றும்
+	\item $\alpha$ ஓர் எல்லை வரிசையெண்ணாகவும் $(\forall \beta \in
+	\alpha)\phi(\beta)$ ஆகவும் எனில், $\phi(\alpha)$.
+\end{enumerate}
+அப்போது $\forall \alpha \phi(\alpha)$.
+\end{thm}
+
+\begin{proof}
+எதிர்மறைநேர்மாற்றை நிறுவுவோம். ஆகவே, $\lnot\phi$ ஆக அமையும் ஏதோ ஒரு
+வரிசையெண் இருக்கிறது எனக் கொண்டு, அவற்றில் மீச்சிறிய வரிசையெண்
+$\gamma$ ஆகட்டும். அப்போது $\gamma = \emptyset$; அல்லது
+$\phi(\alpha)$ ஆக அமையும் ஏதோ ஓர் $\alpha$ க்கு
+$\gamma = \ordsucc{\alpha}$; அல்லது $\gamma$ ஓர் எல்லை வரிசையெண்ணாகவும்
+$(\forall \beta \in \gamma)\phi(\beta)$ ஆகவும் இருக்கும்.
+\end{proof}
+\noindent
+இறுதியாக, பின்வரும் சிறு குறியீடு பின்னர் உதவும்:
+
+\begin{defn}\ollabel{defsupstrict}
+$X$ வரிசையெண்களைக் கொண்ட ஒரு கணம் எனில், $\supstrict(X) =
+\bigcup_{\alpha \in X} \ordsucc{\alpha}$.
+\end{defn}
+\noindent
+இங்கே ``lsub'' என்பது ``least strict upper bound'' என்ற ஆங்கிலத் தொடரின்
+சுருக்கம்; அதாவது ``மீச்சிறு கண்டிப்பான மேல்வரம்பு.''\footnote{சில நூல்கள்
+இதற்கு ``$\text{sup}(X)$'' ஐப் பயன்படுத்துகின்றன. ஆனால் வேறு சில நூல்கள்
+``$\text{sup}(X)$'' ஐ மீச்சிறு \emph{கண்டிப்பில்லாத} மேல்வரம்புக்குப்
+பயன்படுத்துகின்றன; அதாவது வெறுமனே $\bigcup X$. $X$ க்கு மீப்பெரு உறுப்பு
+$\alpha$ இருந்தால், இக்கருத்துகள் வேறுபடுகின்றன: மீச்சிறு \emph{கண்டிப்பான}
+மேல்வரம்பு $\ordsucc{\alpha}$; ஆனால் மீச்சிறு \emph{கண்டிப்பில்லாத}
+மேல்வரம்பு $\alpha$ மட்டுமே.} பின்வரும் முடிவு இதை விளக்குகிறது:
+
+\begin{prop}
+$X$ வரிசையெண்களைக் கொண்ட ஒரு கணம் எனில், $\supstrict(X)$ ஆனது $X$
+இலுள்ள ஒவ்வொரு வரிசையெண்ணையும்விடப் பெரிய மீச்சிறு வரிசையெண்.
+\end{prop}
+
+\begin{proof}
+$Y = \Setabs{\ordsucc{\alpha}}{\alpha \in X}$ என்க; எனவே
+$\supstrict(X) = \bigcup Y$. வரிசையெண்கள் கடப்புப் பண்புடையவை; மேலும்
+ஒரு வரிசையெண்ணின் ஒவ்வோர் உறுப்பும் ஒரு வரிசையெண். ஆகவே
+$\supstrict(X)$ வரிசையெண்களைக் கொண்ட கடப்புப் பண்புடைய கணம்; எனவே
+\olref[basic]{corordtransitiveord} இன்படி அது ஒரு வரிசையெண்.
+
+$\alpha \in X$ எனில், $\ordsucc{\alpha} \in Y$; ஆகவே
+$\ordsucc{\alpha} \subseteq \bigcup Y = \supstrict(X)$; இதனால்
+$\alpha \in \supstrict(X)$. எனவே $\supstrict(X)$ ஆனது $X$ இலுள்ள
+ஒவ்வொரு வரிசையெண்ணையும்விடக் கண்டிப்பாகப் பெரியது.
+
+மறுதலையாக, $\alpha \in \supstrict(X)$ எனில், ஏதோ ஒரு $\beta \in X$
+க்கு $\alpha \in \ordsucc{\beta} \in Y$; ஆகவே $\alpha \leq
+\beta \in X$. எனவே $\supstrict(X)$ ஆனது $X$ இன் \emph{மீச்சிறு}
+கண்டிப்பான மேல்வரம்பு.
+\end{proof}
+
+\end{document}

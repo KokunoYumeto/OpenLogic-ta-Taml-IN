@@ -1,0 +1,93 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-set-theory-ordinals.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-20T22:25:09.2852056Z",
+  "passes": [
+    {
+      "pass": 1,
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Reference `sth:ordinals:idea:sec' on page 1 undefined on input l",
+        "LaTeX Warning: Reference `sth:ordinals:iso:isoscompose' on page 1 undefined on ",
+        "LaTeX Warning: Reference `sth:ordinals:wo:propwoinduction' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:wo:propwoinduction' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:wo:wo:strictorder' on page 1 undefined o",
+        "LaTeX Warning: Reference `sth:ordinals:iso:wellordinitialsegment' on page 1 und",
+        "LaTeX Warning: Reference `sth:ordinals:iso:wellordnotinitial' on page 1 undefin",
+        "LaTeX Warning: Reference `sth:ordinals:iso:lemordsegments' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:iso:wellordinitialsegment' on page 1 und",
+        "LaTeX Warning: Reference `sth:ordinals:iso:thm:woalwayscomparable' on page 1 un",
+        "LaTeX Warning: Reference `sth:ordinals:wo:wo:strictorder' on page 1 undefined o",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordmemberord' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordinductionschema' on page 1 unde",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordtrichotomy' on page 1 undefined",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordmemberord' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordinductionschema' on page 1 unde",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordinductionschema' on page 1 unde",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordinductionschema' on page 1 unde",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordmemberord' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:wo:wo:strictorder' on page 1 undefined o",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordtrichotomy' on page 1 undefined",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordmemberord' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordinductionschema' on page 1 unde",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordtrichotomy' on page 1 undefined",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordinductionschema' on page 1 unde",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordtrichotomy' on page 1 undefined",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordmemberord' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:basic:corordtransitiveord' on page 1 und",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordordered' on page 1 undefined on",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordinductionschema' on page 1 unde",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordtrichotomy' on page 1 undefined",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordinductionschema' on page 1 unde",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordtrichotomy' on page 1 undefined",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordtrichotomy' on page 1 undefined",
+        "LaTeX Warning: Reference `sth:ordinals:iso:wellordnotinitial' on page 1 undefin",
+        "LaTeX Warning: Reference `sth:ordinals:vn:sec' on page 1 undefined on input lin",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordisoidentity' on page 1 undefine",
+        "LaTeX Warning: Reference `sth:ordinals:iso:lemordsegments' on page 1 undefined ",
+        "LaTeX Warning: Reference `sth:ordinals:basic:corordtransitiveord' on page 1 und",
+        "LaTeX Warning: Reference `sth:ordinals:iso:wellordinitialsegment' on page 1 und",
+        "LaTeX Warning: Reference `sth:ordinals:vn:sec' on page 1 undefined on input lin",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordisoidentity' on page 1 undefine",
+        "LaTeX Warning: Reference `sth:ordinals:iso:ordisounique' on page 1 undefined on",
+        "LaTeX Warning: Reference `sth:ordinals:iso:wellordinitialsegment' on page 1 und",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordissetofsmallerord' on page 1 un",
+        "LaTeX Warning: Reference `sth:ordinals:basic:corordtransitiveord' on page 1 und",
+        "LaTeX Warning: Reference `sth:ordinals:basic:ordordered' on page 1 undefined on",
+        "LaTeX Warning: Reference `sth:ordinals:basic:corordtransitiveord' on page 1 und",
+        "LaTeX Warning: There were undefined references.",
+        "LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right."
+      ]
+    },
+    {
+      "pass": 2,
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right."
+      ]
+    },
+    {
+      "pass": 3,
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ]
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "bibliography": {
+    "engine": "bibtex",
+    "issues": [],
+    "exit_code": 0
+  },
+  "finished_utc": "2026-09-20T22:25:18.9703566Z"
+}

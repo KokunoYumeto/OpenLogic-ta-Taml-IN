@@ -1,0 +1,183 @@
+% SEGMENT OLP-0551-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ordinals}{iso}
+\olsection{வரிசை ஓரினச்சார்புகள்}
+
+நன்கு வரிசைப்படுத்தல் எவ்வளவு \emph{வலுவானது} என்பதை விளக்க, நன்கு
+வரிசைப்படுத்தல்களை ஒப்பிடுவதற்கான ஒரு முறையை முதலில் அறிமுகப்படுத்துவோம்.
+
+\begin{defn}
+$<$ ஆனது $A$ ஐ நன்கு வரிசைப்படுத்துமாறு அமைந்த $\tuple{A, <}$ என்ற
+ஜோடி ஒரு \emph{நன்கு வரிசைப்படுத்தல்} ஆகும். பின்வரும் நிபந்தனையை
+நிறைவுசெய்யும் !!a{bijection} $f \colon A \to B$ ஒன்று இருந்தால்,
+அப்போது, அப்போது மட்டுமே, $\tuple{A, <}$ மற்றும் $\tuple{B,
+\lessdot}$ என்ற நன்கு வரிசைப்படுத்தல்கள் \emph{வரிசை ஓரினமானவை}:
+$x < y$ எனில், எனில் மட்டுமே, $f(x) \lessdot  f(y)$. இந்த நிலையில்
+$\ordeq{\tuple{A, <}}{\tuple{B, \lessdot}}$ என்று எழுதி, $f$ ஐ ஒரு
+\emph{வரிசை ஓரினச்சார்பு} என்கிறோம்.
+\end{defn}
+\noindent
+இனி, சுருக்கமாக ``வரிசை ஓரினச்சார்புகள்'' என்பதற்குப் பதிலாக
+``ஓரினச்சார்புகள்'' என்போம். உள்ளுணர்வின்படி, ஓரினச்சார்புகள் கட்டமைப்பைப்
+பேணும் !!{bijection}s. ஓரினச்சார்புகளைப் பற்றிய சில எளிய உண்மைகள் இதோ.
+
+\begin{lem}\ollabel{isoscompose}
+ஓரினச்சார்புகளின் சேர்ப்புகளும் ஓரினச்சார்புகளே; அதாவது $f \colon A
+\to B$, $g \colon B \to C$ ஆகியவை ஓரினச்சார்புகள் எனில், $(g \circ f)
+\colon A \to C$ என்பதும் ஓர் ஓரினச்சார்பு.
+\end{lem}
+\begin{prob}
+	\olref[sth][ordinals][iso]{isoscompose} ஐ நிறுவுக.
+\end{prob}
+\begin{proof}
+ஒரு பயிற்சியாக விடப்படுகிறது.
+\end{proof}
+\begin{cor}\ollabel{ordisoisequiv}
+	$\ordeq{X}{Y}$ ஒரு சமானத் தொடர்பு.
+\end{cor}
+\begin{prop}\ollabel{ordisounique}
+$\tuple{A, <}$ மற்றும் $\tuple{B, \lessdot}$ ஆகியவை ஓரினமான நன்கு
+வரிசைப்படுத்தல்கள் எனில், அவற்றுக்கிடையிலான ஓரினச்சார்பு ஒரே ஒன்றுதான்.
+\end{prop}
+
+\begin{proof}
+$A \to B$ என்ற ஓரினச்சார்புகள் $f$, $g$ ஆகட்டும். தொகுத்தறிதலால்,
+அதாவது \olref[wo]{propwoinduction} ஐப் பயன்படுத்தி, முடிவை நிறுவுவோம்.
+$a\in A$ ஐ நிலைப்படுத்தி, $(\forall b < a)f(b) = g(b)$ எனத்
+தொகுத்தறிதலுக்காகக் கொள்வோம். $x \in B$ ஐ நிலைப்படுத்துங்கள்.
+
+$x \lessdot f(a)$ எனில், $f^{-1}(x) < a$; ஆகவே $f$, $g$ ஆகியவை
+ஓரினச்சார்புகள் என்பதைப் பயன்படுத்தி $g(f^{-1}(x)) \lessdot g(a)$.
+ஆனால் $f^{-1}(x) < a$ என்பதால், நமது கருதுகோளின்படி
+$x =f(f^{-1}(x)) = g(f^{-1}(x))$. எனவே $x \lessdot g(a)$. இதேபோல,
+$x \lessdot g(a)$ எனில் $x \lessdot f(a)$.
+
+பொதுமைப்படுத்தினால், $(\forall x \in B)(x \lessdot f(a) \liff x
+\lessdot g(a))$. எனவே
+\olref[sfr][rel][ord]{prop:extensionality-strictlinearorders} இன்படி
+$f(a) = g(a)$. ஆகவே \olref[wo]{propwoinduction} இன்படி $(\forall a \in
+A)f(a) = g(a)$.
+\end{proof}\noindent
+இது நன்கு வரிசைப்படுத்தல்கள் வலுவானவை என்பதற்குச் சிறிதளவு விளக்கம்
+தருகிறது. இதைத் தொடர்ந்து விளக்க, இன்னும் சில குறியீடுகளை அறிமுகப்படுத்துவது
+உதவும்.
+
+\begin{defn}
+$\tuple{A, <}$ ஒரு நன்கு வரிசைப்படுத்தலாகவும் $a \in A$ ஆகவும்
+இருக்கும்போது, $A_a = \Setabs{x \in A}{x < a}$ என்க. $A_a$ ஐ $A$ இன்
+ஒரு தகு \emph{தொடக்கத் துண்டு} என்கிறோம் ($A$ ஐயே $A$ இன் ஒரு தகா
+தொடக்கத் துண்டாகவும் அனுமதிக்கிறோம்). தொடக்கத் துண்டுக்கு $<$ ஐக்
+கட்டுப்படுத்திய தொடர்பு, அதாவது $\funrestrictionto{\mathord{<}}{A_a^2}$,
+$<_a$ ஆகட்டும்.
+\end{defn}
+\noindent
+இந்தக் குறியீட்டைப் பயன்படுத்தி, எந்த நன்கு வரிசைப்படுத்தலும் அதன் எந்தத்
+தகு தொடக்கத் துண்டுக்கும் ஓரினமானதல்ல என்று கூறி நிறுவலாம்.
+
+\begin{lem}\ollabel{wellordnotinitial}
+$\tuple{A, <}$ ஒரு நன்கு வரிசைப்படுத்தலாகவும் $a \in A$ ஆகவும் எனில்,
+$\ordneq{\tuple{A, <}}{\tuple{A_a, <_a}}$.
+\end{lem}
+
+\begin{proof}
+முரண் மூலம் நிறுவும் பொருட்டு, $f \colon A \to A_a$ ஓர்
+ஓரினச்சார்பு எனக் கொள்வோம். $f$ இருபுறச் சார்பாகவும் $A_a \subsetneq A$
+ஆகவும் இருப்பதால், \olref[wo]{wo:strictorder} ஐப் பயன்படுத்தி,
+$b \neq f(b)$ ஆகுமாறு அமைந்த $A$ இன் $<$-மீச்சிறு !!{element}
+$b \in A$ ஐ எடுத்துக்கொள்வோம். $(\forall x \in A)(x<b \liff x < f(b))$ என்று
+காட்டுவோம்; இதிலிருந்து
+\olref[sfr][rel][ord]{prop:extensionality-strictlinearorders} இன்படி
+$b = f(b)$ என்று பின்வந்து, முரண் நிறைவடையும்.
+
+$x < b$ எனக் கொள்வோம். $b$ ஐத் தேர்ந்தெடுத்த விதத்தின்படி $x = f(x)$.
+மேலும் $f$ ஓரினச்சார்பு என்பதால் $f(x) < f(b)$. எனவே $x < f(b)$.
+
+$x < f(b)$ எனக் கொள்வோம். $f$ ஓரினச்சார்பு என்பதால்
+$f^{-1}(x) < b$; ஆகவே $b$ ஐத் தேர்ந்தெடுத்த விதத்தின்படி
+$f^{-1}(x) = x$. எனவே $x < b$.
+\end{proof}
+
+அடுத்த முடிவு, தோராயமாகச் சொன்னால், ஓர் ஓரினச்சார்பின் ``தொடக்கத் துண்டும்''
+ஓர் ஓரினச்சார்பே என்று காட்டுகிறது:
+
+\begin{lem}\ollabel{wellordinitialsegment}
+$\tuple{A, <}$ மற்றும் $\tuple{B, \lessdot}$ நன்கு வரிசைப்படுத்தல்கள்
+ஆகட்டும். $f \colon A \to B$ ஓர் ஓரினச்சார்பாகவும் $a \in A$ ஆகவும்
+இருந்தால், $\funrestrictionto{f}{A_{a}} : A_a \to B_{f(a)}$ ஓர்
+ஓரினச்சார்பு.
+\end{lem}
+
+\begin{proof}
+$f$ ஓர் ஓரினச்சார்பு என்பதால்:
+	%Since $f$ is an isomorphism, $b < a$ iff $f(b) \lessdot f(a)$, so that 
+\begin{align*}
+	\funimage{f}{A_a} &= \funimage{f}{\Setabs{x \in A}{x < a}}\\
+	&= \funimage{f}{\Setabs{f^{-1}(y) \in A}{f^{-1}(y) < a}} \\
+	&= \Setabs{y \in B}{y \lessdot f(a)} \\
+	&=B_{f(a)} 
+\end{align*}
+மேலும் $f$ வரிசையைப் பேணுவதால், $\funrestrictionto{f}{A_a}$ உம்
+வரிசையைப் பேணுகிறது.
+\end{proof}
+
+அடுத்த இரு முடிவுகள், நன்கு வரிசைப்படுத்தல்கள் எப்போதும் ஒப்பிடத்தக்கவை
+என்பதை நிறுவுகின்றன:
+
+\begin{lem}\ollabel{lemordsegments}
+$\tuple{A, <}$ மற்றும் $\tuple{B, \lessdot}$ நன்கு வரிசைப்படுத்தல்கள்
+ஆகட்டும். $\ordeq{\tuple{A_{a_1}, <_{a_1}}}{\tuple{B_{b_1},
+\lessdot_{b_1}}}$ மற்றும் $\ordeq{\tuple{A_{{a_2}},
+<_{a_2}}}{\tuple{B_{{b_2}}, \lessdot_{b_2}}}$ எனில், ${a_1}  <
+{a_2} \text{ எனில், எனில் மட்டுமே, }{b_1} \lessdot {b_2}$.
+\end{lem}
+
+\begin{proof}
+\emph{இடமிருந்து வலம்} நிறுவுவோம்; மற்றத் திசையும் இதேபோன்றது.
+$\ordeq{\tuple{A_{a_1}, <_{a_1}}}{\tuple{B_{b_1},
+\lessdot_{b_1}}}$, $\ordeq{\tuple{A_{{a_2}},
+<_{a_2}}}{\tuple{B_{{b_2}}, \lessdot_{b_2}}}$ ஆகிய இரண்டும்
+உண்மை என்றும், $f \colon A_{{a_2}} \to B_{{b_2}}$ நமது ஓரினச்சார்பு
+என்றும் கொள்வோம். ${a_1} < {a_2}$ என்க; அப்போது
+\olref{wellordinitialsegment} இன்படி
+$\ordeq{\tuple{A_{a_1}, <_{a_1}}}{\tuple{B_{f({a_1})},
+\lessdot_{f({a_1})}}}$. எனவே
+$\ordeq{\tuple{B_{b_1}, \lessdot_{b_1}}}{\tuple{B_{f({a_1})},
+\lessdot_{f({a_1})}}}$; ஆகவே \olref{wellordnotinitial} இன்படி
+${b_1} = f({a_1})$. இப்போது $f$ இன் துணைச்சார்பகம் $B_{{b_2}}$
+என்பதால் ${b_1} \lessdot {b_2}$.
+% SOURCE CORRECTION TA-STH-010: f's codomain, not its domain, is B_{b_2}.
+\end{proof}
+
+\begin{thm}\ollabel{thm:woalwayscomparable}
+எந்த இரண்டு நன்கு வரிசைப்படுத்தல்கள் கொடுக்கப்பட்டாலும், அவற்றில் ஒன்று
+மற்றதன் ஒரு தொடக்கத் துண்டுக்கு (அது தகுவாக இருக்க வேண்டியதில்லை)
+ஓரினமானது.
+\end{thm}
+
+\begin{proof}
+$\tuple{A, <}$ மற்றும் $\tuple{B, \lessdot}$ நன்கு வரிசைப்படுத்தல்கள்
+ஆகட்டும். பிரிப்பைப் பயன்படுத்தி,
+\[
+	f = \Setabs{\tuple{a, b} \in A \times B}{
+		\ordeq{\tuple{A_a, <_a}}{\tuple{B_b, \lessdot_b}}}.
+\]
+என்க. $\tuple{a_1, b_1}, \tuple{a_2, b_2} \in f$ என அமையும் எல்லா
+ஜோடிகளுக்கும், \olref{lemordsegments} இன்படி $a_1 < a_2$ எனில்,
+எனில் மட்டுமே, $b_1 \lessdot b_2$. எனவே $f \colon \dom{f} \to
+\ran{f}$ ஓர் ஓரினச்சார்பு.
+
+$a_2 \in \dom{f}$ மற்றும் $a_1 < a_2$ எனில்,
+\olref{wellordinitialsegment} இன்படி $a_1 \in \dom{f}$; ஆகவே
+$\dom{f}$ ஆனது $A$ இன் ஒரு தொடக்கத் துண்டு. இதேபோல, $\ran{f}$ ஆனது
+$B$ இன் ஒரு தொடக்கத் துண்டு. முரண் மூலம் நிறுவும் பொருட்டு, இவை இரண்டுமே
+\emph{தகு} தொடக்கத் துண்டுகள் எனக் கொள்வோம். அப்போது $A \setminus
+\dom{f}$ இன் $<$-மீச்சிறு !!{element} $a$ ஆகட்டும்; எனவே $\dom{f} =
+A_a$. மேலும் $B \setminus \ran{f}$ இன் $\lessdot$-மீச்சிறு
+!!{element} $b$ ஆகட்டும்; எனவே $\ran{f} = B_b$. ஆகவே $f \colon A_a
+\to B_b$ ஓர் ஓரினச்சார்பு; எனவே $\tuple{a, b} \in f$. இது ஒரு முரண்.
+\end{proof}
+
+\end{document}
