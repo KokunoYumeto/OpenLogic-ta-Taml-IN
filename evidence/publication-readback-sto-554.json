@@ -1,0 +1,341 @@
+{
+  "schema": "openlogic-tamil-publication-readback/1",
+  "checked_at_utc": "2026-09-20T22:39:17.174435+00:00",
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "branch": "main",
+  "commit": "449c3bfb90971941eb59715863f31e8e752434ba",
+  "parent_commit": "42f44bfc52474247f773c2cdf287c49fa7b7c600",
+  "anonymous_commit_api": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/commits/449c3bfb90971941eb59715863f31e8e752434ba",
+    "http_status": 200,
+    "reported_sha": "449c3bfb90971941eb59715863f31e8e752434ba",
+    "matches_requested_commit": true
+  },
+  "anonymous_raw_changed_files": {
+    "count": 35,
+    "all_http_200": true,
+    "all_match_commit_blobs": true,
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/README.md",
+        "http_status": 200,
+        "bytes": 9755,
+        "sha256": "f505f8a24f357ea8bc73234b26be2eae9965ab188121926322166d98640a0821",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "build/tamil-set-theory-ordinals.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/build/tamil-set-theory-ordinals.tex",
+        "http_status": 200,
+        "bytes": 10718,
+        "sha256": "787ff2d1d88395eeba523ec7ff3f6ec9a7fa5b45bfebc4ede8c35c222ae2ebaa",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/README.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/README.md",
+        "http_status": 200,
+        "bytes": 4570,
+        "sha256": "81b1e55bba8d5f2b2f3d04f7270f6b6c8a63ca6a63a8b2f99d484e7e689a55ed",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/checkpoint-current.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/checkpoint-current.json",
+        "http_status": 200,
+        "bytes": 1269770,
+        "sha256": "9ae2a460ac383197cbf0751c7a397ed48245ca94d74204d9398511dd0ed71f31",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/cursor-current.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/cursor-current.json",
+        "http_status": 200,
+        "bytes": 11434,
+        "sha256": "dbdd06d1746053b6bfac4c04d3290de4ba3b9a2ebba7eed1b90493f880949681",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-batches/qa-b243.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/qa-batches/qa-b243.json",
+        "http_status": 200,
+        "bytes": 4082,
+        "sha256": "67bab6f567223dfff7ca6000b55696d7f2ac2772cc851792ef69b6d3944a32a2",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-batches/qa-b244.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/qa-batches/qa-b244.json",
+        "http_status": 200,
+        "bytes": 4065,
+        "sha256": "2cb0380845c0401c86e69087333f5efc2c0adfe390e891b8fa614e579bc21e73",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-batches/qa-b245.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/qa-batches/qa-b245.json",
+        "http_status": 200,
+        "bytes": 4327,
+        "sha256": "6ebd144fc0f2ee0d5d73d85c55fd3e59f2c82ef135c6d7bfa63ae3a5287c67eb",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-batches/qa-b246.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/qa-batches/qa-b246.json",
+        "http_status": 200,
+        "bytes": 8852,
+        "sha256": "cd8c9bdac4416a9276bd99a715cadbc2ba77a4fdacaca553cb9eb7d695c37b69",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-current.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/qa-current.json",
+        "http_status": 200,
+        "bytes": 3538,
+        "sha256": "31a9c46ba6e065f6acf2bc18c8d1dae29f75b4a64325bc60348c6fc370cb7c8d",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/segment-canon-use.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/segment-canon-use.jsonl",
+        "http_status": 200,
+        "bytes": 2279825,
+        "sha256": "b51297f195ddede0b930fbc61eb8358c907be24d4116453117293b227034d67d",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/semantic-review-current.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/semantic-review-current.json",
+        "http_status": 200,
+        "bytes": 565885,
+        "sha256": "83436503029661532f82c4a6cb5375e34a16e108c0736ca110fb2f50e9f9baa2",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/set-theory-ordinals-render-qa.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/set-theory-ordinals-render-qa.json",
+        "http_status": 200,
+        "bytes": 6090,
+        "sha256": "77c495a10af3ca6c9731988b56036712967cd90ec87180d740f8c734ad283156",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/source-corrections.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/source-corrections.json",
+        "http_status": 200,
+        "bytes": 467586,
+        "sha256": "dbed07b0bfe0a7c68fba43b927542141ae887718bdca1e43f8bc4fa84a2d7528",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/term-decisions.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/term-decisions.jsonl",
+        "http_status": 200,
+        "bytes": 171976,
+        "sha256": "e5b71062343bf91aa5bfc366daf1cce12ced938fc6defaa8173efd72b33786a1",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/tex-set-theory-ordinals-receipt.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/tex-set-theory-ordinals-receipt.json",
+        "http_status": 200,
+        "bytes": 5608,
+        "sha256": "50a6e14403e44eb570851b8c91ea34cc6903edb24ae3f1e97669c8829a6883c4",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/translation-decisions.jsonl",
+        "http_status": 200,
+        "bytes": 2869490,
+        "sha256": "50a41a3b10d6cd2d18a6af586b0d58334043c989bb0c54c592803ea614eaf9a4",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/DECISIONS.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/translation-decisions/DECISIONS.json",
+        "http_status": 200,
+        "bytes": 83701653,
+        "sha256": "ea1c36b551befd279f4a4d3413b9b5e52f57faca653c664dec5f845a64e5f70f",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/DECISION_OCCURRENCES.csv",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/translation-decisions/DECISION_OCCURRENCES.csv",
+        "http_status": 200,
+        "bytes": 21215759,
+        "sha256": "933382745590cc8b0d4dac9ede80f1a9aef04b659789b1b634afe9c0694f0e90",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/PRIORITY_REVIEW.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/translation-decisions/PRIORITY_REVIEW.md",
+        "http_status": 200,
+        "bytes": 4251170,
+        "sha256": "e75363329aae5e86ad4939e93a0f495ce0d65c119c2a31121e0df2fddb90c57b",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/START_HERE.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/translation-decisions/START_HERE.md",
+        "http_status": 200,
+        "bytes": 915,
+        "sha256": "e99e4c17ae69bf4545d4c633399053b6e0de88c6cc154fba3842f7836deb462e",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md",
+        "http_status": 200,
+        "bytes": 6742923,
+        "sha256": "209b1d07bc079f409298014f390f92fa717f9c8ed40435039d8cbaa554201dc8",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/TRANSLATION_DECISION_QA.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/evidence/translation-decisions/TRANSLATION_DECISION_QA.json",
+        "http_status": 200,
+        "bytes": 2946,
+        "sha256": "1f9ff07e64f1a35e8c3f89c52b28ddf457894f7d2fd0269c46af9e6b68981395",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "readers/set-theory-ordinals-ta-Taml-IN.pdf",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/readers/set-theory-ordinals-ta-Taml-IN.pdf",
+        "http_status": 200,
+        "bytes": 204055,
+        "sha256": "b08e4f4515644c5c965cd51304bebab705251206a501e405518196bb7f9e0e6a",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/basic.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/basic.tex",
+        "http_status": 200,
+        "bytes": 17994,
+        "sha256": "4bf6572e9cc310ab6a7df269adac5e25fcf0202ac343c291a8c3e7757350d227",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/idea.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/idea.tex",
+        "http_status": 200,
+        "bytes": 4341,
+        "sha256": "bfb6a080c20b8723d406712d808b4527fada5e121228b4340f0d25c70e93a404",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/introduction.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/introduction.tex",
+        "http_status": 200,
+        "bytes": 2689,
+        "sha256": "7b24214c2b8b56872f582daf16c1a2b19a2397325422e7afc4ec0493f3f76b79",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/iso.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/iso.tex",
+        "http_status": 200,
+        "bytes": 13293,
+        "sha256": "9c7ad1655cb4a00163c70c1d93b4386a48556d21efc374d877a4713c848f624c",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/milestone.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/milestone.tex",
+        "http_status": 200,
+        "bytes": 2551,
+        "sha256": "62de0c76c1d20002b597378975ba27b82de3593a96d3f93f4b8e307dc2d5f681",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/opps.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/opps.tex",
+        "http_status": 200,
+        "bytes": 7892,
+        "sha256": "809974393970dd2dee5e227694d7f6c7816c0b503306a1119c8f28927098ce9d",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/ordinals.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/ordinals.tex",
+        "http_status": 200,
+        "bytes": 401,
+        "sha256": "a0044c0dbb80a91bdd9549dcb84bce05b7ab676d8b13d3c8c1450c74358980bd",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/ordtype.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/ordtype.tex",
+        "http_status": 200,
+        "bytes": 6421,
+        "sha256": "d6429bcf92e2dd966e1fb0d39991d933b78ba137f09bbf35bb3d07b608873c30",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/replacement.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/replacement.tex",
+        "http_status": 200,
+        "bytes": 7572,
+        "sha256": "8c1e9255597339fe0345947dc6b205b8b7f3a29acece9eb5cacadca7445740d6",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/vn.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/vn.tex",
+        "http_status": 200,
+        "bytes": 6222,
+        "sha256": "ddf12639aee6556f7b1703062b1973be086274d85102d0deb8649ec1ac15d1fa",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/ordinals/wo.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/449c3bfb90971941eb59715863f31e8e752434ba/translation/content/set-theory/ordinals/wo.tex",
+        "http_status": 200,
+        "bytes": 5597,
+        "sha256": "77a65929ea056c42a534afdd26695c357c1d3aab706ace81bcc788b0aad59f04",
+        "matches_commit_blob": true
+      }
+    ]
+  },
+  "anonymous_repository_archive": {
+    "url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/449c3bfb90971941eb59715863f31e8e752434ba",
+    "http_status": 200,
+    "bytes": 17474158,
+    "sha256": "b3cd001b212c3c3a85f77fbfced0d0a0b0cd443dd425608e28204aaefa0e4a6f",
+    "verified_files": 1737,
+    "missing_files": [],
+    "extra_files": [],
+    "mismatched_files": [],
+    "all_files_match": true
+  },
+  "scope": {
+    "accepted_units": 554,
+    "aligned_segments": 1440,
+    "semantic_samples": 648,
+    "visually_verified_distinct_reader_units": 232,
+    "new_units": [
+      "OLP-0547",
+      "OLP-0548",
+      "OLP-0549",
+      "OLP-0550",
+      "OLP-0551",
+      "OLP-0552",
+      "OLP-0553",
+      "OLP-0554",
+      "OLP-0555",
+      "OLP-0556",
+      "OLP-0557"
+    ],
+    "new_reader_claim": true,
+    "new_epub_claim": false,
+    "reader_pdf": {
+      "path": "readers/set-theory-ordinals-ta-Taml-IN.pdf",
+      "expected_sha256": "b08e4f4515644c5c965cd51304bebab705251206a501e405518196bb7f9e0e6a",
+      "present_in_changed_files": true,
+      "downloaded_sha256": "b08e4f4515644c5c965cd51304bebab705251206a501e405518196bb7f9e0e6a",
+      "matches_expected_sha256": true
+    }
+  },
+  "result": "pass"
+}
