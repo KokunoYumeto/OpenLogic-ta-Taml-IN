@@ -1,0 +1,139 @@
+{
+  "schema": "openlogic-tamil-ordinals-source-companion-public-readback/1",
+  "checked_at_utc": "2026-09-20T23:23:42.864130+00:00",
+  "anonymous": true,
+  "authorization_header_sent": false,
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "branch": "main",
+  "commit": "5185e5f95bd84dda8c343cba0f0278dcf5887720",
+  "parent_commit": "d1bccae7f6a64fad933995836da046e8bdd10676",
+  "main_ref_commit": "5185e5f95bd84dda8c343cba0f0278dcf5887720",
+  "anonymous_commit_api": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/commits/5185e5f95bd84dda8c343cba0f0278dcf5887720",
+    "http_status": 200,
+    "reported_sha": "5185e5f95bd84dda8c343cba0f0278dcf5887720",
+    "matches_requested_commit": true
+  },
+  "anonymous_raw_changed_files": {
+    "count": 7,
+    "all_http_200": true,
+    "all_match_commit_blobs": true,
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/README.md",
+        "http_status": 200,
+        "bytes": 9988,
+        "sha256": "33654b9aad52c8904b75c4b94a5e4d109b8816e6f0e1a7273707f7c077eabd4f",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "build/package-ordinals-tex.py",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/build/package-ordinals-tex.py",
+        "http_status": 200,
+        "bytes": 12125,
+        "sha256": "bf2e6ff3686cfef12e76d6558274152dfb689658350b0d463ff70830877dea3d",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "build/qa-ordinals-tex.py",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/build/qa-ordinals-tex.py",
+        "http_status": 200,
+        "bytes": 5819,
+        "sha256": "6884415d50c65f5cd416c939ce9e15a544e5f848306578805b96f27f9fc49981",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/publication-receipts.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/evidence/publication-receipts.md",
+        "http_status": 200,
+        "bytes": 32895,
+        "sha256": "3554d6e1bdebb4acc1bfa301d7396c428c8227d95f58db1c26d9d93836a61853",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/set-theory-ordinals-tex-source-qa.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/evidence/set-theory-ordinals-tex-source-qa.json",
+        "http_status": 200,
+        "bytes": 1047,
+        "sha256": "03e081142febc32a9be9dab04bf9ea79ef74c779dfde557d176d778c33b7b14b",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/set-theory-ordinals-tex-source.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/evidence/set-theory-ordinals-tex-source.json",
+        "http_status": 200,
+        "bytes": 8699,
+        "sha256": "32a92a8b1b11c2bf96a60a5112f2f5e720d753e5cb3ebfe33826fdebd324f230",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "release/openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/release/openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex",
+        "http_status": 200,
+        "bytes": 274225,
+        "sha256": "306598b2dd3c3d59ec9ef9f12d58f6b81b7fc36d0872acb86356defae4c331da",
+        "matches_commit_blob": true
+      }
+    ]
+  },
+  "reader_chain": {
+    "readme_order": [
+      "readers/set-theory-ordinals-ta-Taml-IN.pdf",
+      "release/openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex",
+      "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/449c3bfb90971941eb59715863f31e8e752434ba"
+    ],
+    "pdf": {
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/readers/set-theory-ordinals-ta-Taml-IN.pdf",
+      "http_status": 200,
+      "bytes": 204055,
+      "sha256": "b08e4f4515644c5c965cd51304bebab705251206a501e405518196bb7f9e0e6a",
+      "preserved_from_source_commit": true
+    },
+    "complete_text_tex": {
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/5185e5f95bd84dda8c343cba0f0278dcf5887720/release/openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex",
+      "http_status": 200,
+      "bytes": 274225,
+      "sha256": "306598b2dd3c3d59ec9ef9f12d58f6b81b7fc36d0872acb86356defae4c331da",
+      "counted_reader_units": 11,
+      "embedded_project_support_files": 14
+    },
+    "pinned_complete_source_zip": {
+      "http_status": 200,
+      "url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/449c3bfb90971941eb59715863f31e8e752434ba",
+      "bytes": 17474158,
+      "sha256": "b3cd001b212c3c3a85f77fbfced0d0a0b0cd443dd425608e28204aaefa0e4a6f",
+      "verified_files": 1737,
+      "missing_files": [],
+      "extra_files": [],
+      "mismatched_files": [],
+      "all_files_match": true
+    }
+  },
+  "anonymous_repository_archive": {
+    "http_status": 200,
+    "url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/5185e5f95bd84dda8c343cba0f0278dcf5887720",
+    "bytes": 17554868,
+    "sha256": "2f4cd85785a5f836f6870f6d2f5f84a1e45f93a3ecaf36728f4c5a5e34c95779",
+    "verified_files": 1743,
+    "missing_files": [],
+    "extra_files": [],
+    "mismatched_files": [],
+    "all_files_match": true
+  },
+  "receipt_identity_correction": {
+    "private_windows_state_bytes": 17050,
+    "private_windows_state_sha256": "56a90fdaaa3a9f8621420de87d2c4f117f8e49c4438c15454c1b409d279a7032",
+    "public_lf_normalized_bytes": 16709,
+    "public_lf_normalized_sha256": "8685e534ffa238f53a584dfc557c5f77064e3e352fe9ba990d8d4bc6d6e12ef2",
+    "identities_are_distinct": true
+  },
+  "scope": {
+    "programme_accepted_source_units": 554,
+    "standalone_ordinals_reader_units": 11,
+    "accepted_pdf_replaced": false,
+    "release_tag_created": false,
+    "epub_created": false
+  },
+  "result": "pass"
+}
