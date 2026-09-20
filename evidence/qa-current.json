@@ -22,7 +22,7 @@
     "incompleteness_arithmetization_reader_verified": 12,
     "representability_in_q_reader_verified": 11,
     "release_verified": 203,
-    "published_sources": 466,
+    "published_sources": 471,
     "total": 722
   },
   "release_complete": false,
@@ -59,6 +59,6 @@
   "representability_in_q_build_qa": "tex-representability-in-q-receipt.json",
   "representability_in_q_render_qa": "representability-in-q-render-qa.json",
   "cumulative_reader_qa": "cumulative-reader-render-qa.json",
-  "source_publication_readback": "publication-readback-nml-466.json",
-  "current_source_published": false
+  "source_publication_readback": "publication-readback-nml-471.json",
+  "current_source_published": true
 }
