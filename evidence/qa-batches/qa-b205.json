@@ -1,0 +1,174 @@
+{
+  "batch_id": "TA-B205",
+  "units": [
+    {
+      "unit_id": "OLP-0464",
+      "source_sha256": "337485e1de3eaba7bdffdc6dddd9e9b4e0fe569bc9eaed470f7af27088492100",
+      "translation_sha256": "da55d30b8c06f45e2799d1134fe2b055a71ffb972894e184388fae95f49839dc",
+      "source_bytes": 12701,
+      "translation_bytes": 26272,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mSat{M}{!A}[w]$",
+        "$\\sFmla{\\False}{!B\\lor!C}\\in\\Gamma$",
+        "$\\sFmla{\\False}{!A}[\\sigma.n]$",
+        "$\\sFmla{\\True}{!A}[\\sigma.n]$",
+        "$\\Gamma\\Proves!A$"
+      ],
+      "extra_math": [
+        "$\\mSat/{M}{!A}[w]$",
+        "$\\sFmla{\\False}{!B\\lor!C}[\\sigma]\\in\\Gamma$",
+        "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\False}{!B}[\\sigma.n]$",
+        "$\\Gamma\\Entails!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "formula",
+        "include",
+        "logic",
+        "nml",
+        "open",
+        "section",
+        "signed",
+        "sou",
+        "tab"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-039",
+          "unit_id": "OLP-0464",
+          "kind": "countermodel-clause-satisfies-conclusion",
+          "action": "Changed the countermodel hypothesis from truth of A at w to falsity of A at w.",
+          "expected_missing_math": [
+            "$\\mSat{M}{!A}[w]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M}{!A}[w]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The stated contrapositive assumes every premise and the conclusion are true, which is not a countermodel and does not show that the initial signed assumptions are satisfiable.",
+          "chosen_treatment": "தமிழ் எதிர்மாதிரியில்~$!A$ ஆனது~$w$ இல் பொய்யாகிறது என்று கூறுகிறது.",
+          "alternatives_considered": "Retaining truth of A; changing the initial signed assumption from F A to T A.",
+          "rationale": "A countermodel to B1,...,Bn entails A makes every Bi true and A false at the same world, exactly satisfying the tableau assumptions T Bi and F A.",
+          "precise_review_question": "Does the contrapositive now assume all premises true and the conclusion false at w?",
+          "location_needle": "SOURCE CORRECTION TA-NML-039"
+        },
+        {
+          "audit_id": "TA-NML-040",
+          "unit_id": "OLP-0464",
+          "kind": "false-box-rule-switches-B-to-A",
+          "action": "Changed the newly generated false signed formula in the false-box case from A to B.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{!A}[\\sigma.n]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{!B}[\\sigma.n]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The premise is F Box B and every later line constructs and satisfies F B at sigma.n, but the first description names F A.",
+          "chosen_treatment": "தமிழ் பொய்ப் பெட்டி விதியின் முடிவுரையைத் தொடர்ந்து~$!B$ ஆகவே வைத்துள்ளது.",
+          "alternatives_considered": "Changing every later occurrence and the premise to A; retaining an unexplained formula switch.",
+          "rationale": "The false-box expansion preserves the operand B and introduces only a new successor prefix.",
+          "precise_review_question": "Does every formula in the false-box case retain operand B?",
+          "location_needle": "SOURCE CORRECTION TA-NML-040"
+        },
+        {
+          "audit_id": "TA-NML-041",
+          "unit_id": "OLP-0464",
+          "kind": "true-diamond-rule-switches-B-to-A",
+          "action": "Changed the newly generated true signed formula in the true-diamond case from A to B.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{!A}[\\sigma.n]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{!B}[\\sigma.n]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The premise is T Diamond B and every later line constructs and satisfies T B at sigma.n, but the first description names T A.",
+          "chosen_treatment": "தமிழ் மெய் வைர விதியின் முடிவுரையைத் தொடர்ந்து~$!B$ ஆகவே வைத்துள்ளது.",
+          "alternatives_considered": "Changing every later occurrence and the premise to A; retaining an unexplained formula switch.",
+          "rationale": "The true-diamond expansion preserves the operand B and introduces only a new successor prefix.",
+          "precise_review_question": "Does every formula in the true-diamond case retain operand B?",
+          "location_needle": "SOURCE CORRECTION TA-NML-041"
+        },
+        {
+          "audit_id": "TA-NML-042",
+          "unit_id": "OLP-0464",
+          "kind": "false-disjunction-premise-lacks-prefix",
+          "action": "Restored prefix sigma on the false-disjunction premise in the prefixed-tableau soundness proof.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{!B\\lor!C}\\in\\Gamma$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{!B\\lor!C}[\\sigma]\\in\\Gamma$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\sigma"
+          ],
+          "source_issue_or_choice": "Every premise and conclusion in the proof is prefixed, but this one false-disjunction premise alone omits [sigma].",
+          "chosen_treatment": "தமிழ் பொய்யான பிரிப்பின் எடுகோளில்~$[\\sigma]$ முன்னொட்டை மீட்டுள்ளது.",
+          "alternatives_considered": "Leaving an unprefixed signed formula in a set explicitly defined to contain prefixed formulas.",
+          "rationale": "The rule preserves one world prefix across the premise and its two conclusions.",
+          "precise_review_question": "Does the false-disjunction premise now carry the same sigma prefix used by its rule?",
+          "location_needle": "SOURCE CORRECTION TA-NML-042"
+        },
+        {
+          "audit_id": "TA-NML-043",
+          "unit_id": "OLP-0464",
+          "kind": "soundness-contradiction-repeats-derivability",
+          "action": "Changed the final conclusion of the entailment-soundness corollary from Gamma proves A to Gamma entails A.",
+          "expected_missing_math": [
+            "$\\Gamma\\Proves!A$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\Entails!A$"
+          ],
+          "expected_missing_commands": [
+            "\\Proves"
+          ],
+          "expected_extra_commands": [
+            "\\Entails"
+          ],
+          "source_issue_or_choice": "The proof begins by assuming derivability, supposes semantic entailment fails, and derives a contradiction, but then merely repeats the original derivability assumption.",
+          "chosen_treatment": "தமிழ் முரண்பாட்டிலிருந்து வேண்டிய~$\\Gamma \\Entails !A$ என்ற முடிவையே எடுக்கிறது.",
+          "alternatives_considered": "Repeating the already assumed syntactic statement; changing the corollary itself.",
+          "rationale": "Negating non-entailment yields entailment, completing the stated soundness corollary.",
+          "precise_review_question": "Does the final sentence now conclude the semantic claim established by contradiction?",
+          "location_needle": "SOURCE CORRECTION TA-NML-043"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Proves"
+      ],
+      "extra_commands": [
+        "\\Entails",
+        "\\sigma"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,16 +1,16 @@
 {
   "schema": "openlogic-translation-decision-qa/1.0.0",
-  "generated_utc": "2026-09-20T00:40:31.580696+00:00",
+  "generated_utc": "2026-09-20T01:37:23.250366+00:00",
   "status": "PASS",
   "edition_id": "openlogic-ta-Taml-IN",
   "coverage_state": "partial",
   "counts": {
-    "decisions": 414,
-    "occurrences": 22084,
-    "source_units": 445,
+    "decisions": 438,
+    "occurrences": 22936,
+    "source_units": 455,
     "reader_units_with_mapped_pages": 49,
     "available_reader_occurrences": 2891,
-    "pending_reader_occurrences": 19193
+    "pending_reader_occurrences": 20045
   },
   "normative_schema": {
     "bytes": 10787,
@@ -43,23 +43,23 @@
   "surfaces": {
     "START_HERE.md": {
       "bytes": 915,
-      "sha256": "5e3dbbf00a2dcb0f117d16a11c8b55a7d0491f60dc39b63a93bcd35d3bf6dc62"
+      "sha256": "a9992024d5b88d5fa9a99a6d98495d35580606eaa39e8f57453cb2096c9adf7a"
     },
     "TRANSLATION_DECISIONS_FULL.md": {
-      "bytes": 5710249,
-      "sha256": "d9509e8a8aea36c91ebe79c785c40673375e4484ebc695ebd8099f227dc01720"
+      "bytes": 5919617,
+      "sha256": "3d0ac384b65b7bbb77ce35dac5153d43710c6b9c592e48d3fa9ad132ad461385"
     },
     "PRIORITY_REVIEW.md": {
-      "bytes": 3539542,
-      "sha256": "c28ba48310f655b52cb2a731322bed86e7b90ea10cb35217855eff04a6e36b81"
+      "bytes": 3719788,
+      "sha256": "0ae6a07916e7e5804d5e038ee90d91d611666d60becc61087206d88f92c88bc5"
     },
     "DECISION_OCCURRENCES.csv": {
-      "bytes": 17978439,
-      "sha256": "981ae50be1b6c9b73465a5f5469f4d9a1ae038fe29b2d430a3cff93bea296bac"
+      "bytes": 18644035,
+      "sha256": "2387cc47a0192c7476c242feb54e6848cf76482c447e1e8e590e29ac78d51702"
     },
     "DECISIONS.json": {
-      "bytes": 70812280,
-      "sha256": "9667d214dbbfff8b04b5c932f736870eb35e348409a9421a691f018ff65bf481"
+      "bytes": 73511421,
+      "sha256": "620f483c7f16cbd40570e4f4caabe8e6a9ef1b01ddf21adf0c164502c35b1e46"
     },
     "translation-decision.schema.json": {
       "bytes": 10787,

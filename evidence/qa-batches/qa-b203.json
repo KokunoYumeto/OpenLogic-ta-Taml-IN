@@ -1,0 +1,77 @@
+{
+  "batch_id": "TA-B203",
+  "units": [
+    {
+      "unit_id": "OLP-0462",
+      "source_sha256": "781f917de40a4b8e0c38ade5e7cd1d9eab39a629563df7f6d07e0434ab5dffe3",
+      "translation_sha256": "7fa252f8253befbe1987d13a79a4c564ddae64cdf618eb0043e2b9c145152ae1",
+      "source_bytes": 9559,
+      "translation_bytes": 14135,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "close",
+        "include",
+        "just",
+        "logic",
+        "name",
+        "notprvBox",
+        "notprvDiamond",
+        "one",
+        "open",
+        "section",
+        "two"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-038",
+          "unit_id": "OLP-0462",
+          "kind": "false-box-expansion-cites-true-box-rule",
+          "action": "Changed the line-3 justification in the Box-only new-prefix counterexample from the true-box rule to the false-box rule.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\True"
+          ],
+          "expected_extra_commands": [
+            "\\False"
+          ],
+          "source_issue_or_choice": "Line 3 derives F A at prefix 1.1 from line 2, which is F Box A, but labels the step T Box[2].",
+          "chosen_treatment": "தமிழ் அட்டவணை மரம் வரி 3 இன் காரணத்தை $\\TRule{\\False}{\\Box}[2]$ எனக் குறிக்கிறது.",
+          "alternatives_considered": "Retaining a rule whose sign does not match either the cited premise or conclusion; changing the premise and conclusion signs, which would destroy the intended example.",
+          "rationale": "The false-box rule is exactly the rule that expands F Box A to F A at a new successor prefix.",
+          "precise_review_question": "Does line 3 now cite the false-box rule applied to line 2 while leaving the counterexample otherwise unchanged?",
+          "location_needle": "SOURCE CORRECTION TA-NML-038"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\True"
+      ],
+      "extra_commands": [
+        "\\False"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

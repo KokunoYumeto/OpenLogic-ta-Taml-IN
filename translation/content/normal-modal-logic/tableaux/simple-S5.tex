@@ -1,0 +1,90 @@
+% SEGMENT OLP-0467-S01
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: simple-S5
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{s5}
+
+\olsection{\Log{S5} க்கான எளிய \usetoken{P}{tableau}கள்}
+
+அனைத்துறவு மாதிரிகளின் வகுப்பை ஒப்பிட்டு~\Log{S5} சரியானதும் நிறைவானதும்;
+அதாவது, இம்மாதிரிகளில் ஒவ்வோர் உலகும் ஒவ்வோர் உலகிலிருந்தும் அணுகத்தக்கது.
+அனைத்துறவு மாதிரிகளில் அணுகுறவு பொருட்டல்ல: ``$\mSat{M}{!A}[w]$ ஆகும்
+ஓர் உலகம்~$w$ உள்ளது'' என்பது,~$u$ இலிருந்து அணுகத்தக்க அத்தகைய ஒரு~$w$
+உள்ளது என்பதற்கு நிகரானது. எனவே \Log{S5} இல், மாதிரிகளை உலகங்களின் ஒரு
+கணமும் ஒரு மதிப்பீடு~$V$ உம் என்று எளிதாக வரையறுக்கலாம். !!{tableau}
+விதிகளையும் நாம் எளிமைப்படுத்த இயலும் என்பதை இது உணர்த்துகிறது. பொது
+நேர்வில், எந்த முன்னொட்டுகள் எந்த மற்ற முன்னொட்டுகள் பெயரிடும்
+உலகங்களிலிருந்து அணுகத்தக்க உலகங்களுக்குப் பெயரிடுகின்றன என்பதைக் கண்காணிக்க,
+நேர்ம முழுக்களின் தொடர்களை முன்னொட்டுகளாகக் கொள்கிறோம்:~$\sigma$ விலிருந்து
+அணுகத்தக்க ஓர் உலகிற்கு $\sigma.n$ பெயரிடுகிறது. ஆனால் \Log{S5} இல் எந்த
+உலகும் எந்த உலகிலிருந்தும் அணுகத்தக்கது; ஆகவே இதைக் கண்காணிக்க வேண்டியதில்லை.
+அதற்குப் பதிலாக நேர்ம முழுக்களையே முன்னொட்டுகளாகப் பயன்படுத்தலாம்.
+எளிமைப்படுத்தப்பட்ட விதிகள் \olref{tab:rules-S5} இல் கொடுக்கப்பட்டுள்ளன.
+
+\begin{table}
+  \begin{center}
+    \def\arraystretch{3}\def\fCenter{}
+    \begin{tabular}{|c|c|}
+    \hline
+    \iftag{prvBox}{
+      \AxiomC{\sFmla{\True}{\Box !A}[n]}
+      \RightLabel{\TRule{\True}{\Box}}
+      \UnaryInfC{\sFmla{\True}{!A}[m]}
+      \DisplayProof
+      &
+      \AxiomC{\sFmla{\False}{\Box !A}[n]}
+      \RightLabel{\TRule{\False}{\Box}}
+      \UnaryInfC{\sFmla{\False}{!A}[m]}
+      \DisplayProof\\
+      $m$ பயன்படுத்தப்பட்டது & $m$ புதியது
+      \\[1ex]
+      \hline}{}
+    \iftag{prvDiamond}{
+      \AxiomC{\sFmla{\True}{\Diamond !A}[n]}
+      \RightLabel{\TRule{\True}{\Diamond}}
+      \UnaryInfC{\sFmla{\True}{!A}[m]}
+      \DisplayProof
+      &
+      \AxiomC{\sFmla{\False}{\Diamond !A}[n]}
+      \RightLabel{\TRule{\False}{\Diamond}}
+      \UnaryInfC{\sFmla{\False}{!A}[m]}
+      \DisplayProof\\
+      $m$ புதியது & $m$ பயன்படுத்தப்பட்டது
+      \\[1ex]
+      \hline}{}
+    \end{tabular}
+  \end{center}
+  \caption{\Log{S5} க்கான எளிமைப்படுத்தப்பட்ட விதிகள்.}
+  \ollabel{tab:rules-S5}
+\end{table}
+
+\begin{ex}
+  $\Log{S5} \Proves \Ax{5}$, அதாவது $\Diamond!A \lif
+  \Box\Diamond!A$, என்பதைக் காட்டும் எளிமைப்படுத்தப்பட்ட மூடிய அட்டவணை
+  மரத்தைக் கொடுக்கிறோம்.
+  \begin{oltableau}
+    [\pFmla{\False}{\Diamond\formula{A} \lif \Box\Diamond \formula{A}}{1},
+      just = \TAss
+      [\pFmla{\True}{\Diamond \formula{A}}{1}, just = {\TRule{\False}{\lif}[1]}
+        [\pFmla{\False}{\Box\Diamond \formula{A}}{1},
+          just = {\TRule{\False}{\lif}[1]}
+          [\pFmla{\False}{\Diamond \formula{A}}{2},
+            just = {\TRule{\False}{\Box}[3]}
+            [\pFmla{\True}{\formula{A}}{3},
+              just = {\TRule{\True}{\Diamond}[2]}
+                [\pFmla{\False}{\formula{A}}{3},
+                  just = {\TRule{\False}{\Diamond}[4]}, close]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+\end{ex}
+
+\end{document}

@@ -1,0 +1,323 @@
+% SEGMENT OLP-0469-S01
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: countermodels
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{cou}
+
+\olsection{\usetoken{P}{tableau}களிலிருந்து எதிர்மாதிரிகள்}
+
+\begin{explain}
+  நிறைவுத்தன்மைத் தேற்றத்தின் நிறுவல், $\Entails !A$ எனில் $\Proves !A$
+  என்று காட்டுவதோடு மட்டும் நிற்பதில்லை;~$\Entails/ !A$ எனில்
+  % SOURCE CORRECTION TA-NML-054: restore the formula marker on A.
+  $!A$ க்கான எதிர்மாதிரிகளைக் கட்டமைக்கும் ஒரு முறையையும் நமக்குத் தருகிறது.
+  ~$\Log{K}$ இன் நேர்வில், இந்த முறை ஒரு \emph{தீர்மானச் செயல்முறையாக}
+  அமைகிறது. $\Entails/ !A$ என்க. அப்போது
+  \olref[cpl]{prop:complete-tableau} இன் நிறுவல், ஒரு முழுமையான
+  !!a{tableau}வைக் கட்டமைக்கும் முறையைத் தருகிறது. உண்மையில், இந்த முறை
+  எப்போதும் முடிவடைகிறது. $\Log{K}$ க்கான கூற்றுத் தருக்க விதிகள் குறைந்த
+  சிக்கலுடைய முன்னொட்டுள்ள !!{formula}s ஐ மட்டுமே சேர்க்கின்றன; அதாவது,
+  ஒவ்வொரு குறியிட்ட வாய்பாடு~$\sFmla{S}{!A}[\sigma]$ க்கும் ஒவ்வொரு
+  கூற்றுத் தருக்க விதியையும் ஒரு கிளையில் ஒருமுறை மட்டுமே பயன்படுத்த வேண்டும்.
+  புதிய முன்னொட்டுகள்
+  \iftag{prvBox}{$\TRule{\False}{\Box}$}{}\iftag{notprvBox,notprvDiamond}{}{
+    மற்றும் }\iftag{prvDiamond}{$\TRule{\True}{\Diamond}$}{}
+  \iftag{notprvBox,notprvDiamond}{விதியால்}{விதிகளால்} மட்டுமே
+  உருவாக்கப்படுகின்றன; அவற்றையும் ஒருமுறை மட்டுமே பயன்படுத்த வேண்டும் (மேலும்
+  அவை ஒவ்வொன்றும் ஒரே ஒரு புதிய முன்னொட்டை உருவாக்கும்).
+  \iftag{prvBox}{$\TRule{\True}{\Box}$}{}\iftag{notprvBox,notprvDiamond}{}{
+    மற்றும் }\iftag{prvDiamond}{$\TRule{\False}{\Diamond}$}{}
+  \iftag{notprvBox,notprvDiamond}{விதியை}{விதிகளை} பலமுறை பயன்படுத்த
+  வேண்டியிருக்கலாம்; ஆனால் ஒரு முன்னொட்டிற்கு
+  ஒருமுறை மட்டுமே, மேலும் முடிவுறு எண்ணிக்கையிலான புதிய முன்னொட்டுகளே
+  உருவாக்கப்படுகின்றன. ஆகவே கட்டமைப்பு முடிவுறு எண்ணிக்கையிலான படிகளுக்குப்
+  பிறகு ஒரு மூடிய கிளையையோ ஒரு முழுமையான கிளையையோ விளைவிக்கும்.
+
+  திறந்த முழுமையான கிளையைக் கொண்ட ஓர் அட்டவணை மரம் கட்டமைக்கப்பட்டதும்,
+  \olref[cpl]{thm:tableau-completeness} இன் நிறுவல், முன்னொட்டுள்ள
+  !!{formula}s இன் மூலக் கணத்தை நிறைவுறுத்தும் வெளிப்படையான ஒரு மாதிரியைத்
+  தருகிறது. ஆகவே $\Gamma \Entails !A$ எனில் ஒரு மூடிய !!{tableau} இருந்து
+  $\Gamma \Proves !A$ என்பது மட்டுமல்ல; மூடிய !!{tableau}வை உரிய முறையில்
+  தேடி, இறுதியில் ஒரு ``முழுமையான'' !!{tableau}வைப் பெற்றால்,
+  $\Gamma \Entails/ !A$ என்று அறிந்துகொள்வதோடு உண்மையில் ஓர்
+  எதிர்மாதிரியையும் கட்டமைக்க முடியும்.
+\end{explain}
+
+\iftag{prvBox}{
+\begin{ex}
+  $\Proves/ \Box(p \lor q) \lif (\Box p \lor \Box q)$ என்று அறிவோம்.
+  ஓர் அட்டவணை மரத்தின் கட்டமைப்பு பின்வருமாறு தொடங்குகிறது:
+  \begin{oltableau}
+    [\pFmla{\False}{\Box(p \lor q) \lif (\Box p \lor \Box q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Box(p \lor q)}{1},
+        just = {\TRule{\False}{\lif}[1]},
+        [\pFmla{\False}{\Box p \lor \Box q}{1},
+          just = {\TRule{\False}{\lif}[1]}, checked
+          [\pFmla{\False}{\Box p}{1},
+            just = {\TRule{\False}{\lor}[3]}, checked
+            [\pFmla{\False}{\Box q}{1},
+              just = {\TRule{\False}{\lor}[3]}, checked
+              [\pFmla{\False}{p}{1.1},
+                just = {\TRule{\False}{\Box}[4]}, checked
+                [\pFmla{\False}{q}{1.2},
+                  just = {\TRule{\False}{\Box}[5]}, checked
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  !!{tableau} இன்னும் முடிவடையவில்லை என்பது தெளிவு. அடுத்த படியில்,
+  சரிபார்ப்புக்குறி இல்லாத ஒரே வரியை, அதாவது வரி~$2$ இலுள்ள முன்னொட்டுள்ள
+  !!{formula}~$\sFmla{\True}{\Box(p \lor q)}[1]$ ஐக் கருதுகிறோம்.
+  % SOURCE CORRECTION TA-NML-058: the search constructs a complete tableau, not a closed one.
+  முழுமையான அட்டவணை மரத்தின் கட்டமைப்பின்படி, கிளையில் பயன்படுத்தப்பட்ட
+  ஒவ்வொரு முன்னொட்டிற்கும், அதாவது $1.1$, $1.2$ ஆகிய இரண்டிற்கும்,
+  $\TRule{\True}{\Box}$ விதியைப் பயன்படுத்த வேண்டும்:
+  \begin{oltableau}
+    [\pFmla{\False}{\Box(p \lor q) \lif (\Box p \lor \Box q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Box(p \lor q)}{1},
+        just = {\TRule{\False}{\lif}[1]},
+        [\pFmla{\False}{\Box p \lor \Box q}{1},
+          just = {\TRule{\False}{\lif}[1]}, checked
+          [\pFmla{\False}{\Box p}{1},
+            just = {\TRule{\False}{\lor}[3]}, checked
+            [\pFmla{\False}{\Box q}{1},
+              just = {\TRule{\False}{\lor}[3]}, checked
+              [\pFmla{\False}{p}{1.1},
+                just = {\TRule{\False}{\Box}[4]}, checked
+                [\pFmla{\False}{q}{1.2},
+                  just = {\TRule{\False}{\Box}[5]}, checked
+                  [\pFmla{\True}{p \lor q}{1.1},
+                    just = {\TRule{\True}{\Box}[2]}
+                    [\pFmla{\True}{p \lor q}{1.2},
+                      just = {\TRule{\True}{\Box}[2]}
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  இப்போது வரிகள் 2, 8, 9 ஆகியவற்றில் சரிபார்ப்புக்குறிகள் இல்லை.
+  ஆனால் புதிய முன்னொட்டு எதுவும் சேர்க்கப்படவில்லை; ஆகவே விளைவாக வரும் எல்லாக்
+  கிளைகளிலும் (அவை மூடாதவரை) வரிகள்~8,~9 க்கு
+  $\TRule{\True}{\lor}$ ஐப் பயன்படுத்துகிறோம்:
+  \begin{oltableau}
+    [\pFmla{\False}{\Box(p \lor q) \lif (\Box p \lor \Box q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Box(p \lor q)}{1},
+        just = {\TRule{\False}{\lif}[1]}, checked
+        [\pFmla{\False}{\Box p \lor \Box q}{1},
+          just = {\TRule{\False}{\lif}[1]}, checked
+          [\pFmla{\False}{\Box p}{1},
+            just = {\TRule{\False}{\lor}[3]}, checked
+            [\pFmla{\False}{\Box q}{1},
+              just = {\TRule{\False}{\lor}[3]}, checked
+              [\pFmla{\False}{p}{1.1},
+                just = {\TRule{\False}{\Box}[4]}, checked
+                [\pFmla{\False}{q}{1.2},
+                  just = {\TRule{\False}{\Box}[5]}, checked
+                  [\pFmla{\True}{p \lor q}{1.1},
+                    just = {\TRule{\True}{\Box}[2]}, checked
+                    [\pFmla{\True}{p \lor q}{1.2},
+                      just = {\TRule{\True}{\Box}[2]}, checked
+                      [\pFmla{\True}{p}{1.1},
+                        just = {\TRule{\True}{\lor}[8]}, checked, close
+                      ]
+                      [\pFmla{\True}{q}{1.1},
+                        just = {\TRule{\True}{\lor}[8]}, checked
+                        [\pFmla{\True}{p}{1.2},
+                          just = {\TRule{\True}{\lor}[9]}, checked]
+                        [\pFmla{\True}{q}{1.2},
+                          just = {\TRule{\True}{\lor}[9]}, checked, close]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  திறந்த கிளை ஒன்று மீதமுள்ளது; அது முழுமையானது. அதிலிருந்து
+  $W = \{1, 1.1, 1.2\}$ என்ற உலகங்களையும் (திறந்த கிளையில் இடம்பெறும்
+  முன்னொட்டுகள் இவை மட்டுமே), $R = \{\tuple{1, 1.1}, \tuple{1, 1.2}\}$
+  என்ற அணுகுறவையும், $V(p) = \{1.2\}$ (ஏனெனில் வரி~11 ஆனது
+  $\sFmla{\True}{p}[1.2]$ ஐக் கொண்டுள்ளது), $V(q) = \{1.1\}$ (ஏனெனில்
+  வரி~10 ஆனது $\sFmla{\True}{q}[1.1]$ ஐக் கொண்டுள்ளது) என்ற
+  ஒதுக்கீட்டையும் கொண்ட மாதிரியை வரையறுக்கிறோம். மாதிரி
+  \olref{fig:counter-Box} இல் படமாக்கப்பட்டுள்ளது; அது $\Box(p \lor q)
+  \lif (\Box p \lor \Box q)$ க்கான எதிர்மாதிரி என்பதை நீங்கள்
+  சரிபார்க்கலாம்.
+  \begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={[align=right]right:\mFalse{p}\\ \mFalse{q}}]{$1$};
+      \node[world] (w2) [label={[align=right]right:\mFalse{p}\\ \mTrue{q}},
+        above left=of w1]{$1.1$};
+      \node[world] (w3) [label={[align=right]right:\mTrue{p}\\ \mFalse{q}},
+        above right=of w1] {$1.2$};
+      \draw[->] (w1) to (w2);
+      \draw[->] (w1) to (w3);
+    \end{tikzpicture}
+  \end{center}
+  \caption{$\Box(p \lor q) \lif (\Box p \lor \Box q)$ க்கான
+    ஓர் எதிர்மாதிரி.}
+  \ollabel{fig:counter-Box}
+\end{figure}
+\end{ex}
+}
+{
+\begin{ex}
+  $\Proves/ (\Diamond p \land \Diamond q) \lif \Diamond(p \land q)$
+  என்று அறிவோம். ஓர் அட்டவணை மரத்தின் கட்டமைப்பு பின்வருமாறு தொடங்குகிறது:
+  \begin{oltableau}
+    [\pFmla{\False}{(\Diamond p \land \Diamond q) \lif \Diamond(p \land q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Diamond p \land \Diamond q}{1},
+        just = {\TRule{\False}{\lif}[1]}, checked
+        [\pFmla{\False}{\Diamond(p \land q)}{1},
+          just = {\TRule{\False}{\lif}[1]}
+          [\pFmla{\True}{\Diamond p}{1},
+            just = {\TRule{\True}{\land}[2]}, checked
+            [\pFmla{\True}{\Diamond q}{1},
+              just = {\TRule{\True}{\land}[2]}, checked
+              [\pFmla{\True}{p}{1.1},
+                just = {\TRule{\True}{\Diamond}[4]}, checked
+                [\pFmla{\True}{q}{1.2},
+                  just = {\TRule{\True}{\Diamond}[5]}, checked
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  !!{tableau} இன்னும் முடிவடையவில்லை என்பது தெளிவு. அடுத்த படியில்,
+  சரிபார்ப்புக்குறி இல்லாத ஒரே வரியை, அதாவது வரி~$3$ இலுள்ள முன்னொட்டுள்ள
+  % SOURCE CORRECTION TA-NML-055: line 3 is false Diamond, expanded by the false-Diamond rule.
+  !!{formula}~$\sFmla{\False}{\Diamond(p \land q)}[1]$ ஐக் கருதுகிறோம்.
+  % SOURCE CORRECTION TA-NML-058: the search constructs a complete tableau, not a closed one.
+  முழுமையான அட்டவணை மரத்தின் கட்டமைப்பின்படி, கிளையில் பயன்படுத்தப்பட்ட
+  ஒவ்வொரு முன்னொட்டிற்கும், அதாவது $1.1$, $1.2$ ஆகிய இரண்டிற்கும்,
+  $\TRule{\False}{\Diamond}$ விதியைப் பயன்படுத்த வேண்டும்:
+  \begin{oltableau}
+    % SOURCE CORRECTION TA-NML-056: retain the original implication direction at the root.
+    [\pFmla{\False}{(\Diamond p \land \Diamond q) \lif \Diamond(p \land q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Diamond p \land \Diamond q}{1},
+        just = {\TRule{\False}{\lif}[1]}, checked
+        [\pFmla{\False}{\Diamond (p \land q)}{1},
+          just = {\TRule{\False}{\lif}[1]}
+          [\pFmla{\True}{\Diamond p}{1},
+            just = {\TRule{\True}{\land}[2]}, checked
+            [\pFmla{\True}{\Diamond q}{1},
+              just = {\TRule{\True}{\land}[2]}, checked
+              [\pFmla{\True}{p}{1.1},
+                just = {\TRule{\True}{\Diamond}[4]}, checked
+                [\pFmla{\True}{q}{1.2},
+                  just = {\TRule{\True}{\Diamond}[5]}, checked
+                  [\pFmla{\False}{p \land q}{1.1},
+                    just = {\TRule{\False}{\Diamond}[3]}
+                    [\pFmla{\False}{p \land q}{1.2},
+                      just = {\TRule{\False}{\Diamond}[3]}
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  இப்போது வரிகள் 3, 8, 9 ஆகியவற்றில் சரிபார்ப்புக்குறிகள் இல்லை.
+  ஆனால் புதிய முன்னொட்டு எதுவும் சேர்க்கப்படவில்லை; ஆகவே விளைவாக வரும் எல்லாக்
+  கிளைகளிலும் (அவை மூடாதவரை) வரிகள்~8,~9 க்கு
+  $\TRule{\False}{\land}$ ஐப் பயன்படுத்துகிறோம்:
+  \begin{oltableau}
+    [\pFmla{\False}{(\Diamond p \land \Diamond q) \lif \Diamond(p \land q)}{1},
+      just = \TAss, checked
+      [\pFmla{\True}{\Diamond p \land \Diamond q}{1},
+        just = {\TRule{\False}{\lif}[1]}, checked
+        [\pFmla{\False}{\Diamond(p \land q)}{1},
+          just = {\TRule{\False}{\lif}[1]}
+          [\pFmla{\True}{\Diamond p}{1},
+            just = {\TRule{\True}{\land}[2]}, checked
+            [\pFmla{\True}{\Diamond q}{1},
+              just = {\TRule{\True}{\land}[2]}, checked
+              [\pFmla{\True}{p}{1.1},
+                just = {\TRule{\True}{\Diamond}[4]}, checked
+                [\pFmla{\True}{q}{1.2},
+                  just = {\TRule{\True}{\Diamond}[5]}, checked
+                  [\pFmla{\False}{p \land q}{1.1},
+                    just = {\TRule{\False}{\Diamond}[3]}, checked
+                    [\pFmla{\False}{p \land q}{1.2},
+                      just = {\TRule{\False}{\Diamond}[3]}, checked
+                      [\pFmla{\False}{p}{1.1},
+                        just = {\TRule{\False}{\land}[8]}, checked, close
+                      ]
+                      [\pFmla{\False}{q}{1.1},
+                        just = {\TRule{\False}{\land}[8]}, checked
+                        [\pFmla{\False}{p}{1.2},
+                          just = {\TRule{\False}{\land}[9]}, checked]
+                        [\pFmla{\False}{q}{1.2},
+                          just = {\TRule{\False}{\land}[9]}, checked, close]
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  திறந்த கிளை ஒன்று மீதமுள்ளது; அது முழுமையானது. அதிலிருந்து
+  $W = \{1, 1.1, 1.2\}$ என்ற உலகங்களையும் (திறந்த கிளையில் இடம்பெறும்
+  முன்னொட்டுகள் இவை மட்டுமே), $R = \{\tuple{1, 1.1}, \tuple{1, 1.2}\}$
+  என்ற அணுகுறவையும், $V(p) = \{1.1\}$ (ஏனெனில் வரி~6 ஆனது
+  $\sFmla{\True}{p}[1.1]$ ஐக் கொண்டுள்ளது), $V(q) = \{1.2\}$ (ஏனெனில்
+  வரி~7 ஆனது
+  % SOURCE CORRECTION TA-NML-057: line 7 contains q at prefix 1.2.
+  $\sFmla{\True}{q}[1.2]$ ஐக் கொண்டுள்ளது) என்ற ஒதுக்கீட்டையும் கொண்ட
+  மாதிரியை வரையறுக்கிறோம். மாதிரி \olref{fig:counter-Diamond} இல்
+  படமாக்கப்பட்டுள்ளது; அது $(\Diamond p \land \Diamond q) \lif
+  \Diamond (p \land q)$ க்கான எதிர்மாதிரி என்பதை நீங்கள் சரிபார்க்கலாம்.
+  \begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={[align=right]right:\mFalse{p}\\ \mFalse{q}}]{$1$};
+      \node[world] (w2) [label={[align=right]right:\mTrue{p}\\ \mFalse{q}},
+        above left=of w1]{$1.1$};
+      \node[world] (w3) [label={[align=right]right:\mFalse{p}\\ \mTrue{q}},
+        above right=of w1] {$1.2$};
+      \draw[->] (w1) to (w2);
+      \draw[->] (w1) to (w3);
+    \end{tikzpicture}
+  \end{center}
+  \caption{$(\Diamond p \land \Diamond q) \lif
+    \Diamond (p \land q)$ க்கான ஓர் எதிர்மாதிரி.}
+  \ollabel{fig:counter-Diamond}
+\end{figure}
+\end{ex}
+}
+
+\end{document}

@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T00:39:33.530945+00:00",
+  "date_utc": "2026-09-20T01:35:58.880843+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2282,6 +2282,56 @@
       "unit_id": "OLP-0459",
       "source_sha256": "904eebe3b14b5f58fcac9db524e0546c9cdd6f1a07b00f1ef097fba80b0664db",
       "translation_sha256": "f5e43772da7ab47653101a418021902327a1382f4d070b5f6a32fe17c6432f65"
+    },
+    {
+      "unit_id": "OLP-0460",
+      "source_sha256": "58eea9ef8caa03576eb40d2be64cbd3d5dbfc07e1bb052af3558481e9f7d8f1b",
+      "translation_sha256": "8ac05525588fd242a51424e31c45a5472585b97e2241d39017ddc282ee6a0040"
+    },
+    {
+      "unit_id": "OLP-0461",
+      "source_sha256": "87a62d9825b9d30949d14e5530488544e403e28c7594774a9bf6c91e73803b54",
+      "translation_sha256": "9eb920085e46581ad211aa2f30f906914649cd35fc41f3f7f65f102c65fd0e30"
+    },
+    {
+      "unit_id": "OLP-0462",
+      "source_sha256": "781f917de40a4b8e0c38ade5e7cd1d9eab39a629563df7f6d07e0434ab5dffe3",
+      "translation_sha256": "7fa252f8253befbe1987d13a79a4c564ddae64cdf618eb0043e2b9c145152ae1"
+    },
+    {
+      "unit_id": "OLP-0463",
+      "source_sha256": "17c60b914fceb4b984233ac0cf4aa37d1f6ee938b91e052aa986b970f0f0842b",
+      "translation_sha256": "8d89ac1b74ee65b2eb88c4174b4e2ce4ad7e43e86cbf321f6c379aaeaaeaf4db"
+    },
+    {
+      "unit_id": "OLP-0464",
+      "source_sha256": "337485e1de3eaba7bdffdc6dddd9e9b4e0fe569bc9eaed470f7af27088492100",
+      "translation_sha256": "da55d30b8c06f45e2799d1134fe2b055a71ffb972894e184388fae95f49839dc"
+    },
+    {
+      "unit_id": "OLP-0465",
+      "source_sha256": "1763d19e944f908c2890c6918b0197280a38ce9932867b28f563a7140b6d9c48",
+      "translation_sha256": "ac76cf9efacfd747d157bcd430bcd6dee419cb2880278f81f59dfdcef558b6ad"
+    },
+    {
+      "unit_id": "OLP-0466",
+      "source_sha256": "8c68f92959ba86967753495c186b9f49a3da00247457511f5527e72e5a9eb936",
+      "translation_sha256": "5f8345299d81a132de22dfd9b44102b4c54d352150ce058ef6f15002fcd4bd7c"
+    },
+    {
+      "unit_id": "OLP-0467",
+      "source_sha256": "424a248ae136b994af3f140ae1e3cc4d68dbbbedd4ba0ca88f24d6148615fa65",
+      "translation_sha256": "18849b0db9c61d76746bfd8462b2acd99849000657f1d0ffd6a582565a6ee70a"
+    },
+    {
+      "unit_id": "OLP-0468",
+      "source_sha256": "ee4e86d1549731cdbe7088d4d682c304f04a9c007a93a525c99b25959a2c2d90",
+      "translation_sha256": "7c65def750005eeb7c47f15e1cfe74e05038d576463180c33513c1912c9e8a89"
+    },
+    {
+      "unit_id": "OLP-0469",
+      "source_sha256": "c47ac240cc48f6e82093505895045e59de1a1f034b7e377086c5b53944d744bd",
+      "translation_sha256": "aa7ffba6728bafa72bf781f4c0bca3f1fd6c8b30a751215ac0197f23e21b71d0"
     }
   ],
   "samples": [
@@ -6134,6 +6184,76 @@
       "assessment": "Both diagrams, the obstruction argument, modal-closure limitation and all three proof items remain. TA-NML-035 uses class nodes throughout the filtered model, and TA-NML-036 aligns theorem item order with its proof.",
       "translation_segment_sha256": "89ed9e70d73898c4ac1fb830e792906afc5aec22309ee8ac96bd0739f7e8b291",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0460-S01",
+      "reverse_paraphrase": "The modal-tableaux chapter imports the introduction, K rules and proofs, soundness, additional frame rules and soundness, simplified S5 system, completeness, and countermodel extraction.",
+      "assessment": "All nine imports remain in source order. TA-NML-037 aligns the copied chapter metadata with the tableaux path and identifier.",
+      "translation_segment_sha256": "452a0f547d4fdd0c78c53b84ec43095f3e0667c92efbacd37f391f19395bf1af",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0461-S01",
+      "reverse_paraphrase": "A prefixed tableau is a downward-branching tree of truth-signed formulas whose nonempty positive-integer sequence prefixes name worlds and whose one-step extensions name accessible worlds.",
+      "assessment": "The closure condition, finite-premise derivability definition, dot-concatenation convention, worked prefix and model intuition remain exact.",
+      "translation_segment_sha256": "212958c0113198370275c2baa722eeddfb3454db84756f84d5bf14d73429ba9e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0462-S01",
+      "reverse_paraphrase": "Propositional rules preserve a formula prefix; modal truth and falsity rules either reuse an existing successor prefix or introduce a fresh one, and both restrictions are required for soundness.",
+      "assessment": "Every rule table, feature-sensitive counterexample and assumption convention remains. TA-NML-038 corrects the false-Box justification sign.",
+      "translation_segment_sha256": "1f16c2f155e9c62236f70e16c9f4dd943fd2d8904e448d7ec5e3789e562b73a3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0463-S01",
+      "reverse_paraphrase": "Closed K tableaux derive distribution of Box over conjunction and distribution of Diamond over disjunction, with four further formulas left as exercises.",
+      "assessment": "Both full proof trees, every rule citation, prefix and exercise formula remain exact.",
+      "translation_segment_sha256": "db10f56a6ca9f614a7d08a01fc3129b5f9d0ae86f1cabd3fea11c32d63d7cd9c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0464-S01",
+      "reverse_paraphrase": "Soundness interprets prefixes as worlds respecting one-step accessibility and proves that each rule preserves at least one satisfiable branch, hence derivability entails semantic consequence.",
+      "assessment": "All propositional, Box and Diamond cases remain. TA-NML-039 through TA-NML-043 repair the countermodel sign, two operand switches, a missing prefix and the final entailment conclusion.",
+      "translation_segment_sha256": "54380dfd2c0135821009133996c5a8d619b86be553bd5102f4a754761fe1a7e0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0465-S01",
+      "reverse_paraphrase": "Additional tableau rules capture reflexive, serial, symmetric, transitive and Euclidean accessibility, yielding the listed systems from T through S5.",
+      "assessment": "The full rule and logic tables, S5 proof tree and six exercises remain. TA-NML-044 identifies the worked tree by the formula it actually proves.",
+      "translation_segment_sha256": "172d195f74c42a5d168e0aba06a80a557104d6ade6f4032b9262e5b9486fbcf0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0466-S01",
+      "reverse_paraphrase": "Each additional rule preserves satisfiability in the corresponding class of reflexive, serial, symmetric, transitive or Euclidean models.",
+      "assessment": "All five paired Box/Diamond proofs and exercises remain. TA-NML-045 repairs both 4r evaluation points, and TA-NML-046 restores the false-Diamond conclusion.",
+      "translation_segment_sha256": "f1723717b9d321c55b2a72e264d79ab48afe9251135efb5c0c51de26ffcba7d8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0467-S01",
+      "reverse_paraphrase": "On universal S5 models, single positive integers suffice as prefixes because every world is accessible from every world; the simplified rules prove axiom 5.",
+      "assessment": "Both primitive-operator rule branches, used/new restrictions and the complete closed proof tree remain exact.",
+      "translation_segment_sha256": "525117971a78322fa567e35a10b6b8449ff1018af55b3f63ef92c70ace3e8f65",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0468-S01",
+      "reverse_paraphrase": "A systematic exhaustive expansion produces complete branches; an open complete branch induces a model whose worlds are prefixes, edges are one-step extensions and valuation records true atomic formulas.",
+      "assessment": "The definition, construction, truth lemma and completeness corollaries remain. TA-NML-047 through TA-NML-053 repair the prefixed examples, completion claim and three induction variables.",
+      "translation_segment_sha256": "88b79a0ad55c13db1e54182b5e5a9829020eaf526f6318bc64793ab192c12851",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0469-S01",
+      "reverse_paraphrase": "For K, exhaustive tableau expansion terminates and any open complete branch directly yields a finite countermodel from its prefixes, successor edges and true atomic formulas.",
+      "assessment": "Both Box-only and Diamond-only searches, all three stages of each tree and both diagrams remain. TA-NML-054 through TA-NML-058 repair the formula marker, false-Diamond expansion, root direction, q prefix and complete-search wording.",
+      "translation_segment_sha256": "e97fdca970befb9af8fd6e6004b7e6a501a5f7a6ea6558951d9ffed9b948b430",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -6802,11 +6922,39 @@
     {
       "unit_id": "OLP-0459",
       "issue": "The filtered-model obstruction names raw worlds instead of their classes, and the theorem lists symmetry, transitivity and Euclideanness while its numbered proof treats them as transitivity, Euclideanness and symmetry. Tamil uses class nodes and aligns the item order under TA-NML-035 and TA-NML-036."
+    },
+    {
+      "unit_id": "OLP-0460",
+      "issue": "The chapter driver retains a copied axioms-systems metadata comment although its path, identifier and imports all concern tableaux. Tamil aligns the metadata under TA-NML-037."
+    },
+    {
+      "unit_id": "OLP-0462",
+      "issue": "The Box-only counterexample derives F A from F Box A but cites the true-Box rule. Tamil cites the false-Box rule under TA-NML-038."
+    },
+    {
+      "unit_id": "OLP-0464",
+      "issue": "The soundness chapter makes a countermodel satisfy its conclusion, switches B to A in two modal expansions, omits one prefix, and repeats derivability where the contradiction establishes entailment. Tamil repairs these under TA-NML-039 through TA-NML-043."
+    },
+    {
+      "unit_id": "OLP-0465",
+      "issue": "The worked S5 tree proves Box A implies Box Diamond A but calls that formula axiom 5, which elsewhere is Diamond A implies Box Diamond A. Tamil names the formula actually proved under TA-NML-044."
+    },
+    {
+      "unit_id": "OLP-0466",
+      "issue": "Both 4r proofs evaluate at the ill-typed f(sigma).n, and the Diamond case initially states a true-Box conclusion inconsistent with its rule and remaining proof. Tamil uses f(sigma.n) and the false-Diamond conclusion under TA-NML-045 and TA-NML-046."
+    },
+    {
+      "unit_id": "OLP-0468",
+      "issue": "The completeness chapter has malformed prefixed-rule examples, calls every systematically expanded branch closed rather than complete, and repeats B where three induction cases require C. Tamil repairs these under TA-NML-047 through TA-NML-053."
+    },
+    {
+      "unit_id": "OLP-0469",
+      "issue": "The countermodel chapter drops one formula marker, reverses the sign and rule in a Diamond expansion, reverses one tree root, cites q at the wrong prefix, and calls two complete-tableau searches closed-tableau constructions. Tamil repairs these under TA-NML-054 through TA-NML-058."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "456 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 266 frozen units still require completion.",
+  "remaining": "466 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 256 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -7408,6 +7556,57 @@
         "S5_decision_search_is_universal_and_parallel": true,
         "C1_through_C4_and_four_preservation_claims_remain": true,
         "euclidean_obstruction_classes_and_proof_order_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0460",
+        "OLP-0461",
+        "OLP-0462",
+        "OLP-0463",
+        "OLP-0464",
+        "OLP-0465",
+        "OLP-0466",
+        "OLP-0467",
+        "OLP-0468",
+        "OLP-0469"
+      ],
+      "correction_ids": [
+        "TA-NML-037",
+        "TA-NML-038",
+        "TA-NML-039",
+        "TA-NML-040",
+        "TA-NML-041",
+        "TA-NML-042",
+        "TA-NML-043",
+        "TA-NML-044",
+        "TA-NML-045",
+        "TA-NML-046",
+        "TA-NML-047",
+        "TA-NML-048",
+        "TA-NML-049",
+        "TA-NML-050",
+        "TA-NML-051",
+        "TA-NML-052",
+        "TA-NML-053",
+        "TA-NML-054",
+        "TA-NML-055",
+        "TA-NML-056",
+        "TA-NML-057",
+        "TA-NML-058"
+      ],
+      "status": "pass",
+      "checks": {
+        "driver_imports_all_nine_sections_and_metadata_is_repaired": true,
+        "prefix_sequence_and_accessibility_meaning_remain": true,
+        "K_rules_preserve_all_connectives_and_used_new_restrictions": true,
+        "both_K_closed_tableaux_and_four_exercises_remain": true,
+        "prefix_interpretation_and_soundness_repairs_remain": true,
+        "additional_rule_table_and_actual_worked_formula_remain": true,
+        "all_five_additional_soundness_classes_and_4r_repairs_remain": true,
+        "simplified_S5_rules_and_axiom5_tableau_remain": true,
+        "complete_branch_model_and_truth_lemma_repairs_remain": true,
+        "both_countermodels_and_all_search_repairs_remain": true
       }
     }
   ]

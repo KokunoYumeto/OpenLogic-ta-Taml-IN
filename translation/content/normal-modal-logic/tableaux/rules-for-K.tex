@@ -1,0 +1,282 @@
+% SEGMENT OLP-0462-S01
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: rules-for-K
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{rul}
+
+\olsection{\Ax{K} க்கான விதிகள்}
+
+வழக்கமான கூற்றுத் தருக்க இணைப்பிகளுக்கான விதிகள், முன்னொட்டுகள்
+சேர்க்கப்பட்டிருப்பதைத் தவிர, வழக்கமான கூற்றுத் தருக்கக் குறியிட்ட
+!!{tableau}s க்கான விதிகளைப் போன்றவையே. ஒவ்வொரு நேர்விலும், குறியிட்ட
+!!{formula}~$\sFmla{S}{!A}[\sigma]$ க்குப் பயன்படுத்தப்படும் விதி,
+~$\sigma$ வையே முன்னொட்டாகக் கொண்ட புதிய !!{formula}s ஐ உருவாக்குகிறது.
+இது உள்ளுணர்வின்படி தெளிவாக இருக்க வேண்டும்: எடுத்துக்காட்டாக, $!A \land
+!B$ ஆனது~$\sigma$ பெயரிடும் ஓர் உலகில் மெய் எனில், $!A$ உம் $!B$ உம்
+~$\sigma$ வில் மெய் (வேறெந்த உலகிலும் என்று இதனால் பொருளல்ல). கூற்றுத்
+தருக்க விதிகளை \olref{tab:prop-rules} இல் தொகுத்துள்ளோம்.
+
+\begin{table}
+  \[\def\arraystretch{3}\begin{array}{|c|c|}
+    \hline
+    \AxiomC{\sFmla{\True}{\lnot !A}[\sigma]}
+    \RightLabel{\TRule{\True}{\lnot}}
+    \UnaryInfC{\sFmla{\False}{!A}[\sigma]}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{\lnot !A}[\sigma]}
+    \RightLabel{\TRule{\False}{\lnot}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma]}
+    \DisplayProof
+    \\[1ex]
+    \hline
+    \AxiomC{\sFmla{\True}{!A \land !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\land}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma]}
+    \noLine
+    \UnaryInfC{\sFmla{\True}{!B}[\sigma]}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \land !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\land}}
+    \UnaryInfC{$\sFmla{\False}{!A}[\sigma] \quad \mid \quad
+      \sFmla{\False}{!B}[\sigma]$}
+    \DisplayProof
+    \\[2ex]
+    \hline
+    \AxiomC{\sFmla{\True}{!A \lor !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\lor}}
+    \UnaryInfC{$\sFmla{\True}{!A}[\sigma] \quad \mid \quad
+      \sFmla{\True}{!B}[\sigma]$}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \lor !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\lor}}
+    \UnaryInfC{\sFmla{\False}{!A}[\sigma]}
+    \noLine
+    \UnaryInfC{\sFmla{\False}{!B}[\sigma]}
+    \DisplayProof
+    \\[2ex]
+    \hline
+    \AxiomC{\sFmla{\True}{!A \lif !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\lif}}
+    \UnaryInfC{$\sFmla{\False}{!A}[\sigma] \quad \mid
+      \quad \sFmla{\True}{!B}[\sigma]$}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \lif !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\lif}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma]}
+    \noLine
+    \UnaryInfC{\sFmla{\False}{!B}[\sigma]}
+    \DisplayProof
+    \\[2ex]
+    \hline
+  \end{array}\]
+  \caption{கூற்றுத் தருக்க இணைப்பிகளுக்கான முன்னொட்டுள்ள
+    !!{tableau} விதிகள்}
+  \ollabel{tab:prop-rules}
+\end{table}
+
+மூடல் நிபந்தனை வழக்கமான !!{tableau}s க்கானதைப் போன்றதே; ஆனால்
+!!{formula}s மட்டுமல்லாமல் முன்னொட்டுகளும் பொருந்த வேண்டும் என்று
+கோருகிறோம். எனவே, ஏதோ ஒரு முன்னொட்டு~$\sigma$ விற்கும் !!{formula}~$!A$
+க்கும் ஒரு கிளை பின்வரும் இரண்டையும் கொண்டிருந்தால் அது மூடியது:
+\[
+\sFmla{\True}{!A}[\sigma] \quad\text{மற்றும்}\quad
+\sFmla{\False}{!A}[\sigma]
+\]
+
+எடுகோள்களை அமைப்பதற்கான விதிகளும் வழக்கமான !!{tableau}s க்கானதைப்
+போன்றவையே; ஆனால் எடுகோள்களுக்கு எப்போதும் முன்னொட்டு~$1$ ஐப்
+பயன்படுத்துகிறோம். (எல்லா எடுகோள்களுக்கும் ஒரே முன்னொட்டைப் பயன்படுத்தும்
+வரை, எந்த முன்னொட்டைப் பயன்படுத்துகிறோம் என்பது பொருட்டல்ல.) ஆகவே,
+எடுத்துக்காட்டாக,
+\[
+!B_1, \dots, !B_n \Proves !A
+\]
+என்று கூறுவது, பின்வரும் எடுகோள்களுக்கு ஒரு மூடிய அட்டவணை மரம் உள்ளது
+என்று பொருள்:
+\[
+\sFmla{\True}{!B_1}[1], \dots, \sFmla{\True}{!B_n}[1],
+\sFmla{\False}{!A}[1].
+\]
+
+வாய்ப்புநிலைச் செய்கை\iftag{prvBox}{\iftag{prvDiamond}{களான~$\Box$
+    மற்றும்}{யான~$\Box$}}{}\iftag{prvDiamond}{~$\Diamond$}{} க்கு,
+முன்னொட்டு~$\sigma$ கொண்ட !!a{formula}விற்குப் பயன்படுத்தப்படும் விதியின்
+முடிவுரை $\sigma.n$ என்ற முன்னொட்டைக் கொண்டிருக்கும். ஆனால் எந்த~$n$
+அனுமதிக்கப்படுகிறது என்பது குறி~$\True$ ஆ அல்லது~$\False$ ஆ என்பதைப்
+பொறுத்தது.
+
+\iftag{prvBox}{$\TRule{\True}{\Box}$ விதி,
+  $\sFmla{\True}{\Box !A}[\sigma]$ ஐக் கொண்ட கிளையை
+  $\sFmla{\True}{!A}[\sigma.n]$ ஆல் நீட்டிக்கிறது.\iftag{prvDiamond}{
+    அதேபோல், }{}}{}\iftag{prvDiamond}{$\TRule{\False}{\Diamond}$ விதி,
+  $\sFmla{\False}{\Diamond !A}[\sigma]$ ஐக் கொண்ட கிளையை
+  $\sFmla{\False}{!A}[\sigma.n]$ ஆல் நீட்டிக்கிறது.}{}
+\iftag{notprvBox,notprvDiamond}{இவ்விதியை}{இவ்விதிகளை} அது பயன்படுத்தப்படும்
+கிளையில் \emph{ஏற்கெனவே} இடம்பெறும் முன்னொட்டு~$\sigma.n$ க்கு மட்டுமே
+பயன்படுத்தலாம். அத்தகைய முன்னொட்டை அந்தக் கிளையில் ``பயன்படுத்தப்பட்ட''
+முன்னொட்டு என்று அழைப்போம்.
+
+\iftag{prvBox}{$\TRule{\False}{\Box}$ விதி,
+  $\sFmla{\False}{\Box !A}[\sigma]$ ஐக் கொண்ட கிளையை
+  $\sFmla{\False}{!A}[\sigma.n]$ ஆல் நீட்டிக்கிறது.\iftag{prvDiamond}{
+    அதேபோல், }{}}{}\iftag{prvDiamond}{$\TRule{\True}{\Diamond}$ விதி,
+  $\sFmla{\True}{\Diamond !A}[\sigma]$ ஐக் கொண்ட கிளையை
+  $\sFmla{\True}{!A}[\sigma.n]$ ஆல் நீட்டிக்கிறது.}{}
+ஆனால் \iftag{notprvBox,notprvDiamond}{இவ்விதியை}{இவ்விதிகளை}, அது
+பயன்படுத்தப்படும் கிளையில் \emph{ஏற்கெனவே இடம்பெறாத} முன்னொட்டு~$\sigma.n$ க்கு
+மட்டுமே பயன்படுத்தலாம். அத்தகைய முன்னொட்டுகளை அந்தக் கிளைக்குப் ``புதிய''
+முன்னொட்டுகள் என்று அழைக்கிறோம்.
+
+விதிகள் \olref{tab:rules-K} இல் கொடுக்கப்பட்டுள்ளன.
+
+\begin{table}
+  \begin{center}
+    \def\arraystretch{3}\def\fCenter{}
+    \begin{tabular}{|c|c|}
+    \hline
+    \iftag{prvBox}{
+      \AxiomC{\sFmla{\True}{\Box !A}[\sigma]}
+      \RightLabel{\TRule{\True}{\Box}}
+      \UnaryInfC{\sFmla{\True}{!A}[\sigma.n]}
+      \DisplayProof
+      &
+      \AxiomC{\sFmla{\False}{\Box !A}[\sigma]}
+      \RightLabel{\TRule{\False}{\Box}}
+      \UnaryInfC{\sFmla{\False}{!A}[\sigma.n]}
+      \DisplayProof\\
+      $\sigma.n$ பயன்படுத்தப்பட்டது & $\sigma.n$ புதியது
+      \\[1ex]
+      \hline}{}
+    \iftag{prvDiamond}{
+      \AxiomC{\sFmla{\True}{\Diamond !A}[\sigma]}
+      \RightLabel{\TRule{\True}{\Diamond}}
+      \UnaryInfC{\sFmla{\True}{!A}[\sigma.n]}
+      \DisplayProof
+      &
+      \AxiomC{\sFmla{\False}{\Diamond !A}[\sigma]}
+      \RightLabel{\TRule{\False}{\Diamond}}
+      \UnaryInfC{\sFmla{\False}{!A}[\sigma.n]}
+      \DisplayProof\\
+      $\sigma.n$ புதியது & $\sigma.n$ பயன்படுத்தப்பட்டது
+      \\[1ex]
+      \hline}{}
+    \end{tabular}
+  \end{center}
+  \caption{\Ax{K} க்கான வாய்ப்புநிலை விதிகள்.}
+  \ollabel{tab:rules-K}
+\end{table}
+
+\iftag{prvBox}{\TRule{\True}{\Box}}{\TRule{\False}{\Diamond}} க்கான
+முன்னொட்டு பயன்படுத்தப்பட்டதாக இருக்க வேண்டும் என்ற கட்டுப்பாடு அவசியம்.
+இல்லையெனில், பின்வருவதை ஒரு மூடிய !!{tableau}வாகக் கணக்கிட நேரிடும்:
+\iftag{notprvBox,notprvDiamond}{%
+  \iftag{prvBox}{%
+  \begin{oltableau}
+    [\pFmla{\True}{\Box \formula{A}}{1}, just = \TAss
+      [\pFmla{\False}{\lnot\Box\lnot \formula{A}}{1}, just = \TAss
+        [\pFmla{\True}{\formula{A}}{1.1}, just = {\TRule{\True}{\Box}[1]}
+          [\pFmla{\True}{\Box\lnot\formula{A}}{1},
+            just ={\TRule{\False}{\lnot}[2]}
+            [\pFmla{\True}{\lnot\formula{A}}{1.1},
+              just = {\TRule{\True}{\Box}[4]}
+              [\pFmla{\False}{\formula{A}}{1.1},
+                  just ={\TRule{\True}{\lnot}[5]}, close]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  }{
+  \begin{oltableau}
+    [\pFmla{\True}{\lnot\Diamond\lnot \formula{A}}{1}, just = \TAss
+      [\pFmla{\False}{\Diamond\formula{A}}{1}, just = \TAss
+        [\pFmla{\False}{\formula{A}}{1.1}, just = {\TRule{\False}{\Diamond}[2]}
+          [\pFmla{\False}{\Diamond\lnot\formula{A}}{1},
+            just ={\TRule{\True}{\lnot}[1]}
+            [\pFmla{\False}{\lnot\formula{A}}{1.1},
+              just = {\TRule{\False}{\Diamond}[4]}
+              [\pFmla{\True}{\formula{A}}{1.1},
+                  just ={\TRule{\True}{\lnot}[5]}, close]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+}}{
+  \begin{oltableau}
+    [\pFmla{\True}{\Box \formula{A}}{1}, just = \TAss
+      [\pFmla{\False}{\Diamond \formula{A}}{1}, just = \TAss
+        [\pFmla{\True}{\formula{A}}{1.1}, just = {\TRule{\True}{\Box}[1]}
+          [\pFmla{\False}{\formula{A}}{1.1},
+            just = {\TRule{\False}{\Diamond}[2]}, close]
+        ]
+      ]
+    ]
+\end{oltableau}}
+
+ஆனால் $\Box \formula{A} \Entails/ \Diamond \formula{A}$; ஆகவே நமது
+நிறுவல் முறைமை சரித்தன்மையற்றதாகிவிடும். அதேபோல், $\Diamond \formula{A}
+\Entails/ \Box \formula{A}$; ஆனால்
+\iftag{prvBox}{\TRule{\False}{\Box}}{\TRule{\True}{\Diamond}} க்கான
+முன்னொட்டு புதியதாக இருக்க வேண்டும் என்ற கட்டுப்பாடு இல்லையெனில், இது ஒரு
+மூடிய அட்டவணை மரமாகிவிடும்: \iftag{notprvBox,notprvDiamond}{%
+  \iftag{prvBox}{%
+  \begin{oltableau}
+    [\pFmla{\True}{\lnot\Box\lnot \formula{A}}{1}, just = \TAss
+      [\pFmla{\False}{\Box \formula{A}}{1}, just = \TAss
+        [\pFmla{\False}{\formula{A}}{1.1},
+          % SOURCE CORRECTION TA-NML-038: line 3 uses the false-box rule from line 2.
+          just = {\TRule{\False}{\Box}[2]}
+          [\pFmla{\False}{\Box\lnot\formula{A}}{1},
+            just ={\TRule{\True}{\lnot}[1]}
+            [\pFmla{\False}{\lnot\formula{A}}{1.1},
+              just = {\TRule{\False}{\Box}[4]}
+              [\pFmla{\True}{\formula{A}}{1.1},
+                  just ={\TRule{\False}{\lnot}[5]}, close]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+  }{
+  \begin{oltableau}
+    [\pFmla{\True}{\Diamond \formula{A}}{1}, just = \TAss
+      [\pFmla{\False}{\lnot\Diamond\lnot\formula{A}}{1}, just = \TAss
+        [\pFmla{\True}{\formula{A}}{1.1}, just = {\TRule{\True}{\Diamond}[1]}
+          [\pFmla{\True}{\Diamond\lnot\formula{A}}{1},
+            just ={\TRule{\False}{\lnot}[2]}
+            [\pFmla{\True}{\lnot\formula{A}}{1.1},
+              just = {\TRule{\True}{\Diamond}[4]}
+              [\pFmla{\False}{\formula{A}}{1.1},
+                  just ={\TRule{\True}{\lnot}[5]}, close]
+            ]
+          ]
+        ]
+      ]
+    ]
+  \end{oltableau}
+}}{
+  \begin{oltableau}
+    [\pFmla{\True}{\Diamond \formula{A}}{1}, just = \TAss,name=one
+      [\pFmla{\False}{\Box \formula{A}}{1}, just = \TAss, name=two
+        [\pFmla{\True}{\formula{A}}{1.1}, just = {\TRule{\True}{\Diamond}[1]}
+          [\pFmla{\False}{\formula{A}}{1.1},
+            just = {\TRule{\False}{\Box}[2]}, close]
+        ]
+      ]
+    ]
+  \end{oltableau}}
+
+\end{document}

@@ -1,0 +1,175 @@
+{
+  "batch_id": "TA-B209",
+  "units": [
+    {
+      "unit_id": "OLP-0469",
+      "source_sha256": "c47ac240cc48f6e82093505895045e59de1a1f034b7e377086c5b53944d744bd",
+      "translation_sha256": "aa7ffba6728bafa72bf781f4c0bca3f1fd6c8b30a751215ac0197f23e21b71d0",
+      "source_bytes": 12874,
+      "translation_bytes": 19571,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Entails/A$",
+        "$\\TRule{\\True}{\\Diamond}$",
+        "$\\sFmla{\\True}{q}[1.1]$",
+        "$\\sFmla{\\True}{\\Diamond(p\\landq)}[1]$"
+      ],
+      "extra_math": [
+        "$\\Entails/!A$",
+        "$\\TRule{\\False}{\\Diamond}$",
+        "$\\sFmla{\\False}{\\Diamond(p\\landq)}[1]$",
+        "$\\sFmla{\\True}{q}[1.2]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "above",
+        "align",
+        "checked",
+        "close",
+        "cpl",
+        "include",
+        "just",
+        "label",
+        "left",
+        "logic",
+        "modal",
+        "notprvBox",
+        "notprvDiamond",
+        "open",
+        "right",
+        "section",
+        "world"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-054",
+          "unit_id": "OLP-0469",
+          "kind": "countermodel-condition-omits-formula-marker",
+          "action": "Restored the formula marker on A in the non-entailment condition.",
+          "expected_missing_math": [
+            "$\\Entails/A$"
+          ],
+          "expected_extra_math": [
+            "$\\Entails/!A$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The preceding and following occurrences use metavariable !A, but this condition writes bare A.",
+          "chosen_treatment": "தமிழ் பின்விளையாமை நிபந்தனையில்~$!A$ என்ற வாய்பாட்டு மாறியையே பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating bare A as a different object in one sentence.",
+          "rationale": "The decision procedure constructs a countermodel to the same formula !A throughout.",
+          "precise_review_question": "Does the non-entailment condition use !A consistently?",
+          "location_needle": "SOURCE CORRECTION TA-NML-054"
+        },
+        {
+          "audit_id": "TA-NML-055",
+          "unit_id": "OLP-0469",
+          "kind": "diamond-countermodel-prose-reverses-line-3-sign-and-rule",
+          "action": "Changed the line-3 description from true Diamond and the true-Diamond rule to false Diamond and the false-Diamond rule.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{\\Diamond(p\\landq)}[1]$",
+            "$\\TRule{\\True}{\\Diamond}$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{\\Diamond(p\\landq)}[1]$",
+            "$\\TRule{\\False}{\\Diamond}$"
+          ],
+          "expected_missing_commands": [
+            "\\True",
+            "\\True"
+          ],
+          "expected_extra_commands": [
+            "\\False",
+            "\\False"
+          ],
+          "source_issue_or_choice": "Line 3 in every displayed tree is F Diamond(p and q), and its used-prefix expansion produces F(p and q), but the intervening prose calls it T Diamond and applies the new-prefix T-Diamond rule.",
+          "chosen_treatment": "தமிழ் வரி 3 ஐப் பொய்க்குறியிட்ட வைர வாய்பாடாகக் கொண்டு, பொய்-வைர விதியைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Changing all displayed trees and the intended countermodel search to the true-Diamond rule.",
+          "rationale": "The false-Diamond rule must be applied once at every used successor prefix, exactly producing lines 8 and 9.",
+          "precise_review_question": "Do the prose sign and rule now match line 3 and its two generated conclusions?",
+          "location_needle": "SOURCE CORRECTION TA-NML-055"
+        },
+        {
+          "audit_id": "TA-NML-056",
+          "unit_id": "OLP-0469",
+          "kind": "middle-diamond-tableau-reverses-root-implication",
+          "action": "Restored the original implication direction at the root of the middle tableau.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Only the middle tableau switches its root to Diamond(p and q) implies (Diamond p and Diamond q), while every descendant, the first and third trees, and the countermodel all concern the reverse implication.",
+          "chosen_treatment": "தமிழ் மூன்று மரங்களிலும் ஒரே மூல வாய்பாட்டை வைத்துள்ளது.",
+          "alternatives_considered": "Rebuilding every descendant and changing the example to the valid reverse implication.",
+          "rationale": "The tableau is one successive construction, so its unchanged lines must retain the same root assumption.",
+          "precise_review_question": "Do all three diamond tableaux now begin with the same implication?",
+          "location_needle": "SOURCE CORRECTION TA-NML-056"
+        },
+        {
+          "audit_id": "TA-NML-057",
+          "unit_id": "OLP-0469",
+          "kind": "diamond-countermodel-q-justification-cites-wrong-prefix",
+          "action": "Changed the cited line-7 signed formula from q at 1.1 to q at 1.2.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{q}[1.1]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{q}[1.2]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The assignment is V(q)={1.2}, line 7 visibly contains T q at 1.2, and the model diagram makes q true at 1.2, but the prose cites 1.1.",
+          "chosen_treatment": "தமிழ் வரி 7 ஐ~$\\sFmla{\\True}{q}[1.2]$ எனத் துல்லியமாக மேற்கோள்கிறது.",
+          "alternatives_considered": "Changing the valuation, tableau line and diagram to 1.1.",
+          "rationale": "The open branch makes p true at 1.1 and q true at 1.2, which is the intended countermodel.",
+          "precise_review_question": "Does the V(q) explanation now cite q at prefix 1.2?",
+          "location_needle": "SOURCE CORRECTION TA-NML-057"
+        },
+        {
+          "audit_id": "TA-NML-058",
+          "unit_id": "OLP-0469",
+          "kind": "countermodel-search-called-closed-tableau-construction",
+          "action": "Changed both descriptions of the systematic search from construction of a closed tableau to construction of a complete tableau.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Both examples start from underivable formulas and intentionally end with an open complete branch, so their prescribed search cannot be a construction of a closed tableau.",
+          "chosen_treatment": "தமிழ் இரு இடங்களிலும் முழுமையான அட்டவணை மரத்தின் கட்டமைப்பு எனக் கூறுகிறது.",
+          "alternatives_considered": "Calling the open trees closed; changing both examples to derivable formulas.",
+          "rationale": "The completeness procedure searches exhaustively; closure is one possible outcome, while these examples exhibit the open complete outcome.",
+          "precise_review_question": "Are both systematic searches now described as complete-tableau constructions?",
+          "location_needle": "SOURCE CORRECTION TA-NML-058"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\True",
+        "\\True"
+      ],
+      "extra_commands": [
+        "\\False",
+        "\\False"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

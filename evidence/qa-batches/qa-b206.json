@@ -1,0 +1,188 @@
+{
+  "batch_id": "TA-B206",
+  "units": [
+    {
+      "unit_id": "OLP-0465",
+      "source_sha256": "1763d19e944f908c2890c6918b0197280a38ce9932867b28f563a7140b6d9c48",
+      "translation_sha256": "ac76cf9efacfd747d157bcd430bcd6dee419cb2880278f81f59dfdcef558b6ad",
+      "source_bytes": 6040,
+      "translation_bytes": 7557,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Log{S5}\\Proves\\Ax{5}$",
+        "$\\Box!A\\lif\\Box\\Diamond!A$"
+      ],
+      "extra_math": [
+        "$\\Log{S5}\\Proves\\Box!A\\lif\\Box\\Diamond!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "close",
+        "include",
+        "just",
+        "logic",
+        "notprvBox",
+        "notprvDiamond",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-044",
+          "unit_id": "OLP-0465",
+          "kind": "worked-tableau-misidentified-as-axiom-5",
+          "action": "Described the worked tableau as proving its displayed formula Box A implies Box Diamond A, rather than calling that different formula axiom 5.",
+          "expected_missing_math": [
+            "$\\Log{S5}\\Proves\\Ax{5}$",
+            "$\\Box!A\\lif\\Box\\Diamond!A$"
+          ],
+          "expected_extra_math": [
+            "$\\Log{S5}\\Proves\\Box!A\\lif\\Box\\Diamond!A$"
+          ],
+          "expected_missing_commands": [
+            "\\Ax"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Axiom 5 is Diamond A implies Box Diamond A throughout the book, while both the tableau root and the following displayed formula use Box A implies Box Diamond A.",
+          "chosen_treatment": "தமிழ் எடுத்துக்காட்டு அட்டவணை மரம் உண்மையில் நிறுவும் காட்டப்பட்ட வாய்பாட்டையே பெயரிடுகிறது.",
+          "alternatives_considered": "Calling the displayed formula axiom 5; replacing the root and rebuilding the proof of actual axiom 5.",
+          "rationale": "The existing proof tree is valid for the displayed S5 theorem; correcting its description preserves the proof while avoiding a false axiom identification.",
+          "precise_review_question": "Does the prose now name exactly the formula at the tableau root without identifying it as axiom 5?",
+          "location_needle": "SOURCE CORRECTION TA-NML-044"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Ax"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0466",
+      "source_sha256": "8c68f92959ba86967753495c186b9f49a3da00247457511f5527e72e5a9eb936",
+      "translation_sha256": "5f8345299d81a132de22dfd9b44102b4c54d352150ce058ef6f15002fcd4bd7c",
+      "source_bytes": 9384,
+      "translation_bytes": 16035,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\sFmla{\\True}{\\Box!B}[\\sigma]$",
+        "$\\mSat{M}{\\Box!B}[f(\\sigma).n]$",
+        "$\\mSat/{M}{\\Diamond!B}[f(\\sigma).n]$"
+      ],
+      "extra_math": [
+        "$\\mSat{M}{\\Box!B}[f(\\sigma.n)]$",
+        "$\\mSat/{M}{\\Diamond!B}[f(\\sigma.n)]$",
+        "$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "formula",
+        "include",
+        "logic",
+        "mru",
+        "msn",
+        "nml",
+        "notprvBox",
+        "notprvDiamond",
+        "open",
+        "probBox",
+        "probDiamond",
+        "prvBox",
+        "prvDiamond",
+        "section",
+        "signed",
+        "tab"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-045",
+          "unit_id": "OLP-0466",
+          "kind": "4r-soundness-evaluates-at-value-dot-n",
+          "action": "Changed both 4r proof evaluations from the ill-typed f(sigma).n to f(sigma.n).",
+          "expected_missing_math": [
+            "$\\mSat{M}{\\Box!B}[f(\\sigma).n]$",
+            "$\\mSat/{M}{\\Diamond!B}[f(\\sigma).n]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat{M}{\\Box!B}[f(\\sigma.n)]$",
+            "$\\mSat/{M}{\\Diamond!B}[f(\\sigma.n)]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The prefix interpretation f maps the whole prefix sigma.n to a world; appending .n to the world value f(sigma) is undefined.",
+          "chosen_treatment": "தமிழ் இரு 4r நிறுவல்களிலும்~$f(\\sigma.n)$ என்ற முன்னொட்டின் பொருள்கோள் மதிப்பைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating model worlds as sequences without any stated structure; changing the definition of prefix interpretation.",
+          "rationale": "The premise is evaluated at prefix sigma.n and the definition supplies exactly the world f(sigma.n).",
+          "precise_review_question": "Do both 4r cases evaluate their premises at f(sigma.n)?",
+          "location_needle": "SOURCE CORRECTION TA-NML-045"
+        },
+        {
+          "audit_id": "TA-NML-046",
+          "unit_id": "OLP-0466",
+          "kind": "4r-diamond-proof-states-wrong-conclusion",
+          "action": "Changed the described 4r-Diamond conclusion from true Box B to false Diamond B at sigma.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{\\Box!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$"
+          ],
+          "expected_missing_commands": [
+            "\\True",
+            "\\Box"
+          ],
+          "expected_extra_commands": [
+            "\\False",
+            "\\Diamond"
+          ],
+          "source_issue_or_choice": "The displayed 4r-Diamond rule and the end of the same proof both conclude F Diamond B at sigma, but the opening description instead says T Box B.",
+          "chosen_treatment": "தமிழ் 4r வைர விதியின் முடிவுரையை~$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$ என ஒருமைப்படுத்துகிறது.",
+          "alternatives_considered": "Changing the rule table and the proof's semantic argument to an unrelated true-box conclusion.",
+          "rationale": "Euclideanness transfers failure of Diamond B from sigma.n back to sigma, exactly as the remaining proof shows.",
+          "precise_review_question": "Does the opening conclusion of the 4r-Diamond proof now match its displayed rule and final sentence?",
+          "location_needle": "SOURCE CORRECTION TA-NML-046"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Box",
+        "\\True"
+      ],
+      "extra_commands": [
+        "\\Diamond",
+        "\\False"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

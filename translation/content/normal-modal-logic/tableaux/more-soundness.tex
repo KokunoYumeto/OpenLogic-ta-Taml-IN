@@ -1,0 +1,244 @@
+% SEGMENT OLP-0466-S01
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: more-soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{msn}
+
+\olsection{கூடுதல் விதிகளுக்கான சரித்தன்மை}
+
+ஒரு வகுப்பு மாதிரிகளிலுள்ள ஏதேனும் ஒரு மாதிரியில் !!a{tableau}வின் ஒரு கிளை
+நிறைவுறத்தக்கதாக இருக்கும்போதெல்லாம், அந்த விதியைப் பயன்படுத்துவதால் கிடைக்கும்
+கிளையும் அவ்வகுப்பு மாதிரிகளிலுள்ள ஒரு மாதிரியில் நிறைவுறத்தக்கதாக இருந்தால்,
+அந்த விதி அவ்வகுப்பு மாதிரிகளுக்குச் சரியானது என்கிறோம்.
+
+\begin{prop}
+  \ollabel{prop:soundness-T}
+  \iftag{prvBox}{\Ax{T}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ மற்றும் }%
+  \iftag{prvDiamond}{\Ax{T}$\Diamond$}{}
+  \iftag{notprvBox,notprvDiamond}{விதி}{விதிகள்}
+  தற்சுட்டு மாதிரிகளுக்குச் சரியானவை.
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{$\sFmla{\True}{\Box !B}[\sigma] \in \Gamma$ க்கு
+  T$\Box$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probBox}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\True}{!B}[\sigma]$ ஐ விளைவிக்கிறது.
+    $\mSat{M}{\Gamma}[f]$, குறிப்பாக $\mSat{M}{\Box
+      !B}[f(\sigma)]$, என்க. $R$ தற்சுட்டுப் பண்புடையதால்,
+    $Rf(\sigma)f(\sigma)$ என்று அறிவோம். எனவே
+    $\mSat{M}{!B}[f(\sigma)]$; அதாவது $\mModel{M}, f$ ஆனது
+    $\sFmla{\True}{!B}[\sigma]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\tagitem{prvDiamond}{$\sFmla{\False}{\Diamond !B}[\sigma] \in \Gamma$
+  க்கு T$\Diamond$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probDiamond}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\False}{!B}[\sigma]$ ஐ விளைவிக்கிறது.
+    $\mSat{M}{\Gamma}[f]$, குறிப்பாக $\mSat/{M}{\Diamond
+      !B}[f(\sigma)]$, என்க. $R$ தற்சுட்டுப் பண்புடையதால்,
+    $Rf(\sigma)f(\sigma)$ என்று அறிவோம். எனவே
+    $\mSat/{M}{!B}[f(\sigma)]$; அதாவது $\mModel{M}, f$ ஆனது
+    $\sFmla{\False}{!B}[\sigma]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-T} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\begin{prop}
+  \ollabel{prop:soundness-D}
+  \iftag{prvBox}{\Ax{D}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ மற்றும் }%
+  \iftag{prvDiamond}{\Ax{D}$\Diamond$}{}
+  \iftag{notprvBox,notprvDiamond}{விதி}{விதிகள்}
+  தொடர் பண்புள்ள மாதிரிகளுக்குச் சரியானவை.
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{$\sFmla{\True}{\Box !B}[\sigma] \in \Gamma$ க்கு
+  D$\Box$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probBox}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\True}{\Diamond !B}[\sigma]$ ஐ
+    விளைவிக்கிறது. $\mSat{M}{\Gamma}[f]$, குறிப்பாக
+    $\mSat{M}{\Box !B}[f(\sigma)]$, என்க. $R$ தொடர் பண்புடையதால்,
+    $Rf(\sigma)w$ ஆகுமாறு ஒரு $w \in W$ உள்ளது. அப்போது
+    $\mSat{M}{!B}[w]$; எனவே $\mSat{M}{\Diamond !B}[f(\sigma)]$.
+    ஆகவே $\mModel{M}, f$ ஆனது
+    $\sFmla{\True}{\Diamond!B}[\sigma]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\tagitem{prvDiamond}{$\sFmla{\False}{\Diamond !B}[\sigma] \in \Gamma$
+  க்கு D$\Diamond$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probDiamond}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\False}{\Box !B}[\sigma]$ ஐ விளைவிக்கிறது.
+    $\mSat{M}{\Gamma}[f]$, குறிப்பாக
+    $\mSat/{M}{\Diamond !B}[f(\sigma)]$, என்க. $R$ தொடர் பண்புடையதால்,
+    $Rf(\sigma)w$ ஆகுமாறு ஒரு $w \in W$ உள்ளது. அப்போது
+    $\mSat/{M}{!B}[w]$; எனவே $\mSat/{M}{\Box !B}[f(\sigma)]$.
+    ஆகவே $\mModel{M}, f$ ஆனது
+    $\sFmla{\False}{\Box!B}[\sigma]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-D} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\begin{prop}
+  \ollabel{prop:soundness-B}
+  \iftag{prvBox}{\Ax{B}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ மற்றும் }%
+  \iftag{prvDiamond}{\Ax{B}$\Diamond$}{}
+  \iftag{notprvBox,notprvDiamond}{விதி}{விதிகள்}
+  சமச்சீரான மாதிரிகளுக்குச் சரியானவை.
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{$\sFmla{\True}{\Box !B}[\sigma.n] \in \Gamma$ க்கு
+  B$\Box$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probBox}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\True}{!B}[\sigma]$ ஐ விளைவிக்கிறது.
+    $\mSat{M}{\Gamma}[f]$, குறிப்பாக $\mSat{M}{\Box
+      !B}[f(\sigma.n)]$, என்க. $f$ ஆனது கிளையிலுள்ள முன்னொட்டுகளை
+    $\mModel{M}$ இல் பொருள்கொள்ளும் பொருள்கோள் என்பதால்,
+    $Rf(\sigma)f(\sigma.n)$ என்று அறிவோம். $R$ சமச்சீரானதால்,
+    $Rf(\sigma.n)f(\sigma)$. $\mSat{M}{\Box !B}[f(\sigma.n)]$
+    என்பதால், $\mSat{M}{!B}[f(\sigma)]$. எனவே $\mModel{M}, f$ ஆனது
+    $\sFmla{\True}{!B}[\sigma]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\tagitem{prvDiamond}{$\sFmla{\False}{\Diamond !B}[\sigma.n] \in
+  \Gamma$ க்கு B$\Diamond$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probDiamond}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\False}{!B}[\sigma]$ ஐ விளைவிக்கிறது.
+    $\mSat{M}{\Gamma}[f]$, குறிப்பாக $\mSat/{M}{\Diamond
+      !B}[f(\sigma.n)]$, என்க. $f$ ஆனது கிளையிலுள்ள முன்னொட்டுகளை
+    $\mModel{M}$ இல் பொருள்கொள்ளும் பொருள்கோள் என்பதால்,
+    $Rf(\sigma)f(\sigma.n)$ என்று அறிவோம். $R$ சமச்சீரானதால்,
+    $Rf(\sigma.n)f(\sigma)$. $\mSat/{M}{\Diamond !B}[f(\sigma.n)]$
+    என்பதால், $\mSat/{M}{!B}[f(\sigma)]$. எனவே $\mModel{M}, f$ ஆனது
+    $\sFmla{\False}{!B}[\sigma]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-B} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\begin{prop}
+  \ollabel{prop:soundness-4}
+  \iftag{prvBox}{\Ax{4}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ மற்றும் }%
+  \iftag{prvDiamond}{\Ax{4}$\Diamond$}{}
+  \iftag{notprvBox,notprvDiamond}{விதி}{விதிகள்}
+  கடத்தும் மாதிரிகளுக்குச் சரியானவை.
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{$\sFmla{\True}{\Box !B}[\sigma] \in \Gamma$ க்கு
+  4$\Box$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probBox}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\True}{\Box!B}[\sigma.n]$ ஐ விளைவிக்கிறது.
+    $\mSat{M}{\Gamma}[f]$, குறிப்பாக
+    $\mSat{M}{\Box !B}[f(\sigma)]$, என்க. $f$ ஆனது கிளையிலுள்ள
+    முன்னொட்டுகளை~$\mModel{M}$ இல் பொருள்கொள்ளும் பொருள்கோளாகவும்
+    $\sigma.n$ பயன்படுத்தப்பட்டதாக இருக்க வேண்டியதாகவும் இருப்பதால்,
+    $Rf(\sigma)f(\sigma.n)$ என்று அறிவோம். இப்போது
+    $Rf(\sigma.n)w$ ஆகும் ஏதேனும் ஓர் உலகம்~$w$ ஐக் கொள்க. $R$
+    கடத்துவதால், $Rf(\sigma)w$. $\mSat{M}{\Box !B}[f(\sigma)]$
+    என்பதால், $\mSat{M}{!B}[w]$. எனவே
+    $\mSat{M}{\Box !B}[f(\sigma.n)]$; மேலும் $\mModel{M}, f$ ஆனது
+    $\sFmla{\True}{\Box !B}[\sigma.n]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\tagitem{prvDiamond}{$\sFmla{\False}{\Diamond !B}[\sigma] \in
+  \Gamma$ க்கு 4$\Diamond$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probDiamond}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\False}{\Diamond!B}[\sigma.n]$ ஐ
+    விளைவிக்கிறது. $\mSat{M}{\Gamma}[f]$, குறிப்பாக
+    $\mSat/{M}{\Diamond !B}[f(\sigma)]$, என்க. $f$ ஆனது கிளையிலுள்ள
+    முன்னொட்டுகளை~$\mModel{M}$ இல் பொருள்கொள்ளும் பொருள்கோளாகவும்
+    $\sigma.n$ பயன்படுத்தப்பட்டதாக இருக்க வேண்டியதாகவும் இருப்பதால்,
+    $Rf(\sigma)f(\sigma.n)$ என்று அறிவோம். இப்போது
+    $Rf(\sigma.n)w$ ஆகும் ஏதேனும் ஓர் உலகம்~$w$ ஐக் கொள்க. $R$
+    கடத்துவதால், $Rf(\sigma)w$. $\mSat/{M}{\Diamond !B}[f(\sigma)]$
+    என்பதால், $\mSat/{M}{!B}[w]$. எனவே
+    $\mSat/{M}{\Diamond !B}[f(\sigma.n)]$; மேலும் $\mModel{M}, f$
+    ஆனது $\sFmla{\False}{\Diamond !B}[\sigma.n]$ ஐ
+    நிறைவுறுத்துகிறது.}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-4} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\begin{prop}
+  \ollabel{prop:soundness-4r}
+  \iftag{prvBox}{\Ax{4r}$\Box$}{}%
+  \iftag{notprvBox,notprvDiamond}{}{ மற்றும் }%
+  \iftag{prvDiamond}{\Ax{4r}$\Diamond$}{}
+  \iftag{notprvBox,notprvDiamond}{விதி}{விதிகள்}
+  யூக்ளிடிய மாதிரிகளுக்குச் சரியானவை.
+\end{prop}
+
+\begin{proof}
+\begin{tagenumerate}{prvBox,prvDiamond}
+\tagitem{prvBox}{$\sFmla{\True}{\Box !B}[\sigma.n] \in \Gamma$ க்கு
+  4r$\Box$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probBox}{பயிற்சி.}{இது கிளையில் புதிய !!{signed
+      formula}~$\sFmla{\True}{\Box!B}[\sigma]$ ஐ விளைவிக்கிறது.
+    $\mSat{M}{\Gamma}[f]$, குறிப்பாக $\mSat{M}{\Box
+      !B}[f(\sigma.n)]$, என்க. $f$ ஆனது கிளையிலுள்ள முன்னொட்டுகளை
+    $\mModel{M}$ இல் பொருள்கொள்ளும் பொருள்கோள் என்பதால்,
+    $Rf(\sigma)f(\sigma.n)$ என்று அறிவோம். இப்போது $Rf(\sigma)w$ ஆகும்
+    ஏதேனும் ஓர் உலகம்~$w$ ஐக் கொள்க. $R$ யூக்ளிடியப் பண்புடையதால்,
+    $Rf(\sigma.n)w$. மேலும்
+    % SOURCE CORRECTION TA-NML-045: evaluate at f(sigma.n), not f(sigma).n.
+    $\mSat{M}{\Box !B}[f(\sigma.n)]$ என்பதால், $\mSat{M}{!B}[w]$.
+    எனவே $\mSat{M}{\Box !B}[f(\sigma)]$; மேலும் $\mModel{M}, f$ ஆனது
+    $\sFmla{\True}{\Box !B}[\sigma]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\tagitem{prvDiamond}{$\sFmla{\False}{\Diamond !B}[\sigma.n] \in
+  \Gamma$ க்கு 4r$\Diamond$ ஐப் பயன்படுத்தி கிளை விரிவாக்கப்படுகிறது:
+  \iftag{probDiamond}{பயிற்சி.}{இது கிளையில் புதிய
+    % SOURCE CORRECTION TA-NML-046: the rule concludes false Diamond B, not true Box B.
+    !!{signed formula}~$\sFmla{\False}{\Diamond!B}[\sigma]$ ஐ
+    விளைவிக்கிறது. $\mSat{M}{\Gamma}[f]$, குறிப்பாக
+    $\mSat/{M}{\Diamond !B}[f(\sigma.n)]$, என்க. $f$ ஆனது கிளையிலுள்ள
+    முன்னொட்டுகளை~$\mModel{M}$ இல் பொருள்கொள்ளும் பொருள்கோள் என்பதால்,
+    $Rf(\sigma)f(\sigma.n)$ என்று அறிவோம். இப்போது $Rf(\sigma)w$ ஆகும்
+    ஏதேனும் ஓர் உலகம்~$w$ ஐக் கொள்க. $R$ யூக்ளிடியப் பண்புடையதால்,
+    $Rf(\sigma.n)w$. மேலும்
+    % SOURCE CORRECTION TA-NML-045: evaluate at f(sigma.n), not f(sigma).n.
+    $\mSat/{M}{\Diamond !B}[f(\sigma.n)]$ என்பதால்,
+    $\mSat/{M}{!B}[w]$. எனவே $\mSat/{M}{\Diamond !B}[f(\sigma)]$;
+    மேலும் $\mModel{M}, f$ ஆனது
+    $\sFmla{\False}{\Diamond !B}[\sigma]$ ஐ நிறைவுறுத்துகிறது.}}{}
+\end{tagenumerate}
+\end{proof}
+
+\tagprob{probBox,probDiamond}
+\begin{prob}
+  \olref[nml][tab][msn]{prop:soundness-4r} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+\tagendprob
+
+\begin{cor}
+\ollabel{cor:soundness-logics} \olref[mru]{tab:logics-rules} இல்
+கொடுக்கப்பட்டுள்ள !!{tableau} முறைமைகள் அவற்றுக்குரிய மாதிரி வகுப்புகளுக்குச்
+சரியானவை.
+\end{cor}
+
+\end{document}

@@ -1,0 +1,249 @@
+{
+  "batch_id": "TA-B208",
+  "units": [
+    {
+      "unit_id": "OLP-0468",
+      "source_sha256": "ee4e86d1549731cdbe7088d4d682c304f04a9c007a93a525c99b25959a2c2d90",
+      "translation_sha256": "7c65def750005eeb7c47f15e1cfe74e05038d576463180c33513c1912c9e8a89",
+      "source_bytes": 10148,
+      "translation_bytes": 19195,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\sFmla{\\True}{!B\\land!C}$",
+        "$\\sFmla{\\False}{!B}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Box}[\\sigma]$",
+        "$\\sFmla{\\True}{\\Diamond}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Box}[\\sigma.n]$",
+        "$\\sFmla{\\True}{\\Diamond}[\\sigma.n]$",
+        "$\\sFmla{\\True}{\\Box}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Diamond}[\\sigma]$",
+        "$\\sFmla{\\True}{\\Box}[\\sigma.n]$",
+        "$\\sFmla{\\False}{\\Diamond}[\\sigma.n]$",
+        "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$"
+      ],
+      "extra_math": [
+        "$\\sFmla{\\True}{!B\\land!C}[\\sigma]$",
+        "$\\sFmla{\\True}{!B}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Box!B}[\\sigma]$",
+        "$\\sFmla{\\True}{\\Diamond!B}[\\sigma]$",
+        "$\\sFmla{\\False}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\False}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\True}{\\Box!B}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "cpl",
+        "include",
+        "logic",
+        "nml",
+        "open",
+        "propositional",
+        "section",
+        "tab",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-047",
+          "unit_id": "OLP-0468",
+          "kind": "complete-branch-conjunction-premise-lacks-prefix",
+          "action": "Restored prefix sigma on the true-conjunction premise in the complete-branch example.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{!B\\land!C}$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{!B\\land!C}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\sigma"
+          ],
+          "source_issue_or_choice": "The conclusions both carry sigma and the definition concerns prefixed formulas, but the conjunction premise alone has no prefix.",
+          "chosen_treatment": "தமிழ் மெய்யான இணைப்பின் எடுகோளில்~$[\\sigma]$ முன்னொட்டை மீட்டுள்ளது.",
+          "alternatives_considered": "Removing prefixes from both conclusions; retaining an unprefixed premise in a prefixed tableau.",
+          "rationale": "A propositional tableau rule preserves the same world prefix from premise to conclusions.",
+          "precise_review_question": "Do the conjunction premise and both conclusions now share prefix sigma?",
+          "location_needle": "SOURCE CORRECTION TA-NML-047"
+        },
+        {
+          "audit_id": "TA-NML-048",
+          "unit_id": "OLP-0468",
+          "kind": "true-disjunction-example-gives-false-left-alternative",
+          "action": "Changed the left alternative generated from a true disjunction from false B to true B.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{!B}[\\sigma]$"
+          ],
+          "expected_missing_commands": [
+            "\\False"
+          ],
+          "expected_extra_commands": [
+            "\\True"
+          ],
+          "source_issue_or_choice": "The true-disjunction branching rule displayed earlier yields T B or T C, but this completeness example says F B or T C.",
+          "chosen_treatment": "தமிழ் மெய்யான பிரிப்பின் இரு மாற்றுகளையும் மெய்க்குறியுடனே தருகிறது.",
+          "alternatives_considered": "Changing the premise to a false disjunction; retaining a branch that does not satisfy the premise.",
+          "rationale": "Truth of B or C is preserved by choosing a branch where B is true or C is true.",
+          "precise_review_question": "Are both alternatives in the true-disjunction example true-signed?",
+          "location_needle": "SOURCE CORRECTION TA-NML-048"
+        },
+        {
+          "audit_id": "TA-NML-049",
+          "unit_id": "OLP-0468",
+          "kind": "complete-branch-modal-examples-omit-operands-and-repeat-operators",
+          "action": "Supplied operand B in all four modal premises and changed all four modal conclusions to the unmodalized B required by the rules.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{\\Box}[\\sigma]$",
+            "$\\sFmla{\\True}{\\Diamond}[\\sigma]$",
+            "$\\sFmla{\\False}{\\Box}[\\sigma.n]$",
+            "$\\sFmla{\\True}{\\Diamond}[\\sigma.n]$",
+            "$\\sFmla{\\True}{\\Box}[\\sigma]$",
+            "$\\sFmla{\\False}{\\Diamond}[\\sigma]$",
+            "$\\sFmla{\\True}{\\Box}[\\sigma.n]$",
+            "$\\sFmla{\\False}{\\Diamond}[\\sigma.n]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{\\Box!B}[\\sigma]$",
+            "$\\sFmla{\\True}{\\Diamond!B}[\\sigma]$",
+            "$\\sFmla{\\False}{!B}[\\sigma.n]$",
+            "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+            "$\\sFmla{\\True}{\\Box!B}[\\sigma]$",
+            "$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$",
+            "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+            "$\\sFmla{\\False}{!B}[\\sigma.n]$"
+          ],
+          "expected_missing_commands": [
+            "\\Box",
+            "\\Box",
+            "\\Diamond",
+            "\\Diamond"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The examples write bare Box or Diamond with no operand and then repeat that operator in the conclusion, whereas every rule earlier takes Box B or Diamond B to the unmodalized B at a successor prefix.",
+          "chosen_treatment": "தமிழ் நான்கு எடுகோள்களிலும்~$!B$ ஐச் சேர்த்து, முடிவுரைகளில் செய்கையை நீக்குகிறது.",
+          "alternatives_considered": "Treating Box and Diamond as complete formulas; repeating modal operators contrary to the displayed rules.",
+          "rationale": "The completeness conditions must instantiate exactly the new-prefix and used-prefix rules whose truth lemma follows.",
+          "precise_review_question": "Do all four modal examples now use Box B or Diamond B as premise and B as conclusion?",
+          "location_needle": "SOURCE CORRECTION TA-NML-049"
+        },
+        {
+          "audit_id": "TA-NML-050",
+          "unit_id": "OLP-0468",
+          "kind": "systematic-expansion-concludes-every-branch-closed",
+          "action": "Changed the construction's final claim from every branch being closed to every branch being complete.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proposition constructs a tableau whose branches satisfy all four completeness conditions; it cannot guarantee closure, and the following theorem specifically needs an open complete branch.",
+          "chosen_treatment": "தமிழ் கட்டமைப்பின்படி ஒவ்வொரு கிளையும் முழுமையானது என்று முடிக்கிறது.",
+          "alternatives_considered": "Claiming every finite set has a closed tableau; changing the proposition and following completeness proof.",
+          "rationale": "Systematic exhaustive rule application yields complete branches, some of which remain open exactly when the initial set is satisfiable.",
+          "precise_review_question": "Does the proposition proof conclude branch completeness rather than closure?",
+          "location_needle": "SOURCE CORRECTION TA-NML-050"
+        },
+        {
+          "audit_id": "TA-NML-051",
+          "unit_id": "OLP-0468",
+          "kind": "false-conjunction-truth-lemma-repeats-B",
+          "action": "Changed the second induction alternative from falsity of B to falsity of C.",
+          "expected_missing_math": [
+            "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The branch alternatives are F B and F C, but the semantic conclusion repeats F B twice.",
+          "chosen_treatment": "தமிழ் இரண்டாம் மாற்றில்~$!C$ பொய் எனக் கூறுகிறது.",
+          "alternatives_considered": "Changing the branch rule to duplicate B.",
+          "rationale": "A conjunction is false when B is false or C is false.",
+          "precise_review_question": "Does the false-conjunction induction step mention B and C exactly once?",
+          "location_needle": "SOURCE CORRECTION TA-NML-051"
+        },
+        {
+          "audit_id": "TA-NML-052",
+          "unit_id": "OLP-0468",
+          "kind": "false-disjunction-truth-lemma-repeats-B",
+          "action": "Changed the second induction conjunct from falsity of B to falsity of C.",
+          "expected_missing_math": [
+            "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The complete branch contains F B and F C, but the semantic conclusion repeats F B twice.",
+          "chosen_treatment": "தமிழ் இரண்டாம் இணைப்பில்~$!C$ பொய் எனக் கூறுகிறது.",
+          "alternatives_considered": "Changing the branch rule to duplicate B.",
+          "rationale": "A disjunction is false when both B and C are false.",
+          "precise_review_question": "Does the false-disjunction induction step mention B and C exactly once?",
+          "location_needle": "SOURCE CORRECTION TA-NML-052"
+        },
+        {
+          "audit_id": "TA-NML-053",
+          "unit_id": "OLP-0468",
+          "kind": "false-conditional-truth-lemma-repeats-B",
+          "action": "Changed the second induction conjunct from falsity of B to falsity of consequent C.",
+          "expected_missing_math": [
+            "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The complete branch contains T B and F C, but the semantic conclusion says T B and F B.",
+          "chosen_treatment": "தமிழ் பொய்யான உட்கிடையின் விளைவுறுப்பு~$!C$ பொய் எனக் கூறுகிறது.",
+          "alternatives_considered": "Changing the branch rule or conditional formula to make B both true and false.",
+          "rationale": "A conditional B implies C is false exactly when B is true and C is false.",
+          "precise_review_question": "Does the false-conditional induction step conclude truth of B and falsity of C?",
+          "location_needle": "SOURCE CORRECTION TA-NML-053"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\False",
+        "\\Box",
+        "\\Box",
+        "\\Diamond",
+        "\\Diamond"
+      ],
+      "extra_commands": [
+        "\\sigma",
+        "\\True"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

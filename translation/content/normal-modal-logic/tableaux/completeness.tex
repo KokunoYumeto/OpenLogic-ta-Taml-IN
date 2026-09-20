@@ -1,0 +1,244 @@
+% SEGMENT OLP-0468-S01
+% Part: normal-modal-logic
+% Chapter: tableaux
+% Section: completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{tab}{cpl}
+
+\olsection{\Log{K} க்கான நிறைவுத்தன்மை}
+
+\begin{explain}
+  !!{tableau} முறை நிறைவானது என்று காட்ட, $\Gamma \Proves !A$ என்பதைக்
+  காட்டும் மூடிய !!{tableau} எதுவும் இல்லாதபோதெல்லாம் $\Gamma \Entails/
+  !A$, அதாவது ஓர் எதிர்மாதிரி உள்ளது, என்று காட்ட வேண்டும். ஆனால் ``மூடிய
+  !!{tableau} எதுவும் இல்லை'' என்பது, அதைக் கட்டமைக்க நாம் முயலக்கூடிய
+  ஒவ்வொரு வழியும் மூடத் தவற வேண்டும் என்று பொருள். அத்தகைய ஒவ்வொரு வழியும்
+  மூடத் தவறினால், குறிப்பிட்ட ஒரு \emph{முறையான, முழுத்தீர்வான} வழியும்
+  மூடத் தவறுகிறது என்பதைக் காண்பதே உத்தி. ஒரு மூடிய !!{tableau} இருந்தால்,
+  இந்த முறையான, முழுத்தீர்வான வழி மூடும். ஒரே அட்டவணை மரத்தின் திறந்த
+  கிளைகளில், ஓர் எதிர்மாதிரியை வரையறுக்கத் தேவையான எல்லாத் தகவல்களும்
+  இருக்கும். இந்த அட்டவணை மரத்தின் ஒரு திறந்த கிளை தரும் எதிர்மாதிரி, அந்தக்
+  கிளையில் பயன்படுத்தப்பட்ட எல்லா முன்னொட்டுகளையும் உலகங்களாகக் கொண்டிருக்கும்;
+  மேலும் !!a{propositional variable}~$p$ ஆனது~$\sigma$ வில் மெய்யாக
+  இருப்பது, அப்போதும் அப்போதுமட்டுமே, $\sFmla{\True}{p}[\sigma]$ அந்தக்
+  கிளையில் இடம்பெறும்.
+\end{explain}
+
+\begin{defn}
+  !!a{tableau}வின் ஒரு கிளையில், விதி பயன்படுத்தக்கூடிய முன்னொட்டுள்ள
+  !!{formula}~$\sFmla{S}{!A}[\sigma]$ இருக்கும்போதெல்லாம், பின்வருவனவும்
+  அதில் இருந்தால் அந்தக் கிளை முழுமையானது எனப்படுகிறது:
+  \begin{enumerate}
+    \item கூற்றுத் தருக்க அடுக்கு விதிகளின் நேர்வில், அவ்விதிக்குரிய
+      முடிவுரைகளான முன்னொட்டுள்ள !!{formula}s;
+    \item கூற்றுத் தருக்க கிளைப்பிரிப்பு விதிகளின் நேர்வில், அவ்விதிக்குரிய
+      முடிவு !!{formula}s இல் ஒன்று;
+    \item ஒரு புதிய முன்னொட்டைக் கோரும் வாய்ப்புநிலை விதிகளின் நேர்வில்,
+      இயலக்கூடிய முடிவுரைகளில் குறைந்தது ஒன்று;
+    \item பயன்படுத்தப்பட்ட முன்னொட்டைக் கோரும் வாய்ப்புநிலை விதிகளின்
+      நேர்வில், கிளையில் இடம்பெறும் ஒவ்வொரு முன்னொட்டிற்கும் அதற்குரிய
+      முடிவுரை.
+  \end{enumerate}
+\end{defn}
+
+\begin{explain}
+எடுத்துக்காட்டாக, ஒரு முழுமையான கிளை
+% SOURCE CORRECTION TA-NML-047: restore sigma on the conjunction premise.
+$\sFmla{\True}{!B \land !C}[\sigma]$ ஐக் கொண்டிருக்கும்போதெல்லாம்
+$\sFmla{\True}{!B}[\sigma]$, $\sFmla{\True}{!C}[\sigma]$ ஆகியவற்றையும்
+கொண்டிருக்கும். அது $\sFmla{\True}{!B \lor !C}[\sigma]$ ஐக் கொண்டிருந்தால்,
+% SOURCE CORRECTION TA-NML-048: both alternatives of a true disjunction are true-signed.
+$\sFmla{\True}{!B}[\sigma]$, $\sFmla{\True}{!C}[\sigma]$ ஆகியவற்றில்
+குறைந்தது ஒன்றைக் கொண்டிருக்கும். அது
+% SOURCE CORRECTION TA-NML-049: supply operand B and use unboxed conclusions.
+\iftag{prvBox}{$\sFmla{\False}{\Box !B}[\sigma]$}
+{$\sFmla{\True}{\Diamond !B}[\sigma]$} ஐக் கொண்டிருந்தால், குறைந்தது ஒரு
+~$n$ க்கு \iftag{prvBox}{$\sFmla{\False}{!B}[\sigma.n]$}
+{$\sFmla{\True}{!B}[\sigma.n]$} ஐயும் கொண்டிருக்கும். மேலும் அது
+\iftag{prvBox}{$\sFmla{\True}{\Box !B}[\sigma]$}
+{$\sFmla{\False}{\Diamond !B}[\sigma]$} ஐக் கொண்டிருக்கும்போதெல்லாம்,
+$\sigma.n$ கிளையில் பயன்படுத்தப்பட்டதாக அமையும் ஒவ்வோர்~$n$ க்கும்
+\iftag{prvBox}{$\sFmla{\True}{!B}[\sigma.n]$}
+{$\sFmla{\False}{!B}[\sigma.n]$} ஐயும் கொண்டிருக்கும்.
+\end{explain}
+
+\begin{prop}\ollabel{prop:complete-tableau}
+  ஒவ்வொரு முடிவுறு~$\Gamma$ விற்கும், ஒவ்வொரு கிளையும் முழுமையாக இருக்கும்
+  ஓர் !!a{tableau} உண்டு.
+\end{prop}
+
+\begin{proof}
+  $\Gamma$ விற்கான !!a{tableau}வின் ஒரு திறந்த கிளையைக் கருதுக. அந்தக்
+  கிளையில் விதி பயன்படுத்தக்கூடிய முன்னொட்டுள்ள !!{formula}s முடிவுறு
+  எண்ணிக்கையிலேயே உள்ளன. ஏதோ ஒரு நிலையான வரிசையில் (எடுத்துக்காட்டாக,
+  மேலிருந்து கீழாக), நிபந்தனைகள்~(1)--(4) ஏற்கெனவே நிறைவாகாத இந்த
+  முன்னொட்டுள்ள !!{formula}s ஒவ்வொன்றிற்கும் பயன்படுத்தக்கூடிய விதிகளைப்
+  பயன்படுத்திக் கிளையை நீட்டிக்க. சில நேர்வுகளில் இது கிளைப்பிரிப்பை
+  விளைவிக்கும்; அப்போது மீதமுள்ள எல்லா முன்னொட்டுள்ள !!{formula}s க்குமான
+  விதிகளை விளைவாக வரும் ஒவ்வொரு கிளையின் முனையிலும் பயன்படுத்துக.
+  முன்னொட்டுள்ள !!{formula}s இன் எண்ணிக்கையும் கிளையில் பயன்படுத்தப்பட்ட
+  முன்னொட்டுகளின் எண்ணிக்கையும் முடிவுறுவன என்பதால், இந்தச் செயல்முறை
+  இறுதியில் மூலக் கிளையை நீட்டிக்கும் (பலவாகவும் இருக்கக்கூடிய) கிளைகளை
+  விளைவிக்கிறது. ஒவ்வொன்றிற்கும் இச்செயல்முறையைப் பயன்படுத்தி மீண்டும்
+  செய்க. கட்டமைப்பின்படி ஒவ்வொரு கிளையும்
+  % SOURCE CORRECTION TA-NML-050: the construction makes branches complete, not closed.
+  முழுமையானது.
+\end{proof}
+
+\begin{thm}[நிறைவுத்தன்மை]
+  \ollabel{thm:tableau-completeness}
+  $\Gamma$ விற்கு மூடிய !!{tableau} எதுவும் இல்லையெனில், $\Gamma$
+  நிறைவுறத்தக்கது.
+\end{thm}
+
+\begin{proof}
+கூற்றின்படி, ஒவ்வொரு கிளையும் முழுமையாக இருக்கும் ஓர் !!a{tableau}
+$\Gamma$ விற்கு உண்டு. அதற்கு மூடிய !!{tableau} எதுவும் இல்லாததால்,
+குறைந்தது ஒரு கிளையாவது திறந்ததாகவும் முழுமையானதாகவும் இருக்கும் ஓர்
+!!a{tableau} அதற்கு உண்டு. அந்தக் கிளையிலுள்ள முன்னொட்டுள்ள !!{formula}s இன்
+கணம்~$\Delta$ எனவும், அதில் இடம்பெறும் முன்னொட்டுகளின் கணம்~$P(\Delta)$
+எனவும் இருக்கட்டும்.
+
+$\Delta$ வில் இடம்பெறும் முன்னொட்டுகள் உலகங்களாக இருக்குமாறு
+$\mModel{M(\Delta)} = \tuple{P(\Delta), R, V}$ என்ற மாதிரியை
+வரையறுக்கிறோம்; அதன் அணுகுறவு பின்வருமாறு கொடுக்கப்படுகிறது:
+\[
+R\sigma\sigma' \quad \text{அப்போதும் அப்போதுமட்டுமே} \quad
+\sigma'=\sigma.n \quad \text{ஏதோ ஓர்~$n$ க்கு}
+\]
+மேலும்
+\[
+V(p) = \Setabs{\sigma}{\sFmla{\True}{p}[\sigma] \in \Delta}.
+\]
+$\sFmla{\True}{!A}[\sigma] \in \Delta$ எனில்
+$\mSat{M(\Delta)}{!A}[\sigma]$ என்றும்,
+$\sFmla{\False}{!A}[\sigma] \in \Delta$ எனில்
+$\mSat/{M(\Delta)}{!A}[\sigma]$ என்றும்~$!A$ மீதான தொகுத்தறிதலால்
+காட்டுகிறோம்.
+
+\begin{enumerate}
+  \item \indcase{!A}{p}{$\sFmla{\True}{\indfrm}[\sigma] \in \Delta$
+    எனில், ($V$ இன் வரையறைப்படி) $\sigma \in V(p)$; எனவே
+    $\mSat{M(\Delta)}{\indfrm}[\sigma]$.
+
+    $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$ எனில்,
+    $\sFmla{\True}{\indfrm}[\sigma] \notin \Delta$; ஏனெனில் இல்லையெனில்
+    கிளை மூடியிருக்கும். ஆகவே $\sigma \notin V(p)$; எனவே
+    $\mSat/{M(\Delta)}{\indfrm}[\sigma]$.}
+  \item \indcase{!A}{\lnot !B}{\iftag{probNot}{பயிற்சி.}{
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் $\sFmla{\False}{!B}[\sigma] \in \Delta$.
+      தொகுத்தறிதல் கருதுகோளின்படி,
+      $\mSat/{M(\Delta)}{!B}[\sigma]$; எனவே
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$.
+
+      $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் $\sFmla{\True}{!B}[\sigma] \in \Delta$.
+      தொகுத்தறிதல் கருதுகோளின்படி,
+      $\mSat{M(\Delta)}{!B}[\sigma]$; எனவே
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$.}}
+  \item \indcase{!A}{!B \land !C}{\iftag{probAnd}{பயிற்சி.}{
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் $\sFmla{\True}{!B}[\sigma] \in \Delta$,
+      $\sFmla{\True}{!C}[\sigma] \in \Delta$ ஆகிய இரண்டும் ஆகும்.
+      தொகுத்தறிதல் கருதுகோளின்படி,
+      $\mSat{M(\Delta)}{!B}[\sigma]$ உம்
+      $\mSat{M(\Delta)}{!C}[\sigma]$ உம். எனவே
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$.
+
+      $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் $\sFmla{\False}{!B}[\sigma] \in \Delta$
+      அல்லது $\sFmla{\False}{!C}[\sigma] \in \Delta$. தொகுத்தறிதல்
+      கருதுகோளின்படி, $\mSat/{M(\Delta)}{!B}[\sigma]$ அல்லது
+      % SOURCE CORRECTION TA-NML-051: the second false conjunct is C.
+      $\mSat/{M(\Delta)}{!C}[\sigma]$. எனவே
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$.}}
+  \item \indcase{!A}{!B \lor !C}{\iftag{probOr}{பயிற்சி.}{
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் $\sFmla{\True}{!B}[\sigma] \in \Delta$
+      அல்லது $\sFmla{\True}{!C}[\sigma] \in \Delta$. தொகுத்தறிதல்
+      கருதுகோளின்படி, $\mSat{M(\Delta)}{!B}[\sigma]$ அல்லது
+      $\mSat{M(\Delta)}{!C}[\sigma]$. எனவே
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$.
+
+      $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் $\sFmla{\False}{!B}[\sigma] \in \Delta$,
+      $\sFmla{\False}{!C}[\sigma] \in \Delta$ ஆகிய இரண்டும் ஆகும்.
+      தொகுத்தறிதல் கருதுகோளின்படி,
+      $\mSat/{M(\Delta)}{!B}[\sigma]$ உம்
+      % SOURCE CORRECTION TA-NML-052: the second false disjunct is C.
+      $\mSat/{M(\Delta)}{!C}[\sigma]$ உம். எனவே
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$.}}
+  \item \indcase{!A}{!B \lif !C}{\iftag{probIf}{பயிற்சி.}{
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் $\sFmla{\False}{!B}[\sigma] \in \Delta$
+      அல்லது $\sFmla{\True}{!C}[\sigma] \in \Delta$. தொகுத்தறிதல்
+      கருதுகோளின்படி, $\mSat/{M(\Delta)}{!B}[\sigma]$ அல்லது
+      $\mSat{M(\Delta)}{!C}[\sigma]$. எனவே
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$.
+
+      $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் $\sFmla{\True}{!B}[\sigma] \in \Delta$,
+      $\sFmla{\False}{!C}[\sigma] \in \Delta$ ஆகிய இரண்டும் ஆகும்.
+      தொகுத்தறிதல் கருதுகோளின்படி,
+      $\mSat{M(\Delta)}{!B}[\sigma]$ உம்
+      % SOURCE CORRECTION TA-NML-053: the false consequent is C.
+      $\mSat/{M(\Delta)}{!C}[\sigma]$ உம். எனவே
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$.}}
+  \item \indcase{!A}{\Box !B}{\iftag{probBox}{பயிற்சி.}{
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் கிளையில் பயன்படுத்தப்பட்ட ஒவ்வொரு~$\sigma.n$
+      க்கும் $\sFmla{\True}{!B}[\sigma.n] \in \Delta$; அதாவது,
+      $R\sigma\sigma'$ ஆகும் ஒவ்வொரு $\sigma' \in P(\Delta)$ க்கும்
+      அவ்வாறு இருக்கும். தொகுத்தறிதல் கருதுகோளின்படி,
+      $R\sigma\sigma'$ ஆகும் ஒவ்வொரு~$\sigma'$ க்கும்
+      $\mSat{M(\Delta)}{!B}[\sigma']$. எனவே
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$.
+
+      $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் ஏதோ ஒரு~$\sigma.n$ க்கு
+      $\sFmla{\False}{!B}[\sigma.n] \in \Delta$. தொகுத்தறிதல்
+      கருதுகோளின்படி, $\mSat/{M(\Delta)}{!B}[\sigma.n]$.
+      $R\sigma(\sigma.n)$ என்பதால்,
+      $\mSat/{M(\Delta)}{!B}[\sigma']$ ஆகுமாறு ஒரு~$\sigma'$ உள்ளது.
+      எனவே $\mSat/{M(\Delta)}{\indfrm}[\sigma]$.}}
+  \item \indcase{!A}{\Diamond !B}{\iftag{probDiamond}{பயிற்சி.}{
+      $\sFmla{\True}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் ஏதோ ஒரு~$\sigma.n$ க்கு
+      $\sFmla{\True}{!B}[\sigma.n] \in \Delta$. தொகுத்தறிதல்
+      கருதுகோளின்படி, $\mSat{M(\Delta)}{!B}[\sigma.n]$.
+      $R\sigma(\sigma.n)$ என்பதால், $\mSat{M(\Delta)}{!B}[\sigma']$
+      ஆகுமாறு ஒரு~$\sigma'$ உள்ளது. எனவே
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$.
+
+      $\sFmla{\False}{\indfrm}[\sigma] \in \Delta$ எனில், கிளை
+      முழுமையானது என்பதால் கிளையில் பயன்படுத்தப்பட்ட ஒவ்வொரு~$\sigma.n$
+      க்கும் $\sFmla{\False}{!B}[\sigma.n] \in \Delta$; அதாவது,
+      $R\sigma\sigma'$ ஆகும் ஒவ்வொரு $\sigma' \in P(\Delta)$ க்கும்
+      அவ்வாறு இருக்கும். தொகுத்தறிதல் கருதுகோளின்படி,
+      $R\sigma\sigma'$ ஆகும் ஒவ்வொரு~$\sigma'$ க்கும்
+      $\mSat/{M(\Delta)}{!B}[\sigma']$. எனவே
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$.}}
+\end{enumerate}
+$\Gamma \subseteq \Delta$ என்பதால், $\mSat{M(\Delta)}{\Gamma}$.
+\end{proof}
+
+\begin{prob}
+\olref[nml][tab][cpl]{thm:tableau-completeness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{cor}
+\ollabel{cor:entailment-completeness}
+$\Gamma \Entails !A$ எனில், $\Gamma \Proves !A$.
+\end{cor}
+
+\begin{cor}
+\ollabel{cor:weak-completeness}
+எல்லா மாதிரிகளிலும்~$!A$ மெய் எனில், $\Proves !A$.
+\end{cor}
+
+\end{document}

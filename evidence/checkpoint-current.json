@@ -1,22 +1,22 @@
 {
   "schema": "openlogic-tamil-checkpoint/4",
-  "date_utc": "2026-09-20T00:44:11.054250+00:00",
+  "date_utc": "2026-09-20T01:37:54.573165+00:00",
   "previous_goal_turn_classification": "progress",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified": 722,
   "source_total": 722,
-  "drafted_units": 456,
-  "aligned_segments": 1342,
+  "drafted_units": 466,
+  "aligned_segments": 1352,
   "canon_sources": 9,
   "canon_passages": 51,
-  "term_decisions": 179,
-  "translation_decisions": 414,
-  "translation_decision_occurrences": 22084,
+  "term_decisions": 181,
+  "translation_decisions": 438,
+  "translation_decision_occurrences": 22936,
   "reader_page_mapped_occurrences": 2891,
-  "reader_page_pending_occurrences": 19193,
+  "reader_page_pending_occurrences": 20045,
   "textual_invariants_pass": true,
-  "semantic_reviewed_units": 456,
-  "semantic_reviewed_samples": 550,
+  "semantic_reviewed_units": 466,
+  "semantic_reviewed_samples": 560,
   "reader_verified_distinct_units": 203,
   "combined_reader_verified_units": 51,
   "proof_systems_reader_verified_units": 49,
@@ -135,7 +135,7 @@
   "published_source_units": 456,
   "source_publication_readback": "publication-readback-nml-456.json",
   "source_publication_commit": "65c5be40d4616e57751e536ded6b52de6da952e5",
-  "current_source_published": true,
+  "current_source_published": false,
   "edition_complete": false,
   "unit_artifacts": [
     {
@@ -22922,6 +22922,964 @@
       "missing_commands": [],
       "extra_commands": [],
       "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0460",
+      "source_sha256": "58eea9ef8caa03576eb40d2be64cbd3d5dbfc07e1bb052af3558481e9f7d8f1b",
+      "translation_sha256": "8ac05525588fd242a51424e31c45a5472585b97e2241d39017ddc282ee6a0040",
+      "source_bytes": 663,
+      "translation_bytes": 1399,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-037",
+          "unit_id": "OLP-0460",
+          "kind": "chapter-driver-comment-names-axioms-systems",
+          "action": "Corrected the retained chapter metadata comment from axioms-systems to tableaux, matching the directory, chapter identifier, title, and all imported sections.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The tableaux chapter driver is headed by a copied Chapter: axioms-systems comment even though its olchapter identifier is tab and every import concerns tableaux.",
+          "chosen_treatment": "தமிழ் இயக்கியின் அதிகாரக் குறிப்பை tableaux எனச் சரிசெய்கிறது.",
+          "alternatives_considered": "Retaining metadata that identifies a different neighboring chapter.",
+          "rationale": "This is descriptive source metadata; every structural identifier and file path independently identifies the chapter as tableaux.",
+          "precise_review_question": "Does the corrected comment agree with the tab chapter identifier and imported files?",
+          "location_needle": "SOURCE CORRECTION TA-NML-037"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0461",
+      "source_sha256": "87a62d9825b9d30949d14e5530488544e403e28c7594774a9bf6c91e73803b54",
+      "translation_sha256": "9eb920085e46581ad211aa2f30f906914649cd35fc41f3f7f65f102c65fd0e30",
+      "source_bytes": 2529,
+      "translation_bytes": 5714,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "formula",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "signed"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0462",
+      "source_sha256": "781f917de40a4b8e0c38ade5e7cd1d9eab39a629563df7f6d07e0434ab5dffe3",
+      "translation_sha256": "7fa252f8253befbe1987d13a79a4c564ddae64cdf618eb0043e2b9c145152ae1",
+      "source_bytes": 9559,
+      "translation_bytes": 14135,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "close",
+        "include",
+        "just",
+        "logic",
+        "name",
+        "notprvBox",
+        "notprvDiamond",
+        "one",
+        "open",
+        "section",
+        "two"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-038",
+          "unit_id": "OLP-0462",
+          "kind": "false-box-expansion-cites-true-box-rule",
+          "action": "Changed the line-3 justification in the Box-only new-prefix counterexample from the true-box rule to the false-box rule.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\True"
+          ],
+          "expected_extra_commands": [
+            "\\False"
+          ],
+          "source_issue_or_choice": "Line 3 derives F A at prefix 1.1 from line 2, which is F Box A, but labels the step T Box[2].",
+          "chosen_treatment": "தமிழ் அட்டவணை மரம் வரி 3 இன் காரணத்தை $\\TRule{\\False}{\\Box}[2]$ எனக் குறிக்கிறது.",
+          "alternatives_considered": "Retaining a rule whose sign does not match either the cited premise or conclusion; changing the premise and conclusion signs, which would destroy the intended example.",
+          "rationale": "The false-box rule is exactly the rule that expands F Box A to F A at a new successor prefix.",
+          "precise_review_question": "Does line 3 now cite the false-box rule applied to line 2 while leaving the counterexample otherwise unchanged?",
+          "location_needle": "SOURCE CORRECTION TA-NML-038"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\True"
+      ],
+      "extra_commands": [
+        "\\False"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0463",
+      "source_sha256": "17c60b914fceb4b984233ac0cf4aa37d1f6ee938b91e052aa986b970f0f0842b",
+      "translation_sha256": "8d89ac1b74ee65b2eb88c4174b4e2ce4ad7e43e86cbf321f6c379aaeaaeaf4db",
+      "source_bytes": 3256,
+      "translation_bytes": 3610,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "close",
+        "include",
+        "just",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0464",
+      "source_sha256": "337485e1de3eaba7bdffdc6dddd9e9b4e0fe569bc9eaed470f7af27088492100",
+      "translation_sha256": "da55d30b8c06f45e2799d1134fe2b055a71ffb972894e184388fae95f49839dc",
+      "source_bytes": 12701,
+      "translation_bytes": 26272,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mSat{M}{!A}[w]$",
+        "$\\sFmla{\\False}{!B\\lor!C}\\in\\Gamma$",
+        "$\\sFmla{\\False}{!A}[\\sigma.n]$",
+        "$\\sFmla{\\True}{!A}[\\sigma.n]$",
+        "$\\Gamma\\Proves!A$"
+      ],
+      "extra_math": [
+        "$\\mSat/{M}{!A}[w]$",
+        "$\\sFmla{\\False}{!B\\lor!C}[\\sigma]\\in\\Gamma$",
+        "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\False}{!B}[\\sigma.n]$",
+        "$\\Gamma\\Entails!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "formula",
+        "include",
+        "logic",
+        "nml",
+        "open",
+        "section",
+        "signed",
+        "sou",
+        "tab"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-039",
+          "unit_id": "OLP-0464",
+          "kind": "countermodel-clause-satisfies-conclusion",
+          "action": "Changed the countermodel hypothesis from truth of A at w to falsity of A at w.",
+          "expected_missing_math": [
+            "$\\mSat{M}{!A}[w]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M}{!A}[w]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The stated contrapositive assumes every premise and the conclusion are true, which is not a countermodel and does not show that the initial signed assumptions are satisfiable.",
+          "chosen_treatment": "தமிழ் எதிர்மாதிரியில்~$!A$ ஆனது~$w$ இல் பொய்யாகிறது என்று கூறுகிறது.",
+          "alternatives_considered": "Retaining truth of A; changing the initial signed assumption from F A to T A.",
+          "rationale": "A countermodel to B1,...,Bn entails A makes every Bi true and A false at the same world, exactly satisfying the tableau assumptions T Bi and F A.",
+          "precise_review_question": "Does the contrapositive now assume all premises true and the conclusion false at w?",
+          "location_needle": "SOURCE CORRECTION TA-NML-039"
+        },
+        {
+          "audit_id": "TA-NML-040",
+          "unit_id": "OLP-0464",
+          "kind": "false-box-rule-switches-B-to-A",
+          "action": "Changed the newly generated false signed formula in the false-box case from A to B.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{!A}[\\sigma.n]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{!B}[\\sigma.n]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The premise is F Box B and every later line constructs and satisfies F B at sigma.n, but the first description names F A.",
+          "chosen_treatment": "தமிழ் பொய்ப் பெட்டி விதியின் முடிவுரையைத் தொடர்ந்து~$!B$ ஆகவே வைத்துள்ளது.",
+          "alternatives_considered": "Changing every later occurrence and the premise to A; retaining an unexplained formula switch.",
+          "rationale": "The false-box expansion preserves the operand B and introduces only a new successor prefix.",
+          "precise_review_question": "Does every formula in the false-box case retain operand B?",
+          "location_needle": "SOURCE CORRECTION TA-NML-040"
+        },
+        {
+          "audit_id": "TA-NML-041",
+          "unit_id": "OLP-0464",
+          "kind": "true-diamond-rule-switches-B-to-A",
+          "action": "Changed the newly generated true signed formula in the true-diamond case from A to B.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{!A}[\\sigma.n]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{!B}[\\sigma.n]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The premise is T Diamond B and every later line constructs and satisfies T B at sigma.n, but the first description names T A.",
+          "chosen_treatment": "தமிழ் மெய் வைர விதியின் முடிவுரையைத் தொடர்ந்து~$!B$ ஆகவே வைத்துள்ளது.",
+          "alternatives_considered": "Changing every later occurrence and the premise to A; retaining an unexplained formula switch.",
+          "rationale": "The true-diamond expansion preserves the operand B and introduces only a new successor prefix.",
+          "precise_review_question": "Does every formula in the true-diamond case retain operand B?",
+          "location_needle": "SOURCE CORRECTION TA-NML-041"
+        },
+        {
+          "audit_id": "TA-NML-042",
+          "unit_id": "OLP-0464",
+          "kind": "false-disjunction-premise-lacks-prefix",
+          "action": "Restored prefix sigma on the false-disjunction premise in the prefixed-tableau soundness proof.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{!B\\lor!C}\\in\\Gamma$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{!B\\lor!C}[\\sigma]\\in\\Gamma$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\sigma"
+          ],
+          "source_issue_or_choice": "Every premise and conclusion in the proof is prefixed, but this one false-disjunction premise alone omits [sigma].",
+          "chosen_treatment": "தமிழ் பொய்யான பிரிப்பின் எடுகோளில்~$[\\sigma]$ முன்னொட்டை மீட்டுள்ளது.",
+          "alternatives_considered": "Leaving an unprefixed signed formula in a set explicitly defined to contain prefixed formulas.",
+          "rationale": "The rule preserves one world prefix across the premise and its two conclusions.",
+          "precise_review_question": "Does the false-disjunction premise now carry the same sigma prefix used by its rule?",
+          "location_needle": "SOURCE CORRECTION TA-NML-042"
+        },
+        {
+          "audit_id": "TA-NML-043",
+          "unit_id": "OLP-0464",
+          "kind": "soundness-contradiction-repeats-derivability",
+          "action": "Changed the final conclusion of the entailment-soundness corollary from Gamma proves A to Gamma entails A.",
+          "expected_missing_math": [
+            "$\\Gamma\\Proves!A$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\Entails!A$"
+          ],
+          "expected_missing_commands": [
+            "\\Proves"
+          ],
+          "expected_extra_commands": [
+            "\\Entails"
+          ],
+          "source_issue_or_choice": "The proof begins by assuming derivability, supposes semantic entailment fails, and derives a contradiction, but then merely repeats the original derivability assumption.",
+          "chosen_treatment": "தமிழ் முரண்பாட்டிலிருந்து வேண்டிய~$\\Gamma \\Entails !A$ என்ற முடிவையே எடுக்கிறது.",
+          "alternatives_considered": "Repeating the already assumed syntactic statement; changing the corollary itself.",
+          "rationale": "Negating non-entailment yields entailment, completing the stated soundness corollary.",
+          "precise_review_question": "Does the final sentence now conclude the semantic claim established by contradiction?",
+          "location_needle": "SOURCE CORRECTION TA-NML-043"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Proves"
+      ],
+      "extra_commands": [
+        "\\Entails",
+        "\\sigma"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0465",
+      "source_sha256": "1763d19e944f908c2890c6918b0197280a38ce9932867b28f563a7140b6d9c48",
+      "translation_sha256": "ac76cf9efacfd747d157bcd430bcd6dee419cb2880278f81f59dfdcef558b6ad",
+      "source_bytes": 6040,
+      "translation_bytes": 7557,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Log{S5}\\Proves\\Ax{5}$",
+        "$\\Box!A\\lif\\Box\\Diamond!A$"
+      ],
+      "extra_math": [
+        "$\\Log{S5}\\Proves\\Box!A\\lif\\Box\\Diamond!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "close",
+        "include",
+        "just",
+        "logic",
+        "notprvBox",
+        "notprvDiamond",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-044",
+          "unit_id": "OLP-0465",
+          "kind": "worked-tableau-misidentified-as-axiom-5",
+          "action": "Described the worked tableau as proving its displayed formula Box A implies Box Diamond A, rather than calling that different formula axiom 5.",
+          "expected_missing_math": [
+            "$\\Log{S5}\\Proves\\Ax{5}$",
+            "$\\Box!A\\lif\\Box\\Diamond!A$"
+          ],
+          "expected_extra_math": [
+            "$\\Log{S5}\\Proves\\Box!A\\lif\\Box\\Diamond!A$"
+          ],
+          "expected_missing_commands": [
+            "\\Ax"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Axiom 5 is Diamond A implies Box Diamond A throughout the book, while both the tableau root and the following displayed formula use Box A implies Box Diamond A.",
+          "chosen_treatment": "தமிழ் எடுத்துக்காட்டு அட்டவணை மரம் உண்மையில் நிறுவும் காட்டப்பட்ட வாய்பாட்டையே பெயரிடுகிறது.",
+          "alternatives_considered": "Calling the displayed formula axiom 5; replacing the root and rebuilding the proof of actual axiom 5.",
+          "rationale": "The existing proof tree is valid for the displayed S5 theorem; correcting its description preserves the proof while avoiding a false axiom identification.",
+          "precise_review_question": "Does the prose now name exactly the formula at the tableau root without identifying it as axiom 5?",
+          "location_needle": "SOURCE CORRECTION TA-NML-044"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Ax"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0466",
+      "source_sha256": "8c68f92959ba86967753495c186b9f49a3da00247457511f5527e72e5a9eb936",
+      "translation_sha256": "5f8345299d81a132de22dfd9b44102b4c54d352150ce058ef6f15002fcd4bd7c",
+      "source_bytes": 9384,
+      "translation_bytes": 16035,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\sFmla{\\True}{\\Box!B}[\\sigma]$",
+        "$\\mSat{M}{\\Box!B}[f(\\sigma).n]$",
+        "$\\mSat/{M}{\\Diamond!B}[f(\\sigma).n]$"
+      ],
+      "extra_math": [
+        "$\\mSat{M}{\\Box!B}[f(\\sigma.n)]$",
+        "$\\mSat/{M}{\\Diamond!B}[f(\\sigma.n)]$",
+        "$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "formula",
+        "include",
+        "logic",
+        "mru",
+        "msn",
+        "nml",
+        "notprvBox",
+        "notprvDiamond",
+        "open",
+        "probBox",
+        "probDiamond",
+        "prvBox",
+        "prvDiamond",
+        "section",
+        "signed",
+        "tab"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-045",
+          "unit_id": "OLP-0466",
+          "kind": "4r-soundness-evaluates-at-value-dot-n",
+          "action": "Changed both 4r proof evaluations from the ill-typed f(sigma).n to f(sigma.n).",
+          "expected_missing_math": [
+            "$\\mSat{M}{\\Box!B}[f(\\sigma).n]$",
+            "$\\mSat/{M}{\\Diamond!B}[f(\\sigma).n]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat{M}{\\Box!B}[f(\\sigma.n)]$",
+            "$\\mSat/{M}{\\Diamond!B}[f(\\sigma.n)]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The prefix interpretation f maps the whole prefix sigma.n to a world; appending .n to the world value f(sigma) is undefined.",
+          "chosen_treatment": "தமிழ் இரு 4r நிறுவல்களிலும்~$f(\\sigma.n)$ என்ற முன்னொட்டின் பொருள்கோள் மதிப்பைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating model worlds as sequences without any stated structure; changing the definition of prefix interpretation.",
+          "rationale": "The premise is evaluated at prefix sigma.n and the definition supplies exactly the world f(sigma.n).",
+          "precise_review_question": "Do both 4r cases evaluate their premises at f(sigma.n)?",
+          "location_needle": "SOURCE CORRECTION TA-NML-045"
+        },
+        {
+          "audit_id": "TA-NML-046",
+          "unit_id": "OLP-0466",
+          "kind": "4r-diamond-proof-states-wrong-conclusion",
+          "action": "Changed the described 4r-Diamond conclusion from true Box B to false Diamond B at sigma.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{\\Box!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$"
+          ],
+          "expected_missing_commands": [
+            "\\True",
+            "\\Box"
+          ],
+          "expected_extra_commands": [
+            "\\False",
+            "\\Diamond"
+          ],
+          "source_issue_or_choice": "The displayed 4r-Diamond rule and the end of the same proof both conclude F Diamond B at sigma, but the opening description instead says T Box B.",
+          "chosen_treatment": "தமிழ் 4r வைர விதியின் முடிவுரையை~$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$ என ஒருமைப்படுத்துகிறது.",
+          "alternatives_considered": "Changing the rule table and the proof's semantic argument to an unrelated true-box conclusion.",
+          "rationale": "Euclideanness transfers failure of Diamond B from sigma.n back to sigma, exactly as the remaining proof shows.",
+          "precise_review_question": "Does the opening conclusion of the 4r-Diamond proof now match its displayed rule and final sentence?",
+          "location_needle": "SOURCE CORRECTION TA-NML-046"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Box",
+        "\\True"
+      ],
+      "extra_commands": [
+        "\\Diamond",
+        "\\False"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0467",
+      "source_sha256": "424a248ae136b994af3f140ae1e3cc4d68dbbbedd4ba0ca88f24d6148615fa65",
+      "translation_sha256": "18849b0db9c61d76746bfd8462b2acd99849000657f1d0ffd6a582565a6ee70a",
+      "source_bytes": 2941,
+      "translation_bytes": 5027,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "close",
+        "include",
+        "just",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0468",
+      "source_sha256": "ee4e86d1549731cdbe7088d4d682c304f04a9c007a93a525c99b25959a2c2d90",
+      "translation_sha256": "7c65def750005eeb7c47f15e1cfe74e05038d576463180c33513c1912c9e8a89",
+      "source_bytes": 10148,
+      "translation_bytes": 19195,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\sFmla{\\True}{!B\\land!C}$",
+        "$\\sFmla{\\False}{!B}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Box}[\\sigma]$",
+        "$\\sFmla{\\True}{\\Diamond}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Box}[\\sigma.n]$",
+        "$\\sFmla{\\True}{\\Diamond}[\\sigma.n]$",
+        "$\\sFmla{\\True}{\\Box}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Diamond}[\\sigma]$",
+        "$\\sFmla{\\True}{\\Box}[\\sigma.n]$",
+        "$\\sFmla{\\False}{\\Diamond}[\\sigma.n]$",
+        "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$"
+      ],
+      "extra_math": [
+        "$\\sFmla{\\True}{!B\\land!C}[\\sigma]$",
+        "$\\sFmla{\\True}{!B}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Box!B}[\\sigma]$",
+        "$\\sFmla{\\True}{\\Diamond!B}[\\sigma]$",
+        "$\\sFmla{\\False}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\False}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+        "$\\sFmla{\\True}{\\Box!B}[\\sigma]$",
+        "$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$",
+        "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "cpl",
+        "include",
+        "logic",
+        "nml",
+        "open",
+        "propositional",
+        "section",
+        "tab",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-047",
+          "unit_id": "OLP-0468",
+          "kind": "complete-branch-conjunction-premise-lacks-prefix",
+          "action": "Restored prefix sigma on the true-conjunction premise in the complete-branch example.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{!B\\land!C}$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{!B\\land!C}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\sigma"
+          ],
+          "source_issue_or_choice": "The conclusions both carry sigma and the definition concerns prefixed formulas, but the conjunction premise alone has no prefix.",
+          "chosen_treatment": "தமிழ் மெய்யான இணைப்பின் எடுகோளில்~$[\\sigma]$ முன்னொட்டை மீட்டுள்ளது.",
+          "alternatives_considered": "Removing prefixes from both conclusions; retaining an unprefixed premise in a prefixed tableau.",
+          "rationale": "A propositional tableau rule preserves the same world prefix from premise to conclusions.",
+          "precise_review_question": "Do the conjunction premise and both conclusions now share prefix sigma?",
+          "location_needle": "SOURCE CORRECTION TA-NML-047"
+        },
+        {
+          "audit_id": "TA-NML-048",
+          "unit_id": "OLP-0468",
+          "kind": "true-disjunction-example-gives-false-left-alternative",
+          "action": "Changed the left alternative generated from a true disjunction from false B to true B.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{!B}[\\sigma]$"
+          ],
+          "expected_missing_commands": [
+            "\\False"
+          ],
+          "expected_extra_commands": [
+            "\\True"
+          ],
+          "source_issue_or_choice": "The true-disjunction branching rule displayed earlier yields T B or T C, but this completeness example says F B or T C.",
+          "chosen_treatment": "தமிழ் மெய்யான பிரிப்பின் இரு மாற்றுகளையும் மெய்க்குறியுடனே தருகிறது.",
+          "alternatives_considered": "Changing the premise to a false disjunction; retaining a branch that does not satisfy the premise.",
+          "rationale": "Truth of B or C is preserved by choosing a branch where B is true or C is true.",
+          "precise_review_question": "Are both alternatives in the true-disjunction example true-signed?",
+          "location_needle": "SOURCE CORRECTION TA-NML-048"
+        },
+        {
+          "audit_id": "TA-NML-049",
+          "unit_id": "OLP-0468",
+          "kind": "complete-branch-modal-examples-omit-operands-and-repeat-operators",
+          "action": "Supplied operand B in all four modal premises and changed all four modal conclusions to the unmodalized B required by the rules.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{\\Box}[\\sigma]$",
+            "$\\sFmla{\\True}{\\Diamond}[\\sigma]$",
+            "$\\sFmla{\\False}{\\Box}[\\sigma.n]$",
+            "$\\sFmla{\\True}{\\Diamond}[\\sigma.n]$",
+            "$\\sFmla{\\True}{\\Box}[\\sigma]$",
+            "$\\sFmla{\\False}{\\Diamond}[\\sigma]$",
+            "$\\sFmla{\\True}{\\Box}[\\sigma.n]$",
+            "$\\sFmla{\\False}{\\Diamond}[\\sigma.n]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{\\Box!B}[\\sigma]$",
+            "$\\sFmla{\\True}{\\Diamond!B}[\\sigma]$",
+            "$\\sFmla{\\False}{!B}[\\sigma.n]$",
+            "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+            "$\\sFmla{\\True}{\\Box!B}[\\sigma]$",
+            "$\\sFmla{\\False}{\\Diamond!B}[\\sigma]$",
+            "$\\sFmla{\\True}{!B}[\\sigma.n]$",
+            "$\\sFmla{\\False}{!B}[\\sigma.n]$"
+          ],
+          "expected_missing_commands": [
+            "\\Box",
+            "\\Box",
+            "\\Diamond",
+            "\\Diamond"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The examples write bare Box or Diamond with no operand and then repeat that operator in the conclusion, whereas every rule earlier takes Box B or Diamond B to the unmodalized B at a successor prefix.",
+          "chosen_treatment": "தமிழ் நான்கு எடுகோள்களிலும்~$!B$ ஐச் சேர்த்து, முடிவுரைகளில் செய்கையை நீக்குகிறது.",
+          "alternatives_considered": "Treating Box and Diamond as complete formulas; repeating modal operators contrary to the displayed rules.",
+          "rationale": "The completeness conditions must instantiate exactly the new-prefix and used-prefix rules whose truth lemma follows.",
+          "precise_review_question": "Do all four modal examples now use Box B or Diamond B as premise and B as conclusion?",
+          "location_needle": "SOURCE CORRECTION TA-NML-049"
+        },
+        {
+          "audit_id": "TA-NML-050",
+          "unit_id": "OLP-0468",
+          "kind": "systematic-expansion-concludes-every-branch-closed",
+          "action": "Changed the construction's final claim from every branch being closed to every branch being complete.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proposition constructs a tableau whose branches satisfy all four completeness conditions; it cannot guarantee closure, and the following theorem specifically needs an open complete branch.",
+          "chosen_treatment": "தமிழ் கட்டமைப்பின்படி ஒவ்வொரு கிளையும் முழுமையானது என்று முடிக்கிறது.",
+          "alternatives_considered": "Claiming every finite set has a closed tableau; changing the proposition and following completeness proof.",
+          "rationale": "Systematic exhaustive rule application yields complete branches, some of which remain open exactly when the initial set is satisfiable.",
+          "precise_review_question": "Does the proposition proof conclude branch completeness rather than closure?",
+          "location_needle": "SOURCE CORRECTION TA-NML-050"
+        },
+        {
+          "audit_id": "TA-NML-051",
+          "unit_id": "OLP-0468",
+          "kind": "false-conjunction-truth-lemma-repeats-B",
+          "action": "Changed the second induction alternative from falsity of B to falsity of C.",
+          "expected_missing_math": [
+            "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The branch alternatives are F B and F C, but the semantic conclusion repeats F B twice.",
+          "chosen_treatment": "தமிழ் இரண்டாம் மாற்றில்~$!C$ பொய் எனக் கூறுகிறது.",
+          "alternatives_considered": "Changing the branch rule to duplicate B.",
+          "rationale": "A conjunction is false when B is false or C is false.",
+          "precise_review_question": "Does the false-conjunction induction step mention B and C exactly once?",
+          "location_needle": "SOURCE CORRECTION TA-NML-051"
+        },
+        {
+          "audit_id": "TA-NML-052",
+          "unit_id": "OLP-0468",
+          "kind": "false-disjunction-truth-lemma-repeats-B",
+          "action": "Changed the second induction conjunct from falsity of B to falsity of C.",
+          "expected_missing_math": [
+            "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The complete branch contains F B and F C, but the semantic conclusion repeats F B twice.",
+          "chosen_treatment": "தமிழ் இரண்டாம் இணைப்பில்~$!C$ பொய் எனக் கூறுகிறது.",
+          "alternatives_considered": "Changing the branch rule to duplicate B.",
+          "rationale": "A disjunction is false when both B and C are false.",
+          "precise_review_question": "Does the false-disjunction induction step mention B and C exactly once?",
+          "location_needle": "SOURCE CORRECTION TA-NML-052"
+        },
+        {
+          "audit_id": "TA-NML-053",
+          "unit_id": "OLP-0468",
+          "kind": "false-conditional-truth-lemma-repeats-B",
+          "action": "Changed the second induction conjunct from falsity of B to falsity of consequent C.",
+          "expected_missing_math": [
+            "$\\mSat/{M(\\Delta)}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M(\\Delta)}{!C}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The complete branch contains T B and F C, but the semantic conclusion says T B and F B.",
+          "chosen_treatment": "தமிழ் பொய்யான உட்கிடையின் விளைவுறுப்பு~$!C$ பொய் எனக் கூறுகிறது.",
+          "alternatives_considered": "Changing the branch rule or conditional formula to make B both true and false.",
+          "rationale": "A conditional B implies C is false exactly when B is true and C is false.",
+          "precise_review_question": "Does the false-conditional induction step conclude truth of B and falsity of C?",
+          "location_needle": "SOURCE CORRECTION TA-NML-053"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\False",
+        "\\Box",
+        "\\Box",
+        "\\Diamond",
+        "\\Diamond"
+      ],
+      "extra_commands": [
+        "\\sigma",
+        "\\True"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0469",
+      "source_sha256": "c47ac240cc48f6e82093505895045e59de1a1f034b7e377086c5b53944d744bd",
+      "translation_sha256": "aa7ffba6728bafa72bf781f4c0bca3f1fd6c8b30a751215ac0197f23e21b71d0",
+      "source_bytes": 12874,
+      "translation_bytes": 19571,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Entails/A$",
+        "$\\TRule{\\True}{\\Diamond}$",
+        "$\\sFmla{\\True}{q}[1.1]$",
+        "$\\sFmla{\\True}{\\Diamond(p\\landq)}[1]$"
+      ],
+      "extra_math": [
+        "$\\Entails/!A$",
+        "$\\TRule{\\False}{\\Diamond}$",
+        "$\\sFmla{\\False}{\\Diamond(p\\landq)}[1]$",
+        "$\\sFmla{\\True}{q}[1.2]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "above",
+        "align",
+        "checked",
+        "close",
+        "cpl",
+        "include",
+        "just",
+        "label",
+        "left",
+        "logic",
+        "modal",
+        "notprvBox",
+        "notprvDiamond",
+        "open",
+        "right",
+        "section",
+        "world"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-054",
+          "unit_id": "OLP-0469",
+          "kind": "countermodel-condition-omits-formula-marker",
+          "action": "Restored the formula marker on A in the non-entailment condition.",
+          "expected_missing_math": [
+            "$\\Entails/A$"
+          ],
+          "expected_extra_math": [
+            "$\\Entails/!A$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The preceding and following occurrences use metavariable !A, but this condition writes bare A.",
+          "chosen_treatment": "தமிழ் பின்விளையாமை நிபந்தனையில்~$!A$ என்ற வாய்பாட்டு மாறியையே பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating bare A as a different object in one sentence.",
+          "rationale": "The decision procedure constructs a countermodel to the same formula !A throughout.",
+          "precise_review_question": "Does the non-entailment condition use !A consistently?",
+          "location_needle": "SOURCE CORRECTION TA-NML-054"
+        },
+        {
+          "audit_id": "TA-NML-055",
+          "unit_id": "OLP-0469",
+          "kind": "diamond-countermodel-prose-reverses-line-3-sign-and-rule",
+          "action": "Changed the line-3 description from true Diamond and the true-Diamond rule to false Diamond and the false-Diamond rule.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{\\Diamond(p\\landq)}[1]$",
+            "$\\TRule{\\True}{\\Diamond}$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{\\Diamond(p\\landq)}[1]$",
+            "$\\TRule{\\False}{\\Diamond}$"
+          ],
+          "expected_missing_commands": [
+            "\\True",
+            "\\True"
+          ],
+          "expected_extra_commands": [
+            "\\False",
+            "\\False"
+          ],
+          "source_issue_or_choice": "Line 3 in every displayed tree is F Diamond(p and q), and its used-prefix expansion produces F(p and q), but the intervening prose calls it T Diamond and applies the new-prefix T-Diamond rule.",
+          "chosen_treatment": "தமிழ் வரி 3 ஐப் பொய்க்குறியிட்ட வைர வாய்பாடாகக் கொண்டு, பொய்-வைர விதியைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Changing all displayed trees and the intended countermodel search to the true-Diamond rule.",
+          "rationale": "The false-Diamond rule must be applied once at every used successor prefix, exactly producing lines 8 and 9.",
+          "precise_review_question": "Do the prose sign and rule now match line 3 and its two generated conclusions?",
+          "location_needle": "SOURCE CORRECTION TA-NML-055"
+        },
+        {
+          "audit_id": "TA-NML-056",
+          "unit_id": "OLP-0469",
+          "kind": "middle-diamond-tableau-reverses-root-implication",
+          "action": "Restored the original implication direction at the root of the middle tableau.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Only the middle tableau switches its root to Diamond(p and q) implies (Diamond p and Diamond q), while every descendant, the first and third trees, and the countermodel all concern the reverse implication.",
+          "chosen_treatment": "தமிழ் மூன்று மரங்களிலும் ஒரே மூல வாய்பாட்டை வைத்துள்ளது.",
+          "alternatives_considered": "Rebuilding every descendant and changing the example to the valid reverse implication.",
+          "rationale": "The tableau is one successive construction, so its unchanged lines must retain the same root assumption.",
+          "precise_review_question": "Do all three diamond tableaux now begin with the same implication?",
+          "location_needle": "SOURCE CORRECTION TA-NML-056"
+        },
+        {
+          "audit_id": "TA-NML-057",
+          "unit_id": "OLP-0469",
+          "kind": "diamond-countermodel-q-justification-cites-wrong-prefix",
+          "action": "Changed the cited line-7 signed formula from q at 1.1 to q at 1.2.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{q}[1.1]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{q}[1.2]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The assignment is V(q)={1.2}, line 7 visibly contains T q at 1.2, and the model diagram makes q true at 1.2, but the prose cites 1.1.",
+          "chosen_treatment": "தமிழ் வரி 7 ஐ~$\\sFmla{\\True}{q}[1.2]$ எனத் துல்லியமாக மேற்கோள்கிறது.",
+          "alternatives_considered": "Changing the valuation, tableau line and diagram to 1.1.",
+          "rationale": "The open branch makes p true at 1.1 and q true at 1.2, which is the intended countermodel.",
+          "precise_review_question": "Does the V(q) explanation now cite q at prefix 1.2?",
+          "location_needle": "SOURCE CORRECTION TA-NML-057"
+        },
+        {
+          "audit_id": "TA-NML-058",
+          "unit_id": "OLP-0469",
+          "kind": "countermodel-search-called-closed-tableau-construction",
+          "action": "Changed both descriptions of the systematic search from construction of a closed tableau to construction of a complete tableau.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Both examples start from underivable formulas and intentionally end with an open complete branch, so their prescribed search cannot be a construction of a closed tableau.",
+          "chosen_treatment": "தமிழ் இரு இடங்களிலும் முழுமையான அட்டவணை மரத்தின் கட்டமைப்பு எனக் கூறுகிறது.",
+          "alternatives_considered": "Calling the open trees closed; changing both examples to derivable formulas.",
+          "rationale": "The completeness procedure searches exhaustively; closure is one possible outcome, while these examples exhibit the open complete outcome.",
+          "precise_review_question": "Are both systematic searches now described as complete-tableau constructions?",
+          "location_needle": "SOURCE CORRECTION TA-NML-058"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\True",
+        "\\True"
+      ],
+      "extra_commands": [
+        "\\False",
+        "\\False"
+      ],
+      "command_parity_or_audited_correction": true
     }
   ],
   "state_hashes": {
@@ -22929,19 +23887,19 @@
     "SOURCE_VERIFICATION.json": "be9dcfa502b93b6d9e3a5388d183072273e0518841360b6230ed4ef1b1fadeb9",
     "CANON_SOURCES.jsonl": "8554943ae1f8204bd0b5902ad778d9d82bc1d9da1704fe9b0724c221720be098",
     "CANON_PASSAGES.jsonl": "a69b451b15b130e4e0e1e146a2604b96ba4928e1d08b545216ddc343979d7add",
-    "TERM_DECISIONS.jsonl": "bfcf8b8dbe8c38bdbc6524840e51545dbc95b0869d74b0eae33f81bfee890dfe",
-    "SEGMENT_CANON_USE.jsonl": "72f4fcb493f48390b3ac38975747ac5aee25a8147e90d1bcb87243bc2d2745a9",
-    "TRANSLATION_DECISIONS.jsonl": "3da5a28c14c6e4a0b08728ee75c2893866b7d736c4d3b0f4b63e911fe7154d9c",
-    "TRANSLATION_DECISION_OCCURRENCES.jsonl": "520197b4f24f7ef21350708c3151846fc5970a166f4b91a95df0bb34b6de7bd4",
-    "TRANSLATION_DECISION_REVIEW.json": "51c14b38f6a1343c1b8644fb0657f3cb6dfbd95e75698703f63380c22887aa43",
-    "TRANSLATION_DECISION_OCCURRENCES.csv": "88ccb18a68f934563657e1b8e92f5420fbe96746bf5b22dd949b6e89f26891d8",
-    "TRANSLATION_DECISION_INDEX.md": "2433173e8e9151faff137098361ce5232cf9a0a97f6d6d96e49042304ddaed06",
-    "TRANSLATION_DECISION_PRIORITY.md": "7638df6cc73ac1d4494980f91cbe481cc842b864fe312a8a0edb1cdde276bb7e",
-    "DECISION-REVIEW-QA.json": "77b95558cf03d83e0cdd97c1a10a6825ff7eb2a6dfd5337f9cfc4326c79e96e3",
+    "TERM_DECISIONS.jsonl": "8b7f9267b6aa738f8f62d9565af7a188576517c348ad9edf2023922733f660cd",
+    "SEGMENT_CANON_USE.jsonl": "3a124daf0f335d2ef9049f000322d72c5e530f35dc7071b49a66bc16342cc22e",
+    "TRANSLATION_DECISIONS.jsonl": "2cb59147da3afb47ba5e443eed36cbc90585ba79d64b9bd693b99dbb12b75a2e",
+    "TRANSLATION_DECISION_OCCURRENCES.jsonl": "68aff4fb9e49ef709924c1c7e55832dbd0e5081ba528dfec6ae65678ce6fe3c1",
+    "TRANSLATION_DECISION_REVIEW.json": "6424fc65912eff12dd6ea98ac487ac68624a8fb811c3fe9399f08cb0ba05179c",
+    "TRANSLATION_DECISION_OCCURRENCES.csv": "92dba2f2b4d832411801416176e48ee6eb8892a21b7beb25740d1571b0272ad6",
+    "TRANSLATION_DECISION_INDEX.md": "49ada1e334f18bae2674e0764a19c7a7bad0299922666957f8ffda13126c3d39",
+    "TRANSLATION_DECISION_PRIORITY.md": "4e4a66d045577348072d851cfb1282368af4f199cb3adf8f46bd2fe3a0417413",
+    "DECISION-REVIEW-QA.json": "400ebd7f20de77e4269cbf7e9572ffa49fefdf97fabacb43fa79eee2cdf226fc",
     "DECISION_PAGE_MAP.jsonl": "5f491211da05ac25b394301a14aa087207c7b2ff125a3b6747c764369df3dc8b",
     "VARIANT_ASSESSMENT.md": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d",
-    "SOURCE_CORRECTIONS.json": "7c30cd3dabb30a30fa77955d7c3fc4edd01db7831390ecb6e105eb184004b72f",
-    "SEMANTIC_REVIEW-CURRENT.json": "3332507bd147d3e3ee0eb9baf55d5d04fa64dd3f55a055f7f8ef3791f79b8c89",
+    "SOURCE_CORRECTIONS.json": "fbcfc1b19c7d07437cf7788a8f6f06de8c52d977730b2c625b1f7166f97b6761",
+    "SEMANTIC_REVIEW-CURRENT.json": "58a2c4ad52e66e755e0fd6527adb86e1623cb89ee5a1a7a23d8a2b4522871397",
     "LAPTOP-INTAKE-CHECK.json": "23e3f05fb962fd9f4bfdfd44551d46aa1b54b51d2053c0121cc1806542b2ae17",
     "LAPTOP-CANON-RECONCILIATION.md": "9fb00061631a8ba53aa3394a1034ba06c5da9b61ae0d338fd43eac586b11673f",
     "TEX-B001-RECEIPT.json": "a5a626165a01e242e480c6d08598fd7d498b8dd637314ecc7cf37632ac8b9c1c",
@@ -23179,6 +24137,14 @@
     "QA-B199.json": "84437e9433355c69230027b960505ead682f66fab7f963af245bcb923c2ecae4",
     "QA-B200.json": "80a2c9cec477c71cd1464509b8e0c832ac3503714de6e586912d1bafdaa161a6",
     "QA-B201.json": "685120299af0a1bfea517b1f39f17584fde806629700d1a0e0c93c4b2bea4a40",
+    "QA-B202.json": "23d6abd18dee5cce0e5113b798446dfa74c41966534deb573bf3c7f019e8ed38",
+    "QA-B203.json": "08e75a62f4a608bb5ddf424c5bcba6a8ac4b9a276d747ba753e86783ff02224f",
+    "QA-B204.json": "f382c832eae291865730f84619c96766998ae733bc51ae3831e4d50b0e68c188",
+    "QA-B205.json": "8990d97c519db15dc1ddd22078879544329caf20ab5924f5466d19f13881662c",
+    "QA-B206.json": "ff9fc2ea35fc54779bcc034240802bcf826337f7141fe589a9f2d29147fc330f",
+    "QA-B207.json": "3079da0b2eb6949015f6f8367f4468d96e901f74efce3fde124b0f73db3178bc",
+    "QA-B208.json": "c04222eefa7dcabab0196f457c1768c22d4dbe41e2b70f07558aaaf3c672e05c",
+    "QA-B209.json": "22f5beb0f8e8d69ac5c71f3123dd387ac97390bc4ed44e923cf2b119ae29c276",
     "EPUB-HTML-PROOF_SYSTEMS-RECEIPT.json": "04bcb59744d6dfb8bdde2f6887d72bdb81040878d829d26c98d7b8f84cdf73e7",
     "EPUB-HTML-SETS-RECEIPT-20260912-215943.json": "ab6044ff13b6727ff03f3822657679a4395050e434b8359bb09d1821dd863207",
     "EPUB-HTML-SETS-RECEIPT-20260912-220848.json": "43571d74a3e091c07f27e26417687b89fff0fb3f6f48021de1b1be2de7e9ee94",
@@ -23222,13 +24188,13 @@
     "readers/incompleteness-arithmetization-ta-Taml-IN.pdf": "4f985c31276f63792c1fcfd0b8ddd1506d1239ed389957f8ce15066ec35488db",
     "readers/representability-in-q-ta-Taml-IN.pdf": "e8512fe714e84c84ec5d4fd4cdcf7e126670762d3b5cdfe18c39eb65ef562b10",
     "readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf": "1b5f3bd1b1395b69a503665ac86e909dd1339ef954393375a4aa48708f70846b",
-    "evidence/translation-decisions/START_HERE.md": "5e3dbbf00a2dcb0f117d16a11c8b55a7d0491f60dc39b63a93bcd35d3bf6dc62",
-    "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md": "d9509e8a8aea36c91ebe79c785c40673375e4484ebc695ebd8099f227dc01720",
-    "evidence/translation-decisions/PRIORITY_REVIEW.md": "c28ba48310f655b52cb2a731322bed86e7b90ea10cb35217855eff04a6e36b81",
-    "evidence/translation-decisions/DECISION_OCCURRENCES.csv": "981ae50be1b6c9b73465a5f5469f4d9a1ae038fe29b2d430a3cff93bea296bac",
-    "evidence/translation-decisions/DECISIONS.json": "9667d214dbbfff8b04b5c932f736870eb35e348409a9421a691f018ff65bf481",
+    "evidence/translation-decisions/START_HERE.md": "a9992024d5b88d5fa9a99a6d98495d35580606eaa39e8f57453cb2096c9adf7a",
+    "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md": "3d0ac384b65b7bbb77ce35dac5153d43710c6b9c592e48d3fa9ad132ad461385",
+    "evidence/translation-decisions/PRIORITY_REVIEW.md": "0ae6a07916e7e5804d5e038ee90d91d611666d60becc61087206d88f92c88bc5",
+    "evidence/translation-decisions/DECISION_OCCURRENCES.csv": "2387cc47a0192c7476c242feb54e6848cf76482c447e1e8e590e29ac78d51702",
+    "evidence/translation-decisions/DECISIONS.json": "620f483c7f16cbd40570e4f4caabe8e6a9ef1b01ddf21adf0c164502c35b1e46",
     "evidence/translation-decisions/translation-decision.schema.json": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
-    "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": "163be74462187fde1856009e7df0172b0f079fecdd409d40b5b7c7860172f468",
+    "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": "2b57aba5141d3b069a66f35093228b88ecf6758ef5d6d310ba762b8dbbc61925",
     "evidence/translation-decisions/VARIANT_ASSESSMENT.md": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d",
     "evidence/publication-readback-proof-systems-release.json": "6af3f7bb4263014103ad484aa09481c479366e34d99ee98a464f705a9508cd7c"
   },
@@ -23236,8 +24202,8 @@
   "current_release_published": false,
   "release_verification_scope": "The exact v0.4.0-cumulative-203 cumulative reader covers 203 distinct units in 384 pages, and the public repository contains all 456 accepted translated source units at source commit 65c5be40d4616e57751e536ded6b52de6da952e5. The release assets and all 1574 files in that source commit were anonymously byte-verified.",
   "unresolved": [
-    "266 source units remain untranslated",
-    "253 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
+    "256 source units remain untranslated",
+    "263 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
     "The 7 verified readers are interim checkpoints, not the full edition",
     "Reflowable EPUB3 production, validation and publication remain in progress for the exact bounded readers",
     "Advanced provisional terminology requires ongoing contextual canon consultation",

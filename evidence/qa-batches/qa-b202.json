@@ -1,0 +1,97 @@
+{
+  "batch_id": "TA-B202",
+  "units": [
+    {
+      "unit_id": "OLP-0460",
+      "source_sha256": "58eea9ef8caa03576eb40d2be64cbd3d5dbfc07e1bb052af3558481e9f7d8f1b",
+      "translation_sha256": "8ac05525588fd242a51424e31c45a5472585b97e2241d39017ddc282ee6a0040",
+      "source_bytes": 663,
+      "translation_bytes": 1399,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-037",
+          "unit_id": "OLP-0460",
+          "kind": "chapter-driver-comment-names-axioms-systems",
+          "action": "Corrected the retained chapter metadata comment from axioms-systems to tableaux, matching the directory, chapter identifier, title, and all imported sections.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The tableaux chapter driver is headed by a copied Chapter: axioms-systems comment even though its olchapter identifier is tab and every import concerns tableaux.",
+          "chosen_treatment": "தமிழ் இயக்கியின் அதிகாரக் குறிப்பை tableaux எனச் சரிசெய்கிறது.",
+          "alternatives_considered": "Retaining metadata that identifies a different neighboring chapter.",
+          "rationale": "This is descriptive source metadata; every structural identifier and file path independently identifies the chapter as tableaux.",
+          "precise_review_question": "Does the corrected comment agree with the tab chapter identifier and imported files?",
+          "location_needle": "SOURCE CORRECTION TA-NML-037"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0461",
+      "source_sha256": "87a62d9825b9d30949d14e5530488544e403e28c7594774a9bf6c91e73803b54",
+      "translation_sha256": "9eb920085e46581ad211aa2f30f906914649cd35fc41f3f7f65f102c65fd0e30",
+      "source_bytes": 2529,
+      "translation_bytes": 5714,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "formula",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "signed"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}
