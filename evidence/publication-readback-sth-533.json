@@ -1,0 +1,298 @@
+{
+  "schema": "openlogic-tamil-publication-readback/1",
+  "checked_at_utc": "2026-09-20T21:14:23.712849+00:00",
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "branch": "main",
+  "commit": "580ffa2ed169eccd878cdd3018805cf1e51ea167",
+  "parent_commit": "193283fb2ccaa049cc6f3e775cb7fb2209868438",
+  "anonymous_commit_api": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/commits/580ffa2ed169eccd878cdd3018805cf1e51ea167",
+    "http_status": 200,
+    "reported_sha": "580ffa2ed169eccd878cdd3018805cf1e51ea167",
+    "matches_requested_commit": true
+  },
+  "anonymous_raw_changed_files": {
+    "count": 30,
+    "all_http_200": true,
+    "all_match_commit_blobs": true,
+    "files": [
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/README.md",
+        "http_status": 200,
+        "bytes": 8777,
+        "sha256": "d279f14fd5785e0664d0ec7055ed9a022e3fc1a27f67d25b8f6abe1282208e12",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "build/tamil-set-theory-story.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/build/tamil-set-theory-story.tex",
+        "http_status": 200,
+        "bytes": 9007,
+        "sha256": "de57d4f8de57414e68e22cb4a34fd97e242d1029bf557a88397179d6feef7560",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/checkpoint-current.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/checkpoint-current.json",
+        "http_status": 200,
+        "bytes": 1226357,
+        "sha256": "15ca456e43457dfbe1f121c6cf5a1888032aa9070178490b7e9b9f0f71500049",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/cursor-current.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/cursor-current.json",
+        "http_status": 200,
+        "bytes": 10993,
+        "sha256": "9305542eb4189fc39b3332605e909340f7ff105593837c04776d1f64b2b33df3",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-batches/qa-b236.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/qa-batches/qa-b236.json",
+        "http_status": 200,
+        "bytes": 4197,
+        "sha256": "e1dd448978bafa886cf1f24acba6f2198d8831546aeddd35a1ecca40c5497560",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-batches/qa-b237.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/qa-batches/qa-b237.json",
+        "http_status": 200,
+        "bytes": 6928,
+        "sha256": "c384b37281368e6be0978a5ce296c8f7201eabeee7b3a23027392aa068508244",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-batches/qa-b238.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/qa-batches/qa-b238.json",
+        "http_status": 200,
+        "bytes": 5291,
+        "sha256": "a550bd3c3de5c68600d29bf12d314b3b58b550fb60ebf395d3ae293bf81c2b18",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/qa-current.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/qa-current.json",
+        "http_status": 200,
+        "bytes": 3183,
+        "sha256": "8d3f9f25ade6c25622ce78a05c25367055a799fd21eea1c91d5fd5e8376b7070",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/segment-canon-use.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/segment-canon-use.jsonl",
+        "http_status": 200,
+        "bytes": 2238757,
+        "sha256": "85a4b50ecca225bb3bab5b53be917c872895bb0b9dd6caf3089a3890e29ea861",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/semantic-review-current.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/semantic-review-current.json",
+        "http_status": 200,
+        "bytes": 545732,
+        "sha256": "ad17ef4f3b0242df30fa6db27d29ae968e3b01457fdd29d6fb5b9e02bac66328",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/set-theory-story-render-qa.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/set-theory-story-render-qa.json",
+        "http_status": 200,
+        "bytes": 4840,
+        "sha256": "79f6b0d015a165704518633b72f507c0ec1657c19f24a563708accaec6f1c000",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/source-corrections.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/source-corrections.json",
+        "http_status": 200,
+        "bytes": 455961,
+        "sha256": "7f2e0e89471083a7d5f8b6722206a2a19130eb395e80f2c154642d6000f95ce1",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/term-decisions.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/term-decisions.jsonl",
+        "http_status": 200,
+        "bytes": 161197,
+        "sha256": "a0bd225e0a56685f7be5ad59e089c6ede2aea93d115c245b90565bc86cc138b6",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/tex-set-theory-story-receipt.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/tex-set-theory-story-receipt.json",
+        "http_status": 200,
+        "bytes": 1511,
+        "sha256": "ad8fff167b93d797f93ea23430fc5e2c1b1198ea243ca0d4db055a2ac48719e8",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/translation-decisions.jsonl",
+        "http_status": 200,
+        "bytes": 2753165,
+        "sha256": "c7a453ea97a6f16640d1c4941246c74c7fd5b74de3a5d0264189df3c7488c10e",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/DECISIONS.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/translation-decisions/DECISIONS.json",
+        "http_status": 200,
+        "bytes": 81476798,
+        "sha256": "6eb90413a8b2dfaec023ffe9eeaf736f9b53fb08078534dde59fb4287eda2047",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/DECISION_OCCURRENCES.csv",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/translation-decisions/DECISION_OCCURRENCES.csv",
+        "http_status": 200,
+        "bytes": 20707082,
+        "sha256": "bd8ba8d21daec4d5c01251a1ad9f004c2b43b4462260119e4743936348d29db6",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/PRIORITY_REVIEW.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/translation-decisions/PRIORITY_REVIEW.md",
+        "http_status": 200,
+        "bytes": 4152859,
+        "sha256": "c36b70b65129a38bda27e7341ee98d7c811770bdae22e2750f692f4037ad80ac",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/START_HERE.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/translation-decisions/START_HERE.md",
+        "http_status": 200,
+        "bytes": 915,
+        "sha256": "65e60e65ef7c14238b8d2544d42da54f862112fe7cb9bb7b8b383d25f2fe9f7c",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md",
+        "http_status": 200,
+        "bytes": 6587380,
+        "sha256": "74b34413a08ac8d88a5c53536e3627f9bfc51c6f23f3874cc2e647666792d3a1",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "evidence/translation-decisions/TRANSLATION_DECISION_QA.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/evidence/translation-decisions/TRANSLATION_DECISION_QA.json",
+        "http_status": 200,
+        "bytes": 2946,
+        "sha256": "03e51adbf2fc5d3640c2dfce51d38548607a8793e143057b8d7283fc0fc4f7c6",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "readers/set-theory-iterative-conception-ta-Taml-IN.pdf",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/readers/set-theory-iterative-conception-ta-Taml-IN.pdf",
+        "http_status": 200,
+        "bytes": 162900,
+        "sha256": "03bf21b446ff953de99c44ce68723ddc856ebbbbc800ae0c573d1578fe9281d4",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/set-theory.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/translation/content/set-theory/set-theory.tex",
+        "http_status": 200,
+        "bytes": 461,
+        "sha256": "c056447ddcf3e4acc8efb1eb17b80765b00871dfaf4aef9da1e12c39aee52188",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/story/cumulative-approach.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/translation/content/set-theory/story/cumulative-approach.tex",
+        "http_status": 200,
+        "bytes": 12734,
+        "sha256": "374537fc6d59f26cfbd62dbdcf4e70460e83f682046fe018b3c19484a89c34b2",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/story/extensionality.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/translation/content/set-theory/story/extensionality.tex",
+        "http_status": 200,
+        "bytes": 3200,
+        "sha256": "0a27204fc8e1fbb01cdd4ccc0dbc1a795a66207d9fdb0de6da5156432fca6510",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/story/grundgesetze.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/translation/content/set-theory/story/grundgesetze.tex",
+        "http_status": 200,
+        "bytes": 6961,
+        "sha256": "9cf7ede0a57ddd592abb4138d9f181fc2955d962c6d4f66c99b1000ebabf630a",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/story/predicativity.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/translation/content/set-theory/story/predicativity.tex",
+        "http_status": 200,
+        "bytes": 14357,
+        "sha256": "d226a18487b2d8fa19fc8df80bc9a801a3d01bc651b7d351941198b7ddc60fdd",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/story/russells-paradox-again.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/translation/content/set-theory/story/russells-paradox-again.tex",
+        "http_status": 200,
+        "bytes": 8222,
+        "sha256": "e34e620ca80aea8b57e72f84b1371190e2d989ccbe63ae08446471d3d12301d3",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/story/story.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/translation/content/set-theory/story/story.tex",
+        "http_status": 200,
+        "bytes": 421,
+        "sha256": "34cd0bb9494793f856be427b313512f154ae64e5a347fc4b977baca0cc5f92c5",
+        "matches_commit_blob": true
+      },
+      {
+        "path": "translation/content/set-theory/story/urelements.tex",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/580ffa2ed169eccd878cdd3018805cf1e51ea167/translation/content/set-theory/story/urelements.tex",
+        "http_status": 200,
+        "bytes": 9237,
+        "sha256": "c376215c8cb2a0078ae0a6d18dfa008316d5120c05d8b582cbf306185ee72980",
+        "matches_commit_blob": true
+      }
+    ]
+  },
+  "anonymous_repository_archive": {
+    "url": "https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/580ffa2ed169eccd878cdd3018805cf1e51ea167",
+    "http_status": 200,
+    "bytes": 16823723,
+    "sha256": "70042d99a52c2a2626c25465927f824667d3d575e52f7d2b14743969905293b2",
+    "verified_files": 1698,
+    "missing_files": [],
+    "extra_files": [],
+    "mismatched_files": [],
+    "all_files_match": true
+  },
+  "scope": {
+    "accepted_units": 533,
+    "aligned_segments": 1419,
+    "semantic_samples": 627,
+    "visually_verified_distinct_reader_units": 211,
+    "new_units": [
+      "OLP-0529",
+      "OLP-0530",
+      "OLP-0531",
+      "OLP-0532",
+      "OLP-0533",
+      "OLP-0534",
+      "OLP-0535",
+      "OLP-0536"
+    ],
+    "new_reader_claim": true,
+    "new_epub_claim": false,
+    "reader_pdf": {
+      "path": "readers/set-theory-iterative-conception-ta-Taml-IN.pdf",
+      "expected_sha256": "03bf21b446ff953de99c44ce68723ddc856ebbbbc800ae0c573d1578fe9281d4",
+      "present_in_changed_files": true,
+      "downloaded_sha256": "03bf21b446ff953de99c44ce68723ddc856ebbbbc800ae0c573d1578fe9281d4",
+      "matches_expected_sha256": true
+    }
+  },
+  "result": "pass"
+}
