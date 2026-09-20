@@ -1,0 +1,236 @@
+% SEGMENT OLP-0449-S01
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: frame-completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{fra}
+
+\olsection{சட்டக நிறைவு}
+
+தரப்பட்ட ஒரு தருக்கத்திற்கான நியம மாதிரி அதற்குரிய சட்டகப் பண்பைக் கொண்டுள்ளது
+என்று காட்டியதும், \Log{K} க்கான நிறைவுத் தேற்றத்தை மற்ற வாய்ப்புநிலை
+அமைப்புகளுக்கு விரிவுபடுத்தலாம்.
+
+\begin{thm}\ollabel{thm:completeframeprops}
+  இயல்பான வாய்ப்புநிலைத் தருக்கம்~$\Sigma$ ஆனது
+  \olref{tab:correspondencetable} இன் இடப்பக்கத்திலுள்ள !!{formula}s இல்
+  ஒன்றைக் கொண்டிருந்தால்,~$\Sigma$ க்கான நியம மாதிரி வலப்பக்கத்திலுள்ள
+  அதற்குரிய பண்பைக் கொண்டிருக்கும்.
+\end{thm}
+
+\begin{table}[htp]
+  \centering
+    \begin{tabular}{| l || l |}
+      \hline
+      \emph{$\Sigma$ கொண்டிருந்தால் \dots} & \emph{\dots $\Sigma$ க்கான
+        நியம மாதிரி:} \\
+      \hline \hline
+      \Ax{D}:\;\; $\Box!A \lif \Diamond !A$ & \quad தொடர் பண்புள்ளது; \\
+      \hline
+      \Ax{T}:\;\; $\Box!A \lif !A$ &\quad  தற்சுட்டுப் பண்புள்ளது;\\
+      \hline
+      \Ax{B}: \;\;$!A \lif \Box\Diamond!A$ &\quad  சமச்சீர்ப் பண்புள்ளது; \\
+      \hline
+      \Ax{4}: \;\; $\Box!A \lif \Box\Box!A$ & \quad கடப்புப் பண்புள்ளது; \\
+      \hline
+      \Ax{5}: \;\; $\Diamond !A \lif \Box\Diamond!A$& \quad யூக்ளிடியப் பண்புள்ளது.\\
+      \hline
+    \end{tabular}
+    \caption{அடிப்படை ஒத்திசைவு உண்மைகள்.}
+    \ollabel{tab:correspondencetable}
+\end{table}
+
+\begin{proof}
+  இவற்றை ஒவ்வொன்றாகக் கருதுவோம்.
+
+  $\Sigma$ ஆனது~\Ax{D} ஐக் கொண்டுள்ளது என்க; மேலும் $\Delta \in W^\Sigma$
+  என்க. $R^\Sigma \Delta\Delta'$ ஆக இருக்கும் ஒரு~$\Delta'$ உள்ளது என்று
+  காட்ட வேண்டும். $\Box^{-1}\Delta$ ஆனது~$\Sigma$-முரணற்றது என்று காட்டினால்
+  போதும்; ஏனெனில் அப்போது லிண்டன்பாமின் துணைத்தேற்றத்தின்படி,
+  $\Delta' \supseteq \Box^{-1}\Delta$ ஆக இருக்கும் நிறைவான
+  $\Sigma$-முரணற்ற கணம் ஒன்று உள்ளது; மேலும் $R^\Sigma$ இன்
+  வரையறைப்படி \iftag{prvBox}{}{மற்றும்
+  \olref[mod]{lem:box-iff-diamond} படி }நமக்கு $R^\Sigma \Delta\Delta'$.
+  எனவே, முரணுக்காக $\Box^{-1}\Delta$ ஆனது~\emph{$\Sigma$-முரணற்றதல்ல}
+  என்க; அதாவது, $\Box^{-1}\Delta \Proves[\Sigma] \lfalse$.
+  \olref[mod]{lem:box2} படி, $\Delta \Proves[\Sigma] \Box\lfalse$;
+  $\Sigma$ ஆனது~\Ax{D} ஐக் கொண்டுள்ளதால், $\Delta \Proves[\Sigma]
+  \Diamond\lfalse$ உம். ஆனால் $\Sigma$ இயல்பானது; எனவே
+  $\Sigma \Proves \lnot\Diamond \lfalse$
+  (\olref[prf][nor]{prop:notDiamondBot}); இதிலிருந்து $\Delta
+  \Proves[\Sigma] \lnot\Diamond \lfalse$ உம் கிடைக்கும்; இது~$\Delta$
+  வின் முரணின்மைக்கு எதிரானது.
+
+  இப்போது $\Sigma$ ஆனது~\Ax{T} ஐக் கொண்டுள்ளது என்க; மேலும் $\Delta \in
+  W^\Sigma$ என்க. $R^\Sigma \Delta\Delta$ என்று காட்ட வேண்டும்;
+  அதாவது,\iftag{prvBox}{}{ \olref[mod]{lem:box-iff-diamond} படி,}
+  $\Box^{-1}\Delta \subseteq \Delta$. ஆனால் $\Box!A \in \Delta$ எனில்,
+  \Ax{T} படி $!A \in \Delta$ உம்; இதுவே வேண்டியது.
+
+  இப்போது $\Sigma$ ஆனது~\Ax{B} ஐக் கொண்டுள்ளது என்க; மேலும் $\Delta$,
+  $\Delta' \in W^\Sigma$ ஆகியவற்றுக்கு $R^\Sigma \Delta\Delta'$ என்க.
+  $R^\Sigma \Delta'\Delta$ என்று காட்ட வேண்டும்; அதாவது,\iftag{prvBox}{
+    $\Box^{-1}\Delta' \subseteq \Delta$. இதை
+    \olref[mod]{lem:box-iff-diamond} படி நிகரமாக எழுதினால்}{}
+  $\Diamond\Delta \subseteq \Delta'$. எனவே $!A \in \Delta$ என்க.
+  \Ax{B} படி, $\Box\Diamond!A \in \Delta$ உம். $R^\Sigma
+  \Delta\Delta'$ என்ற கருதுகோளாலும்\iftag{prvBox}{}{ மேலும்
+    \olref[mod]{lem:box-iff-diamond} படியும்}, $\Box^{-1}\Delta
+  \subseteq \Delta'$; எனவே வேண்டியபடி $\Diamond!A \in \Delta'$.
+
+  இப்போது $\Sigma$ ஆனது~\Ax{4} ஐக் கொண்டுள்ளது என்க; மேலும்
+  $R^\Sigma \Delta_1\Delta_2$, $R^\Sigma \Delta_2\Delta_3$ என்க.
+  $R^\Sigma \Delta_1\Delta_3$ என்று காட்ட வேண்டும். கருதுகோளிலிருந்தும்
+  \iftag{prvBox}{}{ \olref[mod]{lem:box-iff-diamond} படியும்} நமக்கு
+  $\Box^{-1}\Delta_1 \subseteq \Delta_2$, $\Box^{-1}\Delta_2 \subseteq
+  \Delta_3$ இரண்டும் கிடைக்கின்றன. $R^\Sigma \Delta_1\Delta_3$ என்று
+  காட்ட, $\Box^{-1}\Delta_1 \subseteq \Delta_3$ என்று காட்டினால் போதும்.
+  எனவே $!B \in \Box^{-1}\Delta_1$ என்க; அதாவது,
+  $\Box!B \in \Delta_1$. \Ax{4} படி, $\Box\Box!B \in \Delta_1$ உம்;
+  கருதுகோளின்படி முதலில் $\Box!B \in \Delta_2$ என்றும், பின்னர்
+  $!B \in \Delta_3$ என்றும் கிடைக்கும்; இதுவே வேண்டியது.
+
+  இப்போது $\Sigma$ ஆனது~\Ax{5} ஐக் கொண்டுள்ளது என்க; மேலும்
+  $R^\Sigma \Delta_1\Delta_2$, $R^\Sigma \Delta_1\Delta_3$ என்க.
+  $R^\Sigma \Delta_2\Delta_3$ என்று காட்ட வேண்டும். முதல் கருதுகோள்
+  $\Box^{-1}\Delta_1 \subseteq \Delta_2$ என்பதைத் தருகிறது\iftag{prvBox}{}{
+    \olref[mod]{lem:box-iff-diamond} படி}; இரண்டாவது கருதுகோள்
+  $\Diamond\Delta_3 \subseteq \Delta_1$ என்பதற்கு நிகரானது\iftag{prvBox}{,
+    \olref[mod]{lem:box-iff-diamond} படி}{}. $R^\Sigma
+  \Delta_2\Delta_3$ என்று காட்ட,\iftag{prvBox}{
+    \olref[mod]{lem:box-iff-diamond} படி, போதுமானது}{ நாம்}
+  $\Diamond\Delta_3 \subseteq \Delta_2$ என்று காட்ட வேண்டும்.
+  எனவே $\Diamond!A \in \Diamond\Delta_3$ என்க; அதாவது,
+  $!A \in \Delta_3$. இரண்டாவது கருதுகோளின்படி $\Diamond!A \in \Delta_1$;
+  \Ax{5} படி $\Box\Diamond!A \in \Delta_1$ உம். ஆனால் இப்போது முதல்
+  கருதுகோள் $\Diamond!A \in \Delta_2$ என்பதைத் தருகிறது; இதுவே வேண்டியது.
+  \end{proof}
+
+இதன் உடன்விளைவாகப் பல அமைப்புகளுக்கான நிறைவு முடிவுகளைப் பெறுகிறோம்.
+எடுத்துக்காட்டாக, $\Log{S5} = \Log{KT5} = \Log{KTB4}$ ஆனது எல்லாத்
+தற்சுட்டு யூக்ளிடிய மாதிரிகளின் வகுப்பைப் பொறுத்து நிறைவானது என்பதை அறிவோம்;
+இவ்வகுப்பு எல்லாத் தற்சுட்டு, சமச்சீர், கடப்பு மாதிரிகளின் வகுப்பே ஆகும்.
+
+\begin{thm}\ollabel{thm:generaldet}
+  $\mClass{C}_\Ax{D}$, $\mClass{C}_\Ax{T}$,
+  $\mClass{C}_\Ax{B}$, $\mClass{C}_\Ax{4}$, $\mClass{C}_\Ax{5}$ ஆகியவை
+  முறையே எல்லாத் தொடர், தற்சுட்டு, சமச்சீர், கடப்பு, யூக்ளிடிய மாதிரிகளின்
+  வகுப்புகளாக இருக்கட்டும். அப்போது \Ax{D}, \Ax{T}, \Ax{B}, \Ax{4},
+  \Ax{5} ஆகியவற்றிலிருந்து பெறப்பட்ட ஏதேனும் திட்டவடிவங்கள் $!A_1$,
+  \dots, $!A_n$ க்கு, அமைப்பு $\Log{K}!A_1 \dots !A_n$ ஆனது
+  $\mClass{C} = \mClass{C}_{!A_1} \cap \dots
+  \cap \mClass{C}_{!A_n}$ என்ற மாதிரிவகுப்பால் தீர்மானிக்கப்படுகிறது.
+\end{thm}
+
+\begin{prop}
+  $\Sigma$ ஓர் இயல்பான வாய்ப்புநிலைத் தருக்கமாக இருக்கட்டும்; அப்போது:
+  \begin{enumerate}
+  \item\ollabel{prop:anotherfive-a}%
+    $\Sigma$ ஆனது $\Diamond!A \lif \Box !A$ என்ற திட்டவடிவத்தைக்
+    கொண்டிருந்தால், $\Sigma$ க்கான நியம மாதிரி பகுதிச் சார்பாக இருக்கும்.
+  \item $\Sigma$ ஆனது $\Diamond!A \liff \Box !A$ என்ற திட்டவடிவத்தைக்
+    கொண்டிருந்தால், $\Sigma$ க்கான நியம மாதிரி சார்பாக இருக்கும்.
+  \item $\Sigma$ ஆனது $\Box\Box!A \lif \Box !A$ என்ற திட்டவடிவத்தைக்
+    கொண்டிருந்தால், $\Sigma$ க்கான நியம மாதிரி தளர்வாக அடர்ந்திருக்கும்.
+  \end{enumerate}
+(இச்சட்டகப் பண்புகளின் வரையறைகளுக்கு
+  \olref[frd][acc]{tab:anotherfive} ஐக் காண்க).
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item $\Sigma$ ஆனது $\Diamond !A \lif \Box !A$ என்ற திட்டவடிவத்தைக்
+    கொண்டுள்ளது என்க. $R^\Sigma$ பகுதிச் சார்பாக உள்ளது என்று காட்ட,
+    எந்த $\Delta_1$, $\Delta_2$, $\Delta_3 \in W^\Sigma$ க்கும்,
+    $R^\Sigma \Delta_1\Delta_2$, $R^\Sigma \Delta_1\Delta_3$ எனில்
+    $\Delta_2=\Delta_3$ என்று நிறுவ வேண்டும். $R^\Sigma
+    \Delta_1\Delta_2$ என்பதால் $\Box^{-1}\Delta_1 \subseteq \Delta_2$;
+    $R^\Sigma \Delta_1\Delta_3$ என்பதால் $\Box^{-1}\Delta_1
+    \subseteq \Delta_3$ உம்\iftag{prvBox}{}{; இரண்டும்
+      \olref[mod]{lem:box-iff-diamond} படி}. $\Delta_2=\Delta_3$ என்ற
+    அடையாளம், $\Delta_2 \subseteq \Delta_3$, $\Delta_3 \subseteq
+    \Delta_2$ என்ற இரு உள்ளடக்கங்களையும் நிறுவினால் பின்வரும். முதல்
+    உள்ளடக்கத்திற்கு, $!A \in \Delta_2$ என்க; அப்போது
+    $\Diamond!A \in \Delta_1$; திட்டவடிவத்தாலும்~$\Delta_1$ இன்
+    வருவித்தல் மூடுதலாலும் $\Box!A \in \Delta_1$ உம்; இதிலிருந்து
+    $R^\Sigma \Delta_1\Delta_3$ என்ற கருதுகோளின்படி,
+    $!A \in \Delta_3$. இரண்டாவது உள்ளடக்கமும் இதேபோன்றது.
+
+  \item பகுதி~\olref{prop:anotherfive-a} இலிருந்தும்
+    \olref{thm:completeframeprops} இலுள்ள தொடர் பண்புக்கான நிறுவலிலிருந்தும்
+    இது உடனடியாகப் பின்வருகிறது.
+
+  \item $\Sigma$ ஆனது $\Box\Box!A \lif \Box!A$ என்ற திட்டவடிவத்தைக்
+    கொண்டுள்ளது என்க. $R^\Sigma$ தளர்வாக அடர்ந்தது என்று காட்ட,
+    $R^\Sigma \Delta_1\Delta_2$ என்க. $R^\Sigma \Delta_1\Delta_3$,
+    $R^\Sigma \Delta_3\Delta_2$ ஆக இருக்கும் நிறைவான
+    $\Sigma$-முரணற்ற கணம்~$\Delta_3$ ஒன்று உள்ளது என்று காட்ட வேண்டும்.
+    பின்வருமாறு வைக்க:
+    \[
+    \Gamma = \Box^{-1}\Delta_1 \cup \Diamond\Delta_2.
+    \]
+    $\Gamma$ ஆனது~$\Sigma$-முரணற்றது என்று காட்டினால் போதும்; ஏனெனில்
+    அப்போது லிண்டன்பாமின் துணைத்தேற்றத்தின்படி, $\Box^{-1}\Delta_1
+    \subseteq \Delta_3$, $\Diamond\Delta_2 \subseteq \Delta_3$ ஆக
+    இருக்கும் நிறைவான $\Sigma$-முரணற்ற கணம்~$\Delta_3$ ஆக அதை
+    விரிவாக்கலாம்; அதாவது, $R^\Sigma \Delta_1\Delta_3$\iftag{prvBox}{}{
+      (\olref[mod]{lem:box-iff-diamond} படி)} மற்றும் $R^\Sigma
+    \Delta_3\Delta_2$\iftag{prvBox}{
+      (\olref[mod]{lem:box-iff-diamond} படி)}{}.
+
+    முரணுக்காக $\Gamma$ முரணற்றதல்ல என்க. அப்போது பின்வருமாறு அமையும்
+    !!{formula}s $\Box!A_1$, \dots, $\Box!A_n \in \Delta_1$ மற்றும்
+    $!B_1$, \dots,~$!B_m \in \Delta_2$ உள்ளன: \[!A_1, \dots,
+    !A_n, \Diamond!B_1, \dots, \Diamond!B_m \Proves[\Sigma]
+    \lfalse.\] ஒவ்வோர் இயல்பான வாய்ப்புநிலைத் தருக்கத்திலும்
+    $\Diamond (!B_1 \land \dots \land !B_m) \to
+    (\Diamond!B_1 \land \dots \land \Diamond!B_m)$ ஆனது
+    !!{derivable} என்பதால்,~$\Delta_2$ இன் முரணின்மைக்கு எதிராகப்
+    பின்வருமாறு வாதிடுகிறோம்:
+    \begin{align*}
+      !A_1, \dots, !A_n, & \Diamond!B_1, \dots,
+      \Diamond!B_m \Proves[\Sigma] \lfalse \\
+      !A_1, \dots,!A_n & \Proves[\Sigma] (\Diamond!B_1 \land
+      \dots \land \Diamond!B_m) \lif \lfalse\\
+      & \qquad\text{வருவித்தல் தேற்றத்தின்படி}\\
+      & \qquad\text{\olref[prf][prp]{prop:derivabilityfacts}\olref[prf][prp]{prop:derivabilityfacts-deduction}, மற்றும் \Taut{} படி} \\
+      !A_1, \dots,!A_n & \Proves[\Sigma]
+      \Diamond(!B_1 \land
+      \dots \land !B_m) \lif \lfalse\\
+      & \qquad \text{$\Sigma$ இயல்பானது என்பதால்} \\
+      !A_1, \dots,!A_n & \Proves[\Sigma]
+      \lnot\Diamond (!B_1 \land \dots \land !B_m)\\
+      & \qquad\text{\PL{} படி} \\
+      !A_1, \dots,!A_n & \Proves[\Sigma]
+      \Box\lnot (!B_1 \land \dots \land !B_m)\\
+      & \qquad\text{$\Box\lnot$ என்பது $\lnot\Diamond$ க்குப் பதில்} \\
+      \Box!A_1, \dots,\Box!A_n
+      & \Proves[\Sigma] \Box\Box \lnot (!B_1 \land \dots \land !B_m)\\
+      & \qquad\text{\olref[mod]{lem:box1} படி} \\
+      \Box!A_1, \dots,\Box!A_n
+      & \Proves[\Sigma]
+      \Box\lnot (!B_1 \land \dots \land !B_m)\\
+      &\qquad\text{$\Box\Box!A \lif \Box!A$ என்ற திட்டவடிவத்தின்படி} \\
+      \Delta_1 & \Proves[\Sigma]
+      \Box\lnot (!B_1 \land \dots \land !B_m)\\
+      &\qquad\text{ஒருபோக்குத்தன்மையால், \olref[prf][prp]{prop:derivabilityfacts}\olref[prf][prp]{prop:derivabilityfacts-monotonicity}} \\
+      & \Box\lnot (!B_1 \land \dots \land !B_m) \in \Delta_1\\
+      &\qquad\text{வருவித்தல் மூடுதலால்}; \\
+      & \lnot (!B_1 \land \dots \land !B_m) \in \Delta_2\\
+      &\qquad \text{ஏனெனில் }
+      R^\Sigma \Delta_1\Delta_2.
+    \end{align*}
+  \end{enumerate}
+\end{proof}
+
+இவ்வெடுத்துக்காட்டுகளின் வலிமையைக் கொண்டு, வாய்ப்புநிலைத் தருக்கத்தின் ஒவ்வோர்
+அமைப்பு~$\Sigma$ வும் \emph{நிறைவானது} என்று ஒருவர் நினைக்கக்கூடும்; அதாவது,
+$\Sigma$ வின் ஒவ்வொரு தேற்றமும் செல்லுபடியாகும் ஒவ்வொரு சட்டகத்திலும்
+செல்லுபடியாகும் எல்லா வாய்பாடுகளையும் அது நிறுவும் என்று நினைக்கக்கூடும்.
+துரதிருஷ்டவசமாக, இப்பொருளில் நிறைவற்ற பல அமைப்புகள் உள்ளன.
+
+\end{document}

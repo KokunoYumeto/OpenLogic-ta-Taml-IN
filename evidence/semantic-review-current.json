@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-19T23:32:53.640740+00:00",
+  "date_utc": "2026-09-20T00:03:16.734158+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2187,6 +2187,51 @@
       "unit_id": "OLP-0440",
       "source_sha256": "410cd2532bf8c2ba318f476f6e9192064021f16e0a42aa297015bb41851e889b",
       "translation_sha256": "2b8f7bb119a8effeccbda420b1d8e8ceaf28132e29e7b87b5888436f6face682"
+    },
+    {
+      "unit_id": "OLP-0441",
+      "source_sha256": "b1cc08131ec5862cc854398515ad134b4c816dfa7b9060ef15d2d5833e51b58d",
+      "translation_sha256": "a626050abd0e5f687a03c2f8e90a5411ba1acdd12f14d61267c516b3f847f759"
+    },
+    {
+      "unit_id": "OLP-0442",
+      "source_sha256": "c9ecf5ad894817a8446043393bd6b5d5e20e9755134d32fe362b503306a51fe7",
+      "translation_sha256": "7945199060041c760ed78d9e331e83b24cec5dbbe29a0d198c4547d122313126"
+    },
+    {
+      "unit_id": "OLP-0443",
+      "source_sha256": "b5bab763b10f3972e8a8c53ae3036677c0b462f86df13137ccb6181d9ce632e1",
+      "translation_sha256": "5b695ecb5c7fb088dffcc7c7df2bad03102442da170de91d9f16305bfe91db41"
+    },
+    {
+      "unit_id": "OLP-0444",
+      "source_sha256": "1708ac2baa1773893a9bff57d63c9201aaea7c990213c76478fb4065a269196b",
+      "translation_sha256": "ff05b7e76d2025a62e2def9d778ae114272cb9a6cc67c2a9366f816554639446"
+    },
+    {
+      "unit_id": "OLP-0445",
+      "source_sha256": "92b97da95c28f21f5806bcce481e64571dc3a82d5d1c315bcaf1c569c90d00a6",
+      "translation_sha256": "0f66343d674e5ecdade328fad0e030d66b48a44ea593c3469fe31b76a910cc6c"
+    },
+    {
+      "unit_id": "OLP-0446",
+      "source_sha256": "7d21c989f62f34ed387f7cbaef899f8b6d2c37467306110765c7395f70b1e4c3",
+      "translation_sha256": "9f700b222c7d3bb8b52e951d220cf2718ad97fc797da4bb4a49e7cea53c40f80"
+    },
+    {
+      "unit_id": "OLP-0447",
+      "source_sha256": "ba09b193f2ccb8f8c5751a1c762c0f81f14937ffbb42bd0e7bfad1f82d51f147",
+      "translation_sha256": "babd817fd9150967614ac31be838fe4de6d78a7ef9b8dbe56637320c1905ab81"
+    },
+    {
+      "unit_id": "OLP-0448",
+      "source_sha256": "067d811b2d64251f4f2365320e942a4e47341e8925b45f84de5571d735b5fa2a",
+      "translation_sha256": "8bdd5701cd235ca99fc6ca8cb9d39a01202cd9fb28aaef836a874e025dadb8e5"
+    },
+    {
+      "unit_id": "OLP-0449",
+      "source_sha256": "4021151e95c367cfd94030d36b6dfb3c16792ade5767bb24825daf2e0602bb70",
+      "translation_sha256": "7ccb559efa4d811e3543184866f406918d20dde260d5e0b0255cc83f0ddc2ff2"
     }
   ],
   "samples": [
@@ -5906,6 +5951,69 @@
       "assessment": "Both examples, all three equivalences or extension claims, and the contraposition proof through deduction and Rule T remain. TA-NML-024 normalizes the first discharged conditional.",
       "translation_segment_sha256": "81e6f1baa9773fcf5b4cfd6ad689ca58464161b378be2b938ce18fdb2f32100a",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0441-S01",
+      "reverse_paraphrase": "The completeness chapter imports its introduction, complete-consistent-set results, Lindenbaum lemma, modal-set lemmas, canonical-model definition, truth lemma, K completeness, and frame completeness in source order.",
+      "assessment": "All eight chapter components and the stable nml/com hierarchy remain intact.",
+      "translation_segment_sha256": "19e358f9395ac588da34bfc2b9453a2070fd5294608fb279f053d990fad894cb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0442-S01",
+      "reverse_paraphrase": "Completeness is proved contrapositively: extend a consistent negated formula to a complete consistent set, make that set a world of a canonical model, and use membership to refute validity.",
+      "assessment": "The proof roadmap, canonical-world construction, intended truth equivalence, and both derivability/validity directions remain. TA-NML-025 restores empty-premise derivability for the negated formula.",
+      "translation_segment_sha256": "1cd7615f0f7bc7f8d5346a94fc28669cf30490738dfce369dc8e615a623d7c06",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0443-S01",
+      "reverse_paraphrase": "A complete Sigma-consistent set decides every formula and is deductively closed; membership in it mirrors truth tables for false, true, negation, conjunction, disjunction, implication, and biconditional.",
+      "assessment": "All closure and connective clauses remain with both proof directions. TA-NML-026 and TA-NML-027 repair the negation-membership conclusion and biconditional converse hypothesis.",
+      "translation_segment_sha256": "7fbe2df96dff1bee74e70f95b2bbea0532a43b4f0febaace28530a4183d0df1c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0444-S01",
+      "reverse_paraphrase": "Lindenbaum construction enumerates all formulas and consistently adds each formula or its negation, yielding a complete consistent extension; a corollary characterizes derivability by membership in every such extension.",
+      "assessment": "The recursive construction, union consistency proof, completeness argument, extension property, and provability characterization remain exact.",
+      "translation_segment_sha256": "0f58fd7664656b1d7a07a34d960505024feb29ff6589b2eec41d798eb86b0ed4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0445-S01",
+      "reverse_paraphrase": "Box and Diamond transforms of formula sets characterize canonical accessibility; the lifting lemmas and complete-consistent-set propositions connect modal membership with every or some accessible extension.",
+      "assessment": "Both primitive-operator branches, accessibility equivalence, final exercise, and all finite-premise steps remain. TA-NML-028 keeps the declared final index k, and TA-NML-029 retains the Sigma derivability index.",
+      "translation_segment_sha256": "9042f6ec20c41d9e9752957a06b0b1a0f85eedab9b86be6294b347b6928e3cd4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0446-S01",
+      "reverse_paraphrase": "The canonical model has all complete Sigma-consistent sets as worlds, defines accessibility through the Box inverse or Diamond image condition, and assigns each variable to exactly the worlds containing it.",
+      "assessment": "The world set, feature-sensitive accessibility clause, valuation clause, and stable model tuple remain exact.",
+      "translation_segment_sha256": "71f52a95dd1daea5f1d166e695175a1f320d38806feea01351e33b846ce4bec7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0447-S01",
+      "reverse_paraphrase": "The truth lemma proves by structural induction that a formula is true at a canonical world exactly when it belongs to that complete consistent set.",
+      "assessment": "The propositional-variable base, all truth-functional cases, both modal cases, feature-sensitive exercises, and every cited membership property remain.",
+      "translation_segment_sha256": "5f6881b34d9ac3dfb29168134a72d7e403a9105462f6fbd4084172a21466a63b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0448-S01",
+      "reverse_paraphrase": "The canonical model determines Sigma because its globally true formulas are exactly the Sigma-derivable formulas; this immediately gives completeness of K for all models.",
+      "assessment": "Both directions of determination, the contraposed K-completeness proof, and the limitation requiring the canonical model to belong to a target model class remain.",
+      "translation_segment_sha256": "7535cb1adf541e45ec7a8be1d83de385898d4545a626ea7d7922792b5d9eafb5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0449-S01",
+      "reverse_paraphrase": "Canonical frames inherit seriality, reflexivity, symmetry, transitivity, and Euclideanness from D, T, B, 4, and 5; further schemas force partial functionality, functionality, and weak density.",
+      "assessment": "Every correspondence proof, the determined-class theorem, all three additional frame-property arguments, and the warning that not every modal system is frame complete remain.",
+      "translation_segment_sha256": "4df54f4759ad7f2203802bb58198749215285c965d769de9451999f074e0d7d8",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -6542,11 +6650,23 @@
     {
       "unit_id": "OLP-0440",
       "issue": "The first deduction-theorem result uses a generic arrow although the paired result and following tautology use the object-language conditional. Tamil normalizes the connective under TA-NML-024."
+    },
+    {
+      "unit_id": "OLP-0442",
+      "issue": "The equivalent non-derivability claim for the negated formula incorrectly supplies Sigma as both the modal-system index and a premise set. Tamil retains the empty-premise claim under TA-NML-025."
+    },
+    {
+      "unit_id": "OLP-0443",
+      "issue": "The negation-membership proof concludes that A belongs to the complete set after assuming A is absent, and the biconditional converse begins from absence of the conditional rather than absence of the biconditional. Tamil restores negated membership and the biconditional hypothesis under TA-NML-026 and TA-NML-027."
+    },
+    {
+      "unit_id": "OLP-0445",
+      "issue": "The box-lifting proof declares a finite premise list B1 through Bk but ends two nested conditionals at Bn, and its second lemma drops the Sigma index from one intermediate derivability claim. Tamil keeps the final index k and the modal-system index under TA-NML-028 and TA-NML-029."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "437 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 285 frozen units still require completion.",
+  "remaining": "446 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 276 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -7080,6 +7200,38 @@
         "finite_premise_derivability_definition_remains": true,
         "five_derivability_properties_and_rule_T_repair_remain": true,
         "consistency_characterizations_and_extension_argument_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0441",
+        "OLP-0442",
+        "OLP-0443",
+        "OLP-0444",
+        "OLP-0445",
+        "OLP-0446",
+        "OLP-0447",
+        "OLP-0448",
+        "OLP-0449"
+      ],
+      "correction_ids": [
+        "TA-NML-025",
+        "TA-NML-026",
+        "TA-NML-027",
+        "TA-NML-028",
+        "TA-NML-029"
+      ],
+      "status": "pass",
+      "checks": {
+        "driver_imports_all_eight_sections": true,
+        "completeness_roadmap_and_empty_premise_repair_remain": true,
+        "complete_consistent_set_closure_and_all_connective_clauses_remain": true,
+        "lindenbaum_extension_and_provability_characterization_remain": true,
+        "modal_set_transforms_accessibility_equivalence_and_repairs_remain": true,
+        "canonical_model_world_relation_and_valuation_clauses_remain": true,
+        "truth_lemma_induction_covers_every_connective_and_modality": true,
+        "determination_and_K_completeness_remain": true,
+        "canonical_frame_correspondences_and_three_further_properties_remain": true
       }
     }
   ]

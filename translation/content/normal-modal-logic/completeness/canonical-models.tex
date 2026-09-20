@@ -1,0 +1,36 @@
+% SEGMENT OLP-0446-S01
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: canonical-models
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{cmd}
+
+\olsection{நியம மாதிரிகள்}
+
+ஒரு வாய்ப்புநிலை அமைப்பு~$\Sigma$ க்கான \emph{நியம மாதிரி} என்பது,
+எல்லா நிறைவான $\Sigma$-முரணற்ற கணங்களையும் உலகுகளாகக் கொண்ட ஒரு
+குறிப்பிட்ட மாதிரி~$\mModel{M^\Sigma}$. ஓர் உலகம்~$\Delta$ இல் மெய்யாகும்
+!!{formula}s,~$\Delta$ வை உருவாக்கும் !!{formula}s ஆகவே இருக்குமாறு,
+அதன் அணுகல்தன்மைத் தொடர்பு~$R^\Sigma$ உம் ஒதுக்கீடு~$V^\Sigma$ உம்
+வரையறுக்கப்படுகின்றன.
+
+\begin{defn}
+  $\Sigma$ ஓர் இயல்பான வாய்ப்புநிலைத் தருக்கமாக இருக்கட்டும்.
+  $\Sigma$ க்கான \emph{நியம மாதிரி} $\mModel{M}^\Sigma =
+  \tuple{W^\Sigma, R^\Sigma, V^\Sigma}$; இங்கு:
+  \begin{enumerate}
+  \item $W^\Sigma = \Setabs{ \Delta }{\Delta \text{ நிறைவான
+      $\Sigma$-முரணற்ற கணம்} }$.
+  \item \iftag{prvBox}{$\Box^{-1}\Delta \subseteq
+      \Delta'$}{$\Diamond\Delta' \subseteq \Delta$} எனில், எனில்
+      மட்டுமே, $R^\Sigma \Delta\Delta'$.
+  \item $V^\Sigma(p) = \Setabs{\Delta}{p \in \Delta}$.
+  \end{enumerate}
+\end{defn}
+
+
+\end{document}

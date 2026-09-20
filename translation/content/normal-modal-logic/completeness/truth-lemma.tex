@@ -1,0 +1,150 @@
+% SEGMENT OLP-0447-S01
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: truth-lemma
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{tru}
+
+\olsection{மெய்மை துணைத்தேற்றம்}
+
+நியம மாதிரி~$\mModel{M^\Sigma}$ ஆனது $\mSat{M^\Sigma}{!A}[\Delta]$
+எனில், எனில் மட்டுமே, $!A \in \Delta$ ஆகுமாறு வரையறுக்கப்பட்டுள்ளது.
+!!{propositional variable}s க்கு, $V^\Sigma$ இன் வரையறையே இதை நேரடியாகத்
+தருகிறது. எனினும், இந்நிகர்மை எல்லா !!{formula}s க்கும் செல்லும் என்பதை
+உறுதிப்படுத்த வேண்டும். இதைத் தொகுத்தறிதலால் செய்கிறோம். தொகுத்தறிதல் படியில்,
+கூற்றுச் செய்குறிகளைக் கொண்ட !!{formula}s க்கும் (இங்கு
+\olref[ccs]{prop:ccs-properties} ஐப் பயன்படுத்த வேண்டும்), வாய்ப்புநிலைச்
+செய்குறிகளைக் கொண்டவற்றுக்கும் (இங்கு \olref[mod]{sec} இன் முடிவுகளைப்
+பயன்படுத்துகிறோம்) நிகர்மையை நிறுவுகிறோம்.
+
+\begin{prop}[மெய்மை துணைத்தேற்றம்]
+  \ollabel{prop:truthlemma}
+  ஒவ்வொரு !!{formula}~$!A$ க்கும், $\mSat{M^\Sigma}{!A}[\Delta]$ எனில்,
+  எனில் மட்டுமே, $!A \in \Delta$.
+\end{prop}
+
+\begin{proof}
+  $!A$ மீதான தொகுத்தறிதலால்.
+  \begin{enumerate}
+    \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\mSat/{M^\Sigma}{\lfalse}[\Delta]$
+        என்பது \olref[syn][trw]{defn:mmodels} படியும், $\lfalse \notin \Delta$
+        என்பது
+        \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lfalse} படியும்.}}{}
+
+    \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\mSat{M^\Sigma}{\ltrue}[\Delta]$
+        என்பது \olref[syn][trw]{defn:mmodels} படியும், $\ltrue \in \Delta$
+        என்பது
+        \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-ltrue} படியும்.}}{}
+
+    \item \indcase{!A}{p}{$\mSat{M^\Sigma}{p}[\Delta]$ எனில், எனில் மட்டுமே,
+      $\Delta \in V^\Sigma(p)$ என்பது \olref[syn][trw]{defn:mmodels} படி.
+      மேலும், $\Delta \in V^\Sigma(p)$ எனில், எனில் மட்டுமே, $p \in \Delta$
+      என்பது~$V^\Sigma$ இன் வரையறைப்படி.}
+
+    \tagitem{prvNot}{\indcase{!A}{\lnot !B}{%
+        \iftag{probNot}{பயிற்சி.}{$\mSat{M^\Sigma}{\lnot !B}[\Delta]$
+          எனில், எனில் மட்டுமே, $\mSat/{M^\Sigma}{!B}[\Delta]$
+          (\olref[syn][trw]{defn:mmodels} படி); எனில், எனில் மட்டுமே,
+          $!B \notin \Delta$ (தொகுத்தறிதல் கருதுகோளின்படி); எனில், எனில்
+          மட்டுமே, $\lnot !B \in \Delta$ (
+          \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lnot} படி).}}}{}
+
+    \tagitem{prvAnd}{\indcase{!A}{!B \land !C}{%
+        \iftag{probAnd}{பயிற்சி.}{$\mSat{M^\Sigma}{!B \land
+            !C}[\Delta]$ எனில், எனில் மட்டுமே, $\mSat{M^\Sigma}{!B}[\Delta]$
+          மற்றும் $\mSat{M^\Sigma}{!C}[\Delta]$ (\olref[syn][trw]{defn:mmodels}
+          படி); எனில், எனில் மட்டுமே, $!B \in \Delta$ மற்றும் $!C
+          \in \Delta$ (தொகுத்தறிதல் கருதுகோளின்படி); எனில், எனில் மட்டுமே,
+          $!B \land !C \in \Delta$ (
+          \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-land} படி).}}}{}
+
+    \tagitem{prvOr}{\indcase{!A}{!B \lor !C}{%
+        \iftag{probOr}{பயிற்சி.}{$\mSat{M^\Sigma}{!B \lor
+            !C}[\Delta]$ எனில், எனில் மட்டுமே, $\mSat{M^\Sigma}{!B}[\Delta]$
+          அல்லது $\mSat{M^\Sigma}{!C}[\Delta]$ (\olref[syn][trw]{defn:mmodels}
+          படி); எனில், எனில் மட்டுமே, $!B \in \Delta$ அல்லது $!C
+          \in \Delta$ (தொகுத்தறிதல் கருதுகோளின்படி); எனில், எனில் மட்டுமே,
+          $!B \lor !C \in \Delta$ (
+          \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lor} படி).}}}{}
+
+    \tagitem{prvIf}{\indcase{!A}{!B \lif !C}{%
+        \iftag{probIf}{பயிற்சி.}{$\mSat{M^\Sigma}{!B \lif
+            !C}[\Delta]$ எனில், எனில் மட்டுமே, $\mSat/{M^\Sigma}{!B}[\Delta]$
+          அல்லது $\mSat{M^\Sigma}{!C}[\Delta]$ (
+          \olref[syn][trw]{defn:mmodels} படி); எனில், எனில் மட்டுமே,
+          $!B \notin \Delta$ அல்லது $!C \in \Delta$ (தொகுத்தறிதல்
+          கருதுகோளின்படி); எனில், எனில் மட்டுமே, $!B \lif !C
+          \in \Delta$ (
+          \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lif} படி).}}}{}
+
+    \tagitem{prvIff}{\indcase{!A}{!B \liff !C}{%
+        \iftag{probIff}{பயிற்சி.}{$\mSat{M^\Sigma}{!B \liff
+            !C}[\Delta]$ எனில், எனில் மட்டுமே, $\mSat{M^\Sigma}{!B}[\Delta]$
+          மற்றும் $\mSat{M^\Sigma}{!C}[\Delta]$ ஆகிய இரண்டும், அல்லது
+          $\mSat/{M^\Sigma}{!B}[\Delta]$ மற்றும்
+          $\mSat/{M^\Sigma}{!C}[\Delta]$ ஆகிய இரண்டும் (\olref[syn][trw]{defn:mmodels}
+          படி); எனில், எனில் மட்டுமே, $!B \in \Delta$ மற்றும்
+          $!C \in \Delta$ ஆகிய இரண்டும், அல்லது $!B \notin \Delta$ மற்றும்
+          $!C \notin \Delta$ ஆகிய இரண்டும் (தொகுத்தறிதல் கருதுகோளின்படி);
+          எனில், எனில் மட்டுமே, $!B \liff !C \in \Delta$ (
+          \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-liff} படி).}}}{}
+
+    \tagitem{prvBox}{\indcase{!A}{\Box !B}{%
+        \iftag{probBox}{பயிற்சி.}{முதலில்
+          $\mSat{M^\Sigma}{\Box !B}[\Delta]$ எனக் கொள்க.
+          \olref[syn][trw]{defn:mmodels} படி, $R^\Sigma \Delta\Delta'$ ஆகும்
+          ஒவ்வொரு $\Delta'$ க்கும்,
+          $\mSat{M^\Sigma}{!B}[\Delta']$. தொகுத்தறிதல் கருதுகோளின்படி,
+          $R^\Sigma \Delta\Delta'$ ஆகும் ஒவ்வொரு $\Delta'$ க்கும்,
+          $!B \in \Delta'$. $R^\Sigma$ இன் வரையறைப்படி,
+          $\Box^{-1} \Delta \subseteq \Delta'$ ஆகும் ஒவ்வொரு $\Delta'$
+          க்கும், $!B \in \Delta'$. \olref[mod]{prop:box} படி, $\Box !B \in
+          \Delta$.
+
+          இப்போது $\Box !B \in \Delta$ எனக் கொள்க. $R^\Sigma \Delta\Delta'$
+          ஆக, அதாவது $\Box^{-1}\Delta \subseteq \Delta'$ ஆக, $\Delta' \in W^\Sigma$
+          இருக்கட்டும். $\Box !B \in \Delta$ என்பதால், $!B \in
+          \Box^{-1} \Delta$. ஆகவே, $!B \in \Delta'$. தொகுத்தறிதல்
+          கருதுகோளின்படி, $\mSat{M^\Sigma}{!B}[\Delta']$. $R^\Sigma
+          \Delta\Delta'$ ஆகும் $\Delta'$ ஏதேனுமாக இருந்ததால்,
+          $R^\Sigma \Delta\Delta'$ ஆகும் எல்லா $\Delta' \in W^\Sigma$
+          க்கும், $\mSat{M^\Sigma}{!B}[\Delta']$. \olref[syn][trw]{defn:mmodels}
+          படி, $\mSat{M^\Sigma}{\Box !B}[\Delta]$.}}}{}
+
+    \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}{%
+        \iftag{probDiamond}{பயிற்சி.}{முதலில்
+          $\mSat{M^\Sigma}{\Diamond !B}[\Delta]$ எனக் கொள்க.
+          \olref[syn][trw]{defn:mmodels} படி, $R^\Sigma \Delta\Delta'$ ஆகும்
+          ஏதோவொரு $\Delta'$ க்கு, $\mSat{M^\Sigma}{!B}[\Delta']$.
+          தொகுத்தறிதல் கருதுகோளின்படி, $R^\Sigma \Delta\Delta'$ ஆகும்
+          ஏதோவொரு $\Delta'$ க்கு, $!B \in \Delta'$. $R^\Sigma$ இன்
+          வரையறைப்படி,\iftag{prvBox}{ $\Box^{-1} \Delta \subseteq \Delta'$
+            ஆகும் ஏதோவொரு $\Delta'$ க்கு, $!B \in \Delta'$.
+            \olref[mod]{prop:diamond} படி,}{} $\Diamond \Delta' \subseteq \Delta$
+          ஆகும் ஏதோவொரு $\Delta'$ க்கு, $!B \in \Delta'$. $!B \in \Delta'$
+          என்பதால், $\Diamond !B \in \Diamond \Delta'$; எனவே
+          $\Diamond !B \in \Delta$.
+
+          இப்போது $\Diamond !B \in \Delta$ எனக் கொள்க.
+          \olref[mod]{prop:diamond} படி, $\Diamond \Delta' \subseteq \Delta$
+          மற்றும் $!B \in \Delta'$ ஆக இருக்கும் நிறைவான
+          $\Sigma$-முரணற்ற $\Delta' \in W^\Sigma$ ஒன்று உள்ளது.\iftag{prvBox}{
+            \olref[mod]{lem:box-iff-diamond} படி, $\Box^{-1}
+            \Delta \subseteq \Delta'$ மற்றும் $!B \in \Delta'$ ஆக இருக்கும்
+            ஒரு $\Delta' \in W^\Sigma$ உள்ளது.}{} $R^\Sigma$ இன் வரையறைப்படி,
+          $R^\Sigma \Delta\Delta'$; ஆகவே $R^\Sigma \Delta\Delta'$ மற்றும்
+          $!B \in \Delta'$ ஆக இருக்கும் ஒரு $\Delta' \in W^\Sigma$ உள்ளது.
+          \olref[syn][trw]{defn:mmodels} படி, $\mSat{M^\Sigma}{\Diamond
+            !B}[\Delta]$.}}}{}
+  \end{enumerate}
+\end{proof}
+
+\begin{probtag}{probFalse,probTrue,probNot,proband,probOr,probIf,probIff,probBox,probDiamond}
+  \olref[nml][com][tru]{prop:truthlemma} இன் நிறுவலை நிறைவுசெய்க.
+\end{probtag}
+
+\end{document}

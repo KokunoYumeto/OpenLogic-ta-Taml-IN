@@ -1,0 +1,263 @@
+% SEGMENT OLP-0445-S01
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: modalities-ccs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{mod}
+
+\olsection{வாய்ப்புநிலைகளும் நிறைவான முரணற்ற கணங்களும்}
+
+\begin{explain}
+ஏதோவோர் இயல்பான வாய்ப்புநிலைத் தருக்கம்~$\Sigma$ இலுள்ள நிறைவான
+$\Sigma$-முரணற்ற கணங்கள்~$\Delta$ வை உலகுகளின் கணமாகக் கொண்ட
+மாதிரி~$\mModel{M^\Sigma}$ ஒன்றைக் கட்டமைக்கும்போது, அத்தகைய
+“உலகுகளுக்கு” இடையில் ஓர் அணுகல்தன்மைத் தொடர்பு~$R^\Sigma$ ஐயும்
+வரையறுக்க வேண்டும். $\mSat{M^\Sigma}{!A}[\Delta]$ என்பது, அப்போதும்
+அப்போது மட்டுமே, $!A \in \Delta$ ஆகுமாறு அணுகல்தன்மைத் தொடர்பையும்
+(ஒதுக்கீடு~$V^\Sigma)$ ஐயும் வரையறுக்க விரும்புகிறோம். இதை எவ்வாறு செய்வது?
+
+அணுகல்தன்மைத் தொடர்பு வரையறுக்கப்பட்டவுடன், ஓர் உலகில் மெய்மை என்பதன்
+வரையறை, \iftag{prvBox}{$R^\Sigma\Delta\Delta'$ ஆக இருக்கும் எல்லா
+$\Delta'$ க்கும் $\mSat{M^\Sigma}{!A}[\Delta']$ எனில், எனில் மட்டுமே,
+$\mSat{M^\Sigma}{\Box!A}[\Delta]$}{$R^\Sigma\Delta\Delta'$ ஆக இருக்கும்
+குறைந்தது ஒரு~$\Delta'$ க்கு $\mSat{M^\Sigma}{!A}[\Delta']$ எனில்,
+எனில் மட்டுமே, $\mSat{M^\Sigma}{\Diamond!A}[\Delta]$} என்பதை
+உறுதிசெய்கிறது. $\mSat{M^\Sigma}{!A}[\Delta]$ என்பது, அப்போதும் அப்போது
+மட்டுமே, $!A \in \Delta$ என்பதற்கான நிறுவல், குறிப்பாக வாய்ப்புநிலைச்
+செய்குறியுடன் தொடங்கும் !!{formula}s க்கும் இது உண்மையாக இருக்க வேண்டும்
+எனக் கோருகிறது; அதாவது, \iftag{prvBox}{$\mSat{M^\Sigma}{\Box!A}[\Delta]$
+என்பது, அப்போதும் அப்போது மட்டுமே, $\Box !A \in \Delta$}
+{$\mSat{M^\Sigma}{\Diamond!A}[\Delta]$ என்பது, அப்போதும் அப்போது மட்டுமே,
+$\Diamond !A \in \Delta$}. இக்கோரிக்கையை, \iftag{prvBox}{$\Box !A$}
+{$\Diamond !A$} க்கான ஓர் உலகில் மெய்மை என்பதன் வரையறையுடன் இணைத்தால்
+பின்வருவது கிடைக்கிறது:
+\[
+\iftag{prvBox}{%
+  \Box!A \in \Delta \text{ எனில், எனில் மட்டுமே, } !A \in \Delta' \text{
+    ஆக இருக்கும் எல்லா $\Delta'$ க்கும் } R^\Sigma\Delta\Delta'}{%
+  \Diamond!A \in \Delta \text{ எனில், எனில் மட்டுமே, } !A \in \Delta'
+    \text{ ஆக இருக்கும் குறைந்தது ஒரு } \Delta' \text{ க்கு } R^\Sigma\Delta\Delta'}
+\]
+\iftag{prvBox}{இடமிருந்து வலமான திசையைக் கருதுக: $\Box !A \in \Delta$
+  எனில், எந்த~$!A$ க்கும் $R^\Sigma\Delta\Delta'$ ஆக இருக்கும் எந்த
+  $\Delta'$ க்கும் $!A \in \Delta'$ என்று அது கூறுகிறது.
+  $R^\Sigma\Delta\Delta'$ என்பது, $!A \in \Delta'$ என்று
+  $\Box!A \in \Delta$ ஆக இருக்கும் எல்லா வாய்பாடுகளுக்கும் இருந்தால்,
+  இது செல்லுபடியாகும். “எனில், எனில் மட்டுமே” என்பதன் வலப்புற நிபந்தனையைச்
+  சுருக்கமாக $\Setabs{!A}{\Box!A \in \Delta} \subseteq \Delta'$ என
+  எழுதலாம்.}{வலமிருந்து இடமான திசையைக் கருதுக: $!A \in \Delta'$ எனில்,
+  எந்த~$!A$ க்கும் $R^\Sigma\Delta\Delta'$ ஆக இருக்கும் எந்த~$\Delta'$
+  க்கும் $\Diamond!A \in \Delta$ என்று அது கூறுகிறது. $!A \in \Delta'$
+  ஆக இருக்கும் எல்லா வாய்பாடுகளுக்கும் $\Diamond!A \in \Delta$ ஆகும்போதெல்லாம்
+  $R^\Sigma\Delta\Delta'$ என்று விதித்தால் இது செல்லுபடியாகும்.
+  “எனில், எனில் மட்டுமே” என்பதன் வலப்புற நிபந்தனையைச் சுருக்கமாக
+  $\Setabs{\Diamond!A}{!A \in \Delta'} \subseteq \Delta$ என எழுதலாம்.}
+
+ஆகவே கேள்வி இதுதான்: $R^\Sigma$ இன் இவ்வரையறை உண்மையில்
+\iftag{prvBox}{$\Box !A \in \Delta$ என்பது, அப்போதும் அப்போது மட்டுமே,
+  $\mSat{M^\Sigma}{\Box !A}[\Delta]$ என்பதை உறுதிசெய்கிறதா?
+  \iftag{prvDiamond}{இது மேலும் உறுதிசெய்வது }{}}{}
+\iftag{prvDiamond}{$\Diamond !A \in \Delta$ என்பது, அப்போதும் அப்போது
+  மட்டுமே, $\mSat{M^\Sigma}{\Diamond !A}[\Delta]$ என்பதையுமா?}{}
+அடுத்த சில முடிவுகள் இதை நிறுவும்.
+\end{explain}
+
+\begin{defn}
+  $\Gamma$ ஒரு !!{formula}s கணம் எனில், பின்வருமாறு வைக்க:
+  \begin{align*}
+    \Box\Gamma & = \Setabs{\Box !B}{!B \in \Gamma}\\
+    \Diamond\Gamma & = \Setabs{\Diamond !B}{!B \in \Gamma}\\
+    \intertext{மேலும்}
+    \Box^{-1}\Gamma & = \Setabs{!B}{\Box !B \in \Gamma}\\
+    \Diamond^{-1}\Gamma & = \Setabs{!B}{\Diamond !B \in \Gamma}\\
+  \end{align*}
+\end{defn}
+
+வேறு சொற்களில், $\Box\Gamma$ என்பது~$\Gamma$ விலுள்ள ஒவ்வொரு
+!!a{formula} க்கும் முன்னால்~$\Box$ சேர்க்கப்பட்ட~$\Gamma$;
+$\Box^{-1}\Gamma$ என்பது~$\Gamma$ விலுள்ள~$\Box$ சேர்க்கப்பட்ட எல்லா
+!!{formula}s இன் தொடக்க~$\Box$ கள் நீக்கப்பட்ட கணம். இவ்வரையறை தனியே
+மிக முக்கியமானது அல்ல; ஆனால் குறியீட்டை மிகவும் எளிதாக்கும்.
+
+$\Box\Box^{-1}\Gamma \subseteq \Gamma$ என்பதைக் கவனிக்க:
+\[
+\Box\Box^{-1}\Gamma = \Setabs{\Box!B}{\Box!B \in \Gamma}
+\]
+அதாவது, இது~$\Gamma$ விலுள்ள~$\Box$ உடன் தொடங்கும் !!{formula}s
+அனைத்தையும் கொண்ட கணம் மட்டுமே.
+
+\begin{lem}\ollabel{lem:box1}
+  $\Gamma \Proves[\Sigma] !A$ எனில், $\Box\Gamma \Proves[\Sigma] \Box
+  !A$.
+\end{lem}
+
+\begin{proof}
+  $\Gamma \Proves[\Sigma] !A$ எனில், $!B_1$, \dots, $!B_k
+  \in \Gamma$ ஆகவும்,
+  % SOURCE CORRECTION TA-NML-028: the finite premise list is indexed through k, not n.
+  $\Sigma \Proves !B_1 \lif (!B_2 \lif \cdots
+  (!B_k \lif !A)\cdots)$ ஆகவும் இருக்கும் வாய்பாடுகள் உள்ளன.
+  $\Sigma$ இயல்பானது என்பதால், விதி~\RK{} படி,
+  $\Sigma \Proves \Box!B_1 \lif (\Box!B_2 \lif \cdots (\Box!B_k \lif
+  \Box!A)\cdots)$; இங்கு $\Box!B_1$, \dots, $\Box!B_k \in
+  \Box\Gamma$ என்பது தெளிவு. ஆகவே வரையறைப்படி,
+  $\Box\Gamma \Proves[\Sigma] \Box !A$.
+\end{proof}
+
+\begin{lem}\ollabel{lem:box2}
+  $\Box^{-1} \Gamma \Proves[\Sigma] !A$ எனில், $\Gamma
+  \Proves[\Sigma] \Box!A$.
+\end{lem}
+
+\begin{proof}
+  $\Box^{-1}\Gamma \Proves[\Sigma] !A$ என்க; அப்போது
+  \olref{lem:box1} படி,
+  % SOURCE CORRECTION TA-NML-029: retain the arbitrary modal-system index in the lifted derivability claim.
+  $\Box\Box^{-1}\Gamma \Proves[\Sigma] \Box!A$. ஆனால்
+  $\Box\Box^{-1}\Gamma \subseteq \Gamma$ என்பதால், ஒருபோக்குத்தன்மையால்
+  $\Gamma \Proves[\Sigma] \Box!A$ உம்.
+\end{proof}
+
+\iftag{prvBox}{%
+% Box is primitive
+
+\begin{prop}\ollabel{prop:box}
+  $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் எனில், $\Box !A \in
+  \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Box^{-1} \Gamma
+  \subseteq \Delta$ ஆக இருக்கும் ஒவ்வொரு நிறைவான $\Sigma$-முரணற்ற
+  $\Delta$ வுக்கும் $!A \in \Delta$.
+\end{prop}
+
+\begin{proof}
+  $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் என்க. “எனில்” திசை எளிது:
+  $\Box !A \in \Gamma$, $\Box^{-1}\Gamma \subseteq \Delta$ என்க.
+  $\Box!A \in \Gamma$ என்பதால், $!A \in \Box^{-1}\Gamma \subseteq
+  \Delta$; ஆகவே $!A \in \Delta$.
+
+  “மட்டுமே எனில்” திசைக்கு, எதிர்நிலைமாற்றத்தை நிறுவுகிறோம்:
+  $\Box!A \notin \Gamma$ என்க. $\Gamma$ நிறைவான $\Sigma$-முரணற்ற
+  கணம் என்பதால், அது வருவித்தலின் கீழ் மூடப்பட்டுள்ளது; எனவே $\Gamma
+  \Proves/[\Sigma] \Box !A$. \olref{lem:box2} படி,
+  $\Box^{-1}\Gamma \Proves/[\Sigma] !A$.
+  \olref[prf][con]{prop:consistencyfacts}\olref[prf][con]{prop:consistencyfacts-b}
+  படி, $\Box^{-1}\Gamma \cup \{ \lnot!A \}$ ஆனது~$\Sigma$-முரணற்றது.
+  லிண்டன்பாமின் துணைத்தேற்றத்தின்படி, $\Box^{-1}\Gamma \cup
+  \{ \lnot!A \} \subseteq \Delta$ ஆக இருக்கும் நிறைவான
+  $\Sigma$-முரணற்ற கணம்~$\Delta$ ஒன்று உள்ளது. முரணின்மையால்,
+  $!A \notin \Delta$.
+\end{proof}
+}{%
+% Box is not primitive, only Diamond is
+
+\begin{prop}\ollabel{prop:diamond}
+  $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் எனில், $\Diamond !A \in
+  \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Diamond\Delta \subseteq
+  \Gamma$, $!A \in \Delta$ ஆக இருக்கும் ஏதோவொரு நிறைவான
+  $\Sigma$-முரணற்ற கணம்~$\Delta$ உள்ளது.
+\end{prop}
+
+\begin{proof}
+  $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் என்க. வலமிருந்து இடமான பகுதி
+  எளிது: $\Diamond\Delta \subseteq \Gamma$, $!A \in \Delta$ ஆக
+  இருக்கும் நிறைவான $\Sigma$-முரணற்ற கணம்~$\Delta$ ஐ எடுத்துக்கொள்க.
+  அப்போது $\Diamond!A \in \Diamond\Delta \subseteq \Gamma$; அதாவது,
+  $\Diamond!A \in \Gamma$.
+
+  இடமிருந்து வலமான திசைக்கு, $\Diamond !A \in \Gamma$ எனக் கொள்க.
+  $!A \in \Delta$, $\Diamond\Delta \subseteq \Gamma$ ஆக இருக்கும்
+  நிறைவான $\Sigma$-முரணற்ற கணம்~$\Delta$ ஒன்று உள்ளது என்று காட்ட வேண்டும்.
+  $\Diamond !A \in \Gamma$ ஆகவும், $\Gamma$ ஆனது~$\Sigma$-முரணற்றதாகவும்
+  இருப்பதால், $\Box\lnot !A \notin \Gamma$. $\Gamma$ நிறைவான
+  $\Sigma$-முரணற்ற கணம் என்பதால், அது வருவித்தலின் கீழ் மூடப்பட்டுள்ளது;
+  ஆகவே $\Gamma \Proves/[\Sigma] \Box\lnot !A$. \olref{lem:box2} படி,
+  $\Box^{-1}\Gamma \Proves/[\Sigma] \lnot !A$.
+  \olref[prf][con]{prop:consistencyfacts}\olref[prf][con]{prop:consistencyfacts-b}
+  படி, $\Box^{-1}\Gamma \cup \{ !A \}$ ஆனது~$\Sigma$-முரணற்றது.
+  லிண்டன்பாமின் துணைத்தேற்றத்தின்படி, $\Box^{-1}\Gamma \cup \{ !A \}
+  \subseteq \Delta$ ஆக இருக்கும் நிறைவான $\Sigma$-முரணற்ற கணம்~$\Delta$
+  ஒன்று உள்ளது. தெளிவாக, $!A \in \Delta$. $\Diamond\Delta \subseteq
+  \Gamma$ என்று காண, அவ்வாறில்லை எனக் கொள்க: ஏதோவொரு $!B \in \Delta$
+  க்கு $\Diamond !B \notin \Gamma$. அப்போது $\Gamma$ நிறைவான
+  $\Sigma$-முரணற்ற கணம் என்பதால், $\Box\lnot !B \in \Gamma$. ஆனால்
+  அப்போது $\lnot !B \in \Box^{-1}\Gamma \subseteq \Delta$ உம்;
+  இது~$\Delta$ வை முரணுடையதாக்கும்.
+\end{proof}
+}
+
+\begin{lem}\ollabel{lem:box-iff-diamond}
+  $\Gamma$, $\Delta$ ஆகியவை நிறைவான $\Sigma$-முரணற்ற கணங்கள் என்க.
+  அப்போது $\Box^{-1}\Gamma \subseteq \Delta$ என்பது, அப்போதும் அப்போது
+  மட்டுமே, $\Diamond\Delta \subseteq \Gamma$.
+\end{lem}
+
+\begin{proof}
+  “மட்டுமே எனில்” திசை: $\Box^{-1}\Gamma \subseteq \Delta$ எனக் கொண்டு,
+  $\Diamond!A \in \Diamond\Delta$ (அதாவது $!A \in \Delta$) என்க.
+  $\Diamond!A \in \Gamma$ என்று காட்ட, $\Box\lnot!A \notin \Gamma$
+  என்று காட்டினால் போதும்; ஏனெனில் அப்போது மீப்பெருமையால்
+  $\lnot\Box\lnot !A \in \Gamma$. இப்போது $\Box\lnot!A \in \Gamma$
+  எனில், கருதுகோளின்படி $\lnot!A \in \Delta$; இது~$\Delta$ வின்
+  முரணின்மைக்கு முரணாகும் ($!A \in \Delta$ என்பதால்). ஆகவே வேண்டியபடி,
+  $\Box\lnot!A \notin \Gamma$.
+
+  “எனில்” திசை: $\Diamond\Delta \subseteq \Gamma$ எனக் கொள்க.
+  எதிர்நிலைமாற்றமாக வாதிடுகிறோம்: $\Box!A \notin \Gamma$ என்று காட்ட,
+  $!A \notin \Delta$ எனக் கொள்க. $!A \notin \Delta$ எனில்,
+  மீப்பெருமையால் $\lnot!A \in \Delta$; எனவே கருதுகோளின்படி
+  $\Diamond\lnot!A \in \Gamma$. ஆனால் ஓர் இயல்பான வாய்ப்புநிலைத்
+  தருக்கத்தில் $\Diamond\lnot!A$ என்பது $\lnot\Box !A$ க்கு நிகரானது;
+  பிந்தியது~$\Gamma$ வில் இருந்தால், முரணின்மையால்
+  $\Box!A \notin\Gamma$; இதுவே வேண்டியது.
+\end{proof}
+
+\iftag{prvBox}{%
+  \iftag{prvDiamond}{%
+% Box and Diamond are both primitive; prove
+% prop:diamond using lem:box-iff-diamond
+
+\begin{prop}\ollabel{prop:diamond}
+  $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் எனில், $\Diamond !A \in
+  \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே, $\Diamond\Delta \subseteq
+  \Gamma$, $!A \in \Delta$ ஆக இருக்கும் ஏதோவொரு நிறைவான
+  $\Sigma$-முரணற்ற கணம்~$\Delta$ உள்ளது.
+\end{prop}
+
+\begin{proof}
+$\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் என்க. \Dual{} மற்றும் மூடுதலால்,
+$\Diamond!A \in \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+$\lnot\Box\lnot !A \in \Gamma$. $\Gamma$ நிறைவான $\Sigma$-முரணற்ற
+கணம் என்பதால், \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lnot}
+படி, $\lnot\Box\lnot !A \in \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+$\Box\lnot !A \notin \Gamma$. \olref{prop:box} படி,
+$\Box\lnot !A \notin \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+$\Box^{-1}\Gamma \subseteq \Delta$, $\lnot!A \notin \Delta$ ஆக இருக்கும்
+ஏதோவொரு நிறைவான $\Sigma$-முரணற்ற கணம்~$\Delta$ உள்ளது. அத்தகைய எந்த
+$\Delta$ ஐயும் கருதுக. \olref{lem:box-iff-diamond} படி,
+$\Box^{-1}\Gamma \subseteq \Delta$ என்பது, அப்போதும் அப்போது மட்டுமே,
+$\Diamond\Delta \subseteq \Gamma$. மேலும்,
+\olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-lnot} படி,
+$\lnot !A \notin \Delta$ என்பது, அப்போதும் அப்போது மட்டுமே,
+$!A \in \Delta$. ஆகவே $\Diamond!A \in \Gamma$ என்பது, அப்போதும்
+அப்போது மட்டுமே, $\Diamond\Delta \subseteq \Gamma$, $!A \in \Delta$
+ஆக இருக்கும் ஏதோவொரு நிறைவான $\Sigma$-முரணற்ற கணம்~$\Delta$ உள்ளது.
+\end{proof}
+
+}{}}{}
+
+\begin{prob}
+  $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் எனில்,
+  \iftag{prvBox}{$\Diamond !A \in \Gamma$ என்பது, அப்போதும் அப்போது
+    மட்டுமே, $\Box^{-1}\Gamma \subseteq \Delta$, $!A \in \Delta$ ஆக
+    இருக்கும் நிறைவான $\Sigma$-முரணற்ற கணம்~$\Delta$ ஒன்று உள்ளது.}
+    {$\Box !A \in \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+    $\Box^{-1} \Gamma \subseteq \Delta$ ஆக இருக்கும் ஒவ்வொரு நிறைவான
+    $\Sigma$-முரணற்ற கணம்~$\Delta$ வுக்கும் $!A \in \Delta$.}
+  \emph{\olref[nml][com][mod]{lem:box-iff-diamond} ஐப் பயன்படுத்தாமல்
+  இதைச் செய்க}.
+\end{prob}
+
+\end{document}

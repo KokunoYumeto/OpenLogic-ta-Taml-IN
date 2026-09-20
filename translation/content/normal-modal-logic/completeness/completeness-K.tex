@@ -1,0 +1,66 @@
+% SEGMENT OLP-0448-S01
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: completeness-K
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{cmk}
+
+\olsection{\Log{K} க்கான தீர்மானிப்பும் நிறைவும்}
+
+நிறைவை நிறுவுவதற்கு நியம மாதிரியைப் பயன்படுத்த இப்போது ஆயத்தமாக உள்ளோம்.
+$\Sigma$ க்கான நியம மாதிரியில் மெய்யாகும் !!{formula}s துல்லியமாக
+$\Sigma$-!!{derivable} வாய்பாடுகளே என்ற உண்மையிலிருந்து நிறைவு பெறப்படுகிறது.
+இப்பண்புள்ள மாதிரிகள்~$\Sigma$ வை \emph{தீர்மானிக்கின்றன} எனப்படுகின்றன.
+
+\begin{defn}
+  எல்லா !!{formula}s~$!A$ க்கும், $\mSat{M}{!A}$ எனில், எனில் மட்டுமே,
+  $\Sigma \Proves !A$ ஆகும்போது துல்லியமாக, மாதிரி~$\mModel{M}$ ஓர்
+  இயல்பான வாய்ப்புநிலைத் தருக்கம்~$\Sigma$ வை \emph{தீர்மானிக்கிறது}.
+\end{defn}
+
+\begin{thm}[தீர்மானிப்பு]\ollabel{thm:determination}
+   $\mSat{M^\Sigma}{!A}$ எனில், எனில் மட்டுமே, $\Sigma \Proves !A$.
+\end{thm}
+
+\begin{proof}
+  $\mSat{M^\Sigma}{!A}$ எனில், ஒவ்வொரு நிறைவான
+  $\Sigma$-முரணற்ற $\Delta$ வுக்கும் $\mSat{M^\Sigma}{!A}[\Delta]$.
+  ஆகவே மெய்மை துணைத்தேற்றத்தின்படி, ஒவ்வொரு நிறைவான
+  $\Sigma$-முரணற்ற $\Delta$ வுக்கும் $!A \in \Delta$; இதிலிருந்து
+  \olref[lin]{cor:provability-characterization} படி ($\Gamma =
+  \emptyset$ என வைத்து), $\Sigma \Proves !A$.
+
+  மறுதலையாக, $\Sigma \Proves !A$ எனில்,
+  \olref[ccs]{prop:ccs-properties}\olref[ccs]{prop:ccs-closed} படி,
+  ஒவ்வொரு நிறைவான $\Sigma$-முரணற்ற $\Delta$ வும்~$!A$ ஐக் கொண்டிருக்கும்;
+  ஆகவே மெய்மை துணைத்தேற்றத்தின்படி, ஒவ்வொரு~$\Delta \in W^\Sigma$
+  வுக்கும் $\mSat{M^\Sigma}{!A}[\Delta]$; அதாவது,
+  $\mSat{M^\Sigma}{!A}$.
+\end{proof}
+
+\Log{K} க்கான நியம மாதிரி~\Log{K} ஐத் தீர்மானிப்பதால், அதன் உடன்விளைவாக
+\Log{K} இன் நிறைவை உடனே பெறுகிறோம்:
+
+\begin{cor}\ollabel{cor:Kcomplete}
+  அடிப்படை வாய்ப்புநிலைத் தருக்கம்~\Log{K} எல்லா மாதிரிகளின் வகுப்பைப்
+  பொறுத்து நிறைவானது; அதாவது, $\Entails !A$ எனில், $\Log{K}
+  \Proves !A$.
+\end{cor}
+
+\begin{proof}
+  எதிர்நிலைமாற்றமாக, $\Log{K} \Proves/ !A$ எனில் தீர்மானிப்பின்படி
+  $\mSat/{M^{\Log{K}}}{!A}$; ஆகவே $!A$ செல்லுபடியாகாது.
+\end{proof}
+
+ஒரு மாதிரிவகுப்பைப் பொறுத்து அமைப்பு~$\Sigma$ நிறைவானது என்ற பொதுவான
+நேர்வுக்கு---எடுத்துக்காட்டாக, தற்சுட்டு, சமச்சீர், கடப்பு மாதிரிகளின்
+வகுப்பைப் பொறுத்து~\Log{KTB4} நிறைவானது என்பதற்கு---தீர்மானிப்பு மட்டும்
+போதாது. அமைப்பு~$\Sigma$ க்கான நியம மாதிரி அவ்வகுப்பின் ஓர் உறுப்பு என்றும்
+காட்ட வேண்டும்; இது நியம மாதிரியின் கட்டமைப்பிலிருந்து வெளிப்படையாகப்
+பின்வருவதில்லை---உண்மையில் இது எப்போதும் உண்மையும் அல்ல!
+
+\end{document}

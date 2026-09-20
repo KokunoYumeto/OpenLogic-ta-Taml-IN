@@ -4103,6 +4103,112 @@
       "rationale": "Both assumptions are discharged by the same deduction theorem and feed the same object-language tautology.",
       "precise_review_question": "Do both deduction-theorem conclusions now use the conditional required by the following tautology?",
       "location_needle": "SOURCE CORRECTION TA-NML-024"
+    },
+    {
+      "audit_id": "TA-NML-025",
+      "unit_id": "OLP-0442",
+      "kind": "consistency-equivalence-adds-modal-system-as-premise-set",
+      "action": "Removed the redundant Sigma premise set from the non-derivability side of the consistency equivalence while retaining Sigma as the modal-system index.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\Sigma\\Proves/[\\Sigma]\\lnot!A",
+          "to": "\\Proves/[\\Sigma]\\lnot!A",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\Sigma"],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The surrounding claim concerns theoremhood relative to modal system Sigma and consistency of the singleton premise A, but the parenthetical equivalence alone also inserts Sigma itself as a premise set.",
+      "chosen_treatment": "தமிழ் $\\Proves/[\\Sigma] \\lnot !A$ என்பதையும் $!A \\Proves/[\\Sigma] \\lfalse$ என்பதையும் ஒப்பிட்டு, Sigma-வை முறைமைச் சுட்டியாக மட்டும் வைத்திருக்கிறது.",
+      "alternatives_considered": "Treating every axiom formula in Sigma as an additional premise despite their already being derivable in the indexed system; changing the singleton-consistency side.",
+      "rationale": "The immediately preceding and following sentences use empty-premise Sigma-relative theoremhood, and the cited consistency definition makes A consistent exactly when A does not derive false in that same system.",
+      "precise_review_question": "Does the corrected equivalence compare empty-premise Sigma-relative non-theoremhood with consistency of A?",
+      "location_needle": "SOURCE CORRECTION TA-NML-025"
+    },
+    {
+      "audit_id": "TA-NML-026",
+      "unit_id": "OLP-0443",
+      "kind": "negation-membership-proof-repeats-positive-formula",
+      "action": "Changed the completeness consequence from A in Gamma to not-A in Gamma when A is absent.",
+      "expected_missing_math": ["$!A\\in\\Gamma$"],
+      "expected_extra_math": ["$\\lnot!A\\in\\Gamma$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\lnot"],
+      "source_issue_or_choice": "The second half of the negation biconditional assumes A is absent but concludes A is present, contradicting both completeness and the stated result.",
+      "chosen_treatment": "தமிழ் $!A \\notin \\Gamma$ எனில் நிறைவால் $\\lnot !A \\in \\Gamma$ என்று முடிக்கிறது.",
+      "alternatives_considered": "Keeping the direct contradiction as the claimed consequence of completeness; reversing the stated biconditional.",
+      "rationale": "Completeness requires that each formula or its negation belongs to Gamma, so absence of A forces membership of not-A.",
+      "precise_review_question": "Does the corrected reverse direction conclude membership of not-A from absence of A?",
+      "location_needle": "SOURCE CORRECTION TA-NML-026"
+    },
+    {
+      "audit_id": "TA-NML-027",
+      "unit_id": "OLP-0443",
+      "kind": "biconditional-converse-assumes-conditional-absent",
+      "action": "Changed the converse assumption from absence of A-implies-B to absence of A-iff-B.",
+      "expected_missing_math": ["$!A\\lif!B\\notin\\Gamma$"],
+      "expected_extra_math": ["$!A\\liff!B\\notin\\Gamma$"],
+      "expected_missing_commands": ["\\lif"],
+      "expected_extra_commands": ["\\liff"],
+      "source_issue_or_choice": "The proof is the converse direction of the biconditional-membership clause and immediately infers membership of not-(A iff B), but its assumption names only A implies B.",
+      "chosen_treatment": "தமிழ் மறுதிசை வாதத்தை $!A \\liff !B \\notin \\Gamma$ என்ற பொருத்தமான கருதுகோளுடன் தொடங்குகிறது.",
+      "alternatives_considered": "Keeping a conditional premise that cannot yield the next negated biconditional; rewriting the entire proof as a conditional-only result.",
+      "rationale": "Completeness turns absence of the exact formula A iff B into membership of its negation, which is the premise used in the remaining argument.",
+      "precise_review_question": "Does the corrected converse assume absence of the same biconditional whose negation is used next?",
+      "location_needle": "SOURCE CORRECTION TA-NML-027"
+    },
+    {
+      "audit_id": "TA-NML-028",
+      "unit_id": "OLP-0445",
+      "kind": "boxed-premise-lifting-switches-final-index",
+      "action": "Changed both final nested-premise indices from n to k, matching the declared finite list B1 through Bk.",
+      "normalized_math_replacements": [
+        {
+          "from": "!B_n\\lif!A",
+          "to": "!B_k\\lif!A",
+          "count": 1
+        },
+        {
+          "from": "\\Box!B_n\\lif\\Box!A",
+          "to": "\\Box!B_k\\lif\\Box!A",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proof introduces premises B1 through Bk and later confirms Box B1 through Box Bk are in Box Gamma, but the two intervening nested conditionals unexpectedly end with Bn.",
+      "chosen_treatment": "தமிழ் முன்வைக்கப்பட்ட இறுதிக்குட்பட்ட பட்டியலுக்கு ஏற்ப இரு தொடர் உட்கிடைப்புகளையும்~$!B_k$ இல் முடிக்கிறது.",
+      "alternatives_considered": "Renaming the declared premise bound and every surrounding occurrence from k to n; retaining an undeclared relationship between n and k.",
+      "rationale": "Rule RK lifts the same finite premise sequence used by the definition of derivability, so its final index must stay k throughout.",
+      "precise_review_question": "Do the premise conditional and its boxed RK image now end at the declared final premise Bk?",
+      "location_needle": "SOURCE CORRECTION TA-NML-028"
+    },
+    {
+      "audit_id": "TA-NML-029",
+      "unit_id": "OLP-0445",
+      "kind": "box-lifting-lemma-drops-modal-system-index",
+      "action": "Restored the Sigma index on the derivability result obtained by applying the preceding lemma.",
+      "normalized_math_replacements": [
+        {
+          "from": "\\Box\\Box^{-1}\\Gamma\\Proves\\Box!A",
+          "to": "\\Box\\Box^{-1}\\Gamma\\Proves[\\Sigma]\\Box!A",
+          "count": 1
+        }
+      ],
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\Sigma"],
+      "source_issue_or_choice": "The hypothesis, cited box-lifting lemma and monotonicity conclusion all concern derivability in arbitrary modal system Sigma, but the intermediate conclusion alone drops that index.",
+      "chosen_treatment": "தமிழ் இடைநிலை முடிவிலும்~$\\Proves[\\Sigma]$ ஐத் தொடர்ந்து பயன்படுத்துகிறது.",
+      "alternatives_considered": "Reading the unindexed relation as an unexplained change to the minimal system; dropping Sigma from the hypothesis and conclusion as well.",
+      "rationale": "Applying lem:box1 to a Sigma-indexed derivation preserves that same system, which monotonicity then carries to Gamma.",
+      "precise_review_question": "Does every derivability relation in the second box lemma remain indexed by the same Sigma?",
+      "location_needle": "SOURCE CORRECTION TA-NML-029"
     }
   ],
   "by_unit": {
@@ -4232,6 +4338,9 @@
     "OLP-0432": ["TA-NML-017", "TA-NML-018"],
     "OLP-0437": ["TA-NML-019", "TA-NML-020", "TA-NML-021"],
     "OLP-0439": ["TA-NML-022", "TA-NML-023"],
-    "OLP-0440": ["TA-NML-024"]
+    "OLP-0440": ["TA-NML-024"],
+    "OLP-0442": ["TA-NML-025"],
+    "OLP-0443": ["TA-NML-026", "TA-NML-027"],
+    "OLP-0445": ["TA-NML-028", "TA-NML-029"]
   }
 }

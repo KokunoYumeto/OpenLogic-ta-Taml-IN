@@ -1,0 +1,147 @@
+% SEGMENT OLP-0443-S01
+% Part: normal-modal-logic
+% Chapter: completeness
+% Section: complete-consistent-sets
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{com}{ccs}
+
+\olsection{நிறைவான $\Sigma$-முரணற்ற கணங்கள்}
+
+$\Sigma$ வாய்ப்புநிலை !!{formula}s கொண்ட ஒரு கணம் என்க---அவற்றை ஓர்
+இயல்பான வாய்ப்புநிலைத் தருக்கத்தின் அடிகோள்கள் அல்லது வரையறுக்கும்
+கொள்கைகள் என்று எண்ணிக்கொள்க. ஒவ்வொரு $!A_i \in \Gamma$ ஆக இருக்கும்
+நிலையில், $\Sigma$ இலிருந்து $!A_1 \lif (!A_2 \lif \cdots
+(!A_n \lif \lfalse)\dots)$ இன் !!{derivation} எதுவும் இல்லையெனில்,
+அதாவது $\Gamma \Proves/[\Sigma] \lfalse$ எனில், எனில் மட்டுமே,
+ஒரு கணம்~$\Gamma$ ஆனது~$\Sigma$-முரணற்றது. ஒவ்வோர் உலகமும் ஒரு சிறப்பு
+வகையான $\Sigma$-முரணற்ற கணமாக எடுத்துக்கொள்ளப்படும் ஒரு “நியம” மாதிரியைக்
+கட்டமைப்போம்: அது $\Sigma$-முரணற்றதாக மட்டும் இல்லாமல், ஒவ்வொரு
+வாய்ப்புநிலை !!a{formula} இன் மெய்மதிப்பையும் தீர்மானிக்கும் பொருளில்
+மீப்பெருமளவு அவ்வாறு இருக்கும்; ஒவ்வொரு~$!A$ க்கும் $!A \in \Gamma$
+அல்லது $\lnot !A \in \Gamma$:
+
+\begin{defn}
+  ஒரு கணம்~$\Gamma$ ஆனது~$\Sigma$-முரணற்றதாகவும், ஒவ்வொரு~$!A$ க்கும்
+  $!A \in \Gamma$ அல்லது $\lnot !A \in \Gamma$ ஆகவும் இருந்தால்,
+  இருந்தால் மட்டுமே, அது \emph{நிறைவான $\Sigma$-முரணற்ற} கணம்.
+\end{defn}
+
+நிறைவான $\Sigma$-முரணற்ற கணங்கள்~$\Gamma$ பல பயனுள்ள பண்புகளைக்
+கொண்டுள்ளன. ஒன்று, அவை வருவித்தலின் கீழ் மூடப்பட்டவை; அதாவது $\Gamma
+\Proves[\Sigma] !A$ எனில் $!A \in \Gamma$. குறிப்பாக,
+!!a{formula}~$!A \in \Sigma$ இன் ஒவ்வொரு நிகழ்வும்~$\in
+\Gamma$ என்பது இதன் பொருள். மேலும், $\Gamma$ வில் உறுப்பாக இருப்பது,
+கூற்று இணைப்பிகளுக்கான மெய்மை நிபந்தனைகளைப் பிரதிபலிக்கிறது. “நியம
+மாதிரி”யை வரையறுக்கும்போது இது முக்கியமாகும்.
+
+\begin{prop}\ollabel{prop:ccs-properties}
+  $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் என்க. அப்போது:
+  \begin{enumerate}
+  \item \ollabel{prop:ccs-closed}%
+    $\Gamma$ ஆனது~$\Sigma$ வில் வருவித்தலின் கீழ் மூடப்பட்டுள்ளது.
+  \item \ollabel{prop:ccs-sigma}%
+    $\Sigma \subseteq \Gamma$.
+  \tagitem{prvFalse}{\ollabel{prop:ccs-lfalse}%
+    $\lfalse \notin \Gamma$}{}
+  \tagitem{prvTrue}{\ollabel{prop:ccs-ltrue}%
+    $\ltrue \in \Gamma$}{}
+  \item \ollabel{prop:ccs-lnot}%
+    $\lnot!A \in \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+    $!A \notin \Gamma$.
+  \tagitem{prvAnd}{\ollabel{prop:ccs-land}%
+    $!A \land !B \in \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+    $!A \in \Gamma$, $!B \in \Gamma$ இரண்டும்}{}
+  \tagitem{prvOr}{\ollabel{prop:ccs-lor}%
+    $!A \lor !B \in \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+    $!A \in \Gamma$ அல்லது $!B \in \Gamma$}{}
+  \tagitem{prvIf}{\ollabel{prop:ccs-lif}%
+    $!A \lif !B \in \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+    $!A \notin \Gamma$ அல்லது $!B \in \Gamma$}{}
+  \tagitem{prvIff}{\ollabel{prop:ccs-liff}%
+    $!A \liff !B \in \Gamma$ என்பது, அப்போதும் அப்போது மட்டுமே,
+    $!A \in \Gamma$, $!B \in \Gamma$ இரண்டும், அல்லது
+    $!A \notin \Gamma$, $!B \notin \Gamma$ இரண்டும்}{}
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item $\Gamma \Proves[\Sigma] !A$ ஆனால் $!A \notin \Gamma$ என்க.
+    $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் என்பதால்,
+    $\lnot!A \in \Gamma$. $!A, \lnot !A \Proves[\Sigma] \lfalse$
+    என்பதால், இது~$\Gamma$ வை முரணுடையதாக்கும்.
+
+  \item $!A \in \Sigma$ எனில், $\Gamma \Proves[\Sigma] !A$;
+    வருவித்தலின் கீழான மூடுதலால், அதாவது நேர்வு~\olref{prop:ccs-closed}
+    படி, $!A \in \Gamma$.
+
+  \tagitem{prvFalse}{$\lfalse \in \Gamma$ எனில், $\Gamma
+    \Proves[\Sigma] \lfalse$; ஆகவே $\Gamma$ ஆனது~$\Sigma$-முரணுடையதாகும்.}{}
+
+  \tagitem{prvTrue}{$\Gamma \Proves[\Sigma] \ltrue$; ஆகவே வருவித்தலின்
+    கீழான மூடுதலால், அதாவது நேர்வு~\olref{prop:ccs-closed} படி,
+    $\ltrue \in \Gamma$.}{}
+
+  % SOURCE CORRECTION TA-NML-026: completeness supplies not-A when A is absent, not A itself.
+  \item $\lnot!A \in \Gamma$ எனில், முரணின்மையால் $!A \notin \Gamma$;
+    $!A \notin \Gamma$ எனில், $\Gamma$ நிறைவான $\Sigma$-முரணற்ற
+    கணம் என்பதால் $\lnot!A \in \Gamma$.
+
+  \tagitem{prvAnd}{\iftag{probAnd}{பயிற்சி.}{$!A \land !B \in
+      \Gamma$ என்க. $(!A \land !B) \lif !A$ ஒரு மெய்ம நிகழ்வு என்பதால்,
+      வருவித்தலின் கீழான மூடுதலால், அதாவது நேர்வு~\olref{prop:ccs-closed}
+      படி, $!A \in \Gamma$. $!B \in \Gamma$ க்கும் அதேபோல்.
+      மறுபுறம், $!A \in \Gamma$, $!B \in \Gamma$ இரண்டும் என்க.
+      $!A \lif (!B \lif (!A \land !B))$ ஒரு மெய்ம நிகழ்வு என்பதால்,
+      வருவித்தலின் கீழான மூடுதல் $(!A \land !B) \in \Gamma$ என்பதைக்
+      குறிக்கிறது.}}{}
+
+  \tagitem{prvOr}{\iftag{probOr}{பயிற்சி.}{$!A \lor !B \in
+      \Gamma$ என்றும், $!A \notin \Gamma$, $!B \notin \Gamma$
+      என்றும் கொள்க. $\Gamma$ நிறைவான $\Sigma$-முரணற்ற கணம் என்பதால்,
+      $\lnot!A \in \Gamma$, $\lnot !B \in \Gamma$. அப்போது
+      $\lnot !A \lif (\lnot !B \lif \lnot (!A \lor !B))$ ஒரு மெய்ம
+      நிகழ்வு என்பதால் $\lnot(!A \lor !B) \in \Gamma$. இது~$\Gamma$
+      ஆனது~$\Sigma$-முரணுடையது என்று பொருள்படும்; இது ஒரு முரண்பாடு.}}{}
+
+  \tagitem{prvIf}{\iftag{probIf}{பயிற்சி.}{$!A \lif !B \in \Gamma$,
+      $!A \in \Gamma$ என்க; அப்போது $\Gamma \Proves[\Sigma] !B$;
+      எனவே வருவித்தலின் கீழான மூடுதலால் $!B \in \Gamma$. மறுதிசையில்,
+      $!A \lif !B \notin \Gamma$ எனில், $\Gamma$ நிறைவான
+      $\Sigma$-முரணற்ற கணம் என்பதால், $\lnot (!A \lif !B) \in \Gamma$.
+      $\lnot(!A \lif !B) \lif !A$ ஒரு மெய்ம நிகழ்வு என்பதால்,
+      வருவித்தலின் கீழான மூடுதலால் $!A \in \Gamma$.
+      $\lnot(!A \lif !B) \lif \lnot !B$ ஒரு மெய்ம நிகழ்வு என்பதால்,
+      $\lnot !B \in \Gamma$. $\Gamma$ ஆனது~$\Sigma$-முரணற்றது
+      என்பதால், $!B \notin \Gamma$.}}{}
+
+  \tagitem{prvIff}{\iftag{probIff}{பயிற்சி.}{$!A \liff !B \in
+      \Gamma$ என்க. $!A \in \Gamma$ எனில், $(!A
+      \liff !B) \lif (!A \lif !B)$ ஒரு மெய்ம நிகழ்வு என்பதால்,
+      $!B \in \Gamma$. அதேபோல், $!B \in \Gamma$ எனில்,
+      $!A \in \Gamma$. ஆகவே $!A \in \Gamma$, $!B \in \Gamma$
+      இரண்டும், அல்லது $!A \in \Gamma$, $!B \in \Gamma$ ஆகிய
+      இரண்டுமே இல்லை.
+
+      % SOURCE CORRECTION TA-NML-027: the converse assumes the biconditional is absent, matching the next negated formula.
+      மறுதிசையில், $!A \liff !B \notin \Gamma$ என்க. $\Gamma$
+      நிறைவான $\Sigma$-முரணற்ற கணம் என்பதால்,
+      $\lnot (!A \liff !B) \in \Gamma$. $\lnot(!A \liff !B) \lif
+      (!A \lif \lnot !B)$ ஒரு மெய்ம நிகழ்வு என்பதால்,
+      $!A \in \Gamma$ எனில் $\lnot !B \in \Gamma$; $\Gamma$ ஆனது
+      $\Sigma$-முரணற்றது என்பதால், $!B \notin \Gamma$. அதேபோல்,
+      $!B \in \Gamma$ எனில் $!A \notin \Gamma$. ஆகவே
+      $!A \in \Gamma$, $!B \in \Gamma$ இரண்டும் அல்ல; மேலும்
+      $!A \notin \Gamma$, $!B \notin \Gamma$ இரண்டும் அல்ல.}}{}
+  \end{enumerate}
+\end{proof}
+
+\begin{probtag}{probAnd,probOr,probIf,probIff}
+  \olref[nml][com][ccs]{prop:ccs-properties} இன் நிறுவலை நிறைவுசெய்க.
+\end{probtag}
+
+\end{document}

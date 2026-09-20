@@ -1,0 +1,63 @@
+{
+  "batch_id": "TA-B195",
+  "units": [
+    {
+      "unit_id": "OLP-0447",
+      "source_sha256": "ba09b193f2ccb8f8c5751a1c762c0f81f14937ffbb42bd0e7bfad1f82d51f147",
+      "translation_sha256": "babd817fd9150967614ac31be838fe4de6d78a7ef9b8dbe56637320c1905ab81",
+      "source_bytes": 6973,
+      "translation_bytes": 11048,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "ccs",
+        "com",
+        "include",
+        "logic",
+        "mod",
+        "nml",
+        "open",
+        "probBox",
+        "probDiamond",
+        "probFalse",
+        "probIf",
+        "probIff",
+        "probNot",
+        "probOr",
+        "probTrue",
+        "proband",
+        "propositional",
+        "section",
+        "syn",
+        "tru",
+        "trw",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

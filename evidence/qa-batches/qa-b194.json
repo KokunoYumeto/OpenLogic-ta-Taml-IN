@@ -1,0 +1,149 @@
+{
+  "batch_id": "TA-B194",
+  "units": [
+    {
+      "unit_id": "OLP-0445",
+      "source_sha256": "92b97da95c28f21f5806bcce481e64571dc3a82d5d1c315bcaf1c569c90d00a6",
+      "translation_sha256": "0f66343d674e5ecdade328fad0e030d66b48a44ea593c3469fe31b76a910cc6c",
+      "source_bytes": 10729,
+      "translation_bytes": 19931,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Sigma\\Proves!B_1\\lif(!B_2\\lif\\cdots(!B_n\\lif!A)\\cdots)$",
+        "$\\Sigma\\Proves\\Box!B_1\\lif(\\Box!B_2\\lif\\cdots(\\Box!B_n\\lif\\Box!A)\\cdots)$",
+        "$\\Box\\Box^{-1}\\Gamma\\Proves\\Box!A$"
+      ],
+      "extra_math": [
+        "$\\Sigma\\Proves!B_1\\lif(!B_2\\lif\\cdots(!B_k\\lif!A)\\cdots)$",
+        "$\\Sigma\\Proves\\Box!B_1\\lif(\\Box!B_2\\lif\\cdots(\\Box!B_k\\lif\\Box!A)\\cdots)$",
+        "$\\Box\\Box^{-1}\\Gamma\\Proves[\\Sigma]\\Box!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "ccs",
+        "com",
+        "con",
+        "include",
+        "logic",
+        "mod",
+        "nml",
+        "open",
+        "prf",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-028",
+          "unit_id": "OLP-0445",
+          "kind": "boxed-premise-lifting-switches-final-index",
+          "action": "Changed both final nested-premise indices from n to k, matching the declared finite list B1 through Bk.",
+          "normalized_math_replacements": [
+            {
+              "from": "!B_n\\lif!A",
+              "to": "!B_k\\lif!A",
+              "count": 1
+            },
+            {
+              "from": "\\Box!B_n\\lif\\Box!A",
+              "to": "\\Box!B_k\\lif\\Box!A",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proof introduces premises B1 through Bk and later confirms Box B1 through Box Bk are in Box Gamma, but the two intervening nested conditionals unexpectedly end with Bn.",
+          "chosen_treatment": "தமிழ் முன்வைக்கப்பட்ட இறுதிக்குட்பட்ட பட்டியலுக்கு ஏற்ப இரு தொடர் உட்கிடைப்புகளையும்~$!B_k$ இல் முடிக்கிறது.",
+          "alternatives_considered": "Renaming the declared premise bound and every surrounding occurrence from k to n; retaining an undeclared relationship between n and k.",
+          "rationale": "Rule RK lifts the same finite premise sequence used by the definition of derivability, so its final index must stay k throughout.",
+          "precise_review_question": "Do the premise conditional and its boxed RK image now end at the declared final premise Bk?",
+          "location_needle": "SOURCE CORRECTION TA-NML-028"
+        },
+        {
+          "audit_id": "TA-NML-029",
+          "unit_id": "OLP-0445",
+          "kind": "box-lifting-lemma-drops-modal-system-index",
+          "action": "Restored the Sigma index on the derivability result obtained by applying the preceding lemma.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\Box\\Box^{-1}\\Gamma\\Proves\\Box!A",
+              "to": "\\Box\\Box^{-1}\\Gamma\\Proves[\\Sigma]\\Box!A",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\Sigma"
+          ],
+          "source_issue_or_choice": "The hypothesis, cited box-lifting lemma and monotonicity conclusion all concern derivability in arbitrary modal system Sigma, but the intermediate conclusion alone drops that index.",
+          "chosen_treatment": "தமிழ் இடைநிலை முடிவிலும்~$\\Proves[\\Sigma]$ ஐத் தொடர்ந்து பயன்படுத்துகிறது.",
+          "alternatives_considered": "Reading the unindexed relation as an unexplained change to the minimal system; dropping Sigma from the hypothesis and conclusion as well.",
+          "rationale": "Applying lem:box1 to a Sigma-indexed derivation preserves that same system, which monotonicity then carries to Gamma.",
+          "precise_review_question": "Does every derivability relation in the second box lemma remain indexed by the same Sigma?",
+          "location_needle": "SOURCE CORRECTION TA-NML-029"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\Sigma"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0446",
+      "source_sha256": "7d21c989f62f34ed387f7cbaef899f8b6d2c37467306110765c7395f70b1e4c3",
+      "translation_sha256": "9f700b222c7d3bb8b52e951d220cf2718ad97fc797da4bb4a49e7cea53c40f80",
+      "source_bytes": 1104,
+      "translation_bytes": 1810,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

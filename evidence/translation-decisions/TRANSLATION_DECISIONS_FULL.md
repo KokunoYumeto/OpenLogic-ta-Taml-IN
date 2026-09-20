@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 426/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 435/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -3004,6 +3004,86 @@ Please double-check: **do both deduction-theorem conclusions now use the conditi
 
 - `TA-OCC-eee0a669ee60ff3f` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:58`; PDF page pending.
 
+## TA-NML-025 — The surrounding claim concerns theoremhood relative to modal system Sigma and consistency of the singleton premise A, but the parenthetical equivalence alone also inserts Sigma itself as a premise set.
+
+Chosen rendering: **தமிழ் $\Proves/[\Sigma] \lnot !A$ என்பதையும் $!A \Proves/[\Sigma] \lfalse$ என்பதையும் ஒப்பிட்டு, Sigma-வை முறைமைச் சுட்டியாக மட்டும் வைத்திருக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The immediately preceding and following sentences use empty-premise Sigma-relative theoremhood, and the cited consistency definition makes A consistent exactly when A does not derive false in that same system.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0442 (checked_supports)
+
+Alternatives: Treating every axiom formula in Sigma as an additional premise despite their already being derivable in the indexed system; changing the singleton-consistency side.
+
+Please double-check: **does the corrected equivalence compare empty-premise Sigma-relative non-theoremhood with consistency of A?**
+
+- `TA-OCC-23c53234d9c3d443` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:47`; PDF page pending.
+
+## TA-NML-026 — The second half of the negation biconditional assumes A is absent but concludes A is present, contradicting both completeness and the stated result.
+
+Chosen rendering: **தமிழ் $!A \notin \Gamma$ எனில் நிறைவால் $\lnot !A \in \Gamma$ என்று முடிக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Completeness requires that each formula or its negation belongs to Gamma, so absence of A forces membership of not-A.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0443 (checked_supports)
+
+Alternatives: Keeping the direct contradiction as the claimed consequence of completeness; reversing the stated biconditional.
+
+Please double-check: **does the corrected reverse direction conclude membership of not-A from absence of A?**
+
+- `TA-OCC-5f8dd86c07f1ce8a` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:89`; PDF page pending.
+
+## TA-NML-027 — The proof is the converse direction of the biconditional-membership clause and immediately infers membership of not-(A iff B), but its assumption names only A implies B.
+
+Chosen rendering: **தமிழ் மறுதிசை வாதத்தை $!A \liff !B \notin \Gamma$ என்ற பொருத்தமான கருதுகோளுடன் தொடங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Completeness turns absence of the exact formula A iff B into membership of its negation, which is the premise used in the remaining argument.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0443 (checked_supports)
+
+Alternatives: Keeping a conditional premise that cannot yield the next negated biconditional; rewriting the entire proof as a conditional-only result.
+
+Please double-check: **does the corrected converse assume absence of the same biconditional whose negation is used next?**
+
+- `TA-OCC-f5ca8799842cf0b6` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:130`; PDF page pending.
+
+## TA-NML-028 — The proof introduces premises B1 through Bk and later confirms Box B1 through Box Bk are in Box Gamma, but the two intervening nested conditionals unexpectedly end with Bn.
+
+Chosen rendering: **தமிழ் முன்வைக்கப்பட்ட இறுதிக்குட்பட்ட பட்டியலுக்கு ஏற்ப இரு தொடர் உட்கிடைப்புகளையும்~$!B_k$ இல் முடிக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Rule RK lifts the same finite premise sequence used by the definition of derivability, so its final index must stay k throughout.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0445 (checked_supports)
+
+Alternatives: Renaming the declared premise bound and every surrounding occurrence from k to n; retaining an undeclared relationship between n and k.
+
+Please double-check: **do the premise conditional and its boxed RK image now end at the declared final premise Bk?**
+
+- `TA-OCC-608de8c73f5e0c57` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:101`; PDF page pending.
+
+## TA-NML-029 — The hypothesis, cited box-lifting lemma and monotonicity conclusion all concern derivability in arbitrary modal system Sigma, but the intermediate conclusion alone drops that index.
+
+Chosen rendering: **தமிழ் இடைநிலை முடிவிலும்~$\Proves[\Sigma]$ ஐத் தொடர்ந்து பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Applying lem:box1 to a Sigma-indexed derivation preserves that same system, which monotonicity then carries to Gamma.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0445 (checked_supports)
+
+Alternatives: Reading the unindexed relation as an unexplained change to the minimal system; dropping Sigma from the hypothesis and conclusion as well.
+
+Please double-check: **does every derivability relation in the second box lemma remain indexed by the same Sigma?**
+
+- `TA-OCC-c5a837075c592a0a` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:119`; PDF page pending.
+
 ## TA-READER-REF-001 — The cumulative 51-unit reader omits the target history chapter, so the frozen cross-reference rendered as a literal question-mark pair.
 
 Chosen rendering: **இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவு என்ற விளக்கத் தொடர்.**
@@ -4107,6 +4187,60 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-b3042d8bc7bb5d0c` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:23`; PDF page pending.
 - `TA-OCC-8961be9af1dd9d94` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:28`; PDF page pending.
 - `TA-OCC-47d94114e3a5a1ea` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:22`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:31`; PDF page pending.
+- `TA-OCC-e43bc33d4395da86` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:49`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:55`; PDF page pending.
+- `TA-OCC-5f42cf5088cddeaa` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:51`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:56`; PDF page pending.
+- `TA-OCC-1de76bd474d8ab18` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:52`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:58`; PDF page pending.
+- `TA-OCC-cac28360ae70d478` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:55`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:64`; PDF page pending.
+- `TA-OCC-9f4b53cea99a6c39` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:3`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:12`; PDF page pending.
+- `TA-OCC-409f8361ab4fe2f9` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; PDF page pending.
+- `TA-OCC-8100bdfe980ce95a` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:20`; PDF page pending.
+- `TA-OCC-5367b81cad24e9f8` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:28`; PDF page pending.
+- `TA-OCC-d7ee1342df357bd1` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:19`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:30`; PDF page pending.
+- `TA-OCC-be6553043cb4f610` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:25`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:33`; PDF page pending.
+- `TA-OCC-f1a5016fe4f095c7` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:42`; PDF page pending.
+- `TA-OCC-3cc4ebe7b2564d54` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:74`; PDF page pending.
+- `TA-OCC-0d14daacbfd3202b` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:92`; PDF page pending.
+- `TA-OCC-56bd6110026bde31` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:105`; PDF page pending.
+- `TA-OCC-8a3e8e0160820888` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:115`; PDF page pending.
+- `TA-OCC-6f124191b34adad8` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:132`; PDF page pending.
+- `TA-OCC-3a6b95883353c248` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; PDF page pending.
+- `TA-OCC-629f90502f71db28` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:25`; PDF page pending.
+- `TA-OCC-1dd866f0bb56196d` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:16`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:34`; PDF page pending.
+- `TA-OCC-c7edd876e3ff2b48` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:19`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:49`; PDF page pending.
+- `TA-OCC-18c1080017dcabe4` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:23`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:51`; PDF page pending.
+- `TA-OCC-406abbadae7f3977` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:31`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:99`; PDF page pending.
+- `TA-OCC-79de35f2bdfb4cd3` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:32`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:106`; PDF page pending.
+- `TA-OCC-b75a32217d342bb8` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:45`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:113`; PDF page pending.
+- `TA-OCC-965c84376ae3c587` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:16`; PDF page pending.
+- `TA-OCC-383c2678040fbaa0` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:70`; PDF page pending.
+- `TA-OCC-4284d0e19771a753` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:83`; PDF page pending.
+- `TA-OCC-943b2f864d6aa8f0` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:64`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:91`; PDF page pending.
+- `TA-OCC-ee5b1d506eaf5463` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:84`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:129`; PDF page pending.
+- `TA-OCC-bcd68e318b11b172` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:136`; PDF page pending.
+- `TA-OCC-395df9332233e619` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:143`; PDF page pending.
+- `TA-OCC-7726d310fd59f496` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:150`; PDF page pending.
+- `TA-OCC-ee091f15a9c5fd41` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:157`; PDF page pending.
+- `TA-OCC-f249668651c464d1` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:160`; PDF page pending.
+- `TA-OCC-6c3e9563648e8423` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:164`; PDF page pending.
+- `TA-OCC-d029da37be6d973f` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:166`; PDF page pending.
+- `TA-OCC-d196f931266f76a1` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:172`; PDF page pending.
+- `TA-OCC-27461624a983a936` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:175`; PDF page pending.
+- `TA-OCC-8365cf9326fa52a8` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:181`; PDF page pending.
+- `TA-OCC-94fc23758c5bd8a8` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:185`; PDF page pending.
+- `TA-OCC-3803a30747462396` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:192`; PDF page pending.
+- `TA-OCC-0106d4266ae4ef2c` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:223`; PDF page pending.
+- `TA-OCC-11f0029f8187e052` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:226`; PDF page pending.
+- `TA-OCC-9a59b74b0e37d6db` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:230`; PDF page pending.
+- `TA-OCC-067e178eb8a63626` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:233`; PDF page pending.
+- `TA-OCC-b11a297f708b9e8a` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:238`; PDF page pending.
+- `TA-OCC-9d6365f1bfe0910e` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:246`; PDF page pending.
+- `TA-OCC-963d110a06b0394d` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:252`; PDF page pending.
+- `TA-OCC-8e1a3e367e7c48c9` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:255`; PDF page pending.
+- `TA-OCC-2e2b61aa5ee25ac1` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:258`; PDF page pending.
+- `TA-OCC-57003c136d74df98` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:27`; PDF page pending.
+- `TA-OCC-656f605c73e0ce55` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:53`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:55`; PDF page pending.
+- `TA-OCC-61173ba48370f259` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:169`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:171`; PDF page pending.
+- `TA-OCC-73ccd4cc5c161ad3` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:176`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:179`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -4602,6 +4736,9 @@ Please double-check: **do the listed uses of “உறுப்பு” preserv
 - `TA-OCC-a02f4f23455ec4fc` — OLP-0389 / `OLP-0389-S01`; source `content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:16`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/valuations-sat.tex:17`; PDF page pending.
 - `TA-OCC-118fb5f386289434` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; PDF page pending.
 - `TA-OCC-f13ede3a167f9dba` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:17`; PDF page pending.
+- `TA-OCC-c59b64a558e503ed` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:66`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:69`; PDF page pending.
+- `TA-OCC-47ddfa97a93f3063` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:67`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:71`; PDF page pending.
+- `TA-OCC-f6bde89716fcf17c` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:62`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:62`; PDF page pending.
 
 ## TA-T003 — empty set
 
@@ -5078,6 +5215,25 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-534f348e60771a0e` — OLP-0417 / `OLP-0417-S01`; source `content/normal-modal-logic/syntax-and-semantics/schemas.tex:36`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/schemas.tex:88`; PDF page pending.
 - `TA-OCC-8b6f39b7a945ef57` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:36`; PDF page pending.
 - `TA-OCC-22dcac21a7cbf17e` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:35`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:40`; PDF page pending.
+- `TA-OCC-1d079d3fff84360d` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:25`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:68`; PDF page pending.
+- `TA-OCC-000940fc86c51628` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:53`; PDF page pending.
+- `TA-OCC-c6bb01c9fc4bf877` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:50`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:56`; PDF page pending.
+- `TA-OCC-5304b6a7949d4648` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:53`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:59`; PDF page pending.
+- `TA-OCC-b72afa02557157db` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:55`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:62`; PDF page pending.
+- `TA-OCC-cdae7d06bc8d313c` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:57`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:65`; PDF page pending.
+- `TA-OCC-343b7df623f95177` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:88`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:97`; PDF page pending.
+- `TA-OCC-4ef52642882d3144` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:19`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:33`; PDF page pending.
+- `TA-OCC-f4e980fc58e20e78` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:24`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:34`; PDF page pending.
+- `TA-OCC-1dcc48b2ee59e7d9` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:25`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:61`; PDF page pending.
+- `TA-OCC-51d5b8ca2a54503e` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:28`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:130`; PDF page pending.
+- `TA-OCC-f27eba47fdc5618e` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:158`; PDF page pending.
+- `TA-OCC-644de9e692525e14` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:31`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:224`; PDF page pending.
+- `TA-OCC-6092803cf4f14afb` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:36`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:231`; PDF page pending.
+- `TA-OCC-c2b1c59206bcfecb` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:38`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:234`; PDF page pending.
+- `TA-OCC-b80a00580628817b` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:44`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:236`; PDF page pending.
+- `TA-OCC-ef821cd8ce85f5c7` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:46`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:240`; PDF page pending.
+- `TA-OCC-d88295745de18498` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:52`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:243`; PDF page pending.
+- `TA-OCC-6def03b3108920b2` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:56`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:256`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -5378,6 +5534,7 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-f43a6b9c5490c517` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:105`; PDF page pending.
 - `TA-OCC-c96f38f7b191b860` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:26`; PDF page pending.
 - `TA-OCC-8c9db3e5714626ca` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:15`; PDF page pending.
+- `TA-OCC-2c51fa5662201c31` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:102`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:109`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5679,6 +5836,7 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-26e03a725a5fefd7` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:21`; PDF page pending.
 - `TA-OCC-5956cf96063ba33a` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:23`; PDF page pending.
 - `TA-OCC-f75e21bbac93b83d` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
+- `TA-OCC-9682ba2a301e04bb` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:15`; PDF page pending.
 
 ## TA-T018 — union / intersection / disjoint
 
@@ -6278,6 +6436,16 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-0804511aefc65c35` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:56`; PDF page pending.
 - `TA-OCC-68513e2d890f2ec2` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:152`; PDF page pending.
 - `TA-OCC-25efd5bd66666baf` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:41`; PDF page pending.
+- `TA-OCC-28ffc7477fe9a442` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:27`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:30`; PDF page pending.
+- `TA-OCC-2d20b82cd45fd97d` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:18`; PDF page pending.
+- `TA-OCC-0375771b3d9f4885` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:52`; PDF page pending.
+- `TA-OCC-73273a3074530c16` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:28`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:61`; PDF page pending.
+- `TA-OCC-e8361fade4ce91f8` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:70`; PDF page pending.
+- `TA-OCC-c8726bc3bacf8ef6` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:79`; PDF page pending.
+- `TA-OCC-03007e06cd29055c` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:141`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:92`; PDF page pending.
+- `TA-OCC-2eeac4577338f922` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:101`; PDF page pending.
+- `TA-OCC-cc873a681733aa17` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:111`; PDF page pending.
+- `TA-OCC-5073d100b07154b4` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:123`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -6683,6 +6851,9 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-ac9d750d58604de4` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:48`; PDF page pending.
 - `TA-OCC-2c6d827076fc2cba` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:91`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:93`; PDF page pending.
 - `TA-OCC-599a9d3cdc5f3453` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:24`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:25`; PDF page pending.
+- `TA-OCC-05cd7d6ad4749325` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:18`; PDF page pending.
+- `TA-OCC-eec8c95f98caef79` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:23`; PDF page pending.
+- `TA-OCC-d348179cb8cde668` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:18`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -7023,6 +7194,22 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-fa8b3b76d5cc8abf` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:72`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:78`; PDF page pending.
 - `TA-OCC-f4373667f4f27e05` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:73`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:157`; PDF page pending.
 - `TA-OCC-93338b25dc46f7fe` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:23`; PDF page pending.
+- `TA-OCC-0fd96e77c93cb50f` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:19`; PDF page pending.
+- `TA-OCC-6e0103a267042de9` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:54`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:58`; PDF page pending.
+- `TA-OCC-1fddfb1cd65f7340` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:54`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:109`; PDF page pending.
+- `TA-OCC-9687e268f66e1eb0` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:60`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:60`; PDF page pending.
+- `TA-OCC-542b5b915cb5175d` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:60`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:60`; PDF page pending.
+- `TA-OCC-12f0022954835b8d` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:60`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:60`; PDF page pending.
+- `TA-OCC-324511504cb39e10` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:34`; PDF page pending.
+- `TA-OCC-f5b4b342c88f478e` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:35`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:36`; PDF page pending.
+- `TA-OCC-75df2fb4a5cc9107` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:37`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:38`; PDF page pending.
+- `TA-OCC-0889c6d9c49115a8` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:113`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:115`; PDF page pending.
+- `TA-OCC-b30e626dffbcb3a6` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:114`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:116`; PDF page pending.
+- `TA-OCC-550263f1010153f9` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:115`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:116`; PDF page pending.
+- `TA-OCC-2cb4c4110ee5debe` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:115`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:116`; PDF page pending.
+- `TA-OCC-59581b7b8f3af806` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:120`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:121`; PDF page pending.
+- `TA-OCC-de70dd95955eb329` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:121`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:121`; PDF page pending.
+- `TA-OCC-c7d4da2987c9faee` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:121`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:121`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -10100,6 +10287,58 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-c81f9bb132853f4e` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:34`; PDF page pending.
 - `TA-OCC-fcf72f0c64387061` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:36`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:37`; PDF page pending.
 - `TA-OCC-cae5a1de45e8e372` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:43`; PDF page pending.
+- `TA-OCC-ae0e3a1f39c17044` — OLP-0441 / `OLP-0441-S01`; source `content/normal-modal-logic/completeness/completeness.tex:2`; Tamil `translation/content/normal-modal-logic/completeness/completeness.tex:9`; PDF page pending.
+- `TA-OCC-9e37abf9b50390cd` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:15`; PDF page pending.
+- `TA-OCC-2e0f6a2c7fdb54a6` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:23`; PDF page pending.
+- `TA-OCC-1d1fcd7499f218a6` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:24`; PDF page pending.
+- `TA-OCC-f1c4e337113b9661` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:32`; PDF page pending.
+- `TA-OCC-901e71938f970405` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:39`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:41`; PDF page pending.
+- `TA-OCC-719c54ae0ae93544` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:47`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:50`; PDF page pending.
+- `TA-OCC-02188d8641bd8e29` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:54`; PDF page pending.
+- `TA-OCC-aad4e1b9673f207d` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:50`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:54`; PDF page pending.
+- `TA-OCC-0e838e1cc93f129d` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:56`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:59`; PDF page pending.
+- `TA-OCC-08258a8520e82545` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:73`; PDF page pending.
+- `TA-OCC-09f5ee50f24fa550` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; PDF page pending.
+- `TA-OCC-bfb36ef1bd39f2c3` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:16`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:18`; PDF page pending.
+- `TA-OCC-47580a5c9f97d3f9` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:23`; PDF page pending.
+- `TA-OCC-73744eff34d2bf9c` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:36`; PDF page pending.
+- `TA-OCC-3d54a4189ef694e8` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:144`; PDF page pending.
+- `TA-OCC-7b71adce597c1e98` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:14`; PDF page pending.
+- `TA-OCC-6a886a62f4dbbba8` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; PDF page pending.
+- `TA-OCC-b905c989d03b1f97` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:29`; PDF page pending.
+- `TA-OCC-2ca25ee4c1ffd554` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:33`; PDF page pending.
+- `TA-OCC-d85962cd50b23e6d` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:31`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:34`; PDF page pending.
+- `TA-OCC-e8e4d1f4e4875e9a` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:53`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:57`; PDF page pending.
+- `TA-OCC-7b7e0acd9adcb667` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:56`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:61`; PDF page pending.
+- `TA-OCC-02c95106e558e2c9` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:31`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:74`; PDF page pending.
+- `TA-OCC-7adc428a15e8f0a6` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:31`; PDF page pending.
+- `TA-OCC-582c9d762af35047` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:49`; PDF page pending.
+- `TA-OCC-e5fedd8dc4142e4c` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:64`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:55`; PDF page pending.
+- `TA-OCC-4dc02f8d0ab42e6a` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:64`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:70`; PDF page pending.
+- `TA-OCC-694259005d6c4710` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:75`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:81`; PDF page pending.
+- `TA-OCC-48eca5c368e3da9d` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:76`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:83`; PDF page pending.
+- `TA-OCC-cf7b7674f2ab7219` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:84`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:90`; PDF page pending.
+- `TA-OCC-4ed135c63216c2d5` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:75`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:103`; PDF page pending.
+- `TA-OCC-32da5ca673ed9009` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:17`; PDF page pending.
+- `TA-OCC-6bc2eb15f20dcd4c` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:17`; PDF page pending.
+- `TA-OCC-8f118b7b95ea18b8` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:16`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:17`; PDF page pending.
+- `TA-OCC-c0098422a9f35d13` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:19`; PDF page pending.
+- `TA-OCC-6f6b97c5a5c9563f` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:24`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:26`; PDF page pending.
+- `TA-OCC-de241b2be4098270` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:16`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:147`; PDF page pending.
+- `TA-OCC-3c06b7f6637ca6c0` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:12`; PDF page pending.
+- `TA-OCC-213ee7fbe5022e85` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:15`; PDF page pending.
+- `TA-OCC-3a412fe387980429` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:22`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:16`; PDF page pending.
+- `TA-OCC-8d85d82fc138a9ec` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:22`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:16`; PDF page pending.
+- `TA-OCC-16884212a637ecf7` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:22`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:20`; PDF page pending.
+- `TA-OCC-198773552a34776a` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:12`; PDF page pending.
+- `TA-OCC-4786cd99d4e673f0` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:15`; PDF page pending.
+- `TA-OCC-8574ab4f352bc9d1` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:20`; PDF page pending.
+- `TA-OCC-12d99d394ecd0d86` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:113`; PDF page pending.
+- `TA-OCC-1040be316b1f08d8` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:159`; PDF page pending.
+- `TA-OCC-0cf3add919f1fefe` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:186`; PDF page pending.
+- `TA-OCC-e78c53c5875cca1d` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:199`; PDF page pending.
+- `TA-OCC-26d4e29bd2c1a85e` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:222`; PDF page pending.
+- `TA-OCC-9f247e5ee853ed62` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:233`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -10655,6 +10894,7 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-10e92ad3b172d992` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:89`; PDF page pending.
 - `TA-OCC-83916229d70200ac` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:30`; PDF page pending.
 - `TA-OCC-ee60e1294c8fd3e9` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:164`; PDF page pending.
+- `TA-OCC-1dc4c278802a3bb4` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:29`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -11607,6 +11847,15 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-3f6f8bbaf0161c02` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:93`; PDF page pending.
 - `TA-OCC-d451ddcb053b5e0d` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:25`; PDF page pending.
 - `TA-OCC-fa67c62b0233d81c` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:157`; PDF page pending.
+- `TA-OCC-32cf4e1ea6ce3fc3` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:20`; PDF page pending.
+- `TA-OCC-e557266b80ec7181` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:57`; PDF page pending.
+- `TA-OCC-f0fdd501b954673f` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:132`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:18`; PDF page pending.
+- `TA-OCC-6aca7063eddc0f70` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:163`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:20`; PDF page pending.
+- `TA-OCC-f85427be7a972a55` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:163`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:23`; PDF page pending.
+- `TA-OCC-f71fd07c4b710d7d` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:18`; PDF page pending.
+- `TA-OCC-2d3e80d26d67dafe` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:32`; PDF page pending.
+- `TA-OCC-04902809c38bf00c` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:121`; PDF page pending.
+- `TA-OCC-6636bac038425465` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:164`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -15184,6 +15433,11 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-607a5cf051ae26ca` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:79`; PDF page pending.
 - `TA-OCC-7573e2f516bc20c5` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:29`; PDF page pending.
 - `TA-OCC-4a9e1e8588a40975` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:50`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:50`; PDF page pending.
+- `TA-OCC-4b3e67e9b113007f` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:37`; PDF page pending.
+- `TA-OCC-942ceafeee56e2f7` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:38`; PDF page pending.
+- `TA-OCC-4915d182de974927` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:84`; PDF page pending.
+- `TA-OCC-8add668353a7d0fb` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:16`; PDF page pending.
+- `TA-OCC-3ffd409bdd76f0da` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:19`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -16195,6 +16449,41 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-521ab2feb98f3b31` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:18`; PDF page pending.
 - `TA-OCC-34b02ce523a0ff1c` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:20`; PDF page pending.
 - `TA-OCC-34b7829b1c56dbd9` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:61`; PDF page pending.
+- `TA-OCC-eabbbf3ca3e765fe` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:18`; PDF page pending.
+- `TA-OCC-f2350e33a9ccb327` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:20`; PDF page pending.
+- `TA-OCC-4f14fa2966a0088e` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:19`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:21`; PDF page pending.
+- `TA-OCC-d75ee45688c81864` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:32`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:34`; PDF page pending.
+- `TA-OCC-421ad5681dbdab13` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:32`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:34`; PDF page pending.
+- `TA-OCC-ea3cc69e2e7f41f8` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:35`; PDF page pending.
+- `TA-OCC-4415272b2d295b08` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:34`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:36`; PDF page pending.
+- `TA-OCC-6933def4c66b7afa` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:38`; PDF page pending.
+- `TA-OCC-025a5ab860abd01b` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:43`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:44`; PDF page pending.
+- `TA-OCC-05e8924212eeeb73` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:51`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:53`; PDF page pending.
+- `TA-OCC-daaf2282bdf4678c` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:53`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:56`; PDF page pending.
+- `TA-OCC-b6364c388d312678` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:57`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:60`; PDF page pending.
+- `TA-OCC-6697ea0abf3b016c` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:58`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:61`; PDF page pending.
+- `TA-OCC-021110b970912bf0` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:64`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:68`; PDF page pending.
+- `TA-OCC-358192dd89153672` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:68`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:72`; PDF page pending.
+- `TA-OCC-c6d45a8cca3fcd0d` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:73`; PDF page pending.
+- `TA-OCC-b7ab89ef30ec78e8` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:23`; PDF page pending.
+- `TA-OCC-3ef1946703350ca3` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:38`; PDF page pending.
+- `TA-OCC-484be965091c6e1c` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:95`; PDF page pending.
+- `TA-OCC-e9136b08eb20783b` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:99`; PDF page pending.
+- `TA-OCC-46182c99a6c4d4d8` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:107`; PDF page pending.
+- `TA-OCC-cb32707cd622d321` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:116`; PDF page pending.
+- `TA-OCC-096818a30c7cdd0c` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:118`; PDF page pending.
+- `TA-OCC-9da0783b6965b186` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:124`; PDF page pending.
+- `TA-OCC-9c57dd9b65ad9085` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:134`; PDF page pending.
+- `TA-OCC-1203cd46ad08b080` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:18`; PDF page pending.
+- `TA-OCC-9b2aa4144baeac23` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:19`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:20`; PDF page pending.
+- `TA-OCC-ad1e71f242752fc9` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:23`; PDF page pending.
+- `TA-OCC-113902320ba6c720` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:36`; PDF page pending.
+- `TA-OCC-5552fa8fc3789ca8` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:16`; PDF page pending.
+- `TA-OCC-9c4ec944f298e26e` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:12`; PDF page pending.
+- `TA-OCC-86b2b361cb0dccba` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:24`; PDF page pending.
+- `TA-OCC-33de6361bc7a3314` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:15`; PDF page pending.
+- `TA-OCC-171e2208a566c878` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:63`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:32`; PDF page pending.
+- `TA-OCC-6f3e45db739c1694` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:63`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:40`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -17278,6 +17567,45 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-af07c70f0ab986c7` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:34`; PDF page pending.
 - `TA-OCC-833c83cff1493aa2` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:36`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:37`; PDF page pending.
 - `TA-OCC-4ca414b599d96c5e` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:43`; PDF page pending.
+- `TA-OCC-c0ac9e5c033109e7` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:15`; PDF page pending.
+- `TA-OCC-fdef4ff6408863ba` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:24`; PDF page pending.
+- `TA-OCC-340f5a8a073f76dc` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:32`; PDF page pending.
+- `TA-OCC-ac85ad8de7b2fb1f` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:39`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:41`; PDF page pending.
+- `TA-OCC-e1bd8d1d07b5b6b5` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:47`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:50`; PDF page pending.
+- `TA-OCC-af870f46a0425577` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:54`; PDF page pending.
+- `TA-OCC-9485cb509ac672d3` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:50`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:54`; PDF page pending.
+- `TA-OCC-ef5116d8f9f1b68a` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:56`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:59`; PDF page pending.
+- `TA-OCC-a303f6877f2e505c` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:70`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:73`; PDF page pending.
+- `TA-OCC-44c33909cbb0b62c` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; PDF page pending.
+- `TA-OCC-7ee0a63cf747aa31` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:23`; PDF page pending.
+- `TA-OCC-6e017cf523128fb2` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:36`; PDF page pending.
+- `TA-OCC-e04bc0a9373aeb85` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:14`; PDF page pending.
+- `TA-OCC-0fa2532779cce875` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; PDF page pending.
+- `TA-OCC-dd440bdc24c06263` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:29`; PDF page pending.
+- `TA-OCC-1cbe807407957a19` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:33`; PDF page pending.
+- `TA-OCC-706ba315631849ca` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:31`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:34`; PDF page pending.
+- `TA-OCC-dbbbd2bcfd711ed5` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:53`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:57`; PDF page pending.
+- `TA-OCC-4d3b57d7be78b036` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:56`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:61`; PDF page pending.
+- `TA-OCC-18a314792e683bc2` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:31`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:74`; PDF page pending.
+- `TA-OCC-a9d772252235b6ba` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:31`; PDF page pending.
+- `TA-OCC-2e6c00e4d31c425e` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:49`; PDF page pending.
+- `TA-OCC-61e750688690b188` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:64`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:55`; PDF page pending.
+- `TA-OCC-a85082ee422c8306` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:64`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:70`; PDF page pending.
+- `TA-OCC-af82c3457f04edca` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:75`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:81`; PDF page pending.
+- `TA-OCC-89cc116f27993b6e` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:76`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:83`; PDF page pending.
+- `TA-OCC-911ed416c29404d5` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:84`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:90`; PDF page pending.
+- `TA-OCC-9968e8835b3bd2a3` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:75`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:103`; PDF page pending.
+- `TA-OCC-93b560774ed2f67e` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:17`; PDF page pending.
+- `TA-OCC-42a8fbeb14b3732f` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:17`; PDF page pending.
+- `TA-OCC-4eb773c5754d6584` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:16`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:17`; PDF page pending.
+- `TA-OCC-7c54e55f64e9e13b` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:19`; PDF page pending.
+- `TA-OCC-f1c98c6ccebf5b26` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:24`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:26`; PDF page pending.
+- `TA-OCC-384fa149a04d2940` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:15`; PDF page pending.
+- `TA-OCC-fb15cf67f30c0303` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:16`; PDF page pending.
+- `TA-OCC-46d357496c0b4b7f` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:22`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:20`; PDF page pending.
+- `TA-OCC-bd885b093e2653c5` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:20`; PDF page pending.
+- `TA-OCC-a9c53fa0a36f028f` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:186`; PDF page pending.
+- `TA-OCC-a71776f9a94cd2e4` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:233`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -17600,6 +17928,7 @@ Please double-check: **do the listed uses of “மெய்மம் / மு�
 - `TA-OCC-3a1de7351f8c6c29` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:43`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:47`; PDF page pending.
 - `TA-OCC-4955dbedda21a2bf` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:71`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:77`; PDF page pending.
 - `TA-OCC-64ea25562817348d` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:15`; PDF page pending.
+- `TA-OCC-815b465b1ca0b503` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:102`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:109`; PDF page pending.
 
 ## TA-T085 — semantic entailment / semantic notions / semantic deduction theorem
 
@@ -17678,6 +18007,9 @@ Please double-check: **is “சீரான பிரதியீடு / உ�
 - `TA-OCC-42daa72e25da2c18` — OLP-0129 / `OLP-0129-S05`; source `content/first-order-logic/completeness/complete-consistent-sets.tex:55`; Tamil `translation/content/first-order-logic/completeness/complete-consistent-sets.tex:60`; PDF page pending.
 - `TA-OCC-b965cb7deadfc402` — OLP-0390 / `OLP-0390-S01`; source `content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:43`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/semantic-notions.tex:46`; PDF page pending.
 - `TA-OCC-f47a8c0527f68df1` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:19`; PDF page pending.
+- `TA-OCC-d5f4173dbb55267d` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:98`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:108`; PDF page pending.
+- `TA-OCC-3ae1fe854f47e7fa` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:111`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:121`; PDF page pending.
+- `TA-OCC-63a30f25b93188ef` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:217`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:220`; PDF page pending.
 
 ## TA-T088 — derivation / proof / inference
 
@@ -18468,6 +18800,11 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-6a5e382da793a7f8` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:52`; PDF page pending.
 - `TA-OCC-98fd27b1e7086e04` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:152`; PDF page pending.
 - `TA-OCC-091e1c00413978f0` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:41`; PDF page pending.
+- `TA-OCC-c9401d8cddbf802c` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:16`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:18`; PDF page pending.
+- `TA-OCC-7672da695076c506` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:27`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:30`; PDF page pending.
+- `TA-OCC-cdc6f3f3f0b8d839` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:46`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:159`; PDF page pending.
+- `TA-OCC-24a6e4980b863f42` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:109`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:199`; PDF page pending.
+- `TA-OCC-103f1a1ce46566c1` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:222`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -19064,6 +19401,12 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-47f3339659939d31` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:163`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:151`; PDF page pending.
 - `TA-OCC-2308c3c1dd7c99b3` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:163`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:170`; PDF page pending.
 - `TA-OCC-f7e032d873d8162f` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:18`; PDF page pending.
+- `TA-OCC-7f8e244bbce4b327` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:190`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:66`; PDF page pending.
+- `TA-OCC-2a5ba0eb0356419e` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:49`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:21`; PDF page pending.
+- `TA-OCC-2331dcc9de524205` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:78`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:99`; PDF page pending.
+- `TA-OCC-46e0f620b2cd7662` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:85`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:101`; PDF page pending.
+- `TA-OCC-9c81ee2f2f123eec` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:91`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:110`; PDF page pending.
+- `TA-OCC-3ce89ddca8b744dd` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:97`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:113`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -19350,6 +19693,7 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-6f0a291f78fe2757` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:21`; PDF page pending.
 - `TA-OCC-eb33fd72520914f4` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:23`; PDF page pending.
 - `TA-OCC-d7af1651a2a008aa` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
+- `TA-OCC-6b5ce860a715802b` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:15`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -20544,6 +20888,19 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-c3bf48cd58ddb0f7` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:35`; PDF page pending.
 - `TA-OCC-67e20a5504aa8598` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:30`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:77`; PDF page pending.
 - `TA-OCC-0efd26b222d5a5d2` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:17`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:18`; PDF page pending.
+- `TA-OCC-005f098721c7f22b` — OLP-0441 / `OLP-0441-S01`; source `content/normal-modal-logic/completeness/completeness.tex:2`; Tamil `translation/content/normal-modal-logic/completeness/completeness.tex:9`; PDF page pending.
+- `TA-OCC-77c4969e32e2a0b2` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:2`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:17`; PDF page pending.
+- `TA-OCC-58dde442e330144b` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:23`; PDF page pending.
+- `TA-OCC-077a3032a83199fc` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:23`; PDF page pending.
+- `TA-OCC-e207d07aa3351c4d` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:25`; PDF page pending.
+- `TA-OCC-061cc3ea8f9ebeb1` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:23`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:44`; PDF page pending.
+- `TA-OCC-86454147da8eb4e1` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:2`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:144`; PDF page pending.
+- `TA-OCC-5c845874e01c0d9b` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:2`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:147`; PDF page pending.
+- `TA-OCC-5da97ad27795724d` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:2`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:12`; PDF page pending.
+- `TA-OCC-02efba0065b3d9bf` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:3`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:16`; PDF page pending.
+- `TA-OCC-f3d1c31dd97d00fc` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:2`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:12`; PDF page pending.
+- `TA-OCC-56fa0d6588e4fd64` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:3`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:15`; PDF page pending.
+- `TA-OCC-32932f955af9b2ee` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:113`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -20619,6 +20976,13 @@ Please double-check: **is “முரணின்மை / முரணுடை
 - `TA-OCC-ce1cf74ac8b1368c` — OLP-0319 / `OLP-0319-S01`; source `content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:117`; Tamil `translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:139`; PDF page pending.
 - `TA-OCC-357d9823f3e27364` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:12`; PDF page pending.
 - `TA-OCC-28a3cee30e844f4e` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:14`; PDF page pending.
+- `TA-OCC-1db93b0e7edb3993` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:83`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:90`; PDF page pending.
+- `TA-OCC-bcddde80d2b339a3` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:103`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:114`; PDF page pending.
+- `TA-OCC-da40e301a5a89b19` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:139`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:150`; PDF page pending.
+- `TA-OCC-1feb7618a17a1e8b` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:191`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:204`; PDF page pending.
+- `TA-OCC-4ba200e6810a278e` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:200`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:213`; PDF page pending.
+- `TA-OCC-725d2bf42896da91` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:63`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:66`; PDF page pending.
+- `TA-OCC-7e556256cd28bfb9` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:190`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:192`; PDF page pending.
 
 ## TA-T096 — quantifier
 
@@ -21699,6 +22063,9 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-78af213f56cd371a` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; PDF page pending.
 - `TA-OCC-e4aa9aecbe97e070` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; PDF page pending.
 - `TA-OCC-238d2abb42de1929` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:162`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:170`; PDF page pending.
+- `TA-OCC-4b204e02d4223813` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:37`; PDF page pending.
+- `TA-OCC-83c2283f4c07468e` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:32`; PDF page pending.
+- `TA-OCC-a74fa25d45234588` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:16`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -21936,6 +22303,7 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-d078f900ee82b789` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:18`; PDF page pending.
 - `TA-OCC-21a82798a0760671` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:21`; PDF page pending.
 - `TA-OCC-79f4e4aafcd68ce0` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:28`; PDF page pending.
+- `TA-OCC-8ce3d6a3994c5d0b` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:17`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -22070,6 +22438,7 @@ Please double-check: **is “நிறைவான கணம் / நிறை�
 - `TA-OCC-8dd498f8c48ee851` — OLP-0128 / `OLP-0128-S06`; source `content/first-order-logic/completeness/outline.tex:80`; Tamil `translation/content/first-order-logic/completeness/outline.tex:83`; PDF page pending.
 - `TA-OCC-827723bf8217a80a` — OLP-0129 / `OLP-0129-S02`; source `content/first-order-logic/completeness/complete-consistent-sets.tex:19`; Tamil `translation/content/first-order-logic/completeness/complete-consistent-sets.tex:21`; PDF page pending.
 - `TA-OCC-2fd7ff609cb5813a` — OLP-0132 / `OLP-0132-S03`; source `content/first-order-logic/completeness/construction-of-model.tex:65`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:69`; PDF page pending.
+- `TA-OCC-c05f717f1eb9bf48` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:102`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:113`; PDF page pending.
 
 ## TA-T108 — saturated set / Henkin expansion / witness constant
 
@@ -22123,6 +22492,8 @@ Please double-check: **is “சொல் மாதிரி / மெய்ம�
 - `TA-OCC-7764a20492477290` — OLP-0133 / `OLP-0133-S11`; source `content/first-order-logic/completeness/identity.tex:159`; Tamil `translation/content/first-order-logic/completeness/identity.tex:172`; PDF page pending.
 - `TA-OCC-7642e087e96611e8` — OLP-0136 / `OLP-0136-S01`; source `content/first-order-logic/completeness/compactness-direct.tex:28`; Tamil `translation/content/first-order-logic/completeness/compactness-direct.tex:22`; PDF page pending.
 - `TA-OCC-b01f8596ec1635cd` — OLP-0136 / `OLP-0136-S13`; source `content/first-order-logic/completeness/compactness-direct.tex:139`; Tamil `translation/content/first-order-logic/completeness/compactness-direct.tex:154`; PDF page pending.
+- `TA-OCC-25572142b2474218` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:12`; PDF page pending.
+- `TA-OCC-525513e008893d43` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:22`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:24`; PDF page pending.
 
 ## TA-T110 — model existence result / Löwenheim–Skolem theorem
 
@@ -26581,6 +26952,25 @@ Please double-check: **is “இயல்பான வாய்ப்புந�
 - `TA-OCC-e6701b77eb6832e1` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:16`; PDF page pending.
 - `TA-OCC-f8b6a6ba1e8d2948` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:15`; PDF page pending.
 - `TA-OCC-b4c583b50b3fb787` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:15`; PDF page pending.
+- `TA-OCC-bd0fcc2a6cd245d5` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:14`; PDF page pending.
+- `TA-OCC-1a38075ce69efb5d` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; PDF page pending.
+- `TA-OCC-8bb39af2afb4a7dd` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:15`; PDF page pending.
+- `TA-OCC-b0bdfb6b86616f71` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:23`; PDF page pending.
+- `TA-OCC-ed94e1f6ae1c0d3c` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:100`; PDF page pending.
+- `TA-OCC-0742daf65a6025bb` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:199`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:12`; PDF page pending.
+- `TA-OCC-11dbcafd1aa79241` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:199`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:15`; PDF page pending.
+- `TA-OCC-67cec02296ca45b2` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:199`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:30`; PDF page pending.
+- `TA-OCC-531696a77e1e38ed` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:199`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:211`; PDF page pending.
+- `TA-OCC-0ddc37ada03e014f` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:14`; PDF page pending.
+- `TA-OCC-327bbfeaca3347ae` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:22`; PDF page pending.
+- `TA-OCC-97d64ba01efca3bf` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:20`; PDF page pending.
+- `TA-OCC-8e82c499b1a90cb3` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:22`; PDF page pending.
+- `TA-OCC-6461e6d7cf696db2` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:49`; PDF page pending.
+- `TA-OCC-17faa718419a9404` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:15`; PDF page pending.
+- `TA-OCC-6590a6a0158b6f21` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:130`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:19`; PDF page pending.
+- `TA-OCC-5af120bf94fe6f5f` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:189`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:130`; PDF page pending.
+- `TA-OCC-9421abd8519424fd` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:189`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:189`; PDF page pending.
+- `TA-OCC-94e02e74cd0d8425` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:189`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:230`; PDF page pending.
 
 ## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
 
@@ -26819,6 +27209,15 @@ Please double-check: **is “ஒரேநேரப் பதிலீடு / �
 - `TA-OCC-3d7f2be66329b27b` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:73`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:86`; PDF page pending.
 - `TA-OCC-564f1cd1ad7d0af4` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:78`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:118`; PDF page pending.
 - `TA-OCC-d70ef25e94ac438b` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:110`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:119`; PDF page pending.
+- `TA-OCC-3425323e959b0a6e` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:15`; PDF page pending.
+- `TA-OCC-f39090fb1dbe8f9e` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:36`; PDF page pending.
+- `TA-OCC-c85a910efc5e460c` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:89`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:95`; PDF page pending.
+- `TA-OCC-9251cfe0b6162a74` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:94`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:99`; PDF page pending.
+- `TA-OCC-684090b9ed564f9a` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:101`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:108`; PDF page pending.
+- `TA-OCC-63767440adeced40` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:109`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:116`; PDF page pending.
+- `TA-OCC-6887b144ee4ea95a` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:111`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:118`; PDF page pending.
+- `TA-OCC-b3bf8394d57567fb` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:118`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:124`; PDF page pending.
+- `TA-OCC-0def73ebffcbd426` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:125`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:134`; PDF page pending.
 
 ## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
 
@@ -26842,6 +27241,8 @@ Please double-check: **is “தொடர்புசார் மாதிர�
 - `TA-OCC-09d26211f9f744c8` — OLP-0418 / `OLP-0418-S01`; source `content/normal-modal-logic/syntax-and-semantics/entailment.tex:14`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/entailment.tex:15`; PDF page pending.
 - `TA-OCC-ca3be169de97ced9` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:63`; PDF page pending.
 - `TA-OCC-15dafb4837ccd4e2` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:64`; PDF page pending.
+- `TA-OCC-df2357b0281441d4` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:23`; PDF page pending.
+- `TA-OCC-9e44829de4246e59` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:36`; PDF page pending.
 
 ## TA-T170 — modal validity / valid in a class of models / tautology / tautological instance / schema / characteristic formula / closed under modus ponens
 
@@ -26909,6 +27310,12 @@ Please double-check: **is “வாய்ப்புநிலைச் செ�
 - `TA-OCC-44e6627a938ba1ce` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:166`; PDF page pending.
 - `TA-OCC-e73c83165d3a905b` — OLP-0432 / `OLP-0432-S01`; source `content/normal-modal-logic/axioms-systems/derived-rules.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/derived-rules.tex:167`; PDF page pending.
 - `TA-OCC-d2bf66ea6c9241a2` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:33`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:38`; PDF page pending.
+- `TA-OCC-73e0dc2e30681c33` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:94`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:95`; PDF page pending.
+- `TA-OCC-d48092fba82e7941` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:101`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:99`; PDF page pending.
+- `TA-OCC-d0c83c308d735b94` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:109`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:116`; PDF page pending.
+- `TA-OCC-98aacdbb2aadaf18` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:111`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:118`; PDF page pending.
+- `TA-OCC-b80e6da70c259a4d` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:125`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:124`; PDF page pending.
+- `TA-OCC-28d5daf61bae91c0` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:125`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:134`; PDF page pending.
 
 ## TA-T171 — entailment / entails / counterexample / class of models / reflexive model
 
@@ -26966,6 +27373,7 @@ Please double-check: **do the listed uses of “பின்விளைவு /
 - `TA-OCC-2f4ae15af55bc1d6` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:23`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:155`; PDF page pending.
 - `TA-OCC-edbf2e53893335c3` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:23`; PDF page pending.
 - `TA-OCC-9b85ee23663ad7fb` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:25`; PDF page pending.
+- `TA-OCC-f0a92b7c014f40ef` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:19`; PDF page pending.
 
 ## TA-T172 — frame / based on a frame / validity in a frame / frame definability / correspondence fact
 
@@ -27001,6 +27409,7 @@ Please double-check: **is “சட்டகம் / சட்டகத்தை
 - `TA-OCC-f37c45d26be871d7` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:19`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:138`; PDF page pending.
 - `TA-OCC-e7d1c23c95d55848` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:2`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:106`; PDF page pending.
 - `TA-OCC-6315e372676ea9ec` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:16`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:19`; PDF page pending.
+- `TA-OCC-52fe42de885d613f` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:3`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:43`; PDF page pending.
 
 ## TA-T173 — euclidean relation / weakly dense / weakly connected / weakly directed / diamond property / confluence
 
@@ -27027,6 +27436,8 @@ Please double-check: **is “யூக்ளிடியப் பண்பு�
 - `TA-OCC-82f787da0e572d09` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:172`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:175`; PDF page pending.
 - `TA-OCC-7d503532b21e3a41` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:156`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:166`; PDF page pending.
 - `TA-OCC-c561c5ea81dfbc37` — OLP-0423 / `OLP-0423-S01`; source `content/normal-modal-logic/frame-definability/definability.tex:157`; Tamil `translation/content/normal-modal-logic/frame-definability/definability.tex:167`; PDF page pending.
+- `TA-OCC-a57a3f301c128bef` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:138`; PDF page pending.
+- `TA-OCC-41919eeb5a75d80b` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:167`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:168`; PDF page pending.
 
 ## TA-T174 — first-order definable / converse well-founded / universal frame / Loeb formula / standard translation / monadic second-order definable
 
@@ -27084,6 +27495,12 @@ Please double-check: **is “ஹில்பர்ட் வகை வருவ�
 - `TA-OCC-a01707f7027c8061` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:22`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:73`; PDF page pending.
 - `TA-OCC-7025406529086c57` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:12`; PDF page pending.
 - `TA-OCC-c1440cef8c2edabb` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:15`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:16`; PDF page pending.
+- `TA-OCC-96d02e6e00b3a31d` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:14`; PDF page pending.
+- `TA-OCC-73ca25260a06549d` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:91`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:100`; PDF page pending.
+- `TA-OCC-c4f5a4ba3558f7e1` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:199`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:15`; PDF page pending.
+- `TA-OCC-5a7d3bcda0de05b6` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:14`; PDF page pending.
+- `TA-OCC-5a9ecfd31d7a821a` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:22`; PDF page pending.
+- `TA-OCC-fd2210a2c2a77be4` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:19`; PDF page pending.
 
 ## TA-T176 — derived rule / rewriting / schematic derivability / dual formula / equivalent axiomatization
 
@@ -27117,6 +27534,29 @@ Please double-check: **is “சரியான வருவித்தல் �
 
 - `TA-OCC-dc7a9b6400612509` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:45`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:52`; PDF page pending.
 - `TA-OCC-2b07ab9fa0e42d23` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:20`; PDF page pending.
+- `TA-OCC-9cf5293bf07777e0` — OLP-0441 / `OLP-0441-S01`; source `content/normal-modal-logic/completeness/completeness.tex:8`; Tamil `translation/content/normal-modal-logic/completeness/completeness.tex:9`; PDF page pending.
+- `TA-OCC-425024f799bc5d06` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:31`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:34`; PDF page pending.
+- `TA-OCC-91bd2e0a7a5e47df` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:36`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:45`; PDF page pending.
+- `TA-OCC-9da929c858a4dc16` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:18`; PDF page pending.
+- `TA-OCC-e5c02b015f49cb3f` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:19`; PDF page pending.
+- `TA-OCC-3c4d8496c727a14c` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:19`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:20`; PDF page pending.
+- `TA-OCC-dfce31043de2cc15` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:132`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:143`; PDF page pending.
+- `TA-OCC-74b821c1b0188519` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:163`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:175`; PDF page pending.
+- `TA-OCC-41d50e5af9bf8cb9` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:12`; PDF page pending.
+- `TA-OCC-b6d3cd3ad3700c25` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:14`; PDF page pending.
+- `TA-OCC-3b02707645fe2d53` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:23`; PDF page pending.
+- `TA-OCC-3b6117b0236fcde5` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:14`; PDF page pending.
+- `TA-OCC-987e44ae3b4b2449` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:14`; PDF page pending.
+- `TA-OCC-07803b6e1092a3df` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:15`; PDF page pending.
+- `TA-OCC-1077315c230f9c95` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:44`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:45`; PDF page pending.
+- `TA-OCC-be8690e1755d6393` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:61`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:62`; PDF page pending.
+- `TA-OCC-16d8bd2c21e757db` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:63`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:63`; PDF page pending.
+- `TA-OCC-43d4d6658b748302` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:14`; PDF page pending.
+- `TA-OCC-2b98733adf2013ed` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:20`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:21`; PDF page pending.
+- `TA-OCC-d756b57fb80bbddb` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:134`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:30`; PDF page pending.
+- `TA-OCC-7d8f7a64b1a275f8` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:136`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:134`; PDF page pending.
+- `TA-OCC-9b41251557d82190` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:136`; PDF page pending.
+- `TA-OCC-e53f8d585cc42348` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:138`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 
