@@ -5413,6 +5413,70 @@
       "rationale": "Both claims evaluate the model just constructed and diagrammed.",
       "precise_review_question": "Do both satisfaction statements refer to M_1?",
       "location_needle": "SOURCE CORRECTION TA-CF-011"
+    },
+    {
+      "audit_id": "TA-STH-001",
+      "unit_id": "OLP-0533",
+      "kind": "russell-set-description-double-negation",
+      "action": "Removed the unintended second negation and described R as containing exactly the non-self-membered sets.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says R contains ‘all and only those sets which are not non-self-membered,’ contradicting both R = {x : x is not in x} and the following explanation.",
+      "chosen_treatment": "தமிழ் R-ஐத் தன்னுறுப்பில்லாத அனைத்துக் கணங்களையும் அவற்றை மட்டுமே கொண்ட கணமாகக் கூறுகிறது.",
+      "alternatives_considered": "Preserving the double negation, which would make R the set of self-membered sets.",
+      "rationale": "The displayed definition and Russell argument uniquely determine the intended class.",
+      "precise_review_question": "Does the prose describe R as containing exactly the non-self-membered sets?",
+      "location_needle": "SOURCE CORRECTION TA-STH-001"
+    },
+    {
+      "audit_id": "TA-STH-002",
+      "unit_id": "OLP-0533",
+      "kind": "vicious-circle-principle-rejection-reverses-argument",
+      "action": "Changed ‘rejecting’ to accepting the vicious-circle principle.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The quoted principle rejects illegitimate totalities, and the proposed predicative hierarchy implements it; saying the authors reject the principle reverses the argument.",
+      "chosen_treatment": "தமிழ் தீய-வட்டக் கொள்கையை ஏற்றுக்கொண்டு அவர்களைப் பின்பற்றுவதாகக் கூறுகிறது.",
+      "alternatives_considered": "Keeping ‘rejecting,’ which would remove the stated motivation for predicative comprehension.",
+      "rationale": "Whitehead and Russell explicitly name and endorse the quoted restriction, and the next construction follows that restriction.",
+      "precise_review_question": "Does predicative comprehension follow from accepting the vicious-circle principle?",
+      "location_needle": "SOURCE CORRECTION TA-STH-002"
+    },
+    {
+      "audit_id": "TA-STH-003",
+      "unit_id": "OLP-0535",
+      "kind": "generic-urelement-class-singular",
+      "action": "Rendered the generic exclusion as applying to urelements in the plural.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says ‘excluding urelement from set theory’ where the surrounding discussion concerns the entire class of urelements.",
+      "chosen_treatment": "தமிழ் கணக் கோட்பாட்டிலிருந்து மூலுறுப்புகளை விலக்குதல் என்று பன்மையில் கூறுகிறது.",
+      "alternatives_considered": "Treating ‘urelement’ as an English mass noun despite its count-noun use throughout the section.",
+      "rationale": "The preceding and following sentences consistently quantify over urelements as a class.",
+      "precise_review_question": "Does the generic exclusion apply to all urelements?",
+      "location_needle": "SOURCE CORRECTION TA-STH-003"
+    },
+    {
+      "audit_id": "TA-STH-004",
+      "unit_id": "OLP-0536",
+      "kind": "russell-possessive-before-finite-verb",
+      "action": "Removed the accidental possessive from ‘Russell's formulated his paradox.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source uses possessive ‘Russell's’ as the subject of the finite verb ‘formulated.’",
+      "chosen_treatment": "தமிழ் ரஸ்ஸல் தமது முரண்பாட்டை வகுத்தார் என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.",
+      "alternatives_considered": "Representing the stray possessive as semantic content.",
+      "rationale": "The intended grammatical subject is unambiguously Russell.",
+      "precise_review_question": "Is Russell the subject who formulated the paradox?",
+      "location_needle": "SOURCE CORRECTION TA-STH-004"
     }
   ],
   "by_unit": {
@@ -5584,6 +5648,9 @@
     "OLP-0525": ["TA-CF-005"],
     "OLP-0526": ["TA-CF-006"],
     "OLP-0527": ["TA-CF-007", "TA-CF-008"],
-    "OLP-0528": ["TA-CF-009", "TA-CF-010", "TA-CF-011"]
+    "OLP-0528": ["TA-CF-009", "TA-CF-010", "TA-CF-011"],
+    "OLP-0533": ["TA-STH-001", "TA-STH-002"],
+    "OLP-0535": ["TA-STH-003"],
+    "OLP-0536": ["TA-STH-004"]
   }
 }

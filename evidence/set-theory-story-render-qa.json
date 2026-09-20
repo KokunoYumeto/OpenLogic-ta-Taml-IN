@@ -1,0 +1,100 @@
+{
+  "schema": "openlogic-tamil-render-qa/1",
+  "result": "pass",
+  "review_date": "2026-09-20",
+  "scope": {
+    "reader_units": 8,
+    "first_unit": "OLP-0529",
+    "last_unit": "OLP-0536",
+    "programme_completed_units": 533,
+    "total_frozen_units": 722,
+    "unit_ids": ["OLP-0529", "OLP-0530", "OLP-0531", "OLP-0532", "OLP-0533", "OLP-0534", "OLP-0535", "OLP-0536"],
+    "reader": "build/tamil-set-theory-story.pdf",
+    "source_master": "build/tamil-set-theory-story.tex"
+  },
+  "tex_guard": {
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "receipt": "TEX-SET-THEORY-STORY-RECEIPT.json",
+    "receipt_bytes": 1559,
+    "receipt_sha256": "044f65b30bb56baa6aa014f0a88a9ba15b9431fac9b4be282d443d8e96c0ba4c",
+    "engine": "xelatex",
+    "passes": 3,
+    "bibtex": true,
+    "status": "built",
+    "final_pass_undefined_references": 0,
+    "missing_character_messages": 0,
+    "overfull_messages": 0
+  },
+  "master": {
+    "bytes": 9007,
+    "sha256": "de57d4f8de57414e68e22cb4a34fd97e242d1029bf557a88397179d6feef7560"
+  },
+  "pdf": {
+    "path": "readers/set-theory-iterative-conception-ta-Taml-IN.pdf",
+    "bytes": 162900,
+    "sha256": "03bf21b446ff953de99c44ce68723ddc856ebbbbc800ae0c573d1578fe9281d4",
+    "pages": 12,
+    "page_size": "A4",
+    "fonts_embedded": true,
+    "unicode_maps_present": true
+  },
+  "renders": [
+    {"page": 1, "bytes": 115513, "sha256": "32c1ea2a9c5e47da7a3c44b737064bd92a6976d6b720cddebcc8a82b4f881b92"},
+    {"page": 2, "bytes": 54826, "sha256": "aee8334b5999d73cd68d072bcd40ab698819c20d78494f5959498be3a7eb312a"},
+    {"page": 3, "bytes": 270106, "sha256": "85948b1765e32dcac4d976a274401ceed221a73c57f4aef9768a423a8345906a"},
+    {"page": 4, "bytes": 418640, "sha256": "4b15280022241783babd9fd0afa3924daf2c1245f6c0171a81ec31b1ef4c8618"},
+    {"page": 5, "bytes": 382750, "sha256": "57c49404cae7250e002437606308351d1c9532124e55abb96336fa7d33976524"},
+    {"page": 6, "bytes": 411344, "sha256": "6941fc07307ed520157f45907df1f5d24fd394dcb9ead200f263bbd2842ae1bf"},
+    {"page": 7, "bytes": 418566, "sha256": "404f4cb4261d1532eef07f0fbf8fa9847f9e95eb53f69dee20346de963515351"},
+    {"page": 8, "bytes": 326664, "sha256": "023a6f3e277dd7a3436b7c706730d5ec7f27cca2f5901891c48a76c989501fc5"},
+    {"page": 9, "bytes": 346221, "sha256": "bda70f055aabee187e7158e6d1dba02fdd88606ae9589b84de0ff390f7e21c68"},
+    {"page": 10, "bytes": 404222, "sha256": "b645df6473308ae82d5972bbb055e0da2adaea3e3e83fce95bc378bfef0e261a"},
+    {"page": 11, "bytes": 238666, "sha256": "5f5aa7304a5e9c32c576b00c1e5a5173c4362a9d09728348e5abc0c6bb086efc"},
+    {"page": 12, "bytes": 123575, "sha256": "ed9d7579e12d8750fd490c3f88f208f0ad918b12da3e5db4f5e0e176d1188b1b"}
+  ],
+  "visual_review": {
+    "complete": true,
+    "basis": "All 12 final page PNGs were directly inspected at original rendered detail after the final rebuild.",
+    "tamil_shaping_and_pulli": "pass",
+    "page_edges_and_clipping": "pass",
+    "headings_and_page_breaks": "pass",
+    "formulas": "pass",
+    "footnotes": "pass",
+    "bibliography": "pass",
+    "cumulative_hierarchy_diagram": "pass",
+    "urelement_hierarchy_diagram": "pass",
+    "visible_placeholders_absent": true,
+    "visible_untranslated_stage_fallback_absent": true
+  },
+  "copy_search": {
+    "extractor": "Poppler pdftotext -layout",
+    "text_bytes": 52950,
+    "text_sha256": "6fe8bedfc4fc8a0f65205961377d0a91676aec8f6332a983b2981733f0d2b443",
+    "unicode_nfc": true,
+    "replacement_character_absent": true,
+    "question_mark_placeholder_absent": true,
+    "tamil_phrase_checks": {
+      "படிநிலைமுறைக் கருத்தாக்கம்": true,
+      "உறுப்புசார் சமத்துவம்": true,
+      "ரஸ்ஸலின் முரண்பாடு": true,
+      "மூலுறுப்புகள் வேண்டுமா?": true,
+      "ஃப்ரேகேயின் அடிப்படை விதி V": true,
+      "படிநிலைகள் வரிசைப்படுத்தப்படுகின்றன": true
+    },
+    "formula_token_checks": {
+      "universal_quantifier": true,
+      "existential_quantifier": true,
+      "membership": true,
+      "biconditional": true,
+      "conjunction": true,
+      "negation": true,
+      "implication": true,
+      "nonmembership_glyph_present": true
+    },
+    "limitations": [
+      "Poppler extracts the nonmembership glyph, but some composite-negation occurrences are separated from their operands in reading order; exact reusable full-formula extraction is not certified.",
+      "PyMuPDF and pdfplumber do not recover every Tamil phrase that Poppler recovers from XeTeX ActualText, so universal copy behavior across PDF engines is not certified."
+    ]
+  },
+  "status": "pass-with-documented-cross-reader-copy-limitations"
+}

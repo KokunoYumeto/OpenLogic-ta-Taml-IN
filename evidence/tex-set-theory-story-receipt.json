@@ -1,0 +1,48 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-set-theory-story.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-20T20:48:30.6529906Z",
+  "passes": [
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Reference `sth:story:blv:sec' on page 1 undefined on input line ",
+        "LaTeX Warning: Reference `sth:story:approach:sec' on page 1 undefined on input ",
+        "LaTeX Warning: Reference `sth:story:rus:sec' on page 1 undefined on input line ",
+        "LaTeX Warning: Reference `sth:story:blv:lem:Fregeextensions' on page 1 undefine",
+        "LaTeX Warning: There were undefined references.",
+        "LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right."
+      ],
+      "pass": 1,
+      "exit_code": 0
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "pass": 2,
+      "exit_code": 0
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "pass": 3,
+      "exit_code": 0
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "bibliography": {
+    "issues": [],
+    "engine": "bibtex",
+    "exit_code": 0
+  },
+  "finished_utc": "2026-09-20T20:48:41.7169069Z"
+}

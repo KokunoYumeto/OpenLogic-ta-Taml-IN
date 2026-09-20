@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T15:29:44.977071+00:00",
+  "date_utc": "2026-09-20T21:05:30.583624+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2627,6 +2627,46 @@
       "unit_id": "OLP-0528",
       "source_sha256": "bf3efbdee2ef7ffb044355a15128b37a9632a2c2a3fe3337d38c42644ab9a2bc",
       "translation_sha256": "82b0274fbd30bf4c699331945a8606ebb834596d4c202e6ba9e45580a5792c22"
+    },
+    {
+      "unit_id": "OLP-0529",
+      "source_sha256": "2ecb71a25920205cd2d00a9ad69601348ff5fd0db30e5b94d396d0da01007a21",
+      "translation_sha256": "c056447ddcf3e4acc8efb1eb17b80765b00871dfaf4aef9da1e12c39aee52188"
+    },
+    {
+      "unit_id": "OLP-0530",
+      "source_sha256": "d8a35d662d8ba0ef853832e82502a4c802f13edae6055c14a578fe051aeabd03",
+      "translation_sha256": "34cd0bb9494793f856be427b313512f154ae64e5a347fc4b977baca0cc5f92c5"
+    },
+    {
+      "unit_id": "OLP-0531",
+      "source_sha256": "d70f6b437cb7f29b4e9ef5bcc1ab66c3021ea6f57d1b2fdf5aaea5b51bdb81c9",
+      "translation_sha256": "0a27204fc8e1fbb01cdd4ccc0dbc1a795a66207d9fdb0de6da5156432fca6510"
+    },
+    {
+      "unit_id": "OLP-0532",
+      "source_sha256": "c468df1becf253ceb2c82540f2ec7e5112fa07bf649119e120184b4593f23b7d",
+      "translation_sha256": "e34e620ca80aea8b57e72f84b1371190e2d989ccbe63ae08446471d3d12301d3"
+    },
+    {
+      "unit_id": "OLP-0533",
+      "source_sha256": "c5cedcd2a3116e12338c7eb16e4704c2b9bb1eb6c93d9754585dbe8ba45912aa",
+      "translation_sha256": "d226a18487b2d8fa19fc8df80bc9a801a3d01bc651b7d351941198b7ddc60fdd"
+    },
+    {
+      "unit_id": "OLP-0534",
+      "source_sha256": "86099ec03bf39142ceb2d76826a796a91731caa5eae0cd35d74b6c1a7fe2f798",
+      "translation_sha256": "374537fc6d59f26cfbd62dbdcf4e70460e83f682046fe018b3c19484a89c34b2"
+    },
+    {
+      "unit_id": "OLP-0535",
+      "source_sha256": "61419cd0dbc03cdf569c7350b028da4daac493e5815f8bf43381544758587b31",
+      "translation_sha256": "c376215c8cb2a0078ae0a6d18dfa008316d5120c05d8b582cbf306185ee72980"
+    },
+    {
+      "unit_id": "OLP-0536",
+      "source_sha256": "d5b70cb63a142ee49c968e41a593dd7c6131d35817afcc6fda2321fa07162cd5",
+      "translation_sha256": "9cf7ede0a57ddd592abb4138d9f181fc2955d962c6d4f66c99b1000ebabf630a"
     }
   ],
   "samples": [
@@ -6962,6 +7002,62 @@
       "assessment": "The Goethe example, three-world diagram and satisfaction claims remain; TA-CF-009 through TA-CF-011 repair metadata, O_w indexing and the M_1 references.",
       "translation_segment_sha256": "4eacb94da1bf318ef24d6b7e7d835303223f5508791659169fbbf48ccbe84ca8",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0529-S01",
+      "reverse_paraphrase": "The set-theory part imports the iterative story, Z, ordinals, cumulative hierarchy, replacement, ordinal arithmetic, cardinals, cardinal arithmetic and choice.",
+      "assessment": "All nine imports and the sth part identity remain in source order.",
+      "translation_segment_sha256": "b5943e0e51985d3760a0c29560836307e3dd79690d9bf6a7edda7e20800b7155",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0530-S01",
+      "reverse_paraphrase": "The iterative-conception chapter moves from extensionality and Russell’s paradox through predicativity, the cumulative approach, urelements and Frege’s Basic Law V.",
+      "assessment": "All six imports and the chapter-ending hook remain exact.",
+      "translation_segment_sha256": "ebf1161a9d86d39302ff45b0559bae8996e6c5d66a58aabea1e4b7478b7888b3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0531-S01",
+      "reverse_paraphrase": "Extensionality says two sets are identical whenever they have exactly the same elements; set theory must still say which sets exist.",
+      "assessment": "The quantified axiom, contrast with concepts and existence challenge remain distinct.",
+      "translation_segment_sha256": "a211a9a004e81ba7a438acc43ae66112fb204de8c0d0cbf64cb2609cbd45540e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0532-S01",
+      "reverse_paraphrase": "Unrestricted naive comprehension is inconsistent because no set contains exactly the non-self-membered sets; the contradiction is already a first-order logical scheme.",
+      "assessment": "The theorem, proof, first-order schema, Frege correspondence and classical-logic conclusion remain exact.",
+      "translation_segment_sha256": "4584ed7930a89be2913d0b474e177c1c638fa83c5c6f140565ee24418a973152",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0533-S01",
+      "reverse_paraphrase": "An impredicative definition quantifies over a domain containing the object defined; predicative comprehension avoids that circle only by stratifying entities into successive types.",
+      "assessment": "The Whitehead–Russell quotation, Ramsey objection, creative-circle argument and cumulative alternative remain; TA-STH-001 removes the double negation and TA-STH-002 accepts the quoted principle.",
+      "translation_segment_sha256": "cd5d75fe981177d468ce5540f1cb8a23bfa102a96139ac6b6aed314a5522e27e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0534-S01",
+      "reverse_paraphrase": "At each cumulative stage, every collection of earlier sets forms a set; stages 0 through 3 add 1, 1, 2 and 12 new sets, and the stage-relative Russell set is unavailable before its own stage.",
+      "assessment": "The construction, hierarchy diagram, stage counts and R_S argument remain exact.",
+      "translation_segment_sha256": "3060b7ed793ea86d7f7be19948516d22d56ca3e133967f4399f4a4c2e80f25e3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0535-S01",
+      "reverse_paraphrase": "Urelements are basic non-sets allowed as set members; they aid applications, while a reductive pure-set foundation and standard pedagogy favor excluding them.",
+      "assessment": "The second hierarchy diagram, cow–pig bijection example and both philosophical motivations remain; TA-STH-003 repairs the generic plural.",
+      "translation_segment_sha256": "c32e1b4bd1fa4c8a501fe519d6833d1428eaa04ab58221006cb8feb229327d98",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0536-S01",
+      "reverse_paraphrase": "Frege defines membership through concept extensions and Basic Law V equates extensions exactly for coextensive concepts; these yield unrestricted comprehension and hence Russell’s paradox.",
+      "assessment": "Both second-order lemmas and their proofs remain exact; TA-STH-004 removes only the stray possessive.",
+      "translation_segment_sha256": "7b8f5d62fa3eca7c16ea30fbb061d137940b2639d3b183ecb74eac538e46afc4",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -7766,14 +7862,26 @@
     {
       "unit_id": "OLP-0528",
       "issue": "The contraposition file retains a transitivity metadata comment, writes a world-specific sphere system as O, and switches from the introduced model M_1 to M. Tamil restores the section name, O_w and both M_1 references under TA-CF-009 through TA-CF-011."
+    },
+    {
+      "unit_id": "OLP-0533",
+      "issue": "The Russell-set description contains a double negation that reverses the displayed definition, and the transition to predicative comprehension says to reject the vicious-circle principle that the quoted authors endorse. Tamil removes the double negation and accepts the principle under TA-STH-001 and TA-STH-002."
+    },
+    {
+      "unit_id": "OLP-0535",
+      "issue": "The generic discussion says “excluding urelement” although it concerns the class in the plural. Tamil uses the plural under TA-STH-003."
+    },
+    {
+      "unit_id": "OLP-0536",
+      "issue": "The opening says “Russell’s formulated his paradox,” using a possessive where the finite verb needs a subject. Tamil restores Russell as the subject under TA-STH-004."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "525 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 197 frozen units still require completion.",
+  "remaining": "533 source units now pass textual and author semantic QA. Eight exact PDF readers visually verify 211 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 189 frozen units still require completion.",
   "visual_reader_coverage": {
-    "reader_count": 7,
-    "distinct_unit_count": 203,
+    "reader_count": 8,
+    "distinct_unit_count": 211,
     "readers": [
       {
         "name": "combined sets/relations/functions",
@@ -7802,6 +7910,10 @@
       {
         "name": "representability in Robinson Q",
         "distinct_units": 11
+      },
+      {
+        "name": "set theory: iterative conception",
+        "distinct_units": 8
       }
     ]
   },
@@ -8646,6 +8758,36 @@
         "contraposition_countermodel_uses_world_indexed_spheres_and_one_model_name": true,
         "minimal_change_driver_preserves_all_six_sections": true,
         "sphere_countermodels_compute_the_claimed_failures": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0529",
+        "OLP-0530",
+        "OLP-0531",
+        "OLP-0532",
+        "OLP-0533",
+        "OLP-0534",
+        "OLP-0535",
+        "OLP-0536"
+      ],
+      "correction_ids": [
+        "TA-STH-001",
+        "TA-STH-002",
+        "TA-STH-003",
+        "TA-STH-004"
+      ],
+      "status": "pass",
+      "checks": {
+        "part_driver_preserves_all_nine_imports": true,
+        "story_driver_preserves_all_six_sections": true,
+        "extensionality_axiom_and_existence_question_remain": true,
+        "russell_proof_and_first_order_scheme_remain": true,
+        "predicativity_definition_type_stratification_and_repairs_remain": true,
+        "cumulative_stage_construction_diagram_and_relative_russell_set_remain": true,
+        "finite_stage_counts_compute_as_claimed": true,
+        "urelement_definition_application_foundation_and_repair_remain": true,
+        "frege_membership_basic_law_comprehension_and_repair_remain": true
       }
     }
   ]
