@@ -1,0 +1,58 @@
+% SEGMENT OLP-0510-S01
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: decidability
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{dec}
+
+\olsection{தீர்மானிக்கத்தக்கதன்மை}
+$\Gamma \Proves/ !A$ ஆகும் ஒவ்வொரு நேர்வுக்கும்,
+$\Gamma \Entails/ !A$ என்பதற்குச் சான்றாக முடிவிலா எண்ணிக்கையிலான
+உலகங்களைக் கொண்ட மாதிரி ஒன்றை நிறைவுத்தன்மைத் தேற்றத்தின் நிறுவல் தருகிறது
+என்பதைக் கவனிக்கவும். $\Entails !A$ என்று நிறுவ, எல்லா முடிவுறு
+மாதிரிகளுக்கும் (அதாவது முடிவுறு உலகக் கணம் கொண்ட மாதிரிகளுக்கும்)
+$\mSat{M}{!A}$ என்று நிறுவினால் போதும் என்பதைப் பின்வரும் கூற்று காட்டுகிறது.
+
+\begin{thm}\ollabel{thm:decidability}
+  $\Entails/ !A$ எனில் $\mSat/{M'}{!A}$ ஆகும் முடிவுறு மாதிரி ஒன்று உள்ளது.
+\end{thm}
+
+\begin{proof}
+  $\mSat/{M}{!A}$ ஆகும் $\mModel{M}=\tuple{W, R, V}$ ஒன்று உள்ளது என்க;
+  மேலும்~$!A$ இன் எல்லா !!{formula}s வடிவத் துணைவாய்பாடுகளின் முடிவுறு
+  கணம்~$\Sigma$ என்க.
+  $W' = \Setabs{[w]}{w \in W}$ என வைத்து
+  $\mModel{M'}=\tuple{W', R', V'}$ ஐ வரையறுக்கிறோம்; இங்கு
+  $[w] = \Setabs{!B \in \Sigma}{\mSat{M}{!B}[w]}$, $R'$ என்பது உட்கண உறவு,
+  மேலும் $V'(p)=\Setabs{[w]}{p \in [w]}$. இதில் இடம்பெறும் ஒவ்வொரு
+  !!{propositional variable} க்கும் இதே மதிப்பளிப்பு பொருந்தும். $W'$ ஒரு முடிவுறு கணம் என்பதும்
+  $\mModel{M'}$ ஓர் !!a{relational model} என்பதும் தெளிவாக இருக்க வேண்டும்.
+  % SOURCE CORRECTION TA-IL-015: filter by all subformula truth profiles, not atom profiles.
+
+  ஒவ்வோர் !!^a{formula}~$!B$ மீதான தொகுமுறையில், ஒவ்வொரு
+  $!B \in \Sigma$ க்கும்
+  \[
+    \mSat{M}{!B}[w] \text{ எனில், எனில் மட்டுமே, }
+    \mSat{M'}{!B}[{[w]}]
+  \]
+  என்று காட்டலாம். இதை வாசகருக்கான பயிற்சியாக விடுகிறோம்.
+\end{proof}
+
+\begin{prob}
+ஒவ்வொரு $!B \in \Sigma$ க்கும் $\mSat{M}{!B}[w]$ எனில், எனில் மட்டுமே,
+$\mSat{M'}{!B}[{[w]}]$ என்று காட்டி
+\olref[int][sc][dec]{thm:decidability} இன் நிறுவலை நிறைவுசெய்க.
+!!{propositional variable}s நேர்வையும் நிபந்தனைவாக்க நேர்வையும்
+வெளிப்படையாகச் சரிபார்க்கவும்.
+% SOURCE CORRECTION TA-IL-016: use the chapter's satisfaction syntax and the filtered subformulas.
+\end{prob}
+
+\olref{thm:decidability} இலிருந்து, $\Entails !A$ ஆகுமா என்பதைத்
+தீர்மானிக்கும் படிமுறை ஒன்று உள்ளது என்பது பின்தொடர்கிறது.
+
+
+\end{document}

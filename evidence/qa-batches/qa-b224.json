@@ -1,0 +1,115 @@
+{
+  "batch_id": "TA-B224",
+  "units": [
+    {
+      "unit_id": "OLP-0496",
+      "source_sha256": "3fc69e5ddaa3c9273ab2fa9c4a9e5c7826c3044aa9945152d4f710f8cf62afd3",
+      "translation_sha256": "59095406804e3d9cab99230278717aa7395dbeeb1228179cff674fc028278acb",
+      "source_bytes": 8383,
+      "translation_bytes": 13357,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!A_1\\land!A_1$"
+      ],
+      "extra_math": [
+        "$!A_1\\land!A_2$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "BHK",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-003",
+          "unit_id": "OLP-0496",
+          "kind": "conjunction-elimination-explanation-repeats-first-conjunct",
+          "action": "Changed the BHK conjunction under discussion from A_1 and A_1 to A_1 and A_2.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "!A_1\\land!A_1",
+              "to": "!A_1\\land!A_2",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The construction is the pair (N_1,N_2), and the next sentence identifies N_1 with A_1 and N_2 with A_2; only the opening conjunction repeats A_1.",
+          "chosen_treatment": "தமிழ் இணைப்பை~$!A_1 \\land !A_2$ என்று தருகிறது.",
+          "alternatives_considered": "Changing N_2 and every later A_2 to A_1, which would no longer explain the general elimination rules shown above.",
+          "rationale": "The displayed rules and BHK pair clause concern two arbitrary conjuncts.",
+          "precise_review_question": "Does the elimination explanation begin with the general conjunction A_1 and A_2?",
+          "location_needle": "SOURCE CORRECTION TA-IL-003"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0497",
+      "source_sha256": "52d798d7dafbabc8b9a386ee1ed6ec0fa3b565217a9f4013242300ab3a621827",
+      "translation_sha256": "b088881d7dccb979b028abdbe98afd02c895597b01d1e0b3bf9fab64ced04bae",
+      "source_bytes": 2428,
+      "translation_bytes": 4682,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "modus",
+        "open",
+        "ponens",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

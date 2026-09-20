@@ -1,0 +1,78 @@
+% SEGMENT OLP-0501-S01
+% part: intuitionistic-logic
+% chapter: semantics
+% section: semantic-notions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sem}{sem}
+
+\olsection{பொருண்மையியல் கருத்துருக்கள்}
+
+\begin{defn}
+  எல்லா $w \in W$ க்கும் $\mSat{M}{!A}[w]$ எனில், அப்போதும் அப்போது
+  மட்டுமே, $!A$ ஆனது \emph{மாதிரி $\mModel{M} = \tuple{W,R,V}$ இல்
+  மெய்}, $\mSat{M}{!A}$ என்கிறோம். எல்லா மாதிரிகளிலும் $!A$ மெய் எனில்,
+  அப்போதும் அப்போது மட்டுமே, $!A$ \emph{செல்லுபடியாகும்}, $\Entails !A$.
+  ஒவ்வொரு மாதிரி~$\mModel{M}$ மற்றும் $\mSat{M}{\Gamma}[w]$ ஆகும் ஒவ்வொரு
+  $w$ க்கும் $\mSat{M}{!A}[w]$ எனில், அப்போதும் அப்போது மட்டுமே,
+  !!{formula}s இன் கணம்~$\Gamma$ ஆனது~$!A$ ஐ \emph{உட்கிடையாக்குகிறது},
+  $\Gamma \Entails !A$, என்கிறோம்.
+\end{defn}
+
+\begin{prop}\ollabel{prop:sat-entails}
+  \begin{enumerate}
+  \item\ollabel{prop:sat-entails1} $\mSat{M}{\Gamma}[w]$ மற்றும்
+    $\Gamma \Entails !A$ எனில், $\mSat{M}{!A}[w]$.
+  \item\ollabel{prop:sat-entails2} $\mSat{M}{\Gamma}$ மற்றும் $\Gamma
+    \Entails !A$ எனில், $\mSat{M}{!A}$.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+  \item $\mSat{M}{\Gamma}[w]$ எனக் கொள்க. $\Gamma \Entails !A$ என்பதால்,
+    $\mSat{M}{!A}[w]$.
+  \item $\mSat{M}{\Gamma}$ எனக் கொள்க. ஒவ்வொரு $u \in W$ க்கும்
+    $\mSat{M}{\Gamma}[u]$; ஆகவே \olref{prop:sat-entails1} இன்படி ஒவ்வொரு
+    $u \in W$ க்கும் $\mSat{M}{!A}[u]$. எனவே $\mSat{M}{!A}$.
+  \end{enumerate}
+\end{proof}
+% SOURCE CORRECTION TA-IL-004: prove the local clause from its local premise,
+% then derive the model-wide clause pointwise.
+
+
+\begin{defn}\ollabel{defn:restrict}
+  $\mModel{M}$ ஒரு தொடர்புமுறை மாதிரியாகவும் $w \in W$ ஆகவும் இருக்கட்டும்.
+  $\mModel{M}$ ஐ~$w$ க்குக் \emph{கட்டுப்படுத்துவது}
+  $\mModel{M}_w=\tuple{W_w, R_w, V_w}$ பின்வருமாறு தரப்படுகிறது:
+  \begin{align*}
+    W_w & = \Setabs{u \in W}{Rwu},\\
+    R_w  & = R \cap (W_w)^2, \text{ மற்றும்}\\
+    V_w(p) & = V(p) \cap W_w.
+  \end{align*}
+\end{defn}
+
+\begin{prop}\ollabel{prop:restrict}
+  $\mSat{M}{!A}[w]$ எனில், எனில் மட்டுமே, $\mSat{M_w}{!A}$.
+\end{prop}
+
+\begin{prob}
+  \olref[int][sem][sem]{prop:restrict} ஐ நிறுவுக.
+\end{prob}
+
+\begin{prop}
+  $\mSat{M}{\Gamma}$ ஆகும் ஒவ்வொரு மாதிரி~$\mModel{M}$ க்கும்
+  $\mSat{M}{!A}$ எனக் கொள்க. அப்போது $\Gamma \Entails !A$.
+\end{prop}
+
+\begin{proof}
+  $\mSat{M}{\Gamma}[w]$ எனக் கொள்க. ஒவ்வொரு~$!B \in \Gamma$ க்கும்
+  \olref{prop:restrict} ஐப் பயன்படுத்துவதால், $\mSat{M_w}{\Gamma}$.
+  எடுகோளின்படி $\mSat{M_w}{!A}$. மீண்டும் \olref{prop:restrict} ஐப்
+  பயன்படுத்துவதால் $\mSat{M}{!A}[w]$ கிடைக்கிறது.
+\end{proof}
+
+\end{document}

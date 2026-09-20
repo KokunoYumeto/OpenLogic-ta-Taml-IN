@@ -1,0 +1,78 @@
+% SEGMENT OLP-0500-S01
+% part: intuitionistic-logic
+% chapter: semantics
+% section: relational-models
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sem}{rel}
+
+\olsection{\usetoken{P}{relational model}}
+
+உள்ளுணர்வுவாதக் கூற்றுக்கணிப்புத் தருக்கத்திற்குத் துல்லியமான
+பொருண்மையியலைத் தர, !!{formula}s ஐ மதிப்பிடுவதற்கான மாதிரி என்று எதைக்
+கருதுவது என்பதற்கு வரையறை தர வேண்டும். அத்தகைய வரையறையின் அடிப்படையில்,
+செல்லுபடிநிலை, பின்விளைவு போன்ற பொருண்மையியல் கருத்துருக்களையும் வரையறுக்க
+முடியும். அத்தகைய ஒரு பொருண்மையியலை !!{relational model}s தருகின்றன.
+
+\begin{defn}
+  உள்ளுணர்வுவாதக் கூற்றுக்கணிப்புத் தருக்கத்திற்கான
+  !!^a{relational model} என்பது $\mModel{M} = \tuple{W, R, V}$ என்ற
+  மும்மை; இதில்
+  \begin{enumerate}
+  \item $W$ ஒரு காலியல்லாத கணம்,
+  \item $R$ என்பது~$W$ மீதான ஒரு பகுதி வரிசை (அதாவது, தற்சுட்டுப் பண்பும்
+    எதிர்ச்சமச்சீர்ப் பண்பும் கடப்புப் பண்பும் கொண்ட ஓர் ஈருறுப்புத் தொடர்பு),
+    மேலும்
+  \item $V$ என்பது ஒவ்வொரு !!{propositional variable}~$p$ க்கும்~$W$ இன்
+    ஓர் உட்கணத்தை மதிப்பளிக்கும் சார்பு; அதோடு
+  \item $R$ ஐப் பொறுத்து $V$ ஓரியக்கமானது; அதாவது $w \in V(p)$ மற்றும்
+    $Rww'$ எனில், $w' \in V(p)$.
+  \end{enumerate}
+\end{defn}
+
+\begin{defn}\ollabel{defn:true-at-w}
+  \emph{$\mModel{M}$ இல் $w$ இல் $!A$ மெய்யாக இருப்பது} என்ற கருத்தை,
+  $\mSat{M}{!A}[w]$, பின்வருமாறு தொகுமுறையில் வரையறுக்கிறோம்:
+  \begin{enumerate}
+  \item \indcase{!A}{p}{$\mSat{M}{\indfrm}[w]$ எனில், எனில் மட்டுமே,
+    $w \in V(p)$.}
+  \item \indcase{!A}{\lfalse}{$\mSat{M}{\indfrm}[w]$ அல்ல}.
+  \item \indcase{!A}{\lnot !B}{$Rww'$ ஆகும் எந்த $w'$ க்கும்
+    $\mSat{M}{!B}[w']$ அல்ல எனில், எனில் மட்டுமே,
+    $\mSat{M}{\indfrm}[w]$}.
+  \item \indcase{!A}{!B \land !C}{$\mSat{M}{\indfrm}[w]$ எனில், எனில்
+    மட்டுமே, $\mSat{M}{!B}[w]$ மற்றும் $\mSat{M}{!C}[w]$}.
+  \item \indcase{!A}{!B \lor !C}{$\mSat{M}{\indfrm}[w]$ எனில், எனில்
+    மட்டுமே, $\mSat{M}{!B}[w]$ அல்லது $\mSat{M}{!C}[w]$ (அல்லது இரண்டும்)}.
+  \item \indcase{!A}{!B \lif !C}{$Rww'$ ஆகும் ஒவ்வொரு $w'$ க்கும்
+    $\mSat{M}{!B}[w']$ அல்ல அல்லது $\mSat{M}{!C}[w']$ (அல்லது இரண்டும்)
+    எனில், எனில் மட்டுமே, $\mSat{M}{\indfrm}[w]$}.
+  \end{enumerate}
+  $\mSat{M}{!A}[w]$ அல்ல எனில் $\mSat/{M}{!A}[w]$ என எழுதுகிறோம். $\Gamma$
+  என்பது !!{formula}s இன் கணம் எனில், எல்லா $!B \in \Gamma$ க்கும்
+  $\mSat{M}{!B}[w]$ என்பதை $\mSat{M}{\Gamma}[w]$ குறிக்கிறது.
+\end{defn}
+
+\begin{prob}
+  \olref[int][sem][rel]{defn:true-at-w} இன்படி,
+  $\mSat{M}{\lnot !A}[w]$ எனில், எனில் மட்டுமே,
+  $\mSat{M}{!A \lif \lfalse}[w]$ என்று காட்டுக.
+\end{prob}
+
+\begin{prop}\ollabel{prop:true-monotonic}
+  உலகங்களில் மெய்மை~$R$ ஐப் பொறுத்து ஓரியக்கமானது; அதாவது,
+  $\mSat{M}{!A}[w]$ மற்றும் $Rww'$ எனில், $\mSat{M}{!A}[w']$.
+\end{prop}
+
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+\begin{prob}
+  \olref[int][sem][rel]{prop:true-monotonic} ஐ நிறுவுக.
+\end{prob}
+
+\end{document}

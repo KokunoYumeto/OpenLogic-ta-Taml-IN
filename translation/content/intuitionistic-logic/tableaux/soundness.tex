@@ -1,0 +1,242 @@
+% SEGMENT OLP-0515-S01
+% Part: intuitionistic-logic
+% Chapter: tableaux
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{tab}{sou}
+
+\olsection{உள்ளுணர்வுவாத \usetoken{P}{tableau} க்கான சரித்தன்மை}
+
+\begin{explain}
+  உள்ளுணர்வுவாத !!{tableau}s சரித்தன்மையுடையவை என்று காட்ட, பின்வருவன
+  \[
+  \sFmla{\True}{!B_1}[1], \dots, \sFmla{\True}{!B_n}[1], \sFmla{\False}{!A}[1]
+  \]
+  மூடிய !!{tableau} ஒன்றைக் கொண்டிருந்தால்
+  $!B_1, \dots, !B_n \Entails !A$ என்று காட்ட வேண்டும். மறுதலையை
+  நிறுவுவது எளிது: ஏதோவொரு $\mModel{M}$ மற்றும் உலகம்~$w$ க்கு,
+  எல்லா $i=1$, \dots,~$n$ க்கும் $\mSat{M}{!B_i}[w]$, ஆனால்
+  $\mSat/{M}{!A}[w]$ எனில் எந்த !!{tableau} உம் மூட முடியாது.
+  % SOURCE CORRECTION TA-IL-019: a countermodel makes A false, not true.
+  அத்தகைய எதிர்மாதிரி, !!{tableau} இன் தொடக்க எடுகோள்கள்
+  நிறைவுறத்தக்கவை என்று காட்டுகிறது. ஓர் !!a{tableau} கிளையிலுள்ள எல்லா
+  முன்னொட்டுள்ள !!{formula}s உம் நிறைவுறத்தக்கவையாக இருக்கும்போதெல்லாம்,
+  ஒரு விதியின் எந்தப் பயன்பாடும், தொடர்ந்து நிறைவுறத்தக்கதாக இருக்கும்
+  குறைந்தது ஒரு நீட்டித்த கிளையையாவது உருவாக்குகிறது என்று காட்டுவதே
+  நிறுவலின் உத்தி. மூடிய கிளைகள் நிறைவுறத்தக்கவை அல்ல என்பதால்,
+  நிறைவுறத்தக்க முன்னொட்டுள்ள !!{formula}s கணத்திற்கான எந்த !!{tableau} உம்
+  குறைந்தது ஒரு திறந்த கிளையைக் கொண்டிருக்க வேண்டும்.
+
+  இந்த உத்தியை முன்னொட்டுள்ள தொடர்புமுறை நேர்வில் பயன்படுத்த,
+  ``நிறைவுறத்தக்கது'' என்ற நமது வரையறையைத் தொடர்புமுறைகளுக்கும்
+  முன்னொட்டுகளுக்கும் விரிவாக்க வேண்டும். அது கிடைத்ததும் நிறுவல் நேரடியானது.
+\end{explain}
+
+\begin{defn}
+  $P$ ஏதோவொரு முன்னொட்டுகளின் கணமாக, அதாவது
+  $P \subseteq (\PosInt)^* \setminus \{\emptyseq\}$ ஆக இருக்கட்டும்;
+  $\mModel{M}$ ஒரு மாதிரியாக இருக்கட்டும். $\sigma$, $\sigma.n$ ஆகிய
+  இரண்டும்~$P$ இல் இருக்கும்போதெல்லாம் $Rf(\sigma)f(\sigma.n)$ எனில்,
+  சார்பு~$f\colon P \to W$ ஆனது~$\mModel{M}$ இல்~$P$ இன்
+  \emph{பொருள்கோள்} ஆகும்.
+
+  முன்னொட்டுகளின் பொருள்கோள்~$P$ ஐப் பொறுத்து பின்வருமாறு வரையறுக்கலாம்:
+  \begin{enumerate}
+  \item $\mSat{M}{!A}[f(\sigma)]$ எனில், எனில் மட்டுமே,
+    $\mModel{M}$ ஆனது $\sFmla{\True}{!A}[\sigma]$ ஐ நிறைவுசெய்கிறது.
+  \item $\mSat/{M}{!A}[f(\sigma)]$ எனில், எனில் மட்டுமே,
+    $\mModel{M}$ ஆனது $\sFmla{\False}{!A}[\sigma]$ ஐ நிறைவுசெய்கிறது.
+  \end{enumerate}
+\end{defn}
+
+$R$ தற்சுட்டுப் பண்பும் கடப்புப் பண்பும் கொண்டிருப்பதாலும்,
+$\sigma.{*}$ என்பது $\sigma$, $\sigma.n_1$, $\sigma.n_1.n_2$, \dots
+ஆகியவற்றைக் குறிப்பதாலும், $Rf(\sigma)f(\sigma.{*})$ உம் மெய் என்பதை
+கவனிக்கவும்.
+
+\begin{defn}
+  $\Gamma$ முன்னொட்டுள்ள !!{formula}s இன் கணமாக இருக்கட்டும்;
+  $P(\Gamma)$ என்பது அதில் இடம்பெறும் முன்னொட்டுகளின் கணமாக இருக்கட்டும்.
+  $f$ ஆனது~$\mModel{M}$ இல்~$P(\Gamma)$ இன் பொருள்கோள் எனில்,
+  $\Gamma$ விலுள்ள ஒவ்வொரு முன்னொட்டுள்ள !!^a{formula} ஐயும்
+  $\mModel{M}$ ஆனது~$f$ ஐப் பொறுத்து நிறைவுசெய்யும்போது, எனில் மட்டுமே,
+  $\mModel{M}$ ஆனது~$f$ ஐப் பொறுத்து~$\Gamma$ வை நிறைவுசெய்கிறது,
+  $\mSat{M}{\Gamma}[f]$, என்கிறோம். $\mSat{M}{\Gamma}[f]$ ஆகும்
+  மாதிரி~$\mModel{M}$ உம் $P(\Gamma)$ இன் பொருள்கோள்~$f$ உம் இருந்தால்,
+  எனில் மட்டுமே, $\Gamma$ \emph{நிறைவுறத்தக்கது}.
+\end{defn}
+
+\begin{prop}
+  ஏதோவொரு !!^a{formula}~$!A$ மற்றும் முன்னொட்டு~$\sigma$ க்கு $\Gamma$
+  ஆனது $\sFmla{\True}{!A}[\sigma]$, $\sFmla{\False}{!A}[\sigma.{*}]$
+  ஆகிய இரண்டையும் கொண்டிருந்தால், அல்லது
+  $\sFmla{\True}{\lfalse}[\sigma]$ ஐக் கொண்டிருந்தால், $\Gamma$
+  நிறைவுறத்தக்கதல்ல.
+\end{prop}
+
+\begin{proof}
+  எப்போதும் $\mSat/{M}{\lfalse}[f(\sigma)]$ என்பதால்,
+  $\sFmla{\True}{\lfalse}[\sigma]$ ஐக் கொண்ட~$\Gamma$
+  நிறைவுறத்தக்கதல்ல.
+  % SOURCE CORRECTION TA-IL-020: retain the prefix on the true-falsity signed formula.
+
+  அந்த இரண்டு எதிர்க் குறியிட்ட வாய்பாடுகளையும் நிறைவுசெய்யும்
+  மாதிரி~$\mModel{M}$ மற்றும் $P(\Gamma)$ இன் பொருள்கோள்~$f$ ஆகியவையும்
+  இருக்க முடியாது. $\mSat{M}{!A}[f(\sigma)]$ எனில்,
+  \olref[sem][rel]{prop:true-monotonic} இன்படி,
+  $Rf(\sigma)f(\sigma.{*})$ என்பதால்,
+  $\mSat{M}{!A}[f(\sigma.{*})]$. எனவே
+  $\mSat{M}{!A}[f(\sigma)]$ மற்றும்
+  $\mSat/{M}{!A}[f(\sigma.{*})]$ ஆகிய இரண்டும் மெய்யாக முடியாது.
+  % SOURCE CORRECTION TA-IL-021: restore f on the accessible prefix and evaluate A there.
+\end{proof}
+
+\begin{thm}[சரித்தன்மை]
+  \ollabel{thm:tableau-soundness}
+  $\Gamma$ மூடிய !!{tableau} ஒன்றைக் கொண்டிருந்தால், $\Gamma$
+  நிறைவுறத்தக்கதல்ல.
+\end{thm}
+
+\begin{proof}
+ஓர் !!a{tableau} கிளையிலுள்ள !!{signed formula}s இன் கணம்
+நிறைவுறத்தக்கது எனில், எனில் மட்டுமே, அக்கிளை நிறைவுறத்தக்கது என்கிறோம்;
+குறைந்தது ஒரு நிறைவுறத்தக்க கிளையைக் கொண்டிருந்தால், எனில் மட்டுமே,
+!!a{tableau} நிறைவுறத்தக்கது என்கிறோம்.
+
+பின்வருவதை நாம் காட்டுகிறோம்: நிறைவுறத்தக்க !!a{tableau} ஐ உய்த்தறி
+விதிகளுள் ஒன்றால் நீட்டிப்பது எப்போதும் நிறைவுறத்தக்க !!a{tableau} ஐயே
+தருகிறது. இது தேற்றத்தை நிறுவும்:~$\Gamma$ விலிருந்து வரும் எடுகோள்களை
+மட்டுமே கொண்ட !!{tableau} க்கு உய்த்தறி விதிகளைப் பயன்படுத்துவதால் எந்த
+மூடிய !!{tableau} உம் கிடைக்கிறது. ஆகவே $\Gamma$ நிறைவுறத்தக்கதாக இருந்தால்,
+அதற்கான எந்த !!{tableau} உம் நிறைவுறத்தக்கதாக இருக்கும். ஆனால் மூடிய
+!!{tableau} தெளிவாக நிறைவுறத்தக்கதல்ல; ஏனெனில் அதன் எல்லாக் கிளைகளும்
+மூடியவை, மூடிய கிளைகள் நிறைவுறத்தக்கவை அல்ல.
+
+நிறைவுறத்தக்க !!a{tableau}, அதாவது குறைந்தது ஒரு நிறைவுறத்தக்க கிளையைக்
+கொண்ட !!a{tableau}, நம்மிடம் உள்ளது எனக் கொள்க. உய்த்தறி விதியைப் பயன்படுத்துவது ஒரு கிளையில்
+!!{signed formula}s ஐச் சேர்க்கும், அல்லது ஒரு கிளையை இரண்டாகப் பிரிக்கும்.
+அவ்விதிப் பயன்பாட்டால் நீட்டிக்கப்படாத ஒரு நிறைவுறத்தக்க கிளையை
+!!{tableau} கொண்டிருந்தால், நீட்டித்த !!{tableau} விலும் அது நிறைவுறத்தக்க
+கிளையாகவே இருக்கும்; எனவே நீட்டித்த அட்டவணை மரம் நிறைவுறத்தக்கது. ஆகவே
+நிறைவுறத்தக்க கிளைக்கே விதி பயன்படுத்தப்படும் நேர்வை மட்டும் கருத வேண்டும்.
+
+அக்கிளையிலுள்ள !!{signed formula}s இன் கணம்~$\Gamma$ எனவும், விதி
+பயன்படுத்தப்படும் !!{signed formula} ஆனது
+$\sFmla{S}{!A}[\sigma] \in \Gamma$ எனவும் இருக்கட்டும். விதி கிளையைப்
+பிரிக்கவில்லை எனில், நீட்டித்த கிளை, அதாவது விதியின் முடிவுகளுடன்~$\Gamma$
+வைச் சேர்த்தது, தொடர்ந்து நிறைவுறத்தக்கது என்று காட்ட வேண்டும். விதி
+கிளையைப் பிரித்தால், கிடைக்கும் இரு கிளைகளுள் குறைந்தது ஒன்று
+நிறைவுறத்தக்கது என்று காட்ட வேண்டும்.
+\begin{enumerate}
+\item $\sFmla{\True}{\lnot !B}[\sigma] \in \Gamma$ க்கு
+  $\TRule{\True}{\lnot}$ ஐப் பயன்படுத்துவதால் கிளை விரிவாக்கப்படுகிறது.
+  அப்போது நீட்டித்த கிளை~$\Gamma \cup
+  \{\sFmla{\False}{!B}[\sigma.{*}]\}$ என்ற !!{signed formula}s ஐக்
+  கொண்டுள்ளது. $\mSat{M}{\Gamma}[f]$ எனக் கொள்க. குறிப்பாக,
+  $\mSat{M}{\lnot !B}[f(\sigma)]$. ஆகவே $Rf(\sigma)w$ ஆகும் எந்த~$w$
+  க்கும் $\mSat/{M}{!B}[w]$; இதில் $f(\sigma.{*})$ உம் அடங்கும்.
+  எனவே $\mModel{M}$ ஆனது~$f$ ஐப் பொறுத்து
+  $\sFmla{\False}{!B}[\sigma.{*}]$ ஐ நிறைவுசெய்கிறது.
+\item $\sFmla{\False}{\lnot !B}[\sigma] \in \Gamma$ க்கு
+  $\TRule{\False}{\lnot}$ ஐப் பயன்படுத்துவதால் கிளை விரிவாக்கப்படுகிறது:
+  பயிற்சி.
+\item $\sFmla{\True}{!B \land !C}[\sigma] \in \Gamma$ க்கு
+  $\TRule{\True}{\land}$ ஐப் பயன்படுத்துவதால் கிளை விரிவாக்கப்பட்டு,
+  $\sFmla{\True}{!B}[\sigma]$, $\sFmla{\True}{!C}[\sigma]$ என்ற இரு
+  புதிய !!{signed formula}s கிளையில் கிடைக்கின்றன.
+  $\mSat{M}{\Gamma}[f]$ எனக் கொள்க; குறிப்பாக
+  $\mSat{M}{!B \land !C}[f(\sigma)]$. அப்போது
+  $\mSat{M}{!B}[f(\sigma)]$ மற்றும் $\mSat{M}{!C}[f(\sigma)]$.
+  அதாவது $\mModel{M}$ ஆனது~$f$ ஐப் பொறுத்து
+  $\sFmla{\True}{!B}[\sigma]$, $\sFmla{\True}{!C}[\sigma]$ ஆகிய
+  இரண்டையும் நிறைவுசெய்கிறது.
+\item $\sFmla{\False}{!B \lor !C}[\sigma] \in \Gamma$ க்கு
+  $\TRule{\False}{\lor}$ ஐப் பயன்படுத்துவதால் கிளை விரிவாக்கப்படுகிறது:
+  பயிற்சி.
+  % SOURCE CORRECTION TA-IL-022: restore the prefix on the false-disjunction premise.
+\item $\sFmla{\False}{!B \lif !C}[\sigma] \in \Gamma$ க்கு
+  $\TRule{\False}{\lif}$ ஐப் பயன்படுத்துவதால் கிளை விரிவாக்கப்படுகிறது.
+  இதனால் $\sFmla{\True}{!B}[\sigma.n]$ மற்றும்
+  $\sFmla{\False}{!C}[\sigma.n]$ என்ற இரு புதிய !!{signed formula}s
+  கிளையில் கிடைக்கின்றன; இங்கு $\sigma.n$ என்பது கிளைக்குப் புதிய முன்னொட்டு,
+  அதாவது $\sigma.n \notin P(\Gamma)$.
+
+  $\Gamma$ நிறைவுறத்தக்கது என்பதால், $\mSat{M}{\Gamma}[f]$ ஆகும்
+  $\mModel{M}$ உம் $P(\Gamma)$ இன் பொருள்கோள்~$f$ உம் உள்ளன; குறிப்பாக
+  $\mSat/{M}{!B \lif !C}[f(\sigma)]$. $\Gamma \cup
+  \{\sFmla{\True}{!B}[\sigma.n], \sFmla{\False}{!C}[\sigma.n]\}$
+  நிறைவுறத்தக்கது என்று காட்ட வேண்டும். இதற்காக $P(\Gamma) \cup
+  \{\sigma.n\}$ இன் பொருள்கோளைப் பின்வருமாறு வரையறுக்கிறோம்:
+
+  $\mSat/{M}{!B \lif !C}[f(\sigma)]$ என்பதால்,
+  $Rf(\sigma)w$ ஆகவும் $\mSat{M}{!B}[w]$ மற்றும்
+  $\mSat/{M}{!C}[w]$ ஆகவும் இருக்கும் $w \in W$ ஒன்று உள்ளது.
+  $f'(\sigma.n) = w$ என்பதைத் தவிர $f$ ஐப் போலவே $f'$ இருக்கட்டும்.
+  $f'(\sigma) = f(\sigma)$ மற்றும் $Rf(\sigma)w$ என்பதால்,
+  $Rf'(\sigma)f'(\sigma.n)$; ஆகவே $f'$ ஆனது $P(\Gamma) \cup
+  \{\sigma.n\}$ இன் பொருள்கோள். வெளிப்படையாகவே
+  $\mSat{M}{!B}[f'(\sigma.n)]$ மற்றும்
+  $\mSat/{M}{!C}[f'(\sigma.n)]$. எல்லா $\sigma' \in P(\Gamma)$ க்கும்
+  $f(\sigma') = f'(\sigma')$ என்பதால், $\mSat{M}{\Gamma}[f']$.
+  எனவே $\mModel{M}, f'$ ஆனது $\Gamma \cup
+  \{\sFmla{\True}{!B}[\sigma.n], \sFmla{\False}{!C}[\sigma.n]\}$ ஐ
+  நிறைவுசெய்கிறது.
+  % SOURCE CORRECTION TA-IL-023: extend the branch by the two rule conclusions.
+\end{enumerate}
+இப்போது இரு முன்னுரைகளைக் கொண்டிருக்கக்கூடிய உய்த்தறிகளைப் பார்ப்போம்.
+\begin{enumerate}
+\item $\sFmla{\False}{!B \land !C}[\sigma] \in \Gamma$ க்கு
+  $\TRule{\False}{\land}$ ஐப் பயன்படுத்துவதால் கிளை விரிவாக்கப்படுகிறது.
+  இது $\sFmla{\False}{!B}[\sigma]$ வழியாகத் தொடரும் இடக் கிளையையும்,
+  $\sFmla{\False}{!C}[\sigma]$ வழியாகத் தொடரும் வலக் கிளையையும் தருகிறது.
+  $\mSat{M}{\Gamma}[f]$ எனக் கொள்க; குறிப்பாக
+  $\mSat/{M}{!B \land !C}[f(\sigma)]$. அப்போது
+  $\mSat/{M}{!B}[f(\sigma)]$ அல்லது $\mSat/{M}{!C}[f(\sigma)]$. முதல்
+  நேர்வில் $\mModel{M}, f$ ஆனது $\sFmla{\False}{!B}[\sigma]$ ஐ
+  நிறைவுசெய்கிறது; அதாவது இடக் கிளை நிறைவுறத்தக்கது. இரண்டாம் நேர்வில்
+  $\mModel{M}, f$ ஆனது $\sFmla{\False}{!C}[\sigma]$ ஐ நிறைவுசெய்கிறது;
+  அதாவது வலக் கிளை நிறைவுறத்தக்கது.
+\item $\sFmla{\True}{!B \lor !C}[\sigma] \in \Gamma$ க்கு
+    $\TRule{\True}{\lor}$ ஐப் பயன்படுத்துவதால் கிளை விரிவாக்கப்படுகிறது:
+    பயிற்சி.
+\item $\sFmla{\True}{!B \lif !C}[\sigma] \in \Gamma$ க்கு
+    $\TRule{\True}{\lif}$ ஐப் பயன்படுத்துவதால் கிளை விரிவாக்கப்படுகிறது:
+    பயிற்சி.
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref[int][tab][sou]{thm:tableau-soundness} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{cor}
+\ollabel{cor:entailment-soundness}
+$\Gamma \Proves !A$ எனில் $\Gamma \Entails !A$.
+\end{cor}
+
+\begin{proof}
+  $\Gamma \Proves !A$ எனில், ஏதோவொரு $!B_1$, \dots, $!B_n \in
+  \Gamma$ க்கு, $\Delta = \{\sFmla{\False}{!A}[1],
+  \sFmla{\True}{!B_1}[1], \dots, \sFmla{\True}{!B_n}[1]\}$ மூடிய
+  !!{tableau} ஒன்றைக் கொண்டுள்ளது. $\Gamma \Entails !A$ என்று காட்ட
+  விரும்புகிறோம். அவ்வாறில்லை எனக் கொள்க. அப்போது ஏதோவொரு
+  $\mModel{M}$ மற்றும் $w$ க்கு, $i=1$, \dots,~$n$ க்கான
+  $\mSat{M}{!B_i}[w]$, ஆனால் $\mSat/{M}{!A}[w]$. $f(1) = w$ என்க;
+  அப்போது $f$ ஆனது~$\mModel{M}$ க்குள்~$P(\Delta)$ இன் பொருள்கோள்;
+  $\mModel{M}$ ஆனது~$f$ ஐப் பொறுத்து~$\Delta$ வை நிறைவுசெய்கிறது.
+  ஆனால் \olref{thm:tableau-soundness} இன்படி, மூடிய !!{tableau} ஒன்றைக்
+  கொண்டிருப்பதால் $\Delta$ நிறைவுறத்தக்கதல்ல; இது முரண். எனவே
+  $\Gamma \Entails !A$.
+  % SOURCE CORRECTION TA-IL-024: conclude entailment, the goal of this corollary.
+\end{proof}
+
+\begin{cor}
+\ollabel{cor:weak-soundness}
+$\Proves !A$ எனில் எல்லா மாதிரிகளிலும் $!A$ மெய்.
+\end{cor}
+
+\end{document}

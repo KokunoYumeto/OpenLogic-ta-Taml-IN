@@ -1,0 +1,52 @@
+% SEGMENT OLP-0509-S01
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: completeness-thm
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{cpl}
+
+\olsection{நிறைவுத்தன்மைத் தேற்றம்}
+
+\begin{thm}\ollabel{thm:completeness}
+  $\Gamma \Entails !A$ எனில் $\Gamma \Proves !A$.
+\end{thm}
+
+\begin{proof}
+  மறுதலையை நிறுவுகிறோம்: $\Gamma \Proves/ !A$ எனக் கொள்க. அப்போது
+  \olref[lin]{lem:lindenbaum} இன்படி, $\Gamma^* \supseteq \Gamma$ ஆகவும்
+  பகாவாகவும் $\Gamma^* \Proves/ !A$ ஆகவும் இருக்கும் கணம் ஒன்று உள்ளது.
+  \olref[mod]{defn:canonical-model} இல்
+  வரையறுக்கப்பட்டபடி,~$\Gamma^*$ க்கான நியம மாதிரி
+  $\mModel{M(\Gamma^*)}$ ஐக் கருதுக. எந்த $!B \in \Gamma$ க்கும்
+  $\Gamma^* \Proves !B$. $\Gamma^*(\emptyseq) = \Gamma^*$ என்பதைக்
+  கவனிக்கவும். மெய்மைத் துணைத்தேற்றத்தின்படி
+  (\olref[tru]{lem:truth}), எல்லா $!B \in \Gamma$ க்கும்
+  $\mSat{M(\Gamma^*)}{!B}[\emptyseq]$; மேலும்
+  $\mSat/{M(\Gamma^*)}{!A}[\emptyseq]$. எனவே
+  $\Gamma \Entails/ !A$.
+\end{proof}
+
+\begin{prob}
+  $!A$ ஆனது !!{propositional variable}s, $\lor$,~$\land$ ஆகியவற்றை
+  மட்டுமே கொண்டிருந்தால் $\Entails/ !A$ என்று காட்டுக. இதைப் பயன்படுத்தி,
+  உள்ளுணர்வுவாதத் தருக்கத்தில் $\lor$,~$\land$ ஆகியவற்றிலிருந்து $\lif$ ஐ
+  வரையறுக்க முடியாது என்று முடிவுசெய்க.
+\end{prob}
+
+\begin{prob}
+  நிறைவுத்தன்மைத் தேற்றத்தைப் பயன்படுத்தி, $\Proves !A \lor !B$ எனில்
+  $\Proves !A$ அல்லது $\Proves !B$ என்று நிறுவுக. (குறிப்பு:
+  $\mSat/{M_1}{!A}$ மற்றும் $\mSat/{M_2}{!B}$ எனக் கொண்டு,
+  $\mSat/{M}{!A \lor !B}$ ஆகும் புதிய மாதிரி~$\mModel{M}$ ஒன்றை அமைக்கவும்.)
+\end{prob}
+
+\begin{prob}
+  $\mModel{M}$ ஆனது நேரியல் வரிசையைப் பயன்படுத்தும் தொடர்புமுறை மாதிரி எனில்,
+  $\mSat{M}{(!A \lif !B)\lor(!B \lif !A)}$ என்று காட்டுக.
+\end{prob}
+
+\end{document}

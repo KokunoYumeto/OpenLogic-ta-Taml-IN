@@ -1,0 +1,185 @@
+{
+  "batch_id": "TA-B229",
+  "units": [
+    {
+      "unit_id": "OLP-0509",
+      "source_sha256": "810866d495adead851b265f7e62f0c993a3d49fc0f42e901bf0acc24f32efe3c",
+      "translation_sha256": "f32c1e87c06c7cfad2f9d6086b84d4bce4d7a71ddafc9bb99589d93c86674361",
+      "source_bytes": 1630,
+      "translation_bytes": 2906,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "lin",
+        "logic",
+        "mod",
+        "open",
+        "propositional",
+        "section",
+        "tru",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0510",
+      "source_sha256": "336d8bc46091819f445eb72e7492c262d01511a56e5771d8e1c424de3ef1d3e5",
+      "translation_sha256": "720158c31351239366cefaedce63e0ca620726c00c80fdb1b1cf76b5b294e8b5",
+      "source_bytes": 1710,
+      "translation_bytes": 3979,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$P$",
+        "$P$",
+        "$P$",
+        "$!A$",
+        "$!A$",
+        "$!A$",
+        "$[w]=\\Setabs{p\\inP}{w\\inV(p)}$",
+        "\\[\\mSat{M}{!A}[w]\\mSat{M'}{!A}[{[w]}]\\]",
+        "$\\mSat{M,w}{!A}$",
+        "$\\mSat{M',[w]}{!A}$"
+      ],
+      "extra_math": [
+        "$\\Sigma$",
+        "$[w]=\\Setabs{!B\\in\\Sigma}{\\mSat{M}{!B}[w]}$",
+        "$!B$",
+        "$!B\\in\\Sigma$",
+        "$!B\\in\\Sigma$",
+        "\\[\\mSat{M}{!B}[w]\\mSat{M'}{!B}[{[w]}]\\]",
+        "$\\mSat{M}{!B}[w]$",
+        "$\\mSat{M'}{!B}[{[w]}]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "dec",
+        "include",
+        "int",
+        "logic",
+        "model",
+        "open",
+        "propositional",
+        "relational",
+        "section",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-015",
+          "unit_id": "OLP-0510",
+          "kind": "finite-model-quotient-by-atoms-does-not-preserve-intuitionistic-formulas",
+          "action": "Filtered by truth profiles of all subformulas and stated the induction for every subformula.",
+          "expected_missing_math": [
+            "$P$",
+            "$P$",
+            "$!A$",
+            "$!A$",
+            "$!A$",
+            "$[w]=\\Setabs{p\\inP}{w\\inV(p)}$",
+            "\\[\\mSat{M}{!A}[w]\\mSat{M'}{!A}[{[w]}]\\]"
+          ],
+          "expected_extra_math": [
+            "$\\Sigma$",
+            "$[w]=\\Setabs{!B\\in\\Sigma}{\\mSat{M}{!B}[w]}$",
+            "$!B$",
+            "$!B\\in\\Sigma$",
+            "\\[\\mSat{M}{!B}[w]\\mSat{M'}{!B}[{[w]}]\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\mSat",
+            "\\Sigma",
+            "\\Sigma",
+            "\\Sigma"
+          ],
+          "source_issue_or_choice": "Worlds agreeing on atoms can have different accessible futures and therefore disagree on negations and implications, so quotienting only by atomic valuations does not support the claimed induction.",
+          "chosen_treatment": "தமிழ் A இன் எல்லாத் துணைவாய்பாடுகளிலும் மெய்மை ஒத்திசையும் உலகங்களை அடையாளப்படுத்தி, அவற்றின் மெய்மைக் கணங்களின் உட்கண உறவை அணுகுறவாகப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Retaining the atom-profile quotient; using a more elaborate two-relation filtration although subformula-theory inclusion suffices here.",
+          "rationale": "There are finitely many subformula truth profiles; persistence makes their inclusion a preorder, and the standard induction preserves every subformula including implication.",
+          "precise_review_question": "Are quotient worlds full subformula truth profiles, so the implication induction has enough information about accessible futures?",
+          "location_needle": "SOURCE CORRECTION TA-IL-015"
+        },
+        {
+          "audit_id": "TA-IL-016",
+          "unit_id": "OLP-0510",
+          "kind": "finite-model-exercise-uses-malformed-satisfaction-and-old-atom-set",
+          "action": "Rewrote the exercise with the chapter's world-indexed satisfaction notation and the corrected subformula set.",
+          "expected_missing_math": [
+            "$P$",
+            "$\\mSat{M,w}{!A}$",
+            "$\\mSat{M',[w]}{!A}$"
+          ],
+          "expected_extra_math": [
+            "$!B\\in\\Sigma$",
+            "$\\mSat{M}{!B}[w]$",
+            "$\\mSat{M'}{!B}[{[w]}]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\Sigma",
+            "\\in"
+          ],
+          "source_issue_or_choice": "The exercise encodes the world inside the model argument twice and still quantifies only by propositional variables after the filtration is repaired.",
+          "chosen_treatment": "தமிழ் மெய்ப்பாட்டை மாதிரி, வாய்பாடு, உலகம் என்ற நிலையான வடிவில் எழுதி ஒவ்வொரு துணைவாய்பாட்டுக்கும் நிறுவச் சொல்கிறது.",
+          "alternatives_considered": "Preserving the malformed macro calls or asking only for atomic formulas, which would not finish the theorem.",
+          "rationale": "The exercise must establish the same subformula truth lemma used in the corrected finite-model proof.",
+          "precise_review_question": "Does the exercise state world-indexed satisfaction on both models for every filtered subformula?",
+          "location_needle": "SOURCE CORRECTION TA-IL-016"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\mSat",
+        "\\Sigma",
+        "\\Sigma",
+        "\\Sigma",
+        "\\Sigma",
+        "\\in"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

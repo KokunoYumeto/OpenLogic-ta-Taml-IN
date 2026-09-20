@@ -1,0 +1,254 @@
+{
+  "batch_id": "TA-B227",
+  "units": [
+    {
+      "unit_id": "OLP-0503",
+      "source_sha256": "a431fe8a0f6a36831ecb5daffee42d7b0258b6afcf65409e082ba0d5c3dc8855",
+      "translation_sha256": "5b22ea62ddd3dce6370d6f4601250e613e7d402e7f43e9aaa313368d13003506",
+      "source_bytes": 683,
+      "translation_bytes": 1274,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0504",
+      "source_sha256": "ad6dd34af76e2848ba49f32f2599bdd96137c93ad50c496f553fddc1755a9125",
+      "translation_sha256": "5eb80b3c23a2bde1a9aea89f7fd83862c55b778927f97ccab7d662509d548c26",
+      "source_bytes": 2277,
+      "translation_bytes": 4366,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mSat{M}{\\Gamma}{!A_n}[w]$"
+      ],
+      "extra_math": [
+        "$\\mSat{M}{!A_n}[w]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Rww",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-007",
+          "unit_id": "OLP-0504",
+          "kind": "axiomatic-soundness-assumption-case-has-spurious-satisfaction-argument",
+          "action": "Removed the extra Gamma argument from the satisfaction expression for A_n.",
+          "expected_missing_math": [
+            "$\\mSat{M}{\\Gamma}{!A_n}[w]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat{M}{!A_n}[w]$"
+          ],
+          "expected_missing_commands": [
+            "\\Gamma"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The assumption case writes the satisfaction macro with three braced arguments although every semantic clause takes the model and formula, followed by the world argument.",
+          "chosen_treatment": "தமிழ் நிறுவல் $!A_n$ ஐ $w$ இல் நேரடியாக நிறைவுசெய்யும் இரு-வாத மெய்ப்பாட்டு வடிவத்தைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating Gamma as an undocumented middle macro argument, inconsistent with every other occurrence in the chapter.",
+          "rationale": "From A_n in Gamma and satisfaction of Gamma at w, the needed conclusion is satisfaction of A_n at w.",
+          "precise_review_question": "Does the assumption case conclude satisfaction of A_n at w with the standard macro arity?",
+          "location_needle": "SOURCE CORRECTION TA-IL-007"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Gamma"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0505",
+      "source_sha256": "2e1aae17af3a524802ebaa08e0a2f16f6b1014f0a06d697757a9ceddce02ab93",
+      "translation_sha256": "c5c82c143082f6c6a88a078b9798f757b115a47a2816b2e7209c21a970b32273",
+      "source_bytes": 7307,
+      "translation_bytes": 12520,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma\\cup\\Delta\\Entails!A\\land!B$",
+        "$\\Gamma\\Entails!C$",
+        "$\\mSat{M}{!B}$",
+        "$\\Delta_1\\cup!B\\Entails!D$",
+        "$\\Delta_2\\cup!C\\Entails!D$"
+      ],
+      "extra_math": [
+        "$\\Gamma\\cup\\Delta\\Entails!B\\land!C$",
+        "$\\mSat{M}{!B}[w]$",
+        "$\\Gamma\\Entails!B\\lor!C$",
+        "$\\Delta_1\\cup\\{!B\\}\\Entails!D$",
+        "$\\Delta_2\\cup\\{!C\\}\\Entails!D$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Rww",
+        "include",
+        "int",
+        "logic",
+        "open",
+        "rel",
+        "section",
+        "sem",
+        "snd"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-008",
+          "unit_id": "OLP-0505",
+          "kind": "conjunction-introduction-soundness-names-wrong-conjuncts",
+          "action": "Changed the required conclusion from A and B to the actual premise formulas B and C.",
+          "expected_missing_math": [
+            "$\\Gamma\\cup\\Delta\\Entails!A\\land!B$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\cup\\Delta\\Entails!B\\land!C$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The case has derivations of B and C but asks for consequence A and B, while its last sentence correctly establishes B and C.",
+          "chosen_treatment": "தமிழ் முடிவு முன்னுரைகளுடன் ஒத்த $!B\\land !C$ என்று தருகிறது.",
+          "alternatives_considered": "Renaming every premise and the final satisfaction claims to A and B.",
+          "rationale": "Conjunction introduction combines exactly the two derived premise formulas.",
+          "precise_review_question": "Does the semantic goal of conjunction introduction use B and C throughout?",
+          "location_needle": "SOURCE CORRECTION TA-IL-008"
+        },
+        {
+          "audit_id": "TA-IL-009",
+          "unit_id": "OLP-0505",
+          "kind": "right-disjunction-introduction-stops-at-premise",
+          "action": "Made the right-introduction branch conclude B or C rather than merely restating C.",
+          "expected_missing_math": [
+            "$\\Gamma\\Entails!C$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\Entails!B\\lor!C$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\lor"
+          ],
+          "source_issue_or_choice": "After proving the left-introduction branch, the parallel right branch states only that Gamma entails C and omits the rule's disjunctive conclusion.",
+          "chosen_treatment": "தமிழ் இரண்டாம் கிளையும் $\\Gamma\\Entails !B\\lor !C$ என்ற அதே முடிவை அடைகிறது என்று கூறுகிறது.",
+          "alternatives_considered": "Leaving the rule application implicit after the premise consequence.",
+          "rationale": "Soundness of right disjunction introduction must establish the conclusion of the displayed rule.",
+          "precise_review_question": "Does the C-premise branch explicitly conclude the disjunction?",
+          "location_needle": "SOURCE CORRECTION TA-IL-009"
+        },
+        {
+          "audit_id": "TA-IL-010",
+          "unit_id": "OLP-0505",
+          "kind": "disjunction-elimination-world-argument-outside-math",
+          "action": "Moved the world argument inside the satisfaction expression.",
+          "expected_missing_math": [
+            "$\\mSat{M}{!B}$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat{M}{!B}[w]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The first semantic case closes math mode before [w], unlike the parallel C case and every satisfaction expression around it.",
+          "chosen_treatment": "தமிழ் $[w]$ ஐ மெய்ப்பாட்டு வெளிப்பாட்டுக்குள்ளேயே வைக்கிறது.",
+          "alternatives_considered": "Leaving [w] as visually adjacent prose, which breaks the formal expression.",
+          "rationale": "The case assumes B is true at the current world w.",
+          "precise_review_question": "Is the world argument part of the B-satisfaction formula?",
+          "location_needle": "SOURCE CORRECTION TA-IL-010"
+        },
+        {
+          "audit_id": "TA-IL-011",
+          "unit_id": "OLP-0505",
+          "kind": "disjunction-elimination-case-assumptions-not-sets",
+          "action": "Restored singleton-set braces around B and C in the two semantic consequence premises.",
+          "expected_missing_math": [
+            "$\\Delta_1\\cup!B\\Entails!D$",
+            "$\\Delta_2\\cup!C\\Entails!D$"
+          ],
+          "expected_extra_math": [
+            "$\\Delta_1\\cup\\{!B\\}\\Entails!D$",
+            "$\\Delta_2\\cup\\{!C\\}\\Entails!D$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The derivation premises correctly use Delta_i union singleton sets, but the semantic application later unions a set directly with a formula.",
+          "chosen_treatment": "தமிழ் இரு இடங்களிலும் $\\{!B\\}$, $\\{!C\\}$ என்ற ஒருறுப்புக் கணங்களைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Treating formulas as sets or changing the earlier derivation premises.",
+          "rationale": "Semantic entailment takes a set of assumptions, so the discharged case assumption must be adjoined as a singleton set.",
+          "precise_review_question": "Do both case consequences adjoin singleton assumption sets?",
+          "location_needle": "SOURCE CORRECTION TA-IL-011"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\lor"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

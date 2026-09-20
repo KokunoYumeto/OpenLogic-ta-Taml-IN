@@ -1,0 +1,75 @@
+% SEGMENT OLP-0497-S01
+% part: intuitionistic-logic
+% chapter: introduction
+% section: axiomatic-derivations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{int}{axd}
+
+\olsection{அடிகோள் முறை \usetoken{P}{derivation}}
+
+உள்ளுணர்வுவாதக் கூற்றுக்கணிப்புத் தருக்கத்திற்கான அடிகோள் முறை
+!!{derivation}s கருத்தளவில் மிக எளியவையும் வரலாற்றில் முதலாவதாக அமைந்த
+!!{derivation} அமைப்புகளும் ஆகும். செவ்வியல் கூற்றுக்கணிப்புத் தருக்கத்தில்
+செயல்படுவதைப் போலவே இவையும் செயல்படுகின்றன.
+
+\begin{defn}[!!^{derivability}]
+$\Gamma$ என்பது $\Lang L$ இன் !!{formula}s இன் கணம் எனில், $\Gamma$
+இலிருந்து ஒரு \emph{!!{derivation}} என்பது !!{formula}s இன் முடிவுறு தொடர்
+$!A_1$, \dots,~$!A_n$; ஒவ்வொரு $i \le n$ க்கும் பின்வருவனவற்றுள் ஒன்று
+மெய்யாகும்:
+\begin{enumerate}
+\item $!A_i \in \Gamma$; அல்லது
+\item $!A_i$ ஓர் அடிகோள்; அல்லது
+\item $j < i$, $k < i$ ஆகும் ஏதோவொரு $!A_j$, $!A_k$ ஆகியவற்றிலிருந்து
+  modus ponens மூலம் $!A_i$ பின்தொடர்கிறது; அதாவது $!A_k \ident !A_j
+  \lif !A_i$.
+\end{enumerate}
+\end{defn}
+
+\begin{defn}[அடிகோள்கள்]
+உள்ளுணர்வுவாதக் கூற்றுக்கணிப்புத் தருக்கத்திற்கான \emph{அடிகோள்களின்}
+கணம்~$\PAx$, பின்வரும் வடிவங்களிலுள்ள எல்லா !!{formula}s ஐயும்
+கொண்டுள்ளது:
+\begin{align}
+  & (!A \land !B) \lif !A \ollabel{ax:land1}\\
+  & (!A \land !B) \lif !B \ollabel{ax:land2}\\
+  & !A \lif (!B \lif (!A \land !B)) \ollabel{ax:land3}\\
+  & !A \lif (!A \lor !B) \ollabel{ax:lor1}\\
+  & !A \lif (!B \lor !A) \ollabel{ax:lor2}\\
+  & (!A \lif !C) \lif ((!B \lif !C) \lif ((!A \lor !B) \lif !C)) \ollabel{ax:lor3}\\
+  & !A \lif (!B \lif !A) \ollabel{ax:lif1}\\
+  & (!A \lif (!B \lif !C)) \lif ((!A \lif !B) \lif (!A \lif !C)) \ollabel{ax:lif2}\\
+  & \lfalse \lif !A \ollabel{ax:lfalse1}
+\end{align}
+\end{defn}
+
+\begin{defn}[!!^{derivability}]
+$!A$ இல் முடியும் $\Gamma$ இலிருந்தான !!a{derivation} ஒன்று இருந்தால்,
+அப்போதும் அப்போது மட்டுமே, !!^a{formula}~$!A$ ஆனது $\Gamma$ இலிருந்து
+\emph{!!{derivable}} ஆகும்; இதை $\Gamma \Proves !A$ என எழுதுகிறோம்.
+\end{defn}
+
+\begin{defn}[தேற்றங்கள்]
+வெற்றுக் கணத்திலிருந்து~$!A$ க்கான !!a{derivation} ஒன்று இருந்தால்,
+!!^a{formula}~$!A$ ஒரு \emph{தேற்றம்}. $!A$ ஒரு தேற்றம் எனில் $\Proves !A$
+என்றும், இல்லையெனில் $\Proves/ !A$ என்றும் எழுதுகிறோம்.
+\end{defn}
+
+\begin{prop}
+  உள்ளுணர்வுவாதத் தருக்கத்திற்கான அடிகோள் முறை !!{derivation} அமைப்பில்
+  $\Gamma \Proves !A$ எனில், செவ்வியல் தருக்கத்திலும் $\Gamma \Proves !A$.
+  குறிப்பாக, $!A$ ஓர் உள்ளுணர்வுவாதத் தேற்றம் எனில், அது ஒரு செவ்வியல்
+  தேற்றமும் ஆகும்.
+\end{prop}
+
+\begin{proof}
+  ஒவ்வோர் உள்ளுணர்வுவாத அடிகோளும் ஒரு செவ்வியல் அடிகோளும் ஆகும்; எனவே
+  உள்ளுணர்வுவாதத் தருக்கத்தின் ஒவ்வோர் !!{derivation} உம் செவ்வியல்
+  தருக்கத்தின் ஓர் !!a{derivation} ஆகும்.
+\end{proof}
+
+\end{document}

@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T02:53:55.862724+00:00",
+  "date_utc": "2026-09-20T04:12:19.956300+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2437,6 +2437,131 @@
       "unit_id": "OLP-0490",
       "source_sha256": "b5e8c2ba742dc473a01dbc6f3908250b2afc6deb12f338019ac9482cfea361cd",
       "translation_sha256": "9ec80cdf7edb8ff51ed553c22594798ce776e340298d54b431efdd77aa9c11fc"
+    },
+    {
+      "unit_id": "OLP-0491",
+      "source_sha256": "d4274226f1459dcd2a6029d4b8962f922c7ccaa0d3cb4ee090b2e442e40425c9",
+      "translation_sha256": "1b991caa7b91b7dce3d41760e539642e7049b8bc613e83da965ca9e786f44670"
+    },
+    {
+      "unit_id": "OLP-0492",
+      "source_sha256": "02462706d5ec30350164ff6ab0d5a17154435698739696ef05e564285efb6a1d",
+      "translation_sha256": "f9ff75d5a9ca075c74ba92d3a39ec86e474c96172f08e94296a52255d3fd556a"
+    },
+    {
+      "unit_id": "OLP-0493",
+      "source_sha256": "0e2e1481d7a5d642bbb24f9a77b1521b56c1aa7d17842dd6b8c9e21cdb6d9ad1",
+      "translation_sha256": "eee1a1ebb8af8593a46d2c0257314c4914bf64d9c1bbf04989420af3c12b7686"
+    },
+    {
+      "unit_id": "OLP-0494",
+      "source_sha256": "ae3a1b269130b8527b095f31c2eb1ee75bb562ba9a69105052d56a0588b67186",
+      "translation_sha256": "c2d7771b46ca794c7f60f166280419278bc09b4f11f68c6afa5468b40850b35c"
+    },
+    {
+      "unit_id": "OLP-0495",
+      "source_sha256": "4a23702a2d57e916ab50e764e61b76bb4e91d6287655d2db737ac71023176794",
+      "translation_sha256": "23d365a2a8ae545152c08cc57b4507dfe6f0055b1d88656efdf9a65620243153"
+    },
+    {
+      "unit_id": "OLP-0496",
+      "source_sha256": "3fc69e5ddaa3c9273ab2fa9c4a9e5c7826c3044aa9945152d4f710f8cf62afd3",
+      "translation_sha256": "59095406804e3d9cab99230278717aa7395dbeeb1228179cff674fc028278acb"
+    },
+    {
+      "unit_id": "OLP-0497",
+      "source_sha256": "52d798d7dafbabc8b9a386ee1ed6ec0fa3b565217a9f4013242300ab3a621827",
+      "translation_sha256": "b088881d7dccb979b028abdbe98afd02c895597b01d1e0b3bf9fab64ced04bae"
+    },
+    {
+      "unit_id": "OLP-0498",
+      "source_sha256": "b3a317c7e49f5e50aa6d36811a805910d62b6163b5d96fc723ba9ff2af9e16f4",
+      "translation_sha256": "2d37e3ffc412f92d5300ec4eb6682aef27ed4559e20051f16d0c4e5f77f20cd2"
+    },
+    {
+      "unit_id": "OLP-0499",
+      "source_sha256": "e69a3d0c1eca8eab6b6dd8fb8664ef4290fbd2e929f1c3faaa4dcd217e2d0a00",
+      "translation_sha256": "74a8f4ed5733de63c6987f67634a81d491e782f7f3018dadb3083cbf394e824c"
+    },
+    {
+      "unit_id": "OLP-0500",
+      "source_sha256": "ceab9f9d7f437b8b7180b065125b178bb5b3bdcbd15f9cb8900c516875173ae0",
+      "translation_sha256": "7d606ccbb41fe7b2de5f467f9cf6c7c737d2c1192ff5e8c312b4316b22ae6fc9"
+    },
+    {
+      "unit_id": "OLP-0501",
+      "source_sha256": "e181f2cc2add672ac76ae6cf3e011d3242479e1a1ff5f8e0f679eb1eda8f62fb",
+      "translation_sha256": "91b14193fa93b4e8f90d8c7ec3b20520808276dd7c9be8d94651eb64e8e884be"
+    },
+    {
+      "unit_id": "OLP-0502",
+      "source_sha256": "a279eb8cdd1aa2accf342003edd769868f134f178ef6c29b3807bda16ae95f21",
+      "translation_sha256": "eec94f8ea18d1567a312abc7c47ec8c8e88810fb784b7d629ec20dd37e4d919e"
+    },
+    {
+      "unit_id": "OLP-0503",
+      "source_sha256": "a431fe8a0f6a36831ecb5daffee42d7b0258b6afcf65409e082ba0d5c3dc8855",
+      "translation_sha256": "5b22ea62ddd3dce6370d6f4601250e613e7d402e7f43e9aaa313368d13003506"
+    },
+    {
+      "unit_id": "OLP-0504",
+      "source_sha256": "ad6dd34af76e2848ba49f32f2599bdd96137c93ad50c496f553fddc1755a9125",
+      "translation_sha256": "5eb80b3c23a2bde1a9aea89f7fd83862c55b778927f97ccab7d662509d548c26"
+    },
+    {
+      "unit_id": "OLP-0505",
+      "source_sha256": "2e1aae17af3a524802ebaa08e0a2f16f6b1014f0a06d697757a9ceddce02ab93",
+      "translation_sha256": "c5c82c143082f6c6a88a078b9798f757b115a47a2816b2e7209c21a970b32273"
+    },
+    {
+      "unit_id": "OLP-0506",
+      "source_sha256": "5e3dd8b221efdfdeeba716e58f220b9c623a2ea317d4033365f6d2e1a21d34be",
+      "translation_sha256": "ad18ca58e1a6d5ff493569faf9b26b3424bebec05478d1e0843c21a1765da2ad"
+    },
+    {
+      "unit_id": "OLP-0507",
+      "source_sha256": "2397d36f77e15b27cf5889ab0e2bdfd34e060416aae5089afbfccb881cde8128",
+      "translation_sha256": "82a79c3dc086498df9f07aec4214d808b15595ba2cdab67fcc4dd2ad3848c824"
+    },
+    {
+      "unit_id": "OLP-0508",
+      "source_sha256": "b2a9084e2846c9a268c63972c78925c3050fdff0bcb3a2942242bfca163cdbaf",
+      "translation_sha256": "cc61b69e74a84285a4c5325d1cd3b64b68c995474786f9176bc365c6a3769ebc"
+    },
+    {
+      "unit_id": "OLP-0509",
+      "source_sha256": "810866d495adead851b265f7e62f0c993a3d49fc0f42e901bf0acc24f32efe3c",
+      "translation_sha256": "f32c1e87c06c7cfad2f9d6086b84d4bce4d7a71ddafc9bb99589d93c86674361"
+    },
+    {
+      "unit_id": "OLP-0510",
+      "source_sha256": "336d8bc46091819f445eb72e7492c262d01511a56e5771d8e1c424de3ef1d3e5",
+      "translation_sha256": "720158c31351239366cefaedce63e0ca620726c00c80fdb1b1cf76b5b294e8b5"
+    },
+    {
+      "unit_id": "OLP-0511",
+      "source_sha256": "d891fab63bd903a4ab7404bbc8bc6ba84ff7ac5f2054761217187b5e18efa8a3",
+      "translation_sha256": "62cb4f1b0da6dcabe36d054723581adbce5aa3933589ad8b2b7e735643b71596"
+    },
+    {
+      "unit_id": "OLP-0512",
+      "source_sha256": "d247348c60332898ef0ee789cf200c83633ab364190dd8a68e7c3a767b5fcdb0",
+      "translation_sha256": "ff5bb7ea39bedb6fee81e3f95c5416e3049dab4bb49f0d9b383861ea00b5808c"
+    },
+    {
+      "unit_id": "OLP-0513",
+      "source_sha256": "ac874fab0a48018f53cbe714eebbee31221cecb86fe6981fda012dfbd17fabcd",
+      "translation_sha256": "9b1c821cf7c6b33c6dfafa8332ce7dc652f42f1831b75064c10175f434c67082"
+    },
+    {
+      "unit_id": "OLP-0514",
+      "source_sha256": "9745506f871e091339606542e34049c03d2baffd71bd7de389c0d69468846e73",
+      "translation_sha256": "9973a8bd5e244f1b60e5a9bbe48a31d3710dde99988590a2d07860cef1bb9508"
+    },
+    {
+      "unit_id": "OLP-0515",
+      "source_sha256": "3852095c3c8edfdf76e294936602d8a0d640622642fcb0c27cf55420ef99e46c",
+      "translation_sha256": "d438bd77f8061f104ec483b8e348a6f41295593499464715ffae4de655d2bbc9"
     }
   ],
   "samples": [
@@ -6506,6 +6631,181 @@
       "assessment": "The induced-submodel clauses, learning and common-knowledge example remain; TA-AML-007 restores the B metavariable marker and TA-AML-008 distinguishes the two genuinely different restricted models.",
       "translation_segment_sha256": "f1317e7e75b77fb80a8f01edcb37eb4029e3c98ff9aad0685fd0aa8aeadaa26a",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0491-S01",
+      "reverse_paraphrase": "The intuitionistic-logic part contains an introduction, semantics, soundness and completeness, and tableaux.",
+      "assessment": "The part title, all four chapter imports and the part-ending hook remain exact.",
+      "translation_segment_sha256": "858a9dfc0bdda1a9fa3df1860de0929f741a58e11fb8aa8669ba744a35b87675",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0492-S01",
+      "reverse_paraphrase": "The introductory chapter proceeds from constructive motivation through syntax and the BHK interpretation to natural deduction and axiomatic derivations.",
+      "assessment": "All five section imports remain in source order with the chapter identifier and ending hook.",
+      "translation_segment_sha256": "9b9cc4f0cbfae66233280441cfcf095f58a40fe4318ae571aa9a658f88c5b8a5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0493-S01",
+      "reverse_paraphrase": "Constructive reasoning requires an explicit witness for an existence claim and a proved disjunct for a disjunction, unlike the nonconstructive Riemann-hypothesis case split; the second irrational-power proof supplies the actual pair.",
+      "assessment": "Both motivating examples, the explicit square-root-of-three/logarithm witness and the distinction among intuitionism, constructivism and the formal logic remain.",
+      "translation_segment_sha256": "09b234e6603400881dafa79d41506bfaaf6c459db7b7a028a9216b829140f9ee",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0494-S01",
+      "reverse_paraphrase": "Intuitionistic propositional formulas take falsity, conjunction, disjunction and conditional as primitive; negation abbreviates implication to falsity and biconditional abbreviates the conjunction of two conditionals.",
+      "assessment": "The primitive inventory, inductive formation clauses, limit clause and both defined-connective expansions remain exact.",
+      "translation_segment_sha256": "9d875162a05861eac3a2bcc91ffc3c9c648eeab95dfabc5cc8f349c6a160e11c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0495-S01",
+      "reverse_paraphrase": "The BHK interpretation assigns constructions to atoms, pairs to conjunctions, tagged alternatives to disjunctions, construction-transforming functions to conditionals, no construction to falsity, and implication-to-falsity constructions to negations.",
+      "assessment": "All six clauses and worked constructions remain; double-negated excluded middle is retained, TA-IL-001 restores the formula marker on C, and TA-IL-002 makes the left injection carry M_1.",
+      "translation_segment_sha256": "9d96d137387f7dfe35ba89a7cef40b4115df9d38b1ba184e63ee1f1b68a2fea5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0496-S01",
+      "reverse_paraphrase": "Intuitionistic natural deduction omits classical contradiction, and each conjunction, conditional, disjunction, falsity and negation rule transforms BHK constructions in the way its proof tree displays.",
+      "assessment": "Every rule group, four worked derivations and six exercises remain; TA-IL-003 restores the distinct A_1 and A_2 conjuncts.",
+      "translation_segment_sha256": "61c78da7e3cc7a67dd4828f2fce7af79b13e8990252fd70f3b2087fa3e09d975",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0497-S01",
+      "reverse_paraphrase": "The axiomatic calculus derives formulas from assumptions, nine intuitionistic axiom schemata and modus ponens; every intuitionistic derivation is also a classical derivation.",
+      "assessment": "All nine labeled schemata, the derivability and theorem definitions, and the inclusion proposition remain exact.",
+      "translation_segment_sha256": "84f4462900236349b0f0265a6a03c6508b2fcd116b657ddce498767a659f4c58",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0498-S01",
+      "reverse_paraphrase": "The semantics chapter contains the motivation, relational models, semantic notions and topological semantics, while openly recording that worked semantic examples are still absent upstream.",
+      "assessment": "All four imports, editorial scope note and chapter-ending hook remain exact.",
+      "translation_segment_sha256": "2e55db59ae242847847774e31c2205ebb7989583e45191a4dbbc30117f86b2c8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0499-S01",
+      "reverse_paraphrase": "Relational intuitionistic semantics reads partially ordered worlds as persistent states of knowledge: conjunction and disjunction stay local, while a conditional must survive every accessible future state and negation excludes every future state that could know its operand.",
+      "assessment": "The partial-order, monotonic-knowledge, conditional, negation, excluded-middle and topological alternatives all remain.",
+      "translation_segment_sha256": "3dd9d1309846bd22721da471760152464285bd240e27c1955b47c7e046344e93",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0500-S01",
+      "reverse_paraphrase": "An intuitionistic relational model is a nonempty partially ordered set with a persistent valuation; atoms, falsity, negation, conjunction, disjunction and conditional receive the displayed world-relative clauses, and truth persists upward.",
+      "assessment": "The model triple, all six inductive truth cases, set-satisfaction convention and monotonicity proposition remain exact.",
+      "translation_segment_sha256": "923d9f8fa46183076a42c70d93f5ed8282f8f438ea0f2f986e0c93eb2c82fa9c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0501-S01",
+      "reverse_paraphrase": "Semantic consequence is local at every world, global truth quantifies over all worlds, and restricting a model to the upward cone of w converts truth at w into truth throughout the restricted model.",
+      "assessment": "Both consequence propositions and the restriction construction remain; TA-IL-004 proves the local clause first and derives the global clause pointwise.",
+      "translation_segment_sha256": "a3ba36731304517a5f238674c713fe29cecf0d739c2a2b9ae8072406dd5d49c8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0502-S01",
+      "reverse_paraphrase": "A topological model assigns open sets to atoms, interprets falsity by the empty set, conjunction by intersection, disjunction by union and conditional by the interior of the complement-union set; derivability corresponds to non-strict inclusion.",
+      "assessment": "All topology axioms, the interior definition and connective operations remain; TA-IL-005 distinguishes a topology from its space and TA-IL-006 restores subset-or-equal in both consequence claims.",
+      "translation_segment_sha256": "5d9083059add67dd7d0440043ddcf436acb7c768011e347d9b435cb641524c6c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0503-S01",
+      "reverse_paraphrase": "The soundness-and-completeness chapter combines axiomatic and natural-deduction soundness with the prime-set, canonical-model, truth-lemma, completeness and decidability arguments.",
+      "assessment": "All seven section imports, the upstream editorial limitations and the chapter-ending hook remain.",
+      "translation_segment_sha256": "6694aca65983fbc86fbcec9f419e4ccd695dd6bb881eea9e01792afe71a6096e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0504-S01",
+      "reverse_paraphrase": "Axiomatic soundness follows by induction on derivation length: axioms are valid, assumptions are true wherever the assumption set is true, and modus ponens uses reflexivity of the intuitionistic accessibility order.",
+      "assessment": "All three induction cases remain; TA-IL-007 removes a spurious satisfaction argument in the assumption case.",
+      "translation_segment_sha256": "2385d8e00a7fd99690587b83c2a9899daf5cd2e1edb628d09c35029fbff59408",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0505-S01",
+      "reverse_paraphrase": "Natural-deduction soundness treats the assumption, conjunction, disjunction, conditional, falsity and negation rules by induction, using monotonic truth at accessible future worlds for conditional introduction.",
+      "assessment": "Every rule case and both exercises remain; TA-IL-008 through TA-IL-011 repair the conjunction target, right-disjunction target, world index and singleton case assumptions.",
+      "translation_segment_sha256": "40e13b01922c4839166609c4b8182f48653ecd9d49a923a94997bfa3857227e5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0506-S01",
+      "reverse_paraphrase": "A prime set is consistent, deductively closed and disjunction-prime; the Lindenbaum construction adds one safe disjunct at each stage while preserving nonderivability of A, and its union is prime.",
+      "assessment": "All three prime conditions, the Gamma_n construction, finite-support argument and closure proof remain; TA-IL-012 gives the finite-earlier-index fairness argument.",
+      "translation_segment_sha256": "37200ae0a115989a28e162a44b86becc58db9ce21bbd09fb71949b437017fe33",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0507-S01",
+      "reverse_paraphrase": "The canonical model unfolds a prime set along finite natural-number sequences, extending a node by a Lindenbaum prime set whenever a listed conditional witness is needed; prefix extension orders worlds and membership defines atomic valuation.",
+      "assessment": "The sequence induction, Delta construction, model triple and valuation monotonicity remain; TA-IL-013 identifies the suffix length as the monotonicity induction parameter.",
+      "translation_segment_sha256": "c4827880d5d69aa91b03dc057283c5bb38eb783566678215674cc2c4af02baa3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0508-S01",
+      "reverse_paraphrase": "The truth lemma equates truth of a formula at sequence sigma in the canonical model with derivability from Delta(sigma), using primeness for disjunction and a purpose-built successor for failed implication.",
+      "assessment": "Every connective case remains; TA-IL-014 fills the previously empty negation case from its conditional-to-falsity definition.",
+      "translation_segment_sha256": "1b4f01e6a2694e4dc842e955af5ce45a3a737031bbd80df1b757edae826eda77",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0509-S01",
+      "reverse_paraphrase": "Completeness extends a nonderiving premise set to a prime set, evaluates its canonical model at the empty sequence, and applies the truth lemma to obtain a countermodel.",
+      "assessment": "The contrapositive proof and all three consequences or exercises remain exact.",
+      "translation_segment_sha256": "b39bd65e4b6c4011a760bfae258d06b38f1e8f752954eecfce311938e4482fe2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0510-S01",
+      "reverse_paraphrase": "The finite-model argument quotients worlds by their truth profiles over all subformulas of A, orders those profiles by inclusion and preserves every subformula by induction, yielding a decision procedure.",
+      "assessment": "The finite-model theorem and exercise remain; TA-IL-015 repairs the insufficient atom-only quotient and TA-IL-016 restores standard world-indexed satisfaction notation.",
+      "translation_segment_sha256": "f078d2acb9f41c013d254ee0bf5194f049d81de482cf7f44cf7e51b5db5ccdbd",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0511-S01",
+      "reverse_paraphrase": "The intuitionistic-tableaux chapter contains an introduction, rules, worked proofs and soundness, while completeness and countermodel extraction remain explicitly inactive upstream.",
+      "assessment": "All four active imports, both commented future imports, the editorial limitations and chapter-ending hook remain exact.",
+      "translation_segment_sha256": "ba5ed335caada57bd0dab25851021a6e1e7a9458a1d7c4267171fe40621a5b1d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0512-S01",
+      "reverse_paraphrase": "An intuitionistic tableau is a tree of truth-signed formulas whose nonempty positive-integer sequence prefixes name worlds; finite-premise derivability uses a closed tree, and prefix extensions name accessible worlds.",
+      "assessment": "The closure test, finite support, dot-concatenation, reflexive-transitive accessibility reading and sigma-star wildcard remain; TA-IL-017 keeps the copied modal label within the present intuitionistic context.",
+      "translation_segment_sha256": "f6aa5907d6efaffb9f81c378b87e4f43e2db16139e416d16be5fa547e9e29315",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0513-S01",
+      "reverse_paraphrase": "The conjunction and disjunction rules stay at one prefix, while true implication branches over an already used accessible prefix and false implication introduces a fresh successor prefix.",
+      "assessment": "All eight displayed rule forms, the asymmetric closure condition, used/new prefix constraints and negation-as-implication rules remain; TA-IL-018 aligns the true-conditional prose signs with its table.",
+      "translation_segment_sha256": "06ee7377d8a9d23bc6c134ecf5bb1c41bca83994cd4f1dea754858d94bcf7b9d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0514-S01",
+      "reverse_paraphrase": "The worked closed tableau derives A implies B implies C from A-and-B implies C by two fresh false-conditional expansions and a true-conditional split.",
+      "assessment": "The complete tree, every justification and all four additional proof exercises remain exact.",
+      "translation_segment_sha256": "af217a055b1a68b3e779578973c560f56458ce0aaa56d19e911c2026a3541259",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0515-S01",
+      "reverse_paraphrase": "Soundness interprets prefixes as worlds, proves closure sets unsatisfiable, shows every rule preserves at least one satisfiable branch and turns a false conditional into a fresh accessible witness.",
+      "assessment": "The branch-preservation induction and both soundness corollaries remain; TA-IL-019 through TA-IL-024 repair the countermodel sign, prefix transport, two omitted prefixes, the witness branch contents and the final entailment conclusion.",
+      "translation_segment_sha256": "9880e1a608a4c2c1fb6b85d02872d0946e5d64818199602f8edfd7e4efe3a264",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -7226,11 +7526,63 @@
     {
       "unit_id": "OLP-0490",
       "issue": "The public-announcement semantics drops the formula marker from B in one dynamic formula and falsely calls two visibly different induced submodels identical. Tamil restores !B and states that the Moore-sentence update removes the additional p-world under TA-AML-007 and TA-AML-008."
+    },
+    {
+      "unit_id": "OLP-0495",
+      "issue": "The BHK currying example drops the formula metavariable marker from C, and the left excluded-middle injection carries M_2 despite declaring M_1 as its input. Tamil restores !C and tuple (1,M_1) under TA-IL-001 and TA-IL-002."
+    },
+    {
+      "unit_id": "OLP-0496",
+      "issue": "The conjunction-elimination explanation repeats A_1 where its pair and following sentence require conjuncts A_1 and A_2. Tamil restores A_2 under TA-IL-003."
+    },
+    {
+      "unit_id": "OLP-0501",
+      "issue": "The proof of the local and global semantic-consequence clauses reverses their roles and uses a global premise for the local result. Tamil proves the local clause from its stated premise and then applies it pointwise for the global clause under TA-IL-004."
+    },
+    {
+      "unit_id": "OLP-0502",
+      "issue": "The source calls the carrier X a topology although the topology is its open-set family, and twice uses strict inclusion where derivability permits equality. Tamil distinguishes the topological space and uses non-strict inclusion under TA-IL-005 and TA-IL-006."
+    },
+    {
+      "unit_id": "OLP-0504",
+      "issue": "The axiomatic-soundness assumption case gives the satisfaction macro a spurious Gamma argument. Tamil restores the standard model/formula/world form under TA-IL-007."
+    },
+    {
+      "unit_id": "OLP-0505",
+      "issue": "The natural-deduction soundness proof names the wrong conjunction, omits the right disjunction conclusion, leaves one world index outside math and unions two assumption sets directly with formulas. Tamil repairs these under TA-IL-008 through TA-IL-011."
+    },
+    {
+      "unit_id": "OLP-0506",
+      "issue": "The Lindenbaum proof claims a global one-per-stage decrease among pending disjunctions, which need not be monotone as the chain grows. Tamil gives the required fixed-j argument using only finitely many earlier indices under TA-IL-012."
+    },
+    {
+      "unit_id": "OLP-0507",
+      "issue": "The canonical-model monotonicity sentence says to induct on the initial sequence although repeated one-step extension is measured by the suffix. Tamil names suffix length as the induction parameter under TA-IL-013."
+    },
+    {
+      "unit_id": "OLP-0508",
+      "issue": "The truth-lemma induction includes an empty negation case. Tamil derives it from the defined conditional-to-falsity expansion under TA-IL-014."
+    },
+    {
+      "unit_id": "OLP-0510",
+      "issue": "The finite-model proof quotients worlds only by atomic valuations, which does not preserve intuitionistic implication or negation, and its exercise uses malformed satisfaction arguments. Tamil filters by all subformula truth profiles and restores world-indexed satisfaction under TA-IL-015 and TA-IL-016."
+    },
+    {
+      "unit_id": "OLP-0512",
+      "issue": "The intuitionistic-tableau introduction calls its newly prefixed formulas modal although its chapter, surrounding prose and following rules are intuitionistic. Tamil keeps the description within the present intuitionistic tableaux under TA-IL-017."
+    },
+    {
+      "unit_id": "OLP-0513",
+      "issue": "The prose for the true-conditional rule reverses both branch signs relative to its displayed rule and intuitionistic semantics. Tamil uses false antecedent and true consequent branches under TA-IL-018."
+    },
+    {
+      "unit_id": "OLP-0515",
+      "issue": "The soundness chapter makes its countermodel satisfy the conclusion, drops or misapplies prefixes in three cases, extends a false-conditional branch with the wrong formula, and repeats derivability where entailment was to be proved. Tamil repairs these under TA-IL-019 through TA-IL-024."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "487 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 235 frozen units still require completion.",
+  "remaining": "512 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 210 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -7959,6 +8311,107 @@
         "bisimulation_preserves_atomic_forth_back_invariance_and_figure": true,
         "PAL_language_inventory_and_formation_clauses_remain": true,
         "PAL_submodel_learning_common_knowledge_and_self_refutation_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0491",
+        "OLP-0492",
+        "OLP-0493",
+        "OLP-0494",
+        "OLP-0495",
+        "OLP-0496",
+        "OLP-0497",
+        "OLP-0498",
+        "OLP-0499",
+        "OLP-0500",
+        "OLP-0501",
+        "OLP-0502"
+      ],
+      "correction_ids": [
+        "TA-IL-001",
+        "TA-IL-002",
+        "TA-IL-003",
+        "TA-IL-004",
+        "TA-IL-005",
+        "TA-IL-006"
+      ],
+      "status": "pass",
+      "checks": {
+        "part_imports_all_four_chapters": true,
+        "introduction_driver_imports_all_five_sections": true,
+        "constructive_examples_require_and_supply_explicit_witnesses": true,
+        "syntax_preserves_primitives_and_both_defined_connectives": true,
+        "BHK_six_clauses_examples_double_negated_LEM_and_repairs_remain": true,
+        "natural_deduction_rule_groups_examples_exercises_and_repair_remain": true,
+        "axiomatic_calculus_retains_nine_schemata_and_modus_ponens": true,
+        "semantics_driver_imports_all_four_sections": true,
+        "epistemic_state_reading_persistence_and_future_conditional_remain": true,
+        "relational_model_and_all_six_truth_cases_and_monotonicity_remain": true,
+        "semantic_notions_local_global_restriction_and_proof_repair_remain": true,
+        "topological_axioms_interior_connective_operations_and_repairs_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0503",
+        "OLP-0504",
+        "OLP-0505",
+        "OLP-0506",
+        "OLP-0507",
+        "OLP-0508",
+        "OLP-0509",
+        "OLP-0510"
+      ],
+      "correction_ids": [
+        "TA-IL-007",
+        "TA-IL-008",
+        "TA-IL-009",
+        "TA-IL-010",
+        "TA-IL-011",
+        "TA-IL-012",
+        "TA-IL-013",
+        "TA-IL-014",
+        "TA-IL-015",
+        "TA-IL-016"
+      ],
+      "status": "pass",
+      "checks": {
+        "chapter_driver_imports_all_seven_metatheory_sections": true,
+        "axiomatic_soundness_preserves_three_induction_cases_and_macro_repair": true,
+        "natural_deduction_soundness_covers_every_rule_and_four_repairs": true,
+        "lindenbaum_prime_conditions_safe_chain_and_fairness_remain": true,
+        "canonical_sequence_construction_model_and_suffix_induction_remain": true,
+        "truth_lemma_retains_all_cases_prime_disjunction_and_implication_witness": true,
+        "completeness_uses_prime_extension_empty_sequence_truth_lemma_and_three_problems": true,
+        "finite_subformula_filtration_and_decision_conclusion_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0511",
+        "OLP-0512",
+        "OLP-0513",
+        "OLP-0514",
+        "OLP-0515"
+      ],
+      "correction_ids": [
+        "TA-IL-017",
+        "TA-IL-018",
+        "TA-IL-019",
+        "TA-IL-020",
+        "TA-IL-021",
+        "TA-IL-022",
+        "TA-IL-023",
+        "TA-IL-024"
+      ],
+      "status": "pass",
+      "checks": {
+        "driver_preserves_four_active_and_two_inactive_imports": true,
+        "introduction_preserves_signed_tree_closure_finite_support_and_prefix_semantics": true,
+        "rules_preserve_full_tables_closure_direction_and_prefix_constraints": true,
+        "worked_tree_and_four_exercises_remain": true,
+        "soundness_preserves_prefix_interpretation_closures_rule_preservation_witness_and_corollaries": true
       }
     }
   ]

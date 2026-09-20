@@ -1,0 +1,103 @@
+{
+  "batch_id": "TA-B223",
+  "units": [
+    {
+      "unit_id": "OLP-0495",
+      "source_sha256": "4a23702a2d57e916ab50e764e61b76bb4e91d6287655d2db737ac71023176794",
+      "translation_sha256": "23d365a2a8ae545152c08cc57b4507dfe6f0055b1d88656efdf9a65620243153",
+      "source_bytes": 7723,
+      "translation_bytes": 16695,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$C$",
+        "$\\tuple{1,M_2}$"
+      ],
+      "extra_math": [
+        "$!C$",
+        "$\\tuple{1,M_1}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "BHK",
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-001",
+          "unit_id": "OLP-0495",
+          "kind": "BHK-currying-example-drops-formula-marker",
+          "action": "Restored the formula metavariable marker on C in the codomain of the construction g.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$C$",
+              "to": "$!C$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The surrounding formula, the immediately preceding conditional and every later occurrence use !C, while this one prose parenthesis prints bare C.",
+          "chosen_treatment": "தமிழ் ஆக்கம்~$g$ இன் இலக்கை~$!C$ இன் ஆக்கங்கள் என்று ஒரே குறியீட்டில் தருகிறது.",
+          "alternatives_considered": "Treating C as an object-language atom in this one parenthetical explanation.",
+          "rationale": "The passage explains the BHK construction for a schematic formula C, so the OpenLogic formula sigil is required.",
+          "precise_review_question": "Does the parenthetical type of g use !C consistently with the displayed formula?",
+          "location_needle": "SOURCE CORRECTION TA-IL-001"
+        },
+        {
+          "audit_id": "TA-IL-002",
+          "unit_id": "OLP-0495",
+          "kind": "excluded-middle-left-injection-uses-wrong-input-variable",
+          "action": "Changed the left disjunction injection from tuple (1,M_2) to tuple (1,M_1).",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\tuple{1,M_2}",
+              "to": "\\tuple{1,M_1}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The sentence declares h_1 with input M_1 but sends it to a pair containing M_2; the right injection h_2 correctly uses its own input M_2.",
+          "chosen_treatment": "தமிழ் இடப்புற உட்செலுத்தல்~$h_1$ தனது உள்ளீடு~$M_1$ ஐயே~$\\tuple{1,M_1}$ க்கு அனுப்புகிறது என்று கூறுகிறது.",
+          "alternatives_considered": "Renaming the declared input to M_2, which would collapse the distinction between the two injections.",
+          "rationale": "The tag 1 selects the A disjunct and therefore must carry the supplied construction of A.",
+          "precise_review_question": "Does h_1 inject M_1 while h_2 injects M_2?",
+          "location_needle": "SOURCE CORRECTION TA-IL-002"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

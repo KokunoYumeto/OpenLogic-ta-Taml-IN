@@ -1,0 +1,166 @@
+% SEGMENT OLP-0505-S01
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: soundness-nd
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{snd}
+
+\olsection{இயல்பான வருவித்தலின் சரித்தன்மை}
+
+தொடர்புமுறைப் பொருண்மையியலைப் பொறுத்து இயல்பான வருவித்தலின் சரித்தன்மையை
+இப்போது நிறுவுவோம்; அதாவது, எடுகோள்களின் ஒரு கணத்திலிருந்து !!^a{formula}
+ஒன்று !!{derivable} எனில், அந்த எடுகோள்களின் கணம் அவ்!!a{formula} ஐ
+உட்கிடையாக்குகிறது என்று காட்டுவோம்.
+
+\begin{thm}[சரித்தன்மை]
+  \ollabel{thm:soundness}
+  $\Gamma \Proves !A$ எனில், $ \Gamma \Entails !A$.
+\end{thm}
+
+\begin{proof}
+  $\Gamma \Proves !A$ எனில் $\Gamma \Entails !A$ என்று நிறுவுகிறோம்.
+  $\Gamma$ இலிருந்து~$!A$ க்கான !!{derivation} மீது தொகுமுறையில்
+  நிறுவுகிறோம்.
+
+  \begin{enumerate}
+  \item !!{derivation} ஆனது எடுகோள்~$!A$ ஐ மட்டுமே கொண்டிருந்தால்,
+    $!A \Proves !A$; $!A \Entails !A$ என்று காட்ட வேண்டும்.
+    $\mSat{M}{!A}[w]$ எனக் கொள்க. அப்போது அற்பமாகவே
+    $\mSat{M}{!A}[w]$.
+
+  \item !!{derivation} ஆனது $\Intro{\land}$ இல் முடிகிறது:
+    \iftag{probAnd}{பயிற்சி.}{!!{undischarged} எடுகோள்கள்~$\Gamma$
+      இலிருந்து~$!B$ என்ற முன்னுரைக்கும், !!{undischarged}
+      எடுகோள்கள்~$\Delta$ இலிருந்து~$!C$ என்ற முன்னுரைக்கும் உள்ள
+      !!{derivation}s, $\Gamma \Proves !B$ மற்றும் $\Delta \Proves !C$
+      என்று காட்டுகின்றன. தொகுமுறை எடுகோளின்படி $\Gamma \Entails !B$
+      மற்றும் $\Delta \Entails !C$. முழு !!{derivation} இன்
+      !!{undischarged} எடுகோள்கள் $\Gamma$ உம் $\Delta$ உம் சேர்ந்தவை;
+      எனவே $\Gamma \cup \Delta \Entails !B \land !C$ என்று காட்ட
+      வேண்டும். $\mSat{M}{\Gamma \cup \Delta}[w]$ எனக் கொள்க. அப்போது
+      $\mSat{M}{\Gamma}[w]$ உம் மெய். $\Gamma \Entails !B$ என்பதால்
+      $\mSat{M}{!B}[w]$. இதேபோல் $\mSat{M}{!C}[w]$. எனவே
+      $\mSat{M}{!B \land !C}[w]$.}
+      % SOURCE CORRECTION TA-IL-008: the conjunction conclusion is B and C.
+
+  \item !!{derivation} ஆனது $\Elim{\land}$ இல் முடிகிறது:
+    \iftag{probAnd}{பயிற்சி.}{!!{undischarged} எடுகோள்கள்~$\Gamma$
+      இலிருந்து $!B \land !C$ என்ற முன்னுரைக்கான !!{derivation},
+      $\Gamma \Proves !B \land !C$ என்று காட்டுகிறது. தொகுமுறை
+      எடுகோளின்படி $\Gamma \Entails !B \land !C$. நாம்
+      $\Gamma \Entails !B$ என்று காட்ட வேண்டும். எனவே
+      $\mSat{M}{\Gamma}[w]$ எனக் கொள்க. $\Gamma \Entails !B \land !C$
+      என்பதால், $\mSat{M}{!B \land !C}[w]$. ஆகவே
+      $\mSat{M}{!B}[w]$ உம் மெய். $\Elim\land$ ஆனது~$!C$ இல்
+      முடிந்தால் இதேபோல் $\Gamma \Entails !C$.}
+
+  \item !!{derivation} ஆனது $\Intro{\lor}$ இல் முடிகிறது:
+    \iftag{probOr}{பயிற்சி.}{முன்னுரை~$!B$ என்றும்,~$!B$ இல் முடியும்
+      !!{derivation} இன் !!{undischarged} எடுகோள்கள்~$\Gamma$ என்றும்
+      கொள்க. அப்போது $\Gamma \Proves !B$; தொகுமுறை எடுகோளின்படி
+      $\Gamma \Entails !B$. $\Gamma \Entails !B \lor !C$ என்று காட்ட
+      வேண்டும். $\mSat{M}{\Gamma}[w]$ எனக் கொள்க. $\Gamma \Entails !B$
+      என்பதால் $\mSat{M}{!B}[w]$. ஆகவே $\mSat{M}{!B \lor !C}[w]$ உம்
+      மெய். இதேபோல் முன்னுரை~$!C$ எனில்,
+      $\Gamma \Entails !B \lor !C$.}
+      % SOURCE CORRECTION TA-IL-009: the right introduction also concludes the disjunction.
+
+  \item !!{derivation} ஆனது~$\Elim{\lor}$ இல் முடிகிறது:
+    \iftag{probOr}{பயிற்சி.}{முன்னுரைகளில் முடியும் !!{derivation}s,
+      !!{undischarged} எடுகோள்கள்~$\Gamma$ இலிருந்து $!B \lor !C$ ஐயும்,
+      !!{undischarged} எடுகோள்கள் $\Delta_1 \cup \{!B\}$ இலிருந்து~$!D$
+      ஐயும், !!{undischarged} எடுகோள்கள் $\Delta_2 \cup \{!C\}$
+      இலிருந்து~$!D$ ஐயும் தருகின்றன. எனவே $\Gamma \Proves !B \lor !C$,
+      $\Delta_1 \cup \{!B\} \Proves !D$, மற்றும்
+      $\Delta_2 \cup \{!C\} \Proves !D$. தொகுமுறை எடுகோளின்படி
+      $\Gamma \Entails !B \lor !C$, $\Delta_1 \cup \{!B\} \Entails !D$,
+      மற்றும் $\Delta_2 \cup \{!C\} \Entails !D$. நாம்
+      $\Gamma \cup \Delta_1 \cup \Delta_2 \Entails !D$ என்று நிறுவ
+      வேண்டும்.
+
+    $\mSat{M}{\Gamma \cup \Delta_1 \cup \Delta_2}[w]$ எனக் கொள்க.
+    அப்போது $\mSat{M}{\Gamma}[w]$; மேலும் $\Gamma \Entails !B \lor !C$
+    என்பதால் $\mSat{M}{!B \lor !C}[w]$. $\mSat{M}{}$ இன் வரையறையின்படி,
+    $\mSat{M}{!B}[w]$ அல்லது $\mSat{M}{!C}[w]$. எனவே நேர்வுகளாகப்
+    பிரிக்கிறோம்: (a)~$\mSat{M}{!B}[w]$. அப்போது
+    $\mSat{M}{\Delta_1 \cup \{!B\}}[w]$. $\Delta_1 \cup \{!B\}
+    \Entails !D$ என்பதால் $\mSat{M}{!D}[w]$. (b)~$\mSat{M}{!C}[w]$.
+    அப்போது $\mSat{M}{\Delta_2 \cup \{!C\}}[w]$. $\Delta_2 \cup
+    \{!C\} \Entails !D$ என்பதால் $\mSat{M}{!D}[w]$. எனவே இரு
+    நேர்வுகளிலும், நாம் காட்ட விரும்பியபடி $\mSat{M}{!D}[w]$.}
+    % SOURCE CORRECTION TA-IL-010: keep the world argument inside satisfaction.
+    % SOURCE CORRECTION TA-IL-011: the case assumptions are singleton sets.
+
+  \item !!{derivation} ஆனது $\Intro{\lif}$ இல் முடிந்து~$!B\lif !C$ ஐ
+    முடிவாகக் கொண்டுள்ளது. அப்போது முன்னுரை~$!C$; அந்த முன்னுரையில் முடியும்
+    !!{derivation} இன் !!{undischarged} எடுகோள்கள்~$\Gamma \cup \{!B\}$.
+    ஆகவே $\Gamma \cup \{!B\} \Proves !C$; தொகுமுறை எடுகோளின்படி
+    $\Gamma \cup \{!B\} \Entails !C$. நாம் $\Gamma \Entails !B \lif !C$
+    என்று காட்ட வேண்டும்.
+
+    $\mSat{M}{\Gamma}[w]$ எனக் கொள்க. $Rww'$ ஆகும் எல்லா~$w'$ க்கும்,
+    $\mSat{M}{!B}[w']$ எனில் $\mSat{M}{!C}[w']$ என்று காட்ட விரும்புகிறோம்.
+    எனவே $Rww'$ மற்றும் $\mSat{M}{!B}[w']$ எனக் கொள்க.
+    \olref[sem][rel]{prop:true-monotonic} இன்படி,
+    $\mSat{M}{\Gamma}[w']$. $\Gamma \cup \{!B\} \Entails !C$ என்பதால்,
+    நாம் காட்ட விரும்பியபடி $\mSat{M}{!C}[w']$.
+
+  \item !!{derivation} ஆனது $\Elim{\lif}$ இல் முடிந்து~$!C$ ஐ முடிவாகக்
+    கொண்டுள்ளது. முன்னுரைகள் $!B \lif !C$ மற்றும் $!B$; அவற்றுக்கான
+    !!{derivation}s முறையே !!{undischarged} எடுகோள்கள்~$\Gamma$,
+    $\Delta$ இலிருந்து வருகின்றன. ஆகவே $\Gamma \Proves !B \lif !C$ மற்றும்
+    $\Delta \Proves !B$. தொகுமுறை எடுகோளின்படி $\Gamma \Entails !B \lif !C$
+    மற்றும் $\Delta \Entails !B$. நாம் $\Gamma \cup \Delta \Entails !C$
+    என்று காட்ட வேண்டும்.
+
+    $\mSat{M}{\Gamma \cup \Delta}[w]$ எனக் கொள்க.
+    $\mSat{M}{\Gamma}[w]$ மற்றும் $\Gamma \Entails !B \lif !C$ என்பதால்,
+    $\mSat{M}{!B \lif !C}[w]$. வரையறையின்படி, $Rww'$ ஆகும் எல்லா~$w'$
+    க்கும் $\mSat{M}{!B}[w']$ எனில் $\mSat{M}{!C}[w']$ என்பது இதன் பொருள்.
+    $R$ தற்சுட்டுப் பண்புள்ளதால், $Rww'$ ஆகும்~$w'$ களுள் $w$ உம் ஒன்று;
+    அதாவது $\mSat{M}{!B}[w]$ எனில் $\mSat{M}{!C}[w]$. மேலும்
+    $\mSat{M}{\Delta}[w]$ மற்றும் $\Delta \Entails !B$ என்பதால்,
+    $\mSat{M}{!B}[w]$. எனவே நாம் காட்ட விரும்பியபடி
+    $\mSat{M}{!C}[w]$.
+
+  \item !!{derivation} ஆனது $\FalseInt$ இல் முடிந்து~$!A$ ஐ முடிவாகக்
+    கொண்டுள்ளது. முன்னுரை~$\lfalse$; அந்த முன்னுரைக்கான !!{derivation} இன்
+    !!{undischarged} எடுகோள்கள்~$\Gamma$. அப்போது
+    $\Gamma \Proves \lfalse$. தொகுமுறை எடுகோளின்படி
+    $\Gamma \Entails \lfalse$. நாம் $\Gamma \Entails !A$ என்று காட்ட
+    வேண்டும்.
+
+    மறைமுகமாக நிறுவுகிறோம். $\Gamma \Entails/ !A$ எனில்,
+    $\mSat{M}{\Gamma}[w]$ மற்றும் $\mSat/{M}{!A}[w]$ ஆகும் மாதிரி
+    $\mModel{M}$ உம் உலகம்~$w$ உம் உள்ளன. $\Gamma \Entails \lfalse$
+    என்பதால் $\mSat{M}{\lfalse}[w]$. ஆனால் வரையறையின்படி
+    $\mSat/{M}{\lfalse}[w]$ என்பதால் இது இயலாது. எனவே
+    $\Gamma \Entails !A$.
+  \item !!{derivation} ஆனது $\Intro\lnot$ இல் முடிகிறது: பயிற்சி.
+  \item !!{derivation} ஆனது $\Elim\lnot$ இல் முடிகிறது: பயிற்சி.
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[int][sc][snd]{thm:soundness} இன் நிறுவலை நிறைவுசெய்க.
+  $\Intro\lnot$, $\Elim\lnot$ ஆகிய நேர்வுகளுக்கு,
+  \olref[int][sem][rel]{defn:true-at-w} இலுள்ள
+  $\mSat{M}{\lnot !A}[w]$ இன் வரையறையைப் பயன்படுத்துக; அதாவது
+  $\lnot !A$ ஐ $!A \lif \lfalse$ ஆல் வரையறுக்கப்பட்டதாகக் கருதாதீர்.
+\end{prob}
+
+\begin{prob}
+  பின்வரும் !!{formula}s உள்ளுணர்வுவாதத் தருக்கத்தில் !!{derivable} அல்ல
+  என்று காட்டுக:
+  \begin{enumerate}
+    \item $(!A \lif !B) \lor (!B \lif !A)$
+    \item $(\lnot\lnot !A \lif !A) \lif (!A \lor \lnot !A)$
+    \item $(!A \lif !B \lor !C) \lif \bigl((!A \lif !B)\lor(!A \lif !C)\bigr)$
+  \end{enumerate}
+\end{prob}
+
+\end{document}

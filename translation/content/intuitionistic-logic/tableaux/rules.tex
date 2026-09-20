@@ -1,0 +1,152 @@
+% SEGMENT OLP-0513-S01
+% Part: intuitionistic-logic
+% Chapter: tableaux
+% Section: rules
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{tab}{rul}
+
+\olsection{உள்ளுணர்வுவாதத் தருக்கத்திற்கான விதிகள்}
+
+$\land$, $\lor$ இணைப்பிகளுக்கான விதிகள், முன்னொட்டுகள் சேர்க்கப்பட்டுள்ளதைத்
+தவிர, சாதாரண கூற்றுக்கணிப்புக் குறியிட்ட !!{tableau}s க்கான விதிகளைப்
+போன்றவையே. ஒவ்வொரு நேர்விலும், குறியிட்ட !!^a{formula}
+$\sFmla{S}{!A}[\sigma]$ க்குப் பயன்படுத்தப்படும் விதி,~$\sigma$ ஆல்
+முன்னொட்டப்பட்ட புதிய !!{formula}s ஐ உருவாக்குகிறது. இது உள்ளுணர்வுப்படி
+தெளிவாக இருக்க வேண்டும்: எடுத்துக்காட்டாக, $!A \land !B$ ஆனது~$\sigma$
+பெயரிடும் உலகில் மெய் எனில், $!A$, $!B$ ஆகியவை~$\sigma$ வில் மெய்
+(வேறெந்த உலகிலும் என்று அவசியமில்லை). $\land$, $\lor$ க்கான விதிகளை
+\olref{tab:prop-rules} இல் தொகுக்கிறோம்.
+
+\begin{table}
+  \[\def\arraystretch{3}\begin{array}{|c|c|}
+    \hline
+    \AxiomC{\sFmla{\True}{!A \land !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\land}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma]}
+    \noLine
+    \UnaryInfC{\sFmla{\True}{!B}[\sigma]}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \land !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\land}}
+    \UnaryInfC{$\sFmla{\False}{!A}[\sigma] \quad \mid \quad
+      \sFmla{\False}{!B}[\sigma]$}
+    \DisplayProof
+    \\[2ex]
+    \hline
+    \AxiomC{\sFmla{\True}{!A \lor !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\lor}}
+    \UnaryInfC{$\sFmla{\True}{!A}[\sigma] \quad \mid \quad
+      \sFmla{\True}{!B}[\sigma]$}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \lor !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\lor}}
+    \UnaryInfC{\sFmla{\False}{!A}[\sigma]}
+    \noLine
+    \UnaryInfC{\sFmla{\False}{!B}[\sigma]}
+    \DisplayProof
+    \\[2ex]
+    \hline
+  \end{array}\]
+  \caption{$\land$, $\lor$ க்கான முன்னொட்டுள்ள !!{tableau} விதிகள்}
+  \ollabel{tab:prop-rules}
+\end{table}
+
+மூடல் நிபந்தனை சாதாரண !!{tableau}s க்கான நிபந்தனையைப் போன்றது; ஆனால்
+!!{formula}s மட்டுமன்றி முன்னொட்டுகளும் ஒத்திருக்க வேண்டும். உண்மையில்,
+சற்றுத் தளர்வாக இருக்கலாம்: உள்ளுணர்வுவாத மாதிரிகளில் !!{formula}s ஒருமுறை
+மெய்யானால் தொடர்ந்து மெய்யாக இருப்பதால்,~$\sigma$ வில் $!A$ மெய்யாகவும்,
+அணுகத்தக்க ஏதோவொரு முன்னொட்டு~$\sigma.{*}$ இல் பொய்யாகவும் இருப்பது இயலாது.
+எனவே ஏதோவொரு முன்னொட்டு~$\sigma$ மற்றும் !!^a{formula}~$!A$ க்கு ஒரு கிளை
+பின்வரும் இரண்டையும் கொண்டிருந்தால் அது மூடியது:
+\[
+\sFmla{\True}{!A}[\sigma] \quad\text{மற்றும்}\quad \sFmla{\False}{!A}[\sigma.{*}]
+\]
+குறிகள் எதிராக்கப்பட்டால், அதாவது கிளை பின்வருவனவற்றைக் கொண்டிருந்தால்,
+\[
+\sFmla{\False}{!A}[\sigma] \quad\text{மற்றும்}\quad \sFmla{\True}{!A}[\sigma.{*}]
+\]
+$*$ ஆனது வெற்றுத் தொடராக இருந்தால் மட்டுமே கிளை மூடியது என்பதைக் கவனிக்கவும்.
+
+மேலும், ஒரு கிளை~$\sFmla{\True}{\bot}[\sigma]$ ஐக் கொண்டிருந்தால் அது
+மூடியது.
+
+எடுகோள்களை அமைப்பதற்கான விதிகளும் சாதாரண !!{tableau}s க்கானவை போன்றவையே;
+ஆனால் எடுகோள்களுக்கு நாம் எப்போதும் முன்னொட்டு~$1$ ஐப் பயன்படுத்துகிறோம்.
+(எல்லா எடுகோள்களுக்கும் ஒரே முன்னொட்டைப் பயன்படுத்தும்வரை, எந்த
+முன்னொட்டைப் பயன்படுத்துகிறோம் என்பது பொருட்டன்று.) ஆகவே, எடுத்துக்காட்டாக,
+\[
+!B_1, \dots, !B_n \Proves !A
+\]
+எனில், எனில் மட்டுமே, பின்வரும் எடுகோள்களுக்கான மூடிய அட்டவணை மரம் ஒன்று
+உள்ளது:
+\[
+\sFmla{\True}{!B_1}[1], \dots, \sFmla{\True}{!B_n}[1],
+\sFmla{\False}{!A}[1].
+\]
+
+நிபந்தனைவாக்கம்~$\lif$ க்கான விதிகள் செவ்வியல் மற்றும் வாய்ப்புநிலை
+நேர்வுகளிலிருந்து வேறுபடுகின்றன. $\TRule{\lif}{\True}$ விதி,
+$\sFmla{\True}{!A \lif !B}[\sigma]$ ஐக் கொண்ட ஒரு கிளையை, வெவ்வேறு
+கிளைகளில் $\sFmla{\False}{!A}[\sigma.{*}]$ மற்றும்
+$\sFmla{\True}{!B}[\sigma.{*}]$ ஆகியவற்றால் நீட்டிக்கிறது.
+% SOURCE CORRECTION TA-IL-018: the prose now matches the signs in the displayed true-conditional rule.
+அவ்விதி பயன்படுத்தப்படும் கிளையில் \emph{ஏற்கெனவே} இடம்பெறும்
+முன்னொட்டு~$\sigma.{*}$ க்கு மட்டுமே அதைப் பயன்படுத்தலாம். அத்தகைய
+முன்னொட்டை அக்கிளையில் ``பயன்படுத்தப்பட்டது'' என அழைப்போம்.
+($\sigma.{*}$ ஆனது~$\sigma$ வையே உள்ளடக்குவதால், முன்னொட்டுள்ள குறியிட்ட
+வாய்பாடுகள் $\sFmla{\False}{!A}[\sigma]$, $\sFmla{\True}{!B}[\sigma]$
+ஆகியவற்றைத் தனித்தனிக் கிளைகளில் சேர்ப்பதன் மூலம் விதியை எப்போதும்
+பயன்படுத்தலாம்.)
+
+$\TRule{\lif}{\False}$ விதி, $\sFmla{\False}{!A \lif !B}[\sigma]$ ஐக்
+கொண்ட ஒரு கிளையை, அதே கிளையில் $\sFmla{\True}{!A}[\sigma.n]$ மற்றும்
+$\sFmla{\False}{!B}[\sigma.n]$ ஆகிய இரண்டாலும் நீட்டிக்கிறது; இங்கு
+$\sigma.n$ என்பது அக்கிளைக்குப் புதிய முன்னொட்டு.
+
+$\lnot$ க்கான விதிகள் இதேபோல் வரையறுக்கப்படுகின்றன ($\lnot !A$ ஐ
+$!A \lif \lfalse$ என வரையறுப்பதைப் பயன்படுத்தி).
+
+விதிகள் \olref{tab:rules-lif-lnot} இல் தரப்பட்டுள்ளன.
+
+\begin{table}
+  \[\def\arraystretch{3}\begin{array}{|c|c|}
+    \hline
+    \AxiomC{\sFmla{\True}{\lnot !A}[\sigma]}
+    \RightLabel{\TRule{\True}{\lnot}}
+    \UnaryInfC{$\sFmla{\False}{!A}[\sigma.{*}]$}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{\lnot !A}[\sigma]}
+    \RightLabel{\TRule{\False}{\lnot}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma.n]}
+    \DisplayProof
+    \\[1ex]
+    \text{$\sigma.{*}$ பயன்படுத்தப்பட்டது} & \text{$\sigma.n$ புதியது}\\
+    \hline
+    \AxiomC{\sFmla{\True}{!A \lif !B}[\sigma]}
+    \RightLabel{\TRule{\True}{\lif}}
+    \UnaryInfC{$\sFmla{\False}{!A}[\sigma.{*}] \quad \mid \quad
+      \sFmla{\True}{!B}[\sigma.{*}]$}
+    \DisplayProof
+    &
+    \AxiomC{\sFmla{\False}{!A \lif !B}[\sigma]}
+    \RightLabel{\TRule{\False}{\lif}}
+    \UnaryInfC{\sFmla{\True}{!A}[\sigma.n]}
+    \noLine
+    \UnaryInfC{\sFmla{\False}{!B}[\sigma.n]}
+    \DisplayProof
+    \\[1ex]
+    \text{$\sigma.{*}$ பயன்படுத்தப்பட்டது} & \text{$\sigma.n$ புதியது}\\
+    \hline
+  \end{array}\]
+  \caption{$\lnot$, $\lif$ க்கான முன்னொட்டுள்ள !!{tableau} விதிகள்}
+  \ollabel{tab:rules-lif-lnot}
+\end{table}
+
+\end{document}

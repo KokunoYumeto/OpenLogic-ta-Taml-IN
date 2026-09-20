@@ -1,0 +1,176 @@
+{
+  "batch_id": "TA-B230",
+  "units": [
+    {
+      "unit_id": "OLP-0511",
+      "source_sha256": "d891fab63bd903a4ab7404bbc8bc6ba84ff7ac5f2054761217187b5e18efa8a3",
+      "translation_sha256": "62cb4f1b0da6dcabe36d054723581adbce5aa3933589ad8b2b7e735643b71596",
+      "source_bytes": 599,
+      "translation_bytes": 1205,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0512",
+      "source_sha256": "d247348c60332898ef0ee789cf200c83633ab364190dd8a68e7c3a767b5fcdb0",
+      "translation_sha256": "ff5bb7ea39bedb6fee81e3f95c5416e3049dab4bb49f0d9b383861ea00b5808c",
+      "source_bytes": 2939,
+      "translation_bytes": 6706,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "formula",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "signed"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-017",
+          "unit_id": "OLP-0512",
+          "kind": "intuitionistic-tableau-introduction-calls-its-formulas-modal",
+          "action": "Referred to the prefixed formulas as belonging to the present intuitionistic tableaux rather than to modal tableaux.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The paragraph begins by extending signed formulas for intuitionistic logic but then labels the same tableaux modal, apparently copied from the neighboring modal chapter.",
+          "chosen_treatment": "தமிழ் இவ்வகை உள்ளுணர்வுவாத அட்டவணை மரங்களிலுள்ள வாய்பாடுகள் என்று சூழலோடு பொருந்துமாறு கூறுகிறது.",
+          "alternatives_considered": "Calling the entire intuitionistic system modal solely because it uses Kripke-style prefixes.",
+          "rationale": "The stable part, chapter and file identifiers, surrounding prose and following rules all identify intuitionistic tableaux.",
+          "precise_review_question": "Does the prefix introduction stay within the intuitionistic-tableau context?",
+          "location_needle": "SOURCE CORRECTION TA-IL-017"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0513",
+      "source_sha256": "ac874fab0a48018f53cbe714eebbee31221cecb86fe6981fda012dfbd17fabcd",
+      "translation_sha256": "9b1c821cf7c6b33c6dfafa8332ce7dc652f42f1831b75064c10175f434c67082",
+      "source_bytes": 5140,
+      "translation_bytes": 9554,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\sFmla{\\True}{!A}[\\sigma.{*}]$",
+        "$\\sFmla{\\False}{!B}[\\sigma.{*}]$",
+        "$\\sFmla{\\True}{!A}[\\sigma]$",
+        "$\\sFmla{\\False}{!B}[\\sigma]$"
+      ],
+      "extra_math": [
+        "$\\sFmla{\\False}{!A}[\\sigma.{*}]$",
+        "$\\sFmla{\\True}{!B}[\\sigma.{*}]$",
+        "$\\sFmla{\\False}{!A}[\\sigma]$",
+        "$\\sFmla{\\True}{!B}[\\sigma]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-018",
+          "unit_id": "OLP-0513",
+          "kind": "true-conditional-rule-prose-reverses-both-signs",
+          "action": "Changed the prose branches to false A and true B, matching the displayed true-conditional rule.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{!A}[\\sigma.{*}]$",
+            "$\\sFmla{\\False}{!B}[\\sigma.{*}]$",
+            "$\\sFmla{\\True}{!A}[\\sigma]$",
+            "$\\sFmla{\\False}{!B}[\\sigma]$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{!A}[\\sigma.{*}]$",
+            "$\\sFmla{\\True}{!B}[\\sigma.{*}]$",
+            "$\\sFmla{\\False}{!A}[\\sigma]$",
+            "$\\sFmla{\\True}{!B}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The prose says that a true conditional branches to true antecedent or false consequent, while the immediately following table correctly branches to false antecedent or true consequent.",
+          "chosen_treatment": "தமிழ் உரை அட்டவணையிலுள்ள பொய்-A மற்றும் மெய்-B கிளைகளையே விளக்குகிறது.",
+          "alternatives_considered": "Changing the table to the reversed signs, which would be semantically unsound for a true conditional.",
+          "rationale": "At an accessible world, a true implication permits failure of the antecedent or truth of the consequent.",
+          "precise_review_question": "Do the prose and displayed true-conditional rule have identical signs on both branches?",
+          "location_needle": "SOURCE CORRECTION TA-IL-018"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

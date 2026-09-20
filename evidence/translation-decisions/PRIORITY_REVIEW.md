@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 476/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 500/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -421,6 +421,390 @@ Alternatives: வெற்றுக் கணத்தையும் மரவ�
 Please double-check: **should the corrected condition be promoted into the translated body in the next reader revision?**
 
 - `TA-OCC-ca1460f68dacf8fc` — OLP-0018 / `OLP-0018:EDITORIAL:relations-notes:L10`; source `content/sets-functions-relations/relations/trees.tex:115`; Tamil `translation/relations-notes.tex:10`; PDF page pending.
+
+## TA-IL-001 — The surrounding formula, the immediately preceding conditional and every later occurrence use !C, while this one prose parenthesis prints bare C.
+
+Chosen rendering: **தமிழ் ஆக்கம்~$g$ இன் இலக்கை~$!C$ இன் ஆக்கங்கள் என்று ஒரே குறியீட்டில் தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The passage explains the BHK construction for a schematic formula C, so the OpenLogic formula sigil is required.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0495 (checked_supports)
+
+Alternatives: Treating C as an object-language atom in this one parenthetical explanation.
+
+Please double-check: **does the parenthetical type of g use !C consistently with the displayed formula?**
+
+- `TA-OCC-d09c8cca596c4e85` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:99`; PDF page pending.
+
+## TA-IL-002 — The sentence declares h_1 with input M_1 but sends it to a pair containing M_2; the right injection h_2 correctly uses its own input M_2.
+
+Chosen rendering: **தமிழ் இடப்புற உட்செலுத்தல்~$h_1$ தனது உள்ளீடு~$M_1$ ஐயே~$\tuple{1,M_1}$ க்கு அனுப்புகிறது என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The tag 1 selects the A disjunct and therefore must carry the supplied construction of A.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0495 (checked_supports)
+
+Alternatives: Renaming the declared input to M_2, which would collapse the distinction between the two injections.
+
+Please double-check: **does h_1 inject M_1 while h_2 injects M_2?**
+
+- `TA-OCC-1cba28e6e72bdde8` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:138`; PDF page pending.
+
+## TA-IL-003 — The construction is the pair (N_1,N_2), and the next sentence identifies N_1 with A_1 and N_2 with A_2; only the opening conjunction repeats A_1.
+
+Chosen rendering: **தமிழ் இணைப்பை~$!A_1 \land !A_2$ என்று தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed rules and BHK pair clause concern two arbitrary conjuncts.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0496 (checked_supports)
+
+Alternatives: Changing N_2 and every later A_2 to A_1, which would no longer explain the general elimination rules shown above.
+
+Please double-check: **does the elimination explanation begin with the general conjunction A_1 and A_2?**
+
+- `TA-OCC-d92e1d3fac61b1c4` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:64`; PDF page pending.
+
+## TA-IL-004 — The source labels the global-satisfaction conclusion as the local clause and then tries to prove the local conclusion from the stronger global premise; this reverses the proposition's two displayed claims.
+
+Chosen rendering: **தமிழ் முதலில் $w$ இல் உள்ளூர் நிறைவிலிருந்து $w$ இல் முடிவை நிறுவி, பின்னர் அந்த முடிவை ஒவ்வொரு $u\in W$ க்கும் பயன்படுத்தி உலகளாவிய நிறைவை நிறுவுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The first claim is exactly the definition of semantic entailment at a world; universal application of that claim gives the second claim.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0501 (checked_supports)
+
+Alternatives: Preserving the reversed numbering and stronger premise, which would not prove the first displayed implication as stated.
+
+Please double-check: **does the proof use the local premise for item 1 and quantify over every world only for item 2?**
+
+- `TA-OCC-c69aff04801a711a` — OLP-0501 / `OLP-0501-S01`; source `content/intuitionistic-logic/semantics/semantic-notions.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/semantic-notions.tex:43`; PDF page pending.
+
+## TA-IL-005 — The source first says X may be written for a topology and then says X becomes a topology, although the preceding definition identifies the topology with the collection of open subsets and X with the underlying set.
+
+Chosen rendering: **தமிழ் $X$ ஐ அடிப்படைக் கணமாகவும், திறந்த கணங்களின் குடும்பத்தை இடவியலாகவும், இரண்டையும் சேர்த்து இடவியல் வெளி என்றும் வேறுபடுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Standard notation distinguishes a topology from the topological space consisting of its carrier and open-set family.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0502 (checked_supports)
+
+Alternatives: Using topology for both the family and the underlying set, which would erase the distinction made by the definition.
+
+Please double-check: **does the prose distinguish the topology from the topological space X?**
+
+- `TA-OCC-6d384deb70a50c57` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:37`; PDF page pending.
+
+## TA-IL-006 — The source uses strict inclusion for derivability and for the set-theoretic modus-ponens property, but equality is allowed in both cases; in particular A proves A.
+
+Chosen rendering: **தமிழ் இரு இடங்களிலும் $\subseteq$ ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Semantic consequence corresponds to ordinary inclusion, and the implication clause guarantees a subset relation that need not be proper.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0502 (checked_supports)
+
+Alternatives: Preserving strict inclusion, which would falsely deny reflexive derivability when the two extensions coincide.
+
+Please double-check: **do both containment claims allow equality?**
+
+- `TA-OCC-00545f0a2b062f47` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:92`; PDF page pending.
+
+## TA-IL-007 — The assumption case writes the satisfaction macro with three braced arguments although every semantic clause takes the model and formula, followed by the world argument.
+
+Chosen rendering: **தமிழ் நிறுவல் $!A_n$ ஐ $w$ இல் நேரடியாக நிறைவுசெய்யும் இரு-வாத மெய்ப்பாட்டு வடிவத்தைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: From A_n in Gamma and satisfaction of Gamma at w, the needed conclusion is satisfaction of A_n at w.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0504 (checked_supports)
+
+Alternatives: Treating Gamma as an undocumented middle macro argument, inconsistent with every other occurrence in the chapter.
+
+Please double-check: **does the assumption case conclude satisfaction of A_n at w with the standard macro arity?**
+
+- `TA-OCC-5d71e732da202133` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:45`; PDF page pending.
+
+## TA-IL-008 — The case has derivations of B and C but asks for consequence A and B, while its last sentence correctly establishes B and C.
+
+Chosen rendering: **தமிழ் முடிவு முன்னுரைகளுடன் ஒத்த $!B\land !C$ என்று தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Conjunction introduction combines exactly the two derived premise formulas.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0505 (checked_supports)
+
+Alternatives: Renaming every premise and the final satisfaction claims to A and B.
+
+Please double-check: **does the semantic goal of conjunction introduction use B and C throughout?**
+
+- `TA-OCC-48f8976a2930e110` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:48`; PDF page pending.
+
+## TA-IL-009 — After proving the left-introduction branch, the parallel right branch states only that Gamma entails C and omits the rule's disjunctive conclusion.
+
+Chosen rendering: **தமிழ் இரண்டாம் கிளையும் $\Gamma\Entails !B\lor !C$ என்ற அதே முடிவை அடைகிறது என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Soundness of right disjunction introduction must establish the conclusion of the displayed rule.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0505 (checked_supports)
+
+Alternatives: Leaving the rule application implicit after the premise consequence.
+
+Please double-check: **does the C-premise branch explicitly conclude the disjunction?**
+
+- `TA-OCC-0f32e4f0b336a7f3` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:70`; PDF page pending.
+
+## TA-IL-010 — The first semantic case closes math mode before [w], unlike the parallel C case and every satisfaction expression around it.
+
+Chosen rendering: **தமிழ் $[w]$ ஐ மெய்ப்பாட்டு வெளிப்பாட்டுக்குள்ளேயே வைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The case assumes B is true at the current world w.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0505 (checked_supports)
+
+Alternatives: Leaving [w] as visually adjacent prose, which breaks the formal expression.
+
+Please double-check: **is the world argument part of the B-satisfaction formula?**
+
+- `TA-OCC-95cc04864b08d764` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:95`; PDF page pending.
+
+## TA-IL-011 — The derivation premises correctly use Delta_i union singleton sets, but the semantic application later unions a set directly with a formula.
+
+Chosen rendering: **தமிழ் இரு இடங்களிலும் $\{!B\}$, $\{!C\}$ என்ற ஒருறுப்புக் கணங்களைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Semantic entailment takes a set of assumptions, so the discharged case assumption must be adjoined as a singleton set.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0505 (checked_supports)
+
+Alternatives: Treating formulas as sets or changing the earlier derivation premises.
+
+Please double-check: **do both case consequences adjoin singleton assumption sets?**
+
+- `TA-OCC-cbb2c433dd5344df` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:96`; PDF page pending.
+
+## TA-IL-012 — The source says each stage leaves one fewer qualifying disjunction without restricting to the finite initial segment before j; new lower-index disjunctions can become derivable as the sets grow.
+
+Chosen rendering: **தமிழ் j க்குக் கீழுள்ள முடிவுறு சுட்டெண்கள் ஒவ்வொன்றும் ஒருமுறை கையாளப்பட்ட பின் j கட்டாயம் தேர்ந்தெடுக்கப்படும் என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: For a fixed j, only finitely many smaller indices can preempt it, and a handled index cannot qualify again because one disjunct has been added.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0506 (checked_supports)
+
+Alternatives: Claiming a monotone decrease in the entire infinite set of pending disjunctions.
+
+Please double-check: **does the proof establish eventual treatment of j using only finitely many possible earlier preemptions?**
+
+- `TA-OCC-aef3bcfcd759f605` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:145`; PDF page pending.
+
+## TA-IL-013 — The source says to induct on sigma although the claim extends the one-step inclusion along the suffix taking sigma to sigma-prime.
+
+Chosen rendering: **தமிழ் தொடக்கத் தொடரை நிலையாக வைத்து பின்சேர்க்கையின் நீளம் மீது தொகுமுறை செய்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Repeated application of Delta(sigma) subset Delta(sigma.n) is controlled by the finite suffix length.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0507 (checked_supports)
+
+Alternatives: Induction on the initial sequence, which does not measure the number of one-step extensions.
+
+Please double-check: **is the induction parameter the number of extension steps?**
+
+- `TA-OCC-62e4764671fae064` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:70`; PDF page pending.
+
+## TA-IL-014 — The induction contains an explicitly empty negation case between the atomic and conjunction cases.
+
+Chosen rendering: **தமிழ் மறுப்பு நிபந்தனைவாக்கம் மற்றும் பொருத்தமின்மையால் வரையறுக்கப்பட்ட சுருக்கம் என்பதால் அந்த இரண்டு நேர்வுகளிலிருந்து முடிவு பின்தொடர்கிறது என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The syntax chapter defines negation as implication to falsity, so no independent semantic induction is required.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0508 (checked_supports)
+
+Alternatives: Leaving a visibly blank proof case or duplicating the full conditional argument.
+
+Please double-check: **does the negation item explain why the conditional and falsity cases cover it?**
+
+- `TA-OCC-2ed6e0344d2a3538` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:36`; PDF page pending.
+
+## TA-IL-015 — Worlds agreeing on atoms can have different accessible futures and therefore disagree on negations and implications, so quotienting only by atomic valuations does not support the claimed induction.
+
+Chosen rendering: **தமிழ் A இன் எல்லாத் துணைவாய்பாடுகளிலும் மெய்மை ஒத்திசையும் உலகங்களை அடையாளப்படுத்தி, அவற்றின் மெய்மைக் கணங்களின் உட்கண உறவை அணுகுறவாகப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: There are finitely many subformula truth profiles; persistence makes their inclusion a preorder, and the standard induction preserves every subformula including implication.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0510 (checked_supports)
+
+Alternatives: Retaining the atom-profile quotient; using a more elaborate two-relation filtration although subformula-theory inclusion suffices here.
+
+Please double-check: **are quotient worlds full subformula truth profiles, so the implication induction has enough information about accessible futures?**
+
+- `TA-OCC-9b1ebc50ea0be0cf` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:34`; PDF page pending.
+
+## TA-IL-016 — The exercise encodes the world inside the model argument twice and still quantifies only by propositional variables after the filtration is repaired.
+
+Chosen rendering: **தமிழ் மெய்ப்பாட்டை மாதிரி, வாய்பாடு, உலகம் என்ற நிலையான வடிவில் எழுதி ஒவ்வொரு துணைவாய்பாட்டுக்கும் நிறுவச் சொல்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The exercise must establish the same subformula truth lemma used in the corrected finite-model proof.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0510 (checked_supports)
+
+Alternatives: Preserving the malformed macro calls or asking only for atomic formulas, which would not finish the theorem.
+
+Please double-check: **does the exercise state world-indexed satisfaction on both models for every filtered subformula?**
+
+- `TA-OCC-f3dcba2016c88ae7` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:51`; PDF page pending.
+
+## TA-IL-017 — The paragraph begins by extending signed formulas for intuitionistic logic but then labels the same tableaux modal, apparently copied from the neighboring modal chapter.
+
+Chosen rendering: **தமிழ் இவ்வகை உள்ளுணர்வுவாத அட்டவணை மரங்களிலுள்ள வாய்பாடுகள் என்று சூழலோடு பொருந்துமாறு கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The stable part, chapter and file identifiers, surrounding prose and following rules all identify intuitionistic tableaux.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0512 (checked_supports)
+
+Alternatives: Calling the entire intuitionistic system modal solely because it uses Kripke-style prefixes.
+
+Please double-check: **does the prefix introduction stay within the intuitionistic-tableau context?**
+
+- `TA-OCC-70f3f74b842b1de8` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:44`; PDF page pending.
+
+## TA-IL-018 — The prose says that a true conditional branches to true antecedent or false consequent, while the immediately following table correctly branches to false antecedent or true consequent.
+
+Chosen rendering: **தமிழ் உரை அட்டவணையிலுள்ள பொய்-A மற்றும் மெய்-B கிளைகளையே விளக்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: At an accessible world, a true implication permits failure of the antecedent or truth of the consequent.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0513 (checked_supports)
+
+Alternatives: Changing the table to the reversed signs, which would be semantically unsound for a true conditional.
+
+Please double-check: **do the prose and displayed true-conditional rule have identical signs on both branches?**
+
+- `TA-OCC-fd0549da3cefaf32` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:98`; PDF page pending.
+
+## TA-IL-019 — The opening contrapositive calls M,w a countermodel but prints A as true there, which would satisfy rather than refute the target entailment.
+
+Chosen rendering: **தமிழ் முன்கூற்றுகள் மெய்யாகவும் முடிவு A பொய்யாகவும் இருக்கும் வழக்கமான எதிர்மாதிரியைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: A countermodel to B_1,...,B_n entails A must satisfy every B_i and falsify A at the same world.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0515 (checked_supports)
+
+Alternatives: Negating one of the premises instead, which would not refute entailment.
+
+Please double-check: **is A false in the countermodel used for the contrapositive?**
+
+- `TA-OCC-250eb1faa4190800` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:24`; PDF page pending.
+
+## TA-IL-020 — The proposition and satisfaction premise are indexed by sigma, but its first proof sentence drops the prefix from the signed formula.
+
+Chosen rendering: **தமிழ் மூடல் கூற்றிலுள்ள அதே முன்னொட்டு sigma வை நிறுவலிலும் வைத்துள்ளது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: This chapter defines satisfiability only for prefixed signed formulas.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0515 (checked_supports)
+
+Alternatives: Treating the unprefixed signed formula as a separate tableau language.
+
+Please double-check: **does true falsity carry sigma in both statement and proof?**
+
+- `TA-OCC-231d3078de7df21d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:85`; PDF page pending.
+
+## TA-IL-021 — The proof's accessibility expression omits f on sigma-star, and the monotonicity conclusion repeats the starting world instead of the accessible world; the preceding sentence is also grammatically interrupted.
+
+Chosen rendering: **தமிழ் பொருள்கோள் f ஐ இரு முன்னொட்டுகளுக்கும் பயன்படுத்தி, நீட்டித்த முன்னொட்டின் உலகில் A மெய் என்று முடிக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Persistence transports truth from f(sigma) to f(sigma-star), exactly the world where the false signed formula is interpreted.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0515 (checked_supports)
+
+Alternatives: Keeping the repeated starting-world conclusion, which cannot contradict falsity at the extension.
+
+Please double-check: **does monotonicity carry A to f(sigma-star)?**
+
+- `TA-OCC-08b6b5e9ee1ebab6` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:95`; PDF page pending.
+
+## TA-IL-022 — Every surrounding rule case and the rule table use a prefix, but the false-disjunction exercise case omits it.
+
+Chosen rendering: **தமிழ் முன்னுரை வாய்பாட்டில் sigma முன்னொட்டை மீட்டமைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The semantic branch interpretation requires a prefix for every signed formula.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0515 (checked_supports)
+
+Alternatives: Leaving the rule application without a world name in a prefixed tableau system.
+
+Please double-check: **is the false disjunction indexed by sigma?**
+
+- `TA-OCC-dab2275cb8bdc7af` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:160`; PDF page pending.
+
+## TA-IL-023 — The paragraph correctly names the false-conditional rule's two conclusions and constructs a witness for them, but both set expressions instead add a false copy of the conditional at the new prefix.
+
+Chosen rendering: **தமிழ் இரு கண வெளிப்பாடுகளிலும் புதிய முன்னொட்டில் மெய்-B மற்றும் பொய்-C ஆகியவற்றைச் சேர்க்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The selected accessible witness makes B true and C false, exactly satisfying the two signed formulas generated by the rule.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0515 (checked_supports)
+
+Alternatives: Changing the witness construction to satisfy a false conditional at the successor, which is neither the rule conclusion nor supported by the chosen world.
+
+Please double-check: **do both extended-branch sets contain true B and false C at sigma.n?**
+
+- `TA-OCC-30217a77acb604b4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:188`; PDF page pending.
+
+## TA-IL-024 — The corollary assumes Gamma proves A and aims to establish entailment, but its last line repeats the already assumed derivability claim.
+
+Chosen rendering: **தமிழ் முரணுக்குப் பின் துணைமுடிவின் இலக்கான பின்விளைவை முடிவாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Eliminating the supposed countermodel proves Gamma entails A.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0515 (checked_supports)
+
+Alternatives: Repeating derivability, which leaves the corollary unproved.
+
+Please double-check: **does the final line state entailment rather than repeat derivability?**
+
+- `TA-OCC-7b69605f46cedf1d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:234`; PDF page pending.
 
 ## TA-INC-001 — The source opens the explanatory parenthesis in prose but closes it before the math delimiter, placing a prose parenthesis inside the formula Gamma.
 
@@ -4181,6 +4565,13 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-d88295745de18498` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:52`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:243`; PDF page pending.
 - `TA-OCC-6def03b3108920b2` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:56`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:256`; PDF page pending.
 - `TA-OCC-27576bab2c6a0bd7` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:24`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:118`; PDF page pending.
+- `TA-OCC-0a57662ce074b988` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:52`; PDF page pending.
+- `TA-OCC-71e4b802eb69462a` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:29`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:31`; PDF page pending.
+- `TA-OCC-39d88e5f7d080030` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:40`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:42`; PDF page pending.
+- `TA-OCC-6cb50804ed8a7930` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:41`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:44`; PDF page pending.
+- `TA-OCC-bb7748468301366b` — OLP-0501 / `OLP-0501-S01`; source `content/intuitionistic-logic/semantics/semantic-notions.tex:15`; Tamil `translation/content/intuitionistic-logic/semantics/semantic-notions.tex:18`; PDF page pending.
+- `TA-OCC-463cf8b85294d83d` — OLP-0501 / `OLP-0501-S01`; source `content/intuitionistic-logic/semantics/semantic-notions.tex:16`; Tamil `translation/content/intuitionistic-logic/semantics/semantic-notions.tex:20`; PDF page pending.
+- `TA-OCC-4faaff8b32545964` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:69`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:74`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -4471,6 +4862,9 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-25f7cd02e61fc0d2` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:261`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:30`; PDF page pending.
 - `TA-OCC-c7766fb5e3961ed6` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:261`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:283`; PDF page pending.
 - `TA-OCC-763d59e5274e4306` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:25`; PDF page pending.
+- `TA-OCC-df9fbf7f4f6dd914` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:116`; PDF page pending.
+- `TA-OCC-ac98e33105cfd044` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:144`; PDF page pending.
+- `TA-OCC-c96e6bd85b5639cd` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:205`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:232`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -4774,6 +5168,16 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-f75e21bbac93b83d` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
 - `TA-OCC-9682ba2a301e04bb` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:15`; PDF page pending.
 - `TA-OCC-58770114039ce078` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:15`; PDF page pending.
+- `TA-OCC-96f90c5702a5eac0` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:24`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:12`; PDF page pending.
+- `TA-OCC-7184d84d68bd7b33` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:30`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:14`; PDF page pending.
+- `TA-OCC-31aad7462a671120` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:31`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:26`; PDF page pending.
+- `TA-OCC-817278005b0713c7` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:66`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:33`; PDF page pending.
+- `TA-OCC-51e37a439922f85d` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:66`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:34`; PDF page pending.
+- `TA-OCC-da2ea827f86d59c6` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:66`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:63`; PDF page pending.
+- `TA-OCC-b80ea6e4ccd44aed` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:12`; PDF page pending.
+- `TA-OCC-bb573e4ed564f332` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:38`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:15`; PDF page pending.
+- `TA-OCC-fe6b7732a37df76c` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:38`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:40`; PDF page pending.
+- `TA-OCC-7e78e59d1b41181e` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:38`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:40`; PDF page pending.
 
 ## TA-T020 — tuple / recursive definition
 
@@ -5254,6 +5658,12 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-975c03470a9ebc7e` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
 - `TA-OCC-fa0ef59d4987a3e8` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:3`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:121`; PDF page pending.
 - `TA-OCC-b67b3fa383d52272` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:296`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:304`; PDF page pending.
+- `TA-OCC-4b9c932ca0f26b6f` — OLP-0498 / `OLP-0498-S01`; source `content/intuitionistic-logic/semantics/semantics.tex:14`; Tamil `translation/content/intuitionistic-logic/semantics/semantics.tex:15`; PDF page pending.
+- `TA-OCC-37ba8b4f34f9ba5f` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:13`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:14`; PDF page pending.
+- `TA-OCC-761a032eb0352d94` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:16`; PDF page pending.
+- `TA-OCC-4d426b93df60d648` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:12`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:15`; PDF page pending.
+- `TA-OCC-f4922b66b8f9249d` — OLP-0511 / `OLP-0511-S01`; source `content/intuitionistic-logic/tableaux/tableaux.tex:12`; Tamil `translation/content/intuitionistic-logic/tableaux/tableaux.tex:14`; PDF page pending.
+- `TA-OCC-0683a750b9ab5ce3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:24`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:36`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -5697,6 +6107,14 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-1d6143b2e8c029e3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:32`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:24`; PDF page pending.
 - `TA-OCC-b9256d1fe156646c` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:32`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:31`; PDF page pending.
 - `TA-OCC-d33b500658cf27a2` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:50`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:14`; PDF page pending.
+- `TA-OCC-ef8b197f3ce10ec6` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:24`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:24`; PDF page pending.
+- `TA-OCC-05d5327bd073daee` — OLP-0500 / `OLP-0500-S01`; source `content/intuitionistic-logic/semantics/relational-models.tex:25`; Tamil `translation/content/intuitionistic-logic/semantics/relational-models.tex:27`; PDF page pending.
+- `TA-OCC-4213ded62de8e156` — OLP-0501 / `OLP-0501-S01`; source `content/intuitionistic-logic/semantics/semantic-notions.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/semantic-notions.tex:48`; PDF page pending.
+- `TA-OCC-8cb478bdd74c964f` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:81`; PDF page pending.
+- `TA-OCC-8c4c45cf02a065dc` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:14`; PDF page pending.
+- `TA-OCC-175c529329acc8f4` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:48`; PDF page pending.
+- `TA-OCC-342bf38456fe14c4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:34`; PDF page pending.
+- `TA-OCC-c66654dcc42a2217` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:35`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -6102,6 +6520,10 @@ Please double-check: **is “முன்வரிசை / பகுதி வ�
 - `TA-OCC-1dddf05034feb308` — OLP-0196 / `OLP-0196-S01`; source `content/model-theory/models-of-arithmetic/models-of-pa.tex:93`; Tamil `translation/content/model-theory/models-of-arithmetic/models-of-pa.tex:276`; PDF page pending.
 - `TA-OCC-775c9d2a1f1907e2` — OLP-0207 / `OLP-0207-S01`; source `content/model-theory/lindstrom/lindstrom-proof.tex:1`; Tamil `translation/content/model-theory/lindstrom/lindstrom-proof.tex:116`; PDF page pending.
 - `TA-OCC-520e4d54fae31dac` — OLP-0479 / `OLP-0479-S01`; source `content/applied-modal-logic/temporal-logic/properties-accessibility.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/properties-accessibility.tex:22`; PDF page pending.
+- `TA-OCC-f0d5abf116c7787f` — OLP-0500 / `OLP-0500-S01`; source `content/intuitionistic-logic/semantics/relational-models.tex:25`; Tamil `translation/content/intuitionistic-logic/semantics/relational-models.tex:26`; PDF page pending.
+- `TA-OCC-31b58d05c0fb6923` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:52`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:58`; PDF page pending.
+- `TA-OCC-d07d2bffceaec444` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:59`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:64`; PDF page pending.
+- `TA-OCC-30f3dc26ce964910` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:44`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:48`; PDF page pending.
 
 ## TA-T036 — tree / root / branch
 
@@ -6464,6 +6886,55 @@ Please double-check: **is “மரவுரு / வேர் / கிளை”
 - `TA-OCC-d73931d78f5a401e` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:87`; PDF page pending.
 - `TA-OCC-9b684bd0322a9222` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:15`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:16`; PDF page pending.
 - `TA-OCC-f53914f4338269e8` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:15`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:18`; PDF page pending.
+- `TA-OCC-c28fdc795b1d6968` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:13`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:14`; PDF page pending.
+- `TA-OCC-f985d2e59300462a` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:22`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:24`; PDF page pending.
+- `TA-OCC-c59d1a156514d9fc` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:22`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:26`; PDF page pending.
+- `TA-OCC-fefce85edb5a86ca` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:25`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:28`; PDF page pending.
+- `TA-OCC-3c616ac900b2de6e` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:26`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:57`; PDF page pending.
+- `TA-OCC-401627339624bb3d` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:63`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:65`; PDF page pending.
+- `TA-OCC-5de38e2dc7f06007` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:72`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:70`; PDF page pending.
+- `TA-OCC-da7a313a4c313946` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:74`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:74`; PDF page pending.
+- `TA-OCC-50b972062a314d3a` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:90`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:76`; PDF page pending.
+- `TA-OCC-a726ec2c0c1864be` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:93`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:95`; PDF page pending.
+- `TA-OCC-5c3b9e04b456c3d0` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:94`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:96`; PDF page pending.
+- `TA-OCC-ca52ab701b48d207` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:95`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:99`; PDF page pending.
+- `TA-OCC-ef7a8e9e6ebc5418` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:98`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:104`; PDF page pending.
+- `TA-OCC-fe33c77a950e085c` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:100`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:108`; PDF page pending.
+- `TA-OCC-992a0fd706144f05` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:103`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:108`; PDF page pending.
+- `TA-OCC-7b143e57fc594425` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:25`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:26`; PDF page pending.
+- `TA-OCC-c58e0274c03d6e51` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:27`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:29`; PDF page pending.
+- `TA-OCC-7e5676d49765def3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:27`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:30`; PDF page pending.
+- `TA-OCC-3f3646ba5217de8c` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:29`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:32`; PDF page pending.
+- `TA-OCC-bd8a3d6943be7ab1` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:91`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:105`; PDF page pending.
+- `TA-OCC-84b4bb019f682ca8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:93`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:107`; PDF page pending.
+- `TA-OCC-d57fe97bfbd098b0` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:101`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:116`; PDF page pending.
+- `TA-OCC-4bd7a587e8d8d0eb` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:102`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:117`; PDF page pending.
+- `TA-OCC-259c176a38fc7779` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:105`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-6b4aeb3dc7a39075` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:106`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:120`; PDF page pending.
+- `TA-OCC-3a6d6a1d690363bf` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:106`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:121`; PDF page pending.
+- `TA-OCC-a5304449c508d9e2` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:107`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:122`; PDF page pending.
+- `TA-OCC-1768a39e7a801355` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:108`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:124`; PDF page pending.
+- `TA-OCC-15703adef7a81e57` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:111`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:125`; PDF page pending.
+- `TA-OCC-d88da51d08d1d84f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:113`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:129`; PDF page pending.
+- `TA-OCC-c7937f28fe35a208` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:115`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:130`; PDF page pending.
+- `TA-OCC-e534c92f24944bfa` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:116`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:132`; PDF page pending.
+- `TA-OCC-3442c128ed7db2b3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:118`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:132`; PDF page pending.
+- `TA-OCC-3d6403aca641e6db` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:119`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:136`; PDF page pending.
+- `TA-OCC-ed24e51382fd7b1f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:121`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:137`; PDF page pending.
+- `TA-OCC-b4b1838d3eef9616` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:123`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:145`; PDF page pending.
+- `TA-OCC-313f01c50e0a39fc` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:129`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:148`; PDF page pending.
+- `TA-OCC-7ce5a9603a150e31` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:131`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:150`; PDF page pending.
+- `TA-OCC-5ddad97a9a9fa97e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:133`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:158`; PDF page pending.
+- `TA-OCC-b361c7f62c3f94d9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:140`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:162`; PDF page pending.
+- `TA-OCC-a4e87c57c84dc108` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:142`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:165`; PDF page pending.
+- `TA-OCC-4ce3e0bfd226f51e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:165`; PDF page pending.
+- `TA-OCC-7e007d5ffb8c7085` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:146`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:193`; PDF page pending.
+- `TA-OCC-437266cd3034e9c8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:168`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:194`; PDF page pending.
+- `TA-OCC-f1174b1de0f4c85a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:170`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:195`; PDF page pending.
+- `TA-OCC-9d798075ec02d754` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:176`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:200`; PDF page pending.
+- `TA-OCC-bc3a2c44095c2e4b` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:177`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:202`; PDF page pending.
+- `TA-OCC-aa03fe40ceb338e2` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:179`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:204`; PDF page pending.
+- `TA-OCC-4cde27f4114ebb96` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:181`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:207`; PDF page pending.
 
 ## TA-T037 — least element / well-order / chain
 
@@ -9168,6 +9639,206 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-4d226c68139365f7` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:99`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:102`; PDF page pending.
 - `TA-OCC-ae762209d51f968d` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:115`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:118`; PDF page pending.
 - `TA-OCC-996d731421c3a206` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:122`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:127`; PDF page pending.
+- `TA-OCC-df963c454aa49259` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:83`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:77`; PDF page pending.
+- `TA-OCC-bffb8040db90cdc6` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:83`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:78`; PDF page pending.
+- `TA-OCC-ac9d1b93e333670a` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:83`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:82`; PDF page pending.
+- `TA-OCC-475e33a64fdbf84e` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:25`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:27`; PDF page pending.
+- `TA-OCC-d42ce977c2722b94` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:25`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:41`; PDF page pending.
+- `TA-OCC-ff55a5e2684e4a46` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:39`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:43`; PDF page pending.
+- `TA-OCC-8fa832b05a05861d` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:42`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:46`; PDF page pending.
+- `TA-OCC-715918b49c52278d` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:45`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:49`; PDF page pending.
+- `TA-OCC-7e3159bf64435752` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:47`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:51`; PDF page pending.
+- `TA-OCC-0e2e14ac2c6a4404` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:48`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:52`; PDF page pending.
+- `TA-OCC-a0599bd9fa8a3ed5` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:50`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:54`; PDF page pending.
+- `TA-OCC-b110c6c3ad5b9c77` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:51`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:55`; PDF page pending.
+- `TA-OCC-906d83fb6b4ae68c` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:53`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:57`; PDF page pending.
+- `TA-OCC-544c4dc9eb78eaac` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:54`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:58`; PDF page pending.
+- `TA-OCC-18c0ca84cb95d469` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:56`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:60`; PDF page pending.
+- `TA-OCC-fd4a6e6b395d74aa` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:39`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:67`; PDF page pending.
+- `TA-OCC-e3213f6c3e5d3995` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:23`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:23`; PDF page pending.
+- `TA-OCC-cdd77870fcc481b9` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:23`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:24`; PDF page pending.
+- `TA-OCC-0ff9fd9f4e29abf7` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:155`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:153`; PDF page pending.
+- `TA-OCC-2e6d35dda042edcf` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:156`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:156`; PDF page pending.
+- `TA-OCC-722be936c07b39c5` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:14`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:12`; PDF page pending.
+- `TA-OCC-30fef8da70d536a9` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:19`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:14`; PDF page pending.
+- `TA-OCC-e3f17aee9d4463df` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:14`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:15`; PDF page pending.
+- `TA-OCC-d7dced036c70e93e` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:20`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:20`; PDF page pending.
+- `TA-OCC-1c0c997ac709771f` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:19`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:20`; PDF page pending.
+- `TA-OCC-528def73639873a3` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:20`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:22`; PDF page pending.
+- `TA-OCC-798858a7d2214741` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:23`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:25`; PDF page pending.
+- `TA-OCC-7b73c8d4473aef70` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:28`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:30`; PDF page pending.
+- `TA-OCC-ff9daca4b9b8ee45` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:80`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:82`; PDF page pending.
+- `TA-OCC-fab74f5060482171` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:135`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:136`; PDF page pending.
+- `TA-OCC-1568bd68f44820fe` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:23`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:243`; PDF page pending.
+- `TA-OCC-4f974cd69090845b` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:244`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:244`; PDF page pending.
+- `TA-OCC-fa5968b5b157359e` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:245`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:245`; PDF page pending.
+- `TA-OCC-983c1521688d346d` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:249`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:249`; PDF page pending.
+- `TA-OCC-41eed97edb3dd4cd` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:249`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:250`; PDF page pending.
+- `TA-OCC-46c02e618cfd9de0` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:13`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:15`; PDF page pending.
+- `TA-OCC-6c862a995bfd1ac5` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:14`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:16`; PDF page pending.
+- `TA-OCC-d00bfa7fa424ba11` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:18`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:20`; PDF page pending.
+- `TA-OCC-f049ddd52694ae60` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:19`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:21`; PDF page pending.
+- `TA-OCC-eb4cb3553f860401` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:20`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:21`; PDF page pending.
+- `TA-OCC-e333ae177ec89a74` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:32`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:35`; PDF page pending.
+- `TA-OCC-af7e34dcf8b7d7b4` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:48`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:51`; PDF page pending.
+- `TA-OCC-2ab9198a44f08304` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:47`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:52`; PDF page pending.
+- `TA-OCC-f803d50dd8c8f6c2` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:53`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:57`; PDF page pending.
+- `TA-OCC-6859f8291343347c` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:53`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:58`; PDF page pending.
+- `TA-OCC-98597a40107ef8ca` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:59`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:63`; PDF page pending.
+- `TA-OCC-98dec3223ebac285` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:67`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:71`; PDF page pending.
+- `TA-OCC-39ceaac8034a9fd5` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:67`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:72`; PDF page pending.
+- `TA-OCC-e87b9ed7926da9c3` — OLP-0498 / `OLP-0498-S01`; source `content/intuitionistic-logic/semantics/semantics.tex:14`; Tamil `translation/content/intuitionistic-logic/semantics/semantics.tex:14`; PDF page pending.
+- `TA-OCC-109728e1abd517f5` — OLP-0498 / `OLP-0498-S01`; source `content/intuitionistic-logic/semantics/semantics.tex:14`; Tamil `translation/content/intuitionistic-logic/semantics/semantics.tex:15`; PDF page pending.
+- `TA-OCC-98c810861bd268db` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:61`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:65`; PDF page pending.
+- `TA-OCC-2b4ea6a34bfdf616` — OLP-0500 / `OLP-0500-S01`; source `content/intuitionistic-logic/semantics/relational-models.tex:15`; Tamil `translation/content/intuitionistic-logic/semantics/relational-models.tex:15`; PDF page pending.
+- `TA-OCC-3aa4677e0280c9c5` — OLP-0500 / `OLP-0500-S01`; source `content/intuitionistic-logic/semantics/relational-models.tex:50`; Tamil `translation/content/intuitionistic-logic/semantics/relational-models.tex:55`; PDF page pending.
+- `TA-OCC-745d7bd1146b2acf` — OLP-0501 / `OLP-0501-S01`; source `content/intuitionistic-logic/semantics/semantic-notions.tex:17`; Tamil `translation/content/intuitionistic-logic/semantics/semantic-notions.tex:21`; PDF page pending.
+- `TA-OCC-062f75ec80286b2d` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:18`; PDF page pending.
+- `TA-OCC-efac0b299ebf9078` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:83`; PDF page pending.
+- `TA-OCC-2fb5849621edd066` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:86`; PDF page pending.
+- `TA-OCC-24c123b7c9fec18f` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:90`; PDF page pending.
+- `TA-OCC-032945940a953dca` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:9`; PDF page pending.
+- `TA-OCC-21de0efbc6056dc6` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:8`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:13`; PDF page pending.
+- `TA-OCC-90369623fdf88a02` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:14`; PDF page pending.
+- `TA-OCC-afeebbbda4a89722` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:27`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:27`; PDF page pending.
+- `TA-OCC-1d3fdb0b59e0288b` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:26`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:27`; PDF page pending.
+- `TA-OCC-b83e199cd2daf3fa` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:28`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:29`; PDF page pending.
+- `TA-OCC-6cbe3d59cba54340` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:30`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:31`; PDF page pending.
+- `TA-OCC-5f0556b2eaef9024` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:26`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:32`; PDF page pending.
+- `TA-OCC-4b5116aeb8a5c05f` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:32`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:34`; PDF page pending.
+- `TA-OCC-0f2df32c3b2d2add` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:33`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:35`; PDF page pending.
+- `TA-OCC-122de846c4ce8766` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:45`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:48`; PDF page pending.
+- `TA-OCC-9e4ef61f7825425b` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:15`; PDF page pending.
+- `TA-OCC-de93e0190312c82f` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:16`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:16`; PDF page pending.
+- `TA-OCC-00ddf3bb4cbfe0d0` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:25`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:26`; PDF page pending.
+- `TA-OCC-69b9a9147c88a213` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:29`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:30`; PDF page pending.
+- `TA-OCC-a3fa9e77f15c16c7` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:33`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:35`; PDF page pending.
+- `TA-OCC-2bd4f398ed057d1c` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:34`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:39`; PDF page pending.
+- `TA-OCC-dd41fb3712448301` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:40`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:41`; PDF page pending.
+- `TA-OCC-7bf5ac11debfcf8f` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:46`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:50`; PDF page pending.
+- `TA-OCC-ba6627832708630d` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:47`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:52`; PDF page pending.
+- `TA-OCC-4fd149cc6575ed9c` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:56`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:61`; PDF page pending.
+- `TA-OCC-ee552ac952c620cd` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:58`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:63`; PDF page pending.
+- `TA-OCC-955bd20fdfb5be08` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:66`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:72`; PDF page pending.
+- `TA-OCC-c35d1dc261bdc18d` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:67`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:73`; PDF page pending.
+- `TA-OCC-a28c7ff9e7bf5ca2` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:88`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:98`; PDF page pending.
+- `TA-OCC-2b5e74e28c4ca6ce` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:89`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:100`; PDF page pending.
+- `TA-OCC-eee5c67eaf558fe7` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:102`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:112`; PDF page pending.
+- `TA-OCC-ced90b2cf43f96ed` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:104`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:114`; PDF page pending.
+- `TA-OCC-a1cbfa7249b5d496` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:120`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:130`; PDF page pending.
+- `TA-OCC-535c832cfcf0ee28` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:122`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:131`; PDF page pending.
+- `TA-OCC-eb3ec4e07c1b206c` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:131`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:143`; PDF page pending.
+- `TA-OCC-369bba1f80d1319b` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:132`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:144`; PDF page pending.
+- `TA-OCC-f81b23e01ffa6a7e` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:149`; PDF page pending.
+- `TA-OCC-7e477d2835067bac` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:144`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:157`; PDF page pending.
+- `TA-OCC-8b5f4e75b5945865` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:17`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:14`; PDF page pending.
+- `TA-OCC-09ea7fc054e5f3cc` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:17`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:19`; PDF page pending.
+- `TA-OCC-6807d953c264e279` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:18`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:19`; PDF page pending.
+- `TA-OCC-648bbe490b89b2ff` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:26`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:27`; PDF page pending.
+- `TA-OCC-4b292c5338ff0fbb` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:18`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:34`; PDF page pending.
+- `TA-OCC-fb656822411fcb73` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:35`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:38`; PDF page pending.
+- `TA-OCC-b71f2c7660d77988` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:52`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:58`; PDF page pending.
+- `TA-OCC-9c30d632ff4fc6ef` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:53`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:59`; PDF page pending.
+- `TA-OCC-cda800edca7b1825` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:55`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:61`; PDF page pending.
+- `TA-OCC-f2425a793651c50c` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:56`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:64`; PDF page pending.
+- `TA-OCC-9706c55ab562e045` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:26`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:120`; PDF page pending.
+- `TA-OCC-dae20e0508ce9d18` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:35`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:134`; PDF page pending.
+- `TA-OCC-676b25a23fa59205` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:52`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:151`; PDF page pending.
+- `TA-OCC-6a999a904a640ffa` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:53`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:156`; PDF page pending.
+- `TA-OCC-046a209df36aadfb` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:25`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:27`; PDF page pending.
+- `TA-OCC-0e3b9262bc7a01d6` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:26`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:29`; PDF page pending.
+- `TA-OCC-8778a4c3165b0418` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:40`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:43`; PDF page pending.
+- `TA-OCC-a7b92a9547818deb` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:41`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:45`; PDF page pending.
+- `TA-OCC-cfc3a9a0c8d2d191` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:25`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:65`; PDF page pending.
+- `TA-OCC-69488d98411064dc` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; PDF page pending.
+- `TA-OCC-108f826f723f32fa` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:15`; PDF page pending.
+- `TA-OCC-793f7c31582aaffe` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:12`; PDF page pending.
+- `TA-OCC-88b3d09473c30a27` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:3`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:41`; PDF page pending.
+- `TA-OCC-f4a782779d5511f9` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:35`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:15`; PDF page pending.
+- `TA-OCC-fa8e2ad00620448f` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:35`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:26`; PDF page pending.
+- `TA-OCC-7b515d5e8f4ca233` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:41`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:36`; PDF page pending.
+- `TA-OCC-2b93ca2a8cadda99` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:41`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:48`; PDF page pending.
+- `TA-OCC-20f2e0b4b7ffefc9` — OLP-0511 / `OLP-0511-S01`; source `content/intuitionistic-logic/tableaux/tableaux.tex:12`; Tamil `translation/content/intuitionistic-logic/tableaux/tableaux.tex:13`; PDF page pending.
+- `TA-OCC-e5ff22100eeacaf1` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:20`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:15`; PDF page pending.
+- `TA-OCC-ff52ae29c8d23e27` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:21`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:21`; PDF page pending.
+- `TA-OCC-04b925ced8948b49` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:23`; PDF page pending.
+- `TA-OCC-7bb0bb147a9c91de` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:24`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:25`; PDF page pending.
+- `TA-OCC-5410b7b009334269` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:25`; PDF page pending.
+- `TA-OCC-3aa4761f4a40dbdb` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:20`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:25`; PDF page pending.
+- `TA-OCC-d347438fbbf72b08` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:29`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:26`; PDF page pending.
+- `TA-OCC-eebcc884dfff6499` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:39`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:30`; PDF page pending.
+- `TA-OCC-c7843e44afa5c608` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:21`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:31`; PDF page pending.
+- `TA-OCC-cb190783eb51ab65` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:28`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:31`; PDF page pending.
+- `TA-OCC-e9bdda6e7745eead` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:51`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:40`; PDF page pending.
+- `TA-OCC-cb75d97b6b32f19c` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:40`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:43`; PDF page pending.
+- `TA-OCC-08a03774f6039664` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:51`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:54`; PDF page pending.
+- `TA-OCC-5490866d5292d39f` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:52`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:55`; PDF page pending.
+- `TA-OCC-728f99c51093caf3` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:55`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:57`; PDF page pending.
+- `TA-OCC-b7f52ea7938b884f` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:58`; PDF page pending.
+- `TA-OCC-bdc0d50b0ddeaab7` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:15`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:16`; PDF page pending.
+- `TA-OCC-6d08e2fa1fe552eb` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:16`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:18`; PDF page pending.
+- `TA-OCC-ab8130ebe0609fb2` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:59`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:61`; PDF page pending.
+- `TA-OCC-33c48880387a1d35` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:61`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:62`; PDF page pending.
+- `TA-OCC-1066e410842e3230` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:67`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:65`; PDF page pending.
+- `TA-OCC-0649439c63ddb014` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:15`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:103`; PDF page pending.
+- `TA-OCC-8e40efc10a1166ae` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:25`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:26`; PDF page pending.
+- `TA-OCC-8c5bb12e642c0d1a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:25`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:27`; PDF page pending.
+- `TA-OCC-d01f5f2c0084abc6` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:29`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:27`; PDF page pending.
+- `TA-OCC-d4794af617ee1a45` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:57`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:28`; PDF page pending.
+- `TA-OCC-52241f75c00caf35` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:61`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:30`; PDF page pending.
+- `TA-OCC-8d6287169789c7c6` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:69`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:31`; PDF page pending.
+- `TA-OCC-5df9bd1ca50681f8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:29`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:31`; PDF page pending.
+- `TA-OCC-eccb4e2fde2048c4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:92`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:35`; PDF page pending.
+- `TA-OCC-10979dfa18d13e08` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:106`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:50`; PDF page pending.
+- `TA-OCC-c5e3009dc98a2a95` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:113`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:52`; PDF page pending.
+- `TA-OCC-6623519be065d9ec` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:57`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:62`; PDF page pending.
+- `TA-OCC-d8153d23b04591c9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:61`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:65`; PDF page pending.
+- `TA-OCC-a9985c4ecf2290fc` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:114`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:66`; PDF page pending.
+- `TA-OCC-2e8b7f7a46abc6b6` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:123`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:67`; PDF page pending.
+- `TA-OCC-df522b3f1d143919` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:133`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:70`; PDF page pending.
+- `TA-OCC-80ca352178caea36` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:69`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:74`; PDF page pending.
+- `TA-OCC-8af0c0282bba54bf` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:78`; PDF page pending.
+- `TA-OCC-3b40c65ee2c76239` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:84`; PDF page pending.
+- `TA-OCC-64b751b13edc6051` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:87`; PDF page pending.
+- `TA-OCC-e13020c4686bc4ea` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:87`; PDF page pending.
+- `TA-OCC-c479fa320c9adbdd` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:101`; PDF page pending.
+- `TA-OCC-89b8ef010f1dcf32` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:92`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:105`; PDF page pending.
+- `TA-OCC-98f3d717d3fe36da` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:106`; PDF page pending.
+- `TA-OCC-b27cf3bae14fb978` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:106`; PDF page pending.
+- `TA-OCC-56aea6e0f9ee1e6c` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:107`; PDF page pending.
+- `TA-OCC-6a0ab72c712cb9d9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:108`; PDF page pending.
+- `TA-OCC-db99d3e6c01a9159` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:110`; PDF page pending.
+- `TA-OCC-ad439c1b10a114fc` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:111`; PDF page pending.
+- `TA-OCC-1464f7ff7acb6c88` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:114`; PDF page pending.
+- `TA-OCC-8d39c7cf08afc353` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:115`; PDF page pending.
+- `TA-OCC-5faa85488cc951ef` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:116`; PDF page pending.
+- `TA-OCC-551971ca1ac57e6e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:117`; PDF page pending.
+- `TA-OCC-150e8fa0ee55989d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-037ab5c5e4d6339d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-fa2c128647b837b2` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:106`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:121`; PDF page pending.
+- `TA-OCC-072bb21b2918e3e9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:122`; PDF page pending.
+- `TA-OCC-a415a52699ab62a8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:123`; PDF page pending.
+- `TA-OCC-c48e2690b936e86e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:124`; PDF page pending.
+- `TA-OCC-f08f0b8e1ffabaab` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:125`; PDF page pending.
+- `TA-OCC-6ca1965d6127a400` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:113`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:127`; PDF page pending.
+- `TA-OCC-177a53ba46f04197` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:114`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:128`; PDF page pending.
+- `TA-OCC-34a0aaef47ddd933` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:131`; PDF page pending.
+- `TA-OCC-14aab7c1604f720a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:133`; PDF page pending.
+- `TA-OCC-31d6fba114788f56` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:123`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:138`; PDF page pending.
+- `TA-OCC-3914a69b3c2e6ec4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:143`; PDF page pending.
+- `TA-OCC-6f76ab803918c849` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:133`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:150`; PDF page pending.
+- `TA-OCC-5ca0cd4f636e5014` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:156`; PDF page pending.
+- `TA-OCC-e5cfebf4568b6c94` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:164`; PDF page pending.
+- `TA-OCC-e63ed53144d3b442` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:168`; PDF page pending.
+- `TA-OCC-59d1013e5f259c04` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:172`; PDF page pending.
+- `TA-OCC-96664fe13fefed5f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:187`; PDF page pending.
+- `TA-OCC-e24ce1d850796985` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:200`; PDF page pending.
+- `TA-OCC-25cd138e27410f9d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:200`; PDF page pending.
+- `TA-OCC-0ad40a5b39589bd2` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:201`; PDF page pending.
+- `TA-OCC-d38cead9933e99c8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:202`; PDF page pending.
+- `TA-OCC-df5ec1e24d14bb39` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:213`; PDF page pending.
+- `TA-OCC-06211187a7353d52` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:230`; PDF page pending.
+- `TA-OCC-ba9be8db3dace7f0` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:232`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -9908,6 +10579,47 @@ Please double-check: **is “காண்டோரின் வளைவழி /
 - `TA-OCC-bb5e653f7e8d480d` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:42`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:188`; PDF page pending.
 - `TA-OCC-746c89dece9e3f81` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:203`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:212`; PDF page pending.
 - `TA-OCC-2c584458d5f487c4` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:73`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:217`; PDF page pending.
+- `TA-OCC-7a049b9bb2079660` — OLP-0511 / `OLP-0511-S01`; source `content/intuitionistic-logic/tableaux/tableaux.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/tableaux.tex:12`; PDF page pending.
+- `TA-OCC-502862b659a282ad` — OLP-0511 / `OLP-0511-S01`; source `content/intuitionistic-logic/tableaux/tableaux.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/tableaux.tex:14`; PDF page pending.
+- `TA-OCC-4b02c44b2dac6403` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:13`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:14`; PDF page pending.
+- `TA-OCC-bc4edc85868340dc` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:19`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:20`; PDF page pending.
+- `TA-OCC-e3d6844a1cf2c61c` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:27`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:28`; PDF page pending.
+- `TA-OCC-ddd138bdb7c873f0` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:27`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:29`; PDF page pending.
+- `TA-OCC-4d822bf2ea5dad66` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:28`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:29`; PDF page pending.
+- `TA-OCC-204a8144c3b13558` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:29`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:30`; PDF page pending.
+- `TA-OCC-8ced21a756bddffc` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:33`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:34`; PDF page pending.
+- `TA-OCC-040eb5e3475d41f9` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:41`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:42`; PDF page pending.
+- `TA-OCC-be3ed61d5ef21213` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:55`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:57`; PDF page pending.
+- `TA-OCC-76a51651b3d9b3f4` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:15`; PDF page pending.
+- `TA-OCC-39fce664b3ecf51e` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:54`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:56`; PDF page pending.
+- `TA-OCC-8951973e72d2d8a0` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:58`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:60`; PDF page pending.
+- `TA-OCC-300297a2d4b604b3` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:77`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:79`; PDF page pending.
+- `TA-OCC-37e6f1efc6140c94` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:86`; PDF page pending.
+- `TA-OCC-6c4370ae359e16f5` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:141`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:148`; PDF page pending.
+- `TA-OCC-af8924d37485bf4d` — OLP-0514 / `OLP-0514-S01`; source `content/intuitionistic-logic/tableaux/proofs.tex:48`; Tamil `translation/content/intuitionistic-logic/tableaux/proofs.tex:16`; PDF page pending.
+- `TA-OCC-760cd64bf2c9d228` — OLP-0514 / `OLP-0514-S01`; source `content/intuitionistic-logic/tableaux/proofs.tex:48`; Tamil `translation/content/intuitionistic-logic/tableaux/proofs.tex:49`; PDF page pending.
+- `TA-OCC-a71283f1951f738a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:15`; PDF page pending.
+- `TA-OCC-d508b23804982185` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:19`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:19`; PDF page pending.
+- `TA-OCC-ac0686cd4f7b56a8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:22`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:23`; PDF page pending.
+- `TA-OCC-7872d61e40f9e0b6` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:25`; PDF page pending.
+- `TA-OCC-ca059e38aae70de1` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:25`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:26`; PDF page pending.
+- `TA-OCC-8fba13fa81973f22` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:28`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:31`; PDF page pending.
+- `TA-OCC-904a490de65dd894` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:87`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:100`; PDF page pending.
+- `TA-OCC-72226d4cb1e1d7e0` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:91`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:105`; PDF page pending.
+- `TA-OCC-03fc20e426b7174b` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:92`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:108`; PDF page pending.
+- `TA-OCC-bed534c0dac82e8b` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:95`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:110`; PDF page pending.
+- `TA-OCC-ce7dd03af08cb4ee` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:96`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:111`; PDF page pending.
+- `TA-OCC-ade6ddf81bcdce9c` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:97`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:113`; PDF page pending.
+- `TA-OCC-2330f8602322e24d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:98`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:114`; PDF page pending.
+- `TA-OCC-690e21a2b98a58e5` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:100`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:115`; PDF page pending.
+- `TA-OCC-187e724b7e616275` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:100`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:116`; PDF page pending.
+- `TA-OCC-da7b06a797cd9576` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:104`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-4a8e5ed4c7244cec` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:104`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:120`; PDF page pending.
+- `TA-OCC-9e7f14cbb0af3861` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:107`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:123`; PDF page pending.
+- `TA-OCC-a4749623bf023e31` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:109`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:123`; PDF page pending.
+- `TA-OCC-f0d96fa468b43fb3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:124`; PDF page pending.
+- `TA-OCC-62d941d0c2108c65` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:198`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:225`; PDF page pending.
+- `TA-OCC-f61e9f29bdc5e80d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:204`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:231`; PDF page pending.
 
 ## TA-T061 — pairing function / encode / code / decode
 
@@ -10544,6 +11256,7 @@ Please double-check: **is “மெய்மதிப்பு ஒதுக்�
 - `TA-OCC-c5f89428c9f4eb12` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:69`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:75`; PDF page pending.
 - `TA-OCC-159919c246a0d15d` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:31`; PDF page pending.
 - `TA-OCC-a80cd3d5c1fa256b` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:77`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:82`; PDF page pending.
+- `TA-OCC-bad9b2de627ce90c` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:15`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:16`; PDF page pending.
 
 ## TA-T083 — satisfaction / satisfiable / unsatisfiable
 
@@ -10732,6 +11445,40 @@ Please double-check: **is “நிறைவுறுத்தல் / நிற
 - `TA-OCC-3121d42977c97ea9` — OLP-0466 / `OLP-0466-S01`; source `content/normal-modal-logic/tableaux/more-soundness.tex:14`; Tamil `translation/content/normal-modal-logic/tableaux/more-soundness.tex:15`; PDF page pending.
 - `TA-OCC-d97c2ac96ce132e4` — OLP-0466 / `OLP-0466-S01`; source `content/normal-modal-logic/tableaux/more-soundness.tex:15`; Tamil `translation/content/normal-modal-logic/tableaux/more-soundness.tex:16`; PDF page pending.
 - `TA-OCC-4fb53042b77d64a2` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:85`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:95`; PDF page pending.
+- `TA-OCC-88fa0a9a62faf4f4` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:30`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:31`; PDF page pending.
+- `TA-OCC-9d4021bae13a895f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:24`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:26`; PDF page pending.
+- `TA-OCC-444f186b69a7616b` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:26`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:27`; PDF page pending.
+- `TA-OCC-b275263024095bd9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:27`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:28`; PDF page pending.
+- `TA-OCC-b3b1e0b827c9217f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:28`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:30`; PDF page pending.
+- `TA-OCC-176d15dfd235a7e4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:28`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:31`; PDF page pending.
+- `TA-OCC-d2a471a24864dbcd` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:32`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:35`; PDF page pending.
+- `TA-OCC-1bc8b8e64a77a501` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:62`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:70`; PDF page pending.
+- `TA-OCC-92bd7cbe678ade5d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:70`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:78`; PDF page pending.
+- `TA-OCC-4f164b00d5d1d117` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:75`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:84`; PDF page pending.
+- `TA-OCC-7b9e112fd8c2c172` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:87`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:101`; PDF page pending.
+- `TA-OCC-4debb9735ed69b62` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:91`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:106`; PDF page pending.
+- `TA-OCC-8125c6d8e1a0f0c6` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:92`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:106`; PDF page pending.
+- `TA-OCC-6c9c310ab38896a4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:93`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:107`; PDF page pending.
+- `TA-OCC-e260c5b317334cb8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:93`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:108`; PDF page pending.
+- `TA-OCC-4f5579ee4fa9e6e3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:95`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:110`; PDF page pending.
+- `TA-OCC-09391b876a9d411d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:96`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:111`; PDF page pending.
+- `TA-OCC-1faa707fb46cb64c` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:99`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:114`; PDF page pending.
+- `TA-OCC-c03e89e3e0b7dce7` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:100`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:115`; PDF page pending.
+- `TA-OCC-0d88ed312834a158` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:101`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:116`; PDF page pending.
+- `TA-OCC-f507422a3ea8d717` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:102`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:117`; PDF page pending.
+- `TA-OCC-f51ae5c9b3eef0de` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:104`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-d18a0faf203c789c` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:105`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-ce3ded6b387d897d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:107`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:122`; PDF page pending.
+- `TA-OCC-b3e8d9fc8ce2484a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:108`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:123`; PDF page pending.
+- `TA-OCC-d9616c72a2e22bdb` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:109`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:124`; PDF page pending.
+- `TA-OCC-ca85d0ab245c8353` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:111`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:125`; PDF page pending.
+- `TA-OCC-55a5804c569708b9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:117`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:131`; PDF page pending.
+- `TA-OCC-36fcb3948813ab34` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:119`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:133`; PDF page pending.
+- `TA-OCC-0555027767422174` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:148`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:168`; PDF page pending.
+- `TA-OCC-d8e821b112df8c4e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:152`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:172`; PDF page pending.
+- `TA-OCC-26ee71c431617172` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:176`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:200`; PDF page pending.
+- `TA-OCC-643218daea8aa6d7` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:178`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:202`; PDF page pending.
+- `TA-OCC-2c015523b8cc7d5f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:204`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:232`; PDF page pending.
 
 ## TA-T085 — semantic entailment / semantic notions / semantic deduction theorem
 
@@ -11491,6 +12238,56 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-ef167911bc063de9` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:52`; PDF page pending.
 - `TA-OCC-30075c77fb8899aa` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:69`; PDF page pending.
 - `TA-OCC-f65fdef7955bfe94` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:18`; PDF page pending.
+- `TA-OCC-985eb27340ec7797` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:22`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:22`; PDF page pending.
+- `TA-OCC-de42a583f6cc425e` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:23`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:23`; PDF page pending.
+- `TA-OCC-7032f27c74ac2e66` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:24`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:25`; PDF page pending.
+- `TA-OCC-1c340136e59bdc87` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:30`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:31`; PDF page pending.
+- `TA-OCC-ee6fcbc7992d53b9` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:119`; PDF page pending.
+- `TA-OCC-e35f14bbdc9740b5` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:17`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:20`; PDF page pending.
+- `TA-OCC-669a9a35ab50e9f5` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:17`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:21`; PDF page pending.
+- `TA-OCC-fc8840c41ac699c8` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:19`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:24`; PDF page pending.
+- `TA-OCC-4d3b2e2cade579b1` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:21`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:29`; PDF page pending.
+- `TA-OCC-8ab1db9e50eb492e` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:23`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:29`; PDF page pending.
+- `TA-OCC-dd05225951e6ff76` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:28`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:82`; PDF page pending.
+- `TA-OCC-98d4b51985ffe8b2` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:29`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:86`; PDF page pending.
+- `TA-OCC-c4c2c1f4c9360af8` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:67`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:135`; PDF page pending.
+- `TA-OCC-6f548541b0b01e72` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:21`; PDF page pending.
+- `TA-OCC-36a2ee523887dad3` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:26`; PDF page pending.
+- `TA-OCC-912d2a520a0995a4` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:13`; PDF page pending.
+- `TA-OCC-9468843449a2566a` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:15`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:15`; PDF page pending.
+- `TA-OCC-7fdb5d7e22580bc4` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:15`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:16`; PDF page pending.
+- `TA-OCC-6c166268a6e05d63` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:29`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:30`; PDF page pending.
+- `TA-OCC-def2daa9868bb93f` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:34`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:36`; PDF page pending.
+- `TA-OCC-e9d32f99325cb7de` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:35`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:38`; PDF page pending.
+- `TA-OCC-905844f7ca80586d` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:36`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:42`; PDF page pending.
+- `TA-OCC-632f516129648860` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:37`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:51`; PDF page pending.
+- `TA-OCC-fa3554c93de910cd` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:40`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:63`; PDF page pending.
+- `TA-OCC-3a40c891fee860c9` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:47`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:74`; PDF page pending.
+- `TA-OCC-46052ee48e349878` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:48`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:75`; PDF page pending.
+- `TA-OCC-bef2825c35c0a3f4` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:49`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:76`; PDF page pending.
+- `TA-OCC-1ae6ea80b87f164a` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:57`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:100`; PDF page pending.
+- `TA-OCC-791b668ec73c5f74` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:58`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:114`; PDF page pending.
+- `TA-OCC-b54e4f933017741c` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:60`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:132`; PDF page pending.
+- `TA-OCC-6de6c9ae48c4aed0` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:81`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:111`; PDF page pending.
+- `TA-OCC-ee95e513a60da902` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:127`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:138`; PDF page pending.
+- `TA-OCC-9c260068a13872b6` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:14`; PDF page pending.
+- `TA-OCC-fb3e5d60b8712f44` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:56`; PDF page pending.
+- `TA-OCC-09d02ea598fa2491` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:37`; PDF page pending.
+- `TA-OCC-e46079dd24189d2f` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:16`; PDF page pending.
+- `TA-OCC-8a419848aa706064` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:17`; PDF page pending.
+- `TA-OCC-cd2f6e4715bed343` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:21`; PDF page pending.
+- `TA-OCC-382ef1425b50d661` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:26`; PDF page pending.
+- `TA-OCC-45c154f653fc83cf` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:32`; PDF page pending.
+- `TA-OCC-fae7a76d60a9aced` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:19`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:20`; PDF page pending.
+- `TA-OCC-742f52331279b074` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:33`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:34`; PDF page pending.
+- `TA-OCC-90583b1a5a5cb239` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:33`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:34`; PDF page pending.
+- `TA-OCC-262ba942c9d56fa4` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:76`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:79`; PDF page pending.
+- `TA-OCC-58f88836309f2063` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:77`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:80`; PDF page pending.
+- `TA-OCC-dfc4cd6cf6af375f` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:79`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:81`; PDF page pending.
+- `TA-OCC-bbdfe2c0085952e6` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:83`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:86`; PDF page pending.
+- `TA-OCC-11ac7a8580c6b49d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:25`; PDF page pending.
+- `TA-OCC-a518aef971213604` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:99`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:112`; PDF page pending.
+- `TA-OCC-60c714c70e19028b` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:117`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:130`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -11779,6 +12576,16 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-d7af1651a2a008aa` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
 - `TA-OCC-6b5ce860a715802b` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:15`; PDF page pending.
 - `TA-OCC-a73f6297e25adc13` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:15`; PDF page pending.
+- `TA-OCC-826d1f1415b81ee1` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:24`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:12`; PDF page pending.
+- `TA-OCC-8414e93809b84188` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:30`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:14`; PDF page pending.
+- `TA-OCC-2f937f72d2423398` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:31`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:26`; PDF page pending.
+- `TA-OCC-00c87fd84770b333` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:66`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:33`; PDF page pending.
+- `TA-OCC-0834751e31dcc4ae` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:66`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:34`; PDF page pending.
+- `TA-OCC-e105623c98bb4417` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:66`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:63`; PDF page pending.
+- `TA-OCC-b565e7488bc9122b` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:12`; PDF page pending.
+- `TA-OCC-117b9533020fdc43` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:38`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:15`; PDF page pending.
+- `TA-OCC-c80da7ea5a56fe9f` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:38`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:40`; PDF page pending.
+- `TA-OCC-e0a06e1cdcfdb85a` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:38`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:40`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -12052,6 +12859,10 @@ Please double-check: **is “இயல்பான வருவித்தல�
 - `TA-OCC-5b2eace54f6bc8a1` — OLP-0140 / `OLP-0140-S04`; source `content/first-order-logic/introduction/first-order-logic.tex:66`; Tamil `translation/content/first-order-logic/introduction/first-order-logic.tex:71`; PDF page pending.
 - `TA-OCC-02d39de29244c158` — OLP-0140 / `OLP-0140-S04`; source `content/first-order-logic/introduction/first-order-logic.tex:68`; Tamil `translation/content/first-order-logic/introduction/first-order-logic.tex:78`; PDF page pending.
 - `TA-OCC-50fbcaccd93c5a4c` — OLP-0196 / `OLP-0196-S01`; source `content/model-theory/models-of-arithmetic/models-of-pa.tex:1`; Tamil `translation/content/model-theory/models-of-arithmetic/models-of-pa.tex:215`; PDF page pending.
+- `TA-OCC-42143447fbaec69d` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:11`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:12`; PDF page pending.
+- `TA-OCC-37f6b45081bb6a78` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:13`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:14`; PDF page pending.
+- `TA-OCC-a4d0f9f8995d4715` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:19`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:20`; PDF page pending.
+- `TA-OCC-5ac02692d6d91c83` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:237`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:243`; PDF page pending.
 
 ## TA-T093 — tableau / truth tree / signed formula / closed branch / open branch
 
@@ -12371,6 +13182,63 @@ Please double-check: **is “அட்டவணை மரம் / மெய்�
 - `TA-OCC-3e07da381545ce76` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:203`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:212`; PDF page pending.
 - `TA-OCC-32dee8c7e43e0d89` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:203`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:293`; PDF page pending.
 - `TA-OCC-9784244d6969c3aa` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:203`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:294`; PDF page pending.
+- `TA-OCC-fe6cef730f1698f6` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:13`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:14`; PDF page pending.
+- `TA-OCC-0ee4dacd6812b313` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:20`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:15`; PDF page pending.
+- `TA-OCC-f6f00109bb694319` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:19`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:20`; PDF page pending.
+- `TA-OCC-fc921eb7618cbaff` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:21`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:21`; PDF page pending.
+- `TA-OCC-3c91a25c9f30450f` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:23`; PDF page pending.
+- `TA-OCC-32867b0d6f19cf8f` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:24`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:25`; PDF page pending.
+- `TA-OCC-8e9f488a26d9b341` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:29`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:26`; PDF page pending.
+- `TA-OCC-caf40cbb6363f89e` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:27`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:28`; PDF page pending.
+- `TA-OCC-6b421c750d120816` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:27`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:29`; PDF page pending.
+- `TA-OCC-d1f574588ca38a14` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:28`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:29`; PDF page pending.
+- `TA-OCC-8b65af2f778f1f43` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:29`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:30`; PDF page pending.
+- `TA-OCC-f6229d2d8191ab57` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:39`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:30`; PDF page pending.
+- `TA-OCC-0bb16dc9ef104ea9` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:33`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:34`; PDF page pending.
+- `TA-OCC-16304b332ed805a5` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:51`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:40`; PDF page pending.
+- `TA-OCC-e82ffc1092164463` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:41`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:42`; PDF page pending.
+- `TA-OCC-653145d65039e33d` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:51`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:54`; PDF page pending.
+- `TA-OCC-b5887f4311b8b2b5` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:55`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:57`; PDF page pending.
+- `TA-OCC-8ae604fea7eb6846` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:15`; PDF page pending.
+- `TA-OCC-64506e1e15bffd1d` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:54`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:56`; PDF page pending.
+- `TA-OCC-8277a581d96ff988` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:58`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:60`; PDF page pending.
+- `TA-OCC-9c8af296bf990484` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:77`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:79`; PDF page pending.
+- `TA-OCC-db27ce0ab93d7096` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:86`; PDF page pending.
+- `TA-OCC-277d59152ce31192` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:141`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:148`; PDF page pending.
+- `TA-OCC-34e336598b1bbe70` — OLP-0514 / `OLP-0514-S01`; source `content/intuitionistic-logic/tableaux/proofs.tex:48`; Tamil `translation/content/intuitionistic-logic/tableaux/proofs.tex:49`; PDF page pending.
+- `TA-OCC-8cc8760638a33c23` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:15`; PDF page pending.
+- `TA-OCC-071bc612a9c9a4dc` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:19`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:19`; PDF page pending.
+- `TA-OCC-7e26a34e06ceb0a6` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:22`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:23`; PDF page pending.
+- `TA-OCC-eb05c1d5f08e0498` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:25`; PDF page pending.
+- `TA-OCC-d1453698b036659f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:25`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:26`; PDF page pending.
+- `TA-OCC-c5a0a0dd55dbb88a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:30`; PDF page pending.
+- `TA-OCC-25032a031678f58f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:28`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:31`; PDF page pending.
+- `TA-OCC-88dd88f7ffd70894` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:19`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:32`; PDF page pending.
+- `TA-OCC-2610cdf853f55525` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:22`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:87`; PDF page pending.
+- `TA-OCC-235a2b8f1d678bf9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:87`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:100`; PDF page pending.
+- `TA-OCC-16e7677f9d10d06f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:91`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:105`; PDF page pending.
+- `TA-OCC-7b07291e1411b92a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:92`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:105`; PDF page pending.
+- `TA-OCC-6f566f1758adecf3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:92`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:108`; PDF page pending.
+- `TA-OCC-23b936a25b69b5ed` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:95`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:110`; PDF page pending.
+- `TA-OCC-ac84a1dc6ef4017c` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:96`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:111`; PDF page pending.
+- `TA-OCC-b726ac66fda5ea05` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:97`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:113`; PDF page pending.
+- `TA-OCC-c8c10ef6febe72a7` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:98`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:114`; PDF page pending.
+- `TA-OCC-5a3cbb6aef7466b9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:100`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:115`; PDF page pending.
+- `TA-OCC-35fa188cef1068d6` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:100`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:116`; PDF page pending.
+- `TA-OCC-7e706d4c614e1c0c` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:117`; PDF page pending.
+- `TA-OCC-e9b5efad8ce0f760` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:104`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-d8d6c8280dd2999b` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:104`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:120`; PDF page pending.
+- `TA-OCC-2bdfe35675998f6f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:106`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:121`; PDF page pending.
+- `TA-OCC-0fdb3b6c5f81b2e1` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:107`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:123`; PDF page pending.
+- `TA-OCC-099ed9998708c609` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:109`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:123`; PDF page pending.
+- `TA-OCC-6de06be64347a8c0` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:25`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:124`; PDF page pending.
+- `TA-OCC-c9c3ecf0cbce92a1` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:113`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:127`; PDF page pending.
+- `TA-OCC-ca4e8f6259019bea` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:114`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:128`; PDF page pending.
+- `TA-OCC-cf9e50652385150f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:123`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:138`; PDF page pending.
+- `TA-OCC-6a4900f92ca640aa` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:133`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:150`; PDF page pending.
+- `TA-OCC-ebd55208ffd5dc4e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:164`; PDF page pending.
+- `TA-OCC-f3dda77c14c69a06` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:198`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:225`; PDF page pending.
+- `TA-OCC-e860b267be045a25` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:204`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:231`; PDF page pending.
 
 ## TA-T094 — soundness / completeness
 
@@ -13206,6 +14074,84 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-e137b32e4097901e` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:17`; PDF page pending.
 - `TA-OCC-a3c130a49712576e` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:58`; PDF page pending.
 - `TA-OCC-d6305fbd074e89f3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:102`; PDF page pending.
+- `TA-OCC-2938b04a4efd955c` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:77`; PDF page pending.
+- `TA-OCC-a238acb20f4f4f00` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:78`; PDF page pending.
+- `TA-OCC-6c71b9955faa2704` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:18`; PDF page pending.
+- `TA-OCC-ff04a65d56f3b963` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:83`; PDF page pending.
+- `TA-OCC-7037ff06fd03126b` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:86`; PDF page pending.
+- `TA-OCC-3877999519387955` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:90`; PDF page pending.
+- `TA-OCC-8ce9dcff3bead18c` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:9`; PDF page pending.
+- `TA-OCC-534e34cc597369da` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:9`; PDF page pending.
+- `TA-OCC-9cbb1bba32650183` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:8`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:12`; PDF page pending.
+- `TA-OCC-c40a18e3daafc247` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:8`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:13`; PDF page pending.
+- `TA-OCC-33b458dae209d334` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:14`; PDF page pending.
+- `TA-OCC-2ffc5b9e290332d5` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:12`; PDF page pending.
+- `TA-OCC-6065ff0781e0c011` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:20`; PDF page pending.
+- `TA-OCC-51e874ea53979622` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:12`; PDF page pending.
+- `TA-OCC-0da108b8e402a0f2` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:14`; PDF page pending.
+- `TA-OCC-4a0564d6e5ff0314` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:3`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:19`; PDF page pending.
+- `TA-OCC-461d2d787912b209` — OLP-0505 / `OLP-0505-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-nd.tex:149`; PDF page pending.
+- `TA-OCC-0a1f42a5f66b9d3c` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:14`; PDF page pending.
+- `TA-OCC-5bc166d2ac20e22d` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:120`; PDF page pending.
+- `TA-OCC-ad11cd10940a50cd` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:13`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:134`; PDF page pending.
+- `TA-OCC-002c75f21256fc93` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:13`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:151`; PDF page pending.
+- `TA-OCC-3c6ed4673fb5d4dc` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:65`; PDF page pending.
+- `TA-OCC-822300113b23a2fc` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; PDF page pending.
+- `TA-OCC-35e908afdf45c0b5` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:12`; PDF page pending.
+- `TA-OCC-555c154e9416a444` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:41`; PDF page pending.
+- `TA-OCC-fe84a2addc3c5f33` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:15`; PDF page pending.
+- `TA-OCC-03e2d07e8e6b4c40` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:2`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:48`; PDF page pending.
+- `TA-OCC-aeee1e662438823d` — OLP-0511 / `OLP-0511-S01`; source `content/intuitionistic-logic/tableaux/tableaux.tex:12`; Tamil `translation/content/intuitionistic-logic/tableaux/tableaux.tex:13`; PDF page pending.
+- `TA-OCC-84dbb687972e1a34` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:31`; PDF page pending.
+- `TA-OCC-c6b44d5bca763847` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:58`; PDF page pending.
+- `TA-OCC-deb4f36a049da7d5` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:3`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:12`; PDF page pending.
+- `TA-OCC-acf88c71f9a931c4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:11`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:15`; PDF page pending.
+- `TA-OCC-954f3c2482b63cce` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:85`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:26`; PDF page pending.
+- `TA-OCC-73d99d68b5719729` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:86`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:27`; PDF page pending.
+- `TA-OCC-a85517fd284f5389` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:187`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:28`; PDF page pending.
+- `TA-OCC-185cfc94e40e5e40` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:191`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:30`; PDF page pending.
+- `TA-OCC-6c8b6a206aebadc9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:203`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:31`; PDF page pending.
+- `TA-OCC-52482100da9bc149` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:35`; PDF page pending.
+- `TA-OCC-eea7cf7e6547f7be` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:50`; PDF page pending.
+- `TA-OCC-d6a73482360b3eaa` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:52`; PDF page pending.
+- `TA-OCC-f56c56791bdadc44` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:66`; PDF page pending.
+- `TA-OCC-f2dae625669bb328` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:67`; PDF page pending.
+- `TA-OCC-27030f558f86b91a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:70`; PDF page pending.
+- `TA-OCC-edcdcb6be69024b8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:78`; PDF page pending.
+- `TA-OCC-addc623a67e9fba2` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:84`; PDF page pending.
+- `TA-OCC-383740f35061dd83` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:87`; PDF page pending.
+- `TA-OCC-5b420a05e57afa29` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:98`; PDF page pending.
+- `TA-OCC-9b8df36ca09b2905` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:101`; PDF page pending.
+- `TA-OCC-5a58c6fe7ec68115` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:106`; PDF page pending.
+- `TA-OCC-008fb22972678ff5` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:106`; PDF page pending.
+- `TA-OCC-8d2d6064b81e8cdc` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:107`; PDF page pending.
+- `TA-OCC-e2d46d3f9d33a45c` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:108`; PDF page pending.
+- `TA-OCC-67737d11adf8d90e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:110`; PDF page pending.
+- `TA-OCC-8c779cf53cdf40a5` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:111`; PDF page pending.
+- `TA-OCC-40a82b0cba3ffc37` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:114`; PDF page pending.
+- `TA-OCC-cbd5a54f4a1f1673` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:115`; PDF page pending.
+- `TA-OCC-f17e9e263676cba0` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:116`; PDF page pending.
+- `TA-OCC-6107e6fb3efc0773` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:117`; PDF page pending.
+- `TA-OCC-5fc14f70ea58aae3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-0165f095b15a3718` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:119`; PDF page pending.
+- `TA-OCC-56d455aa88b61350` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:122`; PDF page pending.
+- `TA-OCC-861683098f830f43` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:123`; PDF page pending.
+- `TA-OCC-a7b7b3d263962eaa` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:124`; PDF page pending.
+- `TA-OCC-46066fed78ba437f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:125`; PDF page pending.
+- `TA-OCC-ead04112b8491ead` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:131`; PDF page pending.
+- `TA-OCC-74e52cdf22dc52f3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:133`; PDF page pending.
+- `TA-OCC-f6378155654207bb` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:143`; PDF page pending.
+- `TA-OCC-9eac32a235b16549` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:156`; PDF page pending.
+- `TA-OCC-c4a1e7f14191c40b` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:168`; PDF page pending.
+- `TA-OCC-d8ed9260a23258a4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:172`; PDF page pending.
+- `TA-OCC-dc2106befe5c8149` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:187`; PDF page pending.
+- `TA-OCC-138267228690b228` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:200`; PDF page pending.
+- `TA-OCC-42a9b01d75008265` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:200`; PDF page pending.
+- `TA-OCC-996e237fd2107ca9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:201`; PDF page pending.
+- `TA-OCC-368425da6802a8d7` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:202`; PDF page pending.
+- `TA-OCC-e5db43ec7e673078` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:213`; PDF page pending.
+- `TA-OCC-0bff9e3c93998d86` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:230`; PDF page pending.
+- `TA-OCC-2b0af091012cfe5e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:232`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -13288,6 +14234,7 @@ Please double-check: **is “முரணின்மை / முரணுடை
 - `TA-OCC-4ba200e6810a278e` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:200`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:213`; PDF page pending.
 - `TA-OCC-725d2bf42896da91` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:63`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:66`; PDF page pending.
 - `TA-OCC-7e556256cd28bfb9` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:190`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:192`; PDF page pending.
+- `TA-OCC-23d8e2f55fb789ae` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:17`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:18`; PDF page pending.
 
 ## TA-T096 — quantifier
 
@@ -13445,6 +14392,11 @@ Please double-check: **is “முன்தொடர் / பின்தொட
 - `TA-OCC-365bf5031a0911f7` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:263`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:282`; PDF page pending.
 - `TA-OCC-a5c48b9313af5c74` — OLP-0286 / `OLP-0286-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:269`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-lk.tex:286`; PDF page pending.
 - `TA-OCC-e0d6a7af3b11f934` — OLP-0287 / `OLP-0287-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex:159`; PDF page pending.
+- `TA-OCC-7122ede5115ce398` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:28`; PDF page pending.
+- `TA-OCC-05cca1762b99453f` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:47`; PDF page pending.
+- `TA-OCC-36224b614b49120f` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:35`; PDF page pending.
+- `TA-OCC-ca2d9f5587e747ce` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:54`; PDF page pending.
+- `TA-OCC-856b617f0bb64b0d` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:55`; PDF page pending.
 
 ## TA-T098 — logical rule / structural rule / weakening / contraction / exchange / cut
 
@@ -13555,6 +14507,8 @@ Please double-check: **is “தருக்க விதி / கட்டம�
 - `TA-OCC-91ba62cac01c0438` — OLP-0462 / `OLP-0462-S01`; source `content/normal-modal-logic/tableaux/rules-for-K.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/rules-for-K.tex:22`; PDF page pending.
 - `TA-OCC-d4706170fb0bd7c9` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:23`; PDF page pending.
 - `TA-OCC-ed483139ddc50d6d` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:26`; PDF page pending.
+- `TA-OCC-c06b57f82922b042` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:76`; PDF page pending.
+- `TA-OCC-b39efb60abeea98d` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:26`; PDF page pending.
 
 ## TA-T099 — eigenvariable / eigenvariable condition
 
@@ -14403,6 +15357,17 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-5b3e253dbb9d77c5` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:27`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:30`; PDF page pending.
 - `TA-OCC-5bcdddc7735af8f3` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:27`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:56`; PDF page pending.
 - `TA-OCC-8a4c2df64ea69f19` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:54`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:53`; PDF page pending.
+- `TA-OCC-8f3f0618838493ac` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:26`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:28`; PDF page pending.
+- `TA-OCC-2e8304e0078956e0` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:26`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:28`; PDF page pending.
+- `TA-OCC-96db9e9e0da9d52e` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:30`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:33`; PDF page pending.
+- `TA-OCC-0f4ffe4e3d45460b` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:30`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:35`; PDF page pending.
+- `TA-OCC-acec85f84d0fb154` — OLP-0494 / `OLP-0494-S01`; source `content/intuitionistic-logic/introduction/syntax.tex:44`; Tamil `translation/content/intuitionistic-logic/introduction/syntax.tex:48`; PDF page pending.
+- `TA-OCC-7851155742dd74c6` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:23`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:23`; PDF page pending.
+- `TA-OCC-cb9e412c4cbec1f1` — OLP-0500 / `OLP-0500-S01`; source `content/intuitionistic-logic/semantics/relational-models.tex:27`; Tamil `translation/content/intuitionistic-logic/semantics/relational-models.tex:29`; PDF page pending.
+- `TA-OCC-919c178801333942` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:41`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:44`; PDF page pending.
+- `TA-OCC-eb0e52fec1ed89ec` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:31`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:34`; PDF page pending.
+- `TA-OCC-946374580e0047b2` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:25`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:32`; PDF page pending.
+- `TA-OCC-669ab1ec25944435` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:35`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:49`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -14641,6 +15606,16 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-21a82798a0760671` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:20`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:21`; PDF page pending.
 - `TA-OCC-79f4e4aafcd68ce0` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:28`; PDF page pending.
 - `TA-OCC-8ce3d6a3994c5d0b` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:17`; PDF page pending.
+- `TA-OCC-34ae504bb63c8103` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:43`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:44`; PDF page pending.
+- `TA-OCC-1260002197b65705` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:239`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:239`; PDF page pending.
+- `TA-OCC-4d3b278758e46fef` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:17`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:19`; PDF page pending.
+- `TA-OCC-a9059cc451f09db1` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:46`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:50`; PDF page pending.
+- `TA-OCC-49fb92c2221272fc` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:17`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:58`; PDF page pending.
+- `TA-OCC-45b84a8c476dc4b6` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:46`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:58`; PDF page pending.
+- `TA-OCC-85f863cec2e21878` — OLP-0497 / `OLP-0497-S01`; source `content/intuitionistic-logic/introduction/axiomatic-derivations.tex:46`; Tamil `translation/content/intuitionistic-logic/introduction/axiomatic-derivations.tex:65`; PDF page pending.
+- `TA-OCC-db03e35a58a98d6c` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:16`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:18`; PDF page pending.
+- `TA-OCC-e556ff3945c343f6` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:26`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:28`; PDF page pending.
+- `TA-OCC-c0fc5b706342fd2c` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:12`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -14777,6 +15752,8 @@ Please double-check: **is “நிறைவான கணம் / நிறை�
 - `TA-OCC-827723bf8217a80a` — OLP-0129 / `OLP-0129-S02`; source `content/first-order-logic/completeness/complete-consistent-sets.tex:19`; Tamil `translation/content/first-order-logic/completeness/complete-consistent-sets.tex:21`; PDF page pending.
 - `TA-OCC-2fd7ff609cb5813a` — OLP-0132 / `OLP-0132-S03`; source `content/first-order-logic/completeness/construction-of-model.tex:65`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:69`; PDF page pending.
 - `TA-OCC-c05f717f1eb9bf48` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:102`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:113`; PDF page pending.
+- `TA-OCC-61d4a1c615154eae` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:27`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:31`; PDF page pending.
+- `TA-OCC-05e46792713e1337` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:28`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:34`; PDF page pending.
 
 ## TA-T108 — saturated set / Henkin expansion / witness constant
 
@@ -15414,6 +16391,9 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-fa3881010c3fa933` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:22`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:55`; PDF page pending.
 - `TA-OCC-620bbe02dfe7ca69` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:85`; PDF page pending.
 - `TA-OCC-ccf7fbcdad91236e` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:102`; PDF page pending.
+- `TA-OCC-8b07e6e2d5a949eb` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:30`; PDF page pending.
+- `TA-OCC-a2adc32317efa071` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:37`; PDF page pending.
+- `TA-OCC-90a0640af5813090` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:15`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:16`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -15988,6 +16968,7 @@ Please double-check: **is “கணிப்புத்தன்மை / கண
 - `TA-OCC-4f20a8cd9eee60b9` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:11`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:14`; PDF page pending.
 - `TA-OCC-2d70072a80032446` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:13`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:16`; PDF page pending.
 - `TA-OCC-31841fdd4638ce69` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:19`; PDF page pending.
+- `TA-OCC-99eebe6aa1bcc4c9` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:12`; PDF page pending.
 
 ## TA-T114 — recursive definition / primitive recursion / partial recursive function / general recursive function
 
@@ -17371,6 +18352,9 @@ Please double-check: **is “தரநிலை டியூரிங் பொ�
 - `TA-OCC-99bff0dc6b15a1b2` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:21`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:43`; PDF page pending.
 - `TA-OCC-5913186cfb2929a1` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:21`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:51`; PDF page pending.
 - `TA-OCC-87e4d9f94278115d` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:21`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:70`; PDF page pending.
+- `TA-OCC-f2627ca28b80bc63` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:133`; PDF page pending.
+- `TA-OCC-ae3e1cd60845e332` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:137`; PDF page pending.
+- `TA-OCC-58bff774a022261a` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:140`; PDF page pending.
 
 ## TA-T126 — halting function / halting problem / diagonal argument / unsolvable
 
@@ -19132,6 +20116,9 @@ Please double-check: **is “இயல்பான வாய்ப்புந�
 - `TA-OCC-721c0f5d063df201` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:20`; PDF page pending.
 - `TA-OCC-5d26245447f4832e` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:58`; PDF page pending.
 - `TA-OCC-a3b165d85d5c82cb` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:99`; PDF page pending.
+- `TA-OCC-d371f5440a3394ea` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:14`; PDF page pending.
+- `TA-OCC-5a91cdb29fb60c54` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:21`; PDF page pending.
+- `TA-OCC-0311007077015548` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:93`; PDF page pending.
 
 ## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
 
@@ -19211,6 +20198,7 @@ Please double-check: **is “சாத்தியமான உலகம் / �
 - `TA-OCC-1f71fdfb359919a5` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:21`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:22`; PDF page pending.
 - `TA-OCC-0cc7a82b659db1f9` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:60`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:60`; PDF page pending.
 - `TA-OCC-22f0aa768d03b428` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:50`; PDF page pending.
+- `TA-OCC-73f1e5f4af3eb9e8` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:59`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:62`; PDF page pending.
 
 ## TA-T168 — simultaneous substitution / iterated substitution / instance / substitution instance
 
@@ -19446,6 +20434,7 @@ Please double-check: **is “தொடர்புசார் மாதிர�
 - `TA-OCC-9e44829de4246e59` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:36`; PDF page pending.
 - `TA-OCC-c612d195a86e87b5` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:12`; PDF page pending.
 - `TA-OCC-fb60494446473951` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:46`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:96`; PDF page pending.
+- `TA-OCC-16049964c7b0c0fb` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:21`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:32`; PDF page pending.
 
 ## TA-T170 — modal validity / valid in a class of models / tautology / tautological instance / schema / characteristic formula / closed under modus ponens
 
@@ -19702,6 +20691,10 @@ Please double-check: **is “சரியான வருவித்தல் �
 - `TA-OCC-7d8f7a64b1a275f8` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:136`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:134`; PDF page pending.
 - `TA-OCC-9b41251557d82190` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:136`; PDF page pending.
 - `TA-OCC-e53f8d585cc42348` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:138`; PDF page pending.
+- `TA-OCC-bcd6dce687fbdf87` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:12`; PDF page pending.
+- `TA-OCC-bef825485946b120` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:48`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:54`; PDF page pending.
+- `TA-OCC-65e5309d22306c7e` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:13`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; PDF page pending.
+- `TA-OCC-91a28106a00081ed` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:21`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:23`; PDF page pending.
 
 ## TA-T178 — filtration / finite model property / closed under subformulas / modally closed
 
@@ -19895,6 +20888,40 @@ Please double-check: **is “முன்னொட்டு / முன்னொ
 - `TA-OCC-9e3da040184dbf74` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:107`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:213`; PDF page pending.
 - `TA-OCC-0f93ba22f9b12a06` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:151`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:251`; PDF page pending.
 - `TA-OCC-cbf68c9377d8a5dd` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:207`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:295`; PDF page pending.
+- `TA-OCC-0ba3c1d8c86ca66c` — OLP-0511 / `OLP-0511-S01`; source `content/intuitionistic-logic/tableaux/tableaux.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/tableaux.tex:12`; PDF page pending.
+- `TA-OCC-499bf74ade8fc322` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:41`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:43`; PDF page pending.
+- `TA-OCC-c88a6a5bcb8c2b9d` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:41`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:45`; PDF page pending.
+- `TA-OCC-7205137a1cae8c2a` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:43`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:46`; PDF page pending.
+- `TA-OCC-6ea203a239ac8155` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:45`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:48`; PDF page pending.
+- `TA-OCC-82e6ea2d60b53119` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:54`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:54`; PDF page pending.
+- `TA-OCC-4ed7beb15739e626` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:60`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:55`; PDF page pending.
+- `TA-OCC-484bee3e72687cf7` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:61`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:57`; PDF page pending.
+- `TA-OCC-2b60745c431c4e68` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:62`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:63`; PDF page pending.
+- `TA-OCC-23c9d3fea65ea6f8` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:65`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:65`; PDF page pending.
+- `TA-OCC-f273a078446278f9` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:65`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:66`; PDF page pending.
+- `TA-OCC-1d6bed90b5af39cf` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:65`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:69`; PDF page pending.
+- `TA-OCC-402b35791e6cec21` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:65`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:69`; PDF page pending.
+- `TA-OCC-8345564080b45fd4` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:14`; PDF page pending.
+- `TA-OCC-75662fd0f25d347b` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:60`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:56`; PDF page pending.
+- `TA-OCC-da5ae470d1560e9c` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:63`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:61`; PDF page pending.
+- `TA-OCC-ced7c84c35c6f485` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:67`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:64`; PDF page pending.
+- `TA-OCC-8c529cc059652523` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:78`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:65`; PDF page pending.
+- `TA-OCC-7e8286c70c2565c8` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:78`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:80`; PDF page pending.
+- `TA-OCC-7722d7fd236371e2` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:93`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:100`; PDF page pending.
+- `TA-OCC-49dc3c5a3f862af6` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:95`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:102`; PDF page pending.
+- `TA-OCC-b73d480235946b42` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:97`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:110`; PDF page pending.
+- `TA-OCC-0e1cd825a012e031` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:103`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:148`; PDF page pending.
+- `TA-OCC-5f22c8ca3ec8d475` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:32`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:27`; PDF page pending.
+- `TA-OCC-7de698414f7f0897` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:37`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:31`; PDF page pending.
+- `TA-OCC-5f03fa5e0ca30ea0` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:43`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:34`; PDF page pending.
+- `TA-OCC-8c1235b881dfa7e7` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:58`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:36`; PDF page pending.
+- `TA-OCC-7eb4f77d9f48aaf8` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:70`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:40`; PDF page pending.
+- `TA-OCC-d6dc946193e467bd` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:146`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:47`; PDF page pending.
+- `TA-OCC-a23e440a1d9059e0` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:146`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:62`; PDF page pending.
+- `TA-OCC-171d16ea21f7411a` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:162`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:63`; PDF page pending.
+- `TA-OCC-f7fd8def755650e9` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:162`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:65`; PDF page pending.
+- `TA-OCC-b46584f6fa885640` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:162`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:74`; PDF page pending.
+- `TA-OCC-e37c0dce02839732` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:162`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:165`; PDF page pending.
 
 ## TA-T181 — interpretation of prefixes / complete branch / systematic exhaustive tableau / countermodel extraction
 
@@ -19913,6 +20940,7 @@ Please double-check: **is “முன்னொட்டுகளின் ப�
 - `TA-OCC-b4171ac92490ab62` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:49`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:49`; PDF page pending.
 - `TA-OCC-8080177a0114f10b` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:34`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:39`; PDF page pending.
 - `TA-OCC-ca1c1a0c767f542e` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:36`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:41`; PDF page pending.
+- `TA-OCC-4ada3103d7c62771` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:43`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:47`; PDF page pending.
 
 ## TA-T182 — hypersequent / cut-free complete hypersequent calculus
 
@@ -20112,6 +21140,197 @@ Please double-check: **is “இயக்க அறிவுநிலைத் �
 - `TA-OCC-e95df077cb2df3f3` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:53`; PDF page pending.
 - `TA-OCC-544ae5c67953cae8` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:115`; PDF page pending.
 - `TA-OCC-63262d9434a4a385` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:53`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:122`; PDF page pending.
+
+## TA-T191 — intuitionistic logic / intuitionism / constructive reasoning / constructivism
+
+Chosen rendering: **உள்ளுணர்வுவாதத் தருக்கம் / உள்ளுணர்வியம் / கட்டுமான ஆய்வுமுறை / கட்டுமானவாதம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: உள்ளுணர்வியம் continues TA-T132 and உள்ளுணர்வுவாதத் தருக்கம், கட்டுமான ஆய்வுமுறை and கட்டுமானவாதம் continue the already reviewed OLP-0179 treatment. The explicit-witness and proved-disjunct examples define the constructive restriction; the prose distinguishes Brouwer's philosophical position from the formal logic and Bishop's constructivism.
+
+Authority basis: TA-IL1967-P264-265-PROOF (checked_supports); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T191-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “உள்ளுணர்வுவாதத் தருக்கம் / உள்ளுணர்வியம் / கட்டுமான ஆய்வுமுறை / கட்டுமானவாதம்” the established India-standard Tamil expression for “intuitionistic logic / intuitionism / constructive reasoning / constructivism” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-a151347bdb0cf7f8` — OLP-0089 / `OLP-0089-S07`; source `content/first-order-logic/natural-deduction/proving-things.tex:183`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:186`; PDF page pending.
+- `TA-OCC-e5836ca5196be574` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:11`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:13`; PDF page pending.
+- `TA-OCC-e0166e9c6d678676` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:74`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:76`; PDF page pending.
+- `TA-OCC-ebf2f7ea38df1e2a` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:88`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:118`; PDF page pending.
+- `TA-OCC-543e59cf6929ccfc` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:140`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:142`; PDF page pending.
+- `TA-OCC-b4a05558e067a8bc` — OLP-0491 / `OLP-0491-S01`; source `content/intuitionistic-logic/intuitionistic-logic.tex:7`; Tamil `translation/content/intuitionistic-logic/intuitionistic-logic.tex:8`; PDF page pending.
+- `TA-OCC-71158107e97fa9c8` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:11`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:12`; PDF page pending.
+- `TA-OCC-1ca45e969dfafa7d` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:14`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:15`; PDF page pending.
+- `TA-OCC-661cdb28267b67a0` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:16`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:76`; PDF page pending.
+- `TA-OCC-4ec78e0969b4de47` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:75`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:83`; PDF page pending.
+
+## TA-T192 — Brouwer--Heyting--Kolmogorov interpretation / construction / law of excluded middle
+
+Chosen rendering: **பிரௌவர்--ஹெய்ட்டிங்--கொல்மொகோரோவ் பொருள்கோள் / ஆக்கம் / விலக்கப்பட்ட நடுவின் விதி**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: பொருள்கோள், சார்பு, இணைப்பு, பிரிப்பு and மறுப்பு continue the reviewed logic register. The chapter explicitly distinguishes an informal constructive construction from a formal derivation; ஆக்கம் keeps that distinction, and the six BHK clauses define its exact sense. விலக்கப்பட்ட நடுவின் விதி continues the already published OLP-0179 terminology.
+
+Authority basis: TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T192-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “பிரௌவர்--ஹெய்ட்டிங்--கொல்மொகோரோவ் பொருள்கோள் / ஆக்கம் / விலக்கப்பட்ட நடுவின் விதி” the established India-standard Tamil expression for “Brouwer--Heyting--Kolmogorov interpretation / construction / law of excluded middle” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-2cc49ebf5e262713` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:1`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:117`; PDF page pending.
+- `TA-OCC-00b78b02bc3806f0` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:139`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:135`; PDF page pending.
+- `TA-OCC-66982e2a42c10c57` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:11`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:12`; PDF page pending.
+- `TA-OCC-93d202dd51af7fb3` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:20`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:21`; PDF page pending.
+- `TA-OCC-8efeb8ff727cf124` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:28`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:22`; PDF page pending.
+- `TA-OCC-1efc52d0ad835562` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:30`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:30`; PDF page pending.
+- `TA-OCC-f5250cda4c356a00` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:31`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:31`; PDF page pending.
+- `TA-OCC-787235a65aafbac0` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:31`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:32`; PDF page pending.
+- `TA-OCC-3f1c529bc1e7c874` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:33`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:32`; PDF page pending.
+- `TA-OCC-ebddc9eb28c4c2fe` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:34`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:33`; PDF page pending.
+- `TA-OCC-1f27bc4e24b343de` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:35`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:36`; PDF page pending.
+- `TA-OCC-0b5e273ed3f97f9b` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:36`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:38`; PDF page pending.
+- `TA-OCC-3890bd9b67912156` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:37`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:40`; PDF page pending.
+- `TA-OCC-448739f5dcd1933d` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:37`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:47`; PDF page pending.
+- `TA-OCC-437b046501e19f2e` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:38`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:48`; PDF page pending.
+- `TA-OCC-21d02210f37fb6ca` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:40`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:48`; PDF page pending.
+- `TA-OCC-b69791458999ace2` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:40`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:52`; PDF page pending.
+- `TA-OCC-e24a752f7794cf20` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:41`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:57`; PDF page pending.
+- `TA-OCC-075ae31f32871142` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:45`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:58`; PDF page pending.
+- `TA-OCC-35e8d322295b791c` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:46`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:59`; PDF page pending.
+- `TA-OCC-741d510e80fd8d35` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:47`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:61`; PDF page pending.
+- `TA-OCC-2d69f08cb79bb85b` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:48`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:64`; PDF page pending.
+- `TA-OCC-1d78e76c25173793` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:48`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:65`; PDF page pending.
+- `TA-OCC-8ba24640fd26092d` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:49`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:72`; PDF page pending.
+- `TA-OCC-bba26a4488fe8d5c` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:52`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:74`; PDF page pending.
+- `TA-OCC-5c87143a45a9367b` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:56`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:75`; PDF page pending.
+- `TA-OCC-244b9ac73d2bb648` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:57`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:75`; PDF page pending.
+- `TA-OCC-610f297e227d4c8f` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:58`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:83`; PDF page pending.
+- `TA-OCC-e4396e272c51fd74` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:59`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:84`; PDF page pending.
+- `TA-OCC-dcf8b9014ba1bb19` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:61`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:85`; PDF page pending.
+- `TA-OCC-2821fa2f1a61788f` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:61`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:87`; PDF page pending.
+- `TA-OCC-897c20e1dedfb7c5` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:63`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:93`; PDF page pending.
+- `TA-OCC-556114119ea305ef` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:64`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:95`; PDF page pending.
+- `TA-OCC-f2d3d025c852e3f8` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:65`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:103`; PDF page pending.
+- `TA-OCC-11770f25a5cec3a5` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:65`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:106`; PDF page pending.
+- `TA-OCC-87fa4d20f4fb08bd` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:69`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:107`; PDF page pending.
+- `TA-OCC-6947cd9cbeb182a0` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:71`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:114`; PDF page pending.
+- `TA-OCC-3169e084dc560d67` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:72`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:117`; PDF page pending.
+- `TA-OCC-8b86b19b7ee81201` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:72`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:119`; PDF page pending.
+- `TA-OCC-95a8a0e360856ed1` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:74`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:129`; PDF page pending.
+- `TA-OCC-f242cc2e90c05339` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:74`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:131`; PDF page pending.
+- `TA-OCC-5a14555bc6b5532e` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:75`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:134`; PDF page pending.
+- `TA-OCC-0167dd95b244b543` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:76`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:136`; PDF page pending.
+- `TA-OCC-776661ccba9f6197` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:82`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:140`; PDF page pending.
+- `TA-OCC-91cdd3662fc2cd6b` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:83`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:142`; PDF page pending.
+- `TA-OCC-a637a05ec30b6d00` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:83`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:143`; PDF page pending.
+- `TA-OCC-2e486257dfb78fc5` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:84`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:145`; PDF page pending.
+- `TA-OCC-aff3d3a42ed5f08a` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:85`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:145`; PDF page pending.
+- `TA-OCC-7fe642831532c297` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:86`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:147`; PDF page pending.
+- `TA-OCC-8dce9bd2f65694d9` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:91`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:149`; PDF page pending.
+- `TA-OCC-236a71dce5bf83af` — OLP-0495 / `OLP-0495-S01`; source `content/intuitionistic-logic/introduction/bhk-interpretation.tex:92`; Tamil `translation/content/intuitionistic-logic/introduction/bhk-interpretation.tex:149`; PDF page pending.
+- `TA-OCC-0338d18931cab798` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:17`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:18`; PDF page pending.
+- `TA-OCC-49704d13ca4078a9` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:22`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:26`; PDF page pending.
+- `TA-OCC-fdc6a818de9c8840` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:22`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:57`; PDF page pending.
+- `TA-OCC-26fce47ea0d64c79` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:24`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:60`; PDF page pending.
+- `TA-OCC-ba55fd015bf8a7e3` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:30`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:62`; PDF page pending.
+- `TA-OCC-1efd74666e648b7c` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:31`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:63`; PDF page pending.
+- `TA-OCC-7050b6f34474630c` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:31`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:84`; PDF page pending.
+- `TA-OCC-743d0a6bd586fa3f` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:55`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:85`; PDF page pending.
+- `TA-OCC-c0df03d029bd9324` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:56`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:86`; PDF page pending.
+- `TA-OCC-f8f14317c39e716a` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:59`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:88`; PDF page pending.
+- `TA-OCC-3c3b0fc9a2f2e1ce` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:61`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:88`; PDF page pending.
+- `TA-OCC-2d1642887014eb4f` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:61`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:89`; PDF page pending.
+- `TA-OCC-800e75745adc3756` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:62`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:90`; PDF page pending.
+- `TA-OCC-661b5b64ed90081d` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:81`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:91`; PDF page pending.
+- `TA-OCC-8774babceebdf057` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:82`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:118`; PDF page pending.
+- `TA-OCC-0886284405277730` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:83`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:119`; PDF page pending.
+- `TA-OCC-e96ed9ab251ed639` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:84`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:120`; PDF page pending.
+- `TA-OCC-a8ac248e9606e52d` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:84`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:123`; PDF page pending.
+- `TA-OCC-51d5754ef3c3bc7d` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:85`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:138`; PDF page pending.
+
+## TA-T193 — topology / topological space / open set / interior / topological semantics
+
+Chosen rendering: **இடவியல் / இடவியல் வெளி / திறந்த கணம் / உட்பகுதி / இடவியல் பொருண்மையியல்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: இடவியல், வெளி, கணம், உட்பகுதி and பொருண்மையியல் use established Tamil mathematical and edition components. The three displayed topology axioms define the open sets, the largest-open-subset clause defines interior, and the recursive valuation clauses define the specialist semantic compound in place. The complete compound இடவியல் பொருண்மையியல் is treated as provisional rather than claimed as a directly attested headword.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T193-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “இடவியல் / இடவியல் வெளி / திறந்த கணம் / உட்பகுதி / இடவியல் பொருண்மையியல்” the established India-standard Tamil expression for “topology / topological space / open set / interior / topological semantics” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-87770da81563c93f` — OLP-0498 / `OLP-0498-S01`; source `content/intuitionistic-logic/semantics/semantics.tex:12`; Tamil `translation/content/intuitionistic-logic/semantics/semantics.tex:13`; PDF page pending.
+- `TA-OCC-8ab8f906f94b68c4` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:68`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:73`; PDF page pending.
+- `TA-OCC-e7b372a55b94fb24` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:69`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:74`; PDF page pending.
+- `TA-OCC-5a04db5237b8b1f0` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:11`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:12`; PDF page pending.
+- `TA-OCC-7bab7c9b783ceeb7` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:14`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:14`; PDF page pending.
+- `TA-OCC-827420ed741c3d49` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:17`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:19`; PDF page pending.
+- `TA-OCC-7cd6bf5351178f22` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:19`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:22`; PDF page pending.
+- `TA-OCC-79777744927bd003` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:20`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:34`; PDF page pending.
+- `TA-OCC-80f29d6a714758b4` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:21`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:36`; PDF page pending.
+- `TA-OCC-7eade0209790c7ef` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:25`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:41`; PDF page pending.
+- `TA-OCC-5de8f564115b2866` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:27`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:43`; PDF page pending.
+- `TA-OCC-22a8a5ffaa0bd5fb` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:33`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:46`; PDF page pending.
+- `TA-OCC-f83820571fd0ef1b` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:33`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:57`; PDF page pending.
+- `TA-OCC-9c58fe86147d69c6` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:35`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:64`; PDF page pending.
+- `TA-OCC-81dd1c5a94deefad` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:35`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:65`; PDF page pending.
+- `TA-OCC-41860a1586b8f940` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:40`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:67`; PDF page pending.
+
+## TA-T194 — prime set / Lindenbaum's lemma / truth lemma / canonical model / subformula filtration
+
+Chosen rendering: **பகாக் கணம் / லிண்டன்பாமின் துணைத்தேற்றம் / மெய்மைத் துணைத்தேற்றம் / நியம மாதிரி / துணைவாய்பாட்டு வடிகட்டல்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: நியம மாதிரி and லிண்டன்பாமின் துணைத்தேற்றம் continue the already reviewed modal-completeness register. The three displayed closure and disjunction conditions define பகாக் கணம்; the satisfaction-versus-derivability equivalence defines மெய்மைத் துணைத்தேற்றம்; and the finite quotient by subformula truth profiles fixes the filtering sense. The complete specialist compounds are not claimed as independently attested Tamil headwords.
+
+Authority basis: TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T194-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “பகாக் கணம் / லிண்டன்பாமின் துணைத்தேற்றம் / மெய்மைத் துணைத்தேற்றம் / நியம மாதிரி / துணைவாய்பாட்டு வடிகட்டல்” the established India-standard Tamil expression for “prime set / Lindenbaum's lemma / truth lemma / canonical model / subformula filtration” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-152245e5710764ae` — OLP-0131 / `OLP-0131-S01`; source `content/first-order-logic/completeness/lindenbaums-lemma.tex:13`; Tamil `translation/content/first-order-logic/completeness/lindenbaums-lemma.tex:14`; PDF page pending.
+- `TA-OCC-2660043bc9f5615c` — OLP-0131 / `OLP-0131-S03`; source `content/first-order-logic/completeness/lindenbaums-lemma.tex:27`; Tamil `translation/content/first-order-logic/completeness/lindenbaums-lemma.tex:30`; PDF page pending.
+- `TA-OCC-3835518a756d3616` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:20`; PDF page pending.
+- `TA-OCC-27c6e3532150bb5e` — OLP-0441 / `OLP-0441-S01`; source `content/normal-modal-logic/completeness/completeness.tex:8`; Tamil `translation/content/normal-modal-logic/completeness/completeness.tex:9`; PDF page pending.
+- `TA-OCC-5f8e778392e1efad` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:12`; PDF page pending.
+- `TA-OCC-261c8a867ca07a52` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:16`; PDF page pending.
+- `TA-OCC-1551fc8cba439567` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:18`; PDF page pending.
+- `TA-OCC-e25368cf3e96c7dd` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:19`; PDF page pending.
+- `TA-OCC-22b24fc0be8df891` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:20`; PDF page pending.
+- `TA-OCC-573e2f8295c645ad` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:19`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:21`; PDF page pending.
+- `TA-OCC-a09ba4a89215a19b` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:23`; PDF page pending.
+- `TA-OCC-00c73cb3f687054b` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:12`; PDF page pending.
+- `TA-OCC-dc81805619773596` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:14`; PDF page pending.
+- `TA-OCC-88622a38f254570d` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:21`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:23`; PDF page pending.
+- `TA-OCC-d4a6d13bb02d16a0` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:14`; PDF page pending.
+- `TA-OCC-2748be58bc00eaa3` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:13`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:14`; PDF page pending.
+- `TA-OCC-d4cef4dcd6fa5503` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:15`; PDF page pending.
+- `TA-OCC-c903087d37f1cd7b` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:32`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:45`; PDF page pending.
+- `TA-OCC-b92e4e1646e1e2a6` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:40`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:62`; PDF page pending.
+- `TA-OCC-84ddbc28e90e0844` — OLP-0448 / `OLP-0448-S01`; source `content/normal-modal-logic/completeness/completeness-K.tex:44`; Tamil `translation/content/normal-modal-logic/completeness/completeness-K.tex:63`; PDF page pending.
+- `TA-OCC-0999eb26d8f147b6` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:14`; PDF page pending.
+- `TA-OCC-ef0af46d560cc52e` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:20`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:21`; PDF page pending.
+- `TA-OCC-90412d18a83f52ee` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:52`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:30`; PDF page pending.
+- `TA-OCC-f6c4279de39e4117` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:134`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:134`; PDF page pending.
+- `TA-OCC-8f7c9376a84006ba` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:136`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:136`; PDF page pending.
+- `TA-OCC-57b2f89ecc39a345` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:138`; PDF page pending.
+- `TA-OCC-f24cd1c2e5247a87` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:12`; PDF page pending.
+- `TA-OCC-c0c2a8f7218a0fc7` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:32`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:35`; PDF page pending.
+- `TA-OCC-6890d87af0958749` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:44`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:51`; PDF page pending.
+- `TA-OCC-d9d37af70a85ab3e` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:12`; PDF page pending.
+- `TA-OCC-a67567e2f22f360f` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:39`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:54`; PDF page pending.
+- `TA-OCC-9a0475cde998e1fe` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:12`; PDF page pending.
+- `TA-OCC-b610202c9617c02a` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:13`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; PDF page pending.
+- `TA-OCC-683a92a4dce45f01` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; PDF page pending.
+- `TA-OCC-96f4ae1022198a1f` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:19`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:23`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

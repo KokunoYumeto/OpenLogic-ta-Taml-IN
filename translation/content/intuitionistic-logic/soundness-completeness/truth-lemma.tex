@@ -1,0 +1,81 @@
+% SEGMENT OLP-0508-S01
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: truth-lemma
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{tru}
+
+\olsection{மெய்மைத் துணைத்தேற்றம்}
+
+நியம மாதிரியில் நிறைவுறுதல் என்பதையும் பகாக் கணம்~$\Delta$ வின்
+!!{element}s ஆக உள்ள !!{formula}s எவை என்பதையும் பின்வரும் துணைத்தேற்றம்
+இணைக்கிறது.
+
+\begin{lem}\ollabel{lem:truth}
+  $\Delta$ பகாவானது எனில், $\mSat{M(\Delta)}{!A}[\sigma]$ எனில், எனில்
+  மட்டுமே, $\Delta(\sigma) \Proves !A$.
+\end{lem}
+
+\begin{proof}
+  $!A$ மீது தொகுமுறையில் நிறுவுகிறோம்.
+  \begin{enumerate}
+    \item \indcase{!A}{\lfalse}{$\Delta(\sigma)$ பகாவானதால் அது
+      முரணற்றது; ஆகவே $\Delta(\sigma) \Proves/ \indfrm$.
+      வரையறையின்படி $\mSat/{M(\Delta)}{\indfrm}[\sigma]$.}
+    \item \indcase{!A}{p}{$\mSat{{}}{}$ இன் வரையறையின்படி,
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$ எனில், எனில் மட்டுமே,
+      $\sigma \in V(p)$; அதாவது $\Delta(\sigma) \Proves \indfrm$.}
+    \item \indcase!{!A}{\lnot !B}{மறுப்பு நிபந்தனைவாக்கத்தால்
+      வரையறுக்கப்பட்ட சுருக்கம் என்பதால், இந்நேர்வு கீழுள்ள
+      நிபந்தனைவாக்க நேர்விலிருந்தும் பொருத்தமின்மை நேர்விலிருந்தும்
+      பின்தொடர்கிறது.}
+      % SOURCE CORRECTION TA-IL-014: supply the omitted negation case.
+    \item \indcase{!A}{!B \land
+      !C}{$\mSat{M(\Delta)}{\indfrm}[\sigma]$ எனில், எனில் மட்டுமே,
+      $\mSat{M(\Delta)}{!B}[\sigma]$ மற்றும்
+      $\mSat{M(\Delta)}{!C}[\sigma]$. தொகுமுறை எடுகோளின்படி,
+      $\mSat{M(\Delta)}{!B}[\sigma]$ எனில், எனில் மட்டுமே,
+      $\Delta(\sigma) \Proves !B$; $!C$ க்கும் இதேபோல். ஆனால்
+      $\Delta(\sigma) \Proves !B$ மற்றும் $\Delta(\sigma) \Proves !C$
+      எனில், எனில் மட்டுமே, $\Delta(\sigma) \Proves \indfrm$.}
+    \item \indcase{!A}{!B \lor
+      !C}{$\mSat{M(\Delta)}{\indfrm}[\sigma]$ எனில், எனில் மட்டுமே,
+      $\mSat{M(\Delta)}{!B}[\sigma]$ அல்லது
+      $\mSat{M(\Delta)}{!C}[\sigma]$. தொகுமுறை எடுகோளின்படி, இது
+      $\Delta(\sigma) \Proves !B$ அல்லது
+      $\Delta(\sigma) \Proves !C$ எனில், எனில் மட்டுமே, மெய்யாகும்.
+      இதுவும் $\Delta(\sigma) \Proves \indfrm$ எனில், எனில் மட்டுமே,
+      மெய்யாகும் என்று காட்ட வேண்டும். இடமிருந்து வலத் திசை தெளிவானது.
+      வலமிருந்து இடத் திசை $\Delta(\sigma)$ பகாவானது என்பதால்
+      பின்தொடர்கிறது.}
+    \item \indcase{!A}{!B \lif !C}{முதலில், இடமிருந்து வலத் திசையின்
+      மறுதலையை நிறுவுவோம். $\Delta(\sigma) \Proves/ !B \lif !C$ எனக்
+      கொள்க. அப்போது $\Delta(\sigma) \cup \{!B\} \Proves/ !C$ உம் மெய்.
+      ஏதோவொரு~$n$ க்கு $\tuple{!B, !C}$ ஆனது
+      $\tuple{!B_n, !C_n}$ என்பதால், $\Delta(\sigma.n) =
+      (\Delta(\sigma) \cup \{!B\})^*$; மேலும்
+      $\Delta(\sigma.n) \Proves !B$, ஆனால்
+      $\Delta(\sigma.n) \Proves/ !C$. தொகுமுறை எடுகோளின்படி,
+      $\mSat{M(\Delta)}{!B}[\sigma.n]$ மற்றும்
+      $\mSat/{M(\Delta)}{!C}[\sigma.n]$. $R\sigma(\sigma.n)$ என்பதால்,
+      $\mSat/{M(\Delta)}{\indfrm}[\sigma]$ என்பது இதன் பொருள்.
+
+      இப்போது $\Delta(\sigma) \Proves !B \lif !C$ எனக் கொண்டு,
+      $R\sigma\sigma'$ என்க. $\Delta(\sigma) \subseteq
+      \Delta(\sigma')$ என்பதால், $\Delta(\sigma') \Proves !B$ எனில்
+      $\Delta(\sigma') \Proves !C$. வேறு சொற்களில்,
+      $R\sigma\sigma'$ ஆகும் ஒவ்வொரு~$\sigma'$ க்கும்
+      $\Delta(\sigma') \Proves/ !B$ அல்லது
+      $\Delta(\sigma') \Proves !C$. தொகுமுறை எடுகோளின்படி,
+      $R\sigma\sigma'$ ஆகும்போதெல்லாம்
+      $\mSat/{M(\Delta)}{!B}[\sigma']$ அல்லது
+      $\mSat{M(\Delta)}{!C}[\sigma']$ என்பது இதன் பொருள்; அதாவது
+      $\mSat{M(\Delta)}{\indfrm}[\sigma]$.}
+  \end{enumerate}
+\end{proof}
+
+\end{document}

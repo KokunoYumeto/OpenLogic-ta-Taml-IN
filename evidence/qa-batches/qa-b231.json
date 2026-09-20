@@ -1,0 +1,268 @@
+{
+  "batch_id": "TA-B231",
+  "units": [
+    {
+      "unit_id": "OLP-0514",
+      "source_sha256": "9745506f871e091339606542e34049c03d2baffd71bd7de389c0d69468846e73",
+      "translation_sha256": "9973a8bd5e244f1b60e5a9bbe48a31d3710dde99988590a2d07860cef1bb9508",
+      "source_bytes": 1833,
+      "translation_bytes": 2149,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "close",
+        "include",
+        "just",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0515",
+      "source_sha256": "3852095c3c8edfdf76e294936602d8a0d640622642fcb0c27cf55420ef99e46c",
+      "translation_sha256": "d438bd77f8061f104ec483b8e348a6f41295593499464715ffae4de655d2bbc9",
+      "source_bytes": 9818,
+      "translation_bytes": 20637,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mSat{M}{!A}[w]$",
+        "$\\mSat{M}{!A}[f(\\sigma)]$",
+        "$\\sFmla{\\True}{\\lfalse}$",
+        "$Rf(\\sigma)(\\sigma.{*})$",
+        "$\\sFmla{\\False}{!B\\lor!C}\\in\\Gamma$",
+        "$\\Gamma\\cup\\{\\sFmla{\\False}{!B\\lif!C}[\\sigma.n]\\}$",
+        "$\\Gamma\\cup\\{\\sFmla{\\False}{!B\\lif!C}[\\sigma.n]\\}$",
+        "$\\Gamma\\Proves!A$"
+      ],
+      "extra_math": [
+        "$\\mSat/{M}{!A}[w]$",
+        "$Rf(\\sigma)f(\\sigma.{*})$",
+        "$\\sFmla{\\True}{\\lfalse}[\\sigma]$",
+        "$\\mSat{M}{!A}[f(\\sigma.{*})]$",
+        "$\\sFmla{\\False}{!B\\lor!C}[\\sigma]\\in\\Gamma$",
+        "$\\Gamma\\cup\\{\\sFmla{\\True}{!B}[\\sigma.n],\\sFmla{\\False}{!C}[\\sigma.n]\\}$",
+        "$\\Gamma\\cup\\{\\sFmla{\\True}{!B}[\\sigma.n],\\sFmla{\\False}{!C}[\\sigma.n]\\}$",
+        "$\\Gamma\\Entails!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "formula",
+        "include",
+        "int",
+        "logic",
+        "open",
+        "rel",
+        "section",
+        "sem",
+        "signed",
+        "sou",
+        "tab"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-019",
+          "unit_id": "OLP-0515",
+          "kind": "tableau-countermodel-makes-conclusion-true",
+          "action": "Made A false at the countermodel world while all premises remain true.",
+          "expected_missing_math": [
+            "$\\mSat{M}{!A}[w]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat/{M}{!A}[w]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The opening contrapositive calls M,w a countermodel but prints A as true there, which would satisfy rather than refute the target entailment.",
+          "chosen_treatment": "தமிழ் முன்கூற்றுகள் மெய்யாகவும் முடிவு A பொய்யாகவும் இருக்கும் வழக்கமான எதிர்மாதிரியைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Negating one of the premises instead, which would not refute entailment.",
+          "rationale": "A countermodel to B_1,...,B_n entails A must satisfy every B_i and falsify A at the same world.",
+          "precise_review_question": "Is A false in the countermodel used for the contrapositive?",
+          "location_needle": "SOURCE CORRECTION TA-IL-019"
+        },
+        {
+          "audit_id": "TA-IL-020",
+          "unit_id": "OLP-0515",
+          "kind": "true-falsity-closure-proof-drops-prefix",
+          "action": "Restored sigma on the true-falsity signed formula in the closure proof.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{\\lfalse}$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{\\lfalse}[\\sigma]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\sigma"
+          ],
+          "source_issue_or_choice": "The proposition and satisfaction premise are indexed by sigma, but its first proof sentence drops the prefix from the signed formula.",
+          "chosen_treatment": "தமிழ் மூடல் கூற்றிலுள்ள அதே முன்னொட்டு sigma வை நிறுவலிலும் வைத்துள்ளது.",
+          "alternatives_considered": "Treating the unprefixed signed formula as a separate tableau language.",
+          "rationale": "This chapter defines satisfiability only for prefixed signed formulas.",
+          "precise_review_question": "Does true falsity carry sigma in both statement and proof?",
+          "location_needle": "SOURCE CORRECTION TA-IL-020"
+        },
+        {
+          "audit_id": "TA-IL-021",
+          "unit_id": "OLP-0515",
+          "kind": "closure-monotonicity-drops-prefix-interpretation-and-reevaluates-old-world",
+          "action": "Applied f to the accessible extended prefix and evaluated A at that extended world.",
+          "expected_missing_math": [
+            "$\\mSat{M}{!A}[f(\\sigma)]$",
+            "$Rf(\\sigma)(\\sigma.{*})$"
+          ],
+          "expected_extra_math": [
+            "$Rf(\\sigma)f(\\sigma.{*})$",
+            "$\\mSat{M}{!A}[f(\\sigma.{*})]$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proof's accessibility expression omits f on sigma-star, and the monotonicity conclusion repeats the starting world instead of the accessible world; the preceding sentence is also grammatically interrupted.",
+          "chosen_treatment": "தமிழ் பொருள்கோள் f ஐ இரு முன்னொட்டுகளுக்கும் பயன்படுத்தி, நீட்டித்த முன்னொட்டின் உலகில் A மெய் என்று முடிக்கிறது.",
+          "alternatives_considered": "Keeping the repeated starting-world conclusion, which cannot contradict falsity at the extension.",
+          "rationale": "Persistence transports truth from f(sigma) to f(sigma-star), exactly the world where the false signed formula is interpreted.",
+          "precise_review_question": "Does monotonicity carry A to f(sigma-star)?",
+          "location_needle": "SOURCE CORRECTION TA-IL-021"
+        },
+        {
+          "audit_id": "TA-IL-022",
+          "unit_id": "OLP-0515",
+          "kind": "false-disjunction-soundness-case-drops-prefix",
+          "action": "Restored sigma on the false-disjunction premise.",
+          "expected_missing_math": [
+            "$\\sFmla{\\False}{!B\\lor!C}\\in\\Gamma$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\False}{!B\\lor!C}[\\sigma]\\in\\Gamma$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\sigma"
+          ],
+          "source_issue_or_choice": "Every surrounding rule case and the rule table use a prefix, but the false-disjunction exercise case omits it.",
+          "chosen_treatment": "தமிழ் முன்னுரை வாய்பாட்டில் sigma முன்னொட்டை மீட்டமைக்கிறது.",
+          "alternatives_considered": "Leaving the rule application without a world name in a prefixed tableau system.",
+          "rationale": "The semantic branch interpretation requires a prefix for every signed formula.",
+          "precise_review_question": "Is the false disjunction indexed by sigma?",
+          "location_needle": "SOURCE CORRECTION TA-IL-022"
+        },
+        {
+          "audit_id": "TA-IL-023",
+          "unit_id": "OLP-0515",
+          "kind": "false-conditional-soundness-extends-branch-with-wrong-formula",
+          "action": "Used the two actual rule conclusions, true B and false C at sigma.n, in both extended-branch sets.",
+          "expected_missing_math": [
+            "$\\Gamma\\cup\\{\\sFmla{\\False}{!B\\lif!C}[\\sigma.n]\\}$",
+            "$\\Gamma\\cup\\{\\sFmla{\\False}{!B\\lif!C}[\\sigma.n]\\}$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\cup\\{\\sFmla{\\True}{!B}[\\sigma.n],\\sFmla{\\False}{!C}[\\sigma.n]\\}$",
+            "$\\Gamma\\cup\\{\\sFmla{\\True}{!B}[\\sigma.n],\\sFmla{\\False}{!C}[\\sigma.n]\\}$"
+          ],
+          "expected_missing_commands": [
+            "\\lif",
+            "\\lif"
+          ],
+          "expected_extra_commands": [
+            "\\sFmla",
+            "\\sFmla",
+            "\\True",
+            "\\True",
+            "\\sigma",
+            "\\sigma"
+          ],
+          "source_issue_or_choice": "The paragraph correctly names the false-conditional rule's two conclusions and constructs a witness for them, but both set expressions instead add a false copy of the conditional at the new prefix.",
+          "chosen_treatment": "தமிழ் இரு கண வெளிப்பாடுகளிலும் புதிய முன்னொட்டில் மெய்-B மற்றும் பொய்-C ஆகியவற்றைச் சேர்க்கிறது.",
+          "alternatives_considered": "Changing the witness construction to satisfy a false conditional at the successor, which is neither the rule conclusion nor supported by the chosen world.",
+          "rationale": "The selected accessible witness makes B true and C false, exactly satisfying the two signed formulas generated by the rule.",
+          "precise_review_question": "Do both extended-branch sets contain true B and false C at sigma.n?",
+          "location_needle": "SOURCE CORRECTION TA-IL-023"
+        },
+        {
+          "audit_id": "TA-IL-024",
+          "unit_id": "OLP-0515",
+          "kind": "entailment-soundness-corollary-repeats-premise-as-conclusion",
+          "action": "Concluded Gamma entails A after the countermodel contradiction.",
+          "expected_missing_math": [
+            "$\\Gamma\\Proves!A$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\Entails!A$"
+          ],
+          "expected_missing_commands": [
+            "\\Proves"
+          ],
+          "expected_extra_commands": [
+            "\\Entails"
+          ],
+          "source_issue_or_choice": "The corollary assumes Gamma proves A and aims to establish entailment, but its last line repeats the already assumed derivability claim.",
+          "chosen_treatment": "தமிழ் முரணுக்குப் பின் துணைமுடிவின் இலக்கான பின்விளைவை முடிவாகக் கூறுகிறது.",
+          "alternatives_considered": "Repeating derivability, which leaves the corollary unproved.",
+          "rationale": "Eliminating the supposed countermodel proves Gamma entails A.",
+          "precise_review_question": "Does the final line state entailment rather than repeat derivability?",
+          "location_needle": "SOURCE CORRECTION TA-IL-024"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\lif",
+        "\\lif",
+        "\\Proves"
+      ],
+      "extra_commands": [
+        "\\sFmla",
+        "\\sFmla",
+        "\\True",
+        "\\True",
+        "\\Entails",
+        "\\sigma",
+        "\\sigma",
+        "\\sigma",
+        "\\sigma"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

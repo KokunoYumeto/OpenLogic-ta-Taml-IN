@@ -1,0 +1,160 @@
+% SEGMENT OLP-0506-S01
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: lindenbaum
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{lin}
+
+\olsection{லிண்டன்பாமின் துணைத்தேற்றம்}
+
+உள்ளுணர்வுவாதத் தருக்கத்திற்கான நிறைவுத்தன்மைத் தேற்றத்தை நிறுவ,
+$\Gamma \Proves/ !A$ எனக் கொண்டு, $\mSat{M}{\Gamma}$ மற்றும்
+$\mSat/{M}{!A}$ ஆகும் மாதிரி ஒன்றை அமைக்கிறோம்.
+
+செவ்வியல் தருக்கத்தில், !!{derivability} உறவை முரணின்மை என்ற கருத்துருவாகக்
+குறைக்கலாம். ஏனெனில் !!^a{formula}~$!A$ ஆனது !!{formula}s இன் கணம்
+ஒன்றிலிருந்து !!{derivable} எனில், எனில் மட்டுமே, அந்தக் கணத்துடன்~$!A$ இன்
+மறுப்பைச் சேர்த்தது முரணானது. உள்ளுணர்வுவாதத் தருக்கத்தில் இதைச் செய்ய
+முடியாது. உள்ளுணர்வுவாதத் தருக்கத்தில் $\lnot!A$ முரணானது எனில்,
+$\Proves \lnot\lnot !A$ என்பது மட்டுமே கிடைக்கிறது. பொதுவாக
+$\lnot\lnot!A \lif !A$ உள்ளுணர்வுவாத முறையில் ஏற்கப்படாததால்,
+$\Proves !A$ என்று முடிக்க முடியாது.
+
+ஆகவே மாதிரி~$\mModel{M}$ ஐ அமைக்கும்போது !!^a{formula}~$!A$ இன்
+!!{derivability} இன்மையைக் கண்காணிக்க வேண்டும். எனவே செவ்வியல் நேர்வைப்
+போல, மாதிரி~$\mModel{M}$ ஐ அமைக்க மூலக் கணத்தை விரிவாக்கும் ஒரு நிறைவான
+கணம்~$\Gamma^* \supseteq \Gamma$ ஐப் பயன்படுத்த முடியாது; ஏனெனில்
+ஒவ்வொரு நிறைவான கணம்~$\Gamma^*$ இலும்
+$\Gamma^* \Proves !A \lor \lnot !A$.
+
+நிறைவான கணம்~$\Gamma^*$ ஐப் பயன்படுத்துவதற்குப் பதிலாக, வாய்பாடுகளின்
+பகாக் கணம் என்ற கருத்தைப் பயன்படுத்துவோம்:
+
+\begin{defn}\ollabel{defn:prime}
+  !!{formula}s இன் கணம்~$\Gamma$ பின்வருவன மெய்யானால், எனில் மட்டுமே,
+  
+  \emph{பகா} ஆகும்:
+  \begin{enumerate}
+  \item\ollabel{defn:prime1} $\Gamma$ முரணற்றது; அதாவது
+    $\Gamma \Proves/ \lfalse$;
+  \item\ollabel{defn:prime2} $\Gamma \Proves !A$ எனில்
+    $!A \in \Gamma$; மேலும்
+  \item\ollabel{defn:prime3} $!A \lor !B \in \Gamma$ எனில்
+    $!A \in \Gamma$ அல்லது $!B \in \Gamma$.
+  \end{enumerate}
+\end{defn}
+
+\begin{lem}[லிண்டன்பாமின் துணைத்தேற்றம்]
+  \ollabel{lem:lindenbaum} $\Gamma \Proves/ !A$ எனில்,
+  $\Gamma^* \supseteq \Gamma$ ஆகவும் $\Gamma^*$ பகாவாகவும்
+  $\Gamma^* \Proves/ !A$ ஆகவும் இருக்கும் அத்தகைய கணம் ஒன்று உள்ளது.
+\end{lem}
+
+\begin{proof}
+  $!B \lor !C$ வடிவிலுள்ள எல்லா !!{formula}s களையும் $!B_1 \lor !C_1$,
+  $!B_2 \lor !C_2$, \dots என எண்ணிடுக. !!{formula}s கணங்களின் ஏறுவரிசைத்
+  தொடர்~$\Gamma_n$ ஐ வரையறுப்போம்; ஒவ்வொரு~$\Gamma_{n+1}$ உம்
+  $\Gamma_n$ உடன் ஒரு புதிய !!^a{formula} ஐச் சேர்த்ததாக வரையறுக்கப்படும்.
+  எல்லா~$\Gamma_n$ களின் ஒன்றியமே~$\Gamma^*$ ஆகும். $\Gamma^*$ பகாவாகவும்
+  தொடர்ந்து $\Gamma^* \Proves/ !A$ ஆகவும் இருப்பதை உறுதிசெய்யுமாறு புதிய
+  !!{formula}s தேர்ந்தெடுக்கப்படுகின்றன. அதாவது ஒவ்வொரு படியிலும்,
+  பின்வருவன மெய்யாகும் முதல் பிரிப்பு~$!B_i \lor !C_i$ ஐக் கண்டுபிடிக்க
+  வேண்டும்:
+  \begin{enumerate}
+  \item\ollabel{gamma-1} $\Gamma_n \Proves !B_i \lor !C_i$
+  \item\ollabel{gamma-2} $!B_i \notin \Gamma_n$ மற்றும்
+    $!C_i \notin \Gamma_n$
+  \end{enumerate}
+  $\Gamma_n \cup \{!B_i\} \Proves/ !A$ எனில் $!B_i$ ஐயும், இல்லையெனில்
+  $!C_i$ ஐயும்~$\Gamma_n$ உடன் சேர்க்கிறோம். இது செயல்படுகிறது என்று
+  காட்ட வேண்டும். இப்போதைக்கு, \olref{gamma-1}, \olref{gamma-2} ஆகியவை
+  மெய்யாகும் மிகச்சிறிய~$i$ ஐ $i(n)$ என வரையறுக்கிறோம்.
+
+  $\Gamma_0 = \Gamma$ எனவும்
+  \[
+  \Gamma_{n+1} = \begin{cases}
+    \Gamma_n \cup \{!B_{i(n)}\} &
+    \text{$\Gamma_n \cup \{!B_{i(n)}\} \Proves/ !A$ எனில்} \\
+    \Gamma_n \cup \{!C_{i(n)}\} & \text{இல்லையெனில்}
+    \end{cases}
+  \]
+  எனவும் வரையறுக்கிறோம். $i(n)$ வரையறுக்கப்படவில்லை எனில், அதாவது
+  $\Gamma_n \Proves !B \lor !C$ ஆகும்போதெல்லாம் $!B \in \Gamma_n$
+  அல்லது $!C \in \Gamma_n$ எனில், $\Gamma_{n+1} = \Gamma_n$ எனக்
+  கொள்கிறோம். இப்போது $\Gamma^* = \bigcup_{n=0}^\infty \Gamma_n$
+
+  முதலில், எல்லா~$n$ க்கும் $\Gamma_n \Proves/ !A$ என்று காட்டுகிறோம்.
+  $n$ மீது தொகுமுறையில் செல்கிறோம். $n = 0$ எனில் தேற்றத்தின்
+  எடுகோளான $\Gamma \Proves/ !A$ இன்படி கூற்று மெய். $n>0$ எனில்,
+  $\Gamma_n \Proves/ !A$ என்பதிலிருந்து $\Gamma_{n+1} \Proves/ !A$
+  என்று காட்ட வேண்டும். $i(n)$ வரையறுக்கப்படவில்லை எனில்,
+  $\Gamma_{n+1} = \Gamma_n$; நிறுவ ஏதுமில்லை. எனவே $i(n)$
+  வரையறுக்கப்பட்டுள்ளது எனக் கொள்க. எளிமைக்காக $i = i(n)$ என்க.
+
+  கூற்றின் மறுதலையை நிறுவுவோம். $\Gamma_{n+1} \Proves !A$ எனக் கொள்க.
+  கட்டமைப்பின்படி, $\Gamma_n \cup \{!B_i\} \Proves/ !A$ எனில்
+  $\Gamma_{n+1} = \Gamma_n \cup \{!B_i\}$; இல்லையெனில்
+  $\Gamma_{n+1} = \Gamma_n \cup \{!C_i\}$. முதல் நேர்வாக இருக்க
+  முடியாது; ஏனெனில் அப்போது $\Gamma_{n+1} \Proves/ !A$. ஆகவே
+  $\Gamma_n \cup \{!B_i\} \Proves !A$ மற்றும்
+  $\Gamma_{n+1} = \Gamma_n \cup \{!C_i\}$. $i(n)$ இன்
+  வரையறையின்படி $\Gamma _n \Proves !B_i \lor !C_i$. நமக்கு
+  $\Gamma_n \cup \{!B_i\} \Proves !A$ உம்
+  $\Gamma_{n+1} = \Gamma_n \cup \{!C_i\} \Proves !A$ உம் உள்ளன.
+  எனவே நாம் காட்ட விரும்பியபடி $\Gamma_n \Proves !A$.
+
+  $\Gamma^* \Proves !A$ எனில், $\Gamma' \Proves !A$ ஆகும் ஏதோவொரு
+  முடிவுறு உட்கணம் $\Gamma' \subseteq \Gamma^*$ இருக்கும்.
+  ஒவ்வொரு~$!D \in \Gamma'$ உம் ஏதோவொரு~$i$ க்கான $\Gamma_i$ இல்
+  இருக்க வேண்டும். இவற்றுள் மிகப்பெரியதை~$n$ என்க. $i \le n$ எனில்
+  $\Gamma_i \subseteq \Gamma_n$ என்பதால், $\Gamma' \subseteq \Gamma_n$.
+  ஆனால் அப்போது $\Gamma_n \Proves !A$; இது மேலே நிறுவிய
+  $\Gamma_n \Proves/ !A$ என்பதற்கு முரண்.
+
+  இறுதியாக, $\Gamma^*$ பகா என்று, அதாவது \olref{defn:prime1},
+  \olref{defn:prime2}, \olref{defn:prime3} ஆகிய
+  \olref{defn:prime} நிபந்தனைகளை நிறைவுசெய்கிறது என்று காட்டுகிறோம்.
+
+  முதலில், $\Gamma^* \Proves/ !A$; ஆகவே $\Gamma^*$ முரணற்றது. எனவே
+  \olref{defn:prime1} மெய்.
+
+  இப்போது $\Gamma^* \Proves !B \lor !C$ எனில் $!B \in \Gamma^*$ அல்லது
+  $!C \in \Gamma^*$ என்று காட்டுகிறோம். இது \olref{defn:prime3} ஐ
+  நிறுவுகிறது; ஏனெனில் $!B \lor !C \in \Gamma^*$ எனில்
+  $\Gamma^* \Proves !B \lor !C$ உம் மெய். ஆகவே
+  $\Gamma^* \Proves !B \lor !C$, ஆனால் $!B \notin \Gamma^*$ மற்றும்
+  $!C \notin \Gamma^*$ எனக் கொள்க. $\Gamma^* \Proves !B \lor !C$
+  என்பதால், ஏதோவொரு~$n$ க்கு $\Gamma_n \Proves !B \lor !C$.
+  எல்லாப் பிரிப்புகளின் எண்ணீட்டில் $!B \lor !C$ ஆனது ஏதோவொரு
+  சுட்டெண்ணில் $!B_j \lor !C_j$ ஆக இடம்பெறும். $!B_j \lor !C_j$ ஆனது
+  $i(n)$ இன் வரையறையிலுள்ள பண்புகளை நிறைவுசெய்கிறது: நமக்கு
+  $\Gamma_n \Proves !B_j \lor !C_j$ உள்ளது; ஆனால்
+  $!B_j \notin \Gamma_n$, $!C_j \notin \Gamma_n$. j தேர்ந்தெடுக்கப்படும்
+  வரை இப்பண்புகள் தொடர்ந்து மெய்யாகும். j க்குக் குறைவான சுட்டெண்கள்
+  முடிவுறு எண்ணிக்கையிலேயே உள்ளன; அவற்றுள் ஒவ்வொன்றும் தேர்ந்தெடுக்கப்பட்டால்
+  ஏதோவொரு பிரிப்பு~$!B_i \lor !C_i$ கையாளப்படுகிறது; அதன்
+  $!B_i$ அல்லது $!C_i$ சேர்க்கப்படுவதால் அந்தச் சுட்டெண் மீண்டும் தடை
+  செய்யாது. ஆகவே
+  ஏதோவொரு படி~$m$ இல் $j = i(m)$. அப்போது $!B \in \Gamma_{m+1}$ அல்லது
+  $!C \in \Gamma_{m+1}$; இது $!B \notin \Gamma^*$ மற்றும்
+  $!C \notin \Gamma^*$ என்ற எடுகோளுக்கு முரண்.
+  % SOURCE CORRECTION TA-IL-012: justify fairness using the finitely many earlier indices.
+
+  இப்போது $\Gamma^* \Proves !B$ எனக் கொள்க. அப்போது
+  $\Gamma^* \Proves !B \lor !B$. $\Gamma^* \Proves !B \lor !B$ எனில்
+  $!B \in \Gamma^*$ என்று இப்போதுதான் நிறுவினோம். எனவே $\Gamma^*$ ஆனது
+  \olref{defn:prime2} என்ற \olref{defn:prime} நிபந்தனையை
+  நிறைவுசெய்கிறது.
+\end{proof}
+
+\begin{prob}
+$\Gamma \Proves/ \bot$ எனில் $\Gamma$ செவ்வியல் தருக்கத்தில் முரணற்றது,
+அதாவது~$\Gamma$ விலுள்ள எல்லா வாய்பாடுகளையும் மெய்யாக்கும் மதிப்பீடு ஒன்று
+உள்ளது என்று காட்டுக.
+\end{prob}
+
+\end{document}

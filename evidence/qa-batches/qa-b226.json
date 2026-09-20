@@ -1,0 +1,185 @@
+{
+  "batch_id": "TA-B226",
+  "units": [
+    {
+      "unit_id": "OLP-0501",
+      "source_sha256": "e181f2cc2add672ac76ae6cf3e011d3242479e1a1ff5f8e0f679eb1eda8f62fb",
+      "translation_sha256": "91b14193fa93b4e8f90d8c7ec3b20520808276dd7c9be8d94651eb64e8e884be",
+      "source_bytes": 2238,
+      "translation_bytes": 3828,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mSat{M}{!A}[w]$",
+        "$\\mSat{M}{\\Gamma}[w]$"
+      ],
+      "extra_math": [
+        "$!A$",
+        "$\\mSat{M}{!A}$",
+        "$u\\inW$",
+        "$\\mSat{M}{!A}[u]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "int",
+        "logic",
+        "open",
+        "section",
+        "sem"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-004",
+          "unit_id": "OLP-0501",
+          "kind": "local-and-global-entailment-proof-clauses-reversed",
+          "action": "Proved the local clause from a local premise, then derived the global clause by applying it at every world.",
+          "expected_missing_math": [
+            "$\\mSat{M}{!A}[w]$",
+            "$\\mSat{M}{\\Gamma}[w]$"
+          ],
+          "expected_extra_math": [
+            "$!A$",
+            "$\\mSat{M}{!A}$",
+            "$u\\inW$",
+            "$\\mSat{M}{!A}[u]$"
+          ],
+          "expected_missing_commands": [
+            "\\Gamma"
+          ],
+          "expected_extra_commands": [
+            "\\in"
+          ],
+          "source_issue_or_choice": "The source labels the global-satisfaction conclusion as the local clause and then tries to prove the local conclusion from the stronger global premise; this reverses the proposition's two displayed claims.",
+          "chosen_treatment": "தமிழ் முதலில் $w$ இல் உள்ளூர் நிறைவிலிருந்து $w$ இல் முடிவை நிறுவி, பின்னர் அந்த முடிவை ஒவ்வொரு $u\\in W$ க்கும் பயன்படுத்தி உலகளாவிய நிறைவை நிறுவுகிறது.",
+          "alternatives_considered": "Preserving the reversed numbering and stronger premise, which would not prove the first displayed implication as stated.",
+          "rationale": "The first claim is exactly the definition of semantic entailment at a world; universal application of that claim gives the second claim.",
+          "precise_review_question": "Does the proof use the local premise for item 1 and quantify over every world only for item 2?",
+          "location_needle": "SOURCE CORRECTION TA-IL-004"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Gamma"
+      ],
+      "extra_commands": [
+        "\\in"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0502",
+      "source_sha256": "a279eb8cdd1aa2accf342003edd769868f134f178ef6c29b3807bda16ae95f21",
+      "translation_sha256": "eec94f8ea18d1567a312abc7c47ec8c8e88810fb784b7d629ec20dd37e4d919e",
+      "source_bytes": 4159,
+      "translation_bytes": 9100,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Prop{X}{!A}\\subset\\Prop{X}{!B}$",
+        "$\\Prop{X}{!A\\lif!B}\\cap\\Prop{X}{!A}\\subset\\Prop{X}{!B}$"
+      ],
+      "extra_math": [
+        "$\\Prop{X}{!A}\\subseteq\\Prop{X}{!B}$",
+        "$\\Prop{X}{!A\\lif!B}\\cap\\Prop{X}{!A}\\subseteq\\Prop{X}{!B}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-005",
+          "unit_id": "OLP-0502",
+          "kind": "topological-space-miscalled-a-topology",
+          "action": "Called X together with its family of open sets a topological space, reserving topology for the family of open sets.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source first says X may be written for a topology and then says X becomes a topology, although the preceding definition identifies the topology with the collection of open subsets and X with the underlying set.",
+          "chosen_treatment": "தமிழ் $X$ ஐ அடிப்படைக் கணமாகவும், திறந்த கணங்களின் குடும்பத்தை இடவியலாகவும், இரண்டையும் சேர்த்து இடவியல் வெளி என்றும் வேறுபடுத்துகிறது.",
+          "alternatives_considered": "Using topology for both the family and the underlying set, which would erase the distinction made by the definition.",
+          "rationale": "Standard notation distinguishes a topology from the topological space consisting of its carrier and open-set family.",
+          "precise_review_question": "Does the prose distinguish the topology from the topological space X?",
+          "location_needle": "SOURCE CORRECTION TA-IL-005"
+        },
+        {
+          "audit_id": "TA-IL-006",
+          "unit_id": "OLP-0502",
+          "kind": "strict-inclusion-used-for-derivability-and-implication",
+          "action": "Changed both strict subset signs to non-strict subset-or-equal signs.",
+          "expected_missing_math": [
+            "$\\Prop{X}{!A}\\subset\\Prop{X}{!B}$",
+            "$\\Prop{X}{!A\\lif!B}\\cap\\Prop{X}{!A}\\subset\\Prop{X}{!B}$"
+          ],
+          "expected_extra_math": [
+            "$\\Prop{X}{!A}\\subseteq\\Prop{X}{!B}$",
+            "$\\Prop{X}{!A\\lif!B}\\cap\\Prop{X}{!A}\\subseteq\\Prop{X}{!B}$"
+          ],
+          "expected_missing_commands": [
+            "\\subset",
+            "\\subset"
+          ],
+          "expected_extra_commands": [
+            "\\subseteq",
+            "\\subseteq"
+          ],
+          "source_issue_or_choice": "The source uses strict inclusion for derivability and for the set-theoretic modus-ponens property, but equality is allowed in both cases; in particular A proves A.",
+          "chosen_treatment": "தமிழ் இரு இடங்களிலும் $\\subseteq$ ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Preserving strict inclusion, which would falsely deny reflexive derivability when the two extensions coincide.",
+          "rationale": "Semantic consequence corresponds to ordinary inclusion, and the implication clause guarantees a subset relation that need not be proper.",
+          "precise_review_question": "Do both containment claims allow equality?",
+          "location_needle": "SOURCE CORRECTION TA-IL-006"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\subset",
+        "\\subset"
+      ],
+      "extra_commands": [
+        "\\subseteq",
+        "\\subseteq"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

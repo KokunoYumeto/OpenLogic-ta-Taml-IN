@@ -1,0 +1,64 @@
+% SEGMENT OLP-0504-S01
+% part: intuitionistic-logic
+% chapter: soundness-completeness
+% section: soundness-axd
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{sc}{sax}
+
+\olsection{அடிகோள் முறை \usetoken{P}{derivation} இன் சரித்தன்மை}
+
+\begin{editorial}
+  எல்லா அடிகோள்களும் உள்ளுணர்வுவாத முறையில் செல்லுபடியாகும் என்ற உண்மையை
+  இச்சரித்தன்மை நிறுவல் சார்ந்துள்ளது; இதை இன்னும், எடுத்துக்காட்டாகப்
+  பொருண்மையியல் அதிகாரத்தில், நிறுவ வேண்டும்.
+\end{editorial}
+
+\begin{thm}[சரித்தன்மை]
+  \ollabel{thm:soundness}
+  $\Gamma \Proves !A$ எனில், $ \Gamma \Entails !A$.
+\end{thm}
+
+\begin{proof}
+  $\Gamma \Proves !A$ எனில் $\Gamma \Entails !A$ என்று நிறுவுகிறோம்.
+  $\Gamma$ இலிருந்து~$!A$ க்கான !!{derivation} இல் உள்ள !!{formula}s இன்
+  எண்ணிக்கை~$n$ மீது தொகுமுறையில் நிறுவுகிறோம். $!A_1$, \dots,
+  $!A_n = !A$ என்பது~$\Gamma$ இலிருந்தான !!a{derivation} எனில்,
+  $\Gamma \Entails !A_n$ என்று காட்டுகிறோம். $!A_1$, \dots, $!A_n$
+  என்பது !!a{derivation} எனில், எந்த $k<n$ க்கும் $!A_1$, \dots,
+  $!A_k$ உம் ஒரு வருவித்தல் என்பதை நினைவில் கொள்க.
+
+  நீளம்~$0$ கொண்ட !!{derivation}s இல்லை; ஆகவே $n=0$ எனும் நிலையில்
+  கூற்று அற்பமாக மெய். எனவே நீளம்~$<n$ கொண்ட எல்லா !!{derivation}s க்கும்
+  கூற்று மெய் எனக் கொள்கிறோம். $!A_n$ க்கான நியாயத்தைப் பொறுத்து
+  நேர்வுகளாகப் பிரிக்கிறோம்.
+
+  \begin{enumerate}
+  \item $!A_n$ ஓர் அடிகோள். எல்லா அடிகோள்களும் செல்லுபடியானவை; எனவே
+    எந்த~$\Gamma$ க்கும் $\Gamma \Entails !A_n$.
+  \item $!A_n \in \Gamma$. அப்போது எந்த $\mModel{M}$ மற்றும் $w$ க்கும்,
+    $\mSat{M}{\Gamma}[w]$ எனில் வெளிப்படையாகவே
+    $\mSat{M}{!A_n}[w]$; அதாவது $\Gamma \Entails !A$.
+    % SOURCE CORRECTION TA-IL-007: remove the spurious Gamma argument from satisfaction.
+  \item $!A_i$ மற்றும் $!A_j \ident !A_i \lif !A_n$ ஆகியவற்றிலிருந்து
+    \MP{} மூலம் $!A_n$ பின்தொடர்கிறது. $!A_1$, \dots, $!A_i$ மற்றும்
+    $!A_1$, \dots, $!A_j$ ஆகியவை~$\Gamma$ இலிருந்தான !!{derivation}s;
+    ஆகவே தொகுமுறை எடுகோளின்படி $\Gamma \Entails !A_i$ மற்றும்
+    $\Gamma \Entails !A_i \lif !A_n$.
+
+    $\mSat{M}{\Gamma}[w]$ எனக் கொள்க. $\mSat{M}{\Gamma}[w]$ மற்றும்
+    $\Gamma \Entails !A_i \lif !A_n$ என்பதால்,
+    $\mSat{M}{!A_i \lif !A_n}[w]$. வரையறையின்படி, $Rww'$ ஆகும் எல்லா
+    $w'$ க்கும் $\mSat{M}{!A_i}[w']$ எனில் $\mSat{M}{!A_n}[w']$ என்பது
+    இதன் பொருள். $R$ தற்சுட்டுப் பண்புள்ளதால், $Rww'$ ஆகும்~$w'$ களுள்
+    $w$ உம் ஒன்று; அதாவது $\mSat{M}{!A_i}[w]$ எனில்
+    $\mSat{M}{!A_n}[w]$. $\Gamma \Entails !A_i$ என்பதால்,
+    $\mSat{M}{!A_i}[w]$. எனவே நாம் காட்ட விரும்பியபடி
+    $\mSat{M}{!A_n}[w]$.
+  \end{enumerate}
+\end{proof}
+
+\end{document}
