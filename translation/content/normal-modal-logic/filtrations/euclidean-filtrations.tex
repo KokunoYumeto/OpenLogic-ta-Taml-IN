@@ -1,0 +1,141 @@
+% SEGMENT OLP-0459-S01
+% Part: normal-modal-logic
+% Chapter: filtrations
+% Section: euclidean-filtrations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{fil}{euc}
+
+\olsection{யூக்ளிடிய மாதிரிகளின் வடிகட்டல்கள்}
+
+\olref[acc]{sec} இன் அணுகுமுறை, யூக்ளிடிய மாதிரிகள் அல்லது தொடருறவும்
+யூக்ளிடியமுமான மாதிரிகள் நேர்வில் செயல்படுவதில்லை.
+\olref{fig:ser-eucl} இன் மேலேயுள்ள, யூக்ளிடியமும் தொடருறவுமாகிய மாதிரியைக்
+கருதுக. $\Gamma = \{p, \Box p \}$ என்க. $\Gamma$ வழியாக வடிகட்டும்போது,
+$w_1$ உம் $w_3$ உம் மட்டுமே~$\Gamma$ மீது உடன்படும் உலகங்கள் என்பதால்
+$[w_1] = [w_3]$. \olref{fig:ser-eucl2} இல் காட்டியபடி, எந்த வடிகட்டலும்
+$\mModel{M}$ இலிருந்து மரபுவந்த அம்புகளையும் கொண்டிருக்கும். அந்த மாதிரி
+யூக்ளிடியமல்ல. மேலும், அதை யூக்ளிடியமாக்க அதற்கு அம்புகளைச் சேர்க்கவும்
+முடியாது. $[w_2]$ மற்றும் $[w_4]$ இடையே இருதிசை அம்புகளையும், பின்னர்
+$[w_2]$ மற்றும்~$[w_5]$ இடையேயும் இருதிசை அம்புகளையும் சேர்க்க வேண்டியிருக்கும்.
+ஆனால் $\Box p$ ஆனது~$[w_2]$ இல் மெய்யாக இருக்க வேண்டிய நிலையில், $p$
+ஆனது~$[w_5]$ இல் பொய்யாக உள்ளது.
+% SOURCE CORRECTION TA-NML-035: all endpoints and evaluations in the filtered model are classes.
+
+\begin{figure}[htpb]
+  \centering
+  \begin{tikzpicture}[modal]
+    \node[world] (w1)
+          [label={left: \mFalse{p}},
+            label={below: $\mSat{{}}{\Box p}$}] {$w_1$};
+    \node[world] (w2)
+          [label={right: \mTrue{p}},
+            label = {below: $\mSat{{}}{\Box p}$},
+            right=of w1] {$w_2$};
+    \draw[->] (w1) to (w2);
+    \node[world] (w3)
+          [label={left: \mFalse{p}},
+            label={below: $\mSat{{}}{\Box p}$},
+            below=of w1] {$w_3$};
+    \node[world] (w4)
+          [label={right:\mTrue{p}},
+            label={below: $\mSat/{{}}{\Box p}$},
+            right=of w3] {$w_4$};
+    \draw[->] (w3) to (w4);
+    \draw[reflexive above] (w4) to (w4);
+    \node[world] (w5)
+          [label={right: \mFalse{p}},
+            label=below:$\mSat/{{}}{\Box p}$,
+            right=of w4] {$w_5$};
+    \draw[->, bend left] (w4) to (w5);
+    \draw[->, bend left] (w5) to (w4);
+    \draw[reflexive above] (w5) to (w5);
+  \end{tikzpicture}
+  \caption{ஒரு தொடருறவும் யூக்ளிடியமுமான மாதிரி.}
+  \ollabel{fig:ser-eucl}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \begin{tikzpicture}[modal,every text node part/.style={align=center}]
+    \node[world] (w1)
+          [label={left: \mFalse{p}},
+            label={right:$[w_1]=[w_3]$},
+            label={below: $\mSat{{}}{\Box p}$}] {$[w_1]$};
+    \node[world] (w2)
+         [label={right: \mTrue{p}},
+           label = {below: $\mSat{{}}{\Box p}$},
+           right=of w1, yshift=1.5cm] {$[w_2]$};
+    \draw[->] (w1) to (w2);
+    \node[world] (w4)
+         [label={right:\mTrue{p}},
+           label={below: $\mSat/{{}}{\Box p}$},
+           right=of w1,yshift=-1.5cm] {$[w_4]$};
+    \draw[->] (w1) to (w4);
+    \draw[reflexive above] (w4) to (w4);
+    \node[world] (w5)
+         [label={right: \mFalse{p}},
+             label=below:$\mSat/{{}}{\Box p}$,
+             right=of w4] {$[w_5]$};
+    \draw[->, bend left] (w4) to (w5);
+    \draw[->, bend left] (w5) to (w4);
+    \draw[reflexive above] (w5) to (w5);
+  \end{tikzpicture}
+  \caption{\olref{fig:ser-eucl} இலுள்ள மாதிரியின் வடிகட்டல்.}
+  \ollabel{fig:ser-eucl2}
+\end{figure}
+
+குறிப்பாக, ஒரு யூக்ளிடிய வடிகட்டலைப் பெற, துணை-!!{formula}s இன் கீழ்
+மூடப்பட்ட தன்னிச்சையான $\Gamma$ களின் வழியான வடிகட்டல்களைக் கருதுவது
+போதாது. அதற்குப் பதிலாக, \emph{வாய்ப்புநிலையில் மூடப்பட்ட}
+$\Gamma$ கணங்களைக் கருத வேண்டும்
+(\olref[pre]{defn:modallyclosed} ஐக் காண்க). அத்தகைய வாக்கியக் கணங்கள்
+முடிவிலாவானவை; ஆகவே அவை தொடர்புடைய முறைமைக்கு ஒரு முடிவுறு மாதிரிப்
+பண்பையோ தீர்மானிக்கத்தன்மையையோ உடனடியாகத் தருவதில்லை.
+
+\begin{thm}\ollabel{thm:modal-closed-filt}
+  $\Gamma$ வாய்ப்புநிலையில் மூடப்பட்டதாகவும்,
+  $\mModel{M}=\tuple{W,R,V}$ ஆகவும்,
+  $\mModel{M^*} = \tuple{W^*,R^*,V^*}$ ஆனது $\mModel{M}$ இன் மிகத்தடித்த
+  வடிகட்டலாகவும் இருக்கட்டும்.
+  % SOURCE CORRECTION TA-NML-036: order the conclusions to match proof items 1--3.
+  \begin{enumerate}
+  \item $\mModel{M}$ கடத்துகிறது எனில், $\mModel{M^*}$ உம் கடத்துகிறது.
+  \item $\mModel{M}$ யூக்ளிடியமானது எனில், $\mModel{M^*}$ உம் யூக்ளிடியமானது.
+  \item $\mModel{M}$ சமச்சீரானது எனில், $\mModel{M^*}$ உம் சமச்சீரானது.
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+\begin{enumerate}
+  \item $\mModel{M^*}$ மிகத்தடித்த வடிகட்டல் எனில், வரையறையின்படி
+    $C_1(u,v)$ அப்போதும் அப்போதுமட்டுமே $R^*[u][v]$. கடத்தலுக்கு,
+    $C_1(u,v)$ மற்றும் $C_1(v,w)$ எனக் கொள்க; $C_1(u,w)$ என்பதை நாம்
+    காட்ட வேண்டும். \iftag{prvBox}{$\mSat{M}{\Box !A}[u]$ எனக் கொள்க;
+      கடத்தும் எல்லா மாதிரிகளிலும் \Ax{4} ஏற்புடையது என்பதால்
+      $\mSat{M}{\Box\Box!A}[u]$; மூடப்பட்டிருப்பதால்
+      $\Box\Box!A \in \Gamma$ என்பதால், $C_1(u,v)$ ஐக் கொண்டு
+      $\mSat{M}{\Box!A}[v]$ உம், பின்னர் $C_1(v,w)$ ஐக் கொண்டு
+      $\mSat{M}{!A}[w]$ உம் கிடைக்கின்றன. }{}\iftag{prvDiamond}{
+      $\mSat{M}{!A}[w]$ எனக் கொள்க; வாய்ப்புநிலை மூடலின்படி
+      $\Diamond !A \in \Gamma$ என்பதால், $C_1(v,w)$ ஐக் கொண்டு
+      $\mSat{M}{\Diamond !A}[v]$. வாய்ப்புநிலை மூடலின்படி
+      $\Diamond\Diamond!A \in \Gamma$ என்பதால், $C_1(u,v)$ ஐக் கொண்டு
+      $\mSat{M}{\Diamond\Diamond !A}[u]$ கிடைக்கிறது. கடத்தும் எல்லா
+      மாதிரிகளிலும் $\Ax{4}_\Diamond$ ஏற்புடையது என்பதால்,
+      $\mSat{M}{\Diamond!A}[u]$.}{}
+  \item பயிற்சி. யூக்ளிடிய மாதிரிகள் அனைத்திலும் \Ax{5} உம்
+    $\Ax{5_\Diamond}$ உம் ஏற்புடையவை என்ற உண்மையைப் பயன்படுத்துக.
+  \item பயிற்சி. சமச்சீரான மாதிரிகள் அனைத்திலும் \Ax{B} உம்
+    $\Ax{B_\Diamond}$ உம் ஏற்புடையவை என்ற உண்மையைப் பயன்படுத்துக.
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[nml][fil][euc]{thm:modal-closed-filt} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\end{document}

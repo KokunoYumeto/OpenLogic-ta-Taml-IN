@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T00:03:16.734158+00:00",
+  "date_utc": "2026-09-20T00:39:33.530945+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2232,6 +2232,56 @@
       "unit_id": "OLP-0449",
       "source_sha256": "4021151e95c367cfd94030d36b6dfb3c16792ade5767bb24825daf2e0602bb70",
       "translation_sha256": "7ccb559efa4d811e3543184866f406918d20dde260d5e0b0255cc83f0ddc2ff2"
+    },
+    {
+      "unit_id": "OLP-0450",
+      "source_sha256": "33219caedd7ed764901499b694eb234af0fcf15c1ccea29b9799a1c32d3b71af",
+      "translation_sha256": "3eda6cddf64775c488e31c221f9eef8cdc58be3ece7994f6c7acc2a78f102c22"
+    },
+    {
+      "unit_id": "OLP-0451",
+      "source_sha256": "faffee0613cc37515af229a202fed584e49ea182600e77c96d722654492eb01a",
+      "translation_sha256": "7cdb873bf69cd1b6790acf557e7882407458bf7726abd27fd99b2c0b3b832783"
+    },
+    {
+      "unit_id": "OLP-0452",
+      "source_sha256": "52ddd6bc925f0da353223ff038b1cb59be4a633ef8b8a8ec885d48fb99fcced8",
+      "translation_sha256": "6c517456e9b2f25e2464f37e499452904960d4237948b7729722290895b5a4ec"
+    },
+    {
+      "unit_id": "OLP-0453",
+      "source_sha256": "e7f0f36522a5549a046c4c7999dec2c80751ed486edb72efaa3c3962bb4d02d1",
+      "translation_sha256": "a73a85a2897dad4147e9e550080e7e93b17720f95276d16c738a7fa18bf8ffd4"
+    },
+    {
+      "unit_id": "OLP-0454",
+      "source_sha256": "8a20bbfcc005772b9166800bca81278de3b28c4b47f51d01dc07f69777c8a484",
+      "translation_sha256": "795d2bd43ca7a11f923813f2215b55074d187c8fdb9760d04cb48227e3b72007"
+    },
+    {
+      "unit_id": "OLP-0455",
+      "source_sha256": "aea5dd77f54889d35f027a23600c24a206ad42e7a6d736d51c16862ddd0997f5",
+      "translation_sha256": "5d23a843e8ea5b5d036bfd5d62c12aec05f2ee38a01bbb3a67f9effb10ef211f"
+    },
+    {
+      "unit_id": "OLP-0456",
+      "source_sha256": "73dfbf706b0e5593dd2a012581fac25f80499260b6f0ac17001235860f4e356e",
+      "translation_sha256": "4618648f2690efc284857beb7e1a9560470eede51e0c747666c6e2a68ebf3669"
+    },
+    {
+      "unit_id": "OLP-0457",
+      "source_sha256": "f6f07c518a0df3bdcff427979834a918256085715f1353b5b35cc6dafe75d1b1",
+      "translation_sha256": "b831fe02b387dbe05acbe124f8c8059d68b1160ec9f2e8132747f49692b864c8"
+    },
+    {
+      "unit_id": "OLP-0458",
+      "source_sha256": "6b103381a08ffabe6a5add8967f9ea83fa5dfb97ec349cd817f372fd752cdc0b",
+      "translation_sha256": "fa94c9960661007133c9dbc5cc81a97e19137f2c202f964862e845ddec0633bb"
+    },
+    {
+      "unit_id": "OLP-0459",
+      "source_sha256": "904eebe3b14b5f58fcac9db524e0546c9cdd6f1a07b00f1ef097fba80b0664db",
+      "translation_sha256": "f5e43772da7ab47653101a418021902327a1382f4d070b5f6a32fe17c6432f65"
     }
   ],
   "samples": [
@@ -6014,6 +6064,76 @@
       "assessment": "Every correspondence proof, the determined-class theorem, all three additional frame-property arguments, and the warning that not every modal system is frame complete remain.",
       "translation_segment_sha256": "4df54f4759ad7f2203802bb58198749215285c965d769de9451999f074e0d7d8",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0450-S01",
+      "reverse_paraphrase": "The filtrations chapter imports its introduction, closure preliminaries, filtration definition, examples, finiteness proof, K and S5 finite-model results, S5 decidability, further accessibility-preserving constructions, and the Euclidean case.",
+      "assessment": "All nine sections and the stable nml/fil hierarchy remain in source order.",
+      "translation_segment_sha256": "29ce6d4916b20121b5fe1004ae8fa9dc0ae1be514b4d91e41afd367e5d2c5c10",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0451-S01",
+      "reverse_paraphrase": "Finite-model search decides validity once every counterexample has a bounded finite countermodel; filtration groups worlds by agreement on relevant subformulas and preserves truth at equivalence classes.",
+      "assessment": "The model-counting argument, finite-model-property motivation, quotient strategy, induction sketch, and relation-design problem remain. TA-NML-030 closes the count parenthesis and TA-NML-031 repairs the global Box clause.",
+      "translation_segment_sha256": "e8c4042c4b17126a827801e1453153e57fd4c3c3d800818ed1f5773144c91b64",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0452-S01",
+      "reverse_paraphrase": "A formula set is subformula-closed when it contains every subformula of each member and modally closed when it also contains Box and Diamond of every member; agreement on the set defines an equivalence relation and a partition of worlds.",
+      "assessment": "Both closure definitions, the equivalence-class construction, all three equivalence properties, and the partition argument remain.",
+      "translation_segment_sha256": "32e144657db73868bd435e25d4e20e7b73e5a6a6684840a1a2ab07b210ce794d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0453-S01",
+      "reverse_paraphrase": "A filtration uses equivalence classes as worlds, the induced valuation, and accessibility conditions R1 through R3; structural induction then preserves truth for every formula in the closed set.",
+      "assessment": "Every definition clause, propositional case, truth-functional case, modal case, exercise and class-validity corollary remains exact.",
+      "translation_segment_sha256": "9d22d77d5f91038096df256019fd4b8e5c4b9b7aa2d2cc3a16ee96b461ea73e7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0454-S01",
+      "reverse_paraphrase": "The finest filtration has exactly the edges witnessed by representatives, while the coarsest has every edge allowed by the Box and Diamond preservation conditions; the successor-chain example admits exactly two displayed filtrations.",
+      "assessment": "Both existence proofs, all feature-sensitive branches, diagrams, valuations, class calculations and the binary-tree exercise remain. TA-NML-032 records the retained mismatch between its world set and valuation comprehensions.",
+      "translation_segment_sha256": "b37ee2bcb3095128e0fffd8c9d6d968b6fe1c434343e4835f8baa5299a987bbb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0455-S01",
+      "reverse_paraphrase": "For finite Gamma, each filtration class maps injectively to the subset of Gamma true throughout that class, bounding the quotient world set by the power set of Gamma.",
+      "assessment": "The injectivity argument, distinct-class contradiction and 2^n bound remain.",
+      "translation_segment_sha256": "7a65ec627795dc2aa3fcdc01593602f39bd6c1dafc6fb5ba1fc993248d09c2d3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0456-S01",
+      "reverse_paraphrase": "K has the finite model property because every finite subformula filtration is a K-model; S5 obtains it through finite universal filtrations, which are also reflexive and Euclidean.",
+      "assessment": "Both finite-model proofs, the universal-model validity equivalence and the preservation exercises remain. TA-NML-033 evaluates the K filtration at the class [w].",
+      "translation_segment_sha256": "4046bd906ac16954d5f11341a38e0c7ebdc191359c3204ef896aaf993a24fa24",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0457-S01",
+      "reverse_paraphrase": "S5 decidability dovetails systematic proof enumeration with finite universal countermodel search, and completeness plus the finite-model property guarantees that one search terminates.",
+      "assessment": "The finite valuation bound, parallel search and two possible outcomes remain. TA-NML-034 restricts countermodels to the model class sound for S5.",
+      "translation_segment_sha256": "a0d17d96824de621b354073c333e0657b3aa87ec318dcc7c45e0518b38326abd",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0458-S01",
+      "reverse_paraphrase": "Conditions C1 through C4 can be combined to construct symmetric, transitive, symmetric-transitive, or transitive-Euclidean filtrations while preserving every required filtration clause.",
+      "assessment": "The full condition table, all four constructions, the symmetric proof and remaining exercise items remain exact.",
+      "translation_segment_sha256": "6ca73018855755befad7df9532c33d6361da46dd2acc4d5109f6fa05e115bb89",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0459-S01",
+      "reverse_paraphrase": "Arbitrary subformula filtrations need not preserve Euclideanness; modal closure lets the coarsest filtration preserve transitivity, Euclideanness and symmetry via axioms 4, 5 and B.",
+      "assessment": "Both diagrams, the obstruction argument, modal-closure limitation and all three proof items remain. TA-NML-035 uses class nodes throughout the filtered model, and TA-NML-036 aligns theorem item order with its proof.",
+      "translation_segment_sha256": "89ed9e70d73898c4ac1fb830e792906afc5aec22309ee8ac96bd0739f7e8b291",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -6662,11 +6782,31 @@
     {
       "unit_id": "OLP-0445",
       "issue": "The box-lifting proof declares a finite premise list B1 through Bk but ends two nested conditionals at Bn, and its second lemma drops the Sigma index from one intermediate derivability claim. Tamil keeps the final index k and the modal-system index under TA-NML-028 and TA-NML-029."
+    },
+    {
+      "unit_id": "OLP-0451",
+      "issue": "The model-count parenthesis is unclosed, and the toy Box clause circularly says that some world satisfies Box B where the later induction requires every world to satisfy B. Tamil closes the parenthesis and states the universal semantic clause under TA-NML-030 and TA-NML-031."
+    },
+    {
+      "unit_id": "OLP-0454",
+      "issue": "The binary-tree exercise defines worlds as 0-prefixed strings but gives valuation comprehensions that also contain 1-prefixed strings. Tamil retains the frozen formulas and records the unresolved repair choice under TA-NML-032."
+    },
+    {
+      "unit_id": "OLP-0456",
+      "issue": "The K finite-model proof evaluates A at raw w in the filtration although its worlds are equivalence classes. Tamil evaluates at [w] under TA-NML-033."
+    },
+    {
+      "unit_id": "OLP-0457",
+      "issue": "The S5 decision proof says to enumerate all finite models, which would admit irrelevant non-S5 countermodels. Tamil restricts the search to finite universal models under TA-NML-034."
+    },
+    {
+      "unit_id": "OLP-0459",
+      "issue": "The filtered-model obstruction names raw worlds instead of their classes, and the theorem lists symmetry, transitivity and Euclideanness while its numbered proof treats them as transitivity, Euclideanness and symmetry. Tamil uses class nodes and aligns the item order under TA-NML-035 and TA-NML-036."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "446 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 276 frozen units still require completion.",
+  "remaining": "456 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 266 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -7232,6 +7372,42 @@
         "truth_lemma_induction_covers_every_connective_and_modality": true,
         "determination_and_K_completeness_remain": true,
         "canonical_frame_correspondences_and_three_further_properties_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0450",
+        "OLP-0451",
+        "OLP-0452",
+        "OLP-0453",
+        "OLP-0454",
+        "OLP-0455",
+        "OLP-0456",
+        "OLP-0457",
+        "OLP-0458",
+        "OLP-0459"
+      ],
+      "correction_ids": [
+        "TA-NML-030",
+        "TA-NML-031",
+        "TA-NML-032",
+        "TA-NML-033",
+        "TA-NML-034",
+        "TA-NML-035",
+        "TA-NML-036"
+      ],
+      "status": "pass",
+      "checks": {
+        "driver_imports_all_nine_sections": true,
+        "finite_model_roadmap_and_global_box_repair_remain": true,
+        "subformula_and_modal_closure_definitions_remain": true,
+        "filtration_conditions_and_truth_theorem_remain": true,
+        "finest_coarsest_examples_and_retained_issue_remain": true,
+        "finite_injection_and_power_bound_remain": true,
+        "K_and_S5_fmp_and_class_world_repair_remain": true,
+        "S5_decision_search_is_universal_and_parallel": true,
+        "C1_through_C4_and_four_preservation_claims_remain": true,
+        "euclidean_obstruction_classes_and_proof_order_remain": true
       }
     }
   ]

@@ -1,0 +1,158 @@
+{
+  "batch_id": "TA-B198",
+  "units": [
+    {
+      "unit_id": "OLP-0450",
+      "source_sha256": "33219caedd7ed764901499b694eb234af0fcf15c1ccea29b9799a1c32d3b71af",
+      "translation_sha256": "3eda6cddf64775c488e31c221f9eef8cdc58be3ece7994f6c7acc2a78f102c22",
+      "source_bytes": 445,
+      "translation_bytes": 548,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0451",
+      "source_sha256": "faffee0613cc37515af229a202fed584e49ea182600e77c96d722654492eb01a",
+      "translation_sha256": "7cdb873bf69cd1b6790acf557e7882407458bf7726abd27fd99b2c0b3b832783",
+      "source_bytes": 7256,
+      "translation_bytes": 19843,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mSat{M}{\\Box!B}[v]$"
+      ],
+      "extra_math": [
+        "$\\mSat{M}{!B}[v]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "propositional",
+        "section",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-NML-030",
+          "unit_id": "OLP-0451",
+          "kind": "unclosed-model-count-parenthesis",
+          "action": "Closed the parenthetical sentence that gives the number of accessibility relations on n worlds.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The parenthesis opened before the precise count 2^(n^2) is never closed.",
+          "chosen_treatment": "தமிழ் எண்ணிக்கைக் கூற்றை முடிக்கும் வலப்புற அடைப்புக்குறியைச் சேர்க்கிறது.",
+          "alternatives_considered": "Leaving the parenthetical sentence visibly unclosed.",
+          "rationale": "The missing mark is ordinary punctuation and the next paragraph begins a new argument.",
+          "precise_review_question": "Does the added closing parenthesis terminate only the accessibility-relation count?",
+          "location_needle": "SOURCE CORRECTION TA-NML-030"
+        },
+        {
+          "audit_id": "TA-NML-031",
+          "unit_id": "OLP-0451",
+          "kind": "global-box-clause-uses-existential-boxed-consequent",
+          "action": "Replaced the incoherent existential claim about some world satisfying Box B with the universal semantic clause that every world satisfies B, and described the toy case as universal accessibility.",
+          "expected_missing_math": [
+            "$\\mSat{M}{\\Box!B}[v]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat{M}{!B}[v]$"
+          ],
+          "expected_missing_commands": [
+            "\\Box"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The toy argument says Box B holds at w iff some v satisfies Box B, while the immediately following Box induction step quantifies over every equivalence class and requires B itself at each representative.",
+          "chosen_treatment": "தமிழ் எல்லா உலகங்களையும் அணுகும் எளிய நேர்வாக இதை வெளிப்படுத்தி, ஒவ்வொரு v-இலும் B மெய்யாகும் என்ற பெட்டி வாய்பாட்டின் சரியான நிபந்தனையைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Retaining the circular existential clause; treating the relation as empty, which would make the later induction step inapplicable.",
+          "rationale": "For universal accessibility, Box B at any world is equivalent to B at every world; this is exactly the premise used later to transfer truth between all classes and representatives.",
+          "precise_review_question": "Does the corrected toy clause state universal accessibility and evaluate unboxed B at every world?",
+          "location_needle": "SOURCE CORRECTION TA-NML-031"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Box"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0452",
+      "source_sha256": "52ddd6bc925f0da353223ff038b1cb59be4a633ef8b8a8ec885d48fb99fcced8",
+      "translation_sha256": "6c517456e9b2f25e2464f37e499452904960d4237948b7729722290895b5a4ec",
+      "source_bytes": 2958,
+      "translation_bytes": 7176,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

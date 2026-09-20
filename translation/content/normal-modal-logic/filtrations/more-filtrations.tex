@@ -1,0 +1,146 @@
+% SEGMENT OLP-0458-S01
+% Part: normal-modal-logic
+% Chapter: filtrations
+% Section: more-filtrations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{fil}{acc}
+
+\olsection{வடிகட்டல்களும் அணுகுறவுப் பண்புகளும்}
+
+முன்னர் குறிப்பிட்டபடி, அனைத்துறவு, தொடருறவு, தற்சுட்டு மாதிரிகளின்
+வடிகட்டல்கள் முறையே எப்போதும் அனைத்துறவு, தொடருறவு, அல்லது தற்சுட்டு
+மாதிரிகளாகவும் உள்ளன. ஆனால் சமச்சீரான அல்லது கடத்தும் மாதிரியின் ஒவ்வொரு
+வடிகட்டலும் முறையே சமச்சீரானதாக அல்லது கடத்துவதாக இருப்பதில்லை. எனினும்,
+சில நேர்வுகளில் அவ்வாறு அமையுமாறு வடிகட்டல்களை வரையறுக்க முடியும். அதைச்
+செய்ய, மிகத்தடித்த வடிகட்டலின் வரையறையில் செய்தது போலச் செயல்பட்டு,
+~$R^*$ இன் வரையறைக்குக் கூடுதல் நிபந்தனைகளைச் சேர்க்கிறோம். $\Gamma$
+துணை-!!{formula}s இன் கீழ் மூடப்பட்டதாக இருக்கட்டும்.
+\olref{tab:Cn-filtrations} இல் மாதிரி
+$\mModel{M} =\tuple{W, R, V}$ ஒன்றின் உலகங்கள் $u$, $v$ இடையே உள்ள
+தொடர்புகள்~$C_i(u,v)$ ஐக் கருதுக. இந்நிபந்தனைகளின் சேர்க்கைகளை
+அடிப்படையாகக் கொண்டு $R^*[u][v]$ ஐ வரையறுக்கலாம். எடுத்துக்காட்டாக,
+$C_1(u,v)$ என்ற நிபந்தனை நிறைவாகும் அப்போதும் அப்போதுமட்டுமே
+$R^*[u][v]$ என்று விதித்தால், துல்லியமாக மிகத்தடித்த வடிகட்டல் கிடைக்கிறது.
+$C_1(u,v)$ உம் $C_2(u, v)$ உம் இரண்டும் நிறைவாகும் அப்போதும்
+அப்போதுமட்டுமே $R^*[u][v]$ என்று விதித்தால், வேறொரு வடிகட்டல் கிடைக்கிறது.
+$C_1(u,v)$ மட்டும் நிறைவுசெய்யும் உலகச் சோடிகளைவிட $C_1(u,v)$ உம்
+$C_2(u,v)$ உம் நிறைவுசெய்யும் சோடிகள் குறைவு என்பதால், இது மிகத்தடித்த
+வடிகட்டலைவிட “நுண்ணியது.”
+
+\begin{table}[ht]
+  \centering
+  \begin{tabular}{|ll|}
+    \hline
+    \multirow{2}{*}{$C_1(u,v)$:}
+    \iftag{prvBox}{&
+      $\Box!A \in \Gamma$ மற்றும் $\mSat{M}{\Box!A}[u]$ எனில்
+      $\mSat{M}{!A}[v]$;\iftag{prvDiamond}{ மேலும்}{}\\}{}
+    \iftag{prvDiamond}{&
+      $\Diamond!A \in \Gamma$ மற்றும் $\mSat{M}{!A}[v]$ எனில்
+      $\mSat{M}{\Diamond!A}[u]$; \\}{}
+    \hline
+    \multirow{2}{*}{$C_2(u,v)$:}
+    \iftag{prvBox}{&
+      $\Box!A \in \Gamma$ மற்றும் $\mSat{M}{\Box!A}[v]$ எனில்
+      $\mSat{M}{!A}[u]$;\iftag{prvDiamond}{ மேலும்}{}\\}{}
+    \iftag{prvDiamond}{&
+      $\Diamond!A \in \Gamma$ மற்றும் $\mSat{M}{!A}[u]$ எனில்
+      $\mSat{M}{\Diamond!A}[v]$; \\}{}
+    \hline
+    \multirow{2}{*}{$C_3(u,v)$:}
+    \iftag{prvBox}{&
+      $\Box!A \in \Gamma$ மற்றும் $\mSat{M}{\Box!A}[u]$ எனில்
+      $\mSat{M}{\Box!A}[v]$;\iftag{prvDiamond}{ மேலும்}{}\\}{}
+    \iftag{prvDiamond}{&
+      $\Diamond!A \in \Gamma$ மற்றும் $\mSat{M}{\Diamond!A}[v]$ எனில்
+      $\mSat{M}{\Diamond!A}[u]$; \\}{}
+    \hline
+    \multirow{2}{*}{$C_4(u,v)$:}
+    \iftag{prvBox}{&
+      $\Box!A \in \Gamma$ மற்றும் $\mSat{M}{\Box!A}[v]$ எனில்
+      $\mSat{M}{\Box!A}[u]$;\iftag{prvDiamond}{ மேலும்}{}\\}{}
+    \iftag{prvDiamond}{&
+      $\Diamond!A \in \Gamma$ மற்றும் $\mSat{M}{\Diamond!A}[u]$ எனில்
+      $\mSat{M}{\Diamond!A}[v]$; \\}{}
+    \hline
+    \end{tabular}
+  \caption{வடிகட்டல்களை வரையறுக்க இயலுலகங்கள் மீதான
+    நிபந்தனைகள்.}
+  \ollabel{tab:Cn-filtrations}
+\end{table}
+
+\begin{thm}\ollabel{thm:more-filtrations}
+  $\mModel{M} =\tuple{W,R,V}$ ஒரு மாதிரியாகவும், $\Gamma$ துணை-!!{formula}s
+  இன் கீழ் மூடப்பட்டதாகவும் இருக்கட்டும். $W^*$ மற்றும் $V^*$ ஆகியவை
+  \olref[fil]{defn:filtration} இல் உள்ளவாறு வரையறுக்கப்படட்டும். அப்போது:
+  \begin{enumerate}
+  \item $C_1(u, v) \land C_2(u,v)$ அப்போதும் அப்போதுமட்டுமே
+    $R^*[u][v]$ எனக் கொள்க. அப்போது $R^*$ சமச்சீரானது; மேலும்
+    $\mModel{M}$ சமச்சீரானது எனில்
+    $\mModel{M^*} = \tuple{W^*,R^*,V^*}$ ஒரு வடிகட்டலாகும்.
+  \item $C_1(u, v) \land C_3(u,v)$ அப்போதும் அப்போதுமட்டுமே
+    $R^*[u][v]$ எனக் கொள்க. அப்போது $R^*$ கடத்துகிறது; மேலும்
+    $\mModel{M}$ கடத்துகிறது எனில்
+    $\mModel{M^*}=\tuple{W^*,R^*,V^*}$ ஒரு வடிகட்டலாகும்.
+  \item $C_1(u, v) \land C_2(u,v) \land C_3(u,v) \land C_4(u,v)$
+    அப்போதும் அப்போதுமட்டுமே $R^*[u][v]$ எனக் கொள்க. அப்போது $R^*$
+    சமச்சீரானதும் கடத்துவதுமாகும்; மேலும் $\mModel{M}$ சமச்சீரானதும்
+    கடத்துவதுமாக இருந்தால், $\mModel{M^*}=\tuple{W^*,R^*,V^*}$ ஒரு
+    வடிகட்டலாகும்.
+  \item $C_1(u, v) \land C_3(u,v) \land C_4(u,v)$ அப்போதும்
+    அப்போதுமட்டுமே $R^*[u][v]$ என்றவாறு $R^*$ வரையறுக்கப்படுவதாகக்
+    கொள்க. அப்போது $R^*$ கடத்துவதும் யூக்ளிடியமுமாகும்; மேலும்
+    $\mModel{M}$ கடத்துவதும் யூக்ளிடியமுமாக இருந்தால்,
+    $\mModel{M^*}=\tuple{W^*,R^*,V^*}$ ஒரு வடிகட்டலாகும்.
+  \end{enumerate}
+\end{thm}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $C_1(u,v) \Leftrightarrow C_2(v,u)$ மற்றும்
+      $C_2(u,v) \Leftrightarrow C_1(v,u)$ என்பதால், $R^*$ சமச்சீரானது
+      என்பது உடனடியானது. ஆகவே $\mModel{M}$ சமச்சீரானது எனில்
+      $\mModel{M^*}$ ஆனது~$\Gamma$ வழியான வடிகட்டல் என்று காட்டுவது
+      மட்டுமே மீதமுள்ளது. நிபந்தனை $C_1(u,v)$ ஆனது
+      \iftag{prvBox}{%
+        \iftag{prvDiamond}{%
+          \olref[fil]{defn:filtration-R2} உம்
+          \olref[fil]{defn:filtration-R3} உம்
+          \olref[fil]{defn:filtration} இல்}{%
+          \olref[fil]{defn:filtration}\olref[fil]{defn:filtration-R2}}}{%
+        \olref[fil]{defn:filtration}\olref[fil]{defn:filtration-R3}}
+      நிறைவுசெய்யப்படுவதை உறுதிசெய்கிறது. எனவே
+      \olref[fil]{defn:filtration}\olref[fil]{defn:filtration-R1},
+      அதாவது, $Ruv$ என்பது $R^*[u][v]$ என்பதைக் கொண்டுவருகிறது என்பதை
+      மட்டும் சரிபார்க்க வேண்டும்.
+
+      எனவே $Ruv$ எனக் கொள்க. $R^*[u][v]$ என்பதைக் காட்ட,
+      $C_1(u,v)$ மற்றும் $C_2(u,v)$ ஆகியவற்றை நிறுவ வேண்டும்.
+      $C_1$ க்கு: \iftag{prvBox}{$\Box!A
+        \in\Gamma$ மற்றும் $\mSat{M}{\Box!A}[u]$ எனில்,
+        $Ruv$ என்பதால் $\mSat{M}{!A}[v]$ உம் ஆகும்.\iftag{prvDiamond}{
+        அதேபோல், }{}}{}\iftag{prvDiamond}{$\Diamond!A \in \Gamma$
+        மற்றும் $\mSat{M}{!A}[v]$ எனில், $Ruv$ என்பதால்
+        $\mSat{M}{\Diamond!A}[u]$.}{} $C_2$ க்கு:
+        \iftag{prvBox}{$\Box!A \in \Gamma$ மற்றும்
+        $\mSat{M}{\Box!A}[v]$ எனில், சமச்சீரால் $Ruv$ என்பது $Rvu$
+        என்பதைக் கொண்டுவருகிறது; எனவே
+        $\mSat{M}{!A}[u]$.\iftag{prvDiamond}{ அதேபோல்,
+        }{}}{}\iftag{prvDiamond}{$\Diamond!A \in\Gamma$ மற்றும்
+        $\mSat{M}{!A}[u]$ எனில், சமச்சீரால் $Rvu$ என்பதால்
+        $\mSat{M}{\Diamond!A}[v]$.}{}
+    \item பயிற்சி.
+    \item பயிற்சி.
+    \item பயிற்சி.
+  \end{enumerate}
+\end{proof}
+
+\begin{prob}
+  \olref[nml][fil][acc]{thm:more-filtrations} இன் நிறுவலை நிறைவுசெய்க.
+\end{prob}
+
+\end{document}

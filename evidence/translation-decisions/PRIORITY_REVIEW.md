@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 435/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 445/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -2757,6 +2757,118 @@ Please double-check: **does every derivability relation in the second box lemma 
 
 - `TA-OCC-c5a837075c592a0a` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:1`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:119`; PDF page pending.
 
+## TA-NML-030 — The parenthesis opened before the precise count 2^(n^2) is never closed.
+
+Chosen rendering: **தமிழ் எண்ணிக்கைக் கூற்றை முடிக்கும் வலப்புற அடைப்புக்குறியைச் சேர்க்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The missing mark is ordinary punctuation and the next paragraph begins a new argument.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0451 (checked_supports)
+
+Alternatives: Leaving the parenthetical sentence visibly unclosed.
+
+Please double-check: **does the added closing parenthesis terminate only the accessibility-relation count?**
+
+- `TA-OCC-0201129b43c25272` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:35`; PDF page pending.
+
+## TA-NML-031 — The toy argument says Box B holds at w iff some v satisfies Box B, while the immediately following Box induction step quantifies over every equivalence class and requires B itself at each representative.
+
+Chosen rendering: **தமிழ் எல்லா உலகங்களையும் அணுகும் எளிய நேர்வாக இதை வெளிப்படுத்தி, ஒவ்வொரு v-இலும் B மெய்யாகும் என்ற பெட்டி வாய்பாட்டின் சரியான நிபந்தனையைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: For universal accessibility, Box B at any world is equivalent to B at every world; this is exactly the premise used later to transfer truth between all classes and representatives.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0451 (checked_supports)
+
+Alternatives: Retaining the circular existential clause; treating the relation as empty, which would make the later induction step inapplicable.
+
+Please double-check: **does the corrected toy clause state universal accessibility and evaluate unboxed B at every world?**
+
+- `TA-OCC-137966fa2aeb213f` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:100`; PDF page pending.
+
+## TA-NML-032 — The world set contains binary strings beginning with 0, while the stated V(p) and V(q) comprehensions range over all binary prefixes and therefore include strings beginning with 1.
+
+Chosen rendering: **தமிழ் உடல் மூலத்தின் மூன்று கண-வரையறைகளையும் மாற்றாமல் வைத்துக் கொண்டு, மதிப்பீடுகளை W-க்கு உட்படுத்த வேண்டிய மூலச் சிக்கலைப் பதிப்புக் குறிப்பில் பதிவு செய்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The diagram shows only the 0-rooted tree, but the exercise may be repaired in more than one formally plausible way; retaining the formulas avoids choosing an unstated repair.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0454 (checked_supports)
+
+Alternatives: Silently intersecting both valuations with W; changing the world set to all nonempty binary strings.
+
+Please double-check: **should a future corrected source intersect both valuation sets with W while preserving the 0-rooted world set?**
+
+- `TA-OCC-c6b1e16d54a56667` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:191`; PDF page pending.
+
+## TA-NML-033 — The worlds of M* are equivalence classes, and the cited filtration theorem evaluates A at [w], but the K proof writes the raw source-model world w.
+
+Chosen rendering: **தமிழ் வடிகட்டப்பட்ட மாதிரியில் வாய்பாட்டைச் சமான வகுப்பு~$[w]$ இல் மதிப்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding filtration definition sets W* to the set of classes [w], and the cited theorem states truth preservation exactly between w and [w].
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0456 (checked_supports)
+
+Alternatives: Retaining a point that is generally not an element of W*; redefining W* to contain original worlds.
+
+Please double-check: **does the corrected K proof evaluate A at the filtration world [w]?**
+
+- `TA-OCC-0f0ddf055e8e8ee2` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:32`; PDF page pending.
+
+## TA-NML-034 — The decision procedure says to search all finite models, which could reject an S5 theorem merely because it fails on a non-S5 frame, while the proof conclusion correctly invokes finite universal models.
+
+Chosen rendering: **தமிழ் எதிர்மாதிரித் தேடலை முடிவுறு அனைத்துறவு மாதிரிகளுக்குள் மட்டுப்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: S5 is complete for universal frames and has the finite-model property there, so dovetailing proofs with finite universal countermodels is sound and terminating.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0457 (checked_supports)
+
+Alternatives: Searching unrestricted finite models; adding a separate universal-frame test without naming the resulting search class.
+
+Please double-check: **does the corrected procedure enumerate exactly the finite universal models relevant to S5?**
+
+- `TA-OCC-72cab95dc375b262` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:31`; PDF page pending.
+
+## TA-NML-035 — The paragraph explicitly discusses adding arrows to the filtered model, whose nodes the adjacent diagram labels [w_i], but then names raw w2 and w5 as endpoints and evaluation points.
+
+Chosen rendering: **தமிழ் வடிகட்டப்பட்ட மாதிரியின் முனைகளையும் மதிப்பீட்டுப் புள்ளிகளையும்~$[w_2]$, $[w_5]$ என்ற சமான வகுப்புகளாகவே குறிக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: A filtration has equivalence classes as worlds, and the contradiction uses truth of Box p and falsity of p at those filtered nodes.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0459 (checked_supports)
+
+Alternatives: Retaining raw worlds that are not generally members of W*; changing the adjacent diagram back to raw worlds.
+
+Please double-check: **are every added-arrow endpoint and both truth-evaluation points expressed as classes in the filtered model?**
+
+- `TA-OCC-2d9f4e3c5c6967d5` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:26`; PDF page pending.
+
+## TA-NML-036 — The theorem lists symmetric, transitive, euclidean, but proof item 1 proves transitivity, item 2 invokes Ax5 for euclideanness, and item 3 invokes AxB for symmetry.
+
+Chosen rendering: **தமிழ் தேற்ற உருப்படிகளை கடத்தல், யூக்ளிடியம், சமச்சீர் என்ற நிறுவலின் வரிசையில் அமைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Only the item order is defective; the set of three conclusions and all proof content remain unchanged.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0459 (checked_supports)
+
+Alternatives: Renumbering and moving the entire proof bodies; leaving every proof number attached to a different theorem claim.
+
+Please double-check: **do theorem items 1, 2 and 3 now correspond respectively to the transitivity proof, Ax5 exercise and AxB exercise?**
+
+- `TA-OCC-ad5d5ad1d2c12a80` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:104`; PDF page pending.
+
 ## TA-READER-REF-001 — The cumulative 51-unit reader omits the target history chapter, so the frozen cross-reference rendered as a literal question-mark pair.
 
 Chosen rendering: **இலக்கு இருந்தால் நேரடி மேற்கோள்; இல்லையெனில் கணக்கோட்பாட்டு வரலாற்றுக் கதைகள் பற்றிய பின்னைய பிரிவு என்ற விளக்கத் தொடர்.**
@@ -3865,6 +3977,7 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-c96f38f7b191b860` — OLP-0434 / `OLP-0434-S01`; source `content/normal-modal-logic/axioms-systems/duals.tex:1`; Tamil `translation/content/normal-modal-logic/axioms-systems/duals.tex:26`; PDF page pending.
 - `TA-OCC-8c9db3e5714626ca` — OLP-0440 / `OLP-0440-S01`; source `content/normal-modal-logic/axioms-systems/consistency.tex:14`; Tamil `translation/content/normal-modal-logic/axioms-systems/consistency.tex:15`; PDF page pending.
 - `TA-OCC-2c51fa5662201c31` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:102`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:109`; PDF page pending.
+- `TA-OCC-d53074b4a0bdb335` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:169`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -4607,6 +4720,23 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-2eeac4577338f922` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:101`; PDF page pending.
 - `TA-OCC-cc873a681733aa17` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:111`; PDF page pending.
 - `TA-OCC-5073d100b07154b4` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:123`; PDF page pending.
+- `TA-OCC-b07cc3871315f8bd` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:95`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:114`; PDF page pending.
+- `TA-OCC-1c69f0321d512f06` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:95`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:117`; PDF page pending.
+- `TA-OCC-e3a838b7c821020a` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:114`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:122`; PDF page pending.
+- `TA-OCC-73df257fb0b8ac67` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:114`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:126`; PDF page pending.
+- `TA-OCC-2aa265a3bafcb006` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:61`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:67`; PDF page pending.
+- `TA-OCC-0c02eb2b6b769768` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:62`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:68`; PDF page pending.
+- `TA-OCC-0809cfdd682e39fa` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:62`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:89`; PDF page pending.
+- `TA-OCC-f0ffcdbdb0d3bca3` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:65`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:96`; PDF page pending.
+- `TA-OCC-90d60c48578c03dd` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:65`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:106`; PDF page pending.
+- `TA-OCC-1b0a9a93e5e6d009` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:83`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:116`; PDF page pending.
+- `TA-OCC-f26df521fdbaaaab` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:83`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:127`; PDF page pending.
+- `TA-OCC-56d1e84f0bb95fcf` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:89`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:142`; PDF page pending.
+- `TA-OCC-755aaaeadc8389e7` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:89`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:150`; PDF page pending.
+- `TA-OCC-cdc0a8a029e8b190` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:97`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:155`; PDF page pending.
+- `TA-OCC-5c8b9df00a39dc42` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:97`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:163`; PDF page pending.
+- `TA-OCC-833bd9db22c730b2` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:21`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:27`; PDF page pending.
+- `TA-OCC-b03b80c3fee89f9e` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:26`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:39`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -5015,6 +5145,22 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-05cd7d6ad4749325` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:18`; PDF page pending.
 - `TA-OCC-eec8c95f98caef79` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:18`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:23`; PDF page pending.
 - `TA-OCC-d348179cb8cde668` — OLP-0446 / `OLP-0446-S01`; source `content/normal-modal-logic/completeness/canonical-models.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/canonical-models.tex:18`; PDF page pending.
+- `TA-OCC-48226508168b231d` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:23`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:25`; PDF page pending.
+- `TA-OCC-17f2833dc9a002e0` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:29`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:31`; PDF page pending.
+- `TA-OCC-cfcaadc8245304b0` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:30`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:32`; PDF page pending.
+- `TA-OCC-cc35217a53249098` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:39`; PDF page pending.
+- `TA-OCC-5a3d26243e76cab6` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:84`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:127`; PDF page pending.
+- `TA-OCC-57518fe392f8a473` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:88`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:140`; PDF page pending.
+- `TA-OCC-394a6553f60a7f7a` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:36`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:65`; PDF page pending.
+- `TA-OCC-ed08fdbbb489cb36` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:40`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:74`; PDF page pending.
+- `TA-OCC-86d9c3ca704502ea` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:18`; PDF page pending.
+- `TA-OCC-aa7f40114167fa71` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:18`; PDF page pending.
+- `TA-OCC-8d31d5a12fc1a907` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:149`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:21`; PDF page pending.
+- `TA-OCC-c6f8e754f1092346` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:158`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:172`; PDF page pending.
+- `TA-OCC-3993354071f11922` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:224`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:241`; PDF page pending.
+- `TA-OCC-3fb133fc6ac6e8f3` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:224`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:241`; PDF page pending.
+- `TA-OCC-10636181ecb0ae23` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:20`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:24`; PDF page pending.
+- `TA-OCC-2a3195c033c72c3e` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:96`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -5141,6 +5287,9 @@ Please double-check: **is “சமான வகுப்பு / ஈவுக�
 - `TA-OCC-15cebe995e561167` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:78`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:87`; PDF page pending.
 - `TA-OCC-89bc4d609f224d1f` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:82`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:88`; PDF page pending.
 - `TA-OCC-77b47b4e3409dc39` — OLP-0425 / `OLP-0425-S01`; source `content/normal-modal-logic/frame-definability/equivalence-S5.tex:83`; Tamil `translation/content/normal-modal-logic/frame-definability/equivalence-S5.tex:146`; PDF page pending.
+- `TA-OCC-c714098276836cef` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:35`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:38`; PDF page pending.
+- `TA-OCC-4209aa75270b75f5` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:46`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:50`; PDF page pending.
+- `TA-OCC-95aa47a1c02ea950` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:46`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:48`; PDF page pending.
 
 ## TA-T031 — modular arithmetic
 
@@ -8016,6 +8165,81 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-e78c53c5875cca1d` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:199`; PDF page pending.
 - `TA-OCC-26d4e29bd2c1a85e` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:222`; PDF page pending.
 - `TA-OCC-9f247e5ee853ed62` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:184`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:233`; PDF page pending.
+- `TA-OCC-b5eccbdad4127b5f` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:15`; PDF page pending.
+- `TA-OCC-a7aa2960b9362f4e` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:18`; PDF page pending.
+- `TA-OCC-3ddef31be5d81d48` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:19`; PDF page pending.
+- `TA-OCC-592a51b5abf0b3b7` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:15`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:20`; PDF page pending.
+- `TA-OCC-46632250a746a96d` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:23`; PDF page pending.
+- `TA-OCC-e10f6cf5b6d6dd86` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:25`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:27`; PDF page pending.
+- `TA-OCC-164dfac8c92498e7` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:37`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:41`; PDF page pending.
+- `TA-OCC-9f81d098ee6d4362` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:45`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:51`; PDF page pending.
+- `TA-OCC-dbfb54038b667c69` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:47`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:54`; PDF page pending.
+- `TA-OCC-a721246961546aa2` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:49`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:56`; PDF page pending.
+- `TA-OCC-223960f0b663e791` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:67`; PDF page pending.
+- `TA-OCC-4551489e72d49b61` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:63`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:70`; PDF page pending.
+- `TA-OCC-946375d9f74f59c3` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:67`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:74`; PDF page pending.
+- `TA-OCC-964f29cb78deb1b0` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:127`; PDF page pending.
+- `TA-OCC-9d6d993e638aa557` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:22`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:133`; PDF page pending.
+- `TA-OCC-f780150b4c61269c` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:120`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:136`; PDF page pending.
+- `TA-OCC-5f7cc664629b13eb` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:121`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:137`; PDF page pending.
+- `TA-OCC-271bd6e076703ebd` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:25`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:141`; PDF page pending.
+- `TA-OCC-f9d0562427a177aa` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:15`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:17`; PDF page pending.
+- `TA-OCC-653c5d12fd4e147c` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:18`; PDF page pending.
+- `TA-OCC-7255b03a45e90b32` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:21`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:22`; PDF page pending.
+- `TA-OCC-3bd35747c7e4ea03` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:22`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:23`; PDF page pending.
+- `TA-OCC-87839e283d599b0d` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:28`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:30`; PDF page pending.
+- `TA-OCC-9b0996b1ebc7ae95` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:29`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:31`; PDF page pending.
+- `TA-OCC-257c742551a61c0c` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:29`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:31`; PDF page pending.
+- `TA-OCC-ba9f13441077f602` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:30`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:32`; PDF page pending.
+- `TA-OCC-a4551d45874189b6` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:40`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:42`; PDF page pending.
+- `TA-OCC-91d018abbdc4cd56` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:41`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:43`; PDF page pending.
+- `TA-OCC-579cdcb4967544fc` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:61`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:64`; PDF page pending.
+- `TA-OCC-5087a4212a2bffb4` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:62`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:67`; PDF page pending.
+- `TA-OCC-4c1a7261bdbd01a0` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:64`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:69`; PDF page pending.
+- `TA-OCC-2aafec4788b7b51d` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:65`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:71`; PDF page pending.
+- `TA-OCC-6f606454d1b90c45` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:64`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:20`; PDF page pending.
+- `TA-OCC-b65d7f12c1d9ef2c` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:64`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:66`; PDF page pending.
+- `TA-OCC-e1942ea7ac1a704e` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:64`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:67`; PDF page pending.
+- `TA-OCC-4ba56d3ea8dedcd5` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:66`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:68`; PDF page pending.
+- `TA-OCC-d824ee74ca80adef` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:78`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:83`; PDF page pending.
+- `TA-OCC-fe92a2df97fc9bf7` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:64`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:170`; PDF page pending.
+- `TA-OCC-681d361d8baab4ae` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:167`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:185`; PDF page pending.
+- `TA-OCC-413ccc41689e0e19` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:50`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:41`; PDF page pending.
+- `TA-OCC-278519e66abfa1ae` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:59`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:46`; PDF page pending.
+- `TA-OCC-fbfed370b646e3e8` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:50`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:56`; PDF page pending.
+- `TA-OCC-196f22dec32c6fcf` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:59`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:67`; PDF page pending.
+- `TA-OCC-5bc962ac327ea478` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:138`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:74`; PDF page pending.
+- `TA-OCC-915c0baeeaf6573e` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:222`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:82`; PDF page pending.
+- `TA-OCC-2b914409664ae14c` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:222`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:83`; PDF page pending.
+- `TA-OCC-95d4745f66fded9c` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:222`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:105`; PDF page pending.
+- `TA-OCC-bdedae5a8e94bb3f` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:222`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:108`; PDF page pending.
+- `TA-OCC-e9999b93da71b243` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:138`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:150`; PDF page pending.
+- `TA-OCC-c8f39b69ee2bb938` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:222`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:239`; PDF page pending.
+- `TA-OCC-a4cc58a363bff6fd` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:14`; PDF page pending.
+- `TA-OCC-dd08dc52f93d396b` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:17`; PDF page pending.
+- `TA-OCC-306d04de808ac358` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:19`; PDF page pending.
+- `TA-OCC-71db10b6fb877db3` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:18`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:19`; PDF page pending.
+- `TA-OCC-a8439993b89c82b9` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:29`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:31`; PDF page pending.
+- `TA-OCC-7905663e831a0825` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:34`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:38`; PDF page pending.
+- `TA-OCC-ce98a9c419840367` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:35`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:39`; PDF page pending.
+- `TA-OCC-f70f8756386691c2` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:40`; PDF page pending.
+- `TA-OCC-b8afd0187cb0a902` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:15`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:17`; PDF page pending.
+- `TA-OCC-b05f5da580c71001` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:25`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:27`; PDF page pending.
+- `TA-OCC-b3fd79d7e2e9e10e` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:28`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:29`; PDF page pending.
+- `TA-OCC-c5f7dcbca8e229a0` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:29`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:33`; PDF page pending.
+- `TA-OCC-235a398465fbab90` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:29`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:33`; PDF page pending.
+- `TA-OCC-ae6f694d84fdae74` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:31`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:36`; PDF page pending.
+- `TA-OCC-2bab9281af1ab412` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:45`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:51`; PDF page pending.
+- `TA-OCC-aa0e51969f1a784a` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:74`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:80`; PDF page pending.
+- `TA-OCC-eaea842a01852e60` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:15`; PDF page pending.
+- `TA-OCC-88f032a792992b01` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:20`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:21`; PDF page pending.
+- `TA-OCC-ecc07e6075149498` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:20`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:30`; PDF page pending.
+- `TA-OCC-4853484d14df3b9b` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:74`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:31`; PDF page pending.
+- `TA-OCC-9f3adfffce087a1e` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:74`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:77`; PDF page pending.
+- `TA-OCC-44bfebc3b254c968` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:74`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:116`; PDF page pending.
+- `TA-OCC-190d1a1d04e5991e` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:74`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:143`; PDF page pending.
+- `TA-OCC-2e92a48bf9e4c729` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:90`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:91`; PDF page pending.
+- `TA-OCC-a899a608e947beba` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:90`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:138`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -8679,6 +8903,8 @@ Please double-check: **is “காண்டோரின் வளைவழி /
 - `TA-OCC-038353908579154b` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:55`; PDF page pending.
 - `TA-OCC-64650bcf29855600` — OLP-0401 / `OLP-0401-S01`; source `content/many-valued-logic/infinite-valued-logics/goedel.tex:1`; Tamil `translation/content/many-valued-logic/infinite-valued-logics/goedel.tex:56`; PDF page pending.
 - `TA-OCC-92aebc12a56b54ed` — OLP-0413 / `OLP-0413-S01`; source `content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:1`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/truth-at-w.tex:19`; PDF page pending.
+- `TA-OCC-49a9fcbe28324370` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:17`; PDF page pending.
+- `TA-OCC-a0c059d4faf0f174` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:19`; PDF page pending.
 
 ## TA-T061 — pairing function / encode / code / decode
 
@@ -10148,6 +10374,58 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-46e0f620b2cd7662` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:85`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:101`; PDF page pending.
 - `TA-OCC-9c81ee2f2f123eec` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:91`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:110`; PDF page pending.
 - `TA-OCC-3ce89ddca8b744dd` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:97`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:113`; PDF page pending.
+- `TA-OCC-d0df524684f4bdf2` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:103`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:19`; PDF page pending.
+- `TA-OCC-2940cd2a3b81b6ae` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:22`; PDF page pending.
+- `TA-OCC-c8aa182fca60293c` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:32`; PDF page pending.
+- `TA-OCC-afe73227a39aea59` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:43`; PDF page pending.
+- `TA-OCC-20663caec930f9fb` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:51`; PDF page pending.
+- `TA-OCC-1d68244935918d89` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:53`; PDF page pending.
+- `TA-OCC-6ec2ff654edd6a1c` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:56`; PDF page pending.
+- `TA-OCC-bdcbad54a8e87c95` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:59`; PDF page pending.
+- `TA-OCC-895e3ee1c2d17961` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:61`; PDF page pending.
+- `TA-OCC-783edd4a57cf3c64` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:62`; PDF page pending.
+- `TA-OCC-f881062d3e15c478` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:64`; PDF page pending.
+- `TA-OCC-50c041362c0fa8cb` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:65`; PDF page pending.
+- `TA-OCC-9c29020e187b6e20` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:66`; PDF page pending.
+- `TA-OCC-4728fbdfe77a4ca6` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:69`; PDF page pending.
+- `TA-OCC-da3d6b1be9a51a0b` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:71`; PDF page pending.
+- `TA-OCC-a7b94bdbd5d7db66` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:77`; PDF page pending.
+- `TA-OCC-90fabd291dcde979` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:81`; PDF page pending.
+- `TA-OCC-ecd99dee78b2a23c` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:84`; PDF page pending.
+- `TA-OCC-45fe8b0e850807ef` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:87`; PDF page pending.
+- `TA-OCC-25d8d31a91cffda7` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:87`; PDF page pending.
+- `TA-OCC-a27fc4a550f9a759` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:88`; PDF page pending.
+- `TA-OCC-c06ff4d8bb5c9a85` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:137`; PDF page pending.
+- `TA-OCC-10e795c81fade3a6` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:107`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:138`; PDF page pending.
+- `TA-OCC-9cabed7a90212bd6` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:14`; PDF page pending.
+- `TA-OCC-ec862b063148e35e` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:17`; PDF page pending.
+- `TA-OCC-cc342e4e4eab7fa8` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:65`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:54`; PDF page pending.
+- `TA-OCC-b4b437c29b5c0e6d` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:78`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:68`; PDF page pending.
+- `TA-OCC-d04a81439e116353` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:12`; PDF page pending.
+- `TA-OCC-82dcf900eae79354` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:15`; PDF page pending.
+- `TA-OCC-b6020670544a8dd8` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:18`; PDF page pending.
+- `TA-OCC-eb0c2656da9fbe0b` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:20`; PDF page pending.
+- `TA-OCC-8560a4d5750e47a0` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:23`; PDF page pending.
+- `TA-OCC-b470e1a846a9066b` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:24`; PDF page pending.
+- `TA-OCC-7a238c949ae17adc` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:12`; PDF page pending.
+- `TA-OCC-41239f1b933c064f` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:16`; PDF page pending.
+- `TA-OCC-97be6ee834c212ab` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:18`; PDF page pending.
+- `TA-OCC-7512130a552cf347` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:23`; PDF page pending.
+- `TA-OCC-587016743321e91f` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:33`; PDF page pending.
+- `TA-OCC-38bf2f0b887e0a94` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:34`; PDF page pending.
+- `TA-OCC-145ef6e23570c583` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:41`; PDF page pending.
+- `TA-OCC-352cc0d6ad189d07` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:50`; PDF page pending.
+- `TA-OCC-52437690221b575d` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:57`; PDF page pending.
+- `TA-OCC-47b1240cf9595457` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:61`; PDF page pending.
+- `TA-OCC-07290dfafa136fef` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:63`; PDF page pending.
+- `TA-OCC-7d07687708ba6c1f` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:72`; PDF page pending.
+- `TA-OCC-e76a2cc7c0b4055a` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:79`; PDF page pending.
+- `TA-OCC-66edf58949bd9d12` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:60`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:82`; PDF page pending.
+- `TA-OCC-b0a1e1911b955893` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:14`; PDF page pending.
+- `TA-OCC-48333bab1c6e11ac` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:26`; PDF page pending.
+- `TA-OCC-8797cacda4a857dd` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:28`; PDF page pending.
+- `TA-OCC-c3ef0d8ae53344e9` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:33`; PDF page pending.
+- `TA-OCC-6ff64a858088c055` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:96`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -11642,6 +11920,23 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-f3d1c31dd97d00fc` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:2`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:12`; PDF page pending.
 - `TA-OCC-56fa0d6588e4fd64` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:3`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:15`; PDF page pending.
 - `TA-OCC-32932f955af9b2ee` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:11`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:113`; PDF page pending.
+- `TA-OCC-30b374bfdbabc219` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:127`; PDF page pending.
+- `TA-OCC-8420c6db75153d5c` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:133`; PDF page pending.
+- `TA-OCC-594f73f211e6fd67` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:141`; PDF page pending.
+- `TA-OCC-a91759e7f8cf7f71` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:20`; PDF page pending.
+- `TA-OCC-084df01a1a413e98` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:170`; PDF page pending.
+- `TA-OCC-bd1f1ac5d48c4884` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:41`; PDF page pending.
+- `TA-OCC-0a9fdb58aa2db24d` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:46`; PDF page pending.
+- `TA-OCC-333046dc3f954507` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:74`; PDF page pending.
+- `TA-OCC-7b3688f2264f6678` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:82`; PDF page pending.
+- `TA-OCC-22dd5b65264879eb` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:83`; PDF page pending.
+- `TA-OCC-5b2cf8bf2527a827` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:105`; PDF page pending.
+- `TA-OCC-4b3563201b94759e` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:108`; PDF page pending.
+- `TA-OCC-ebcffaf57426c7ba` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:30`; PDF page pending.
+- `TA-OCC-58dd31d67e23c9a9` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:31`; PDF page pending.
+- `TA-OCC-145b3b941a72e067` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:116`; PDF page pending.
+- `TA-OCC-5fa75f36fbdffdc7` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:143`; PDF page pending.
+- `TA-OCC-188bb1a4c445e2c8` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:138`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -12807,6 +13102,12 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-4b204e02d4223813` — OLP-0442 / `OLP-0442-S01`; source `content/normal-modal-logic/completeness/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/completeness/introduction.tex:37`; PDF page pending.
 - `TA-OCC-83c2283f4c07468e` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:30`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:32`; PDF page pending.
 - `TA-OCC-a74fa25d45234588` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:15`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:16`; PDF page pending.
+- `TA-OCC-199994519eda0e7d` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:21`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:24`; PDF page pending.
+- `TA-OCC-d3a96dd694834140` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:92`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:28`; PDF page pending.
+- `TA-OCC-9d846e64754436f5` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:100`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:102`; PDF page pending.
+- `TA-OCC-20a7c8c0e3094c8a` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:120`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:113`; PDF page pending.
+- `TA-OCC-cfac7fb7afd8c006` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:120`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:135`; PDF page pending.
+- `TA-OCC-fc62de9bb1e5936a` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:22`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:23`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -13071,6 +13372,7 @@ Please double-check: **is “செல்லுபடியான தொடர�
 - `TA-OCC-7295d09079b44f6d` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:123`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:206`; PDF page pending.
 - `TA-OCC-857a9176736afe8d` — OLP-0187 / `OLP-0187-S01`; source `content/model-theory/basics/isomorphism.tex:92`; Tamil `translation/content/model-theory/basics/isomorphism.tex:100`; PDF page pending.
 - `TA-OCC-a8ca428c7d65bd12` — OLP-0271 / `OLP-0271-S01`; source `content/turing-machines/undecidability/verification.tex:152`; Tamil `translation/content/turing-machines/undecidability/verification.tex:132`; PDF page pending.
+- `TA-OCC-28881deb829fe050` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:65`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:68`; PDF page pending.
 
 ## TA-T103 — substitutability of identicals / Leibniz's Law / identity inference rule
 
@@ -14385,6 +14687,12 @@ Please double-check: **is “கணிப்புத்தன்மை / கண
 - `TA-OCC-76f4aef2b486d64e` — OLP-0350 / `OLP-0350-S01`; source `content/lambda-calculus/introduction/computable-lambda.tex:13`; Tamil `translation/content/lambda-calculus/introduction/computable-lambda.tex:19`; PDF page pending.
 - `TA-OCC-ba4883f56fda6b48` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:79`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:84`; PDF page pending.
 - `TA-OCC-2560ad4eb3d2293e` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:81`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:86`; PDF page pending.
+- `TA-OCC-eae97abd69ebd328` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:15`; PDF page pending.
+- `TA-OCC-f6be6918b3e6f582` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:17`; PDF page pending.
+- `TA-OCC-2150e75ff7413348` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:3`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:12`; PDF page pending.
+- `TA-OCC-4f20a8cd9eee60b9` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:11`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:14`; PDF page pending.
+- `TA-OCC-2d70072a80032446` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:13`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:16`; PDF page pending.
+- `TA-OCC-31841fdd4638ce69` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:19`; PDF page pending.
 
 ## TA-T114 — recursive definition / primitive recursion / partial recursive function / general recursive function
 
@@ -16649,6 +16957,7 @@ Please double-check: **is “டார்ஸ்கியின் வரைய�
 - `TA-OCC-bf07f050780ce6a8` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:120`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:125`; PDF page pending.
 - `TA-OCC-85746b51583d6b17` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:121`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:155`; PDF page pending.
 - `TA-OCC-52123dcb5c8107fb` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:150`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:155`; PDF page pending.
+- `TA-OCC-5fc45db191d48cd6` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:37`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:41`; PDF page pending.
 
 ## TA-T143 — second-order logic / object variable / relation variable / function variable / standard semantics
 
@@ -17462,6 +17771,17 @@ Please double-check: **is “இயல்பான வாய்ப்புந�
 - `TA-OCC-5af120bf94fe6f5f` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:189`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:130`; PDF page pending.
 - `TA-OCC-9421abd8519424fd` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:189`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:189`; PDF page pending.
 - `TA-OCC-94e02e74cd0d8425` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:189`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:230`; PDF page pending.
+- `TA-OCC-cd758b035c543142` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:20`; PDF page pending.
+- `TA-OCC-94027b204e6a28c2` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:40`; PDF page pending.
+- `TA-OCC-4b911d9aaac61395` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:119`; PDF page pending.
+- `TA-OCC-b403c40fd18a6075` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:14`; PDF page pending.
+- `TA-OCC-1e1a9af941e498ad` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:27`; PDF page pending.
+- `TA-OCC-46dcd5df10fd5c94` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:15`; PDF page pending.
+- `TA-OCC-ce551088d8724a5f` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:13`; PDF page pending.
+- `TA-OCC-0ebfe6378ed11ba4` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:93`; PDF page pending.
+- `TA-OCC-fc2ecf5a0c48b009` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:100`; PDF page pending.
+- `TA-OCC-80b4e94fdf238455` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:123`; PDF page pending.
+- `TA-OCC-fe57988bf07fe27d` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:125`; PDF page pending.
 
 ## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
 
@@ -17505,6 +17825,19 @@ Please double-check: **is “சாத்தியமான உலகம் / �
 - `TA-OCC-e64b019402613cd3` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:21`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:21`; PDF page pending.
 - `TA-OCC-4c33c9c1bfaa99d8` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:55`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:56`; PDF page pending.
 - `TA-OCC-c1593cd19965422e` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:110`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:113`; PDF page pending.
+- `TA-OCC-a5d016334620fc7d` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:29`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:25`; PDF page pending.
+- `TA-OCC-903425affbabdc3e` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:35`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:31`; PDF page pending.
+- `TA-OCC-90f8291ba5247ead` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:84`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:39`; PDF page pending.
+- `TA-OCC-844927908dc8cf20` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:124`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:93`; PDF page pending.
+- `TA-OCC-a5289e0aa75eccd3` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:124`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:125`; PDF page pending.
+- `TA-OCC-06b167c93bf971fb` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:124`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:127`; PDF page pending.
+- `TA-OCC-8db75d9cfb2ec196` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:124`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:139`; PDF page pending.
+- `TA-OCC-1a29b87c7e185267` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:18`; PDF page pending.
+- `TA-OCC-ac1e95a593e495e1` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:18`; PDF page pending.
+- `TA-OCC-ff035fbe494dbe0f` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:149`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:163`; PDF page pending.
+- `TA-OCC-6bb7795b437d66d4` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:158`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:172`; PDF page pending.
+- `TA-OCC-ab446bd8952c86aa` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:224`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:241`; PDF page pending.
+- `TA-OCC-6e550289712bb350` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:67`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:12`; PDF page pending.
 
 ## TA-T168 — simultaneous substitution / iterated substitution / instance / substitution instance
 
@@ -17990,6 +18323,114 @@ Please double-check: **is “சரியான வருவித்தல் �
 - `TA-OCC-7d8f7a64b1a275f8` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:136`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:134`; PDF page pending.
 - `TA-OCC-9b41251557d82190` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:136`; PDF page pending.
 - `TA-OCC-e53f8d585cc42348` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:138`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:138`; PDF page pending.
+
+## TA-T178 — filtration / finite model property / closed under subformulas / modally closed
+
+Chosen rendering: **வடிகட்டல் / முடிவுறு மாதிரிப் பண்பு / துணைவாய்பாடுகளின் கீழ் மூடப்பட்ட / வாய்ப்புநிலையில் மூடப்பட்ட**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: முடிவுறு, மாதிரி, பண்பு, வாய்பாடு and closure language continue the reviewed mathematical and semantic register. The quotient construction that groups worlds by agreement on a formula set fixes வடிகட்டல்; preservation of truth or falsity in a finite quotient fixes முடிவுறு மாதிரிப் பண்பு; and the two displayed closure clauses fix the subformula and modal compounds. The full specialist compounds are not claimed as direct headword attestations.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T178-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வடிகட்டல் / முடிவுறு மாதிரிப் பண்பு / துணைவாய்பாடுகளின் கீழ் மூடப்பட்ட / வாய்ப்புநிலையில் மூடப்பட்ட” the established India-standard Tamil expression for “filtration / finite model property / closed under subformulas / modally closed” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-ee2425a8d0750da8` — OLP-0450 / `OLP-0450-S01`; source `content/normal-modal-logic/filtrations/filtrations.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations.tex:9`; PDF page pending.
+- `TA-OCC-623ce4f3abe33279` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:59`; PDF page pending.
+- `TA-OCC-34879a6b074e7a3d` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:51`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:61`; PDF page pending.
+- `TA-OCC-48459f80ab744668` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:53`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:128`; PDF page pending.
+- `TA-OCC-6905e0bedd2a6cbb` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:112`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:129`; PDF page pending.
+- `TA-OCC-f0622ef34c894e03` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:114`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:132`; PDF page pending.
+- `TA-OCC-d5d888b7cfeab4ad` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:116`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:138`; PDF page pending.
+- `TA-OCC-40ebc0a0c143ca1c` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:14`; PDF page pending.
+- `TA-OCC-07cc12dbe339b18f` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:13`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:16`; PDF page pending.
+- `TA-OCC-050934a91b087884` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:18`; PDF page pending.
+- `TA-OCC-a129f762362dbfba` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:21`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:19`; PDF page pending.
+- `TA-OCC-59170d172c3dffeb` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:23`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:24`; PDF page pending.
+- `TA-OCC-66af15793c9e49a2` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:23`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:25`; PDF page pending.
+- `TA-OCC-08eb7b0bd6bd7b6b` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:30`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:27`; PDF page pending.
+- `TA-OCC-e1eac7ffc293ac16` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:12`; PDF page pending.
+- `TA-OCC-120758996eaa27c5` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:3`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:16`; PDF page pending.
+- `TA-OCC-a4b2fe06a9cba76e` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:11`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:18`; PDF page pending.
+- `TA-OCC-15f45f9d920bd1b5` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:13`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:25`; PDF page pending.
+- `TA-OCC-26ad4252bdf704d5` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:27`; PDF page pending.
+- `TA-OCC-b7e97872df73eaf3` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:15`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:57`; PDF page pending.
+- `TA-OCC-72d982f4643253d0` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:64`; PDF page pending.
+- `TA-OCC-51ef8f8437404851` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:178`; PDF page pending.
+- `TA-OCC-a7de4b27ca81fc78` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:23`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:180`; PDF page pending.
+- `TA-OCC-da86505d8fc543af` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:24`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:184`; PDF page pending.
+- `TA-OCC-184b1dfa57da7348` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:12`; PDF page pending.
+- `TA-OCC-4f0c48e282520e23` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:3`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:14`; PDF page pending.
+- `TA-OCC-632a2bb6699c6cf9` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:11`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:16`; PDF page pending.
+- `TA-OCC-6b4aa32599db2730` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:13`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:18`; PDF page pending.
+- `TA-OCC-5ca3ad8a38a4063d` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:25`; PDF page pending.
+- `TA-OCC-a063cf3a12e4e753` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:26`; PDF page pending.
+- `TA-OCC-8150ad5d9948af38` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:35`; PDF page pending.
+- `TA-OCC-afad7f68805990de` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:78`; PDF page pending.
+- `TA-OCC-f66e834ad861262a` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:18`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:79`; PDF page pending.
+- `TA-OCC-43a638ad37ce5b54` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:23`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:95`; PDF page pending.
+- `TA-OCC-ad4d8fab519c1d43` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:24`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:146`; PDF page pending.
+- `TA-OCC-c542fb1c0a4009b9` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:32`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:171`; PDF page pending.
+- `TA-OCC-711add472a804520` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:12`; PDF page pending.
+- `TA-OCC-28d839454ab6256f` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:11`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:15`; PDF page pending.
+- `TA-OCC-6a14e6455e5cec97` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:13`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:15`; PDF page pending.
+- `TA-OCC-60cf9b31e8268259` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:15`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:24`; PDF page pending.
+- `TA-OCC-55713de4d11d6fb2` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:12`; PDF page pending.
+- `TA-OCC-04af461662338464` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:11`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:16`; PDF page pending.
+- `TA-OCC-3c9e68c1c3560dc0` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:21`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:23`; PDF page pending.
+- `TA-OCC-aa5230872cacf568` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:26`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:41`; PDF page pending.
+- `TA-OCC-15e4a82cc1ba3a61` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:27`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:41`; PDF page pending.
+- `TA-OCC-47626d6f17bc5b62` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:36`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:61`; PDF page pending.
+- `TA-OCC-24f7894eba8f7555` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:37`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:72`; PDF page pending.
+- `TA-OCC-c7690d830bab9a96` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:37`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:94`; PDF page pending.
+- `TA-OCC-0233ad3d63a7c138` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:14`; PDF page pending.
+- `TA-OCC-763491d5f0c01186` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:12`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:38`; PDF page pending.
+- `TA-OCC-176f64d6f6201cd8` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:12`; PDF page pending.
+- `TA-OCC-264628465f5a297d` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:3`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:15`; PDF page pending.
+- `TA-OCC-af8f7818f306de45` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:11`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:18`; PDF page pending.
+- `TA-OCC-b026017142b36db9` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:13`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:27`; PDF page pending.
+- `TA-OCC-601ebe00672390ed` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:29`; PDF page pending.
+- `TA-OCC-b6e8842f5e407a67` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:17`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:71`; PDF page pending.
+- `TA-OCC-bcaf94adf9f09aa2` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:18`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:107`; PDF page pending.
+- `TA-OCC-f24a3c46ff6bbfd6` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:2`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:12`; PDF page pending.
+- `TA-OCC-928541a03645e205` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:3`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:87`; PDF page pending.
+- `TA-OCC-db44c1af68a9be4c` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:11`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:92`; PDF page pending.
+- `TA-OCC-f02bbc752d8adf55` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:93`; PDF page pending.
+- `TA-OCC-a527716633258093` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:18`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:100`; PDF page pending.
+- `TA-OCC-bce2075b5e59063a` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:84`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:114`; PDF page pending.
+
+## TA-T179 — finest filtration / coarsest filtration / universal model
+
+Chosen rendering: **மிகநுண்ணிய வடிகட்டல் / மிகத்தடித்த வடிகட்டல் / அனைத்துறவு மாதிரி**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: வடிகட்டல் continues TA-T178 and மாதிரி, தொடர்பு continue the reviewed semantic and relation register. The least and greatest admissible accessibility relations fix மிகநுண்ணிய and மிகத்தடித்த; the requirement that every ordered pair be accessible fixes அனைத்துறவு மாதிரி. The prose states the edge-minimal and edge-maximal senses explicitly to prevent the partition-order terminology from being misread.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-SC12V2-P282-GLOSSARY (checked_supports); TA-T179-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “மிகநுண்ணிய வடிகட்டல் / மிகத்தடித்த வடிகட்டல் / அனைத்துறவு மாதிரி” the established India-standard Tamil expression for “finest filtration / coarsest filtration / universal model” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-9f8705134cfe181b` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:16`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:35`; PDF page pending.
+- `TA-OCC-6f3f38e6ae3b3bc7` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:18`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:95`; PDF page pending.
+- `TA-OCC-50caf95710679904` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:43`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:48`; PDF page pending.
+- `TA-OCC-ec93c1d83ea8ff84` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:45`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:50`; PDF page pending.
+- `TA-OCC-b4a1ee491b75a1c4` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:51`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:57`; PDF page pending.
+- `TA-OCC-d1da5830ff8dcfe9` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:51`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:57`; PDF page pending.
+- `TA-OCC-f5fa1a82dcaa131f` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:53`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:59`; PDF page pending.
+- `TA-OCC-43b5d02afe3d1e65` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:72`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:65`; PDF page pending.
+- `TA-OCC-ece4d769879cf1d9` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:73`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:77`; PDF page pending.
+- `TA-OCC-60a0fcd314a048c5` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:74`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:79`; PDF page pending.
+- `TA-OCC-a1eee339745f21dd` — OLP-0456 / `OLP-0456-S01`; source `content/normal-modal-logic/filtrations/S5-fmp.tex:74`; Tamil `translation/content/normal-modal-logic/filtrations/S5-fmp.tex:81`; PDF page pending.
+- `TA-OCC-2f33ad1c5482874c` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:31`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:38`; PDF page pending.
+- `TA-OCC-b59010da160c6aa8` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:31`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:38`; PDF page pending.
+- `TA-OCC-30612d4356b00149` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:18`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:27`; PDF page pending.
+- `TA-OCC-d0a876688262ac27` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:97`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:114`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 
