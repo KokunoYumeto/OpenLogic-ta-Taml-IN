@@ -1,0 +1,32 @@
+{
+  "schema": "openlogic-tamil-ordinals-tex-source-qa/1",
+  "result": "pass",
+  "source_commit": "449c3bfb90971941eb59715863f31e8e752434ba",
+  "asset": {
+    "filename": "openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex",
+    "bytes": 274225,
+    "sha256": "306598b2dd3c3d59ec9ef9f12d58f6b81b7fc36d0872acb86356defae4c331da"
+  },
+  "scope": {
+    "counted_reader_units": 11,
+    "exact_translation_blobs_verified": 11,
+    "unaccepted_drafts_included": 0
+  },
+  "embedded": {
+    "filecontents_blocks": 25,
+    "project_support_files": 14,
+    "all_literal_executable_inputs_embedded": true,
+    "bibliography_and_style_embedded": true
+  },
+  "checks": {
+    "asset_identity": true,
+    "reader_unit_inventory": true,
+    "translation_payloads_match_source_commit": true,
+    "project_local_input_completeness": true,
+    "support_payloads_match_source_commit_or_declared_path_rewrites": true,
+    "reader_master_identity": true,
+    "unaccepted_drafts_absent": true,
+    "personal_path_absent": true,
+    "accepted_pdf_replaced": false
+  }
+}
