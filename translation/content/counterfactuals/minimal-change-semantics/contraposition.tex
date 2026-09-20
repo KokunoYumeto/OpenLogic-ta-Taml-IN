@@ -1,0 +1,71 @@
+% SEGMENT OLP-0528-S01
+% Part: counterfactuals
+% Chapter: minimal-change-semantics
+% Section: contraposition
+% SOURCE CORRECTION TA-CF-009: correct the copied section metadata from transitivity to contraposition.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cnt}{min}{cpo}
+
+\olsection{எதிர்மறைநேர்மாற்று}
+
+பொருள்சார் நிபந்தனைகளும் கண்டிப்பான நிபந்தனைகளும் அவற்றின்
+எதிர்மறைநேர்மாற்றுக் கூற்றுகளுக்குச் சமானமானவை. உண்மைக்கு மாறான
+நிபந்தனைகள் அவ்வாறல்ல. கிராட்சர் தந்த ஓர் எடுத்துக்காட்டு இதோ:
+\begin{quote}
+  கோதே 1832-இல் இறந்திருக்காவிட்டால், இப்போதும் அவர் இறந்தவராகவே
+  இருந்திருப்பார்.
+
+  கோதே இப்போது இறந்தவராக இல்லாவிட்டால், அவர் 1832-இல் இறந்திருப்பார்.
+\end{quote}
+முதல் வாக்கியம் மெய்: மனிதர்கள் நூற்றுக்கணக்கான ஆண்டுகள் வாழ்வதில்லை.
+இரண்டாவது தெளிவாகப் பொய்: கோதே இப்போது இறந்தவராக இல்லாவிட்டால், அவர்
+இன்னும் உயிரோடு இருப்பார்; ஆகவே 1832-இல் இறந்திருக்க முடியாது.
+
+\begin{ex}\ollabel{ex:contraposition-counterex}
+  கோளப் பொருண்மையியல் எதிர்மறைநேர்மாற்றைச் செல்லாததாக்குகிறது; அதாவது,
+  $p \cif q \Entails/ \lnot q \cif \lnot p$. $p$ என்பது ``கோதே
+  1832-இல் இறக்கவில்லை'' என்றும், $q$ என்பது ``கோதே இப்போது இறந்துள்ளார்''
+  என்றும் கொள்க. $W = \{w, w_1, w_2\}$, $O_w = \{\{w\}, \{w, w_1\},
+  \{w, w_1, w_2\}\}$, $V(p) = \{w_1, w_2\}$, $V(q) = \{w, w_1\}$
+  ஆகியவற்றைக் கொண்ட மாதிரி $\mModel{M_1} = \tuple{W, O, V}$ இல் இதைப்
+  பதிவு செய்யலாம்.
+  % SOURCE CORRECTION TA-CF-010: the sphere system is O_w, not a world-independent O.
+  எனவே $w$ என்பது கோதே 1832-இல் இறந்து, இன்னும் இறந்தவராகவே இருக்கும்
+  நடப்பு உலகம்; $w_1$ என்பது கோதே, எடுத்துக்காட்டாக 1833-இல் இறந்து,
+  இன்னும் இறந்தவராகவே இருக்கும் (நெருங்கிய) உலகம்; $w_2$ என்பது கோதே
+  இன்னும் உயிரோடு இருக்கும் (தொலைவான) உலகம்.
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.6,layerwidth=1.5]\tiny
+  \spheresystem{3}
+  \begin{scope}
+    \clip \propositionplot{0}{.8}{50}{4.5} -- (4.5,-4.5) -- (-4.5,-4.5) -- (-4.5,4.5) -- (4.5,4.5);
+    \spherelayer{3}
+  \end{scope}
+  \propositionintersect{0}{2}{110}{5.5}
+  \proposition{0}{.8}{50}{4.5}
+  \path (0,0) node[world] {$w$};
+  \spherepos{0}{2}{node[world] {$w_1$}}
+  \spherepos{-50}{3}{node[world] {$w_2$}}
+  \spherepos{28}{3}{node {$q$}}
+  \spherepos{42}{3}{node {$\lnot q$}}
+  \spherepos{-55}{4}{node {$p$}}
+  \spherepos{-67}{4}{node {$\lnot p$}}
+\end{tikzpicture}
+\caption{எதிர்மறைநேர்மாற்றுக்கான எதிரெடுத்துக்காட்டு}
+\ollabel{fig:contraposition}
+\end{center}
+\end{figure}
+$p$-ஐ ஏற்கும் கோளம் $S = \{w, w_1\}$ ஒன்று உள்ளது; அதிலுள்ள எல்லா
+உலகங்களிலும் $p \lif q$ மெய்; எனவே $\mSat{M_1}{p \cif q}[w]$.
+எனினும், $\lnot q$-ஐ ஏற்கும் கோளம் $\{w, w_1, w_2\}$ ஆனது~$w_2$ என்ற
+உலகைக் கொண்டுள்ளது; அங்கு $q$ பொய்யாகவும் $p$ மெய்யாகவும் இருப்பதால்,
+$\mSat/{M_1}{\lnot q \lif \lnot p}[w_2]$.
+% SOURCE CORRECTION TA-CF-011: use the introduced model M_1 consistently in both satisfaction claims.
+\end{ex}
+
+\end{document}

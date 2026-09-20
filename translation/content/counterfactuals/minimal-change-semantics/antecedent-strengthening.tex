@@ -1,0 +1,73 @@
+% SEGMENT OLP-0526-S01
+% Part: counterfactuals
+% Chapter: minimal-change-semantics
+% Section: antecedent-strengthening
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cnt}{min}{agg}
+
+\olsection{முன்னிலையை வலுப்படுத்துதல்}
+
+``முன்னிலையை வலுப்படுத்துதல்'' என்பது $!A \lif !C \Entails (!A
+\land !B) \lif !C$ என்ற அனுமானத்தைக் குறிக்கிறது. இது பொருள்சார்
+நிபந்தனைக்குச் செல்லுபடியாகும்; ஆனால் உண்மைக்கு மாறான நிபந்தனைகளுக்குச்
+செல்லுபடியாகாது. இந்தத் தீக்குச்சியை நான் உரசியிருந்தால் அது பற்றியிருக்கும்
+என்பது மெய் எனக் கொள்க. (அதாவது, தீக்குச்சியிலோ தீப்பெட்டியின் உரசும்
+பரப்பிலோ குறை ஏதுமில்லை; நான் தீக்குச்சியை முறிக்கமாட்டேன்; இப்படியே
+பல.) ஆனால் விண்வெளியில் இந்தத் தீக்குச்சியை நான் உரசியிருந்தால் அது
+பற்றியிருக்கும் என்பது மெய்யல்ல. எனவே பின்வரும் அனுமானம் செல்லுபடியாகாது:
+% SOURCE CORRECTION TA-CF-006: the strengthened antecedent is striking, not lighting, the match in outer space.
+\begin{quote}
+  தீக்குச்சி உரசப்பட்டிருந்தால், அது பற்றியிருக்கும்.
+
+  எனவே, தீக்குச்சி விண்வெளியில் உரசப்பட்டிருந்தால், அது பற்றியிருக்கும்.
+\end{quote}
+
+நிபந்தனைக் கூற்றுகள் பற்றிய லூயிஸ்--ஸ்டால்நேக்கர் விளக்கம் இதை
+விளக்குகிறது: தீக்குச்சியை நான் விண்வெளியில் உரசும் மிக நெருங்கிய உலகம்,
+தீக்குச்சியை நான் உரசும் மிக நெருங்கிய உலகைவிட நடப்பு உலகிலிருந்து மிக
+அதிகத் தொலைவில் உள்ளது. ஆகவே பிந்தைய உலகில் தீக்குச்சி பற்றுவது மெய்யாக
+இருந்தாலும், முந்தைய உலகில் அது மெய்யல்ல. அவ்வாறே இருக்க வேண்டும்.
+
+\begin{ex}
+  கோளப் பொருண்மையியல் இந்த அனுமானத்தைச் செல்லாததாக்குகிறது; அதாவது $p
+  \cif r \Entails/ (p \land q) \cif r$. $W = \{w, w_1, w_2\}$,
+  $O_w = \{\{w\}, \{w, w_1\}, \{w, w_1, w_2\}\}$, $V(p) = \{w_1,
+  w_2\}$, $V(q) = \{w_2\}$, $V(r) = \{w_1\}$ ஆகியவற்றைக் கொண்ட
+  மாதிரி $\mModel{M} = \tuple{W, O, V}$ ஐக் கருதுக. $p$-ஐ ஏற்கும்
+  கோளம் $S = \{w, w_1\}$ ஒன்று உள்ளது; அதிலுள்ள எல்லா உலகங்களிலும்
+  $p \lif r$ மெய்; எனவே $\mSat{M}{p \cif r}[w]$. மேலும், $(p \land
+  q)$-ஐ ஏற்கும் கோளம் $S' = \{w, w_1, w_2\}$ ஒன்று உள்ளது. ஆனால்
+  $\mSat/{M}{(p \land q) \lif r}[w_2]$; எனவே $\mSat/{M}{(p \land q)
+  \cif r}[w]$ (\olref{fig:antecedent-strengthening} ஐப் பார்க்கவும்).
+
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[layerwidth=1.5,scale=.6]\tiny
+  \spheresystem{3}
+  \propositionintersect{-10}{3}{30}{5}
+  \begin{scope}
+    \clip plot[smooth,tension=1] coordinates
+          {(0,4.5) (30:.95) (4.5,-3.5)} -- (4.5,4.5) ;
+    \spherefill{2}
+  \end{scope}
+  \draw[proposition] plot[dashed,smooth,tension=1] coordinates
+          {(0,4.5) (30:.95) (4.5,-3.5)} ;
+  \proposition{30}{2}{30}{5}
+  \path (0,0) node[world] {$w$};
+  \spherepos{30}{2}{node[world] {$w_1$}}
+  \spherepos{-10}{3}{node[world] {$w_2$}}
+  \spherepos{-10}{4}{node {$q$}}
+  \spherepos{30}{4}{node {$r$}}
+  \draw (1,4.5) node[below] {$p$};
+\end{tikzpicture}
+\caption{முன்னிலையை வலுப்படுத்துதலுக்கான எதிரெடுத்துக்காட்டு}
+\ollabel{fig:antecedent-strengthening}
+\end{center}
+\end{figure}
+\end{ex}
+
+\end{document}

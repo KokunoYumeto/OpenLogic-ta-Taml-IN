@@ -1,0 +1,275 @@
+{
+  "batch_id": "TA-B235",
+  "units": [
+    {
+      "unit_id": "OLP-0526",
+      "source_sha256": "17178d12f5c6ec82fbe5143286b95f4e2cce3b97117cde0884304e39333892c8",
+      "translation_sha256": "1745f228783097031a74a7e23f0cbc489d94e89d9a508f9e42fbe746d64dc4a0",
+      "source_bytes": 2648,
+      "translation_bytes": 5174,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "below",
+        "coordinates",
+        "dashed",
+        "include",
+        "layerwidth",
+        "logic",
+        "node",
+        "open",
+        "plot",
+        "proposition",
+        "scale",
+        "section",
+        "smooth",
+        "tension",
+        "world"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-CF-006",
+          "unit_id": "OLP-0526",
+          "kind": "antecedent-strengthening-switches-strike-to-light",
+          "action": "Kept striking the match as the strengthened antecedent in outer space.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The first outer-space sentence says ‘light this match,’ although the displayed inference and model strengthen ‘strike this match’ by adding ‘in outer space.’",
+          "chosen_treatment": "தமிழ் முன்கூற்றிலும் விளக்கத்திலும் விண்வெளியில் தீக்குச்சியை உரசுவதாகவே கூறுகிறது.",
+          "alternatives_considered": "Changing the antecedent to the conclusion that the match lights, which would no longer illustrate antecedent strengthening.",
+          "rationale": "The formal pattern is p implies r versus (p and q) implies r, where p is striking and q is being in outer space.",
+          "precise_review_question": "Is striking, rather than lighting, the action strengthened by the outer-space condition?",
+          "location_needle": "SOURCE CORRECTION TA-CF-006"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0527",
+      "source_sha256": "e5b649b07980ba0ec35bc7b18cfa27c1b9bf28553363ab8a10736c3cc182ee0a",
+      "translation_sha256": "0d1ee1161e0a2aade9d82d79bd64644a95216e980411a9548ed4f01fc7bcd26f",
+      "source_bytes": 3602,
+      "translation_bytes": 8625,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mSat/{M}{q\\lifr}$"
+      ],
+      "extra_math": [
+        "$\\mSat{M}{q\\lifr}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "cnt",
+        "include",
+        "logic",
+        "min",
+        "open",
+        "section",
+        "tra"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-CF-007",
+          "unit_id": "OLP-0527",
+          "kind": "transitivity-example-duplicated-be",
+          "action": "Removed the duplicated ‘be’ from the second premise and conclusion.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Both quoted sentences say ‘would have been be a traitor.’",
+          "chosen_treatment": "தமிழ் இரு இடங்களிலும் நாட்டுத்துரோகியாக இருந்திருப்பார் என்று இயல்பாகக் கூறுகிறது.",
+          "alternatives_considered": "Representing the duplicated auxiliary as meaningful content.",
+          "rationale": "The intended English phrase is uniquely ‘would have been a traitor.’",
+          "precise_review_question": "Are both quoted traitor clauses grammatically complete?",
+          "location_needle": "SOURCE CORRECTION TA-CF-007"
+        },
+        {
+          "audit_id": "TA-CF-008",
+          "unit_id": "OLP-0527",
+          "kind": "transitivity-countermodel-negates-claimed-true-conditional",
+          "action": "Removed the negation slash from satisfaction of q material-implies r throughout the q-admitting sphere.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\mSat/{M}{q\\lifr}",
+              "to": "\\mSat{M}{q\\lifr}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The prose says q material-implies r is true at all worlds in S-prime and uses that to infer q counterfactually-implies r, but the satisfaction macro carries a negation slash.",
+          "chosen_treatment": "தமிழ் முறைசார் குறியீடும் உரையும் இரண்டிலும் அந்தப் பொருள்சார் நிபந்தனை மெய் என்று கூறுகிறது.",
+          "alternatives_considered": "Keeping the negation slash, which would destroy the second premise of the counterexample.",
+          "rationale": "At w1 both q and r are true, and at w q is false, so q material-implies r is true throughout the sphere.",
+          "precise_review_question": "Is q material-implies r satisfied throughout S-prime?",
+          "location_needle": "SOURCE CORRECTION TA-CF-008"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0528",
+      "source_sha256": "bf3efbdee2ef7ffb044355a15128b37a9632a2c2a3fe3337d38c42644ab9a2bc",
+      "translation_sha256": "82b0274fbd30bf4c699331945a8606ebb834596d4c202e6ba9e45580a5792c22",
+      "source_bytes": 2345,
+      "translation_bytes": 4909,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$O=\\{\\{w\\},\\{w,w_1\\},\\{w,w_1,w_2\\}\\}$",
+        "$\\mSat{M}{p\\cifq}[w]$",
+        "$\\mSat/{M}{\\lnotq\\lif\\lnotp}[w_2]$"
+      ],
+      "extra_math": [
+        "$O_w=\\{\\{w\\},\\{w,w_1\\},\\{w,w_1,w_2\\}\\}$",
+        "$\\mSat{M_1}{p\\cifq}[w]$",
+        "$\\mSat/{M_1}{\\lnotq\\lif\\lnotp}[w_2]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "layerwidth",
+        "logic",
+        "node",
+        "open",
+        "scale",
+        "section",
+        "world"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-CF-009",
+          "unit_id": "OLP-0528",
+          "kind": "contraposition-file-copied-section-comment",
+          "action": "Corrected the metadata comment from transitivity to contraposition.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The file name, identifier, title and contents concern contraposition, while the Section comment says transitivity.",
+          "chosen_treatment": "தமிழ் மெட்டாதரவு உள்ளடக்கத்திற்கேற்ப எதிர்மறைநேர்மாற்றுப் பகுதியைக் குறிக்கிறது.",
+          "alternatives_considered": "Treating a nonfunctional copied comment as the authoritative section identity.",
+          "rationale": "Every functional locator identifies the contraposition section.",
+          "precise_review_question": "Does the metadata comment name contraposition?",
+          "location_needle": "SOURCE CORRECTION TA-CF-009"
+        },
+        {
+          "audit_id": "TA-CF-010",
+          "unit_id": "OLP-0528",
+          "kind": "contraposition-model-drops-world-index-on-sphere-system",
+          "action": "Indexed the displayed sphere system by its center world w.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "O=\\{\\{w\\},\\{w,w_1\\},\\{w,w_1,w_2\\}\\}",
+              "to": "O_w=\\{\\{w\\},\\{w,w_1\\},\\{w,w_1,w_2\\}\\}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The sphere-model definition makes O a function and O_w the sphere system at w, but this example equates O itself with one set of spheres.",
+          "chosen_treatment": "தமிழ் எடுத்துக்காட்டு w மையத்திற்கான கோள அமைப்பை O_w என்று தருகிறது.",
+          "alternatives_considered": "Treating O as a constant sphere system contrary to the chapter definition.",
+          "rationale": "All neighboring examples specify O_w when only the evaluation world's sphere system is given.",
+          "precise_review_question": "Is the displayed set assigned to O_w?",
+          "location_needle": "SOURCE CORRECTION TA-CF-010"
+        },
+        {
+          "audit_id": "TA-CF-011",
+          "unit_id": "OLP-0528",
+          "kind": "contraposition-example-switches-model-name",
+          "action": "Used the introduced model M_1 in both satisfaction claims.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\mSat{M}{p\\cifq}[w]",
+              "to": "\\mSat{M_1}{p\\cifq}[w]",
+              "count": 1
+            },
+            {
+              "from": "\\mSat/{M}{\\lnotq\\lif\\lnotp}[w_2]",
+              "to": "\\mSat/{M_1}{\\lnotq\\lif\\lnotp}[w_2]",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The example introduces M_1 but its two concluding satisfaction statements use an undefined M.",
+          "chosen_treatment": "தமிழ் இரு நிறைவுறுத்தல் கூற்றுகளிலும் அறிமுகப்படுத்தப்பட்ட M_1 ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Renaming the introduced model to M, which would alter the explicit model label rather than repair its later references.",
+          "rationale": "Both claims evaluate the model just constructed and diagrammed.",
+          "precise_review_question": "Do both satisfaction statements refer to M_1?",
+          "location_needle": "SOURCE CORRECTION TA-CF-011"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

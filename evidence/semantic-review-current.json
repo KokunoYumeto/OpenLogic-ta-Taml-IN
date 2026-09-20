@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T04:12:19.956300+00:00",
+  "date_utc": "2026-09-20T15:29:44.977071+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2562,6 +2562,71 @@
       "unit_id": "OLP-0515",
       "source_sha256": "3852095c3c8edfdf76e294936602d8a0d640622642fcb0c27cf55420ef99e46c",
       "translation_sha256": "d438bd77f8061f104ec483b8e348a6f41295593499464715ffae4de655d2bbc9"
+    },
+    {
+      "unit_id": "OLP-0516",
+      "source_sha256": "506d0c7ca33935c373fb7a04a0529d2f5944a8bdab154c277b6a6d4b5d2c3c38",
+      "translation_sha256": "816341f25be944c9a249edfb0b3640b3dc4db950f6f63c08a8adba03c00fa8b2"
+    },
+    {
+      "unit_id": "OLP-0517",
+      "source_sha256": "9c730df185a453a8a7234e93924fdb224243e5eb28966c4fde44b0740aa668e9",
+      "translation_sha256": "64b822243ffabea523a6b7d5234f2e1d3c3f77bf29dac48b6772ee66f42d705e"
+    },
+    {
+      "unit_id": "OLP-0518",
+      "source_sha256": "1336ca4b9151ae97d2416ae95b815dbcaa478c68cb0b41f743e5654afc7b5d76",
+      "translation_sha256": "29c9c05d8705efb6d831ea1e224f5249b52f2d3f8f68d84ae097df1f21e3838c"
+    },
+    {
+      "unit_id": "OLP-0519",
+      "source_sha256": "a96e295c0662cc160349ae9241950d176eb45968998616ebd599b1004f7a167c",
+      "translation_sha256": "2a6ffbb6fb44c1e273792f9942cc289d9336eb13b16eb2ddf6e87af628b94e0a"
+    },
+    {
+      "unit_id": "OLP-0520",
+      "source_sha256": "f3b34ead41eeafc7b73f9abd9c8936638dc8d7244943f7d649bf3cc01254062f",
+      "translation_sha256": "178ed13f64dbf9f4221962467af3db5cc4fb3ec9e4deb3d90c81604c1675866b"
+    },
+    {
+      "unit_id": "OLP-0521",
+      "source_sha256": "b99a7ee8d111ff23508238df4fae5208e76f84f1a2cba55c5eecaff5814f7dba",
+      "translation_sha256": "0734ca7b0a76c6f4a2d9ce92c6dbf85ea6c7d61cbb6f7f74ebcb762d13bf224b"
+    },
+    {
+      "unit_id": "OLP-0522",
+      "source_sha256": "07af1173a0566d6b3fe2a45972e0eb9ad540a826380eedc5a5053fef44976df1",
+      "translation_sha256": "10ab232eb2a88a9781786e7659b1701f01d6732a80b5a67a1179fa247f2ff457"
+    },
+    {
+      "unit_id": "OLP-0523",
+      "source_sha256": "52eadae36895fda99f808b74a27529041a2fa0bccbfddea6c11eec92c016b2e4",
+      "translation_sha256": "9398a73e2d488f6235bb16bc74b61be04001b77ea6b11f6333f5b51bd7d5cbd9"
+    },
+    {
+      "unit_id": "OLP-0524",
+      "source_sha256": "8086fe23ef5707ea236526c24de19199690ae25ff49ac7e523d7ca79173fee37",
+      "translation_sha256": "ba21b6e36bf6888eb1d7233d22a1f20196538c902b4c1c5e9ea442e2531ce660"
+    },
+    {
+      "unit_id": "OLP-0525",
+      "source_sha256": "cd1c4ae0d9b97228174e754a0f786211c56f689360a476ba1ec27858f58922e9",
+      "translation_sha256": "41334faef75a3f3d9e829d6cd0ea068d6cd43a1a73a80f9ed3556a289aacfe19"
+    },
+    {
+      "unit_id": "OLP-0526",
+      "source_sha256": "17178d12f5c6ec82fbe5143286b95f4e2cce3b97117cde0884304e39333892c8",
+      "translation_sha256": "1745f228783097031a74a7e23f0cbc489d94e89d9a508f9e42fbe746d64dc4a0"
+    },
+    {
+      "unit_id": "OLP-0527",
+      "source_sha256": "e5b649b07980ba0ec35bc7b18cfa27c1b9bf28553363ab8a10736c3cc182ee0a",
+      "translation_sha256": "0d1ee1161e0a2aade9d82d79bd64644a95216e980411a9548ed4f01fc7bcd26f"
+    },
+    {
+      "unit_id": "OLP-0528",
+      "source_sha256": "bf3efbdee2ef7ffb044355a15128b37a9632a2c2a3fe3337d38c42644ab9a2bc",
+      "translation_sha256": "82b0274fbd30bf4c699331945a8606ebb834596d4c202e6ba9e45580a5792c22"
     }
   ],
   "samples": [
@@ -6806,6 +6871,97 @@
       "assessment": "The branch-preservation induction and both soundness corollaries remain; TA-IL-019 through TA-IL-024 repair the countermodel sign, prefix transport, two omitted prefixes, the witness branch contents and the final entailment conclusion.",
       "translation_segment_sha256": "9880e1a608a4c2c1fb6b85d02872d0946e5d64818199602f8edfd7e4efe3a264",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0516-S01",
+      "reverse_paraphrase": "The counterfactuals part consists of an introductory chapter and a minimal-change-semantics chapter.",
+      "assessment": "Both imports, the cnt part identity and part-ending hook remain exact.",
+      "translation_segment_sha256": "7405976e7eba7d7637627eee17b67afbce6f84454e1782489db64344c9fceda2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0517-S01",
+      "reverse_paraphrase": "The introduction proceeds from the material conditional and its paradoxes through the strict conditional to counterfactual conditionals.",
+      "assessment": "All four imports remain in source order and the chapter hook is preserved.",
+      "translation_segment_sha256": "68e4cfde8e360f00a9cffe261331667b9eede41814f9959e543bc8f7658e4814",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0518-S01",
+      "reverse_paraphrase": "The material conditional is truth-functional: A implies B is false only when A is true and B false; it validates deduction, modus ponens, agglomeration, antecedent strengthening, transitivity and contraposition.",
+      "assessment": "The valuation clause and every displayed entailment remain; TA-CF-001 repairs only the source typo “earn.”",
+      "translation_segment_sha256": "06d767bbe4b6288c0e824812a24988e36ab2cbb56204d57f59937bb84eecc3c9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0519-S01",
+      "reverse_paraphrase": "Material implication is a truth-functional connective rather than the metalinguistic entailment relation, yet its truth conditions validate natural-language conditionals that can sound paradoxical.",
+      "assessment": "Lewis’s two objections, the valuation distinction, both moon examples and the total-order tautology remain; TA-CF-002 removes only a stray preposition.",
+      "translation_segment_sha256": "f02fb6dc2a0bb75a4488e84719ba2cae346fc6cc38c406d079bcaa0d6c07dec1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0520-S01",
+      "reverse_paraphrase": "The strict conditional A strictif B is Box(A material-implies B): it avoids several material paradoxes but makes every true or false strict conditional necessary.",
+      "assessment": "Both valid and invalid entailment lists, S5 problems and final four principles remain; TA-CF-003 correctly negates the strict rather than material conditional.",
+      "translation_segment_sha256": "a4b4fa06cd17727d1f916488ae5022c03786025cb5e45557bf4449e632505391",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0521-S01",
+      "reverse_paraphrase": "Indicative and counterfactual conditionals differ in truth conditions; counterfactuals support causal claims and are evaluated at closest antecedent worlds in the Stalnaker–Lewis account.",
+      "assessment": "The Oswald pair, match examples, ontic analysis and alternative approaches remain distinct; the Tamil examples use natural counterfactual morphology.",
+      "translation_segment_sha256": "e914d1fdc0851f15943fff9e88f31cbe6c4ba0473386f65bc75b73494cb1f294",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0522-S01",
+      "reverse_paraphrase": "The minimal-change-semantics chapter contains the motivation, sphere models, truth and falsity, then failures of antecedent strengthening, transitivity and contraposition.",
+      "assessment": "All six imports and the chapter-ending hook remain exact.",
+      "translation_segment_sha256": "3c4a4772e7f8c195eee15b0a939ee9a5d09adec9545216404d26fff36505a9bd",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0523-S01",
+      "reverse_paraphrase": "A counterfactual is true when its consequent holds in the possible worlds requiring only minimal change to make its antecedent true; nested spheres represent comparative closeness.",
+      "assessment": "The match scenario, cif connective, world-relative satisfaction and closest-A-world diagram remain exact.",
+      "translation_segment_sha256": "b95ab52d772a40a18e2952deb64e978253d0a640871679b90239535609c6fdd9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0524-S01",
+      "reverse_paraphrase": "A sphere model assigns each world a centered nested sphere system closed under nonempty unions and intersections; A counterfactually implies B either vacuously or through an A-admitting sphere throughout which A materially implies B.",
+      "assessment": "The model triple, four conditions, diagram, two-clause semantics and no-limit case remain; TA-CF-004 restores the cnt identifier.",
+      "translation_segment_sha256": "dc129b1a22f69cea0247b0a5f0bd9953facf2365351b0d812b45769753d580c9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0525-S01",
+      "reverse_paraphrase": "A counterfactual may be non-vacuously true, vacuously true, false together with its negated-consequent opposite, false while that opposite is true, or contingent across worlds.",
+      "assessment": "All five sphere diagrams, captions and world-relative satisfaction claims remain; TA-CF-005 restores the cnt identifier.",
+      "translation_segment_sha256": "7fb1d136418c162203316e0c7f30c8e2c66581393ff257ba33a3ff817fd9f6a3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0526-S01",
+      "reverse_paraphrase": "Antecedent strengthening fails because the closest match-striking worlds may light the match while the closest outer-space match-striking worlds do not.",
+      "assessment": "The p/q/r sphere countermodel and diagram remain; TA-CF-006 keeps striking, rather than lighting, as the strengthened antecedent.",
+      "translation_segment_sha256": "9e99b072f4dc09f9f9c48e88e8b971605653fbbde30b61c2b41d4c81c9762a88",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0527-S01",
+      "reverse_paraphrase": "Counterfactual transitivity fails because the closest p-worlds used for p cif q can differ from the closest q-worlds used for q cif r.",
+      "assessment": "The Hoover example, formal three-world countermodel and exercises remain; TA-CF-007 repairs the duplicated auxiliary and TA-CF-008 restores truth of q material-implies r on its admitting sphere.",
+      "translation_segment_sha256": "f681c1e2e9fc468f9c2e6aabf5670d50e2ee7067e58133adca3d8d2fbb4c4701",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0528-S01",
+      "reverse_paraphrase": "Counterfactual contraposition fails when the closest p-worlds satisfy q but the closest not-q worlds still satisfy p.",
+      "assessment": "The Goethe example, three-world diagram and satisfaction claims remain; TA-CF-009 through TA-CF-011 repair metadata, O_w indexing and the M_1 references.",
+      "translation_segment_sha256": "4eacb94da1bf318ef24d6b7e7d835303223f5508791659169fbbf48ccbe84ca8",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -7578,11 +7734,43 @@
     {
       "unit_id": "OLP-0515",
       "issue": "The soundness chapter makes its countermodel satisfy the conclusion, drops or misapplies prefixes in three cases, extends a false-conditional branch with the wrong formula, and repeats derivability where entailment was to be proved. Tamil repairs these under TA-IL-019 through TA-IL-024."
+    },
+    {
+      "unit_id": "OLP-0518",
+      "issue": "The material-conditional introduction says students “earn” rather than “learn” to symbolize conditionals. Tamil restores the intended pedagogical verb under TA-CF-001."
+    },
+    {
+      "unit_id": "OLP-0519",
+      "issue": "The final example begins with the ungrammatical phrase “Another example of concerns.” Tamil removes the stray preposition under TA-CF-002."
+    },
+    {
+      "unit_id": "OLP-0520",
+      "issue": "The strict-conditional comparison negates a material conditional where the surrounding claim and converse direction require the strict conditional. Tamil uses strictif under TA-CF-003."
+    },
+    {
+      "unit_id": "OLP-0524",
+      "issue": "The sphere-model file retains copied conditional-logics metadata and a con file identifier although it is imported by the counterfactuals cnt part. Tamil restores cnt under TA-CF-004."
+    },
+    {
+      "unit_id": "OLP-0525",
+      "issue": "The truth-and-falsity file retains copied conditional-logics metadata and a con file identifier although it is imported by the counterfactuals cnt part. Tamil restores cnt under TA-CF-005."
+    },
+    {
+      "unit_id": "OLP-0526",
+      "issue": "The strengthened outer-space antecedent once switches from striking the match to lighting it, contrary to the quotation and p-and-q model. Tamil keeps striking throughout under TA-CF-006."
+    },
+    {
+      "unit_id": "OLP-0527",
+      "issue": "The Hoover quotation duplicates “be” twice, and the formal countermodel negates q material-implies r while calling it true throughout its sphere. Tamil repairs the prose and satisfaction sign under TA-CF-007 and TA-CF-008."
+    },
+    {
+      "unit_id": "OLP-0528",
+      "issue": "The contraposition file retains a transitivity metadata comment, writes a world-specific sphere system as O, and switches from the introduced model M_1 to M. Tamil restores the section name, O_w and both M_1 references under TA-CF-009 through TA-CF-011."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "512 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 210 frozen units still require completion.",
+  "remaining": "525 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 197 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -8412,6 +8600,52 @@
         "rules_preserve_full_tables_closure_direction_and_prefix_constraints": true,
         "worked_tree_and_four_exercises_remain": true,
         "soundness_preserves_prefix_interpretation_closures_rule_preservation_witness_and_corollaries": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0516",
+        "OLP-0517",
+        "OLP-0518",
+        "OLP-0519",
+        "OLP-0520",
+        "OLP-0521",
+        "OLP-0522",
+        "OLP-0523",
+        "OLP-0524",
+        "OLP-0525",
+        "OLP-0526",
+        "OLP-0527",
+        "OLP-0528"
+      ],
+      "correction_ids": [
+        "TA-CF-001",
+        "TA-CF-002",
+        "TA-CF-003",
+        "TA-CF-004",
+        "TA-CF-005",
+        "TA-CF-006",
+        "TA-CF-007",
+        "TA-CF-008",
+        "TA-CF-009",
+        "TA-CF-010",
+        "TA-CF-011"
+      ],
+      "status": "pass",
+      "checks": {
+        "part_and_introduction_drivers_preserve_complete_import_graph": true,
+        "material_truth_clause_and_inference_inventory_remain": true,
+        "material_paradoxes_keep_connective_entailment_distinction_and_examples": true,
+        "strict_definition_validities_invalidities_and_repair_remain": true,
+        "natural_language_counterfactual_distinctions_causation_and_closest_worlds_remain": true,
+        "minimal_change_introduction_preserves_connective_world_semantics_and_spheres": true,
+        "sphere_model_four_conditions_two_truth_clauses_and_identifier_repair_remain": true,
+        "counterfactual_truth_falsity_contingency_and_all_figures_remain": true,
+        "antecedent_strengthening_countermodel_keeps_outer_space_as_added_condition": true,
+        "transitivity_countermodel_preserves_two_true_premises_and_false_composition": true,
+        "contraposition_countermodel_uses_world_indexed_spheres_and_one_model_name": true,
+        "minimal_change_driver_preserves_all_six_sections": true,
+        "sphere_countermodels_compute_the_claimed_failures": true
       }
     }
   ]

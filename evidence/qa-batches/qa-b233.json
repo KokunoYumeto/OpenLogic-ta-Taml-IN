@@ -1,0 +1,163 @@
+{
+  "batch_id": "TA-B233",
+  "units": [
+    {
+      "unit_id": "OLP-0520",
+      "source_sha256": "f3b34ead41eeafc7b73f9abd9c8936638dc8d7244943f7d649bf3cc01254062f",
+      "translation_sha256": "178ed13f64dbf9f4221962467af3db5cc4fb3ec9e4deb3d90c81604c1675866b",
+      "source_bytes": 4467,
+      "translation_bytes": 8807,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align}!A\\strictif!B&\\Entails\\lnot!A\\lor!B\\\\\\lnot!A\\lor!B&\\Entails/!A\\strictif!B\\\\!B&\\Entails/!A\\strictif!B\\\\\\lnot!A&\\Entails/!A\\strictif!B\\\\\\lnot(!A\\lif!B)&\\Entails/!A\\land\\lnot!B\\\\!A\\land\\lnot!B&\\Entails\\lnot(!A\\strictif!B)!A,!A\\strictif!B&\\Entails!B!A\\strictif!B,!A\\strictif!C&\\Entails!A\\strictif(!B\\land!C)!A\\strictif!B&\\Entails(!A\\land!C)\\strictif!B!A\\strictif!B,!B\\strictif!C&\\Entails!A\\strictif!C!A\\strictif!B&\\Entails\\lnot!B\\strictif\\lnot!A\\\\\\lnot!B\\strictif\\lnot!A&\\Entails!A\\strictif!B\\end{align}"
+      ],
+      "extra_math": [
+        "\\begin{align}!A\\strictif!B&\\Entails\\lnot!A\\lor!B\\\\\\lnot!A\\lor!B&\\Entails/!A\\strictif!B\\\\!B&\\Entails/!A\\strictif!B\\\\\\lnot!A&\\Entails/!A\\strictif!B\\\\\\lnot(!A\\strictif!B)&\\Entails/!A\\land\\lnot!B\\\\!A\\land\\lnot!B&\\Entails\\lnot(!A\\strictif!B)!A,!A\\strictif!B&\\Entails!B!A\\strictif!B,!A\\strictif!C&\\Entails!A\\strictif(!B\\land!C)!A\\strictif!B&\\Entails(!A\\land!C)\\strictif!B!A\\strictif!B,!B\\strictif!C&\\Entails!A\\strictif!C!A\\strictif!B&\\Entails\\lnot!B\\strictif\\lnot!A\\\\\\lnot!B\\strictif\\lnot!A&\\Entails!A\\strictif!B\\end{align}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section",
+        "then"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-CF-003",
+          "unit_id": "OLP-0520",
+          "kind": "strict-conditional-comparison-uses-material-connective",
+          "action": "Replaced the material connective by the strict connective in the negated strict-conditional comparison.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\lif"
+          ],
+          "expected_extra_commands": [
+            "\\strictif"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\lnot(!A\\lif!B)&\\Entails/!A\\land\\lnot!B",
+              "to": "\\lnot(!A\\strictif!B)&\\Entails/!A\\land\\lnot!B",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The surrounding section and the following converse direction compare the strict conditional with antecedent-and-negated-consequent, but this one line accidentally retains the material connective.",
+          "chosen_treatment": "தமிழ் வரியில் மறுக்கப்படுவது கண்டிப்பான நிபந்தனையே.",
+          "alternatives_considered": "Keeping the material conditional, for which the displayed non-entailment is false.",
+          "rationale": "Negating a material conditional entails A and not-B; negating a strict conditional need not do so at the current world.",
+          "precise_review_question": "Does the non-entailment line negate A strictif B?",
+          "location_needle": "SOURCE CORRECTION TA-CF-003"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\lif"
+      ],
+      "extra_commands": [
+        "\\strictif"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0521",
+      "source_sha256": "b99a7ee8d111ff23508238df4fae5208e76f84f1a2cba55c5eecaff5814f7dba",
+      "translation_sha256": "0734ca7b0a76c6f4a2d9ce92c6dbf85ea6c7d61cbb6f7f74ebcb762d13bf224b",
+      "source_bytes": 4092,
+      "translation_bytes": 11413,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "case",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "that",
+        "the",
+        "then",
+        "were",
+        "would"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0522",
+      "source_sha256": "07af1173a0566d6b3fe2a45972e0eb9ad540a826380eedc5a5053fef44976df1",
+      "translation_sha256": "10ab232eb2a88a9781786e7659b1701f01d6732a80b5a67a1179fa247f2ff457",
+      "source_bytes": 388,
+      "translation_bytes": 481,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

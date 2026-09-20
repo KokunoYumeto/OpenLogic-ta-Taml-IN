@@ -1,0 +1,115 @@
+% SEGMENT OLP-0520-S01
+% Part: counterfactuals
+% Chapter: introduction
+% Section: strict-conditional
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cnt}{int}{str}
+
+\olsection{கண்டிப்பான நிபந்தனைக் கூற்று}
+
+லூயிஸ் \emph{கண்டிப்பான நிபந்தனை}~$\strictif$ ஐ அறிமுகப்படுத்தி,
+பொருள்சார் நிபந்தனை அல்ல, இதுவே உட்கிடைவுக்கு ஒத்தது என்று வாதிட்டார்.
+மெய்மையியல் வாய்ப்புநிலைத் தருக்கத்தில் $!A \strictif !B$ ஐ
+$\Box(!A \lif !B)$ என்று வரையறுக்கலாம். எனவே, அதற்கொத்த பொருள்சார்
+நிபந்தனை இன்றியமையாததாக இருந்தால், எனில் மட்டுமே, ஒரு கண்டிப்பான
+நிபந்தனை ஓர் உலகில் மெய்யாகும்.
+
+பொருள்சார் நிபந்தனையின் முரண்தோற்றங்களைக் கண்டிப்பான நிபந்தனை எவ்வாறு
+சமாளிக்கிறது? பொய்யான முன்னிலையைக் கொண்ட கண்டிப்பான நிபந்தனையும்,
+மெய்யான பின்னிலையைக் கொண்ட கண்டிப்பான நிபந்தனையும் மெய்யாகவோ பொய்யாகவோ
+இருக்கலாம். மேலும், $(!A \strictif !B) \lor (!B \strictif !A)$
+செல்லுபடியாகாது. கண்டிப்பான நிபந்தனை $!A \strictif !B$ ஆனது $\lnot !A
+\lor !B$ க்குச் சமானமானதுமல்ல; எனவே அது மெய்ம்மதிப்புச் சார்ந்ததல்ல.
+
+நமக்குக் கிடைப்பவை:
+% SOURCE CORRECTION TA-CF-003: compare the negation of the strict conditional here.
+\begin{align}
+  !A \strictif !B & \Entails \lnot !A \lor !B
+  \text{ ஆனால்:}\\
+  \lnot !A \lor !B & \Entails/ !A \strictif !B\\
+  !B & \Entails/ !A \strictif !B\\
+  \lnot !A & \Entails/ !A \strictif !B\\
+  \lnot(!A \strictif !B) & \Entails/ !A \land \lnot !B
+  \text{ ஆனால்:}\\
+  !A \land \lnot !B & \Entails \lnot(!A \strictif !B)
+  \intertext{எனினும், கண்டிப்பான நிபந்தனை மோடஸ் போனென்ஸை இன்னும்
+    ஆதரிக்கிறது:}
+  !A, !A \strictif !B & \Entails !B
+  \intertext{கண்டிப்பான நிபந்தனை ஒருங்குவிக்கிறது:}
+  !A \strictif !B,  !A \strictif !C & \Entails !A \strictif (!B \land !C)
+  \intertext{முன்னிலையை வலுப்படுத்துதல் கண்டிப்பான நிபந்தனைக்குப்
+    பொருந்துகிறது:}
+  !A \strictif !B & \Entails (!A \land !C) \strictif !B
+  \intertext{கண்டிப்பான நிபந்தனையும் கடப்புத்தன்மையுள்ளது:}
+  !A \strictif !B, !B \strictif !C & \Entails !A \strictif !C
+  \intertext{இறுதியாக, கண்டிப்பான நிபந்தனை அதன் எதிர்மறைநேர்மாற்றுக்
+    கூற்றுக்குச் சமானமானது:}
+  !A \strictif !B & \Entails \lnot !B \strictif \lnot !A\\
+  \lnot !B \strictif \lnot !A & \Entails !A \strictif !B
+\end{align}
+
+\begin{prob}
+  கண்டிப்பான நிபந்தனைக்குப் பொருந்தாத பின்விளைவுத் தொடர்புகளுக்கு,
+  அதாவது பின்வருவனவற்றுக்கு \Log{S5}-எதிரெடுத்துக்காட்டுகளைத் தருக:
+  \begin{enumerate}
+  \item $\lnot p \Entails/ \Box(p \lif q)$
+  \item $q \Entails/ \Box(p \lif q)$
+  \item $\lnot\Box(p \lif q) \Entails/ p \land \lnot q$
+  \item $\Entails/ \Box(p \lif q) \lor \Box(q \lif p)$
+  \end{enumerate}
+\end{prob}
+
+\begin{prob}
+  கண்டிப்பான நிபந்தனைக்கு செல்லுபடியாகும் பின்விளைவுத் தொடர்புகள்
+  பொருந்துகின்றன என்று பின்வருவனவற்றிற்கான \Log{S5}-நிறுவல்களைத் தந்து
+  காட்டுக:
+  \begin{enumerate}
+  \item  $\Box(!A \lif !B) \Entails \lnot !A \lor !B$
+  \item $!A \land \lnot !B \Entails \lnot\Box(!A \lif !B)$
+  \item $!A, \Box(!A \lif !B) \Entails !B$
+  \item $\Box(!A \lif !B), \Box(!A \lif !C) \Entails \Box(!A \lif (!B
+    \land !C))$
+  \item $\Box(!A \lif !B) \Entails \Box((!A \land !C) \lif !B)$
+  \item $\Box(!A \lif !B), \Box(!B \lif !C) \Entails \Box(!A
+    \lif !C)$
+  \item $\Box(!A \lif !B) \Entails \Box(\lnot !B \lif \lnot !A)$
+  \item $\Box(\lnot !B \lif \lnot !A) \Entails \Box(!A \lif !B)$
+  \end{enumerate}
+\end{prob}
+
+இருப்பினும், கண்டிப்பான நிபந்தனைக்கெனத் தனியான ``முரண்தோற்றங்கள்''
+உள்ளன. பொய்யான முன்னிலை அல்லது மெய்யான பின்னிலையைக் கொண்ட பொருள்சார்
+நிபந்தனை மெய்யாவதைப் போலவே, \emph{இன்றியமையாமல்} பொய்யான முன்னிலை அல்லது
+இன்றியமையாமல் மெய்யான பின்னிலையைக் கொண்ட கண்டிப்பான நிபந்தனை மெய்யாகும்.
+மேலும், மெய்யான எந்தக் கண்டிப்பான நிபந்தனையும் இன்றியமையாமல் மெய்;
+பொய்யான எந்தக் கண்டிப்பான நிபந்தனையும் இன்றியமையாமல் பொய். வேறு சொற்களில்,
+\begin{align}
+  \Box \lnot !A & \Entails !A \strictif !B\\
+  \Box !B & \Entails !A \strictif !B\\
+  !A \strictif !B& \Entails \Box(!A \strictif !B)\\
+  \lnot(!A \strictif !B) & \Entails \Box\lnot(!A \strictif !B)
+\end{align}
+என்று நமக்குக் கிடைக்கிறது. $\strictif$ ஐ ``பின்விளைகிறது'' என்று
+நீங்கள் கருதினால் இவை சிக்கல்கள் அல்ல. தருக்கமுறைப் பின்விளைவுத் தொடர்புகள்
+கணித உண்மைகள்; ஆகவே அவை நிச்சயமற்றவையாக இருக்க முடியாது. ஆனால் ``if
+\dots then \dots'' ஐப் பதிவு செய்ய வேண்டிய தருக்க இணைப்பியாக $\strictif$
+ஐப் பயன்படுத்த விரும்பினால், குறிப்பாகக் கடைசி இரண்டு தொடர்புகளும்
+சிக்கல்களை எழுப்புகின்றன. ஏனெனில் நிச்சயமற்று மெய்யாகவோ நிச்சயமற்றுப்
+பொய்யாகவோ இருக்கும் ``if \dots then \dots'' கூற்றுகள் உறுதியாக உள்ளன;
+உண்மையில், அவை பொதுவாக இன்றியமையாதவையும் அல்ல, சாத்தியமற்றவையும் அல்ல.
+
+\begin{prob}
+  பின்வருவனவற்றுக்கு \Log{S5} இல் நிறுவல்கள் தருக:
+  \begin{enumerate}
+    \item  $\Box \lnot !A \Entails !A \strictif !B$
+    \item $!A \strictif !B \Entails \Box(!A \strictif !B)$
+    \item $\lnot(!A \strictif !B)  \Entails \Box\lnot(!A \strictif !B)$
+  \end{enumerate}
+  அவ்வாறு செய்ய $\strictif$ இன் வரையறையைப் பயன்படுத்துக.
+\end{prob}
+
+\end{document}

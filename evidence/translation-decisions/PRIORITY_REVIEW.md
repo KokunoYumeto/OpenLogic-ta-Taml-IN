@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 500/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 512/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -275,6 +275,182 @@ Alternatives: Retaining the overbroad statements; broadening the axiom schemas t
 Please double-check: **do the added closed-term qualifications state exactly the scope licensed by ax:id1 and ax:id2?**
 
 - `TA-OCC-a6c3760731835433` — OLP-0125 / `OLP-0125-S05`; source `content/first-order-logic/axiomatic-deduction/identity.tex:38`; Tamil `translation/content/first-order-logic/axiomatic-deduction/identity.tex:44`; PDF page pending.
+
+## TA-CF-001 — The introductory sentence has the obvious typographical omission of l in learn.
+
+Chosen rendering: **தமிழ் அறிமுகத் தருக்கவியல் பாடங்களில் குறியீடாக்கக் கற்கிறோம் என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The sentence explains what students learn in introductory logic courses.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0518 (checked_supports)
+
+Alternatives: Translating earn literally, which is ungrammatical and contradicts the pedagogical context.
+
+Please double-check: **does the Tamil describe learning to symbolize conditionals?**
+
+- `TA-OCC-bee4872e48a75a91` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:1`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:22`; PDF page pending.
+
+## TA-CF-002 — The preposition ‘of’ interrupts the grammatical subject-verb construction.
+
+Chosen rendering: **தமிழ் மற்றோர் எடுத்துக்காட்டு அந்த மெய்மத்தைப் பற்றியது என்று இயல்பாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Removing the stray preposition restores the unique coherent reading.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0519 (checked_supports)
+
+Alternatives: Preserving an English-only grammatical accident in Tamil.
+
+Please double-check: **does the paragraph introduce the tautology as another example?**
+
+- `TA-OCC-2d1c26f8833f554b` — OLP-0519 / `OLP-0519-S01`; source `content/counterfactuals/introduction/paradoxes-material.tex:1`; Tamil `translation/content/counterfactuals/introduction/paradoxes-material.tex:60`; PDF page pending.
+
+## TA-CF-003 — The surrounding section and the following converse direction compare the strict conditional with antecedent-and-negated-consequent, but this one line accidentally retains the material connective.
+
+Chosen rendering: **தமிழ் வரியில் மறுக்கப்படுவது கண்டிப்பான நிபந்தனையே.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Negating a material conditional entails A and not-B; negating a strict conditional need not do so at the current world.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0520 (checked_supports)
+
+Alternatives: Keeping the material conditional, for which the displayed non-entailment is false.
+
+Please double-check: **does the non-entailment line negate A strictif B?**
+
+- `TA-OCC-bfe1f7ce9e916e0b` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:1`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:29`; PDF page pending.
+
+## TA-CF-004 — The file is imported by the counterfactuals part and all neighboring files use cnt, but this file retains the older conditional-logics/con identifier.
+
+Chosen rendering: **தமிழ் கோப்பு நடப்பு பகுதி மற்றும் அதன் இறக்குமதி வழிக்கேற்ப cnt ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The manifest path, part driver and cross-file identifier convention all agree on cnt.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0524 (checked_supports)
+
+Alternatives: Retaining an identifier that points outside the actual part hierarchy.
+
+Please double-check: **does the section identify itself as cnt/min/sph?**
+
+- `TA-OCC-98439a084841514a` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:5`; PDF page pending.
+
+## TA-CF-005 — The file is imported by the counterfactuals part and all neighboring files use cnt, but this file retains the older conditional-logics/con identifier.
+
+Chosen rendering: **தமிழ் கோப்பு நடப்பு பகுதி மற்றும் அதன் இறக்குமதி வழிக்கேற்ப cnt ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The manifest path, part driver and cross-file identifier convention all agree on cnt.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0525 (checked_supports)
+
+Alternatives: Retaining an identifier that points outside the actual part hierarchy.
+
+Please double-check: **does the section identify itself as cnt/min/tf?**
+
+- `TA-OCC-aa859cb27ff0f24e` — OLP-0525 / `OLP-0525-S01`; source `content/counterfactuals/minimal-change-semantics/true-false.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/true-false.tex:5`; PDF page pending.
+
+## TA-CF-006 — The first outer-space sentence says ‘light this match,’ although the displayed inference and model strengthen ‘strike this match’ by adding ‘in outer space.’
+
+Chosen rendering: **தமிழ் முன்கூற்றிலும் விளக்கத்திலும் விண்வெளியில் தீக்குச்சியை உரசுவதாகவே கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The formal pattern is p implies r versus (p and q) implies r, where p is striking and q is being in outer space.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0526 (checked_supports)
+
+Alternatives: Changing the antecedent to the conclusion that the match lights, which would no longer illustrate antecedent strengthening.
+
+Please double-check: **is striking, rather than lighting, the action strengthened by the outer-space condition?**
+
+- `TA-OCC-0e53a262c8a9bbea` — OLP-0526 / `OLP-0526-S01`; source `content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:22`; PDF page pending.
+
+## TA-CF-007 — Both quoted sentences say ‘would have been be a traitor.’
+
+Chosen rendering: **தமிழ் இரு இடங்களிலும் நாட்டுத்துரோகியாக இருந்திருப்பார் என்று இயல்பாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The intended English phrase is uniquely ‘would have been a traitor.’
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0527 (checked_supports)
+
+Alternatives: Representing the duplicated auxiliary as meaningful content.
+
+Please double-check: **are both quoted traitor clauses grammatically complete?**
+
+- `TA-OCC-23853a480d3231a5` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:28`; PDF page pending.
+
+## TA-CF-008 — The prose says q material-implies r is true at all worlds in S-prime and uses that to infer q counterfactually-implies r, but the satisfaction macro carries a negation slash.
+
+Chosen rendering: **தமிழ் முறைசார் குறியீடும் உரையும் இரண்டிலும் அந்தப் பொருள்சார் நிபந்தனை மெய் என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: At w1 both q and r are true, and at w q is false, so q material-implies r is true throughout the sphere.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0527 (checked_supports)
+
+Alternatives: Keeping the negation slash, which would destroy the second premise of the counterexample.
+
+Please double-check: **is q material-implies r satisfied throughout S-prime?**
+
+- `TA-OCC-aca2a456facdbbde` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:65`; PDF page pending.
+
+## TA-CF-009 — The file name, identifier, title and contents concern contraposition, while the Section comment says transitivity.
+
+Chosen rendering: **தமிழ் மெட்டாதரவு உள்ளடக்கத்திற்கேற்ப எதிர்மறைநேர்மாற்றுப் பகுதியைக் குறிக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Every functional locator identifies the contraposition section.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0528 (checked_supports)
+
+Alternatives: Treating a nonfunctional copied comment as the authoritative section identity.
+
+Please double-check: **does the metadata comment name contraposition?**
+
+- `TA-OCC-46f7c07691275011` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:5`; PDF page pending.
+
+## TA-CF-010 — The sphere-model definition makes O a function and O_w the sphere system at w, but this example equates O itself with one set of spheres.
+
+Chosen rendering: **தமிழ் எடுத்துக்காட்டு w மையத்திற்கான கோள அமைப்பை O_w என்று தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: All neighboring examples specify O_w when only the evaluation world's sphere system is given.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0528 (checked_supports)
+
+Alternatives: Treating O as a constant sphere system contrary to the chapter definition.
+
+Please double-check: **is the displayed set assigned to O_w?**
+
+- `TA-OCC-6605a7e616f47d19` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:36`; PDF page pending.
+
+## TA-CF-011 — The example introduces M_1 but its two concluding satisfaction statements use an undefined M.
+
+Chosen rendering: **தமிழ் இரு நிறைவுறுத்தல் கூற்றுகளிலும் அறிமுகப்படுத்தப்பட்ட M_1 ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Both claims evaluate the model just constructed and diagrammed.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0528 (checked_supports)
+
+Alternatives: Renaming the introduced model to M, which would alter the explicit model label rather than repair its later references.
+
+Please double-check: **do both satisfaction statements refer to M_1?**
+
+- `TA-OCC-334b1a62a82fae4a` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:68`; PDF page pending.
 
 ## TA-COM-001 — The proof chooses the largest of the finitely many stage indices associated with members of Gamma-prime, but a finite subset may be empty and then has no such largest index.
 
@@ -4572,6 +4748,7 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-bb7748468301366b` — OLP-0501 / `OLP-0501-S01`; source `content/intuitionistic-logic/semantics/semantic-notions.tex:15`; Tamil `translation/content/intuitionistic-logic/semantics/semantic-notions.tex:18`; PDF page pending.
 - `TA-OCC-463cf8b85294d83d` — OLP-0501 / `OLP-0501-S01`; source `content/intuitionistic-logic/semantics/semantic-notions.tex:16`; Tamil `translation/content/intuitionistic-logic/semantics/semantic-notions.tex:20`; PDF page pending.
 - `TA-OCC-4faaff8b32545964` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:69`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:74`; PDF page pending.
+- `TA-OCC-0b0eacdc02b6fd24` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:81`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:87`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -4692,6 +4869,7 @@ Please double-check: **is “தொடர்முறை” the established Indi
 - `TA-OCC-ab25362f4c5e541d` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:17`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:31`; PDF page pending.
 - `TA-OCC-63ffb0456f2659cb` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:31`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:38`; PDF page pending.
 - `TA-OCC-8997e1a0fc4dd867` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:38`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:40`; PDF page pending.
+- `TA-OCC-5fc5d1846c8eb046` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:107`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:114`; PDF page pending.
 
 ## TA-T014 — continuum
 
@@ -4865,6 +5043,10 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-df9fbf7f4f6dd914` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:116`; PDF page pending.
 - `TA-OCC-ac98e33105cfd044` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:144`; PDF page pending.
 - `TA-OCC-c96e6bd85b5639cd` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:205`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:232`; PDF page pending.
+- `TA-OCC-e3f5e6d0549e8322` — OLP-0519 / `OLP-0519-S01`; source `content/counterfactuals/introduction/paradoxes-material.tex:1`; Tamil `translation/content/counterfactuals/introduction/paradoxes-material.tex:12`; PDF page pending.
+- `TA-OCC-51a546c443046199` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:1`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:21`; PDF page pending.
+- `TA-OCC-a186b26c84e7f3bb` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:1`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:84`; PDF page pending.
+- `TA-OCC-52fcc64ae5d80327` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:1`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:45`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5664,6 +5846,8 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-4d426b93df60d648` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:12`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:15`; PDF page pending.
 - `TA-OCC-f4922b66b8f9249d` — OLP-0511 / `OLP-0511-S01`; source `content/intuitionistic-logic/tableaux/tableaux.tex:12`; Tamil `translation/content/intuitionistic-logic/tableaux/tableaux.tex:14`; PDF page pending.
 - `TA-OCC-0683a750b9ab5ce3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:24`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:36`; PDF page pending.
+- `TA-OCC-5693a4937408bd68` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:63`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:68`; PDF page pending.
+- `TA-OCC-e6853bb8bca918a5` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:100`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:106`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -6115,6 +6299,14 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-175c529329acc8f4` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:48`; PDF page pending.
 - `TA-OCC-342bf38456fe14c4` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:34`; PDF page pending.
 - `TA-OCC-c66654dcc42a2217` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:35`; PDF page pending.
+- `TA-OCC-11af4fb70582497f` — OLP-0519 / `OLP-0519-S01`; source `content/counterfactuals/introduction/paradoxes-material.tex:24`; Tamil `translation/content/counterfactuals/introduction/paradoxes-material.tex:26`; PDF page pending.
+- `TA-OCC-78b94e5057c0ff0a` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:51`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:56`; PDF page pending.
+- `TA-OCC-77dcd32239f4838a` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:62`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:67`; PDF page pending.
+- `TA-OCC-2cb2533984bbac8a` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:62`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:97`; PDF page pending.
+- `TA-OCC-ac1317f10409093d` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:62`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:100`; PDF page pending.
+- `TA-OCC-dd6da37dfd778633` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:1`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:55`; PDF page pending.
+- `TA-OCC-037245a658a1f360` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:43`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:40`; PDF page pending.
+- `TA-OCC-60c7b29a4a85c001` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:43`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:47`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -6957,6 +7149,8 @@ Please double-check: **is “மீச்சிறு உறுப்பு / �
 - `TA-OCC-c279787c04cdeefa` — OLP-0018 / `OLP-0018-S10`; source `content/sets-functions-relations/relations/trees.tex:92`; Tamil `translation/content/sets-functions-relations/relations/trees.tex:114`; PDF page pending.
 - `TA-OCC-23c0b662ee66f014` — OLP-0177 / `OLP-0177-S01`; source `content/first-order-logic/beyond/second-order-logic.tex:189`; Tamil `translation/content/first-order-logic/beyond/second-order-logic.tex:202`; PDF page pending.
 - `TA-OCC-aeadf6ffe2318eff` — OLP-0196 / `OLP-0196-S01`; source `content/model-theory/models-of-arithmetic/models-of-pa.tex:1`; Tamil `translation/content/model-theory/models-of-arithmetic/models-of-pa.tex:116`; PDF page pending.
+- `TA-OCC-2676746faf616ea5` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:54`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:59`; PDF page pending.
+- `TA-OCC-217707035a6360f2` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:13`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:14`; PDF page pending.
 
 ## TA-T038 — successor / predecessor / initial segment
 
@@ -9839,6 +10033,19 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-df5ec1e24d14bb39` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:213`; PDF page pending.
 - `TA-OCC-06211187a7353d52` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:230`; PDF page pending.
 - `TA-OCC-ba9be8db3dace7f0` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:144`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:232`; PDF page pending.
+- `TA-OCC-672b807d7b247b90` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:18`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:19`; PDF page pending.
+- `TA-OCC-6a27af74a535cea6` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:18`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:34`; PDF page pending.
+- `TA-OCC-98a07ce331de9a8f` — OLP-0519 / `OLP-0519-S01`; source `content/counterfactuals/introduction/paradoxes-material.tex:24`; Tamil `translation/content/counterfactuals/introduction/paradoxes-material.tex:26`; PDF page pending.
+- `TA-OCC-3704ae440d942ff6` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:36`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:39`; PDF page pending.
+- `TA-OCC-be490b591d5c4223` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:37`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:39`; PDF page pending.
+- `TA-OCC-14e06b305bee73b8` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:39`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:41`; PDF page pending.
+- `TA-OCC-06a3e5dc8c39c955` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:36`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:43`; PDF page pending.
+- `TA-OCC-a305afd744b81dae` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:37`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:68`; PDF page pending.
+- `TA-OCC-783bb3fe2ad1d1c6` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:39`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:71`; PDF page pending.
+- `TA-OCC-119a2a071bb673b1` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:78`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:28`; PDF page pending.
+- `TA-OCC-9f7289fa5e7b499b` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:78`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:81`; PDF page pending.
+- `TA-OCC-75240c9b678d0c4f` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:78`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:81`; PDF page pending.
+- `TA-OCC-802f7c5677c6281e` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:78`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:82`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -11257,6 +11464,7 @@ Please double-check: **is “மெய்மதிப்பு ஒதுக்�
 - `TA-OCC-159919c246a0d15d` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:27`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:31`; PDF page pending.
 - `TA-OCC-a80cd3d5c1fa256b` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:77`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:82`; PDF page pending.
 - `TA-OCC-bad9b2de627ce90c` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:15`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:16`; PDF page pending.
+- `TA-OCC-3277a147e02b45df` — OLP-0519 / `OLP-0519-S01`; source `content/counterfactuals/introduction/paradoxes-material.tex:33`; Tamil `translation/content/counterfactuals/introduction/paradoxes-material.tex:35`; PDF page pending.
 
 ## TA-T083 — satisfaction / satisfiable / unsatisfiable
 
@@ -11479,6 +11687,7 @@ Please double-check: **is “நிறைவுறுத்தல் / நிற
 - `TA-OCC-26ee71c431617172` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:176`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:200`; PDF page pending.
 - `TA-OCC-643218daea8aa6d7` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:178`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:202`; PDF page pending.
 - `TA-OCC-2c015523b8cc7d5f` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:204`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:232`; PDF page pending.
+- `TA-OCC-8b6fe7ab93f75234` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:39`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:43`; PDF page pending.
 
 ## TA-T085 — semantic entailment / semantic notions / semantic deduction theorem
 
@@ -11560,6 +11769,7 @@ Please double-check: **is “சீரான பிரதியீடு / உ�
 - `TA-OCC-d5f4173dbb55267d` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:98`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:108`; PDF page pending.
 - `TA-OCC-3ae1fe854f47e7fa` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:111`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:121`; PDF page pending.
 - `TA-OCC-63a30f25b93188ef` — OLP-0449 / `OLP-0449-S01`; source `content/normal-modal-logic/completeness/frame-completeness.tex:217`; Tamil `translation/content/normal-modal-logic/completeness/frame-completeness.tex:220`; PDF page pending.
+- `TA-OCC-015fc8935c42ec5b` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:1`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:57`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -12288,6 +12498,9 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-11ac7a8580c6b49d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:23`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:25`; PDF page pending.
 - `TA-OCC-a518aef971213604` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:99`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:112`; PDF page pending.
 - `TA-OCC-60c714c70e19028b` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:117`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:130`; PDF page pending.
+- `TA-OCC-ec060b84c403487d` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:76`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:80`; PDF page pending.
+- `TA-OCC-38caa85b434190de` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:27`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:33`; PDF page pending.
+- `TA-OCC-4de3f877115a7ff2` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:28`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:45`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -14152,6 +14365,11 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-e5db43ec7e673078` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:213`; PDF page pending.
 - `TA-OCC-0bff9e3c93998d86` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:230`; PDF page pending.
 - `TA-OCC-2b0af091012cfe5e` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:209`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:232`; PDF page pending.
+- `TA-OCC-b22358ea218a4666` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:43`; PDF page pending.
+- `TA-OCC-75f86f0bcafe23f3` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:68`; PDF page pending.
+- `TA-OCC-e04208e7a27cefca` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:71`; PDF page pending.
+- `TA-OCC-65e2619278456e10` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:28`; PDF page pending.
+- `TA-OCC-dd64ed8279a892b5` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:81`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -14509,6 +14727,7 @@ Please double-check: **is “தருக்க விதி / கட்டம�
 - `TA-OCC-ed483139ddc50d6d` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:26`; PDF page pending.
 - `TA-OCC-c06b57f82922b042` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:76`; PDF page pending.
 - `TA-OCC-b39efb60abeea98d` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:26`; PDF page pending.
+- `TA-OCC-1326950c76dc32aa` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:35`; PDF page pending.
 
 ## TA-T099 — eigenvariable / eigenvariable condition
 
@@ -15368,6 +15587,8 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-eb0e52fec1ed89ec` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:31`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:34`; PDF page pending.
 - `TA-OCC-946374580e0047b2` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:25`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:32`; PDF page pending.
 - `TA-OCC-669ab1ec25944435` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:35`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:49`; PDF page pending.
+- `TA-OCC-f0c358d6671da381` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:1`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:65`; PDF page pending.
+- `TA-OCC-c639f3c7f7fced78` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:37`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -15616,6 +15837,7 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-db03e35a58a98d6c` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:16`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:18`; PDF page pending.
 - `TA-OCC-e556ff3945c343f6` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:26`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:28`; PDF page pending.
 - `TA-OCC-c0fc5b706342fd2c` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:12`; PDF page pending.
+- `TA-OCC-f300fa8ecd08ffd2` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:30`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:34`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -16394,6 +16616,7 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-8b07e6e2d5a949eb` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:30`; PDF page pending.
 - `TA-OCC-a2adc32317efa071` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:37`; PDF page pending.
 - `TA-OCC-90a0640af5813090` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:15`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:16`; PDF page pending.
+- `TA-OCC-578ddc9014be0828` — OLP-0519 / `OLP-0519-S01`; source `content/counterfactuals/introduction/paradoxes-material.tex:33`; Tamil `translation/content/counterfactuals/introduction/paradoxes-material.tex:35`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -18597,6 +18820,7 @@ Please double-check: **is “முறைப்படுத்தல் / கோ
 - `TA-OCC-2811a5c05f50b972` — OLP-0336 / `OLP-0336-S01`; source `content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:2`; Tamil `translation/content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:10`; PDF page pending.
 - `TA-OCC-ded379c5bb8a6e0d` — OLP-0339 / `OLP-0339-S01`; source `content/second-order-logic/sol-and-set-theory/cardinalities.tex:44`; Tamil `translation/content/second-order-logic/sol-and-set-theory/cardinalities.tex:50`; PDF page pending.
 - `TA-OCC-1d348490bbdcb611` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:86`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:94`; PDF page pending.
+- `TA-OCC-ff1b888cb43f39eb` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:1`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:76`; PDF page pending.
 
 ## TA-T130 — axiomatized / axiomatizable / induction schema / Robinson Q / Peano arithmetic
 
@@ -20119,6 +20343,9 @@ Please double-check: **is “இயல்பான வாய்ப்புந�
 - `TA-OCC-d371f5440a3394ea` — OLP-0493 / `OLP-0493-S01`; source `content/intuitionistic-logic/introduction/constructive-reasoning.tex:1`; Tamil `translation/content/intuitionistic-logic/introduction/constructive-reasoning.tex:14`; PDF page pending.
 - `TA-OCC-5a91cdb29fb60c54` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:21`; PDF page pending.
 - `TA-OCC-0311007077015548` — OLP-0513 / `OLP-0513-S01`; source `content/intuitionistic-logic/tableaux/rules.tex:1`; Tamil `translation/content/intuitionistic-logic/tableaux/rules.tex:93`; PDF page pending.
+- `TA-OCC-6fff6c296d1fe3ee` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:1`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:16`; PDF page pending.
+- `TA-OCC-c79e12784e68aedb` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:29`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:40`; PDF page pending.
+- `TA-OCC-ac11f5ca1fb2ab62` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:82`; PDF page pending.
 
 ## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
 
@@ -20199,6 +20426,7 @@ Please double-check: **is “சாத்தியமான உலகம் / �
 - `TA-OCC-0cc7a82b659db1f9` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:60`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:60`; PDF page pending.
 - `TA-OCC-22f0aa768d03b428` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:50`; PDF page pending.
 - `TA-OCC-73f1e5f4af3eb9e8` — OLP-0512 / `OLP-0512-S01`; source `content/intuitionistic-logic/tableaux/introduction.tex:59`; Tamil `translation/content/intuitionistic-logic/tableaux/introduction.tex:62`; PDF page pending.
+- `TA-OCC-d5a4a6562f0019cf` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:15`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:16`; PDF page pending.
 
 ## TA-T168 — simultaneous substitution / iterated substitution / instance / substitution instance
 
@@ -20435,6 +20663,7 @@ Please double-check: **is “தொடர்புசார் மாதிர�
 - `TA-OCC-c612d195a86e87b5` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:12`; PDF page pending.
 - `TA-OCC-fb60494446473951` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:46`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:96`; PDF page pending.
 - `TA-OCC-16049964c7b0c0fb` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:21`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:32`; PDF page pending.
+- `TA-OCC-49f7d8daef847e20` — OLP-0525 / `OLP-0525-S01`; source `content/counterfactuals/minimal-change-semantics/true-false.tex:26`; Tamil `translation/content/counterfactuals/minimal-change-semantics/true-false.tex:47`; PDF page pending.
 
 ## TA-T170 — modal validity / valid in a class of models / tautology / tautological instance / schema / characteristic formula / closed under modus ponens
 
@@ -21155,7 +21384,7 @@ Alternatives: None recorded.
 
 Please double-check: **is “உள்ளுணர்வுவாதத் தருக்கம் / உள்ளுணர்வியம் / கட்டுமான ஆய்வுமுறை / கட்டுமானவாதம்” the established India-standard Tamil expression for “intuitionistic logic / intuitionism / constructive reasoning / constructivism” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
 
-- `TA-OCC-a151347bdb0cf7f8` — OLP-0089 / `OLP-0089-S07`; source `content/first-order-logic/natural-deduction/proving-things.tex:183`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:186`; PDF page pending.
+- `TA-OCC-a151347bdb0cf7f8` — OLP-0089 / `OLP-0089-S07`; source `content/first-order-logic/natural-deduction/proving-things.tex:183`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:186`; PDF page 44.
 - `TA-OCC-e5836ca5196be574` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:11`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:13`; PDF page pending.
 - `TA-OCC-e0166e9c6d678676` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:74`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:76`; PDF page pending.
 - `TA-OCC-ebf2f7ea38df1e2a` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:88`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:118`; PDF page pending.
@@ -21331,6 +21560,193 @@ Please double-check: **is “பகாக் கணம் / லிண்டன�
 - `TA-OCC-b610202c9617c02a` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:13`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; PDF page pending.
 - `TA-OCC-683a92a4dce45f01` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:14`; PDF page pending.
 - `TA-OCC-96f4ae1022198a1f` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:19`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:23`; PDF page pending.
+
+## TA-T195 — material conditional / strict conditional / indicative conditional / subjunctive conditional / counterfactual conditional
+
+Chosen rendering: **பொருள்சார் நிபந்தனைக் கூற்று / கண்டிப்பான நிபந்தனைக் கூற்று / சுட்டுநிலை நிபந்தனைக் கூற்று / ஐயநிலை நிபந்தனைக் கூற்று / உண்மைக்கு மாறான நிபந்தனைக் கூற்று**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: நிபந்தனைக் கூற்று is directly attested with the material truth table. The truth-functional clause defines பொருள்சார், Box(A→B) defines கண்டிப்பான, and the paired English examples define சுட்டுநிலை and ஐயநிலை as labels for English grammatical forms rather than claims about a distinct Tamil mood system. உண்மைக்கு மாறான is a transparent provisional phrase: its Tamil examples use the natural இருந்திருந்தால்/இருந்திருக்கும் construction, and no independent specialist-headword attestation is claimed.
+
+Authority basis: TA-SC12V2-P255-CONDITIONAL (checked_context_only); TA-SC12V2-P256-CONDITIONAL-TABLE (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-SC12V2-P282-GLOSSARY (checked_supports); TA-TVA-N-6.3-OPEN (checked_context_only); TA-T195-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “பொருள்சார் நிபந்தனைக் கூற்று / கண்டிப்பான நிபந்தனைக் கூற்று / சுட்டுநிலை நிபந்தனைக் கூற்று / ஐயநிலை நிபந்தனைக் கூற்று / உண்மைக்கு மாறான நிபந்தனைக் கூற்று” the established India-standard Tamil expression for “material conditional / strict conditional / indicative conditional / subjunctive conditional / counterfactual conditional” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-e6b9b546dde41313` — OLP-0516 / `OLP-0516-S01`; source `content/counterfactuals/counterfactuals.tex:1`; Tamil `translation/content/counterfactuals/counterfactuals.tex:8`; PDF page pending.
+- `TA-OCC-c85ac8f6936a0ffa` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:11`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:12`; PDF page pending.
+- `TA-OCC-ab536029641369f2` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:27`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:43`; PDF page pending.
+- `TA-OCC-1ab62c34361024a9` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:30`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:47`; PDF page pending.
+- `TA-OCC-d71a56ed69e8995b` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:11`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:12`; PDF page pending.
+- `TA-OCC-c0fa8c4a0211835f` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:19`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:12`; PDF page pending.
+- `TA-OCC-33a9e55afb811cdf` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:22`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:19`; PDF page pending.
+- `TA-OCC-765584692b257fa0` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:41`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:54`; PDF page pending.
+- `TA-OCC-a47d36e959bffa86` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:13`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:18`; PDF page pending.
+
+## TA-T196 — antecedent / consequent / antecedent strengthening / agglomeration / contraposition / chain rule
+
+Chosen rendering: **முன்னிலை / பின்னிலை / முன்னிலையை வலுப்படுத்துதல் / ஒருங்குவித்தல் / எதிர்மறைநேர்மாற்று / சங்கிலி விதி**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked SCERT passage directly supplies conditional hypothesis/conclusion vocabulary and names the contrapositive form; முன்னிலை and பின்னிலை keep these conditional positions distinct from the sequent sides in TA-T097. Each remaining inference name is fixed beside its displayed entailment, with ஒருங்குவித்தல் reserved here for combining two consequents under the same antecedent.
+
+Authority basis: TA-SC12V2-P255-CONDITIONAL (checked_context_only); TA-SC12V2-P256-CONDITIONAL-TABLE (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-T196-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “முன்னிலை / பின்னிலை / முன்னிலையை வலுப்படுத்துதல் / ஒருங்குவித்தல் / எதிர்மறைநேர்மாற்று / சங்கிலி விதி” the established India-standard Tamil expression for “antecedent / consequent / antecedent strengthening / agglomeration / contraposition / chain rule” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-8ed88795e4932296` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:23`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:23`; PDF page 7.
+- `TA-OCC-da990a2cb0de651e` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:24`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:24`; PDF page 7.
+- `TA-OCC-342c1e2365d41b97` — OLP-0066 / `OLP-0066-S02`; source `content/first-order-logic/proof-systems/natural-deduction.tex:44`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:44`; PDF page 8.
+- `TA-OCC-04a4e6f83b94dd98` — OLP-0088 / `OLP-0088-S04`; source `content/first-order-logic/natural-deduction/derivations.tex:78`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:79`; PDF page 41.
+- `TA-OCC-411fb295bfa52db2` — OLP-0091 / `OLP-0091-S10`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:136`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:170`; PDF page 51.
+- `TA-OCC-e69ee568c3b0226d` — OLP-0118 / `OLP-0118-S11`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:112`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:148`; PDF page pending.
+- `TA-OCC-85fdf82b18f3c98e` — OLP-0119 / `OLP-0119-S09`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:110`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:119`; PDF page pending.
+- `TA-OCC-b47193d6340e0155` — OLP-0288 / `OLP-0288-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-ax.tex:197`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-ax.tex:216`; PDF page pending.
+- `TA-OCC-64773ad1856dac9b` — OLP-0288 / `OLP-0288-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-ax.tex:197`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-ax.tex:216`; PDF page pending.
+- `TA-OCC-55d802babe88d2ee` — OLP-0288 / `OLP-0288-S01`; source `content/incompleteness/arithmetization-syntax/proofs-in-ax.tex:211`; Tamil `translation/content/incompleteness/arithmetization-syntax/proofs-in-ax.tex:234`; PDF page pending.
+- `TA-OCC-ee23783fd8762df6` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:38`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:43`; PDF page pending.
+- `TA-OCC-b30ef3ea0a4c86a7` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:39`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:44`; PDF page pending.
+- `TA-OCC-e50ce4a0625375fd` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:43`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:47`; PDF page pending.
+- `TA-OCC-431dcbb644b501c2` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:43`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:48`; PDF page pending.
+- `TA-OCC-d0eff94c4e1b3bb7` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:51`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:56`; PDF page pending.
+- `TA-OCC-281d4e885ba26033` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:51`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:62`; PDF page pending.
+- `TA-OCC-79716b5020be5d5a` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:20`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:22`; PDF page pending.
+- `TA-OCC-d5838bce5a3a2662` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:21`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:23`; PDF page pending.
+- `TA-OCC-1be8f6b20fd4edc3` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:40`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:44`; PDF page pending.
+- `TA-OCC-ec772f9db7240589` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:40`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:49`; PDF page pending.
+- `TA-OCC-2c22cb072e573048` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:79`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:85`; PDF page pending.
+- `TA-OCC-c15a1ef1589b7452` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:79`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:85`; PDF page pending.
+- `TA-OCC-fe091b4812167684` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:81`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:86`; PDF page pending.
+- `TA-OCC-f8cd1bf80e07e5b0` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:81`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:87`; PDF page pending.
+- `TA-OCC-08dc300ca6a1513b` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:16`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:17`; PDF page pending.
+- `TA-OCC-91f6f528055db1fc` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:47`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:48`; PDF page pending.
+- `TA-OCC-65756bdb42c9d7b7` — OLP-0521 / `OLP-0521-S01`; source `content/counterfactuals/introduction/counterfactuals.tex:48`; Tamil `translation/content/counterfactuals/introduction/counterfactuals.tex:49`; PDF page pending.
+- `TA-OCC-171a54989b8184c1` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:19`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:19`; PDF page pending.
+- `TA-OCC-85dee158f3c82cc8` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:19`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:21`; PDF page pending.
+- `TA-OCC-6584d25c53c2b1ef` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:95`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:101`; PDF page pending.
+- `TA-OCC-b2a0957fc031633c` — OLP-0526 / `OLP-0526-S01`; source `content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:3`; Tamil `translation/content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:12`; PDF page pending.
+- `TA-OCC-24040f6988453898` — OLP-0526 / `OLP-0526-S01`; source `content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:11`; Tamil `translation/content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:14`; PDF page pending.
+- `TA-OCC-e74df624d8a5ab3f` — OLP-0526 / `OLP-0526-S01`; source `content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:11`; Tamil `translation/content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:67`; PDF page pending.
+- `TA-OCC-cac99492dd44c6fc` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:13`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:14`; PDF page pending.
+- `TA-OCC-21eb5c578d67969c` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:35`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:39`; PDF page pending.
+- `TA-OCC-dc5a38f989af48c7` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:35`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:39`; PDF page pending.
+- `TA-OCC-3b1f142764920a43` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:11`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:13`; PDF page pending.
+- `TA-OCC-97d59bd048042dfd` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:25`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:16`; PDF page pending.
+- `TA-OCC-b92da67c3eab9f16` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:26`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:59`; PDF page pending.
+
+## TA-T197 — minimal change semantics / closest possible world / ontic analysis / causal reasoning / contingent conditional
+
+Chosen rendering: **குறைந்தபட்ச மாற்றப் பொருண்மையியல் / மிக நெருங்கிய சாத்தியமான உலகம் / இருப்பியல் பகுப்பாய்வு / காரணவியல் பகுத்தறிதல் / நிச்சயமற்ற நிபந்தனைக் கூற்று**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: பொருண்மையியல், சாத்தியமான உலகம், நிச்சயமின்மை and the inference register continue reviewed edition usage. The prose defines minimal change by holding all irrelevant features fixed, closest worlds by the nested ordering around an evaluation world, ontic analysis by its quantification over possible worlds, and causal reasoning by the match-lighting example. The complete compounds are not claimed as directly attested headwords.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-SC12V2-P282-GLOSSARY (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-T197-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “குறைந்தபட்ச மாற்றப் பொருண்மையியல் / மிக நெருங்கிய சாத்தியமான உலகம் / இருப்பியல் பகுப்பாய்வு / காரணவியல் பகுத்தறிதல் / நிச்சயமற்ற நிபந்தனைக் கூற்று” the established India-standard Tamil expression for “minimal change semantics / closest possible world / ontic analysis / causal reasoning / contingent conditional” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-546d270d2543ba0f` — OLP-0522 / `OLP-0522-S01`; source `content/counterfactuals/minimal-change-semantics/minimal-change-semantics.tex:8`; Tamil `translation/content/counterfactuals/minimal-change-semantics/minimal-change-semantics.tex:9`; PDF page pending.
+
+## TA-T198 — sphere model / system of spheres / centered / nested / layer / admitting sphere / innermost sphere
+
+Chosen rendering: **கோள மாதிரி / கோளங்களின் அமைப்பு / மையமாகக் கொண்ட / ஒன்றினுள் ஒன்று அடங்கிய / அடுக்கு / ஏற்கும் கோளம் / மிகவுட்புறக் கோளம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: கணம், உட்கணம், நேரியல் வரிசை, ஒன்றிப்பு, வெட்டு, மாதிரி and உலகம் continue the reviewed mathematical register. The triple <W,O,V>, four closure/order clauses and concentric diagrams define the sphere vocabulary exactly; B-ஐ ஏற்கும் கோளம் is fixed as a sphere containing a B-world. No direct Tamil attestation of this specialist model terminology is claimed.
+
+Authority basis: TA-SC11-P3 (checked_supports); TA-SC11-P4 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T198-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கோள மாதிரி / கோளங்களின் அமைப்பு / மையமாகக் கொண்ட / ஒன்றினுள் ஒன்று அடங்கிய / அடுக்கு / ஏற்கும் கோளம் / மிகவுட்புறக் கோளம்” the established India-standard Tamil expression for “sphere model / system of spheres / centered / nested / layer / admitting sphere / innermost sphere” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-127b7f857ef218dd` — OLP-0006 / `OLP-0006-S01`; source `content/sets-functions-relations/sets/subsets.tex:1`; Tamil `translation/content/sets-functions-relations/sets/subsets.tex:11`; PDF page pending.
+- `TA-OCC-511dcf150f3d58d2` — OLP-0006 / `OLP-0006-S10`; source `content/sets-functions-relations/sets/subsets.tex:75`; Tamil `translation/content/sets-functions-relations/sets/subsets.tex:97`; PDF page pending.
+- `TA-OCC-1adb63952ea249c3` — OLP-0006 / `OLP-0006-S10`; source `content/sets-functions-relations/sets/subsets.tex:75`; Tamil `translation/content/sets-functions-relations/sets/subsets.tex:99`; PDF page pending.
+- `TA-OCC-cbde6444862fa560` — OLP-0010 / `OLP-0010-S03`; source `content/sets-functions-relations/sets/russells-paradox.tex:27`; Tamil `translation/content/sets-functions-relations/sets/russells-paradox.tex:31`; PDF page pending.
+- `TA-OCC-60ac6a1ec1060c91` — OLP-0032 / `OLP-0032-S01`; source `content/sets-functions-relations/size-of-sets/pairing-alt.tex:1`; Tamil `translation/content/sets-functions-relations/size-of-sets/pairing-alt.tex:89`; PDF page pending.
+- `TA-OCC-6b640cb7f861fe75` — OLP-0032 / `OLP-0032-S01`; source `content/sets-functions-relations/size-of-sets/pairing-alt.tex:1`; Tamil `translation/content/sets-functions-relations/size-of-sets/pairing-alt.tex:91`; PDF page pending.
+- `TA-OCC-70bf20577f567ae8` — OLP-0137 / `OLP-0137-S05`; source `content/first-order-logic/completeness/downward-ls.tex:48`; Tamil `translation/content/first-order-logic/completeness/downward-ls.tex:58`; PDF page pending.
+- `TA-OCC-210fae8b8047a717` — OLP-0137 / `OLP-0137-S05`; source `content/first-order-logic/completeness/downward-ls.tex:48`; Tamil `translation/content/first-order-logic/completeness/downward-ls.tex:61`; PDF page pending.
+- `TA-OCC-e55148bed28b94d5` — OLP-0140 / `OLP-0140-S05`; source `content/first-order-logic/introduction/first-order-logic.tex:75`; Tamil `translation/content/first-order-logic/introduction/first-order-logic.tex:85`; PDF page pending.
+- `TA-OCC-5e8cafca577e1919` — OLP-0172 / `OLP-0172-S01`; source `content/first-order-logic/models-theories/set-theory.tex:1`; Tamil `translation/content/first-order-logic/models-theories/set-theory.tex:89`; PDF page pending.
+- `TA-OCC-48cc627fb306c45e` — OLP-0172 / `OLP-0172-S01`; source `content/first-order-logic/models-theories/set-theory.tex:1`; Tamil `translation/content/first-order-logic/models-theories/set-theory.tex:92`; PDF page pending.
+- `TA-OCC-3a2c024394fcef6f` — OLP-0220 / `OLP-0220-S01`; source `content/computability/recursive-functions/sequences.tex:1`; Tamil `translation/content/computability/recursive-functions/sequences.tex:26`; PDF page pending.
+- `TA-OCC-00ffb1bd107421b6` — OLP-0220 / `OLP-0220-S01`; source `content/computability/recursive-functions/sequences.tex:1`; Tamil `translation/content/computability/recursive-functions/sequences.tex:102`; PDF page pending.
+- `TA-OCC-332b65239b1f420e` — OLP-0220 / `OLP-0220-S01`; source `content/computability/recursive-functions/sequences.tex:1`; Tamil `translation/content/computability/recursive-functions/sequences.tex:155`; PDF page pending.
+- `TA-OCC-ec602567dee55663` — OLP-0223 / `OLP-0223-S01`; source `content/computability/recursive-functions/non-pr-functions.tex:1`; Tamil `translation/content/computability/recursive-functions/non-pr-functions.tex:48`; PDF page pending.
+- `TA-OCC-16f46c7d01b448ca` — OLP-0281 / `OLP-0281-S01`; source `content/incompleteness/arithmetization-syntax/introduction.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/introduction.tex:40`; PDF page pending.
+- `TA-OCC-ebfeaf006984bcb2` — OLP-0282 / `OLP-0282-S01`; source `content/incompleteness/arithmetization-syntax/coding-symbols.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-symbols.tex:89`; PDF page pending.
+- `TA-OCC-fafbb6a358909255` — OLP-0292 / `OLP-0292-S01`; source `content/incompleteness/representability-in-q/beta-function.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/beta-function.tex:36`; PDF page pending.
+- `TA-OCC-1f9fa56c308577ed` — OLP-0336 / `OLP-0336-S01`; source `content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:13`; PDF page pending.
+- `TA-OCC-b197ad396b93065a` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:19`; PDF page pending.
+- `TA-OCC-e25b05749c5ae877` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:22`; PDF page pending.
+- `TA-OCC-872ce2f379d91bfd` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:24`; PDF page pending.
+- `TA-OCC-e04fe4ed37f3b25f` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:78`; PDF page pending.
+- `TA-OCC-0d2b5c377b4e4816` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:80`; PDF page pending.
+- `TA-OCC-8dfe7f9e189f41f3` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:85`; PDF page pending.
+- `TA-OCC-b46934fd5312b431` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:86`; PDF page pending.
+- `TA-OCC-c5821c05461e2d90` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:106`; PDF page pending.
+- `TA-OCC-fc8f0fc1e351d3de` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:111`; PDF page pending.
+- `TA-OCC-b6b6df2a17af5405` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:112`; PDF page pending.
+- `TA-OCC-730059290e960aee` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:134`; PDF page pending.
+- `TA-OCC-692caad8c70e9c77` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:136`; PDF page pending.
+- `TA-OCC-f73cc35e9d396801` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:26`; PDF page pending.
+- `TA-OCC-b6ff4f14541f21e8` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:36`; PDF page pending.
+- `TA-OCC-13bcd5e040b564c7` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:48`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:51`; PDF page pending.
+- `TA-OCC-8de95e2170f1ac27` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:11`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:13`; PDF page pending.
+- `TA-OCC-d4ff97fbea9e5400` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:16`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:18`; PDF page pending.
+- `TA-OCC-3a4ca0ce32d283b6` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:20`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:23`; PDF page pending.
+- `TA-OCC-ee38df1586e26756` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:23`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:30`; PDF page pending.
+- `TA-OCC-19a4c67a7ef1709d` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:26`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:31`; PDF page pending.
+- `TA-OCC-48af551bc5df520f` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:27`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:41`; PDF page pending.
+- `TA-OCC-a2fbe8212269a546` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:40`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:41`; PDF page pending.
+- `TA-OCC-6c8e98161e17d1d8` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:43`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:46`; PDF page pending.
+- `TA-OCC-667d9a6b341feb28` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:60`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:48`; PDF page pending.
+- `TA-OCC-6292b813dcb50134` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:67`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:65`; PDF page pending.
+- `TA-OCC-f83533064aa17382` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:73`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:71`; PDF page pending.
+- `TA-OCC-c4d8a46431eb9cdc` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:99`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:72`; PDF page pending.
+- `TA-OCC-b2e25135403bd50e` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:103`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:76`; PDF page pending.
+- `TA-OCC-ea2c226aae2edb40` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:105`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:81`; PDF page pending.
+- `TA-OCC-5454eb9f80141a60` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:106`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:112`; PDF page pending.
+- `TA-OCC-7409e6391bebcf99` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:108`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:113`; PDF page pending.
+- `TA-OCC-d508c56cf7be09b5` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:109`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:116`; PDF page pending.
+- `TA-OCC-aa1964dacd88bb87` — OLP-0525 / `OLP-0525-S01`; source `content/counterfactuals/minimal-change-semantics/true-false.tex:30`; Tamil `translation/content/counterfactuals/minimal-change-semantics/true-false.tex:92`; PDF page pending.
+- `TA-OCC-b458872dc9463d6c` — OLP-0526 / `OLP-0526-S01`; source `content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:38`; Tamil `translation/content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:43`; PDF page pending.
+- `TA-OCC-45a9a33a53e4f585` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:57`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:60`; PDF page pending.
+- `TA-OCC-b2195906e5ed3079` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:59`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:66`; PDF page pending.
+- `TA-OCC-9dfb3c9483ed4de5` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:57`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:63`; PDF page pending.
+- `TA-OCC-bb862538955d7e6f` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:59`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:65`; PDF page pending.
+
+## TA-T199 — truth-functional / vacuously true / non-vacuously true / monotonic conditional / transitive conditional
+
+Chosen rendering: **மெய்ம்மதிப்புச் சார்ந்த / வெறுமைவழி மெய் / வெறுமைவழியல்லாமல் மெய் / ஒருபோக்குத்தன்மையுள்ள நிபந்தனைக் கூற்று / கடப்புத்தன்மையுள்ள நிபந்தனைக் கூற்று**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: மெய்ம்மதிப்பு and conditional truth-table vocabulary are directly supported by the checked SCERT pages; வெறுமைவழி மெய் continues TA-T169, and ஒருபோக்குத்தன்மை continues TA-T087. Dependence only on the component truth values, absence or presence of an antecedent-admitting sphere, antecedent strengthening and the displayed chain entailment define the five senses without relying on the Tamil labels alone.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC12V2-P254-TRUTH-TABLES (checked_context_only); TA-SC12V2-P255-CONDITIONAL (checked_context_only); TA-SC12V2-P256-CONDITIONAL-TABLE (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T199-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “மெய்ம்மதிப்புச் சார்ந்த / வெறுமைவழி மெய் / வெறுமைவழியல்லாமல் மெய் / ஒருபோக்குத்தன்மையுள்ள நிபந்தனைக் கூற்று / கடப்புத்தன்மையுள்ள நிபந்தனைக் கூற்று” the established India-standard Tamil expression for “truth-functional / vacuously true / non-vacuously true / monotonic conditional / transitive conditional” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-7720de9fc9a956d8` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:21`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:24`; PDF page pending.
+- `TA-OCC-c3b97d00352f681a` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:34`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:38`; PDF page pending.
+- `TA-OCC-8333af8b7ee7f57c` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:1`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:26`; PDF page pending.
+- `TA-OCC-83e826c372c6cb3a` — OLP-0525 / `OLP-0525-S01`; source `content/counterfactuals/minimal-change-semantics/true-false.tex:26`; Tamil `translation/content/counterfactuals/minimal-change-semantics/true-false.tex:17`; PDF page pending.
+- `TA-OCC-dea8babe239cad2f` — OLP-0525 / `OLP-0525-S01`; source `content/counterfactuals/minimal-change-semantics/true-false.tex:26`; Tamil `translation/content/counterfactuals/minimal-change-semantics/true-false.tex:29`; PDF page pending.
+- `TA-OCC-ec0e086bbc6e7df7` — OLP-0525 / `OLP-0525-S01`; source `content/counterfactuals/minimal-change-semantics/true-false.tex:44`; Tamil `translation/content/counterfactuals/minimal-change-semantics/true-false.tex:47`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

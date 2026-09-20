@@ -3,7 +3,7 @@
 India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
 Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
 
-The full edition is in progress. **343 of 722 frozen content units are translated, source-aligned and textually and semantically audited**. The accepted source now extends through the opening lambda-calculus chapters; 379 units remain.
+The full edition is in progress. **525 of 722 frozen content units are translated, source-aligned and textually and semantically audited**. The accepted source now extends through the complete counterfactuals part; 197 units remain.
 The first tagged reader remains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
 The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Sets, Relations, Functions, Size of Sets, number-system construction and Infinite Sets. Patch release v0.2.1 replaces five references to chapters outside this reader with descriptive Tamil fallbacks; the live references return automatically when those destinations are included in a later complete edition. It passed a three-pass guarded XeLaTeX/BibTeX build, font embedding and copy/search checks, plus visual inspection of every rendered page.
 Seven verified component readers cover 203 distinct units. Each component passed a guarded TeX build, embedded-font and copy/search checks, and all-page visual inspection. The 384-page cumulative reader concatenates those exact accepted pages in frozen-source order, adds section bookmarks, and preserves 626 checked links. It does not imply continuous coverage of all units through OLP-0346.
@@ -27,7 +27,7 @@ Seven verified component readers cover 203 distinct units. Each component passed
 - Proof-systems, sequent-calculus, natural-deduction and tableaux reader master: build/tamil-proof-systems-sequent.tex.
 
 This is machine translation with source comparison and author semantic review. Independent human or native-speaker approval is not claimed.
-Every component reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 343 accepted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 1,229 aligned segments and 437 reverse-paraphrase samples. For the cumulative reader, every page content stream and page box is identical to its accepted component, all fonts remain embedded, and representative boundary and interior pages were rendered and visually inspected.
+Every component reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 525 accepted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 1,411 aligned segments and 619 reverse-paraphrase samples. For the cumulative reader, every page content stream and page box is identical to its accepted component, all fonts remain embedded, and representative boundary and interior pages were rendered and visually inspected.
 
 PDF text reuse has measured limitations. Poppler correctly extracts five tested Tamil phrases and representative union, intersection and Cartesian-product formulas. PyMuPDF duplicates some Tamil syllables or loses spacing. Composite negation symbols may still split during extraction in some contexts; blackboard number-set letters may extract as ordinary letters. Use the editable formulas for exact mathematical reuse. This is not a claim of tagged-PDF or universal screen-reader accessibility. A semantic reader remains part of the continuing full-edition work.
 
@@ -47,7 +47,7 @@ The evidence folder contains the source manifest, actual per-segment canon-use r
 
 OpenLogic's natural numbers include zero. The source convention is retained and explained in a separate Tamil edition note, because the consulted school text uses a different convention. New editorial or learner material is kept separate from the faithful source.
 
-The ordinary reader graph and remaining wrappers, all remaining translation, integration of the 140 accepted units outside the seven component readers, reflowable EPUB3 production, ongoing terminology review and final full-edition publication are unfinished. An interim release does not complete the programme.
+The ordinary reader graph and remaining wrappers, all remaining translation, integration of the 322 accepted units outside the seven component readers, reflowable EPUB3 production, ongoing terminology review and final full-edition publication are unfinished. An interim release does not complete the programme.
 
 ## Attribution and license
 

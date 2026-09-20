@@ -5218,6 +5218,201 @@
       "rationale": "Eliminating the supposed countermodel proves Gamma entails A.",
       "precise_review_question": "Does the final line state entailment rather than repeat derivability?",
       "location_needle": "SOURCE CORRECTION TA-IL-024"
+    },
+    {
+      "audit_id": "TA-CF-001",
+      "unit_id": "OLP-0518",
+      "kind": "material-conditional-introduction-typographical-earn",
+      "action": "Read ‘we earn to symbolize’ as ‘we learn to symbolize.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The introductory sentence has the obvious typographical omission of l in learn.",
+      "chosen_treatment": "தமிழ் அறிமுகத் தருக்கவியல் பாடங்களில் குறியீடாக்கக் கற்கிறோம் என்று கூறுகிறது.",
+      "alternatives_considered": "Translating earn literally, which is ungrammatical and contradicts the pedagogical context.",
+      "rationale": "The sentence explains what students learn in introductory logic courses.",
+      "precise_review_question": "Does the Tamil describe learning to symbolize conditionals?",
+      "location_needle": "SOURCE CORRECTION TA-CF-001"
+    },
+    {
+      "audit_id": "TA-CF-002",
+      "unit_id": "OLP-0519",
+      "kind": "paradoxes-material-stray-preposition",
+      "action": "Read ‘Another example of concerns’ as ‘Another example concerns.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The preposition ‘of’ interrupts the grammatical subject-verb construction.",
+      "chosen_treatment": "தமிழ் மற்றோர் எடுத்துக்காட்டு அந்த மெய்மத்தைப் பற்றியது என்று இயல்பாகக் கூறுகிறது.",
+      "alternatives_considered": "Preserving an English-only grammatical accident in Tamil.",
+      "rationale": "Removing the stray preposition restores the unique coherent reading.",
+      "precise_review_question": "Does the paragraph introduce the tautology as another example?",
+      "location_needle": "SOURCE CORRECTION TA-CF-002"
+    },
+    {
+      "audit_id": "TA-CF-003",
+      "unit_id": "OLP-0520",
+      "kind": "strict-conditional-comparison-uses-material-connective",
+      "action": "Replaced the material connective by the strict connective in the negated strict-conditional comparison.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\lif"],
+      "expected_extra_commands": ["\\strictif"],
+      "normalized_math_replacements": [
+        {"from": "\\lnot(!A\\lif!B)&\\Entails/!A\\land\\lnot!B", "to": "\\lnot(!A\\strictif!B)&\\Entails/!A\\land\\lnot!B", "count": 1}
+      ],
+      "source_issue_or_choice": "The surrounding section and the following converse direction compare the strict conditional with antecedent-and-negated-consequent, but this one line accidentally retains the material connective.",
+      "chosen_treatment": "தமிழ் வரியில் மறுக்கப்படுவது கண்டிப்பான நிபந்தனையே.",
+      "alternatives_considered": "Keeping the material conditional, for which the displayed non-entailment is false.",
+      "rationale": "Negating a material conditional entails A and not-B; negating a strict conditional need not do so at the current world.",
+      "precise_review_question": "Does the non-entailment line negate A strictif B?",
+      "location_needle": "SOURCE CORRECTION TA-CF-003"
+    },
+    {
+      "audit_id": "TA-CF-004",
+      "unit_id": "OLP-0524",
+      "kind": "sphere-models-copied-part-identifier",
+      "action": "Restored the counterfactuals part metadata and cnt component of the stable file identifier.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {"from": "\\olfileid{con}{min}{sph}", "to": "\\olfileid{cnt}{min}{sph}", "count": 1}
+      ],
+      "source_issue_or_choice": "The file is imported by the counterfactuals part and all neighboring files use cnt, but this file retains the older conditional-logics/con identifier.",
+      "chosen_treatment": "தமிழ் கோப்பு நடப்பு பகுதி மற்றும் அதன் இறக்குமதி வழிக்கேற்ப cnt ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Retaining an identifier that points outside the actual part hierarchy.",
+      "rationale": "The manifest path, part driver and cross-file identifier convention all agree on cnt.",
+      "precise_review_question": "Does the section identify itself as cnt/min/sph?",
+      "location_needle": "SOURCE CORRECTION TA-CF-004"
+    },
+    {
+      "audit_id": "TA-CF-005",
+      "unit_id": "OLP-0525",
+      "kind": "counterfactual-truth-falsity-copied-part-identifier",
+      "action": "Restored the counterfactuals part metadata and cnt component of the stable file identifier.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {"from": "\\olfileid{con}{min}{tf}", "to": "\\olfileid{cnt}{min}{tf}", "count": 1}
+      ],
+      "source_issue_or_choice": "The file is imported by the counterfactuals part and all neighboring files use cnt, but this file retains the older conditional-logics/con identifier.",
+      "chosen_treatment": "தமிழ் கோப்பு நடப்பு பகுதி மற்றும் அதன் இறக்குமதி வழிக்கேற்ப cnt ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Retaining an identifier that points outside the actual part hierarchy.",
+      "rationale": "The manifest path, part driver and cross-file identifier convention all agree on cnt.",
+      "precise_review_question": "Does the section identify itself as cnt/min/tf?",
+      "location_needle": "SOURCE CORRECTION TA-CF-005"
+    },
+    {
+      "audit_id": "TA-CF-006",
+      "unit_id": "OLP-0526",
+      "kind": "antecedent-strengthening-switches-strike-to-light",
+      "action": "Kept striking the match as the strengthened antecedent in outer space.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The first outer-space sentence says ‘light this match,’ although the displayed inference and model strengthen ‘strike this match’ by adding ‘in outer space.’",
+      "chosen_treatment": "தமிழ் முன்கூற்றிலும் விளக்கத்திலும் விண்வெளியில் தீக்குச்சியை உரசுவதாகவே கூறுகிறது.",
+      "alternatives_considered": "Changing the antecedent to the conclusion that the match lights, which would no longer illustrate antecedent strengthening.",
+      "rationale": "The formal pattern is p implies r versus (p and q) implies r, where p is striking and q is being in outer space.",
+      "precise_review_question": "Is striking, rather than lighting, the action strengthened by the outer-space condition?",
+      "location_needle": "SOURCE CORRECTION TA-CF-006"
+    },
+    {
+      "audit_id": "TA-CF-007",
+      "unit_id": "OLP-0527",
+      "kind": "transitivity-example-duplicated-be",
+      "action": "Removed the duplicated ‘be’ from the second premise and conclusion.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "Both quoted sentences say ‘would have been be a traitor.’",
+      "chosen_treatment": "தமிழ் இரு இடங்களிலும் நாட்டுத்துரோகியாக இருந்திருப்பார் என்று இயல்பாகக் கூறுகிறது.",
+      "alternatives_considered": "Representing the duplicated auxiliary as meaningful content.",
+      "rationale": "The intended English phrase is uniquely ‘would have been a traitor.’",
+      "precise_review_question": "Are both quoted traitor clauses grammatically complete?",
+      "location_needle": "SOURCE CORRECTION TA-CF-007"
+    },
+    {
+      "audit_id": "TA-CF-008",
+      "unit_id": "OLP-0527",
+      "kind": "transitivity-countermodel-negates-claimed-true-conditional",
+      "action": "Removed the negation slash from satisfaction of q material-implies r throughout the q-admitting sphere.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\mSat/{M}{q\\lifr}", "to": "\\mSat{M}{q\\lifr}", "count": 1}
+      ],
+      "source_issue_or_choice": "The prose says q material-implies r is true at all worlds in S-prime and uses that to infer q counterfactually-implies r, but the satisfaction macro carries a negation slash.",
+      "chosen_treatment": "தமிழ் முறைசார் குறியீடும் உரையும் இரண்டிலும் அந்தப் பொருள்சார் நிபந்தனை மெய் என்று கூறுகிறது.",
+      "alternatives_considered": "Keeping the negation slash, which would destroy the second premise of the counterexample.",
+      "rationale": "At w1 both q and r are true, and at w q is false, so q material-implies r is true throughout the sphere.",
+      "precise_review_question": "Is q material-implies r satisfied throughout S-prime?",
+      "location_needle": "SOURCE CORRECTION TA-CF-008"
+    },
+    {
+      "audit_id": "TA-CF-009",
+      "unit_id": "OLP-0528",
+      "kind": "contraposition-file-copied-section-comment",
+      "action": "Corrected the metadata comment from transitivity to contraposition.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The file name, identifier, title and contents concern contraposition, while the Section comment says transitivity.",
+      "chosen_treatment": "தமிழ் மெட்டாதரவு உள்ளடக்கத்திற்கேற்ப எதிர்மறைநேர்மாற்றுப் பகுதியைக் குறிக்கிறது.",
+      "alternatives_considered": "Treating a nonfunctional copied comment as the authoritative section identity.",
+      "rationale": "Every functional locator identifies the contraposition section.",
+      "precise_review_question": "Does the metadata comment name contraposition?",
+      "location_needle": "SOURCE CORRECTION TA-CF-009"
+    },
+    {
+      "audit_id": "TA-CF-010",
+      "unit_id": "OLP-0528",
+      "kind": "contraposition-model-drops-world-index-on-sphere-system",
+      "action": "Indexed the displayed sphere system by its center world w.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "O=\\{\\{w\\},\\{w,w_1\\},\\{w,w_1,w_2\\}\\}", "to": "O_w=\\{\\{w\\},\\{w,w_1\\},\\{w,w_1,w_2\\}\\}", "count": 1}
+      ],
+      "source_issue_or_choice": "The sphere-model definition makes O a function and O_w the sphere system at w, but this example equates O itself with one set of spheres.",
+      "chosen_treatment": "தமிழ் எடுத்துக்காட்டு w மையத்திற்கான கோள அமைப்பை O_w என்று தருகிறது.",
+      "alternatives_considered": "Treating O as a constant sphere system contrary to the chapter definition.",
+      "rationale": "All neighboring examples specify O_w when only the evaluation world's sphere system is given.",
+      "precise_review_question": "Is the displayed set assigned to O_w?",
+      "location_needle": "SOURCE CORRECTION TA-CF-010"
+    },
+    {
+      "audit_id": "TA-CF-011",
+      "unit_id": "OLP-0528",
+      "kind": "contraposition-example-switches-model-name",
+      "action": "Used the introduced model M_1 in both satisfaction claims.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\mSat{M}{p\\cifq}[w]", "to": "\\mSat{M_1}{p\\cifq}[w]", "count": 1},
+        {"from": "\\mSat/{M}{\\lnotq\\lif\\lnotp}[w_2]", "to": "\\mSat/{M_1}{\\lnotq\\lif\\lnotp}[w_2]", "count": 1}
+      ],
+      "source_issue_or_choice": "The example introduces M_1 but its two concluding satisfaction statements use an undefined M.",
+      "chosen_treatment": "தமிழ் இரு நிறைவுறுத்தல் கூற்றுகளிலும் அறிமுகப்படுத்தப்பட்ட M_1 ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Renaming the introduced model to M, which would alter the explicit model label rather than repair its later references.",
+      "rationale": "Both claims evaluate the model just constructed and diagrammed.",
+      "precise_review_question": "Do both satisfaction statements refer to M_1?",
+      "location_needle": "SOURCE CORRECTION TA-CF-011"
     }
   ],
   "by_unit": {
@@ -5381,6 +5576,14 @@
     "OLP-0510": ["TA-IL-015", "TA-IL-016"],
     "OLP-0512": ["TA-IL-017"],
     "OLP-0513": ["TA-IL-018"],
-    "OLP-0515": ["TA-IL-019", "TA-IL-020", "TA-IL-021", "TA-IL-022", "TA-IL-023", "TA-IL-024"]
+    "OLP-0515": ["TA-IL-019", "TA-IL-020", "TA-IL-021", "TA-IL-022", "TA-IL-023", "TA-IL-024"],
+    "OLP-0518": ["TA-CF-001"],
+    "OLP-0519": ["TA-CF-002"],
+    "OLP-0520": ["TA-CF-003"],
+    "OLP-0524": ["TA-CF-004"],
+    "OLP-0525": ["TA-CF-005"],
+    "OLP-0526": ["TA-CF-006"],
+    "OLP-0527": ["TA-CF-007", "TA-CF-008"],
+    "OLP-0528": ["TA-CF-009", "TA-CF-010", "TA-CF-011"]
   }
 }

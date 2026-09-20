@@ -1,0 +1,117 @@
+% SEGMENT OLP-0525-S01
+% Part: counterfactuals
+% Chapter: minimal-change-semantics
+% Section: true-false
+% SOURCE CORRECTION TA-CF-005: restore the counterfactuals part metadata and cnt file identifier.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{cnt}{min}{tf}
+
+\olsection{உண்மைக்கு மாறான நிபந்தனைகளின் மெய்மையும் பொய்மையும்}
+
+\olref{fig:true} இல் காட்டியுள்ளபடி, மிக நெருங்கிய $!A$-உலகங்கள்
+அனைத்தும் $!B$-உலகங்களாக இருந்தால், உண்மைக்கு மாறான நிபந்தனை $!A \cif
+!B$ வெறுமைவழியல்லாமல் மெய்யாகும்.
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.7]\small
+  \spheresystem{5}
+  \draw (0,0) node {$w$};
+  \propositionintersect{0}{4}{40}{3.5}
+  {\tikzset{proposition/.append={smooth,tension=1.4}}
+  \proposition[shift={(1.6,-1)}]{90}{1}{30}{4}}
+  \path (1.5,3) node[below] {$\formula{B}$};
+  \path (3,0) node {$\formula{A}$};
+\end{tikzpicture}
+\caption{வெறுமைவழியல்லாமல் மெய்யான உண்மைக்கு மாறான நிபந்தனை}
+\ollabel{fig:true}
+\end{center}
+\end{figure}
+$w$ ஐச் சுற்றியுள்ள கோளங்களின் அமைப்பில் $!A$-ஐ ஏற்கும் கோளமே இல்லாத
+நிலையிலும் ஓர் உண்மைக்கு மாறான நிபந்தனை~$w$ இல் மெய்யாகும். அப்போது அது
+\emph{வெறுமைவழி} மெய் (\olref{fig:vacuous} ஐப் பார்க்கவும்).
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.7]\small
+  \spheresystem{5}
+  \draw (0,0) node {$w$};
+  \proposition{0}{6.5}{40}{3.5}
+  {\tikzset{proposition/.append={smooth,tension=1.4}}
+  \proposition[shift={(1.2,-1)}]{90}{1}{30}{4}}
+  \path (1.5,3) node[below] {$\formula{B}$};
+  \spherepos{0}{7}{node {$\formula{A}$}}
+\end{tikzpicture}
+\caption{வெறுமைவழி மெய்யான உண்மைக்கு மாறான நிபந்தனை}
+\ollabel{fig:vacuous}
+\end{center}
+\end{figure}
+
+அது இரண்டு விதங்களில் பொய்யாக இருக்கலாம். மிக நெருங்கிய $!A$-உலகங்களில்
+சில மட்டும் $!B$-உலகங்களாக இருப்பது ஒரு விதம். இந்நிலையில், $!A \cif
+\lnot !B$ உம் பொய்யாகும்
+(\olref{fig:false} ஐப் பார்க்கவும்).
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.7]\small
+  \spheresystem{5}
+  \draw (0,0) node {$w$};
+  \propositionintersect{0}{4}{40}{3.5}
+  {\tikzset{proposition/.append={smooth,tension=1.4}}
+  \proposition[shift={(1.6,0)}]{90}{1}{30}{3}}
+  \path (1.5,3) node[below] {$\formula{B}$};
+  \path (3,0) node {$\formula{A}$};
+\end{tikzpicture}
+\caption{பொய்யான உண்மைக்கு மாறான நிபந்தனை; பொய்யான எதிர்க்கூற்று}
+\ollabel{fig:false}
+\end{center}
+\end{figure}
+மிக நெருங்கிய $!A$-உலகங்களும் $!B$-உலகங்களும் முற்றிலும் ஒன்றையொன்று
+வெட்டாமல் இருந்தால், $!A \cif !B$ பொய்யாகும். ஆனால் இந்நிலையில் மிக
+நெருங்கிய $!A$-உலகங்கள் அனைத்தும் $\lnot !B$-உலகங்கள்; எனவே $!A \cif
+\lnot !B$ மெய்யாகும் (\olref{fig:false-opposite} ஐப் பார்க்கவும்).
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.7]\small
+  \spheresystem{5}
+  \draw (0,0) node {$w$};
+  \propositionintersect{0}{4}{40}{3.5}
+  {\tikzset{proposition/.append={smooth,tension=1.4}}
+  \proposition[shift={(-1,0)}]{90}{1}{30}{3}}
+  \path (-1,3) node[below] {$\formula{B}$};
+  \path (3,0) node {$\formula{A}$};
+\end{tikzpicture}
+\caption{பொய்யான உண்மைக்கு மாறான நிபந்தனை; மெய்யான எதிர்க்கூற்று}
+\ollabel{fig:false-opposite}
+\end{center}
+\end{figure}
+
+கண்டிப்பான நிபந்தனைகளைப் போலல்லாமல், உண்மைக்கு மாறான நிபந்தனைகள்
+நிச்சயமற்றவையாக இருக்கலாம். \olref{fig:contingent} இலுள்ள கோள மாதிரியைக்
+கருதுக. $u$ க்கு மிக நெருங்கிய $!A$-உலகங்கள் அனைத்தும் $!B$-உலகங்கள்;
+எனவே $\mSat{M}{!A \cif !B}[u]$. ஆனால் $v$ க்கு மிக நெருங்கிய
+$!A$-உலகங்களில் சில $!B$-உலகங்கள் அல்ல; எனவே $\mSat/{M}{!A \cif
+!B}[v]$.
+\begin{figure}
+\begin{center}
+\begin{tikzpicture}[scale=.6]\small
+  \spheresystem{7}
+  \spheresystem[shift={(0:3.1)},dashed]{4}
+  \propositionintersect{45}{4}{40}{4.5}
+  \begin{scope}
+    \clip \propositionplot{45}{4}{40}{4.5} ;
+    \spherelayer[shift={(0:3.1)}]{3}
+  \end{scope}
+  \proposition[shift={(1.4,-.5)}]{90}{1}{35}{5}
+  \path (0,0) node {$u$};
+  \path (0:3.1) node {$v$};
+  \spherepos{35}{9}{node {$\formula{A}$}}
+  \spherepos{80}{9}{node {$\formula{B}$}}
+\end{tikzpicture}
+\end{center}
+\caption{நிச்சயமற்ற உண்மைக்கு மாறான நிபந்தனை}
+\ollabel{fig:contingent}
+\end{figure}
+\end{document}
