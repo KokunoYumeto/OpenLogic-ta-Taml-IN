@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 455/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 460/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -5854,6 +5854,8 @@ Please double-check: **is “தொடர்முறை” the established Indi
 - `TA-OCC-835c09eb1db12e37` — OLP-0060 / `OLP-0060-S07`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:144`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:152`; PDF page pending.
 - `TA-OCC-463dbccdb9ea5b59` — OLP-0060 / `OLP-0060-S07`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:145`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:153`; PDF page pending.
 - `TA-OCC-d425488d3dff68df` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:12`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:13`; PDF page pending.
+- `TA-OCC-b206a8926d0043da` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:43`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:48`; PDF page pending.
+- `TA-OCC-9cac2bc9fa08cd0c` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:46`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:52`; PDF page pending.
 
 ## TA-T014 — continuum
 
@@ -6325,6 +6327,7 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-5956cf96063ba33a` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:23`; PDF page pending.
 - `TA-OCC-f75e21bbac93b83d` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
 - `TA-OCC-9682ba2a301e04bb` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:15`; PDF page pending.
+- `TA-OCC-58770114039ce078` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:15`; PDF page pending.
 
 ## TA-T018 — union / intersection / disjoint
 
@@ -6971,6 +6974,9 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-569ea256e9d637c5` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:14`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:15`; PDF page pending.
 - `TA-OCC-96c98c2cce37c394` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:18`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:21`; PDF page pending.
 - `TA-OCC-123bd1612cd0059f` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:37`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:42`; PDF page pending.
+- `TA-OCC-975c03470a9ebc7e` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
+- `TA-OCC-fa0ef59d4987a3e8` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:3`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:121`; PDF page pending.
+- `TA-OCC-b67b3fa383d52272` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:296`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:304`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -7769,6 +7775,11 @@ Please double-check: **do the listed uses of “தற்சுட்டு / �
 - `TA-OCC-693cea67bb8fa2c6` — OLP-0466 / `OLP-0466-S01`; source `content/normal-modal-logic/tableaux/more-soundness.tex:24`; Tamil `translation/content/normal-modal-logic/tableaux/more-soundness.tex:25`; PDF page pending.
 - `TA-OCC-eb5c5b7d000901b9` — OLP-0466 / `OLP-0466-S01`; source `content/normal-modal-logic/tableaux/more-soundness.tex:34`; Tamil `translation/content/normal-modal-logic/tableaux/more-soundness.tex:35`; PDF page pending.
 - `TA-OCC-2327740cce18b099` — OLP-0466 / `OLP-0466-S01`; source `content/normal-modal-logic/tableaux/more-soundness.tex:42`; Tamil `translation/content/normal-modal-logic/tableaux/more-soundness.tex:44`; PDF page pending.
+- `TA-OCC-5ae9e5a987a11323` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:174`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:176`; PDF page pending.
+- `TA-OCC-eb7652f5528fec18` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:183`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:190`; PDF page pending.
+- `TA-OCC-f975f898db6063e9` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:188`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:194`; PDF page pending.
+- `TA-OCC-1c4dea9736fbffea` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:192`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:199`; PDF page pending.
+- `TA-OCC-50a7bfaea9ea4899` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:197`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:208`; PDF page pending.
 
 ## TA-T026 — equivalence relation
 
@@ -11248,6 +11259,29 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-0142c3bf32c32e6e` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:74`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:43`; PDF page pending.
 - `TA-OCC-cb3fabaf0e0dfc3c` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:74`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:80`; PDF page pending.
 - `TA-OCC-02e11dc534c7e239` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:204`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:215`; PDF page pending.
+- `TA-OCC-bfe40c677f1bf2f4` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
+- `TA-OCC-2622afb76ecaf0bb` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:43`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:47`; PDF page pending.
+- `TA-OCC-8a9b3430242ba8d2` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:45`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:48`; PDF page pending.
+- `TA-OCC-a787f22c21b57426` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:47`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:51`; PDF page pending.
+- `TA-OCC-c7c2d43a974ea4e3` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:48`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:52`; PDF page pending.
+- `TA-OCC-976691342c5d67f9` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:50`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:54`; PDF page pending.
+- `TA-OCC-87dc96161254bbfe` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:52`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:56`; PDF page pending.
+- `TA-OCC-5bfcf8cdb6c14b71` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:61`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:63`; PDF page pending.
+- `TA-OCC-800a0e083ade4c94` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:62`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:68`; PDF page pending.
+- `TA-OCC-5edf1dafec635394` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:64`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:70`; PDF page pending.
+- `TA-OCC-f2a2b666ad7501e7` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:43`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:102`; PDF page pending.
+- `TA-OCC-aed5688cbd14deb2` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:45`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:106`; PDF page pending.
+- `TA-OCC-9d599170495dd8fb` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:16`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:18`; PDF page pending.
+- `TA-OCC-17362d8c6e87a40f` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:49`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:52`; PDF page pending.
+- `TA-OCC-409f03ed279844a1` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:82`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:84`; PDF page pending.
+- `TA-OCC-0b48218d65b395d5` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:119`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:120`; PDF page pending.
+- `TA-OCC-3d70f62f73032e0a` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:224`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:228`; PDF page pending.
+- `TA-OCC-3363852f33bf0b82` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:236`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:241`; PDF page pending.
+- `TA-OCC-4f6f5cf5670d83ad` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:250`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:256`; PDF page pending.
+- `TA-OCC-91007bdf9e7b7166` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:262`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:269`; PDF page pending.
+- `TA-OCC-581c30c6086d4068` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:278`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:286`; PDF page pending.
+- `TA-OCC-21913efaf166524d` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:297`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:305`; PDF page pending.
+- `TA-OCC-3bf9da98d49517fa` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:353`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:361`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -12832,6 +12866,9 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-b40c726e4b700bee` — OLP-0466 / `OLP-0466-S01`; source `content/normal-modal-logic/tableaux/more-soundness.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/more-soundness.tex:73`; PDF page pending.
 - `TA-OCC-6f9525fd89ac0045` — OLP-0466 / `OLP-0466-S01`; source `content/normal-modal-logic/tableaux/more-soundness.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/more-soundness.tex:83`; PDF page pending.
 - `TA-OCC-d1c22ea61a3c2e69` — OLP-0467 / `OLP-0467-S01`; source `content/normal-modal-logic/tableaux/simple-S5.tex:20`; Tamil `translation/content/normal-modal-logic/tableaux/simple-S5.tex:23`; PDF page pending.
+- `TA-OCC-41d2e850f057c14b` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:43`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:48`; PDF page pending.
+- `TA-OCC-74e8fdaa6df75828` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:46`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:52`; PDF page pending.
+- `TA-OCC-d9c4f6ae0bed8968` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:181`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -14523,6 +14560,7 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-3e92af97f96dae21` — OLP-0421 / `OLP-0421-S01`; source `content/normal-modal-logic/frame-definability/properties-accessibility.tex:116`; Tamil `translation/content/normal-modal-logic/frame-definability/properties-accessibility.tex:136`; PDF page pending.
 - `TA-OCC-ecdb94ff0308a261` — OLP-0455 / `OLP-0455-S01`; source `content/normal-modal-logic/filtrations/finite.tex:37`; Tamil `translation/content/normal-modal-logic/filtrations/finite.tex:42`; PDF page pending.
 - `TA-OCC-06a85fb6ea320f47` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:48`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:53`; PDF page pending.
+- `TA-OCC-d3b7594f059eb3a3` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -16511,6 +16549,8 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-0851715a3a2707c9` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:38`; PDF page pending.
 - `TA-OCC-cec88ba34d135f56` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:23`; PDF page pending.
 - `TA-OCC-73e42f211b26b5a6` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:26`; PDF page pending.
+- `TA-OCC-a7a4547189a61648` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:14`; PDF page pending.
+- `TA-OCC-717a8496d80675ff` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -17711,6 +17751,7 @@ Please double-check: **do the listed uses of “தருக்க இணைப�
 - `TA-OCC-71275edcaa6a1efc` — OLP-0395 / `OLP-0395-S01`; source `content/many-valued-logic/three-valued-logics/kleene.tex:33`; Tamil `translation/content/many-valued-logic/three-valued-logics/kleene.tex:178`; PDF page pending.
 - `TA-OCC-f713f2fb54706564` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:21`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:23`; PDF page pending.
 - `TA-OCC-b6cb95adc0cc0fbe` — OLP-0410 / `OLP-0410-S01`; source `content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/language-modal-logic.tex:24`; PDF page pending.
+- `TA-OCC-8d31765f44ced415` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; PDF page pending.
 
 ## TA-T080 — conditional / biconditional
 
@@ -18856,6 +18897,18 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-56c6b175ce3e00eb` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:38`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:43`; PDF page pending.
 - `TA-OCC-e92f8ba0a9932893` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:74`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:80`; PDF page pending.
 - `TA-OCC-5f96b4edc85b0748` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:204`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:215`; PDF page pending.
+- `TA-OCC-8fb0b8176b7df22d` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:43`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:47`; PDF page pending.
+- `TA-OCC-16b1aa3102d94384` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:45`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:48`; PDF page pending.
+- `TA-OCC-3bfacab0d93d7eaa` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:47`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:51`; PDF page pending.
+- `TA-OCC-1b1d73a275219e8f` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:48`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:52`; PDF page pending.
+- `TA-OCC-c6eae4216e4848e4` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:50`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:54`; PDF page pending.
+- `TA-OCC-46facf963c44b899` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:52`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:56`; PDF page pending.
+- `TA-OCC-66d417598af0b689` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:61`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:63`; PDF page pending.
+- `TA-OCC-7ec4493c4d98566d` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:62`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:68`; PDF page pending.
+- `TA-OCC-52bfdfac6b4faaeb` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:64`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:70`; PDF page pending.
+- `TA-OCC-36a12cdb3b149815` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:43`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:102`; PDF page pending.
+- `TA-OCC-c66874053a73f8fc` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:45`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:106`; PDF page pending.
+- `TA-OCC-93e720254a1af317` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:119`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:120`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -20105,6 +20158,19 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-2ba73a8cbc4ebfd4` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:14`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:15`; PDF page pending.
 - `TA-OCC-50ad49671090764d` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:18`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:21`; PDF page pending.
 - `TA-OCC-4a33c000b9dd49da` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:37`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:42`; PDF page pending.
+- `TA-OCC-0d00e99fa138b8e6` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
+- `TA-OCC-c17608e24871a6a7` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:16`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:18`; PDF page pending.
+- `TA-OCC-8bab813277b80562` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:49`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:52`; PDF page pending.
+- `TA-OCC-44538eb1c6bfef42` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:82`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:84`; PDF page pending.
+- `TA-OCC-6fbfbf491e369dbc` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:16`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:121`; PDF page pending.
+- `TA-OCC-7f805a3b6fc63c9b` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:224`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:228`; PDF page pending.
+- `TA-OCC-f03b4896e050f04c` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:236`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:241`; PDF page pending.
+- `TA-OCC-97c745b24b748e66` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:250`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:256`; PDF page pending.
+- `TA-OCC-3619b8bd28ce6159` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:262`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:269`; PDF page pending.
+- `TA-OCC-38e7ea4cbcff35ca` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:278`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:286`; PDF page pending.
+- `TA-OCC-62399da674624909` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:224`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:304`; PDF page pending.
+- `TA-OCC-b6ab2e9c85b45f03` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:297`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:305`; PDF page pending.
+- `TA-OCC-dabe53cd2d9e4b0a` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:353`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:361`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -21067,6 +21133,7 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-eb33fd72520914f4` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:19`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:23`; PDF page pending.
 - `TA-OCC-d7af1651a2a008aa` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:2`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:92`; PDF page pending.
 - `TA-OCC-6b5ce860a715802b` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:14`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:15`; PDF page pending.
+- `TA-OCC-a73f6297e25adc13` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:15`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -21279,6 +21346,29 @@ Please double-check: **is “தொடரணி / தொடரணிக் க�
 - `TA-OCC-a8b2a517f3081b97` — OLP-0405 / `OLP-0405-S01`; source `content/many-valued-logic/sequent-calculus/structural-rules.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/structural-rules.tex:42`; PDF page pending.
 - `TA-OCC-c2e39d792d50e25b` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:2`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:15`; PDF page pending.
 - `TA-OCC-b672ace9ce89cd88` — OLP-0406 / `OLP-0406-S01`; source `content/many-valued-logic/sequent-calculus/propositional-rules.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/propositional-rules.tex:18`; PDF page pending.
+- `TA-OCC-9aad5ffe492eae08` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:2`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:9`; PDF page pending.
+- `TA-OCC-45db77655e300434` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:8`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; PDF page pending.
+- `TA-OCC-fde160e641d27137` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:2`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:14`; PDF page pending.
+- `TA-OCC-ccdf69bd956ca727` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:45`; PDF page pending.
+- `TA-OCC-88efa99d15e5fca4` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:48`; PDF page pending.
+- `TA-OCC-7da16f0fd9e96a95` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:2`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; PDF page pending.
+- `TA-OCC-a51496a04b5131e7` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:16`; PDF page pending.
+- `TA-OCC-316599fb8b903420` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:14`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:53`; PDF page pending.
+- `TA-OCC-0978f15cabfa052d` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:15`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:55`; PDF page pending.
+- `TA-OCC-34597084b7af9c3d` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:15`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:59`; PDF page pending.
+- `TA-OCC-ab0df442376cc5e5` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:56`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:102`; PDF page pending.
+- `TA-OCC-534bb90404ca8de7` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:2`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:12`; PDF page pending.
+- `TA-OCC-8eafc73bc6ea9142` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:11`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:18`; PDF page pending.
+- `TA-OCC-97f7d19e79e48d54` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:16`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:51`; PDF page pending.
+- `TA-OCC-b36089f44730e544` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:16`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:120`; PDF page pending.
+- `TA-OCC-c6c0cedef39f1e3d` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:2`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:220`; PDF page pending.
+- `TA-OCC-a32a3fe58ec92d42` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:218`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:227`; PDF page pending.
+- `TA-OCC-8779f4ba1063ec34` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:224`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:240`; PDF page pending.
+- `TA-OCC-13beb8b7469e9c58` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:236`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:255`; PDF page pending.
+- `TA-OCC-d4df444f502be1e2` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:250`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:268`; PDF page pending.
+- `TA-OCC-fb0b081f0622f219` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:262`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:285`; PDF page pending.
+- `TA-OCC-0681845fc30c9c43` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:278`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:301`; PDF page pending.
+- `TA-OCC-d5e066f951a502a3` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:294`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:361`; PDF page pending.
 
 ## TA-T092 — natural deduction / introduction rule / elimination rule
 
@@ -22466,6 +22556,8 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-6e80ee9e9584cf74` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:84`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:231`; PDF page pending.
 - `TA-OCC-ef959a93630fa365` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:14`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:15`; PDF page pending.
 - `TA-OCC-bc632518e38702ca` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:37`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:43`; PDF page pending.
+- `TA-OCC-9b3f5a9c83362071` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
+- `TA-OCC-0d52cbf5559be015` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -28580,6 +28672,14 @@ Please double-check: **is “இயல்பான வாய்ப்புந�
 - `TA-OCC-48a9e966b19d5b9b` — OLP-0465 / `OLP-0465-S01`; source `content/normal-modal-logic/tableaux/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/more-rules.tex:156`; PDF page pending.
 - `TA-OCC-f2b5046f859d6cdf` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:40`; PDF page pending.
 - `TA-OCC-bafe6197f3bc0de5` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:42`; PDF page pending.
+- `TA-OCC-eb50eb3f23ca16fa` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:9`; PDF page pending.
+- `TA-OCC-f53278b6411e9ea7` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; PDF page pending.
+- `TA-OCC-a048153735588391` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:45`; PDF page pending.
+- `TA-OCC-59caab56e8582490` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:19`; PDF page pending.
+- `TA-OCC-9899b58f28ac2866` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:78`; PDF page pending.
+- `TA-OCC-551ab29138a6b542` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:119`; PDF page pending.
+- `TA-OCC-5e60ab3cc7c764a4` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:161`; PDF page pending.
+- `TA-OCC-d8ac84556ecea717` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:220`; PDF page pending.
 
 ## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
 
@@ -28640,6 +28740,9 @@ Please double-check: **is “சாத்தியமான உலகம் / �
 - `TA-OCC-95d5f671bc1ac3df` — OLP-0465 / `OLP-0465-S01`; source `content/normal-modal-logic/tableaux/more-rules.tex:11`; Tamil `translation/content/normal-modal-logic/tableaux/more-rules.tex:14`; PDF page pending.
 - `TA-OCC-8a1046ebd3e48cd5` — OLP-0467 / `OLP-0467-S01`; source `content/normal-modal-logic/tableaux/simple-S5.tex:15`; Tamil `translation/content/normal-modal-logic/tableaux/simple-S5.tex:16`; PDF page pending.
 - `TA-OCC-d51179630614885f` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:108`; PDF page pending.
+- `TA-OCC-5c69cb17e11c8dc6` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:46`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:46`; PDF page pending.
+- `TA-OCC-63a5ed13771657e9` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:11`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:12`; PDF page pending.
+- `TA-OCC-fd5b9dd0c133890d` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:11`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:14`; PDF page pending.
 
 ## TA-T168 — simultaneous substitution / iterated substitution / instance / substitution instance
 
@@ -29396,6 +29499,22 @@ Please double-check: **is “முன்னொட்டுகளின் ப�
 - `TA-OCC-b4171ac92490ab62` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:49`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:49`; PDF page pending.
 - `TA-OCC-8080177a0114f10b` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:34`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:39`; PDF page pending.
 - `TA-OCC-ca1c1a0c767f542e` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:36`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:41`; PDF page pending.
+
+## TA-T182 — hypersequent / cut-free complete hypersequent calculus
+
+Chosen rendering: **மிகைத்தொடரணி / வெட்டற்ற நிறைவான மிகைத்தொடரணிக் கணியம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: தொடரணி, தொடரணிக் கணியம், வெட்டு, நிறைவுத்தன்மை and the proof/inference register continue the reviewed edition vocabulary. The checked originals do not attest hypersequent as a specialist headword; மிகைத்தொடரணி is therefore an explicit provisional compound, fixed here by contrast with an LK-derived sequent calculus and by the claim of cut-free completeness for S5.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T182-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “மிகைத்தொடரணி / வெட்டற்ற நிறைவான மிகைத்தொடரணிக் கணியம்” the established India-standard Tamil expression for “hypersequent / cut-free complete hypersequent calculus” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-bd7187700d670279` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:48`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:50`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

@@ -1,0 +1,52 @@
+% SEGMENT OLP-0471-S01
+% Part: normal-modal-logic
+% Chapter: sequent-calculus
+% Section: introduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{seq}{int}
+
+\olsection{அறிமுகம்}
+
+கூற்றுத் தருக்கத்திற்கான தொடரணிக் கணியத்தைக்
+\iftag{prvBox}{$\Box$\iftag{prvDiamond}{ மற்றும்~}{}}{}%
+\iftag{prvDiamond}{$\Diamond$}{} ஆகியவற்றைக் கையாளும் கூடுதல் விதிகளால்
+விரிவாக்கலாம். எடுத்துக்காட்டாக, $\Log{K}$ க்கு \Log{LK} உடன்
+பின்வருவனவும் உள்ளன:
+\[
+  \iftag{prvBox}{\iftag{prvDiamond}{% <> and [] primitive
+    \Axiom$\Gamma \fCenter \Delta, !A$
+    \RightLabel{$\Box$}
+    \UnaryInf$\Box\Gamma \fCenter \Diamond\Delta, \Box!A$
+    \DisplayProof
+    \qquad
+    \Axiom$!A, \Gamma \fCenter \Delta$
+    \RightLabel{$\Diamond$}
+    \UnaryInf$\Diamond!A, \Box\Gamma \fCenter \Diamond\Delta$
+    \DisplayProof
+}{% only Box primitive
+\Axiom$\Gamma \fCenter !A$
+\RightLabel{$\Box$}
+\UnaryInf$\Box\Gamma \fCenter \Box!A$
+\DisplayProof
+}}{% only <> primitive
+  \Axiom$!A \fCenter \Delta$
+  \RightLabel{$\Diamond$}
+  \UnaryInf$\Diamond!A \fCenter \Diamond\Delta$
+  \DisplayProof
+}
+\]
+$\Log{K}$ இன் விரிவாக்கங்களுக்கு மேலும் கூடுதல் விதிகளையும் சேர்க்க
+வேண்டும்.
+
+ஒவ்வொரு வாய்ப்புநிலைத் தருக்கத்திற்கும் இத்தகைய ஒரு தொடரணிக் கணியம்
+இருப்பதில்லை. பொருண்மையியல்படி எளியதான $\Log{S5}$ ஐ அணுகுறவுகளையே
+பயன்படுத்தாமல் வரையறுக்கலாம்; எனினும், \Cut{} விதி இல்லாமல் நிறைவானதாக
+இருக்கும்படி $\Log{LK}$ இலிருந்து கிடைக்கும் ஒரு தொடரணிக் கணியம் அதற்கு
+இருப்பதாக அறியப்படவில்லை. ஆனால் அதற்கு வெட்டற்ற நிறைவான
+\emph{மிகைத்தொடரணிக்} கணியம் ஒன்று உள்ளது.
+
+\end{document}

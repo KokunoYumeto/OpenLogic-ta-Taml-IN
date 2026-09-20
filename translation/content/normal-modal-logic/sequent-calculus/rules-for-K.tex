@@ -1,0 +1,140 @@
+% SEGMENT OLP-0472-S01
+% Part: normal-modal-logic
+% Chapter: sequent-calculus
+% Section: rules-for-K
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{nml}{seq}{rul}
+
+\olsection{\Log{K} க்கான விதிகள்}
+
+வழக்கமான கூற்றுத் தருக்க இணைப்புகளுக்கான விதிகள், வழக்கமான தொடரணிக்
+கணியம்~$\Log{LK}$ இல் உள்ளவற்றைப் போன்றவையே. அடிகோள்களும் அவ்வாறே:
+$!A \Sequent !A$ என்ற வடிவிலுள்ள ஒவ்வொரு தொடரணியும் ஓர் அடிகோளாகக்
+கொள்ளப்படுகிறது.
+
+வாய்ப்புநிலைச் செயலி\iftag{prvBox}{\iftag{prvDiamond}{களான~$\Box$
+மற்றும்}{யான~$\Box$}}{}%
+\iftag{prvDiamond}{யான~$\Diamond$}{} க்கு, பின்வரும் கூடுதல்
+\iftag{notprvBox,notprvDiamond}{விதி}{விதிகள்} உள்ளன:
+\[
+  \iftag{prvBox}{\iftag{prvDiamond}{% <> and [] primitive
+    \Axiom$\Gamma \fCenter \Delta, !A$
+    \RightLabel{$\Box$}
+    \UnaryInf$\Box\Gamma \fCenter \Diamond\Delta, \Box!A$
+    \DisplayProof
+    \qquad
+    \Axiom$!A, \Gamma \fCenter \Delta$
+    \RightLabel{$\Diamond$}
+    \UnaryInf$\Diamond!A, \Box\Gamma \fCenter \Diamond\Delta$
+    \DisplayProof
+}{% only Box primitive
+\Axiom$\Gamma \fCenter !A$
+\RightLabel{$\Box$}
+\UnaryInf$\Box\Gamma \fCenter \Box!A$
+\DisplayProof
+}}{% only <> primitive
+  \Axiom$!A \fCenter \Delta$
+  \RightLabel{$\Diamond$}
+  \UnaryInf$\Diamond!A \fCenter \Diamond\Delta$
+  \DisplayProof
+}
+\]
+இங்கே, \iftag{prvBox}{$\Box\Gamma$ என்பது $\Gamma$ விலுள்ள ஒவ்வொரு
+!!{formula}க்கும் முன் $\Box$ ஐ இடுவதால் $\Gamma$ விலிருந்து கிடைக்கும்
+!!{formula}s இன் தொடர்முறை\iftag{prvDiamond}{; மேலும்
+}{}}{}%
+\iftag{prvDiamond}{$\Diamond\Delta$ என்பது $\Delta$ விலுள்ள ஒவ்வொரு
+!!{formula}க்கும் முன் $\Diamond$ ஐ இடுவதால் $\Delta$ விலிருந்து கிடைக்கும்
+!!{formula}s இன் தொடர்முறை}{}.
+\iftag{notprvDiamond}{$\Box$ விதியின் மேல்த் தொடரணியின் வலப்பக்கத்தில்
+அதிகபட்சமாக ஒரே ஓர் !!{formula}~$!A$ மட்டுமே இருக்க வேண்டும். }{}%
+\iftag{notprvBox}{$\Diamond$ விதியின் மேல்த் தொடரணியின் இடப்பக்கத்தில்
+அதிகபட்சமாக ஒரே ஓர் !!{formula}~$!A$ மட்டுமே இருக்க வேண்டும். }{}%
+\iftag{prvBox}{$\Gamma$\iftag{prvDiamond}{ வும்~}{}}{}%
+\iftag{prvDiamond}{$\Delta$ வும்}{} வெற்றாக இருக்கலாம்; அப்போது கீழ்த்
+தொடரணியின் அதற்குரிய
+\iftag{prvBox}{$\Box\Gamma$\iftag{prvDiamond}{ பகுதியும்~}{}}{}%
+\iftag{prvDiamond}{$\Diamond\Delta$ பகுதியும்}{} வெற்றாகவே இருக்கும்.
+
+ஒரே ஓர் !!{formula}~$!A$ க்கு மட்டும்
+\iftag{prvBox}{வலப்பக்கத்தில் $\Box$ ஐ\iftag{prvDiamond}{யும்
+}{}}{}%
+\iftag{prvDiamond}{இடப்பக்கத்தில் $\Diamond$ ஐயும்}{} சேர்க்க வேண்டும்
+என்ற கட்டுப்பாடு அவசியமானது.
+\iftag{prvBox}{வலப்பக்கத்தில் எத்தனை !!{formula}s க்கு வேண்டுமானாலும்
+$\Box$ ஐச் சேர்க்க\iftag{prvDiamond}{வோ, }{}}{}%
+\iftag{prvDiamond}{இடப்பக்கத்தில் எத்தனை !!{formula}s க்கு வேண்டுமானாலும்
+$\Diamond$ ஐச் சேர்க்கவோ}{} அனுமதித்தால், பின்வருவதை
+!!{derive} முடியும்:
+  \[
+    \iftag{prvBox}{
+      \Axiom$!A \fCenter !A$
+      \RightLabel{\RightR{\lnot}}
+      \UnaryInf$\fCenter !A, \lnot !A$
+      \RightLabel{$\Box*$}
+      \UnaryInf$\fCenter \Box!A, \Box\lnot !A$
+      \doubleLine
+      \RightLabel{\RightR{\lor}}
+      \UnaryInf$\fCenter \Box!A \lor \Box \lnot !A$
+      \DisplayProof}{}
+    \iftag{notprvBox,notprvDiamond}{}{\qquad}
+    \iftag{prvDiamond}{
+      \Axiom$!A \fCenter !A$
+      \RightLabel{\LeftR{\lnot}}
+      \UnaryInf$\lnot !A, !A \fCenter$
+      \RightLabel{$\Diamond*$}
+      \UnaryInf$\Diamond\lnot !A,\Diamond!A \fCenter $
+      \RightLabel{\RightR{\lnot}}
+      \UnaryInf$\Diamond!A \fCenter \lnot\Diamond\lnot !A$
+      \RightLabel{\RightR{\lif}}
+      \UnaryInf$ \fCenter \Diamond!A \lif \lnot\Diamond\lnot !A$
+      \DisplayProof}{}
+  \]
+ஆனால் \iftag{prvBox}{$\Box!A \lor \Box \lnot !A$
+\iftag{prvDiamond}{ மற்றும் $\Diamond!A \lif \lnot\Diamond\lnot !A$
+ஆகியவை}{ என்பது}}{$\Diamond!A \lif \lnot\Diamond\lnot !A$ என்பது}
+~$\Log{K}$ இல் செல்லுபடியாகாதது.
+
+மேல்த் தொடரணியில் $!A$ உடன் பக்க வாய்பாடுகளையும் அனுமதித்து,
+\iftag{prvBox}{$\Box$ விதி வலப்பக்கத்திலுள்ள $!A$ க்கு மட்டும் $\Box$ ஐச்
+சேர்க்க\iftag{prvDiamond}{ அனுமதித்தாலோ, }{}}{}%
+\iftag{prvDiamond}{$\Diamond$ விதி இடப்பக்கத்திலுள்ள $!A$ க்கு மட்டும்
+$\Diamond$ ஐச் சேர்க்க அனுமதித்தாலோ}{} (பக்க வாய்பாடுகளை மாற்றாமல்
+விட்டால்), பின்வருவதை !!{derive} முடியும்:
+\[
+  \iftag{prvBox}{
+    \Axiom$!A \fCenter !A$
+    \RightLabel{\RightR{\lnot}}
+    \UnaryInf$\fCenter !A, \lnot !A$
+    \RightLabel{\RightR{\Exchange}}
+    \UnaryInf$\fCenter \lnot !A, !A$
+    \RightLabel{$\Box*$}
+    \UnaryInf$\fCenter \lnot!A, \Box !A$
+    \doubleLine
+    \RightLabel{\RightR{\lor}}
+    \UnaryInf$\fCenter \lnot!A \lor \Box !A$
+    \DisplayProof}{}
+  \iftag{notprvBox,notprvDiamond}{}{\qquad}
+  \iftag{prvDiamond}{
+    \Axiom$!A \fCenter !A$
+    \RightLabel{\LeftR{\lnot}}
+    \UnaryInf$\lnot !A, !A \fCenter$
+    \RightLabel{$\Diamond*$}
+    \UnaryInf$\Diamond\lnot !A, !A \fCenter $
+    \RightLabel{\RightR{\lnot}}
+    \UnaryInf$!A \fCenter \lnot\Diamond\lnot !A$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$ \fCenter !A \lif \lnot\Diamond\lnot !A$
+    \DisplayProof}{}
+\]
+ஆனால் \iftag{prvBox}{$\lnot!A \lor \Box !A$ ($!A \lif \Box!A$ க்கு
+நிகரானது)\iftag{prvDiamond}{ மற்றும்
+$!A \lif \lnot\Diamond\lnot !A$ ஆகியவை}{ என்பது}}%
+{$!A \lif \lnot\Diamond\lnot !A$ என்பது}~$\Log{K}$ இல்
+செல்லுபடியாகாதது.
+
+\end{document}

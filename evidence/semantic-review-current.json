@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T01:35:58.880843+00:00",
+  "date_utc": "2026-09-20T02:01:05.038145+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2332,6 +2332,31 @@
       "unit_id": "OLP-0469",
       "source_sha256": "c47ac240cc48f6e82093505895045e59de1a1f034b7e377086c5b53944d744bd",
       "translation_sha256": "aa7ffba6728bafa72bf781f4c0bca3f1fd6c8b30a751215ac0197f23e21b71d0"
+    },
+    {
+      "unit_id": "OLP-0470",
+      "source_sha256": "94307f3948f0d7279630b64423a6095dd687e47e84368fde684e0e2203d256a1",
+      "translation_sha256": "6980b4a3b5c4e103216367c0f399c72cb8ec5d479189c73346f212776096363e"
+    },
+    {
+      "unit_id": "OLP-0471",
+      "source_sha256": "c647612a3cbf98569d9533d15a111b2df1457e6c19a63a8e77f1a2f75c895897",
+      "translation_sha256": "c171576e4ae15efe4cf566cfbc3ce3af310c312e07e28d2b9058cfadb9bb199c"
+    },
+    {
+      "unit_id": "OLP-0472",
+      "source_sha256": "ae411a3ba93f8dead177612c4e2ac01e15814d1270e2a0cd4012338ad262018f",
+      "translation_sha256": "4b2d3ae4b6cef78f99c3ffca6dcaba5ca67d75ae06facdc08bef6e9829fa9d26"
+    },
+    {
+      "unit_id": "OLP-0473",
+      "source_sha256": "62589ae78eea5962800114b6fdfffa1923072dfb10c85746d042c4d5dc7f4c30",
+      "translation_sha256": "80f1ef1f1573d0adb091df9005e8851e8e9f13d83abd94c4760b2ad39e3a496e"
+    },
+    {
+      "unit_id": "OLP-0474",
+      "source_sha256": "7208b51ded8fec09ae57789b113c42fc47b8e8a4c8e6c290c8f7b25ffb27ef45",
+      "translation_sha256": "04715072116871202a5c62c11bb44e84ce4373e2098957055ede4b5b1e875391"
     }
   ],
   "samples": [
@@ -6254,6 +6279,41 @@
       "assessment": "Both Box-only and Diamond-only searches, all three stages of each tree and both diagrams remain. TA-NML-054 through TA-NML-058 repair the formula marker, false-Diamond expansion, root direction, q prefix and complete-search wording.",
       "translation_segment_sha256": "e97fdca970befb9af8fd6e6004b7e6a501a5f7a6ea6558951d9ffed9b948b430",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0470-S01",
+      "reverse_paraphrase": "The modal sequent-calculus chapter imports its introduction, K rules, K derivations and additional accessibility rules while explicitly retaining the source editorial status.",
+      "assessment": "All four active imports, three inactive planned imports, chapter identifier and request for examples plus soundness and completeness proofs remain.",
+      "translation_segment_sha256": "0a355d8e84a512e5e655fffdb090d99031bfc734f5e544b203e1b9098fb561df",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0471-S01",
+      "reverse_paraphrase": "Propositional LK is extended by modal Box and Diamond rules for K; stronger logics need further rules, while S5 requires a cut-free complete hypersequent treatment rather than a known cut-free LK extension.",
+      "assessment": "Every feature-sensitive rule branch and the precise qualified nonexistence claim remain; hypersequent is marked by TA-T182 as a defined provisional compound.",
+      "translation_segment_sha256": "1c5f57f5f7cfb4972e60a815d4cde1ff26a6935b1442db802e14af0fd4d2fa96",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0472-S01",
+      "reverse_paraphrase": "K retains the ordinary LK rules and identity axioms, but its modal rule may principalize at most one formula and must modalize all side contexts; weakening either restriction derives formulas invalid in K.",
+      "assessment": "All primitive-operator variants, empty-context clauses and both complete overgeneration derivations remain exact.",
+      "translation_segment_sha256": "4b70beae7d59a426fd3fb9bc5f2dafe91b1f10b041c684fe8a27ba23bbea8272",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0473-S01",
+      "reverse_paraphrase": "The K sequent calculus derives Box distribution over conjunction, Diamond distribution over disjunction and modal duality, with four further formulas left as exercises.",
+      "assessment": "Both tagged derivations, the full duality proof tree, every structural inference and all four exercises remain exact.",
+      "translation_segment_sha256": "45fe417eb44b28c8a042bb2b9cde148308c8abd55a2ba278327676cc2be7e5ca",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0474-S01",
+      "reverse_paraphrase": "Additional sequent rules correspond to reflexive, serial, symmetric, transitive and Euclidean accessibility; they derive axioms 4 and 5, while a displayed S5 theorem requires cut.",
+      "assessment": "All three feature-sensitive rule tables, the modal-system table, K4 and S5 derivations, the cut derivation and six closing exercises remain exact.",
+      "translation_segment_sha256": "8bcaadfb683de6d6ff66f49cc865a123cafbb4eb3b09a5440e2e51ffd75d9f00",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -6954,7 +7014,7 @@
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "466 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 256 frozen units still require completion.",
+  "remaining": "471 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 251 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -7607,6 +7667,24 @@
         "simplified_S5_rules_and_axiom5_tableau_remain": true,
         "complete_branch_model_and_truth_lemma_repairs_remain": true,
         "both_countermodels_and_all_search_repairs_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0470",
+        "OLP-0471",
+        "OLP-0472",
+        "OLP-0473",
+        "OLP-0474"
+      ],
+      "correction_ids": [],
+      "status": "pass",
+      "checks": {
+        "driver_preserves_active_and_planned_sections": true,
+        "K_modal_rules_and_hypersequent_limit_remain": true,
+        "single_principal_formula_and_side_context_restrictions_remain": true,
+        "K_derivations_duality_and_four_exercises_remain": true,
+        "additional_rule_and_logic_tables_cut_example_and_exercises_remain": true
       }
     }
   ]
