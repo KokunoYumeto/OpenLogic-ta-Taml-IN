@@ -1,0 +1,64 @@
+﻿{
+    "schema":  "openlogic-tamil-tex-guard/1",
+    "mutex":  "Global\\InterlanguageTeXSlotV1",
+    "acquisition_timeout_ms":  60000,
+    "master":  "tamil-set-theory-z.tex",
+    "engine":  "xelatex",
+    "started_utc":  "2026-09-20T21:48:07.3734531Z",
+    "passes":  [
+                   {
+                       "pass":  1,
+                       "issues":  [
+                                      "LaTeX Warning: You have requested file `\u0027,",
+                                      "LaTeX Warning: You have requested file `\u0027,",
+                                      "LaTeX Warning: Reference `sth:z:sep:thm:NoUniversalSet\u0027 on page 1 undefined on ",
+                                      "LaTeX Warning: Reference `sth:z:sep:prop:intersectionsexist\u0027 on page 1 undefine",
+                                      "LaTeX Warning: Reference `sth:z:story:sec\u0027 on page 1 undefined on input line 32",
+                                      "LaTeX Warning: Reference `sth:z:pairs:singleton\u0027 on page 1 undefined on input l",
+                                      "LaTeX Warning: Reference `sth:z:pairs:binunion\u0027 on page 1 undefined on input li",
+                                      "LaTeX Warning: Reference `sth:z:pairs:tuples\u0027 on page 1 undefined on input line",
+                                      "LaTeX Warning: Reference `sth:z:pairs:singleton\u0027 on page 1 undefined on input l",
+                                      "LaTeX Warning: Reference `sth:z:pairs:prop:pairsconsequences\u0027 on page 1 undefin",
+                                      "LaTeX Warning: Reference `sth:z:pairs:prop:pairsconsequences\u0027 on page 1 undefin",
+                                      "LaTeX Warning: Reference `sth:z:sep:prop:emptyexists\u0027 on page 1 undefined on in",
+                                      "LaTeX Warning: Reference `sth:z:pairs:prop:pairsconsequences\u0027 on page 1 undefin",
+                                      "LaTeX Warning: Reference `sth:z:nat:sec\u0027 on page 1 undefined on input line 74.",
+                                      "LaTeX Warning: Reference `sth:z:arbintersections:sec\u0027 on page 1 undefined on in",
+                                      "LaTeX Warning: Reference `sth:z:infinity-again:defnomega\u0027 on page 1 undefined o",
+                                      "LaTeX Warning: Reference `sth:z:milestone:sec\u0027 on page 1 undefined on input lin",
+                                      "LaTeX Warning: Reference `sth:z:sep:prop:intersectionsexist\u0027 on page 1 undefine",
+                                      "LaTeX Warning: Reference `sth:z:arbintersections:bicondelimarbintersection\u0027 on ",
+                                      "LaTeX Warning: Reference `sth:z:arbintersections:bicondelimarbintersection\u0027 on ",
+                                      "LaTeX Warning: There were undefined references.",
+                                      "LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right."
+                                  ],
+                       "exit_code":  0
+                   },
+                   {
+                       "pass":  2,
+                       "issues":  [
+                                      "LaTeX Warning: You have requested file `\u0027,",
+                                      "LaTeX Warning: You have requested file `\u0027,"
+                                  ],
+                       "exit_code":  0
+                   },
+                   {
+                       "pass":  3,
+                       "issues":  [
+                                      "LaTeX Warning: You have requested file `\u0027,",
+                                      "LaTeX Warning: You have requested file `\u0027,"
+                                  ],
+                       "exit_code":  0
+                   }
+               ],
+    "status":  "built",
+    "abandoned_mutex":  false,
+    "bibliography":  {
+                         "engine":  "bibtex",
+                         "issues":  [
+
+                                    ],
+                         "exit_code":  0
+                     },
+    "finished_utc":  "2026-09-20T21:48:18.6627876Z"
+}

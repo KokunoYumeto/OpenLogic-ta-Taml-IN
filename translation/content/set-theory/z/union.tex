@@ -1,0 +1,32 @@
+% SEGMENT OLP-0540-S01
+% Part: set-theory
+% Chapter: z
+% Section: union
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{z}{union}
+\olsection{சேர்ப்பு}
+
+\olref[sth][z][sep]{prop:intersectionsexist} நமக்கு வெட்டுகளைத் தந்தது.
+ஆனால் தன்னிச்சையான சேர்ப்புகள் இருக்க வேண்டுமெனில், மேலும் ஓர் அடிகோளை
+வகுக்க வேண்டும்:
+
+\begin{axiom}[சேர்ப்பு] எந்தக் கணம் $A$ க்கும், பின்வரும் கணம் உள்ளது:
+$\bigcup A = \Setabs{x}{(\exists b \in A) x \in b}$.
+\[
+	\forall A \exists U \forall x(x \in U \liff (\exists b \in A)x \in b)
+\]
+\end{axiom}
+
+திரள்வுறும் படிநிலைமுறைக் கருத்தாக்கமும் இந்த அடிகோளை நியாயப்படுத்துகிறது.
+$A$ ஒரு கணம் என்க; ஆகவே $A$ ஏதோ ஒரு படிநிலை $S$ இல் உருவாகிறது
+(\stageshier{} இன்படி). $A$ இன் ஒவ்வோர் உறுப்பும் $S$ க்கு \emph{முன்பு}
+உருவானது (\stagesacc{} இன்படி); அதேவிதமாகப் பகுத்தறிந்தால், $A$ இன்
+ஒவ்வோர் உறுப்பினுடைய ஒவ்வோர் உறுப்பும் $S$ க்கு முன்பு உருவானது. ஆகவே
+\emph{அந்தக்} கணங்கள் அனைத்தும் $S$ க்கு முன்பு கிடைக்கின்றன; அவற்றை
+$S$ இல் ஒரு கணமாக உருவாக்கலாம். அந்தக் கணமே $\bigcup A$.
+
+\end{document}

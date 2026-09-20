@@ -1,0 +1,107 @@
+{
+  "schema": "openlogic-tamil-render-qa/1",
+  "result": "pass",
+  "review_date": "2026-09-20",
+  "scope": {
+    "reader_units": 10,
+    "first_unit": "OLP-0537",
+    "last_unit": "OLP-0546",
+    "programme_completed_units": 543,
+    "total_frozen_units": 722,
+    "unit_ids": ["OLP-0537", "OLP-0538", "OLP-0539", "OLP-0540", "OLP-0541", "OLP-0542", "OLP-0543", "OLP-0544", "OLP-0545", "OLP-0546"],
+    "reader": "build/tamil-set-theory-z.pdf",
+    "source_master": "build/tamil-set-theory-z.tex"
+  },
+  "tex_guard": {
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "receipt": "TEX-SET-THEORY-Z-RECEIPT.json",
+    "receipt_bytes": 4252,
+    "receipt_sha256": "ea81e515e3fb10079f252455ae3b6df6c0915c62958ff3416c2251e2aa996147",
+    "engine": "xelatex",
+    "passes": 3,
+    "bibtex": true,
+    "status": "built",
+    "final_pass_undefined_references": 0,
+    "missing_character_messages": 0,
+    "overfull_messages": 0
+  },
+  "master": {
+    "bytes": 9999,
+    "sha256": "ee51a27d74995b906fc9d37471732377e6972ad5fd71e436fc6c1c12a8036b6a"
+  },
+  "pdf": {
+    "path": "readers/set-theory-zermelo-axioms-ta-Taml-IN.pdf",
+    "bytes": 169849,
+    "sha256": "1e0a0136b0e32b96a14996dc4f4c0ab7e63c7031c5b8208753959ba35f0f4660",
+    "pages": 14,
+    "page_size": "A4",
+    "fonts_embedded": true,
+    "tamil_fonts_unicode_mapped": true
+  },
+  "renders": [
+    {"page": 1, "bytes": 137059, "sha256": "52f8693263f52f73e0c10610c7b8e651135749e50e2c7fecefde207563f07c0b"},
+    {"page": 2, "bytes": 71002, "sha256": "83f32121842bc7d1e228ebd0140caa668d6eb2f5361540e1418967c94ce4f635"},
+    {"page": 3, "bytes": 371791, "sha256": "10cc4cb1309a70a4d8ab26c80f7daa913d13b59ee37cef583ad9b109c35c68b9"},
+    {"page": 4, "bytes": 430645, "sha256": "52e480935d36e835f3e1c1fe039a98658b35673e9b6a6cc13bd2d14d6e60e600"},
+    {"page": 5, "bytes": 438767, "sha256": "3ec4ebe747d406bc172de9408531e51b3dbdb0c14284e8790825447dd9468a8d"},
+    {"page": 6, "bytes": 417789, "sha256": "174878c61af6960f434f332327ca323aa4f1c8a5607b5c5f23594561f84e72f0"},
+    {"page": 7, "bytes": 401832, "sha256": "3b6dbd09ef8aa27b9275657b73915c216b8a5bbafecedc736984ddfa00ee7309"},
+    {"page": 8, "bytes": 423077, "sha256": "daf10d7cb6bfae57a66e4f61b628ade9415810b4124a44071b759a36f9f6e8ee"},
+    {"page": 9, "bytes": 488732, "sha256": "74a25965bf62daf5b213990390ddbcc7fab38911f01737c50cc557ac59b07ee7"},
+    {"page": 10, "bytes": 533126, "sha256": "f47e871a254901ff28822d4ac2813fe87ba9f5c015a2fde71c86abf1f6d5d88e"},
+    {"page": 11, "bytes": 505453, "sha256": "5ff0ad85d5032924ee8481bd2ee04972101bc0158eafe4c1ec3b55051217e5e9"},
+    {"page": 12, "bytes": 480593, "sha256": "91fa2442e1b6eea826886328165977b4d22eedad64d369a9662c10c82fcb2744"},
+    {"page": 13, "bytes": 202911, "sha256": "b68a52edde1669e536592fbb79e087763e00d634818724c39cfcc27f166fc2ec"},
+    {"page": 14, "bytes": 124395, "sha256": "51ef69579620b78fbadaa1f57f1d18cbcf4c5ddc27caefc458a9e2eb308891c7"}
+  ],
+  "visual_review": {
+    "complete": true,
+    "basis": "All 14 final page PNGs were directly inspected at original rendered detail after the final guarded rebuild.",
+    "tamil_shaping_and_pulli": "pass",
+    "page_edges_and_clipping": "pass",
+    "headings_and_page_breaks": "pass",
+    "formulas": "pass",
+    "footnotes": "pass",
+    "bibliography": "pass",
+    "internal_cross_references": "pass",
+    "visible_placeholders_absent": true,
+    "visible_untranslated_stage_fallback_absent": true
+  },
+  "copy_search": {
+    "extractor": "Poppler pdftotext -layout",
+    "text_bytes": 60441,
+    "text_sha256": "34f09c6ca0949652f2954f872ce21ed7edaa00bc768a4eab7ffa082456d613f1",
+    "unicode_nfc": true,
+    "replacement_character_absent": true,
+    "tamil_phrase_checks": {
+      "கதையின் கூடுதல் விவரம்": true,
+      "பிரிப்பு அடிகோள் திட்டம்": true,
+      "சேர்ப்பு": true,
+      "ஜோடிகள்": true,
+      "அடுக்குக்கணங்கள்": true,
+      "முடிவிலி": true,
+      "ஒரு முக்கியக் கட்டம்": true,
+      "நமது இயல் எண்களைத் தேர்ந்தெடுத்தல்": true,
+      "பின்னிணைப்பு": true
+    },
+    "formula_token_checks": {
+      "universal_quantifier": true,
+      "existential_quantifier": true,
+      "membership": true,
+      "nonmembership": true,
+      "empty_set": true,
+      "union": true,
+      "intersection": true,
+      "subset": true,
+      "biconditional": true,
+      "implication": true,
+      "omega": true,
+      "phi": true
+    },
+    "limitations": [
+      "The embedded CMSY10 symbol font has no ToUnicode map, although the embedded Tamil fonts and the representative mathematical glyphs checked here are copyable with Poppler.",
+      "PyMuPDF and pdfplumber are not certified to recover every Tamil phrase that Poppler recovers from XeTeX ActualText, so universal copy behavior across PDF engines is not claimed."
+    ]
+  },
+  "status": "pass-with-documented-cross-reader-copy-limitations"
+}

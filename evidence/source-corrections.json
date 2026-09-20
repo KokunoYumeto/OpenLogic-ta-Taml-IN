@@ -5477,6 +5477,93 @@
       "rationale": "The intended grammatical subject is unambiguously Russell.",
       "precise_review_question": "Is Russell the subject who formulated the paradox?",
       "location_needle": "SOURCE CORRECTION TA-STH-004"
+    },
+    {
+      "audit_id": "TA-STH-005",
+      "unit_id": "OLP-0538",
+      "kind": "stage-principle-caution-missing-verb",
+      "action": "Supplied the missing verb and described the italicized labels as mnemonic names used by the authors.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source sentence ‘We simply monikers which we hope are helpful’ has no finite verb.",
+      "chosen_treatment": "தமிழ் உதவியாக இருக்கும் என நம்பும் நினைவுப்பெயர்களை ஆசிரியர்கள் பயன்படுத்துகிறார்கள் என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.",
+      "alternatives_considered": "Treating ‘monikers’ as a verb, which it is not in this construction.",
+      "rationale": "The preceding sentence says the principles lack established names, so the authors are plainly introducing convenient labels.",
+      "precise_review_question": "Does the caution say that these are author-supplied mnemonic names?",
+      "location_needle": "SOURCE CORRECTION TA-STH-005"
+    },
+    {
+      "audit_id": "TA-STH-006",
+      "unit_id": "OLP-0539",
+      "kind": "separation-avoids-subject-verb-error",
+      "action": "Rendered ‘this avoid Russell's Paradox’ with the intended singular verb ‘avoids.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source uses the bare verb ‘avoid’ with singular subject ‘this.’",
+      "chosen_treatment": "தமிழ் பிரிப்பு ரஸ்ஸலின் முரண்பாட்டைத் தவிர்க்கிறது என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.",
+      "alternatives_considered": "Reproducing the English agreement error as if it changed the mathematical claim.",
+      "rationale": "The surrounding contrast with Naive Comprehension uniquely fixes the intended statement.",
+      "precise_review_question": "Does the text state that Separation avoids Russell's Paradox?",
+      "location_needle": "SOURCE CORRECTION TA-STH-006"
+    },
+    {
+      "audit_id": "TA-STH-007",
+      "unit_id": "OLP-0541",
+      "kind": "schoenfield-name-misspelling",
+      "action": "Used the same Schoenfield spelling as the cited source and the preceding chapter.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The pairs section writes ‘Shoenfield’ while the quotation, bibliography key and surrounding chapter use ‘Schoenfield.’",
+      "chosen_treatment": "தமிழ் பெயரை ஷோன்ஃபீல்ட் என்று ஒருமைப்படுத்துகிறது.",
+      "alternatives_considered": "Transliterating the isolated typo as a different person.",
+      "rationale": "The sentence explicitly refers back to the same set-formation story quoted from Schoenfield.",
+      "precise_review_question": "Is the reference to Schoenfield spelled consistently?",
+      "location_needle": "SOURCE CORRECTION TA-STH-007"
+    },
+    {
+      "audit_id": "TA-STH-008",
+      "unit_id": "OLP-0545",
+      "kind": "natural-number-stipulation-demonstrative-grammar",
+      "action": "Rendered ‘this significance of this stipulation’ as ‘the significance of this stipulation.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source has a stray demonstrative in ‘We will discuss this significance of this stipulation.’",
+      "chosen_treatment": "தமிழ் இந்த நிர்ணயத்தின் முக்கியத்துவத்தை விவாதிப்போம் என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.",
+      "alternatives_considered": "Treating the duplicated demonstrative as a substantive distinction.",
+      "rationale": "The following section is plainly announced as discussing the stipulation's significance.",
+      "precise_review_question": "Does the sentence announce discussion of the stipulation's significance?",
+      "location_needle": "SOURCE CORRECTION TA-STH-008"
+    },
+    {
+      "audit_id": "TA-STH-009",
+      "unit_id": "OLP-0546",
+      "kind": "inactive-intersection-proof-lowercase-defined-set",
+      "action": "Restored uppercase C in the final line of the inactive explanatory proof.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "x\\inc",
+          "to": "x\\inC",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The proof defines uppercase C throughout but concludes with lowercase c, which is otherwise undeclared.",
+      "chosen_treatment": "தமிழ் செயலற்ற விளக்க நிறுவலின் இறுதி உறுப்புக் கூற்றிலும் வரையறுக்கப்பட்ட C ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Preserving an undeclared lowercase object in the explanatory proof.",
+      "rationale": "Both the target biconditional and Separation definition use C, so the final membership claim must use the same set.",
+      "precise_review_question": "Does the inactive proof conclude x is a member of uppercase C?",
+      "location_needle": "SOURCE CORRECTION TA-STH-009"
     }
   ],
   "by_unit": {
@@ -5651,6 +5738,11 @@
     "OLP-0528": ["TA-CF-009", "TA-CF-010", "TA-CF-011"],
     "OLP-0533": ["TA-STH-001", "TA-STH-002"],
     "OLP-0535": ["TA-STH-003"],
-    "OLP-0536": ["TA-STH-004"]
+    "OLP-0536": ["TA-STH-004"],
+    "OLP-0538": ["TA-STH-005"],
+    "OLP-0539": ["TA-STH-006"],
+    "OLP-0541": ["TA-STH-007"],
+    "OLP-0545": ["TA-STH-008"],
+    "OLP-0546": ["TA-STH-009"]
   }
 }

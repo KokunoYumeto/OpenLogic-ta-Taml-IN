@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 520/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 529/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -4463,6 +4463,86 @@ Please double-check: **is Russell the subject who formulated the paradox?**
 
 - `TA-OCC-102801f07f08ac7d` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:14`; PDF page pending.
 
+## TA-STH-005 — The source sentence ‘We simply monikers which we hope are helpful’ has no finite verb.
+
+Chosen rendering: **தமிழ் உதவியாக இருக்கும் என நம்பும் நினைவுப்பெயர்களை ஆசிரியர்கள் பயன்படுத்துகிறார்கள் என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding sentence says the principles lack established names, so the authors are plainly introducing convenient labels.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0538 (checked_supports)
+
+Alternatives: Treating ‘monikers’ as a verb, which it is not in this construction.
+
+Please double-check: **does the caution say that these are author-supplied mnemonic names?**
+
+- `TA-OCC-bc9adb5337ee0a39` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:1`; Tamil `translation/content/set-theory/z/story.tex:41`; PDF page pending.
+
+## TA-STH-006 — The source uses the bare verb ‘avoid’ with singular subject ‘this.’
+
+Chosen rendering: **தமிழ் பிரிப்பு ரஸ்ஸலின் முரண்பாட்டைத் தவிர்க்கிறது என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The surrounding contrast with Naive Comprehension uniquely fixes the intended statement.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0539 (checked_supports)
+
+Alternatives: Reproducing the English agreement error as if it changed the mathematical claim.
+
+Please double-check: **does the text state that Separation avoids Russell's Paradox?**
+
+- `TA-OCC-6d16eaa39b4ffb51` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:1`; Tamil `translation/content/set-theory/z/separation.tex:57`; PDF page pending.
+
+## TA-STH-007 — The pairs section writes ‘Shoenfield’ while the quotation, bibliography key and surrounding chapter use ‘Schoenfield.’
+
+Chosen rendering: **தமிழ் பெயரை ஷோன்ஃபீல்ட் என்று ஒருமைப்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The sentence explicitly refers back to the same set-formation story quoted from Schoenfield.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0541 (checked_supports)
+
+Alternatives: Transliterating the isolated typo as a different person.
+
+Please double-check: **is the reference to Schoenfield spelled consistently?**
+
+- `TA-OCC-018d271327b0a813` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:1`; Tamil `translation/content/set-theory/z/pairs.tex:43`; PDF page pending.
+
+## TA-STH-008 — The source has a stray demonstrative in ‘We will discuss this significance of this stipulation.’
+
+Chosen rendering: **தமிழ் இந்த நிர்ணயத்தின் முக்கியத்துவத்தை விவாதிப்போம் என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The following section is plainly announced as discussing the stipulation's significance.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0545 (checked_supports)
+
+Alternatives: Treating the duplicated demonstrative as a substantive distinction.
+
+Please double-check: **does the sentence announce discussion of the stipulation's significance?**
+
+- `TA-OCC-77b7bf462395d6ed` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:1`; Tamil `translation/content/set-theory/z/nat.tex:62`; PDF page pending.
+
+## TA-STH-009 — The proof defines uppercase C throughout but concludes with lowercase c, which is otherwise undeclared.
+
+Chosen rendering: **தமிழ் செயலற்ற விளக்க நிறுவலின் இறுதி உறுப்புக் கூற்றிலும் வரையறுக்கப்பட்ட C ஐப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Both the target biconditional and Separation definition use C, so the final membership claim must use the same set.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0546 (checked_supports)
+
+Alternatives: Preserving an undeclared lowercase object in the explanatory proof.
+
+Please double-check: **does the inactive proof conclude x is a member of uppercase C?**
+
+- `TA-OCC-bdba0af58e8b05e3` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:1`; Tamil `translation/content/set-theory/z/arbintersections.tex:58`; PDF page pending.
+
 ## TA-T007 — extensionality
 
 Chosen rendering: **உறுப்புசார் சமத்துவம்**
@@ -4492,6 +4572,8 @@ Please double-check: **is “உறுப்புசார் சமத்த�
 - `TA-OCC-466dc3b8d6301b40` — OLP-0531 / `OLP-0531-S01`; source `content/set-theory/story/extensionality.tex:5`; Tamil `translation/content/set-theory/story/extensionality.tex:11`; PDF page pending.
 - `TA-OCC-ce0f08b186e5da76` — OLP-0531 / `OLP-0531-S01`; source `content/set-theory/story/extensionality.tex:6`; Tamil `translation/content/set-theory/story/extensionality.tex:16`; PDF page pending.
 - `TA-OCC-c901f99d4ede9d2e` — OLP-0532 / `OLP-0532-S01`; source `content/set-theory/story/russells-paradox-again.tex:37`; Tamil `translation/content/set-theory/story/russells-paradox-again.tex:48`; PDF page pending.
+- `TA-OCC-1d570be0c8c7feee` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:13`; Tamil `translation/content/set-theory/z/milestone.tex:19`; PDF page pending.
+- `TA-OCC-0352a37bf8ee4787` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:32`; Tamil `translation/content/set-theory/z/arbintersections.tex:38`; PDF page pending.
 
 ## TA-T009 — if and only if
 
@@ -4983,6 +5065,10 @@ Please double-check: **is “பண்புவழிக் கணமாக்�
 - `TA-OCC-a7df0b056d0f90b5` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:61`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:68`; PDF page pending.
 - `TA-OCC-95706e8aa30caea7` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:12`; Tamil `translation/content/set-theory/story/grundgesetze.tex:19`; PDF page pending.
 - `TA-OCC-9c911313c712bb86` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:14`; Tamil `translation/content/set-theory/story/grundgesetze.tex:63`; PDF page pending.
+- `TA-OCC-2749a6cbbc3db1b7` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:8`; Tamil `translation/content/set-theory/z/separation.tex:13`; PDF page pending.
+- `TA-OCC-fc04a582009b0f28` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:42`; Tamil `translation/content/set-theory/z/separation.tex:51`; PDF page pending.
+- `TA-OCC-1d66b66ce4afcbab` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:6`; Tamil `translation/content/set-theory/z/arbintersections.tex:11`; PDF page pending.
+- `TA-OCC-7d7fc21c605eed64` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:21`; Tamil `translation/content/set-theory/z/arbintersections.tex:27`; PDF page pending.
 
 ## TA-T016 — Russell paradox / contradiction
 
@@ -5143,6 +5229,9 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-8ed743297e9c85e7` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:16`; PDF page pending.
 - `TA-OCC-7b6133f4c17435e0` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:20`; PDF page pending.
 - `TA-OCC-74e14e352c5badf8` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:78`; PDF page pending.
+- `TA-OCC-e3f398ea6a02c8cc` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:1`; Tamil `translation/content/set-theory/z/separation.tex:51`; PDF page pending.
+- `TA-OCC-3f53c1cc99717744` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:1`; Tamil `translation/content/set-theory/z/separation.tex:67`; PDF page pending.
+- `TA-OCC-3025b3fa2a55e3df` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:1`; Tamil `translation/content/set-theory/z/separation.tex:70`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5459,6 +5548,30 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-08fe00ee2bd27adb` — OLP-0531 / `OLP-0531-S01`; source `content/set-theory/story/extensionality.tex:11`; Tamil `translation/content/set-theory/story/extensionality.tex:27`; PDF page pending.
 - `TA-OCC-f7c889bcda67bc48` — OLP-0532 / `OLP-0532-S01`; source `content/set-theory/story/russells-paradox-again.tex:37`; Tamil `translation/content/set-theory/story/russells-paradox-again.tex:14`; PDF page pending.
 - `TA-OCC-20f048ecb0a145ed` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:8`; Tamil `translation/content/set-theory/story/urelements.tex:14`; PDF page pending.
+- `TA-OCC-d134feb963a96908` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:26`; Tamil `translation/content/set-theory/z/story.tex:34`; PDF page pending.
+- `TA-OCC-90024f424dd5b048` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:29`; Tamil `translation/content/set-theory/z/story.tex:37`; PDF page pending.
+- `TA-OCC-1a67b1c10e38eca2` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:10`; Tamil `translation/content/set-theory/z/separation.tex:16`; PDF page pending.
+- `TA-OCC-8e71aa1e21cc6337` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:11`; Tamil `translation/content/set-theory/z/separation.tex:17`; PDF page pending.
+- `TA-OCC-73c9aeb7bcb2ac24` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:12`; Tamil `translation/content/set-theory/z/separation.tex:21`; PDF page pending.
+- `TA-OCC-fca857ab00d5a660` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:14`; Tamil `translation/content/set-theory/z/separation.tex:21`; PDF page pending.
+- `TA-OCC-17c1b487996fbf74` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:14`; Tamil `translation/content/set-theory/z/separation.tex:22`; PDF page pending.
+- `TA-OCC-c863219e677b0c3a` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:15`; Tamil `translation/content/set-theory/z/separation.tex:28`; PDF page pending.
+- `TA-OCC-68c8a778fe79f55e` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:21`; Tamil `translation/content/set-theory/z/separation.tex:35`; PDF page pending.
+- `TA-OCC-9b9c4db8059db7eb` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:28`; Tamil `translation/content/set-theory/z/separation.tex:86`; PDF page pending.
+- `TA-OCC-8b8bcdeea439d2c3` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:8`; Tamil `translation/content/set-theory/z/pairs.tex:13`; PDF page pending.
+- `TA-OCC-f85f02b42b459c7f` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:8`; Tamil `translation/content/set-theory/z/powerset.tex:54`; PDF page pending.
+- `TA-OCC-4d73869b675e1c7f` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:10`; Tamil `translation/content/set-theory/z/powerset.tex:55`; PDF page pending.
+- `TA-OCC-09c16541b5207a51` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:8`; Tamil `translation/content/set-theory/z/infinity-again.tex:14`; PDF page pending.
+- `TA-OCC-ed1d6d137b65e0da` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:36`; Tamil `translation/content/set-theory/z/infinity-again.tex:43`; PDF page pending.
+- `TA-OCC-30cc86b262c4493a` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:38`; Tamil `translation/content/set-theory/z/infinity-again.tex:56`; PDF page pending.
+- `TA-OCC-a68d4d3b1b38b5ac` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:40`; Tamil `translation/content/set-theory/z/infinity-again.tex:64`; PDF page pending.
+- `TA-OCC-da2d2bf6a3bf40fc` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:46`; Tamil `translation/content/set-theory/z/infinity-again.tex:124`; PDF page pending.
+- `TA-OCC-03ee142ee2b8b068` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:9`; Tamil `translation/content/set-theory/z/milestone.tex:15`; PDF page pending.
+- `TA-OCC-6098632400c8adc1` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:10`; Tamil `translation/content/set-theory/z/milestone.tex:19`; PDF page pending.
+- `TA-OCC-09c00840bcf1a23f` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:13`; Tamil `translation/content/set-theory/z/milestone.tex:20`; PDF page pending.
+- `TA-OCC-80d6aaf13340955b` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:10`; Tamil `translation/content/set-theory/z/nat.tex:25`; PDF page pending.
+- `TA-OCC-5cb1432fece08df3` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:20`; Tamil `translation/content/set-theory/z/nat.tex:26`; PDF page pending.
+- `TA-OCC-7c60e277b7117caa` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:21`; Tamil `translation/content/set-theory/z/nat.tex:30`; PDF page pending.
 
 ## TA-T020 — tuple / recursive definition
 
@@ -5948,6 +6061,7 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-5693a4937408bd68` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:63`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:68`; PDF page pending.
 - `TA-OCC-e6853bb8bca918a5` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:100`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:106`; PDF page pending.
 - `TA-OCC-f23db441a0387fbe` — OLP-0532 / `OLP-0532-S01`; source `content/set-theory/story/russells-paradox-again.tex:23`; Tamil `translation/content/set-theory/story/russells-paradox-again.tex:46`; PDF page pending.
+- `TA-OCC-ed830bdbd541d160` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:74`; Tamil `translation/content/set-theory/z/infinity-again.tex:85`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -6408,6 +6522,8 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-037245a658a1f360` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:43`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:40`; PDF page pending.
 - `TA-OCC-60c7b29a4a85c001` — OLP-0523 / `OLP-0523-S01`; source `content/counterfactuals/minimal-change-semantics/introduction.tex:43`; Tamil `translation/content/counterfactuals/minimal-change-semantics/introduction.tex:47`; PDF page pending.
 - `TA-OCC-0252bea4c65b9708` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:20`; PDF page pending.
+- `TA-OCC-42d923ae1563b8d1` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:51`; Tamil `translation/content/set-theory/z/powerset.tex:63`; PDF page pending.
+- `TA-OCC-0da95b57ae0be01d` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:52`; Tamil `translation/content/set-theory/z/nat.tex:59`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -6537,6 +6653,7 @@ Please double-check: **is “சமான வகுப்பு / ஈவுக�
 - `TA-OCC-c714098276836cef` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:35`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:38`; PDF page pending.
 - `TA-OCC-4209aa75270b75f5` — OLP-0452 / `OLP-0452-S01`; source `content/normal-modal-logic/filtrations/preliminaries.tex:46`; Tamil `translation/content/normal-modal-logic/filtrations/preliminaries.tex:50`; PDF page pending.
 - `TA-OCC-95aa47a1c02ea950` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:46`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:48`; PDF page pending.
+- `TA-OCC-f19eae1b699125c7` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:58`; Tamil `translation/content/set-theory/z/powerset.tex:69`; PDF page pending.
 
 ## TA-T031 — modular arithmetic
 
@@ -10155,6 +10272,10 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-4448e43daa7e5227` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:51`; Tamil `translation/content/set-theory/story/predicativity.tex:62`; PDF page pending.
 - `TA-OCC-7bf7165c5901713a` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:55`; Tamil `translation/content/set-theory/story/predicativity.tex:66`; PDF page pending.
 - `TA-OCC-6f6b57f8ab8f1be1` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:40`; Tamil `translation/content/set-theory/story/grundgesetze.tex:47`; PDF page pending.
+- `TA-OCC-b60b8a9cc19a570c` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:10`; Tamil `translation/content/set-theory/z/separation.tex:16`; PDF page pending.
+- `TA-OCC-dd8ff0563bf5e56d` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:16`; Tamil `translation/content/set-theory/z/separation.tex:23`; PDF page pending.
+- `TA-OCC-7ab8d6c70f51b664` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:20`; Tamil `translation/content/set-theory/z/separation.tex:27`; PDF page pending.
+- `TA-OCC-48149288777f6411` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:28`; Tamil `translation/content/set-theory/z/separation.tex:35`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -11474,6 +11595,7 @@ Please double-check: **is “டெடெகிண்ட் இயற்கண�
 - `TA-OCC-ea7f752321893ea8` — OLP-0051 / `OLP-0051-S06`; source `content/sets-functions-relations/infinite/dedekind-algebra.tex:93`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:112`; PDF page pending.
 - `TA-OCC-4098d9084d98842a` — OLP-0051 / `OLP-0051-S07`; source `content/sets-functions-relations/infinite/dedekind-algebra.tex:99`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:121`; PDF page pending.
 - `TA-OCC-fe12694243a7733a` — OLP-0052 / `OLP-0052-S01`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:10`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:13`; PDF page pending.
+- `TA-OCC-776754d36c554abf` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:31`; Tamil `translation/content/set-theory/z/infinity-again.tex:40`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -12616,6 +12738,9 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-2e90306b98cf2dad` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:36`; Tamil `translation/content/set-theory/story/predicativity.tex:41`; PDF page pending.
 - `TA-OCC-393adaa3f2b7e902` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:36`; Tamil `translation/content/set-theory/story/predicativity.tex:76`; PDF page pending.
 - `TA-OCC-b8dd4757b23ffd0f` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:74`; PDF page pending.
+- `TA-OCC-3c402d372887ece3` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:17`; Tamil `translation/content/set-theory/z/story.tex:21`; PDF page pending.
+- `TA-OCC-0a6c66eacde9505d` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:19`; Tamil `translation/content/set-theory/z/story.tex:22`; PDF page pending.
+- `TA-OCC-8c840be3927a1ad2` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:1`; Tamil `translation/content/set-theory/z/nat.tex:20`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -12916,6 +13041,30 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-e0a06e1cdcfdb85a` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:38`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:40`; PDF page pending.
 - `TA-OCC-5d8230c12187b081` — OLP-0531 / `OLP-0531-S01`; source `content/set-theory/story/extensionality.tex:11`; Tamil `translation/content/set-theory/story/extensionality.tex:27`; PDF page pending.
 - `TA-OCC-3fea8805d91c0e40` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:8`; Tamil `translation/content/set-theory/story/urelements.tex:14`; PDF page pending.
+- `TA-OCC-3068a2706a3783fc` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:26`; Tamil `translation/content/set-theory/z/story.tex:34`; PDF page pending.
+- `TA-OCC-855143096d25606a` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:29`; Tamil `translation/content/set-theory/z/story.tex:37`; PDF page pending.
+- `TA-OCC-ab2d8659bc5c3450` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:10`; Tamil `translation/content/set-theory/z/separation.tex:16`; PDF page pending.
+- `TA-OCC-854abbf831821a2a` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:11`; Tamil `translation/content/set-theory/z/separation.tex:17`; PDF page pending.
+- `TA-OCC-0e46ddff24b5edc0` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:12`; Tamil `translation/content/set-theory/z/separation.tex:21`; PDF page pending.
+- `TA-OCC-3c5426bbd652411c` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:14`; Tamil `translation/content/set-theory/z/separation.tex:21`; PDF page pending.
+- `TA-OCC-8429e88c4afd60f4` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:14`; Tamil `translation/content/set-theory/z/separation.tex:22`; PDF page pending.
+- `TA-OCC-2b8fb91f38e24f0f` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:15`; Tamil `translation/content/set-theory/z/separation.tex:28`; PDF page pending.
+- `TA-OCC-b1c6c5e5e6431098` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:21`; Tamil `translation/content/set-theory/z/separation.tex:35`; PDF page pending.
+- `TA-OCC-dfad2204ac063ec9` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:28`; Tamil `translation/content/set-theory/z/separation.tex:86`; PDF page pending.
+- `TA-OCC-d2d0ca539cce7e47` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:8`; Tamil `translation/content/set-theory/z/pairs.tex:13`; PDF page pending.
+- `TA-OCC-6e02d01324b84021` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:8`; Tamil `translation/content/set-theory/z/powerset.tex:54`; PDF page pending.
+- `TA-OCC-0a2973f3e7a70f5f` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:10`; Tamil `translation/content/set-theory/z/powerset.tex:55`; PDF page pending.
+- `TA-OCC-4ea067a302c167c1` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:8`; Tamil `translation/content/set-theory/z/infinity-again.tex:14`; PDF page pending.
+- `TA-OCC-10390573c888683c` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:36`; Tamil `translation/content/set-theory/z/infinity-again.tex:43`; PDF page pending.
+- `TA-OCC-8a3c0b31ad569d73` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:38`; Tamil `translation/content/set-theory/z/infinity-again.tex:56`; PDF page pending.
+- `TA-OCC-1eb89ccc136137e0` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:40`; Tamil `translation/content/set-theory/z/infinity-again.tex:64`; PDF page pending.
+- `TA-OCC-f64154957f8891f2` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:46`; Tamil `translation/content/set-theory/z/infinity-again.tex:124`; PDF page pending.
+- `TA-OCC-317b5fcbb2ac8b6f` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:9`; Tamil `translation/content/set-theory/z/milestone.tex:15`; PDF page pending.
+- `TA-OCC-d73446ab697b008c` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:10`; Tamil `translation/content/set-theory/z/milestone.tex:19`; PDF page pending.
+- `TA-OCC-f5e1895058ca2615` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:13`; Tamil `translation/content/set-theory/z/milestone.tex:20`; PDF page pending.
+- `TA-OCC-f80a592fadaa3106` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:10`; Tamil `translation/content/set-theory/z/nat.tex:25`; PDF page pending.
+- `TA-OCC-8239ea286f750bb9` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:20`; Tamil `translation/content/set-theory/z/nat.tex:26`; PDF page pending.
+- `TA-OCC-d2428aff269f726c` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:21`; Tamil `translation/content/set-theory/z/nat.tex:30`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -14848,6 +14997,10 @@ Please double-check: **is “தருக்க விதி / கட்டம�
 - `TA-OCC-c06b57f82922b042` — OLP-0499 / `OLP-0499-S01`; source `content/intuitionistic-logic/semantics/introduction.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/introduction.tex:76`; PDF page pending.
 - `TA-OCC-b39efb60abeea98d` — OLP-0502 / `OLP-0502-S01`; source `content/intuitionistic-logic/semantics/topological-semantics.tex:1`; Tamil `translation/content/intuitionistic-logic/semantics/topological-semantics.tex:26`; PDF page pending.
 - `TA-OCC-1326950c76dc32aa` — OLP-0524 / `OLP-0524-S01`; source `content/counterfactuals/minimal-change-semantics/sphere-models.tex:1`; Tamil `translation/content/counterfactuals/minimal-change-semantics/sphere-models.tex:35`; PDF page pending.
+- `TA-OCC-51a29629396c1cbb` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:1`; Tamil `translation/content/set-theory/z/separation.tex:107`; PDF page pending.
+- `TA-OCC-29bab27d232422de` — OLP-0540 / `OLP-0540-S01`; source `content/set-theory/z/union.tex:1`; Tamil `translation/content/set-theory/z/union.tex:13`; PDF page pending.
+- `TA-OCC-7cf810aa74b1c845` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:1`; Tamil `translation/content/set-theory/z/arbintersections.tex:11`; PDF page pending.
+- `TA-OCC-28166d554fd03a0f` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:1`; Tamil `translation/content/set-theory/z/arbintersections.tex:59`; PDF page pending.
 
 ## TA-T099 — eigenvariable / eigenvariable condition
 
@@ -16742,6 +16895,7 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-77cd42df1260fa2b` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:1`; Tamil `translation/content/set-theory/story/predicativity.tex:20`; PDF page pending.
 - `TA-OCC-933be7e0420b4c03` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:1`; Tamil `translation/content/set-theory/story/predicativity.tex:23`; PDF page pending.
 - `TA-OCC-f41aa2e484e1656b` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:27`; PDF page pending.
+- `TA-OCC-d3614978793a4cf2` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:62`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -18049,6 +18203,7 @@ Please double-check: **is “கணிக்கத்தக்கவாறு �
 - `TA-OCC-a3584f8587a6cf42` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:1`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:69`; PDF page pending.
 - `TA-OCC-6e128629cb391c9c` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:64`; Tamil `translation/content/set-theory/story/urelements.tex:73`; PDF page pending.
 - `TA-OCC-69e3410bd8434a3b` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:20`; Tamil `translation/content/set-theory/story/grundgesetze.tex:27`; PDF page pending.
+- `TA-OCC-1bc7156bb0274ef7` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:52`; Tamil `translation/content/set-theory/z/powerset.tex:62`; PDF page pending.
 
 ## TA-T118 — many-one reduction / one-one reduction / Turing reducibility / Karp reducibility / Cook reducibility
 
@@ -18954,6 +19109,9 @@ Please double-check: **is “முறைப்படுத்தல் / கோ
 - `TA-OCC-bad0112eaf95986f` — OLP-0532 / `OLP-0532-S01`; source `content/set-theory/story/russells-paradox-again.tex:8`; Tamil `translation/content/set-theory/story/russells-paradox-again.tex:76`; PDF page pending.
 - `TA-OCC-281fec0e7e2dee3b` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:18`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:72`; PDF page pending.
 - `TA-OCC-5b6e68722fa427da` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:44`; Tamil `translation/content/set-theory/story/urelements.tex:87`; PDF page pending.
+- `TA-OCC-1c4161214fd4d4d3` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:10`; Tamil `translation/content/set-theory/z/milestone.tex:19`; PDF page pending.
+- `TA-OCC-29216d90335a2e4d` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:50`; Tamil `translation/content/set-theory/z/nat.tex:57`; PDF page pending.
+- `TA-OCC-2af27baba775ca77` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:53`; Tamil `translation/content/set-theory/z/nat.tex:59`; PDF page pending.
 
 ## TA-T130 — axiomatized / axiomatizable / induction schema / Robinson Q / Peano arithmetic
 
@@ -21866,6 +22024,14 @@ Please double-check: **is “கோள மாதிரி / கோளங்க�
 - `TA-OCC-b2195906e5ed3079` — OLP-0527 / `OLP-0527-S01`; source `content/counterfactuals/minimal-change-semantics/transitivity.tex:59`; Tamil `translation/content/counterfactuals/minimal-change-semantics/transitivity.tex:66`; PDF page pending.
 - `TA-OCC-9dfb3c9483ed4de5` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:57`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:63`; PDF page pending.
 - `TA-OCC-bb862538955d7e6f` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:59`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:65`; PDF page pending.
+- `TA-OCC-691b3903d5b7d1e0` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:11`; PDF page pending.
+- `TA-OCC-091280ff8059db8c` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:15`; PDF page pending.
+- `TA-OCC-be227344ee9ae1bf` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:32`; PDF page pending.
+- `TA-OCC-e33f84b40033114a` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:40`; PDF page pending.
+- `TA-OCC-151091465c2369bc` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:54`; PDF page pending.
+- `TA-OCC-4ae53f88faf5a5f2` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:55`; PDF page pending.
+- `TA-OCC-48aa2e9e0dfb2541` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:58`; PDF page pending.
+- `TA-OCC-2d338556472f837b` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:1`; Tamil `translation/content/set-theory/z/milestone.tex:20`; PDF page pending.
 
 ## TA-T199 — truth-functional / vacuously true / non-vacuously true / monotonic conditional / transitive conditional
 
@@ -21987,6 +22153,59 @@ Please double-check: **is “படிநிலைமுறைக் கணக�
 - `TA-OCC-300d883eb91cb5e7` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:9`; Tamil `translation/content/set-theory/story/urelements.tex:13`; PDF page pending.
 - `TA-OCC-f5fa7be479f4aebf` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:9`; Tamil `translation/content/set-theory/story/urelements.tex:21`; PDF page pending.
 - `TA-OCC-30e1fae9a2b0055b` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:16`; Tamil `translation/content/set-theory/story/urelements.tex:22`; PDF page pending.
+- `TA-OCC-df28fcf353b78df5` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:13`; Tamil `translation/content/set-theory/z/story.tex:17`; PDF page pending.
+- `TA-OCC-3e5ef5121d7b31e2` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:14`; Tamil `translation/content/set-theory/z/story.tex:18`; PDF page pending.
+- `TA-OCC-5879f926785b537d` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:15`; Tamil `translation/content/set-theory/z/story.tex:18`; PDF page pending.
+- `TA-OCC-d5bc1ef833c88df2` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:20`; Tamil `translation/content/set-theory/z/story.tex:19`; PDF page pending.
+- `TA-OCC-b3fbce66f215c948` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:21`; Tamil `translation/content/set-theory/z/story.tex:25`; PDF page pending.
+- `TA-OCC-1f3bb73b113c08ac` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:22`; Tamil `translation/content/set-theory/z/story.tex:28`; PDF page pending.
+- `TA-OCC-04099da5b2c7b345` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:22`; Tamil `translation/content/set-theory/z/story.tex:28`; PDF page pending.
+- `TA-OCC-0846408a3595009e` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:23`; Tamil `translation/content/set-theory/z/story.tex:30`; PDF page pending.
+- `TA-OCC-1100dfa2b5d6d4db` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:23`; Tamil `translation/content/set-theory/z/story.tex:30`; PDF page pending.
+- `TA-OCC-503adc616a3f3991` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:35`; Tamil `translation/content/set-theory/z/separation.tex:40`; PDF page pending.
+- `TA-OCC-86e1576ad07b6eae` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:36`; Tamil `translation/content/set-theory/z/separation.tex:42`; PDF page pending.
+- `TA-OCC-a0838f8a4a050cbe` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:36`; Tamil `translation/content/set-theory/z/separation.tex:43`; PDF page pending.
+- `TA-OCC-37044e200617705a` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:39`; Tamil `translation/content/set-theory/z/separation.tex:44`; PDF page pending.
+- `TA-OCC-f20d69a7d132e40a` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:40`; Tamil `translation/content/set-theory/z/separation.tex:46`; PDF page pending.
+- `TA-OCC-726ad241acebb927` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:62`; Tamil `translation/content/set-theory/z/separation.tex:47`; PDF page pending.
+- `TA-OCC-5db8a47d1118255f` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:63`; Tamil `translation/content/set-theory/z/separation.tex:73`; PDF page pending.
+- `TA-OCC-7f4d0a3e25ee3674` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:63`; Tamil `translation/content/set-theory/z/separation.tex:74`; PDF page pending.
+- `TA-OCC-5d09b146475af211` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:66`; Tamil `translation/content/set-theory/z/separation.tex:77`; PDF page pending.
+- `TA-OCC-aa3959e63935c80e` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:67`; Tamil `translation/content/set-theory/z/separation.tex:79`; PDF page pending.
+- `TA-OCC-7fd8b350c69ebc8d` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:69`; Tamil `translation/content/set-theory/z/separation.tex:79`; PDF page pending.
+- `TA-OCC-c5a6137f527c6aac` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:69`; Tamil `translation/content/set-theory/z/separation.tex:82`; PDF page pending.
+- `TA-OCC-5a1659961c67dcba` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:69`; Tamil `translation/content/set-theory/z/separation.tex:82`; PDF page pending.
+- `TA-OCC-a12e783f65a9e75e` — OLP-0540 / `OLP-0540-S01`; source `content/set-theory/z/union.tex:19`; Tamil `translation/content/set-theory/z/union.tex:24`; PDF page pending.
+- `TA-OCC-1f4c861d0bb1b115` — OLP-0540 / `OLP-0540-S01`; source `content/set-theory/z/union.tex:19`; Tamil `translation/content/set-theory/z/union.tex:25`; PDF page pending.
+- `TA-OCC-5494308fe106870a` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:22`; PDF page pending.
+- `TA-OCC-69fe98b81ee95b80` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:23`; PDF page pending.
+- `TA-OCC-ff012d555f393585` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:24`; PDF page pending.
+- `TA-OCC-d985257cd8e8504b` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:25`; PDF page pending.
+- `TA-OCC-4fe84518911ff3ac` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:25`; PDF page pending.
+- `TA-OCC-057b794a919c22c9` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:27`; PDF page pending.
+- `TA-OCC-91b31d058b9ce6b1` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:19`; Tamil `translation/content/set-theory/z/pairs.tex:29`; PDF page pending.
+- `TA-OCC-556beb171b121ae5` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:21`; Tamil `translation/content/set-theory/z/pairs.tex:35`; PDF page pending.
+- `TA-OCC-5e82a83af14e8b2c` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:24`; Tamil `translation/content/set-theory/z/pairs.tex:37`; PDF page pending.
+- `TA-OCC-8a622a8903e54da1` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:26`; Tamil `translation/content/set-theory/z/pairs.tex:40`; PDF page pending.
+- `TA-OCC-aaa151223ae52e41` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:18`; Tamil `translation/content/set-theory/z/powerset.tex:23`; PDF page pending.
+- `TA-OCC-e93ef1f7a42a2ab4` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:20`; Tamil `translation/content/set-theory/z/powerset.tex:27`; PDF page pending.
+- `TA-OCC-0e8096827333f977` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:21`; Tamil `translation/content/set-theory/z/powerset.tex:28`; PDF page pending.
+- `TA-OCC-c4430dea07534cbf` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:22`; Tamil `translation/content/set-theory/z/powerset.tex:29`; PDF page pending.
+- `TA-OCC-cbf0b4432f173764` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:23`; Tamil `translation/content/set-theory/z/powerset.tex:30`; PDF page pending.
+- `TA-OCC-130b96aa6f44299b` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:15`; Tamil `translation/content/set-theory/z/infinity-again.tex:32`; PDF page pending.
+- `TA-OCC-df70abfd3dbe9ae9` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:16`; Tamil `translation/content/set-theory/z/infinity-again.tex:120`; PDF page pending.
+- `TA-OCC-3ef7398502e7347a` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:17`; Tamil `translation/content/set-theory/z/infinity-again.tex:121`; PDF page pending.
+- `TA-OCC-194b423a97620c2b` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:18`; Tamil `translation/content/set-theory/z/infinity-again.tex:121`; PDF page pending.
+- `TA-OCC-d3d5ff8638e52d13` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:19`; Tamil `translation/content/set-theory/z/infinity-again.tex:122`; PDF page pending.
+- `TA-OCC-de1d234043777ee0` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:26`; Tamil `translation/content/set-theory/z/infinity-again.tex:125`; PDF page pending.
+- `TA-OCC-1122db1c73586119` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:126`; PDF page pending.
+- `TA-OCC-ae355067af9a952e` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:131`; PDF page pending.
+- `TA-OCC-6fb6b9304045ddf1` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:132`; PDF page pending.
+- `TA-OCC-d8d850e5dcece57c` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:132`; PDF page pending.
+- `TA-OCC-19594d5e8458753d` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:111`; Tamil `translation/content/set-theory/z/infinity-again.tex:133`; PDF page pending.
+- `TA-OCC-6004bc76ab1e0402` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:112`; Tamil `translation/content/set-theory/z/infinity-again.tex:134`; PDF page pending.
+- `TA-OCC-cffac4fbad894b88` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:117`; Tamil `translation/content/set-theory/z/infinity-again.tex:135`; PDF page pending.
+- `TA-OCC-eb5f0f055ff764b0` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:118`; Tamil `translation/content/set-theory/z/infinity-again.tex:142`; PDF page pending.
 
 ## TA-T202 — urelement / pure set theory / reductive foundational goal
 
@@ -22036,6 +22255,86 @@ Please double-check: **is “கருத்துருவின் விர�
 - `TA-OCC-a49b4853ad496c8a` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:20`; Tamil `translation/content/set-theory/story/grundgesetze.tex:27`; PDF page pending.
 - `TA-OCC-4c238bd2f65f3c33` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:32`; Tamil `translation/content/set-theory/story/grundgesetze.tex:44`; PDF page pending.
 - `TA-OCC-8c973a003c9a09c4` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:34`; Tamil `translation/content/set-theory/story/grundgesetze.tex:59`; PDF page pending.
+
+## TA-T205 — Scheme of Separation / parameter / universal set
+
+Chosen rendering: **பிரிப்பு அடிகோள் திட்டம் / அளவுரு / அனைத்துமைக் கணம்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: கணம், உட்கணம், வாய்பாடு, அளவுரு and quantifier vocabulary continue the checked school and Tamil Virtual Academy register. The displayed schema bounds comprehension by A, while the Russell reductio fixes அனைத்துமைக் கணம் as a set containing every object. The complete axiom name is not claimed as a directly attested Tamil headword.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P4 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-T205-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “பிரிப்பு அடிகோள் திட்டம் / அளவுரு / அனைத்துமைக் கணம்” the established India-standard Tamil expression for “Scheme of Separation / parameter / universal set” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-b5d886c04bec2b36` — OLP-0343 / `OLP-0343-S01`; source `content/lambda-calculus/introduction/overview.tex:28`; Tamil `translation/content/lambda-calculus/introduction/overview.tex:27`; PDF page pending.
+- `TA-OCC-68d79762f58205d1` — OLP-0347 / `OLP-0347-S01`; source `content/lambda-calculus/introduction/currying.tex:51`; Tamil `translation/content/lambda-calculus/introduction/currying.tex:51`; PDF page pending.
+- `TA-OCC-6f176181739178c9` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:41`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:44`; PDF page pending.
+- `TA-OCC-56b0dc6d716f1372` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:10`; Tamil `translation/content/set-theory/z/separation.tex:16`; PDF page pending.
+- `TA-OCC-bdeb75038d72e6a1` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:29`; Tamil `translation/content/set-theory/z/separation.tex:35`; PDF page pending.
+- `TA-OCC-c89f1bc4485e279c` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:56`; Tamil `translation/content/set-theory/z/separation.tex:67`; PDF page pending.
+- `TA-OCC-49f2153a8f0d27dc` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:61`; Tamil `translation/content/set-theory/z/separation.tex:73`; PDF page pending.
+- `TA-OCC-2cfc1d9d20944230` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:64`; Tamil `translation/content/set-theory/z/separation.tex:76`; PDF page pending.
+
+## TA-T208 — Axiom of Infinity / von Neumann successor / omega / infinite stage / immediate predecessor
+
+Chosen rendering: **முடிவிலி அடிகோள் / ஃபான் நாய்மன் பின்வரிசையுறுப்பு / ஒமேகா / முடிவிலிப் படிநிலை / உடனடி முன்னோடி**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The checked canon supports infinity, natural-number, function and injection components. The formula s(x)=x union {x}, the least s-closed set omega and the three explicit limit-stage conditions fix the specialist senses; the full compounds are not claimed as independently attested headwords.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-AU-ANALYSIS-COUNTABLE-Q11 (checked_context_only); TA-T208-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “முடிவிலி அடிகோள் / ஃபான் நாய்மன் பின்வரிசையுறுப்பு / ஒமேகா / முடிவிலிப் படிநிலை / உடனடி முன்னோடி” the established India-standard Tamil expression for “Axiom of Infinity / von Neumann successor / omega / infinite stage / immediate predecessor” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-d66703eb318eccbc` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:56`; Tamil `translation/content/set-theory/z/infinity-again.tex:56`; PDF page pending.
+- `TA-OCC-72c22df8485f703a` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:57`; Tamil `translation/content/set-theory/z/infinity-again.tex:64`; PDF page pending.
+- `TA-OCC-bbbaf9b1d0f35626` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:58`; Tamil `translation/content/set-theory/z/infinity-again.tex:120`; PDF page pending.
+- `TA-OCC-9c307431065c757d` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:122`; PDF page pending.
+- `TA-OCC-00af4efa89e95b06` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:124`; PDF page pending.
+- `TA-OCC-d23197652d7d202f` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:20`; Tamil `translation/content/set-theory/z/nat.tex:25`; PDF page pending.
+- `TA-OCC-6aa8a349766fb48e` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:30`; Tamil `translation/content/set-theory/z/nat.tex:30`; PDF page pending.
+
+## TA-T209 — set-theoretic simulation / Benacerraf problem / alternative representations
+
+Chosen rendering: **கணக்கோட்பாட்டுப் போலமைப்பு / பெனசெராஃப் சிக்கல் / மாற்றுப் பிரதிநிதித்துவங்கள்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The paired constructions of 2, the isomorphic Dedekind-algebra role and the list of alternative encodings define the structural comparison. போலமைப்பு is used for modelling mathematical objects without asserting numerical identity; no direct Tamil attestation of the full philosophical label is claimed.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P6 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-T209-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கணக்கோட்பாட்டுப் போலமைப்பு / பெனசெராஃப் சிக்கல் / மாற்றுப் பிரதிநிதித்துவங்கள்” the established India-standard Tamil expression for “set-theoretic simulation / Benacerraf problem / alternative representations” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-9593dfac8b94444e` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:47`; Tamil `translation/content/set-theory/z/nat.tex:56`; PDF page pending.
+- `TA-OCC-74c1c5435c6f8334` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:50`; Tamil `translation/content/set-theory/z/nat.tex:59`; PDF page pending.
+- `TA-OCC-ea5b148817549f1e` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:54`; Tamil `translation/content/set-theory/z/nat.tex:60`; PDF page pending.
+- `TA-OCC-3ed11d040e55de96` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:54`; Tamil `translation/content/set-theory/z/nat.tex:61`; PDF page pending.
+
+## TA-T210 — arbitrary intersection / bounded Separation definition / closure under a function
+
+Chosen rendering: **தன்னிச்சையான வெட்டு / வரம்பிட்ட பிரிப்பு வரையறை / ஒரு சார்பின் கீழான மூடல்**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: வெட்டு, சார்பு and அடைவு continue checked mathematical usage and TA-T076. The appendix's exact biconditional and its witness set S show how Separation bounds an apparently unrestricted intersection; the complete specialist phrase is defined there rather than presented as directly attested.
+
+Authority basis: TA-SC11-P3 (checked_supports); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-T210-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தன்னிச்சையான வெட்டு / வரம்பிட்ட பிரிப்பு வரையறை / ஒரு சார்பின் கீழான மூடல்” the established India-standard Tamil expression for “arbitrary intersection / bounded Separation definition / closure under a function” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-a14dcb2b5d00ad4e` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:93`; Tamil `translation/content/set-theory/z/separation.tex:107`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

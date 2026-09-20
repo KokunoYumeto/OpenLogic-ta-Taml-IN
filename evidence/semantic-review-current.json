@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T21:05:30.583624+00:00",
+  "date_utc": "2026-09-20T21:51:26.685112+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2667,6 +2667,56 @@
       "unit_id": "OLP-0536",
       "source_sha256": "d5b70cb63a142ee49c968e41a593dd7c6131d35817afcc6fda2321fa07162cd5",
       "translation_sha256": "9cf7ede0a57ddd592abb4138d9f181fc2955d962c6d4f66c99b1000ebabf630a"
+    },
+    {
+      "unit_id": "OLP-0537",
+      "source_sha256": "43206be4ccde2c429283bc09a731a20b667ca5fcaec3030a9db434442a71a69b",
+      "translation_sha256": "b57ac62422e651aea48e8bf0f66d25d47f4fefc00f6cfad9280902308d5c772b"
+    },
+    {
+      "unit_id": "OLP-0538",
+      "source_sha256": "675bc77160d15d826fc2960c15764275f12e8ef2450e121d6f34981d7af64a99",
+      "translation_sha256": "612591ea172f834bfa71c18a17acdec92b489f4f20be45603d0c3ae17fa28f9c"
+    },
+    {
+      "unit_id": "OLP-0539",
+      "source_sha256": "5e4a9611823aa454b51908d88aa15f3fd4ee41af84f847a98e1c8a003a9b7a0b",
+      "translation_sha256": "ecd34caba3942e1f1007f29dfd40118e43dd38cf0b7093a8f5c79e775d077569"
+    },
+    {
+      "unit_id": "OLP-0540",
+      "source_sha256": "5cd50b70d0d606fa557040cfa94f3b34303bd1f5ac56c1ed03cb23ed4520fdc4",
+      "translation_sha256": "18115629a6f4ac3e593fd01574670d924614274502473c9af76a4db718382979"
+    },
+    {
+      "unit_id": "OLP-0541",
+      "source_sha256": "6e386f6c7bb1e2a08dd198e5ad421083df93eb4273efa9370d92b5432d11843f",
+      "translation_sha256": "08bfd50c1fd918de937b164282dae7e377ad67c696c3011dc3619d420b117432"
+    },
+    {
+      "unit_id": "OLP-0542",
+      "source_sha256": "e4189963f1fa098226ec3ae72a660f56882350d3d8be819b6c5232663261e722",
+      "translation_sha256": "ceaf2b1219d6d192becaba7bef694c15760081cd7fc5d73773bcdb201d457b40"
+    },
+    {
+      "unit_id": "OLP-0543",
+      "source_sha256": "29267a484b8628ec7cafd50d87dac4a0f6650914c625dec7dd06ac0e79aa3f91",
+      "translation_sha256": "750b729e3eec387a32dbf0689c098be664bbed8bc6aa280870b79bcfae0c791b"
+    },
+    {
+      "unit_id": "OLP-0544",
+      "source_sha256": "15127543e5463e6dc278ab5cb43c4127fe55a54696e9b076d77c053608a5ff40",
+      "translation_sha256": "8a7526fdbc71468d11cf4ee95f18a1869776f5f08f379923e9de1d6ba1342887"
+    },
+    {
+      "unit_id": "OLP-0545",
+      "source_sha256": "33f3b77912ba9c7217893e6a0e9f59c16b2ca51e5b0652f99850bed6aeb8f12c",
+      "translation_sha256": "d40661bc1f1117f632202d00c302d04e47634a63b5e2c886560729cae6e2e292"
+    },
+    {
+      "unit_id": "OLP-0546",
+      "source_sha256": "866857905e11e5f329a248326ba04ba14f293b388bd8e3573caaf05fb2b7d56d",
+      "translation_sha256": "93b0c3602bfd8bfb5457b3f542f48feaeafb9ff109984dd585911ee9796606be"
     }
   ],
   "samples": [
@@ -7058,6 +7108,76 @@
       "assessment": "Both second-order lemmas and their proofs remain exact; TA-STH-004 removes only the stray possessive.",
       "translation_segment_sha256": "7b8f5d62fa3eca7c16ea30fbb061d137940b2639d3b183ecb74eac538e46afc4",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0537-S01",
+      "reverse_paraphrase": "The Z chapter imports the iterative story, Separation, Union, Pairs, Powersets, Infinity, the Z-minus milestone, natural-number encodings and arbitrary intersections.",
+      "assessment": "All nine chapter imports and the chapter-ending hook remain in source order.",
+      "translation_segment_sha256": "15f3947aa34c79e17dbcd3141e44bc63ff18898c006cdf2911d92e87ba2c9084",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0538-S01",
+      "reverse_paraphrase": "Every set is formed at a stage; the stages are well ordered; and at each stage every collection of earlier sets forms a set while nothing else does.",
+      "assessment": "All three informal stage principles, their qualifications and the missing-verb source repair remain explicit.",
+      "translation_segment_sha256": "d8515b862d7fba59581cbb4a70d630ebc864e9d592a5e4af24525c96943f3215",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0539-S01",
+      "reverse_paraphrase": "Separation is a parameter-allowing axiom scheme bounded by a prior set A; it avoids Russell’s contradiction and yields no universal set, the empty set, set difference and nonempty arbitrary intersections.",
+      "assessment": "The schema, cumulative justification, theorem and three consequences remain distinct; TA-STH-006 repairs only source agreement.",
+      "translation_segment_sha256": "f5025506ab92ab3eadb7da4d556493e6369c8df044008b0b11d43211c322676d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0540-S01",
+      "reverse_paraphrase": "The Union axiom collects every member of every member of A, and the cumulative-stage account justifies the resulting set at the same stage at which A appears.",
+      "assessment": "Both informal and quantified formulations and the stage argument remain exact.",
+      "translation_segment_sha256": "c491fa4147af9d197536dd720e5cf424cc1f36eebfe08352c7d234144355eb5f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0541-S01",
+      "reverse_paraphrase": "The Pairs axiom requires the no-last-stage principle and yields singletons, binary unions, ordered pairs and all finite sets.",
+      "assessment": "The axiom, Schoenfield repair, stage justification and four consequences remain exact.",
+      "translation_segment_sha256": "ccc47b068eb40cf432a6775a3011d0d1e105c96d7fa223f9399cb5df78aae6e5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0542-S01",
+      "reverse_paraphrase": "The Powerset axiom yields Cartesian products by Separation inside Pow(Pow(A union B)); the exercises extend the construction to relations, functions and equivalence classes.",
+      "assessment": "The cumulative justification, containing set, Separation predicate and all exercises remain exact.",
+      "translation_segment_sha256": "4bec6e416600c1b187dd1560928a9086767f3ee653bae18ef0963c55284faa12",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0543-S01",
+      "reverse_paraphrase": "Infinity supplies an inductive set; omega is the least successor-closed part generated from the empty set, no natural number is Dedekind-infinite, and the story therefore needs an infinite limit stage.",
+      "assessment": "The formal axiom, closure definition, two-case proof and immediate-predecessor condition remain exact.",
+      "translation_segment_sha256": "6aec00e4806d73247b672d15f4ea72828a7529d088722fd4d2a00c49bf577f29",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0544-S01",
+      "reverse_paraphrase": "Z-minus consists of Extensionality, Union, Pairs, Powersets, Infinity and every instance of Separation.",
+      "assessment": "The milestone definition and its role as the formal setting for the earlier constructions remain explicit.",
+      "translation_segment_sha256": "baf6878fea743db05942674b0351511e103c060e287641b9888f28973aa9ac38",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0545-S01",
+      "reverse_paraphrase": "Von Neumann and Zermelo encodings both support arithmetic but represent 2 by different sets; this is the alternative-representation problem highlighted by Benacerraf.",
+      "assessment": "Both successor maps, both encodings of 2, the practical rationale and the simulation point remain exact; TA-STH-008 repairs only the source demonstrative.",
+      "translation_segment_sha256": "a282ca4eeef586425e9d5c3a761a40ce13296386b03568d73cb62326b8068f51",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0546-S01",
+      "reverse_paraphrase": "An unrestricted-looking intersection is justified when a witness set S satisfies phi, because bounded Separation on S constructs exactly the required C; the same device formalizes function closure.",
+      "assessment": "The defining biconditional, witness argument, closure application and uppercase-C correction remain exact.",
+      "translation_segment_sha256": "a4c601060e729a7d043cf1a8105d1c6ece65028fca6151409d7f07931335ba4f",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -7874,14 +7994,34 @@
     {
       "unit_id": "OLP-0536",
       "issue": "The opening says “Russell’s formulated his paradox,” using a possessive where the finite verb needs a subject. Tamil restores Russell as the subject under TA-STH-004."
+    },
+    {
+      "unit_id": "OLP-0538",
+      "issue": "The source sentence “We simply monikers which we hope will be helpful” lacks a finite verb. Tamil supplies the intended “use” sense under TA-STH-005."
+    },
+    {
+      "unit_id": "OLP-0539",
+      "issue": "The source says “this avoid Russell’s Paradox,” with singular subject and uninflected verb. Tamil restores the agreement under TA-STH-006."
+    },
+    {
+      "unit_id": "OLP-0541",
+      "issue": "The source misspells Schoenfield as “Shoenfield” in the historical attribution. Tamil restores the name under TA-STH-007."
+    },
+    {
+      "unit_id": "OLP-0545",
+      "issue": "The source phrase “the this significance” duplicates the demonstrative. Tamil states the intended significance under TA-STH-008."
+    },
+    {
+      "unit_id": "OLP-0546",
+      "issue": "The inactive explanatory proof concludes with lowercase c although the constructed set is C. Tamil restores uppercase C under TA-STH-009."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "533 source units now pass textual and author semantic QA. Eight exact PDF readers visually verify 211 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 189 frozen units still require completion.",
+  "remaining": "543 source units now pass textual and author semantic QA. Nine exact PDF readers visually verify 221 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 179 frozen units still require completion.",
   "visual_reader_coverage": {
-    "reader_count": 8,
-    "distinct_unit_count": 211,
+    "reader_count": 9,
+    "distinct_unit_count": 221,
     "readers": [
       {
         "name": "combined sets/relations/functions",
@@ -7914,6 +8054,10 @@
       {
         "name": "set theory: iterative conception",
         "distinct_units": 8
+      },
+      {
+        "name": "set theory: Zermelo axioms",
+        "distinct_units": 10
       }
     ]
   },
@@ -8788,6 +8932,40 @@
         "finite_stage_counts_compute_as_claimed": true,
         "urelement_definition_application_foundation_and_repair_remain": true,
         "frege_membership_basic_law_comprehension_and_repair_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0537",
+        "OLP-0538",
+        "OLP-0539",
+        "OLP-0540",
+        "OLP-0541",
+        "OLP-0542",
+        "OLP-0543",
+        "OLP-0544",
+        "OLP-0545",
+        "OLP-0546"
+      ],
+      "correction_ids": [
+        "TA-STH-005",
+        "TA-STH-006",
+        "TA-STH-007",
+        "TA-STH-008",
+        "TA-STH-009"
+      ],
+      "status": "pass",
+      "checks": {
+        "z_driver_preserves_all_nine_sections": true,
+        "three_stage_principles_and_missing_verb_repair_remain": true,
+        "separation_schema_parameters_and_no_universal_set_remain": true,
+        "union_axiom_and_stage_justification_remain": true,
+        "pairs_no_last_stage_and_consequences_remain": true,
+        "powerset_cartesian_product_construction_remains": true,
+        "infinity_omega_two_cases_and_limit_stage_remain": true,
+        "zminus_axiom_inventory_remains": true,
+        "zermelo_von_neumann_encodings_and_benacerraf_point_remain": true,
+        "arbitrary_intersection_biconditional_witness_and_uppercase_c_remain": true
       }
     }
   ]

@@ -1,0 +1,145 @@
+{
+  "batch_id": "TA-B242",
+  "units": [
+    {
+      "unit_id": "OLP-0545",
+      "source_sha256": "33f3b77912ba9c7217893e6a0e9f59c16b2ca51e5b0652f99850bed6aeb8f12c",
+      "translation_sha256": "d40661bc1f1117f632202d00c302d04e47634a63b5e2c886560729cae6e2e292",
+      "source_bytes": 2773,
+      "translation_bytes": 6840,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "again",
+        "arith",
+        "dedekindsproof",
+        "include",
+        "infinite",
+        "infinity",
+        "logic",
+        "open",
+        "ordinals",
+        "ref",
+        "rel",
+        "section",
+        "sfr"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-008",
+          "unit_id": "OLP-0545",
+          "kind": "natural-number-stipulation-demonstrative-grammar",
+          "action": "Rendered ‘this significance of this stipulation’ as ‘the significance of this stipulation.’",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source has a stray demonstrative in ‘We will discuss this significance of this stipulation.’",
+          "chosen_treatment": "தமிழ் இந்த நிர்ணயத்தின் முக்கியத்துவத்தை விவாதிப்போம் என்று இலக்கணமுற்ற வாக்கியமாகக் கூறுகிறது.",
+          "alternatives_considered": "Treating the duplicated demonstrative as a substantive distinction.",
+          "rationale": "The following section is plainly announced as discussing the stipulation's significance.",
+          "precise_review_question": "Does the sentence announce discussion of the stipulation's significance?",
+          "location_needle": "SOURCE CORRECTION TA-STH-008"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0546",
+      "source_sha256": "866857905e11e5f329a248326ba04ba14f293b388bd8e3573caaf05fb2b7d56d",
+      "translation_sha256": "93b0c3602bfd8bfb5457b3f542f48feaeafb9ff109984dd585911ee9796606be",
+      "source_bytes": 2979,
+      "translation_bytes": 6551,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$x\\inc$"
+      ],
+      "extra_math": [
+        "$x\\inC$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "dedekind",
+        "include",
+        "infinite",
+        "logic",
+        "milestone",
+        "open",
+        "section",
+        "sep",
+        "sfr",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-009",
+          "unit_id": "OLP-0546",
+          "kind": "inactive-intersection-proof-lowercase-defined-set",
+          "action": "Restored uppercase C in the final line of the inactive explanatory proof.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "x\\inc",
+              "to": "x\\inC",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof defines uppercase C throughout but concludes with lowercase c, which is otherwise undeclared.",
+          "chosen_treatment": "தமிழ் செயலற்ற விளக்க நிறுவலின் இறுதி உறுப்புக் கூற்றிலும் வரையறுக்கப்பட்ட C ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Preserving an undeclared lowercase object in the explanatory proof.",
+          "rationale": "Both the target biconditional and Separation definition use C, so the final membership claim must use the same set.",
+          "precise_review_question": "Does the inactive proof conclude x is a member of uppercase C?",
+          "location_needle": "SOURCE CORRECTION TA-STH-009"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}
