@@ -1,0 +1,45 @@
+% SEGMENT OLP-0480-S01
+% Part: applied-modal-logics
+% Chapter: temporal-logic
+% Section: extra-operators
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{tl}{ext}
+
+\olsection{காலத் தருக்கத்திற்கான கூடுதல் செயற்குறிகள்}
+
+கடந்தகாலம், எதிர்காலம் ஆகியவற்றுக்கான ஓருறுப்புச் செயற்குறிகளுடன், காலத்
+தருக்கங்கள் சில நேரங்களில் ``முதல்'', ``வரை'' ஆகியவற்றைக் குறிக்கவுள்ள
+ஈருறுப்புச் செயற்குறிகளான $\Since $,~$\Until$ ஆகியவற்றையும் கொண்டிருக்கும்.
+இதன் பொருள், காலத் தருக்க மொழியில் $\Since $,~$\Until$ ஆகியவற்றைச் சேர்த்து,
+ஒரு கால !!{formula}வின் வரையறையில் பின்வரும் கூறைச் சேர்ப்பதாகும்:
+
+\begin{itemize}
+\item[] $!A$, $!B$ ஆகியவை !!{formula}s எனில், $(\Since  !A !B)$ மற்றும்
+  $(\Until !A !B)$ இரண்டும் !!{formula}s.
+\end{itemize}
+
+இச்செயற்குறிகளின் பொருண்மையியல் பின்வருமாறு அளிக்கப்படுகிறது:
+
+\begin{defn}\ollabel{defn:since-until}
+  ஒரு~$\mModel M$ இல் \emph{$t$ இல் !!a{formula}~$!A$ இன் மெய்மை}:
+  \begin{enumerate}
+  \item\ollabel{defn:sub:mmodels-since} \indcase{!A}{\Since  !B
+    !C}{$\mSat{M}{\indfrm}[t]$ எனில், எனில் மட்டுமே, $t' \prec t$ ஆகும்
+    ஏதோவொரு $t' \in T$ க்கு $\mSat{M}{!B}[t']$; மேலும் $t' \prec s \prec t$
+    ஆகும் எல்லா $s$ க்கும் $\mSat{M}{!C}[s]$}
+   \item\ollabel{defn:sub:mmodels-until} \indcase{!A}{\Until !B
+    !C}{$\mSat{M}{\indfrm}[t]$ எனில், எனில் மட்டுமே, $t \prec t'$ ஆகும்
+    ஏதோவொரு $t' \in T$ க்கு $\mSat{M}{!B}[t']$; மேலும் $t \prec s \prec t'$
+    ஆகும் எல்லா $s$ க்கும் $\mSat{M}{!C}[s]$}
+  \end{enumerate}
+\end{defn}
+
+$\Since  !B !C$ இன் உள்ளுணர்வு வாசிப்பு, ``$!B$ நிகழ்ந்தது முதல்
+$!C$~நிகழ்ந்துள்ளது'' என்பதாகும். $\Until !B !C$ இன் உள்ளுணர்வு வாசிப்பு,
+``$!B$ நிகழும் வரை $!C$~நிகழும்'' என்பதாகும்.
+
+\end{document}

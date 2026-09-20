@@ -1,0 +1,137 @@
+% SEGMENT OLP-0478-S01
+% Part: applied-modal-logics
+% Chapter: temporal-logic
+% Section: language-epistemic-logic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{tl}{sem}
+
+\olsection{காலத் தருக்கத்தின் பொருண்மையியல்}
+
+\begin{defn}
+காலத் தருக்கத்தின் அடிப்படை மொழி பின்வருவனவற்றைக் கொண்டுள்ளது:
+\begin{enumerate}
+  \tagitem{prvFalse}{!!{falsity}க்கான கூற்று மாறிலி~$\lfalse$.}{}
+  \tagitem{prvTrue}{!!{truth}க்கான கூற்று மாறிலி~$\ltrue$.}{}
+  \item !!{propositional variable}s இன் ஓர் !!{denumerable}s கணம்: $\Obj
+    p_0$, $\Obj p_1$, $\Obj p_2$, \dots
+  \item முன்மொழிவு இணைப்பிகள்: \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (மறுப்பு)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (இணைப்பு)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (பிரிப்பு)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}.
+  \item கடந்தகாலச் செயற்குறிகள் $\Ptemp$, $\Htemp$.
+  \item எதிர்காலச் செயற்குறிகள் $\Ftemp$, $\Gtemp$.
+\end{enumerate}
+\end{defn}
+
+வேறு வகையான வாய்ப்புநிலைச் செயற்குறிகளைச் சேர்ப்பதற்கான வாய்ப்பைப் பின்னர்
+விவாதிப்போம்.
+
+\begin{defn}
+கால மொழியின் \emph{!!^{formula}s} பின்வருமாறு தொகுமுறையில்
+  வரையறுக்கப்படுகின்றன:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ ஓர் அணு !!{formula}.}{}
+
+\tagitem{prvTrue}{$\ltrue$ ஓர் அணு !!{formula}.}{}
+
+\item ஒவ்வொரு கூற்று மாறி $\Obj p_i$ உம் ஓர் (அணு) !!{formula}.
+
+\tagitem{prvNot}{$!A$ ஓர் !!{formula} எனில், $\lnot !A$ உம் ஓர்
+  !!{formula}.}{}
+
+\tagitem{prvAnd}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \land
+  !B)$ ஓர் !!{formula}.}{}
+
+\tagitem{prvOr}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \lor !B)$
+  ஓர் !!{formula}.}{}
+
+\tagitem{prvIf}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \lif !B)$
+  ஓர் !!{formula}.}{}
+
+\tagitem{prvIff}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \liff !B)$
+  ஓர் !!{formula}.}{}
+
+% SOURCE CORRECTION TA-AML-002: restore the missing Ftemp macro.
+\item $!A$ ஓர் !!{formula} எனில், $\Ptemp  !A$, $\Htemp  !A$, $\Ftemp !A$, $\Gtemp  !A$
+  அனைத்தும் !!{formula}s.
+
+\tagitem{limitClause}{வேறு எதுவும் ஓர் !!{formula} அல்ல.}{}
+\end{enumerate}
+\end{defn}
+
+பிற உட்பொருள்சார் தருக்கங்களைப் போலவே, காலத் தருக்கங்களின் பொருண்மையியலும்
+தொடர்புமுறை மாதிரிகளின் வாயிலாக அளிக்கப்படுகிறது.
+
+\begin{defn}
+  கால மொழிக்கான ஒரு \emph{மாதிரி} என்பது
+  $\mModel{M} = \tuple{T, \prec, V}$ என்ற மும்மை; இதில்
+  \begin{enumerate}
+  \item $T$ என்பது காலப் புள்ளிகளாகப் பொருள்கொள்ளப்படும் காலியல்லாத கணம்.
+  \item $\prec$ என்பது $T$ மீதான ஓர் ஈருறுப்புத் தொடர்பு.
+  \item ஒவ்வொரு !!{propositional variable}~$p$ க்கும் காலப் புள்ளிகளின்
+    ஒரு கணம் $V(p)$ ஐ மதிப்பளிக்கும் சார்பு $V$.
+  \end{enumerate}
+  $t \prec t'$ ஆகும்போது, $t$ ஆனது~$t'$ ஐ \emph{முந்துகிறது} என்கிறோம்.
+  $t \in V(p)$ ஆகும்போது, $p$ ஆனது~$t$ இல் \emph{மெய்} என்கிறோம்.
+\end{defn}
+
+தற்போதைக்கு, நமது முந்துநிலைத் தொடர்பு~$\prec$ மீது எந்த நிபந்தனையையும்
+விதிக்கவில்லை என்பதைக் கவனிக்கவும். எனவே நமது கால மாதிரிகளின் கட்டமைப்புக்கு
+இப்போது எந்தக் கட்டுப்பாடும் இல்லை; ஆகையால் காலம் நேரியலாகவோ,
+கிளைப்படைவதாகவோ, வட்டமாகவோ, அல்லது முற்றிலும் வேறு எந்தக் கட்டமைப்பையோ
+கொண்டிருக்கும் மாதிரிகள் நமக்கு இருக்கலாம்.
+
+இயல்பான வாய்ப்புநிலைத் தருக்கத்தைப் போலவே, ஒவ்வொரு கால மாதிரியும் அதிலுள்ள
+எந்தப் புள்ளிகளில் எந்த !!{formula}s மெய்யாகின்றன என்பதைத்
+தீர்மானிக்கிறது. தொடர்புமுறைப் பொருண்மையியலின் அடிப்படைக் கருத்துக்கு,
+``மாதிரி~$\mModel{M}$ புள்ளி~$t$ இல் !!{formula}~$!A$ ஐ மெய்யாக்குகிறது''
+என்ற அதே குறியீட்டைப் பயன்படுத்துகிறோம். இத்தொடர்பு தொகுமுறையில்
+வரையறுக்கப்படுகிறது; வாய்ப்புநிலையற்ற எல்லாச் செயற்குறிகளுக்கும் அது இயல்பான
+வாய்ப்புநிலை நேர்வுடன் ஒன்றுபட்டது.
+
+\begin{defn}\ollabel{defn:tmodels}
+  ஒரு~$\mModel M$ இல் \emph{$t$ இல் !!a{formula}~$!A$ இன் மெய்மை},
+  குறியீட்டில்: $\mSat{M}{!A}[t]$, பின்வருமாறு தொகுமுறையில்
+  வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\mSat{M}{\lfalse}[t]$ ஒருபோதும் மெய்யன்று}.}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\mSat{M}{\ltrue}[t]$ எப்போதும் மெய்}.}{}
+  \item $\mSat{M}{p}[t]$ எனில், எனில் மட்டுமே, $t \in V(p)$
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[t]$ எனில்,
+    எனில் மட்டுமே, $\mSat/{M}{!B}[t]$}.}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[t]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[t]$ மற்றும் $\mSat{M}{!C}[t]$}.}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[t]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[t]$ அல்லது $\mSat{M}{!C}[t]$} (அல்லது இரண்டும்).}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[t]$ எனில்,
+    எனில் மட்டுமே, $\mSat/{M}{!B}[t]$ அல்லது $\mSat{M}{!C}[t]$}.}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[t]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[t]$, $\mSat{M}{!C}[t]$ இரண்டும் ஆகும்,
+    அல்லது $\mSat{M}{!B}[t]$ உம் $\mSat{M}{!C}[t]$ உம் இரண்டுமே ஆகாது}.}{}
+  \item\ollabel{defn:sub:mmodels-p}
+    \indcase{!A}{\Ptemp  !B}{$\mSat{M}{\indfrm}[t]$ எனில், எனில் மட்டுமே,
+    $t' \prec t$ ஆகும் ஏதோவொரு $t' \in T$ க்கு $\mSat{M}{!B}[t']$}
+\item\ollabel{defn:sub:mmodels-h}
+    \indcase{!A}{\Htemp  !B}{$\mSat{M}{\indfrm}[t]$ எனில், எனில் மட்டுமே,
+    $t' \prec t$ ஆகும் ஒவ்வொரு $t' \in T$ க்கும் $\mSat{M}{!B}[t']$}
+   \item\ollabel{defn:sub:mmodels-f}
+    \indcase{!A}{\Ftemp  !B}{$\mSat{M}{\indfrm}[t]$ எனில், எனில் மட்டுமே,
+    $t \prec t'$ ஆகும் ஏதோவொரு $t' \in T$ க்கு $\mSat{M}{!B}[t']$}
+\item\ollabel{defn:sub:mmodels-g}
+    \indcase{!A}{\Gtemp  !B}{$\mSat{M}{\indfrm}[t]$ எனில், எனில் மட்டுமே,
+    $t \prec t'$ ஆகும் ஒவ்வொரு $t' \in T$ க்கும் $\mSat{M}{!B}[t']$}
+  \end{enumerate}
+\end{defn}
+
+பொருண்மையியலை அடிப்படையாகக் கொண்டு, $\Ptemp$,~$\Htemp$ ஆகிய செயற்குறிகள்
+ஒன்றுக்கொன்று இருமங்கள் என்பதையும், $\Ftemp$, $\Gtemp$ ஆகியவையும் அவ்வாறே
+என்பதையும் காணலாம். அதனால் $\Htemp  !A$ ஐ $\lnot \Ptemp \lnot !A$ என
+வரையறுக்கலாம்; $\Gtemp$,~$\Ftemp$ ஆகியவற்றுக்கும் இதேபோலச் செய்யலாம்.
+
+\end{document}

@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T02:01:05.038145+00:00",
+  "date_utc": "2026-09-20T02:53:55.862724+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2357,6 +2357,86 @@
       "unit_id": "OLP-0474",
       "source_sha256": "7208b51ded8fec09ae57789b113c42fc47b8e8a4c8e6c290c8f7b25ffb27ef45",
       "translation_sha256": "04715072116871202a5c62c11bb44e84ce4373e2098957055ede4b5b1e875391"
+    },
+    {
+      "unit_id": "OLP-0475",
+      "source_sha256": "e4daecb067402048d5f0180f1ed05cc9260fc93d2442079ac5ddf7841327ef1e",
+      "translation_sha256": "5d1caf656c25ddcc7fa3ed63690fe82f759e9bd158eb1312981dbebf7e88f242"
+    },
+    {
+      "unit_id": "OLP-0476",
+      "source_sha256": "002d60bc4f9fd0b84f7d062f1cf8a325563ce8f343c5d070e124e4f05c4115e4",
+      "translation_sha256": "59f9b669929e9862fe8eba9154cbb18ca6dcc83332ee45b1a5b3668ef87d26c9"
+    },
+    {
+      "unit_id": "OLP-0477",
+      "source_sha256": "327c7c72f1b98905b0786413d23b688185ed185226419ff49bcd78aaeb3f76dd",
+      "translation_sha256": "f513880b87b73946282927aa35e4ab0963dd1350ccc2912bc0af5cf240f042e9"
+    },
+    {
+      "unit_id": "OLP-0478",
+      "source_sha256": "237c841d5cb359d63f994fd71e13fb6e7101c266c2390e0059ab52e9efb8fd6d",
+      "translation_sha256": "52ff649259c9a21b7a3ed635f8e087774483fce7bd97c735da390e83ecddd7a9"
+    },
+    {
+      "unit_id": "OLP-0479",
+      "source_sha256": "63699c7012da1cd23c29024e0e1ebecedaac878fcb0d6678fd26d69b7400d095",
+      "translation_sha256": "bb44f0124d8c58b45b93c68066d7774d959d700274ca704a9f85cde087a6a942"
+    },
+    {
+      "unit_id": "OLP-0480",
+      "source_sha256": "610e36a049e01fb2ace59164fd64a6482a8109a49e5d859af928922edfe26f97",
+      "translation_sha256": "66dacc8ac71ef4f9236226b2634a2ff7fda13a71a945226b71ac7311c4673b5c"
+    },
+    {
+      "unit_id": "OLP-0481",
+      "source_sha256": "29a288f0012cbdf900f927cb285864444ca0f8d7dea27c1d037cdaaae40e924a",
+      "translation_sha256": "3922bbf2a91d469e9a24afe2a994562a2073402b696a68f3d07ff7e63b001cf1"
+    },
+    {
+      "unit_id": "OLP-0482",
+      "source_sha256": "12674717c3c51628c4a275e5c34b38b66e2ec1eb7bbffea7bf08629d68489834",
+      "translation_sha256": "537b80367098cda7b1d43518194fd53601ee22b0acc8580095f3b099d9ad0e63"
+    },
+    {
+      "unit_id": "OLP-0483",
+      "source_sha256": "b2c3d1cfca757032d8e89e4f17207aa4f37248926fa4f1a3057ef724407c09d9",
+      "translation_sha256": "df8263f7ca03de32d098033decf272abc59d2be51b6a93b76f56dcb44732ca08"
+    },
+    {
+      "unit_id": "OLP-0484",
+      "source_sha256": "a3dbe66fb9357878583c30a38b9801609179a229bc1ae39a6fd3e565f243e455",
+      "translation_sha256": "df17e017beb87ef480f84ee7969262330182a14f88d0519acedc4beed16127a7"
+    },
+    {
+      "unit_id": "OLP-0485",
+      "source_sha256": "2c35ea27376dd725cd7695eb76a679a8d9187c17a3091dc7db972886374daf21",
+      "translation_sha256": "edd8bad4cfe349f48c7a0f3d32d29a3049fb9121d6fa26af194049d985206724"
+    },
+    {
+      "unit_id": "OLP-0486",
+      "source_sha256": "d1a57861965ea7a83ae4e6a37a6fcb19f5fce14c1a16336f551f6a0101060abc",
+      "translation_sha256": "0cccc893d201ee6f57e67aa6c762ca9abcdda6522c5a2adf142c9d87a8218849"
+    },
+    {
+      "unit_id": "OLP-0487",
+      "source_sha256": "b16925e353d0ef707658018dfded176d8ac04d486b0835b408349546d079e30d",
+      "translation_sha256": "28c28fe434546b29d49091613f7dd5189c2dfb43354cc2a0cfd2cc06b7eb0ac7"
+    },
+    {
+      "unit_id": "OLP-0488",
+      "source_sha256": "3be0d4f2009365ab48416c0235ba2a8dfa8a5c04a68c0066d377959a0489c60d",
+      "translation_sha256": "5749ccbdb727514b0c2bc24d08a2bac1c7bb6259326690700916cfb5547a7ab1"
+    },
+    {
+      "unit_id": "OLP-0489",
+      "source_sha256": "9f39c9626584c27c3ce6509b5f4cb49db0c501e6fb9852598e66892db400beee",
+      "translation_sha256": "2bd88033ec4924b87a5fe690a3a35b43707604f348dc1c9d60f931cbe14daca2"
+    },
+    {
+      "unit_id": "OLP-0490",
+      "source_sha256": "b5e8c2ba742dc473a01dbc6f3908250b2afc6deb12f338019ac9482cfea361cd",
+      "translation_sha256": "9ec80cdf7edb8ff51ed553c22594798ce776e340298d54b431efdd77aa9c11fc"
     }
   ],
   "samples": [
@@ -6314,6 +6394,118 @@
       "assessment": "All three feature-sensitive rule tables, the modal-system table, K4 and S5 derivations, the cut derivation and six closing exercises remain exact.",
       "translation_segment_sha256": "8bcaadfb683de6d6ff66f49cc865a123cafbb4eb3b09a5440e2e51ffd75d9f00",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0475-S01",
+      "reverse_paraphrase": "The applied-modal-logic part is an explicitly experimental collection of temporal and epistemic applications of modal logic.",
+      "assessment": "Both chapter imports, part identifier and editorial qualification remain exact.",
+      "translation_segment_sha256": "76d3e15ce558f5f17ab6dd7445957e83ff61b17ebe961d42165e6fe10c9e8a3c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0476-S01",
+      "reverse_paraphrase": "The temporal-logic chapter comprises an introduction, relational semantics, frame properties, additional temporal operators and possible histories.",
+      "assessment": "All five imports remain in source order; TA-AML-001 replaces the copied part-ending hook with the required chapter-ending hook.",
+      "translation_segment_sha256": "2038f8aacf8956143e430f6978311c769cbe3ceee2ea13d7b691346e0d878416",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0477-S01",
+      "reverse_paraphrase": "Prior-style tense logic adds temporal operators to tenseless propositional logic, allowing claims at different times while leaving substantive choices about future contingents and the structure of time.",
+      "assessment": "The Beezie inference, determinism versus an open future, and linear, branching, circular, bounded, discrete and continuous model choices all remain.",
+      "translation_segment_sha256": "fd0aab34bffecc47f6295684864b4656419b836ff2128bf15d9db24a68eabf5c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0478-S01",
+      "reverse_paraphrase": "Temporal models use time points, a precedence relation and a valuation; P and H quantify over earlier points, while F and G quantify over later points, in existential and universal pairs.",
+      "assessment": "The complete syntax and every satisfaction clause remain; TA-AML-002 restores Ftemp in the formation list, and both dualities remain explicit.",
+      "translation_segment_sha256": "25b2e19d2c7c93e4071b504f2115b34135199c7b60f1e3f4f937d743e16607e6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0479-S01",
+      "reverse_paraphrase": "Unrestricted temporal frames validate K analogues; transitivity, linearity, density and past or future unboundedness produce the displayed additional validities, while irreflexivity is not temporally definable.",
+      "assessment": "Both K schemata, all five table rows, their first-order conditions and the nondefinability example remain exact.",
+      "translation_segment_sha256": "31842493b33e8a258f3adce11dc784320193dd5e64f4d125f5ab1a8a09ad3357",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0480-S01",
+      "reverse_paraphrase": "Binary Since and Until operators require the first argument at an earlier or later witness point and the second argument throughout the intervening interval.",
+      "assessment": "Both formation formulas, labeled satisfaction clauses and intuitive readings remain exact.",
+      "translation_segment_sha256": "66fd4e3a020a9f578ad8344fa3468de9dd2c00eedfd2456a2d9b32efbd37b835",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0481-S01",
+      "reverse_paraphrase": "A possible-histories model uses suffix-closed state sequences; temporal truth is evaluated relative to a history, while Diamond varies the history through the same state.",
+      "assessment": "The model triple, sequence order, redefined F clause, Diamond clause and the not-F-p-and-possibly-F-p example remain exact.",
+      "translation_segment_sha256": "53d9e426db9bfb68641b133f6d232f276557d0741020165f50e674d9bcc8c267",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0482-S01",
+      "reverse_paraphrase": "The epistemic-logic chapter develops multi-agent knowledge, relational semantics, bisimulation and public-announcement updates.",
+      "assessment": "All eight section imports and the editorial attribution remain; TA-AML-003 replaces the copied part hook with the chapter hook required by this driver.",
+      "translation_segment_sha256": "bcbf8169d9fee7346ac69a568938991032e33317df807f220f15304ddef8e292",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0483-S01",
+      "reverse_paraphrase": "Epistemic and doxastic operators model knowledge and belief through possible-world accessibility, with separate operators for multiple agents.",
+      "assessment": "All four motivating examples, the Hintikka context, epistemic possibility, frame constraints and the single-agent contrast remain.",
+      "translation_segment_sha256": "dca063c1508cf11ae0a6f658d2a01b7af763f26bd16698b343e47b7407d2560c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0484-S01",
+      "reverse_paraphrase": "The language indexes knowledge by agents, defines group knowledge as the conjunction of every member’s knowledge and distinguishes it from iterated common knowledge.",
+      "assessment": "The full propositional formation rules, modal-free notion, group formula and unbounded mutual-knowledge reading remain exact.",
+      "translation_segment_sha256": "531e1012c27c5e90bf9feabb4d4b98f2cc81007d42fc97d29e69a17278624ad4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0485-S01",
+      "reverse_paraphrase": "A multi-agent epistemic model has one accessibility relation per agent; an accessible world is informationally indistinguishable from the current world for that agent.",
+      "assessment": "The model triple, nonempty world set, indexed relations, valuation and information-consistency interpretation remain.",
+      "translation_segment_sha256": "9806aa3537c698dd417de278b72055758d4b6bfeab978b6aacdffb7934f55435",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0486-S01",
+      "reverse_paraphrase": "Knowledge is true at a world when its content holds at every world accessible for that agent; reflexivity prevents vacuous inconsistent knowledge, and common knowledge quantifies over the transitive closure of the agents’ relations.",
+      "assessment": "Every truth clause, the three-world exercise figure, the S5 discussion and the common-knowledge closure definition remain exact.",
+      "translation_segment_sha256": "9ffae41e48106d892013a4faa7ab0920c59e71da55de8e030277b034e8f73866",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0487-S01",
+      "reverse_paraphrase": "Closure, veridicality, positive introspection and negative introspection correspond respectively to the K, T, 4 and 5 principles and their frame behavior.",
+      "assessment": "The complete table, Victoria example and both ordinary counterexample discussions remain.",
+      "translation_segment_sha256": "b03a4a091bfea218ce1f515cbc22bdf89bf442cbf25e96f2878d097728a4e0f1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0488-S01",
+      "reverse_paraphrase": "A bisimulation preserves atomic valuation and matches every agent-indexed successor in both directions, so related pointed models satisfy the same formulas.",
+      "assessment": "The atomic, forth and back clauses, invariance theorem and two-model figure remain; TA-AML-004 quantifies agents over the declared set G.",
+      "translation_segment_sha256": "e6b560827a0dddc1bfbdef840b6b6c0ba82cd5a432eeddc3f3757550a46a1bc3",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0489-S01",
+      "reverse_paraphrase": "Public-announcement logic adds a box-like update operator: after a truthful announcement of A, B holds in the updated model.",
+      "assessment": "The complete propositional and epistemic syntax remains; TA-AML-005 repairs copied metadata and TA-AML-006 restores the biconditional to the connective inventory.",
+      "translation_segment_sha256": "b742ce53c7df68177c8d8ddece9a2cbd500ef1a5543cf6f2ef63fb58ba77ff65",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0490-S01",
+      "reverse_paraphrase": "A public announcement restricts worlds, accessibility and valuations to the worlds satisfying the announced formula; truthful Moore-style announcements can become false after their own update.",
+      "assessment": "The induced-submodel clauses, learning and common-knowledge example remain; TA-AML-007 restores the B metavariable marker and TA-AML-008 distinguishes the two genuinely different restricted models.",
+      "translation_segment_sha256": "f1317e7e75b77fb80a8f01edcb37eb4029e3c98ff9aad0685fd0aa8aeadaa26a",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -7010,11 +7202,35 @@
     {
       "unit_id": "OLP-0469",
       "issue": "The countermodel chapter drops one formula marker, reverses the sign and rule in a Diamond expansion, reverses one tree root, cites q at the wrong prefix, and calls two complete-tableau searches closed-tableau constructions. Tamil repairs these under TA-NML-054 through TA-NML-058."
+    },
+    {
+      "unit_id": "OLP-0476",
+      "issue": "The temporal-logic chapter driver ends with the part hook although it declares a chapter and imports chapter sections. Tamil uses the chapter hook under TA-AML-001."
+    },
+    {
+      "unit_id": "OLP-0478",
+      "issue": "The temporal formula-formation list alone prints the ordinary letter F where its operator inventory and semantic clause use Ftemp. Tamil restores the temporal-operator macro under TA-AML-002."
+    },
+    {
+      "unit_id": "OLP-0482",
+      "issue": "The epistemic-logic chapter driver ends with the part hook although it declares a chapter and imports chapter sections. Tamil uses the chapter hook under TA-AML-003."
+    },
+    {
+      "unit_id": "OLP-0488",
+      "issue": "The two bisimulation direction clauses quantify agents over an undeclared set A although the chapter declares and consistently uses G. Tamil quantifies both clauses over G under TA-AML-004."
+    },
+    {
+      "unit_id": "OLP-0489",
+      "issue": "The public-announcement language file retains copied basic-language section metadata and omits the biconditional from its connective inventory despite admitting it in the formation clauses. Tamil repairs both under TA-AML-005 and TA-AML-006."
+    },
+    {
+      "unit_id": "OLP-0490",
+      "issue": "The public-announcement semantics drops the formula marker from B in one dynamic formula and falsely calls two visibly different induced submodels identical. Tamil restores !B and states that the Moore-sentence update removes the additional p-world under TA-AML-007 and TA-AML-008."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "471 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 251 frozen units still require completion.",
+  "remaining": "487 source units now pass textual and author semantic QA. Seven exact PDF readers visually verify 203 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 235 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 7,
     "distinct_unit_count": 203,
@@ -7685,6 +7901,64 @@
         "single_principal_formula_and_side_context_restrictions_remain": true,
         "K_derivations_duality_and_four_exercises_remain": true,
         "additional_rule_and_logic_tables_cut_example_and_exercises_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0475",
+        "OLP-0476",
+        "OLP-0477",
+        "OLP-0478",
+        "OLP-0479",
+        "OLP-0480",
+        "OLP-0481"
+      ],
+      "correction_ids": [
+        "TA-AML-001",
+        "TA-AML-002"
+      ],
+      "status": "pass",
+      "checks": {
+        "part_imports_both_applied_chapters": true,
+        "temporal_driver_imports_five_sections_and_uses_chapter_hook": true,
+        "Prior_Beezie_future_contingency_and_time_choices_remain": true,
+        "temporal_syntax_model_clauses_and_dualities_remain": true,
+        "frame_K_correspondence_table_and_irreflexivity_limit_remain": true,
+        "since_until_formation_semantics_and_readings_remain": true,
+        "possible_histories_model_and_modal_example_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0482",
+        "OLP-0483",
+        "OLP-0484",
+        "OLP-0485",
+        "OLP-0486",
+        "OLP-0487",
+        "OLP-0488",
+        "OLP-0489",
+        "OLP-0490"
+      ],
+      "correction_ids": [
+        "TA-AML-003",
+        "TA-AML-004",
+        "TA-AML-005",
+        "TA-AML-006",
+        "TA-AML-007",
+        "TA-AML-008"
+      ],
+      "status": "pass",
+      "checks": {
+        "driver_preserves_eight_imports_and_chapter_hook": true,
+        "introduction_preserves_examples_possible_worlds_and_multi_agent_framing": true,
+        "language_preserves_individual_group_and_common_knowledge": true,
+        "relational_model_preserves_indexed_relations_and_information_reading": true,
+        "truth_clauses_vacuity_reflexivity_figure_and_common_knowledge_remain": true,
+        "frame_principle_table_preserves_closure_T_4_and_5": true,
+        "bisimulation_preserves_atomic_forth_back_invariance_and_figure": true,
+        "PAL_language_inventory_and_formation_clauses_remain": true,
+        "PAL_submodel_learning_common_knowledge_and_self_refutation_remain": true
       }
     }
   ]

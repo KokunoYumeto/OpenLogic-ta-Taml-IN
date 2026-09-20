@@ -1,0 +1,79 @@
+{
+  "batch_id": "TA-B215",
+  "units": [
+    {
+      "unit_id": "OLP-0478",
+      "source_sha256": "237c841d5cb359d63f994fd71e13fb6e7101c266c2390e0059ab52e9efb8fd6d",
+      "translation_sha256": "52ff649259c9a21b7a3ed635f8e087774483fce7bd97c735da390e83ecddd7a9",
+      "source_bytes": 5294,
+      "translation_bytes": 10007,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$F!A$"
+      ],
+      "extra_math": [
+        "$\\Ftemp!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "propositional",
+        "section",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AML-002",
+          "unit_id": "OLP-0478",
+          "kind": "future-formula-omits-temporal-operator-macro",
+          "action": "Restored Ftemp in the inductive list of temporal formulas.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\Ftemp"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "F!A",
+              "to": "\\Ftemp!A",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The language definition names Ftemp as the future operator and every semantic clause uses it, but the formula-formation list alone prints the ordinary letter F.",
+          "chosen_treatment": "தமிழ் வாய்பாட்டு உருவாக்கப் பட்டியலில் $\\Ftemp !A$ என்ற எதிர்காலச் செயற்குறியை மீட்டமைக்கிறது.",
+          "alternatives_considered": "Treating F as a new undeclared operator or preserving the isolated typo.",
+          "rationale": "The immediately preceding operator inventory and the later satisfaction clause make Ftemp the unique intended command.",
+          "precise_review_question": "Does the formation clause now list exactly Ptemp, Htemp, Ftemp and Gtemp?",
+          "location_needle": "SOURCE CORRECTION TA-AML-002"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\Ftemp"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

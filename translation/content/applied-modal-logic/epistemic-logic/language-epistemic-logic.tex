@@ -1,0 +1,87 @@
+% SEGMENT OLP-0484-S01
+% Part: applied-modal-logics
+% Chapter: epistemic-logic
+% Section: language-epistemic-logic
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{el}{lan}
+
+\olsection{அறிவுநிலைத் தருக்கத்தின் மொழி}
+
+\begin{defn}
+$G$ என்பது முகவர்-குறிகளின் கணமாக இருக்கட்டும். பன்முகவர் அறிவுநிலைத்
+தருக்கத்தின் அடிப்படை மொழி பின்வருவனவற்றைக் கொண்டுள்ளது:
+\begin{enumerate}
+  \tagitem{prvFalse}{!!{falsity}க்கான கூற்று மாறிலி~$\lfalse$.}{}
+  \tagitem{prvTrue}{!!{truth}க்கான கூற்று மாறிலி~$\ltrue$.}{}
+  \item !!{propositional variable}s இன் ஓர் !!{denumerable}s கணம்: $\Obj
+    p_0$, $\Obj p_1$, $\Obj p_2$, \dots
+  \item முன்மொழிவு இணைப்பிகள்: \startycommalist
+  \iftag{prvNot}{\ycomma $\lnot$ (மறுப்பு)}{}%
+  \iftag{prvAnd}{\ycomma $\land$ (இணைப்பு)}{}%
+  \iftag{prvOr}{\ycomma $\lor$ (பிரிப்பு)}{}%
+  \iftag{prvIf}{\ycomma $\lif$ (!!{conditional})}{}%
+  \iftag{prvIff}{\ycomma $\liff$ (!!{biconditional})}{}.
+  \item $a \in G$ ஆகும் இடத்தில் அறிவுச் செயற்குறி~$\Knows_a$.
+\end{enumerate}
+\end{defn}
+
+நமது அமைப்பில் ஒரே முகவரின் அறிவைப் பற்றி மட்டுமே அக்கறைப்படுகிறோம் எனில்,
+கணம்~$G$ மற்றும் தனித்தனி முகவர்கள் பற்றிய குறிப்பை நீக்கலாம். அவ்வாறெனில்,
+அடிப்படைச் செயற்குறி~$\Knows$ மட்டுமே நமக்கு இருக்கும்.
+
+\begin{defn}
+அறிவுநிலை மொழியின் \emph{!!^{formula}s} பின்வருமாறு தொகுமுறையில்
+  வரையறுக்கப்படுகின்றன:
+\begin{enumerate}
+\tagitem{prvFalse}{$\lfalse$ ஓர் அணு !!{formula}.}{}
+
+\tagitem{prvTrue}{$\ltrue$ ஓர் அணு !!{formula}.}{}
+
+\item ஒவ்வொரு கூற்று மாறி $\Obj p_i$ உம் ஓர் (அணு) !!{formula}.
+
+\tagitem{prvNot}{$!A$ ஓர் !!{formula} எனில், $\lnot !A$ உம் ஓர்
+  !!{formula}.}{}
+
+\tagitem{prvAnd}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \land
+  !B)$ ஓர் !!{formula}.}{}
+
+\tagitem{prvOr}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \lor !B)$
+  ஓர் !!{formula}.}{}
+
+\tagitem{prvIf}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \lif !B)$
+  ஓர் !!{formula}.}{}
+
+\tagitem{prvIff}{$!A$, $!B$ ஆகியவை !!{formula}s எனில், $(!A \liff !B)$
+  ஓர் !!{formula}.}{}
+
+\item $!A$ ஓர் !!{formula} ஆகவும் $a \in G$ ஆகவும் இருந்தால்,
+  $\Knows_a !A$ ஓர் !!{formula}.
+
+\tagitem{limitClause}{வேறு எதுவும் ஓர் !!{formula} அல்ல.}{}
+\end{enumerate}
+\end{defn}
+
+ஓர் !!a{formula}~$!A$ ஆனது $\Knows_a$ ஐக் கொண்டிராவிட்டால், அது
+\emph{வாய்ப்புநிலையற்றது} என்கிறோம்.
+
+\begin{defn}
+  $\Knows$ செயற்குறி தனிநபர் அறிவைக் குறிக்கவுள்ளதுபோல, ``எல்லோரும்
+  அறிகிறார்கள்'' என்று பெரும்பாலும் வாசிக்கப்படும்~$\EKnows$ குழு அறிவைக்
+  குறிக்கிறது. $G' \subseteq G$ ஆகும் இடத்தில், $\EKnows_{G'} !A$ ஐ
+  \[\bigwedge_{b \in G'} \Knows_b !A.\] என்பதன் சுருக்கமாக வரையறுக்கிறோம்.
+\end{defn}
+
+முகவர்களின் குழு~$G$ இல் \emph{பொதுவறிவு} எனப்படும், இதைவிடவும் வலுவான
+அறிவுப் பொருளையும் வரையறுக்கலாம். ஒரு தகவல் ஒரு முகவர் குழுவில் பொதுவறிவாக
+இருந்தால், அக்குழுவின் முகவர்களின் ஒவ்வொரு சேர்க்கையிலும், ஒருவர் அறிந்ததை
+மற்றவர் அறிவதை இன்னொருவர் அறிவதை அவர்கள் அனைவரும் அறிவார்கள்~\dots இவ்வாறு
+முடிவின்றித் தொடரும். இது குழு அறிவைவிடக் குறிப்பிடத்தக்க அளவு வலுவானது;
+ஓர் !!a{formula} குழு அறிவாக இருந்தாலும் பொதுவறிவாக இல்லாத தொடர்புமுறை
+மாதிரிகளை எளிதில் அமைக்கலாம். ``$!A$ என்பது~$G$ இல் பொதுவறிவு'' என்பதைக்
+குறிக்க $\CKnows_G !A$ ஐப் பயன்படுத்துவோம்.
+
+\end{document}

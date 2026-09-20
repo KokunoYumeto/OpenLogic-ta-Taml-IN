@@ -1,0 +1,138 @@
+{
+  "batch_id": "TA-B214",
+  "units": [
+    {
+      "unit_id": "OLP-0475",
+      "source_sha256": "e4daecb067402048d5f0180f1ed05cc9260fc93d2442079ac5ddf7841327ef1e",
+      "translation_sha256": "5d1caf656c25ddcc7fa3ed63690fe82f759e9bd158eb1312981dbebf7e88f242",
+      "source_bytes": 416,
+      "translation_bytes": 811,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "epistemic",
+        "include",
+        "logic",
+        "open",
+        "part",
+        "temporal"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0476",
+      "source_sha256": "002d60bc4f9fd0b84f7d062f1cf8a325563ce8f343c5d070e124e4f05c4115e4",
+      "translation_sha256": "59f9b669929e9862fe8eba9154cbb18ca6dcc83332ee45b1a5b3668ef87d26c9",
+      "source_bytes": 443,
+      "translation_bytes": 677,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AML-001",
+          "unit_id": "OLP-0476",
+          "kind": "temporal-chapter-uses-part-ending-hook",
+          "action": "Replaced the part-ending hook with the chapter-ending hook in the temporal-logic chapter driver.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\OLEndPartHook"
+          ],
+          "expected_extra_commands": [
+            "\\OLEndChapterHook"
+          ],
+          "source_issue_or_choice": "The file declares the chapter subfiles class and opens an olchapter, but ends with OLEndPartHook; every other chapter driver in the surrounding modal material uses OLEndChapterHook.",
+          "chosen_treatment": "தமிழ் காலத் தருக்க அதிகார இயக்கி அதிகார முடிவுக் கொக்கியைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Preserving the part-ending hook in a chapter driver.",
+          "rationale": "The document class, opening macro and imported sections unambiguously identify this file as a chapter driver.",
+          "precise_review_question": "Does the temporal-logic driver now end with the chapter hook while preserving all five imports?",
+          "location_needle": "SOURCE CORRECTION TA-AML-001"
+        }
+      ],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\OLEndPartHook"
+      ],
+      "extra_commands": [
+        "\\OLEndChapterHook"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0477",
+      "source_sha256": "327c7c72f1b98905b0786413d23b688185ed185226419ff49bcd78aaeb3f76dd",
+      "translation_sha256": "f513880b87b73946282927aa35e4ab0963dd1350ccc2912bc0af5cf240f042e9",
+      "source_bytes": 2600,
+      "translation_bytes": 7411,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "batch_id": "TA-B221",
+  "units": [
+    {
+      "unit_id": "OLP-0489",
+      "source_sha256": "9f39c9626584c27c3ce6509b5f4cb49db0c501e6fb9852598e66892db400beee",
+      "translation_sha256": "2bd88033ec4924b87a5fe690a3a35b43707604f348dc1c9d60f931cbe14daca2",
+      "source_bytes": 2979,
+      "translation_bytes": 5751,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [],
+      "extra_math": [
+        "$\\liff$"
+      ],
+      "token_key_parity": false,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "propositional",
+        "section",
+        "variable"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AML-005",
+          "unit_id": "OLP-0489",
+          "kind": "public-announcement-language-copied-section-metadata",
+          "action": "Aligned the section metadata comment with the public-announcement language file and stable pal identifier.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "% Section: language-epistemic-logic",
+              "to": "% Section: public-announcement-logic-language",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The section comment repeats the basic epistemic-language filename although the file, heading and aml/el/pal identifier concern public-announcement language.",
+          "chosen_treatment": "தமிழ் கோப்பு அதன் பொது அறிவிப்பு மொழி உள்ளடக்கத்துடன் பொருந்தும் பிரிவு குறிப்பைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Preserving the copied basic-language comment.",
+          "rationale": "The path, heading, additional operator and stable file id all identify the section uniquely.",
+          "precise_review_question": "Does the section metadata now identify public-announcement logic language?",
+          "location_needle": "SOURCE CORRECTION TA-AML-005"
+        },
+        {
+          "audit_id": "TA-AML-006",
+          "unit_id": "OLP-0489",
+          "kind": "public-announcement-language-inventory-omits-biconditional",
+          "action": "Added the feature-sensitive biconditional to the connective inventory already supported by the formation clauses.",
+          "expected_missing_math": [],
+          "expected_extra_math": [
+            "$\\liff$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\iftag",
+            "\\ycomma",
+            "\\liff"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [
+            "biconditional"
+          ],
+          "source_issue_or_choice": "The initial connective list stops after the conditional, but the same definition's inductive syntax includes a prvIff biconditional clause.",
+          "chosen_treatment": "தமிழ் அடிப்படை இணைப்பிப் பட்டியலில் அம்சக்குறியுடன்~$\\liff$ ஐச் சேர்க்கிறது.",
+          "alternatives_considered": "Deleting the later biconditional formation clause or leaving the language inventory incomplete.",
+          "rationale": "The complete epistemic language immediately preceding this section lists the same biconditional, and the PAL formation clause requires it.",
+          "precise_review_question": "Does the inventory now list every connective admitted by the formation clauses?",
+          "location_needle": "SOURCE CORRECTION TA-AML-006"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [
+        "biconditional"
+      ],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\iftag",
+        "\\ycomma",
+        "\\liff"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0490",
+      "source_sha256": "b5e8c2ba742dc473a01dbc6f3908250b2afc6deb12f338019ac9482cfea361cd",
+      "translation_sha256": "9ec80cdf7edb8ff51ed553c22594798ce776e340298d54b431efdd77aa9c11fc",
+      "source_bytes": 5717,
+      "translation_bytes": 10436,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$[!A]B$"
+      ],
+      "extra_math": [
+        "$[!A]!B$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "above",
+        "below",
+        "dotted",
+        "include",
+        "label",
+        "left",
+        "logic",
+        "loop",
+        "modal",
+        "node",
+        "open",
+        "right",
+        "section",
+        "swap",
+        "world",
+        "xshift"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AML-007",
+          "unit_id": "OLP-0490",
+          "kind": "public-announcement-formula-drops-metavariable-marker",
+          "action": "Restored the OpenLogic formula marker on B in the vacuous-truth explanation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "[!A]B",
+              "to": "[!A]!B",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The syntax and semantic clause use !B as a formula metavariable, while the prose instance alone prints an unmarked B.",
+          "chosen_treatment": "தமிழ் விளக்கம்~$[!A]!B$ என்ற ஒரே வாய்பாட்டு குறியீட்டைத் தொடர்கிறது.",
+          "alternatives_considered": "Treating B as an object-language atom in this one sentence.",
+          "rationale": "The sentence quantifies an arbitrary formula B and directly explains the preceding dynamic semantic clause.",
+          "precise_review_question": "Does the vacuous-truth sentence retain formula markers on both A and B?",
+          "location_needle": "SOURCE CORRECTION TA-AML-007"
+        },
+        {
+          "audit_id": "TA-AML-008",
+          "unit_id": "OLP-0490",
+          "kind": "two-public-announcement-restrictions-falsely-called-identical",
+          "action": "Stated that the p-update and the Moore-sentence update are not identical, while retaining the knowledge and self-refutation conclusion.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "In the displayed model, updating by p retains both p-worlds, while updating by p and not-K_b-p removes the p-world where b already knows p; the source nevertheless calls the two restricted models the same.",
+          "chosen_treatment": "தமிழ் இரு புதுப்பித்த மாதிரிகளும் வேறுபடுகின்றன என்றும், இரண்டாவது ஒரு கூடுதல் மெய்-p உலகை நீக்குகிறது என்றும் கூறுகிறது.",
+          "alternatives_considered": "Changing the diagram or valuation so the two restrictions coincide; preserving the false identity claim.",
+          "rationale": "Direct evaluation at the three drawn worlds distinguishes the domains, while both updates still make K_b p true at the surviving w1 and hence preserve the intended self-refuting announcement example.",
+          "precise_review_question": "Does the corrected prose distinguish the two restricted domains without altering the final false-after-announcement result?",
+          "location_needle": "SOURCE CORRECTION TA-AML-008"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

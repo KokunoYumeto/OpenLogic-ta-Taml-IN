@@ -1,0 +1,122 @@
+% SEGMENT OLP-0486-S01
+% Part: applied-modal-logics
+% Chapter: epistemic-logic
+% Section: truth-at-w
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{el}{trw}
+
+\olsection{ஓர் உலகில் மெய்மை}
+
+இயல்பான வாய்ப்புநிலைத் தருக்கத்தைப் போலவே, ஒவ்வோர் அறிவுநிலை மாதிரியும்
+அதிலுள்ள எந்த உலகங்களில் எந்த !!{formula}s மெய்யாகின்றன என்பதைத்
+தீர்மானிக்கிறது. தொடர்புமுறைப் பொருண்மையியலின் அடிப்படைக் கருத்துக்கு,
+``மாதிரி~$\mModel{M}$ உலகம்~$w$ இல் !!{formula}~$!A$ ஐ மெய்யாக்குகிறது''
+என்ற அதே குறியீட்டைப் பயன்படுத்துகிறோம். இத்தொடர்பு தொகுமுறையில்
+வரையறுக்கப்படுகிறது; வாய்ப்புநிலையற்ற எல்லாச் செயற்குறிகளுக்கும் அது இயல்பான
+வாய்ப்புநிலை நேர்வுடன் ஒன்றுபட்டது.
+
+\begin{defn}\ollabel{defn:mmodels}
+  ஒரு~$\mModel M$ இல் \emph{$w$ இல் !!a{formula}~$!A$ இன் மெய்மை},
+  குறியீட்டில்: $\mSat{M}{!A}[w]$, பின்வருமாறு தொகுமுறையில்
+  வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\mSat{M}{\lfalse}[w]$ ஒருபோதும் மெய்யன்று}.}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\mSat{M}{\ltrue}[w]$ எப்போதும் மெய்}.}{}
+  \item $\mSat{M}{p}[w]$ எனில், எனில் மட்டுமே, $w \in V(p)$
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat/{M}{!B}[w]$}.}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[w]$ மற்றும் $\mSat{M}{!C}[w]$}.}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[w]$ அல்லது $\mSat{M}{!C}[w]$} (அல்லது இரண்டும்).}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat/{M}{!B}[w]$ அல்லது $\mSat{M}{!C}[w]$}.}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[w]$, $\mSat{M}{!C}[w]$ இரண்டும் மெய்,
+    அல்லது $\mSat{M}{!B}[w]$, $\mSat{M}{!C}[w]$ இரண்டுமே மெய்யல்ல}.}{}
+  \item\ollabel{defn:sub:mmodels-box}
+    \indcase{!A}{\Knows_a !B}{$\mSat{M}{\indfrm}[w]$ எனில், எனில் மட்டுமே,
+    $R_a ww'$ ஆகும் எல்லா $w' \in W$ க்கும் $\mSat{M}{!B}[w']$}
+  \end{enumerate}
+\end{defn}
+
+ஆனால் இங்குதான் நமது அணுகுறவுகளின் மீதான கட்டுப்பாடுகளைப் பற்றி நாம்
+சிந்திக்க வேண்டும். ஏனெனில் கூறு~\olref{defn:sub:mmodels-box} இன்படி,
+$R_a ww'$ ஆகும் எந்த~$w'$ உம் இல்லாதபோதெல்லாம் !!a{formula}~$\Knows_a !B$
+ஆனது~$w$ இல் மெய். இயல்பான வாய்ப்புநிலைத் தருக்கத்தின் அதே கூறே இது; ஓர்
+உலகிற்கு அடுத்துறுப்புகள் இல்லாதபோது, எல்லா~$\Box$-வாய்பாடுகளும் அங்கு
+வெறுமையாக மெய்யாகின்றன. $\Knows$ ஆனது \emph{அறிவைக்} குறிக்கிறது என்று
+நாம் கருதினால், இது உள்ளுணர்வுக்கு மிகவும் முரணானதாகத் தோன்றுகிறது. ஏனெனில்,
+ஒரு முகவர் $!A$, $\lnot !A$ இரண்டையும் ஒரே நேரத்தில் அறியக்கூடிய சூழ்நிலை
+\emph{எதுவும் இல்லை} என்றே நாம் பொதுவாகக் கருதுகிறோம்.
+
+அறிவுநிலைத் தருக்கத்தில் நமது அணுகுறவு எப்போதும் \emph{தற்சுட்டுப்
+பண்புடையதாக} இருப்பதை உறுதிசெய்வது ஒரு தீர்வு. மெய்யான உலகம் ஒரு முகவரின்
+தகவலுடன் ஒத்திசைகிறது என்ற கருத்துக்கு இது தோராயமாகப் பொருந்துகிறது.
+உண்மையில், அறிவுநிலைத் தருக்கங்கள் பொதுவாக S5 ஐப் பயன்படுத்துகின்றன; ஆனால்
+$\Knows_a$ தொடர்பு துல்லியமாக எதைக் குறிக்க வேண்டும் என்பதைப் பொறுத்து,
+மற்றவர்கள் வலுக்குறைந்த அமைப்புகளைப் பயன்படுத்தலாம்.
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={[align=right]right:\mTrue{p}\\ \mFalse{q}}]{$w_1$};
+      \node[world] (w2) [label={[align=right]right:\mTrue{p}\\ \mTrue{q}},
+        above right=of w1]{$w_2$};
+      \node[world] (w3) [label={[align=right]right:\mFalse{p}\\ \mFalse{q}},
+        below right=of w1] {$w_3$};
+      \draw[<->] (w1) to node {$a$} (w2);
+      \draw[->,loop left] (w1) to node {$a,b$} (w1);
+      \draw[<->] (w1) to [swap] node {$b$} (w3);
+      \draw[->,loop above] (w2) to node {$a,b$} (w2) ;
+      \draw[->,loop below] (w3) to node {$a,b$} (w3) ;
+    \end{tikzpicture}
+  \end{center}
+  \caption{ஓர் எளிய அறிவுநிலை மாதிரி.}
+  \ollabel{fig:simple}
+\end{figure}
+
+\begin{prob}
+  பின்வருவனவற்றில் எவை \olref[aml][el][trw]{fig:simple} இல் மெய்யாகின்றன
+  என்பதைக் கருதுக:
+  \begin{enumerate}
+    \item $\mSat{M}{\lnot q}[w_1]$;
+    \item $\mSat{M}{\Knows_a \lnot q}[w_1]$;
+    \item $\mSat{M}{\Knows_b \lnot q}[w_1]$;
+    \item $\mSat{M}{\Knows_b q \lor \Knows_b \lnot q}[w_2]$;
+    \item $\mSat{M}{\Knows_a( \Knows_b q \lor \Knows_b \lnot q)}[w_2]$;
+    \item $\mSat{M}{\EKnows_{\{a,b\}} \lnot q}[w_3]$;
+    \end{enumerate}
+\end{prob}
+
+ஓர் உலகில் மெய்மை என்ற அடிப்படை வரையறையை இப்போது அளித்துவிட்டதால்,
+வாய்ப்புநிலைச் செல்லுபடிநிலை, பின்விளைவு போன்ற இயல்பான வாய்ப்புநிலைத்
+தருக்கத்தின் பிற பொருண்மையியல் கருத்துகள், வாய்ப்புநிலைச் செயற்குறிகளின்
+பொருள்கோளைப் பற்றிய இப்புதிய சிந்தனைமுறைக்குப் பயன்படுத்தப்பட்டபடியே
+எளிதாகத் தொடர்கின்றன.
+
+பொதுவறிவுச் செயற்குறி~$\CKnows_G$ க்கான மெய்மை நிபந்தனைகளையும் இப்போது
+அளிக்க முடியும். தொடர்பு~$R$ இன் \emph{கடப்பு அடைவு}~$R^+$ ஆனது
+\olref[sfr][rel][ops]{sec} இன்படி பின்வருமாறு வரையறுக்கப்படுகிறது என்பதை
+நினைவுகூர்க:
+\begin{align*}
+  R^+ &= \bigcup_{ n \in \mathbb{N}} R^n,
+\intertext{இங்கு}
+  R^0 & = R \text{ மற்றும்}\\
+  R^{n+1} & = \Setabs{\tuple{x, z}}{\exists y (R^n xy \land Ryz)}.
+\end{align*}
+பின்னர், $G$ ஒரு முகவர் குழுவாக இருக்கும் இடத்தில், எல்லா முகவர்களின்
+அணுகுறவுகளின் ஒன்றியத்தின் கடப்பு அடைவாக $R_G = ( \bigcup_{b
+\in G} R_b )^+$ ஐ வரையறுக்கிறோம்.
+
+\begin{defn}
+$G' \subseteq G$ எனில், $R_{G'} w w'$ ஆகும் ஒவ்வொரு $w'$ க்கும்
+$\mSat{M}{!A}[w']$ ஆகும்போது, அப்போதும் அப்போது மட்டுமே,
+$\mSat{M}{\CKnows_{G'} !A}[ w]$ எனக் கொள்கிறோம்.
+\end{defn}
+
+\end{document}

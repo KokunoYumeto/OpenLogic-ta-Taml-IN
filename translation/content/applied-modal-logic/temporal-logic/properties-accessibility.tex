@@ -1,0 +1,65 @@
+% SEGMENT OLP-0479-S01
+% Part: applied-modal-logics
+% Chapter: temporal-logic
+% Section: properties-accessibility
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{tl}{acc}
+
+\olsection{காலச் சட்டகங்களின் பண்புகள்}
+
+நமது கால மாதிரிகள் தொடர்பு~$\prec$ மீது எந்த நிபந்தனையையும் விதிக்காததால்,
+நமக்குப் பழக்கமான கோட்பாட்டுறுதிகளில் எல்லா மாதிரிகளிலும் செல்லுபடியாகும்
+ஒரே கோட்பாட்டுறுதி~$K$, அல்லது அதற்கு ஒத்த $K_{\Gtemp}$ மற்றும்~$K_{\Htemp}$:
+\begin{align*}
+\tag{$K_{\Gtemp}$}  \Gtemp (p \to q) & \to (\Gtemp p \to \Gtemp q)\\
+\tag{$K_{\Htemp}$}  \Htemp (p \to q) & \to (\Htemp p \to \Htemp q)
+\end{align*}
+
+ஆனால், எடுத்துக்காட்டாக~$\prec$ ஒரு நேரியல் வரிசையாக இருப்பதை உறுதிசெய்வதன்
+மூலம் காலம் எவ்வாறு குறிக்கப்படுகிறது என்பதற்கு நமது மாதிரிகள் கடுமையான
+நிபந்தனைகளை விதிக்க வேண்டும் என விரும்பினால், நமது மாதிரிகளில் வேறு
+செல்லுபடிநிலைகளும் கிடைக்கும்.
+
+\begin{table}[t]
+  \begin{tabular}{| p{.48\textwidth} || p{.48\textwidth} |}
+    \hline
+    {\emph{$\prec$ \dots எனில்}} & {\emph{\dots ஆனது~$\mModel{M}$ இல் மெய்யாகும்:}} \\
+    \hline \hline
+    \emph{கடப்புப் பண்புள்ளது}: \newline
+    $\forall u \forall v \forall w ((u \prec v \land v \prec w) \lif u \prec w)$ &
+    $\Ftemp \Ftemp p \lif \Ftemp p$  \\
+    \hline
+    \emph{நேரியல்}: \newline
+    $\forall w \forall v (w \prec v \lor w = v \lor v \prec w)$ &
+    $(\Ftemp \Ptemp  p \lor \Ptemp \Ftemp p) \lif (\Ptemp p \lor p \lor \Ftemp p)$\\
+    \hline
+    \emph{அடர்ந்தது}: \newline
+    $\forall w \forall v (w \prec v \to \exists u(w \prec u \land u \prec v))$ &
+    $\Ftemp p \lif \Ftemp \Ftemp p$ \\
+    \hline
+    \emph{வரம்பற்றது (கடந்தகாலம்)}: \newline
+    $\forall w \exists v( v \prec w)$ &
+    $\Htemp p \to \Ptemp p$ \\
+    \hline
+    \emph{வரம்பற்றது (எதிர்காலம்)}: \newline
+    $\forall w \exists v( w \prec v)$ &
+    $\Gtemp p \to \Ftemp p$ \\
+    \hline
+  \end{tabular}
+  \caption{காலச் சட்டகங்களுக்கான சில பொருத்தப் பண்புகள்.}
+  \ollabel{tab:correspondence}
+\end{table}
+
+\olref{tab:correspondence} இல் உள்ள பல பண்புகள், காலத்தைக் குறிக்கவுள்ள ஒரு
+மாதிரிக்கு விரும்பத்தக்க இயல்புகளாகத் தோன்றலாம். எனினும், தொடர்பு~$\prec$
+மீது நாம் விரும்பும் எந்த நிபந்தனையையும் விதிக்க முடிந்தாலும், எல்லா
+நிபந்தனைகளுக்கும் காலத் தருக்க மொழியில் வெளிப்படுத்தக்கூடிய !!{formula}s
+பொருந்துவதில்லை என்பதைக் கவனிக்க வேண்டும். எடுத்துக்காட்டாக, எங்கும்
+தற்சுட்டற்ற பண்பு, அதாவது $\forall w \lnot (w \prec w)$ என்ற கருத்துக்கு,
+காலத் தருக்கத்தில் பொருந்தும் வாய்பாடு இல்லை.
+
+\end{document}

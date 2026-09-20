@@ -1,0 +1,130 @@
+% SEGMENT OLP-0490-S01
+% Part: applied-modal-logics
+% Chapter: epistemic-logic
+% Section: public-announcement-logic-semantics
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{aml}{el}{psm}
+
+\olsection{பொது அறிவிப்புத் தருக்கத்தின் பொருண்மையியல்}
+
+பொது அறிவிப்புத் தருக்கங்களுக்கான தொடர்புமுறை மாதிரிகள், அறிவுநிலைத்
+தருக்கங்களில் இருந்த அதே மாதிரிகளே. எனினும், பொது அறிவிப்புச்
+செயற்குறிக்கான பொருண்மையியல் புதியதாகும்.
+
+\begin{defn}\ollabel{defn:mmodels} \emph{ஒரு~$\mModel M = \tuple{W, R, V}$
+  இல் $w$ இல் !!a{formula}~$!A$ இன் மெய்மை}, குறியீட்டில்:
+  $\mSat{M}{!A}[w]$, பின்வருமாறு தொகுமுறையில் வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+  \tagitem{prvFalse}{\indcase{!A}{\lfalse}{$\mSat{M}{\lfalse}[w]$ ஒருபோதும் மெய்யன்று}.}{}
+  \tagitem{prvTrue}{\indcase{!A}{\ltrue}{$\mSat{M}{\ltrue}[w]$ எப்போதும் மெய்}.}{}
+  \item $\mSat{M}{p}[w]$ எனில், எனில் மட்டுமே, $w \in V(p)$
+  \tagitem{prvNot}{\indcase{!A}{\lnot !B}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat/{M}{!B}[w]$}.}{}
+  \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[w]$ மற்றும் $\mSat{M}{!C}[w]$}.}{}
+  \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[w]$ அல்லது $\mSat{M}{!C}[w]$} (அல்லது இரண்டும்).}{}
+  \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat/{M}{!B}[w]$ அல்லது $\mSat{M}{!C}[w]$}.}{}
+  \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}{$\mSat{M}{\indfrm}[w]$ எனில்,
+    எனில் மட்டுமே, $\mSat{M}{!B}[w]$, $\mSat{M}{!C}[w]$ இரண்டும் மெய்,
+    அல்லது $\mSat{M}{!B}[w]$, $\mSat{M}{!C}[w]$ இரண்டுமே மெய்யல்ல}.}{}
+  \item\ollabel{defn:sub:mmodels-box}
+    \indcase{!A}{\Knows_a !B}{$\mSat{M}{\indfrm}[w]$ எனில், எனில் மட்டுமே,
+    $R_a ww'$ ஆகும் எல்லா $w' \in W$ க்கும் $\mSat{M}{!B}[w']$}
+  \item\ollabel{defn:sub:mmodels-pal}
+    \indcase{!A}{[!B] !C}{$\mSat{M}{\indfrm}[w]$ எனில், எனில் மட்டுமே,
+    $\mSat{M}{!B}[w]$ என்பது $\mSat{M \mid !B}{!C}[w]$ ஐ உட்கிடையாக்குகிறது}
+
+
+  இங்கு $\mModel M \mid !B = \tuple{W', R', V'}$ பின்வருமாறு
+  வரையறுக்கப்படுகிறது:
+  \begin{enumerate}
+    \item $W' = \Setabs{ u \in W}{\mSat{M}{!B}[u]}$. எனவே
+      $\mModel M \mid !B$ இன் உலகங்கள், $!B$ மெய்யாகும்~$\mModel M$ இன்
+      உலகங்களாகும்.
+    \item $R'_a = R_a \cap (W' \times W')$. ஒவ்வொரு முகவரின் அணுகுறவும்
+      $W'$ இல் எஞ்சியிருக்கும் உலகங்களுக்கு மட்டும் கட்டுப்படுத்தப்படுகிறது.
+    \item $V'(p) = \Setabs{ u \in W'}{u \in V(p) }$. இதேபோல்,
+      தகவல்சார் நிகழ்வுகள் கூற்று மாறிகளின் மெய்ம்மதிப்பை மாற்றாது என்ற
+      கருத்தைக் குறிக்க, உலகங்களிலுள்ள கூற்று மதிப்பளிப்புகள் மாறாமல்
+      இருக்கின்றன.
+  \end{enumerate}
+
+  \end{enumerate}
+\end{defn}
+
+எனவே பொது அறிவிப்புத் தருக்கங்களின் தனிச்சிறப்பு என்னவெனில்,
+$\mModel M$ இல் ஓர் !!a{formula}வின் மெய்மையைச் சில நேரங்களில்
+$\mModel M$ இலிருந்து வேறுபட்ட ஒரு மாதிரியைக் குறிப்பிடுவதன் மூலமே
+தீர்மானிக்க முடியும்.
+
+நமது பொருண்மையியல் அறிவிப்புச் செயற்குறியை ஒரு~$\Box$ செயற்குறியாகக்
+கருதுகிறது என்பதையும் கவனிக்கவும். எனவே ஓர் உலகில் !!a{formula}~$!A$ ஐ
+மெய்யாக அறிவிக்க முடியாவிட்டால், இறுதிப்புள்ளிகளில் எல்லா~$\Box$ !!{formula}s
+மெய்யாக இருப்பதுபோலவே, அங்கு $[!A]!B$ அற்பமாக மெய்யாகும்.
+% SOURCE CORRECTION TA-AML-007: restore the formula metavariable marker on B.
+
+\begin{figure}
+  \begin{center}
+    \begin{tikzpicture}[modal]
+      \node[world] (w1) [label={below left:$p, \lnot q$}]{$w_1$};
+      \node[world] (w2) [left=of w1, label={left:$\lnot p, \lnot q$}]{$w_2$};
+      \node[world] (w3) [above=of w1, label={right:$p, q$}] {$w_3$};
+      \draw[<->] (w1) to [swap] node {$b$} (w2);
+      \draw[->,loop below] (w1) to node {$a, b$} (w1);
+      \draw[<->] (w1) to [swap] node {$a$} (w3);
+      \draw[->,loop above] (w2) to node {$a, b$} (w2) ;
+      \draw[->,loop above] (w3) to node {$a, b$} (w3) ;
+
+      \node[world](v1)[right of=w1, xshift=1.25in, label={right:$p, \lnot q$}]{$w'_1$};
+      \node[world](v3)[above of=v1,label={right:$p,q$}]{$w'_3$};
+      \draw[<->] (v1) to node {$a$} (v3);
+      \draw[->,loop below] (v1) to node {$a,b$} (v1);
+      \draw[->,loop above] (v3) to node {$a,b$} (v3) ;
+
+      \node(m)[below=of w1]{$\mModel M$};
+      \node(m')[below=of v1]{$\mModel M \mid p$};
+
+      \draw[-,dotted] (w1) to node {\footnotesize $p$ இன் அறிவிப்பு}(v1) ;
+
+    \end{tikzpicture}
+  \end{center}
+  \caption{$p$ இன் பொது அறிவிப்புக்கு முன்னும் பின்னும்.}
+  \ollabel{fig:announcement-example}
+\end{figure}
+
+ஓர் !!a{formula}வின் பொது அறிவிப்பை ஒரு மாதிரியைச் சுருக்குவதாக, அல்லது
+அந்த~!!{formula} மெய்யாக இருந்த உலகங்களுக்கு அதைக் கட்டுப்படுத்துவதாகக் காணலாம்.
+\olref{fig:announcement-example},~$p$ ஐப் பொதுவாக அறிவிப்பதன் விளைவுக்கு ஓர்
+எடுத்துக்காட்டை அளிக்கிறது. அறிவிப்பின் விளைவாக முகவர்~$b$ ஆனவர்~$p$ ஐ
+அறிந்துகொள்கிறார்; ஆனால் முகவர்~$a$ அவ்வாறு அறிந்துகொள்வதில்லை ($p$ மெய்
+என்பதை~$a$ ஏற்கெனவே அறிந்திருந்ததால்) என்பது அம்மாதிரியின் குறிப்பிடத்தக்க
+ஒரு விடயம்.
+
+இன்னும் முறையாக, $\mSat{M}{\lnot \Knows_b p}[w_1]$; ஆனால் $\mSat{M
+\mid p}{\Knows_b p}[w'_1]$. இதனால் $\mSat{M}{[p] \Knows_b
+p}[w_1]$. ஆனால் அறிவிப்பின் விளைவைப் பற்றி இதைவிட வலுவான கூற்றுகளையும்
+கூறலாம். உண்மையில், $\mSat{M}{[p]\CKnows_{\{a,b\}} p}[w_1]$. வேறு
+சொற்களில், $p$ அறிவிக்கப்பட்ட பிறகு அது \emph{பொதுவறிவாகிறது}.
+
+ஆனால் இது பொதுநேர்விலும் மெய்யாகுமா என்றும்,~$!A$ இன் மெய்யான அறிவிப்பு
+\emph{எப்போதும்} $!A$ ஐப் பொதுவறிவாக்குமா என்றும் நாம் கேட்கலாம். பதில்
+இல்லை என்பது வியப்பளிக்கலாம். உண்மையில், அறிவிக்கப்பட்டவுடன் மெய்யாக
+இருப்பதை நிறுத்திவிடும் !!{formula}s ஐ மெய்யாக அறிவிக்க முடியும்.
+எடுத்துக்காட்டாக, \olref{fig:announcement-example} இல்~$w_1$ இல்
+$p \land \lnot \Knows_b p$ ஐ அறிவிப்பதன் விளைவுகளைக் கருதுக. உண்மையில்,
+$\mModel M \mid p$, $\mModel M \mid (p \land \lnot \Knows_b p)$ ஆகியவை
+ஒரே மாதிரி அல்ல; இரண்டாவது புதுப்பிப்பு முன்னதிலுள்ள ஒரு கூடுதல்
+மெய்-p உலகை நீக்குகிறது. எனினும், நாம் ஏற்கெனவே குறிப்பிட்டபடி,
+$\mSat{M \mid p}{\Knows_b p}[w'_1]$. ஆகவே,
+$\mSat{M \mid (p \land \lnot \Knows_b p)}{\lnot
+(p \land \lnot \Knows_b p)}[w'_1]$; எனவே இது அறிவிக்கப்பட்டவுடன்
+பொய்யாகும் ஓர் !!a{formula}.
+% SOURCE CORRECTION TA-AML-008: the two restricted models are not identical.
+
+\end{document}

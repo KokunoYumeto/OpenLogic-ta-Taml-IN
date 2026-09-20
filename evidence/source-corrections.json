@@ -4673,6 +4673,164 @@
       "rationale": "The completeness procedure searches exhaustively; closure is one possible outcome, while these examples exhibit the open complete outcome.",
       "precise_review_question": "Are both systematic searches now described as complete-tableau constructions?",
       "location_needle": "SOURCE CORRECTION TA-NML-058"
+    },
+    {
+      "audit_id": "TA-AML-001",
+      "unit_id": "OLP-0476",
+      "kind": "temporal-chapter-uses-part-ending-hook",
+      "action": "Replaced the part-ending hook with the chapter-ending hook in the temporal-logic chapter driver.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\OLEndPartHook"],
+      "expected_extra_commands": ["\\OLEndChapterHook"],
+      "source_issue_or_choice": "The file declares the chapter subfiles class and opens an olchapter, but ends with OLEndPartHook; every other chapter driver in the surrounding modal material uses OLEndChapterHook.",
+      "chosen_treatment": "தமிழ் காலத் தருக்க அதிகார இயக்கி அதிகார முடிவுக் கொக்கியைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Preserving the part-ending hook in a chapter driver.",
+      "rationale": "The document class, opening macro and imported sections unambiguously identify this file as a chapter driver.",
+      "precise_review_question": "Does the temporal-logic driver now end with the chapter hook while preserving all five imports?",
+      "location_needle": "SOURCE CORRECTION TA-AML-001"
+    },
+    {
+      "audit_id": "TA-AML-002",
+      "unit_id": "OLP-0478",
+      "kind": "future-formula-omits-temporal-operator-macro",
+      "action": "Restored Ftemp in the inductive list of temporal formulas.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\Ftemp"],
+      "normalized_math_replacements": [
+        {
+          "from": "F!A",
+          "to": "\\Ftemp!A",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The language definition names Ftemp as the future operator and every semantic clause uses it, but the formula-formation list alone prints the ordinary letter F.",
+      "chosen_treatment": "தமிழ் வாய்பாட்டு உருவாக்கப் பட்டியலில் $\\Ftemp !A$ என்ற எதிர்காலச் செயற்குறியை மீட்டமைக்கிறது.",
+      "alternatives_considered": "Treating F as a new undeclared operator or preserving the isolated typo.",
+      "rationale": "The immediately preceding operator inventory and the later satisfaction clause make Ftemp the unique intended command.",
+      "precise_review_question": "Does the formation clause now list exactly Ptemp, Htemp, Ftemp and Gtemp?",
+      "location_needle": "SOURCE CORRECTION TA-AML-002"
+    },
+    {
+      "audit_id": "TA-AML-003",
+      "unit_id": "OLP-0482",
+      "kind": "epistemic-chapter-uses-part-ending-hook",
+      "action": "Replaced the part-ending hook with the chapter-ending hook in the epistemic-logic chapter driver.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\OLEndPartHook"],
+      "expected_extra_commands": ["\\OLEndChapterHook"],
+      "source_issue_or_choice": "The file declares the chapter subfiles class and opens an olchapter, but ends with OLEndPartHook.",
+      "chosen_treatment": "தமிழ் அறிவுநிலைத் தருக்க அதிகார இயக்கி அதிகார முடிவுக் கொக்கியைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Preserving the part-ending hook in a chapter driver.",
+      "rationale": "The document class, opening macro and eight imported sections unambiguously identify this file as a chapter driver.",
+      "precise_review_question": "Does the epistemic-logic driver now end with the chapter hook while preserving all eight imports?",
+      "location_needle": "SOURCE CORRECTION TA-AML-003"
+    },
+    {
+      "audit_id": "TA-AML-004",
+      "unit_id": "OLP-0488",
+      "kind": "bisimulation-clauses-use-undeclared-agent-set",
+      "action": "Changed both agent quantifiers from the undeclared set A to the chapter's declared agent-symbol set G.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "a\\inA",
+          "to": "a\\inG",
+          "count": 2
+        }
+      ],
+      "source_issue_or_choice": "The epistemic language declares G as its set of agent symbols and uses it throughout, while the two bisimulation clauses alone quantify agents over an undeclared A.",
+      "chosen_treatment": "தமிழ் இரு முன்னோக்கு/பின்னோக்குக் கூறுகளிலும் முகவர்களை~$G$ இலிருந்து அளவையிடுகிறது.",
+      "alternatives_considered": "Introducing a second unexplained agent set A or preserving the free set symbol.",
+      "rationale": "The indexed accessibility relations and all preceding language and model definitions use G, making the intended set unambiguous.",
+      "precise_review_question": "Do both bisimulation direction clauses quantify every agent in G?",
+      "location_needle": "SOURCE CORRECTION TA-AML-004"
+    },
+    {
+      "audit_id": "TA-AML-005",
+      "unit_id": "OLP-0489",
+      "kind": "public-announcement-language-copied-section-metadata",
+      "action": "Aligned the section metadata comment with the public-announcement language file and stable pal identifier.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {
+          "from": "% Section: language-epistemic-logic",
+          "to": "% Section: public-announcement-logic-language",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The section comment repeats the basic epistemic-language filename although the file, heading and aml/el/pal identifier concern public-announcement language.",
+      "chosen_treatment": "தமிழ் கோப்பு அதன் பொது அறிவிப்பு மொழி உள்ளடக்கத்துடன் பொருந்தும் பிரிவு குறிப்பைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Preserving the copied basic-language comment.",
+      "rationale": "The path, heading, additional operator and stable file id all identify the section uniquely.",
+      "precise_review_question": "Does the section metadata now identify public-announcement logic language?",
+      "location_needle": "SOURCE CORRECTION TA-AML-005"
+    },
+    {
+      "audit_id": "TA-AML-006",
+      "unit_id": "OLP-0489",
+      "kind": "public-announcement-language-inventory-omits-biconditional",
+      "action": "Added the feature-sensitive biconditional to the connective inventory already supported by the formation clauses.",
+      "expected_missing_math": [],
+      "expected_extra_math": ["$\\liff$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\iftag", "\\ycomma", "\\liff"],
+      "expected_missing_tokens": [],
+      "expected_extra_tokens": ["biconditional"],
+      "source_issue_or_choice": "The initial connective list stops after the conditional, but the same definition's inductive syntax includes a prvIff biconditional clause.",
+      "chosen_treatment": "தமிழ் அடிப்படை இணைப்பிப் பட்டியலில் அம்சக்குறியுடன்~$\\liff$ ஐச் சேர்க்கிறது.",
+      "alternatives_considered": "Deleting the later biconditional formation clause or leaving the language inventory incomplete.",
+      "rationale": "The complete epistemic language immediately preceding this section lists the same biconditional, and the PAL formation clause requires it.",
+      "precise_review_question": "Does the inventory now list every connective admitted by the formation clauses?",
+      "location_needle": "SOURCE CORRECTION TA-AML-006"
+    },
+    {
+      "audit_id": "TA-AML-007",
+      "unit_id": "OLP-0490",
+      "kind": "public-announcement-formula-drops-metavariable-marker",
+      "action": "Restored the OpenLogic formula marker on B in the vacuous-truth explanation.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "[!A]B",
+          "to": "[!A]!B",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The syntax and semantic clause use !B as a formula metavariable, while the prose instance alone prints an unmarked B.",
+      "chosen_treatment": "தமிழ் விளக்கம்~$[!A]!B$ என்ற ஒரே வாய்பாட்டு குறியீட்டைத் தொடர்கிறது.",
+      "alternatives_considered": "Treating B as an object-language atom in this one sentence.",
+      "rationale": "The sentence quantifies an arbitrary formula B and directly explains the preceding dynamic semantic clause.",
+      "precise_review_question": "Does the vacuous-truth sentence retain formula markers on both A and B?",
+      "location_needle": "SOURCE CORRECTION TA-AML-007"
+    },
+    {
+      "audit_id": "TA-AML-008",
+      "unit_id": "OLP-0490",
+      "kind": "two-public-announcement-restrictions-falsely-called-identical",
+      "action": "Stated that the p-update and the Moore-sentence update are not identical, while retaining the knowledge and self-refutation conclusion.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "In the displayed model, updating by p retains both p-worlds, while updating by p and not-K_b-p removes the p-world where b already knows p; the source nevertheless calls the two restricted models the same.",
+      "chosen_treatment": "தமிழ் இரு புதுப்பித்த மாதிரிகளும் வேறுபடுகின்றன என்றும், இரண்டாவது ஒரு கூடுதல் மெய்-p உலகை நீக்குகிறது என்றும் கூறுகிறது.",
+      "alternatives_considered": "Changing the diagram or valuation so the two restrictions coincide; preserving the false identity claim.",
+      "rationale": "Direct evaluation at the three drawn worlds distinguishes the domains, while both updates still make K_b p true at the surviving w1 and hence preserve the intended self-refuting announcement example.",
+      "precise_review_question": "Does the corrected prose distinguish the two restricted domains without altering the final false-after-announcement result?",
+      "location_needle": "SOURCE CORRECTION TA-AML-008"
     }
   ],
   "by_unit": {
@@ -4817,6 +4975,12 @@
     "OLP-0465": ["TA-NML-044"],
     "OLP-0466": ["TA-NML-045", "TA-NML-046"],
     "OLP-0468": ["TA-NML-047", "TA-NML-048", "TA-NML-049", "TA-NML-050", "TA-NML-051", "TA-NML-052", "TA-NML-053"],
-    "OLP-0469": ["TA-NML-054", "TA-NML-055", "TA-NML-056", "TA-NML-057", "TA-NML-058"]
+    "OLP-0469": ["TA-NML-054", "TA-NML-055", "TA-NML-056", "TA-NML-057", "TA-NML-058"],
+    "OLP-0476": ["TA-AML-001"],
+    "OLP-0478": ["TA-AML-002"],
+    "OLP-0482": ["TA-AML-003"],
+    "OLP-0488": ["TA-AML-004"],
+    "OLP-0489": ["TA-AML-005", "TA-AML-006"],
+    "OLP-0490": ["TA-AML-007", "TA-AML-008"]
   }
 }

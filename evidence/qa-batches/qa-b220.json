@@ -1,0 +1,92 @@
+{
+  "batch_id": "TA-B220",
+  "units": [
+    {
+      "unit_id": "OLP-0488",
+      "source_sha256": "3be0d4f2009365ab48416c0235ba2a8dfa8a5c04a68c0066d377959a0489c60d",
+      "translation_sha256": "5749ccbdb727514b0c2bc24d08a2bac1c7bb6259326690700916cfb5547a7ab1",
+      "source_bytes": 4103,
+      "translation_bytes": 8366,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$a\\inA$",
+        "$a\\inA$"
+      ],
+      "extra_math": [
+        "$a\\inG$",
+        "$a\\inG$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "above",
+        "below",
+        "bend",
+        "dotted",
+        "include",
+        "left",
+        "logic",
+        "loop",
+        "modal",
+        "node",
+        "open",
+        "propositional",
+        "right",
+        "section",
+        "swap",
+        "variable",
+        "world",
+        "xshift"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-AML-004",
+          "unit_id": "OLP-0488",
+          "kind": "bisimulation-clauses-use-undeclared-agent-set",
+          "action": "Changed both agent quantifiers from the undeclared set A to the chapter's declared agent-symbol set G.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "a\\inA",
+              "to": "a\\inG",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "The epistemic language declares G as its set of agent symbols and uses it throughout, while the two bisimulation clauses alone quantify agents over an undeclared A.",
+          "chosen_treatment": "தமிழ் இரு முன்னோக்கு/பின்னோக்குக் கூறுகளிலும் முகவர்களை~$G$ இலிருந்து அளவையிடுகிறது.",
+          "alternatives_considered": "Introducing a second unexplained agent set A or preserving the free set symbol.",
+          "rationale": "The indexed accessibility relations and all preceding language and model definitions use G, making the intended set unambiguous.",
+          "precise_review_question": "Do both bisimulation direction clauses quantify every agent in G?",
+          "location_needle": "SOURCE CORRECTION TA-AML-004"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

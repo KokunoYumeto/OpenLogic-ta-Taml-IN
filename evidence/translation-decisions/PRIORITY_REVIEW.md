@@ -1,8 +1,136 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 460/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 476/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
+
+## TA-AML-001 — The file declares the chapter subfiles class and opens an olchapter, but ends with OLEndPartHook; every other chapter driver in the surrounding modal material uses OLEndChapterHook.
+
+Chosen rendering: **தமிழ் காலத் தருக்க அதிகார இயக்கி அதிகார முடிவுக் கொக்கியைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The document class, opening macro and imported sections unambiguously identify this file as a chapter driver.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0476 (checked_supports)
+
+Alternatives: Preserving the part-ending hook in a chapter driver.
+
+Please double-check: **does the temporal-logic driver now end with the chapter hook while preserving all five imports?**
+
+- `TA-OCC-b6083e0ea9c4c698` — OLP-0476 / `OLP-0476-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic.tex:21`; PDF page pending.
+
+## TA-AML-002 — The language definition names Ftemp as the future operator and every semantic clause uses it, but the formula-formation list alone prints the ordinary letter F.
+
+Chosen rendering: **தமிழ் வாய்பாட்டு உருவாக்கப் பட்டியலில் $\Ftemp !A$ என்ற எதிர்காலச் செயற்குறியை மீட்டமைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The immediately preceding operator inventory and the later satisfaction clause make Ftemp the unique intended command.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0478 (checked_supports)
+
+Alternatives: Treating F as a new undeclared operator or preserving the isolated typo.
+
+Please double-check: **does the formation clause now list exactly Ptemp, Htemp, Ftemp and Gtemp?**
+
+- `TA-OCC-72153e66acb37d29` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:60`; PDF page pending.
+
+## TA-AML-003 — The file declares the chapter subfiles class and opens an olchapter, but ends with OLEndPartHook.
+
+Chosen rendering: **தமிழ் அறிவுநிலைத் தருக்க அதிகார இயக்கி அதிகார முடிவுக் கொக்கியைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The document class, opening macro and eight imported sections unambiguously identify this file as a chapter driver.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0482 (checked_supports)
+
+Alternatives: Preserving the part-ending hook in a chapter driver.
+
+Please double-check: **does the epistemic-logic driver now end with the chapter hook while preserving all eight imports?**
+
+- `TA-OCC-535f0d767739ae7e` — OLP-0482 / `OLP-0482-S01`; source `content/applied-modal-logic/epistemic-logic/epistemic-logic.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/epistemic-logic.tex:29`; PDF page pending.
+
+## TA-AML-004 — The epistemic language declares G as its set of agent symbols and uses it throughout, while the two bisimulation clauses alone quantify agents over an undeclared A.
+
+Chosen rendering: **தமிழ் இரு முன்னோக்கு/பின்னோக்குக் கூறுகளிலும் முகவர்களை~$G$ இலிருந்து அளவையிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The indexed accessibility relations and all preceding language and model definitions use G, making the intended set unambiguous.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0488 (checked_supports)
+
+Alternatives: Introducing a second unexplained agent set A or preserving the free set symbol.
+
+Please double-check: **do both bisimulation direction clauses quantify every agent in G?**
+
+- `TA-OCC-bcb2f491dd2fa4bf` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:39`; PDF page pending.
+
+## TA-AML-005 — The section comment repeats the basic epistemic-language filename although the file, heading and aml/el/pal identifier concern public-announcement language.
+
+Chosen rendering: **தமிழ் கோப்பு அதன் பொது அறிவிப்பு மொழி உள்ளடக்கத்துடன் பொருந்தும் பிரிவு குறிப்பைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The path, heading, additional operator and stable file id all identify the section uniquely.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0489 (checked_supports)
+
+Alternatives: Preserving the copied basic-language comment.
+
+Please double-check: **does the section metadata now identify public-announcement logic language?**
+
+- `TA-OCC-d47e35b17dc92bf8` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:5`; PDF page pending.
+
+## TA-AML-006 — The initial connective list stops after the conditional, but the same definition's inductive syntax includes a prvIff biconditional clause.
+
+Chosen rendering: **தமிழ் அடிப்படை இணைப்பிப் பட்டியலில் அம்சக்குறியுடன்~$\liff$ ஐச் சேர்க்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The complete epistemic language immediately preceding this section lists the same biconditional, and the PAL formation clause requires it.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0489 (checked_supports)
+
+Alternatives: Deleting the later biconditional formation clause or leaving the language inventory incomplete.
+
+Please double-check: **does the inventory now list every connective admitted by the formation clauses?**
+
+- `TA-OCC-d1d9df2406e6b792` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:37`; PDF page pending.
+
+## TA-AML-007 — The syntax and semantic clause use !B as a formula metavariable, while the prose instance alone prints an unmarked B.
+
+Chosen rendering: **தமிழ் விளக்கம்~$[!A]!B$ என்ற ஒரே வாய்பாட்டு குறியீட்டைத் தொடர்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The sentence quantifies an arbitrary formula B and directly explains the preceding dynamic semantic clause.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0490 (checked_supports)
+
+Alternatives: Treating B as an object-language atom in this one sentence.
+
+Please double-check: **does the vacuous-truth sentence retain formula markers on both A and B?**
+
+- `TA-OCC-aca94848e12bba4a` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:70`; PDF page pending.
+
+## TA-AML-008 — In the displayed model, updating by p retains both p-worlds, while updating by p and not-K_b-p removes the p-world where b already knows p; the source nevertheless calls the two restricted models the same.
+
+Chosen rendering: **தமிழ் இரு புதுப்பித்த மாதிரிகளும் வேறுபடுகின்றன என்றும், இரண்டாவது ஒரு கூடுதல் மெய்-p உலகை நீக்குகிறது என்றும் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Direct evaluation at the three drawn worlds distinguishes the domains, while both updates still make K_b p true at the surviving w1 and hence preserve the intended self-refuting announcement example.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0490 (checked_supports)
+
+Alternatives: Changing the diagram or valuation so the two restrictions coincide; preserving the false identity claim.
+
+Please double-check: **does the corrected prose distinguish the two restricted domains without altering the final false-after-announcement result?**
+
+- `TA-OCC-4a84a99a08c59d4a` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:128`; PDF page pending.
 
 ## TA-ARI-006 — Checking appendix refers to subtraction and division of cuts although their source definitions are commented out
 
@@ -259,6 +387,8 @@ Please double-check: **is the separate warning sufficient for Tamil learners, or
 - `TA-OCC-1f600e91a855770a` — OLP-0019 / `OLP-0019-S04`; source `content/sets-functions-relations/relations/operations.tex:50`; Tamil `translation/content/sets-functions-relations/relations/operations.tex:70`; PDF page pending.
 - `TA-OCC-9d84aea8da741832` — OLP-0019 / `OLP-0019:EDITORIAL:relations-notes:L14`; source `content/sets-functions-relations/relations/operations.tex:52`; Tamil `translation/relations-notes.tex:14`; PDF page pending.
 - `TA-OCC-abca13461bb5a6e9` — OLP-0171 / `OLP-0171-S01`; source `content/first-order-logic/models-theories/expressing-relations.tex:1`; Tamil `translation/content/first-order-logic/models-theories/expressing-relations.tex:105`; PDF page pending.
+- `TA-OCC-9512421b3b604e0b` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:103`; PDF page pending.
+- `TA-OCC-b8ab0e506918ffdd` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:107`; PDF page pending.
 
 ## TA-D003 — Branch definition uses undeclared X
 
@@ -4050,6 +4180,7 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-ef821cd8ce85f5c7` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:46`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:240`; PDF page pending.
 - `TA-OCC-d88295745de18498` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:52`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:243`; PDF page pending.
 - `TA-OCC-6def03b3108920b2` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:56`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:256`; PDF page pending.
+- `TA-OCC-27576bab2c6a0bd7` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:24`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:118`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -4167,6 +4298,9 @@ Please double-check: **is “தொடர்முறை” the established Indi
 - `TA-OCC-d425488d3dff68df` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:12`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:13`; PDF page pending.
 - `TA-OCC-b206a8926d0043da` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:43`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:48`; PDF page pending.
 - `TA-OCC-9cac2bc9fa08cd0c` — OLP-0472 / `OLP-0472-S01`; source `content/normal-modal-logic/sequent-calculus/rules-for-K.tex:46`; Tamil `translation/content/normal-modal-logic/sequent-calculus/rules-for-K.tex:52`; PDF page pending.
+- `TA-OCC-ab25362f4c5e541d` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:17`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:31`; PDF page pending.
+- `TA-OCC-63ffb0456f2659cb` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:31`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:38`; PDF page pending.
+- `TA-OCC-8997e1a0fc4dd867` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:38`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:40`; PDF page pending.
 
 ## TA-T014 — continuum
 
@@ -4336,6 +4470,7 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-d53074b4a0bdb335` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:169`; PDF page pending.
 - `TA-OCC-25f7cd02e61fc0d2` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:261`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:30`; PDF page pending.
 - `TA-OCC-c7766fb5e3961ed6` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:261`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:283`; PDF page pending.
+- `TA-OCC-763d59e5274e4306` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:25`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5543,6 +5678,25 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-3fb133fc6ac6e8f3` — OLP-0454 / `OLP-0454-S01`; source `content/normal-modal-logic/filtrations/examples-of-filtrations.tex:224`; Tamil `translation/content/normal-modal-logic/filtrations/examples-of-filtrations.tex:241`; PDF page pending.
 - `TA-OCC-10636181ecb0ae23` — OLP-0458 / `OLP-0458-S01`; source `content/normal-modal-logic/filtrations/more-filtrations.tex:20`; Tamil `translation/content/normal-modal-logic/filtrations/more-filtrations.tex:24`; PDF page pending.
 - `TA-OCC-2a3195c033c72c3e` — OLP-0459 / `OLP-0459-S01`; source `content/normal-modal-logic/filtrations/euclidean-filtrations.tex:1`; Tamil `translation/content/normal-modal-logic/filtrations/euclidean-filtrations.tex:96`; PDF page pending.
+- `TA-OCC-ea536fb5fcfff79c` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:72`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:69`; PDF page pending.
+- `TA-OCC-5680ede63c2d8320` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:72`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:76`; PDF page pending.
+- `TA-OCC-b868f4083eb4430e` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:80`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:84`; PDF page pending.
+- `TA-OCC-df57c16fba8b95a9` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:85`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:92`; PDF page pending.
+- `TA-OCC-db44526ae18133f0` — OLP-0479 / `OLP-0479-S01`; source `content/applied-modal-logic/temporal-logic/properties-accessibility.tex:14`; Tamil `translation/content/applied-modal-logic/temporal-logic/properties-accessibility.tex:14`; PDF page pending.
+- `TA-OCC-b807cbf6038c82e3` — OLP-0479 / `OLP-0479-S01`; source `content/applied-modal-logic/temporal-logic/properties-accessibility.tex:58`; Tamil `translation/content/applied-modal-logic/temporal-logic/properties-accessibility.tex:58`; PDF page pending.
+- `TA-OCC-ca1aed1ce25fbf01` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:15`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:15`; PDF page pending.
+- `TA-OCC-bcf9c0fd6971ff82` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:21`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:46`; PDF page pending.
+- `TA-OCC-a2bf06fa335078ad` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:83`; PDF page pending.
+- `TA-OCC-1da8d42459f5509e` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:17`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:12`; PDF page pending.
+- `TA-OCC-5a12f0ad54b70bc4` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:19`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:15`; PDF page pending.
+- `TA-OCC-6e2d5f9dfe0e67f9` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:20`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:23`; PDF page pending.
+- `TA-OCC-5e844e70762aa60e` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:23`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:24`; PDF page pending.
+- `TA-OCC-8ca2991634e96810` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:16`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:16`; PDF page pending.
+- `TA-OCC-d1318f0d784649bb` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:43`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:61`; PDF page pending.
+- `TA-OCC-7b828b70c5855919` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:52`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:103`; PDF page pending.
+- `TA-OCC-1d6143b2e8c029e3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:32`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:24`; PDF page pending.
+- `TA-OCC-b9256d1fe156646c` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:32`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:31`; PDF page pending.
+- `TA-OCC-d33b500658cf27a2` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:50`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:14`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -5947,6 +6101,7 @@ Please double-check: **is “முன்வரிசை / பகுதி வ�
 - `TA-OCC-438b72660e270e07` — OLP-0196 / `OLP-0196-S01`; source `content/model-theory/models-of-arithmetic/models-of-pa.tex:93`; Tamil `translation/content/model-theory/models-of-arithmetic/models-of-pa.tex:103`; PDF page pending.
 - `TA-OCC-1dddf05034feb308` — OLP-0196 / `OLP-0196-S01`; source `content/model-theory/models-of-arithmetic/models-of-pa.tex:93`; Tamil `translation/content/model-theory/models-of-arithmetic/models-of-pa.tex:276`; PDF page pending.
 - `TA-OCC-775c9d2a1f1907e2` — OLP-0207 / `OLP-0207-S01`; source `content/model-theory/lindstrom/lindstrom-proof.tex:1`; Tamil `translation/content/model-theory/lindstrom/lindstrom-proof.tex:116`; PDF page pending.
+- `TA-OCC-520e4d54fae31dac` — OLP-0479 / `OLP-0479-S01`; source `content/applied-modal-logic/temporal-logic/properties-accessibility.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/properties-accessibility.tex:22`; PDF page pending.
 
 ## TA-T036 — tree / root / branch
 
@@ -6305,6 +6460,10 @@ Please double-check: **is “மரவுரு / வேர் / கிளை”
 - `TA-OCC-80d1688ae65febe2` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:239`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:252`; PDF page pending.
 - `TA-OCC-1afa0a3871d9e98f` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:279`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:293`; PDF page pending.
 - `TA-OCC-31c229c66d2ce877` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:281`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:294`; PDF page pending.
+- `TA-OCC-2224005eae4944d2` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:50`; PDF page pending.
+- `TA-OCC-d73931d78f5a401e` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:87`; PDF page pending.
+- `TA-OCC-9b684bd0322a9222` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:15`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:16`; PDF page pending.
+- `TA-OCC-f53914f4338269e8` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:15`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:18`; PDF page pending.
 
 ## TA-T037 — least element / well-order / chain
 
@@ -6366,6 +6525,7 @@ Please double-check: **is “அடுத்துறுப்பு / முந
 - `TA-OCC-a90d2aecec992635` — OLP-0047 / `OLP-0047-S13`; source `content/sets-functions-relations/arithmetization/checking-details.tex:163`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:204`; PDF page pending.
 - `TA-OCC-26ddba5c25cd69bf` — OLP-0047 / `OLP-0047-S16`; source `content/sets-functions-relations/arithmetization/checking-details.tex:185`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:232`; PDF page pending.
 - `TA-OCC-660413e2ee88655a` — OLP-0059 / `OLP-0059-S02`; source `content/propositional-logic/syntax-and-semantics/preliminaries.tex:51`; Tamil `translation/content/propositional-logic/syntax-and-semantics/preliminaries.tex:55`; PDF page pending.
+- `TA-OCC-7309c0a10fd3f3ce` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:46`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:51`; PDF page pending.
 
 ## TA-T039 — inverse / relative product / restriction / application of relation
 
@@ -6412,6 +6572,7 @@ Please double-check: **is “தற்சுட்டு அடைவு / க�
 - `TA-OCC-2574d71f973a488b` — OLP-0019 / `OLP-0019-S04`; source `content/sets-functions-relations/relations/operations.tex:52`; Tamil `translation/content/sets-functions-relations/relations/operations.tex:64`; PDF page pending.
 - `TA-OCC-cef0c67e1b3b79d2` — OLP-0019 / `OLP-0019-S04`; source `content/sets-functions-relations/relations/operations.tex:56`; Tamil `translation/content/sets-functions-relations/relations/operations.tex:69`; PDF page pending.
 - `TA-OCC-47aec8b00806fe14` — OLP-0019 / `OLP-0019-S06`; source `content/sets-functions-relations/relations/operations.tex:68`; Tamil `translation/content/sets-functions-relations/relations/operations.tex:89`; PDF page pending.
+- `TA-OCC-31348d7ad987d208` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:98`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:103`; PDF page pending.
 
 ## TA-T041 — formula / derivation / completeness / computability
 
@@ -8914,6 +9075,99 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-581c30c6086d4068` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:278`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:286`; PDF page pending.
 - `TA-OCC-21913efaf166524d` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:297`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:305`; PDF page pending.
 - `TA-OCC-3bf9da98d49517fa` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:353`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:361`; PDF page pending.
+- `TA-OCC-85a4186cdeb7e6fb` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:34`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:36`; PDF page pending.
+- `TA-OCC-1808fd5e5816aa4c` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:37`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:39`; PDF page pending.
+- `TA-OCC-9d6b74d29c0e2488` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:39`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:41`; PDF page pending.
+- `TA-OCC-b823ce8fb858bb61` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:41`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:43`; PDF page pending.
+- `TA-OCC-4a6a6ac6fc52a058` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:43`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:45`; PDF page pending.
+- `TA-OCC-472ccda6fd26204d` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:44`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:46`; PDF page pending.
+- `TA-OCC-9681c6801fe2d809` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:46`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:48`; PDF page pending.
+- `TA-OCC-b14dfb9e655c1f34` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:47`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:49`; PDF page pending.
+- `TA-OCC-57400fc4113d2924` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:49`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:51`; PDF page pending.
+- `TA-OCC-a0ba087e9b4e2731` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:50`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:52`; PDF page pending.
+- `TA-OCC-20acfd8d323e582b` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:52`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:54`; PDF page pending.
+- `TA-OCC-33e8a8280a93d2b6` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:53`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:55`; PDF page pending.
+- `TA-OCC-5f756c277de5e504` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:55`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:57`; PDF page pending.
+- `TA-OCC-2cfd753ee9e143ca` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:56`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:58`; PDF page pending.
+- `TA-OCC-47c7682813d3c01a` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:58`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:61`; PDF page pending.
+- `TA-OCC-0d249eb2856358d1` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:59`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:62`; PDF page pending.
+- `TA-OCC-b583d7f5b0f245b1` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:61`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:64`; PDF page pending.
+- `TA-OCC-3ae78edfe62081fe` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:83`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:91`; PDF page pending.
+- `TA-OCC-3a34a61dd38146e7` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:84`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:93`; PDF page pending.
+- `TA-OCC-14ae11be1e0b2b7b` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:90`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:99`; PDF page pending.
+- `TA-OCC-851ba7e09d098d9c` — OLP-0479 / `OLP-0479-S01`; source `content/applied-modal-logic/temporal-logic/properties-accessibility.tex:59`; Tamil `translation/content/applied-modal-logic/temporal-logic/properties-accessibility.tex:60`; PDF page pending.
+- `TA-OCC-71f87ca788261d08` — OLP-0479 / `OLP-0479-S01`; source `content/applied-modal-logic/temporal-logic/properties-accessibility.tex:59`; Tamil `translation/content/applied-modal-logic/temporal-logic/properties-accessibility.tex:63`; PDF page pending.
+- `TA-OCC-e004e6ce26d9f2b5` — OLP-0480 / `OLP-0480-S01`; source `content/applied-modal-logic/temporal-logic/extra-temporal-operators.tex:17`; Tamil `translation/content/applied-modal-logic/temporal-logic/extra-temporal-operators.tex:18`; PDF page pending.
+- `TA-OCC-9866c7477b54ad40` — OLP-0480 / `OLP-0480-S01`; source `content/applied-modal-logic/temporal-logic/extra-temporal-operators.tex:20`; Tamil `translation/content/applied-modal-logic/temporal-logic/extra-temporal-operators.tex:21`; PDF page pending.
+- `TA-OCC-c88654ba9c63f5c4` — OLP-0480 / `OLP-0480-S01`; source `content/applied-modal-logic/temporal-logic/extra-temporal-operators.tex:21`; Tamil `translation/content/applied-modal-logic/temporal-logic/extra-temporal-operators.tex:22`; PDF page pending.
+- `TA-OCC-7e0c509f992383b0` — OLP-0480 / `OLP-0480-S01`; source `content/applied-modal-logic/temporal-logic/extra-temporal-operators.tex:27`; Tamil `translation/content/applied-modal-logic/temporal-logic/extra-temporal-operators.tex:28`; PDF page pending.
+- `TA-OCC-b8fd89dae8b2607c` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:45`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:44`; PDF page pending.
+- `TA-OCC-c3e6f2a0cc160e6e` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:55`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:54`; PDF page pending.
+- `TA-OCC-a1c808b6d8dcb105` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:36`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:37`; PDF page pending.
+- `TA-OCC-1c1a3bbe082d611e` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:39`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:40`; PDF page pending.
+- `TA-OCC-74367093a9a9e02a` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:41`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:42`; PDF page pending.
+- `TA-OCC-e16dd2fe7fe7c66c` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:43`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:44`; PDF page pending.
+- `TA-OCC-3855f9496becdcd3` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:45`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:46`; PDF page pending.
+- `TA-OCC-9cad485709ef790b` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:46`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:47`; PDF page pending.
+- `TA-OCC-d1e7ac0010b222ad` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:48`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:49`; PDF page pending.
+- `TA-OCC-c7e04628cb70688c` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:49`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:50`; PDF page pending.
+- `TA-OCC-acd6a93ee59562ae` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:51`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:52`; PDF page pending.
+- `TA-OCC-9d6c5f223e7d7c47` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:52`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:53`; PDF page pending.
+- `TA-OCC-feb9b94044a4fabd` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:54`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:55`; PDF page pending.
+- `TA-OCC-b6c8154e7d981fde` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:55`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:56`; PDF page pending.
+- `TA-OCC-185190d86e82d523` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:58`; PDF page pending.
+- `TA-OCC-1ec6b57930fdfce0` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:58`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:59`; PDF page pending.
+- `TA-OCC-6aea1f805f5b3f69` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:60`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:61`; PDF page pending.
+- `TA-OCC-288d0810c4845556` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:61`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:62`; PDF page pending.
+- `TA-OCC-8109b8b317a5ef9c` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:63`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:64`; PDF page pending.
+- `TA-OCC-f0f230ed8c6ddeeb` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:67`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:68`; PDF page pending.
+- `TA-OCC-81c38a36828bdb9b` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:83`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:83`; PDF page pending.
+- `TA-OCC-b624b08e1d6b75a4` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:15`; PDF page pending.
+- `TA-OCC-fb4923f53c02a3f7` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:15`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:17`; PDF page pending.
+- `TA-OCC-ab068b73ce1678e2` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:19`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:23`; PDF page pending.
+- `TA-OCC-0956b4524c97b644` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:44`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:49`; PDF page pending.
+- `TA-OCC-8eaa9d2889187d85` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:51`; PDF page pending.
+- `TA-OCC-453b4872876066df` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:14`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:16`; PDF page pending.
+- `TA-OCC-c9f82dbaab8c30d5` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:20`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:22`; PDF page pending.
+- `TA-OCC-e7587c157d961064` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:54`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:56`; PDF page pending.
+- `TA-OCC-455a3e01c3c949e3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:64`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:15`; PDF page pending.
+- `TA-OCC-4e73668cfc05246c` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:64`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:16`; PDF page pending.
+- `TA-OCC-8ddbb3b40fa1d416` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:64`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:17`; PDF page pending.
+- `TA-OCC-257a0ccaf0f2f326` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:64`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:21`; PDF page pending.
+- `TA-OCC-1345d8b7c5cafe39` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:64`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:58`; PDF page pending.
+- `TA-OCC-5c751e97a2d6bda3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:64`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:58`; PDF page pending.
+- `TA-OCC-3d21db9e76b867e0` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:64`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:65`; PDF page pending.
+- `TA-OCC-0e690d60c73b6d6c` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:64`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:102`; PDF page pending.
+- `TA-OCC-7d8dddbf719cfc02` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:35`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:18`; PDF page pending.
+- `TA-OCC-cf67bb0032b6a383` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:35`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:40`; PDF page pending.
+- `TA-OCC-0ec3c26d3e6055bc` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:43`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:49`; PDF page pending.
+- `TA-OCC-453dd4824785b1f6` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:46`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:52`; PDF page pending.
+- `TA-OCC-1ff875f36d742bb6` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:48`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:54`; PDF page pending.
+- `TA-OCC-267c18309b42afec` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:51`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:57`; PDF page pending.
+- `TA-OCC-2d481a5fbb37fd10` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:53`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:59`; PDF page pending.
+- `TA-OCC-6ff72f3456c05f1f` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:54`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:60`; PDF page pending.
+- `TA-OCC-8ab8422fc36b2301` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:56`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:62`; PDF page pending.
+- `TA-OCC-aa949bbad321324f` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:63`; PDF page pending.
+- `TA-OCC-1897d06eab1bdb83` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:59`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:65`; PDF page pending.
+- `TA-OCC-2d4259a583aa2bf9` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:60`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:66`; PDF page pending.
+- `TA-OCC-8e9408c506bacad2` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:62`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:68`; PDF page pending.
+- `TA-OCC-bce9850bd112ab8b` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:63`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:69`; PDF page pending.
+- `TA-OCC-9bfcb0c72def875f` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:65`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:71`; PDF page pending.
+- `TA-OCC-c98ffa0779d3b683` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:66`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:72`; PDF page pending.
+- `TA-OCC-d6b78ed1d847b31c` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:68`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:74`; PDF page pending.
+- `TA-OCC-dcde3ff6c23d0e57` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:69`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:75`; PDF page pending.
+- `TA-OCC-9d63dcf193bcb509` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:71`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:77`; PDF page pending.
+- `TA-OCC-7bb6d8e6de6fc9a1` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:71`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:77`; PDF page pending.
+- `TA-OCC-9e92e042b05e6952` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:73`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:79`; PDF page pending.
+- `TA-OCC-0717e4819d32e75f` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:77`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:83`; PDF page pending.
+- `TA-OCC-07188e7a4b0c8a4f` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:17`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:19`; PDF page pending.
+- `TA-OCC-703092fb9d6da67f` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:61`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:62`; PDF page pending.
+- `TA-OCC-6a849f04ddd288bc` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:65`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:67`; PDF page pending.
+- `TA-OCC-b57443c1650555bb` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:67`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:68`; PDF page pending.
+- `TA-OCC-3cc09c69f117baa5` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:98`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:101`; PDF page pending.
+- `TA-OCC-4d226c68139365f7` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:99`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:102`; PDF page pending.
+- `TA-OCC-ae762209d51f968d` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:115`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:118`; PDF page pending.
+- `TA-OCC-996d731421c3a206` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:122`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:127`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -11234,6 +11488,9 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-bbc69942529a38d7` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:136`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:84`; PDF page pending.
 - `TA-OCC-2e568f6b42e75a86` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:37`; PDF page pending.
 - `TA-OCC-f9b0df59e7bb621f` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:38`; PDF page pending.
+- `TA-OCC-ef167911bc063de9` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:52`; PDF page pending.
+- `TA-OCC-30075c77fb8899aa` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:69`; PDF page pending.
+- `TA-OCC-f65fdef7955bfe94` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:18`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -12946,6 +13203,9 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-bc632518e38702ca` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:37`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:43`; PDF page pending.
 - `TA-OCC-9b3f5a9c83362071` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
 - `TA-OCC-0d52cbf5559be015` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
+- `TA-OCC-e137b32e4097901e` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:17`; PDF page pending.
+- `TA-OCC-a3c130a49712576e` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:58`; PDF page pending.
+- `TA-OCC-d6305fbd074e89f3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:102`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -14122,6 +14382,27 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-fc62de9bb1e5936a` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:22`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:23`; PDF page pending.
 - `TA-OCC-8464aa44cc949e54` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:1`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:20`; PDF page pending.
 - `TA-OCC-7936ec7a43f387a2` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:26`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:26`; PDF page pending.
+- `TA-OCC-a402d25594746133` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:18`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:17`; PDF page pending.
+- `TA-OCC-172c6f9b4a21eed2` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:18`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:18`; PDF page pending.
+- `TA-OCC-676ffd9ed15c478e` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:18`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:19`; PDF page pending.
+- `TA-OCC-0e3258c649ff70e7` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:18`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:43`; PDF page pending.
+- `TA-OCC-f61709dd9c72144c` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:18`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:77`; PDF page pending.
+- `TA-OCC-7d49e82293548959` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:34`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:33`; PDF page pending.
+- `TA-OCC-f424a4d736084a02` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:19`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:18`; PDF page pending.
+- `TA-OCC-5eca743ccbfc83c3` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:19`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:19`; PDF page pending.
+- `TA-OCC-7f4581769c0e210c` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:19`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:20`; PDF page pending.
+- `TA-OCC-085947951d2bd6d0` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:19`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:44`; PDF page pending.
+- `TA-OCC-de0ee276f897654f` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:25`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:16`; PDF page pending.
+- `TA-OCC-17b77123a1d51bf0` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:25`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:25`; PDF page pending.
+- `TA-OCC-dac4340bccab9a39` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:25`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:35`; PDF page pending.
+- `TA-OCC-6d899419e5c58524` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:38`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:37`; PDF page pending.
+- `TA-OCC-1ca9a98d2c40f3e1` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:58`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:57`; PDF page pending.
+- `TA-OCC-716dadb88d2cf3e3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:101`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:101`; PDF page pending.
+- `TA-OCC-9a629d1ff247a7fd` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:27`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:28`; PDF page pending.
+- `TA-OCC-f2073bd995fe7c4d` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:27`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:29`; PDF page pending.
+- `TA-OCC-5b3e253dbb9d77c5` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:27`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:30`; PDF page pending.
+- `TA-OCC-5bcdddc7735af8f3` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:27`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:56`; PDF page pending.
+- `TA-OCC-8a4c2df64ea69f19` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:54`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:53`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -18510,6 +18791,8 @@ Please double-check: **is “எதிர்கால நிச்சயமற�
 - `TA-OCC-4937688ab2024a1e` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:31`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:35`; PDF page pending.
 - `TA-OCC-2906694ad6d05bad` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:141`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:157`; PDF page pending.
 - `TA-OCC-4bc910799fd07ae9` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:142`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:158`; PDF page pending.
+- `TA-OCC-c8ed39550101629b` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:33`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:35`; PDF page pending.
+- `TA-OCC-21f139fd3f3e3616` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:43`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:43`; PDF page pending.
 
 ## TA-T162 — infinite-valued logic / m-valued logic / evenly spaced truth values / fuzzy logic
 
@@ -18817,6 +19100,38 @@ Please double-check: **is “இயல்பான வாய்ப்புந�
 - `TA-OCC-551ab29138a6b542` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:119`; PDF page pending.
 - `TA-OCC-5e60ab3cc7c764a4` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:161`; PDF page pending.
 - `TA-OCC-d8ac84556ecea717` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:1`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:220`; PDF page pending.
+- `TA-OCC-c8d966161ddfc03f` — OLP-0475 / `OLP-0475-S01`; source `content/applied-modal-logic/applied-modal-logic.tex:1`; Tamil `translation/content/applied-modal-logic/applied-modal-logic.tex:8`; PDF page pending.
+- `TA-OCC-292f022fbe513b9b` — OLP-0475 / `OLP-0475-S01`; source `content/applied-modal-logic/applied-modal-logic.tex:1`; Tamil `translation/content/applied-modal-logic/applied-modal-logic.tex:11`; PDF page pending.
+- `TA-OCC-ae517da1595e4a27` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:19`; PDF page pending.
+- `TA-OCC-9b2fa2c7ff85a73a` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:82`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:32`; PDF page pending.
+- `TA-OCC-d35c40a8c1c95630` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:82`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:90`; PDF page pending.
+- `TA-OCC-3efc5662b17edd6b` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:82`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:95`; PDF page pending.
+- `TA-OCC-c513f9a3406d9a53` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:82`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:96`; PDF page pending.
+- `TA-OCC-b3b7e9212279f32b` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:68`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:18`; PDF page pending.
+- `TA-OCC-f71a2cbfd542694e` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:68`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:20`; PDF page pending.
+- `TA-OCC-f8f63009eefea632` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:68`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:67`; PDF page pending.
+- `TA-OCC-4cef8ab687fee0b7` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:68`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:68`; PDF page pending.
+- `TA-OCC-6f6d0dd47d70c285` — OLP-0482 / `OLP-0482-S01`; source `content/applied-modal-logic/epistemic-logic/epistemic-logic.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/epistemic-logic.tex:13`; PDF page pending.
+- `TA-OCC-8cdcc5ad9009f698` — OLP-0483 / `OLP-0483-S01`; source `content/applied-modal-logic/epistemic-logic/introduction.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/introduction.tex:14`; PDF page pending.
+- `TA-OCC-f134f62fdcc2a508` — OLP-0483 / `OLP-0483-S01`; source `content/applied-modal-logic/epistemic-logic/introduction.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/introduction.tex:14`; PDF page pending.
+- `TA-OCC-041fbddfd8a1fb31` — OLP-0483 / `OLP-0483-S01`; source `content/applied-modal-logic/epistemic-logic/introduction.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/introduction.tex:17`; PDF page pending.
+- `TA-OCC-121860815c71d400` — OLP-0483 / `OLP-0483-S01`; source `content/applied-modal-logic/epistemic-logic/introduction.tex:21`; Tamil `translation/content/applied-modal-logic/epistemic-logic/introduction.tex:32`; PDF page pending.
+- `TA-OCC-4c1d0de4eacf852c` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:68`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:69`; PDF page pending.
+- `TA-OCC-9129552d6da284eb` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:41`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:15`; PDF page pending.
+- `TA-OCC-41d1a945f832a9cb` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:41`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:44`; PDF page pending.
+- `TA-OCC-dbb57dd805d65d85` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:14`; PDF page pending.
+- `TA-OCC-00a6678904fe7a1d` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:45`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:19`; PDF page pending.
+- `TA-OCC-c40d2f3e65aca636` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:92`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:20`; PDF page pending.
+- `TA-OCC-6f49afa70701fc03` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:92`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:50`; PDF page pending.
+- `TA-OCC-e4199b31e0dc81cd` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:92`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:97`; PDF page pending.
+- `TA-OCC-bdd23c791e928ffb` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:92`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:97`; PDF page pending.
+- `TA-OCC-b490fe86216fa1c1` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:92`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:98`; PDF page pending.
+- `TA-OCC-cb8cc9960331a526` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:20`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:14`; PDF page pending.
+- `TA-OCC-0f350ca44a800828` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:20`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:22`; PDF page pending.
+- `TA-OCC-a7460e31ce4585d2` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:20`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:23`; PDF page pending.
+- `TA-OCC-721c0f5d063df201` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:20`; PDF page pending.
+- `TA-OCC-5d26245447f4832e` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:58`; PDF page pending.
+- `TA-OCC-a3b165d85d5c82cb` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:99`; PDF page pending.
 
 ## TA-T167 — possible world / accessibility relation / Kripke semantics / relational structure / alethic, epistemic and dynamic logic / correspondence theory / modal schema
 
@@ -18880,6 +19195,22 @@ Please double-check: **is “சாத்தியமான உலகம் / �
 - `TA-OCC-5c69cb17e11c8dc6` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:46`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:46`; PDF page pending.
 - `TA-OCC-63a5ed13771657e9` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:11`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:12`; PDF page pending.
 - `TA-OCC-fd5b9dd0c133890d` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:11`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:14`; PDF page pending.
+- `TA-OCC-065c7b5da88f3755` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:15`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:22`; PDF page pending.
+- `TA-OCC-3f0d90a5097dd318` — OLP-0483 / `OLP-0483-S01`; source `content/applied-modal-logic/epistemic-logic/introduction.tex:21`; Tamil `translation/content/applied-modal-logic/epistemic-logic/introduction.tex:35`; PDF page pending.
+- `TA-OCC-0d374e48e43761cd` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:17`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:19`; PDF page pending.
+- `TA-OCC-48d4bd9954374f0a` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:19`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:20`; PDF page pending.
+- `TA-OCC-58c642aaf197d3db` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:23`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:20`; PDF page pending.
+- `TA-OCC-ec2f85e9f281e197` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:32`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:24`; PDF page pending.
+- `TA-OCC-f170cabfc2b99812` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:35`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:34`; PDF page pending.
+- `TA-OCC-8752646bb3da2618` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:42`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:43`; PDF page pending.
+- `TA-OCC-445d4dba9d3aa0dc` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:43`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:45`; PDF page pending.
+- `TA-OCC-197d97ac7c3fed05` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:52`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:47`; PDF page pending.
+- `TA-OCC-563c9b62fb782880` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:108`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:57`; PDF page pending.
+- `TA-OCC-b7ff4bc4db8f4c9c` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:108`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:113`; PDF page pending.
+- `TA-OCC-fdba7cca235ef16a` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:12`; PDF page pending.
+- `TA-OCC-1f71fdfb359919a5` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:21`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:22`; PDF page pending.
+- `TA-OCC-0cc7a82b659db1f9` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:60`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:60`; PDF page pending.
+- `TA-OCC-22f0aa768d03b428` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:50`; PDF page pending.
 
 ## TA-T168 — simultaneous substitution / iterated substitution / instance / substitution instance
 
@@ -19084,6 +19415,10 @@ Please double-check: **is “ஒரேநேரப் பதிலீடு / �
 - `TA-OCC-6887b144ee4ea95a` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:111`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:118`; PDF page pending.
 - `TA-OCC-b3bf8394d57567fb` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:118`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:124`; PDF page pending.
 - `TA-OCC-0def73ebffcbd426` — OLP-0443 / `OLP-0443-S01`; source `content/normal-modal-logic/completeness/complete-consistent-sets.tex:125`; Tamil `translation/content/normal-modal-logic/completeness/complete-consistent-sets.tex:134`; PDF page pending.
+- `TA-OCC-6bbc859cdc148d20` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:40`; PDF page pending.
+- `TA-OCC-746d0c245b60d390` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:1`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:17`; PDF page pending.
+- `TA-OCC-b7b1f3f946ec3eab` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:17`; PDF page pending.
+- `TA-OCC-2dd9eb4cd61205e7` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:53`; PDF page pending.
 
 ## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
 
@@ -19109,6 +19444,8 @@ Please double-check: **is “தொடர்புசார் மாதிர�
 - `TA-OCC-15dafb4837ccd4e2` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:64`; PDF page pending.
 - `TA-OCC-df2357b0281441d4` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:23`; PDF page pending.
 - `TA-OCC-9e44829de4246e59` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:33`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:36`; PDF page pending.
+- `TA-OCC-c612d195a86e87b5` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:12`; PDF page pending.
+- `TA-OCC-fb60494446473951` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:46`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:96`; PDF page pending.
 
 ## TA-T170 — modal validity / valid in a class of models / tautology / tautological instance / schema / characteristic formula / closed under modus ponens
 
@@ -19592,6 +19929,189 @@ Alternatives: None recorded.
 Please double-check: **is “மிகைத்தொடரணி / வெட்டற்ற நிறைவான மிகைத்தொடரணிக் கணியம்” the established India-standard Tamil expression for “hypersequent / cut-free complete hypersequent calculus” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
 
 - `TA-OCC-bd7187700d670279` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:48`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:50`; PDF page pending.
+
+## TA-T183 — temporal logic / tense logic / temporal operator / future contingent / open future
+
+Chosen rendering: **காலத் தருக்கம் / வினைக்காலத் தருக்கம் / காலச் செயற்குறி / எதிர்கால நிச்சயமற்ற கூற்று / திறந்த எதிர்காலம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: தருக்கம், கூற்று, மெய்ம்மதிப்பு, செயற்குறி and நிச்சயமின்மை continue the directly reviewed curricular and edition register; எதிர்கால நிச்சயமற்ற also continues TA-T161. The checked originals do not attest temporal or tense logic as specialist Tamil headwords. காலத் தருக்கம் and வினைக்காலத் தருக்கம் are therefore transparent provisional compounds, while the chapter's examples distinguish tenseless propositional claims, tense, determinism and an undetermined open future.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-TVA-N-6.3-OPEN (checked_context_only); TA-T183-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “காலத் தருக்கம் / வினைக்காலத் தருக்கம் / காலச் செயற்குறி / எதிர்கால நிச்சயமற்ற கூற்று / திறந்த எதிர்காலம்” the established India-standard Tamil expression for “temporal logic / tense logic / temporal operator / future contingent / open future” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-beb1f139012b750c` — OLP-0394 / `OLP-0394-S01`; source `content/many-valued-logic/three-valued-logics/lukasiewicz.tex:19`; Tamil `translation/content/many-valued-logic/three-valued-logics/lukasiewicz.tex:69`; PDF page pending.
+- `TA-OCC-c9e280449c963c0c` — OLP-0475 / `OLP-0475-S01`; source `content/applied-modal-logic/applied-modal-logic.tex:1`; Tamil `translation/content/applied-modal-logic/applied-modal-logic.tex:11`; PDF page pending.
+- `TA-OCC-bf3a23191a7912be` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:13`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:16`; PDF page pending.
+- `TA-OCC-684e85c685dab21a` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:15`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:18`; PDF page pending.
+- `TA-OCC-53b0a4035d6c9dc7` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:17`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:27`; PDF page pending.
+- `TA-OCC-5a6fc34476c4ab2a` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:25`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:31`; PDF page pending.
+- `TA-OCC-039ea67af3c16e42` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:27`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:35`; PDF page pending.
+- `TA-OCC-18b6c4bc832e3b08` — OLP-0477 / `OLP-0477-S01`; source `content/applied-modal-logic/temporal-logic/introduction.tex:31`; Tamil `translation/content/applied-modal-logic/temporal-logic/introduction.tex:43`; PDF page pending.
+- `TA-OCC-b37f96e54fae1c5c` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:13`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:67`; PDF page pending.
+
+## TA-T184 — point in time / precedence relation / temporal frame / unbounded past or future
+
+Chosen rendering: **காலப் புள்ளி / முந்துநிலைத் தொடர்பு / காலச் சட்டகம் / கடந்தகாலத்தில் அல்லது எதிர்காலத்தில் வரம்பற்ற**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: புள்ளி, தொடர்பு, சட்டகம், வரம்பு and the attested relation-property terms continue the reviewed mathematical register. The model triple defines காலப் புள்ளி and முந்துநிலைத் தொடர்பு; each frame adjective is fixed by the displayed first-order condition. No direct attestation of the full temporal compounds is claimed.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T184-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “காலப் புள்ளி / முந்துநிலைத் தொடர்பு / காலச் சட்டகம் / கடந்தகாலத்தில் அல்லது எதிர்காலத்தில் வரம்பற்ற” the established India-standard Tamil expression for “point in time / precedence relation / temporal frame / unbounded past or future” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-ca6fe2031c82f1a9` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:80`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:75`; PDF page pending.
+- `TA-OCC-ccd39a528d792f9c` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:80`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:77`; PDF page pending.
+- `TA-OCC-c27b152980b18860` — OLP-0478 / `OLP-0478-S01`; source `content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:80`; Tamil `translation/content/applied-modal-logic/temporal-logic/temporal-logic-semantics.tex:84`; PDF page pending.
+- `TA-OCC-0f561a77a0c99073` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:45`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:33`; PDF page pending.
+- `TA-OCC-5b410121c035b409` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:45`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:44`; PDF page pending.
+
+## TA-T185 — since and until operators / possible history / computational path / history-relative truth
+
+Chosen rendering: **முதல் மற்றும் வரை செயற்குறிகள் / சாத்தியமான வரலாறு / கணிப்புப் பாதை / வரலாற்றைச் சார்ந்த மெய்மை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: தொடர்முறை, சார்பு, மெய்மை and relation vocabulary continue the reviewed canon and edition register. The two displayed satisfaction clauses fix முதல் and வரை; the set C of state sequences and its suffix closure fix சாத்தியமான வரலாறு and கணிப்புப் பாதை; evaluation at a pair (t,sigma) fixes the history-relative sense. The specialist compounds are not claimed as directly attested headwords.
+
+Authority basis: TA-SC6-P169-GLOSSARY (checked_supports); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T185-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “முதல் மற்றும் வரை செயற்குறிகள் / சாத்தியமான வரலாறு / கணிப்புப் பாதை / வரலாற்றைச் சார்ந்த மெய்மை” the established India-standard Tamil expression for “since and until operators / possible history / computational path / history-relative truth” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-9e7ff8977455ba9d` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:29`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:12`; PDF page pending.
+- `TA-OCC-024dfdae8b39ec95` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:29`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:17`; PDF page pending.
+- `TA-OCC-ed0b90fbb9514e16` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:29`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:25`; PDF page pending.
+- `TA-OCC-10ea54bb1798a236` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:29`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:29`; PDF page pending.
+- `TA-OCC-4b82be1fb299b128` — OLP-0481 / `OLP-0481-S01`; source `content/applied-modal-logic/temporal-logic/possible-histories.tex:29`; Tamil `translation/content/applied-modal-logic/temporal-logic/possible-histories.tex:30`; PDF page pending.
+
+## TA-T186 — epistemic logic / epistemic proposition / doxastic interpretation / epistemic possibility / multi-agent logic
+
+Chosen rendering: **அறிவுநிலைத் தருக்கம் / அறிவுநிலைக் கூற்று / நம்பிக்கைநிலைப் பொருள்கோள் / அறிவுநிலைக் கூடுதன்மை / பன்முகவர் தருக்கம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: தருக்கம், கூற்று, பொருள்கோள், கூடுதன்மை and the semantic register continue reviewed edition usage, while முகவர் transparently names the indexed reasoners in the displayed examples. The checked originals do not attest the complete epistemic or doxastic compounds; the knowledge, belief and indexed-accessibility clauses define them in place.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-TVA-N-6.3-OPEN (checked_context_only); TA-T186-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “அறிவுநிலைத் தருக்கம் / அறிவுநிலைக் கூற்று / நம்பிக்கைநிலைப் பொருள்கோள் / அறிவுநிலைக் கூடுதன்மை / பன்முகவர் தருக்கம்” the established India-standard Tamil expression for “epistemic logic / epistemic proposition / doxastic interpretation / epistemic possibility / multi-agent logic” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-257fc061012a0d70` — OLP-0409 / `OLP-0409-S01`; source `content/normal-modal-logic/syntax-and-semantics/introduction.tex:80`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/introduction.tex:91`; PDF page pending.
+- `TA-OCC-8e90e325e13b7cad` — OLP-0475 / `OLP-0475-S01`; source `content/applied-modal-logic/applied-modal-logic.tex:11`; Tamil `translation/content/applied-modal-logic/applied-modal-logic.tex:11`; PDF page pending.
+- `TA-OCC-255f4cbf7af31b1c` — OLP-0483 / `OLP-0483-S01`; source `content/applied-modal-logic/epistemic-logic/introduction.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/introduction.tex:15`; PDF page pending.
+- `TA-OCC-6ff26967a2172140` — OLP-0483 / `OLP-0483-S01`; source `content/applied-modal-logic/epistemic-logic/introduction.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/introduction.tex:16`; PDF page pending.
+- `TA-OCC-8bf21c1c823fd65a` — OLP-0483 / `OLP-0483-S01`; source `content/applied-modal-logic/epistemic-logic/introduction.tex:21`; Tamil `translation/content/applied-modal-logic/epistemic-logic/introduction.tex:44`; PDF page pending.
+- `TA-OCC-6b8207d9b6fbb0cb` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:19`; PDF page pending.
+
+## TA-T187 — group knowledge / common knowledge / information state / agent-indexed accessibility
+
+Chosen rendering: **குழு அறிவு / பொதுவறிவு / தகவல் நிலை / முகவரால் சுட்டப்பட்ட அணுகுறவு**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: அறிவு, தகவல், நிலை, தொடர்பு and function vocabulary are transparent established components. The finite conjunction of individual Knows operators defines குழு அறிவு; reachability through the transitive closure of the union of agent relations defines பொதுவறிவு; the indexed model clauses define the information-state and accessibility phrases. The specialist compounds are not claimed as directly attested headwords.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T187-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “குழு அறிவு / பொதுவறிவு / தகவல் நிலை / முகவரால் சுட்டப்பட்ட அணுகுறவு” the established India-standard Tamil expression for “group knowledge / common knowledge / information state / agent-indexed accessibility” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-e75b2c6c25d3984b` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:73`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:78`; PDF page pending.
+- `TA-OCC-3f960162affae252` — OLP-0484 / `OLP-0484-S01`; source `content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:78`; Tamil `translation/content/applied-modal-logic/epistemic-logic/language-epistemic-logic.tex:84`; PDF page pending.
+- `TA-OCC-dfe44b18350d20af` — OLP-0485 / `OLP-0485-S01`; source `content/applied-modal-logic/epistemic-logic/relational-models.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/relational-models.tex:45`; PDF page pending.
+- `TA-OCC-a76891cc4a8dbc67` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:1`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:102`; PDF page pending.
+- `TA-OCC-5905e48b5aa60ec7` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:79`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:86`; PDF page pending.
+
+## TA-T188 — closure / veridicality / positive introspection / negative introspection
+
+Chosen rendering: **அடைவு / மெய்மைத்தன்மை / நேர்முகத் தன்னோக்கு / எதிர்மறைத் தன்னோக்கு**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: அடைவு and மெய்மை continue the reviewed mathematical and semantic register. The four displayed schemata define implication closure, knowledge implying truth, knowledge of knowledge and knowledge of non-knowledge; the introspection compounds are provisional and remain adjacent to those exact formulas.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T188-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “அடைவு / மெய்மைத்தன்மை / நேர்முகத் தன்னோக்கு / எதிர்மறைத் தன்னோக்கு” the established India-standard Tamil expression for “closure / veridicality / positive introspection / negative introspection” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-1c9d047d84fd836c` — OLP-0016 / `OLP-0016-S13`; source `content/sets-functions-relations/relations/orders.tex:100`; Tamil `translation/content/sets-functions-relations/relations/orders.tex:120`; PDF page pending.
+- `TA-OCC-d8cc69e75cec5c0b` — OLP-0018 / `OLP-0018-S12`; source `content/sets-functions-relations/relations/trees.tex:110`; Tamil `translation/content/sets-functions-relations/relations/trees.tex:143`; PDF page pending.
+- `TA-OCC-fe3d148988998b4c` — OLP-0019 / `OLP-0019-S04`; source `content/sets-functions-relations/relations/operations.tex:50`; Tamil `translation/content/sets-functions-relations/relations/operations.tex:61`; PDF page pending.
+- `TA-OCC-ce263230c9bdbf56` — OLP-0019 / `OLP-0019-S04`; source `content/sets-functions-relations/relations/operations.tex:52`; Tamil `translation/content/sets-functions-relations/relations/operations.tex:64`; PDF page pending.
+- `TA-OCC-57e48677937661cd` — OLP-0019 / `OLP-0019-S04`; source `content/sets-functions-relations/relations/operations.tex:56`; Tamil `translation/content/sets-functions-relations/relations/operations.tex:69`; PDF page pending.
+- `TA-OCC-8918876de61e16d3` — OLP-0019 / `OLP-0019-S06`; source `content/sets-functions-relations/relations/operations.tex:68`; Tamil `translation/content/sets-functions-relations/relations/operations.tex:89`; PDF page pending.
+- `TA-OCC-d1a4ee0266172758` — OLP-0486 / `OLP-0486-S01`; source `content/applied-modal-logic/epistemic-logic/truth-at-w.tex:98`; Tamil `translation/content/applied-modal-logic/epistemic-logic/truth-at-w.tex:103`; PDF page pending.
+- `TA-OCC-c7b34ddfe8700157` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:32`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:34`; PDF page pending.
+- `TA-OCC-f34e0aaefb57e366` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:35`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:37`; PDF page pending.
+- `TA-OCC-fef143731794a7d9` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:40`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:42`; PDF page pending.
+- `TA-OCC-4bf9cffabe462664` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:45`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:47`; PDF page pending.
+- `TA-OCC-a8ef8fa6db2a2a44` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:52`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:54`; PDF page pending.
+- `TA-OCC-0adc48c4ee83fceb` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:54`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:57`; PDF page pending.
+- `TA-OCC-a938828f79f2794c` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:55`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:57`; PDF page pending.
+- `TA-OCC-e70f2b6530846f1d` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:57`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:60`; PDF page pending.
+- `TA-OCC-f572c73acba784d1` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:63`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:67`; PDF page pending.
+- `TA-OCC-ed6cf2d10871d8fa` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:68`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:71`; PDF page pending.
+- `TA-OCC-4eea600bb1b7ed3f` — OLP-0487 / `OLP-0487-S01`; source `content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:71`; Tamil `translation/content/applied-modal-logic/epistemic-logic/properties-accessibility.tex:74`; PDF page pending.
+
+## TA-T189 — bisimulation / bisimilar / forth and back conditions
+
+Chosen rendering: **இருதிசை ஒப்புறவு / இருதிசை ஒப்புடைய / முன்னோக்கு மற்றும் பின்னோக்கு நிபந்தனைகள்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: உறவு, நிபந்தனை and model vocabulary continue the reviewed register. Agreement on atomic valuations plus matched successors in both directions defines இருதிசை ஒப்புறவு, and the invariance theorem fixes இருதிசை ஒப்புடைய. No direct Tamil headword attestation is claimed.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-T189-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “இருதிசை ஒப்புறவு / இருதிசை ஒப்புடைய / முன்னோக்கு மற்றும் பின்னோக்கு நிபந்தனைகள்” the established India-standard Tamil expression for “bisimulation / bisimilar / forth and back conditions” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-b9e8eaba88bb2030` — OLP-0482 / `OLP-0482-S01`; source `content/applied-modal-logic/epistemic-logic/epistemic-logic.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/epistemic-logic.tex:14`; PDF page pending.
+- `TA-OCC-cd90c9de8fcb92b3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:3`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:12`; PDF page pending.
+- `TA-OCC-bcc5015e041afe20` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:24`; PDF page pending.
+- `TA-OCC-0b7ca84c56b36f06` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:24`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:29`; PDF page pending.
+- `TA-OCC-42ef4238b09cd83c` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:29`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:34`; PDF page pending.
+- `TA-OCC-5e772af0167a5baf` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:33`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:50`; PDF page pending.
+- `TA-OCC-97200083e66162fe` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:49`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:53`; PDF page pending.
+- `TA-OCC-dda6d87a02edb286` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:52`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:92`; PDF page pending.
+- `TA-OCC-8f1f99af898e60d3` — OLP-0488 / `OLP-0488-S01`; source `content/applied-modal-logic/epistemic-logic/bisimulations.tex:55`; Tamil `translation/content/applied-modal-logic/epistemic-logic/bisimulations.tex:98`; PDF page pending.
+
+## TA-T190 — dynamic epistemic logic / public announcement logic / informational event / update / truthful announcement
+
+Chosen rendering: **இயக்க அறிவுநிலைத் தருக்கம் / பொது அறிவிப்புத் தருக்கம் / தகவல்சார் நிகழ்வு / புதுப்பிப்பு / மெய்யான அறிவிப்பு**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: தருக்கம், அறிவு, தகவல், நிகழ்வு, மெய்மை and function/restriction language continue the reviewed canon and edition register. The [A]B clause and induced submodel M|A define the dynamic update and truthful public-announcement senses exactly. The complete specialist compounds are not claimed as directly attested headwords.
+
+Authority basis: TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-SC12V2-P252-STATEMENT (checked_context_only); TA-SC12V2-P269-SEMANTIC-SUMMARY (checked_context_only); TA-TVA-N-6.3-OPEN (checked_context_only); TA-T190-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “இயக்க அறிவுநிலைத் தருக்கம் / பொது அறிவிப்புத் தருக்கம் / தகவல்சார் நிகழ்வு / புதுப்பிப்பு / மெய்யான அறிவிப்பு” the established India-standard Tamil expression for “dynamic epistemic logic / public announcement logic / informational event / update / truthful announcement” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-aa11fb23f2b4bf04` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:13`; PDF page pending.
+- `TA-OCC-c163e589c1689cc4` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:17`; PDF page pending.
+- `TA-OCC-8f03bedad7d84f87` — OLP-0489 / `OLP-0489-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:16`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-lang.tex:20`; PDF page pending.
+- `TA-OCC-e95df077cb2df3f3` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:11`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:53`; PDF page pending.
+- `TA-OCC-544ae5c67953cae8` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:13`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:115`; PDF page pending.
+- `TA-OCC-63262d9434a4a385` — OLP-0490 / `OLP-0490-S01`; source `content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:53`; Tamil `translation/content/applied-modal-logic/epistemic-logic/public-announcement-logic-semantics.tex:122`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 
