@@ -1,0 +1,110 @@
+% SEGMENT OLP-0561-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{spine}{Valphabasic}
+\olsection{படிநிலைகளின் அடிப்படைப் பண்புகள்}
+
+$V_\alpha$-களின் வரையறையின் அடித்தள முக்கியத்துவத்தை வெளிப்படுத்த,
+அவற்றைப் பற்றிய சில அடிப்படை முடிவுகளை வழங்குவோம். ஒரு வரையறையுடன்
+தொடங்குகிறோம்:\footnote{``ஆற்றலுடைய'' என்பதற்குத் தரநிலையான சொல்வழக்கு
+எதுவுமில்லை; இது \citet{ButtonLT1} பயன்படுத்தும் பெயர்.}
+\begin{defn}
+	$\forall x((\exists y \in A)x \subseteq y \lif x \in A)$ எனில்,
+	எனில் மட்டுமே, கணம் $A$ \emph{ஆற்றலுடையது}.
+\end{defn}
+\begin{lem}\ollabel{Valphabasicprops}
+ஒவ்வொரு வரிசையெண் $\alpha$ க்கும்:
+\begin{enumerate}
+	\item\ollabel{Valphatrans} $V_\alpha$ கடப்புப் பண்புடையது.
+	\item\ollabel{Valphapotent} $V_\alpha$ ஆற்றலுடையது.
+	\item\ollabel{Valphacum} $\gamma \in \alpha$ எனில், $V_\gamma
+	\in V_\alpha$ (எனவே \olref{Valphatrans} இன்படி $V_\gamma
+	\subseteq V_\alpha$ உம்).
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+இதை ஓர் (ஒருங்கிணைந்த) முடிவிலிக்கடந்த தொகுத்தறிதலால் நிறுவுகிறோம்.
+தொகுத்தறிதலுக்காக, ஒவ்வொரு வரிசையெண் $\beta < \alpha$ க்கும்
+\olref{Valphatrans}--\olref{Valphacum} நிறைவேறுகின்றன எனக் கொள்க.
+
+$\alpha = \emptyset$ என்ற நேர்வு எளிதானது.
+
+$\alpha = \ordsucc{\beta}$ என்க. \olref{Valphacum} ஐக் காட்ட,
+$\gamma \in \alpha$ எனில், கருதுகோளின்படி $V_\gamma \subseteq
+V_\beta$; ஆகவே $V_\gamma \in \Pow{V_\beta} = V_\alpha$.
+\olref{Valphapotent} ஐக் காட்ட, $A \subseteq B \in V_\alpha$,
+அதாவது $A \subseteq B \subseteq V_\beta$, எனக் கொள்க; அப்போது
+$A \subseteq V_\beta$, எனவே $A \in V_\alpha$. \olref{Valphatrans}
+ஐக் காட்ட, $x \in A \in V_\alpha$ எனில் $A \subseteq V_\beta$;
+எனவே $x \in V_\beta$; மேலும் கருதுகோளின்படி $V_\beta$ கடப்புப்
+பண்புடையதால் $x \subseteq V_\beta$; ஆகவே $x \in V_\alpha$.
+
+$\alpha$ ஓர் எல்லை வரிசையெண் என்க. \olref{Valphacum} ஐக் காட்ட,
+$\gamma \in \alpha$ எனில் $\gamma \in \ordsucc{\gamma} \in
+\alpha$; எனவே அனுமானத்தின்படி $V_\gamma \in V_{\ordsucc{\gamma}}$,
+ஆகவே $V_\gamma \in \bigcup_{\beta \in \alpha} V_\beta =
+V_\alpha$. \olref{Valphatrans}, \olref{Valphapotent} ஆகியவற்றைக்
+காட்ட, கடப்புப் பண்புடைய (முறையே, ஆற்றலுடைய) கணங்களின் சேர்ப்பு கடப்புப்
+பண்புடையது (முறையே, ஆற்றலுடையது) என்பதைக் கவனித்தால் போதும்.
+\end{proof}
+
+\begin{lem}\ollabel{Valphanotref}
+ஒவ்வொரு வரிசையெண் $\alpha$ க்கும், $V_\alpha \notin V_\alpha$.
+\end{lem}
+
+\begin{proof}
+முடிவிலிக்கடந்த தொகுத்தறிதலால். $V_\emptyset \notin V_\emptyset$
+என்பது தெளிவு.
+
+$V_{\ordsucc{\alpha}} \in V_{\ordsucc{\alpha}} = \Pow{V_\alpha}$
+எனில், $V_{\ordsucc{\alpha}} \subseteq V_\alpha$; மேலும்
+\olref{Valphabasicprops} இன்படி $V_\alpha \in
+V_{\ordsucc{\alpha}}$ என்பதால் $V_\alpha \in V_\alpha$.
+மறுதிசையில்: $V_\alpha \notin V_\alpha$ எனில்
+$V_{\ordsucc{\alpha}} \notin V_{\ordsucc{\alpha}}$.
+
+$\alpha$ ஓர் எல்லை என்றும் $V_\alpha \in V_\alpha =
+\bigcup_{\beta \in \alpha}V_\beta$ என்றும் கொள்க. அப்போது ஏதோ ஒரு
+$\beta \in \alpha$ க்கு $V_\alpha \in V_\beta$; ஆனால்
+\olref{Valphabasicprops} ஐ (இருமுறை) பயன்படுத்தினால்
+$V_\beta \in V_\alpha$ உம், ஆகவே $V_\beta \in V_\beta$ உம்.
+மறுதிசையில், எல்லா $\beta \in \alpha$ க்கும் $V_\beta \notin
+V_\beta$ எனில், $V_\alpha \notin V_\alpha$.
+\end{proof}
+
+\begin{cor}
+எந்த வரிசையெண்கள் $\alpha, \beta$ க்கும்:
+$\alpha \in \beta$ எனில், எனில் மட்டுமே, $V_\alpha \in V_\beta$.
+\end{cor}
+
+\begin{proof}
+ஒரு திசையை \Olref{Valphabasicprops} தருகிறது. மறுதிசையில்,
+$V_\alpha \in V_\beta$ என்க. \olref{Valphanotref} இன்படி
+$\alpha \neq \beta$; மேலும் $\beta \notin \alpha$, ஏனெனில் அவ்வாறு
+இருந்தால் $V_\beta \in V_\alpha$, அதனால்
+\olref{Valphabasicprops} ஐ (இருமுறை) பயன்படுத்தி $V_\beta \in
+V_\beta$ என்று கிடைக்கும்; இது \olref{Valphanotref} க்கு முரணானது.
+எனவே முக்கூற்றுப் பண்பின்படி $\alpha \in \beta$.
+\end{proof}
+\noindent
+இவை அனைத்தும் ஒவ்வொரு $V_\alpha$ ஐயும் படிநிலைமுறையின் $\alpha$-ஆம்
+படிநிலையாகக் கருத அனுமதிக்கின்றன. அதற்கான காரணம் இதோ.
+
+வரிசையெண்களின் நமது பயன்பாடு மீளச்செயலின் கருத்தைப் பின்தொடர்வதால்,
+$V_\alpha$-கள் ஓர் \emph{மீளச்செயல்} செயல்முறையில் உருவாகின்றன என்று
+நிச்சயமாகக் கருதலாம். மேலும் ஒரு படிநிலை மற்றொன்றுக்கு முன்பு
+உருவானால், அதாவது $V_\beta \in V_\alpha$, அதாவது $\beta \in
+\alpha$ எனில், $V_\beta \subseteq V_\alpha$ என்பதால் நமது உருவாக்கச்
+செயல்முறை \emph{திரள்வுறுவது}. கடைசியாக, எந்தப் பின்வரிசைப் படிநிலையும்
+$V_{\ordsucc{\alpha}}$ அதன் முன்னோடி $V_\alpha$ இன் அடுக்குக்கணம்
+என்பதால், முந்தைய எந்தப் படிநிலையிலும் கிடைத்த கணங்களின் சாத்தியமான
+\emph{எல்லாத்} தொகுப்புகளையும் உண்மையிலேயே உருவாக்குகிறோம்.
+
+சுருக்கமாக: கணங்களின் திரள்வுறும் மீளச்செயல் படிநிலைமுறை பற்றிய நமது
+காட்சியை விளக்குவதில் $\ZFminus$ உடன் நாம் \emph{கிட்டத்தட்ட}
+முடித்துவிட்டோம். (ஆனால், மாற்றீட்டை நாம் இன்னும் நியாயப்படுத்த வேண்டும்.)
+
+\end{document}

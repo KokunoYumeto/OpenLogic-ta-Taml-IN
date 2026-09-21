@@ -1,0 +1,145 @@
+% SEGMENT OLP-0564-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{spine}{rank}
+\olsection{தரநிலை}
+
+படிநிலைகளை $V_\alpha$-களாக வரையறுத்துள்ளோம்; மேலும் ஒவ்வொரு கணமும்
+ஏதோ ஒரு படிநிலையின் உட்கணம் என்று அறிவோம். ஆகவே ஒரு கணத்தின்
+\emph{தரநிலையை} வரையறுக்கலாம். உள்ளுணர்வின்படி, $A$ இன் தரநிலை என்பது
+$A$ முதன்முதலில் உருவான தருணம். இன்னும் துல்லியமாக:
+
+\begin{defn}\ollabel{defnsetrank}
+ஒவ்வொரு கணம் $A$ க்கும், $A \subseteq V_\alpha$ ஆக அமையும் மீச்சிறு
+வரிசையெண் $\alpha$ தான் $\setrank{A}$.
+\end{defn}
+\begin{prop}\ollabel{ranksexist}
+	எந்த $A$ க்கும் $\setrank{A}$ உள்ளது.
+\end{prop}
+\begin{proof}
+	பயிற்சியாக விடப்பட்டுள்ளது.
+\end{proof}
+\begin{prob}
+	\olref[sth][spine][rank]{ranksexist} ஐ நிறுவுக.
+\end{prob}
+\noindent
+தரநிலைகளின் நன்கு வரிசைப்படுத்தல் சில முக்கிய முடிவுகளை நிறுவ
+அனுமதிக்கிறது:
+\begin{prop}\ollabel{valphalowerrank}
+எந்த வரிசையெண் $\alpha$ க்கும்,
+$V_\alpha = \Setabs{x}{\setrank{x} \in \alpha}$.
+\end{prop}
+
+\begin{proof}
+$\setrank{x} \in \alpha$ எனில் $x \subseteq V_{\setrank{x}} \in
+V_\alpha$; ஆகவே $V_\alpha$ ஆற்றலுடையது என்பதால்
+(\olref[Valphabasic]{Valphabasicprops} ஐப் பலமுறை பயன்படுத்தி)
+$x \in V_\alpha$. மறுதிசையில், $x \in V_\alpha$ எனில்
+$x \subseteq V_\alpha$; ஆகவே $\setrank{x} \leq \alpha$.
+இப்போது ஓர் எளிய முடிவிலிக்கடந்த தொகுத்தறிதல் உண்மையில்
+$\setrank{x} \in \alpha$ என்று காட்டுகிறது.
+% SOURCE CORRECTION TA-STH-016: replace the contradictory “x is not in V_alpha” conclusion with the required strict rank inequality.
+\end{proof}
+\begin{prob}
+	\olref[sth][spine][rank]{valphalowerrank} இல் குறிப்பிடப்பட்ட எளிய
+	முடிவிலிக்கடந்த தொகுத்தறிதலை நிறைவுசெய்க.
+\end{prob}
+
+\begin{prop}\ollabel{rankmemberslower}
+$B \in A$ எனில், $\setrank{B} \in \setrank{A}$.
+\end{prop}
+
+\begin{proof}
+\olref{valphalowerrank} இன்படி
+$A \subseteq V_{\setrank{A}} = \Setabs{x}{\setrank{x} \in
+\setrank{A}}$.
+\end{proof}
+\noindent
+இவ்வுண்மையைப் பயன்படுத்தி, \emph{எல்லாக் கணங்களையும்} பற்றி ஒரு வகைத்
+தொகுத்தறிதலால் நிறுவ அனுமதிக்கும் முடிவை அடையலாம்:
+
+\begin{thm}[$\in$-தொகுத்தறிதல் திட்டம்]
+எந்த வாய்பாடு $\phi$ க்கும்:
+\[
+	\forall A((\forall x \in A)\phi(x) \lif \phi(A)) \lif \forall A \phi(A).
+\]
+\end{thm}
+
+\begin{proof}
+எதிர்மறையை நிறுவுவோம். எனவே $\lnot \forall A \phi(A)$ என்க.
+முடிவிலிக்கடந்த தொகுத்தறிதலால்
+(\olref[ordinals][basic]{ordinductionschema}), சாத்தியமானவற்றுள்
+மீச்சிறு தரநிலையுடைய ஏதோ ஓர் $\phi$-அல்லாதது உள்ளது; அதாவது,
+$\lnot \phi(A)$ மற்றும் $\forall x(\setrank{x} \in \setrank{A}
+\lif \phi(x))$ ஆக அமையும் ஏதோ ஓர் $A$ உள்ளது. இப்போது $x \in A$
+எனில், \olref{rankmemberslower} இன்படி $\setrank{x} \in
+\setrank{A}$; ஆகவே $\phi(x)$; அதாவது $(\forall x \in A)\phi(x)
+\land \lnot \phi(A)$.
+\end{proof}\noindent
+இவ்வாற்றல்வாய்ந்த முடிவை முறைசாராமல் விளக்கும் ஒரு வழி இதோ. ஒரு கணத்தின்
+ஒவ்வொரு !!{element} உம் $\phi$ ஆக இருக்கும்போதெல்லாம் அந்தக் கணமும்
+$\phi$ ஆக இருந்தால், $\phi$ \emph{மரபுவழியானது} என்று கூறுக. அப்போது
+$\in$-தொகுத்தறிதல் உங்களுக்குப் பின்வருவதைச் சொல்கிறது: $\phi$
+மரபுவழியானது எனில், ஒவ்வொரு கணமும் $\phi$ ஆகும்.
+
+தரநிலைகள் பற்றிய விவாதத்தை (இப்போதைக்கு) நிறைவுசெய்ய, சில முறை
+முன்னறிவித்துள்ள சில கூற்றுகளை நிறுவுவோம்.
+
+\begin{prop}\ollabel{ranksupstrict}
+$\setrank{A} = \supstrict_{x \in A}\setrank{x}$.
+\end{prop}
+
+\begin{proof}
+$\alpha = \supstrict_{x \in A}\setrank{x}$ என்க.
+\olref{rankmemberslower} இன்படி $\alpha \leq \setrank{A}$. ஆனால்
+$x \in A$ எனில் $\setrank{x} \in \alpha$; ஆகவே
+\olref{valphalowerrank} இன்படி $x \in V_\alpha$, எனவே
+$A \subseteq V_\alpha$, அதாவது $\setrank{A} \leq \alpha$.
+எனவே $\setrank{A} = \alpha$.
+\end{proof}
+
+\begin{cor}\ollabel{ordsetrankalpha}
+எந்த வரிசையெண் $\alpha$ க்கும் $\setrank{\alpha} = \alpha$.
+\end{cor}
+
+\begin{proof}
+எல்லா $\beta \in \alpha$ க்கும் $\setrank{\beta} = \beta$ என்று
+முடிவிலிக்கடந்த தொகுத்தறிதலுக்காகக் கொள்க. இப்போது
+\olref{ranksupstrict} இன்படி $\setrank{\alpha} =
+\supstrict_{\beta \in \alpha}\setrank{\beta} =
+\supstrict_{\beta \in \alpha}\beta = \alpha$.
+% 	First note that $\setrank{\alpha} \neq \beta$ for any $\beta \in
+% 	\alpha$. For otherwise we would have $\beta = \setrank{\beta} \in
+% 	\setrank{\alpha} = \beta$ by \olref{rankmemberslower}, i.e.,
+% 	$\beta \in \beta$, a contradiction. 
+%
+% 	Now note that $\alpha \subseteq V_\alpha$. For $\alpha =
+% 	\Setabs{\beta}{\beta \in \alpha}$ by
+% 	\olref[sfr][ordinals][basic]{ordissetofsmallerord}. And if
+% 	$\beta \in \alpha$ then $\beta \subseteq V_{\setrank{\beta}} =
+% 	V_\beta \in V_\alpha$, hence $\beta \in V_\alpha$, by
+% 	\olref[sfr][spine][Valphabasic]{Valphabasicprops} twice. 
+\end{proof}
+
+கடைசியாக, $\ZFminus$ ஆனது
+$\emph{ஒழுங்குமை} \Rightarrow \emph{அடித்தளம்}$ என்ற நிபந்தனைவாக்கியத்தை
+நிறுவுகிறது என்று \olref[foundation]{sec} இன் இறுதியில் வாக்களிக்கப்பட்ட
+முடிவுக்கான விரைவான நிறுவல் இதோ. (``தரநிலை'' என்ற கருத்தும்
+\olref{rankmemberslower} உம் இந்த நிறுவலில் பயன்படுத்தக் கிடைக்கின்றன;
+ஏனெனில்---இப்பிரிவின் தொடக்கத்தில் குறிப்பிட்டதுபோல---அவற்றை
+$\ZFminus + \text{ஒழுங்குமை}$ ஐப் பயன்படுத்தி முன்வைக்கலாம்.)
+
+\begin{prop}[$\ZFminus + \text{ஒழுங்குமை}$ இல் பணிபுரிகிறோம்]\ollabel{zfminusregularityfoundation}
+அடித்தளம் நிறைவேறுகிறது.
+\end{prop}
+
+\begin{proof}
+$A \neq \emptyset$ ஐ நிலைப்படுத்தி, சாத்தியமானவற்றுள் மீச்சிறு தரநிலையுடைய
+ஏதோ ஒரு $B \in A$ ஐ எடுத்துக்கொள்க. $c \in B$ எனில்,
+\olref{rankmemberslower} இன்படி $\setrank{c} \in \setrank{B}$;
+ஆகவே $B$-இன் தேர்வின்படி $c \notin A$.
+\end{proof}
+
+\end{document}

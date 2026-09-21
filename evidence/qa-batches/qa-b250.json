@@ -1,0 +1,130 @@
+{
+  "batch_id": "TA-B250",
+  "units": [
+    {
+      "unit_id": "OLP-0563",
+      "source_sha256": "94df3fb797ff5d12ce812c586f3dd8211fd7972ebaf25d3363bb135ad7686d73",
+      "translation_sha256": "2174cdbbd47c9f639c039a54352773023263a65a7bde5df8fc7935854a8386ae",
+      "source_bytes": 1969,
+      "translation_bytes": 5016,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "recursion",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0564",
+      "source_sha256": "fa9b9faa09478d4d5d6e510c52a2d5752fa72985db8efaff4a432a0e24d81dd0",
+      "translation_sha256": "b5933593e00aca0e49fb74288d6b07d4ed51f7f8b03fa9d54c5f53b771d0e7ff",
+      "source_bytes": 5018,
+      "translation_bytes": 8911,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$x\\notinV_\\alpha$"
+      ],
+      "extra_math": [
+        "$\\setrank{x}\\in\\alpha$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Valphabasic",
+        "basic",
+        "foundation",
+        "include",
+        "logic",
+        "open",
+        "ordinals",
+        "rank",
+        "section",
+        "spine",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-016",
+          "unit_id": "OLP-0564",
+          "kind": "rank-characterization-contradictory-conclusion",
+          "action": "Replaced the contradictory conclusion x not in V_alpha with the strict rank inequality required by the proposition.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\notin"
+          ],
+          "expected_extra_commands": [
+            "\\setrank",
+            "\\in"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "$x\\notinV_\\alpha$",
+              "to": "$\\setrank{x}\\in\\alpha$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The converse assumes x is in V_alpha and then says induction proves x is not in V_alpha, contradicting both its assumption and the displayed characterization. The needed conclusion is rank(x) < alpha, written rank(x) in alpha for ordinals.",
+          "chosen_treatment": "தமிழ் நிறுவல் தேவையான முடிவாக setrank(x) in alpha என்பதைத் தெளிவாகக் கூறுகிறது.",
+          "alternatives_considered": "Preserving a direct contradiction; weakening the conclusion to rank(x) less than or equal to alpha, which was already obtained and does not prove the proposition.",
+          "rationale": "The proposition identifies V_alpha with sets whose rank belongs to alpha, so the converse must strengthen rank(x) <= alpha to rank(x) in alpha.",
+          "precise_review_question": "Does the converse conclude setrank(x) is an element of alpha?",
+          "location_needle": "SOURCE CORRECTION TA-STH-016"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\notin"
+      ],
+      "extra_commands": [
+        "\\setrank",
+        "\\in"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

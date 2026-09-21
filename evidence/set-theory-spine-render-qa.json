@@ -1,0 +1,155 @@
+{
+  "schema": "openlogic-tamil-render-qa/1",
+  "result": "pass",
+  "review_date": "2026-09-21",
+  "scope": {
+    "reader_units": 7,
+    "first_unit": "OLP-0558",
+    "last_unit": "OLP-0564",
+    "programme_completed_units": 561,
+    "total_frozen_units": 722,
+    "unit_ids": ["OLP-0558", "OLP-0559", "OLP-0560", "OLP-0561", "OLP-0562", "OLP-0563", "OLP-0564"],
+    "reader": "build/tamil-set-theory-spine.pdf",
+    "public_reader": "readers/set-theory-stages-ranks-ta-Taml-IN.pdf",
+    "source_master": "build/tamil-set-theory-spine.tex"
+  },
+  "textual_unit_qa": {
+    "batch_receipts": [
+      {"path": "QA-B247.json", "bytes": 2965, "sha256": "f4675187017e80ddcb62bc3bc14b0a8d79de773c64244b3398481f2b2f7d8cc9"},
+      {"path": "QA-B248.json", "bytes": 3353, "sha256": "82e2ad80a463499c10f281720fe0e3eb50546e36e46c18eef7d8d23bfa01961c"},
+      {"path": "QA-B249.json", "bytes": 4999, "sha256": "e24df938e71ded156dac2932aefdc8b96452e6c35a25b711a6a8ac5157d4808"},
+      {"path": "QA-B250.json", "bytes": 4970, "sha256": "b900d3802465c983edfc0e4971086f996402b790a8e3a96465f31c769cc21122"}
+    ],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass, including TA-STH-014 through TA-STH-016",
+    "standalone_reference_fallbacks": "Earlier story, Zermelo and ordinal destinations retain readable Tamil descriptions; all references within this reader remain live.",
+    "uppercase_reference_localization": "The document-level Olref alias preserves the frozen uppercase source command while using the Tamil localized reference name."
+  },
+  "semantic_review": {
+    "path": "SEMANTIC_REVIEW-CURRENT.json",
+    "bytes": 581584,
+    "sha256": "718e3fd3c120a63c9da22be4e7cd5ba200362b24c99c365b944caa9a6036c13a",
+    "bound_units": 561,
+    "reviewed_samples": 655,
+    "reader_count": 11,
+    "reader_distinct_units": 239
+  },
+  "tex_guard": {
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "receipt": "TEX-SET-THEORY-SPINE-RECEIPT.json",
+    "receipt_bytes": 1040,
+    "receipt_sha256": "d47ec7ec20dc1832fea72da2cb62036bec88150c402c792ad926341b0528b308",
+    "engine": "xelatex",
+    "passes": 3,
+    "bibtex": true,
+    "status": "built",
+    "final_pass_undefined_references": 0,
+    "missing_character_messages": 0,
+    "multiply_defined_labels": 0,
+    "overfull_messages": 0,
+    "underfull_messages": 1,
+    "font_warnings": 0,
+    "benign_requested_file_warnings": 6
+  },
+  "master": {
+    "bytes": 10247,
+    "sha256": "2d42f79c05de159ab99fe5bff1beb0bb40eb4f930171dc1664e6071adb796d24"
+  },
+  "pdf": {
+    "path": "readers/set-theory-stages-ranks-ta-Taml-IN.pdf",
+    "bytes": 153034,
+    "sha256": "a22bd7308a8c725f70eca6e1262401d43f5fda37743f9cc7f64fd6826bc0c58d",
+    "pages": 12,
+    "page_size": "A4",
+    "encrypted": false,
+    "pdf_version": "1.7",
+    "fonts_embedded": true,
+    "fonts_subset": true,
+    "all_fonts_unicode_mapped": true,
+    "metadata": {
+      "title": "OpenLogic Tamil: Stages and Ranks",
+      "subject": "Machine translation; OLP-0558 through OLP-0564; 7 of 722 frozen source units",
+      "author": "OpenLogic Tamil translation programme"
+    }
+  },
+  "renders": [
+    {"page": 1, "bytes": 100704, "sha256": "925e7e7c70b2c80f53e806ab84cf5bcc08ee4a9c133b730414db9fa17027bae7"},
+    {"page": 2, "bytes": 45428, "sha256": "2c1e0a6361fe644bac064cd781acb58ce1c3f3e6d4d275987900e7cc2d33dd9b"},
+    {"page": 3, "bytes": 243700, "sha256": "eeee3f3030e87b047dc531ca0b70c214abdbcdeaf2e005c9b512cb229d1a4d85"},
+    {"page": 4, "bytes": 350611, "sha256": "3c52eff9f3974d0d0f5c20d596e0b9dfecc4b64d5ffeec317b5f484045f956f3"},
+    {"page": 5, "bytes": 279069, "sha256": "8d0231a7c0ab90c8c2975dc8b04221df16a4b202550726f67d472fa7df0612eb"},
+    {"page": 6, "bytes": 294037, "sha256": "01e56e1bd559565fe8c73e62da848ab68558730ea25b5ec89fce5c4a665f0aaf"},
+    {"page": 7, "bytes": 360698, "sha256": "97ece77df60df8bbcedceb97ce938cfd107c66c70eacddcb49afbcc75faa93bb"},
+    {"page": 8, "bytes": 242527, "sha256": "4b3a72726a6d6a10a03496e52e6daf56118d80400ef1254d565e19e8254fe0d0"},
+    {"page": 9, "bytes": 370840, "sha256": "307a3659ca9a2e9b50b947b65d78f566b714708eeb8b54bc67dafa8cb5f0c465"},
+    {"page": 10, "bytes": 292273, "sha256": "be7ebdcfdea7eebf25aef37a6f2555beaa353a7084bab271f2ebe125a3601b41"},
+    {"page": 11, "bytes": 237358, "sha256": "9e2ca2991fd3c82723a8f640453597fe0bc81492eb305c0614225798e9ce94ac"},
+    {"page": 12, "bytes": 26928, "sha256": "9ca479449c0d7de3b845d26eecb2b36191d62aa1804a1dcc97b6167a767d7b37"}
+  ],
+  "render": {
+    "directory": "renders-set-theory-spine-a22bd730",
+    "resolution_dpi": 110,
+    "page_png_count": 12,
+    "page_png_total_bytes": 2844173
+  },
+  "visual_review": {
+    "complete": true,
+    "basis": "All 12 final page PNGs were inspected at original rendered detail. Eleven page images were byte-identical to the first complete inspection; corrected page 7 was then reinspected from the final PDF.",
+    "tamil_shaping_and_pulli": "pass",
+    "page_edges_and_clipping": "pass",
+    "headings_and_page_breaks": "pass",
+    "formulas": "pass",
+    "footnotes": "pass",
+    "bibliography": "pass",
+    "internal_cross_references": "pass",
+    "visible_placeholders_absent": true,
+    "visible_untranslated_reference_label_absent": true
+  },
+  "copy_search": {
+    "extractor": "Poppler pdftotext -layout",
+    "path": "renders-set-theory-spine-a22bd730/set-theory-spine-a22bd730.txt",
+    "text_bytes": 45627,
+    "text_sha256": "d9acc566711f879751ee59e43fdf3ea594d6beea4d07716ba622379387285fcd",
+    "unicode_nfc": true,
+    "tamil_character_count": 12243,
+    "replacement_character_absent": true,
+    "literal_question_pair_absent": true,
+    "automatic_english_theorem_labels_absent": true,
+    "tamil_phrase_checks": {
+      "தமிழ் மொழிபெயர்ப்பு": true,
+      "படிநிலைகளும் தரநிலைகளும்": true,
+      "முடிவிலிக்கடந்த மீள்வரையறைத் தேற்றம்": true,
+      "படிநிலைகளின் அடிப்படைப் பண்புகள்": true,
+      "அடித்தளம்": true,
+      "ஒழுங்குமை": true,
+      "தரநிலை": true,
+      "தொகுத்தறிதல் திட்டம்": true,
+      "உறுப்புறவுத் தொகுத்தறிதல்": true,
+      "கடப்பு மூடல்": true,
+      "ஆற்றலுடையது": true,
+      "ஒரு திசையை துணைத்தேற்றம் 1.7 தருகிறது": true
+    },
+    "formula_token_checks": {
+      "universal_quantifier": true,
+      "existential_quantifier": true,
+      "membership": true,
+      "empty_set": true,
+      "subset": true,
+      "implication": true,
+      "omega": true,
+      "phi": true,
+      "alpha": true,
+      "beta": true
+    },
+    "limitations": [
+      "The PDF is untagged; Poppler extraction and the tested glyphs pass, but universal behavior across PDF engines is not claimed."
+    ]
+  },
+  "diagnostic_files": {
+    "pdffonts_path": "renders-set-theory-spine-a22bd730/set-theory-spine-a22bd730-pdffonts.txt",
+    "pdffonts_sha256": "4141dca3b1c2abddd0e053c72ef5e760f7597ece2eb78ecdefb269e91cafac5c",
+    "pdfinfo_path": "renders-set-theory-spine-a22bd730/set-theory-spine-a22bd730-pdfinfo.txt",
+    "pdfinfo_sha256": "5135af6f459744fea4944f7d4174df5acadc744fc3648327cd164bf3dcb6c435"
+  },
+  "status": "pass-with-documented-untagged-pdf-limitation"
+}

@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 540/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 547/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -4607,6 +4607,54 @@ Please double-check: **is f typed as a function from beta to the carrier B?**
 
 - `TA-OCC-48eb9af450179982` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:1`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:72`; PDF page pending.
 
+## TA-STH-014 — The source says ‘offer a transfinite by (transfinite) recursion,’ leaving the direct object incomplete; the surrounding sentences concern definitions and the success of the displayed V-alpha definition.
+
+Chosen rendering: **தமிழ் வாக்கியம் ‘முடிவிலிக்கடந்த மீள்வரையறையால் எந்த முடிவிலிக்கடந்த வரையறையை வழங்கும் முயற்சியும்’ என்று விடுபட்ட ‘வரையறை’ பொருளை வெளிப்படையாக வழங்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding and following sentences explicitly identify the object under discussion as a definition, and the section proves recursion principles that legitimate such definitions.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0560 (checked_supports)
+
+Alternatives: Preserving the ungrammatical ellipsis; treating ‘transfinite’ as an otherwise undefined noun.
+
+Please double-check: **does the statement of purpose say that every attempted transfinite definition by recursion succeeds?**
+
+- `TA-OCC-d24db8b8b6905652` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:13`; PDF page pending.
+
+## TA-STH-015 — The proof selects uppercase B from D and reasons about members of B, but the displayed definition of beta alone switches to undeclared lowercase b.
+
+Chosen rendering: **தமிழ் காட்சி வாய்பாடு முன் தேர்ந்தெடுத்த B ஐத் தொடர்ந்து பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The next sentence concludes B is a subset of V_beta, so beta must be defined from the ranks needed by members of that same B.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0562 (checked_supports)
+
+Alternatives: Preserving an undeclared lowercase set; silently introducing a new set unrelated to the contradiction.
+
+Please double-check: **does the defining set for beta quantify x over uppercase B?**
+
+- `TA-OCC-1454c0e2ae7095dd` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:1`; Tamil `translation/content/set-theory/spine/foundation.tex:93`; PDF page pending.
+
+## TA-STH-016 — The converse assumes x is in V_alpha and then says induction proves x is not in V_alpha, contradicting both its assumption and the displayed characterization. The needed conclusion is rank(x) < alpha, written rank(x) in alpha for ordinals.
+
+Chosen rendering: **தமிழ் நிறுவல் தேவையான முடிவாக setrank(x) in alpha என்பதைத் தெளிவாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The proposition identifies V_alpha with sets whose rank belongs to alpha, so the converse must strengthen rank(x) <= alpha to rank(x) in alpha.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0564 (checked_supports)
+
+Alternatives: Preserving a direct contradiction; weakening the conclusion to rank(x) less than or equal to alpha, which was already obtained and does not prove the proposition.
+
+Please double-check: **does the converse conclude setrank(x) is an element of alpha?**
+
+- `TA-OCC-42352846efcea33b` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:43`; PDF page pending.
+
 ## TA-T007 — extensionality
 
 Chosen rendering: **உறுப்புசார் சமத்துவம்**
@@ -4638,6 +4686,7 @@ Please double-check: **is “உறுப்புசார் சமத்த�
 - `TA-OCC-c901f99d4ede9d2e` — OLP-0532 / `OLP-0532-S01`; source `content/set-theory/story/russells-paradox-again.tex:37`; Tamil `translation/content/set-theory/story/russells-paradox-again.tex:48`; PDF page pending.
 - `TA-OCC-1d570be0c8c7feee` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:13`; Tamil `translation/content/set-theory/z/milestone.tex:19`; PDF page pending.
 - `TA-OCC-0352a37bf8ee4787` — OLP-0546 / `OLP-0546-S01`; source `content/set-theory/z/arbintersections.tex:32`; Tamil `translation/content/set-theory/z/arbintersections.tex:38`; PDF page pending.
+- `TA-OCC-77919cadd21d2c1e` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:15`; Tamil `translation/content/set-theory/spine/zf.tex:16`; PDF page pending.
 
 ## TA-T009 — if and only if
 
@@ -5308,6 +5357,9 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-803e87df5e950e41` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:163`; Tamil `translation/content/set-theory/ordinals/basic.tex:201`; PDF page pending.
 - `TA-OCC-e89b18e45de22cee` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:1`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:19`; PDF page pending.
 - `TA-OCC-c4e9f48c737486e8` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:41`; PDF page pending.
+- `TA-OCC-fcd8b94f6f0428a9` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:98`; PDF page pending.
+- `TA-OCC-96c56f469c328f52` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:1`; Tamil `translation/content/set-theory/spine/foundation.tex:83`; PDF page pending.
+- `TA-OCC-81638670897cf57a` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:1`; Tamil `translation/content/set-theory/spine/foundation.tex:92`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5657,6 +5709,8 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-20fd00d69efdd5c8` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:10`; Tamil `translation/content/set-theory/ordinals/milestone.tex:11`; PDF page pending.
 - `TA-OCC-fb8f25e0ebbb32ec` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:15`; PDF page pending.
 - `TA-OCC-3e4e59429538f496` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:16`; PDF page pending.
+- `TA-OCC-34f493fddf0d3f9f` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:14`; Tamil `translation/content/set-theory/spine/zf.tex:15`; PDF page pending.
+- `TA-OCC-220473dec36d1edc` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:25`; Tamil `translation/content/set-theory/spine/zf.tex:42`; PDF page pending.
 
 ## TA-T020 — tuple / recursive definition
 
@@ -6158,6 +6212,13 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-ce9f0ecbf1677744` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:43`; Tamil `translation/content/set-theory/ordinals/basic.tex:214`; PDF page pending.
 - `TA-OCC-f0762482ba2f472e` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:32`; Tamil `translation/content/set-theory/ordinals/opps.tex:44`; PDF page pending.
 - `TA-OCC-19fdd32700659890` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:39`; Tamil `translation/content/set-theory/ordinals/opps.tex:46`; PDF page pending.
+- `TA-OCC-1e8b6e8e93a8c571` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:14`; Tamil `translation/content/set-theory/spine/recursion.tex:39`; PDF page pending.
+- `TA-OCC-5fb9b3d5952082ba` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:14`; Tamil `translation/content/set-theory/spine/recursion.tex:61`; PDF page pending.
+- `TA-OCC-cfec215497196f8c` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:32`; Tamil `translation/content/set-theory/spine/zf.tex:33`; PDF page pending.
+- `TA-OCC-658bd17158901d4f` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:20`; Tamil `translation/content/set-theory/spine/rank.tex:41`; PDF page pending.
+- `TA-OCC-9128b9f174eb2c3b` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:22`; Tamil `translation/content/set-theory/spine/rank.tex:63`; PDF page pending.
+- `TA-OCC-6c55910aeb88ce9c` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:32`; Tamil `translation/content/set-theory/spine/rank.tex:84`; PDF page pending.
+- `TA-OCC-9ab78e57062fe182` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:35`; Tamil `translation/content/set-theory/spine/rank.tex:129`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -7497,6 +7558,8 @@ Please double-check: **is “மீச்சிறு உறுப்பு / �
 - `TA-OCC-35768784c496d80e` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:1`; Tamil `translation/content/set-theory/ordinals/replacement.tex:10`; PDF page pending.
 - `TA-OCC-a35f7d6caad8374a` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:15`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:52`; PDF page pending.
 - `TA-OCC-3a42e6689c98c7e9` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:15`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:60`; PDF page pending.
+- `TA-OCC-56edd2d8b4e01fff` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:1`; Tamil `translation/content/set-theory/spine/idea.tex:10`; PDF page pending.
+- `TA-OCC-ff8f2f496bfbfc5c` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:28`; PDF page pending.
 
 ## TA-T038 — successor / predecessor / initial segment
 
@@ -10424,6 +10487,11 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-e7417ec25e013de8` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:39`; Tamil `translation/content/set-theory/ordinals/replacement.tex:42`; PDF page pending.
 - `TA-OCC-faa3473d5af0f79f` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:14`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:34`; PDF page pending.
 - `TA-OCC-d5dc3d75b46cc324` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:32`; Tamil `translation/content/set-theory/ordinals/opps.tex:47`; PDF page pending.
+- `TA-OCC-e69d79e6de7b96d4` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:16`; Tamil `translation/content/set-theory/spine/recursion.tex:18`; PDF page pending.
+- `TA-OCC-9e9972843f13dd5d` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:25`; Tamil `translation/content/set-theory/spine/recursion.tex:61`; PDF page pending.
+- `TA-OCC-2284db157d3a9271` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:20`; Tamil `translation/content/set-theory/spine/rank.tex:47`; PDF page pending.
+- `TA-OCC-123c98dd223dc04a` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:22`; Tamil `translation/content/set-theory/spine/rank.tex:64`; PDF page pending.
+- `TA-OCC-4916eae656e3508b` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:32`; Tamil `translation/content/set-theory/spine/rank.tex:87`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -11713,6 +11781,16 @@ Please double-check: **is “கோஷி தொடர் / எல்லை / �
 - `TA-OCC-a4e6446058611f95` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:15`; Tamil `translation/content/set-theory/ordinals/opps.tex:18`; PDF page pending.
 - `TA-OCC-65f9ab84f0127063` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:49`; Tamil `translation/content/set-theory/ordinals/opps.tex:52`; PDF page pending.
 - `TA-OCC-c003d21580ab73c2` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:59`; Tamil `translation/content/set-theory/ordinals/opps.tex:63`; PDF page pending.
+- `TA-OCC-abc75f739659b78e` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:13`; Tamil `translation/content/set-theory/spine/idea.tex:13`; PDF page pending.
+- `TA-OCC-191b967e06bb666d` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:22`; Tamil `translation/content/set-theory/spine/idea.tex:23`; PDF page pending.
+- `TA-OCC-d3579da37f9833fe` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:32`; Tamil `translation/content/set-theory/spine/idea.tex:33`; PDF page pending.
+- `TA-OCC-3bcaf5209dc20d77` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:42`; Tamil `translation/content/set-theory/spine/recursion.tex:53`; PDF page pending.
+- `TA-OCC-26e5982a02a94189` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:96`; Tamil `translation/content/set-theory/spine/recursion.tex:113`; PDF page pending.
+- `TA-OCC-e678e53202c12d43` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:110`; Tamil `translation/content/set-theory/spine/recursion.tex:127`; PDF page pending.
+- `TA-OCC-0821a7343b68c176` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:124`; Tamil `translation/content/set-theory/spine/recursion.tex:144`; PDF page pending.
+- `TA-OCC-8d76b45a3e30a709` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:41`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:45`; PDF page pending.
+- `TA-OCC-a9541ad0a152e4ec` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:63`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:69`; PDF page pending.
+- `TA-OCC-3e677f73a9f5b083` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:1`; Tamil `translation/content/set-theory/spine/zf.tex:38`; PDF page pending.
 
 ## TA-T075 — Dedekind infinite / Hilbert hotel
 
@@ -12916,6 +12994,9 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-cb60aa6c174b5d46` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:1`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:49`; PDF page pending.
 - `TA-OCC-2ff2c3b095d05591` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:21`; PDF page pending.
 - `TA-OCC-9ea3d3009dd6e110` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:81`; PDF page pending.
+- `TA-OCC-b874ced0c859ca66` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:32`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:10`; PDF page pending.
+- `TA-OCC-faf9aa55de94e44a` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:28`; PDF page pending.
+- `TA-OCC-d6316445f00cf6d6` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:129`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -13249,6 +13330,8 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-5946a72019a798ed` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:10`; Tamil `translation/content/set-theory/ordinals/milestone.tex:11`; PDF page pending.
 - `TA-OCC-426e4b0758ac4c30` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:15`; PDF page pending.
 - `TA-OCC-61c4e558ec9a7a9f` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:16`; PDF page pending.
+- `TA-OCC-cf89aef9885f7bad` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:14`; Tamil `translation/content/set-theory/spine/zf.tex:15`; PDF page pending.
+- `TA-OCC-a472fffe6c9877fc` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:25`; Tamil `translation/content/set-theory/spine/zf.tex:42`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -14828,6 +14911,9 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-ee6c0f5fa548f0d7` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:190`; PDF page pending.
 - `TA-OCC-593c5417fae854cb` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:1`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:34`; PDF page pending.
 - `TA-OCC-c0ac2d951730d1af` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:47`; PDF page pending.
+- `TA-OCC-b0084f7fee29adca` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:61`; PDF page pending.
+- `TA-OCC-2c15327b031cef89` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:47`; PDF page pending.
+- `TA-OCC-55bed6872823110d` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:87`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -15075,6 +15161,7 @@ Please double-check: **is “முன்தொடர் / பின்தொட
 - `TA-OCC-ca2d9f5587e747ce` — OLP-0508 / `OLP-0508-S01`; source `content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/truth-lemma.tex:54`; PDF page pending.
 - `TA-OCC-856b617f0bb64b0d` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:55`; PDF page pending.
 - `TA-OCC-0baae7a9f2cb052f` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:1`; Tamil `translation/content/set-theory/story/predicativity.tex:65`; PDF page pending.
+- `TA-OCC-fd3a46d1b41d8d2c` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:1`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:96`; PDF page pending.
 
 ## TA-T098 — logical rule / structural rule / weakening / contraction / exchange / cut
 
@@ -16056,6 +16143,7 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-f755929e8eb45d43` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:1`; Tamil `translation/content/set-theory/story/predicativity.tex:114`; PDF page pending.
 - `TA-OCC-f191b459a4437c29` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:64`; Tamil `translation/content/set-theory/story/urelements.tex:72`; PDF page pending.
 - `TA-OCC-556ed6db6b70241d` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:41`; Tamil `translation/content/set-theory/ordinals/replacement.tex:45`; PDF page pending.
+- `TA-OCC-5639ee448dda62d5` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:38`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -16305,6 +16393,7 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-e556ff3945c343f6` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:26`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:28`; PDF page pending.
 - `TA-OCC-c0fc5b706342fd2c` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:12`; PDF page pending.
 - `TA-OCC-f300fa8ecd08ffd2` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:30`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:34`; PDF page pending.
+- `TA-OCC-9771314b9cb4893a` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:6`; Tamil `translation/content/set-theory/spine/recursion.tex:7`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -17089,6 +17178,8 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-f41aa2e484e1656b` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:1`; Tamil `translation/content/set-theory/story/grundgesetze.tex:27`; PDF page pending.
 - `TA-OCC-d3614978793a4cf2` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:62`; PDF page pending.
 - `TA-OCC-564ea0c84379dd0f` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:1`; Tamil `translation/content/set-theory/ordinals/replacement.tex:45`; PDF page pending.
+- `TA-OCC-ba0fe5c4a23d1986` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:42`; PDF page pending.
+- `TA-OCC-72ee018d96e7f444` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:56`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -18124,6 +18215,17 @@ Please double-check: **is “மீள்வரையறை / முதன்ம
 - `TA-OCC-3b9277b1f909acb8` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:29`; PDF page pending.
 - `TA-OCC-3a065e5005854806` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; PDF page pending.
 - `TA-OCC-8acbcae3a96293f6` — OLP-0382 / `OLP-0382-S01`; source `content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:33`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definable-recursive.tex:37`; PDF page pending.
+- `TA-OCC-d0251eb6d6ecf4a3` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:1`; Tamil `translation/content/set-theory/spine/idea.tex:27`; PDF page pending.
+- `TA-OCC-32cb12403d5ab957` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:1`; Tamil `translation/content/set-theory/spine/idea.tex:28`; PDF page pending.
+- `TA-OCC-64fd893d84597157` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:7`; PDF page pending.
+- `TA-OCC-a6df25a85de6cbbc` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:10`; PDF page pending.
+- `TA-OCC-ddaf0824241066f3` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:17`; PDF page pending.
+- `TA-OCC-144ea50a782782de` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:29`; PDF page pending.
+- `TA-OCC-762fa0075d613d29` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:70`; PDF page pending.
+- `TA-OCC-35e806a0e2b7f2ed` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:102`; PDF page pending.
+- `TA-OCC-cf350d023ae57d6e` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:105`; PDF page pending.
+- `TA-OCC-7ea0efc165481d87` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:1`; Tamil `translation/content/set-theory/spine/zf.tex:32`; PDF page pending.
+- `TA-OCC-42bfdec75cb480c9` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:1`; Tamil `translation/content/set-theory/spine/zf.tex:33`; PDF page pending.
 
 ## TA-T115 — characteristic function / bounded quantification / bounded minimization / projection function
 
@@ -19306,6 +19408,8 @@ Please double-check: **is “முறைப்படுத்தல் / கோ
 - `TA-OCC-29216d90335a2e4d` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:50`; Tamil `translation/content/set-theory/z/nat.tex:57`; PDF page pending.
 - `TA-OCC-2af27baba775ca77` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:53`; Tamil `translation/content/set-theory/z/nat.tex:59`; PDF page pending.
 - `TA-OCC-85cf349605b6cf08` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:11`; Tamil `translation/content/set-theory/ordinals/milestone.tex:15`; PDF page pending.
+- `TA-OCC-72ebb84efaa626a0` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:14`; Tamil `translation/content/set-theory/spine/zf.tex:10`; PDF page pending.
+- `TA-OCC-ebe434c98339f05c` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:18`; Tamil `translation/content/set-theory/spine/zf.tex:11`; PDF page pending.
 
 ## TA-T130 — axiomatized / axiomatizable / induction schema / Robinson Q / Peano arithmetic
 
@@ -20396,6 +20500,7 @@ Please double-check: **is “சர்ச்-குறியாக்கப்�
 - `TA-OCC-32613713467d23a4` — OLP-0376 / `OLP-0376-S01`; source `content/lambda-calculus/lambda-definability/pairs.tex:35`; Tamil `translation/content/lambda-calculus/lambda-definability/pairs.tex:36`; PDF page pending.
 - `TA-OCC-86c5e3f5fc465cf1` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:19`; PDF page pending.
 - `TA-OCC-410241ccf34746d2` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:59`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:65`; PDF page pending.
+- `TA-OCC-9aeb64387a08654d` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:142`; PDF page pending.
 
 ## TA-T158 — many-valued logic / designated truth value / truth-value matrix / arity / determinateness operator
 
@@ -22228,6 +22333,8 @@ Please double-check: **is “கோள மாதிரி / கோளங்க�
 - `TA-OCC-48aa2e9e0dfb2541` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:1`; Tamil `translation/content/set-theory/z/powerset.tex:58`; PDF page pending.
 - `TA-OCC-2d338556472f837b` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:1`; Tamil `translation/content/set-theory/z/milestone.tex:20`; PDF page pending.
 - `TA-OCC-ecb65ef12c4a8ff5` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:1`; Tamil `translation/content/set-theory/ordinals/milestone.tex:16`; PDF page pending.
+- `TA-OCC-e295e29353e29b40` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:1`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:102`; PDF page pending.
+- `TA-OCC-74ce3debeee69be4` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:1`; Tamil `translation/content/set-theory/spine/zf.tex:16`; PDF page pending.
 
 ## TA-T199 — truth-functional / vacuously true / non-vacuously true / monotonic conditional / transitive conditional
 
@@ -22409,6 +22516,29 @@ Please double-check: **is “படிநிலைமுறைக் கணக�
 - `TA-OCC-eb21171c65ff7397` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:17`; Tamil `translation/content/set-theory/ordinals/introduction.tex:18`; PDF page pending.
 - `TA-OCC-3712127a7e2be632` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:18`; Tamil `translation/content/set-theory/ordinals/introduction.tex:19`; PDF page pending.
 - `TA-OCC-85866750b905b486` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:20`; Tamil `translation/content/set-theory/ordinals/idea.tex:21`; PDF page pending.
+- `TA-OCC-cf96ad74b31db7bd` — OLP-0558 / `OLP-0558-S01`; source `content/set-theory/spine/spine.tex:8`; Tamil `translation/content/set-theory/spine/spine.tex:9`; PDF page pending.
+- `TA-OCC-33f72867ac681910` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:7`; Tamil `translation/content/set-theory/spine/idea.tex:8`; PDF page pending.
+- `TA-OCC-db01874375d47f80` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:11`; Tamil `translation/content/set-theory/spine/idea.tex:12`; PDF page pending.
+- `TA-OCC-146480fc0ec198b4` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:36`; Tamil `translation/content/set-theory/spine/idea.tex:36`; PDF page pending.
+- `TA-OCC-03fef38854a25871` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:37`; Tamil `translation/content/set-theory/spine/idea.tex:36`; PDF page pending.
+- `TA-OCC-a647ecb0e2d42943` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:37`; Tamil `translation/content/set-theory/spine/idea.tex:37`; PDF page pending.
+- `TA-OCC-2b9f43ed6aaa69f2` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:39`; Tamil `translation/content/set-theory/spine/idea.tex:38`; PDF page pending.
+- `TA-OCC-135ac8a6bd4041aa` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:40`; Tamil `translation/content/set-theory/spine/idea.tex:40`; PDF page pending.
+- `TA-OCC-4ab031047795ad4e` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:6`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:7`; PDF page pending.
+- `TA-OCC-95f4eb1498dd09d3` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:80`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:93`; PDF page pending.
+- `TA-OCC-1c10443710989d10` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:80`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:94`; PDF page pending.
+- `TA-OCC-24d9221edc8f0cd2` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:84`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:98`; PDF page pending.
+- `TA-OCC-cb2cb8ca7312545a` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:88`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:101`; PDF page pending.
+- `TA-OCC-fe67ae793bec36e7` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:88`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:103`; PDF page pending.
+- `TA-OCC-e080b1f86a837bb0` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:92`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:106`; PDF page pending.
+- `TA-OCC-d5264141375c019c` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:11`; Tamil `translation/content/set-theory/spine/foundation.tex:12`; PDF page pending.
+- `TA-OCC-e94270196ad07c45` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:14`; Tamil `translation/content/set-theory/spine/foundation.tex:15`; PDF page pending.
+- `TA-OCC-f73cceadc83707d6` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:17`; Tamil `translation/content/set-theory/spine/foundation.tex:18`; PDF page pending.
+- `TA-OCC-54ff3d6aaa5a5311` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:19`; Tamil `translation/content/set-theory/spine/foundation.tex:21`; PDF page pending.
+- `TA-OCC-970121adcb96098b` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:20`; Tamil `translation/content/set-theory/spine/foundation.tex:22`; PDF page pending.
+- `TA-OCC-66cabc4aef469d34` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:22`; Tamil `translation/content/set-theory/spine/foundation.tex:25`; PDF page pending.
+- `TA-OCC-bea5850553b3fe74` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:8`; Tamil `translation/content/set-theory/spine/rank.tex:9`; PDF page pending.
+- `TA-OCC-accf3f34353d3b55` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:9`; Tamil `translation/content/set-theory/spine/rank.tex:10`; PDF page pending.
 
 ## TA-T202 — urelement / pure set theory / reductive foundational goal
 
@@ -22482,6 +22612,7 @@ Please double-check: **is “பிரிப்பு அடிகோள் த�
 - `TA-OCC-49f2153a8f0d27dc` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:61`; Tamil `translation/content/set-theory/z/separation.tex:73`; PDF page pending.
 - `TA-OCC-2cfc1d9d20944230` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:64`; Tamil `translation/content/set-theory/z/separation.tex:76`; PDF page pending.
 - `TA-OCC-f2ade20450773d03` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:63`; Tamil `translation/content/set-theory/ordinals/wo.tex:74`; PDF page pending.
+- `TA-OCC-9af32f899415d50f` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:16`; Tamil `translation/content/set-theory/spine/recursion.tex:19`; PDF page pending.
 
 ## TA-T208 — Axiom of Infinity / von Neumann successor / omega / infinite stage / immediate predecessor
 
@@ -22661,6 +22792,34 @@ Please double-check: **is “வரிசையெண் / முடிவில
 - `TA-OCC-c810804d7ff7c6b1` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:86`; Tamil `translation/content/set-theory/ordinals/opps.tex:92`; PDF page pending.
 - `TA-OCC-4f2e7397556a4e00` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:87`; Tamil `translation/content/set-theory/ordinals/opps.tex:93`; PDF page pending.
 - `TA-OCC-513929c6e2973af4` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:87`; Tamil `translation/content/set-theory/ordinals/opps.tex:98`; PDF page pending.
+- `TA-OCC-10751b8aa9997ffc` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:9`; Tamil `translation/content/set-theory/spine/idea.tex:11`; PDF page pending.
+- `TA-OCC-d8b2851da7efea07` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:10`; Tamil `translation/content/set-theory/spine/idea.tex:13`; PDF page pending.
+- `TA-OCC-3b9886c362c48670` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:12`; Tamil `translation/content/set-theory/spine/idea.tex:14`; PDF page pending.
+- `TA-OCC-f734395527407529` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:13`; Tamil `translation/content/set-theory/spine/idea.tex:21`; PDF page pending.
+- `TA-OCC-d2dd40f24ffe532b` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:20`; Tamil `translation/content/set-theory/spine/idea.tex:23`; PDF page pending.
+- `TA-OCC-4bb781ee5b791d96` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:22`; Tamil `translation/content/set-theory/spine/idea.tex:27`; PDF page pending.
+- `TA-OCC-721b82f635f71ba9` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:27`; Tamil `translation/content/set-theory/spine/idea.tex:32`; PDF page pending.
+- `TA-OCC-c4ede2a867e6d8b6` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:19`; Tamil `translation/content/set-theory/spine/recursion.tex:22`; PDF page pending.
+- `TA-OCC-9da1f5e97d27c537` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:23`; Tamil `translation/content/set-theory/spine/recursion.tex:30`; PDF page pending.
+- `TA-OCC-b1db3d3fa94961c8` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:34`; Tamil `translation/content/set-theory/spine/recursion.tex:44`; PDF page pending.
+- `TA-OCC-42c93477fce27af8` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:34`; Tamil `translation/content/set-theory/spine/recursion.tex:53`; PDF page pending.
+- `TA-OCC-a8e218211d29bc2e` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:42`; Tamil `translation/content/set-theory/spine/recursion.tex:71`; PDF page pending.
+- `TA-OCC-a2feae9ae4b30842` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:61`; Tamil `translation/content/set-theory/spine/recursion.tex:97`; PDF page pending.
+- `TA-OCC-32f4819664041b9d` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:80`; Tamil `translation/content/set-theory/spine/recursion.tex:111`; PDF page pending.
+- `TA-OCC-54ea32c173f4c1e3` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:81`; Tamil `translation/content/set-theory/spine/recursion.tex:113`; PDF page pending.
+- `TA-OCC-b49f8bec1b3ccaff` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:94`; Tamil `translation/content/set-theory/spine/recursion.tex:124`; PDF page pending.
+- `TA-OCC-c7d92ed9b34c6b77` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:96`; Tamil `translation/content/set-theory/spine/recursion.tex:127`; PDF page pending.
+- `TA-OCC-f8f1f58ff3e22526` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:102`; Tamil `translation/content/set-theory/spine/recursion.tex:130`; PDF page pending.
+- `TA-OCC-d824bacecee2bbe3` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:14`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:18`; PDF page pending.
+- `TA-OCC-32d0937db942cc80` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:27`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:30`; PDF page pending.
+- `TA-OCC-aee65f6c4556843f` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:41`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:45`; PDF page pending.
+- `TA-OCC-e9243cb8b5d13443` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:51`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:55`; PDF page pending.
+- `TA-OCC-a7582f389ec260d7` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:72`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:79`; PDF page pending.
+- `TA-OCC-ab857646c3693002` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:83`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:96`; PDF page pending.
+- `TA-OCC-6c5b306f96129cb6` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:66`; Tamil `translation/content/set-theory/spine/foundation.tex:77`; PDF page pending.
+- `TA-OCC-645b303e8eced94d` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:14`; Tamil `translation/content/set-theory/spine/rank.tex:16`; PDF page pending.
+- `TA-OCC-b09f96d9d00899fd` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:29`; Tamil `translation/content/set-theory/spine/rank.tex:31`; PDF page pending.
+- `TA-OCC-2cd4508484c3c8c3` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:63`; Tamil `translation/content/set-theory/spine/rank.tex:104`; PDF page pending.
 
 ## TA-T214 — Scheme of Replacement / ZF minus / image under a term
 
@@ -22697,6 +22856,339 @@ Please double-check: **is “பின்வரிசை வரிசையெ�
 - `TA-OCC-b8cb390b1d0fd2fa` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:49`; Tamil `translation/content/set-theory/ordinals/opps.tex:52`; PDF page pending.
 - `TA-OCC-bbb827204756ebbe` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:59`; Tamil `translation/content/set-theory/ordinals/opps.tex:63`; PDF page pending.
 - `TA-OCC-e1b596362e286d31` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:70`; Tamil `translation/content/set-theory/ordinals/opps.tex:75`; PDF page pending.
+- `TA-OCC-582f321b82e9437d` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:13`; Tamil `translation/content/set-theory/spine/idea.tex:13`; PDF page pending.
+- `TA-OCC-803c68da0f30113f` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:22`; Tamil `translation/content/set-theory/spine/idea.tex:23`; PDF page pending.
+- `TA-OCC-d45e64de0786e3a7` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:42`; Tamil `translation/content/set-theory/spine/recursion.tex:53`; PDF page pending.
+- `TA-OCC-a429379f1a5635a9` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:96`; Tamil `translation/content/set-theory/spine/recursion.tex:113`; PDF page pending.
+- `TA-OCC-e50dd9e1d14df3ac` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:110`; Tamil `translation/content/set-theory/spine/recursion.tex:127`; PDF page pending.
+- `TA-OCC-9b91cb3c794ba951` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:41`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:45`; PDF page pending.
+
+## TA-T217 — stage / rank / V-alpha hierarchy
+
+Chosen rendering: **படிநிலை / தரநிலை / V_α-களின் படிநிலைமுறை**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: படிநிலை continues TA-T201 for construction stages, while தரநிலை is reserved for the least ordinal measuring a set's entry into the hierarchy. The base, successor and limit equations for V_α and the least-ordinal definition of set rank keep these related senses formally distinct; no direct attestation of the complete V-hierarchy phrase is claimed.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-T217-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “படிநிலை / தரநிலை / V_α-களின் படிநிலைமுறை” the established India-standard Tamil expression for “stage / rank / V-alpha hierarchy” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-81a6fd0f76b6ed23` — OLP-0131 / `OLP-0131-S02`; source `content/first-order-logic/completeness/lindenbaums-lemma.tex:21`; Tamil `translation/content/first-order-logic/completeness/lindenbaums-lemma.tex:24`; PDF page pending.
+- `TA-OCC-49482cbca87fb304` — OLP-0131 / `OLP-0131-S02`; source `content/first-order-logic/completeness/lindenbaums-lemma.tex:21`; Tamil `translation/content/first-order-logic/completeness/lindenbaums-lemma.tex:25`; PDF page pending.
+- `TA-OCC-b4c17b9fa9c9a65f` — OLP-0189 / `OLP-0189-S01`; source `content/model-theory/basics/partial-iso.tex:109`; Tamil `translation/content/model-theory/basics/partial-iso.tex:126`; PDF page pending.
+- `TA-OCC-7863b5e5baa1d39d` — OLP-0207 / `OLP-0207-S01`; source `content/model-theory/lindstrom/lindstrom-proof.tex:29`; Tamil `translation/content/model-theory/lindstrom/lindstrom-proof.tex:31`; PDF page pending.
+- `TA-OCC-ffc371d2ebefc384` — OLP-0213 / `OLP-0213-S01`; source `content/computability/recursive-functions/pr-functions.tex:70`; Tamil `translation/content/computability/recursive-functions/pr-functions.tex:78`; PDF page pending.
+- `TA-OCC-f293dfe9853bd590` — OLP-0213 / `OLP-0213-S01`; source `content/computability/recursive-functions/pr-functions.tex:72`; Tamil `translation/content/computability/recursive-functions/pr-functions.tex:81`; PDF page pending.
+- `TA-OCC-092ed933210e3db7` — OLP-0213 / `OLP-0213-S01`; source `content/computability/recursive-functions/pr-functions.tex:72`; Tamil `translation/content/computability/recursive-functions/pr-functions.tex:81`; PDF page pending.
+- `TA-OCC-c833691607714e1c` — OLP-0247 / `OLP-0247-S01`; source `content/computability/computability-theory/total.tex:1`; Tamil `translation/content/computability/computability-theory/total.tex:62`; PDF page pending.
+- `TA-OCC-41a3299a68dd3ed8` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:93`; PDF page pending.
+- `TA-OCC-df5841809cb132fd` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:97`; PDF page pending.
+- `TA-OCC-3f2063b74fd0e3e6` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:97`; PDF page pending.
+- `TA-OCC-2fece73a294293be` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:98`; PDF page pending.
+- `TA-OCC-ed1ec7704161c590` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:98`; PDF page pending.
+- `TA-OCC-17279b9932d74aa5` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:101`; PDF page pending.
+- `TA-OCC-d66bbca9889a04af` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:102`; PDF page pending.
+- `TA-OCC-e23237d82aecf79d` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:107`; PDF page pending.
+- `TA-OCC-922760d096f381ab` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:116`; PDF page pending.
+- `TA-OCC-296c69c6f0386a0b` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:118`; PDF page pending.
+- `TA-OCC-e6be0422eb2468e5` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:139`; PDF page pending.
+- `TA-OCC-29b1c21123e65da6` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:146`; PDF page pending.
+- `TA-OCC-9a53549ac58397fb` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:167`; PDF page pending.
+- `TA-OCC-9ddae0c2be2426b0` — OLP-0266 / `OLP-0266-S01`; source `content/turing-machines/undecidability/enumerating-tms.tex:1`; Tamil `translation/content/turing-machines/undecidability/enumerating-tms.tex:169`; PDF page pending.
+- `TA-OCC-cfe6af7614495bb6` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:1`; Tamil `translation/content/incompleteness/introduction/definitions.tex:46`; PDF page pending.
+- `TA-OCC-2ae712cd968d91fb` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:1`; Tamil `translation/content/incompleteness/introduction/definitions.tex:66`; PDF page pending.
+- `TA-OCC-7d5a2c50bd145d77` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:1`; Tamil `translation/content/incompleteness/introduction/definitions.tex:73`; PDF page pending.
+- `TA-OCC-4a5e3d61326f9cad` — OLP-0279 / `OLP-0279-S01`; source `content/incompleteness/introduction/undecidability.tex:1`; Tamil `translation/content/incompleteness/introduction/undecidability.tex:69`; PDF page pending.
+- `TA-OCC-51d5ab0628af3d98` — OLP-0279 / `OLP-0279-S01`; source `content/incompleteness/introduction/undecidability.tex:1`; Tamil `translation/content/incompleteness/introduction/undecidability.tex:138`; PDF page pending.
+- `TA-OCC-a58bc03c875f776f` — OLP-0291 / `OLP-0291-S01`; source `content/incompleteness/representability-in-q/representable-comp.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/representable-comp.tex:46`; PDF page pending.
+- `TA-OCC-7a526189a523b2cf` — OLP-0291 / `OLP-0291-S01`; source `content/incompleteness/representability-in-q/representable-comp.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/representable-comp.tex:48`; PDF page pending.
+- `TA-OCC-98537150404a315e` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:243`; PDF page pending.
+- `TA-OCC-5689fd7dd41cf4d2` — OLP-0299 / `OLP-0299-S01`; source `content/incompleteness/representability-in-q/undecidability.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/undecidability.tex:53`; PDF page pending.
+- `TA-OCC-9ef5069dfbcd610b` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:311`; PDF page pending.
+- `TA-OCC-efc56e749996aea0` — OLP-0305 / `OLP-0305-S01`; source `content/incompleteness/theories-computability/extensions-of-q-not-decidable.tex:1`; Tamil `translation/content/incompleteness/theories-computability/extensions-of-q-not-decidable.tex:79`; PDF page pending.
+- `TA-OCC-d40845e4dfd24207` — OLP-0311 / `OLP-0311-S01`; source `content/incompleteness/theories-computability/interpretability.tex:1`; Tamil `translation/content/incompleteness/theories-computability/interpretability.tex:65`; PDF page pending.
+- `TA-OCC-110215a96585c347` — OLP-0311 / `OLP-0311-S01`; source `content/incompleteness/theories-computability/interpretability.tex:1`; Tamil `translation/content/incompleteness/theories-computability/interpretability.tex:71`; PDF page pending.
+- `TA-OCC-30950a11e55ca6fd` — OLP-0314 / `OLP-0314-S01`; source `content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:44`; PDF page pending.
+- `TA-OCC-d6c50553232346aa` — OLP-0314 / `OLP-0314-S01`; source `content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:72`; PDF page pending.
+- `TA-OCC-c698c90a617f6520` — OLP-0321 / `OLP-0321-S01`; source `content/incompleteness/incompleteness-provability/tarski-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/tarski-thm.tex:22`; PDF page pending.
+- `TA-OCC-4d721856bd748ebf` — OLP-0321 / `OLP-0321-S01`; source `content/incompleteness/incompleteness-provability/tarski-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/tarski-thm.tex:23`; PDF page pending.
+- `TA-OCC-8d4d43f737ff323d` — OLP-0324 / `OLP-0324-S01`; source `content/second-order-logic/syntax-and-semantics/introduction.tex:1`; Tamil `translation/content/second-order-logic/syntax-and-semantics/introduction.tex:41`; PDF page pending.
+- `TA-OCC-c95cb2a1df54addd` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:1`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:51`; PDF page pending.
+- `TA-OCC-9e2a6e9376e21a50` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:1`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:99`; PDF page pending.
+- `TA-OCC-26d52ae85ef5b946` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:1`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:61`; PDF page pending.
+- `TA-OCC-867530f4d670032c` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:20`; PDF page pending.
+- `TA-OCC-43e77d045d5ae43e` — OLP-0426 / `OLP-0426-S01`; source `content/normal-modal-logic/frame-definability/second-order-definability.tex:1`; Tamil `translation/content/normal-modal-logic/frame-definability/second-order-definability.tex:26`; PDF page pending.
+- `TA-OCC-8018842cb5956e87` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:31`; PDF page pending.
+- `TA-OCC-7afa63f958aaea34` — OLP-0444 / `OLP-0444-S01`; source `content/normal-modal-logic/completeness/lindenbaums-lemma.tex:55`; Tamil `translation/content/normal-modal-logic/completeness/lindenbaums-lemma.tex:60`; PDF page pending.
+- `TA-OCC-4cf0b175ae7bd8b6` — OLP-0530 / `OLP-0530-S01`; source `content/set-theory/story/story.tex:1`; Tamil `translation/content/set-theory/story/story.tex:8`; PDF page pending.
+- `TA-OCC-0a804071bb3eaf92` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:104`; Tamil `translation/content/set-theory/story/predicativity.tex:116`; PDF page pending.
+- `TA-OCC-a9d1ea7bf9942e0d` — OLP-0533 / `OLP-0533-S01`; source `content/set-theory/story/predicativity.tex:104`; Tamil `translation/content/set-theory/story/predicativity.tex:118`; PDF page pending.
+- `TA-OCC-31cac0e543e7597d` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:9`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:11`; PDF page pending.
+- `TA-OCC-74696bff678d18fd` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:11`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:13`; PDF page pending.
+- `TA-OCC-c219e0be0fec7e50` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:11`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:16`; PDF page pending.
+- `TA-OCC-d7455b87c8fecc67` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:12`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:16`; PDF page pending.
+- `TA-OCC-91f367270366bec5` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:12`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:17`; PDF page pending.
+- `TA-OCC-9057524c9399506a` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:13`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:17`; PDF page pending.
+- `TA-OCC-4458625ad1cc53e0` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:15`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:18`; PDF page pending.
+- `TA-OCC-a48fb50adff0769a` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:22`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:19`; PDF page pending.
+- `TA-OCC-e05fbe3371b88ab5` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:23`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:22`; PDF page pending.
+- `TA-OCC-62b04c33486dbd55` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:24`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:27`; PDF page pending.
+- `TA-OCC-70846d9f27e82be5` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:24`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:27`; PDF page pending.
+- `TA-OCC-105ceca215432237` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:24`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:29`; PDF page pending.
+- `TA-OCC-36bf245060e3a481` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:26`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:29`; PDF page pending.
+- `TA-OCC-10d98b0ba0ecc97d` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:27`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:30`; PDF page pending.
+- `TA-OCC-0e7712c50ab7e667` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:29`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:31`; PDF page pending.
+- `TA-OCC-4a316b54a7aa8335` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:30`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:32`; PDF page pending.
+- `TA-OCC-afa8d7bf41d77ac3` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:31`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:35`; PDF page pending.
+- `TA-OCC-3b6d4dc42ad78fe8` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:32`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:35`; PDF page pending.
+- `TA-OCC-7dc7afa35ce5f6bc` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:33`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:37`; PDF page pending.
+- `TA-OCC-674427e8f37876c8` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:34`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:37`; PDF page pending.
+- `TA-OCC-c18c081a14b1d215` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:36`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:40`; PDF page pending.
+- `TA-OCC-2fcbe7206430c979` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:69`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:40`; PDF page pending.
+- `TA-OCC-c6e4a83a26a5c28c` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:70`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:42`; PDF page pending.
+- `TA-OCC-d6d5ebf7853c46a0` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:75`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:43`; PDF page pending.
+- `TA-OCC-c4f7c7789de2e7c2` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:86`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:75`; PDF page pending.
+- `TA-OCC-34f2d1a8d4c483a3` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:86`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:76`; PDF page pending.
+- `TA-OCC-33f4eb1c037be9a5` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:86`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:77`; PDF page pending.
+- `TA-OCC-768e474743fd43dc` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:86`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:83`; PDF page pending.
+- `TA-OCC-afe103995a5fb4c6` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:86`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:84`; PDF page pending.
+- `TA-OCC-bb07b17be26941cc` — OLP-0534 / `OLP-0534-S01`; source `content/set-theory/story/cumulative-approach.tex:86`; Tamil `translation/content/set-theory/story/cumulative-approach.tex:89`; PDF page pending.
+- `TA-OCC-5ec140538fae601f` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:16`; Tamil `translation/content/set-theory/story/urelements.tex:13`; PDF page pending.
+- `TA-OCC-4710e4a49f37eb1c` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:18`; Tamil `translation/content/set-theory/story/urelements.tex:21`; PDF page pending.
+- `TA-OCC-23c39550a74d21ec` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:18`; Tamil `translation/content/set-theory/story/urelements.tex:22`; PDF page pending.
+- `TA-OCC-19facb58fe7852ef` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:13`; Tamil `translation/content/set-theory/z/story.tex:17`; PDF page pending.
+- `TA-OCC-bb721aaaddcdbd5d` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:14`; Tamil `translation/content/set-theory/z/story.tex:18`; PDF page pending.
+- `TA-OCC-c9f41f5687d7180d` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:15`; Tamil `translation/content/set-theory/z/story.tex:18`; PDF page pending.
+- `TA-OCC-19bc10c27973eaf4` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:20`; Tamil `translation/content/set-theory/z/story.tex:19`; PDF page pending.
+- `TA-OCC-f5bd28e6ab8b1b5a` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:21`; Tamil `translation/content/set-theory/z/story.tex:25`; PDF page pending.
+- `TA-OCC-bc5dbb4b73033070` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:22`; Tamil `translation/content/set-theory/z/story.tex:28`; PDF page pending.
+- `TA-OCC-83478273cca24316` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:22`; Tamil `translation/content/set-theory/z/story.tex:28`; PDF page pending.
+- `TA-OCC-287b1907aeb29d52` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:23`; Tamil `translation/content/set-theory/z/story.tex:30`; PDF page pending.
+- `TA-OCC-31ea14ff19e9eaa1` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:23`; Tamil `translation/content/set-theory/z/story.tex:30`; PDF page pending.
+- `TA-OCC-8f2c6766ae1eaf59` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:23`; Tamil `translation/content/set-theory/z/story.tex:36`; PDF page pending.
+- `TA-OCC-c3735ee3b969b1f2` — OLP-0538 / `OLP-0538-S01`; source `content/set-theory/z/story.tex:23`; Tamil `translation/content/set-theory/z/story.tex:37`; PDF page pending.
+- `TA-OCC-426bf8bc065eb346` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:35`; Tamil `translation/content/set-theory/z/separation.tex:40`; PDF page pending.
+- `TA-OCC-8ae07ae7b34b84f4` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:36`; Tamil `translation/content/set-theory/z/separation.tex:42`; PDF page pending.
+- `TA-OCC-bb76a7f89c4f0725` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:36`; Tamil `translation/content/set-theory/z/separation.tex:43`; PDF page pending.
+- `TA-OCC-dc043f01875644f4` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:39`; Tamil `translation/content/set-theory/z/separation.tex:44`; PDF page pending.
+- `TA-OCC-9f19bce175d89944` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:40`; Tamil `translation/content/set-theory/z/separation.tex:46`; PDF page pending.
+- `TA-OCC-83435761f9950670` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:67`; Tamil `translation/content/set-theory/z/separation.tex:47`; PDF page pending.
+- `TA-OCC-104940a32015cd22` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:69`; Tamil `translation/content/set-theory/z/separation.tex:73`; PDF page pending.
+- `TA-OCC-2c6ef3a3647292e3` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:71`; Tamil `translation/content/set-theory/z/separation.tex:74`; PDF page pending.
+- `TA-OCC-fef9e24341c29d07` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:72`; Tamil `translation/content/set-theory/z/separation.tex:77`; PDF page pending.
+- `TA-OCC-1c6b8af253019b08` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:72`; Tamil `translation/content/set-theory/z/separation.tex:79`; PDF page pending.
+- `TA-OCC-86b0944ec0ce5665` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:72`; Tamil `translation/content/set-theory/z/separation.tex:79`; PDF page pending.
+- `TA-OCC-4cdd00dc52fd6f14` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:72`; Tamil `translation/content/set-theory/z/separation.tex:82`; PDF page pending.
+- `TA-OCC-73b1c06ae815a03a` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:72`; Tamil `translation/content/set-theory/z/separation.tex:82`; PDF page pending.
+- `TA-OCC-953836cadf59fc7e` — OLP-0539 / `OLP-0539-S01`; source `content/set-theory/z/separation.tex:72`; Tamil `translation/content/set-theory/z/separation.tex:83`; PDF page pending.
+- `TA-OCC-c29ee2d7e82cce03` — OLP-0540 / `OLP-0540-S01`; source `content/set-theory/z/union.tex:20`; Tamil `translation/content/set-theory/z/union.tex:24`; PDF page pending.
+- `TA-OCC-615a6d22b2d980a7` — OLP-0540 / `OLP-0540-S01`; source `content/set-theory/z/union.tex:20`; Tamil `translation/content/set-theory/z/union.tex:25`; PDF page pending.
+- `TA-OCC-98d20a4b2e9d3ad1` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:22`; PDF page pending.
+- `TA-OCC-6f4a54f407f3814e` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:23`; PDF page pending.
+- `TA-OCC-719879acebe0a9b1` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:24`; PDF page pending.
+- `TA-OCC-f49ceb50525939df` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:25`; PDF page pending.
+- `TA-OCC-ab79aa496f6724c7` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:17`; Tamil `translation/content/set-theory/z/pairs.tex:25`; PDF page pending.
+- `TA-OCC-02d6fabd192ffb54` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:19`; Tamil `translation/content/set-theory/z/pairs.tex:27`; PDF page pending.
+- `TA-OCC-95ceb39b3ba9e0d5` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:21`; Tamil `translation/content/set-theory/z/pairs.tex:29`; PDF page pending.
+- `TA-OCC-2e645c2f3cee372e` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:24`; Tamil `translation/content/set-theory/z/pairs.tex:35`; PDF page pending.
+- `TA-OCC-1da8bd95eaefc84b` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:26`; Tamil `translation/content/set-theory/z/pairs.tex:37`; PDF page pending.
+- `TA-OCC-633a976dd672ad20` — OLP-0541 / `OLP-0541-S01`; source `content/set-theory/z/pairs.tex:26`; Tamil `translation/content/set-theory/z/pairs.tex:40`; PDF page pending.
+- `TA-OCC-9cc0a8d40e3469ff` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:18`; Tamil `translation/content/set-theory/z/powerset.tex:23`; PDF page pending.
+- `TA-OCC-4c871320b81909c2` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:20`; Tamil `translation/content/set-theory/z/powerset.tex:27`; PDF page pending.
+- `TA-OCC-3a8b94ee7fb23c35` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:21`; Tamil `translation/content/set-theory/z/powerset.tex:28`; PDF page pending.
+- `TA-OCC-6864d7ec6fdf3ed2` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:22`; Tamil `translation/content/set-theory/z/powerset.tex:29`; PDF page pending.
+- `TA-OCC-2f94a95052f6cca4` — OLP-0542 / `OLP-0542-S01`; source `content/set-theory/z/powerset.tex:23`; Tamil `translation/content/set-theory/z/powerset.tex:30`; PDF page pending.
+- `TA-OCC-aa80f47406082899` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:15`; Tamil `translation/content/set-theory/z/infinity-again.tex:32`; PDF page pending.
+- `TA-OCC-3d17bfea0453422f` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:16`; Tamil `translation/content/set-theory/z/infinity-again.tex:120`; PDF page pending.
+- `TA-OCC-ba0a5f89858a0807` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:17`; Tamil `translation/content/set-theory/z/infinity-again.tex:121`; PDF page pending.
+- `TA-OCC-dca9120491ad54e6` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:18`; Tamil `translation/content/set-theory/z/infinity-again.tex:121`; PDF page pending.
+- `TA-OCC-c52ac74880754802` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:19`; Tamil `translation/content/set-theory/z/infinity-again.tex:122`; PDF page pending.
+- `TA-OCC-0ed58bf3e20170fd` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:26`; Tamil `translation/content/set-theory/z/infinity-again.tex:125`; PDF page pending.
+- `TA-OCC-4e3253be104c7cdb` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:126`; PDF page pending.
+- `TA-OCC-57646be7118418fd` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:131`; PDF page pending.
+- `TA-OCC-6e89c6f3fa5ef7cb` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:132`; PDF page pending.
+- `TA-OCC-c1ace58a2d11ab91` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:108`; Tamil `translation/content/set-theory/z/infinity-again.tex:132`; PDF page pending.
+- `TA-OCC-c7aa1cb5f5aad5f5` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:111`; Tamil `translation/content/set-theory/z/infinity-again.tex:133`; PDF page pending.
+- `TA-OCC-be1d0046f5f6b3f8` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:112`; Tamil `translation/content/set-theory/z/infinity-again.tex:134`; PDF page pending.
+- `TA-OCC-a96fddbfe4f92f63` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:119`; Tamil `translation/content/set-theory/z/infinity-again.tex:135`; PDF page pending.
+- `TA-OCC-30d20671807de99e` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:119`; Tamil `translation/content/set-theory/z/infinity-again.tex:142`; PDF page pending.
+- `TA-OCC-e7c2b5418107d547` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:13`; Tamil `translation/content/set-theory/ordinals/introduction.tex:14`; PDF page pending.
+- `TA-OCC-b82987def8783b83` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:16`; Tamil `translation/content/set-theory/ordinals/introduction.tex:14`; PDF page pending.
+- `TA-OCC-cb0229048b101213` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:16`; Tamil `translation/content/set-theory/ordinals/introduction.tex:17`; PDF page pending.
+- `TA-OCC-5e5dedaab827c7f4` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:17`; Tamil `translation/content/set-theory/ordinals/introduction.tex:18`; PDF page pending.
+- `TA-OCC-f40b024a007ec96b` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:18`; Tamil `translation/content/set-theory/ordinals/introduction.tex:18`; PDF page pending.
+- `TA-OCC-4806ed4ec20f8908` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:18`; Tamil `translation/content/set-theory/ordinals/introduction.tex:19`; PDF page pending.
+- `TA-OCC-66167f2c08d15635` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:20`; Tamil `translation/content/set-theory/ordinals/idea.tex:21`; PDF page pending.
+- `TA-OCC-cefcc54726de446c` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:122`; PDF page pending.
+- `TA-OCC-76723e7e5201f42d` — OLP-0558 / `OLP-0558-S01`; source `content/set-theory/spine/spine.tex:8`; Tamil `translation/content/set-theory/spine/spine.tex:9`; PDF page pending.
+- `TA-OCC-5e48673a1a12a410` — OLP-0558 / `OLP-0558-S01`; source `content/set-theory/spine/spine.tex:8`; Tamil `translation/content/set-theory/spine/spine.tex:9`; PDF page pending.
+- `TA-OCC-b792bfe3f52e6038` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:7`; Tamil `translation/content/set-theory/spine/idea.tex:8`; PDF page pending.
+- `TA-OCC-ce2b5e009fdd3503` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:37`; Tamil `translation/content/set-theory/spine/idea.tex:12`; PDF page pending.
+- `TA-OCC-4eb5d475bb9102ba` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:37`; Tamil `translation/content/set-theory/spine/idea.tex:36`; PDF page pending.
+- `TA-OCC-b861e0d69e909408` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:39`; Tamil `translation/content/set-theory/spine/idea.tex:36`; PDF page pending.
+- `TA-OCC-795936f8773576ec` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:40`; Tamil `translation/content/set-theory/spine/idea.tex:37`; PDF page pending.
+- `TA-OCC-3c79266b3028e37b` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:40`; Tamil `translation/content/set-theory/spine/idea.tex:38`; PDF page pending.
+- `TA-OCC-2b6d7b553c6208f4` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:40`; Tamil `translation/content/set-theory/spine/idea.tex:40`; PDF page pending.
+- `TA-OCC-248d166c981dca19` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:6`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:7`; PDF page pending.
+- `TA-OCC-b25c14158d7dbfad` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:80`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:11`; PDF page pending.
+- `TA-OCC-1023666bde560fb9` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:84`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:93`; PDF page pending.
+- `TA-OCC-078b5e21e22b6265` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:88`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:94`; PDF page pending.
+- `TA-OCC-1342811ed1ca57e7` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:88`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:98`; PDF page pending.
+- `TA-OCC-87bed895524753c5` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:88`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:101`; PDF page pending.
+- `TA-OCC-562e9d8153cde924` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:88`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:103`; PDF page pending.
+- `TA-OCC-2c401bb03d3d6b75` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:88`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:106`; PDF page pending.
+- `TA-OCC-bb53e2f96b774af5` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:11`; Tamil `translation/content/set-theory/spine/foundation.tex:12`; PDF page pending.
+- `TA-OCC-1a75df2992481647` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:17`; Tamil `translation/content/set-theory/spine/foundation.tex:15`; PDF page pending.
+- `TA-OCC-d91fbcd35b1ac407` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:22`; Tamil `translation/content/set-theory/spine/foundation.tex:18`; PDF page pending.
+- `TA-OCC-dd0f3223d5e191ee` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:98`; Tamil `translation/content/set-theory/spine/foundation.tex:21`; PDF page pending.
+- `TA-OCC-4d903537e0ae6a8b` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:98`; Tamil `translation/content/set-theory/spine/foundation.tex:22`; PDF page pending.
+- `TA-OCC-ef8220b6b990788f` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:98`; Tamil `translation/content/set-theory/spine/foundation.tex:25`; PDF page pending.
+- `TA-OCC-4366627920b92502` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:5`; Tamil `translation/content/set-theory/spine/rank.tex:7`; PDF page pending.
+- `TA-OCC-3fbbef400b599666` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:6`; Tamil `translation/content/set-theory/spine/rank.tex:9`; PDF page pending.
+- `TA-OCC-1a8005cfa3f3f3ab` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:8`; Tamil `translation/content/set-theory/spine/rank.tex:10`; PDF page pending.
+- `TA-OCC-d3ad1b2da156bdc2` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:9`; Tamil `translation/content/set-theory/spine/rank.tex:11`; PDF page pending.
+- `TA-OCC-5c9d806bd7ffafe0` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:10`; Tamil `translation/content/set-theory/spine/rank.tex:11`; PDF page pending.
+- `TA-OCC-18a293051341c82d` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:10`; Tamil `translation/content/set-theory/spine/rank.tex:28`; PDF page pending.
+- `TA-OCC-640d09cec1836f4f` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:24`; Tamil `translation/content/set-theory/spine/rank.tex:74`; PDF page pending.
+- `TA-OCC-3d13dd0ac25a430e` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:27`; Tamil `translation/content/set-theory/spine/rank.tex:87`; PDF page pending.
+- `TA-OCC-9321977f7e05ca89` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:38`; Tamil `translation/content/set-theory/spine/rank.tex:129`; PDF page pending.
+- `TA-OCC-155074525238b87c` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:64`; Tamil `translation/content/set-theory/spine/rank.tex:139`; PDF page pending.
+
+## TA-T218 — transfinite recursion / alpha-approximation / bounded, general and simple recursion
+
+Chosen rendering: **முடிவிலிக்கடந்த மீள்வரையறை / α-தோராயம் / வரம்பிட்ட, பொதுமை மற்றும் எளிய மீள்வரையறை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: சார்பு, சார்பகம், சொல், ஒருமை and தொகுத்தறிதல் continue the checked mathematical register. The α-domain condition defines தோராயம், and the displayed base, successor and limit clauses distinguish the three recursion principles. மீள்வரையறை emphasizes that the theorem legitimates definitions, including the V_α hierarchy, rather than merely an informal repeated computation.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P41-COMPOSITION (checked_context_only); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T218-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “முடிவிலிக்கடந்த மீள்வரையறை / α-தோராயம் / வரம்பிட்ட, பொதுமை மற்றும் எளிய மீள்வரையறை” the established India-standard Tamil expression for “transfinite recursion / alpha-approximation / bounded, general and simple recursion” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-7c1693fa8da7fdb7` — OLP-0217 / `OLP-0217-S01`; source `content/computability/recursive-functions/pr-relations.tex:89`; Tamil `translation/content/computability/recursive-functions/pr-relations.tex:95`; PDF page pending.
+- `TA-OCC-8d42fcf8bef93e6a` — OLP-0217 / `OLP-0217-S01`; source `content/computability/recursive-functions/pr-relations.tex:104`; Tamil `translation/content/computability/recursive-functions/pr-relations.tex:112`; PDF page pending.
+- `TA-OCC-d71f176ac9558a12` — OLP-0217 / `OLP-0217-S01`; source `content/computability/recursive-functions/pr-relations.tex:113`; Tamil `translation/content/computability/recursive-functions/pr-relations.tex:122`; PDF page pending.
+- `TA-OCC-79941d9063ece31f` — OLP-0217 / `OLP-0217-S01`; source `content/computability/recursive-functions/pr-relations.tex:114`; Tamil `translation/content/computability/recursive-functions/pr-relations.tex:125`; PDF page pending.
+- `TA-OCC-5e1115c2e74a1729` — OLP-0217 / `OLP-0217-S01`; source `content/computability/recursive-functions/pr-relations.tex:117`; Tamil `translation/content/computability/recursive-functions/pr-relations.tex:127`; PDF page pending.
+- `TA-OCC-cc96cc7c46c92703` — OLP-0218 / `OLP-0218-S01`; source `content/computability/recursive-functions/bounded-minimization.tex:3`; Tamil `translation/content/computability/recursive-functions/bounded-minimization.tex:12`; PDF page pending.
+- `TA-OCC-7f135683e39137dc` — OLP-0219 / `OLP-0219-S01`; source `content/computability/recursive-functions/primes.tex:12`; Tamil `translation/content/computability/recursive-functions/primes.tex:15`; PDF page pending.
+- `TA-OCC-3d021bd455b56cc9` — OLP-0219 / `OLP-0219-S01`; source `content/computability/recursive-functions/primes.tex:12`; Tamil `translation/content/computability/recursive-functions/primes.tex:15`; PDF page pending.
+- `TA-OCC-c6afd78509212d0f` — OLP-0219 / `OLP-0219-S01`; source `content/computability/recursive-functions/primes.tex:22`; Tamil `translation/content/computability/recursive-functions/primes.tex:26`; PDF page pending.
+- `TA-OCC-4a0b9fb38dc0ef02` — OLP-0219 / `OLP-0219-S01`; source `content/computability/recursive-functions/primes.tex:55`; Tamil `translation/content/computability/recursive-functions/primes.tex:61`; PDF page pending.
+- `TA-OCC-89a5811e9ef6d58c` — OLP-0219 / `OLP-0219-S01`; source `content/computability/recursive-functions/primes.tex:77`; Tamil `translation/content/computability/recursive-functions/primes.tex:88`; PDF page pending.
+- `TA-OCC-9545ee44bc46573d` — OLP-0220 / `OLP-0220-S01`; source `content/computability/recursive-functions/sequences.tex:69`; Tamil `translation/content/computability/recursive-functions/sequences.tex:75`; PDF page pending.
+- `TA-OCC-489cca67494b24ab` — OLP-0220 / `OLP-0220-S01`; source `content/computability/recursive-functions/sequences.tex:157`; Tamil `translation/content/computability/recursive-functions/sequences.tex:163`; PDF page pending.
+- `TA-OCC-022f5924bd30ca9d` — OLP-0220 / `OLP-0220-S01`; source `content/computability/recursive-functions/sequences.tex:158`; Tamil `translation/content/computability/recursive-functions/sequences.tex:165`; PDF page pending.
+- `TA-OCC-7f64ea02293c2e75` — OLP-0254 / `OLP-0254-S01`; source `content/turing-machines/machines-computations/introduction.tex:106`; Tamil `translation/content/turing-machines/machines-computations/introduction.tex:110`; PDF page pending.
+- `TA-OCC-d26b38df1993bb35` — OLP-0283 / `OLP-0283-S01`; source `content/incompleteness/arithmetization-syntax/coding-terms.tex:58`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-terms.tex:62`; PDF page pending.
+- `TA-OCC-6ebed46536072971` — OLP-0292 / `OLP-0292-S01`; source `content/incompleteness/representability-in-q/beta-function.tex:117`; Tamil `translation/content/incompleteness/representability-in-q/beta-function.tex:126`; PDF page pending.
+- `TA-OCC-00cd06bf34c6632e` — OLP-0292 / `OLP-0292-S01`; source `content/incompleteness/representability-in-q/beta-function.tex:178`; Tamil `translation/content/incompleteness/representability-in-q/beta-function.tex:189`; PDF page pending.
+- `TA-OCC-7eb77648d60d4500` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:18`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:21`; PDF page pending.
+- `TA-OCC-65d7202a1395fd37` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:25`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:28`; PDF page pending.
+- `TA-OCC-9a569902cc441e08` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:29`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:32`; PDF page pending.
+- `TA-OCC-e9e8b3104d83d69f` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:37`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:39`; PDF page pending.
+- `TA-OCC-c3750b53c3e83d25` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:153`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:182`; PDF page pending.
+- `TA-OCC-40860f4a7d70321c` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:164`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:210`; PDF page pending.
+- `TA-OCC-866c052337691459` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:191`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:268`; PDF page pending.
+- `TA-OCC-56c9610ee78b3c6d` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:197`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:268`; PDF page pending.
+- `TA-OCC-01aac773949311df` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:245`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:273`; PDF page pending.
+- `TA-OCC-1d094596f1f6d343` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:248`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:280`; PDF page pending.
+- `TA-OCC-c7a3d785a0a229e7` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:26`; Tamil `translation/content/set-theory/spine/idea.tex:27`; PDF page pending.
+- `TA-OCC-0e679d7d1def9906` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:6`; Tamil `translation/content/set-theory/spine/recursion.tex:7`; PDF page pending.
+- `TA-OCC-87d912740f262fe4` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:22`; Tamil `translation/content/set-theory/spine/recursion.tex:10`; PDF page pending.
+- `TA-OCC-9d9410d91381a284` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:86`; Tamil `translation/content/set-theory/spine/recursion.tex:29`; PDF page pending.
+- `TA-OCC-de1c0c321b7b443e` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:86`; Tamil `translation/content/set-theory/spine/recursion.tex:102`; PDF page pending.
+- `TA-OCC-188634c321cca11a` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:31`; Tamil `translation/content/set-theory/spine/zf.tex:32`; PDF page pending.
+- `TA-OCC-e17354295853342d` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:32`; Tamil `translation/content/set-theory/spine/zf.tex:33`; PDF page pending.
+
+## TA-T219 — potent set / powerset-closed stage behavior
+
+Chosen rendering: **ஆற்றலுடைய கணம் / அடுக்குக்கணத்தை உள்ளடக்கும் படிநிலைப் பண்பு**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: ஆற்றல் is used transparently for the source's deliberately nonstandard label ‘potent’; the exact condition that every subset of an available object is a member of the later stage carries the technical content. The term is not presented as a standard independently attested Tamil headword, and அடுக்குக்கணம் continues the set-theory vocabulary already fixed in the edition.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-T219-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “ஆற்றலுடைய கணம் / அடுக்குக்கணத்தை உள்ளடக்கும் படிநிலைப் பண்பு” the established India-standard Tamil expression for “potent set / powerset-closed stage behavior” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-c39b9afebe703c20` — OLP-0544 / `OLP-0544-S01`; source `content/set-theory/z/milestone.tex:1`; Tamil `translation/content/set-theory/z/milestone.tex:31`; PDF page pending.
+- `TA-OCC-9e21c4826d9a8f5b` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:1`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:15`; PDF page pending.
+- `TA-OCC-b6805ec56e4ca140` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:1`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:21`; PDF page pending.
+- `TA-OCC-d4a889a2347e1b67` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:1`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:51`; PDF page pending.
+- `TA-OCC-42961a70061eaf79` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:37`; PDF page pending.
+
+## TA-T220 — Foundation / Regularity / transitive closure under membership
+
+Chosen rendering: **அடித்தளம் / ஒழுங்குமை / உறுப்புறவுக் கடப்பு மூடல்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The Foundation formula chooses an element disjoint from a nonempty set, Regularity requires containment in some V_α, and the omega-union of successive membership closures defines trcl(A). கடப்பு follows the set-membership sense of transitive set fixed in TA-T025 and TA-T213; this use is kept distinct from earlier relation-closure notation. The complete axiom labels are defined in place rather than claimed as directly attested headwords.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T220-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “அடித்தளம் / ஒழுங்குமை / உறுப்புறவுக் கடப்பு மூடல்” the established India-standard Tamil expression for “Foundation / Regularity / transitive closure under membership” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-5d23796a7f51f29f` — OLP-0053 / `OLP-0053-S05`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:51`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:59`; PDF page pending.
+- `TA-OCC-c53a05509aa5653e` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:16`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:148`; PDF page pending.
+- `TA-OCC-f0bddb17464e7439` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:62`; Tamil `translation/content/set-theory/story/urelements.tex:70`; PDF page pending.
+- `TA-OCC-d70111f79729435c` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:5`; Tamil `translation/content/set-theory/spine/foundation.tex:8`; PDF page pending.
+- `TA-OCC-fac18f15edff2fe3` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:7`; Tamil `translation/content/set-theory/spine/foundation.tex:29`; PDF page pending.
+- `TA-OCC-30b2be1c900ff5cb` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:26`; Tamil `translation/content/set-theory/spine/foundation.tex:35`; PDF page pending.
+- `TA-OCC-6c1f11c66a17b869` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:33`; Tamil `translation/content/set-theory/spine/foundation.tex:39`; PDF page pending.
+- `TA-OCC-d8b802408ee850ca` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:37`; Tamil `translation/content/set-theory/spine/foundation.tex:39`; PDF page pending.
+- `TA-OCC-969e466ff1ff5d8b` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:37`; Tamil `translation/content/set-theory/spine/foundation.tex:97`; PDF page pending.
+- `TA-OCC-760b6df2ffa41612` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:77`; Tamil `translation/content/set-theory/spine/foundation.tex:108`; PDF page pending.
+- `TA-OCC-85469be3f4ba3cc9` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:89`; Tamil `translation/content/set-theory/spine/foundation.tex:108`; PDF page pending.
+- `TA-OCC-439f2c66a1ca1eea` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:97`; Tamil `translation/content/set-theory/spine/foundation.tex:110`; PDF page pending.
+- `TA-OCC-fe4cdbc080acdee8` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:97`; Tamil `translation/content/set-theory/spine/foundation.tex:110`; PDF page pending.
+- `TA-OCC-d9315ce13b49e54e` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:99`; Tamil `translation/content/set-theory/spine/foundation.tex:112`; PDF page pending.
+- `TA-OCC-556d29c51c46c5e5` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:99`; Tamil `translation/content/set-theory/spine/foundation.tex:113`; PDF page pending.
+- `TA-OCC-6b90e717b6a7603d` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:100`; Tamil `translation/content/set-theory/spine/foundation.tex:113`; PDF page pending.
+- `TA-OCC-3bffffc837b83271` — OLP-0562 / `OLP-0562-S01`; source `content/set-theory/spine/foundation.tex:100`; Tamil `translation/content/set-theory/spine/foundation.tex:115`; PDF page pending.
+- `TA-OCC-5f95652fa2f49f35` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:8`; Tamil `translation/content/set-theory/spine/zf.tex:12`; PDF page pending.
+- `TA-OCC-e9033ed31765d223` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:11`; Tamil `translation/content/set-theory/spine/zf.tex:17`; PDF page pending.
+- `TA-OCC-33a4588f0b8fb288` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:14`; Tamil `translation/content/set-theory/spine/zf.tex:24`; PDF page pending.
+- `TA-OCC-84ae66ab583a6bd3` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:15`; Tamil `translation/content/set-theory/spine/zf.tex:24`; PDF page pending.
+- `TA-OCC-d9cbf261daf997c2` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:18`; Tamil `translation/content/set-theory/spine/zf.tex:25`; PDF page pending.
+- `TA-OCC-ed2a8eb81305cb3b` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:22`; Tamil `translation/content/set-theory/spine/zf.tex:34`; PDF page pending.
+- `TA-OCC-7e9c458a3dff85d4` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:23`; Tamil `translation/content/set-theory/spine/zf.tex:40`; PDF page pending.
+- `TA-OCC-10575e6b88a1bd00` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:23`; Tamil `translation/content/set-theory/spine/zf.tex:42`; PDF page pending.
+- `TA-OCC-b7aa62d86ba7be6e` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:113`; Tamil `translation/content/set-theory/spine/rank.tex:127`; PDF page pending.
+- `TA-OCC-9192c7dc9ecf70e9` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:114`; Tamil `translation/content/set-theory/spine/rank.tex:127`; PDF page pending.
+- `TA-OCC-df70b8aefe6203d3` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:114`; Tamil `translation/content/set-theory/spine/rank.tex:132`; PDF page pending.
+- `TA-OCC-ec9ccae0a85959e7` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:117`; Tamil `translation/content/set-theory/spine/rank.tex:134`; PDF page pending.
+- `TA-OCC-13e95e6d31151b8b` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:119`; Tamil `translation/content/set-theory/spine/rank.tex:135`; PDF page pending.
+
+## TA-T221 — membership induction / hereditary formula / set rank
+
+Chosen rendering: **∈-தொகுத்தறிதல் / மரபுவழியான வாய்பாடு / கணத் தரநிலை**
+
+Kind: `terminology`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: தொகுத்தறிதல் and வாய்பாடு continue the checked logic register. The strict decrease of rank along membership proves the scheme, while the premise that a set inherits φ from all its elements defines மரபுவழியான here. கணத் தரநிலை is fixed by the least V-stage containing the set and remains distinct from ordinary qualitative ‘level’ language.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P19 (checked_context_only); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T221-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “∈-தொகுத்தறிதல் / மரபுவழியான வாய்பாடு / கணத் தரநிலை” the established India-standard Tamil expression for “membership induction / hereditary formula / set rank” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-47437c1fb8ffffa9` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:83`; PDF page pending.
+- `TA-OCC-555f10327f61a677` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:85`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

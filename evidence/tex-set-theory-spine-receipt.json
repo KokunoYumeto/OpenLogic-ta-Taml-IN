@@ -1,0 +1,42 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-set-theory-spine.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-20T23:55:31.7254087Z",
+  "passes": [
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "pass": 1,
+      "exit_code": 0
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "pass": 2,
+      "exit_code": 0
+    },
+    {
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "pass": 3,
+      "exit_code": 0
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "bibliography": {
+    "engine": "bibtex",
+    "issues": [],
+    "exit_code": 0
+  },
+  "finished_utc": "2026-09-20T23:55:40.0008186Z"
+}

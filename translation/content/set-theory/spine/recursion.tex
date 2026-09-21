@@ -1,0 +1,154 @@
+% SEGMENT OLP-0560-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{spine}{recursion}
+\olsection{முடிவிலிக்கடந்த மீள்வரையறைத் தேற்றம்(ங்கள்)}
+
+முதலில், \olref[valpha]{defValphas} ஒரு வெற்றிகரமான வரையறை என்பதை
+உறுதிசெய்ய வேண்டும். பொதுவாக, முடிவிலிக்கடந்த மீள்வரையறையால் எந்த
+முடிவிலிக்கடந்த வரையறையை வழங்கும் முயற்சியும் வெற்றிபெறும் என்று
+நிறுவ வேண்டும். அதுவே இப்பிரிவின் நோக்கம்.
+% SOURCE CORRECTION TA-STH-014: supply the missing “definition” sense in “offer a transfinite by (transfinite) recursion.”
+
+\emph{எச்சரிக்கை: இது சிக்கலான பொருள்}. எனினும், அதன் மேலோங்கிய கருத்து
+மிக எளியது: முடிவிலிக்கடந்த தொகுத்தறிதலும் மாற்றீடும், முடிவிலிக்கடந்த
+மீள்வரையறையின் (பல வடிவங்களின்) ஏற்புடைமையை உறுதிசெய்கின்றன.\footnote{ஒரு
+நினைவூட்டல்: வெளிப்படையாக வேறுவிதமாகக் கூறப்படாவிட்டால், எல்லா வாய்பாடுகளும்
+சொற்களும் அளவுருக்களைக் கொண்டிருக்கலாம்.}
+
+\begin{defn}
+	$\tau(x)$ ஒரு சொல் என்க; $f$ ஒரு சார்பு என்க; $\alpha$ ஒரு வரிசையெண்
+	என்க. $\dom{f} = \alpha$, $(\forall \beta \in \alpha)f(\beta) =
+	\tau(\funrestrictionto{f}{\beta})$ ஆகிய இரண்டும் நிறைவேறினால், எனில்
+	மட்டுமே, $f$ ஆனது $\tau$-க்கான ஓர் \emph{$\alpha$-தோராயம்} என்று
+	கூறுகிறோம்.
+\end{defn}
+
+\begin{lem}[வரம்பிட்ட மீள்வரையறை]\ollabel{transrecursionfun}
+எந்தச் சொல் $\tau(x)$ க்கும் எந்த வரிசையெண் $\alpha$ க்கும்,
+$\tau$-க்கான ஒரேயொரு $\alpha$-தோராயம் உள்ளது.
+\end{lem}
+\begin{proof}
+எந்த $\gamma \leq \alpha$ க்கும், ஒரேயொரு $\gamma$-தோராயம் உள்ளது
+என்று காட்டுவோம்.
+
+முதலில் ஒருமையை நிறுவுகிறோம். $g$, $h$ ஆகியவை (முறையே) $\gamma$-,
+$\delta$-தோராயங்கள் என்க. அவற்றின் மாறிகள்மீதான முடிவிலிக்கடந்த
+தொகுத்தறிதல், எந்த $\beta \in \dom{g} \cap \dom{h} = \gamma \cap
+\delta = \min(\gamma, \delta)$ க்கும் $g(\beta) = h(\beta)$ என்று
+காட்டுகிறது. எனவே நமது தோராயங்கள் இருந்தால் அவை ஒருமையானவை; மேலும் எல்லா
+மதிப்புகளிலும் ஒன்றுபடுகின்றன.
+
+இருப்பை நிறுவ, $\delta \leq \alpha$ என்ற வரிசையெண்கள்மீது இப்போது ஓர்
+எளிய முடிவிலிக்கடந்த தொகுத்தறிதலை
+(\olref[ordinals][opps]{simpletransrecursion}) பயன்படுத்துகிறோம்.
+
+வெற்றுச் சார்பு எளிதாகவே ஓர் $\emptyset$-தோராயம்.
+
+$g$ ஒரு $\gamma$-தோராயம் எனில், $g \cup
+\{\tuple{\gamma, \tau(g)}\}$ ஒரு $\ordsucc{\gamma}$-தோராயம்.
+
+$\gamma$ ஓர் எல்லை வரிசையெண் என்றும், எல்லா $\delta < \gamma$ க்கும்
+$g_\delta$ ஒரு $\delta$-தோராயம் என்றும் கொள்க; $g = \bigcup_{\delta
+\in \gamma} g_\delta$ என்க. நமது பல்வேறு $g_\delta$-களும் எல்லா
+மதிப்புகளிலும் ஒன்றுபடுவதால், இது ஒரு சார்பு. மேலும் $\delta \in
+\gamma$ எனில், $g(\delta) = g_{\ordsucc{\delta}}(\delta) =
+\tau(\funrestrictionto{g_{\ordsucc{\delta}}}{\delta}) =
+\tau(\funrestrictionto{g}{\delta})$.
+
+இது முடிவிலிக்கடந்த தொகுத்தறிதல் நிறுவலை நிறைவுசெய்கிறது.
+\end{proof}
+
+ஒரு சார்பிற்குப் பதிலாக ஒரு \emph{சொல்லை} வரையறுக்க நம்மை
+அனுமதித்தால், முந்தைய முடிவிலிருந்து $\alpha$ என்ற வரம்பை நீக்கலாம்.
+பின்வரும் முடிவின் கூற்றிலும் நிறுவலிலும், $\sigma$ ஒரு சொல்லாக இருக்கும்போது,
+$\funrestrictionto{\sigma}{\alpha} = \Setabs{\tuple{\beta,
+\sigma(\beta)}}{\beta \in \alpha}$ என்க.
+
+\begin{thm}[பொதுமை மீள்வரையறை]\ollabel{transrecursionschema}
+எந்தச் சொல் $\tau(x)$ க்கும், எந்த வரிசையெண்~$\alpha$ க்கும்
+$\sigma(\alpha) = \tau(\funrestrictionto{\sigma}{\alpha})$ ஆக அமையும்
+ஒரு சொல் $\sigma(x)$ ஐ வெளிப்படையாக வரையறுக்கலாம்.
+\end{thm}
+
+\begin{proof}
+ஒவ்வொரு $\alpha$ க்கும், \olref{transrecursionfun} இன்படி
+$\tau$-க்கான ஒரேயொரு $\alpha$-தோராயம் $f_\alpha$ உள்ளது.
+$\sigma(\alpha)$ ஐ $f_{\ordsucc{\alpha}}(\alpha)$ என வரையறுக்க.
+இப்போது:
+	\begin{align*}
+		\sigma(\alpha) &= 
+		f_{\ordsucc{\alpha}}(\alpha) \\&= 
+		\tau(\funrestrictionto{f_{\ordsucc{\alpha}}}{\alpha}) \\&= 
+		\tau(\Setabs{\tuple{\beta, f_{\ordsucc{\alpha}}(\beta)}}{\beta \in \alpha}) \\&= 
+		\tau(\Setabs{\tuple{\beta, f_{\ordsucc{\beta}}(\beta)}}{\beta \in \alpha})\\&=
+		\tau(\funrestrictionto{\sigma}{\alpha})
+	\end{align*}
+\olref{transrecursionfun} இல் கண்டதுபோல, எல்லா $\beta < \alpha$ க்கும்
+$f_{\ordsucc{\beta}}(\beta) = f_{\ordsucc{\alpha}}(\beta)$ என்பதை
+இங்கு கவனிக்கிறோம்.
+\end{proof}
+\noindent
+\olref{transrecursionschema} ஒரு \emph{திட்டம்} என்பதைக் கவனிக்கவும்.
+முக்கியமாக, $\sigma$ ஒரு சார்பை, அதாவது ஒரு குறிப்பிட்ட வகைக்
+\emph{கணத்தை}, வரையறுக்கும் என்று எதிர்பார்க்க முடியாது; அவ்வாறு இருந்தால்
+$\dom{\sigma}$ எல்லா வரிசையெண்களையும் கொண்ட கணமாகி, புராலி--ஃபோர்ட்டி
+முரணுரையுடன் (\olref[ordinals][basic]{buraliforti}) முரண்படும்.
+
+எனினும், \olref{transrecursionschema} நமது $V_\alpha$-களின்
+வரையறையை நியாயப்படுத்துகிறது என்று இன்னும் காட்ட வேண்டும். இது உடனடியாகத்
+தெளிவாகத் தோன்றாமல் இருக்கலாம்; ஆனால் முடிவிலிக்கடந்த மீள்வரையறையின்
+கடைசி எளிய வடிவத்துடன் அது தெளிவாகும்.
+
+\begin{thm}[எளிய மீள்வரையறை]\ollabel{simplerecursionschema}
+எந்தச் சொற்கள் $\tau(x)$, $\theta(x)$ க்கும் எந்தக் கணம் $A$ க்கும்,
+பின்வருமாறு அமையும் ஒரு சொல் $\sigma(x)$ ஐ வெளிப்படையாக வரையறுக்கலாம்:
+\begin{align*}
+	\sigma(\emptyset) &= A\\
+	\sigma(\ordsucc{\alpha}) &= \tau(\sigma(\alpha)) &&
+		\text{எந்த வரிசையெண் }\alpha\text{ க்கும்}\\
+	\sigma(\alpha) &= \theta(\ran{\funrestrictionto{\sigma}{\alpha}})&&
+		\text{எப்போது }\alpha\text{ ஓர் எல்லை வரிசையெண்ணோ அப்போது}
+\end{align*}
+\end{thm}
+
+\begin{proof}
+முதலில் $\xi(x)$ என்ற ஒரு சொல்லைப் பின்வருமாறு வரையறுக்கிறோம்:
+%t $\xi(x) = A$ if $x$ is not a function whose domain is an ordinal;
+%otherwise let:
+\[
+	\xi(x) = 
+	\begin{cases}
+			A &\text{$x$ ஆனது வரிசையெண்ணைச் சார்பகமாகக் கொண்ட}\\
+			&\hspace{1em}\text{சார்பு அல்ல எனில்; இல்லையெனில்:}\\
+			\tau(x(\alpha)) & \text{$\dom{x} = \ordsucc{\alpha}$ எனில்}\\
+			\theta(\ran{x}) & \text{$\dom{x}$ ஓர் எல்லை வரிசையெண் எனில்}
+	\end{cases}
+\]
+\olref{transrecursionschema} இன்படி, ஒவ்வொரு வரிசையெண் $\alpha$ க்கும்
+$\sigma(\alpha) = \xi(\funrestrictionto{\sigma}{\alpha})$ ஆக அமையும்
+ஒரு சொல் $\sigma(x)$ உள்ளது; மேலும் $\funrestrictionto{\sigma}{\alpha}$
+ஆனது $\alpha$ ஐச் சார்பகமாகக் கொண்ட ஒரு சார்பு. எளிய முடிவிலிக்கடந்த
+தொகுத்தறிதலால் (\olref[ordinals][opps]{simpletransrecursion}), $\sigma$
+தேவையான பண்புகளைக் கொண்டது என்று காட்டுகிறோம்.
+
+முதலில், $\sigma(\emptyset) = \xi(\emptyset) = A$.
+
+அடுத்து, $\sigma(\ordsucc{\alpha}) =
+\xi(\funrestrictionto{\sigma}{\ordsucc{\alpha}}) =
+\tau(\funrestrictionto{\sigma}{\ordsucc{\alpha}}(\alpha)) =
+\tau(\sigma(\alpha))$.
+
+கடைசியாக, $\alpha$ ஓர் எல்லையாக இருக்கும்போது, $\sigma(\alpha) =
+\xi(\funrestrictionto{\sigma}{\alpha}) =
+\theta(\ran{\funrestrictionto{\sigma}{\alpha}})$.
+\end{proof}
+\noindent
+இப்போது \olref[valpha]{defValphas} ஐ நியாயப்படுத்த, $A = \emptyset$,
+$\tau(x) = \Pow{x}$, $\theta(x) = \bigcup x$ என்று மட்டும் எடுக்க.
+இறுதியாக, இது $V_\alpha$-களின் வரையறையை நியாயப்படுத்துகிறது!{}
+
+
+\end{document}

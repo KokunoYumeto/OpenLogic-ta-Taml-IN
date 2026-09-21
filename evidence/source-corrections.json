@@ -5635,6 +5635,68 @@
       "rationale": "The following restriction uses values f(alpha) as members of B and initial-segment indices, so the carrier B is the required codomain.",
       "precise_review_question": "Is f typed as a function from beta to the carrier B?",
       "location_needle": "SOURCE CORRECTION TA-STH-013"
+    },
+    {
+      "audit_id": "TA-STH-014",
+      "unit_id": "OLP-0560",
+      "kind": "transfinite-recursion-missing-definition-noun",
+      "action": "Supplied the missing noun ‘definition’ in the section's statement of purpose.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says ‘offer a transfinite by (transfinite) recursion,’ leaving the direct object incomplete; the surrounding sentences concern definitions and the success of the displayed V-alpha definition.",
+      "chosen_treatment": "தமிழ் வாக்கியம் ‘முடிவிலிக்கடந்த மீள்வரையறையால் எந்த முடிவிலிக்கடந்த வரையறையை வழங்கும் முயற்சியும்’ என்று விடுபட்ட ‘வரையறை’ பொருளை வெளிப்படையாக வழங்குகிறது.",
+      "alternatives_considered": "Preserving the ungrammatical ellipsis; treating ‘transfinite’ as an otherwise undefined noun.",
+      "rationale": "The preceding and following sentences explicitly identify the object under discussion as a definition, and the section proves recursion principles that legitimate such definitions.",
+      "precise_review_question": "Does the statement of purpose say that every attempted transfinite definition by recursion succeeds?",
+      "location_needle": "SOURCE CORRECTION TA-STH-014"
+    },
+    {
+      "audit_id": "TA-STH-015",
+      "unit_id": "OLP-0562",
+      "kind": "foundation-proof-lowercase-defined-set",
+      "action": "Restored uppercase B in the defining set for beta.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "\\[\\beta=\\supstrict\\Setabs{\\delta}{(\\existsx\\inb)(x\\subseteqV_\\delta\\land(\\forall\\gamma<\\delta)x\\nsubseteqV_\\gamma)}.\\]",
+          "to": "\\[\\beta=\\supstrict\\Setabs{\\delta}{(\\existsx\\inB)(x\\subseteqV_\\delta\\land(\\forall\\gamma<\\delta)x\\nsubseteqV_\\gamma)}.\\]",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The proof selects uppercase B from D and reasons about members of B, but the displayed definition of beta alone switches to undeclared lowercase b.",
+      "chosen_treatment": "தமிழ் காட்சி வாய்பாடு முன் தேர்ந்தெடுத்த B ஐத் தொடர்ந்து பயன்படுத்துகிறது.",
+      "alternatives_considered": "Preserving an undeclared lowercase set; silently introducing a new set unrelated to the contradiction.",
+      "rationale": "The next sentence concludes B is a subset of V_beta, so beta must be defined from the ranks needed by members of that same B.",
+      "precise_review_question": "Does the defining set for beta quantify x over uppercase B?",
+      "location_needle": "SOURCE CORRECTION TA-STH-015"
+    },
+    {
+      "audit_id": "TA-STH-016",
+      "unit_id": "OLP-0564",
+      "kind": "rank-characterization-contradictory-conclusion",
+      "action": "Replaced the contradictory conclusion x not in V_alpha with the strict rank inequality required by the proposition.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\notin"],
+      "expected_extra_commands": ["\\setrank", "\\in"],
+      "normalized_math_replacements": [
+        {
+          "from": "$x\\notinV_\\alpha$",
+          "to": "$\\setrank{x}\\in\\alpha$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The converse assumes x is in V_alpha and then says induction proves x is not in V_alpha, contradicting both its assumption and the displayed characterization. The needed conclusion is rank(x) < alpha, written rank(x) in alpha for ordinals.",
+      "chosen_treatment": "தமிழ் நிறுவல் தேவையான முடிவாக setrank(x) in alpha என்பதைத் தெளிவாகக் கூறுகிறது.",
+      "alternatives_considered": "Preserving a direct contradiction; weakening the conclusion to rank(x) less than or equal to alpha, which was already obtained and does not prove the proposition.",
+      "rationale": "The proposition identifies V_alpha with sets whose rank belongs to alpha, so the converse must strengthen rank(x) <= alpha to rank(x) in alpha.",
+      "precise_review_question": "Does the converse conclude setrank(x) is an element of alpha?",
+      "location_needle": "SOURCE CORRECTION TA-STH-016"
     }
   ],
   "by_unit": {
@@ -5818,6 +5880,9 @@
     "OLP-0551": ["TA-STH-010"],
     "OLP-0553": ["TA-STH-011"],
     "OLP-0554": ["TA-STH-012"],
-    "OLP-0556": ["TA-STH-013"]
+    "OLP-0556": ["TA-STH-013"],
+    "OLP-0560": ["TA-STH-014"],
+    "OLP-0562": ["TA-STH-015"],
+    "OLP-0564": ["TA-STH-016"]
   }
 }

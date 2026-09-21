@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T22:29:49.648190+00:00",
+  "date_utc": "2026-09-20T23:56:36.224469+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2772,6 +2772,41 @@
       "unit_id": "OLP-0557",
       "source_sha256": "f53aa4197833752c4ecdd3d7755c8e13cdec164fd68d0261dac26290a95cd171",
       "translation_sha256": "809974393970dd2dee5e227694d7f6c7816c0b503306a1119c8f28927098ce9d"
+    },
+    {
+      "unit_id": "OLP-0558",
+      "source_sha256": "990b6ec9c7785eb5cc4fdbd82c029fffa99c0409a869a7309bb4522b41b6e0d6",
+      "translation_sha256": "33cb9e694069fea1f0ce53027d3c2f9bca2a630563a49290c52c09d5e292a314"
+    },
+    {
+      "unit_id": "OLP-0559",
+      "source_sha256": "72e78cfef1d30e6a2e097f398dd5f502654f906c855dc226b9f616947a2b6955",
+      "translation_sha256": "5e22009b0c2e8154629bca533a7f0d4c6e8445a6e37c366578ee7011fc00fce5"
+    },
+    {
+      "unit_id": "OLP-0560",
+      "source_sha256": "e9b5fe7b4ab133bc97d234aabd8dae2412e91bbeeb9c785b4a8112ba1e1a0510",
+      "translation_sha256": "05eaff38fe50444b7aee8f37aa0cf726ddff12fad3c77f5f6434237e6ca14552"
+    },
+    {
+      "unit_id": "OLP-0561",
+      "source_sha256": "055948a696b012f7bf5b0a6e9ac39297a0a910f6c17ca9580782e9795e87def6",
+      "translation_sha256": "bd9be5e84178987cf15b731611ddc6f0376f8bcd5d6fb51b9e9e35c68792ae30"
+    },
+    {
+      "unit_id": "OLP-0562",
+      "source_sha256": "18d5d41a2becf13c6d5221d1c3504ea8300d96d85572c8848ed22bfc7ea321a5",
+      "translation_sha256": "e112a02fa93d31a2798ff6696e55d466e0547275708ceebb53ceda0d83daf7f8"
+    },
+    {
+      "unit_id": "OLP-0563",
+      "source_sha256": "94df3fb797ff5d12ce812c586f3dd8211fd7972ebaf25d3363bb135ad7686d73",
+      "translation_sha256": "2174cdbbd47c9f639c039a54352773023263a65a7bde5df8fc7935854a8386ae"
+    },
+    {
+      "unit_id": "OLP-0564",
+      "source_sha256": "fa9b9faa09478d4d5d6e510c52a2d5752fa72985db8efaff4a432a0e24d81dd0",
+      "translation_sha256": "b5933593e00aca0e49fb74288d6b07d4ed51f7f8b03fa9d54c5f53b771d0e7ff"
     }
   ],
   "samples": [
@@ -7310,6 +7345,55 @@
       "assessment": "The successor proposition, three-case induction, lsub definition, strict/non-strict footnote and upper-bound proof remain exact.",
       "translation_segment_sha256": "38eb8252fb65d94d916292f2df0c2fe640a084903b05d683f317fabe233e1e2b",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0558-S01",
+      "reverse_paraphrase": "The Stages and Ranks chapter develops the V-alpha hierarchy, transfinite recursion, basic stage laws, Foundation, ZF and set rank in that order.",
+      "assessment": "All six section imports and the chapter-ending hook remain in source order.",
+      "translation_segment_sha256": "0bcba5b23128931f0151d2c3bab57d7b1f7891c61ad6de3c50bfdf12caae0b9f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0559-S01",
+      "reverse_paraphrase": "V-emptyset is empty, a successor stage is the powerset of its predecessor, and a limit stage is the union of all earlier stages; this defines the hierarchy internally within set theory.",
+      "assessment": "The base, successor and limit clauses, natural-number comparison, and internal-versus-model distinction remain explicit.",
+      "translation_segment_sha256": "33a19ec3ab5ff71259a4f1c64e7299b2f7315357456260c126f31deef16f56d9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0560-S01",
+      "reverse_paraphrase": "An alpha-approximation recursively assigns each beta below alpha from the earlier restriction; transfinite induction and Replacement give unique bounded approximations, a general term schema and the simple base-successor-limit recursion scheme.",
+      "assessment": "The uniqueness and existence proof, three recursion principles, Burali–Forti restriction and application to V-alpha remain; TA-STH-014 supplies the missing definition noun.",
+      "translation_segment_sha256": "46075bcc993b8970e9e07256cb028781c9c4524e18fd99272724b65031beca43",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0561-S01",
+      "reverse_paraphrase": "Every V-alpha is transitive and potent, earlier stages belong to and are subsets of later stages, and no stage belongs to itself; these facts realize an iterative and cumulative hierarchy containing every possible collection from earlier stages.",
+      "assessment": "The simultaneous induction, successor and limit cases, ordinal-stage correspondence and nonstandard potent footnote remain exact.",
+      "translation_segment_sha256": "694ef528ea8f743b823c228a92a54c5bedd816d04276afcb318d10668cc1819c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0562-S01",
+      "reverse_paraphrase": "Foundation chooses an element disjoint from every nonempty set, while Regularity places each set below some V-alpha; membership transitive closure and a least-rank obstruction show in ZF-minus that Foundation implies Regularity.",
+      "assessment": "The trcl construction, transitive-set lemma, D and beta arguments and equivalence roadmap remain; TA-STH-015 restores uppercase B.",
+      "translation_segment_sha256": "0c1e799c442d58a0cd6330565134b7b2442fd792e031da18f67e61b61a2e7ba7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0563-S01",
+      "reverse_paraphrase": "Z adds Foundation to Z-minus, and ZF adds Foundation and Replacement; Foundation is used as the official axiom because it can be stated without the V-alpha recursion whose proof needs Replacement.",
+      "assessment": "Both axiom inventories, the Z-minus versus ZF-minus distinction and the definability explanation remain explicit.",
+      "translation_segment_sha256": "7023f71e0855f108f0629874d9acd4d698559f1a928521a0c027ec96ed78133f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0564-S01",
+      "reverse_paraphrase": "The rank of A is the least alpha with A contained in V-alpha; rank strictly decreases along membership, yielding membership induction, the strict-supremum formula, ordinal rank alpha and Regularity-to-Foundation.",
+      "assessment": "All definitions and proofs remain, and TA-STH-016 replaces the contradictory frozen-source conclusion with rank(x) in alpha.",
+      "translation_segment_sha256": "bc219c62b1b4de86c7b45196975f585f90d07a29467dbb7ace066d4d2dc43752",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -8162,14 +8246,26 @@
     {
       "unit_id": "OLP-0556",
       "issue": "The final order-type proof types an isomorphism as mapping into the ordered pair <B, lessdot>, contrary to the chapter definition and following use of values in B. Tamil restores carrier B under TA-STH-013."
+    },
+    {
+      "unit_id": "OLP-0560",
+      "issue": "The recursion section says “offer a transfinite by recursion,” omitting the noun that its surrounding discussion requires. Tamil explicitly says transfinite definition under TA-STH-014."
+    },
+    {
+      "unit_id": "OLP-0562",
+      "issue": "The Foundation proof selects uppercase B but the defining set for beta alone switches to undeclared lowercase b. Tamil restores uppercase B under TA-STH-015."
+    },
+    {
+      "unit_id": "OLP-0564",
+      "issue": "The rank characterization assumes x is in V_alpha and then says induction proves x is not in V_alpha, contradicting both the assumption and proposition. Tamil gives the required strict conclusion rank(x) in alpha under TA-STH-016."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "554 source units now pass textual and author semantic QA. Ten exact PDF readers visually verify 232 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 168 frozen units still require completion.",
+  "remaining": "561 source units now pass textual and author semantic QA. Eleven exact PDF readers visually verify 239 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 161 frozen units still require completion.",
   "visual_reader_coverage": {
-    "reader_count": 10,
-    "distinct_unit_count": 232,
+    "reader_count": 11,
+    "distinct_unit_count": 239,
     "readers": [
       {
         "name": "combined sets/relations/functions",
@@ -8210,6 +8306,10 @@
       {
         "name": "set theory: ordinals",
         "distinct_units": 11
+      },
+      {
+        "name": "set theory: stages and ranks",
+        "distinct_units": 7
       }
     ]
   },
@@ -9153,6 +9253,32 @@
         "zfminus_axiom_inventory_and_history_remain": true,
         "ordinal_representation_order_type_laws_and_repair_remain": true,
         "successor_limit_induction_and_lsub_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0558",
+        "OLP-0559",
+        "OLP-0560",
+        "OLP-0561",
+        "OLP-0562",
+        "OLP-0563",
+        "OLP-0564"
+      ],
+      "correction_ids": [
+        "TA-STH-014",
+        "TA-STH-015",
+        "TA-STH-016"
+      ],
+      "status": "pass",
+      "checks": {
+        "spine_driver_preserves_all_six_sections": true,
+        "V_hierarchy_base_successor_limit_and_internal_reading_remain": true,
+        "three_recursion_principles_and_definition_repair_remain": true,
+        "stage_transitivity_potency_cumulativity_and_nonmembership_remain": true,
+        "foundation_regularity_transitive_closure_and_uppercase_B_remain": true,
+        "Z_and_ZF_axiom_inventories_and_replacement_dependency_remain": true,
+        "rank_characterization_induction_supremum_and_strict_repair_remain": true
       }
     }
   ]

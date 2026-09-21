@@ -1,0 +1,70 @@
+{
+  "batch_id": "TA-B248",
+  "units": [
+    {
+      "unit_id": "OLP-0560",
+      "source_sha256": "e9b5fe7b4ab133bc97d234aabd8dae2412e91bbeeb9c785b4a8112ba1e1a0510",
+      "translation_sha256": "05eaff38fe50444b7aee8f37aa0cf726ddff12fad3c77f5f6434237e6ca14552",
+      "source_bytes": 6139,
+      "translation_bytes": 11692,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "basic",
+        "include",
+        "logic",
+        "open",
+        "opps",
+        "ordinals",
+        "section",
+        "valpha"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-014",
+          "unit_id": "OLP-0560",
+          "kind": "transfinite-recursion-missing-definition-noun",
+          "action": "Supplied the missing noun ‘definition’ in the section's statement of purpose.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says ‘offer a transfinite by (transfinite) recursion,’ leaving the direct object incomplete; the surrounding sentences concern definitions and the success of the displayed V-alpha definition.",
+          "chosen_treatment": "தமிழ் வாக்கியம் ‘முடிவிலிக்கடந்த மீள்வரையறையால் எந்த முடிவிலிக்கடந்த வரையறையை வழங்கும் முயற்சியும்’ என்று விடுபட்ட ‘வரையறை’ பொருளை வெளிப்படையாக வழங்குகிறது.",
+          "alternatives_considered": "Preserving the ungrammatical ellipsis; treating ‘transfinite’ as an otherwise undefined noun.",
+          "rationale": "The preceding and following sentences explicitly identify the object under discussion as a definition, and the section proves recursion principles that legitimate such definitions.",
+          "precise_review_question": "Does the statement of purpose say that every attempted transfinite definition by recursion succeeds?",
+          "location_needle": "SOURCE CORRECTION TA-STH-014"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

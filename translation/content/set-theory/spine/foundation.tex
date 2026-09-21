@@ -1,0 +1,117 @@
+% SEGMENT OLP-0562-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{spine}{foundation}
+
+\olsection{அடித்தளம்}
+
+நாம் \emph{கிட்டத்தட்ட} மட்டுமே முடித்திருக்கிறோம்---\emph{முழுமையாக}
+முடிக்கவில்லை---ஏனெனில் \emph{ஒவ்வொரு} கணமும் ஏதோ ஒரு $V_\alpha$ இல் உள்ளது,
+அதாவது ஒவ்வொரு கணமும் ஏதோ ஒரு படிநிலையில் உருவாகிறது, என்று
+$\ZFminus$ இலுள்ள எதுவும் உறுதிசெய்வதில்லை.
+
+படிநிலைமுறைக்கு வெளியே கணங்கள் உள்ளனவா என்பது குறித்து நாம்
+\emph{கவலைப்படத் தேவையில்லை} என்று கூறுவதற்கு ஓரளவு நேரடியான (கணித)
+பொருள் உள்ளது. (அங்கு ஏதேனும் இருந்தால், அவற்றைப் புறக்கணிக்கலாம்.)
+ஆனால் ஒவ்வொரு கணமும் ஏதோ ஒரு படிநிலையில் உருவாகிறது என்ற எண்ணத்தால்
+நமது கணம் என்ற \emph{கருத்தை} ஊக்குவித்தோம்
+(\olref[z][story]{sec} இலுள்ள \stageshier{} ஐக் காண்க). எனவே
+படிநிலைமுறைக்கு வெளியே விழும் கணங்களின் சாத்தியத்தை விலக்க விரும்புவோம்.
+அதற்கேற்ப, ஒவ்வொரு கணமும் படிநிலைமுறையில் எங்காவது இடம்பெறுவதை
+உறுதிசெய்யும் ஒரு புதிய அடிகோளைச் சேர்க்க வேண்டும்.
+
+$V_\alpha$-களே நமது படிநிலைகள் என்பதால், பின்வருவதை ஓர் அடிகோளாகச்
+சேர்ப்பதை வெறுமனே கருதலாம்:
+
+\begin{defish}
+\emph{ஒழுங்குமை.} $\forall A \exists \alpha\, A \subseteq V_\alpha$
+\end{defish}
+
+இது முற்றிலும் நியாயமான அணுகுமுறையாக இருக்கும். எனினும், அடுத்த பிரிவில்
+விளக்கப்படும் காரணங்களுக்காக, பின்வரும் மாற்று அடிகோளை ஏற்றுக்கொள்வோம்:
+
+\begin{axiom}[அடித்தளம்]
+$(\forall A \neq \emptyset)(\exists B \in A)A \cap B = \emptyset$.
+\end{axiom}
+
+சிறிது முயற்சியுடன், $\ZFminus$ இல் அடித்தளம் ஒழுங்குமையை விளைவிக்கிறது
+என்று காட்டலாம்:
+\begin{defn}
+ஒவ்வொரு கணம் $A$ க்கும், பின்வருமாறு கொள்க:
+\begin{align*}
+	\text{cl}_0(A) &= A,\\
+	\text{cl}_{n+1}(A) &= \bigcup \text{cl}_n(A),\\
+	\text{trcl}(A) &= \bigcup_{n < \omega} \text{cl}_{n}(A).
+\end{align*}
+$\text{trcl}(A)$ ஐ $A$ இன் \emph{கடப்பு மூடல்} என்று அழைக்கிறோம்.
+\end{defn}
+\noindent
+``கடப்பு மூடல்'' என்ற பெயர் பொருத்தமானது:
+\begin{prop}\ollabel{subsetoftrcl}
+$A \subseteq \trcl{A}$ மற்றும் $\trcl{A}$ ஒரு கடப்புப் பண்புடைய கணம்.
+\end{prop}
+
+\begin{proof}
+$A = \text{cl}_0(A) \subseteq \text{trcl}(A)$ என்பது தெளிவு.
+மேலும் $x \in b \in \trcl{A}$ எனில், ஏதோ ஒரு $n$ க்கு
+$b \in \text{cl}_n(A)$; ஆகவே $x \in \text{cl}_{n+1}(A)
+\subseteq \text{trcl}(A)$.
+\end{proof}
+
+\begin{lem}\ollabel{lem:TransitiveWellFounded}
+$A$ ஒரு கடப்புப் பண்புடைய கணம் எனில், $A \subseteq V_\alpha$ ஆக
+அமையும் ஏதோ ஓர் $\alpha$ உள்ளது.
+\end{lem}
+
+\begin{proof}
+\olref[ordinals][opps]{defsupstrict} இலுள்ள ``$\supstrict(X)$''
+என்ற வரையறையை நினைவுகூர்ந்து, இரண்டு கணங்களை வரையறுக்கிறோம்:
+\begin{align*}
+	D  &= \Setabs{x \in A}{\forall \delta\ x \nsubseteq V_\delta}\\
+	\alpha &= \supstrict\Setabs{\delta}{(\exists x \in A)
+	(x \subseteq V_\delta \land (\forall \gamma \in \delta)x \nsubseteq V_\gamma)}
+\end{align*}
+$D = \emptyset$ என்க. எனவே $x \in A$ எனில், $x \subseteq
+V_\delta$ ஆக அமையும் ஏதோ ஒரு $\delta$ உள்ளது; வரிசையெண்களின் நன்கு
+வரிசைப்படுத்தலால் $(\forall \gamma \in \delta)x \nsubseteq
+V_\gamma$ ஆகவும் தேர்ந்தெடுக்கலாம். இதனால் $\delta \in \alpha$;
+எனவே \olref[spine][Valphabasic]{Valphabasicprops} இன்படி
+$x \in V_\alpha$. ஆகவே தேவைப்பட்டவாறு $A \subseteq V_{\alpha}$.
+
+எனவே $D = \emptyset$ என்று காட்டினால் போதும். முரண்பாட்டிற்காக,
+அவ்வாறு இல்லை என்க. அடித்தளத்தின்படி, $D \cap B = \emptyset$ ஆக
+அமையும் ஏதோ ஒரு $B \in D \subseteq A$ உள்ளது. $x \in B$ எனில்,
+$A$ கடப்புப் பண்புடையதால் $x \in A$; மேலும் $x \notin D$ என்பதால்
+$\exists \delta\ x \subseteq V_\delta$. இப்போது
+\[
+	\beta = \supstrict\Setabs{\delta}{(\exists x \in B)(x \subseteq V_\delta \land (\forall \gamma < \delta)x \nsubseteq V_\gamma)}.
+\]
+முன்புபோலவே, $B \subseteq V_\beta$; இது $B \in D$ என்ற கூற்றுடன்
+முரண்படுகிறது.
+% SOURCE CORRECTION TA-STH-015: restore uppercase B in the defining set for beta.
+\end{proof}
+
+\begin{thm}\ollabel{zfentailsregularity}
+ஒழுங்குமை நிறைவேறுகிறது.
+\end{thm}
+
+\begin{proof}
+$A$ ஐ நிலைப்படுத்துக; \olref{subsetoftrcl} இன்படி $A \subseteq
+\trcl{A}$, மேலும் இது கடப்புப் பண்புடையது. எனவே
+\olref{lem:TransitiveWellFounded} இன்படி ஏதோ ஒரு $\alpha$ க்கு
+$A \subseteq \trcl{A} \subseteq V_\alpha$.
+\end{proof}
+
+இம்முடிவுகள் $\ZFminus$ ஆனது
+$\emph{அடித்தளம்}\Rightarrow\emph{ஒழுங்குமை}$ என்ற நிபந்தனைவாக்கியத்தை
+நிறுவுகிறது என்று காட்டுகின்றன. \olref[spine][rank]{zfminusregularityfoundation}
+இல், $\ZFminus$ ஆனது $\emph{ஒழுங்குமை}\Rightarrow\emph{அடித்தளம்}$
+என்ற நிபந்தனைவாக்கியத்தை நிறுவுகிறது என்றும் காட்டுவோம். எனவே அடித்தளமும்
+ஒழுங்குமையும் ($\ZFminus$ தொடர்பில்) \emph{சமானவை}. ஆனால் இதன் பொருள்,
+$\ZFminus$ கொடுக்கப்பட்டால், அடித்தளம் ஒழுங்குமைக்குச் சமானமானது என்று
+குறிப்பிட்டு அடித்தளத்தை நியாயப்படுத்தலாம். மேலும் \stageshier{} இன்
+அடிப்படையில் ஒழுங்குமையை உடனடியாக நியாயப்படுத்தலாம்.
+
+\end{document}
