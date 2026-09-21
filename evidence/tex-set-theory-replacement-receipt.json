@@ -1,0 +1,43 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 60000,
+  "master": "tamil-set-theory-replacement.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-21T00:37:38.7494894Z",
+  "passes": [
+    {
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right."
+      ],
+      "pass": 1
+    },
+    {
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "pass": 2
+    },
+    {
+      "exit_code": 0,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',"
+      ],
+      "pass": 3
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "bibliography": {
+    "exit_code": 0,
+    "issues": [],
+    "engine": "bibtex"
+  },
+  "finished_utc": "2026-09-21T00:37:53.7012000Z"
+}

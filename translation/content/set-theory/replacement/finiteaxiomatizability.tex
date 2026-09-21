@@ -1,0 +1,124 @@
+% SEGMENT OLP-0573-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{replacement}{finiteaxiomatizability}
+\olsection{பிற்சேர்க்கை: முடிவுறு அடிகோளாக்கத்தன்மை}
+மாற்றீட்டிலிருந்து சில முடிவுகளைப் பெறுவதுடன் இவ்வத்தியாயத்தை
+நிறைவுசெய்கிறோம். முதல் முடிவு \citet{Montague1961} ஐச் சேர்ந்தது; இது
+$\ZF$ \emph{இல்} செய்யப்படும் நிறுவல் அல்ல, $\ZF$ ஐப் \emph{பற்றிய}
+நிறுவல் என்பதைக் கவனிக்கவும்:
+\begin{thm}\ollabel{zfnotfinitely}
+	$\ZF$ முடிவுறுமுறையில் அடிகோளாக்கத்தக்கதன்று. இன்னும் பொதுவாக:
+	$\Th{T}$ முடிவுறுவதாகவும் $\Th{T} \Proves \ZF$ ஆகவும் இருந்தால்,
+	$\Th{T}$ முரணுடையது.
+
+	(இங்கே, $\in$ ஐ மட்டுமே தருக்கமல்லாத மூலக்கருத்தாகக் கொண்ட முதல்தர
+	வாக்கியங்களுக்கு நம்மை மௌனமாகக் கட்டுப்படுத்துகிறோம்; மேலும் எல்லா
+	$\phi \in \ZF$ க்கும் $\Th{T} \Proves \phi$ என்பதைக் குறிக்க
+	$\Th{T} \Proves \ZF$ என்று எழுதுகிறோம்.)
+\end{thm}
+\begin{proof}
+	$\Th{T} \Proves \ZF$ ஆக அமையும் முடிவுறு $\Th{T}$ ஐ நிலைப்படுத்துக.
+	ஆகவே $\Th{T}$ பிரதிபலிப்பை, அதாவது
+	\olref[sth][replacement][ref]{reflectionschema} ஐ, நிறுவுகிறது.
+	$\Th{T}$ முடிவுறுவதால், அதை $\theta$ என்ற ஒரே இணைப்பாக மீண்டும் எழுதலாம்.
+	இந்த வாய்பாட்டைக் கொண்டு பிரதிபலிக்கையில்,
+	$\Th{T} \Proves \exists \beta(\theta \liff \theta^{V_\beta})$.
+	நேரடியாகவே $\Th{T} \Proves \theta$ என்பதால்,
+	$\Th{T} \Proves \exists \beta\ \theta^{V_\beta}$ என்று பெறுகிறோம்.
+
+	இப்போது $\psi(X)$ என்பது பின்வருவதன் சுருக்கம் என்க:
+	\[
+		\theta^X \land X\text{ கடப்புப் பண்புடையது} \land (\forall Y \in X)(Y\text{ கடப்புப் பண்புடையது}\lif \lnot \theta^{Y})
+	\]
+	ஏறத்தாழ இது பின்வருமாறு கூறுகிறது: $X$ ஆனது $\theta$ இன் கடப்புப்
+	பண்புடைய ஒரு மாதிரி; மேலும் இது இப்பொருளில் $\in$-மீச்சிறியது. இப்போது
+	$\Th{T} \Proves \exists \beta\ \theta^{V_\beta}$ என்பதை நினைவுகூர்ந்து,
+	$\ZF$ க்குள்ளும் எனவே $\Th{T}$ க்குள்ளும் தரநிலைகள் பற்றிய அடிப்படை
+	உண்மைகளால் பின்வருவதைப் பெறுகிறோம்:
+	\begin{equation}
+		\Th{T} \Proves \exists M \psi(M). \tag{*}\label{Mpsi}
+	\end{equation}
+	$\psi(X)$ இன் முதல் இணைப்பைப் பயன்படுத்தினால், எப்போதெல்லாம்
+	$\Th{T} \Proves \sigma$ ஆகிறதோ அப்போதெல்லாம்
+	$\Th{T} \Proves \forall X(\psi(X) \lif \sigma^X)$ ஆகிறது. ஆகவே
+	\eqref{Mpsi} இன்படி:
+	\begin{align*}
+		\Th{T} &\Proves \forall X(\psi(X) \lif (\exists N \psi(N))^X)\\
+	\intertext{இதையும் மீண்டும் \eqref{Mpsi} ஐயும் பயன்படுத்தினால்:}
+		\Th{T} &\Proves \exists M(\psi(M) \land (\exists N \psi(N))^M)
+	\intertext{எனவே குறிப்பாக:}
+		\Th{T} &\Proves \exists M(\psi(M) \land (\exists N \in M)((N\text{ கடப்புப் பண்புடையது})^N \land (\theta^N)^M))
+	\intertext{ஆகவே கடப்புப் பண்பைப் பற்றிய அடிப்படைப் பகுத்தறிதலால்:}
+		\Th{T} &\Proves \exists M(\psi(M) \land (\exists N \in M)(N\text{ கடப்புப் பண்புடையது} \land \theta^N))
+	\end{align*}
+	எனவே $\Th{T}$ முரணுடையது.\footnote{இந்த ``அடிப்படைப் பகுத்தறிதலில்''
+	கடப்புப் பண்புடைய கணங்களுக்கான சில ``மாறாமை உண்மைகளை'' நிறுவுவது
+	அடங்குகிறது.}
+\end{proof}
+
+\citet[223]{Potter2004} குறிப்பிட்ட இதைப் போன்ற இன்னொரு முடிவு இதோ:
+
+\begin{prop}\ollabel{finiteextensionofZ}
+	$\Th{T}$ ஆனது $\Z$ ஐ முடிவுறு எண்ணிக்கையிலான புதிய அடிகோள்களால்
+	விரிவாக்கட்டும். $\Th{T} \Proves \ZF$ எனில், $\Th{T}$ முரணுடையது.
+	(இங்கே \olref{zfnotfinitely} இல் உள்ள அதே மௌனமான கட்டுப்பாடுகளைப்
+	பயன்படுத்துகிறோம்.)
+\end{prop}
+\begin{proof}
+	பிரிப்பின் (முடிவிலாப் பல) நிகழ்வுகளை \emph{தவிர்த்து}, $\Th{T}$ இன் எல்லா
+	அடிகோள்களின் இணைப்புக்கும் $\theta$ ஐப் பயன்படுத்துக. $\theta$ விலிருந்து
+	\olref{zfnotfinitely} இல் உள்ளதுபோல $\psi$ ஐ வரையறுத்தால்,
+	$\Th{T} \Proves \exists M \psi(M)$ என்று காட்டலாம்.
+
+	\olref{zfnotfinitely} இல் உள்ளதுபோல, எப்போதெல்லாம்
+	$\Th{T} \Proves \sigma$ ஆகிறதோ அப்போதெல்லாம்
+	$\Th{T} \Proves \forall X(\psi(X) \lif \sigma^X)$ ஆகும் திட்டத்தை
+	நிறுவலாம். பின்னர் \olref{zfnotfinitely} இல் உள்ளவாறே நமது நிறுவலை
+	நிறைவுசெய்கிறோம்.
+
+	எனினும், இத்திட்டத்தை நிறுவுவது \olref{zfnotfinitely} இல் இருந்ததைவிட
+	சற்றுக் கூடுதல் வேலையைக் கோருகிறது. ஏனெனில் பிரிப்பு நிகழ்வுகள்
+	$\Th{T}$ இல் இருந்தாலும், அவை $\theta$ வின் இணைப்பிகள் அல்ல. ஆனால்
+	ஒவ்வொரு பிரிப்பு நிகழ்வு $\sigma$ க்கும்
+	$\Th{T} \Proves \forall X(X\text{ கடப்புப் பண்புடையது} \lif \sigma^X)$
+	என்று நிறுவுவதன் மூலம் இத்தடையைத் தாண்டலாம். இதை வாசகருக்கே விடுகிறோம்.
+\end{proof}
+\begin{prob}
+	ஒவ்வொரு பிரிப்பு நிகழ்வு $\sigma$ க்கும் பின்வருவது நிறைவேறுகிறது என்று
+	காட்டுக: $\Z \Proves \forall X(X\text{ கடப்புப் பண்புடையது} \lif \sigma^X)$.
+	(இத்திட்டத்தை
+	\olref[sth][replacement][finiteaxiomatizability]{finiteextensionofZ} இல்
+	பயன்படுத்தினோம்.)
+\end{prob}
+\begin{prob}
+	ஒவ்வொரு $\phi \in \Z$ க்கும்
+	$\ZF \Proves \phi^{V_{\omega+\omega}}$ என்று காட்டுக.
+\end{prob}
+\begin{prob}
+	\olref[sth][replacement][finiteaxiomatizability]{zfnotfinitely} மற்றும்
+	\olref[sth][replacement][finiteaxiomatizability]{finiteextensionofZ}
+	ஆகியவற்றின் நிறுவல்களில் பயன்படுத்தப்பட்ட மீதமுள்ள திட்டவடிவ
+	முடிவுகளை உறுதிசெய்க.
+\end{prob}
+
+\olref[sth][replacement][absinf]{sec} இல் குறிப்பிட்டபடி, மாற்றீடு
+\olref[ordinals][ordtype]{thmOrdinalRepresentation} ஐவிடக் கண்டிப்பாக
+வலிமையானது என்பதை இது காட்டுகிறது. அல்லது இன்னும் துல்லியமாக:
+$\Z$ + ``ஒவ்வொரு நன்கு வரிசைப்படுத்தலும் ஒன்றே ஒரு வரிசையெண்ணுக்கு
+ஓரினமானது'' முரணற்றதெனில், ஏதோ ஒரு மாற்றீட்டு நிகழ்வை நிறுவ அது தவறுகிறது.
+
+
+	%	By assumption, $\psi^{V_\alpha}$ has the form:
+	%	\[
+	%		(\forall A \in V_\alpha)(\exists S \in V_\alpha)(\forall x \in V_\alpha)(x \in S \liff (\phi^{V_\alpha}(x) \land x \in A))
+	%	\]
+	%	To establish this holds, fix $A \in V_\alpha$. Using Separation, obtain:
+	%	\[
+	%		S = \Setabs{x \in A}{\phi^{V_\alpha}(x)}
+	%	\]
+	%	Now $S \in V_\alpha$, since $S \subseteq A \in V_\alpha$, and clearly $(\forall x \in V_\alpha)(x \in S \liff (\phi^{V_\alpha}(x) \land x \in A)$.
+
+\end{document}

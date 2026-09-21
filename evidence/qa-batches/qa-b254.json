@@ -1,0 +1,169 @@
+{
+  "batch_id": "TA-B254",
+  "units": [
+    {
+      "unit_id": "OLP-0572",
+      "source_sha256": "c034323f1402beaf3d329ac7d7a0be6e192bd86ea81ff3efffe29229aca9cf43",
+      "translation_sha256": "be23c99a523bff02fd235855fcb02967565207058231103a39c566b803e1d88c",
+      "source_bytes": 7874,
+      "translation_bytes": 15838,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}S_0&=V_{\\alpha+1}\\\\S_{n+1}&=S_n\\cup\\bigcup\\Setabs{\\mu(\\overline{a}_1,\\ldots,\\overline{a}_k)}{\\overline{a}_1,\\ldots,\\overline{a}_k\\inS_n}\\\\S&=\\bigcup_{m<\\omega}S_n.\\end{align*}",
+        "$\\Setabs{y}{(\\existsx\\inA)\\phi(x,y}$"
+      ],
+      "extra_math": [
+        "\\begin{align*}S_0&=V_{\\alpha+1}\\\\S_{n+1}&=S_n\\cup\\bigcup\\Setabs{\\mu(\\overline{a}_1,\\ldots,\\overline{a}_k)}{\\overline{a}_1,\\ldots,\\overline{a}_k\\inS_n}\\\\S&=\\bigcup_{m<\\omega}S_m.\\end{align*}",
+        "$\\Setabs{y}{(\\existsx\\inA)\\phi(x,y)}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Theorem",
+        "align",
+        "first",
+        "include",
+        "logic",
+        "open",
+        "part",
+        "ref",
+        "replacement",
+        "section",
+        "spine",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-020",
+          "unit_id": "OLP-0572",
+          "kind": "reflection-recursion-bound-index",
+          "action": "Changed the final omega-union summand from S_n to S_m to match the bound index m.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "S&=\\bigcup_{m<\\omega}S_n.",
+              "to": "S&=\\bigcup_{m<\\omega}S_m.",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The union binds m but the summand uses the unrelated index n; the ensuing proof requires the union of every finite stage S_m.",
+          "chosen_treatment": "தமிழ் காட்சி வரையறை கட்டப்பட்ட மாறி m உடன் S_m ஐப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Leaving n free in the definition of S; renaming the binder to n throughout only this subexpression.",
+          "rationale": "The proof later chooses n with the parameters in S_n and then places witnesses in S_{n+1}, which works exactly when S is the union of all S_m.",
+          "precise_review_question": "Does the omega-union read S = union_{m<omega} S_m?",
+          "location_needle": "SOURCE CORRECTION TA-STH-020"
+        },
+        {
+          "audit_id": "TA-STH-021",
+          "unit_id": "OLP-0572",
+          "kind": "weak-reflection-replacement-missing-parenthesis",
+          "action": "Closed the missing parenthesis in the replacement image-set formula.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "$\\Setabs{y}{(\\existsx\\inA)\\phi(x,y}$",
+              "to": "$\\Setabs{y}{(\\existsx\\inA)\\phi(x,y)}$",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The displayed set-builder condition opens a parenthesis before the existential and never closes it.",
+          "chosen_treatment": "தமிழ் தேற்றம் set-builder நிபந்தனையின் அடைப்புக்குறியை நிறைவுசெய்கிறது.",
+          "alternatives_considered": "Preserving unbalanced mathematical punctuation.",
+          "rationale": "The identical image-set expression is balanced in the proof and in the earlier Replacement scheme.",
+          "precise_review_question": "Is the existential condition inside the final set-builder braces parenthetically balanced?",
+          "location_needle": "SOURCE CORRECTION TA-STH-021"
+        },
+        {
+          "audit_id": "TA-STH-022",
+          "unit_id": "OLP-0572",
+          "kind": "weak-reflection-wrong-principle-name",
+          "action": "Identified the apparently weaker formulation as a formulation of Reflection rather than Replacement.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source announces ‘an apparently weaker formulation of Replacement,’ but immediately names it Weak-Reflection and then uses it to prove Replacement.",
+          "chosen_treatment": "தமிழ் வாக்கியம் அடுத்ததாக வழங்கப்படுவது பிரதிபலிப்பின் வலுக்குறைந்த வடிவம் என்று சரியாகக் கூறுகிறது.",
+          "alternatives_considered": "Calling Weak-Reflection a formulation of Replacement and making the ensuing implication circular.",
+          "rationale": "The section's stated aim is to derive Replacement over Z from a weaker reflection principle; the definition and theorem labels confirm that reading.",
+          "precise_review_question": "Does the transition introduce Weak-Reflection as a weaker formulation of Reflection?",
+          "location_needle": "SOURCE CORRECTION TA-STH-022"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0573",
+      "source_sha256": "31413d0ed7d34d8cd7ee45cbf8f137fb28c954de9ed84ef6bed96f502fad4cf4",
+      "translation_sha256": "76066771a81dc8e3ec72801e0c8892b136c09e9de89dca60b675f589a417d3ed",
+      "source_bytes": 5071,
+      "translation_bytes": 10203,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "absinf",
+        "align",
+        "finiteaxiomatizability",
+        "include",
+        "logic",
+        "open",
+        "ordinals",
+        "ordtype",
+        "ref",
+        "replacement",
+        "section",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

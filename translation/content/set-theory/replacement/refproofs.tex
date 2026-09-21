@@ -1,0 +1,201 @@
+% SEGMENT OLP-0572-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{replacement}{refproofs}
+\olsection{பிற்சேர்க்கை: மாற்றீட்டைச் சூழ்ந்த முடிவுகள்}
+
+இப்பிரிவில் $\ZF$ க்குள் பிரதிபலிப்பை நிறுவுவோம். பிரதிபலிப்பு எந்தப்
+பொருளில் மாற்றீட்டுக்கு நிகரானது என்பதையும் நிறுவுவோம். இவை அனைத்தின்
+வலிமையைப் பற்றிய ஒரு சுவையான விளைவையும் நிறுவுவோம். \emph{எச்சரிக்கை:
+இப்பாடநூலில் உள்ள கணிதத்தின் மிக முன்னேறிய பகுதி இதுவே.}
+
+சுருக்கத்திற்காக மாறிகள் அல்லது பொருள்களின் தொடர்களைக் கையாளும்
+\emph{மேற்கோடிடல்} என்ற குறியீட்டு முறையைப் பயன்படுத்தும் ஒரு
+துணைத்தேற்றத்துடன் தொடங்குவோம். அதாவது, ``$\overline{a}_k$'' என்பது
+``$a_{k_1}$, \dots, $a_{k_n}$'' என்பதன் சுருக்கம்; இங்கே $n$ சூழலால்
+தீர்மானிக்கப்படுகிறது.
+
+\begin{lem}\ollabel{lemreflection}
+ஒவ்வொரு $1 \leq i \leq k$ க்கும் $\phi_i(\overline{v}_i, x)$ ஒரு
+வாய்பாடாக இருக்கட்டும். அப்போது ஒவ்வொரு $\alpha$ க்கும், எந்த
+$\overline{a}_1, \ldots, \overline{a}_k \in V_\beta$ க்கும் ஒவ்வொரு
+$1 \leq i \leq k$ க்கும் பின்வருவது நிறைவேறுமாறு ஏதோ ஒரு
+$\beta > \alpha$ உள்ளது:
+\[
+	\exists x\phi_i(\overline{a}_i, x) \rightarrow (\exists x \in V_\beta) \phi_i(\overline{a}_i, x)
+\]
+\end{lem}
+
+\begin{proof}
+ஒரு சொல் $\mu$ ஐப் பின்வருமாறு வரையறுக்கிறோம்:
+$\mu(\overline{a}_1, \ldots, \overline{a}_k)$ என்பது, ஒவ்வொரு
+$1 \leq i \leq k$ க்கும் பின்வரும் நிபந்தனைவாக்கியங்கள் அனைத்தையும்
+நிறைவுசெய்யும் மீச்சிறு படிநிலை $V$:
+\[
+\exists x\phi_i(\overline{a}_i, x) \rightarrow (\exists x \in V) \phi_i(\overline{a}_i, x))
+\]
+எல்லா $\overline{a}_1, \ldots, \overline{a}_k$ க்கும்
+$\mu(\overline{a}_1, \ldots, \overline{a}_k)$ உள்ளது என்பதை எளிதாக
+உறுதிசெய்யலாம். இப்போது மாற்றீட்டையும் நமது மீள்வரையறைத் தேற்றத்தையும்
+பயன்படுத்திப் பின்வருமாறு வரையறுக்கிறோம்:
+\begin{align*}
+	S_0 & = V_{\alpha+1}\\
+	S_{n+1} & = S_n \cup \bigcup
+	\Setabs{\mu(\overline{a}_1, \ldots, \overline{a}_k)}
+	{\overline{a}_1, \ldots, \overline{a}_k \in S_n} \\
+	S &= \bigcup_{m < \omega} S_m.
+\end{align*}
+% SOURCE CORRECTION TA-STH-020: the omega-union binds m, so its summand is S_m rather than S_n.
+ஒவ்வொரு $S_n$ உம், எனவே $S$ உம், $V_\alpha$ க்குப் பிந்தைய ஒரு
+படிநிலை. இப்போது $\overline{a}_1$, \dots,~$\overline{a}_k \in S$ ஐ
+நிலைப்படுத்துக; அப்போது $\overline{a}_1$, \dots,
+$\overline{a}_k \in S_n$ ஆக அமையும் ஏதோ ஓர் $n < \omega$ உள்ளது.
+ஏதோ ஒரு $1 \leq i \leq k$ ஐ நிலைப்படுத்தி,
+$\exists x \phi_i(\overline{a}_i,x)$ எனக் கொள்க. அமைப்பின்படி
+$(\exists x \in \mu(\overline{a}_1, \ldots,
+\overline{a}_k))\phi_i(\overline{a}_i, x)$; எனவே
+$(\exists x \in S_{n+1})\phi_i(\overline{a}_i, x)$, ஆகவே
+$(\exists x \in S)\phi_i(\overline{a}_i, x)$. எனவே $S$ தான் நமக்குத்
+தேவையான $V_\beta$.
+\end{proof}
+\noindent
+இப்போது \olref[sth][replacement][ref]{reflectionschema} ஐ மிகவும்
+நேரடியாக நிறுவலாம்:
+
+\begin{proof}[நிறுவல்]
+$\alpha$ ஐ நிலைப்படுத்துக. பொதுமையை இழக்காமல், $\phi$ இன் ஒரே
+இணைப்பிகள் $\exists$, $\lnot$, $\land$ என்று கொள்ளலாம் (ஏனெனில் இவை
+வெளிப்படுத்துகையில் போதுமானவை). $\psi_k = \phi$ ஆகுமாறு, $\phi$ இன்
+ஒவ்வொரு துணைவாய்பாட்டையும் அவற்றின் சிக்கல்தன்மைப்படி
+$\psi_1, \ldots, \psi_k$ எனப் பட்டியலிடுக. \olref{lemreflection} இன்படி,
+எந்த $\overline{a}_i \in V_\beta$ க்கும் ஒவ்வொரு
+$1 \leq i \leq k$ க்கும் பின்வருவது நிறைவேறுமாறு ஏதோ ஒரு
+$\beta > \alpha$ உள்ளது:
+\begin{align}\label{reflectionnicelybehaved}
+	\exists x\psi_i(\overline{a}_i, x) \rightarrow
+	(\exists x \in V_\beta) \psi_i(\overline{a}_i, x)\tag{*}
+\end{align}
+$\psi_i$ இன் சிக்கல்தன்மைமீதான தொகுத்தறிதலால், எந்த
+$\overline{a}_i \in V_\beta$ க்கும்
+$\psi_i(\overline{a}_i) \leftrightarrow
+\psi_i^{V_\beta}(\overline{a}_i)$ என்று காட்டுவோம். $\psi_i$ அணுவானது
+எனில் இது நேரடியானது. இந்தப் பண்பை நிறைவுசெய்யும் துணைவாய்பாடுகளின்
+மறுப்பாகவோ இணைப்பாகவோ $\psi_i$ இருந்தால், $\psi_i$ உம் இப்பண்பை
+நிறைவுசெய்கிறது என்பதையும் இருநிபந்தனை நிறுவுகிறது. ஆகவே அளவையிடலைப்
+பற்றிய நிலை மட்டுமே சுவையானது. $\overline{a}_i \in V_\beta$ ஐ
+நிலைப்படுத்துக; அப்போது:
+\begin{align*}
+	(\exists x \psi_i(\overline{a}_i, x))^{V_\beta}
+	&\text{ அப்போதும் அப்போது மட்டும் }
+	(\exists x \in V_\beta)\psi_i^{V_\beta}(\overline{a}_i, x)
+	&&\text{ வரையறையின்படி}\\
+	&\text{ அப்போதும் அப்போது மட்டும் }
+	(\exists x \in V_\beta)\psi_i(\overline{a}_i,  x)
+	&&\text{ எடுகோளின்படி}\\
+	&\text{ அப்போதும் அப்போது மட்டும் }
+	\exists x \psi_i(\overline{a}_i, x)
+	&&\text{ \eqref{reflectionnicelybehaved} இன்படி}
+\end{align*}
+இது தொகுத்தறிதலை நிறைவுசெய்கிறது; $\psi_k = \phi$ என்பதால் முடிவு
+பின்வருகிறது.
+\end{proof}
+
+$\ZF$ இல் பிரதிபலிப்பை நிறுவியுள்ளோம். நமது நிறுவல் அடிப்படையில்
+\citet{Montague1961} ஐப் பின்பற்றியது. இப்போது பிரதிபலிப்பு மாற்றீட்டைப்
+பின்விளைவிக்கிறது என்று $\Z$ இல் நிறுவ விரும்புகிறோம். நிறுவல்
+\citet{Levy1960} ஐ, ஓர் எளிமைப்படுத்தலுடன், பின்பற்றுகிறது.
+
+$\Z$ இல் பணிபுரிவதால், மேலே கொடுத்த அதே வடிவத்தில் பிரதிபலிப்பைக் கூற
+முடியாது. ஏனெனில் ``$V_\alpha$'' குறியீட்டைப் பயன்படுத்தி பிரதிபலிப்பை
+வகுத்தோம்; அதை $\Z$ இல் வரையறுக்க முடியாது
+(\olref[sth][spine][zf]{sec} ஐப் பார்க்கவும்). எனவே அதற்குப் பதிலாக,
+பிரதிபலிப்பின் வெளித்தோற்றத்தில் வலுக்குறைந்த பின்வரும் வடிவத்தை வழங்குவோம்:
+% SOURCE CORRECTION TA-STH-022: the apparently weaker formulation is of Reflection, as the named principle and ensuing proof show, not of Replacement.
+
+\begin{defish}
+\emph{வலுக்குறைந்த பிரதிபலிப்பு.} எந்த வாய்பாடு $\phi$ க்கும், $0$, $1$,
+மேலும் $\phi$ இன் எந்த அளவுருக்களும் $S$ இன் !!{element}s ஆகவும்,
+$(\forall \overline{x} \in S)(\phi \liff \phi^S)$ ஆகவும் அமையும் ஒரு
+கடப்புப் பண்புடைய கணம் $S$ உள்ளது.
+\end{defish}
+
+மாற்றீட்டை நிறுவ இதைப் பயன்படுத்த, முதலில்
+\citet[first part of Theorem 2]{Levy1960} ஐப் பின்பற்றி ஒரே நேரத்தில் இரு
+வாய்பாடுகளை ``பிரதிபலிக்க'' முடியும் என்று காட்டுவோம்:
+
+\begin{lem}[$\Z + \text{வலுக்குறைந்த பிரதிபலிப்பு}$ இல்.]\ollabel{lem:reflect}
+எந்த வாய்பாடுகள் $\psi, \chi$ க்கும், $0$, $1$ (மற்றும்
+வாய்பாடுகளின் எந்த அளவுருக்களும்) $S$ இன் !!{element}s ஆகவும்,
+$(\forall \overline{x} \in S)((\psi \liff \psi^S) \land (\chi
+\liff \chi^S))$ ஆகவும் அமையும் ஒரு கடப்புப் பண்புடைய கணம் $S$ உள்ளது.
+\end{lem}
+
+\begin{proof}
+$\phi$ என்பது $(z = 0 \land \psi) \lor (z = 1 \land \chi)$ என்ற வாய்பாடு
+என்க.
+
+இங்கே ஒரு சுருக்கத்தைப் பயன்படுத்துகிறோம்; ``$z = 0$'' என்பதை
+``$\forall t\, t \notin z$'' என்றும், ``$z =1$'' என்பதை
+``$\forall s(s \in z \liff \forall t\, t \notin s)$'' என்றும் விரித்து
+எழுத வேண்டும். ஆனால் $0, 1 \in S$ ஆகவும் $S$ கடப்புப் பண்புடையதாகவும்
+இருப்பதால், இவ்வாய்பாடுகள் $S$ க்கு \emph{மாறாதவை}; அதாவது, அவற்றின்
+அளவையீட்டுக்குறிகளை $S$ க்குக் கட்டுப்படுத்தினாலும் அவை அதே பொருளுக்கே
+பொருந்தும்.\footnote{இன்னும் முறைப்படி, இவ்வாய்பாடுகளில் ஏதேனும் ஒன்றை
+$\xi$ எனக் கொண்டால், $\xi(z) \liff \xi^S(z)$.}
+
+வலுக்குறைந்த பிரதிபலிப்பின்படி, பின்வருமாறு அமையும் பொருத்தமான ஓர் $S$
+நமக்குள்ளது:
+\begin{align*}
+	(\forall z, \overline{x} \in S)(&\phi \liff \phi^S)\\
+	\text{அதாவது }(\forall z, \overline{x} \in S)(&((z = 0 \land \psi) \lor (z = 1 \land \chi)) \liff {}\\
+	&\phantom{(}((z = 0 \land \psi) \lor (z = 1 \land \chi))^S)\\
+	\text{அதாவது }(\forall z, \overline{x} \in S)(&((z = 0 \land \psi) \lor (z = 1 \land \chi))\liff {}\\
+	&\phantom{(}((z = 0 \land \psi^S) \lor (z = 1 \land \chi^S)))\\
+	\text{அதாவது }(\forall \overline{x} \in S)(&(\psi \liff \psi^S) \land (\chi \liff \chi^S))
+\end{align*}
+``$z = 0$'' மற்றும் ``$z=1$'' ஆகியவை $S$ க்கு மாறாதவை என்பதால் இரண்டாம்
+கூற்று மூன்றாம் கூற்றைப் பின்விளைவிக்கிறது; $0 \neq 1$ என்பதால் நான்காம்
+கூற்று பின்வருகிறது.
+\end{proof}\noindent
+இப்போது \citet[Theorem 6]{Levy1960} ஐப் பின்பற்றி எளிமைப்படுத்துவதன் மூலம்
+மாற்றீட்டைப் பெறலாம்:
+
+\begin{thm}[$\Z$ + வலுக்குறைந்த பிரதிபலிப்பில்]\label{thm:replacement}
+எந்த வாய்பாடு $\phi(v,w)$ க்கும் எந்த $A$ க்கும்,
+$(\forall x \in A)\lexists![y][\phi(x,y)]$ எனில்,
+$\Setabs{y}{(\exists x \in A)\phi(x,y)}$ இருக்கிறது.
+\end{thm}
+% SOURCE CORRECTION TA-STH-021: close the missing parenthesis in the replacement image-set formula.
+
+\begin{proof}
+$(\forall x \in A)\lexists![y][\phi(x,y)]$ ஆக அமையும் $A$ ஐ
+நிலைப்படுத்தி, பின்வரும் வாய்பாடுகளை வரையறுக்கவும்:
+\begin{align*}
+	\psi &\text{ என்பது } (\phi(x, z) \land A = A)\\
+	\chi &\text{ என்பது } \lexists[y][\phi(x, y)]
+\end{align*}
+\olref{lem:reflect} ஐப் பயன்படுத்துக. $A$ ஆனது $\psi$ க்கு ஓர் அளவுரு
+என்பதால், $0, 1, A \in S$ ஆகவும் (வேறு எந்த அளவுருக்களுடனும்),
+பின்வருவது நிறைவேறுமாறும் ஒரு கடப்புப் பண்புடைய~$S$ உள்ளது:
+\[
+	(\forall x,z \in S)((\psi \liff \psi^S) \land (\chi \liff \chi^S))
+\]
+ஆகவே குறிப்பாக:
+\begin{align*}
+	(\forall  x, z \in S)(&\phi(x, z) \liff \phi^S(x, z))\\
+	(\forall x \in S)(&\exists y\phi(x, y) \liff (\exists y \in S)\phi^S(x, y))
+\end{align*}
+இவற்றை இணைத்து, $A \in S$ ஆகவும் $S$ கடப்புப் பண்புடையதாகவும் இருப்பதால்
+$A \subseteq S$ என்பதைக் கவனித்தால்:
+\begin{align*}
+	(\forall x \in A)(&\exists y\phi(x, y) \liff (\exists y \in S)\phi(x, y))
+\end{align*}
+$(\forall x \in A)\lexists![y][\phi(x, y)]$ என்பதால் இப்போது
+$(\forall x \in A)(\lexists![y \in S])\phi(x, y)$. பிரிப்பு இப்போது
+$\Setabs{y \in S}{(\exists x \in A) \phi(x, y)} = \Setabs{y}{(\exists
+x \in A) \phi(x, y)}$ ஐத் தருகிறது.
+\end{proof}
+
+\end{document}

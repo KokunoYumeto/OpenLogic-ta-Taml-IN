@@ -5697,6 +5697,116 @@
       "rationale": "The proposition identifies V_alpha with sets whose rank belongs to alpha, so the converse must strengthen rank(x) <= alpha to rank(x) in alpha.",
       "precise_review_question": "Does the converse conclude setrank(x) is an element of alpha?",
       "location_needle": "SOURCE CORRECTION TA-STH-016"
+    },
+    {
+      "audit_id": "TA-STH-017",
+      "unit_id": "OLP-0567",
+      "kind": "replacement-strength-duplicated-comparative",
+      "action": "Rendered the malformed double comparative as ‘get a better sense of just how tall.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says ‘get a better sense of better just how tall,’ where the second ‘better’ is a stray duplicate.",
+      "chosen_treatment": "தமிழ் வாக்கியம் மாற்றீடு படிநிலைமுறையை எவ்வளவு உயரமாக்குகிறது என்பதை இன்னும் நன்றாக உணர்வோம் என்று இலக்கணமுற்ற பொருளைக் கூறுகிறது.",
+      "alternatives_considered": "Preserving two competing comparative constructions.",
+      "rationale": "The paragraph previews later results measuring how tall Replacement forces the hierarchy to be.",
+      "precise_review_question": "Does the sentence make one coherent comparison about gaining a better sense of the hierarchy's height?",
+      "location_needle": "SOURCE CORRECTION TA-STH-017"
+    },
+    {
+      "audit_id": "TA-STH-018",
+      "unit_id": "OLP-0569",
+      "kind": "limitation-of-size-stray-pronoun",
+      "action": "Removed the stray ‘it’ from ‘the issue it is not just.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source combines ‘the issue is’ with ‘it is,’ producing an ungrammatical duplicate subject.",
+      "chosen_treatment": "தமிழ் வாக்கியம் சிக்கல் இதுவரையிலான மௌனம் மட்டுமன்று என்று தெளிவாகக் கூறுகிறது.",
+      "alternatives_considered": "Preserving a duplicated grammatical subject.",
+      "rationale": "The next sentence identifies the deeper conflict with stage formation, so no semantic qualification is lost.",
+      "precise_review_question": "Does the transition say that prior silence is not the only issue?",
+      "location_needle": "SOURCE CORRECTION TA-STH-018"
+    },
+    {
+      "audit_id": "TA-STH-019",
+      "unit_id": "OLP-0570",
+      "kind": "absolute-infinity-competing-articles",
+      "action": "Rendered ‘some a broader principle’ as ‘a broader principle.’",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source contains two competing determiners before ‘broader principle.’",
+      "chosen_treatment": "தமிழ் வாக்கியம் பிந்தைய இரு கொள்கைகளும் ஒரு விரிவான கொள்கையிலிருந்து வருகின்றன என்று கூறுகிறது.",
+      "alternatives_considered": "Preserving an impossible determiner sequence.",
+      "rationale": "The immediately following stages-inex principle is the single broader principle intended.",
+      "precise_review_question": "Does the sentence introduce stages-inex as one broader principle?",
+      "location_needle": "SOURCE CORRECTION TA-STH-019"
+    },
+    {
+      "audit_id": "TA-STH-020",
+      "unit_id": "OLP-0572",
+      "kind": "reflection-recursion-bound-index",
+      "action": "Changed the final omega-union summand from S_n to S_m to match the bound index m.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "S&=\\bigcup_{m<\\omega}S_n.",
+          "to": "S&=\\bigcup_{m<\\omega}S_m.",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The union binds m but the summand uses the unrelated index n; the ensuing proof requires the union of every finite stage S_m.",
+      "chosen_treatment": "தமிழ் காட்சி வரையறை கட்டப்பட்ட மாறி m உடன் S_m ஐப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Leaving n free in the definition of S; renaming the binder to n throughout only this subexpression.",
+      "rationale": "The proof later chooses n with the parameters in S_n and then places witnesses in S_{n+1}, which works exactly when S is the union of all S_m.",
+      "precise_review_question": "Does the omega-union read S = union_{m<omega} S_m?",
+      "location_needle": "SOURCE CORRECTION TA-STH-020"
+    },
+    {
+      "audit_id": "TA-STH-021",
+      "unit_id": "OLP-0572",
+      "kind": "weak-reflection-replacement-missing-parenthesis",
+      "action": "Closed the missing parenthesis in the replacement image-set formula.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "$\\Setabs{y}{(\\existsx\\inA)\\phi(x,y}$",
+          "to": "$\\Setabs{y}{(\\existsx\\inA)\\phi(x,y)}$",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The displayed set-builder condition opens a parenthesis before the existential and never closes it.",
+      "chosen_treatment": "தமிழ் தேற்றம் set-builder நிபந்தனையின் அடைப்புக்குறியை நிறைவுசெய்கிறது.",
+      "alternatives_considered": "Preserving unbalanced mathematical punctuation.",
+      "rationale": "The identical image-set expression is balanced in the proof and in the earlier Replacement scheme.",
+      "precise_review_question": "Is the existential condition inside the final set-builder braces parenthetically balanced?",
+      "location_needle": "SOURCE CORRECTION TA-STH-021"
+    },
+    {
+      "audit_id": "TA-STH-022",
+      "unit_id": "OLP-0572",
+      "kind": "weak-reflection-wrong-principle-name",
+      "action": "Identified the apparently weaker formulation as a formulation of Reflection rather than Replacement.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source announces ‘an apparently weaker formulation of Replacement,’ but immediately names it Weak-Reflection and then uses it to prove Replacement.",
+      "chosen_treatment": "தமிழ் வாக்கியம் அடுத்ததாக வழங்கப்படுவது பிரதிபலிப்பின் வலுக்குறைந்த வடிவம் என்று சரியாகக் கூறுகிறது.",
+      "alternatives_considered": "Calling Weak-Reflection a formulation of Replacement and making the ensuing implication circular.",
+      "rationale": "The section's stated aim is to derive Replacement over Z from a weaker reflection principle; the definition and theorem labels confirm that reading.",
+      "precise_review_question": "Does the transition introduce Weak-Reflection as a weaker formulation of Reflection?",
+      "location_needle": "SOURCE CORRECTION TA-STH-022"
     }
   ],
   "by_unit": {
@@ -5883,6 +5993,10 @@
     "OLP-0556": ["TA-STH-013"],
     "OLP-0560": ["TA-STH-014"],
     "OLP-0562": ["TA-STH-015"],
-    "OLP-0564": ["TA-STH-016"]
+    "OLP-0564": ["TA-STH-016"],
+    "OLP-0567": ["TA-STH-017"],
+    "OLP-0569": ["TA-STH-018"],
+    "OLP-0570": ["TA-STH-019"],
+    "OLP-0572": ["TA-STH-020", "TA-STH-021", "TA-STH-022"]
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-20T23:56:36.224469+00:00",
+  "date_utc": "2026-09-21T00:50:49.328762+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2807,6 +2807,51 @@
       "unit_id": "OLP-0564",
       "source_sha256": "fa9b9faa09478d4d5d6e510c52a2d5752fa72985db8efaff4a432a0e24d81dd0",
       "translation_sha256": "b5933593e00aca0e49fb74288d6b07d4ed51f7f8b03fa9d54c5f53b771d0e7ff"
+    },
+    {
+      "unit_id": "OLP-0565",
+      "source_sha256": "65e993fb2a190799326cdaca3b946d7f92b72f8963e591048f2be4918354f997",
+      "translation_sha256": "16f8b41b932490ef3e367a826be64ae630f1d57a7eb811dd1c26bb20f6586f0a"
+    },
+    {
+      "unit_id": "OLP-0566",
+      "source_sha256": "e623e78d259b8d80570492733074213737414fe7fbbc8d7dc641d77760783ad6",
+      "translation_sha256": "045b88a7762623a14aaab22926ab54df40c6a9372a504fc5a422b845a79c2e83"
+    },
+    {
+      "unit_id": "OLP-0567",
+      "source_sha256": "4f3e4108f3ab822b38f880ddcade17b6e270a0f0272d9b0c40e9a9a389911301",
+      "translation_sha256": "4a07dffaf75ed52d62e3e7502dc8eb21ed75ea43097913aac4bccfa87b67a455"
+    },
+    {
+      "unit_id": "OLP-0568",
+      "source_sha256": "004138bef28268b2a7f9547172634b404d5bcd15716839e7822f4cccc6126c30",
+      "translation_sha256": "ceb2866f9fb50ead934f482eb1fe35cdbdbebf2e28fb3e8106a08c91f5c24275"
+    },
+    {
+      "unit_id": "OLP-0569",
+      "source_sha256": "579ce35979a90771bcf225ff54b688aa34c19a88bd46fd5b51256f5ab2e68d49",
+      "translation_sha256": "e4241ecdda5e5b59af537c9d9c8baae6b0fd8809202284007f56170390129e2a"
+    },
+    {
+      "unit_id": "OLP-0570",
+      "source_sha256": "fd6cb8f41f12694c74f9cc52336851f0b04eee98efbcdad5b60300c2de0ebea2",
+      "translation_sha256": "8ac1467d036c73ad5a0a0ffa3b5d1eb17e2a149dedbc257d58ca1a6da397989a"
+    },
+    {
+      "unit_id": "OLP-0571",
+      "source_sha256": "fbdfc9b85a4c276113f81e9a1ba5a20f59930a75175e43a1e11a6d9bee57644e",
+      "translation_sha256": "48ce1c9958e6783a135ed7f59076c7483fd57b71e2fd298bf76e06fd7224ecac"
+    },
+    {
+      "unit_id": "OLP-0572",
+      "source_sha256": "c034323f1402beaf3d329ac7d7a0be6e192bd86ea81ff3efffe29229aca9cf43",
+      "translation_sha256": "be23c99a523bff02fd235855fcb02967565207058231103a39c566b803e1d88c"
+    },
+    {
+      "unit_id": "OLP-0573",
+      "source_sha256": "31413d0ed7d34d8cd7ee45cbf8f137fb28c954de9ed84ef6bed96f502fad4cf4",
+      "translation_sha256": "76066771a81dc8e3ec72801e0c8892b136c09e9de89dca60b675f589a417d3ed"
     }
   ],
   "samples": [
@@ -7394,6 +7439,69 @@
       "assessment": "All definitions and proofs remain, and TA-STH-016 replaces the contradictory frozen-source conclusion with rank(x) in alpha.",
       "translation_segment_sha256": "bc219c62b1b4de86c7b45196975f585f90d07a29467dbb7ace066d4d2dc43752",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0565-S01",
+      "reverse_paraphrase": "The Replacement chapter proceeds through introduction, strength, extrinsic justification, limitation of size, absolute infinity, Reflection, the equivalence proofs and finite axiomatizability.",
+      "assessment": "All eight section imports and the chapter-ending hook remain in source order.",
+      "translation_segment_sha256": "d0868934224776f04847d02ddecd8e85220dee6a987aa20cec7751ef1bd79c79",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0566-S01",
+      "reverse_paraphrase": "Replacement is the axiom scheme distinguishing ZF from Z; its strength motivates both extrinsic justification by consequences and intrinsic justification from the governing mathematical concepts.",
+      "assessment": "The chapter question, both defined justification strategies and the Maddy references remain distinct.",
+      "translation_segment_sha256": "d732fcbeb7831306de28f367b1968abc77b7a9bd3aeb56ea58645ceaa6330c5f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0567-S01",
+      "reverse_paraphrase": "V_{omega+omega} models every Z axiom but omits omega+omega; hence Z cannot prove all well-orders have ordinal order types, while Replacement forces the hierarchy beyond every definable well-order.",
+      "assessment": "Formula relativization, the parity ordering, model argument and height conclusion remain; TA-STH-017 removes only a duplicated comparative.",
+      "translation_segment_sha256": "e02160a3f88446f2fb71d4a8be6ec7af5f25dce7a05c11699b79cab2867886fb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0568-S01",
+      "reverse_paraphrase": "Boolos proposes justifying Replacement by desirable consequences, but Level Theory plus Infinity and Powersets recovers the cited hierarchy results without Replacement, and purely extrinsic evidence gives insufficient assurance of consistency.",
+      "assessment": "The ordinal, rank, membership-induction and recursion consequences, LT/Zr comparison and two objections remain explicit.",
+      "translation_segment_sha256": "2e89e55d3f2a18923df963b5176f16deaf460405fe420b4a40ba2bd9acf56277",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0569-S01",
+      "reverse_paraphrase": "Limitation of size justifies Replacement because an image set is no larger than its source, yet it conflicts with the cumulative-stage motivation and offers a poor size-based explanation of Russell nonexistence.",
+      "assessment": "The cardinal inequality, two-thoughts history, stage-versus-size contrast and pug version of Russell remain; TA-STH-018 removes only a stray pronoun.",
+      "translation_segment_sha256": "8f1181ecd010f33c92099aaf0a46d2167bce4949d35b40054379896995e26423",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0570-S01",
+      "reverse_paraphrase": "Absolute infinity requires the stage hierarchy to be as tall as possible; strengthening this to non-cofinality with every set bounds all image ranks in one later stage and thereby yields Replacement.",
+      "assessment": "The omega-plus-omega motivation, ordinal-representation limitation, stages-cofinal principle, formalization exercise and contrapositive argument remain; TA-STH-019 repairs only the article sequence.",
+      "translation_segment_sha256": "267510f757f2a1c33244ebc045e432282804ffdaa5d28f4dc062c9153331e289",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0571-S01",
+      "reverse_paraphrase": "Reflection says every formula agrees with its V_beta relativization at arbitrarily high stages; over Z, suitable Reflection and Replacement formulations are equivalent.",
+      "assessment": "The full schema, parameter caveat, Montague–Levy attribution and intrinsic-justification argument remain exact.",
+      "translation_segment_sha256": "b5c7f173d75cc9960eb082dcc0d588141680ab36b3ababa80b86c0390b2738f2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0572-S01",
+      "reverse_paraphrase": "ZF proves Reflection by closing an omega-sequence of stages under witnesses and then inducting on subformulas; over Z, Weak-Reflection for transitive sets reflects two formulas simultaneously and yields each Replacement instance.",
+      "assessment": "All witness, absoluteness and Separation steps remain; TA-STH-020 fixes the bound union index, TA-STH-021 closes the set-builder condition and TA-STH-022 names the weakened principle correctly.",
+      "translation_segment_sha256": "5fcfd69f631c2081919be4964460176cc438a77019f7e739a779241db59ce6e8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0573-S01",
+      "reverse_paraphrase": "No finite theory can prove all of ZF consistently, and no finite extension of Z can do so consistently; Reflection supplies a minimal transitive model whose internal copy contradicts minimality.",
+      "assessment": "Both metatheorems, schematic Separation obligations, exercises and comparison with ordinal representation remain exact.",
+      "translation_segment_sha256": "9215ba3ae6ab0543181218d515719877e9b69afb6ae1284ba6f199efb811a82d",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -8258,14 +8366,38 @@
     {
       "unit_id": "OLP-0564",
       "issue": "The rank characterization assumes x is in V_alpha and then says induction proves x is not in V_alpha, contradicting both the assumption and proposition. Tamil gives the required strict conclusion rank(x) in alpha under TA-STH-016."
+    },
+    {
+      "unit_id": "OLP-0567",
+      "issue": "The chapter preview says “get a better sense of better just how tall,” combining two comparative constructions. Tamil states one coherent comparison under TA-STH-017."
+    },
+    {
+      "unit_id": "OLP-0569",
+      "issue": "The transition says “the issue it is not just,” duplicating the grammatical subject. Tamil removes the stray pronoun under TA-STH-018."
+    },
+    {
+      "unit_id": "OLP-0570",
+      "issue": "The absolute-infinity motivation says “some a broader principle,” combining incompatible determiners. Tamil introduces one broader principle under TA-STH-019."
+    },
+    {
+      "unit_id": "OLP-0572",
+      "issue": "The witness-stage recursion binds m in its omega-union but uses S_n as the summand. Tamil uses S_m under TA-STH-020."
+    },
+    {
+      "unit_id": "OLP-0572",
+      "issue": "The Weak-Reflection theorem leaves its image-set condition parenthetically unclosed. Tamil closes it under TA-STH-021."
+    },
+    {
+      "unit_id": "OLP-0572",
+      "issue": "The transition calls Weak-Reflection a weaker formulation of Replacement although the ensuing argument uses it to derive Replacement. Tamil identifies it as a weaker formulation of Reflection under TA-STH-022."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "561 source units now pass textual and author semantic QA. Eleven exact PDF readers visually verify 239 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 161 frozen units still require completion.",
+  "remaining": "570 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 152 frozen units still require completion.",
   "visual_reader_coverage": {
-    "reader_count": 11,
-    "distinct_unit_count": 239,
+    "reader_count": 12,
+    "distinct_unit_count": 248,
     "readers": [
       {
         "name": "combined sets/relations/functions",
@@ -8310,6 +8442,10 @@
       {
         "name": "set theory: stages and ranks",
         "distinct_units": 7
+      },
+      {
+        "name": "set theory: replacement and reflection",
+        "distinct_units": 9
       }
     ]
   },
@@ -9279,6 +9415,39 @@
         "foundation_regularity_transitive_closure_and_uppercase_B_remain": true,
         "Z_and_ZF_axiom_inventories_and_replacement_dependency_remain": true,
         "rank_characterization_induction_supremum_and_strict_repair_remain": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0565",
+        "OLP-0566",
+        "OLP-0567",
+        "OLP-0568",
+        "OLP-0569",
+        "OLP-0570",
+        "OLP-0571",
+        "OLP-0572",
+        "OLP-0573"
+      ],
+      "correction_ids": [
+        "TA-STH-017",
+        "TA-STH-018",
+        "TA-STH-019",
+        "TA-STH-020",
+        "TA-STH-021",
+        "TA-STH-022"
+      ],
+      "status": "pass",
+      "checks": {
+        "replacement_driver_preserves_all_eight_sections": true,
+        "justification_contrast_and_chapter_question_remain": true,
+        "V_omegaomega_model_relativization_and_height_remain": true,
+        "LT_Zr_extrinsic_objections_remain": true,
+        "limitation_of_size_cardinal_and_stage_contrast_remain": true,
+        "absolute_infinity_cofinality_and_replacement_argument_remain": true,
+        "reflection_schema_and_equivalence_remain": true,
+        "reflection_proof_weak_form_and_three_repairs_remain": true,
+        "finite_axiomatizability_theorems_and_exercises_remain": true
       }
     }
   ]

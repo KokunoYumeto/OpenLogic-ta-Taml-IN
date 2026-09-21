@@ -1,0 +1,161 @@
+{
+  "schema": "openlogic-tamil-render-qa/1",
+  "result": "pass",
+  "review_date": "2026-09-21",
+  "scope": {
+    "reader_units": 9,
+    "first_unit": "OLP-0565",
+    "last_unit": "OLP-0573",
+    "programme_completed_units": 570,
+    "total_frozen_units": 722,
+    "unit_ids": ["OLP-0565", "OLP-0566", "OLP-0567", "OLP-0568", "OLP-0569", "OLP-0570", "OLP-0571", "OLP-0572", "OLP-0573"],
+    "reader": "build/tamil-set-theory-replacement.pdf",
+    "public_reader": "readers/set-theory-replacement-reflection-ta-Taml-IN.pdf",
+    "source_master": "build/tamil-set-theory-replacement.tex"
+  },
+  "textual_unit_qa": {
+    "batch_receipts": [
+      {"path": "QA-B251.json", "bytes": 5804, "sha256": "6016bb13eab99a95690d80387e1bebe4e13b2ded861f45e991b23909f5f1c4fb"},
+      {"path": "QA-B252.json", "bytes": 4083, "sha256": "b1f4ce08caae15db2a105da4276662d1f936f06cbedd1f2b75981c9b4ba982de"},
+      {"path": "QA-B253.json", "bytes": 4282, "sha256": "07aee8b94ef9722e61f2a376c9e11239b892cd0cdcf72d9e2128cd1d525c3b9c"},
+      {"path": "QA-B254.json", "bytes": 8095, "sha256": "92b35d318177f45d1f90364c398a34fe569434b220df4597a2ef8d7de53bb07c"}
+    ],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass, including TA-STH-017 through TA-STH-022",
+    "standalone_reference_fallbacks": "Earlier ordinal, stage-and-rank and cardinal-arithmetic destinations retain readable Tamil descriptions; every reference within this reader remains live.",
+    "bibliographic_source_language": "English article and book titles, and the two Lévy theorem descriptors, are retained as source metadata rather than generated document labels."
+  },
+  "semantic_review": {
+    "path": "SEMANTIC_REVIEW-CURRENT.json",
+    "bytes": 591440,
+    "sha256": "845a3b706246bfaa7e5c31c8c92b314f26af606e48ea4434775fa9efae54d791",
+    "bound_units": 570,
+    "reviewed_samples": 664,
+    "reader_count": 12,
+    "reader_distinct_units": 248
+  },
+  "tex_guard": {
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "receipt": "TEX-SET-THEORY-REPLACEMENT-RECEIPT.json",
+    "receipt_bytes": 1137,
+    "receipt_sha256": "57e70b5c2921924490531c0b9d2a5ae0f3ef9bcc6af57412838c7d1106cd1a0b",
+    "engine": "xelatex",
+    "passes": 3,
+    "bibtex": true,
+    "status": "built",
+    "final_pass_undefined_references": 0,
+    "missing_character_messages": 0,
+    "multiply_defined_labels": 0,
+    "overfull_messages": 0,
+    "underfull_messages": 3,
+    "font_warnings": 0,
+    "benign_requested_file_warnings": 2
+  },
+  "master": {
+    "bytes": 8379,
+    "sha256": "a42016418d75d771a03366f912781bba86b9ce5e223fc02e33c983bb746f65ce"
+  },
+  "pdf": {
+    "path": "readers/set-theory-replacement-reflection-ta-Taml-IN.pdf",
+    "bytes": 201960,
+    "sha256": "b09f6abfecf4fee6b524941a54001e880eaba49e116309ec0c3e062af69d50f6",
+    "pages": 16,
+    "page_size": "A4",
+    "encrypted": false,
+    "pdf_version": "1.7",
+    "fonts_embedded": true,
+    "fonts_subset": true,
+    "all_fonts_unicode_mapped": true,
+    "metadata": {
+      "title": "OpenLogic Tamil: Replacement and Reflection",
+      "subject": "Machine translation; OLP-0565 through OLP-0573; 9 of 722 frozen source units",
+      "author": "OpenLogic Tamil translation programme"
+    }
+  },
+  "renders": [
+    {"page": 1, "bytes": 132439, "sha256": "3426203756d17c5b893705779c9d55844e198ca365d291026d5b0d662295ea77"},
+    {"page": 2, "bytes": 72732, "sha256": "f9e7bb9aabff8b7d8026c86c1cfd9907dbc68d2c6b692ef3cbf9bffbca03b5c5"},
+    {"page": 3, "bytes": 405542, "sha256": "1bc0b8c02a9e91619c707b8482478027ac61b13131c3a46cc3670a36d4fdf01d"},
+    {"page": 4, "bytes": 522600, "sha256": "ce1d70e55bc73c2796619eb2ba85855feb0ffdb948f87c81bb5651cd7ded8937"},
+    {"page": 5, "bytes": 614514, "sha256": "0468b1ac718676732ce2389e394972744da0d0da8482062b7077d4d0ebab5083"},
+    {"page": 6, "bytes": 571097, "sha256": "bd618666d40054a2c84e3b72997728852f84ed59eab6d11a30263399c4765592"},
+    {"page": 7, "bytes": 638799, "sha256": "70c317ae090fea39336d87c300325cf4075c336f94d0e715e85b8b53d8d9efb8"},
+    {"page": 8, "bytes": 571949, "sha256": "2699044274dc84710aa2346a99fb1ad6a1e0f24e1e4ab6e14bc6ab1f246cd2f4"},
+    {"page": 9, "bytes": 600094, "sha256": "c904ff7e1883ae841eb4980b637a074b468397674d4317ff4dbd714a297c8468"},
+    {"page": 10, "bytes": 520288, "sha256": "58edc41f56a44fe3067e9aa0fea72d1e1a9b807c1fd2d8afc58bcda60679e9b1"},
+    {"page": 11, "bytes": 446743, "sha256": "497ad57ddb80286da88ba4663a66583b1686e6bcdfc9938f8f0d8c6737eb58de"},
+    {"page": 12, "bytes": 493154, "sha256": "ba5394748ce0527d81b9b9ce509a33d269e93aaa6323f4cec1dd7dbe9e704009"},
+    {"page": 13, "bytes": 292886, "sha256": "44422b2ece0a33077f9fc81d57f4ec60605c1aee4c3cb23fbf693b4438885279"},
+    {"page": 14, "bytes": 411990, "sha256": "79b17deaf5c1dc876b0b2d93e072c175376244d15d37d4c59a137ad0e46a2d36"},
+    {"page": 15, "bytes": 358554, "sha256": "d45edb49b5dba0225a44e9cbe5e8d1c807a0b11c1915aad359510b9ca869d45d"},
+    {"page": 16, "bytes": 251524, "sha256": "18cd3518e48a97bf0d8191e468204de9faa67832f7121c9df95255396a72af88"}
+  ],
+  "render": {
+    "directory": "renders-set-theory-replacement-b09f6ab",
+    "resolution_dpi": 150,
+    "page_png_count": 16,
+    "page_png_total_bytes": 6904905
+  },
+  "visual_review": {
+    "complete": true,
+    "basis": "All 16 final page PNGs were directly inspected at original rendered detail after the final guarded build.",
+    "tamil_shaping_and_pulli": "pass",
+    "page_edges_and_clipping": "pass",
+    "headings_and_page_breaks": "pass",
+    "long_formulas": "pass",
+    "boxed_theorem": "pass",
+    "proof_markers": "pass",
+    "footnotes": "pass",
+    "bibliography": "pass",
+    "internal_cross_references": "pass",
+    "visible_placeholders_absent": true,
+    "visible_untranslated_automatic_labels_absent": true
+  },
+  "copy_search": {
+    "extractor": "Poppler pdftotext -layout",
+    "path": "renders-set-theory-replacement-b09f6ab/set-theory-replacement-b09f6ab.txt",
+    "text_bytes": 80719,
+    "text_sha256": "6af05ce1d7773da9ae78e6cbcddb74729bb8a3e6de66ea289ecd785569cdb331",
+    "unicode_nfc": true,
+    "tamil_character_count": 22330,
+    "replacement_character_absent": true,
+    "literal_question_pair_absent": true,
+    "automatic_english_theorem_labels_absent": true,
+    "retained_english_theorem_citation_descriptors": 2,
+    "tamil_phrase_checks": {
+      "தமிழ் மொழிபெயர்ப்பு": true,
+      "மாற்றீடு": true,
+      "மாற்றீட்டின் வலிமை": true,
+      "மாற்றீடு பற்றிய வெளிப்புறக் கருத்தாய்வுகள்": true,
+      "அளவு-வரம்பு": true,
+      "மாற்றீடும் “முற்றுமுடிவிலியும்”": true,
+      "மாற்றீடும் பிரதிபலிப்பும்": true,
+      "பிற்சேர்க்கை: மாற்றீட்டைச் சூழ்ந்த முடிவுகள்": true,
+      "பிற்சேர்க்கை: முடிவுறு அடிகோளாக்கத்தன்மை": true,
+      "பிரதிபலிப்புத் திட்டம்": true,
+      "வலுக்குறைந்த பிரதிபலிப்பு": true
+    },
+    "formula_token_checks": {
+      "universal_quantifier": true,
+      "existential_quantifier": true,
+      "membership": true,
+      "subset": true,
+      "biconditional": true,
+      "implication": true,
+      "omega": true,
+      "phi": true,
+      "alpha": true,
+      "beta": true
+    },
+    "limitations": [
+      "The PDF is untagged; Poppler extraction and the tested glyphs pass, but universal behavior across PDF engines is not claimed."
+    ]
+  },
+  "diagnostic_files": {
+    "pdffonts_path": "renders-set-theory-replacement-b09f6ab/set-theory-replacement-b09f6ab-pdffonts.txt",
+    "pdffonts_sha256": "252a15878f0b506f531c5ca41e6173b402fae58f250813729215f0537039c5fc",
+    "pdfinfo_path": "renders-set-theory-replacement-b09f6ab/set-theory-replacement-b09f6ab-pdfinfo.txt",
+    "pdfinfo_sha256": "da4456a349d234725f1d505a64e05a5e7100e0e22cd85d1ad38e8b4196290a1f"
+  },
+  "status": "pass-with-documented-untagged-pdf-limitation"
+}
