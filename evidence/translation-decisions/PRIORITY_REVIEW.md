@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 567/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 573/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -4896,6 +4896,118 @@ Please double-check: **is the predecessor's infinitude derived from closure of f
 
 - `TA-OCC-f05be831c910dd1f` — OLP-0584 / `OLP-0584-S03`; source `content/set-theory/cardinals/classing.tex:70`; Tamil `translation/content/set-theory/cardinals/classing.tex:102`; PDF page pending.
 
+## TA-STH-032 — The proof explicitly bounds Seg(gamma_1,gamma_2) only when gamma=max(gamma_1,gamma_2) is infinite, then concludes the bound for all pairs. It leaves the finite gamma case unstated.
+
+Chosen rendering: **அதிகபட்ச ஆயம் முடிவுறு எனில் தொடக்கத் துண்டு முடிவுறு பெருக்கற்பலனின் துணைக்கணம்; ஆகவே அதன் அளவு தேர்ந்தெடுத்த முடிவுறாத கண அளவெண்ணைவிடச் சிறியது என்று தனியாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The canonical initial segment with finite maximum coordinate is contained in the square of a finite successor ordinal, hence finite, and therefore strictly smaller in cardinality than the selected infinite cardinal.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0588 (checked_supports)
+
+Alternatives: Leaving the unproved finite case implicit; changing the lemma to exclude finite-coordinate pairs.
+
+Please double-check: **does the argument now handle every pair, including pairs with finite maximum coordinate, without altering the infinite-coordinate chain?**
+
+- `TA-OCC-57186bbbeb5e560b` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:62`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:110`; PDF page pending.
+
+## TA-STH-033 — The proof's target is a product of two function sets, whose elements are ordered pairs of functions. The source sends f to a Cartesian product of its restrictions instead of their ordered pair.
+
+Chosen rendering: **பிரித்த இரு சார்புகளின் வரிசையிட்ட இணையையே முதல் இருபுறச் சார்பு திருப்பித் தருகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The restrictions have disjoint tagged domains and uniquely reconstruct f; their ordered pair is the correctly typed element of the codomain.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0589 (checked_supports)
+
+Alternatives: Keeping the product-of-functions expression and silently treating it as a pair.
+
+Please double-check: **does the splitting map have values in the Cartesian product of the two function spaces?**
+
+- `TA-OCC-e1bc7ba10528fb86` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:35`; PDF page pending.
+
+## TA-STH-034 — The construction defines f-star on pairs from b times c but states a bijection into functions whose domain is b cardinal-times c, an equipotent initial ordinal rather than literally that pair set.
+
+Chosen rendering: **நேரடி சார்பின் ஆட்களம் பெருக்கற்கணமாகச் சரிசெய்யப்பட்டு, அதன் கண அளவெண் மேலுள்ள கூற்றில் வரும் கண அளவெண் பெருக்கலுடன் ஒத்ததாக விளக்கப்படுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Currying gives a literal bijection between functions on c valued in functions on b and functions on b times c; cardinal equality with functions on the initial ordinal follows by equipotence.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0589 (checked_supports)
+
+Alternatives: Adding an unmentioned chosen bijection from the pair set to the initial ordinal and transporting every function along it.
+
+Please double-check: **does f-star's displayed domain match the pair inputs in its definition, with the cardinal-product step stated separately?**
+
+- `TA-OCC-216cb68b393f98a6` — OLP-0589 / `OLP-0589-S02`; source `content/set-theory/card-arithmetic/expotough.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:52`; PDF page pending.
+
+## TA-STH-035 — The source states a-to-n equals a for every n in omega, including zero. But for any infinite a, a-to-zero is one, not a.
+
+Chosen rendering: **முடிவுறு அடுக்கின் தேற்றத்தில் பூச்சியத்தை விலக்கி நேர்ம இயல் எண்ணை மட்டும் கருதுகிறது; நிறுவல் பூச்சிய நிலையின் மதிப்பைத் தனியாக விளக்குகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: A product of n copies of an infinite cardinal is the same cardinal only for positive finite n; the empty product has cardinal one.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0589 (checked_supports)
+
+Alternatives: Keeping the false n=0 case or changing the standard zero-exponent convention.
+
+Please double-check: **is the proposition now restricted to positive n while preserving the conventional zero power?**
+
+- `TA-OCC-bedb6ef8c2ff2bde` — OLP-0589 / `OLP-0589-S04`; source `content/set-theory/card-arithmetic/expotough.tex:68`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:96`; PDF page pending.
+
+## TA-STH-036 — The source invokes Transfinite Induction for the least-greater-cardinal step. Existence follows from NoLargestCardinal and leastness from well-ordering of the ordinal cardinals, not from induction.
+
+Chosen rendering: **பெரிய கண அளவெண் இருப்பதை முதலில் பயன்படுத்தி, அவற்றுள் மீச்சிறியதை வரிசையெண்களின் நன்கு வரிசைப்படுத்தலால் பெறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Given one larger cardinal witness, the nonempty set of larger cardinals no greater than that witness has a least member; it is least among all larger cardinals.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0590 (checked_supports)
+
+Alternatives: Retaining the misleading Transfinite Induction attribution.
+
+Please double-check: **is the leastness justified by well-ordering once nonemptiness is established?**
+
+- `TA-OCC-a72ec0d311b0d692` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:37`; PDF page pending.
+
+## TA-STH-037 — The source says 'the rest of the definition of a is provided by Transfinite Recursion', although a is a parameter of the successor-cardinal operation; the recursions define the aleph and beth sequences.
+
+Chosen rendering: **கண அளவெண்ணின் தொடர்ச்சி தனியாக வரையறுக்கப்பட்டதாகவும், அலெஃப் மற்றும் பெத் தொடர்களின் எஞ்சிய வரையறைகள் முடிவிலிக்கடந்த மீள்வரையறையால் கிடைப்பதாகவும் தெளிவுபடுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed equations recursively define two ordinal-indexed sequences while the successor operation on an arbitrary cardinal is already specified by leastness.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0590 (checked_supports)
+
+Alternatives: Preserving the source's ambiguous attribution to a.
+
+Please double-check: **does the prose identify the two sequences as the objects defined by transfinite recursion?**
+
+- `TA-OCC-35ee8770d9ddfe5e` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:41`; PDF page pending.
+
+## TA-STH-038 — The source starts at card(A) and applies beth iteration, then calls card(A) strictly less than its limit. If card(A) is already a beth fixed point, all iterates remain card(A), so the strict inequality fails and W need not be injective.
+
+Chosen rendering: **தொடக்க மதிப்பாக A இன் கண அளவெண்ணின் வரிசையெண் தொடர்ச்சியில் உள்ள பெத் மதிப்பை எடுத்து, அதன் பின்னரான மீள்வரையறையை அப்படியே வைத்திருக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The beth function is increasing, with beth at the successor index strictly above card(A). The subsequent omega iteration reaches a beth fixed point, including when the seed itself is already fixed, and remains above card(A).
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0591 (checked_supports)
+
+Alternatives: Keeping the stationary fixed-point counterexample; adding an unexplained strictness premise to A; starting with a non-cardinal ordinal successor.
+
+Please double-check: **does the revised seed make card(A) strictly smaller than tau(A) even when card(A) was originally a beth fixed point?**
+
+- `TA-OCC-72f85a61d532f484` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:142`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:167`; PDF page pending.
+
 ## TA-T007 — extensionality
 
 Chosen rendering: **உறுப்புசார் சமத்துவம்**
@@ -5613,6 +5725,12 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-66228ef9477b0de1` — OLP-0585 / `OLP-0585-S04`; source `content/set-theory/cardinals/hp.tex:61`; Tamil `translation/content/set-theory/cardinals/hp.tex:72`; PDF page pending.
 - `TA-OCC-3845623faf8bc8f9` — OLP-0585 / `OLP-0585-S04`; source `content/set-theory/cardinals/hp.tex:61`; Tamil `translation/content/set-theory/cardinals/hp.tex:75`; PDF page pending.
 - `TA-OCC-857b8cd0680d669d` — OLP-0585 / `OLP-0585-S04`; source `content/set-theory/cardinals/hp.tex:61`; Tamil `translation/content/set-theory/cardinals/hp.tex:79`; PDF page pending.
+- `TA-OCC-e523730ab4b52cbf` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:62`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:89`; PDF page pending.
+- `TA-OCC-439dac13186a3784` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:122`; PDF page pending.
+- `TA-OCC-d3c2148f172c6ecf` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:123`; PDF page pending.
+- `TA-OCC-2694f56dfaf5a9fc` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:133`; PDF page pending.
+- `TA-OCC-10fddb2b7108934e` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:134`; PDF page pending.
+- `TA-OCC-a01419e00b22f00d` — OLP-0591 / `OLP-0591-S03`; source `content/set-theory/card-arithmetic/fix.tex:73`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:79`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -5973,6 +6091,7 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-72b2299824835b83` — OLP-0582 / `OLP-0582-S01`; source `content/set-theory/cardinals/cardsasords.tex:35`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:43`; PDF page pending.
 - `TA-OCC-5b62ce18f740cc1d` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:9`; Tamil `translation/content/set-theory/cardinals/milestone.tex:10`; PDF page pending.
 - `TA-OCC-99616ad2b66b4a26` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:13`; Tamil `translation/content/set-theory/cardinals/milestone.tex:14`; PDF page pending.
+- `TA-OCC-9b4b343f18f952a9` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:133`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:155`; PDF page pending.
 
 ## TA-T020 — tuple / recursive definition
 
@@ -6494,6 +6613,10 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-d53fa786caa6457d` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:86`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:130`; PDF page pending.
 - `TA-OCC-1ebe6efbc00950f8` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:107`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:138`; PDF page pending.
 - `TA-OCC-13aa53c7c8339668` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:114`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:142`; PDF page pending.
+- `TA-OCC-f864748ee811d4d6` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:102`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:119`; PDF page pending.
+- `TA-OCC-06c1c595cf7d2df3` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:68`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:107`; PDF page pending.
+- `TA-OCC-2b4625f767f18da8` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:13`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:14`; PDF page pending.
+- `TA-OCC-6918bbd9d240f6e0` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:101`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:112`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -6965,6 +7088,8 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-90de4119030488ad` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:29`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:30`; PDF page pending.
 - `TA-OCC-faf72ac66d7c6f02` — OLP-0582 / `OLP-0582-S01`; source `content/set-theory/cardinals/cardsasords.tex:21`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:25`; PDF page pending.
 - `TA-OCC-497c07a047a277b6` — OLP-0582 / `OLP-0582-S02`; source `content/set-theory/cardinals/cardsasords.tex:65`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:74`; PDF page pending.
+- `TA-OCC-6190a77e98c121b4` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:11`; PDF page pending.
+- `TA-OCC-95d080c7be9c43e1` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:101`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -7858,6 +7983,9 @@ Please double-check: **is “மீச்சிறு உறுப்பு / �
 - `TA-OCC-9e463a904deff987` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:1`; Tamil `translation/content/set-theory/cardinals/milestone.tex:16`; PDF page pending.
 - `TA-OCC-bf0504983c169454` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:1`; Tamil `translation/content/set-theory/cardinals/milestone.tex:24`; PDF page pending.
 - `TA-OCC-ce288875d4cb7b2e` — OLP-0584 / `OLP-0584-S02`; source `content/set-theory/cardinals/classing.tex:37`; Tamil `translation/content/set-theory/cardinals/classing.tex:73`; PDF page pending.
+- `TA-OCC-aea7d73c2cf67610` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:28`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:32`; PDF page pending.
+- `TA-OCC-b78e350a365687e4` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:46`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:44`; PDF page pending.
+- `TA-OCC-cbacf05b64da4f94` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:38`; PDF page pending.
 
 ## TA-T038 — successor / predecessor / initial segment
 
@@ -10809,6 +10937,7 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-824d987ad246803a` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:111`; Tamil `translation/content/set-theory/replacement/refproofs.tex:174`; PDF page pending.
 - `TA-OCC-6bea5f57cb7fd903` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:9`; PDF page pending.
 - `TA-OCC-6b4093ba215456d3` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:80`; PDF page pending.
+- `TA-OCC-878e924ff382ac9f` — OLP-0587 / `OLP-0587-S05`; source `content/set-theory/card-arithmetic/opps.tex:133`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:174`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -10909,6 +11038,9 @@ Please double-check: **is “ஒன்றுக்கொன்றான மே�
 - `TA-OCC-afe6e8d51870c1a8` — OLP-0581 / `OLP-0581-S02`; source `content/set-theory/cardinals/cp.tex:24`; Tamil `translation/content/set-theory/cardinals/cp.tex:29`; PDF page pending.
 - `TA-OCC-8177a492e37181cf` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:102`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:115`; PDF page pending.
 - `TA-OCC-cc07162300484f6c` — OLP-0584 / `OLP-0584-S01`; source `content/set-theory/cardinals/classing.tex:24`; Tamil `translation/content/set-theory/cardinals/classing.tex:29`; PDF page pending.
+- `TA-OCC-90badbfaa7e73fe6` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:95`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:111`; PDF page pending.
+- `TA-OCC-9048063b71f876ce` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:30`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:41`; PDF page pending.
+- `TA-OCC-22b6d943008dce6c` — OLP-0589 / `OLP-0589-S02`; source `content/set-theory/card-arithmetic/expotough.tex:40`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:56`; PDF page pending.
 
 ## TA-T050 — graph of a function / image of a set
 
@@ -11172,6 +11304,7 @@ Please double-check: **is “பட்டியலாக்கம் / எண்
 - `TA-OCC-34cce0b8ab3d3b0d` — OLP-0584 / `OLP-0584-S01`; source `content/set-theory/cardinals/classing.tex:10`; Tamil `translation/content/set-theory/cardinals/classing.tex:11`; PDF page pending.
 - `TA-OCC-e436a4dceba48d9f` — OLP-0584 / `OLP-0584-S04`; source `content/set-theory/cardinals/classing.tex:100`; Tamil `translation/content/set-theory/cardinals/classing.tex:116`; PDF page pending.
 - `TA-OCC-78c48aaea5051ec0` — OLP-0584 / `OLP-0584-S04`; source `content/set-theory/cardinals/classing.tex:105`; Tamil `translation/content/set-theory/cardinals/classing.tex:122`; PDF page pending.
+- `TA-OCC-0cad3d55bbf0a543` — OLP-0587 / `OLP-0587-S05`; source `content/set-theory/card-arithmetic/opps.tex:127`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:150`; PDF page pending.
 
 ## TA-T058 — size of a set
 
@@ -11864,6 +11997,7 @@ Please double-check: **is “அளவில் பெரிதல்ல / அ�
 - `TA-OCC-ca0f9e9ca2e2ada4` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:1`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:119`; PDF page pending.
 - `TA-OCC-ad40625db005c5da` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:1`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:119`; PDF page pending.
 - `TA-OCC-d7ba1075572e2096` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:1`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:147`; PDF page pending.
+- `TA-OCC-06bfc2155ac74384` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:46`; PDF page pending.
 
 ## TA-T069 — Schroder-Bernstein theorem
 
@@ -11949,6 +12083,7 @@ Please double-check: **is “வரிசைப்படுத்தப்பட
 - `TA-OCC-dedcfe1e89f5fafc` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:75`; Tamil `translation/content/set-theory/ordinals/opps.tex:81`; PDF page pending.
 - `TA-OCC-e060a147bcf06c01` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:75`; Tamil `translation/content/set-theory/ordinals/opps.tex:103`; PDF page pending.
 - `TA-OCC-f335f16fc254e43c` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:111`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:138`; PDF page pending.
+- `TA-OCC-ea6de1d4b4424205` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:112`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:138`; PDF page pending.
 
 ## TA-T072 — Dedekind cut / proper initial segment / greatest lower bound
 
@@ -12067,6 +12202,10 @@ Please double-check: **is “பரிமாற்று வளையம் / �
 - `TA-OCC-c9f2c94b226628d7` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:80`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:98`; PDF page pending.
 - `TA-OCC-67ea6578cf7dd0f8` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:58`; PDF page pending.
 - `TA-OCC-4f8d336e25f27bb2` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:64`; PDF page pending.
+- `TA-OCC-d43562b6a8a6b411` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:52`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:55`; PDF page pending.
+- `TA-OCC-b6f29ebf8437d71a` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:57`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:56`; PDF page pending.
+- `TA-OCC-9d8b65c6c342dd1f` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:57`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:60`; PDF page pending.
+- `TA-OCC-7bd7ffeea7522385` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:57`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:70`; PDF page pending.
 
 ## TA-T074 — Cauchy sequence / limit / tends to zero / monotone increasing or decreasing / decimal expansion
 
@@ -12140,6 +12279,9 @@ Please double-check: **is “கோஷி தொடர் / எல்லை / �
 - `TA-OCC-bb880ee0105bcf24` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:46`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:53`; PDF page pending.
 - `TA-OCC-428a1e95d047a154` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:51`; PDF page pending.
 - `TA-OCC-7de5fd64f9870a8f` — OLP-0584 / `OLP-0584-S03`; source `content/set-theory/cardinals/classing.tex:86`; Tamil `translation/content/set-theory/cardinals/classing.tex:96`; PDF page pending.
+- `TA-OCC-76f645da4dfdbf6e` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:27`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:29`; PDF page pending.
+- `TA-OCC-f76d335c8f9235e8` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:113`; PDF page pending.
+- `TA-OCC-7e705f6a34e98d4d` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:157`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:180`; PDF page pending.
 
 ## TA-T075 — Dedekind infinite / Hilbert hotel
 
@@ -13412,6 +13554,51 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-1638860139609f61` — OLP-0584 / `OLP-0584-S05`; source `content/set-theory/cardinals/classing.tex:142`; Tamil `translation/content/set-theory/cardinals/classing.tex:167`; PDF page pending.
 - `TA-OCC-83b60f556c66af5a` — OLP-0584 / `OLP-0584-S05`; source `content/set-theory/cardinals/classing.tex:142`; Tamil `translation/content/set-theory/cardinals/classing.tex:169`; PDF page pending.
 - `TA-OCC-9b3b3c440b59d76e` — OLP-0585 / `OLP-0585-S06`; source `content/set-theory/cardinals/hp.tex:87`; Tamil `translation/content/set-theory/cardinals/hp.tex:104`; PDF page pending.
+- `TA-OCC-992dd78ed5c3f1ce` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:34`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:42`; PDF page pending.
+- `TA-OCC-7d090cd8c56d77e0` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:34`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:48`; PDF page pending.
+- `TA-OCC-b6ccb630c7a1b268` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:34`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:75`; PDF page pending.
+- `TA-OCC-fe96e300ca3e0583` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:75`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:90`; PDF page pending.
+- `TA-OCC-08db65ecda88cf58` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:102`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:121`; PDF page pending.
+- `TA-OCC-a58808aa0e8a75ab` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:102`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:127`; PDF page pending.
+- `TA-OCC-2cb24465f2b828c9` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:102`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:142`; PDF page pending.
+- `TA-OCC-7e5d03a18e59e9bc` — OLP-0587 / `OLP-0587-S05`; source `content/set-theory/card-arithmetic/opps.tex:125`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:162`; PDF page pending.
+- `TA-OCC-478f0ca863ae7105` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:75`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:74`; PDF page pending.
+- `TA-OCC-fcd2be49b72b87b9` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:79`; PDF page pending.
+- `TA-OCC-e8564fbca77654ae` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:100`; PDF page pending.
+- `TA-OCC-50dafde3719a5d87` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:111`; PDF page pending.
+- `TA-OCC-8bea0bdc81521d89` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:112`; PDF page pending.
+- `TA-OCC-27ad05d08fa1af8f` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:113`; PDF page pending.
+- `TA-OCC-ede26351685f6077` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:113`; PDF page pending.
+- `TA-OCC-4533a6fd9bbe99ff` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:118`; PDF page pending.
+- `TA-OCC-13deefa42f2053c0` — OLP-0588 / `OLP-0588-S04`; source `content/set-theory/card-arithmetic/simp.tex:100`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:126`; PDF page pending.
+- `TA-OCC-b177e197347dc9db` — OLP-0588 / `OLP-0588-S04`; source `content/set-theory/card-arithmetic/simp.tex:100`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:142`; PDF page pending.
+- `TA-OCC-14424271bcfa535c` — OLP-0588 / `OLP-0588-S04`; source `content/set-theory/card-arithmetic/simp.tex:100`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:147`; PDF page pending.
+- `TA-OCC-422f2df38ebea1bd` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:11`; PDF page pending.
+- `TA-OCC-dfd4f362b342fd43` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:13`; PDF page pending.
+- `TA-OCC-4fdff87750418b2b` — OLP-0589 / `OLP-0589-S03`; source `content/set-theory/card-arithmetic/expotough.tex:45`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:61`; PDF page pending.
+- `TA-OCC-0198cac35f4838ad` — OLP-0589 / `OLP-0589-S03`; source `content/set-theory/card-arithmetic/expotough.tex:45`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:64`; PDF page pending.
+- `TA-OCC-c16975856c9c71c2` — OLP-0589 / `OLP-0589-S03`; source `content/set-theory/card-arithmetic/expotough.tex:45`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:68`; PDF page pending.
+- `TA-OCC-1c25cd5651ab3304` — OLP-0589 / `OLP-0589-S04`; source `content/set-theory/card-arithmetic/expotough.tex:68`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:92`; PDF page pending.
+- `TA-OCC-cbbfc71dfcf0e0d5` — OLP-0589 / `OLP-0589-S04`; source `content/set-theory/card-arithmetic/expotough.tex:68`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:97`; PDF page pending.
+- `TA-OCC-6adfb00a6402fc2f` — OLP-0589 / `OLP-0589-S05`; source `content/set-theory/card-arithmetic/expotough.tex:86`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:115`; PDF page pending.
+- `TA-OCC-e54614fe568b340a` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:7`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:7`; PDF page pending.
+- `TA-OCC-55d32f09ea917609` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:7`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:9`; PDF page pending.
+- `TA-OCC-9acc536ac4db113c` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:7`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:13`; PDF page pending.
+- `TA-OCC-11c687312ad39578` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:7`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:13`; PDF page pending.
+- `TA-OCC-2d36fcbbba496ecc` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:7`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:54`; PDF page pending.
+- `TA-OCC-4be64b3da92f8407` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:47`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:73`; PDF page pending.
+- `TA-OCC-69b12ae192dc2e50` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:47`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:76`; PDF page pending.
+- `TA-OCC-ed1bf8948f9902e5` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:90`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:98`; PDF page pending.
+- `TA-OCC-ae9d6bb6e37866b4` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:105`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:100`; PDF page pending.
+- `TA-OCC-342229d4b76949c7` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:105`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:105`; PDF page pending.
+- `TA-OCC-0f4aed1eae3a957b` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:105`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:121`; PDF page pending.
+- `TA-OCC-ce84bbb963589ca0` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:112`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:130`; PDF page pending.
+- `TA-OCC-62edd49ab5a21ffc` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:116`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:135`; PDF page pending.
+- `TA-OCC-c189e7944fe34fef` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:118`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:144`; PDF page pending.
+- `TA-OCC-41baa3f76961311d` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:121`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:152`; PDF page pending.
+- `TA-OCC-6bfa5f0f5010f1b5` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:100`; PDF page pending.
+- `TA-OCC-b82856b0c17a0195` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:101`; PDF page pending.
+- `TA-OCC-4d8d4dd579b7c23a` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:126`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -13756,6 +13943,7 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-63744621ab8f7b0e` — OLP-0582 / `OLP-0582-S01`; source `content/set-theory/cardinals/cardsasords.tex:35`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:43`; PDF page pending.
 - `TA-OCC-19447f0f06495153` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:9`; Tamil `translation/content/set-theory/cardinals/milestone.tex:10`; PDF page pending.
 - `TA-OCC-d283fc52358f646a` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:13`; Tamil `translation/content/set-theory/cardinals/milestone.tex:14`; PDF page pending.
+- `TA-OCC-e683a64d066e3be3` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:133`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:155`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -15344,6 +15532,7 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-91737af444a8221e` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:1`; Tamil `translation/content/set-theory/replacement/refproofs.tex:101`; PDF page pending.
 - `TA-OCC-2c49bbcc73cd38b2` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:1`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:9`; PDF page pending.
 - `TA-OCC-26e2472496c6d039` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:1`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:80`; PDF page pending.
+- `TA-OCC-6ac621a972275872` — OLP-0587 / `OLP-0587-S05`; source `content/set-theory/card-arithmetic/opps.tex:125`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:174`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -16827,6 +17016,7 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-c0fc5b706342fd2c` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:11`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:12`; PDF page pending.
 - `TA-OCC-f300fa8ecd08ffd2` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:30`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:34`; PDF page pending.
 - `TA-OCC-9771314b9cb4893a` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:6`; Tamil `translation/content/set-theory/spine/recursion.tex:7`; PDF page pending.
+- `TA-OCC-a8885ef559824917` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:105`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:121`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -17613,6 +17803,9 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-564ea0c84379dd0f` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:1`; Tamil `translation/content/set-theory/ordinals/replacement.tex:45`; PDF page pending.
 - `TA-OCC-ba0fe5c4a23d1986` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:42`; PDF page pending.
 - `TA-OCC-72ee018d96e7f444` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:1`; Tamil `translation/content/set-theory/spine/recursion.tex:56`; PDF page pending.
+- `TA-OCC-4ffac2c0124ffa2e` — OLP-0589 / `OLP-0589-S04`; source `content/set-theory/card-arithmetic/expotough.tex:68`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:105`; PDF page pending.
+- `TA-OCC-9d3b80bbc3e4c5b3` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:111`; PDF page pending.
+- `TA-OCC-5bc9e62f2d87884f` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:153`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -18672,6 +18865,9 @@ Please double-check: **is “மீள்வரையறை / முதன்ம
 - `TA-OCC-0f9def48093a1b68` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:32`; PDF page pending.
 - `TA-OCC-c2c7243053af5dc7` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:44`; PDF page pending.
 - `TA-OCC-2289d07ab7563cc0` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:73`; PDF page pending.
+- `TA-OCC-e8add4de5a490563` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:44`; PDF page pending.
+- `TA-OCC-a1fd00e02f458e15` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:28`; PDF page pending.
+- `TA-OCC-a4b7258807afd160` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:153`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:176`; PDF page pending.
 
 ## TA-T115 — characteristic function / bounded quantification / bounded minimization / projection function
 
@@ -19067,6 +19263,15 @@ Please double-check: **is “நிலைப்புள்ளி / தன்க
 - `TA-OCC-c98617cd88a3f9e5` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:37`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:41`; PDF page pending.
 - `TA-OCC-6bc81f2e4731e54d` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:37`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:41`; PDF page pending.
 - `TA-OCC-340969f9d16d210f` — OLP-0380 / `OLP-0380-S01`; source `content/lambda-calculus/lambda-definability/minimization.tex:37`; Tamil `translation/content/lambda-calculus/lambda-definability/minimization.tex:42`; PDF page pending.
+- `TA-OCC-7d606464a2307a17` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:6`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:7`; PDF page pending.
+- `TA-OCC-58dc0987e9107ad9` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:6`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:21`; PDF page pending.
+- `TA-OCC-565d4fa0e9d8efcf` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:6`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:24`; PDF page pending.
+- `TA-OCC-5251188c87b5234c` — OLP-0591 / `OLP-0591-S02`; source `content/set-theory/card-arithmetic/fix.tex:48`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:51`; PDF page pending.
+- `TA-OCC-02119c359aed1951` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:130`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:99`; PDF page pending.
+- `TA-OCC-40b3deb59515f8b2` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:130`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:106`; PDF page pending.
+- `TA-OCC-c6d2c09d1d726965` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:130`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:143`; PDF page pending.
+- `TA-OCC-02398f41a004eade` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:152`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:173`; PDF page pending.
+- `TA-OCC-cd19744ec0aa2d5e` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:160`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:184`; PDF page pending.
 
 ## TA-T121 — Turing machine / tape / read-write head / transition function / instruction set
 
@@ -20745,6 +20950,10 @@ Please double-check: **is “அடுக்குக்கணக் குற�
 - `TA-OCC-9a520fb286781095` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:150`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:180`; PDF page pending.
 - `TA-OCC-b1107095ebdce5a2` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:150`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:184`; PDF page pending.
 - `TA-OCC-04742780a012e59b` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:150`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:189`; PDF page pending.
+- `TA-OCC-a4e965612fdde4de` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:7`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:7`; PDF page pending.
+- `TA-OCC-7bfbadcf62ee66ea` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:90`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:105`; PDF page pending.
+- `TA-OCC-c90a48c91a2c0b14` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:112`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:130`; PDF page pending.
+- `TA-OCC-7275f92405865fb7` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:116`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:135`; PDF page pending.
 
 ## TA-T151 — third-order logic / set of sets / unique code / cardinal comparison
 
@@ -22802,6 +23011,12 @@ Please double-check: **is “கோள மாதிரி / கோளங்க�
 - `TA-OCC-ce9398295cf8a33d` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:1`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:53`; PDF page pending.
 - `TA-OCC-618e9d14fb6fb727` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:1`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:60`; PDF page pending.
 - `TA-OCC-1cdc73ae7bd351af` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:1`; Tamil `translation/content/set-theory/cardinals/milestone.tex:15`; PDF page pending.
+- `TA-OCC-d69d41adb669d2ca` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:9`; PDF page pending.
+- `TA-OCC-809be85647f1df02` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:10`; PDF page pending.
+- `TA-OCC-a17e1b398f423ba7` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:14`; PDF page pending.
+- `TA-OCC-69930016cbaa5e68` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:100`; PDF page pending.
+- `TA-OCC-54ae3478f93cb4d3` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:163`; PDF page pending.
+- `TA-OCC-e38694fe443c9a7a` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:135`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:155`; PDF page pending.
 
 ## TA-T199 — truth-functional / vacuously true / non-vacuously true / monotonic conditional / transitive conditional
 
@@ -23059,6 +23274,13 @@ Please double-check: **is “படிநிலைமுறைக் கணக�
 - `TA-OCC-affc33174d3f3665` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:31`; Tamil `translation/content/set-theory/replacement/refproofs.tex:35`; PDF page pending.
 - `TA-OCC-4cec3aa603c9012e` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:44`; Tamil `translation/content/set-theory/replacement/refproofs.tex:52`; PDF page pending.
 - `TA-OCC-53f7f8e3887fe23f` — OLP-0575 / `OLP-0575-S01`; source `content/set-theory/ord-arithmetic/introduction.tex:10`; Tamil `translation/content/set-theory/ord-arithmetic/introduction.tex:14`; PDF page pending.
+- `TA-OCC-2d19bbf6dd01ab81` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:9`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:11`; PDF page pending.
+- `TA-OCC-a04b8faf212676d3` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:94`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:101`; PDF page pending.
+- `TA-OCC-9ab01ba08637e06c` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:135`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:150`; PDF page pending.
+- `TA-OCC-832eda62e6fac81b` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:137`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:154`; PDF page pending.
+- `TA-OCC-67e14949aa90bd47` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:138`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:155`; PDF page pending.
+- `TA-OCC-d4908d8f068ec026` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:139`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:157`; PDF page pending.
+- `TA-OCC-ebd2aa32170c3cdb` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:142`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:161`; PDF page pending.
 
 ## TA-T202 — urelement / pure set theory / reductive foundational goal
 
@@ -23432,6 +23654,28 @@ Please double-check: **is “வரிசையெண் / முடிவில
 - `TA-OCC-517e15065cfdcff7` — OLP-0584 / `OLP-0584-S04`; source `content/set-theory/cardinals/classing.tex:129`; Tamil `translation/content/set-theory/cardinals/classing.tex:152`; PDF page pending.
 - `TA-OCC-c8180f11feb40d40` — OLP-0584 / `OLP-0584-S05`; source `content/set-theory/cardinals/classing.tex:151`; Tamil `translation/content/set-theory/cardinals/classing.tex:177`; PDF page pending.
 - `TA-OCC-693486bcde5e6c8f` — OLP-0584 / `OLP-0584-S05`; source `content/set-theory/cardinals/classing.tex:152`; Tamil `translation/content/set-theory/cardinals/classing.tex:178`; PDF page pending.
+- `TA-OCC-eb02ed14be463313` — OLP-0587 / `OLP-0587-S01`; source `content/set-theory/card-arithmetic/opps.tex:9`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:10`; PDF page pending.
+- `TA-OCC-e13683be52a18a3b` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:44`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:51`; PDF page pending.
+- `TA-OCC-4635d5c3b96fa44c` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:75`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:88`; PDF page pending.
+- `TA-OCC-abe346b71565ff9b` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:77`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:91`; PDF page pending.
+- `TA-OCC-7114d2e3ea596a6d` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:122`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:143`; PDF page pending.
+- `TA-OCC-9bf13c5ddf571057` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:10`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:11`; PDF page pending.
+- `TA-OCC-db09cc4e1c165659` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:16`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:17`; PDF page pending.
+- `TA-OCC-f43459d8fb543243` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:29`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:31`; PDF page pending.
+- `TA-OCC-ae8f553b30159bf7` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:41`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:46`; PDF page pending.
+- `TA-OCC-1a0822ca56d2ddf0` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:64`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:74`; PDF page pending.
+- `TA-OCC-99a95d6c0b87eeab` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:69`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:80`; PDF page pending.
+- `TA-OCC-b6e3ffab392465ba` — OLP-0588 / `OLP-0588-S04`; source `content/set-theory/card-arithmetic/simp.tex:121`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:148`; PDF page pending.
+- `TA-OCC-7b1266d7dda13315` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:27`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:29`; PDF page pending.
+- `TA-OCC-5c4a8fe9116385ef` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:27`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:38`; PDF page pending.
+- `TA-OCC-70258a32fd3bcd3d` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:49`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:58`; PDF page pending.
+- `TA-OCC-53b20009f3ec4ec3` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:76`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:89`; PDF page pending.
+- `TA-OCC-8dc674e36f950789` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:16`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:16`; PDF page pending.
+- `TA-OCC-44d6bf6f86e17026` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:114`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:125`; PDF page pending.
+- `TA-OCC-df4642ad1db3345e` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:143`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:162`; PDF page pending.
+- `TA-OCC-5bf3ec710bb66e76` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:159`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:180`; PDF page pending.
+- `TA-OCC-7b0371902a281c3c` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:160`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:182`; PDF page pending.
+- `TA-OCC-8f18b27fe9146d69` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:160`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:183`; PDF page pending.
 
 ## TA-T214 — Scheme of Replacement / ZF minus / image under a term
 
@@ -23481,6 +23725,8 @@ Please double-check: **is “பின்வரிசை வரிசையெ�
 - `TA-OCC-ac0d41b6a8535881` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:46`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:53`; PDF page pending.
 - `TA-OCC-4018239e43867e8d` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:51`; PDF page pending.
 - `TA-OCC-a05711395d9cfbc8` — OLP-0584 / `OLP-0584-S03`; source `content/set-theory/cardinals/classing.tex:86`; Tamil `translation/content/set-theory/cardinals/classing.tex:96`; PDF page pending.
+- `TA-OCC-37f68a50007515fd` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:27`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:29`; PDF page pending.
+- `TA-OCC-8e2ed398f9858303` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:142`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:180`; PDF page pending.
 
 ## TA-T217 — stage / rank / V-alpha hierarchy
 
@@ -23738,6 +23984,13 @@ Please double-check: **is “படிநிலை / தரநிலை / V_α-�
 - `TA-OCC-9563fcad91aca401` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:63`; PDF page pending.
 - `TA-OCC-60fbbc1c0014bef4` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:37`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:65`; PDF page pending.
 - `TA-OCC-1482116d0b1ca10a` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:77`; PDF page pending.
+- `TA-OCC-44a9148ad714b045` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:11`; PDF page pending.
+- `TA-OCC-551d5a1648d23428` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:101`; PDF page pending.
+- `TA-OCC-687c05b21affc7e2` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:135`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:150`; PDF page pending.
+- `TA-OCC-fe2f90a643cf5434` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:137`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:154`; PDF page pending.
+- `TA-OCC-9ac4dbac32cd300d` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:139`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:155`; PDF page pending.
+- `TA-OCC-6b0bb6b9444283c4` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:139`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:157`; PDF page pending.
+- `TA-OCC-6a39b2e73fbed3c3` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:142`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:161`; PDF page pending.
 
 ## TA-T218 — transfinite recursion / alpha-approximation / bounded, general and simple recursion
 
@@ -23792,6 +24045,7 @@ Please double-check: **is “முடிவிலிக்கடந்த ம�
 - `TA-OCC-3d0d21b5191b6ca1` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:41`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:61`; PDF page pending.
 - `TA-OCC-927d6c471837896a` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:119`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:147`; PDF page pending.
 - `TA-OCC-67f8eb918683692b` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:44`; PDF page pending.
+- `TA-OCC-c6587d355be886b5` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:36`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:44`; PDF page pending.
 
 ## TA-T219 — potent set / powerset-closed stage behavior
 
@@ -23965,6 +24219,7 @@ Please double-check: **is “வரிசையெண் எண்கணித�
 - `TA-OCC-f2d4b1ce8808ab04` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:132`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:164`; PDF page pending.
 - `TA-OCC-414d09a012bee3e3` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:222`; PDF page pending.
 - `TA-OCC-66a7422600fb46b7` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:227`; PDF page pending.
+- `TA-OCC-36b3f3f9716c3f8c` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:75`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:88`; PDF page pending.
 
 ## TA-T228 — disjoint sum / reverse lexicographic order / order-type sum
 
@@ -23983,6 +24238,7 @@ Please double-check: **is “வெட்டாக் கூட்டுத்�
 - `TA-OCC-8331afbbfd736550` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:26`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:32`; PDF page pending.
 - `TA-OCC-4eb00b369e4e724b` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:48`; PDF page pending.
 - `TA-OCC-4d6db09d2aa0957d` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:24`; PDF page pending.
+- `TA-OCC-918c13603476d094` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:41`; PDF page pending.
 
 ## TA-T230 — ordinal multiplication / reverse-lexicographic product / limit-stage supremum
 
@@ -24081,6 +24337,57 @@ Please double-check: **is “கண அளவெண் / கணத்தின�
 - `TA-OCC-0d1eac3bec88e28c` — OLP-0585 / `OLP-0585-S01`; source `content/set-theory/cardinals/hp.tex:5`; Tamil `translation/content/set-theory/cardinals/hp.tex:9`; PDF page pending.
 - `TA-OCC-64adfbfe188b9ec6` — OLP-0585 / `OLP-0585-S02`; source `content/set-theory/cardinals/hp.tex:23`; Tamil `translation/content/set-theory/cardinals/hp.tex:26`; PDF page pending.
 - `TA-OCC-92dc1f0c2914a919` — OLP-0585 / `OLP-0585-S02`; source `content/set-theory/cardinals/hp.tex:23`; Tamil `translation/content/set-theory/cardinals/hp.tex:27`; PDF page pending.
+- `TA-OCC-f167896df336c7a8` — OLP-0586 / `OLP-0586-S01`; source `content/set-theory/card-arithmetic/card-arithmetic.tex:8`; Tamil `translation/content/set-theory/card-arithmetic/card-arithmetic.tex:9`; PDF page pending.
+- `TA-OCC-db20b271eca91a0e` — OLP-0587 / `OLP-0587-S01`; source `content/set-theory/card-arithmetic/opps.tex:8`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:9`; PDF page pending.
+- `TA-OCC-0c89588b7f49c565` — OLP-0587 / `OLP-0587-S01`; source `content/set-theory/card-arithmetic/opps.tex:13`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:15`; PDF page pending.
+- `TA-OCC-03a054d3db2a1b26` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:43`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:50`; PDF page pending.
+- `TA-OCC-4baebe962ab6c303` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:76`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:88`; PDF page pending.
+- `TA-OCC-02a7cad59b870b63` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:78`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:91`; PDF page pending.
+- `TA-OCC-9356d1d038bbdd32` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:109`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:127`; PDF page pending.
+- `TA-OCC-ea2bbfed649a0efb` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:112`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:131`; PDF page pending.
+- `TA-OCC-0594320568fd3a48` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:121`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:142`; PDF page pending.
+- `TA-OCC-b6ba4bcc53610697` — OLP-0587 / `OLP-0587-S05`; source `content/set-theory/card-arithmetic/opps.tex:125`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:149`; PDF page pending.
+- `TA-OCC-600de6623c32da71` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:8`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:9`; PDF page pending.
+- `TA-OCC-72163480e4b30630` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:9`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:10`; PDF page pending.
+- `TA-OCC-361229a897cc2be5` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:72`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:83`; PDF page pending.
+- `TA-OCC-0b869ef1056d65e2` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:92`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:84`; PDF page pending.
+- `TA-OCC-a12c04b1fb6982f7` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:92`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:108`; PDF page pending.
+- `TA-OCC-8f31e0fce8a97a73` — OLP-0588 / `OLP-0588-S04`; source `content/set-theory/card-arithmetic/simp.tex:103`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:126`; PDF page pending.
+- `TA-OCC-efa8211ad1f0df2c` — OLP-0588 / `OLP-0588-S04`; source `content/set-theory/card-arithmetic/simp.tex:121`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:147`; PDF page pending.
+- `TA-OCC-4b1a6ae4c962d3b1` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:6`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:7`; PDF page pending.
+- `TA-OCC-1eb1596294cb15c9` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:9`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:10`; PDF page pending.
+- `TA-OCC-2570cc76362efadb` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:21`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:18`; PDF page pending.
+- `TA-OCC-b2ebe8a1113343c7` — OLP-0589 / `OLP-0589-S02`; source `content/set-theory/card-arithmetic/expotough.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:57`; PDF page pending.
+- `TA-OCC-15d45ce3de57d77a` — OLP-0589 / `OLP-0589-S02`; source `content/set-theory/card-arithmetic/expotough.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:57`; PDF page pending.
+- `TA-OCC-7008573998a22585` — OLP-0589 / `OLP-0589-S03`; source `content/set-theory/card-arithmetic/expotough.tex:47`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:61`; PDF page pending.
+- `TA-OCC-0364039f603ce0ad` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:9`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:9`; PDF page pending.
+- `TA-OCC-039f47112f7869e5` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:10`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:12`; PDF page pending.
+- `TA-OCC-a3652617d9b2383e` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:13`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:13`; PDF page pending.
+- `TA-OCC-24589211a8bfd5ff` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:19`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:21`; PDF page pending.
+- `TA-OCC-f0cab29ad517ea49` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:32`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:34`; PDF page pending.
+- `TA-OCC-5f0e31bb6fb1e44e` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:33`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:35`; PDF page pending.
+- `TA-OCC-8491705054420301` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:33`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:40`; PDF page pending.
+- `TA-OCC-6f949f2cf9eb80e6` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:54`; PDF page pending.
+- `TA-OCC-e7d66959ad45cdf6` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:48`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:59`; PDF page pending.
+- `TA-OCC-4bf1a2bf55c5f64c` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:54`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:65`; PDF page pending.
+- `TA-OCC-e90989419eb3cb3f` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:55`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:68`; PDF page pending.
+- `TA-OCC-0171eb12378771ef` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:56`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:70`; PDF page pending.
+- `TA-OCC-a5f6b242f51ccbb5` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:57`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:70`; PDF page pending.
+- `TA-OCC-7f8b44d922b6f230` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:58`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:73`; PDF page pending.
+- `TA-OCC-5fcaab8447d71666` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:58`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:76`; PDF page pending.
+- `TA-OCC-ed36934337376c65` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:59`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:81`; PDF page pending.
+- `TA-OCC-c519dd7a75cb144a` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:62`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:88`; PDF page pending.
+- `TA-OCC-208f525ad06e91ae` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:65`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:89`; PDF page pending.
+- `TA-OCC-baf3f8d152877a11` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:98`; PDF page pending.
+- `TA-OCC-5fa52e4df0137bae` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:84`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:100`; PDF page pending.
+- `TA-OCC-5d718fe6c9456a8e` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:85`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:109`; PDF page pending.
+- `TA-OCC-bdeaa9fe152c3ce9` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:121`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:141`; PDF page pending.
+- `TA-OCC-bdeb6a47a5e55fb1` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:122`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:142`; PDF page pending.
+- `TA-OCC-e271ffa646b031f9` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:123`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:143`; PDF page pending.
+- `TA-OCC-8c47ac6b1092f4de` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:140`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:162`; PDF page pending.
+- `TA-OCC-b28af246c074c3fa` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:10`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:11`; PDF page pending.
+- `TA-OCC-800978ac1d7b038d` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:20`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:20`; PDF page pending.
+- `TA-OCC-6ee507790dbbd5f5` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:33`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:35`; PDF page pending.
 
 ## TA-T233 — Hume's Principle / predicate position / predicative versus impredicative / neo-Fregean logicists
 
@@ -24113,6 +24420,91 @@ Please double-check: **is “ஹியூமின் கொள்கை / ப�
 - `TA-OCC-ca787661343ca0b4` — OLP-0585 / `OLP-0585-S05`; source `content/set-theory/cardinals/hp.tex:82`; Tamil `translation/content/set-theory/cardinals/hp.tex:98`; PDF page pending.
 - `TA-OCC-e92a5952ad2d78d9` — OLP-0585 / `OLP-0585-S06`; source `content/set-theory/cardinals/hp.tex:87`; Tamil `translation/content/set-theory/cardinals/hp.tex:105`; PDF page pending.
 - `TA-OCC-f04aa61f0a787e21` — OLP-0585 / `OLP-0585-S06`; source `content/set-theory/cardinals/hp.tex:89`; Tamil `translation/content/set-theory/cardinals/hp.tex:109`; PDF page pending.
+
+## TA-T234 — cardinal arithmetic / cardinal addition, multiplication and exponentiation / canonical ordering
+
+Chosen rendering: **கண அளவெண் எண்கணிதம் / கண அளவெண் கூட்டல், பெருக்கல், அடுக்கேற்றம் / நியம வரிசை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly inspected school pages support number operations, products, relations, functions and bijections as components, not the full transfinite-cardinal compounds. The frozen English source defines addition by tagged disjoint union, multiplication by Cartesian product, exponentiation by functions from exponent to base, and canonical pair order by first comparing the maximum coordinate. The same Tamil terms distinguish these cardinal operations from ordinal operations, whose noncommutative behavior was proved in the preceding chapter.
+
+Authority basis: TA-SC6-P29-NUMBERS (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-T234-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கண அளவெண் எண்கணிதம் / கண அளவெண் கூட்டல், பெருக்கல், அடுக்கேற்றம் / நியம வரிசை” the established India-standard Tamil expression for “cardinal arithmetic / cardinal addition, multiplication and exponentiation / canonical ordering” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-c72dc1179a7c3a14` — OLP-0021 / `OLP-0021-S04`; source `content/sets-functions-relations/functions/function-basics.tex:57`; Tamil `translation/content/sets-functions-relations/functions/function-basics.tex:67`; PDF page pending.
+- `TA-OCC-2d111cdff94fce00` — OLP-0021 / `OLP-0021-S05`; source `content/sets-functions-relations/functions/function-basics.tex:64`; Tamil `translation/content/sets-functions-relations/functions/function-basics.tex:76`; PDF page pending.
+- `TA-OCC-34d80ebfe367194d` — OLP-0045 / `OLP-0045-S08`; source `content/sets-functions-relations/arithmetization/cuts.tex:85`; Tamil `translation/content/sets-functions-relations/arithmetization/cuts.tex:133`; PDF page pending.
+- `TA-OCC-bacaff622ac9a884` — OLP-0047 / `OLP-0047-S10`; source `content/sets-functions-relations/arithmetization/checking-details.tex:124`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:164`; PDF page pending.
+- `TA-OCC-2822805211b792f3` — OLP-0051 / `OLP-0051-S01`; source `content/sets-functions-relations/infinite/dedekind-algebra.tex:1`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-algebra.tex:15`; PDF page pending.
+- `TA-OCC-5b38816324a051bf` — OLP-0052 / `OLP-0052-S07`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:68`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:83`; PDF page pending.
+- `TA-OCC-c4e283f612377f98` — OLP-0052 / `OLP-0052-S07`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:68`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:83`; PDF page pending.
+- `TA-OCC-5e0ad409d2aaaa15` — OLP-0171 / `OLP-0171-S01`; source `content/first-order-logic/models-theories/expressing-relations.tex:1`; Tamil `translation/content/first-order-logic/models-theories/expressing-relations.tex:103`; PDF page pending.
+- `TA-OCC-ed0cb6a83c63d441` — OLP-0197 / `OLP-0197-S01`; source `content/model-theory/models-of-arithmetic/computable-models.tex:1`; Tamil `translation/content/model-theory/models-of-arithmetic/computable-models.tex:22`; PDF page pending.
+- `TA-OCC-5bb65f55c79dd9e4` — OLP-0197 / `OLP-0197-S01`; source `content/model-theory/models-of-arithmetic/computable-models.tex:1`; Tamil `translation/content/model-theory/models-of-arithmetic/computable-models.tex:107`; PDF page pending.
+- `TA-OCC-a3e37ec5261f588f` — OLP-0210 / `OLP-0210-S01`; source `content/computability/recursive-functions/introduction.tex:1`; Tamil `translation/content/computability/recursive-functions/introduction.tex:23`; PDF page pending.
+- `TA-OCC-e9180d8077e0680e` — OLP-0210 / `OLP-0210-S01`; source `content/computability/recursive-functions/introduction.tex:1`; Tamil `translation/content/computability/recursive-functions/introduction.tex:24`; PDF page pending.
+- `TA-OCC-b42f9d7f4b380492` — OLP-0211 / `OLP-0211-S01`; source `content/computability/recursive-functions/primitive-recursion.tex:1`; Tamil `translation/content/computability/recursive-functions/primitive-recursion.tex:59`; PDF page pending.
+- `TA-OCC-d564351e50d65ba1` — OLP-0213 / `OLP-0213-S01`; source `content/computability/recursive-functions/pr-functions.tex:1`; Tamil `translation/content/computability/recursive-functions/pr-functions.tex:130`; PDF page pending.
+- `TA-OCC-6feb887783c017c4` — OLP-0216 / `OLP-0216-S01`; source `content/computability/recursive-functions/examples.tex:1`; Tamil `translation/content/computability/recursive-functions/examples.tex:16`; PDF page pending.
+- `TA-OCC-01c420e71b5bd597` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:1`; Tamil `translation/content/incompleteness/introduction/definitions.tex:61`; PDF page pending.
+- `TA-OCC-6bcf195698631486` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:1`; Tamil `translation/content/incompleteness/introduction/definitions.tex:63`; PDF page pending.
+- `TA-OCC-4dfb049ff7af283a` — OLP-0290 / `OLP-0290-S01`; source `content/incompleteness/representability-in-q/introduction.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/introduction.tex:133`; PDF page pending.
+- `TA-OCC-e5bf481f2ba074d1` — OLP-0292 / `OLP-0292-S01`; source `content/incompleteness/representability-in-q/beta-function.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/beta-function.tex:15`; PDF page pending.
+- `TA-OCC-00fa4dac799af3de` — OLP-0292 / `OLP-0292-S01`; source `content/incompleteness/representability-in-q/beta-function.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/beta-function.tex:49`; PDF page pending.
+- `TA-OCC-1cf76a659dba4967` — OLP-0292 / `OLP-0292-S01`; source `content/incompleteness/representability-in-q/beta-function.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/beta-function.tex:121`; PDF page pending.
+- `TA-OCC-cba7f2d78429fac1` — OLP-0292 / `OLP-0292-S01`; source `content/incompleteness/representability-in-q/beta-function.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/beta-function.tex:189`; PDF page pending.
+- `TA-OCC-76f4efc561c51cd3` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:20`; PDF page pending.
+- `TA-OCC-b81334a01203f69f` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:207`; PDF page pending.
+- `TA-OCC-e05c165b7f5875be` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:234`; PDF page pending.
+- `TA-OCC-8cf19dab9d3eb9b6` — OLP-0375 / `OLP-0375-S01`; source `content/lambda-calculus/lambda-definability/arithmetical-functions.tex:1`; Tamil `translation/content/lambda-calculus/lambda-definability/arithmetical-functions.tex:95`; PDF page pending.
+- `TA-OCC-82c1e0d9dbeaf83d` — OLP-0386 / `OLP-0386-S01`; source `content/many-valued-logic/syntax-and-semantics/connectives.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/connectives.tex:67`; PDF page pending.
+- `TA-OCC-43d0921eca37a78c` — OLP-0387 / `OLP-0387-S01`; source `content/many-valued-logic/syntax-and-semantics/formulas.tex:1`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/formulas.tex:39`; PDF page pending.
+- `TA-OCC-e8d61fe726472797` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:1`; Tamil `translation/content/set-theory/spine/idea.tex:30`; PDF page pending.
+- `TA-OCC-3255378790712eb8` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:1`; Tamil `translation/content/set-theory/spine/idea.tex:30`; PDF page pending.
+- `TA-OCC-07a60809c6b1d014` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:11`; PDF page pending.
+- `TA-OCC-cef546bed0962064` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:43`; PDF page pending.
+- `TA-OCC-8132b6a2ff43d1c6` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:80`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:98`; PDF page pending.
+- `TA-OCC-981842e1fe08f322` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:11`; PDF page pending.
+- `TA-OCC-add4538d373a74a7` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:58`; PDF page pending.
+- `TA-OCC-1dde609ebe0945c7` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:64`; PDF page pending.
+- `TA-OCC-99aed760de9a8d0f` — OLP-0586 / `OLP-0586-S01`; source `content/set-theory/card-arithmetic/card-arithmetic.tex:8`; Tamil `translation/content/set-theory/card-arithmetic/card-arithmetic.tex:9`; PDF page pending.
+- `TA-OCC-8ab6097af021b68a` — OLP-0587 / `OLP-0587-S01`; source `content/set-theory/card-arithmetic/opps.tex:8`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:11`; PDF page pending.
+- `TA-OCC-cc008b295c4fe6a0` — OLP-0587 / `OLP-0587-S01`; source `content/set-theory/card-arithmetic/opps.tex:8`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:11`; PDF page pending.
+- `TA-OCC-34b23223be9e281d` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:43`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:50`; PDF page pending.
+- `TA-OCC-0dffe1c033b14574` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:76`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:88`; PDF page pending.
+- `TA-OCC-fe9547f6da682446` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:8`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:17`; PDF page pending.
+- `TA-OCC-f14897e2c79de647` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:9`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:10`; PDF page pending.
+- `TA-OCC-164821a0c4bd6f11` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:9`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:10`; PDF page pending.
+- `TA-OCC-d7b53dbe29c38405` — OLP-0589 / `OLP-0589-S02`; source `content/set-theory/card-arithmetic/expotough.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:57`; PDF page pending.
+- `TA-OCC-327b770bb1aa53a5` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:12`; PDF page pending.
+
+## TA-T235 — continuum hypothesis / generalized continuum hypothesis / aleph and beth fixed point / hierarchy width and height
+
+Chosen rendering: **தொடரகக் கருதுகோள் / பொதுமைப்படுத்தப்பட்ட தொடரகக் கருதுகோள் / அலெஃப் மற்றும் பெத் நிலைப்புள்ளி / படிநிலைமுறையின் அகலும் உயரமும்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly inspected school and logic pages support number, sets, order and proof as components but do not attest these specialist headwords. The frozen source defines CH by aleph-one equals beth-one and GCH by equality at every ordinal, with fixed points given by kappa equals aleph-kappa or beth-kappa. Width counts stage elements and height indexes stages. The historical Gödel, Cohen and Boolos citations remain source attributions; no new direct reading of those originals is claimed.
+
+Authority basis: TA-SC6-P29-NUMBERS (checked_context_only); TA-SC11-P2 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports); TA-T235-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தொடரகக் கருதுகோள் / பொதுமைப்படுத்தப்பட்ட தொடரகக் கருதுகோள் / அலெஃப் மற்றும் பெத் நிலைப்புள்ளி / படிநிலைமுறையின் அகலும் உயரமும்” the established India-standard Tamil expression for “continuum hypothesis / generalized continuum hypothesis / aleph and beth fixed point / hierarchy width and height” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-8b12b493f7d42b64` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:132`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:168`; PDF page pending.
+- `TA-OCC-4c719caec08f5c1b` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:138`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:174`; PDF page pending.
+- `TA-OCC-026d4c29dbe7ec9d` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:143`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:180`; PDF page pending.
+- `TA-OCC-26f47698a3389bcb` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:147`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:184`; PDF page pending.
+- `TA-OCC-cdf77d1e88050e83` — OLP-0340 / `OLP-0340-S01`; source `content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:150`; Tamil `translation/content/second-order-logic/sol-and-set-theory/power-of-continuum.tex:189`; PDF page pending.
+- `TA-OCC-3007e5fd4266e68a` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:7`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:7`; PDF page pending.
+- `TA-OCC-877eb2fa9055b97d` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:90`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:105`; PDF page pending.
+- `TA-OCC-8460f2dc182ddb81` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:112`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:130`; PDF page pending.
+- `TA-OCC-1f429119247952ac` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:116`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:135`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

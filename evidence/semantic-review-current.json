@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-25T03:23:48.013589+00:00",
+  "date_utc": "2026-09-25T03:49:57.633526+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2912,6 +2912,36 @@
       "unit_id": "OLP-0585",
       "source_sha256": "b4c06d8cd04558e99e48c018a170bef91763b86b74ef03b260282ea5eae5b09e",
       "translation_sha256": "cea20f2ef9548e84e919043909a1a0a2e78259095fbb65b9c3d1bd5555539e01"
+    },
+    {
+      "unit_id": "OLP-0586",
+      "source_sha256": "b3fbea63d204335a19534ac83b115a8b519ae07e12121e668dddce7fc4589b77",
+      "translation_sha256": "de7f01c4823a5699a3e98f187539e87b3de9d19e474c4fdf1d3ac49fe026ba83"
+    },
+    {
+      "unit_id": "OLP-0587",
+      "source_sha256": "fe59199062c34a36e296a777ee0da52721751686f202735791a472d0a0906872",
+      "translation_sha256": "db44ceec1cc4b7b73909bc5850d444b48c662109ecd5bd49c9e6617a91036184"
+    },
+    {
+      "unit_id": "OLP-0588",
+      "source_sha256": "a606bab065a11c689b655ff8053e3e77894decb42b88e70605a981c129148da0",
+      "translation_sha256": "2a85b2d8d4fe23428a2cf8c2f702e10c6bcf4737052f4c7e1d0e5d9f99e31f79"
+    },
+    {
+      "unit_id": "OLP-0589",
+      "source_sha256": "3c24595966608c406bd3b8f2eec62edc0476017588fee15ec14ba64798b208ec",
+      "translation_sha256": "5a90e782ea947c8fc322ea285255c50941c1909e711cb44c5b92b276616b9fcc"
+    },
+    {
+      "unit_id": "OLP-0590",
+      "source_sha256": "b1bdee185ce2a21eeba54cce52ebec13154b54b77a6652820ad4f7ac61e8b212",
+      "translation_sha256": "8b702696f3155c8fab107e8ef748539bfcbbc3ed54caca244b4f8734e669ff6b"
+    },
+    {
+      "unit_id": "OLP-0591",
+      "source_sha256": "cc111d7d7472b0e7ef940196977faef0f1b2867feaab0a74843e9d39077f5074",
+      "translation_sha256": "98a3fbece15c0d78ec34847e0afdfda3fbcda2a800a74eb983cf1324bb2b0142"
     }
   ],
   "samples": [
@@ -7800,6 +7830,181 @@
       "assessment": "The neo-Fregean comparison and final set-abstraction expression remain.",
       "translation_segment_sha256": "137a39771e3ce0b1b4736d75e1ac89e89ee4aec8dd98be118b0d4c7c67a5e324",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0586-S01",
+      "reverse_paraphrase": "Cardinal arithmetic proceeds through definitions, addition and multiplication simplification, exponentiation, the continuum hypotheses and fixed points.",
+      "assessment": "All five imported sections remain in frozen order.",
+      "translation_segment_sha256": "cd7c51b3bc6321d55a83d4fd409676bbe223e840d16553db87e107d554dbfd88",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0587-S01",
+      "reverse_paraphrase": "Cardinal sum, product and exponent are the cardinalities of tagged disjoint union, Cartesian product and the set of functions from exponent to base.",
+      "assessment": "The direction of the function space and the existence/rank exercise remain.",
+      "translation_segment_sha256": "a2887754a8268a5ca3943251e44b4f469db6e99dc9d1e721c9fbe8da66c85265",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0587-S02",
+      "reverse_paraphrase": "Cardinal addition and multiplication are commutative and associative; an infinite cardinal absorbs one under addition.",
+      "assessment": "The finite-product motivation and both exercise and cited equivalence remain.",
+      "translation_segment_sha256": "724ca8a82bf88cae2c912348c2397aeb40b26e8f1e4c5b7dd855503ece479614",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0587-S03",
+      "reverse_paraphrase": "Subsets of A correspond bijectively to A-to-2 characteristic functions, so powerset cardinality equals 2 to card(A).",
+      "assessment": "The case rule, bijection and transition from A to its cardinal representative remain.",
+      "translation_segment_sha256": "4bb3418a2bb84b859168d3b70d20bd05d8d1e86b27480a8d38838dabeaebbe56",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0587-S04",
+      "reverse_paraphrase": "Cantor implies every cardinal is smaller than its cardinal power of two, whereas ordinal 2 to omega equals omega.",
+      "assessment": "The strict versus equality contrast and both distinct exponent operators remain.",
+      "translation_segment_sha256": "69522cbebe67c67a52ab0c48fc20360445d77792de6973200848e3593fab581d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0587-S05",
+      "reverse_paraphrase": "The reals and the powerset of omega have equal cardinality by injections in both directions and Schröder–Bernstein.",
+      "assessment": "The proof is explicitly a skeleton and leaves both injections as an exercise.",
+      "translation_segment_sha256": "dadca8f16219484f5867fb36720cf218d7213b2ee746f8787caa33ec8a0b3377",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0588-S01",
+      "reverse_paraphrase": "Canonical ordering compares pairs first by maximum coordinate, then first coordinate, then second; this well-orders each ordinal square.",
+      "assessment": "All three tie-break cases and the least-member proof are preserved.",
+      "translation_segment_sha256": "cb96623290ba1b8a089d49af2f0b3653ba777a5f599bcb9028cc9fd6b7a66076",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0588-S02",
+      "reverse_paraphrase": "An equipotence between alpha and beta induces an equipotence between their Cartesian squares by applying the bijection coordinatewise.",
+      "assessment": "The coordinate map retains both inputs and outputs.",
+      "translation_segment_sha256": "bc2a7b92aaf3d5dea0d3187fbbb5bfcc3f41df314154e1630e341a6f593ed367",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0588-S03",
+      "reverse_paraphrase": "Every infinite ordinal is equipotent with its square via a least-counterexample argument and small canonical initial segments.",
+      "assessment": "TA-STH-032 separately bounds the previously unstated finite-maximum-coordinate case.",
+      "translation_segment_sha256": "b9e697834278ae64c5ae88c327d51d57f689fb52015ffb9d05571673c2cf48be",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0588-S04",
+      "reverse_paraphrase": "For infinite cardinals, sum and product equal their maximum, and a cardinal-indexed union of no-larger sets stays no larger.",
+      "assessment": "The injection tags each element by its first stage, with the Choice reference retained.",
+      "translation_segment_sha256": "86a07e560a896af31910de0a1bd7755bbd10c88830496faa5a59e79b7d210904",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0589-S01",
+      "reverse_paraphrase": "Cardinal exponent distributes over a sum of exponents by splitting a function on a tagged disjoint union into an ordered pair of restrictions.",
+      "assessment": "TA-STH-033 repairs the pair value; the product of function spaces remains the codomain.",
+      "translation_segment_sha256": "b7eada4fbde3ceebe5d399afd5a458b157c4ca4a2d9c0886c281579ba611d039",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0589-S02",
+      "reverse_paraphrase": "The exponent-of-an-exponent law uses currying between functions on c valued in b-to-a functions and functions on the pair set b times c.",
+      "assessment": "TA-STH-034 types the uncurried domain literally and explains the cardinal-product passage.",
+      "translation_segment_sha256": "21655149edf126d9b372b16c755a36482ba80ccaf7106f64e509d535f035690f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0589-S03",
+      "reverse_paraphrase": "For infinite b and 2 at most a at most b, a to b equals 2 to b by upper and lower cardinal bounds.",
+      "assessment": "All three cited steps in the inequality chain remain.",
+      "translation_segment_sha256": "c57d6b82aced7ec917fd56390508d6a110995d45fc4cabb56b720baebf3949ea",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0589-S04",
+      "reverse_paraphrase": "Exponentiating an infinite cardinal by a positive finite n leaves it unchanged; zero exponent instead yields one.",
+      "assessment": "TA-STH-035 excludes the false n=0 case while retaining the surrounding caution about infinite exponents.",
+      "translation_segment_sha256": "badae0a836eebb1d5883724fcae7cea9d704e9db624da779eb17b9e0b16c2847",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0589-S05",
+      "reverse_paraphrase": "If b is infinite and 2 at most b less than a at most 2 to b, then a to b equals 2 to b.",
+      "assessment": "The proof sandwiches the expression using the preceding exponent rules.",
+      "translation_segment_sha256": "1dae0b9f42bc18b7db637eb253f3e52341de86654ea1d4ad48c7f81f8fe2b199",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0590-S01",
+      "reverse_paraphrase": "Aleph and beth sequences start at omega, use cardinal successor versus powerset cardinality at successors, and unions at limits.",
+      "assessment": "TA-STH-036 and 037 correct the leastness justification and identify the sequences as recursively defined.",
+      "translation_segment_sha256": "cf8d01080219380ca4d25a791bd76b74fd9251e558c9c0c460a37bdc6641e784",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0590-S02",
+      "reverse_paraphrase": "Transfinite induction makes each aleph and beth a cardinal, and every infinite cardinal occurs uniquely as an aleph.",
+      "assessment": "Both existence and uniqueness claims and the successor/limit reasoning remain.",
+      "translation_segment_sha256": "c12f9b136afd824c0a70dfeca5105e43021f0070262b39a25c611b6368b9a832",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0590-S03",
+      "reverse_paraphrase": "GCH asserts equality of corresponding aleph and beth values at every ordinal; the source contrasts relative consistency with possible negation.",
+      "assessment": "The bounded exponent claim, cofinality footnote and Gödel attribution remain.",
+      "translation_segment_sha256": "1be19246b71454d38a0175204366ba63c3411bda5890c9d62a17629d205d9a8b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0590-S04",
+      "reverse_paraphrase": "CH is aleph-one equals beth-one; the source presents its ZFC independence and distinguishes formal independence from undecided truth.",
+      "assessment": "The Cohen attribution, continuum cardinality explanation, two philosophical cautions and reading note remain.",
+      "translation_segment_sha256": "95492e2de6b14657017d08737c675b85c1b1bfdbcf530b96c133e90891b51987",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0591-S01",
+      "reverse_paraphrase": "Iterating the aleph function from zero and taking the omega union yields an aleph fixed point.",
+      "assessment": "The cofinal-union equality and Replacement motivation remain.",
+      "translation_segment_sha256": "1891d339e909a45dbd9f826451cf6c6189a47d1fb632450d6c665a6b4fe1cab7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0591-S02",
+      "reverse_paraphrase": "Boolos questions the truth of theories asserting at least the constructed kappa objects and later asks whether such discourse still describes reality.",
+      "assessment": "Both page-specific quotations are translated from the frozen text and his older Replacement claim is cited without claiming direct original consultation.",
+      "translation_segment_sha256": "8f44e295c20073937c80415d192626abc4e522464edb9aab48ab4a493da3f71c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0591-S03",
+      "reverse_paraphrase": "Tristram Shandy records one lived day per year, falls ever further behind at each finite year, yet records every day over an immortal lifetime.",
+      "assessment": "The 364/728/1092 examples, leap-year footnote and fixed-point analogy remain.",
+      "translation_segment_sha256": "07f4f88c651a78f52348fab7d49a4cb76d3ba83481a6551430839d5f5c2a5598",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0591-S04",
+      "reverse_paraphrase": "A beth fixed point exists, stage V at omega plus alpha has beth-alpha cardinality, and a sufficiently late beth fixed point makes stage width equal its index.",
+      "assessment": "The transfinite induction, ordinal-arithmetic threshold and corollary retain their dependencies.",
+      "translation_segment_sha256": "f7459252d0c8e01f32dc218fdb17976b4a12815c67a4dbe1f4793dc617e34387",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0591-S05",
+      "reverse_paraphrase": "At a beth fixed-point stage V-kappa, the number of earlier stages equals the number of elements in that stage.",
+      "assessment": "The powerset-driven growth analogy and width/height interpretation remain.",
+      "translation_segment_sha256": "2e047e6317610a163c609f686a50a4e33bf3470972fa7ae1ece4272248c359d7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0591-S06",
+      "reverse_paraphrase": "A successor-indexed beth seed above card(A) and omega iteration yield a beth fixed point strictly above card(A); transfinite W recursion then gives class-many width-equals-height stages.",
+      "assessment": "TA-STH-038 repairs the stationary-seed counterexample and secures strict growth of W.",
+      "translation_segment_sha256": "38cd40d211849a72f27e8b8c6fd4632db1dc6a35ca7aa334e5c89ed1365f5a52",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -8696,11 +8901,27 @@
     {
       "unit_id": "OLP-0584",
       "issue": "The infinite-successor proof cites a proposition distinguishing finite ordinals by equinumerosity for the predecessor’s infinitude. Tamil supplies the needed closure of finite ordinals under successor and keeps the earlier result only as a comparison under TA-STH-031."
+    },
+    {
+      "unit_id": "OLP-0588",
+      "issue": "The canonical-order proof bounds proper initial segments only when the maximum coordinate is infinite. Tamil supplies the finite-coordinate case under TA-STH-032."
+    },
+    {
+      "unit_id": "OLP-0589",
+      "issue": "The split-function map uses a Cartesian product instead of an ordered pair, the uncurried function is typed on a cardinal representative instead of the actual pair set, and a finite-power theorem includes the false zero-exponent case. Tamil repairs these under TA-STH-033 through TA-STH-035."
+    },
+    {
+      "unit_id": "OLP-0590",
+      "issue": "The least-greater-cardinal justification invokes Transfinite Induction rather than well-ordering, and the recursion sentence misidentifies the object being defined. Tamil clarifies both under TA-STH-036 and TA-STH-037."
+    },
+    {
+      "unit_id": "OLP-0591",
+      "issue": "The final beth iteration can be stationary when card(A) is already a fixed point, contradicting the claimed strict bound and injectivity of W. Tamil seeds the iteration above card(A) under TA-STH-038."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "582 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 140 frozen units still require completion.",
+  "remaining": "588 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 134 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 12,
     "distinct_unit_count": 248,
@@ -9678,6 +9899,34 @@
         "zfc_axioms_and_choice_pointer": true,
         "finite_infinite_enumerable_and_two_repairs": true,
         "hume_principle_type_and_impredicativity": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0586",
+        "OLP-0587",
+        "OLP-0588",
+        "OLP-0589",
+        "OLP-0590",
+        "OLP-0591"
+      ],
+      "correction_ids": [
+        "TA-STH-032",
+        "TA-STH-033",
+        "TA-STH-034",
+        "TA-STH-035",
+        "TA-STH-036",
+        "TA-STH-037",
+        "TA-STH-038"
+      ],
+      "status": "pass",
+      "checks": {
+        "five_sections_in_frozen_order": true,
+        "sum_product_exponent_definitions_and_power_set": true,
+        "canonical_order_max_and_finite_segment_repair": true,
+        "currying_and_positive_exponent_repairs": true,
+        "aleph_beth_and_continuum_hypotheses": true,
+        "fixed_points_stage_width_and_strict_seed": true
       }
     }
   ]

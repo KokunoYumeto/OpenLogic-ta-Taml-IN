@@ -1,0 +1,171 @@
+% SEGMENT OLP-0588-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{card-arithmetic}{simp}
+\olsection{கூட்டலையும் பெருக்கலையும் எளிதாக்குதல்}
+
+முடிவிலிக்கடந்த கண அளவெண் கூட்டலும் பெருக்கலும்
+\emph{மிகவும்} எளிதானவை என்று தெரியவரும். கண அளவெண்கள்
+(குறிப்பிட்ட) வரிசையெண்களாக இருப்பதால் நன்கு வரிசைப்படுத்தப்பட்டவை;
+எனவே அவற்றை ஒரு குறிப்பிட்ட முறையில் கையாள முடிகிறது.
+ஆனால் இதைக் \emph{காட்டுவது} அவ்வளவு எளிதல்ல.
+தொடங்குவதற்கு ஒரு நுட்பமான வரையறை தேவை:
+
+\begin{defn}
+வரிசையெண்களின் இணைகள் மீது \emph{நியம வரிசை} $\canonord$ ஐ
+பின்வருமாறு வரையறுக்கிறோம்: $\tuple{\alpha_1, \alpha_2} \canonord
+\tuple{\beta_1, \beta_2}$ எனும்போதும் அப்போதுதான் பின்வருவனவற்றில்
+ஒன்று நிறைவேறும்:
+\begin{enumerate}
+	\item $\max(\alpha_1, \alpha_2) < \max(\beta_1, \beta_2)$; அல்லது
+	\item $\max(\alpha_1, \alpha_2) = \max(\beta_1, \beta_2)$ மற்றும்
+	$\alpha_1 < \beta_1$; அல்லது
+	\item $\max(\alpha_1, \alpha_2) = \max(\beta_1, \beta_2)$,
+	$\alpha_1 = \beta_1$, மேலும் $\alpha_2 < \beta_2$.
+\end{enumerate}
+\end{defn}
+
+\begin{lem}
+எந்த வரிசையெண் $\alpha$ க்கும்
+$\tuple{\alpha \times \alpha, \canonord}$ ஒரு நன்கு வரிசைப்படுத்தல்.
+\end{lem}
+
+\begin{proof}
+$\alpha \times \alpha$ மீது $\canonord$ ஒப்பிடத்தக்கது என்பது
+தெளிவு. ஏனெனில் $\tuple{\alpha_1, \alpha_2}$,
+$\tuple{\beta_1, \beta_2}$ ஆகியவற்றில் எதுவும் மற்றொன்றைவிட
+$\canonord$-சிறியதல்ல என்க. அப்போது
+$\max(\alpha_1, \alpha_2) = \max(\beta_1, \beta_2)$,
+$\alpha_1 = \beta_1$, $\alpha_2 = \beta_2$; ஆகவே
+$\tuple{\alpha_1, \alpha_2} = \tuple{\beta_1,  \beta_2}$.
+
+நன்கு வரிசைப்படுத்தல் என்பதை நிறுவ,
+$X \subseteq \alpha\times\alpha$ ஒரு காலியற்ற கணம் என்க.
+$\alpha$ ஒரு வரிசையெண் என்பதால்,
+$\Setabs{\max(\gamma_1, \gamma_2)}{\tuple{\gamma_1,
+\gamma_2} \in X}$ இல் $\delta$ என்ற மீச்சிறிய உறுப்பு உள்ளது.
+இப்போது $\Setabs{\tuple{\gamma_1,\gamma_2} \in X}{\max(\gamma_1, \gamma_2) =
+\delta}$ இலிருந்து, முதல் ஆயம் மீச்சிறியதாக உள்ள இணைகளை மட்டும்
+வைத்துக்கொள்க. அவற்றுள் இரண்டாம் ஆயம் மீச்சிறியதாக உள்ள இணையே
+$X$ இன் $\canonord$-மீச்சிறிய உறுப்பு.
+\end{proof}
+\noindent
+
+% SEGMENT OLP-0588-S02
+இப்போது ஒரு மிகச் சிறிய, எளிய கவனிப்பு:
+
+\begin{prop}\ollabel{simplecardproduct}
+$\cardeq{\alpha}{\beta}$ எனில்,
+$\cardeq{\alpha \times \alpha}{\beta \times \beta}$.
+\end{prop}
+
+\begin{proof}
+$f \colon \alpha \to \beta$ ஆனது
+$\tuple{\gamma_1, \gamma_2} \mapsto
+\tuple{f(\gamma_1), f(\gamma_2)}$ என்ற இணைச் சார்பைத் தரட்டும்.
+\end{proof}
+\noindent
+
+% SEGMENT OLP-0588-S03
+முக்கியமான துணைத்தேற்றத்தை நிறுவ இவற்றையெல்லாம் பயன்படுத்துவோம்:
+\begin{lem}\ollabel{alphatimesalpha}
+எந்த முடிவுறாத வரிசையெண் $\alpha$ க்கும்
+$\cardeq{\alpha}{\alpha \times \alpha}$.
+\end{lem}
+
+\begin{proof}
+மறுதலித்து நிறுவ, இக்கூற்று பொய்யாகும் மீச்சிறிய முடிவுறாத
+வரிசையெண் $\alpha$ ஐ எடுத்துக்கொள்வோம்.
+\olref[sfr][siz][zigzag]{natsquaredenumerable} ஆனது
+$\cardeq{\omega}{\omega\times\omega}$ என்று காட்டுகிறது;
+எனவே $\omega \in \alpha$. மேலும் $\alpha$ ஒரு கண அளவெண்.
+மறுதலித்து அது கண அளவெண் அல்ல என்க. அப்போது
+$\card{\alpha} \in \alpha$; எனவே கருதுகோளின்படி
+$\cardeq{\card{\alpha}}{\card{\alpha} \times \card{\alpha}}$.
+வரையறையின்படி $\cardeq{\card{\alpha}}{\alpha}$;
+ஆகவே \olref{simplecardproduct} இன்படி
+$\cardeq{\alpha}{\alpha\times\alpha}$; இது முரண்.
+
+இப்போது ஒவ்வொரு $\tuple{\gamma_1, \gamma_2} \in
+\alpha \times \alpha$ க்கும் பின்வரும் தொடக்கத் துண்டைக்
+கருதுவோம்:
+\begin{align*}
+	\text{Seg}(\gamma_1, \gamma_2) &= \Setabs{\tuple{\delta_1, \delta_2} \in \alpha \times \alpha}{\tuple{\delta_1, \delta_2} \canonord \tuple{\gamma_1, \gamma_2}}
+\end{align*}
+$\gamma = \max(\gamma_1, \gamma_2)$ என்க. அப்போது
+$\tuple{\gamma_1, \gamma_2} \canonord
+\tuple{\gamma+1, \gamma + 1}$ என்பதைக் கவனிக்கவும்.
+எனவே $\gamma$ முடிவுறாததாக இருக்கும்போது:
+\begin{align*}
+	\text{Seg}(\gamma_1, \gamma_2) &
+	\precsim ((\gamma \ordplus 1)\ordtimes (\gamma \ordplus 1))\\
+	&\approx (\gamma \ordtimes \gamma)
+	\text{, \olref[ord-arithmetic][using-addition]{ordinfinitycharacter} மற்றும்
+	\olref{simplecardproduct} இன்படி}\\
+	&\approx \gamma \text{, தொகுத்தறிதல் கருதுகோளின்படி}\\
+	& \prec \alpha\text{, $\alpha$ ஒரு கண அளவெண் என்பதால்}
+\end{align*}
+% SOURCE CORRECTION TA-STH-032: முடிவுறு ஆயங்களின் தொடக்கத் துண்டையும் தனியே உள்ளடக்குக.
+இங்கு அதிகபட்ச ஆயம் முடிவுறுவதாக இருந்தாலும் அந்தத் தொடக்கத்
+துண்டு ஒரு முடிவுறு பெருக்கற்பலனின் துணைக்கணமாக இருப்பதால்
+முடிவுறுவதே. ஆகவே அதன் அளவும் தேர்ந்தெடுத்த முடிவுறாத கண
+அளவெண்ணைவிடச் சிறியது.
+எனவே $\ordtype{\alpha\times \alpha, \canonord} \leq \alpha$;
+இதனால் $\cardle{\alpha \times \alpha}{\alpha}$.
+மேலும் $\cardle{\alpha}{\alpha \times \alpha}$ என்பது
+தெளிவு; ஆகவே ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றத்தால் வேண்டிய முடிவு
+கிடைக்கிறது.
+\end{proof}
+
+% SEGMENT OLP-0588-S04
+இறுதியாக எளிதாக்கும் முடிவைப் பெறுகிறோம்:
+
+\begin{thm}\ollabel{cardplustimesmax}
+$\cardfont{a}, \cardfont{b}$ முடிவுறாத கண அளவெண்கள் எனில்:
+\[
+	\cardfont{a}
+\cardtimes \cardfont{b} = \cardfont{a} \cardplus \cardfont{b} =
+\text{max}(\cardfont{a}, \cardfont{b}).
+\]
+\end{thm}
+
+\begin{proof}
+பொதுத்தன்மை இழப்பின்றி
+$\cardfont{a} = \max(\cardfont{a}, \cardfont{b})$ என்க.
+\olref{alphatimesalpha} ஐப் பயன்படுத்தினால்,
+$\cardfont{a}\cardtimes\cardfont{a} = \cardfont{a} \leq \cardfont{a}
+\cardplus \cardfont{b} \leq \cardfont{a} \cardplus \cardfont{a} \leq
+\cardfont{a} \cardtimes \cardfont{a}$.
+\end{proof}\noindent
+இதைப் போலவே, $\cardfont{a}$ முடிவுறாததாக இருந்தால்,
+$\cardfont{a}$ அளவுள்ள, ஒவ்வொன்றும் $\leq\cardfont{a}$ அளவுள்ள
+கணங்களின் ஒன்றிப்பின் அளவும் $\leq\cardfont{a}$ ஆகும்:
+
+\begin{prop}\ollabel{kappaunionkappasize}
+$\cardfont{a}$ ஒரு முடிவுறாத கண அளவெண் என்க.
+ஒவ்வொரு வரிசையெண் $\beta \in \cardfont{a}$ க்கும்,
+$\card{X_\beta} \leq \cardfont{a}$ ஆகுமாறு ஒரு கணம் $X_\beta$
+இருக்கட்டும். அப்போது
+$\card{\bigcup_{\beta \in \cardfont{a}} X_\beta}
+\leq \cardfont{a}$.
+\end{prop}
+
+\begin{proof}
+ஒவ்வொரு $\beta \in \cardfont{a}$ க்கும்
+$f_\beta \colon X_\beta \to \cardfont{a}$ என்ற
+!!a{injection} ஐத் தேர்ந்து நிலைப்படுத்துவோம்.\footnote{இவற்றை
+எவ்வாறு ``நிலைப்படுத்துகிறோம்''? \olref[sth][choice][countablechoice]{sec}
+ஐப் பார்க்கவும்.}
+$v \in X_\beta$ என்றும், $\gamma \in \beta$ எனும்
+ஒவ்வொரு முன்னைய குறியீட்டுக்கும் $v \notin X_\gamma$ என்றும் இருக்கும்போது,
+$g(v) = \tuple{\beta, f_\beta(v)}$ என வரையறுத்து,
+$g \colon \bigcup_{\beta \in \cardfont{a}} X_\beta \to
+\cardfont{a} \times \cardfont{a}$ என்ற !!a{injection} ஐப்
+பெறுகிறோம். இப்போது \olref{cardplustimesmax} இன்படி
+$\bigcup_{\beta \in \cardfont{a}} X_\beta \preceq
+\cardfont{a} \times \cardfont{a} \approx \cardfont{a}$.
+\end{proof}
+
+\end{document}

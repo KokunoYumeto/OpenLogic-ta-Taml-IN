@@ -1,0 +1,177 @@
+% SEGMENT OLP-0587-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{card-arithmetic}{opps}
+\olsection{அடிப்படைச் செயல்களை வரையறுத்தல்}
+
+வரிசையை நினைவில் வைத்திருக்க வேண்டியதில்லை என்பதால், கண அளவெண்
+எண்கணிதத்தை வரையறுப்பது வரிசையெண் எண்கணிதத்தை வரையறுப்பதைவிட
+எளிதானது. கூட்டல், பெருக்கல், அடுக்கேற்றம் ஆகியவற்றை ஒரே சமயத்தில்
+வரையறுப்போம்.
+
+\begin{defn}
+$\cardfont{a}$, $\cardfont{b}$ ஆகியவை கண அளவெண்கள் எனில்:
+\begin{align*}
+	\cardfont{a} \cardplus \cardfont{b} &\defis
+	\card{\cardfont{a} \disjointsum \cardfont{b}}\\
+	\cardfont{a} \cardtimes \cardfont{b} &\defis
+	\card{\cardfont{a} \times \cardfont{b}}\\
+	\cardexpo{\cardfont{a}}{\cardfont{b}} &\defis
+	\card{\funfromto{\cardfont{b}}{\cardfont{a}}}
+\end{align*}
+இங்கு $\funfromto{X}{Y} = \Setabs{f}{f \text{ ஒரு சார்பு } X \to Y}$.
+(எந்தக் கணங்கள் $X$, $Y$ க்கும் $\funfromto{X}{Y}$ இருக்கிறது
+என்பதை எளிதில் காட்டலாம்; இதைப் பயிற்சிக்கு விடுகிறோம்.)
+\end{defn}
+
+\begin{prob}
+எந்தக் கணங்கள் $X$, $Y$ க்கும் $\funfromto{X}{Y}$ இருக்கிறது
+என்பதை $\Zminus$ இல் நிறுவுக. $\ZF$ இல், $\setrank{X}$ மற்றும்
+$\setrank{Y}$ ஆகியவற்றிலிருந்து
+$\setrank{\funfromto{X}{Y}}$ ஐக் கணக்கிடுக; இது
+\olref[sth][ord-arithmetic][using-addition]{rankcomputation} இல்
+செய்த முறையைப் போன்றதாக இருக்கட்டும்.
+\end{prob}
+
+% SEGMENT OLP-0587-S02
+இந்த வரையறையை விளக்குவது உதவியாக இருக்கும். கூட்டலைப் பொறுத்தவரை,
+\olref[ord-arithmetic][add]{defdissum} இல் வரையறுக்கப்பட்ட
+$\disjointsum$ என்ற வெட்டாக் கூட்டுத்தொகையைப் பயன்படுத்துகிறோம்;
+முடிவுறு நிலைகளுக்கு இவ்வரையறை சரியான விடையைத் தருகிறது என்பதை
+எளிதில் காணலாம். பெருக்கலைப் பொறுத்தவரை,
+\olref[sfr][set][pai]{cardnmprod} இன்படி $A$ இல் $n$
+உறுப்புகளும் $B$ இல் $m$ உறுப்புகளும் இருந்தால், $A \times B$
+இல் $n \cdot m$ உறுப்புகள் உள்ளன. ஆகவே நமது வரையறை அந்தக்
+கருத்தை முடிவிலிக்கடந்த பெருக்கலுக்கு பொதுமைப்படுத்துகிறது.
+அடுக்கேற்றமும் இதைப் போன்றதே: முடிவுறு நிலைக்கான கருத்தை
+முடிவிலிக்கடந்த நிலைக்குப் பொதுமைப்படுத்துகிறோம்.
+உண்மையில், சில விதங்களில் முடிவிலிக்கடந்த கண அளவெண் எண்கணிதம்,
+முடிவிலிக்கடந்த வரிசையெண் எண்கணிதத்தைவிட ``வழக்கமான''
+எண்கணிதத்தை அதிகம் ஒத்திருக்கிறது:
+
+\begin{prop}\ollabel{cardplustimescommute}
+$\cardplus$ மற்றும் $\cardtimes$ ஆகிய இரண்டும் பரிமாற்றுப் பண்பும்
+சேர்ப்புப் பண்பும் உடையவை.
+\end{prop}
+
+\begin{proof}
+பரிமாற்றுப் பண்புக்கு,
+\olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} இன்படி
+$\cardeq{(\cardfont{a} \disjointsum
+\cardfont{b})}{(\cardfont{b} \disjointsum \cardfont{a})}$ என்றும்
+$\cardeq{(\cardfont{a} \times \cardfont{b})}{(\cardfont{b} \times
+\cardfont{a})}$ என்றும் கவனித்தால் போதும். சேர்ப்புப் பண்பை
+நிறுவுவதைப் பயிற்சிக்கு விடுகிறோம்.
+\end{proof}
+
+\begin{prob}
+$\cardplus$ மற்றும் $\cardtimes$ ஆகியவை சேர்ப்புப் பண்புடையவை
+என்று நிறுவுக.
+\end{prob}
+
+\begin{prop}
+$A$ முடிவுறாதது எனும்போதும் அப்போதுதான்
+$\card{A} \cardplus 1 = 1 \cardplus \card{A} = \card{A}$.
+\end{prop}
+
+\begin{proof}
+\olref[cardinals][classing]{generalinfinitycharacter} இல்
+செய்ததுபோல,
+\olref[ord-arithmetic][using-addition]{ordinfinitycharacter},
+\olref[cardinals][cardsasords]{lem:CardinalsBehaveRight}
+ஆகியவற்றிலிருந்து பெறப்படுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0587-S03
+வரிசையெண் கூட்டல்/பெருக்கலுக்கும் கண அளவெண் கூட்டல்/பெருக்கலுக்கும்
+ஏன் வெவ்வேறு குறிகளைப் பயன்படுத்த வேண்டும் என்பதை இது விளக்குகிறது:
+இவை உண்மையிலேயே \emph{வேறுபட்ட} செயல்கள். அடுத்த இரண்டு முடிவுகள்,
+வரிசையெண் அடுக்கேற்றமும் கண அளவெண் அடுக்கேற்றமும் வேறுபட்ட
+செயல்கள் என்று காட்டுகின்றன.
+(\olref[z][infinity-again]{defnomega} இன்படி $2 = \{0, 1\}$
+என்பதை நினைவுகூர்க.)
+
+\begin{lem}\ollabel{lem:SizePowerset2Exp}
+எந்த $A$ க்கும் $\card{\Pow{A}} = \cardexpo{2}{\card{A}}$.
+\end{lem}
+
+\begin{proof}
+ஒவ்வொரு துணைக்கணம் $B \subseteq A$ க்கும்,
+பின்வருமாறு $\chi_B \in \funfromto{A}{2}$ என வரையறுக்கவும்:
+\begin{align*}
+	\chi_{B}(x) &\defis
+	\begin{cases}
+		1 & \text{எனில் }x\in B\\
+		0 & \text{இல்லாவிட்டால்.}
+	\end{cases}
+\end{align*}
+இப்போது $f(B) = \chi_B$ என்க. இதனால் $f \colon \Pow{A}
+\to \funfromto{A}{2}$ என்ற !!a{bijection} வரையறுக்கப்படுகிறது.
+ஆகவே $\cardeq{\Pow{A}}{\funfromto{A}{2}}$.
+இதிலிருந்து $\cardeq{\Pow{A}}{\funfromto{\card{A}}{2}}$;
+எனவே $\card{\Pow{A}} = \card{\funfromto{\card{A}}{2}} =
+2^{\card{A}}$.
+\end{proof}
+
+% SEGMENT OLP-0587-S04
+இந்தச் சுருக்கமான நிறுவல், \olref[sfr][siz][red-alt]{sec} இல்
+நடத்திய விவாதத்தைப் பெருமளவில் உள்ளடக்குகிறது. அங்கு
+$\Pow{\omega}$ இன் எண்ணப்படாமையை, முடிவுறாத இருமக் குறித்
+தொடர்களின் கணமான $\Bin^\omega$ இன் எண்ணப்படாமைக்குச்
+``சுருக்குவது'' எப்படி என்று காட்டினோம். உண்மையில்,
+$\Bin^{\omega}$ என்பது $\funfromto{\omega}{2}$ தான்.
+முந்தைய நிறுவலில், \olref[sfr][siz][red-alt]{sec} இல்
+பயன்படுத்திய காரணவாதம் $\omega$ வுக்குப் பதில் எந்தக் கணம்~$A$
+க்கும் பொருந்தும் என்று காட்டினோம். இந்த முடிவு கண அளவெண்
+அடுக்கேற்றத்தைப் பற்றிய விரைவான உண்மையையும் தருகிறது:
+
+\begin{cor}\ollabel{cantorcor}
+எந்தக் கண அளவெண்~$\cardfont{a}$ க்கும்
+$\cardfont{a} < \cardexpo{2}{\cardfont{a}}$.
+\end{cor}
+
+\begin{proof}
+காண்டோரின் தேற்றத்திலிருந்தும்
+(\olref[sfr][siz][car]{thm:cantor})
+\olref{lem:SizePowerset2Exp} இலிருந்தும் பெறப்படுகிறது.
+\end{proof}
+\noindent
+எனவே $\omega < \cardexpo{2}{\omega}$. ஆனால் இது
+\emph{கண அளவெண்} அடுக்கேற்றத்தைப் பற்றிய முடிவு என்பதைக்
+கவனிக்கவும். \emph{வரிசையெண்} அடுக்கேற்றத்துடன் இதை
+வேறுபடுத்த வேண்டும்: அதன் நிலையில் $\omega =
+\ordexpo{2}{\omega}$ (\olref[ord-arithmetic][expo]{sec}
+ஐப் பார்க்கவும்).
+
+% SEGMENT OLP-0587-S05
+கண அளவெண் அடுக்கேற்றத்தைப் பற்றிப் பேசும்போது, $\Real$
+எந்த ``விதத்தில்'' !!{nonenumerable} என்பதையும் சற்றுத்
+துல்லியமாகச் சொல்லலாம்.
+
+\begin{thm}\ollabel{continuumis2aleph0}
+$\card{\Real} = \cardexpo{2}{\omega}$
+\end{thm}
+
+\begin{proof}[நிறுவலின் எலும்புக்கூடு]
+இதை நிறுவப் பல வழிகள் உள்ளன. மிக நேரடியான வழி,
+$\cardle{\Pow{\omega}}{\Real}$ மற்றும்
+$\cardle{\Real}{\Pow{\omega}}$ என்பதைக் காட்டி,
+பின்னர் ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றத்தால்
+$\cardeq{\Real}{\Pow{\omega}}$ என்று முடிவு செய்து,
+\olref[card-arithmetic][opps]{lem:SizePowerset2Exp} மூலம்
+$\card{\Real} = \cardexpo{2}{\omega}$ என்று பெறுவதாகும்.
+$f \colon \Pow{\omega} \to \Real$ மற்றும்
+$g \colon \Real \to \Pow{\omega}$ என்ற உள்செலுத்தல்களை
+வரையறுப்பதை (பயனுள்ள) பயிற்சிக்கு விடுகிறோம்.
+\end{proof}
+
+\begin{prob}
+$\cardle{\Pow{\omega}}{\Real}$ மற்றும்
+$\cardle{\Real}{\Pow{\omega}}$ என்பதைக் காட்டி,
+\olref[sth][card-arithmetic][opps]{continuumis2aleph0} இன்
+நிறுவலை நிறைவு செய்க.
+\end{prob}
+
+\end{document}

@@ -5972,6 +5972,130 @@
       "rationale": "If beta belongs to omega, then beta plus one belongs to omega, contrary to the assumed infinitude of alpha. The existing proposition is retained as a nearby comparison, without attributing this closure fact to it.",
       "precise_review_question": "Is the predecessor's infinitude derived from closure of finite ordinals under successor, with the old reference no longer bearing the proof burden?",
       "location_needle": "SOURCE CORRECTION TA-STH-031"
+    },
+    {
+      "audit_id": "TA-STH-032",
+      "unit_id": "OLP-0588",
+      "kind": "finite-coordinate-case-in-canonical-order-proof",
+      "action": "Added the finite-maximum-coordinate case before concluding that every proper canonical-order segment has size below the infinite cardinal.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The proof explicitly bounds Seg(gamma_1,gamma_2) only when gamma=max(gamma_1,gamma_2) is infinite, then concludes the bound for all pairs. It leaves the finite gamma case unstated.",
+      "chosen_treatment": "அதிகபட்ச ஆயம் முடிவுறு எனில் தொடக்கத் துண்டு முடிவுறு பெருக்கற்பலனின் துணைக்கணம்; ஆகவே அதன் அளவு தேர்ந்தெடுத்த முடிவுறாத கண அளவெண்ணைவிடச் சிறியது என்று தனியாகக் கூறுகிறது.",
+      "alternatives_considered": "Leaving the unproved finite case implicit; changing the lemma to exclude finite-coordinate pairs.",
+      "rationale": "The canonical initial segment with finite maximum coordinate is contained in the square of a finite successor ordinal, hence finite, and therefore strictly smaller in cardinality than the selected infinite cardinal.",
+      "precise_review_question": "Does the argument now handle every pair, including pairs with finite maximum coordinate, without altering the infinite-coordinate chain?",
+      "location_needle": "SOURCE CORRECTION TA-STH-032"
+    },
+    {
+      "audit_id": "TA-STH-033",
+      "unit_id": "OLP-0589",
+      "kind": "split-function-ordered-pair-codomain",
+      "action": "Sent the split function to the ordered pair of its two restrictions rather than their Cartesian product.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\tuple"],
+      "normalized_math_replacements": [
+        {"from": "\\mapsto(f_{\\cardfont{b}}\\timesf_\\cardfont{c})", "to": "\\mapsto\\tuple{f_{\\cardfont{b}},f_\\cardfont{c}}", "count": 1}
+      ],
+      "source_issue_or_choice": "The proof's target is a product of two function sets, whose elements are ordered pairs of functions. The source sends f to a Cartesian product of its restrictions instead of their ordered pair.",
+      "chosen_treatment": "பிரித்த இரு சார்புகளின் வரிசையிட்ட இணையையே முதல் இருபுறச் சார்பு திருப்பித் தருகிறது.",
+      "alternatives_considered": "Keeping the product-of-functions expression and silently treating it as a pair.",
+      "rationale": "The restrictions have disjoint tagged domains and uniquely reconstruct f; their ordered pair is the correctly typed element of the codomain.",
+      "precise_review_question": "Does the splitting map have values in the Cartesian product of the two function spaces?",
+      "location_needle": "SOURCE CORRECTION TA-STH-033"
+    },
+    {
+      "audit_id": "TA-STH-034",
+      "unit_id": "OLP-0589",
+      "kind": "uncurried-function-actual-domain",
+      "action": "Typed the uncurried function on the Cartesian product of the two carrier sets and explained passage to the corresponding cardinal product.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\cardtimes"],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\funfromto{\\cardfont{b}\\cardtimes\\cardfont{c}}{\\cardfont{a}}", "to": "\\funfromto{\\cardfont{b}\\times\\cardfont{c}}{\\cardfont{a}}", "count": 1}
+      ],
+      "source_issue_or_choice": "The construction defines f-star on pairs from b times c but states a bijection into functions whose domain is b cardinal-times c, an equipotent initial ordinal rather than literally that pair set.",
+      "chosen_treatment": "நேரடி சார்பின் ஆட்களம் பெருக்கற்கணமாகச் சரிசெய்யப்பட்டு, அதன் கண அளவெண் மேலுள்ள கூற்றில் வரும் கண அளவெண் பெருக்கலுடன் ஒத்ததாக விளக்கப்படுகிறது.",
+      "alternatives_considered": "Adding an unmentioned chosen bijection from the pair set to the initial ordinal and transporting every function along it.",
+      "rationale": "Currying gives a literal bijection between functions on c valued in functions on b and functions on b times c; cardinal equality with functions on the initial ordinal follows by equipotence.",
+      "precise_review_question": "Does f-star's displayed domain match the pair inputs in its definition, with the cardinal-product step stated separately?",
+      "location_needle": "SOURCE CORRECTION TA-STH-034"
+    },
+    {
+      "audit_id": "TA-STH-035",
+      "unit_id": "OLP-0589",
+      "kind": "zero-cardinal-exponent-exclusion",
+      "action": "Restricted the finite exponent law a-to-n equals a to strictly positive natural n.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "n\\in\\omega", "to": "0<n\\in\\omega", "count": 1}
+      ],
+      "source_issue_or_choice": "The source states a-to-n equals a for every n in omega, including zero. But for any infinite a, a-to-zero is one, not a.",
+      "chosen_treatment": "முடிவுறு அடுக்கின் தேற்றத்தில் பூச்சியத்தை விலக்கி நேர்ம இயல் எண்ணை மட்டும் கருதுகிறது; நிறுவல் பூச்சிய நிலையின் மதிப்பைத் தனியாக விளக்குகிறது.",
+      "alternatives_considered": "Keeping the false n=0 case or changing the standard zero-exponent convention.",
+      "rationale": "A product of n copies of an infinite cardinal is the same cardinal only for positive finite n; the empty product has cardinal one.",
+      "precise_review_question": "Is the proposition now restricted to positive n while preserving the conventional zero power?",
+      "location_needle": "SOURCE CORRECTION TA-STH-035"
+    },
+    {
+      "audit_id": "TA-STH-036",
+      "unit_id": "OLP-0590",
+      "kind": "least-greater-cardinal-justification",
+      "action": "Attributed the existence of a least cardinal above a to well-ordering of ordinals after existence of a greater cardinal is established.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source invokes Transfinite Induction for the least-greater-cardinal step. Existence follows from NoLargestCardinal and leastness from well-ordering of the ordinal cardinals, not from induction.",
+      "chosen_treatment": "பெரிய கண அளவெண் இருப்பதை முதலில் பயன்படுத்தி, அவற்றுள் மீச்சிறியதை வரிசையெண்களின் நன்கு வரிசைப்படுத்தலால் பெறுகிறது.",
+      "alternatives_considered": "Retaining the misleading Transfinite Induction attribution.",
+      "rationale": "Given one larger cardinal witness, the nonempty set of larger cardinals no greater than that witness has a least member; it is least among all larger cardinals.",
+      "precise_review_question": "Is the leastness justified by well-ordering once nonemptiness is established?",
+      "location_needle": "SOURCE CORRECTION TA-STH-036"
+    },
+    {
+      "audit_id": "TA-STH-037",
+      "unit_id": "OLP-0590",
+      "kind": "transfinite-recursion-referent",
+      "action": "Clarified that transfinite recursion supplies the remaining aleph and beth sequence definitions, not a remaining definition of the cardinal a.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says 'the rest of the definition of a is provided by Transfinite Recursion', although a is a parameter of the successor-cardinal operation; the recursions define the aleph and beth sequences.",
+      "chosen_treatment": "கண அளவெண்ணின் தொடர்ச்சி தனியாக வரையறுக்கப்பட்டதாகவும், அலெஃப் மற்றும் பெத் தொடர்களின் எஞ்சிய வரையறைகள் முடிவிலிக்கடந்த மீள்வரையறையால் கிடைப்பதாகவும் தெளிவுபடுத்துகிறது.",
+      "alternatives_considered": "Preserving the source's ambiguous attribution to a.",
+      "rationale": "The displayed equations recursively define two ordinal-indexed sequences while the successor operation on an arbitrary cardinal is already specified by leastness.",
+      "precise_review_question": "Does the prose identify the two sequences as the objects defined by transfinite recursion?",
+      "location_needle": "SOURCE CORRECTION TA-STH-037"
+    },
+    {
+      "audit_id": "TA-STH-038",
+      "unit_id": "OLP-0591",
+      "kind": "strictly-larger-beth-fixed-point-seed",
+      "action": "Seeded the beth iteration at beth indexed by the successor of card(A), ensuring that the resulting fixed point is strictly larger than card(A).",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\beth", "\\ordplus"],
+      "normalized_math_replacements": [
+        {"from": "\\tau_0(A)&\\defis\\card{A}", "to": "\\tau_0(A)&\\defis\\beth_{\\card{A}\\ordplus1}", "count": 1}
+      ],
+      "source_issue_or_choice": "The source starts at card(A) and applies beth iteration, then calls card(A) strictly less than its limit. If card(A) is already a beth fixed point, all iterates remain card(A), so the strict inequality fails and W need not be injective.",
+      "chosen_treatment": "தொடக்க மதிப்பாக A இன் கண அளவெண்ணின் வரிசையெண் தொடர்ச்சியில் உள்ள பெத் மதிப்பை எடுத்து, அதன் பின்னரான மீள்வரையறையை அப்படியே வைத்திருக்கிறது.",
+      "alternatives_considered": "Keeping the stationary fixed-point counterexample; adding an unexplained strictness premise to A; starting with a non-cardinal ordinal successor.",
+      "rationale": "The beth function is increasing, with beth at the successor index strictly above card(A). The subsequent omega iteration reaches a beth fixed point, including when the seed itself is already fixed, and remains above card(A).",
+      "precise_review_question": "Does the revised seed make card(A) strictly smaller than tau(A) even when card(A) was originally a beth fixed point?",
+      "location_needle": "SOURCE CORRECTION TA-STH-038"
     }
   ],
   "by_unit": {
@@ -6167,6 +6291,10 @@
     "OLP-0577": ["TA-STH-025", "TA-STH-026"],
     "OLP-0578": ["TA-STH-027"],
     "OLP-0579": ["TA-STH-028", "TA-STH-029"],
-    "OLP-0584": ["TA-STH-030", "TA-STH-031"]
+    "OLP-0584": ["TA-STH-030", "TA-STH-031"],
+    "OLP-0588": ["TA-STH-032"],
+    "OLP-0589": ["TA-STH-033", "TA-STH-034", "TA-STH-035"],
+    "OLP-0590": ["TA-STH-036", "TA-STH-037"],
+    "OLP-0591": ["TA-STH-038"]
   }
 }

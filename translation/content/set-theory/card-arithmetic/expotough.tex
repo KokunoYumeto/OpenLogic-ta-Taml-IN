@@ -1,0 +1,131 @@
+% SEGMENT OLP-0589-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{card-arithmetic}{expotough}
+\olsection[சில எளிதாக்கல்கள்]{கண அளவெண் அடுக்கேற்றத்தின் சில எளிதாக்கல்கள்}
+
+$\canonord$ ஐ வரையறுப்பது சற்றுச் சிக்கலாக இருந்தாலும், அதன் மூலம்
+கண அளவெண் கூட்டல், பெருக்கல் பற்றிய பயனுள்ள
+\olref[simp]{cardplustimesmax} முடிவு கிடைத்தது. ஆனால்
+முடிவிலிக்கடந்த அடுக்கேற்றத்தை அத்தனை நேரடியாக எளிதாக்க முடியாது.
+ஏன் என்பதை விளக்க, முடிவுறு நிலையின் பழக்கமான அமைப்பை நீட்டிக்கும்
+ஒரு முடிவிலிருந்து தொடங்குவோம் (இதன் நிறுவல் சற்றுயர்ந்த
+கருத்துச் சுருக்க நிலையில் இருந்தாலும்):
+
+\begin{prop}\ollabel{simplecardexpo}
+எந்தக் கண அளவெண்கள் $\cardfont{a}, \cardfont{b}, \cardfont{c}$
+க்கும்,
+$\cardexpo{\cardfont{a}}{\cardfont{b} \cardplus \cardfont{c}} =
+\cardexpo{\cardfont{a}}{\cardfont{b}} \cardtimes
+\cardexpo{\cardfont{a}}{\cardfont{c}}$; மேலும்
+$\cardexpo{(\cardexpo{\cardfont{a}}{\cardfont{b}})}{\cardfont{c}} =
+\cardexpo{\cardfont{a}}{\cardfont{b} \cardtimes \cardfont{c}}$.
+\end{prop}
+
+\begin{proof}
+முதல் கூற்றுக்கு, $f \colon
+(\cardfont{b}\disjointsum\cardfont{c}) \to \cardfont{a}$
+என்ற சார்பைக் கருதுக. ஒவ்வொரு $\beta \in \cardfont{b}$ க்கும்
+$f_\cardfont{b}(\beta) = f(\beta, 0)$ என்றும், ஒவ்வொரு
+$\gamma \in \cardfont{c}$ க்கும்
+$f_\cardfont{c}(\gamma) = f(\gamma, 1)$ என்றும் வரையறுத்து,
+அதை இரண்டு பகுதிகளாகப் பிரிக்கலாம்.
+% SOURCE CORRECTION TA-STH-033: இரு சார்புகளின் வரிசையிட்ட இணையையே திருப்பித் தருக.
+$f \mapsto \tuple{f_{\cardfont{b}}, f_\cardfont{c}}$ என்ற
+கோவை
+$\funfromto{\cardfont{b} \disjointsum \cardfont{c}}{\cardfont{a}} \to
+(\funfromto{\cardfont{b}}{\cardfont{a}} \times
+\funfromto{\cardfont{c}}{\cardfont{a}})$
+என்ற !!a{bijection} ஆகும்.
+
+% SEGMENT OLP-0589-S02
+இரண்டாவது கூற்றுக்கு,
+$f \colon \cardfont{c} \to
+(\funfromto{\cardfont{b}}{\cardfont{a}})$ என்ற சார்பைக்
+கருதுக. அப்போது ஒவ்வொரு $\gamma \in \cardfont{c}$ க்கும்
+$f(\gamma) \colon \cardfont{b} \to \cardfont{a}$ என்ற சார்பு
+உள்ளது. இப்போது ஒவ்வொரு
+$\tuple{\beta, \gamma} \in \cardfont{b} \times \cardfont{c}$
+க்கும் $f^*(\beta, \gamma) = (f(\gamma))(\beta)$ என வரையறுக்கவும்.
+% SOURCE CORRECTION TA-STH-034: f* இன் நேரடி ஆட்களம் பெருக்கற்கணம்; கண அளவெண் பிரதிநிதி அல்ல.
+$f \mapsto f^*$ என்பது
+$\funfromto{\cardfont{c}}{(\funfromto{\cardfont{b}}{\cardfont{a}})}
+\to \funfromto{\cardfont{b} \times \cardfont{c}}{\cardfont{a}}$
+என்ற !!a{bijection} ஆகும். இந்த நேரடி ஆட்களமான பெருக்கற்கணத்தின்
+கண அளவெண்தான் மேலுள்ள கூற்றில் வரும் கண அளவெண் பெருக்கல்.
+\end{proof}
+
+% SEGMENT OLP-0589-S03
+முடிவுறாத கண அளவெண்களைப் பொறுத்தவரை
+$\cardexpo{\cardfont{a}}{\cardfont{b}}$ ஐ எளிதில் கணக்கிடும்
+வழி கிடைக்க வேண்டும் என்று \emph{விரும்புவோம்}. அதற்கு உதவும்
+ஒரு முடிவு இது:
+
+\begin{prop}\ollabel{cardexpo2reduct}
+$2 \leq \cardfont{a} \leq \cardfont{b}$ மற்றும்
+$\cardfont{b}$ முடிவுறாதது எனில்,
+$\cardexpo{\cardfont{a}}{\cardfont{b}} =
+\cardexpo{2}{\cardfont{b}}$.
+\end{prop}
+
+\begin{proof}
+\begin{align*}
+	\cardexpo{2}{\cardfont{b}} &\leq
+	\cardexpo{\cardfont{a}}{\cardfont{b}}\text{, $2 \leq \cardfont{a}$ என்பதால்}\\
+	&\leq \cardexpo{(2^\cardfont{a})}{\cardfont{b}}
+	\text{, \olref[opps]{lem:SizePowerset2Exp} இன்படி}\\
+	&= \cardexpo{2}{\cardfont{a} \cardtimes \cardfont{b}}
+	\text{, \olref{simplecardexpo} இன்படி} \\
+	&= \cardexpo{2}{\cardfont{b}}
+	\text{, \olref[simp]{cardplustimesmax} இன்படி}
+\end{align*}
+\end{proof}
+
+% SEGMENT OLP-0589-S04
+இதற்கு மேலும் எளிதாக்கலாம் என்று எதிர்பார்க்க வேண்டாம்.
+ஏனெனில் \olref[card-arithmetic][opps]{lem:SizePowerset2Exp} இன்படி
+$\cardfont{b} < \cardexpo{2}{\cardfont{b}}$.
+ஆனால் $\cardfont{b} < \cardfont{a}$ எனும்போது
+$\cardexpo{\cardfont{a}}{\cardfont{b}}$ பற்றி என்ன சொல்லலாம்
+என்பதை இது தெரிவிக்கவில்லை. $\cardfont{b}$ \emph{முடிவுறு}
+எனில், என்ன செய்ய வேண்டும் என்பது நமக்குத் தெரியும்.
+
+\begin{prop}
+% SOURCE CORRECTION TA-STH-035: பூச்சிய அடுக்கை விலக்கி நேர்ம n ஐக் கொள்க.
+$\cardfont{a}$ முடிவுறாததாகவும் $0 < n \in \omega$
+ஆகவும் இருந்தால் $\cardexpo{\cardfont{a}}{n} = \cardfont{a}$.
+\end{prop}
+
+\begin{proof}
+$\cardexpo{\cardfont{a}}{n} = \cardfont{a} \cardtimes \cardfont{a}
+\cardtimes \ldots \cardtimes \cardfont{a} = \cardfont{a}$;
+இது \olref[simp]{cardplustimesmax} இன்படி. பூச்சிய அடுக்கிற்கு
+இந்தப் பெருக்கற்பலன் வடிவம் பொருந்தாது; அதன் மதிப்பு ஒன்று.
+\end{proof}
+\noindent
+
+% SEGMENT OLP-0589-S05
+மேலும் சில நிலைகளில்,
+$\cardexpo{\cardfont{a}}{\cardfont{b}}$ இன் அளவை நிர்ணயிக்கலாம்:
+
+\begin{prop}
+$2 \leq \cardfont{b} < \cardfont{a} \leq
+\cardexpo{2}{\cardfont{b}}$ என்றும் $\cardfont{b}$ முடிவுறாதது
+என்றும் இருந்தால்,
+$\cardexpo{\cardfont{a}}{\cardfont{b}} =
+\cardexpo{2}{\cardfont{b}}$.
+\end{prop}
+
+\begin{proof}
+\olref{cardexpo2reduct} இல் செய்ததைப் போலக் காரணம் கூறினால்,
+$\cardexpo{2}{\cardfont{b}}\leq \cardexpo{\cardfont{a}}{\cardfont{b}}
+\leq \cardexpo{(\cardexpo{2}{\cardfont{b}})}{\cardfont{b}} =
+\cardexpo{2}{\cardfont{b}\cardtimes\cardfont{b}} =
+\cardexpo{2}{\cardfont{b}}$.
+\end{proof}
+\noindent
+ஆனால் இதற்கு அப்பால் நிலைமை மிகவும் நுட்பமாகிறது.
+
+\end{document}

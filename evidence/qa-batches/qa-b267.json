@@ -1,0 +1,139 @@
+{
+  "batch_id": "TA-B267",
+  "units": [
+    {
+      "unit_id": "OLP-0589",
+      "source_sha256": "3c24595966608c406bd3b8f2eec62edc0476017588fee15ec14ba64798b208ec",
+      "translation_sha256": "5a90e782ea947c8fc322ea285255c50941c1909e711cb44c5b92b276616b9fcc",
+      "source_bytes": 4360,
+      "translation_bytes": 7838,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$f\\mapsto(f_{\\cardfont{b}}\\timesf_\\cardfont{c})$",
+        "$\\funfromto{\\cardfont{c}}{(\\funfromto{\\cardfont{b}}{\\cardfont{a}})}\\to\\funfromto{\\cardfont{b}\\cardtimes\\cardfont{c}}{\\cardfont{a}}$",
+        "$n\\in\\omega$"
+      ],
+      "extra_math": [
+        "$f\\mapsto\\tuple{f_{\\cardfont{b}},f_\\cardfont{c}}$",
+        "$\\funfromto{\\cardfont{c}}{(\\funfromto{\\cardfont{b}}{\\cardfont{a}})}\\to\\funfromto{\\cardfont{b}\\times\\cardfont{c}}{\\cardfont{a}}$",
+        "$0<n\\in\\omega$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "arithmetic",
+        "card",
+        "include",
+        "logic",
+        "open",
+        "opps",
+        "section",
+        "simp"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-033",
+          "unit_id": "OLP-0589",
+          "kind": "split-function-ordered-pair-codomain",
+          "action": "Sent the split function to the ordered pair of its two restrictions rather than their Cartesian product.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\tuple"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\mapsto(f_{\\cardfont{b}}\\timesf_\\cardfont{c})",
+              "to": "\\mapsto\\tuple{f_{\\cardfont{b}},f_\\cardfont{c}}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof's target is a product of two function sets, whose elements are ordered pairs of functions. The source sends f to a Cartesian product of its restrictions instead of their ordered pair.",
+          "chosen_treatment": "பிரித்த இரு சார்புகளின் வரிசையிட்ட இணையையே முதல் இருபுறச் சார்பு திருப்பித் தருகிறது.",
+          "alternatives_considered": "Keeping the product-of-functions expression and silently treating it as a pair.",
+          "rationale": "The restrictions have disjoint tagged domains and uniquely reconstruct f; their ordered pair is the correctly typed element of the codomain.",
+          "precise_review_question": "Does the splitting map have values in the Cartesian product of the two function spaces?",
+          "location_needle": "SOURCE CORRECTION TA-STH-033"
+        },
+        {
+          "audit_id": "TA-STH-034",
+          "unit_id": "OLP-0589",
+          "kind": "uncurried-function-actual-domain",
+          "action": "Typed the uncurried function on the Cartesian product of the two carrier sets and explained passage to the corresponding cardinal product.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\cardtimes"
+          ],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\funfromto{\\cardfont{b}\\cardtimes\\cardfont{c}}{\\cardfont{a}}",
+              "to": "\\funfromto{\\cardfont{b}\\times\\cardfont{c}}{\\cardfont{a}}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The construction defines f-star on pairs from b times c but states a bijection into functions whose domain is b cardinal-times c, an equipotent initial ordinal rather than literally that pair set.",
+          "chosen_treatment": "நேரடி சார்பின் ஆட்களம் பெருக்கற்கணமாகச் சரிசெய்யப்பட்டு, அதன் கண அளவெண் மேலுள்ள கூற்றில் வரும் கண அளவெண் பெருக்கலுடன் ஒத்ததாக விளக்கப்படுகிறது.",
+          "alternatives_considered": "Adding an unmentioned chosen bijection from the pair set to the initial ordinal and transporting every function along it.",
+          "rationale": "Currying gives a literal bijection between functions on c valued in functions on b and functions on b times c; cardinal equality with functions on the initial ordinal follows by equipotence.",
+          "precise_review_question": "Does f-star's displayed domain match the pair inputs in its definition, with the cardinal-product step stated separately?",
+          "location_needle": "SOURCE CORRECTION TA-STH-034"
+        },
+        {
+          "audit_id": "TA-STH-035",
+          "unit_id": "OLP-0589",
+          "kind": "zero-cardinal-exponent-exclusion",
+          "action": "Restricted the finite exponent law a-to-n equals a to strictly positive natural n.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "n\\in\\omega",
+              "to": "0<n\\in\\omega",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source states a-to-n equals a for every n in omega, including zero. But for any infinite a, a-to-zero is one, not a.",
+          "chosen_treatment": "முடிவுறு அடுக்கின் தேற்றத்தில் பூச்சியத்தை விலக்கி நேர்ம இயல் எண்ணை மட்டும் கருதுகிறது; நிறுவல் பூச்சிய நிலையின் மதிப்பைத் தனியாக விளக்குகிறது.",
+          "alternatives_considered": "Keeping the false n=0 case or changing the standard zero-exponent convention.",
+          "rationale": "A product of n copies of an infinite cardinal is the same cardinal only for positive finite n; the empty product has cardinal one.",
+          "precise_review_question": "Is the proposition now restricted to positive n while preserving the conventional zero power?",
+          "location_needle": "SOURCE CORRECTION TA-STH-035"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\cardtimes"
+      ],
+      "extra_commands": [
+        "\\tuple"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

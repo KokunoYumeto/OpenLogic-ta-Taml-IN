@@ -1,0 +1,90 @@
+{
+  "batch_id": "TA-B269",
+  "units": [
+    {
+      "unit_id": "OLP-0591",
+      "source_sha256": "cc111d7d7472b0e7ef940196977faef0f1b2867feaab0a74843e9d39077f5074",
+      "translation_sha256": "98a3fbece15c0d78ec34847e0afdfda3fbcda2a800a74eb983cf1324bb2b0142",
+      "source_bytes": 7091,
+      "translation_bytes": 14956,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\tau_0(A)&\\defis\\card{A}\\\\\\tau_{n+1}(A)&\\defis\\beth_{\\tau_n(A)}\\\\\\tau(A)&\\defis\\bigcup_{n<\\omega}\\tau_n(A)$\\tau(A)$$\\beth$$A$$\\card{A}<\\tau(A)$W_0&\\defis0\\\\W_{\\alpha+1}&\\defis\\tau(W_\\alpha)\\\\W_\\alpha&\\defis\\bigcup_{\\beta<\\alpha}W_\\beta$\\alpha$\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\tau_0(A)&\\defis\\beth_{\\card{A}\\ordplus1}\\\\\\tau_{n+1}(A)&\\defis\\beth_{\\tau_n(A)}\\\\\\tau(A)&\\defis\\bigcup_{n<\\omega}\\tau_n(A)$\\tau(A)$$\\beth$$A$$\\card{A}<\\tau(A)$W_0&\\defis0\\\\W_{\\alpha+1}&\\defis\\tau(W_\\alpha)\\\\W_\\alpha&\\defis\\bigcup_{\\beta<\\alpha}W_\\beta$\\alpha$\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "arithmetic",
+        "cardinals",
+        "classing",
+        "extrinsic",
+        "include",
+        "logic",
+        "open",
+        "ord",
+        "replacement",
+        "section",
+        "spine"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-038",
+          "unit_id": "OLP-0591",
+          "kind": "strictly-larger-beth-fixed-point-seed",
+          "action": "Seeded the beth iteration at beth indexed by the successor of card(A), ensuring that the resulting fixed point is strictly larger than card(A).",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\beth",
+            "\\ordplus"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\tau_0(A)&\\defis\\card{A}",
+              "to": "\\tau_0(A)&\\defis\\beth_{\\card{A}\\ordplus1}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source starts at card(A) and applies beth iteration, then calls card(A) strictly less than its limit. If card(A) is already a beth fixed point, all iterates remain card(A), so the strict inequality fails and W need not be injective.",
+          "chosen_treatment": "தொடக்க மதிப்பாக A இன் கண அளவெண்ணின் வரிசையெண் தொடர்ச்சியில் உள்ள பெத் மதிப்பை எடுத்து, அதன் பின்னரான மீள்வரையறையை அப்படியே வைத்திருக்கிறது.",
+          "alternatives_considered": "Keeping the stationary fixed-point counterexample; adding an unexplained strictness premise to A; starting with a non-cardinal ordinal successor.",
+          "rationale": "The beth function is increasing, with beth at the successor index strictly above card(A). The subsequent omega iteration reaches a beth fixed point, including when the seed itself is already fixed, and remains above card(A).",
+          "precise_review_question": "Does the revised seed make card(A) strictly smaller than tau(A) even when card(A) was originally a beth fixed point?",
+          "location_needle": "SOURCE CORRECTION TA-STH-038"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\beth",
+        "\\ordplus"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}
