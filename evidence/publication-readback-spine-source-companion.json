@@ -1,0 +1,130 @@
+{
+  "schema": "openlogic-tamil-public-raw-readback/1",
+  "checked_at_utc": "2026-09-25T01:48:58.304877+00:00",
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "branch": "main",
+  "commit": "0df12c029d2ab0c5dbb511920155ca993e58b403",
+  "parent_commit": "5398f0c460c8695afaa5163ac708b3b68d5a2fed",
+  "anonymous_commit_api": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/commits/0df12c029d2ab0c5dbb511920155ca993e58b403",
+    "http_status": 200,
+    "reported_sha": "0df12c029d2ab0c5dbb511920155ca993e58b403",
+    "matches_requested_commit": true
+  },
+  "anonymous_main_ref": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/git/ref/heads/main",
+    "http_status": 200,
+    "reported_sha": "0df12c029d2ab0c5dbb511920155ca993e58b403",
+    "matches_requested_commit": true
+  },
+  "changed_file_count": 12,
+  "changed_files": [
+    {
+      "path": "README.en.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/README.en.md",
+      "http_status": 200,
+      "bytes": 11577,
+      "sha256": "a23c5bf61631128208e2abff655fd6d47ec117b9623b29603abb0c5e6ff3d376",
+      "matches_local_commit": true
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/README.md",
+      "http_status": 200,
+      "bytes": 16935,
+      "sha256": "dea0aba242e0c86e7485c61d97328ac2a8f396d068cbaf901c5140b25470a989",
+      "matches_local_commit": true
+    },
+    {
+      "path": "build/package-spine-tex.py",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/build/package-spine-tex.py",
+      "http_status": 200,
+      "bytes": 14033,
+      "sha256": "85dc7acdc657b838c380fc20721082342b736cc081740d5b92f6ae298d684624",
+      "matches_local_commit": true
+    },
+    {
+      "path": "build/qa-spine-tex.py",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/build/qa-spine-tex.py",
+      "http_status": 200,
+      "bytes": 6171,
+      "sha256": "fb347451e7f8f050d97299fda7bf0ad4bd73c41d43bff52796e2c426c84e8977",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/checkpoint-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/evidence/checkpoint-current.json",
+      "http_status": 200,
+      "bytes": 1310052,
+      "sha256": "de10ce1b3615475d6d6fa26480401679ec18984ad73da9e5e6ebb1c63704e6dd",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/cursor-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/evidence/cursor-current.json",
+      "http_status": 200,
+      "bytes": 11815,
+      "sha256": "b55e38cebfc1eaa075f1c7b050f531386e606b3e913074c2ebf9aec8e1d44721",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/publication-readback-replacement-570.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/evidence/publication-readback-replacement-570.json",
+      "http_status": 200,
+      "bytes": 14606,
+      "sha256": "088c354efe285c6a02f92d26dad168934d8eb706a28ce2d5a90a5acf23b5b8f4",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/publication-receipts.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/evidence/publication-receipts.md",
+      "http_status": 200,
+      "bytes": 37220,
+      "sha256": "dcb24d1d1b419bd1fda054ecd74945f0a5bcf5f5ababbb8c2ad2d34990cefafb",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/evidence/qa-current.json",
+      "http_status": 200,
+      "bytes": 3931,
+      "sha256": "9fd61eb993348932a111cb0f95a8d1fe4d01f1c908685b7a14b2718836815a0a",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/set-theory-spine-tex-source-qa.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/evidence/set-theory-spine-tex-source-qa.json",
+      "http_status": 200,
+      "bytes": 1061,
+      "sha256": "c517ceeaf77dc8ad656e92496d162929a633d11818f70ec52c1e300755659160",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/set-theory-spine-tex-source.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/evidence/set-theory-spine-tex-source.json",
+      "http_status": 200,
+      "bytes": 8168,
+      "sha256": "898fcd8333395125bb736dbe65c2444109160ced23c2a58621c9170b55ac6fc1",
+      "matches_local_commit": true
+    },
+    {
+      "path": "release/openlogic-ta-Taml-IN-set-theory-stages-ranks-7-units.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/0df12c029d2ab0c5dbb511920155ca993e58b403/release/openlogic-ta-Taml-IN-set-theory-stages-ranks-7-units.tex",
+      "http_status": 200,
+      "bytes": 244175,
+      "sha256": "8f1dac911821e6be40811b8a9a84489a8d66e60f77dbe829f798544b8ac2603b",
+      "matches_local_commit": true
+    }
+  ],
+  "all_new_and_changed_files_public_and_identical": true,
+  "reader": null,
+  "scope": {
+    "accepted_units": 570,
+    "aligned_segments": 1456,
+    "semantic_samples": 664,
+    "visually_verified_distinct_reader_units": 248
+  },
+  "repository_public": true,
+  "anonymous_repository_files_verified": 12,
+  "result": "pass"
+}
