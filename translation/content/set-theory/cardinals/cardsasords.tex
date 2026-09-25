@@ -1,0 +1,145 @@
+% SEGMENT OLP-0582-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{cardinals}{cardsasords}
+\olsection{வரிசையெண்களாகக் கண அளவெண்கள்}
+
+உண்மையில், கண அளவெண்களைப் பற்றிய நமது கோட்பாடு வரிசையெண்களைப்
+பற்றிய கோட்பாட்டை (எந்தத் தயக்கமும் இன்றி) பயன்படுத்தும். அதாவது,
+குறிப்பிட்ட சில வரிசையெண்களையே கண அளவெண்களாக வரையறுப்போம்.
+குறிப்பாக, பின்வரும் வரையறையை அளிக்கிறோம்:
+
+\begin{defn}\ollabel{defcardinalasordinal}
+$A$ ஐ நன்கு வரிசைப்படுத்த முடிந்தால், $\cardeq{A}{\gamma}$ ஆகுமாறு
+உள்ள மீச்சிறிய வரிசையெண் $\gamma$ தான் $\card{A}$. எந்த வரிசையெண்
+$\gamma$ க்கும், $\gamma = \card{\gamma}$ எனும்போதும் அப்போதுதான்
+$\gamma$ ஒரு \emph{கண அளவெண்} என்று சொல்கிறோம்.
+\end{defn}
+
+``$A$ ஐ நன்கு வரிசைப்படுத்த முடியும்'' என்ற சொற்றொடரை இப்போது
+பயன்படுத்தினோம். கணிதத்தில் பெரும்பாலும் இருப்பதைப் போல, இங்குள்ள
+சாத்தியத்தைக் குறிக்கும் சொற்கள் ஓர் இருப்புக் கூற்றை முறைசாராமல்
+குறிக்கின்றன: ``$A$ ஐ நன்கு வரிசைப்படுத்த முடியும்'' என்பதன் பொருள்,
+``$A$ ஐ நன்கு வரிசைப்படுத்தும் ஒரு தொடர்பு உள்ளது'' என்பதே.
+
+ஆனால் \olref{defcardinalasordinal} இல் ஒரு சிக்கல் உள்ளது.
+\emph{ஒவ்வொரு} கணத்திற்கும் ஓர் அளவு இருக்க வேண்டும்; அதாவது,
+ஒவ்வொரு $A$ க்கும் $\card{A}$ இருக்க வேண்டும் என்று விரும்புகிறோம்.
+எனினும், நாம் இப்போது தந்த வரையறை ஒரு நிபந்தனையுடன் தொடங்குகிறது:
+``$A$ ஐ நன்கு வரிசைப்படுத்த \emph{முடிந்தால்}\ldots''.
+நன்கு வரிசைப்படுத்த முடியாத ஒரு கணம் $A$ இருந்தால், அந்த வரையறை
+$\card{A}$ என்ற பொருளை வரையறுக்காது.
+
+ஆகவே, \olref{defcardinalasordinal} ஐப் பயன்படுத்த, ஒவ்வொரு கணத்தையும்
+நன்கு வரிசைப்படுத்த முடியும் என்ற உறுதி தேவை. ஆனால் $\ZF$ இல்
+அந்த உறுதி கிடைக்கவில்லை. எனவே, \olref{defcardinalasordinal} ஐப்
+பயன்படுத்த விரும்பினால், பின்வருவது போன்ற ஒரு புதிய அடிகோளைச்
+சேர்ப்பதைத் தவிர வேறு வழியில்லை:
+\begin{axiom}[நன்கு வரிசைப்படுத்தல்]
+ஒவ்வொரு கணத்தையும் நன்கு வரிசைப்படுத்த முடியும்.
+\end{axiom}
+இந்த நன்கு வரிசைப்படுத்தல் அடிகோள் ஏற்கத்தக்கதா என்பதை
+\olref[choice][]{chap} இல் ஆராய்வோம். ஆனால் இனி அதை நாம்
+பயன்படுத்திக் கொள்வோம்.
+
+% SEGMENT OLP-0582-S02
+அதைப் பயன்படுத்தினால், \olref{defcardinalasordinal} இல் வரையறுக்கப்பட்ட
+கண அளவெண்கள் இருக்கின்றன என்றும் சரியாகச் செயல்படுகின்றன என்றும்
+நிறுவுவது எளிது:
+
+\begin{lem}\ollabel{lem:CardinalsExist}
+ஒவ்வொரு கணம் $A$ க்கும்:
+\begin{enumerate}
+	\item\ollabel{cardaexists} $\card{A}$ இருக்கிறது; அது தனித்துவமானது;
+	\item\ollabel{cardaapprox}  $\cardeq{\card{A}}{A}$;
+	\item\ollabel{cardaidem}  $\card{A}$ ஒரு கண அளவெண்; அதாவது,
+	$\card{A} = \card{\card{A}}$;
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+$A$ ஐ நிலையாகக் கொள்வோம். நன்கு வரிசைப்படுத்தல் அடிகோளின்படி,
+$\tuple{A, R}$ என்ற நன்கு வரிசைப்படுத்தல் உள்ளது.
+\olref[ordinals][ordtype]{thmOrdinalRepresentation} இன்படி,
+$\tuple{A, R}$ ஆனது $\beta$ என்ற தனித்துவமான வரிசையெண்ணுடன்
+வரிசை ஓரின அமைப்புடையது. எனவே $\cardeq{A}{\beta}$.
+முடிவிலிக்கடந்த தொகுத்தறிதலின்படி, $\cardeq{A}{\gamma}$ ஆகுமாறு
+உள்ள தனித்துவமான மீச்சிறிய வரிசையெண் $\gamma$ உள்ளது. ஆகவே
+$\card{A} = \gamma$; இதனால் \olref{cardaexists},
+\olref{cardaapprox} ஆகியவை நிறுவப்பட்டன.
+\olref{cardaidem} ஐ நிறுவ, $\delta \in \gamma$ எனில்,
+$\gamma$ ஐத் தேர்ந்தெடுத்த விதத்தால் $\cardless{\delta}{A}$
+என்பதைக் கவனிக்கவும். எண்ணொத்த தன்மை ஒரு சமானத் தொடர்பு
+(\olref[sfr][siz][equ]{equinumerosityisequi}) என்பதால்,
+$\cardless{\delta}{\gamma}$ என்றும் பெறுகிறோம். எனவே
+$\gamma = \card{\gamma}$.
+% மறுதலித்து நிறுவ, $\delta \in \gamma$ மற்றும் $\cardeq{\gamma}{\delta}$ ஆகுமாறு ஒரு வரிசையெண் $\delta$ உள்ளது எனக் கொள்வோம். அப்போது $\cardeq{\cardeq{A}{\gamma}}{\delta}$; ஆகவே \olref[sfr][set][equ]{equinumerosityisequi} இன்படி $\cardeq{A}{\delta}$, இது $\gamma$ இன் மீச்சிறிய தேர்வுக்கு முரணாகும்.
+\end{proof}
+
+% SEGMENT OLP-0582-S03
+அடுத்த முடிவு காண்டோரின் கொள்கையையும் மேலும் பலவற்றையும் உறுதி செய்கிறது.
+(கண அளவெண்கள் தமது வரிசையை வரிசையெண்களிலிருந்து பெறுகின்றன என்பதைக்
+கவனிக்கவும்; அதாவது $\cardfont{a} < \cardfont{b}$ எனும்போதும்
+அப்போதுதான் $\cardfont{a} \in \cardfont{b}$. இதைக் கூறும்போது,
+கண அளவெண்கள் என்று அறிந்துள்ள பொருள்களுக்கு ஃபிராக்டூர் எழுத்துகளைப்
+பயன்படுத்துவோம். இது பொதுவான மரபு. கண அளவெண்கள் வரிசையெண்களாகவும்
+இருப்பதால், கிரேக்க எழுத்துமாலையின் நடுப்பகுதி எழுத்துகளைத் தேர்வது
+மற்றொரு பொதுவான முறை; எடுத்துக்காட்டாக, $\kappa, \lambda$.)
+\begin{lem}\ollabel{lem:CardinalsBehaveRight}
+எந்தக் கணங்கள் $A$, $B$ க்கும்:
+\begin{align*}
+	\cardeq{A}{B} &\text{ iff } \card{A} = \card{B}\\
+	\cardle{A}{B} &\text{ iff } \card{A} \leq \card{B}\\
+	\cardless{A}{B}&\text{ iff } \card{A} < \card{B}
+\end{align*}
+\end{lem}
+
+\begin{proof}
+இரண்டாவது கூற்றின் இடமிருந்து வலம் செல்லும் திசையை நிறுவுவோம்;
+மற்ற நிலைகளும் இதைப் போன்றவை, அவை பயிற்சிக்கு விடப்படுகின்றன.
+பின்வரும் படத்தைக் கருதுங்கள்:
+\begin{center}
+	\begin{tikzpicture}
+	\node (nodea) {$A$};
+	\node[right = 6em of nodea] (nodeb) {$B$};
+	\node[below = 2em of nodea] (nodecarda) {$\card{A}$};
+	\node[below = 2em of nodeb] (nodecardb) {$\card{B}$};
+	\draw[->] (nodea)--(nodeb);
+	\draw[<->] (nodea)--(nodecarda);
+	\draw[<->] (nodeb)--(nodecardb);
+	\draw[->, dashed] (nodecarda)--(nodecardb);
+\end{tikzpicture}
+\end{center}
+இரு முனைகளிலும் அம்புள்ள கோடுகள் !!{bijection}s ஐக் குறிக்கின்றன;
+\olref{lem:CardinalsExist} அவை இருப்பதை உறுதி செய்கிறது.
+$\cardle{A}{B}$ என்று கருதுவதால், $A\to B$ என்ற
+!!a{injection} உள்ளது. இப்போது $\card{A}$ இலிருந்து $A$ க்கும்,
+அங்கிருந்து $B$ க்கும், பிறகு $\card{B}$ க்கும் அம்புகளைத் தொடர்ந்து,
+$\card{A} \to \card{B}$ என்ற !!a{injection} ஐப் பெறுகிறோம்
+(இது கோடிட்ட அம்பு).
+\end{proof}\noindent
+\olref{lem:CardinalsBehaveRight} ஐப் பயன்படுத்தி
+ஷ்ரோடர்--பெர்ன்ஸ்டைன் தேற்றத்தை மீண்டும் நிறுவலாம்.
+$\cardle{A}{B}$ மற்றும் $\cardle{B}{A}$ எனில் $\cardeq{A}{B}$
+என்பதே அக்கூற்று. இதை \olref[sfr][siz][sb]{thm:schroder-bernstein}
+என்று கூறினோம்; ஆனால் முதலில் \olref[sfr][infinite][card-sb]{sec} இல்
+சற்று முயற்சியுடன் நிறுவினோம். இப்போது பாருங்கள்:
+
+\begin{proof}[ஷ்ரோடர்--பெர்ன்ஸ்டைனின் மறு நிறுவல்]
+$\cardle{A}{B}$ மற்றும் $\cardle{B}{A}$ எனில்,
+\olref{lem:CardinalsBehaveRight} இன்படி $\card{A} \leq \card{B}$
+மற்றும் $\card{B} \leq \card{A}$. ஆகவே, முக்கூற்றுப் பண்பினாலும்
+\olref{lem:CardinalsBehaveRight} இனாலும் $\card{A} = \card{B}$,
+$\cardeq{A}{B}$ ஆகியவை கிடைக்கின்றன.
+\end{proof}
+\noindent
+இந்த நிறுவல் மிக எளிதாக இருந்தாலும், இதன் பின்னணியில்
+\olref[ordinals][ordtype]{thmOrdinalRepresentation} ஐப் பெற
+மாற்றீட்டு அடிகோளும், \olref{lem:CardinalsBehaveRight} ஐ உறுதிசெய்ய
+நன்கு வரிசைப்படுத்தல் அடிகோளும் பயன்படுத்தப்படுகின்றன. மாறாக,
+\olref[sfr][infinite][card-sb]{sec} இன் நிறுவல் அதிகம் தன்னிறைவு
+கொண்டது; அதனை $\Zminus$ இலும் செய்ய முடியும்.
+
+\end{document}

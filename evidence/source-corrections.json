@@ -5940,6 +5940,38 @@
       "rationale": "For every nonzero base, removing the initial exponent-0 value leaves the same limit supremum; for zero base it gives 0 at positive limits, agreeing with the corrected finite-support construction.",
       "precise_review_question": "Does the limit clause agree with 0^beta=0 for every beta>0 while retaining ordinary nonzero-base exponentiation?",
       "location_needle": "SOURCE CORRECTION TA-STH-029"
+    },
+    {
+      "audit_id": "TA-STH-030",
+      "unit_id": "OLP-0584",
+      "kind": "finite-cardinal-object-distinction",
+      "action": "Identified the cardinality of A, rather than A itself, as the non-natural-number object in the theorem's first clause.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The formal clause says card(A) is not in omega, but its English gloss says A is not a natural number. A can be any set, and the theorem concerns whether its cardinal is a finite ordinal.",
+      "chosen_treatment": "முதல் கூற்றின் விளக்கம் A தானே அல்ல, A இன் கண அளவெண்ணே இயல் எண் அல்ல என்று தெளிவுபடுத்துகிறது.",
+      "alternatives_considered": "Keeping the literal gloss and allowing it to contradict the formal statement.",
+      "rationale": "For example, a non-ordinal finite set may fail to be a natural number while its cardinal is a natural number, so the literal gloss would make the equivalence false.",
+      "precise_review_question": "Does the gloss predicate nonmembership of omega of card(A), rather than of A?",
+      "location_needle": "SOURCE CORRECTION TA-STH-030"
+    },
+    {
+      "audit_id": "TA-STH-031",
+      "unit_id": "OLP-0584",
+      "kind": "infinite-successor-predecessor-justification",
+      "action": "Explained that the predecessor of an infinite successor ordinal is infinite because a finite ordinal has a finite successor.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source attributes the predecessor's infinitude to finitecardisoequal, a proposition about equinumerosity of two finite ordinals. The needed fact is closure of omega under successor.",
+      "chosen_treatment": "முன்னெண் இயல் எண் எனில் அதன் தொடர்ச்சியும் இயல் எண் என்பதைக் கூறி, முடிவுறாத தொடர்ச்சியின் முன்னெண் முடிவுறாதது என நிறுவுகிறது.",
+      "alternatives_considered": "Leaving the original citation as the sole justification; dropping the citation without explaining the missing closure step.",
+      "rationale": "If beta belongs to omega, then beta plus one belongs to omega, contrary to the assumed infinitude of alpha. The existing proposition is retained as a nearby comparison, without attributing this closure fact to it.",
+      "precise_review_question": "Is the predecessor's infinitude derived from closure of finite ordinals under successor, with the old reference no longer bearing the proof burden?",
+      "location_needle": "SOURCE CORRECTION TA-STH-031"
     }
   ],
   "by_unit": {
@@ -6134,6 +6166,7 @@
     "OLP-0576": ["TA-STH-023", "TA-STH-024"],
     "OLP-0577": ["TA-STH-025", "TA-STH-026"],
     "OLP-0578": ["TA-STH-027"],
-    "OLP-0579": ["TA-STH-028", "TA-STH-029"]
+    "OLP-0579": ["TA-STH-028", "TA-STH-029"],
+    "OLP-0584": ["TA-STH-030", "TA-STH-031"]
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-25T02:15:43.946733+00:00",
+  "date_utc": "2026-09-25T03:23:48.013589+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2882,6 +2882,36 @@
       "unit_id": "OLP-0579",
       "source_sha256": "965be29d6ab8e9aad3e56b319cc8ddfb3cd212e836092f061198fafb561ae6fc",
       "translation_sha256": "4d1d22c30553087a073c67595b0d925d988f6d9cb69ac19c32dfb424494a1142"
+    },
+    {
+      "unit_id": "OLP-0580",
+      "source_sha256": "c837e8387ad2e577aa30b67d723f1c811794d325069bfd2447a2ea297ba66c43",
+      "translation_sha256": "6bdb6dd3cfebedc65fd246928cf62cc25f314de9fb5ae6ca436310bce23ae64c"
+    },
+    {
+      "unit_id": "OLP-0581",
+      "source_sha256": "950307ddcd75e93c0cb6aeaeb8f969f17e519027f1ff3672f433552edd519fae",
+      "translation_sha256": "4187e9b26e3905ee520f48d6332a905c9dfc2fd6cfcb0e386ad1686e5de4e4bf"
+    },
+    {
+      "unit_id": "OLP-0582",
+      "source_sha256": "76eb33836f0e2c21be7701b157030b8465ac08daccf532eeb5fa74dc8110100d",
+      "translation_sha256": "78343928ebbc3c746a30ea94b8ab6f21cd6c0bff30666d107c0e61c9e8ab4fd7"
+    },
+    {
+      "unit_id": "OLP-0583",
+      "source_sha256": "50f4f989834763156b2d27822acd03201532846baa243a8f97d6b3fa299a54fd",
+      "translation_sha256": "9ce99630c65616a6f1f062ce0fd8325a329e9c7ce07b3e436b0431764828a7e2"
+    },
+    {
+      "unit_id": "OLP-0584",
+      "source_sha256": "facf3eb5d19661a660d1c6441f09c0acc909f944253f4c7fe129048f8ea35bc6",
+      "translation_sha256": "2bfa5a6bece9b9f02ba7e101d06b3cec3a18ae3a65ef6e3c12e819dfbac0ecc8"
+    },
+    {
+      "unit_id": "OLP-0585",
+      "source_sha256": "b4c06d8cd04558e99e48c018a170bef91763b86b74ef03b260282ea5eae5b09e",
+      "translation_sha256": "cea20f2ef9548e84e919043909a1a0a2e78259095fbb65b9c3d1bd5555539e01"
     }
   ],
   "samples": [
@@ -7637,6 +7667,139 @@
       "assessment": "TA-STH-029 omits the zero-exponent term only at a positive limit so 0 to any positive exponent remains 0; the problem uses the same corrected finite-support parameter order as the exposition.",
       "translation_segment_sha256": "d7e0370ed38fe7f151511e5a290e3efb10bec3b29d51a6f0f6be69e5d05b53c9",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0580-S01",
+      "reverse_paraphrase": "The Cardinals chapter proceeds from Cantor’s Principle to cardinal ordinals, the ZFC milestone, finite and infinite classifications, and Hume’s Principle.",
+      "assessment": "All five imports retain frozen source order; the chapter title uses a provisional specialist compound.",
+      "translation_segment_sha256": "8c39bb2c3d060bedbe0330d604e15d532375deac40bdc46e6ce258c47dd0d6f8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0581-S01",
+      "reverse_paraphrase": "Ordinal equality calibrates isomorphism of well-orders; the chapter seeks an analogous object for equinumerosity without preserving order structure.",
+      "assessment": "Both ordinal references and the precise order-isomorphism display remain.",
+      "translation_segment_sha256": "7e2f9583d2e2f93a136087193d6bcde8f46bf710afa82c1a1aa770add0c2f222",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0581-S02",
+      "reverse_paraphrase": "Two sets are equinumerous exactly when a bijection exists; this is weaker structural information than an order isomorphism.",
+      "assessment": "Bijection token keys, the A-to-B function and relation to size are retained.",
+      "translation_segment_sha256": "215389422007c2a9e17f9d2c19b0593c33a347cb109a45f56a4157c07eff86b7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0581-S03",
+      "reverse_paraphrase": "Cantor’s Principle requires card(A)=card(B) exactly when A and B are equinumerous; the chapter will define card(X) to meet it.",
+      "assessment": "The displayed biconditional and Hume appendix reference remain; cardinal is defined by the source, not merely by a Tamil headword.",
+      "translation_segment_sha256": "3ea5fba83df269cd52c25a2a530bd2e8b328f82d7dfeba6b400a42391b7b394f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0582-S01",
+      "reverse_paraphrase": "A cardinal is the least ordinal equinumerous with a well-orderable set; not every set’s well-orderability is secured in ZF, so the chapter assumes Well-Ordering.",
+      "assessment": "The existential reading of “can,” the conditional definition and later Choice discussion remain distinct.",
+      "translation_segment_sha256": "5fc251977b800f5775b5f11ed0ab585f1c3b655f9005710850341a84e2bf99fe",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0582-S02",
+      "reverse_paraphrase": "Well-Ordering and ordinal representation yield a least equinumerous ordinal, which is itself fixed by the cardinal operation.",
+      "assessment": "All three lemma clauses, the transfinite minimality argument and the source’s nonrendering alternate proof comment remain.",
+      "translation_segment_sha256": "f85d174b13569d5c4dab4bed8b30a8efb1a28187d7125691d0a1ea7876d1235b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0582-S03",
+      "reverse_paraphrase": "Cardinal comparison corresponds to comparison of least ordinal representatives; an injection transfers through bijections, giving a short Schroder–Bernstein proof under stronger axioms.",
+      "assessment": "Diagram arrows and dashed injection, all three equivalences, both earlier theorem references and the Replacement/Well-Ordering dependency distinction remain.",
+      "translation_segment_sha256": "230ae05c51f63f4257f8b195b1ea2ffe001b45c63d5e0fa95cec4c6aa3231dfb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0583-S01",
+      "reverse_paraphrase": "Adding Well-Ordering to ZF yields ZFC with Extensionality, Union, Pairs, Powersets, Infinity, Foundation, Separation and Replacement.",
+      "assessment": "The later Choice equivalence is referenced without prematurely replacing the axiom in the formal list.",
+      "translation_segment_sha256": "4ae214b1f7dfc06b26af29527c706a9c94dda13d08077616088b2f2c3ae3172a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0584-S01",
+      "reverse_paraphrase": "Distinct finite ordinals are not equinumerous; every natural-number ordinal is therefore its own least equipotent ordinal and is a cardinal.",
+      "assessment": "Trichotomy, proper-subset bijection and Dedekind-finitude contradiction are retained.",
+      "translation_segment_sha256": "081eec9f02644b5fd474813e230e6eb705a3e34d4c980c322954623f2232f516",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0584-S02",
+      "reverse_paraphrase": "Under ZFC, a set is finite exactly when its cardinal lies in omega; otherwise it is infinite and Dedekind infinite.",
+      "assessment": "TA-STH-030 fixes the source gloss so the formal subject is card(A), and the Well-Ordering dependence remains explicit.",
+      "translation_segment_sha256": "9eff8a39f31ee68744a6700bc142d1bc723a8a10b240056c5779a705d4f5288f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0584-S03",
+      "reverse_paraphrase": "Omega is the least infinite cardinal; an infinite successor ordinal cannot be a cardinal because its infinite predecessor is equinumerous with it.",
+      "assessment": "TA-STH-031 supplies the needed closure of finite ordinals under successor instead of wrongly attributing it to the finite-equinumerosity proposition.",
+      "translation_segment_sha256": "613a364fff7fb4f0e20fa562bde1d6e34f23be861f335b9791720006520aa953",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0584-S04",
+      "reverse_paraphrase": "An enumerable set has cardinal at most omega, covering empty, finite nonempty and countably infinite cases; omega is the sole enumerable infinite cardinal.",
+      "assessment": "All three source cases and both comparison directions are retained.",
+      "translation_segment_sha256": "abf611c4ebd7add6a796773322976f7d69db5ab3b89446dc0386873aa4fa2cd8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0584-S05",
+      "reverse_paraphrase": "Unions of sets of cardinals are cardinals, there is no largest cardinal by Cantor, and therefore the collection of all cardinals cannot be a set.",
+      "assessment": "The ordinal-membership argument, powerset comparison and final union contradiction remain; the Russell and Burali–Forti comparisons are retained.",
+      "translation_segment_sha256": "3d2f536c28ffdeb89b0199572e1e989ac13273fc97ca0e4d2c0854acc9d4a9d5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0585-S01",
+      "reverse_paraphrase": "Hume’s Principle assigns equal numbers to predicates exactly when their extensions can be bijected, analogous to Cantor’s set principle.",
+      "assessment": "The relation-based bijection formula and distinct Frege-number notation remain.",
+      "translation_segment_sha256": "1340e8ec8e576bac605a13cc307315b783ad280eb8bb46749e418b08344437ed",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0585-S02",
+      "reverse_paraphrase": "Cantor’s variables denote first-order sets, whereas Hume’s predicate letters stand in predicate position; Hume’s historical line and Frege’s citation remain attributed.",
+      "assessment": "The Tamil quotation follows the source’s one-to-one unit correspondence without claiming new access to the historical originals.",
+      "translation_segment_sha256": "df926474bd0b8a78aece32343f751be03aeddf4631c936e3eb2469164587e19d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0585-S03",
+      "reverse_paraphrase": "Impredicative readings keep abstracted extensions or numbers inside the original quantifier domain; predicative readings place them in a distinct domain.",
+      "assessment": "The Basic Law V equation and all prior Story references remain.",
+      "translation_segment_sha256": "a9d5191d3a7147e0827fd52c720571563b05f7392670d6bf0339ad447317fd02",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0585-S04",
+      "reverse_paraphrase": "Impredicative Basic Law V is inconsistent through unrestricted comprehension, while impredicative Hume’s Principle is consistent and strong.",
+      "assessment": "The predicative rescue caveat for Basic Law V is retained.",
+      "translation_segment_sha256": "6028b9296a3c81ff6b90bc95e658f472c934217c4806d00eb87b332f08cc5e0b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0585-S05",
+      "reverse_paraphrase": "Hume’s Principle assigns zero to an empty predicate extension, then one and two through predicates containing previously obtained objects only under the impredicative reading.",
+      "assessment": "The zero/one/two formulas, nonidentity arguments and domain condition remain in their source order.",
+      "translation_segment_sha256": "3425eb710733185503a11812f732983121e0de19bfb6e28bbbd5bc2908e40d50",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0585-S06",
+      "reverse_paraphrase": "Impredicative Hume’s Principle entails infinitely many objects, though Frege instead derived it from extensions of equinumerosity concepts, returning to comprehension difficulties.",
+      "assessment": "The neo-Fregean comparison and final set-abstraction expression remain.",
+      "translation_segment_sha256": "137a39771e3ce0b1b4736d75e1ac89e89ee4aec8dd98be118b0d4c7c67a5e324",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -8525,11 +8688,19 @@
     {
       "unit_id": "OLP-0572",
       "issue": "The transition calls Weak-Reflection a weaker formulation of Replacement although the ensuing argument uses it to derive Replacement. Tamil identifies it as a weaker formulation of Reflection under TA-STH-022."
+    },
+    {
+      "unit_id": "OLP-0584",
+      "issue": "The infinite-cardinality theorem gloss says A itself is not a natural number although its formula concerns card(A). Tamil identifies the cardinal as the non-natural object under TA-STH-030."
+    },
+    {
+      "unit_id": "OLP-0584",
+      "issue": "The infinite-successor proof cites a proposition distinguishing finite ordinals by equinumerosity for the predecessor’s infinitude. Tamil supplies the needed closure of finite ordinals under successor and keeps the earlier result only as a comparison under TA-STH-031."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "576 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 146 frozen units still require completion.",
+  "remaining": "582 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 140 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 12,
     "distinct_unit_count": 248,
@@ -9484,6 +9655,29 @@
         "rank_bound_and_endpoint_exercise_repaired": true,
         "multiplication_zero_limit_and_noncommutativity": true,
         "exponent_parameter_and_zero_limit_repairs": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0580",
+        "OLP-0581",
+        "OLP-0582",
+        "OLP-0583",
+        "OLP-0584",
+        "OLP-0585"
+      ],
+      "correction_ids": [
+        "TA-STH-030",
+        "TA-STH-031"
+      ],
+      "status": "pass",
+      "checks": {
+        "five_sections_in_frozen_order": true,
+        "cantor_principle_and_equinumerosity": true,
+        "least_ordinal_and_axiom_dependency": true,
+        "zfc_axioms_and_choice_pointer": true,
+        "finite_infinite_enumerable_and_two_repairs": true,
+        "hume_principle_type_and_impredicativity": true
       }
     }
   ]

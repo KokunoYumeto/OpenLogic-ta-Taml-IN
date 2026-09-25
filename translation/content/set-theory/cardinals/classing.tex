@@ -1,0 +1,217 @@
+% SEGMENT OLP-0584-S01
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{cardinals}{classing}
+\olsection{முடிவுறு, \usetoken{S}{enumerable}, \usetoken{S}{nonenumerable}}
+
+கண அளவெண்களை அறிமுகப்படுத்தியுள்ளதால், அவற்றின் வெவ்வேறு வகைகளைப்
+பற்றிச் சிறிது பேசுவது பயனுள்ளது; குறிப்பாக முடிவுறு, !!{enumerable},
+!!{nonenumerable} கண அளவெண்களைப் பற்றிப் பார்ப்போம்.
+
+முதல் இரண்டு முடிவுகளிலிருந்து, முடிவுறு கண அளவெண்கள் துல்லியமாக
+முடிவுறு வரிசையெண்களே என்று கிடைக்கும். அவற்றையே
+\olref[z][infinity-again]{defnomega} இல் நமது \emph{இயல் எண்கள்}
+என்று வரையறுத்தோம்:
+
+\begin{prop}\ollabel{finitecardisoequal}
+$n, m \in \omega$ என்க. அப்போது $n = m$ எனும்போதும் அப்போதுதான்
+$\cardeq{n}{m}$.
+\end{prop}
+
+\begin{proof}
+\emph{இடமிருந்து வலம்} செல்லும் திசை உடனடியாகத் தெரியும்.
+\emph{வலமிருந்து இடம்} செல்லும் திசைக்கு, $n \neq m$ என்றாலும்
+$\cardeq{n}{m}$ எனக் கொள்வோம். முக்கூற்றுப் பண்பின்படி $n \in m$
+அல்லது $m \in n$; பொதுத்தன்மை இழப்பின்றி $n \in m$ எனக் கொள்வோம்.
+அப்போது $n \subsetneq m$; மேலும் $f \colon m \to n$ என்ற
+!!a{bijection} உள்ளது. எனவே $m$ டெடெகிண்ட் முடிவுறாதது.
+இது \olref[z][infinity-again]{naturalnumbersarentinfinite} க்கு முரண்.
+\end{proof}
+
+\begin{cor}\ollabel{naturalsarecardinals}
+$n \in \omega$ எனில், $n$ ஒரு கண அளவெண்.
+\end{cor}
+
+\begin{proof}
+உடனடியாகப் பெறப்படுகிறது.
+\end{proof}
+\noindent
+
+% SEGMENT OLP-0584-S02
+ஒரு கண அளவெண்ணை ``முடிவுறு'' அல்லது ``முடிவுறாதது'' என்று
+சொல்வதற்கான பல நியாயமான பொருள்கள் ஒன்றுபடுகின்றன என்றும் கிடைக்கிறது:
+\begin{thm}\ollabel{generalinfinitycharacter}எந்தக் கணம் $A$ க்கும்,
+பின்வருவன சமானமானவை:
+\begin{enumerate}
+	% SOURCE CORRECTION TA-STH-030: A அல்ல, அதன் கண அளவெண் இயல் எண் அல்ல.
+	\item\ollabel{card:notinomega} $\card{A} \notin \omega$;
+	அதாவது, $A$ இன் கண அளவெண் ஓர் இயல் எண் அல்ல;
+	\item\ollabel{card:omegaplus} $\omega \leq \card{A}$;
+	\item\ollabel{card:infinite} $A$ டெடெகிண்ட் முடிவுறாதது.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+\olref[ord-arithmetic][using-addition]{ordinfinitycharacter},
+\olref[cardinals][cardsasords]{lem:CardinalsBehaveRight},
+\olref{naturalsarecardinals} ஆகியவற்றிலிருந்து பெறப்படுகிறது.
+\end{proof}
+
+இதனால் \olref[sfr][][]{part} இல் ஓரளவு முறைசாராமல் பயன்படுத்திய
+சில கருத்துகளைப் பின்வருமாறு \emph{வரையறுக்க} முடிகிறது:
+
+\begin{defn}\ollabel{defnfinite}
+$\card{A}$ ஓர் இயல் எண், அதாவது $\card{A} \in \omega$,
+எனும்போதும் அப்போதுதான் $A$ \emph{முடிவுறு} என்று சொல்கிறோம்.
+இல்லாவிட்டால், $A$ \emph{முடிவுறாதது} என்று சொல்கிறோம்.
+\end{defn}
+\noindent
+ஆனால், இந்த வரையறை $\ZFC$ இன் பின்னணியிலேயே அளிக்கப்படுகிறது
+என்பதைக் கவனிக்கவும். எல்லாக் கணங்களுக்கும் கண அளவெண் இருப்பதை
+உறுதிசெய்ய நன்கு வரிசைப்படுத்தல் தேவைப்பட்டது. உண்மையில், நன்கு
+வரிசைப்படுத்தல் இல்லாவிட்டால், முடிவுறாததும் டெடெகிண்ட்
+முடிவுறாததுமல்லாத ஒரு கணம் இருக்கக்கூடும். இவ்வகைச் சிக்கலுக்கு
+\olref[choice][]{chap} இல் திரும்புவோம். இப்போது நன்கு
+வரிசைப்படுத்தலைத் தொடர்ந்து பயன்படுத்துவோம்.
+
+% SEGMENT OLP-0584-S03
+இப்போது முடிவுறு கண அளவெண்களிலிருந்து முடிவுறாத கண அளவெண்களுக்குச்
+செல்வோம். இரண்டு அடிப்படை முடிவுகள் இவை:
+
+\begin{cor}\ollabel{omegaisacardinal}
+$\omega$ தான் மீச்சிறிய முடிவுறாத கண அளவெண்.
+\end{cor}
+
+\begin{proof}
+$\omega$ ஒரு கண அளவெண். ஏனெனில் $\omega$ டெடெகிண்ட்
+முடிவுறாதது; ஏதேனும் $n \in \omega$ க்கு
+$\cardeq{\omega}{n}$ எனில் $n$ உம் டெடெகிண்ட் முடிவுறாததாகும்.
+இது \olref[z][infinity-again]{naturalnumbersarentinfinite} க்கு முரண்.
+இப்போது, வரையறையின்படி $\omega$ தான் மீச்சிறிய முடிவுறாத கண அளவெண்.
+\end{proof}
+
+\begin{cor}
+ஒவ்வொரு முடிவுறாத கண அளவெண்ணும் ஓர் எல்லை வரிசையெண்.
+\end{cor}
+
+\begin{proof}
+$\alpha$ ஒரு முடிவுறாத தொடர்ச்சி வரிசையெண் என்க. அப்போது,
+ஏதேனும் $\beta$ க்கு $\alpha = \beta \ordplus 1$.
+% SOURCE CORRECTION TA-STH-031: முடிவுறு இயல் எண்ணின் தொடர்ச்சி மீண்டும் முடிவுறுவதே இங்கு தேவை.
+$\beta$ முடிவுறாதது: அது ஓர் இயல் எண் எனில் அதன்
+தொடர்ச்சியும் இயல் எண்களின் கணத்தில் இருக்கும்; இது முரண். முடிவுறு
+வரிசையெண்களை வேறுபடுத்தும் \olref{finitecardisoequal} உடன் இதை
+ஒப்பிடலாம். இப்போது
+\olref[ord-arithmetic][using-addition]{ordinfinitycharacter} இன்படி
+$\cardeq{\beta}{\beta \ordplus 1}$. எனவே
+\olref[cardinals][cardsasords]{lem:CardinalsBehaveRight} இன்படி
+$\card{\beta} = \card{\beta\ordplus 1} = \card{\alpha}$;
+ஆகவே $\alpha \neq \card{\alpha}$.
+\end{proof}
+
+% SEGMENT OLP-0584-S04
+\olref[sfr][siz][enm-alt]{defn:enumerable} இலேயே
+!!{enumerable} முடிவுறாத கணங்களையும் !!{nonenumerable}
+முடிவுறாத கணங்களையும் வேறுபடுத்தலாம் என்று குறிப்பிட்டோம்.
+அந்த வரையறையிலிருந்து இயல்பாகப் பின்வருவது:
+
+\begin{prop}
+$A$ !!{enumerable} எனும்போதும் அப்போதுதான் $\card{A} \leq \omega$;
+$A$ !!{nonenumerable} எனும்போதும் அப்போதுதான்
+$\omega < \card{A}$.
+\end{prop}
+
+\begin{proof}
+முக்கூற்றுப் பண்பின்படி இரு கூற்றுகளும் சமானமானவை. எனவே
+$A$ !!{enumerable} எனும்போதும் அப்போதுதான்
+$\card{A} \leq \omega$ என்பதை நிறுவினால் போதும்.
+\emph{வலமிருந்து இடம்} செல்லும் திசையில், $\card{A} \leq \omega$
+எனில், \olref[cardinals][cardsasords]{lem:CardinalsBehaveRight},
+\olref{omegaisacardinal} ஆகியவற்றின்படி $\cardle{A}{\omega}$.
+\emph{இடமிருந்து வலம்} செல்லும் திசையில், $A$ !!{enumerable} எனக்
+கொள்வோம். அப்போது \olref[sfr][siz][enm-alt]{defn:enumerable} இன்படி
+மூன்று நிலைகள் உண்டு:
+\begin{enumerate}
+	\item $A = \emptyset$ எனில்,
+	\olref{naturalsarecardinals},
+	\olref[cardinals][cardsasords]{lem:CardinalsBehaveRight}
+	ஆகியவற்றின்படி $\card{A} = 0 \in \omega$.
+	\item $\cardeq{n}{A}$ எனில்,
+	\olref{naturalsarecardinals},
+	\olref[cardinals][cardsasords]{lem:CardinalsBehaveRight}
+	ஆகியவற்றின்படி $\card{A} = n \in \omega$.
+	\item $\cardeq{\omega}{A}$ எனில்,
+\olref{omegaisacardinal} இன்படி $\card{A} = \omega$.
+\end{enumerate}
+எனவே எல்லா நிலைகளிலும் $\card{A} \leq \omega$.
+\end{proof}
+\noindent
+உண்மையில், $\omega$ க்கு ஒரு சிறப்பிடம் உள்ளது.
+எண்ணக்கூடிய வரிசையெண்கள் பல இருந்தாலும்:
+
+\begin{cor}
+$\omega$ மட்டுமே !!{enumerable} முடிவுறாத கண அளவெண்.
+\end{cor}
+
+\begin{proof}
+$\cardfont{a}$ ஓர் !!a{enumerable} முடிவுறாத கண அளவெண் என்க.
+$\cardfont{a}$ முடிவுறாதது என்பதால் $\omega \leq \cardfont{a}$.
+$\cardfont{a}$ ஓர் !!a{enumerable} கண அளவெண் என்பதால்,
+$\cardfont{a} = \card{\cardfont{a}} \leq \omega$.
+எனவே முக்கூற்றுப் பண்பின்படி $\cardfont{a} = \omega$.
+\end{proof}
+
+% SEGMENT OLP-0584-S05
+நிச்சயமாக, முடிவுறாத எண்ணிக்கையில் கண அளவெண்கள் உள்ளன. எனவே
+\emph{கண அளவெண்கள் எத்தனை?} என்று கேட்கலாம். அக்கேள்வியை
+மறுபரிசீலனை செய்ய வேண்டும் என்பதைப் பின்வரும் முடிவுகள் காட்டுகின்றன.
+
+\begin{prop}\ollabel{unioncardinalscardinal}
+$X$ இன் ஒவ்வொரு உறுப்பும் ஒரு கண அளவெண் எனில், $\bigcup X$ உம்
+ஒரு கண அளவெண்.
+\end{prop}
+
+\begin{proof}
+$\bigcup X$ ஒரு வரிசையெண் என்பதை எளிதில் சரிபார்க்கலாம்.
+$\alpha \in \bigcup X$ ஒரு வரிசையெண் என்க. அப்போது ஏதேனும்
+கண அளவெண் $\cardfont{b}$ க்கு
+$\alpha \in \cardfont{b} \in X$. $\cardfont{b}$ ஒரு கண அளவெண்
+என்பதால் $\cardless{\alpha}{\cardfont{b}}$.
+$\cardfont{b} \subseteq \bigcup X$ என்பதால்,
+$\cardle{\cardfont{b}}{\bigcup X}$. எனவே
+$\cardneq{\alpha}{\bigcup X}$. இதைப் பொதுமைப்படுத்தினால்,
+$\bigcup X$ ஒரு கண அளவெண்.
+\end{proof}
+
+\begin{thm}\ollabel{lem:NoLargestCardinal}
+மீப்பெரு கண அளவெண் என்று எதுவும் இல்லை.
+\end{thm}
+
+\begin{proof}
+எந்தக் கண அளவெண் $\cardfont{a}$ க்கும், காண்டோரின் தேற்றமும்
+(\olref[sfr][siz][car]{thm:cantor})
+\olref[cardinals][cardsasords]{lem:CardinalsExist} உம் சேர்ந்து
+$\cardfont{a} < \card{\Pow{\cardfont{a}}}$ என்பதைத் தருகின்றன.
+\end{proof}
+
+\begin{thm}
+எல்லாக் கண அளவெண்களையும் கொண்ட கணம் இல்லை.
+\end{thm}
+
+\begin{proof}
+மறுதலித்து நிறுவ, $C = \Setabs{\cardfont{a}}{\cardfont{a} \text{
+ஒரு கண அளவெண்}}$ எனக் கொள்வோம். இப்போது
+\olref{unioncardinalscardinal} இன்படி $\bigcup C$ ஒரு கண அளவெண்.
+எனவே \olref{lem:NoLargestCardinal} இன்படி
+$\cardfont{b} > \bigcup C$ ஆகுமாறு ஒரு கண அளவெண்
+உள்ளது. வரையறையின்படி $\cardfont{b} \in C$; ஆகவே
+$\cardfont{b} \subseteq \bigcup{C}$, எனவே
+$\cardfont{b} \leq \bigcup C$. இது முரண்.
+\end{proof}
+
+இதை ரசலின் முரண்பாட்டுடனும் புராலி--ஃபோர்ட்டி முரண்பாட்டுடனும்
+ஒப்பிட்டுப் பாருங்கள்.
+
+\end{document}
