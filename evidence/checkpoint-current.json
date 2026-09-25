@@ -1,22 +1,22 @@
 {
   "schema": "openlogic-tamil-checkpoint/4",
-  "date_utc": "2026-09-25T01:49:29.312579+00:00",
+  "date_utc": "2026-09-25T02:28:39.167372+00:00",
   "previous_goal_turn_classification": "progress",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified": 722,
   "source_total": 722,
-  "drafted_units": 570,
-  "aligned_segments": 1456,
+  "drafted_units": 576,
+  "aligned_segments": 1471,
   "canon_sources": 9,
   "canon_passages": 51,
-  "term_decisions": 226,
-  "translation_decisions": 548,
-  "translation_decision_occurrences": 26825,
+  "term_decisions": 231,
+  "translation_decisions": 560,
+  "translation_decision_occurrences": 27004,
   "reader_page_mapped_occurrences": 2897,
-  "reader_page_pending_occurrences": 23928,
+  "reader_page_pending_occurrences": 24107,
   "textual_invariants_pass": true,
-  "semantic_reviewed_units": 570,
-  "semantic_reviewed_samples": 664,
+  "semantic_reviewed_units": 576,
+  "semantic_reviewed_samples": 679,
   "reader_verified_distinct_units": 248,
   "combined_reader_verified_units": 51,
   "proof_systems_reader_verified_units": 49,
@@ -216,7 +216,7 @@
   "published_source_units": 570,
   "source_publication_readback": "publication-readback-spine-source-companion.json",
   "source_publication_commit": "0df12c029d2ab0c5dbb511920155ca993e58b403",
-  "current_source_published": true,
+  "current_source_published": false,
   "edition_complete": false,
   "unit_artifacts": [
     {
@@ -29650,6 +29650,452 @@
       "missing_commands": [],
       "extra_commands": [],
       "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0574",
+      "source_sha256": "aeccfd957a75eb3ddbfc0ed123fc50201eb60973fad8ac05dcc8f65cb2c91b64",
+      "translation_sha256": "b256fe754844aad350eb742ffdeb421af281196e8eb320682a53285b4ef9c31f",
+      "source_bytes": 336,
+      "translation_bytes": 397,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0575",
+      "source_sha256": "9e0976b1ea12b68d90487495db0bc3624653a8c55cdea1300fded90db48a73b8",
+      "translation_sha256": "fc856805d6c2ce38053ab1ce4f8832ca2384e67218244e739ffcb3fec0f8e5c4",
+      "source_bytes": 886,
+      "translation_bytes": 2036,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "idea",
+        "include",
+        "logic",
+        "open",
+        "ordinals",
+        "section",
+        "spine"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0576",
+      "source_sha256": "e812adca016fb2b68daed98ef2bc27f45e48a57ceeeb27d244ad5c92a453a6e6",
+      "translation_sha256": "84c05f3c066e4cccc2c41a0839d81f1d7e604618cdebdf7b439d621459b05dbb",
+      "source_bytes": 9309,
+      "translation_bytes": 17915,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\alpha\\disjointsum1=(\\alpha\\times\\{0\\})\\disjointsum(\\{0\\}\\times\\{1\\})$",
+        "\\begin{align*}\\alpha\\ordplus0&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(0\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup\\{0\\},\\rlexless}\\\\&=\\alpha\\\\\\alpha\\ordplus(\\beta\\ordplus1)%&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\ordtype{\\beta\\ordplus1}\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\ordsucc{\\beta}\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\beta\\times\\{1\\}),\\rlexless}\\ordplus1\\\\&=(\\alpha\\ordplus\\beta)\\ordplus1\\end{align*}"
+      ],
+      "extra_math": [
+        "$\\alpha\\disjointsum1=(\\alpha\\times\\{0\\})\\cup(\\{0\\}\\times\\{1\\})$",
+        "\\begin{align*}\\alpha\\ordplus0&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(0\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{\\alpha\\times\\{0\\},\\rlexless}\\\\&=\\alpha\\\\\\alpha\\ordplus(\\beta\\ordplus1)%&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\ordtype{\\beta\\ordplus1}\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\ordsucc{\\beta}\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\beta\\times\\{1\\}),\\rlexless}\\ordplus1\\\\&=(\\alpha\\ordplus\\beta)\\ordplus1\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "add",
+        "again",
+        "align",
+        "arithmetic",
+        "basic",
+        "hilbert",
+        "include",
+        "infinite",
+        "infinity",
+        "logic",
+        "open",
+        "ord",
+        "ordinals",
+        "ordtype",
+        "section",
+        "sfr",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-023",
+          "unit_id": "OLP-0576",
+          "kind": "already-tagged-disjoint-sum-components",
+          "action": "Replaced the second disjoint-sum operation between the two tagged components by ordinary union in the successor isomorphism codomain.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\disjointsum"
+          ],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\disjointsum(\\{0\\}\\times\\{1\\})",
+              "to": "\\cup(\\{0\\}\\times\\{1\\})",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source correctly defines alpha disjointsum 1 as the union of alpha-times-{0} and 1-times-{1}, but the proof applies disjointsum a second time to those already tagged pieces.",
+          "chosen_treatment": "தமிழ் நிறுவல் குறியிட்ட இரு கணங்களைச் சாதாரணச் சேர்ப்பால் இணைக்கிறது.",
+          "alternatives_considered": "Retaining the nested disjoint sum, which would create newly tagged pairs rather than the displayed f-values.",
+          "rationale": "The displayed map f sends gamma to <gamma,0> and alpha to <0,1>; exactly those values belong to the ordinary union of the two tagged components.",
+          "precise_review_question": "Does the codomain consist exactly of the values displayed for f?",
+          "location_needle": "SOURCE CORRECTION TA-STH-023"
+        },
+        {
+          "audit_id": "TA-STH-024",
+          "unit_id": "OLP-0576",
+          "kind": "zero-product-spurious-singleton",
+          "action": "Removed a spurious singleton from the zero-addition order-type calculation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\ordtype{(\\alpha\\times\\{0\\})\\cup\\{0\\},\\rlexless}",
+              "to": "\\ordtype{\\alpha\\times\\{0\\},\\rlexless}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source simplifies (alpha-times-{0}) union (0-times-{1}) to (alpha-times-{0}) union {0}; but 0 is the empty ordinal and 0-times-{1} is empty, not {0}.",
+          "chosen_treatment": "தமிழ் கணக்கில் வெற்றுக் கார்டீசியப் பெருக்கலை நீக்கி alpha-times-{0} மட்டும் வைத்துள்ளது.",
+          "alternatives_considered": "Preserving a nonexistent singleton or changing the zero ordinal's meaning.",
+          "rationale": "The resulting tagged copy of alpha is order-isomorphic to alpha under the relation already defined.",
+          "precise_review_question": "Does the base recursion calculation use 0-times-{1}=empty set?",
+          "location_needle": "SOURCE CORRECTION TA-STH-024"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\disjointsum"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0577",
+      "source_sha256": "9641a137f0347689fad7fc04337f8889991e482c6179513c19a0bfbc619eaff1",
+      "translation_sha256": "c1e8650169e0dad8067f1fdf90e8286b028bf2bdfb7f87af8b4efce36a9f2849",
+      "source_bytes": 4730,
+      "translation_bytes": 8054,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\setrank{A\\timesB}\\max(\\setrank{A},\\setrank{B})\\ordplus2$"
+      ],
+      "extra_math": [
+        "$\\setrank{A\\timesB}=\\max(\\setrank{A},\\setrank{B})\\ordplus2$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "again",
+        "include",
+        "infinity",
+        "logic",
+        "open",
+        "rank",
+        "section",
+        "spine"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-025",
+          "unit_id": "OLP-0577",
+          "kind": "cartesian-product-rank-wrong-citation",
+          "action": "Referred to the powerset-rank clause twice when bounding the rank of the Cartesian product inside two powersets.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "and invoke \\olref{exranktuple}",
+              "to": "and invoke \\olref{exrankpow}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof says A-times-B is contained in P(P(A-union-B)) but cites the ordered-pair rank clause rather than the powerset-rank clause needed to bound the displayed double powerset.",
+          "chosen_treatment": "தமிழ் நிறுவல் அடுக்குக்கணத்தின் தரநிலை வாய்பாட்டை இருமுறை பயன்படுத்துகிறது.",
+          "alternatives_considered": "Retaining the mismatched ordered-pair citation while leaving the double-powerset argument unexplained.",
+          "rationale": "The displayed containment and the earlier equality rank(P(X))=rank(X)+1 directly yield the stated max-plus-two upper bound.",
+          "precise_review_question": "Does the cited clause compute the rank of P(P(A-union-B))?",
+          "location_needle": "SOURCE CORRECTION TA-STH-025"
+        },
+        {
+          "audit_id": "TA-STH-026",
+          "unit_id": "OLP-0577",
+          "kind": "product-rank-exercise-missing-relation",
+          "action": "Inserted the missing equality sign in the second requested Cartesian-product rank example.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\setrank{A\\timesB}\\max",
+              "to": "\\setrank{A\\timesB}=\\max",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The second problem prints rank(A-times-B) immediately followed by max(rank A, rank B)+2 without any relation sign.",
+          "chosen_treatment": "தமிழ் பயிற்சி மேல்வரம்பை எட்டும் எடுத்துக்காட்டுக்கான சமக்குறியை நிரப்புகிறது.",
+          "alternatives_considered": "Reading the missing sign as strict inequality, which conflicts with the preceding upper bound and the exercise's contrast between attainable endpoints.",
+          "rationale": "The preceding lemma establishes at most max-plus-two and the first request uses equality at max; the second therefore asks for equality at the stated upper endpoint.",
+          "precise_review_question": "Does the second exercise request equality to max(rank A, rank B)+2?",
+          "location_needle": "SOURCE CORRECTION TA-STH-026"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0578",
+      "source_sha256": "eade2bc67a7dede697f1a89e0359c3ef4a1c52154bbcf4b1b45176f5d3742abb",
+      "translation_sha256": "77ceeb1af095c71af18b85a72f66f12826782b6763f78ffe5b59aaf6ef15a5f4",
+      "source_bytes": 4066,
+      "translation_bytes": 7369,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\alpha\\ordtimes0&=0\\\\\\alpha\\ordtimes(\\beta\\ordplus1)&=(\\alpha\\ordtimes\\beta)\\ordplus\\alpha\\\\\\alpha\\ordtimes\\beta&=\\supstrict_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)&&$\\beta$.\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\alpha\\ordtimes0&=0\\\\\\alpha\\ordtimes(\\beta\\ordplus1)&=(\\alpha\\ordtimes\\beta)\\ordplus\\alpha\\\\\\alpha\\ordtimes\\beta&=\\sup_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)&&$\\beta$.\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "add",
+        "align",
+        "arithmetic",
+        "include",
+        "logic",
+        "mult",
+        "open",
+        "ord",
+        "section",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-027",
+          "unit_id": "OLP-0578",
+          "kind": "ordinal-multiplication-zero-left-factor-limit",
+          "action": "Used ordinary supremum rather than least strict upper bound in the limit multiplication equation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\supstrict"
+          ],
+          "expected_extra_commands": [
+            "\\sup"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\supstrict_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)",
+              "to": "\\sup_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source states the limit recursion for every alpha using least strict upper bound. At alpha=0 and any nonzero limit beta, all preceding products are 0, whose least strict upper bound is 1; but the directly defined order type of 0-times-beta is 0.",
+          "chosen_treatment": "தமிழ் எல்லைநிலைச் சமன்பாட்டில் சாதாரண மீச்சிறு மேல்வரம்பைப் பயன்படுத்துகிறது; இதனால் 0 பெருக்கல் 0 ஆகவே உள்ளது.",
+          "alternatives_considered": "Excluding alpha=0 from the lemma, leaving zero-base multiplication undefined at limits.",
+          "rationale": "For nonzero alpha, the finite and transfinite products are cofinal at a limit and ordinary and least-strict suprema agree; the ordinary supremum also handles alpha=0 correctly.",
+          "precise_review_question": "Does the revised limit recursion agree with the order-type product when alpha=0?",
+          "location_needle": "SOURCE CORRECTION TA-STH-027"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\supstrict"
+      ],
+      "extra_commands": [
+        "\\sup"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0579",
+      "source_sha256": "965be29d6ab8e9aad3e56b319cc8ddfb3cd212e836092f061198fafb561ae6fc",
+      "translation_sha256": "4d1d22c30553087a073c67595b0d925d988f6d9cb69ac19c32dfb424494a1142",
+      "source_bytes": 2721,
+      "translation_bytes": 6051,
+      "source_coverage_complete": true,
+      "segments": 2,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\ordtype{(\\alpha,\\beta),\\sqsubset}$",
+        "\\begin{align*}\\ordexpo{\\alpha}{0}&=1\\\\\\ordexpo{\\alpha}{\\beta\\ordplus1}&=\\ordexpo{\\alpha}{\\beta}\\ordtimes\\alpha\\\\\\ordexpo{\\alpha}{\\beta}&=\\bigcup_{\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}&&$\\beta$\\end{align*}",
+        "$\\ordexpo{\\alpha}{\\beta}=\\ordtype{(\\alpha,\\beta),\\sqsubset}$"
+      ],
+      "extra_math": [
+        "$\\ordtype{(\\beta,\\alpha),\\sqsubset}$",
+        "\\begin{align*}\\ordexpo{\\alpha}{0}&=1\\\\\\ordexpo{\\alpha}{\\beta\\ordplus1}&=\\ordexpo{\\alpha}{\\beta}\\ordtimes\\alpha\\\\\\ordexpo{\\alpha}{\\beta}&=\\bigcup_{0<\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}&&$\\beta$\\end{align*}",
+        "$\\ordexpo{\\alpha}{\\beta}=\\ordtype{(\\beta,\\alpha),\\sqsubset}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "arithmetic",
+        "expo",
+        "include",
+        "logic",
+        "open",
+        "ord",
+        "section",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-028",
+          "unit_id": "OLP-0579",
+          "kind": "finite-support-exponent-parameter-order",
+          "action": "Used finite-support functions from exponent beta into base alpha in both the synthetic construction and the exercise.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\ordtype{(\\alpha,\\beta),\\sqsubset}",
+              "to": "\\ordtype{(\\beta,\\alpha),\\sqsubset}",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "The source defines finfun(alpha,beta) as finitely supported functions alpha to beta, then calls its order type alpha to the beta. Such functions instead represent beta to the alpha; the base and exponent arguments are reversed in both uses.",
+          "chosen_treatment": "தமிழ் கட்டமைப்பிலும் பயிற்சியிலும் அடுக்குக்குறியாகிய beta இலிருந்து அடியாகிய alpha க்கான முடிவுறு ஆதரவுச் சார்புகளைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Changing the definition of finfun itself or retaining a construction whose zero-exponent and successor cases contradict the displayed recursion.",
+          "rationale": "finfun(0,alpha) contains the empty function and has order type 1; finfun(1,alpha) has order type alpha, as required by alpha^0=1 and alpha^1=alpha.",
+          "precise_review_question": "Do the synthetic construction and exercise both use finfun(beta,alpha) for alpha^beta?",
+          "location_needle": "SOURCE CORRECTION TA-STH-028"
+        },
+        {
+          "audit_id": "TA-STH-029",
+          "unit_id": "OLP-0579",
+          "kind": "zero-base-exponent-limit",
+          "action": "Excluded the zero exponent from the positive-limit union in the ordinal-exponentiation recursion.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\bigcup_{\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}",
+              "to": "\\bigcup_{0<\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source's limit union includes exponent 0 for every base. For base 0 and positive limit beta, the union includes 0^0=1 and yields 1, conflicting with the synthetic function order type and with 0 to every positive successor being 0.",
+          "chosen_treatment": "தமிழ் நேர்ம எல்லை அடுக்கில் பூச்சிய அடுக்கை மட்டும் விலக்கி 0 இன் நேர்ம அடுக்குகள் அனைத்தும் 0 ஆக இருப்பதைப் பாதுகாக்கிறது.",
+          "alternatives_considered": "Adding a separate zero-base case while retaining the original limit formula only under alpha>0; excluding base 0 from the chapter entirely.",
+          "rationale": "For every nonzero base, removing the initial exponent-0 value leaves the same limit supremum; for zero base it gives 0 at positive limits, agreeing with the corrected finite-support construction.",
+          "precise_review_question": "Does the limit clause agree with 0^beta=0 for every beta>0 while retaining ordinary nonzero-base exponentiation?",
+          "location_needle": "SOURCE CORRECTION TA-STH-029"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
     }
   ],
   "state_hashes": {
@@ -29661,7 +30107,7 @@
     "CUMULATIVE-READER-RENDER-QA.json": "ec518cf14c953bb240b398c873b86ffdba2e6feb535a1c7b51a3b91b3e0e1d98",
     "CUMULATIVE-TEX-SOURCE-QA.json": "1367c6b33d6142df4cd653175984cb6dc3fdf846ce16318e10ae89b710668226",
     "CUMULATIVE-TEX-SOURCE.json": "88a83f4205056da22454fa0ff9f851499930802206a558ddb1db59ccd581c137",
-    "DECISION-REVIEW-QA.json": "0035091409cd140ad1471c00d05d891c516af0aca876f3129bf04fdd1da138b3",
+    "DECISION-REVIEW-QA.json": "4914b1f1300bd4ba2c08ac9377be8f0d4c0e7e29938be2fccd5db2c63a607c8e",
     "DECISION_PAGE_MAP.jsonl": "e4e04950f5d5e3d970437efa49a1af4806735b3a10220de4c4ff8292d4cbfcb8",
     "EPUB-HTML-PROOF_SYSTEMS-RECEIPT.json": "04bcb59744d6dfb8bdde2f6887d72bdb81040878d829d26c98d7b8f84cdf73e7",
     "EPUB-HTML-SETS-RECEIPT-20260912-215943.json": "ab6044ff13b6727ff03f3822657679a4395050e434b8359bb09d1821dd863207",
@@ -29717,6 +30163,7 @@
     "PUBLICATION-READBACK-SFR-PATCH.json": "aaac9730075fe36a57473ff9b6489027e281fe83463a747d44beba34b4acfe90",
     "PUBLICATION-READBACK-SFR.json": "25053cc497d31b19ce691012788b6920e9d0e1a59dae51efc873ade194032567",
     "PUBLICATION-READBACK-SPINE-SOURCE-COMPANION.json": "c8eb4d8e2322a2c48187d67d4cbaf21116cb77e67b09e031bb993e24f0d8f131",
+    "PUBLICATION-READBACK-SPINE-SOURCE-EVIDENCE.json": "71fec743bb12ecbef2d98d3dcdd0805f424c7d865e25f5427452e73bcca4a7fc",
     "PUBLICATION-READBACK-STH-533-EVIDENCE.json": "1a8c243ce86c8d90038be161e4e57314251e184ea9d5b466d06801d83cf63d3c",
     "PUBLICATION-READBACK-STH-533.json": "575c3b326cd7eee4d9e2209ffaa89cc075c877bf19bf637190b24e3924ce7114",
     "PUBLICATION-READBACK-STO-554-EVIDENCE.json": "233073a6701f1b413e7fd139db76e4f74bf17397bdbb13fa8dd9c0594c5b0932",
@@ -29982,9 +30429,14 @@
     "QA-B252.json": "b1f4ce08caae15db2a105da4276662d1f936f06cbedd1f2b75981c9b4ba982de",
     "QA-B253.json": "07aee8b94ef9722e61f2a376c9e11239b892cd0cdcf72d9e2128cd1d525c3b9c",
     "QA-B254.json": "92b35d318177f45d1f90364c398a34fe569434b220df4597a2ef8d7de53bb07c",
+    "QA-B255.json": "abd0d6da238a78bca42bc6bc63f835ee06f25623fccdc46681e6f40c6753eb90",
+    "QA-B256.json": "9b9a56eb4a5e00590042c8fba496616b716aa9b37c51a1fd254e772415cc3ba5",
+    "QA-B257.json": "9a0034f351485586db2ceb05f2822f8cc680a9e34d1a98991e62c5c1117af45a",
+    "QA-B258.json": "cc087df789230b3dba6f10a2627a1021a1e0811f6c6ab9665f2f31163bd4e209",
+    "QA-B259.json": "2374e44dc9ee325c7d87e75c9e56099c2abe74c3affbe3840f2e3c6dfd81e8bf",
     "REPRESENTABILITY-IN-Q-RENDER-QA.json": "b6d9f9e100bc3b6529357df03724debe350a071f1fe797866fb77d3245681d79",
-    "SEGMENT_CANON_USE.jsonl": "5f053126a3fa3181a5d6b35850e77f3ca186aa08f7e0f775c1b8a2976548615d",
-    "SEMANTIC_REVIEW-CURRENT.json": "845a3b706246bfaa7e5c31c8c92b314f26af606e48ea4434775fa9efae54d791",
+    "SEGMENT_CANON_USE.jsonl": "7a33618d4002c303c2edc1b96797a241b32518b4fe375fdde8c6fad9dff7bd8d",
+    "SEMANTIC_REVIEW-CURRENT.json": "d0fdf2f03c1e0d599118c78539223b1ffcf1fd86247a001e6686dddfd2c498b7",
     "SET-THEORY-ORDINALS-RENDER-QA.json": "77c495a10af3ca6c9731988b56036712967cd90ec87180d740f8c734ad283156",
     "SET-THEORY-REPLACEMENT-RENDER-QA.json": "5d35a110e4b32bfbf2b9f2635de9cf8453619524fa857c6ca963ce432aa6581a",
     "SET-THEORY-SPINE-RENDER-QA.json": "85b9c87911ec8b2de57304bef5003a61e7cb309c27800f3605f542497d73c0af",
@@ -29994,10 +30446,10 @@
     "SET-THEORY-Z-RENDER-QA.json": "4db09856abcb41600116a3822baccbbded7e9c7da5099291d9cd6442c0cb015f",
     "SETS-RENDER-QA.json": "d21053405c28d2f1102db50c7d2ee548efff28df150e8c2bc1fe7408d13df1b4",
     "SFR-RENDER-QA.json": "bc4310da73bd3e8131778ff092692b180250e3b0065c838f9a637bddcdfdacb9",
-    "SOURCE_CORRECTIONS.json": "726e2d54caf66dc582b6b2f7f1bae194ad71f66f9819faa5126ae851d81524c4",
+    "SOURCE_CORRECTIONS.json": "ae366c2a0bc8d6bb44e319f9bc19a9eef03274061d5375fa2500a511e6fe7910",
     "SOURCE_MANIFEST.jsonl": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155",
     "SOURCE_VERIFICATION.json": "be9dcfa502b93b6d9e3a5388d183072273e0518841360b6230ed4ef1b1fadeb9",
-    "TERM_DECISIONS.jsonl": "405c40cfbc434257b5bff421a2ac551a4325f7010c00e58ee485dde702f6a094",
+    "TERM_DECISIONS.jsonl": "82d7b0024d9a8b8c128091dab17c238174f9132025fa01bd855f8432eb9941b7",
     "TEX-AXIOMATIC-DEDUCTION-RECEIPT.json": "839faa95fd428faae1ac203268d0cfa80de57dedc4d7d1d2c124f0345bab3223",
     "TEX-B001-RECEIPT.json": "a5a626165a01e242e480c6d08598fd7d498b8dd637314ecc7cf37632ac8b9c1c",
     "TEX-COMPLETENESS-RECEIPT.json": "3cbac0105099271b35526f8b7d15db831b51552073162e3d70cb2b387f2debb3",
@@ -30014,12 +30466,12 @@
     "TEX-SFR-PATCH-RECEIPT.json": "06f084e3e806f5a9ff5335c5b7a5cc7eb05eb02ec351050f8f208173bff28bf1",
     "TEX-SFR-RECEIPT.json": "0d8da3b49c2525be20400fccb8cc0ff3e5902de50d9d9dfe6f809a7d646a5624",
     "TEX-TURING-MACHINES-RECEIPT.json": "8a03faf4c585494983a8cb08cff2ba0066714ad94d739c67afdb436b5c36266b",
-    "TRANSLATION_DECISIONS.jsonl": "7331f037e47400eb66bc6d616bfe21184d0a17b7c98f523d723b84e6e2479c10",
-    "TRANSLATION_DECISION_INDEX.md": "930606a637d9cf0472581a13e3158fb2466350ce692daec7a58be78c8618750a",
-    "TRANSLATION_DECISION_OCCURRENCES.csv": "60055b878feae25731832b7fc412ffb9428043a8d7286a7d1ea11c49fd7dfa39",
-    "TRANSLATION_DECISION_OCCURRENCES.jsonl": "f10e58fd40441f78cd1ad052f95b1efc11594bcbf79c0c5d320814e672358ee2",
-    "TRANSLATION_DECISION_PRIORITY.md": "2f8e7a6673f7350983c8311117dfc9454480244bbed6400c7e779b8fb4180c08",
-    "TRANSLATION_DECISION_REVIEW.json": "b59bc6659b02dd10ebe54e95d61517a1d080636290a2f8b74316e77bb320246c",
+    "TRANSLATION_DECISIONS.jsonl": "222870120b0d40826d4d1c45598fd8fd1bd6ea7db5d240134f841e2b32196046",
+    "TRANSLATION_DECISION_INDEX.md": "4cf3ddc31c4a934c734fb5a86c65261b682ac18e90cb03ebd17e04772fc6cfd8",
+    "TRANSLATION_DECISION_OCCURRENCES.csv": "25b10ab7a5fc5a50e4ca025fed0cb3c0d75ad48e72a1c048f0d55326b2f581ba",
+    "TRANSLATION_DECISION_OCCURRENCES.jsonl": "3b5c28af5e5342808261fbff4629b9b9bb1f3b0825de0da0f3542778e15e63d2",
+    "TRANSLATION_DECISION_PRIORITY.md": "ef1ffb10357aaaa85ea10ab9306e4fda61dc643a69a9f0b8c9dca19a7244d312",
+    "TRANSLATION_DECISION_REVIEW.json": "df6d8837dcccbafe407781e487fd34fbe928a96bda4c9ce08fa35647b103fa06",
     "TURING-MACHINES-RENDER-QA.json": "38290c8229fefe8a1c8b66f5cca01d2c7a1f57c34744f11a8003c76da038c069",
     "VARIANT_ASSESSMENT.md": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d"
   },
@@ -30069,13 +30521,13 @@
     "readers/set-theory-stages-ranks-ta-Taml-IN.pdf": "a22bd7308a8c725f70eca6e1262401d43f5fda37743f9cc7f64fd6826bc0c58d",
     "readers/set-theory-replacement-reflection-ta-Taml-IN.pdf": "b09f6abfecf4fee6b524941a54001e880eaba49e116309ec0c3e062af69d50f6",
     "readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf": "1b5f3bd1b1395b69a503665ac86e909dd1339ef954393375a4aa48708f70846b",
-    "evidence/translation-decisions/START_HERE.md": "c53369e8590fcb241b6799ed50b7f718900019877c9a73bf1b4501feafcc749f",
-    "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md": "ae0bd1709691728a6fcfd538642ca55d6383087e40d4bcbd63c92ec1faadb30c",
-    "evidence/translation-decisions/PRIORITY_REVIEW.md": "66a89bfc255b745d10c481c15dfe8af9c9a9f5529084639050f9edae61210335",
-    "evidence/translation-decisions/DECISION_OCCURRENCES.csv": "f136284fd4c53444d1da8364d93a75c1587fa9aa8858a1741bc9848086409e89",
-    "evidence/translation-decisions/DECISIONS.json": "562a12cd3d594b56450cd56ef7202fa9a09f0b4f556bc424ea626bc14c09ba36",
+    "evidence/translation-decisions/START_HERE.md": "14ba80a0b413f84265ac7bd15f09cfcd30a76f3c540e744d59b9da3ae2c7036a",
+    "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md": "2cd2591331241d9839f8f80293a5f3cddb6d6ca17d029e1ea90806fac1986e3f",
+    "evidence/translation-decisions/PRIORITY_REVIEW.md": "28f792d0941ee3c76f19e2b1bc2a32bc3d6ec9eb17d0c07087e3b46972701b8e",
+    "evidence/translation-decisions/DECISION_OCCURRENCES.csv": "102afd334dac88803b1d2d0ee204327ba36f25631a96a33ab62082b1d35fad14",
+    "evidence/translation-decisions/DECISIONS.json": "e04ba497ba964a82d43f63ebc77a89e5df837de3fd078339b5e1da48092d621a",
     "evidence/translation-decisions/translation-decision.schema.json": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
-    "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": "ddd00aed4875a66e5c699b61cffaf62deeca0b9a0c97ef0940db5db76ec6c475",
+    "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": "cf062c13e470b3c4023de41b1d5054c00ef11c6b0b6410c7b2317115f538418e",
     "evidence/translation-decisions/VARIANT_ASSESSMENT.md": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d",
     "evidence/publication-readback-proof-systems-release.json": "6af3f7bb4263014103ad484aa09481c479366e34d99ee98a464f705a9508cd7c"
   },
@@ -30083,8 +30535,8 @@
   "current_release_published": false,
   "release_verification_scope": "The exact v0.4.0-cumulative-203 cumulative reader covers 203 distinct units in 384 pages, and the public repository contains all 570 accepted translated source units at source commit 0df12c029d2ab0c5dbb511920155ca993e58b403. The release assets and all 12 files in that source commit were anonymously byte-verified.",
   "unresolved": [
-    "152 source units remain untranslated",
-    "322 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
+    "146 source units remain untranslated",
+    "328 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
     "The 12 verified readers are interim checkpoints, not the full edition",
     "Reflowable EPUB3 production, validation and publication remain in progress for the exact bounded readers",
     "Advanced provisional terminology requires ongoing contextual canon consultation",

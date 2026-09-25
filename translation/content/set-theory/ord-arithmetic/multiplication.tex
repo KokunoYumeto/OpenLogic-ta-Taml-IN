@@ -1,0 +1,126 @@
+% SEGMENT OLP-0578-S01
+% Part: set-theory
+% Chapter: ord-arithmetic
+% Section: multiplication
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ord-arithmetic}{mult}
+\olsection{வரிசையெண் பெருக்கல்}
+
+இப்போது வரிசையெண் பெருக்கலை நோக்குவோம்; வரிசையெண் கூட்டலைப் போலவே
+இதையும் அணுகுகிறோம். $\alpha$ வை $\beta$ ஆல் பெருக்க விரும்புகிறோம்
+என்று கொள்வோம். அகலம் $\alpha$, உயரம் $\beta$ உள்ள செவ்வகக்
+கட்டத்தை மனத்தில் கொள்ளுங்கள். ஒவ்வொரு கிடைவரிசையிலும் நகர்ந்து,
+பின்னர் அடுத்த கிடைவரிசைக்குச் சென்று\ldots இவ்வாறு முழுக் கட்டத்தையும்
+கடந்து செல்லும்போது கிடைப்பதே $\alpha$, $\beta$ ஆகியவற்றின்
+பெருக்கற்பலன். வேறுவிதமாகச் சொன்னால், $\beta$ விலுள்ள
+\emph{ஒவ்வொரு} உறுப்புக்கும் பதிலாக $\alpha$ வின் ஒரு பிரதியை
+வைப்பதன் மூலம் $\alpha$, $\beta$ ஆகியவற்றின் பெருக்கற்பலன் கிடைக்கிறது.
+
+இதனை முறைப்படுத்த, $\alpha$, $\beta$ ஆகியவற்றின் கார்டீசியப்
+பெருக்கலின் மீது தலைகீழ் அகராதி வரிசையைப் பயன்படுத்துகிறோம்:
+
+\begin{defn}
+எந்த வரிசையெண்கள் $\alpha, \beta$ க்கும் அவற்றின் பெருக்கற்பலன்
+$\alpha \ordtimes \beta = \ordtype{\alpha \times \beta, \rlexless}$.
+\end{defn}
+\noindent
+இந்த வரையறை முறையாக அமைந்துள்ளது என்பதை மீண்டும் உறுதிசெய்ய வேண்டும்:
+
+\begin{lem}\ollabel{ordtimeslessiswo}
+எந்த வரிசையெண்கள் $\alpha$, $\beta$ க்கும்
+$\tuple{\alpha \times \beta, \rlexless}$ ஒரு நன்கு
+வரிசைப்படுத்தலாகும்.
+\end{lem}
+
+\begin{proof}
+\olref[add]{ordsumlessiswo} இன் நிறுவலைப் போலவே.
+\end{proof}
+\noindent
+பெருக்கல் பின்வருமாறு செயல்படுகிறது என்பதையும் எளிதில் நிறுவலாம்:
+
+\begin{lem}\ollabel{ordtimesrecursion}
+எந்த வரிசையெண்கள் $\alpha, \beta$ க்கும்:
+\begin{align*}
+  \alpha \ordtimes 0 &= 0\\
+  \alpha \ordtimes (\beta \ordplus 1) &=
+    (\alpha \ordtimes \beta) \ordplus \alpha\\
+  \alpha  \ordtimes \beta &=
+    \sup_{\delta < \beta}(\alpha \ordtimes \delta) &&
+    \text{$\beta$ ஓர் எல்லை வரிசையெண் எனில்}.
+\end{align*}
+% SOURCE CORRECTION TA-STH-027: ordinary supremum handles zero left factor.
+\end{lem}
+
+\begin{proof}
+பயிற்சியாக விடப்படுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0578-S02
+உண்மையில், கூட்டலைப் போலவே, நேரடி வரையறைக்குப் பதிலாக இந்த
+மீள்வரையறைச் சமன்பாடுகளைக் கொண்டே வரிசையெண் பெருக்கலை
+வரையறுத்திருக்கலாம். கூட்டலைப் போலவே, இதன் சில பண்புகளும்
+பழக்கமானவையே:
+
+\begin{lem}\ollabel{ordinalmultiplicationisnice}
+$\alpha, \beta, \gamma$ வரிசையெண்கள் எனில்:
+\begin{enumerate}
+  \item\ollabel{ordtimes1} $\alpha \neq 0$ மற்றும்
+  $\beta < \gamma$ எனில்,
+  $\alpha \ordtimes \beta < \alpha \ordtimes \gamma$;
+  \item\ollabel{ordtimes2} $\alpha \neq 0$ மற்றும்
+  $\alpha \ordtimes \beta = \alpha\ordtimes\gamma$ எனில்,
+  $\beta = \gamma$;
+  \item\ollabel{ordtimes3}
+  $\alpha \ordtimes (\beta \ordtimes \gamma) =
+  (\alpha \ordtimes \beta) \ordtimes \gamma$;
+  \item\ollabel{ordtimes4} $\alpha \leq \beta$ எனில்,
+  $\alpha \ordtimes \gamma \leq \beta \ordtimes \gamma$;
+  \item\ollabel{ordtimes5}
+  $\alpha \ordtimes (\beta \ordplus \gamma) =
+  (\alpha \ordtimes \beta )\ordplus (\alpha\ordtimes \gamma)$.
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+பயிற்சியாக விடப்படுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0578-S03
+விரும்பினால் வேறு முடிவுகளையும் நிறுவலாம் (அல்லது தேடிப் பார்க்கலாம்).
+ஆனால் \olref[ord-arithmetic][add]{ordsumnotcommute} ஐக்
+கருதினால், பின்வருவது ஆச்சரியமாக இருக்கக்கூடாது:
+
+\begin{prop}
+வரிசையெண் பெருக்கல் பரிமாற்றுப் பண்புடையதல்ல:
+$2 \ordtimes \omega  = \omega < \omega \ordtimes 2$.
+\end{prop}
+
+\begin{proof}
+$2 \ordtimes \omega = \supstrict_{n < \omega}(2\ordtimes  n)
+= \omega \in \supstrict_{n < \omega}(\omega \ordplus n)
+= \omega \ordplus \omega = \omega \ordtimes 2$.
+\end{proof}
+\noindent
+இதற்கான உள்ளுணர்வுக் காரணமும் நேரடியானது. $2 \ordtimes \omega$
+வைக் கணக்கிட, ஒவ்வோர் இயல் எண்ணுக்கும் பதிலாக இரண்டு பொருள்களை
+வைக்கிறோம். இயல் எண்களுக்கு இடையே எல்லா ``அரை'' எண்களையும்
+செருகினாலும் அதே வரிசை வகை கிடைக்கும்; அதாவது,
+$\Setabs{\nicefrac{n}{2}}{n \in \omega}$ இன் இயல்பான வரிசையைக்
+கருதலாம். அவ்வாறு பார்த்தால் அதன் வரிசை வகை $\omega$ வின்
+வரிசை வகையே என்பது தெளிவு. ஆனால் $\omega \ordtimes 2$ வைக்
+கணக்கிட, $\omega$ வின் இரண்டு பிரதிகளை ஒன்றன் பின் ஒன்றாக
+வைக்கிறோம்.
+
+\begin{prob}
+\olref[sth][ord-arithmetic][mult]{ordtimeslessiswo},
+\olref[sth][ord-arithmetic][mult]{ordtimesrecursion},
+மற்றும்
+\olref[sth][ord-arithmetic][mult]{ordinalmultiplicationisnice}
+ஆகியவற்றை நிறுவுக.
+\end{prob}
+
+\end{document}

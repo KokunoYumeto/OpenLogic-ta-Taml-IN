@@ -1,0 +1,118 @@
+{
+  "batch_id": "TA-B256",
+  "units": [
+    {
+      "unit_id": "OLP-0576",
+      "source_sha256": "e812adca016fb2b68daed98ef2bc27f45e48a57ceeeb27d244ad5c92a453a6e6",
+      "translation_sha256": "84c05f3c066e4cccc2c41a0839d81f1d7e604618cdebdf7b439d621459b05dbb",
+      "source_bytes": 9309,
+      "translation_bytes": 17915,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\alpha\\disjointsum1=(\\alpha\\times\\{0\\})\\disjointsum(\\{0\\}\\times\\{1\\})$",
+        "\\begin{align*}\\alpha\\ordplus0&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(0\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup\\{0\\},\\rlexless}\\\\&=\\alpha\\\\\\alpha\\ordplus(\\beta\\ordplus1)%&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\ordtype{\\beta\\ordplus1}\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\ordsucc{\\beta}\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\beta\\times\\{1\\}),\\rlexless}\\ordplus1\\\\&=(\\alpha\\ordplus\\beta)\\ordplus1\\end{align*}"
+      ],
+      "extra_math": [
+        "$\\alpha\\disjointsum1=(\\alpha\\times\\{0\\})\\cup(\\{0\\}\\times\\{1\\})$",
+        "\\begin{align*}\\alpha\\ordplus0&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(0\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{\\alpha\\times\\{0\\},\\rlexless}\\\\&=\\alpha\\\\\\alpha\\ordplus(\\beta\\ordplus1)%&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\ordtype{\\beta\\ordplus1}\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\ordsucc{\\beta}\\times\\{1\\}),\\rlexless}\\\\&=\\ordtype{(\\alpha\\times\\{0\\})\\cup(\\beta\\times\\{1\\}),\\rlexless}\\ordplus1\\\\&=(\\alpha\\ordplus\\beta)\\ordplus1\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "add",
+        "again",
+        "align",
+        "arithmetic",
+        "basic",
+        "hilbert",
+        "include",
+        "infinite",
+        "infinity",
+        "logic",
+        "open",
+        "ord",
+        "ordinals",
+        "ordtype",
+        "section",
+        "sfr",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-023",
+          "unit_id": "OLP-0576",
+          "kind": "already-tagged-disjoint-sum-components",
+          "action": "Replaced the second disjoint-sum operation between the two tagged components by ordinary union in the successor isomorphism codomain.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\disjointsum"
+          ],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\disjointsum(\\{0\\}\\times\\{1\\})",
+              "to": "\\cup(\\{0\\}\\times\\{1\\})",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source correctly defines alpha disjointsum 1 as the union of alpha-times-{0} and 1-times-{1}, but the proof applies disjointsum a second time to those already tagged pieces.",
+          "chosen_treatment": "தமிழ் நிறுவல் குறியிட்ட இரு கணங்களைச் சாதாரணச் சேர்ப்பால் இணைக்கிறது.",
+          "alternatives_considered": "Retaining the nested disjoint sum, which would create newly tagged pairs rather than the displayed f-values.",
+          "rationale": "The displayed map f sends gamma to <gamma,0> and alpha to <0,1>; exactly those values belong to the ordinary union of the two tagged components.",
+          "precise_review_question": "Does the codomain consist exactly of the values displayed for f?",
+          "location_needle": "SOURCE CORRECTION TA-STH-023"
+        },
+        {
+          "audit_id": "TA-STH-024",
+          "unit_id": "OLP-0576",
+          "kind": "zero-product-spurious-singleton",
+          "action": "Removed a spurious singleton from the zero-addition order-type calculation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\ordtype{(\\alpha\\times\\{0\\})\\cup\\{0\\},\\rlexless}",
+              "to": "\\ordtype{\\alpha\\times\\{0\\},\\rlexless}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source simplifies (alpha-times-{0}) union (0-times-{1}) to (alpha-times-{0}) union {0}; but 0 is the empty ordinal and 0-times-{1} is empty, not {0}.",
+          "chosen_treatment": "தமிழ் கணக்கில் வெற்றுக் கார்டீசியப் பெருக்கலை நீக்கி alpha-times-{0} மட்டும் வைத்துள்ளது.",
+          "alternatives_considered": "Preserving a nonexistent singleton or changing the zero ordinal's meaning.",
+          "rationale": "The resulting tagged copy of alpha is order-isomorphic to alpha under the relation already defined.",
+          "precise_review_question": "Does the base recursion calculation use 0-times-{1}=empty set?",
+          "location_needle": "SOURCE CORRECTION TA-STH-024"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\disjointsum"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,249 @@
+% SEGMENT OLP-0576-S01
+% Part: set-theory
+% Chapter: ord-arithmetic
+% Section: addition
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ord-arithmetic}{add}
+\olsection{வரிசையெண் கூட்டல்}
+
+$\alpha$ வையும் $\beta$ வையும் கூட்ட விரும்புகிறோம் என்று கொள்வோம்.
+$\alpha$ வின் ஒரு பிரதிக்குப் பின்னால் $\beta$ வின் ஒரு பிரதியை
+உடனடியாக வைக்கலாம். (\olref[ordinals][basic]{ordinalsaresubsets} இன்
+படி $\alpha \subseteq \beta$ அல்லது $\beta \subseteq \alpha$
+என்பதால், அவற்றின் \emph{பிரதிகளை} எடுக்க வேண்டும்.) உள்ளுணர்வாக,
+முதலில் $\alpha$-தொடர் படிகளைக் கடந்து, \emph{அதற்குப் பிறகு}
+$\beta$-தொடர் படிகளைக் கடப்பதாக இது அமையும். கிடைக்கும் தொடர் நன்கு
+வரிசைப்படுத்தப்பட்டிருக்கும்; ஆகவே
+\olref[ordinals][ordtype]{thmOrdinalRepresentation} இன் படி,
+அது (ஒரேயொரு) வரிசையெண்ணுடன் வரிசை ஓரினச்சார்பு உடையதாகும். அந்த
+வரிசையெண்ணை $\alpha$, $\beta$ ஆகியவற்றின் \emph{கூட்டுத்தொகை} எனக்
+கருதலாம்.
+
+வரிசையெண் கூட்டலின் உள்ளுணர்வுக் கருத்து இதுவே. இதைத் துல்லியமாக
+வரையறுக்க, கணங்களின் \emph{பிரதிகளை} உருவாக்கும் கருத்திலிருந்து
+தொடங்குகிறோம். எந்தப் பொருள் எங்கிருந்து வந்தது என்பதைப் பதிவு செய்ய,
+தன்னிச்சையான $0$, $1$ குறிச்சொற்களைப் பயன்படுத்துகிறோம்:
+
+\begin{defn}\ollabel{defdissum}
+$A$, $B$ ஆகியவற்றின் \emph{வெட்டாக் கூட்டுத்தொகை} என்பது
+$A \disjointsum B = (A\times \{0\}) \cup (B \times \{1\})$.
+\end{defn}
+
+% SEGMENT OLP-0576-S02
+அடுத்து, வரிசையெண் இணைகளின் மீது ஒரு வரிசையை வரையறுக்கிறோம்:
+
+\begin{defn}
+எந்த வரிசையெண்கள் $\alpha_1, \alpha_2, \beta_1, \beta_2$ க்கும்:
+\begin{align*}
+  \tuple{\alpha_1, \alpha_2} \rlexless \tuple{\beta_1, \beta_2}\text{ எனில், எனில் மட்டுமே }&
+  \text{$\alpha_2 \in \beta_2$ ஆகும்; அல்லது}\\
+  &\text{$\alpha_2 = \beta_2$ மற்றும் $\alpha_1 \in \beta_1$ ஆகிய இரண்டும் ஆகும்.}
+\end{align*}
+\end{defn}
+
+இது \emph{தலைகீழ் அகராதி வரிசை}: முதலில் இரண்டாவது
+உறுப்பின்படியும், அதன் பிறகு முதலாவது உறுப்பின்படியும் வரிசைப்படுத்துகிறோம்.
+$\alpha$ வின் பிரதிக்குப் பின்னால் $\beta$ வின் பிரதியை வைத்தால்
+கிடைக்கும் வரிசை வகையாக $\alpha \ordplus \beta$ வைப் வரையறுக்க
+விரும்பினோம் என்பதை நினைவுகூருங்கள். அதற்காகப் பின்வருமாறு கூறுகிறோம்:
+
+\begin{defn}\ollabel{defordplus}
+எந்த வரிசையெண்கள் $\alpha$, $\beta$ க்கும் அவற்றின் கூட்டுத்தொகை
+$\alpha \ordplus \beta = \ordtype{\alpha \disjointsum \beta, \rlexless}$.
+\end{defn}
+\noindent
+இங்கு குறியீட்டைச் சற்றுத் தளர்வாகப் பயன்படுத்தியுள்ளோம். கண்டிப்பாகச்
+சொன்னால், ``$\rlexless$'' என்பதற்குப் பதிலாக
+``$\Setabs{\tuple{x,y}\in \alpha\disjointsum\beta}{x \rlexless y}$''
+என்று எழுத வேண்டும். சுருக்கத்திற்காகத் தொடர்ந்து இதே குறியீட்டைத்
+தளர்வாகப் பயன்படுத்துவோம்.
+
+பின்வரும் முடிவும் \olref[ordinals][ordtype]{thmOrdinalRepresentation}
+உம் சேர்ந்து, நமது வரையறை முறையாக அமைந்திருப்பதை உறுதிசெய்கின்றன:
+
+\begin{lem}\ollabel{ordsumlessiswo}
+எந்த வரிசையெண்கள் $\alpha$, $\beta$ க்கும்
+$\tuple{\alpha \disjointsum \beta, \rlexless}$ ஒரு நன்கு
+வரிசைப்படுத்தலாகும்.
+\end{lem}
+
+\begin{proof}
+$\alpha \disjointsum \beta$ இன் மீது $\rlexless$ ஒப்பிடத்தக்கது
+என்பது தெளிவு. ஒவ்வொரு வெறுமையற்ற உட்கணத்திற்கும் மீச்சிறு உறுப்பு
+உள்ளது என்பதைக் காட்ட, வெறுமையல்லாத
+$X \subseteq \alpha \disjointsum \beta$ ஒன்றை எடுத்துக்கொள்வோம்.
+இரண்டாவது ஆயம் இயன்ற அளவு சிறியதாக உள்ள $X$ இன் உறுப்புகளின்
+உட்கணத்தை $Y$ என்க; அதாவது,
+$Y = \Setabs{\tuple{\gamma, i} \in X}{(\forall \tuple{\delta, j} \in X)i \leq j}$.
+இப்போது $Y$ இல் முதலாவது ஆயம் மிகச் சிறியதாக உள்ள உறுப்பைத்
+தேர்ந்தெடுக்கலாம்.
+\end{proof}
+\noindent
+இதனால் வரிசையெண் கூட்டலுக்கு ஒரு தெளிவான, வெளிப்படையான வரையறை
+கிடைத்தது. ஆச்சரியமில்லாத ஒரு உண்மை இதோ
+(\olref[z][infinity-again]{defnomega} இன் படி $1 = \{0\}$ என்பதை
+நினைவுகூருங்கள்):
+\begin{prop}
+எந்த வரிசையெண் $\alpha$ க்கும்
+$\alpha \ordplus  1 = \ordsucc{\alpha}$.
+\end{prop}
+
+\begin{proof}
+% SOURCE CORRECTION TA-STH-023: the two already tagged components form a union.
+$\ordsucc{\alpha} = \alpha \cup \{\alpha\}$ இலிருந்து
+$\alpha\disjointsum1 = (\alpha \times \{0\})
+\cup (\{0\} \times \{1\})$ க்கான வரிசை ஓரினச்சார்பு $f$ ஐக்
+கவனியுங்கள்: $\gamma \in \alpha$ எனில்
+$f(\gamma) = \tuple{\gamma, 0}$; மேலும்
+$f(\alpha) = \tuple{0, 1}$.
+\end{proof}
+\noindent
+
+% SEGMENT OLP-0576-S03
+கூட்டல் சில மீள்வரையறை நிபந்தனைகளைப் பூர்த்திசெய்கிறது என்பதையும்
+எளிதில் காட்டலாம்:
+
+\begin{lem}\ollabel{ordadditionrecursion}
+எந்த வரிசையெண்கள் $\alpha, \beta$ க்கும்:
+\begin{align*}
+  \alpha\ordplus 0 &= \alpha\\
+  \alpha \ordplus  (\beta\ordplus 1) &= (\alpha \ordplus  \beta) \ordplus  1\\
+  \alpha  \ordplus  \beta &= \supstrict_{\delta < \beta}(\alpha \ordplus  \delta) && \text{$\beta$ ஓர் எல்லை வரிசையெண் எனில்}
+\end{align*}
+\end{lem}
+
+\begin{proof}
+ஒவ்வொரு நேர்வையும் தனித்தனியாகச் சரிபார்ப்போம். முதலில்:
+% SOURCE CORRECTION TA-STH-024: 0 times {1} is empty, not {0}.
+\begin{align*}
+  \alpha \ordplus  0
+  & = \ordtype{(\alpha \times \{0\}) \cup (0 \times \{1\}), \rlexless} \\
+  &= \ordtype{\alpha \times \{0\}, \rlexless}\\
+  &= \alpha\\
+  \alpha \ordplus (\beta \ordplus  1)
+  %&= \ordtype{(\alpha\times \{0\}) \cup (\ordtype{\beta \ordplus  1}\times \{1\}), \rlexless} \\
+  &= \ordtype{(\alpha\times \{0\}) \cup (\ordsucc{\beta}\times \{1\}), \rlexless} \\
+  &= \ordtype{(\alpha\times \{0\}) \cup (\beta \times \{1\}), \rlexless} \ordplus 1\\
+  &= (\alpha \ordplus  \beta) \ordplus  1
+\end{align*}
+இப்போது $\beta \neq \emptyset$ ஓர் எல்லை வரிசையெண் என்க.
+$\delta < \beta$ எனில் $\delta\ordplus 1 < \beta$ உம் ஆகும்;
+ஆகவே $\alpha \ordplus  \delta$ என்பது $\alpha \ordplus  \beta$
+வின் தகு தொடக்கத் துண்டாகும். எனவே
+$X = \Setabs{\alpha \ordplus  \delta}{\delta < \beta}$ இன்
+கண்டிப்பான மேல்வரம்பு $\alpha \ordplus  \beta$ ஆகும். மேலும்
+$\alpha \leq \gamma < \alpha \ordplus  \beta$ எனில், ஏதோ ஒரு
+$\delta < \beta$ க்கு $\gamma = \alpha \ordplus \delta$
+என்பது தெளிவு. ஆகவே
+$\alpha \ordplus  \beta =
+\supstrict_{\delta< \beta}(\alpha\ordplus \delta)$.
+\end{proof}
+
+ஆனால் கவனிக்கத்தக்க ஓர் உண்மை உள்ளது. வரிசையெண் கூட்டலை வரையறுக்க,
+இதற்குப் \emph{பதிலாக} முடிவிலிக்கடந்த மீள்வரையறைத் தேற்றத்தைப்
+பயன்படுத்தி, \olref{ordadditionrecursion} இல் கொடுக்கப்பட்டுள்ள
+மீள்வரையறைச் சமன்பாடுகளை மட்டும் விதித்திருக்கலாம்
+(அங்கே ``$\beta \ordplus 1$'' என்பதற்குப் பதிலாக
+``$\ordsucc{\beta}$'' என்பதைப் பயன்படுத்தி).
+
+ஆக, வரிசையெண்களின் மீது செயல்களை வரையறுக்க இரண்டு வெவ்வேறு வழிகள்
+உள்ளன. ஒரு நன்கு வரிசைப்படுத்தப்பட்ட கணத்தை வெளிப்படையாகக்
+கட்டமைத்து, அதன் வரிசை வகையை எடுத்துக்கொள்வதன் மூலம் அவற்றை
+\emph{கட்டமைப்பு வழியில்} வரையறுக்கலாம். அல்லது மீள்வரையறைச்
+சமன்பாடுகளை மட்டும் விதித்து \emph{மீள்வரையறை வழியில்}
+வரையறுக்கலாம். ஆனால் சரியாகச் செய்தால், இரண்டிலும் கிடைப்பது ஒன்றே.
+ஏனெனில், அந்த மீள்வரையறைச் சமன்பாடுகள் \emph{ஒரேயொரு}
+வரிசையெண்ணை நிர்ணயிக்கின்றன என்பதை
+\olref[ordinals][ordtype]{thmOrdinalRepresentation} உறுதிசெய்கிறது.
+
+% SEGMENT OLP-0576-S04
+பல விதங்களில் வரிசையெண் எண்கணிதம் இயல் எண்களின் கூட்டலைப் போலவே
+செயல்படுகிறது. எடுத்துக்காட்டாக, பின்வருவதை நிறுவலாம்:
+
+\begin{lem}\ollabel{ordinaladditionisnice}
+$\alpha, \beta, \gamma$ வரிசையெண்கள் எனில்:
+\begin{enumerate}
+  \item\ollabel{ordaddition1} $\beta < \gamma$ எனில்
+  $\alpha \ordplus  \beta < \alpha \ordplus  \gamma$
+  \item\ollabel{ordaddition2}
+  $\alpha \ordplus  \beta = \alpha\ordplus \gamma$ எனில்
+  $\beta = \gamma$
+  \item\ollabel{ordaddition3}
+  $\alpha \ordplus  (\beta \ordplus \gamma) =
+  (\alpha \ordplus  \beta) \ordplus  \gamma$; அதாவது,
+  கூட்டல் சேர்ப்புப் பண்புடையது
+  \item\ollabel{ordaddition4} $\alpha \leq \beta$ எனில்
+  $\alpha \ordplus  \gamma \leq \beta \ordplus \gamma$
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+மற்றவற்றைப் பயிற்சியாக விட்டுவிட்டு \olref{ordaddition3} ஐ
+நிறுவுவோம். \olref{ordadditionrecursion} ஐப் பயன்படுத்தி
+$\gamma$ இன் மீது எளிய முடிவிலிக்கடந்த தொகுத்தறிதலால் நிறுவுகிறோம்.
+$\gamma = 0$ எனில்:
+\[
+(\alpha \ordplus  \beta) \ordplus  0 = \alpha \ordplus  \beta  = \alpha \ordplus  (\beta \ordplus  0)
+\]
+$\gamma = \delta\ordplus 1$ எனில்,
+$(\alpha \ordplus  \beta) \ordplus  \delta =
+\alpha \ordplus  (\beta \ordplus \delta)$ என்று தொகுத்தறிதல்
+எடுகோளாகக் கொள்வோம். இப்போது \olref{ordadditionrecursion} ஐ
+மூன்று முறை பயன்படுத்தினால்:
+\begin{align*}
+  (\alpha \ordplus  \beta) \ordplus  (\delta \ordplus  1) & = ((\alpha \ordplus  \beta) \ordplus  \delta)\ordplus 1\\
+  & = (\alpha \ordplus  (\beta \ordplus  \delta)) \ordplus  1\\
+  & = \alpha \ordplus  ((\beta \ordplus  \delta)\ordplus 1)\\
+  & = \alpha \ordplus  (\beta \ordplus  (\delta\ordplus 1))
+\end{align*}
+$\gamma$ ஓர் எல்லை வரிசையெண் எனில், ஒவ்வொரு
+$\delta \in \gamma$ க்கும்
+$(\alpha \ordplus  \beta) \ordplus  \delta =
+\alpha \ordplus  (\beta \ordplus  \delta)$ என்று
+தொகுத்தறிதல் எடுகோளாகக் கொள்வோம். இப்போது:
+\begin{align*}
+  (\alpha \ordplus  \beta) \ordplus  \gamma & = \supstrict_{\delta < \gamma}((\alpha \ordplus  \beta) \ordplus  \delta) \\
+  &= \supstrict_{\delta < \gamma}(\alpha \ordplus  (\beta \ordplus  \delta))\\
+  &= \alpha \ordplus  \supstrict_{\delta < \gamma}(\beta \ordplus  \delta)\\
+  &= \alpha \ordplus  (\beta \ordplus  \gamma)
+\end{align*}
+\end{proof}
+
+\begin{prob}
+\olref[sth][ord-arithmetic][add]{ordinaladditionisnice} இன்
+மீதமுள்ள பகுதிகளை நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0576-S05
+இவ்விதங்களில் வரிசையெண் கூட்டல் நமக்குப் பழக்கமானதாக இருக்க வேண்டும்.
+ஆனால் ஓர் இன்றியமையாத விதத்தில், அது இயல் எண்களின் கூட்டலைப்
+\emph{போலல்ல}.
+
+\begin{prop}\ollabel{ordsumnotcommute}
+வரிசையெண் கூட்டல் {பரிமாற்றுப் பண்புடையதல்ல};
+$1 \ordplus  \omega = \omega < \omega \ordplus  1$.
+\end{prop}
+
+\begin{proof}
+$1 \ordplus  \omega = \supstrict_{n < \omega} (1 \ordplus n)
+= \omega \in \omega \cup \{\omega\} = \ordsucc{\omega} =
+\omega \ordplus  1$ என்பதைக் கவனியுங்கள்.
+\end{proof}
+\noindent
+இது முதலில் வியப்பாகத் தோன்றலாம்; ஆனால் \emph{அப்படி
+இருக்க வேண்டியதில்லை}. $1 \ordplus  \omega$ வைக் கருதும்போது,
+எல்லா இயல் எண்களுக்கும் \emph{முன்னால்} ஓர் உறுப்பைக் கூடுதலாக
+வைத்துக் கிடைக்கும் வரிசை வகையைப் பற்றிச் சிந்திக்கிறோம்.
+\olref[sfr][infinite][hilbert]{sec} இல் ஹில்பர்ட்டின் விடுதியைப்
+பற்றிச் சிந்தித்தது போலச் சிந்தித்தால், இந்தக் கூடுதல் முதலுறுப்பு
+ஒட்டுமொத்த வரிசை வகையில் எந்த வேறுபாட்டையும் ஏற்படுத்தாது என்பதை
+உள்ளுணரலாம். மறுபுறம், $\omega \ordplus  1$ வைக் கருதும்போது,
+எல்லா இயல் எண்களுக்கும் \emph{பின்னால்} ஓர் உறுப்பைக் கூடுதலாக
+வைத்துக் கிடைக்கும் வரிசை வகையைப் பற்றிச் சிந்திக்கிறோம்.
+அது முற்றிலும் வேறுபட்ட வரிசை வகை!
+
+\end{document}

@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 555/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 561/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -5110,6 +5110,119 @@ Please double-check: **does the transition introduce Weak-Reflection as a weaker
 
 - `TA-OCC-31b8c9a4e0426e08` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:1`; Tamil `translation/content/set-theory/replacement/refproofs.tex:115`; PDF page pending.
 
+## TA-STH-023 — The source correctly defines alpha disjointsum 1 as the union of alpha-times-{0} and 1-times-{1}, but the proof applies disjointsum a second time to those already tagged pieces.
+
+Chosen rendering: **தமிழ் நிறுவல் குறியிட்ட இரு கணங்களைச் சாதாரணச் சேர்ப்பால் இணைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed map f sends gamma to <gamma,0> and alpha to <0,1>; exactly those values belong to the ordinary union of the two tagged components.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0576 (checked_supports)
+
+Alternatives: Retaining the nested disjoint sum, which would create newly tagged pairs rather than the displayed f-values.
+
+Please double-check: **does the codomain consist exactly of the values displayed for f?**
+
+- `TA-OCC-90c54427d3179c9d` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:96`; PDF page pending.
+
+## TA-STH-024 — The source simplifies (alpha-times-{0}) union (0-times-{1}) to (alpha-times-{0}) union {0}; but 0 is the empty ordinal and 0-times-{1} is empty, not {0}.
+
+Chosen rendering: **தமிழ் கணக்கில் வெற்றுக் கார்டீசியப் பெருக்கலை நீக்கி alpha-times-{0} மட்டும் வைத்துள்ளது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The resulting tagged copy of alpha is order-isomorphic to alpha under the relation already defined.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0576 (checked_supports)
+
+Alternatives: Preserving a nonexistent singleton or changing the zero ordinal's meaning.
+
+Please double-check: **does the base recursion calculation use 0-times-{1}=empty set?**
+
+- `TA-OCC-5693465095a856f3` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:121`; PDF page pending.
+
+## TA-STH-025 — The proof says A-times-B is contained in P(P(A-union-B)) but cites the ordered-pair rank clause rather than the powerset-rank clause needed to bound the displayed double powerset.
+
+Chosen rendering: **தமிழ் நிறுவல் அடுக்குக்கணத்தின் தரநிலை வாய்பாட்டை இருமுறை பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The displayed containment and the earlier equality rank(P(X))=rank(X)+1 directly yield the stated max-plus-two upper bound.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0577 (checked_supports)
+
+Alternatives: Retaining the mismatched ordered-pair citation while leaving the double-powerset argument unexplained.
+
+Please double-check: **does the cited clause compute the rank of P(P(A-union-B))?**
+
+- `TA-OCC-6fee86e7a3c59454` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:55`; PDF page pending.
+
+## TA-STH-026 — The second problem prints rank(A-times-B) immediately followed by max(rank A, rank B)+2 without any relation sign.
+
+Chosen rendering: **தமிழ் பயிற்சி மேல்வரம்பை எட்டும் எடுத்துக்காட்டுக்கான சமக்குறியை நிரப்புகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding lemma establishes at most max-plus-two and the first request uses equality at max; the second therefore asks for equality at the stated upper endpoint.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0577 (checked_supports)
+
+Alternatives: Reading the missing sign as strict inequality, which conflicts with the preceding upper bound and the exercise's contrast between attainable endpoints.
+
+Please double-check: **does the second exercise request equality to max(rank A, rank B)+2?**
+
+- `TA-OCC-b450aadfbf2ac240` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:78`; PDF page pending.
+
+## TA-STH-027 — The source states the limit recursion for every alpha using least strict upper bound. At alpha=0 and any nonzero limit beta, all preceding products are 0, whose least strict upper bound is 1; but the directly defined order type of 0-times-beta is 0.
+
+Chosen rendering: **தமிழ் எல்லைநிலைச் சமன்பாட்டில் சாதாரண மீச்சிறு மேல்வரம்பைப் பயன்படுத்துகிறது; இதனால் 0 பெருக்கல் 0 ஆகவே உள்ளது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: For nonzero alpha, the finite and transfinite products are cofinal at a limit and ordinary and least-strict suprema agree; the ordinary supremum also handles alpha=0 correctly.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0578 (checked_supports)
+
+Alternatives: Excluding alpha=0 from the lemma, leaving zero-base multiplication undefined at limits.
+
+Please double-check: **does the revised limit recursion agree with the order-type product when alpha=0?**
+
+- `TA-OCC-d3f4d76f316c16e2` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:55`; PDF page pending.
+
+## TA-STH-028 — The source defines finfun(alpha,beta) as finitely supported functions alpha to beta, then calls its order type alpha to the beta. Such functions instead represent beta to the alpha; the base and exponent arguments are reversed in both uses.
+
+Chosen rendering: **தமிழ் கட்டமைப்பிலும் பயிற்சியிலும் அடுக்குக்குறியாகிய beta இலிருந்து அடியாகிய alpha க்கான முடிவுறு ஆதரவுச் சார்புகளைப் பயன்படுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: finfun(0,alpha) contains the empty function and has order type 1; finfun(1,alpha) has order type alpha, as required by alpha^0=1 and alpha^1=alpha.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0579 (checked_supports)
+
+Alternatives: Changing the definition of finfun itself or retaining a construction whose zero-exponent and successor cases contradict the displayed recursion.
+
+Please double-check: **do the synthetic construction and exercise both use finfun(beta,alpha) for alpha^beta?**
+
+- `TA-OCC-1ea5771b336edc91` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:28`; PDF page pending.
+- `TA-OCC-1e002051312f6490` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:74`; PDF page pending.
+
+## TA-STH-029 — The source's limit union includes exponent 0 for every base. For base 0 and positive limit beta, the union includes 0^0=1 and yields 1, conflicting with the synthetic function order type and with 0 to every positive successor being 0.
+
+Chosen rendering: **தமிழ் நேர்ம எல்லை அடுக்கில் பூச்சிய அடுக்கை மட்டும் விலக்கி 0 இன் நேர்ம அடுக்குகள் அனைத்தும் 0 ஆக இருப்பதைப் பாதுகாக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: For every nonzero base, removing the initial exponent-0 value leaves the same limit supremum; for zero base it gives 0 at positive limits, agreeing with the corrected finite-support construction.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0579 (checked_supports)
+
+Alternatives: Adding a separate zero-base case while retaining the original limit formula only under alpha>0; excluding base 0 from the chapter entirely.
+
+Please double-check: **does the limit clause agree with 0^beta=0 for every beta>0 while retaining ordinary nonzero-base exponentiation?**
+
+- `TA-OCC-f7f0fc1938d35d9d` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:53`; PDF page pending.
+
 ## TA-T001 — set
 
 Chosen rendering: **கணம்**
@@ -5951,6 +6064,7 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-3ee22e6be15adb64` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:52`; Tamil `translation/content/set-theory/replacement/absinf.tex:106`; PDF page pending.
 - `TA-OCC-6a758e1a5c43e480` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:104`; Tamil `translation/content/set-theory/replacement/refproofs.tex:121`; PDF page pending.
 - `TA-OCC-a848f4210f47475b` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:114`; Tamil `translation/content/set-theory/replacement/refproofs.tex:132`; PDF page pending.
+- `TA-OCC-1d7c3a5e143ba49b` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:12`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:20`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -6519,6 +6633,12 @@ Please double-check: **do the listed uses of “உறுப்பு” preserv
 - `TA-OCC-5d04e76c3c7e2805` — OLP-0569 / `OLP-0569-S01`; source `content/set-theory/replacement/limofsize.tex:18`; Tamil `translation/content/set-theory/replacement/limofsize.tex:20`; PDF page pending.
 - `TA-OCC-4d53731d7c1a2c4e` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:105`; Tamil `translation/content/set-theory/replacement/refproofs.tex:119`; PDF page pending.
 - `TA-OCC-ad0462ff43423055` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:115`; Tamil `translation/content/set-theory/replacement/refproofs.tex:130`; PDF page pending.
+- `TA-OCC-144ed957f140a53c` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:42`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:76`; PDF page pending.
+- `TA-OCC-3a3dda16c1c7ede0` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:65`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:79`; PDF page pending.
+- `TA-OCC-8be52c2f0b36dba1` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:47`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:59`; PDF page pending.
+- `TA-OCC-59380e6878dafad6` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:49`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:63`; PDF page pending.
+- `TA-OCC-e83881ab30d83add` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:51`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:66`; PDF page pending.
+- `TA-OCC-7a41fae59fa067e1` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:16`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:20`; PDF page pending.
 
 ## TA-T003 — empty set
 
@@ -7907,6 +8027,7 @@ Please double-check: **do the listed uses of “சேர்ப்பு / வ�
 - `TA-OCC-2bc32448964fa2c1` — OLP-0555 / `OLP-0555-S01`; source `content/set-theory/ordinals/milestone.tex:14`; Tamil `translation/content/set-theory/ordinals/milestone.tex:16`; PDF page pending.
 - `TA-OCC-0aa4d1b2d9f7d3a1` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:46`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:50`; PDF page pending.
 - `TA-OCC-cce82dbc79f7f6a2` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:15`; Tamil `translation/content/set-theory/spine/zf.tex:16`; PDF page pending.
+- `TA-OCC-215183d9446ab8a5` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:132`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:178`; PDF page pending.
 
 ## TA-T019 — Cartesian product / ordered pair
 
@@ -8467,6 +8588,9 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-21a267106c309261` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:10`; PDF page pending.
 - `TA-OCC-a7840c2960dd1eb1` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:11`; PDF page pending.
 - `TA-OCC-b20004d0d036b36c` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:13`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:103`; PDF page pending.
+- `TA-OCC-01ee1a4a2d0d4a06` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:150`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:194`; PDF page pending.
+- `TA-OCC-d25575d435d01c50` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:152`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:207`; PDF page pending.
+- `TA-OCC-41d545fdae883e0f` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:29`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:36`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -10390,6 +10514,7 @@ Please double-check: **is “மீச்சிறு உறுப்பு / �
 - `TA-OCC-ff8f2f496bfbfc5c` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:28`; PDF page pending.
 - `TA-OCC-4949afb09d04246b` — OLP-0567 / `OLP-0567-S01`; source `content/set-theory/replacement/strength.tex:1`; Tamil `translation/content/set-theory/replacement/strength.tex:41`; PDF page pending.
 - `TA-OCC-a15073d050ba9dee` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:1`; Tamil `translation/content/set-theory/replacement/absinf.tex:48`; PDF page pending.
+- `TA-OCC-ec076fc4344e06ce` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:58`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:76`; PDF page pending.
 
 ## TA-T038 — successor / predecessor / initial segment
 
@@ -13980,6 +14105,16 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-8df247379e6b62fd` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:1`; Tamil `translation/content/set-theory/replacement/absinf.tex:111`; PDF page pending.
 - `TA-OCC-1141be476a29decd` — OLP-0571 / `OLP-0571-S01`; source `content/set-theory/replacement/ref.tex:1`; Tamil `translation/content/set-theory/replacement/ref.tex:26`; PDF page pending.
 - `TA-OCC-e001ca8d8506eb8e` — OLP-0571 / `OLP-0571-S01`; source `content/set-theory/replacement/ref.tex:1`; Tamil `translation/content/set-theory/replacement/ref.tex:38`; PDF page pending.
+- `TA-OCC-5f23b773695a546e` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:133`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:164`; PDF page pending.
+- `TA-OCC-08865f066d503c79` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:223`; PDF page pending.
+- `TA-OCC-e223a7a2688c0672` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:239`; PDF page pending.
+- `TA-OCC-8b585c82f9b3ef5a` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:198`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:245`; PDF page pending.
+- `TA-OCC-4acfdf44bcf4562c` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:36`; PDF page pending.
+- `TA-OCC-849d3ca6915ad5c8` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:72`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:90`; PDF page pending.
+- `TA-OCC-b55c9eb1c2a27a04` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:17`; PDF page pending.
+- `TA-OCC-f684af26089b9b60` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:95`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:109`; PDF page pending.
+- `TA-OCC-6356b0ef0e1d528b` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:97`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:110`; PDF page pending.
+- `TA-OCC-240bb912e0d0a56a` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:50`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:64`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -15087,6 +15222,11 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-91da4d9335fde309` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:1`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:17`; PDF page pending.
 - `TA-OCC-31501cda7a1ebf23` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:1`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:30`; PDF page pending.
 - `TA-OCC-38749a43fc73c66f` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:15`; Tamil `translation/content/set-theory/replacement/refproofs.tex:14`; PDF page pending.
+- `TA-OCC-643b43eaaacce57f` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:13`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:18`; PDF page pending.
+- `TA-OCC-0b4e97d0a0608dd9` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:14`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:19`; PDF page pending.
+- `TA-OCC-f087355481d2bb75` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:14`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:19`; PDF page pending.
+- `TA-OCC-a91bcd084e3d4f22` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:62`; PDF page pending.
+- `TA-OCC-e18bb87a3cb7b566` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:29`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:41`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -16848,6 +16988,11 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-98e63750d9cf4161` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:37`; Tamil `translation/content/set-theory/spine/recursion.tex:125`; PDF page pending.
 - `TA-OCC-c7ecaa1e80248014` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:43`; Tamil `translation/content/set-theory/spine/recursion.tex:133`; PDF page pending.
 - `TA-OCC-7a57d8a56f927394` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:1`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:72`; PDF page pending.
+- `TA-OCC-044e88fd1d676597` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:101`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:124`; PDF page pending.
+- `TA-OCC-5ce6fe1bd037698c` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:107`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:132`; PDF page pending.
+- `TA-OCC-5a52d31693ef7ce0` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:109`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:134`; PDF page pending.
+- `TA-OCC-8ca9ae6331b7aaac` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:12`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:18`; PDF page pending.
+- `TA-OCC-13bfe215b351affd` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:12`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:20`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -17055,6 +17200,7 @@ Please double-check: **do the listed uses of “ஒன்றுக்கொன�
 - `TA-OCC-8804c7655c57c3b3` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:82`; Tamil `translation/content/set-theory/z/infinity-again.tex:91`; PDF page pending.
 - `TA-OCC-5a163246b9eb3e87` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:98`; Tamil `translation/content/set-theory/z/infinity-again.tex:111`; PDF page pending.
 - `TA-OCC-74ccbd59fdf44f88` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:1`; Tamil `translation/content/set-theory/z/nat.tex:39`; PDF page pending.
+- `TA-OCC-e28b3bf1b125700c` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:109`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:134`; PDF page pending.
 
 ## TA-T048 — inverse relation: additional native attestation
 
@@ -17177,6 +17323,8 @@ Please double-check: **is “ஒன்றுக்கொன்றான மே�
 - `TA-OCC-308c6a65cf14567b` — OLP-0338 / `OLP-0338-S01`; source `content/second-order-logic/sol-and-set-theory/comparing-sets.tex:47`; Tamil `translation/content/second-order-logic/sol-and-set-theory/comparing-sets.tex:54`; PDF page pending.
 - `TA-OCC-bf245bc40c5b1682` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:14`; Tamil `translation/content/set-theory/ordinals/iso.tex:15`; PDF page pending.
 - `TA-OCC-69e1a5db31d30c18` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:22`; Tamil `translation/content/set-theory/ordinals/iso.tex:25`; PDF page pending.
+- `TA-OCC-5ee38f7a4ac59f41` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:101`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:124`; PDF page pending.
+- `TA-OCC-88d32a61827a5c3c` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:107`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:132`; PDF page pending.
 
 ## TA-T050 — graph of a function / image of a set
 
@@ -17266,6 +17414,8 @@ Please double-check: **do the listed uses of “இருபுறச் சா�
 - `TA-OCC-61ce607ae29b9ee3` — OLP-0535 / `OLP-0535-S01`; source `content/set-theory/story/urelements.tex:1`; Tamil `translation/content/set-theory/story/urelements.tex:51`; PDF page pending.
 - `TA-OCC-7a26a84bb335ab5f` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:14`; Tamil `translation/content/set-theory/ordinals/iso.tex:15`; PDF page pending.
 - `TA-OCC-bac80bdd1bbee21b` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:22`; Tamil `translation/content/set-theory/ordinals/iso.tex:25`; PDF page pending.
+- `TA-OCC-12cdd0c99f213cbf` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:101`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:124`; PDF page pending.
+- `TA-OCC-95b48bd5d393fc75` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:107`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:132`; PDF page pending.
 
 ## TA-T052 — composition of functions
 
@@ -18085,6 +18235,8 @@ Please double-check: **is “காண்டோரின் வளைவழி /
 - `TA-OCC-f0d96fa468b43fb3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:14`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:124`; PDF page pending.
 - `TA-OCC-62d941d0c2108c65` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:198`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:225`; PDF page pending.
 - `TA-OCC-f61e9f29bdc5e80d` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:204`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:231`; PDF page pending.
+- `TA-OCC-1bfefdd55fd50f0a` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:13`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:16`; PDF page pending.
+- `TA-OCC-8fd16634781df935` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:14`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:17`; PDF page pending.
 
 ## TA-T061 — pairing function / encode / code / decode
 
@@ -18313,6 +18465,8 @@ Please double-check: **is “எண்ணொத்த / எண்ணொத்த
 - `TA-OCC-b717dc154db9f790` — OLP-0037 / `OLP-0037-S01`; source `content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:15`; Tamil `translation/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:18`; PDF page pending.
 - `TA-OCC-8f1e887304119863` — OLP-0037 / `OLP-0037-S01`; source `content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:17`; Tamil `translation/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:20`; PDF page pending.
 - `TA-OCC-e41f69060d2e2557` — OLP-0037 / `OLP-0037-S03`; source `content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:48`; Tamil `translation/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:54`; PDF page pending.
+- `TA-OCC-318e0de22c0927bf` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:77`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:95`; PDF page pending.
+- `TA-OCC-598cda4ad2317f9e` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:14`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:20`; PDF page pending.
 
 ## TA-T068 — cardinal no-larger / strictly smaller / Cantor theorem
 
@@ -18425,6 +18579,7 @@ Please double-check: **is “வரிசைப்படுத்தப்பட
 - `TA-OCC-6f22644d02edcc54` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:74`; Tamil `translation/content/set-theory/ordinals/opps.tex:80`; PDF page pending.
 - `TA-OCC-dedcfe1e89f5fafc` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:75`; Tamil `translation/content/set-theory/ordinals/opps.tex:81`; PDF page pending.
 - `TA-OCC-e060a147bcf06c01` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:75`; Tamil `translation/content/set-theory/ordinals/opps.tex:103`; PDF page pending.
+- `TA-OCC-f335f16fc254e43c` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:111`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:138`; PDF page pending.
 
 ## TA-T072 — Dedekind cut / proper initial segment / greatest lower bound
 
@@ -18537,6 +18692,12 @@ Please double-check: **is “பரிமாற்று வளையம் / �
 - `TA-OCC-180b56824e630f07` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:76`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:81`; PDF page pending.
 - `TA-OCC-c51ab5bf7fa943c5` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:74`; Tamil `translation/content/set-theory/ordinals/basic.tex:81`; PDF page pending.
 - `TA-OCC-17cf037f7b049415` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:202`; Tamil `translation/content/set-theory/ordinals/basic.tex:223`; PDF page pending.
+- `TA-OCC-5bbd07673ad1477c` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:132`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:178`; PDF page pending.
+- `TA-OCC-52c81df0907e29d1` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:227`; PDF page pending.
+- `TA-OCC-dc8bc2f097f38691` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:69`; PDF page pending.
+- `TA-OCC-c9f2c94b226628d7` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:80`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:98`; PDF page pending.
+- `TA-OCC-67ea6578cf7dd0f8` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:58`; PDF page pending.
+- `TA-OCC-4f8d336e25f27bb2` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:64`; PDF page pending.
 
 ## TA-T074 — Cauchy sequence / limit / tends to zero / monotone increasing or decreasing / decimal expansion
 
@@ -18601,6 +18762,14 @@ Please double-check: **is “கோஷி தொடர் / எல்லை / �
 - `TA-OCC-8d76b45a3e30a709` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:41`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:45`; PDF page pending.
 - `TA-OCC-a9541ad0a152e4ec` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:63`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:69`; PDF page pending.
 - `TA-OCC-3e677f73a9f5b083` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:1`; Tamil `translation/content/set-theory/spine/zf.tex:38`; PDF page pending.
+- `TA-OCC-8a8e1f552e5e3661` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:91`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:115`; PDF page pending.
+- `TA-OCC-5045f70756706658` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:108`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:133`; PDF page pending.
+- `TA-OCC-2034c99b1af862ea` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:166`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:203`; PDF page pending.
+- `TA-OCC-8362d996c6f3e778` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:24`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:29`; PDF page pending.
+- `TA-OCC-05c8291d14016972` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:49`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:61`; PDF page pending.
+- `TA-OCC-86b5567ddf74e33a` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:90`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:111`; PDF page pending.
+- `TA-OCC-bb880ee0105bcf24` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:46`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:53`; PDF page pending.
+- `TA-OCC-428a1e95d047a154` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:51`; PDF page pending.
 
 ## TA-T075 — Dedekind infinite / Hilbert hotel
 
@@ -18628,6 +18797,9 @@ Please double-check: **is “டெடெகிண்ட்-முடிவு�
 - `TA-OCC-8bda519d6cd997c1` — OLP-0053 / `OLP-0053-S07`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:68`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:81`; PDF page pending.
 - `TA-OCC-8e4eb95e9d3816ea` — OLP-0053 / `OLP-0053-S07`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:70`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:83`; PDF page pending.
 - `TA-OCC-7deee7fb3419d483` — OLP-0053 / `OLP-0053-S08`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:73`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:88`; PDF page pending.
+- `TA-OCC-dcfceae0792b097e` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:241`; PDF page pending.
+- `TA-OCC-2c409568b7c365cc` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:78`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:96`; PDF page pending.
+- `TA-OCC-e590933c3050eded` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:110`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:134`; PDF page pending.
 
 ## TA-T076 — Dedekind algebra / f-closed / closure under a function
 
@@ -23246,6 +23418,7 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-d98d83d941c72fba` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:10`; PDF page pending.
 - `TA-OCC-4c65f007a3d07c0b` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:11`; PDF page pending.
 - `TA-OCC-a7272936ab508a7e` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:13`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:103`; PDF page pending.
+- `TA-OCC-9b12a1c1691db7c1` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:29`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:36`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -24022,6 +24195,14 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-d6465f41c3161a90` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:63`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:62`; PDF page pending.
 - `TA-OCC-79265c6f134e3ff2` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:63`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:65`; PDF page pending.
 - `TA-OCC-ca044362746e7afa` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:63`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:104`; PDF page pending.
+- `TA-OCC-5c842f0c85b1b067` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:65`; PDF page pending.
+- `TA-OCC-bca3ba37808ac31e` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:65`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:82`; PDF page pending.
+- `TA-OCC-56152ec5f54cb59d` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:65`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:82`; PDF page pending.
+- `TA-OCC-94b872f980dee1a2` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:65`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:96`; PDF page pending.
+- `TA-OCC-8250d4a9406774ca` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:82`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:102`; PDF page pending.
+- `TA-OCC-3fe8f2f7a827541a` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:82`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:102`; PDF page pending.
+- `TA-OCC-fc7659a38de23e98` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:82`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:134`; PDF page pending.
+- `TA-OCC-6fb0a63dd94624c2` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:80`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:93`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -29269,6 +29450,16 @@ Please double-check: **is “மீள்வரையறை / முதன்ம
 - `TA-OCC-b2f14ef3188bee08` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:1`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:29`; PDF page pending.
 - `TA-OCC-cb5433cd63f28c26` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:1`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:61`; PDF page pending.
 - `TA-OCC-24d583d7db2b556b` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:1`; Tamil `translation/content/set-theory/replacement/refproofs.tex:41`; PDF page pending.
+- `TA-OCC-4c96d2cb71243aa1` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:107`; PDF page pending.
+- `TA-OCC-0cb767958b58745e` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:147`; PDF page pending.
+- `TA-OCC-5735f82fb35ce194` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:149`; PDF page pending.
+- `TA-OCC-88801b1cc9a32b8d` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:156`; PDF page pending.
+- `TA-OCC-7a4bf818ee62daf5` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:157`; PDF page pending.
+- `TA-OCC-b2eecbe9719f18d6` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:159`; PDF page pending.
+- `TA-OCC-c4b1e16efb4479dd` — OLP-0578 / `OLP-0578-S02`; source `content/set-theory/ord-arithmetic/multiplication.tex:54`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:64`; PDF page pending.
+- `TA-OCC-0f9def48093a1b68` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:32`; PDF page pending.
+- `TA-OCC-c2c7243053af5dc7` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:44`; PDF page pending.
+- `TA-OCC-2289d07ab7563cc0` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:35`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:73`; PDF page pending.
 
 ## TA-T115 — characteristic function / bounded quantification / bounded minimization / projection function
 
@@ -31413,6 +31604,7 @@ Please double-check: **is “டெடெகிண்ட் முடிவி�
 - `TA-OCC-f0e2ecaf2fff2f3a` — OLP-0052 / `OLP-0052-S03`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:30`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:37`; PDF page pending.
 - `TA-OCC-f3ac05f357733e43` — OLP-0053 / `OLP-0053-S02`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:25`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:26`; PDF page pending.
 - `TA-OCC-1c60493f909683e5` — OLP-0329 / `OLP-0329-S01`; source `content/second-order-logic/syntax-and-semantics/inf-count.tex:32`; Tamil `translation/content/second-order-logic/syntax-and-semantics/inf-count.tex:34`; PDF page pending.
+- `TA-OCC-49a161b9c9c8ecc0` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:78`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:96`; PDF page pending.
 
 ## TA-T146 — metatheory / axiomatizable / compactness / finitely satisfiable
 
@@ -33979,6 +34171,7 @@ Please double-check: **is “படிநிலைமுறைக் கணக�
 - `TA-OCC-1e8db63ecd286278` — OLP-0571 / `OLP-0571-S01`; source `content/set-theory/replacement/ref.tex:32`; Tamil `translation/content/set-theory/replacement/ref.tex:39`; PDF page pending.
 - `TA-OCC-affc33174d3f3665` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:31`; Tamil `translation/content/set-theory/replacement/refproofs.tex:35`; PDF page pending.
 - `TA-OCC-4cec3aa603c9012e` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:44`; Tamil `translation/content/set-theory/replacement/refproofs.tex:52`; PDF page pending.
+- `TA-OCC-53f7f8e3887fe23f` — OLP-0575 / `OLP-0575-S01`; source `content/set-theory/ord-arithmetic/introduction.tex:10`; Tamil `translation/content/set-theory/ord-arithmetic/introduction.tex:14`; PDF page pending.
 
 ## TA-T202 — urelement / pure set theory / reductive foundational goal
 
@@ -34338,6 +34531,66 @@ Please double-check: **is “வரிசையெண் / முடிவில
 - `TA-OCC-b52cf63b53b02477` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:47`; Tamil `translation/content/set-theory/replacement/absinf.tex:52`; PDF page pending.
 - `TA-OCC-4eefc2b69be8b9f4` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:49`; Tamil `translation/content/set-theory/replacement/absinf.tex:53`; PDF page pending.
 - `TA-OCC-f5977c9951d4f8ab` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:60`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:110`; PDF page pending.
+- `TA-OCC-66fd46523a707626` — OLP-0574 / `OLP-0574-S01`; source `content/set-theory/ord-arithmetic/ord-arithmetic.tex:8`; Tamil `translation/content/set-theory/ord-arithmetic/ord-arithmetic.tex:9`; PDF page pending.
+- `TA-OCC-a3e927dc0e979e1d` — OLP-0575 / `OLP-0575-S01`; source `content/set-theory/ord-arithmetic/introduction.tex:8`; Tamil `translation/content/set-theory/ord-arithmetic/introduction.tex:13`; PDF page pending.
+- `TA-OCC-1bfc1b48a212f618` — OLP-0575 / `OLP-0575-S01`; source `content/set-theory/ord-arithmetic/introduction.tex:8`; Tamil `translation/content/set-theory/ord-arithmetic/introduction.tex:15`; PDF page pending.
+- `TA-OCC-e1b89dfb2fe92cd4` — OLP-0575 / `OLP-0575-S01`; source `content/set-theory/ord-arithmetic/introduction.tex:9`; Tamil `translation/content/set-theory/ord-arithmetic/introduction.tex:16`; PDF page pending.
+- `TA-OCC-e20bc36a79b34b3a` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:6`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:11`; PDF page pending.
+- `TA-OCC-1d778d89469e107b` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:11`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:22`; PDF page pending.
+- `TA-OCC-a89e534eb0937f2e` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:16`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:23`; PDF page pending.
+- `TA-OCC-77c85606fc331796` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:17`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:26`; PDF page pending.
+- `TA-OCC-bb3e6487bec50426` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:37`; PDF page pending.
+- `TA-OCC-63f16928c7142527` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:33`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:40`; PDF page pending.
+- `TA-OCC-2be7edac4c205e26` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:43`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:51`; PDF page pending.
+- `TA-OCC-ff43807cb0763adc` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:47`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:55`; PDF page pending.
+- `TA-OCC-44df9db39be838a5` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:54`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:69`; PDF page pending.
+- `TA-OCC-d44ce464733f8182` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:59`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:86`; PDF page pending.
+- `TA-OCC-625b0ed2f1027778` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:68`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:91`; PDF page pending.
+- `TA-OCC-13ee5124902ec04b` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:87`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:111`; PDF page pending.
+- `TA-OCC-5ff74b3c756a4f3c` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:91`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:115`; PDF page pending.
+- `TA-OCC-ba0ec887407d3c99` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:118`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:133`; PDF page pending.
+- `TA-OCC-3c73f514c1ab8c62` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:125`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:146`; PDF page pending.
+- `TA-OCC-2f209168df82e037` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:126`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:153`; PDF page pending.
+- `TA-OCC-26db8a70f76044ec` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:129`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:155`; PDF page pending.
+- `TA-OCC-45205a8a5170b0ea` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:130`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:160`; PDF page pending.
+- `TA-OCC-823c195129f31116` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:132`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:164`; PDF page pending.
+- `TA-OCC-af797f0377360639` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:136`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:168`; PDF page pending.
+- `TA-OCC-4470c91803154c2d` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:166`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:203`; PDF page pending.
+- `TA-OCC-001dc1c50ae8b1ac` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:222`; PDF page pending.
+- `TA-OCC-f6ba942a0be1f4a3` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:227`; PDF page pending.
+- `TA-OCC-3e35a5058accca53` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:185`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:240`; PDF page pending.
+- `TA-OCC-6f86ca70627629b8` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:197`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:243`; PDF page pending.
+- `TA-OCC-16c695e8860dc920` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:200`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:246`; PDF page pending.
+- `TA-OCC-c76b935e158d5957` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:202`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:247`; PDF page pending.
+- `TA-OCC-40ae54d0987e5e99` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:6`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:11`; PDF page pending.
+- `TA-OCC-0ebe1a269f919db5` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:8`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:13`; PDF page pending.
+- `TA-OCC-495b8b504cbd4184` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:49`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:30`; PDF page pending.
+- `TA-OCC-e27e2f1460e9a919` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:49`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:61`; PDF page pending.
+- `TA-OCC-c4e450c7b016f153` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:66`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:82`; PDF page pending.
+- `TA-OCC-e000099d34c5933c` — OLP-0577 / `OLP-0577-S02`; source `content/set-theory/ord-arithmetic/using-addition.tex:69`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:87`; PDF page pending.
+- `TA-OCC-ebf8fdff1b45d0a4` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:82`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:102`; PDF page pending.
+- `TA-OCC-cbac97289d7d73b7` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:90`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:112`; PDF page pending.
+- `TA-OCC-06aa0b4b3a0f1f25` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:90`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:112`; PDF page pending.
+- `TA-OCC-6090c1acb9e48074` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:7`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:11`; PDF page pending.
+- `TA-OCC-d27448b204c86fbb` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:9`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:13`; PDF page pending.
+- `TA-OCC-c6244eba5b47c79a` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:10`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:13`; PDF page pending.
+- `TA-OCC-b7894e301af620b5` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:22`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:27`; PDF page pending.
+- `TA-OCC-c32341755d3d8729` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:29`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:34`; PDF page pending.
+- `TA-OCC-375f70428ef283db` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:46`; PDF page pending.
+- `TA-OCC-320721bf42d87992` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:46`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:53`; PDF page pending.
+- `TA-OCC-ad2f14aebdbecb96` — OLP-0578 / `OLP-0578-S02`; source `content/set-theory/ord-arithmetic/multiplication.tex:54`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:64`; PDF page pending.
+- `TA-OCC-ca52f4bab324b11a` — OLP-0578 / `OLP-0578-S02`; source `content/set-theory/ord-arithmetic/multiplication.tex:60`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:69`; PDF page pending.
+- `TA-OCC-02ac004e4899378f` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:86`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:98`; PDF page pending.
+- `TA-OCC-dc559addfa20fb8d` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:96`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:111`; PDF page pending.
+- `TA-OCC-33d9fd8c010a9fda` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:99`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:113`; PDF page pending.
+- `TA-OCC-08c5c430ed66cb64` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:99`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:114`; PDF page pending.
+- `TA-OCC-0c26a25148655965` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:6`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:11`; PDF page pending.
+- `TA-OCC-f321d68853623fbc` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:8`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:13`; PDF page pending.
+- `TA-OCC-1c84aa0a3768d6ac` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:9`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:33`; PDF page pending.
+- `TA-OCC-f0e10862279dce91` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:23`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:43`; PDF page pending.
+- `TA-OCC-935d73aa5f53dc97` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:51`; PDF page pending.
+- `TA-OCC-7e3df933738f9ae6` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:44`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:56`; PDF page pending.
+- `TA-OCC-d32bb44c256f8ea9` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:45`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:58`; PDF page pending.
 
 ## TA-T212 — well-order / order-isomorphism / proper and improper initial segment
 
@@ -34378,6 +34631,9 @@ Please double-check: **do the listed uses of “நன்கு வரிசை�
 - `TA-OCC-ef9838f128e9e649` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:28`; PDF page pending.
 - `TA-OCC-da151c8f2e6ed56b` — OLP-0567 / `OLP-0567-S01`; source `content/set-theory/replacement/strength.tex:1`; Tamil `translation/content/set-theory/replacement/strength.tex:41`; PDF page pending.
 - `TA-OCC-817e7da80ae48907` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:1`; Tamil `translation/content/set-theory/replacement/absinf.tex:48`; PDF page pending.
+- `TA-OCC-8993c952226cda04` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:22`; PDF page pending.
+- `TA-OCC-6bb843516d437cf3` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:58`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:99`; PDF page pending.
+- `TA-OCC-edf835ef3789b1d9` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:82`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:127`; PDF page pending.
 
 ## TA-T213 — transitive set / transfinite induction / trichotomy for ordinals
 
@@ -34446,6 +34702,12 @@ Please double-check: **is “பின்வரிசை வரிசையெ�
 - `TA-OCC-a429379f1a5635a9` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:96`; Tamil `translation/content/set-theory/spine/recursion.tex:113`; PDF page pending.
 - `TA-OCC-e50dd9e1d14df3ac` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:110`; Tamil `translation/content/set-theory/spine/recursion.tex:127`; PDF page pending.
 - `TA-OCC-9b91cb3c794ba951` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:41`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:45`; PDF page pending.
+- `TA-OCC-2faa6c8a178fe09d` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:91`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:115`; PDF page pending.
+- `TA-OCC-11d2ad279726aabb` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:91`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:133`; PDF page pending.
+- `TA-OCC-3cbcef361615d4c2` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:166`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:203`; PDF page pending.
+- `TA-OCC-e0dea70535614b9b` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:49`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:61`; PDF page pending.
+- `TA-OCC-ac0d41b6a8535881` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:46`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:53`; PDF page pending.
+- `TA-OCC-4018239e43867e8d` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:51`; PDF page pending.
 
 ## TA-T216 — Burali–Forti paradox / set of all ordinals
 
@@ -34715,6 +34977,12 @@ Please double-check: **is “படிநிலை / தரநிலை / V_α-�
 - `TA-OCC-32ba7a8e10bb4618` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:31`; Tamil `translation/content/set-theory/replacement/refproofs.tex:35`; PDF page pending.
 - `TA-OCC-9e57bc77660decaa` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:44`; Tamil `translation/content/set-theory/replacement/refproofs.tex:52`; PDF page pending.
 - `TA-OCC-e23604cac30360aa` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:20`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:39`; PDF page pending.
+- `TA-OCC-6eaf180458c2ab17` — OLP-0575 / `OLP-0575-S01`; source `content/set-theory/ord-arithmetic/introduction.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/introduction.tex:14`; PDF page pending.
+- `TA-OCC-856b3063479bf3a2` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:8`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:14`; PDF page pending.
+- `TA-OCC-e016d2836bdfa546` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:9`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:59`; PDF page pending.
+- `TA-OCC-9563fcad91aca401` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:63`; PDF page pending.
+- `TA-OCC-60fbbc1c0014bef4` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:37`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:65`; PDF page pending.
+- `TA-OCC-1482116d0b1ca10a` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:77`; PDF page pending.
 
 ## TA-T218 — transfinite recursion / alpha-approximation / bounded, general and simple recursion
 
@@ -34767,6 +35035,8 @@ Please double-check: **is “முடிவிலிக்கடந்த ம�
 - `TA-OCC-e17354295853342d` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:32`; Tamil `translation/content/set-theory/spine/zf.tex:33`; PDF page pending.
 - `TA-OCC-b89072035baaf000` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:41`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:29`; PDF page pending.
 - `TA-OCC-3d0d21b5191b6ca1` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:41`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:61`; PDF page pending.
+- `TA-OCC-927d6c471837896a` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:119`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:147`; PDF page pending.
+- `TA-OCC-67f8eb918683692b` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:44`; PDF page pending.
 
 ## TA-T219 — potent set / powerset-closed stage behavior
 
@@ -34935,6 +35205,95 @@ Alternatives: None recorded.
 Please double-check: **do the listed uses of “முடிவுறு அடிகோளாக்கத்தன்மை / முடிவுறுமுறையில் அடிகோளாக்கத்தக்க கோட்பாடு / Z-இன் முடிவுறு விரிவாக்கம்” preserve the OpenLogic sense of “finite axiomatizability / finitely axiomatizable theory / finite extension of Z” and read naturally in India-standard mathematical Tamil?**
 
 - `TA-OCC-f78ae610ae5aef0f` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:6`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:7`; PDF page pending.
+
+## TA-T227 — ordinal arithmetic / ordinal addition
+
+Chosen rendering: **வரிசையெண் எண்கணிதம் / வரிசையெண் கூட்டல்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly inspected school pages establish ordinary number and successor language and explicitly show ordinary addition and multiplication; the set and relation pages supply the register for order-based ordinal constructions. They do not attest the full specialist compounds. The accepted ordinals chapter fixes வரிசையெண் by its well-order and membership definitions; this chapter will define its arithmetic from ordered copies and transfinite recursion, so no commutativity or familiar finite-number law is imported merely from the Tamil title.
+
+Authority basis: TA-SC6-P2-SUCCESSOR (checked_context_only); TA-SC6-P29-NUMBERS (checked_context_only); TA-SC11-P2 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-T227-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வரிசையெண் எண்கணிதம் / வரிசையெண் கூட்டல்” the established India-standard Tamil expression for “ordinal arithmetic / ordinal addition” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-1875bf16057ca7bc` — OLP-0574 / `OLP-0574-S01`; source `content/set-theory/ord-arithmetic/ord-arithmetic.tex:8`; Tamil `translation/content/set-theory/ord-arithmetic/ord-arithmetic.tex:9`; PDF page pending.
+- `TA-OCC-857e13197a76fdfe` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:6`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:11`; PDF page pending.
+- `TA-OCC-f2d4b1ce8808ab04` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:132`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:164`; PDF page pending.
+- `TA-OCC-414d09a012bee3e3` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:222`; PDF page pending.
+- `TA-OCC-66a7422600fb46b7` — OLP-0576 / `OLP-0576-S05`; source `content/set-theory/ord-arithmetic/addition.tex:182`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:227`; PDF page pending.
+
+## TA-T228 — disjoint sum / reverse lexicographic order / order-type sum
+
+Chosen rendering: **வெட்டாக் கூட்டுத்தொகை / தலைகீழ் அகராதி வரிசை / வரிசை வகைக் கூட்டுத்தொகை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected originals distinguish set membership, subset, union, Cartesian-product relations and functions; வெட்டாக் continues the edition's disjoint-set register. Neither complete tagged-sum nor reverse-lexicographic headword is claimed as directly attested. The formulas A×{0}∪B×{1}, comparison first on the second coordinate, and order type of the resulting well-order define all three senses exactly.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P3 (checked_supports); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-T228-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வெட்டாக் கூட்டுத்தொகை / தலைகீழ் அகராதி வரிசை / வரிசை வகைக் கூட்டுத்தொகை” the established India-standard Tamil expression for “disjoint sum / reverse lexicographic order / order-type sum” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-8331afbbfd736550` — OLP-0576 / `OLP-0576-S01`; source `content/set-theory/ord-arithmetic/addition.tex:26`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:32`; PDF page pending.
+- `TA-OCC-4eb00b369e4e724b` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:48`; PDF page pending.
+- `TA-OCC-4d6db09d2aa0957d` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:24`; PDF page pending.
+
+## TA-T229 — synthetic versus recursive ordinal addition / associative versus commutative
+
+Chosen rendering: **கட்டமைப்பு வழி எதிர் மீள்வரையறை வழி / சேர்ப்புப் பண்பு எதிர் பரிமாற்றுப் பண்பு**
+
+Kind: `terminology`; confidence: `medium`; provisional: `false`; priority: `normal`.
+
+Intended sense and rationale: The directly inspected SCERT page labels associative and commutative laws for set operations, and the grade-6 page shows ordinary arithmetic; neither establishes those laws for ordinal addition. The chapter proves associativity via recursion and disproves commutativity with 1+ω versus ω+1. Constructing ordered copies and solving recursion equations are the two explicitly defined methods, with the same resulting ordinal.
+
+Authority basis: TA-SC6-P29-NUMBERS (checked_context_only); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports)
+
+Alternatives: None recorded.
+
+Please double-check: **do the listed uses of “கட்டமைப்பு வழி எதிர் மீள்வரையறை வழி / சேர்ப்புப் பண்பு எதிர் பரிமாற்றுப் பண்பு” preserve the OpenLogic sense of “synthetic versus recursive ordinal addition / associative versus commutative” and read naturally in India-standard mathematical Tamil?**
+
+- `TA-OCC-3584bc20ddd61b36` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:156`; PDF page pending.
+- `TA-OCC-85a6149def210189` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:83`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:157`; PDF page pending.
+
+## TA-T230 — ordinal multiplication / reverse-lexicographic product / limit-stage supremum
+
+Chosen rendering: **வரிசையெண் பெருக்கல் / தலைகீழ் அகராதி வரிசையிலான பெருக்கற்பலன் / எல்லைநிலை மீச்சிறு மேல்வரம்பு**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected grade-6 page supplies ordinary multiplication vocabulary and grade-11 pages supply Cartesian-product, order and property language, not ordinal multiplication as a headword. The order type of alpha-times-beta with second-coordinate-first comparison fixes the specialist operation. The limit equation uses ordinary supremum so zero times a limit remains zero; the displayed 2-times-omega versus omega-times-2 example prevents importing finite commutativity.
+
+Authority basis: TA-SC6-P29-NUMBERS (checked_context_only); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-T230-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வரிசையெண் பெருக்கல் / தலைகீழ் அகராதி வரிசையிலான பெருக்கற்பலன் / எல்லைநிலை மீச்சிறு மேல்வரம்பு” the established India-standard Tamil expression for “ordinal multiplication / reverse-lexicographic product / limit-stage supremum” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-32b191b0d60c3fa8` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:7`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:11`; PDF page pending.
+- `TA-OCC-94bc6b64edca50a6` — OLP-0578 / `OLP-0578-S03`; source `content/set-theory/ord-arithmetic/multiplication.tex:86`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:98`; PDF page pending.
+
+## TA-T231 — ordinal exponentiation / finite-support function / largest differing coordinate
+
+Chosen rendering: **வரிசையெண் அடுக்கேற்றம் / முடிவுறு ஆதரவு உடைய சார்பு / வேறுபடும் மீப்பெரு ஆயம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected originals support ordinary number powers, finite sets, functions, bijections and relations but do not directly attest transfinite exponentiation or finite-support terminology. The corrected synthetic description orders functions from exponent beta into base alpha by the greatest coordinate of disagreement; the recursive equations define the same ordinal. The positive-index limit union preserves 0 to a positive limit as 0 without altering nonzero-base behavior.
+
+Authority basis: TA-SC6-P29-NUMBERS (checked_context_only); TA-SC11-P4 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-T231-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வரிசையெண் அடுக்கேற்றம் / முடிவுறு ஆதரவு உடைய சார்பு / வேறுபடும் மீப்பெரு ஆயம்” the established India-standard Tamil expression for “ordinal exponentiation / finite-support function / largest differing coordinate” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-34505259decf2f89` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:6`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:11`; PDF page pending.
+- `TA-OCC-b0d6a4d1c026f257` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:44`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:58`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

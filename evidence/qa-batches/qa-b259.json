@@ -1,0 +1,108 @@
+{
+  "batch_id": "TA-B259",
+  "units": [
+    {
+      "unit_id": "OLP-0579",
+      "source_sha256": "965be29d6ab8e9aad3e56b319cc8ddfb3cd212e836092f061198fafb561ae6fc",
+      "translation_sha256": "4d1d22c30553087a073c67595b0d925d988f6d9cb69ac19c32dfb424494a1142",
+      "source_bytes": 2721,
+      "translation_bytes": 6051,
+      "source_coverage_complete": true,
+      "segments": 2,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\ordtype{(\\alpha,\\beta),\\sqsubset}$",
+        "\\begin{align*}\\ordexpo{\\alpha}{0}&=1\\\\\\ordexpo{\\alpha}{\\beta\\ordplus1}&=\\ordexpo{\\alpha}{\\beta}\\ordtimes\\alpha\\\\\\ordexpo{\\alpha}{\\beta}&=\\bigcup_{\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}&&$\\beta$\\end{align*}",
+        "$\\ordexpo{\\alpha}{\\beta}=\\ordtype{(\\alpha,\\beta),\\sqsubset}$"
+      ],
+      "extra_math": [
+        "$\\ordtype{(\\beta,\\alpha),\\sqsubset}$",
+        "\\begin{align*}\\ordexpo{\\alpha}{0}&=1\\\\\\ordexpo{\\alpha}{\\beta\\ordplus1}&=\\ordexpo{\\alpha}{\\beta}\\ordtimes\\alpha\\\\\\ordexpo{\\alpha}{\\beta}&=\\bigcup_{0<\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}&&$\\beta$\\end{align*}",
+        "$\\ordexpo{\\alpha}{\\beta}=\\ordtype{(\\beta,\\alpha),\\sqsubset}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "arithmetic",
+        "expo",
+        "include",
+        "logic",
+        "open",
+        "ord",
+        "section",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-028",
+          "unit_id": "OLP-0579",
+          "kind": "finite-support-exponent-parameter-order",
+          "action": "Used finite-support functions from exponent beta into base alpha in both the synthetic construction and the exercise.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\ordtype{(\\alpha,\\beta),\\sqsubset}",
+              "to": "\\ordtype{(\\beta,\\alpha),\\sqsubset}",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "The source defines finfun(alpha,beta) as finitely supported functions alpha to beta, then calls its order type alpha to the beta. Such functions instead represent beta to the alpha; the base and exponent arguments are reversed in both uses.",
+          "chosen_treatment": "தமிழ் கட்டமைப்பிலும் பயிற்சியிலும் அடுக்குக்குறியாகிய beta இலிருந்து அடியாகிய alpha க்கான முடிவுறு ஆதரவுச் சார்புகளைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Changing the definition of finfun itself or retaining a construction whose zero-exponent and successor cases contradict the displayed recursion.",
+          "rationale": "finfun(0,alpha) contains the empty function and has order type 1; finfun(1,alpha) has order type alpha, as required by alpha^0=1 and alpha^1=alpha.",
+          "precise_review_question": "Do the synthetic construction and exercise both use finfun(beta,alpha) for alpha^beta?",
+          "location_needle": "SOURCE CORRECTION TA-STH-028"
+        },
+        {
+          "audit_id": "TA-STH-029",
+          "unit_id": "OLP-0579",
+          "kind": "zero-base-exponent-limit",
+          "action": "Excluded the zero exponent from the positive-limit union in the ordinal-exponentiation recursion.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\bigcup_{\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}",
+              "to": "\\bigcup_{0<\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source's limit union includes exponent 0 for every base. For base 0 and positive limit beta, the union includes 0^0=1 and yields 1, conflicting with the synthetic function order type and with 0 to every positive successor being 0.",
+          "chosen_treatment": "தமிழ் நேர்ம எல்லை அடுக்கில் பூச்சிய அடுக்கை மட்டும் விலக்கி 0 இன் நேர்ம அடுக்குகள் அனைத்தும் 0 ஆக இருப்பதைப் பாதுகாக்கிறது.",
+          "alternatives_considered": "Adding a separate zero-base case while retaining the original limit formula only under alpha>0; excluding base 0 from the chapter entirely.",
+          "rationale": "For every nonzero base, removing the initial exponent-0 value leaves the same limit supremum; for zero base it gives 0 at positive limits, agreeing with the corrected finite-support construction.",
+          "precise_review_question": "Does the limit clause agree with 0^beta=0 for every beta>0 while retaining ordinary nonzero-base exponentiation?",
+          "location_needle": "SOURCE CORRECTION TA-STH-029"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,142 @@
+% SEGMENT OLP-0577-S01
+% Part: set-theory
+% Chapter: ord-arithmetic
+% Section: using-addition
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ord-arithmetic}{using-addition}
+\olsection{வரிசையெண் கூட்டலைப் பயன்படுத்துதல்}
+
+வரிசையெண் கூட்டலைப் பயன்படுத்தி, \olref[spine][rank]{defnsetrank}
+இல் உள்ள பொருளில் பல்வேறு கணங்களின் தரநிலைகளை வெளிப்படையாகக்
+கணக்கிடலாம்:
+
+\begin{lem}\ollabel{rankcomputation}
+$\setrank{A} = \alpha$ மற்றும் $\setrank{B} = \beta$ எனில்:
+\begin{enumerate}
+  \item\ollabel{exrankpow} $\setrank{\Pow{A}} = \alpha\ordplus 1$
+  \item\ollabel{exrankpair} $\setrank{\{A, B\}} = \max(\alpha,
+  \beta) \ordplus 1$
+  \item\ollabel{exrankcup} $\setrank{A \cup B} = \max(\alpha,
+  \beta)$
+  \item\ollabel{exranktuple} $\setrank{\tuple{A,B}} = \max(\alpha,
+  \beta) \ordplus  2$
+  \item\ollabel{exranktimes} $\setrank{A \times B} \leq
+  \max(\alpha, \beta) \ordplus  2$
+  \item\ollabel{exrankunion} $\alpha$ வெறுமையாகவோ எல்லை
+  வரிசையெண்ணாகவோ இருந்தால் $\setrank{\bigcup A} = \alpha$;
+  $\alpha = \gamma\ordplus 1$ எனில் $\setrank{\bigcup A} = \gamma$
+\end{enumerate}
+\end{lem}
+
+\begin{proof}
+நிறுவல் முழுவதும் \olref[spine][rank]{ranksupstrict} ஐ மீண்டும்
+மீண்டும் பயன்படுத்துகிறோம்.
+
+\emph{\olref{exrankpow}.} $x \subseteq A$ எனில்
+$\setrank{x} \leq \setrank{A}$. ஆகவே
+$\setrank{\Pow{A}} \leq \alpha \ordplus  1$.
+குறிப்பாக $A \in \Pow{A}$ என்பதால்
+$\setrank{\Pow{A}} = \alpha \ordplus  1$.
+
+\emph{\olref{exrankpair}.} \olref[spine][rank]{ranksupstrict} இன் படி.
+
+\emph{\olref{exrankcup}.} \olref[spine][rank]{ranksupstrict} இன் படி.
+
+\emph{\olref{exranktuple}.} \olref{exrankpair} ஐ இருமுறை
+பயன்படுத்தினால்.
+
+\emph{\olref{exranktimes}.}
+$A \times B \subseteq \Pow{\Pow{A \cup B}}$ என்பதைக் கவனித்து,
+\olref{exrankpow} ஐ இருமுறை பயன்படுத்துக.
+% SOURCE CORRECTION TA-STH-025: two powersets require exrankpow twice, not exranktuple.
+
+\emph{\olref{exrankunion}.} $\alpha = \gamma\ordplus 1$ எனில்,
+$\setrank{c} = \gamma$ ஆக அமையும் ஏதோ ஒரு $c \in A$ உண்டு;
+$A$ இன் எந்த !!{element} உம் இதைவிட உயர்ந்த தரநிலை
+கொண்டிருக்காது. எனவே $\setrank{\bigcup A} = \gamma$.
+$\alpha$ ஓர் எல்லை வரிசையெண் எனில், $\alpha$ வை விடக்
+கண்டிப்பாகக் குறைவாக, ஆனால் அதனை எவ்வளவு வேண்டுமானாலும்
+நெருங்கும் தரநிலையுடைய !!{element}s $A$ இல் உள்ளன. ஆகவே
+$\bigcup A$ இலும் $\alpha$ வை விடக் கண்டிப்பாகக் குறைவாக,
+ஆனால் அதனை எவ்வளவு வேண்டுமானாலும் நெருங்கும் தரநிலையுடைய
+!!{element}s உள்ளன; அதனால் $\setrank{\bigcup A} = \alpha$.
+\end{proof}
+\noindent
+\olref{exranktimes} இல் ஏன் \emph{சமனின்மை} வருகிறது என்பதைக்
+காட்டுவதைப் பயிற்சியாக விடுகிறோம்.
+
+\begin{prob}
+$\setrank{A \times B} =
+\max(\setrank{A}, \setrank{B})$ ஆக அமையும் $A$, $B$ கணங்களைத்
+தருக. $\setrank{A \times B} =
+\max(\setrank{A}, \setrank{B}) \ordplus  2$ ஆக அமையும் $A$,
+$B$ கணங்களையும் தருக. வேறு தரநிலைகள் சாத்தியமா?
+% SOURCE CORRECTION TA-STH-026: restore the missing equality in the second request.
+\end{prob}
+
+% SEGMENT OLP-0577-S02
+ஒரு வரிசையெண் ``முடிவுறு'' அல்லது ``முடிவுறாதது'' என்பதற்குப்
+பொருள் என்ன என்பதற்கான பல நியாயமான கருத்துகள் ஒன்றுக்கொன்று
+சமானமானவை என்பதையும் இப்போது காட்டலாம்:
+
+\begin{lem}\ollabel{ordinfinitycharacter}
+எந்த வரிசையெண் $\alpha$ க்கும், பின்வருவன சமானமானவை:
+\begin{enumerate}
+  \item\ollabel{ord:notinomega} $\alpha\notin \omega$;
+  அதாவது, $\alpha$ ஓர் இயல் எண் அல்ல
+  \item\ollabel{ord:omegaplus} $\omega \leq \alpha$
+  \item\ollabel{ord:oneplus} $1 \ordplus  \alpha = \alpha$
+  %\alpha \approx \alpha \ordplus 1$
+  \item\ollabel{ord:plusone} $\alpha \approx \alpha\ordplus 1$;
+  அதாவது, $\alpha$ வும் $\alpha\ordplus 1$ உம் எண்ணொத்தவை
+  \item\ollabel{ord:infinite} $\alpha$ டெடெகிண்ட்-முடிவுறாதது
+\end{enumerate}
+\end{lem}
+\noindent
+
+% SEGMENT OLP-0577-S03
+ஆக, ஒரு வரிசையெண் முடிவுறுகிறதா முடிவுறாததா என்பதைப் புரிந்துகொள்ள
+ஒன்றுக்கொன்று சமானமான ஐந்து வழிகளை நிறுவியுள்ளோம்.
+
+\begin{proof}
+\emph{\olref{ord:notinomega} $\Rightarrow$ \olref{ord:omegaplus}.}
+முக்கூற்றுப் பண்பின்படி.
+
+\emph{\olref{ord:omegaplus} $\Rightarrow$ \olref{ord:oneplus}.}
+$\alpha \geq \omega$ என்க. முடிவிலிக்கடந்த தொகுத்தறிதலின்படி,
+$\alpha = \beta \ordplus \gamma$ என்றும் $\beta$ ஓர் எல்லை
+வரிசையெண் என்றும் ஆகுமாறு ஏதோ ஒரு மீச்சிறு வரிசையெண் $\gamma$
+உண்டு; அது $0$ ஆகவும் இருக்கலாம். இப்போது:
+\[
+  1 \ordplus \alpha =
+  1 \ordplus (\beta \ordplus \gamma) =
+  (1 \ordplus \beta) \ordplus \gamma =
+  \supstrict_{\delta < \beta} (1 \ordplus  \delta) \ordplus  \gamma =
+  \beta \ordplus  \gamma =
+  \alpha.
+\]
+\emph{\olref{ord:oneplus} $\Rightarrow$ \olref{ord:plusone}.}
+$f \colon (\alpha \disjointsum 1) \to (1 \disjointsum \alpha)$
+என்ற !!a{bijection} இருப்பது தெளிவு.
+$1 \ordplus \alpha = \alpha$ எனில்,
+$g \colon (1 \disjointsum \alpha) \to \alpha$ என்ற
+வரிசை ஓரினச்சார்பு உண்டு. இப்போது $\comp{f}{g}$ ஐக் கருதுக.
+
+\emph{\olref{ord:plusone} $\Rightarrow$ \olref{ord:infinite}.}
+$\alpha \approx \alpha \ordplus 1$ எனில்,
+$f \colon (\alpha \disjointsum 1) \to \alpha$ என்ற
+!!a{bijection} உண்டு. ஒவ்வொரு $\gamma < \alpha$ க்கும்
+$g(\gamma) = f(\gamma, 0)$ என வரையறுக்க. இந்த
+!!{injection} ஆனது $\alpha$ டெடெகிண்ட்-முடிவுறாதது என்பதைக்
+காட்டுகிறது; ஏனெனில்
+$f(0,1) \in \alpha \setminus \ran{g}$.
+
+\emph{\olref{ord:infinite} $\Rightarrow$ \olref{ord:notinomega}.}
+இது \olref[z][infinity-again]{naturalnumbersarentinfinite} ஆகும்.
+\end{proof}
+
+\end{document}

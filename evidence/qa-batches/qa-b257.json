@@ -1,0 +1,103 @@
+{
+  "batch_id": "TA-B257",
+  "units": [
+    {
+      "unit_id": "OLP-0577",
+      "source_sha256": "9641a137f0347689fad7fc04337f8889991e482c6179513c19a0bfbc619eaff1",
+      "translation_sha256": "c1e8650169e0dad8067f1fdf90e8286b028bf2bdfb7f87af8b4efce36a9f2849",
+      "source_bytes": 4730,
+      "translation_bytes": 8054,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\setrank{A\\timesB}\\max(\\setrank{A},\\setrank{B})\\ordplus2$"
+      ],
+      "extra_math": [
+        "$\\setrank{A\\timesB}=\\max(\\setrank{A},\\setrank{B})\\ordplus2$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "again",
+        "include",
+        "infinity",
+        "logic",
+        "open",
+        "rank",
+        "section",
+        "spine"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-025",
+          "unit_id": "OLP-0577",
+          "kind": "cartesian-product-rank-wrong-citation",
+          "action": "Referred to the powerset-rank clause twice when bounding the rank of the Cartesian product inside two powersets.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "and invoke \\olref{exranktuple}",
+              "to": "and invoke \\olref{exrankpow}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof says A-times-B is contained in P(P(A-union-B)) but cites the ordered-pair rank clause rather than the powerset-rank clause needed to bound the displayed double powerset.",
+          "chosen_treatment": "தமிழ் நிறுவல் அடுக்குக்கணத்தின் தரநிலை வாய்பாட்டை இருமுறை பயன்படுத்துகிறது.",
+          "alternatives_considered": "Retaining the mismatched ordered-pair citation while leaving the double-powerset argument unexplained.",
+          "rationale": "The displayed containment and the earlier equality rank(P(X))=rank(X)+1 directly yield the stated max-plus-two upper bound.",
+          "precise_review_question": "Does the cited clause compute the rank of P(P(A-union-B))?",
+          "location_needle": "SOURCE CORRECTION TA-STH-025"
+        },
+        {
+          "audit_id": "TA-STH-026",
+          "unit_id": "OLP-0577",
+          "kind": "product-rank-exercise-missing-relation",
+          "action": "Inserted the missing equality sign in the second requested Cartesian-product rank example.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\setrank{A\\timesB}\\max",
+              "to": "\\setrank{A\\timesB}=\\max",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The second problem prints rank(A-times-B) immediately followed by max(rank A, rank B)+2 without any relation sign.",
+          "chosen_treatment": "தமிழ் பயிற்சி மேல்வரம்பை எட்டும் எடுத்துக்காட்டுக்கான சமக்குறியை நிரப்புகிறது.",
+          "alternatives_considered": "Reading the missing sign as strict inequality, which conflicts with the preceding upper bound and the exercise's contrast between attainable endpoints.",
+          "rationale": "The preceding lemma establishes at most max-plus-two and the first request uses equality at max; the second therefore asks for equality at the stated upper endpoint.",
+          "precise_review_question": "Does the second exercise request equality to max(rank A, rank B)+2?",
+          "location_needle": "SOURCE CORRECTION TA-STH-026"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

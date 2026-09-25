@@ -5807,6 +5807,139 @@
       "rationale": "The section's stated aim is to derive Replacement over Z from a weaker reflection principle; the definition and theorem labels confirm that reading.",
       "precise_review_question": "Does the transition introduce Weak-Reflection as a weaker formulation of Reflection?",
       "location_needle": "SOURCE CORRECTION TA-STH-022"
+    },
+    {
+      "audit_id": "TA-STH-023",
+      "unit_id": "OLP-0576",
+      "kind": "already-tagged-disjoint-sum-components",
+      "action": "Replaced the second disjoint-sum operation between the two tagged components by ordinary union in the successor isomorphism codomain.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\disjointsum"],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\disjointsum(\\{0\\}\\times\\{1\\})", "to": "\\cup(\\{0\\}\\times\\{1\\})", "count": 1}
+      ],
+      "source_issue_or_choice": "The source correctly defines alpha disjointsum 1 as the union of alpha-times-{0} and 1-times-{1}, but the proof applies disjointsum a second time to those already tagged pieces.",
+      "chosen_treatment": "தமிழ் நிறுவல் குறியிட்ட இரு கணங்களைச் சாதாரணச் சேர்ப்பால் இணைக்கிறது.",
+      "alternatives_considered": "Retaining the nested disjoint sum, which would create newly tagged pairs rather than the displayed f-values.",
+      "rationale": "The displayed map f sends gamma to <gamma,0> and alpha to <0,1>; exactly those values belong to the ordinary union of the two tagged components.",
+      "precise_review_question": "Does the codomain consist exactly of the values displayed for f?",
+      "location_needle": "SOURCE CORRECTION TA-STH-023"
+    },
+    {
+      "audit_id": "TA-STH-024",
+      "unit_id": "OLP-0576",
+      "kind": "zero-product-spurious-singleton",
+      "action": "Removed a spurious singleton from the zero-addition order-type calculation.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\ordtype{(\\alpha\\times\\{0\\})\\cup\\{0\\},\\rlexless}", "to": "\\ordtype{\\alpha\\times\\{0\\},\\rlexless}", "count": 1}
+      ],
+      "source_issue_or_choice": "The source simplifies (alpha-times-{0}) union (0-times-{1}) to (alpha-times-{0}) union {0}; but 0 is the empty ordinal and 0-times-{1} is empty, not {0}.",
+      "chosen_treatment": "தமிழ் கணக்கில் வெற்றுக் கார்டீசியப் பெருக்கலை நீக்கி alpha-times-{0} மட்டும் வைத்துள்ளது.",
+      "alternatives_considered": "Preserving a nonexistent singleton or changing the zero ordinal's meaning.",
+      "rationale": "The resulting tagged copy of alpha is order-isomorphic to alpha under the relation already defined.",
+      "precise_review_question": "Does the base recursion calculation use 0-times-{1}=empty set?",
+      "location_needle": "SOURCE CORRECTION TA-STH-024"
+    },
+    {
+      "audit_id": "TA-STH-025",
+      "unit_id": "OLP-0577",
+      "kind": "cartesian-product-rank-wrong-citation",
+      "action": "Referred to the powerset-rank clause twice when bounding the rank of the Cartesian product inside two powersets.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {"from": "and invoke \\olref{exranktuple}", "to": "and invoke \\olref{exrankpow}", "count": 1}
+      ],
+      "source_issue_or_choice": "The proof says A-times-B is contained in P(P(A-union-B)) but cites the ordered-pair rank clause rather than the powerset-rank clause needed to bound the displayed double powerset.",
+      "chosen_treatment": "தமிழ் நிறுவல் அடுக்குக்கணத்தின் தரநிலை வாய்பாட்டை இருமுறை பயன்படுத்துகிறது.",
+      "alternatives_considered": "Retaining the mismatched ordered-pair citation while leaving the double-powerset argument unexplained.",
+      "rationale": "The displayed containment and the earlier equality rank(P(X))=rank(X)+1 directly yield the stated max-plus-two upper bound.",
+      "precise_review_question": "Does the cited clause compute the rank of P(P(A-union-B))?",
+      "location_needle": "SOURCE CORRECTION TA-STH-025"
+    },
+    {
+      "audit_id": "TA-STH-026",
+      "unit_id": "OLP-0577",
+      "kind": "product-rank-exercise-missing-relation",
+      "action": "Inserted the missing equality sign in the second requested Cartesian-product rank example.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\setrank{A\\timesB}\\max", "to": "\\setrank{A\\timesB}=\\max", "count": 1}
+      ],
+      "source_issue_or_choice": "The second problem prints rank(A-times-B) immediately followed by max(rank A, rank B)+2 without any relation sign.",
+      "chosen_treatment": "தமிழ் பயிற்சி மேல்வரம்பை எட்டும் எடுத்துக்காட்டுக்கான சமக்குறியை நிரப்புகிறது.",
+      "alternatives_considered": "Reading the missing sign as strict inequality, which conflicts with the preceding upper bound and the exercise's contrast between attainable endpoints.",
+      "rationale": "The preceding lemma establishes at most max-plus-two and the first request uses equality at max; the second therefore asks for equality at the stated upper endpoint.",
+      "precise_review_question": "Does the second exercise request equality to max(rank A, rank B)+2?",
+      "location_needle": "SOURCE CORRECTION TA-STH-026"
+    },
+    {
+      "audit_id": "TA-STH-027",
+      "unit_id": "OLP-0578",
+      "kind": "ordinal-multiplication-zero-left-factor-limit",
+      "action": "Used ordinary supremum rather than least strict upper bound in the limit multiplication equation.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": ["\\supstrict"],
+      "expected_extra_commands": ["\\sup"],
+      "normalized_math_replacements": [
+        {"from": "\\supstrict_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)", "to": "\\sup_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)", "count": 1}
+      ],
+      "source_issue_or_choice": "The source states the limit recursion for every alpha using least strict upper bound. At alpha=0 and any nonzero limit beta, all preceding products are 0, whose least strict upper bound is 1; but the directly defined order type of 0-times-beta is 0.",
+      "chosen_treatment": "தமிழ் எல்லைநிலைச் சமன்பாட்டில் சாதாரண மீச்சிறு மேல்வரம்பைப் பயன்படுத்துகிறது; இதனால் 0 பெருக்கல் 0 ஆகவே உள்ளது.",
+      "alternatives_considered": "Excluding alpha=0 from the lemma, leaving zero-base multiplication undefined at limits.",
+      "rationale": "For nonzero alpha, the finite and transfinite products are cofinal at a limit and ordinary and least-strict suprema agree; the ordinary supremum also handles alpha=0 correctly.",
+      "precise_review_question": "Does the revised limit recursion agree with the order-type product when alpha=0?",
+      "location_needle": "SOURCE CORRECTION TA-STH-027"
+    },
+    {
+      "audit_id": "TA-STH-028",
+      "unit_id": "OLP-0579",
+      "kind": "finite-support-exponent-parameter-order",
+      "action": "Used finite-support functions from exponent beta into base alpha in both the synthetic construction and the exercise.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\ordtype{(\\alpha,\\beta),\\sqsubset}", "to": "\\ordtype{(\\beta,\\alpha),\\sqsubset}", "count": 2}
+      ],
+      "source_issue_or_choice": "The source defines finfun(alpha,beta) as finitely supported functions alpha to beta, then calls its order type alpha to the beta. Such functions instead represent beta to the alpha; the base and exponent arguments are reversed in both uses.",
+      "chosen_treatment": "தமிழ் கட்டமைப்பிலும் பயிற்சியிலும் அடுக்குக்குறியாகிய beta இலிருந்து அடியாகிய alpha க்கான முடிவுறு ஆதரவுச் சார்புகளைப் பயன்படுத்துகிறது.",
+      "alternatives_considered": "Changing the definition of finfun itself or retaining a construction whose zero-exponent and successor cases contradict the displayed recursion.",
+      "rationale": "finfun(0,alpha) contains the empty function and has order type 1; finfun(1,alpha) has order type alpha, as required by alpha^0=1 and alpha^1=alpha.",
+      "precise_review_question": "Do the synthetic construction and exercise both use finfun(beta,alpha) for alpha^beta?",
+      "location_needle": "SOURCE CORRECTION TA-STH-028"
+    },
+    {
+      "audit_id": "TA-STH-029",
+      "unit_id": "OLP-0579",
+      "kind": "zero-base-exponent-limit",
+      "action": "Excluded the zero exponent from the positive-limit union in the ordinal-exponentiation recursion.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\bigcup_{\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}", "to": "\\bigcup_{0<\\delta<\\beta}\\ordexpo{\\alpha}{\\delta}", "count": 1}
+      ],
+      "source_issue_or_choice": "The source's limit union includes exponent 0 for every base. For base 0 and positive limit beta, the union includes 0^0=1 and yields 1, conflicting with the synthetic function order type and with 0 to every positive successor being 0.",
+      "chosen_treatment": "தமிழ் நேர்ம எல்லை அடுக்கில் பூச்சிய அடுக்கை மட்டும் விலக்கி 0 இன் நேர்ம அடுக்குகள் அனைத்தும் 0 ஆக இருப்பதைப் பாதுகாக்கிறது.",
+      "alternatives_considered": "Adding a separate zero-base case while retaining the original limit formula only under alpha>0; excluding base 0 from the chapter entirely.",
+      "rationale": "For every nonzero base, removing the initial exponent-0 value leaves the same limit supremum; for zero base it gives 0 at positive limits, agreeing with the corrected finite-support construction.",
+      "precise_review_question": "Does the limit clause agree with 0^beta=0 for every beta>0 while retaining ordinary nonzero-base exponentiation?",
+      "location_needle": "SOURCE CORRECTION TA-STH-029"
     }
   ],
   "by_unit": {
@@ -5997,6 +6130,10 @@
     "OLP-0567": ["TA-STH-017"],
     "OLP-0569": ["TA-STH-018"],
     "OLP-0570": ["TA-STH-019"],
-    "OLP-0572": ["TA-STH-020", "TA-STH-021", "TA-STH-022"]
+    "OLP-0572": ["TA-STH-020", "TA-STH-021", "TA-STH-022"],
+    "OLP-0576": ["TA-STH-023", "TA-STH-024"],
+    "OLP-0577": ["TA-STH-025", "TA-STH-026"],
+    "OLP-0578": ["TA-STH-027"],
+    "OLP-0579": ["TA-STH-028", "TA-STH-029"]
   }
 }

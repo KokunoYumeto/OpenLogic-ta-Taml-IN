@@ -1,0 +1,90 @@
+{
+  "batch_id": "TA-B258",
+  "units": [
+    {
+      "unit_id": "OLP-0578",
+      "source_sha256": "eade2bc67a7dede697f1a89e0359c3ef4a1c52154bbcf4b1b45176f5d3742abb",
+      "translation_sha256": "77ceeb1af095c71af18b85a72f66f12826782b6763f78ffe5b59aaf6ef15a5f4",
+      "source_bytes": 4066,
+      "translation_bytes": 7369,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\alpha\\ordtimes0&=0\\\\\\alpha\\ordtimes(\\beta\\ordplus1)&=(\\alpha\\ordtimes\\beta)\\ordplus\\alpha\\\\\\alpha\\ordtimes\\beta&=\\supstrict_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)&&$\\beta$.\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\alpha\\ordtimes0&=0\\\\\\alpha\\ordtimes(\\beta\\ordplus1)&=(\\alpha\\ordtimes\\beta)\\ordplus\\alpha\\\\\\alpha\\ordtimes\\beta&=\\sup_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)&&$\\beta$.\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "add",
+        "align",
+        "arithmetic",
+        "include",
+        "logic",
+        "mult",
+        "open",
+        "ord",
+        "section",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-027",
+          "unit_id": "OLP-0578",
+          "kind": "ordinal-multiplication-zero-left-factor-limit",
+          "action": "Used ordinary supremum rather than least strict upper bound in the limit multiplication equation.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\supstrict"
+          ],
+          "expected_extra_commands": [
+            "\\sup"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\supstrict_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)",
+              "to": "\\sup_{\\delta<\\beta}(\\alpha\\ordtimes\\delta)",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source states the limit recursion for every alpha using least strict upper bound. At alpha=0 and any nonzero limit beta, all preceding products are 0, whose least strict upper bound is 1; but the directly defined order type of 0-times-beta is 0.",
+          "chosen_treatment": "தமிழ் எல்லைநிலைச் சமன்பாட்டில் சாதாரண மீச்சிறு மேல்வரம்பைப் பயன்படுத்துகிறது; இதனால் 0 பெருக்கல் 0 ஆகவே உள்ளது.",
+          "alternatives_considered": "Excluding alpha=0 from the lemma, leaving zero-base multiplication undefined at limits.",
+          "rationale": "For nonzero alpha, the finite and transfinite products are cofinal at a limit and ordinary and least-strict suprema agree; the ordinary supremum also handles alpha=0 correctly.",
+          "precise_review_question": "Does the revised limit recursion agree with the order-type product when alpha=0?",
+          "location_needle": "SOURCE CORRECTION TA-STH-027"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\supstrict"
+      ],
+      "extra_commands": [
+        "\\sup"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

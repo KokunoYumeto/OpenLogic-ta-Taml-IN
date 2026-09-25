@@ -1,0 +1,77 @@
+% SEGMENT OLP-0579-S01
+% Part: set-theory
+% Chapter: ord-arithmetic
+% Section: exponentiation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{sth}{ord-arithmetic}{expo}
+\olsection{வரிசையெண் அடுக்கேற்றம்}
+
+இப்போது வரிசையெண் அடுக்கேற்றத்தை நோக்குவோம். வருத்தமாக,
+இதற்கான \emph{எளிதில் புரியும்} கட்டமைப்பு வழி வரையறை இல்லை.
+
+வெளிப்படையான கட்டமைப்பு வழி வரையறைகள் \emph{உள்ளன} என்பது உண்மை.
+அவற்றில் ஒன்று இதோ. $\text{finfun}(\alpha,\beta)$ என்பது
+$f \colon \alpha \to \beta$ என்ற எல்லாச் சார்புகளிலும்,
+$\Setabs{\gamma \in \alpha}{f(\gamma) \neq 0}$ ஏதோ ஓர் இயல்
+எண்ணுடன் எண்ணொத்ததாக உள்ள சார்புகளின் கணம் என்க.
+$\text{finfun}(\alpha,\beta)$ மீது, $f \neq g$ என்றும்
+$f(\gamma_0) < g(\gamma_0)$ என்றும் இருந்தால், அப்போது மட்டுமே
+$f \sqsubset g$ என நன்கு வரிசைப்படுத்தலை வரையறுக்கிறோம்; இங்கு
+$\gamma_0 = \text{max}\Setabs{\gamma \in \alpha}{f(\gamma) \neq
+g(\gamma)}$. அப்போது $\ordexpo{\alpha}{\beta}$ வைப்
+$\ordtype{\text{finfun}(\beta, \alpha), \sqsubset}$ என
+வரையறுக்கலாம்.
+% SOURCE CORRECTION TA-STH-028: exponent beta indexes finite-support functions into base alpha.
+பாட்டர் இந்த வெளிப்படையான வரையறையைப் பயன்படுத்தியவுடன் இவ்வாறு
+விளக்குகிறார்:
+\begin{quote}
+  இந்த வரிசையைத் தேர்ந்தெடுப்பது, பொருத்தமான மீள்வரையறை
+  நிபந்தனையைப் பூர்த்திசெய்யும் வரிசையெண் அடுக்கேற்ற வரையறையைப்
+  பெற வேண்டும் என்ற நமது விருப்பத்தால் மட்டுமே தீர்மானிக்கப்படுகிறது
+  \ldots; வரிசைப்படுத்தப்பட்ட கூட்டுத்தொகையையும் பெருக்கற்பலனையும்
+  விட இதை மனக்கண்ணில் காண்பது மிகவும் கடினம்.
+  \citep[p.~199]{Potter2004}
+\end{quote}
+அப்படித்தான். கூட்டலை ``$\alpha$ வின் பிரதிக்குப் பிறகு
+$\beta$ வின் பிரதி'' என்றும், பெருக்கலை ``$\alpha$ வின்
+பிரதிகளால் ஆன $\beta$-தொடர்'' என்றும் விளக்கினோம். ஆனால்
+$\text{finfun}(\alpha, \gamma)$ பற்றி அத்தகைய சுருக்கமான
+விளக்கம் நம்மிடம் இல்லை. எனவே வரிசையெண் அடுக்கேற்றத்தை
+முடிவிலிக்கடந்த மீள்வரையறை \emph{மூலமே} வரையறுப்போம்; அதாவது:
+
+% SEGMENT OLP-0579-S02
+\begin{defn}\ollabel{ordexporecursion}
+\begin{align*}
+  \ordexpo{\alpha}{0} &= 1\\
+  \ordexpo{\alpha}{\beta\ordplus 1} &=\ordexpo{\alpha}{\beta} \ordtimes \alpha\\
+  \ordexpo{\alpha}{\beta} &= \bigcup_{0 < \delta < \beta}\ordexpo{\alpha}{\delta}& & \text{$\beta$ ஓர் எல்லை வரிசையெண் எனில்}
+\end{align*}
+% SOURCE CORRECTION TA-STH-029: omit the zero exponent at positive limits to keep 0^beta=0.
+\end{defn}
+
+\emph{கணக் கோட்பாட்டாளர்களாகவே} நாம் செயல்பட்டிருந்தால், வரிசையெண்
+அடுக்கேற்றத்தின் சில பண்புகளை ஆராய விரும்பியிருக்கலாம். ஆனால்
+வரிசையெண் அடுக்கேற்றம் பரிமாற்றுப் பண்புடையதல்ல என்ற
+ஆச்சரியமில்லாத உண்மையைத் தவிர வேறொன்றையும் இங்கு பெரிதாகச்
+சேர்க்க வேண்டியதில்லை. ஆக,
+$\ordexpo{2}{\omega} =
+\bigcup_{\delta < \omega}\ordexpo{2}{\delta} = \omega$;
+ஆனால் $\ordexpo{\omega}{2} = \omega \ordtimes \omega$.
+இயல் எண்களிலேயே அடுக்கேற்றம் பரிமாற்றுப் பண்புடையதல்ல என்பதால்
+அப்படியிருக்க வேண்டும் என்று \emph{எதிர்பார்க்கவும் கூடாது}:
+$\ordexpo{2}{3} = 8 < 9 = \ordexpo{3}{2}$.
+
+\begin{prob}
+முடிவிலிக்கடந்த தொகுத்தறிதலைப் பயன்படுத்தி,
+$\ordexpo{\alpha}{\beta} =
+\ordtype{\text{finfun}(\beta, \alpha), \sqsubset}$ என
+வரையறுத்தால், \olref[sth][ord-arithmetic][expo]{ordexporecursion}
+இன் மீள்வரையறைச் சமன்பாடுகள் கிடைக்கின்றன என்பதை நிறுவுக.
+% SOURCE CORRECTION TA-STH-028: the exercise uses the corrected argument order.
+\end{prob}
+
+\end{document}

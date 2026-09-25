@@ -5,10 +5,10 @@ For the reader-facing Tamil edition information, see [தமிழ் முக�
 India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
 Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
 
-The full edition is in progress. **570 of 722 frozen content units are translated, source-aligned and textually and semantically audited**. The accepted source now extends through the set-theory part driver and the complete iterative-conception, Zermelo-axioms, ordinals, stages-and-ranks, and Replacement-and-Reflection chapters; 152 units remain.
+The full edition is in progress. **576 of 722 frozen content units are translated, source-aligned and textually and semantically audited**. The accepted source now extends through the complete Ordinal Arithmetic chapter; 146 units remain.
 The first tagged reader remains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
 The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Sets, Relations, Functions, Size of Sets, number-system construction and Infinite Sets. Patch release v0.2.1 replaces five references to chapters outside this reader with descriptive Tamil fallbacks; the live references return automatically when those destinations are included in a later complete edition. It passed a three-pass guarded XeLaTeX/BibTeX build, font embedding and copy/search checks, plus visual inspection of every rendered page.
-Twelve verified component readers cover 248 distinct units. Each component passed a guarded TeX build, embedded-font and copy/search checks, and all-page visual inspection. The existing 384-page cumulative reader concatenates the first seven accepted components (203 units) in frozen-source order, adds section bookmarks, and preserves 626 checked links. The five set-theory readers are supplied separately and do not imply continuous reader coverage of all units through OLP-0573.
+Twelve verified component readers cover 248 distinct units. Each component passed a guarded TeX build, embedded-font and copy/search checks, and all-page visual inspection. The existing 384-page cumulative reader concatenates the first seven accepted components (203 units) in frozen-source order, adds section bookmarks, and preserves 626 checked links. The five set-theory readers are supplied separately. The six new Ordinal Arithmetic units are editable source; their PDF reader has not yet been built.
 
 ## Read and edit
 
@@ -25,6 +25,7 @@ Twelve verified component readers cover 248 distinct units. Each component passe
 - வரிசையெண்கள்: [17-page Tamil PDF](readers/set-theory-ordinals-ta-Taml-IN.pdf) → [complete-text single-file LaTeX](release/openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex) → [pinned complete source ZIP](https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/449c3bfb90971941eb59715863f31e8e752434ba). The chapter covers 11 source units: well-orders, order-isomorphisms, von Neumann ordinals, transfinite induction, Replacement, order types, successor and limit ordinals, and the Burali–Forti paradox.
 - Stages and ranks: [12-page Tamil PDF](readers/set-theory-stages-ranks-ta-Taml-IN.pdf) → [complete-text single-file LaTeX](release/openlogic-ta-Taml-IN-set-theory-stages-ranks-7-units.tex) → [pinned complete source ZIP](https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/3d20aea0980eddfb823c4e4c9aedf84b4eaedbe3). The seven units cover the $V_\alpha$ hierarchy, transfinite recursion, stage properties, Foundation and Regularity, $\ZF$, set rank and membership induction.
 - [மாற்றீடும் பிரதிபலிப்பும் — Replacement-and-Reflection Tamil PDF](readers/set-theory-replacement-reflection-ta-Taml-IN.pdf): 16 pages and 9 source units covering the strength and justification of Replacement, limitation of size, absolute infinity, Reflection, the weak-reflection equivalence and finite axiomatizability.
+- [வரிசையெண் எண்கணிதம் — editable Ordinal Arithmetic Tamil TeX](translation/content/set-theory/ord-arithmetic/ord-arithmetic.tex): six accepted units; reader PDF pending.
 - [203-unit cumulative Tamil reader](readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf): 384 A4 pages containing the seven accepted components above, in source order.
 - Editable Tamil: `translation/content/`. Each accepted file retains its frozen relative path and stable OLP unit binding in `evidence/`.
 - Frozen, unchanged English sources and original components: upstream/.
@@ -33,9 +34,8 @@ Twelve verified component readers cover 248 distinct units. Each component passe
 - Propositional syntax-and-semantics source master: build/tamil-pl-syn.tex.
 - Proof-systems, sequent-calculus, natural-deduction and tableaux reader master: build/tamil-proof-systems-sequent.tex.
 
-This is machine translation with source comparison and author semantic review. Independent human or native-speaker approval is not claimed.
-The 570 accepted units were translated and checked by OpenAI Codex — GPT-5.6 Sol, Ultra effort. The 2026-09-25 publication metadata and source packaging updates were made by OpenAI Codex — GPT-6 Sol, Ultra effort.
-Every component reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 570 accepted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 1,456 aligned segments and 664 reverse-paraphrase samples. For the cumulative reader, every page content stream and page box is identical to its accepted component, all fonts remain embedded, and representative boundary and interior pages were rendered and visually inspected.
+The first 570 units were translated and author reviewed with OpenAI Codex GPT-5.6 Sol, Ultra reasoning. OLP-0574–OLP-0579 and this metadata update were produced with OpenAI Codex GPT-6 Sol, Ultra reasoning. Independent human or native-speaker approval is not claimed.
+Every component reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 576 accepted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 1,469 aligned segments and 679 reverse-paraphrase samples. The seven Ordinal Arithmetic corrections are documented in [the source-correction ledger](evidence/source-corrections.json). For the cumulative reader, every page content stream and page box is identical to its accepted component, all fonts remain embedded, and representative boundary and interior pages were rendered and visually inspected.
 
 PDF text reuse has measured limitations. Poppler correctly extracts five tested Tamil phrases and representative union, intersection and Cartesian-product formulas. PyMuPDF duplicates some Tamil syllables or loses spacing. Composite negation symbols may still split during extraction in some contexts; blackboard number-set letters may extract as ordinary letters. Use the editable formulas for exact mathematical reuse. This is not a claim of tagged-PDF or universal screen-reader accessibility. A semantic reader remains part of the continuing full-edition work.
 
@@ -55,7 +55,7 @@ The evidence folder contains the source manifest, actual per-segment canon-use r
 
 OpenLogic's natural numbers include zero. The source convention is retained and explained in a separate Tamil edition note, because the consulted school text uses a different convention. New editorial or learner material is kept separate from the faithful source.
 
-The ordinary reader graph and remaining wrappers, all remaining translation, integration of the 322 accepted units outside the twelve component readers, reflowable EPUB3 production, ongoing terminology review and final full-edition publication are unfinished. An interim release does not complete the programme.
+The ordinary reader graph and remaining wrappers, all remaining translation, integration of the 328 accepted units outside the twelve component readers, reflowable EPUB3 production, ongoing terminology review and final full-edition publication are unfinished. An interim release does not complete the programme.
 
 ## Attribution and license
 
