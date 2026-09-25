@@ -1,0 +1,84 @@
+{
+  "batch_id": "TA-B275",
+  "units": [
+    {
+      "unit_id": "OLP-0599",
+      "source_sha256": "51f2d8e142b4bccd21bc0aa06330ecff874360d32005b34c415955eaaa24943a",
+      "translation_sha256": "b8fcb2eb4952103b86f4a2d132407d64df397e139c8d5260fbd40c3c07cf0bd1",
+      "source_bytes": 3942,
+      "translation_bytes": 10027,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\tan(\\pi(r-\\nicefrac{1}{2})))$"
+      ],
+      "extra_math": [
+        "$\\tan(\\pi(r-\\nicefrac{1}{2}))$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Theorem",
+        "cantorplane",
+        "extrinsic",
+        "hilbertcurve",
+        "his",
+        "include",
+        "logic",
+        "open",
+        "pathology",
+        "replacement",
+        "section",
+        "set"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-046",
+          "unit_id": "OLP-0599",
+          "kind": "tangent-bijection-parenthesis-balance",
+          "action": "Removed the superfluous closing parenthesis in the tangent map from the open unit interval to the reals.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\tan(\\pi(r-\\nicefrac{1}{2})))",
+              "to": "\\tan(\\pi(r-\\nicefrac{1}{2}))",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source prints tan(pi(r-1/2))) with three closing parentheses for two openings. The intended tangent bijection is otherwise unambiguous.",
+          "chosen_treatment": "டேன்ஜென்ட் மற்றும் பை வாதத்தின் அடைப்புகளைச் சரியாக இரண்டாக முடிக்கிறது.",
+          "alternatives_considered": "Keeping a syntactically unbalanced displayed function in the Tamil explanation.",
+          "rationale": "The standard map r↦tan(pi(r-1/2)) sends (0,1) bijectively onto the real line and requires exactly two closing parentheses.",
+          "precise_review_question": "Is the example the balanced tangent map from (0,1) onto the reals?",
+          "location_needle": "SOURCE CORRECTION TA-STH-046"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

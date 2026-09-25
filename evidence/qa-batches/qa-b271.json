@@ -1,0 +1,165 @@
+{
+  "batch_id": "TA-B271",
+  "units": [
+    {
+      "unit_id": "OLP-0595",
+      "source_sha256": "ffe4c3f0a800bd7893a39e68d109ca1eb9662b5f29cda42393cbc5777cf557c4",
+      "translation_sha256": "7895c511b1215cf6493562676b1c02227f9181bd9b845d77008cf9b0424d77da",
+      "source_bytes": 3605,
+      "translation_bytes": 7188,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$B\\subseteqR$",
+        "\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\alpha),f(\\beta)}\\inA\\timesA}{\\alpha\\in\\beta}.\\end{align*}",
+        "$\\cardeq{\\cardeq{A\\disjointsumB}{A\\timesB}}{M}$"
+      ],
+      "extra_math": [
+        "$B\\subseteqA$",
+        "\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\xi),f(\\eta)}\\inA\\timesA}{\\xi\\in\\eta\\in\\alpha}.\\end{align*}",
+        "$\\cardeq{A\\disjointsumB}{M}$",
+        "$\\cardeq{A\\timesB}{M}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "addition",
+        "align",
+        "arithmetic",
+        "basic",
+        "card",
+        "include",
+        "iso",
+        "logic",
+        "open",
+        "ord",
+        "ordinals",
+        "ordtype",
+        "section",
+        "simp",
+        "sth",
+        "using"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-039",
+          "unit_id": "OLP-0595",
+          "kind": "hartogs-order-carrier-subset",
+          "action": "Restored the carrier of a well-ordering to a subset of A, not a subset of its relation R.",
+          "expected_missing_math": [
+            "$B\\subseteqR$"
+          ],
+          "expected_extra_math": [
+            "$B\\subseteqA$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "B\\subseteqR",
+              "to": "B\\subseteqA",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof defines C using well-orderings of subsets B of A, but the transitivity paragraph later writes B subseteq R. R is a binary relation on B, so this reverses the intended carrier condition.",
+          "chosen_treatment": "மாறுநிலை நிறுவலில் ஒழுங்கமைவின் அடிக்கணம் A இன் துணைக்கணம் என்று சரிசெய்கிறது.",
+          "alternatives_considered": "Keeping the ill-typed carrier condition and relying only on the preceding definition of C.",
+          "rationale": "Every witness (B,R) in C has B subseteq A, and each initial segment of B is again a subset of A.",
+          "precise_review_question": "Does the transitivity step use the actual defining condition of C, B subseteq A?",
+          "location_needle": "SOURCE CORRECTION TA-STH-039"
+        },
+        {
+          "audit_id": "TA-STH-040",
+          "unit_id": "OLP-0595",
+          "kind": "hartogs-transported-order-binders",
+          "action": "Used two fresh ordinal variables and explicitly bounded the transported membership relation to the domain of f.",
+          "expected_missing_math": [
+            "\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\alpha),f(\\beta)}\\inA\\timesA}{\\alpha\\in\\beta}.\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\xi),f(\\eta)}\\inA\\timesA}{\\xi\\in\\eta\\in\\alpha}.\\end{align*}"
+          ],
+          "expected_missing_commands": [
+            "\\alpha",
+            "\\beta",
+            "\\beta"
+          ],
+          "expected_extra_commands": [
+            "\\in",
+            "\\xi",
+            "\\xi",
+            "\\eta",
+            "\\eta"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\Setabs{\\tuple{f(\\alpha),f(\\beta)}\\inA\\timesA}{\\alpha\\in\\beta}",
+              "to": "\\Setabs{\\tuple{f(\\xi),f(\\eta)}\\inA\\timesA}{\\xi\\in\\eta\\in\\alpha}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "After fixing an ordinal alpha as the domain of f, the relation comprehension reuses alpha as a varying index and does not state that its indices belong to dom(f). Read literally, f(alpha) is outside its domain.",
+          "chosen_treatment": "உறவின் மாறும் குறிகளாக xi, eta ஆகியவற்றை எடுத்து xi∈eta∈alpha என்ற ஆட்கள வரம்பை வெளிப்படையாகக் கூறுகிறது.",
+          "alternatives_considered": "Keeping the ambiguous reused alpha and inferring the domain restriction only from definedness of f.",
+          "rationale": "The injective f transports the membership well-order on the fixed ordinal alpha to its image B exactly by pairs (f(xi),f(eta)) with xi in eta in alpha.",
+          "precise_review_question": "Is R now a well-defined relation on ran(f) isomorphic to membership on the whole fixed ordinal alpha?",
+          "location_needle": "SOURCE CORRECTION TA-STH-040"
+        },
+        {
+          "audit_id": "TA-STH-041",
+          "unit_id": "OLP-0595",
+          "kind": "cardinal-sum-product-comparison-typing",
+          "action": "Replaced a nested equinumerosity expression between a proposition and M with the two intended equinumerosity claims for disjoint union and Cartesian product.",
+          "expected_missing_math": [
+            "$\\cardeq{\\cardeq{A\\disjointsumB}{A\\timesB}}{M}$"
+          ],
+          "expected_extra_math": [
+            "$\\cardeq{A\\disjointsumB}{M}$",
+            "$\\cardeq{A\\timesB}{M}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The closing example nests cardeq(A disjoint-sum B,A times B) as the first argument of another cardeq with M. The inner expression is a proposition, not a set whose size can be compared with M, and the intended AC statement concerns each operation separately.",
+          "chosen_treatment": "வெட்டாக் கூட்டுத்தொகையும் பெருக்கற்கணமும் ஒவ்வொன்றாக பெரிய கணம் M உடன் சமஎண்ணிக்கையுடையவை என்ற இரண்டு கூற்றுகளாகக் கூறுகிறது.",
+          "alternatives_considered": "Keeping the ill-typed nested expression or only claiming that sum and product are equinumerous to each other.",
+          "rationale": "When A and B are infinite and comparable under Choice, both their disjoint union and their product have the size of the larger carrier, as the referenced theorem states.",
+          "precise_review_question": "Are both sum and product separately compared with the larger set M, with no proposition passed as a set argument?",
+          "location_needle": "SOURCE CORRECTION TA-STH-041"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\alpha",
+        "\\beta",
+        "\\beta"
+      ],
+      "extra_commands": [
+        "\\in",
+        "\\xi",
+        "\\xi",
+        "\\eta",
+        "\\eta"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

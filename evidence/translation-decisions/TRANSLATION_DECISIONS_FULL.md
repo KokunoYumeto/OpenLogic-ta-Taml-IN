@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 573/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 581/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -5367,6 +5367,198 @@ Please double-check: **does the revised seed make card(A) strictly smaller than 
 
 - `TA-OCC-72f85a61d532f484` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:142`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:167`; PDF page pending.
 
+## TA-STH-039 — The proof defines C using well-orderings of subsets B of A, but the transitivity paragraph later writes B subseteq R. R is a binary relation on B, so this reverses the intended carrier condition.
+
+Chosen rendering: **மாறுநிலை நிறுவலில் ஒழுங்கமைவின் அடிக்கணம் A இன் துணைக்கணம் என்று சரிசெய்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Every witness (B,R) in C has B subseteq A, and each initial segment of B is again a subset of A.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0595 (checked_supports)
+
+Alternatives: Keeping the ill-typed carrier condition and relying only on the preceding definition of C.
+
+Please double-check: **does the transitivity step use the actual defining condition of C, B subseteq A?**
+
+- `TA-OCC-10e2fc6e35e2d0c0` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:1`; Tamil `translation/content/set-theory/choice/hartogs.tex:38`; PDF page pending.
+
+## TA-STH-040 — After fixing an ordinal alpha as the domain of f, the relation comprehension reuses alpha as a varying index and does not state that its indices belong to dom(f). Read literally, f(alpha) is outside its domain.
+
+Chosen rendering: **உறவின் மாறும் குறிகளாக xi, eta ஆகியவற்றை எடுத்து xi∈eta∈alpha என்ற ஆட்கள வரம்பை வெளிப்படையாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The injective f transports the membership well-order on the fixed ordinal alpha to its image B exactly by pairs (f(xi),f(eta)) with xi in eta in alpha.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0595 (checked_supports)
+
+Alternatives: Keeping the ambiguous reused alpha and inferring the domain restriction only from definedness of f.
+
+Please double-check: **is R now a well-defined relation on ran(f) isomorphic to membership on the whole fixed ordinal alpha?**
+
+- `TA-OCC-595d708423370593` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:1`; Tamil `translation/content/set-theory/choice/hartogs.tex:45`; PDF page pending.
+
+## TA-STH-041 — The closing example nests cardeq(A disjoint-sum B,A times B) as the first argument of another cardeq with M. The inner expression is a proposition, not a set whose size can be compared with M, and the intended AC statement concerns each operation separately.
+
+Chosen rendering: **வெட்டாக் கூட்டுத்தொகையும் பெருக்கற்கணமும் ஒவ்வொன்றாக பெரிய கணம் M உடன் சமஎண்ணிக்கையுடையவை என்ற இரண்டு கூற்றுகளாகக் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: When A and B are infinite and comparable under Choice, both their disjoint union and their product have the size of the larger carrier, as the referenced theorem states.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0595 (checked_supports)
+
+Alternatives: Keeping the ill-typed nested expression or only claiming that sum and product are equinumerous to each other.
+
+Please double-check: **are both sum and product separately compared with the larger set M, with no proposition passed as a set argument?**
+
+- `TA-OCC-dd1d4583e76ac975` — OLP-0595 / `OLP-0595-S05`; source `content/set-theory/choice/hartogs.tex:76`; Tamil `translation/content/set-theory/choice/hartogs.tex:105`; PDF page pending.
+
+## TA-STH-042 — The construction begins with g(0)=f(A), but if A is empty then f is defined only on nonempty subsets of A and f(A) is undefined. The empty set is already well-ordered.
+
+Chosen rendering: **காலிக் கணம் நேரடியாக நன்கு வரிசைப்படும் என்று கூறி, மீள்வரையறையில் காலியற்ற கணத்தை மட்டும் கருதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The theorem includes the empty set; a separate trivial case makes the displayed base value defined in the remaining case.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0596 (checked_supports)
+
+Alternatives: Silently assuming A nonempty in the theorem for all sets.
+
+Please double-check: **is f(A) used only after the empty-carrier case has been discharged?**
+
+- `TA-OCC-9a2bb11365fccacb` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:63`; PDF page pending.
+
+## TA-STH-043 — The source says that upon first exhaustion at alpha, g(delta)=A for every delta at most alpha. That overwrites the earlier selected values and destroys the displayed injectivity argument. The sentinel must apply from alpha onward.
+
+Chosen rendering: **முதலில் நிற்கும் alpha நிலையிலிருந்து பின்னருள்ள delta குறிகளுக்கே நிரப்பு மதிப்பு A வழங்கப்படுகிறது; முன்னைய தேர்வுகள் பாதுகாக்கப்படுகின்றன.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The recursion has chosen distinct elements at all stages below alpha; those values cannot be overwritten. A harmless fixed sentinel after exhaustion makes the class recursion total while the desired bijection is its pre-stop restriction.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0596 (checked_supports)
+
+Alternatives: Retaining the reversed inequality or leaving the stop marker without any rigorous expansion.
+
+Please double-check: **are all pre-stop values preserved and the sentinel confined to stages delta at least alpha?**
+
+- `TA-OCC-26ed3eb36037946b` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:79`; PDF page pending.
+
+## TA-STH-044 — The source says g is injective and finally a bijection from an ordinal to A while also specifying a constant sentinel after exhaustion. The full class function is then not injective and its range also contains the sentinel A.
+
+Chosen rendering: **ஒருமுகத்தன்மை, வீச்சு மற்றும் இறுதி இருபுறச் சார்பு ஆகியவற்றை நிறுத்துமுன் கிடைக்கும் தொடக்கத் துண்டுக்கே உரியதாகத் தெளிவுபடுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Before the first exhausted stage alpha, recursion chooses new elements of A; the restriction g|alpha is an injective surjection onto A and transports the ordinal well-order.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0596 (checked_supports)
+
+Alternatives: Calling the post-stop total class function injective, or suppressing the stop extension without explaining the domain restriction.
+
+Please double-check: **does the final bijection refer precisely to the restriction before the first exhausted stage?**
+
+- `TA-OCC-81a958425cb88f80` — OLP-0596 / `OLP-0596-S04`; source `content/set-theory/choice/wellorderingproblem.tex:64`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:98`; PDF page pending.
+
+## TA-STH-045 — The displayed bound writes union over i<n of A_n, leaving i unused. Its right side sums A_0 through A_(n-1), and the preceding definition of B_n subtracts exactly those earlier sets.
+
+Chosen rendering: **முடிவுறு ஒன்றிப்பின் உறுப்புக் குறியை A_n இலிருந்து A_i ஆகச் சரிசெய்து, வலப்புறக் கூட்டலுடன் ஒத்திசைக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The union of earlier A_i has size at most the sum of their finite cardinalities 1+2+...+2^(n-1), which is strictly below |A_n|=2^n.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0597 (checked_supports)
+
+Alternatives: Retaining the constant A_n union, which makes the stated strict inequality false.
+
+Please double-check: **does the displayed finite union range over A_i for i<n, matching both B_n and the following sum?**
+
+- `TA-OCC-c2f202c98d4c0166` — OLP-0597 / `OLP-0597-S02`; source `content/set-theory/choice/countablechoice.tex:46`; Tamil `translation/content/set-theory/choice/countablechoice.tex:76`; PDF page pending.
+
+## TA-STH-046 — The source prints tan(pi(r-1/2))) with three closing parentheses for two openings. The intended tangent bijection is otherwise unambiguous.
+
+Chosen rendering: **டேன்ஜென்ட் மற்றும் பை வாதத்தின் அடைப்புகளைச் சரியாக இரண்டாக முடிக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The standard map r↦tan(pi(r-1/2)) sends (0,1) bijectively onto the real line and requires exactly two closing parentheses.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0599 (checked_supports)
+
+Alternatives: Keeping a syntactically unbalanced displayed function in the Tamil explanation.
+
+Please double-check: **is the example the balanced tangent map from (0,1) onto the reals?**
+
+- `TA-OCC-125446a4c2f30f8d` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:41`; Tamil `translation/content/set-theory/choice/banach.tex:61`; PDF page pending.
+
+## TA-STH-047 — The source calls angles in [0,2pi) with rational radian values a group. For rational r>0, the inverse angle 2pi-r is generally irrational, and sums reduced modulo 2pi need not be rational. The subsequent half-group doubling proof also requires closure modulo 2pi.
+
+Chosen rendering: **கோணங்களை பையின் பகுத்தெண் மடங்குகளாக வரையறுத்து, முழுச் சுற்று அளவில் கோப்பு மூடப்பட்டிருப்பதையும் பூச்சியச் சுழற்சியின் எதிருறுப்பையும் தெளிவுபடுத்துகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Rational multiples of pi modulo 2pi form a countable abelian subgroup; each half specified by [0,pi) and [pi,2pi) maps onto the whole under squaring.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0600 (checked_supports)
+
+Alternatives: Retaining rational radian values while claiming nonexistent inverse closure; allowing all real rotations, which would lose countability.
+
+Please double-check: **is the selected rotation set countable, closed under composition and inverses, and compatible with the half-group doubling lemma?**
+
+- `TA-OCC-3627652312e6b556` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:34`; Tamil `translation/content/set-theory/choice/vitali.tex:39`; PDF page pending.
+
+## TA-STH-048 — The source introduces rotationsgroup_1 and rotationsgroup_2, but then indexes the D_1 pieces by R_1, which has no declaration in this proof.
+
+Chosen rendering: **D_1 இன் துண்டுகளை முன் வரையறுத்த முதல் சுழற்சிப் பாதியின் உறுப்புகளால் குறியிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: D_1 is by definition the union over rotationsgroup_1 of rho(C); its countable partition has exactly those indices.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0600 (checked_supports)
+
+Alternatives: Treating R_1 as silently synonymous with rotationsgroup_1.
+
+Please double-check: **does the partition proof use precisely the declared rotationsgroup_1 index set?**
+
+- `TA-OCC-e08ecdf6535a90f0` — OLP-0600 / `OLP-0600-S04`; source `content/set-theory/choice/vitali.tex:141`; Tamil `translation/content/set-theory/choice/vitali.tex:198`; PDF page pending.
+
+## TA-STH-049 — The final proof twice writes rho in C, although C is a set of points and rho is applied as a rotation. All pieces in the disjoint cover are indexed by the rotation group.
+
+Chosen rendering: **இரு இடங்களிலும் rho சுழற்சிக் குழுவின் உறுப்பு என்று வரம்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: For any rotation rho, rho(C) is congruent to sigma(C); invariance gives the common measure used in the countable sum.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0600 (checked_supports)
+
+Alternatives: Keeping the type error and informally reading a point as a rotation.
+
+Please double-check: **do both congruence and equal-measure statements quantify over the same rotation index set as the final cover?**
+
+- `TA-OCC-c3ec331953f10820` — OLP-0600 / `OLP-0600-S06`; source `content/set-theory/choice/vitali.tex:229`; Tamil `translation/content/set-theory/choice/vitali.tex:336`; PDF page pending.
+
+## TA-STH-050 — The source assumes a measure on some sigma-algebra and equality of measures for congruent measurable sets, then infers that every rotated C is measurable from one measurable rotated C. Equality on pairs already in the domain does not itself make the domain rotation-invariant.
+
+Chosen rendering: **அளவிடத்தக்க கணங்களின் களம் கருதப்படும் சுழற்சிகளின்கீழ் மூடப்பட்டிருக்க வேண்டும் என்ற நிபந்தனையை வெளிப்படையாகச் சேர்க்கிறது; அளவிட முடியாதது என்பதன் பொருளையும் இம்மாறாமைச் சூழலுக்குள் வரம்பிடுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: If one rotated piece belongs to a rotation-stable measurable domain, all its rotations do; then equal measures and countable additivity yield the displayed contradiction.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0600 (checked_supports)
+
+Alternatives: Treating invariance of the numerical value as silently implying closure of the sigma-algebra domain.
+
+Please double-check: **does the corollary state the domain condition needed to transfer measurability among all rotation images?**
+
+- `TA-OCC-f9b528da01a74b53` — OLP-0600 / `OLP-0600-S06`; source `content/set-theory/choice/vitali.tex:229`; Tamil `translation/content/set-theory/choice/vitali.tex:321`; PDF page pending.
+
 ## TA-T001 — set
 
 Chosen rendering: **கணம்**
@@ -6224,6 +6416,32 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-426230d987b43b04` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:10`; PDF page pending.
 - `TA-OCC-bdb7549752e802e8` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:101`; PDF page pending.
 - `TA-OCC-5f42f773f07126f7` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:127`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:163`; PDF page pending.
+- `TA-OCC-c8ee116f4b7ebf48` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:27`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:33`; PDF page pending.
+- `TA-OCC-eaecd4b9708aaec9` — OLP-0594 / `OLP-0594-S02`; source `content/set-theory/choice/tarskiscott.tex:37`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:47`; PDF page pending.
+- `TA-OCC-9cd8dce3543343ba` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:13`; Tamil `translation/content/set-theory/choice/hartogs.tex:14`; PDF page pending.
+- `TA-OCC-7517dab7f6b6e0c3` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:26`; Tamil `translation/content/set-theory/choice/hartogs.tex:35`; PDF page pending.
+- `TA-OCC-6d01039cdc95450c` — OLP-0595 / `OLP-0595-S02`; source `content/set-theory/choice/hartogs.tex:54`; Tamil `translation/content/set-theory/choice/hartogs.tex:62`; PDF page pending.
+- `TA-OCC-4a4729870cc90ad8` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:28`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:34`; PDF page pending.
+- `TA-OCC-2fae7c7d1a5118e7` — OLP-0596 / `OLP-0596-S02`; source `content/set-theory/choice/wellorderingproblem.tex:43`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:52`; PDF page pending.
+- `TA-OCC-e163de99cd9596d8` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:11`; Tamil `translation/content/set-theory/choice/countablechoice.tex:23`; PDF page pending.
+- `TA-OCC-49e343a2e9265789` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:18`; Tamil `translation/content/set-theory/choice/countablechoice.tex:43`; PDF page pending.
+- `TA-OCC-95d00fe6dac122f2` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:23`; Tamil `translation/content/set-theory/choice/countablechoice.tex:50`; PDF page pending.
+- `TA-OCC-8bb9ae5f6a835368` — OLP-0597 / `OLP-0597-S03`; source `content/set-theory/choice/countablechoice.tex:79`; Tamil `translation/content/set-theory/choice/countablechoice.tex:106`; PDF page pending.
+- `TA-OCC-3bd75e978ca58fb2` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:118`; Tamil `translation/content/set-theory/choice/countablechoice.tex:164`; PDF page pending.
+- `TA-OCC-028155c331269ec5` — OLP-0598 / `OLP-0598-S01`; source `content/set-theory/choice/justifications.tex:9`; Tamil `translation/content/set-theory/choice/justifications.tex:21`; PDF page pending.
+- `TA-OCC-ef55720bb5c71eee` — OLP-0598 / `OLP-0598-S02`; source `content/set-theory/choice/justifications.tex:32`; Tamil `translation/content/set-theory/choice/justifications.tex:38`; PDF page pending.
+- `TA-OCC-f66f34fa34953e24` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:43`; Tamil `translation/content/set-theory/choice/justifications.tex:51`; PDF page pending.
+- `TA-OCC-15dea77e6c571f2c` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:46`; Tamil `translation/content/set-theory/choice/justifications.tex:53`; PDF page pending.
+- `TA-OCC-c4f0f0f8943e1004` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:51`; Tamil `translation/content/set-theory/choice/justifications.tex:64`; PDF page pending.
+- `TA-OCC-b6f6ef6fd0af446f` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:52`; Tamil `translation/content/set-theory/choice/justifications.tex:70`; PDF page pending.
+- `TA-OCC-e527bc4468692e3e` — OLP-0599 / `OLP-0599-S04`; source `content/set-theory/choice/banach.tex:69`; Tamil `translation/content/set-theory/choice/banach.tex:88`; PDF page pending.
+- `TA-OCC-da47d23891fbb8f0` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:24`; Tamil `translation/content/set-theory/choice/vitali.tex:24`; PDF page pending.
+- `TA-OCC-1ae932c36e54987a` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:35`; Tamil `translation/content/set-theory/choice/vitali.tex:43`; PDF page pending.
+- `TA-OCC-3f115fd146c60af2` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:82`; Tamil `translation/content/set-theory/choice/vitali.tex:105`; PDF page pending.
+- `TA-OCC-e217c9b6540788ac` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:100`; Tamil `translation/content/set-theory/choice/vitali.tex:143`; PDF page pending.
+- `TA-OCC-134025eaff246cc0` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:102`; Tamil `translation/content/set-theory/choice/vitali.tex:144`; PDF page pending.
+- `TA-OCC-c6a36fb7150c171b` — OLP-0600 / `OLP-0600-S06`; source `content/set-theory/choice/vitali.tex:237`; Tamil `translation/content/set-theory/choice/vitali.tex:305`; PDF page pending.
+- `TA-OCC-02bce20fd1a136fc` — OLP-0600 / `OLP-0600-S06`; source `content/set-theory/choice/vitali.tex:241`; Tamil `translation/content/set-theory/choice/vitali.tex:315`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -6805,6 +7023,18 @@ Please double-check: **do the listed uses of “உறுப்பு” preserv
 - `TA-OCC-5ac135dcfdb10d30` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:42`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:48`; PDF page pending.
 - `TA-OCC-24b6f1751ebd439b` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:46`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:52`; PDF page pending.
 - `TA-OCC-50909c17c634d9ba` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:135`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:151`; PDF page pending.
+- `TA-OCC-f52d669c0164d5d9` — OLP-0595 / `OLP-0595-S04`; source `content/set-theory/choice/hartogs.tex:71`; Tamil `translation/content/set-theory/choice/hartogs.tex:90`; PDF page pending.
+- `TA-OCC-d309112b46c51f22` — OLP-0596 / `OLP-0596-S02`; source `content/set-theory/choice/wellorderingproblem.tex:46`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:56`; PDF page pending.
+- `TA-OCC-4acb66bf0190cc6d` — OLP-0597 / `OLP-0597-S02`; source `content/set-theory/choice/countablechoice.tex:57`; Tamil `translation/content/set-theory/choice/countablechoice.tex:68`; PDF page pending.
+- `TA-OCC-8a665af0cfcf1734` — OLP-0597 / `OLP-0597-S02`; source `content/set-theory/choice/countablechoice.tex:70`; Tamil `translation/content/set-theory/choice/countablechoice.tex:84`; PDF page pending.
+- `TA-OCC-2f03d5eef2dda52c` — OLP-0598 / `OLP-0598-S01`; source `content/set-theory/choice/justifications.tex:18`; Tamil `translation/content/set-theory/choice/justifications.tex:21`; PDF page pending.
+- `TA-OCC-59458274298c858c` — OLP-0598 / `OLP-0598-S02`; source `content/set-theory/choice/justifications.tex:29`; Tamil `translation/content/set-theory/choice/justifications.tex:34`; PDF page pending.
+- `TA-OCC-08eb6fd0eaae0705` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:48`; Tamil `translation/content/set-theory/choice/justifications.tex:57`; PDF page pending.
+- `TA-OCC-7343c41bd3902e9c` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:50`; Tamil `translation/content/set-theory/choice/justifications.tex:61`; PDF page pending.
+- `TA-OCC-5def47c26000f610` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:48`; Tamil `translation/content/set-theory/choice/justifications.tex:64`; PDF page pending.
+- `TA-OCC-991888446739bc30` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:47`; Tamil `translation/content/set-theory/choice/vitali.tex:54`; PDF page pending.
+- `TA-OCC-3125c807b6303d8d` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:51`; Tamil `translation/content/set-theory/choice/vitali.tex:59`; PDF page pending.
+- `TA-OCC-bf9cc2b19d190b30` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:104`; Tamil `translation/content/set-theory/choice/vitali.tex:131`; PDF page pending.
 
 ## TA-T003 — empty set
 
@@ -7710,6 +7940,35 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-2694f56dfaf5a9fc` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:133`; PDF page pending.
 - `TA-OCC-10fddb2b7108934e` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:134`; PDF page pending.
 - `TA-OCC-a01419e00b22f00d` — OLP-0591 / `OLP-0591-S03`; source `content/set-theory/card-arithmetic/fix.tex:73`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:79`; PDF page pending.
+- `TA-OCC-3aad26aab9884a8b` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:44`; Tamil `translation/content/set-theory/choice/hartogs.tex:52`; PDF page pending.
+- `TA-OCC-9065ecabb84719d4` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:72`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:108`; PDF page pending.
+- `TA-OCC-0ee31ef30b3b3818` — OLP-0597 / `OLP-0597-S03`; source `content/set-theory/choice/countablechoice.tex:75`; Tamil `translation/content/set-theory/choice/countablechoice.tex:106`; PDF page pending.
+- `TA-OCC-031a5babf3e220ee` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:111`; Tamil `translation/content/set-theory/choice/countablechoice.tex:148`; PDF page pending.
+- `TA-OCC-d493b435644c1709` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:1`; Tamil `translation/content/set-theory/choice/banach.tex:7`; PDF page pending.
+- `TA-OCC-574697895ccaf0d7` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:1`; Tamil `translation/content/set-theory/choice/banach.tex:21`; PDF page pending.
+- `TA-OCC-7983a6c376c46e1a` — OLP-0599 / `OLP-0599-S02`; source `content/set-theory/choice/banach.tex:25`; Tamil `translation/content/set-theory/choice/banach.tex:47`; PDF page pending.
+- `TA-OCC-13554059b3b0cba5` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:41`; Tamil `translation/content/set-theory/choice/banach.tex:50`; PDF page pending.
+- `TA-OCC-d3d29485e66a3493` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:41`; Tamil `translation/content/set-theory/choice/banach.tex:51`; PDF page pending.
+- `TA-OCC-431ec6b10743c73a` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:41`; Tamil `translation/content/set-theory/choice/banach.tex:54`; PDF page pending.
+- `TA-OCC-dbb66d9e3e03b4cd` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:41`; Tamil `translation/content/set-theory/choice/banach.tex:73`; PDF page pending.
+- `TA-OCC-f67b21b479595fef` — OLP-0599 / `OLP-0599-S04`; source `content/set-theory/choice/banach.tex:59`; Tamil `translation/content/set-theory/choice/banach.tex:79`; PDF page pending.
+- `TA-OCC-7101346f17cade6d` — OLP-0599 / `OLP-0599-S05`; source `content/set-theory/choice/banach.tex:74`; Tamil `translation/content/set-theory/choice/banach.tex:96`; PDF page pending.
+- `TA-OCC-027b6650dbb06554` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:7`; PDF page pending.
+- `TA-OCC-ee257cbdc5b20a22` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:17`; PDF page pending.
+- `TA-OCC-c33aab7c38bde726` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:23`; PDF page pending.
+- `TA-OCC-5cea364c324ae000` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:23`; PDF page pending.
+- `TA-OCC-1f35b1e76d8da89d` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:26`; PDF page pending.
+- `TA-OCC-5e93f83cd91262f4` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:29`; PDF page pending.
+- `TA-OCC-9fe389c990d6b364` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:31`; PDF page pending.
+- `TA-OCC-81e0c98c661d0b72` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:33`; PDF page pending.
+- `TA-OCC-6f47ab7d80758582` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:34`; Tamil `translation/content/set-theory/choice/vitali.tex:37`; PDF page pending.
+- `TA-OCC-3b823dc97ad8ff1a` — OLP-0600 / `OLP-0600-S04`; source `content/set-theory/choice/vitali.tex:141`; Tamil `translation/content/set-theory/choice/vitali.tex:209`; PDF page pending.
+- `TA-OCC-ef18a4af4b0ef464` — OLP-0600 / `OLP-0600-S04`; source `content/set-theory/choice/vitali.tex:141`; Tamil `translation/content/set-theory/choice/vitali.tex:223`; PDF page pending.
+- `TA-OCC-27e43079d96b945f` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:228`; PDF page pending.
+- `TA-OCC-48eeee003c0b33b1` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:257`; PDF page pending.
+- `TA-OCC-431dcfc0e33b344b` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:271`; PDF page pending.
+- `TA-OCC-6101eb4da6b7df9a` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:273`; PDF page pending.
+- `TA-OCC-24d2e2a89a96bf8a` — OLP-0600 / `OLP-0600-S06`; source `content/set-theory/choice/vitali.tex:229`; Tamil `translation/content/set-theory/choice/vitali.tex:353`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -8220,6 +8479,7 @@ Please double-check: **do the listed uses of “சேர்ப்பு / வ�
 - `TA-OCC-2dfd16b523104640` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:56`; PDF page pending.
 - `TA-OCC-142efd3c5cf65fe4` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:65`; PDF page pending.
 - `TA-OCC-c4b8cb36a82ac015` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:70`; PDF page pending.
+- `TA-OCC-de24a218bd4a4924` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:67`; Tamil `translation/content/set-theory/choice/vitali.tex:69`; PDF page pending.
 
 ## TA-T019 — Cartesian product / ordered pair
 
@@ -8790,6 +9050,13 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-06c1c595cf7d2df3` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:68`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:107`; PDF page pending.
 - `TA-OCC-2b4625f767f18da8` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:13`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:14`; PDF page pending.
 - `TA-OCC-6918bbd9d240f6e0` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:101`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:112`; PDF page pending.
+- `TA-OCC-49f8f228ee55f44b` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:65`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:79`; PDF page pending.
+- `TA-OCC-dc86c32413d03c28` — OLP-0597 / `OLP-0597-S03`; source `content/set-theory/choice/countablechoice.tex:78`; Tamil `translation/content/set-theory/choice/countablechoice.tex:98`; PDF page pending.
+- `TA-OCC-07127d8fcf8b5cf9` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:89`; Tamil `translation/content/set-theory/choice/countablechoice.tex:116`; PDF page pending.
+- `TA-OCC-f699a07e75979980` — OLP-0598 / `OLP-0598-S02`; source `content/set-theory/choice/justifications.tex:35`; Tamil `translation/content/set-theory/choice/justifications.tex:41`; PDF page pending.
+- `TA-OCC-a4caf11984f7ff11` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:49`; Tamil `translation/content/set-theory/choice/banach.tex:62`; PDF page pending.
+- `TA-OCC-7c95d04f9ef33e50` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:9`; Tamil `translation/content/set-theory/choice/vitali.tex:27`; PDF page pending.
+- `TA-OCC-6329b4bc8fbf64a2` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:39`; Tamil `translation/content/set-theory/choice/vitali.tex:45`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -9263,6 +9530,7 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-497c07a047a277b6` — OLP-0582 / `OLP-0582-S02`; source `content/set-theory/cardinals/cardsasords.tex:65`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:74`; PDF page pending.
 - `TA-OCC-6190a77e98c121b4` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:11`; PDF page pending.
 - `TA-OCC-95d080c7be9c43e1` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:101`; PDF page pending.
+- `TA-OCC-fbd821a1728b83e0` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:85`; Tamil `translation/content/set-theory/choice/vitali.tex:118`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -10739,6 +11007,15 @@ Please double-check: **is “மீச்சிறு உறுப்பு / �
 - `TA-OCC-aea7d73c2cf67610` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:28`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:32`; PDF page pending.
 - `TA-OCC-b78e350a365687e4` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:46`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:44`; PDF page pending.
 - `TA-OCC-cbacf05b64da4f94` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:38`; PDF page pending.
+- `TA-OCC-3ca474a33a9d15ca` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:1`; Tamil `translation/content/set-theory/choice/introduction.tex:12`; PDF page pending.
+- `TA-OCC-16ef85e3fe61cb80` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:1`; Tamil `translation/content/set-theory/choice/introduction.tex:13`; PDF page pending.
+- `TA-OCC-82d4d81d2693bbef` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:50`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:83`; PDF page pending.
+- `TA-OCC-62076b692db1c3af` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:1`; Tamil `translation/content/set-theory/choice/hartogs.tex:25`; PDF page pending.
+- `TA-OCC-3e7584fa5a959f7f` — OLP-0595 / `OLP-0595-S02`; source `content/set-theory/choice/hartogs.tex:47`; Tamil `translation/content/set-theory/choice/hartogs.tex:61`; PDF page pending.
+- `TA-OCC-52f58ac20de7128e` — OLP-0595 / `OLP-0595-S03`; source `content/set-theory/choice/hartogs.tex:59`; Tamil `translation/content/set-theory/choice/hartogs.tex:71`; PDF page pending.
+- `TA-OCC-8c0f2739e23b5632` — OLP-0595 / `OLP-0595-S05`; source `content/set-theory/choice/hartogs.tex:76`; Tamil `translation/content/set-theory/choice/hartogs.tex:96`; PDF page pending.
+- `TA-OCC-7d17967a1c38ae22` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:7`; PDF page pending.
+- `TA-OCC-44f0ab11a0d08ef8` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:15`; PDF page pending.
 
 ## TA-T038 — successor / predecessor / initial segment
 
@@ -10791,6 +11068,9 @@ Please double-check: **is “அடுத்துறுப்பு / முந
 - `TA-OCC-ac728cd7e3933361` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:25`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:28`; PDF page pending.
 - `TA-OCC-0fc34acf2a8713e4` — OLP-0571 / `OLP-0571-S01`; source `content/set-theory/replacement/ref.tex:22`; Tamil `translation/content/set-theory/replacement/ref.tex:28`; PDF page pending.
 - `TA-OCC-648b430ceb497bf1` — OLP-0571 / `OLP-0571-S01`; source `content/set-theory/replacement/ref.tex:32`; Tamil `translation/content/set-theory/replacement/ref.tex:40`; PDF page pending.
+- `TA-OCC-ec75abc7adcf0da2` — OLP-0596 / `OLP-0596-S04`; source `content/set-theory/choice/wellorderingproblem.tex:64`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:99`; PDF page pending.
+- `TA-OCC-2350c118bbe08d1c` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:72`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:105`; PDF page pending.
+- `TA-OCC-7c0b4cd8600c391a` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:72`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:113`; PDF page pending.
 
 ## TA-T039 — inverse / relative product / restriction / application of relation
 
@@ -13691,6 +13971,8 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-6bea5f57cb7fd903` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:9`; PDF page pending.
 - `TA-OCC-6b4093ba215456d3` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:80`; PDF page pending.
 - `TA-OCC-878e924ff382ac9f` — OLP-0587 / `OLP-0587-S05`; source `content/set-theory/card-arithmetic/opps.tex:133`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:174`; PDF page pending.
+- `TA-OCC-9c147b022375e7cc` — OLP-0594 / `OLP-0594-S02`; source `content/set-theory/choice/tarskiscott.tex:33`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:41`; PDF page pending.
+- `TA-OCC-370a8beb5a0ffae2` — OLP-0594 / `OLP-0594-S02`; source `content/set-theory/choice/tarskiscott.tex:36`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:45`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -14347,6 +14629,13 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-90a18a0694586e19` — OLP-0584 / `OLP-0584-S03`; source `content/set-theory/cardinals/classing.tex:70`; Tamil `translation/content/set-theory/cardinals/classing.tex:104`; PDF page pending.
 - `TA-OCC-d761f5b8a5fe6361` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:122`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:141`; PDF page pending.
 - `TA-OCC-7cbeb56bf93b3e6a` — OLP-0591 / `OLP-0591-S03`; source `content/set-theory/card-arithmetic/fix.tex:73`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:91`; PDF page pending.
+- `TA-OCC-0da7ca68d664f4b4` — OLP-0597 / `OLP-0597-S06`; source `content/set-theory/choice/countablechoice.tex:141`; Tamil `translation/content/set-theory/choice/countablechoice.tex:197`; PDF page pending.
+- `TA-OCC-ab9cb6e249e7ba26` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:34`; Tamil `translation/content/set-theory/choice/vitali.tex:65`; PDF page pending.
+- `TA-OCC-0178fed29a48683c` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:34`; Tamil `translation/content/set-theory/choice/vitali.tex:80`; PDF page pending.
+- `TA-OCC-295fae5970c41f9b` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:34`; Tamil `translation/content/set-theory/choice/vitali.tex:87`; PDF page pending.
+- `TA-OCC-0ec898357404c973` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:81`; Tamil `translation/content/set-theory/choice/vitali.tex:144`; PDF page pending.
+- `TA-OCC-be456dd2e129de68` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:235`; PDF page pending.
+- `TA-OCC-96a0227f2d1cd1f8` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:264`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -15476,6 +15765,12 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-ce1bdb64da62692b` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:101`; PDF page pending.
 - `TA-OCC-b31127877569bc69` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:162`; PDF page pending.
 - `TA-OCC-e803aeb18399a174` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:142`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:174`; PDF page pending.
+- `TA-OCC-81c1cd2d8e24539c` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:1`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:20`; PDF page pending.
+- `TA-OCC-c0020f649b840315` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:1`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:32`; PDF page pending.
+- `TA-OCC-792d5f1c77086a7e` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:81`; Tamil `translation/content/set-theory/choice/vitali.tex:107`; PDF page pending.
+- `TA-OCC-34ecc466ab7ae6e9` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:81`; Tamil `translation/content/set-theory/choice/vitali.tex:115`; PDF page pending.
+- `TA-OCC-9465b2ebfe5e3c7c` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:81`; Tamil `translation/content/set-theory/choice/vitali.tex:118`; PDF page pending.
+- `TA-OCC-4a1b491823f6d823` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:230`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -17262,6 +17557,32 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-b3fd84e0fd95107f` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:95`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:111`; PDF page pending.
 - `TA-OCC-493bda31d0005b16` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:133`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:153`; PDF page pending.
 - `TA-OCC-ed9cea75adb0b6b0` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:160`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:184`; PDF page pending.
+- `TA-OCC-680818a54dd9e87a` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:37`; Tamil `translation/content/set-theory/choice/hartogs.tex:44`; PDF page pending.
+- `TA-OCC-c6da6dcaf5d733a4` — OLP-0595 / `OLP-0595-S03`; source `content/set-theory/choice/hartogs.tex:64`; Tamil `translation/content/set-theory/choice/hartogs.tex:79`; PDF page pending.
+- `TA-OCC-841896dbba028ccc` — OLP-0595 / `OLP-0595-S04`; source `content/set-theory/choice/hartogs.tex:70`; Tamil `translation/content/set-theory/choice/hartogs.tex:88`; PDF page pending.
+- `TA-OCC-dfc484922148ad8d` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:25`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:29`; PDF page pending.
+- `TA-OCC-07f783b5763af03e` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:25`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:29`; PDF page pending.
+- `TA-OCC-b3d83eb68364b651` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:25`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:31`; PDF page pending.
+- `TA-OCC-7536ee66cb62a4c0` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:25`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:35`; PDF page pending.
+- `TA-OCC-5a57528703309070` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:28`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:40`; PDF page pending.
+- `TA-OCC-9099fd776f3066ab` — OLP-0596 / `OLP-0596-S02`; source `content/set-theory/choice/wellorderingproblem.tex:46`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:57`; PDF page pending.
+- `TA-OCC-27eda4a54fa445ea` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:62`; PDF page pending.
+- `TA-OCC-fd52297e685a83e9` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:50`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:81`; PDF page pending.
+- `TA-OCC-d390052bd0ce4df8` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:62`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:86`; PDF page pending.
+- `TA-OCC-96f0c85c839db7be` — OLP-0596 / `OLP-0596-S04`; source `content/set-theory/choice/wellorderingproblem.tex:64`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:89`; PDF page pending.
+- `TA-OCC-458e7597d26b426b` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:75`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:114`; PDF page pending.
+- `TA-OCC-bf402019d71515bf` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:11`; Tamil `translation/content/set-theory/choice/countablechoice.tex:13`; PDF page pending.
+- `TA-OCC-021c25e27c2fdcaf` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:20`; Tamil `translation/content/set-theory/choice/countablechoice.tex:23`; PDF page pending.
+- `TA-OCC-832f23d9864a2273` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:27`; Tamil `translation/content/set-theory/choice/countablechoice.tex:32`; PDF page pending.
+- `TA-OCC-134ff987dd6f1e47` — OLP-0597 / `OLP-0597-S02`; source `content/set-theory/choice/countablechoice.tex:72`; Tamil `translation/content/set-theory/choice/countablechoice.tex:87`; PDF page pending.
+- `TA-OCC-f92284d53a31cd53` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:103`; Tamil `translation/content/set-theory/choice/countablechoice.tex:128`; PDF page pending.
+- `TA-OCC-53ea162197d80c07` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:108`; Tamil `translation/content/set-theory/choice/countablechoice.tex:134`; PDF page pending.
+- `TA-OCC-3af760399d376be0` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:115`; Tamil `translation/content/set-theory/choice/countablechoice.tex:143`; PDF page pending.
+- `TA-OCC-ede462d9048a5ac6` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:115`; Tamil `translation/content/set-theory/choice/countablechoice.tex:144`; PDF page pending.
+- `TA-OCC-03292890e3806d0d` — OLP-0597 / `OLP-0597-S06`; source `content/set-theory/choice/countablechoice.tex:149`; Tamil `translation/content/set-theory/choice/countablechoice.tex:198`; PDF page pending.
+- `TA-OCC-300e502841cdccaa` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:37`; Tamil `translation/content/set-theory/choice/vitali.tex:43`; PDF page pending.
+- `TA-OCC-76e2c24e75ba022f` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:37`; Tamil `translation/content/set-theory/choice/vitali.tex:48`; PDF page pending.
+- `TA-OCC-06398b4ff5923b22` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:102`; Tamil `translation/content/set-theory/choice/vitali.tex:129`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -17475,6 +17796,14 @@ Please double-check: **do the listed uses of “ஒன்றுக்கொன�
 - `TA-OCC-4f5c88c0d8375dda` — OLP-0588 / `OLP-0588-S04`; source `content/set-theory/card-arithmetic/simp.tex:128`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:158`; PDF page pending.
 - `TA-OCC-0fbf128fa75e3214` — OLP-0588 / `OLP-0588-S04`; source `content/set-theory/card-arithmetic/simp.tex:129`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:165`; PDF page pending.
 - `TA-OCC-c2c453f685db80dc` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:160`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:184`; PDF page pending.
+- `TA-OCC-5ccb9621d65a1278` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:37`; Tamil `translation/content/set-theory/choice/hartogs.tex:44`; PDF page pending.
+- `TA-OCC-f018cef7e288473a` — OLP-0595 / `OLP-0595-S03`; source `content/set-theory/choice/hartogs.tex:64`; Tamil `translation/content/set-theory/choice/hartogs.tex:79`; PDF page pending.
+- `TA-OCC-0f7aac009b99cbb5` — OLP-0595 / `OLP-0595-S04`; source `content/set-theory/choice/hartogs.tex:70`; Tamil `translation/content/set-theory/choice/hartogs.tex:88`; PDF page pending.
+- `TA-OCC-f1a465c2ae58857c` — OLP-0596 / `OLP-0596-S04`; source `content/set-theory/choice/wellorderingproblem.tex:70`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:100`; PDF page pending.
+- `TA-OCC-6439d5b7064257a6` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:72`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:106`; PDF page pending.
+- `TA-OCC-20d88b2a158aa069` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:103`; Tamil `translation/content/set-theory/choice/countablechoice.tex:128`; PDF page pending.
+- `TA-OCC-f53b828b67963027` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:108`; Tamil `translation/content/set-theory/choice/countablechoice.tex:134`; PDF page pending.
+- `TA-OCC-10ac47720636e3a9` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:115`; Tamil `translation/content/set-theory/choice/countablechoice.tex:143`; PDF page pending.
 
 ## TA-T048 — inverse relation: additional native attestation
 
@@ -17607,6 +17936,7 @@ Please double-check: **is “ஒன்றுக்கொன்றான மே�
 - `TA-OCC-90badbfaa7e73fe6` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:95`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:111`; PDF page pending.
 - `TA-OCC-9048063b71f876ce` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:30`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:41`; PDF page pending.
 - `TA-OCC-22b6d943008dce6c` — OLP-0589 / `OLP-0589-S02`; source `content/set-theory/card-arithmetic/expotough.tex:40`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:56`; PDF page pending.
+- `TA-OCC-688f95f890151544` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:75`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:114`; PDF page pending.
 
 ## TA-T050 — graph of a function / image of a set
 
@@ -17707,6 +18037,7 @@ Please double-check: **do the listed uses of “இருபுறச் சா�
 - `TA-OCC-3b75727a4053ee57` — OLP-0587 / `OLP-0587-S03`; source `content/set-theory/card-arithmetic/opps.tex:95`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:111`; PDF page pending.
 - `TA-OCC-6196d92f24b740c8` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:30`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:41`; PDF page pending.
 - `TA-OCC-ca172a781359b555` — OLP-0589 / `OLP-0589-S02`; source `content/set-theory/card-arithmetic/expotough.tex:40`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:56`; PDF page pending.
+- `TA-OCC-157e219bd1b21df0` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:75`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:114`; PDF page pending.
 
 ## TA-T052 — composition of functions
 
@@ -17999,6 +18330,8 @@ Please double-check: **do the listed uses of “எண்ணிடத்தக�
 - `TA-OCC-a08f7b5217a7236d` — OLP-0584 / `OLP-0584-S04`; source `content/set-theory/cardinals/classing.tex:132`; Tamil `translation/content/set-theory/cardinals/classing.tex:155`; PDF page pending.
 - `TA-OCC-324a7b827650aa0d` — OLP-0584 / `OLP-0584-S04`; source `content/set-theory/cardinals/classing.tex:136`; Tamil `translation/content/set-theory/cardinals/classing.tex:159`; PDF page pending.
 - `TA-OCC-b85c8b54727c75d5` — OLP-0584 / `OLP-0584-S04`; source `content/set-theory/cardinals/classing.tex:138`; Tamil `translation/content/set-theory/cardinals/classing.tex:161`; PDF page pending.
+- `TA-OCC-5894202b40ad61c0` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:103`; Tamil `translation/content/set-theory/choice/vitali.tex:130`; PDF page pending.
+- `TA-OCC-db65fc2c6f9deff8` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:104`; Tamil `translation/content/set-theory/choice/vitali.tex:131`; PDF page pending.
 
 ## TA-T057 — enumeration / uncountable
 
@@ -18108,6 +18441,8 @@ Please double-check: **is “பட்டியலாக்கம் / எண்
 - `TA-OCC-e436a4dceba48d9f` — OLP-0584 / `OLP-0584-S04`; source `content/set-theory/cardinals/classing.tex:100`; Tamil `translation/content/set-theory/cardinals/classing.tex:116`; PDF page pending.
 - `TA-OCC-78c48aaea5051ec0` — OLP-0584 / `OLP-0584-S04`; source `content/set-theory/cardinals/classing.tex:105`; Tamil `translation/content/set-theory/cardinals/classing.tex:122`; PDF page pending.
 - `TA-OCC-0cad3d55bbf0a543` — OLP-0587 / `OLP-0587-S05`; source `content/set-theory/card-arithmetic/opps.tex:127`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:150`; PDF page pending.
+- `TA-OCC-d734e6cbb20013de` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:105`; Tamil `translation/content/set-theory/choice/vitali.tex:132`; PDF page pending.
+- `TA-OCC-7ce9d3e6ee8f72df` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:107`; Tamil `translation/content/set-theory/choice/vitali.tex:135`; PDF page pending.
 
 ## TA-T058 — size of a set
 
@@ -18129,6 +18464,7 @@ Please double-check: **is “கணத்தின் அளவு” the establ
 - `TA-OCC-9d8bbb80f7036db8` — OLP-0137 / `OLP-0137-S05`; source `content/first-order-logic/completeness/downward-ls.tex:48`; Tamil `translation/content/first-order-logic/completeness/downward-ls.tex:55`; PDF page pending.
 - `TA-OCC-3f88c60c67756285` — OLP-0337 / `OLP-0337-S01`; source `content/second-order-logic/sol-and-set-theory/introduction.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/introduction.tex:23`; PDF page pending.
 - `TA-OCC-4eb285abe47856dc` — OLP-0339 / `OLP-0339-S01`; source `content/second-order-logic/sol-and-set-theory/cardinalities.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/cardinalities.tex:52`; PDF page pending.
+- `TA-OCC-703214207e86b93a` — OLP-0595 / `OLP-0595-S05`; source `content/set-theory/choice/hartogs.tex:76`; Tamil `translation/content/set-theory/choice/hartogs.tex:97`; PDF page pending.
 
 ## TA-T059 — ceiling function
 
@@ -18801,6 +19137,8 @@ Please double-check: **is “அளவில் பெரிதல்ல / அ�
 - `TA-OCC-ad40625db005c5da` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:1`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:119`; PDF page pending.
 - `TA-OCC-d7ba1075572e2096` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:1`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:147`; PDF page pending.
 - `TA-OCC-06bfc2155ac74384` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:46`; PDF page pending.
+- `TA-OCC-48841d97040736d4` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:15`; PDF page pending.
+- `TA-OCC-71a253ae67ebea03` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:88`; Tamil `translation/content/set-theory/choice/countablechoice.tex:112`; PDF page pending.
 
 ## TA-T069 — Schroder-Bernstein theorem
 
@@ -19009,6 +19347,8 @@ Please double-check: **is “பரிமாற்று வளையம் / �
 - `TA-OCC-b6f29ebf8437d71a` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:57`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:56`; PDF page pending.
 - `TA-OCC-9d8b65c6c342dd1f` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:57`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:60`; PDF page pending.
 - `TA-OCC-7bd7ffeea7522385` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:57`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:70`; PDF page pending.
+- `TA-OCC-098e6b2f36dca5f5` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:47`; Tamil `translation/content/set-theory/choice/vitali.tex:69`; PDF page pending.
+- `TA-OCC-156c0368b6b2c632` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:51`; Tamil `translation/content/set-theory/choice/vitali.tex:74`; PDF page pending.
 
 ## TA-T074 — Cauchy sequence / limit / tends to zero / monotone increasing or decreasing / decimal expansion
 
@@ -19521,6 +19861,8 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-f8e00bb237e4d4c6` — OLP-0590 / `OLP-0590-S02`; source `content/set-theory/card-arithmetic/ch.tex:47`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:63`; PDF page pending.
 - `TA-OCC-321dd35c80c6dbbf` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:122`; PDF page pending.
 - `TA-OCC-d356d4da770513ef` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:123`; PDF page pending.
+- `TA-OCC-3587ca2c2888f357` — OLP-0595 / `OLP-0595-S02`; source `content/set-theory/choice/hartogs.tex:47`; Tamil `translation/content/set-theory/choice/hartogs.tex:59`; PDF page pending.
+- `TA-OCC-a3aa1516aa28a864` — OLP-0597 / `OLP-0597-S02`; source `content/set-theory/choice/countablechoice.tex:46`; Tamil `translation/content/set-theory/choice/countablechoice.tex:57`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -20884,6 +21226,7 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-c42a93478a151293` — OLP-0571 / `OLP-0571-S01`; source `content/set-theory/replacement/ref.tex:32`; Tamil `translation/content/set-theory/replacement/ref.tex:40`; PDF page pending.
 - `TA-OCC-31bfa750605f12a8` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:70`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:79`; PDF page pending.
 - `TA-OCC-dff680d3f43bcf11` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:133`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:138`; PDF page pending.
+- `TA-OCC-67a7216f7c53ab46` — OLP-0597 / `OLP-0597-S06`; source `content/set-theory/choice/countablechoice.tex:141`; Tamil `translation/content/set-theory/choice/countablechoice.tex:194`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -22359,6 +22702,8 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-7c7e05c0ee744dfe` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:114`; Tamil `translation/content/set-theory/replacement/refproofs.tex:136`; PDF page pending.
 - `TA-OCC-95437d023741f993` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:114`; Tamil `translation/content/set-theory/replacement/refproofs.tex:166`; PDF page pending.
 - `TA-OCC-9aebdfebb8801d4a` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:115`; Tamil `translation/content/set-theory/replacement/refproofs.tex:174`; PDF page pending.
+- `TA-OCC-d20cecc290a27819` — OLP-0594 / `OLP-0594-S02`; source `content/set-theory/choice/tarskiscott.tex:33`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:41`; PDF page pending.
+- `TA-OCC-cb736364aeaec15a` — OLP-0594 / `OLP-0594-S02`; source `content/set-theory/choice/tarskiscott.tex:33`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:45`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -23748,6 +24093,13 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-d08481bcb2b6c54c` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:102`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:119`; PDF page pending.
 - `TA-OCC-9ec3777001c43615` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:13`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:14`; PDF page pending.
 - `TA-OCC-da5ababe0b439279` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:101`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:112`; PDF page pending.
+- `TA-OCC-44c2774ff1967c41` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:65`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:79`; PDF page pending.
+- `TA-OCC-1828ae11f14209e0` — OLP-0597 / `OLP-0597-S03`; source `content/set-theory/choice/countablechoice.tex:78`; Tamil `translation/content/set-theory/choice/countablechoice.tex:98`; PDF page pending.
+- `TA-OCC-2affe075e44d6177` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:89`; Tamil `translation/content/set-theory/choice/countablechoice.tex:116`; PDF page pending.
+- `TA-OCC-2975db85e4d0ec81` — OLP-0598 / `OLP-0598-S02`; source `content/set-theory/choice/justifications.tex:35`; Tamil `translation/content/set-theory/choice/justifications.tex:41`; PDF page pending.
+- `TA-OCC-154a5907bb3632b8` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:49`; Tamil `translation/content/set-theory/choice/banach.tex:62`; PDF page pending.
+- `TA-OCC-8a0fa21b10becbfe` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:9`; Tamil `translation/content/set-theory/choice/vitali.tex:27`; PDF page pending.
+- `TA-OCC-c77733cd2df368c9` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:39`; Tamil `translation/content/set-theory/choice/vitali.tex:45`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -24610,6 +24962,30 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-6bfa5f0f5010f1b5` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:100`; PDF page pending.
 - `TA-OCC-b82856b0c17a0195` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:101`; PDF page pending.
 - `TA-OCC-4d8d4dd579b7c23a` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:91`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:126`; PDF page pending.
+- `TA-OCC-1ebb91b65d9f7bef` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:1`; Tamil `translation/content/set-theory/choice/hartogs.tex:11`; PDF page pending.
+- `TA-OCC-56228273ded478cf` — OLP-0595 / `OLP-0595-S02`; source `content/set-theory/choice/hartogs.tex:47`; Tamil `translation/content/set-theory/choice/hartogs.tex:56`; PDF page pending.
+- `TA-OCC-c5621264ea2922ac` — OLP-0595 / `OLP-0595-S05`; source `content/set-theory/choice/hartogs.tex:76`; Tamil `translation/content/set-theory/choice/hartogs.tex:100`; PDF page pending.
+- `TA-OCC-f5a17a82aec93c7d` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:10`; PDF page pending.
+- `TA-OCC-dec91986aeb6e44f` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:1`; Tamil `translation/content/set-theory/choice/countablechoice.tex:13`; PDF page pending.
+- `TA-OCC-c50ac4c838e18d4f` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:1`; Tamil `translation/content/set-theory/choice/countablechoice.tex:26`; PDF page pending.
+- `TA-OCC-21889bd9aee480c6` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:1`; Tamil `translation/content/set-theory/choice/countablechoice.tex:45`; PDF page pending.
+- `TA-OCC-771f3c03f7fc3d5d` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:1`; Tamil `translation/content/set-theory/choice/countablechoice.tex:46`; PDF page pending.
+- `TA-OCC-bc8ce3a5b05f1c17` — OLP-0597 / `OLP-0597-S03`; source `content/set-theory/choice/countablechoice.tex:75`; Tamil `translation/content/set-theory/choice/countablechoice.tex:104`; PDF page pending.
+- `TA-OCC-941706df4cf76510` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:88`; Tamil `translation/content/set-theory/choice/countablechoice.tex:134`; PDF page pending.
+- `TA-OCC-06ff86b1bee1950d` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:111`; Tamil `translation/content/set-theory/choice/countablechoice.tex:146`; PDF page pending.
+- `TA-OCC-8a03a91a040fe8f9` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:1`; Tamil `translation/content/set-theory/choice/banach.tex:19`; PDF page pending.
+- `TA-OCC-f4b1fdaf9b9a5235` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:1`; Tamil `translation/content/set-theory/choice/banach.tex:22`; PDF page pending.
+- `TA-OCC-776e8de512567753` — OLP-0599 / `OLP-0599-S02`; source `content/set-theory/choice/banach.tex:25`; Tamil `translation/content/set-theory/choice/banach.tex:33`; PDF page pending.
+- `TA-OCC-782b6c03be348250` — OLP-0599 / `OLP-0599-S02`; source `content/set-theory/choice/banach.tex:25`; Tamil `translation/content/set-theory/choice/banach.tex:37`; PDF page pending.
+- `TA-OCC-3e892cfe908d1447` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:41`; Tamil `translation/content/set-theory/choice/banach.tex:53`; PDF page pending.
+- `TA-OCC-aa7abaebdf1e0f42` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:41`; Tamil `translation/content/set-theory/choice/banach.tex:71`; PDF page pending.
+- `TA-OCC-8c4e19ad4517d741` — OLP-0599 / `OLP-0599-S04`; source `content/set-theory/choice/banach.tex:59`; Tamil `translation/content/set-theory/choice/banach.tex:79`; PDF page pending.
+- `TA-OCC-22a7148acc373e70` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:28`; PDF page pending.
+- `TA-OCC-d23b28e4ef7334a5` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:34`; Tamil `translation/content/set-theory/choice/vitali.tex:96`; PDF page pending.
+- `TA-OCC-9cd636bc951ae7fe` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:81`; Tamil `translation/content/set-theory/choice/vitali.tex:145`; PDF page pending.
+- `TA-OCC-2c7b8a0cec8f465b` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:237`; PDF page pending.
+- `TA-OCC-c10c6a0794d6ccb2` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:258`; PDF page pending.
+- `TA-OCC-48cf5ab8d65d0146` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:278`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -28817,6 +29193,7 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-4ffac2c0124ffa2e` — OLP-0589 / `OLP-0589-S04`; source `content/set-theory/card-arithmetic/expotough.tex:68`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:105`; PDF page pending.
 - `TA-OCC-9d3b80bbc3e4c5b3` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:111`; PDF page pending.
 - `TA-OCC-5bc9e62f2d87884f` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:153`; PDF page pending.
+- `TA-OCC-8d8764ffc1b609d1` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:81`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -29879,6 +30256,8 @@ Please double-check: **is “மீள்வரையறை / முதன்ம
 - `TA-OCC-e8add4de5a490563` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:44`; PDF page pending.
 - `TA-OCC-a1fd00e02f458e15` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:28`; PDF page pending.
 - `TA-OCC-a4b7258807afd160` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:153`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:176`; PDF page pending.
+- `TA-OCC-3cc65e2f246e374c` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:66`; PDF page pending.
+- `TA-OCC-b38566ac8540f250` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:76`; PDF page pending.
 
 ## TA-T115 — characteristic function / bounded quantification / bounded minimization / projection function
 
@@ -32222,6 +32601,7 @@ Please double-check: **is “மூன்றாம்தரத் தருக�
 - `TA-OCC-9dd3f5da3d7d341e` — OLP-0008 / `OLP-0008-S11`; source `content/sets-functions-relations/sets/unions-and-intersections.tex:121`; Tamil `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:140`; PDF page pending.
 - `TA-OCC-fd419b976490faec` — OLP-0172 / `OLP-0172-S01`; source `content/first-order-logic/models-theories/set-theory.tex:1`; Tamil `translation/content/first-order-logic/models-theories/set-theory.tex:170`; PDF page pending.
 - `TA-OCC-4c7b5b094519101f` — OLP-0236 / `OLP-0236-S01`; source `content/computability/computability-theory/russells-paradox.tex:1`; Tamil `translation/content/computability/computability-theory/russells-paradox.tex:22`; PDF page pending.
+- `TA-OCC-23312ddb234f379a` — OLP-0596 / `OLP-0596-S02`; source `content/set-theory/choice/wellorderingproblem.tex:43`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:52`; PDF page pending.
 
 ## TA-T152 — lambda calculus / lambda abstraction / application / typed and untyped lambda calculus
 
@@ -32417,6 +32797,17 @@ Please double-check: **is “சர்ச்-குறியாக்கப்�
 - `TA-OCC-86c5e3f5fc465cf1` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:18`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:19`; PDF page pending.
 - `TA-OCC-410241ccf34746d2` — OLP-0377 / `OLP-0377-S01`; source `content/lambda-calculus/lambda-definability/truth-values.tex:59`; Tamil `translation/content/lambda-calculus/lambda-definability/truth-values.tex:65`; PDF page pending.
 - `TA-OCC-9aeb64387a08654d` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:1`; Tamil `translation/content/set-theory/spine/rank.tex:142`; PDF page pending.
+- `TA-OCC-0e99458642ebbd8b` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:1`; Tamil `translation/content/set-theory/choice/introduction.tex:13`; PDF page pending.
+- `TA-OCC-d2828f07343a8903` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:11`; PDF page pending.
+- `TA-OCC-a0c065b6e6a7a41a` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:37`; PDF page pending.
+- `TA-OCC-be76d1b78b5adbdc` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:61`; PDF page pending.
+- `TA-OCC-bd32925146204d2b` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:1`; Tamil `translation/content/set-theory/choice/countablechoice.tex:35`; PDF page pending.
+- `TA-OCC-d93c2f8961a27ad9` — OLP-0597 / `OLP-0597-S03`; source `content/set-theory/choice/countablechoice.tex:75`; Tamil `translation/content/set-theory/choice/countablechoice.tex:103`; PDF page pending.
+- `TA-OCC-b3fdc0d293895ae7` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:111`; Tamil `translation/content/set-theory/choice/countablechoice.tex:139`; PDF page pending.
+- `TA-OCC-b833d6514a2c380d` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:111`; Tamil `translation/content/set-theory/choice/countablechoice.tex:140`; PDF page pending.
+- `TA-OCC-cf1a719bfef5e871` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:111`; Tamil `translation/content/set-theory/choice/countablechoice.tex:145`; PDF page pending.
+- `TA-OCC-bd12d2c4b858f891` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:111`; Tamil `translation/content/set-theory/choice/countablechoice.tex:170`; PDF page pending.
+- `TA-OCC-5fba4af575b2faec` — OLP-0598 / `OLP-0598-S01`; source `content/set-theory/choice/justifications.tex:1`; Tamil `translation/content/set-theory/choice/justifications.tex:26`; PDF page pending.
 
 ## TA-T158 — many-valued logic / designated truth value / truth-value matrix / arity / determinateness operator
 
@@ -34357,6 +34748,8 @@ Please double-check: **is “கோள மாதிரி / கோளங்க�
 - `TA-OCC-69930016cbaa5e68` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:100`; PDF page pending.
 - `TA-OCC-54ae3478f93cb4d3` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:163`; PDF page pending.
 - `TA-OCC-e38694fe443c9a7a` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:135`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:155`; PDF page pending.
+- `TA-OCC-2b2be069a18fc84d` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:12`; PDF page pending.
+- `TA-OCC-11a9c7054ebb3ad9` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:12`; PDF page pending.
 
 ## TA-T199 — truth-functional / vacuously true / non-vacuously true / monotonic conditional / transitive conditional
 
@@ -34621,6 +35014,11 @@ Please double-check: **is “படிநிலைமுறைக் கணக�
 - `TA-OCC-67e14949aa90bd47` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:138`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:155`; PDF page pending.
 - `TA-OCC-d4908d8f068ec026` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:139`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:157`; PDF page pending.
 - `TA-OCC-ebd2aa32170c3cdb` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:142`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:161`; PDF page pending.
+- `TA-OCC-7892387ac49b8585` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:29`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:32`; PDF page pending.
+- `TA-OCC-d05dd1ffd67c766e` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:29`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:33`; PDF page pending.
+- `TA-OCC-80f870311bf6c6cd` — OLP-0598 / `OLP-0598-S01`; source `content/set-theory/choice/justifications.tex:14`; Tamil `translation/content/set-theory/choice/justifications.tex:15`; PDF page pending.
+- `TA-OCC-da68f85f02ede191` — OLP-0598 / `OLP-0598-S01`; source `content/set-theory/choice/justifications.tex:16`; Tamil `translation/content/set-theory/choice/justifications.tex:19`; PDF page pending.
+- `TA-OCC-6074e23ca561f06b` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:49`; Tamil `translation/content/set-theory/choice/justifications.tex:60`; PDF page pending.
 
 ## TA-T202 — urelement / pure set theory / reductive foundational goal
 
@@ -34747,6 +35145,9 @@ Please double-check: **do the listed uses of “செர்மேலோ கண�
 - `TA-OCC-f7cffce97292aec6` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:1`; Tamil `translation/content/set-theory/spine/zf.tex:38`; PDF page pending.
 - `TA-OCC-6802ead78044fbcd` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:70`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:143`; PDF page pending.
 - `TA-OCC-a31efe4dc68a7d4d` — OLP-0587 / `OLP-0587-S01`; source `content/set-theory/card-arithmetic/opps.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:31`; PDF page pending.
+- `TA-OCC-3572847aef031692` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:1`; Tamil `translation/content/set-theory/choice/countablechoice.tex:12`; PDF page pending.
+- `TA-OCC-89b49cbd7e664bc3` — OLP-0597 / `OLP-0597-S02`; source `content/set-theory/choice/countablechoice.tex:46`; Tamil `translation/content/set-theory/choice/countablechoice.tex:60`; PDF page pending.
+- `TA-OCC-7c02bfe0cd3b1b5a` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:88`; Tamil `translation/content/set-theory/choice/countablechoice.tex:120`; PDF page pending.
 
 ## TA-T207 — Axiom of Union / Axiom of Pairs / Axiom of Powersets / no last stage
 
@@ -35082,6 +35483,19 @@ Please double-check: **is “வரிசையெண் / முடிவில
 - `TA-OCC-5bf3ec710bb66e76` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:159`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:180`; PDF page pending.
 - `TA-OCC-7b0371902a281c3c` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:160`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:182`; PDF page pending.
 - `TA-OCC-8f18b27fe9146d69` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:160`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:183`; PDF page pending.
+- `TA-OCC-41b892eb7228be39` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:10`; Tamil `translation/content/set-theory/choice/introduction.tex:11`; PDF page pending.
+- `TA-OCC-caf1ef1a2e6d3e19` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:9`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:10`; PDF page pending.
+- `TA-OCC-000f0ab258b71c86` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:69`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:82`; PDF page pending.
+- `TA-OCC-0a8c26bb5681c460` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:72`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:86`; PDF page pending.
+- `TA-OCC-650b4bd69d0be213` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:13`; Tamil `translation/content/set-theory/choice/hartogs.tex:15`; PDF page pending.
+- `TA-OCC-164841ba693d372f` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:26`; Tamil `translation/content/set-theory/choice/hartogs.tex:34`; PDF page pending.
+- `TA-OCC-7a95657d4e9f8250` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:30`; Tamil `translation/content/set-theory/choice/hartogs.tex:34`; PDF page pending.
+- `TA-OCC-925b3afb75369d6f` — OLP-0595 / `OLP-0595-S04`; source `content/set-theory/choice/hartogs.tex:68`; Tamil `translation/content/set-theory/choice/hartogs.tex:85`; PDF page pending.
+- `TA-OCC-f60e97713e8d551f` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:72`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:104`; PDF page pending.
+- `TA-OCC-100f05db94ce8650` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:73`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:106`; PDF page pending.
+- `TA-OCC-b6727544c0c3fb45` — OLP-0596 / `OLP-0596-S05`; source `content/set-theory/choice/wellorderingproblem.tex:75`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:112`; PDF page pending.
+- `TA-OCC-4f28d823d87df401` — OLP-0597 / `OLP-0597-S06`; source `content/set-theory/choice/countablechoice.tex:159`; Tamil `translation/content/set-theory/choice/countablechoice.tex:199`; PDF page pending.
+- `TA-OCC-28d9d8c6692bd431` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:13`; Tamil `translation/content/set-theory/choice/banach.tex:15`; PDF page pending.
 
 ## TA-T212 — well-order / order-isomorphism / proper and improper initial segment
 
@@ -35141,6 +35555,15 @@ Please double-check: **do the listed uses of “நன்கு வரிசை�
 - `TA-OCC-8e98d4b744759a51` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:28`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:32`; PDF page pending.
 - `TA-OCC-65d21ec42b0324b5` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:28`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:44`; PDF page pending.
 - `TA-OCC-cc78bd71a9b06341` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:38`; PDF page pending.
+- `TA-OCC-bc17b9b17df704c4` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:1`; Tamil `translation/content/set-theory/choice/introduction.tex:12`; PDF page pending.
+- `TA-OCC-1db5dfd0f9ce7be9` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:1`; Tamil `translation/content/set-theory/choice/introduction.tex:13`; PDF page pending.
+- `TA-OCC-f346e59be6fc95dd` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:50`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:83`; PDF page pending.
+- `TA-OCC-c0ef1087a7f28bee` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:1`; Tamil `translation/content/set-theory/choice/hartogs.tex:25`; PDF page pending.
+- `TA-OCC-50656499ab305e81` — OLP-0595 / `OLP-0595-S02`; source `content/set-theory/choice/hartogs.tex:47`; Tamil `translation/content/set-theory/choice/hartogs.tex:61`; PDF page pending.
+- `TA-OCC-d2f3c254ad559423` — OLP-0595 / `OLP-0595-S03`; source `content/set-theory/choice/hartogs.tex:59`; Tamil `translation/content/set-theory/choice/hartogs.tex:71`; PDF page pending.
+- `TA-OCC-67484f45c9e94829` — OLP-0595 / `OLP-0595-S05`; source `content/set-theory/choice/hartogs.tex:76`; Tamil `translation/content/set-theory/choice/hartogs.tex:96`; PDF page pending.
+- `TA-OCC-67d41dbc7954396d` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:7`; PDF page pending.
+- `TA-OCC-924b12c72af39d38` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:15`; PDF page pending.
 
 ## TA-T213 — transitive set / transfinite induction / trichotomy for ordinals
 
@@ -35500,6 +35923,14 @@ Please double-check: **is “படிநிலை / தரநிலை / V_α-�
 - `TA-OCC-9ac4dbac32cd300d` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:139`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:155`; PDF page pending.
 - `TA-OCC-6b0bb6b9444283c4` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:139`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:157`; PDF page pending.
 - `TA-OCC-6a39b2e73fbed3c3` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:142`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:161`; PDF page pending.
+- `TA-OCC-5174dfed6577fe74` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:29`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:32`; PDF page pending.
+- `TA-OCC-4fe01b5d7d56ad72` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:30`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:33`; PDF page pending.
+- `TA-OCC-7e674d2ee2471673` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:31`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:36`; PDF page pending.
+- `TA-OCC-e04bbb996acd0e3d` — OLP-0594 / `OLP-0594-S02`; source `content/set-theory/choice/tarskiscott.tex:37`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:47`; PDF page pending.
+- `TA-OCC-c4942205d6c419fc` — OLP-0594 / `OLP-0594-S02`; source `content/set-theory/choice/tarskiscott.tex:44`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:56`; PDF page pending.
+- `TA-OCC-f4df244d131832f8` — OLP-0598 / `OLP-0598-S01`; source `content/set-theory/choice/justifications.tex:16`; Tamil `translation/content/set-theory/choice/justifications.tex:15`; PDF page pending.
+- `TA-OCC-d9ea18de38affbb2` — OLP-0598 / `OLP-0598-S01`; source `content/set-theory/choice/justifications.tex:17`; Tamil `translation/content/set-theory/choice/justifications.tex:19`; PDF page pending.
+- `TA-OCC-3cb6eff8f43b7c26` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:49`; Tamil `translation/content/set-theory/choice/justifications.tex:60`; PDF page pending.
 
 ## TA-T218 — transfinite recursion / alpha-approximation / bounded, general and simple recursion
 
@@ -35555,6 +35986,7 @@ Please double-check: **is “முடிவிலிக்கடந்த ம�
 - `TA-OCC-927d6c471837896a` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:119`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:147`; PDF page pending.
 - `TA-OCC-67f8eb918683692b` — OLP-0579 / `OLP-0579-S01`; source `content/set-theory/ord-arithmetic/exponentiation.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:44`; PDF page pending.
 - `TA-OCC-c6587d355be886b5` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:36`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:44`; PDF page pending.
+- `TA-OCC-273adea0feb3ca39` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:66`; PDF page pending.
 
 ## TA-T219 — potent set / powerset-closed stage behavior
 
@@ -35655,6 +36087,8 @@ Please double-check: **is “உள்ளார்ந்த நியாயப�
 
 - `TA-OCC-99c3d8b8ae6b6fc3` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:12`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:33`; PDF page pending.
 - `TA-OCC-d0b02c09b559eb7b` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:31`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:37`; PDF page pending.
+- `TA-OCC-ece0051aa8c86f8a` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:43`; Tamil `translation/content/set-theory/choice/justifications.tex:72`; PDF page pending.
+- `TA-OCC-1a382471aefc03ef` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:11`; Tamil `translation/content/set-theory/choice/banach.tex:12`; PDF page pending.
 
 ## TA-T223 — formula relativization / model of a theory / absolute for a transitive set
 
@@ -35764,6 +36198,7 @@ Please double-check: **is “வெட்டாக் கூட்டுத்�
 - `TA-OCC-4eb00b369e4e724b` — OLP-0576 / `OLP-0576-S02`; source `content/set-theory/ord-arithmetic/addition.tex:30`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:48`; PDF page pending.
 - `TA-OCC-4d6db09d2aa0957d` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:1`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:24`; PDF page pending.
 - `TA-OCC-918c13603476d094` — OLP-0587 / `OLP-0587-S02`; source `content/set-theory/card-arithmetic/opps.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:41`; PDF page pending.
+- `TA-OCC-12b0b6e4ec392d64` — OLP-0595 / `OLP-0595-S05`; source `content/set-theory/choice/hartogs.tex:76`; Tamil `translation/content/set-theory/choice/hartogs.tex:102`; PDF page pending.
 
 ## TA-T229 — synthetic versus recursive ordinal addition / associative versus commutative
 
@@ -35930,6 +36365,17 @@ Please double-check: **is “கண அளவெண் / கணத்தின�
 - `TA-OCC-b28af246c074c3fa` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:10`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:11`; PDF page pending.
 - `TA-OCC-800978ac1d7b038d` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:20`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:20`; PDF page pending.
 - `TA-OCC-6ee507790dbbd5f5` — OLP-0591 / `OLP-0591-S01`; source `content/set-theory/card-arithmetic/fix.tex:33`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:35`; PDF page pending.
+- `TA-OCC-1df9dc6dcd393790` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:9`; Tamil `translation/content/set-theory/choice/introduction.tex:11`; PDF page pending.
+- `TA-OCC-5f52ddb25ed194ae` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:8`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:10`; PDF page pending.
+- `TA-OCC-f7c1a6f3da0cdfc0` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:9`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:16`; PDF page pending.
+- `TA-OCC-009650a920361d68` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:15`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:21`; PDF page pending.
+- `TA-OCC-2315f97aff4ab570` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:51`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:70`; PDF page pending.
+- `TA-OCC-f25d190920e04915` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:54`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:72`; PDF page pending.
+- `TA-OCC-038d766f887d7d08` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:58`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:74`; PDF page pending.
+- `TA-OCC-03ae258a6a65d261` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:60`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:78`; PDF page pending.
+- `TA-OCC-73285624117649df` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:60`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:85`; PDF page pending.
+- `TA-OCC-fc731587c2c40dd2` — OLP-0595 / `OLP-0595-S05`; source `content/set-theory/choice/hartogs.tex:78`; Tamil `translation/content/set-theory/choice/hartogs.tex:99`; PDF page pending.
+- `TA-OCC-4609bb199c3c5c57` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:12`; Tamil `translation/content/set-theory/choice/banach.tex:14`; PDF page pending.
 
 ## TA-T233 — Hume's Principle / predicate position / predicative versus impredicative / neo-Fregean logicists
 
@@ -36023,6 +36469,7 @@ Please double-check: **is “கண அளவெண் எண்கணிதம�
 - `TA-OCC-164821a0c4bd6f11` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:9`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:10`; PDF page pending.
 - `TA-OCC-d7b53dbe29c38405` — OLP-0589 / `OLP-0589-S02`; source `content/set-theory/card-arithmetic/expotough.tex:35`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:57`; PDF page pending.
 - `TA-OCC-327b770bb1aa53a5` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:12`; PDF page pending.
+- `TA-OCC-0c8a6404256ca858` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:111`; Tamil `translation/content/set-theory/choice/countablechoice.tex:162`; PDF page pending.
 
 ## TA-T235 — continuum hypothesis / generalized continuum hypothesis / aleph and beth fixed point / hierarchy width and height
 
@@ -36047,6 +36494,133 @@ Please double-check: **is “தொடரகக் கருதுகோள் /
 - `TA-OCC-877eb2fa9055b97d` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:90`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:105`; PDF page pending.
 - `TA-OCC-8460f2dc182ddb81` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:112`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:130`; PDF page pending.
 - `TA-OCC-1f429119247952ac` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:116`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:135`; PDF page pending.
+
+## TA-T236 — Axiom of Choice / choice function / countable choice / choice set
+
+Chosen rendering: **தேர்வின் அடிகோளம் / தேர்வுச் சார்பு / எண்ணத்தக்க தேர்வு / தேர்வுக் கணம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected Tamil pages support sets, functions, bijections and quantifier language as components, not the full Choice headwords. The chapter defines a choice function on nonempty members, countable Choice by its restricted domain, and a choice set by meeting each member of a disjoint nonempty family in exactly one point. The axiom and its well-ordering equivalence fix the senses; no direct attestation of these complete specialist compounds is claimed.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-T236-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தேர்வின் அடிகோளம் / தேர்வுச் சார்பு / எண்ணத்தக்க தேர்வு / தேர்வுக் கணம்” the established India-standard Tamil expression for “Axiom of Choice / choice function / countable choice / choice set” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-3af93be6d6368296` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:1`; Tamil `translation/content/set-theory/choice/introduction.tex:13`; PDF page pending.
+- `TA-OCC-9388ce5855964357` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:10`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:29`; PDF page pending.
+- `TA-OCC-0852bddfc98d90ad` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:25`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:31`; PDF page pending.
+- `TA-OCC-2e381dae25d85a7e` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:25`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:35`; PDF page pending.
+- `TA-OCC-7b0566fb4a71aa0a` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:25`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:37`; PDF page pending.
+- `TA-OCC-7e91175947e02896` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:28`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:40`; PDF page pending.
+- `TA-OCC-5ca8dc37ffceb138` — OLP-0596 / `OLP-0596-S02`; source `content/set-theory/choice/wellorderingproblem.tex:46`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:57`; PDF page pending.
+- `TA-OCC-f2925b0cfb7e9343` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:62`; PDF page pending.
+- `TA-OCC-db6db34d407edabd` — OLP-0596 / `OLP-0596-S04`; source `content/set-theory/choice/wellorderingproblem.tex:64`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:89`; PDF page pending.
+- `TA-OCC-7a530a893808d949` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:6`; Tamil `translation/content/set-theory/choice/countablechoice.tex:7`; PDF page pending.
+- `TA-OCC-9d8c80b0467ccba4` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:11`; Tamil `translation/content/set-theory/choice/countablechoice.tex:13`; PDF page pending.
+- `TA-OCC-ae7780bc740d651c` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:20`; Tamil `translation/content/set-theory/choice/countablechoice.tex:23`; PDF page pending.
+- `TA-OCC-18d34724bffb323c` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:27`; Tamil `translation/content/set-theory/choice/countablechoice.tex:31`; PDF page pending.
+- `TA-OCC-a08d2db0c7f5e148` — OLP-0597 / `OLP-0597-S01`; source `content/set-theory/choice/countablechoice.tex:27`; Tamil `translation/content/set-theory/choice/countablechoice.tex:32`; PDF page pending.
+- `TA-OCC-6d7526bc6cfa8395` — OLP-0597 / `OLP-0597-S02`; source `content/set-theory/choice/countablechoice.tex:49`; Tamil `translation/content/set-theory/choice/countablechoice.tex:60`; PDF page pending.
+- `TA-OCC-d52006864865a798` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:94`; Tamil `translation/content/set-theory/choice/countablechoice.tex:117`; PDF page pending.
+- `TA-OCC-e513124b7659f30b` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:96`; Tamil `translation/content/set-theory/choice/countablechoice.tex:120`; PDF page pending.
+- `TA-OCC-bad3a7f81deeb217` — OLP-0597 / `OLP-0597-S05`; source `content/set-theory/choice/countablechoice.tex:111`; Tamil `translation/content/set-theory/choice/countablechoice.tex:171`; PDF page pending.
+- `TA-OCC-a8ada285a98a61f6` — OLP-0597 / `OLP-0597-S06`; source `content/set-theory/choice/countablechoice.tex:141`; Tamil `translation/content/set-theory/choice/countablechoice.tex:198`; PDF page pending.
+- `TA-OCC-fc6499ba20448619` — OLP-0598 / `OLP-0598-S02`; source `content/set-theory/choice/justifications.tex:32`; Tamil `translation/content/set-theory/choice/justifications.tex:38`; PDF page pending.
+- `TA-OCC-3f847b1fcbc205ad` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:43`; Tamil `translation/content/set-theory/choice/justifications.tex:51`; PDF page pending.
+- `TA-OCC-17f5de34239b8a94` — OLP-0598 / `OLP-0598-S03`; source `content/set-theory/choice/justifications.tex:44`; Tamil `translation/content/set-theory/choice/justifications.tex:70`; PDF page pending.
+- `TA-OCC-ab7d2b1ae8979a6e` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:102`; Tamil `translation/content/set-theory/choice/vitali.tex:129`; PDF page pending.
+
+## TA-T237 — Tarski–Scott trick / Hartogs' lemma / well-ordering / comparability
+
+Chosen rendering: **டார்ஸ்கி--ஸ்காட் உத்தி / ஹார்டாக்ஸ் துணைத்தேற்றம் / நன்கு வரிசைப்படுத்தல் / ஒப்பிடத்தக்க தன்மை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Inspected pages ground set, order, function, bijection and proof terminology but do not attest the named constructions as Tamil headwords. The chapter defines Tarski–Scott by least-rank witnesses, Hartogs by order types of well-ordered subsets, and comparability by injection in one direction. The translated proofs give the relation to Well-Ordering without presenting the named historical originals as newly consulted.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC11-P34-BIJECTION (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T237-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “டார்ஸ்கி--ஸ்காட் உத்தி / ஹார்டாக்ஸ் துணைத்தேற்றம் / நன்கு வரிசைப்படுத்தல் / ஒப்பிடத்தக்க தன்மை” the established India-standard Tamil expression for “Tarski–Scott trick / Hartogs' lemma / well-ordering / comparability” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-b95aad159b2f5019` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:6`; Tamil `translation/content/set-theory/ordinals/wo.tex:7`; PDF page pending.
+- `TA-OCC-62e15352bcf8fc4a` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:22`; Tamil `translation/content/set-theory/ordinals/wo.tex:28`; PDF page pending.
+- `TA-OCC-e92b8a595f55d57d` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:8`; Tamil `translation/content/set-theory/ordinals/iso.tex:9`; PDF page pending.
+- `TA-OCC-c7c4e2b57befd901` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:9`; Tamil `translation/content/set-theory/ordinals/iso.tex:14`; PDF page pending.
+- `TA-OCC-f720b4f21c8f823a` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:12`; Tamil `translation/content/set-theory/ordinals/iso.tex:17`; PDF page pending.
+- `TA-OCC-00ce21b34ff3ef59` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:13`; Tamil `translation/content/set-theory/ordinals/iso.tex:64`; PDF page pending.
+- `TA-OCC-13cbc11bd3fff441` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:41`; Tamil `translation/content/set-theory/ordinals/iso.tex:107`; PDF page pending.
+- `TA-OCC-20b7e529efa4d380` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:59`; Tamil `translation/content/set-theory/ordinals/iso.tex:126`; PDF page pending.
+- `TA-OCC-753cbdec3be3dd03` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:63`; Tamil `translation/content/set-theory/ordinals/iso.tex:130`; PDF page pending.
+- `TA-OCC-964005a98e2bb642` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:69`; Tamil `translation/content/set-theory/ordinals/iso.tex:155`; PDF page pending.
+- `TA-OCC-1b94dbb0dc28ce7c` — OLP-0551 / `OLP-0551-S01`; source `content/set-theory/ordinals/iso.tex:73`; Tamil `translation/content/set-theory/ordinals/iso.tex:161`; PDF page pending.
+- `TA-OCC-2fc7ef64c22f99b5` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:10`; Tamil `translation/content/set-theory/ordinals/vn.tex:10`; PDF page pending.
+- `TA-OCC-1fe8a07992c02842` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:11`; Tamil `translation/content/set-theory/ordinals/vn.tex:38`; PDF page pending.
+- `TA-OCC-48e5cb37a9be772c` — OLP-0552 / `OLP-0552-S01`; source `content/set-theory/ordinals/vn.tex:34`; Tamil `translation/content/set-theory/ordinals/vn.tex:40`; PDF page pending.
+- `TA-OCC-4e27a5ebb404710f` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:223`; PDF page pending.
+- `TA-OCC-9def6f6d25373cad` — OLP-0554 / `OLP-0554-S01`; source `content/set-theory/ordinals/replacement.tex:10`; Tamil `translation/content/set-theory/ordinals/replacement.tex:10`; PDF page pending.
+- `TA-OCC-946e462cc43463df` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:11`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:52`; PDF page pending.
+- `TA-OCC-b18b73f23ff2234c` — OLP-0556 / `OLP-0556-S01`; source `content/set-theory/ordinals/ordtype.tex:49`; Tamil `translation/content/set-theory/ordinals/ordtype.tex:60`; PDF page pending.
+- `TA-OCC-171809ad545a9e38` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:9`; Tamil `translation/content/set-theory/spine/idea.tex:10`; PDF page pending.
+- `TA-OCC-47777cf86b2f7753` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:27`; Tamil `translation/content/set-theory/spine/rank.tex:28`; PDF page pending.
+- `TA-OCC-b653ac7ba0d41df6` — OLP-0567 / `OLP-0567-S01`; source `content/set-theory/replacement/strength.tex:26`; Tamil `translation/content/set-theory/replacement/strength.tex:41`; PDF page pending.
+- `TA-OCC-3721140414b141b4` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:36`; Tamil `translation/content/set-theory/replacement/absinf.tex:48`; PDF page pending.
+- `TA-OCC-89c7c2e2b0e6e68f` — OLP-0581 / `OLP-0581-S01`; source `content/set-theory/cardinals/cp.tex:1`; Tamil `translation/content/set-theory/cardinals/cp.tex:10`; PDF page pending.
+- `TA-OCC-f0c0237096ef7dc4` — OLP-0581 / `OLP-0581-S02`; source `content/set-theory/cardinals/cp.tex:23`; Tamil `translation/content/set-theory/cardinals/cp.tex:27`; PDF page pending.
+- `TA-OCC-8ed0ff5e976d433c` — OLP-0581 / `OLP-0581-S03`; source `content/set-theory/cardinals/cp.tex:27`; Tamil `translation/content/set-theory/cardinals/cp.tex:33`; PDF page pending.
+- `TA-OCC-ad32d4147c45f2a2` — OLP-0582 / `OLP-0582-S01`; source `content/set-theory/cardinals/cardsasords.tex:36`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:40`; PDF page pending.
+- `TA-OCC-3d064f10027df4f3` — OLP-0582 / `OLP-0582-S01`; source `content/set-theory/cardinals/cardsasords.tex:39`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:43`; PDF page pending.
+- `TA-OCC-5dfaf0e357bcb314` — OLP-0582 / `OLP-0582-S02`; source `content/set-theory/cardinals/cardsasords.tex:56`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:63`; PDF page pending.
+- `TA-OCC-f5fd42c41ab4c7cc` — OLP-0582 / `OLP-0582-S02`; source `content/set-theory/cardinals/cardsasords.tex:56`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:64`; PDF page pending.
+- `TA-OCC-5e4f6a2f4a69d311` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:124`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:141`; PDF page pending.
+- `TA-OCC-4d46511bfbade818` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:8`; Tamil `translation/content/set-theory/cardinals/milestone.tex:9`; PDF page pending.
+- `TA-OCC-4561f8c01ce9d184` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:14`; Tamil `translation/content/set-theory/cardinals/milestone.tex:16`; PDF page pending.
+- `TA-OCC-452c3b11bb1f3663` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:16`; Tamil `translation/content/set-theory/cardinals/milestone.tex:24`; PDF page pending.
+- `TA-OCC-e13ffa0f87446e10` — OLP-0584 / `OLP-0584-S02`; source `content/set-theory/cardinals/classing.tex:64`; Tamil `translation/content/set-theory/cardinals/classing.tex:73`; PDF page pending.
+- `TA-OCC-ea9d795b9e4985bd` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:40`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:32`; PDF page pending.
+- `TA-OCC-24bef053a9b040bf` — OLP-0588 / `OLP-0588-S01`; source `content/set-theory/card-arithmetic/simp.tex:40`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:44`; PDF page pending.
+- `TA-OCC-4aafb736b1025633` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:1`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:38`; PDF page pending.
+- `TA-OCC-a700f2a4c0093931` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:11`; Tamil `translation/content/set-theory/choice/introduction.tex:12`; PDF page pending.
+- `TA-OCC-486acb4c74728750` — OLP-0593 / `OLP-0593-S01`; source `content/set-theory/choice/introduction.tex:12`; Tamil `translation/content/set-theory/choice/introduction.tex:13`; PDF page pending.
+- `TA-OCC-ea045b374c9ee957` — OLP-0594 / `OLP-0594-S01`; source `content/set-theory/choice/tarskiscott.tex:10`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:7`; PDF page pending.
+- `TA-OCC-6d493ca79249b38d` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:58`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:62`; PDF page pending.
+- `TA-OCC-8777147d2ed63365` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:66`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:83`; PDF page pending.
+- `TA-OCC-d375c11dcf27a08f` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:6`; Tamil `translation/content/set-theory/choice/hartogs.tex:7`; PDF page pending.
+- `TA-OCC-ce419bb3892dd720` — OLP-0595 / `OLP-0595-S01`; source `content/set-theory/choice/hartogs.tex:6`; Tamil `translation/content/set-theory/choice/hartogs.tex:25`; PDF page pending.
+- `TA-OCC-e556969cee9fd6df` — OLP-0595 / `OLP-0595-S02`; source `content/set-theory/choice/hartogs.tex:52`; Tamil `translation/content/set-theory/choice/hartogs.tex:61`; PDF page pending.
+- `TA-OCC-46ceef2191d5a3d5` — OLP-0595 / `OLP-0595-S03`; source `content/set-theory/choice/hartogs.tex:60`; Tamil `translation/content/set-theory/choice/hartogs.tex:71`; PDF page pending.
+- `TA-OCC-cf61f268cd287d75` — OLP-0595 / `OLP-0595-S05`; source `content/set-theory/choice/hartogs.tex:76`; Tamil `translation/content/set-theory/choice/hartogs.tex:96`; PDF page pending.
+- `TA-OCC-ef70d56dc086048f` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:6`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:7`; PDF page pending.
+- `TA-OCC-585f9c1acb2cccee` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:8`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:15`; PDF page pending.
+
+## TA-T238 — Banach–Tarski paradox / Vitali paradox / free rotation group / measurable set
+
+Chosen rendering: **பனாக்--டார்ஸ்கி முரண்புதிர் / விட்டாலி முரண்புதிர் / கட்டற்ற சுழற்சிக் குழு / அளவிடத்தக்க கணம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly inspected Tamil mathematical and logic passages support sets, relations and proof as components, not the complete paradox or group terminology. The frozen source distinguishes finite-piece Banach–Tarski from countable-piece Vitali, defines the circle rotation orbit construction, and states the measurable-set contradiction. Tamil specifies rational multiples of pi so the countable rotation set is a group, with a rotation-stable measurable domain for the final inference. Historical names and citations remain frozen-source attributions.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P5 (checked_context_only); TA-SC11-P19 (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports); TA-T238-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “பனாக்--டார்ஸ்கி முரண்புதிர் / விட்டாலி முரண்புதிர் / கட்டற்ற சுழற்சிக் குழு / அளவிடத்தக்க கணம்” the established India-standard Tamil expression for “Banach–Tarski paradox / Vitali paradox / free rotation group / measurable set” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-485b6575dfa4636d` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:1`; Tamil `translation/content/set-theory/choice/banach.tex:7`; PDF page pending.
+- `TA-OCC-b554223ad358d53e` — OLP-0599 / `OLP-0599-S01`; source `content/set-theory/choice/banach.tex:1`; Tamil `translation/content/set-theory/choice/banach.tex:21`; PDF page pending.
+- `TA-OCC-d4db8a8b6a23c275` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:7`; PDF page pending.
+- `TA-OCC-faad0087e3b724b3` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:17`; PDF page pending.
+- `TA-OCC-edd888f800e6422d` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:26`; PDF page pending.
+- `TA-OCC-bc1c06da5c8a14e9` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:29`; PDF page pending.
+- `TA-OCC-1f3dad07ea465805` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:31`; PDF page pending.
+- `TA-OCC-4f3ee32e3aa4746e` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:34`; Tamil `translation/content/set-theory/choice/vitali.tex:37`; PDF page pending.
+- `TA-OCC-58b9316712b7d52e` — OLP-0600 / `OLP-0600-S04`; source `content/set-theory/choice/vitali.tex:141`; Tamil `translation/content/set-theory/choice/vitali.tex:209`; PDF page pending.
+- `TA-OCC-1dcd13f946700b76` — OLP-0600 / `OLP-0600-S05`; source `content/set-theory/choice/vitali.tex:176`; Tamil `translation/content/set-theory/choice/vitali.tex:273`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

@@ -1,0 +1,86 @@
+{
+  "batch_id": "TA-B273",
+  "units": [
+    {
+      "unit_id": "OLP-0597",
+      "source_sha256": "37ed80e497f07f2c96db1a56b8573d90a6d8421e119f0bc7a2865fa2f534b994",
+      "translation_sha256": "7ad4707814a51c28ee51ca3249ebaaa989fa6855506236c79c6961cb16e5637e",
+      "source_bytes": 7098,
+      "translation_bytes": 16438,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\card{\\bigcup_{i<n}A_n}&\\leq\\card{A_0}+\\card{A_1}+\\ldots+\\card{A_{n-1}}\\\\&=1+2+\\ldots+2^{n-1}\\\\&=2^n-1\\\\&<2^n=\\card{A_n}\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\card{\\bigcup_{i<n}A_i}&\\leq\\card{A_0}+\\card{A_1}+\\ldots+\\card{A_{n-1}}\\\\&=1+2+\\ldots+2^{n-1}\\\\&=2^n-1\\\\&<2^n=\\card{A_n}\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "arithmetic",
+        "card",
+        "cardinals",
+        "classing",
+        "include",
+        "logic",
+        "open",
+        "pairs",
+        "section",
+        "sfr",
+        "simp",
+        "siz",
+        "zigzag"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-045",
+          "unit_id": "OLP-0597",
+          "kind": "countable-choice-finite-union-index",
+          "action": "Changed the finite-union summand from the constant A_n to the indexed A_i in Dedekind's cardinal bound.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\card{\\bigcup_{i<n}A_n}",
+              "to": "\\card{\\bigcup_{i<n}A_i}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The displayed bound writes union over i<n of A_n, leaving i unused. Its right side sums A_0 through A_(n-1), and the preceding definition of B_n subtracts exactly those earlier sets.",
+          "chosen_treatment": "முடிவுறு ஒன்றிப்பின் உறுப்புக் குறியை A_n இலிருந்து A_i ஆகச் சரிசெய்து, வலப்புறக் கூட்டலுடன் ஒத்திசைக்கிறது.",
+          "alternatives_considered": "Retaining the constant A_n union, which makes the stated strict inequality false.",
+          "rationale": "The union of earlier A_i has size at most the sum of their finite cardinalities 1+2+...+2^(n-1), which is strictly below |A_n|=2^n.",
+          "precise_review_question": "Does the displayed finite union range over A_i for i<n, matching both B_n and the following sum?",
+          "location_needle": "SOURCE CORRECTION TA-STH-045"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

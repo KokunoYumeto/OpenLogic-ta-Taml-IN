@@ -1,0 +1,117 @@
+{
+  "batch_id": "TA-B272",
+  "units": [
+    {
+      "unit_id": "OLP-0596",
+      "source_sha256": "9ca7bb6570d323e7caebb910c975827a9411c1bbe2b4dabd6d41f9ebe2f04fa4",
+      "translation_sha256": "8e31500eb515cba5a146df6fcb03518b467e970224ed986e86710c0ac9f1f541",
+      "source_bytes": 3686,
+      "translation_bytes": 9561,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\delta\\leq\\alpha$"
+      ],
+      "extra_math": [
+        "$\\alpha\\leq\\delta$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "hartogs",
+        "include",
+        "logic",
+        "open",
+        "recursion",
+        "section",
+        "spine",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-042",
+          "unit_id": "OLP-0596",
+          "kind": "choice-recursion-empty-carrier-case",
+          "action": "Handled the empty set separately before evaluating the choice function at A in the recursion base.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The construction begins with g(0)=f(A), but if A is empty then f is defined only on nonempty subsets of A and f(A) is undefined. The empty set is already well-ordered.",
+          "chosen_treatment": "காலிக் கணம் நேரடியாக நன்கு வரிசைப்படும் என்று கூறி, மீள்வரையறையில் காலியற்ற கணத்தை மட்டும் கருதுகிறது.",
+          "alternatives_considered": "Silently assuming A nonempty in the theorem for all sets.",
+          "rationale": "The theorem includes the empty set; a separate trivial case makes the displayed base value defined in the remaining case.",
+          "precise_review_question": "Is f(A) used only after the empty-carrier case has been discharged?",
+          "location_needle": "SOURCE CORRECTION TA-STH-042"
+        },
+        {
+          "audit_id": "TA-STH-043",
+          "unit_id": "OLP-0596",
+          "kind": "choice-recursion-stop-direction",
+          "action": "Assigned the stop sentinel only at and after the first exhausted stage instead of overwriting all preceding stages.",
+          "expected_missing_math": [
+            "$\\delta\\leq\\alpha$"
+          ],
+          "expected_extra_math": [
+            "$\\alpha\\leq\\delta$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\delta\\leq\\alpha",
+              "to": "\\alpha\\leq\\delta",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source says that upon first exhaustion at alpha, g(delta)=A for every delta at most alpha. That overwrites the earlier selected values and destroys the displayed injectivity argument. The sentinel must apply from alpha onward.",
+          "chosen_treatment": "முதலில் நிற்கும் alpha நிலையிலிருந்து பின்னருள்ள delta குறிகளுக்கே நிரப்பு மதிப்பு A வழங்கப்படுகிறது; முன்னைய தேர்வுகள் பாதுகாக்கப்படுகின்றன.",
+          "alternatives_considered": "Retaining the reversed inequality or leaving the stop marker without any rigorous expansion.",
+          "rationale": "The recursion has chosen distinct elements at all stages below alpha; those values cannot be overwritten. A harmless fixed sentinel after exhaustion makes the class recursion total while the desired bijection is its pre-stop restriction.",
+          "precise_review_question": "Are all pre-stop values preserved and the sentinel confined to stages delta at least alpha?",
+          "location_needle": "SOURCE CORRECTION TA-STH-043"
+        },
+        {
+          "audit_id": "TA-STH-044",
+          "unit_id": "OLP-0596",
+          "kind": "choice-recursion-prestop-bijection-scope",
+          "action": "Scoped injectivity, range equality and the final bijection to the initial segment before the stop sentinel.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says g is injective and finally a bijection from an ordinal to A while also specifying a constant sentinel after exhaustion. The full class function is then not injective and its range also contains the sentinel A.",
+          "chosen_treatment": "ஒருமுகத்தன்மை, வீச்சு மற்றும் இறுதி இருபுறச் சார்பு ஆகியவற்றை நிறுத்துமுன் கிடைக்கும் தொடக்கத் துண்டுக்கே உரியதாகத் தெளிவுபடுத்துகிறது.",
+          "alternatives_considered": "Calling the post-stop total class function injective, or suppressing the stop extension without explaining the domain restriction.",
+          "rationale": "Before the first exhausted stage alpha, recursion chooses new elements of A; the restriction g|alpha is an injective surjection onto A and transports the ordinal well-order.",
+          "precise_review_question": "Does the final bijection refer precisely to the restriction before the first exhausted stage?",
+          "location_needle": "SOURCE CORRECTION TA-STH-044"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

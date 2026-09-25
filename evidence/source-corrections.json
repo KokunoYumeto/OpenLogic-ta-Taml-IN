@@ -6096,6 +6096,219 @@
       "rationale": "The beth function is increasing, with beth at the successor index strictly above card(A). The subsequent omega iteration reaches a beth fixed point, including when the seed itself is already fixed, and remains above card(A).",
       "precise_review_question": "Does the revised seed make card(A) strictly smaller than tau(A) even when card(A) was originally a beth fixed point?",
       "location_needle": "SOURCE CORRECTION TA-STH-038"
+    },
+    {
+      "audit_id": "TA-STH-039",
+      "unit_id": "OLP-0595",
+      "kind": "hartogs-order-carrier-subset",
+      "action": "Restored the carrier of a well-ordering to a subset of A, not a subset of its relation R.",
+      "expected_missing_math": ["$B\\subseteqR$"],
+      "expected_extra_math": ["$B\\subseteqA$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "B\\subseteqR", "to": "B\\subseteqA", "count": 1}
+      ],
+      "source_issue_or_choice": "The proof defines C using well-orderings of subsets B of A, but the transitivity paragraph later writes B subseteq R. R is a binary relation on B, so this reverses the intended carrier condition.",
+      "chosen_treatment": "மாறுநிலை நிறுவலில் ஒழுங்கமைவின் அடிக்கணம் A இன் துணைக்கணம் என்று சரிசெய்கிறது.",
+      "alternatives_considered": "Keeping the ill-typed carrier condition and relying only on the preceding definition of C.",
+      "rationale": "Every witness (B,R) in C has B subseteq A, and each initial segment of B is again a subset of A.",
+      "precise_review_question": "Does the transitivity step use the actual defining condition of C, B subseteq A?",
+      "location_needle": "SOURCE CORRECTION TA-STH-039"
+    },
+    {
+      "audit_id": "TA-STH-040",
+      "unit_id": "OLP-0595",
+      "kind": "hartogs-transported-order-binders",
+      "action": "Used two fresh ordinal variables and explicitly bounded the transported membership relation to the domain of f.",
+      "expected_missing_math": ["\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\alpha),f(\\beta)}\\inA\\timesA}{\\alpha\\in\\beta}.\\end{align*}"],
+      "expected_extra_math": ["\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\xi),f(\\eta)}\\inA\\timesA}{\\xi\\in\\eta\\in\\alpha}.\\end{align*}"],
+      "expected_missing_commands": ["\\alpha", "\\beta", "\\beta"],
+      "expected_extra_commands": ["\\in", "\\xi", "\\xi", "\\eta", "\\eta"],
+      "normalized_math_replacements": [
+        {"from": "\\Setabs{\\tuple{f(\\alpha),f(\\beta)}\\inA\\timesA}{\\alpha\\in\\beta}", "to": "\\Setabs{\\tuple{f(\\xi),f(\\eta)}\\inA\\timesA}{\\xi\\in\\eta\\in\\alpha}", "count": 1}
+      ],
+      "source_issue_or_choice": "After fixing an ordinal alpha as the domain of f, the relation comprehension reuses alpha as a varying index and does not state that its indices belong to dom(f). Read literally, f(alpha) is outside its domain.",
+      "chosen_treatment": "உறவின் மாறும் குறிகளாக xi, eta ஆகியவற்றை எடுத்து xi∈eta∈alpha என்ற ஆட்கள வரம்பை வெளிப்படையாகக் கூறுகிறது.",
+      "alternatives_considered": "Keeping the ambiguous reused alpha and inferring the domain restriction only from definedness of f.",
+      "rationale": "The injective f transports the membership well-order on the fixed ordinal alpha to its image B exactly by pairs (f(xi),f(eta)) with xi in eta in alpha.",
+      "precise_review_question": "Is R now a well-defined relation on ran(f) isomorphic to membership on the whole fixed ordinal alpha?",
+      "location_needle": "SOURCE CORRECTION TA-STH-040"
+    },
+    {
+      "audit_id": "TA-STH-041",
+      "unit_id": "OLP-0595",
+      "kind": "cardinal-sum-product-comparison-typing",
+      "action": "Replaced a nested equinumerosity expression between a proposition and M with the two intended equinumerosity claims for disjoint union and Cartesian product.",
+      "expected_missing_math": ["$\\cardeq{\\cardeq{A\\disjointsumB}{A\\timesB}}{M}$"],
+      "expected_extra_math": ["$\\cardeq{A\\disjointsumB}{M}$", "$\\cardeq{A\\timesB}{M}$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The closing example nests cardeq(A disjoint-sum B,A times B) as the first argument of another cardeq with M. The inner expression is a proposition, not a set whose size can be compared with M, and the intended AC statement concerns each operation separately.",
+      "chosen_treatment": "வெட்டாக் கூட்டுத்தொகையும் பெருக்கற்கணமும் ஒவ்வொன்றாக பெரிய கணம் M உடன் சமஎண்ணிக்கையுடையவை என்ற இரண்டு கூற்றுகளாகக் கூறுகிறது.",
+      "alternatives_considered": "Keeping the ill-typed nested expression or only claiming that sum and product are equinumerous to each other.",
+      "rationale": "When A and B are infinite and comparable under Choice, both their disjoint union and their product have the size of the larger carrier, as the referenced theorem states.",
+      "precise_review_question": "Are both sum and product separately compared with the larger set M, with no proposition passed as a set argument?",
+      "location_needle": "SOURCE CORRECTION TA-STH-041"
+    },
+    {
+      "audit_id": "TA-STH-042",
+      "unit_id": "OLP-0596",
+      "kind": "choice-recursion-empty-carrier-case",
+      "action": "Handled the empty set separately before evaluating the choice function at A in the recursion base.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The construction begins with g(0)=f(A), but if A is empty then f is defined only on nonempty subsets of A and f(A) is undefined. The empty set is already well-ordered.",
+      "chosen_treatment": "காலிக் கணம் நேரடியாக நன்கு வரிசைப்படும் என்று கூறி, மீள்வரையறையில் காலியற்ற கணத்தை மட்டும் கருதுகிறது.",
+      "alternatives_considered": "Silently assuming A nonempty in the theorem for all sets.",
+      "rationale": "The theorem includes the empty set; a separate trivial case makes the displayed base value defined in the remaining case.",
+      "precise_review_question": "Is f(A) used only after the empty-carrier case has been discharged?",
+      "location_needle": "SOURCE CORRECTION TA-STH-042"
+    },
+    {
+      "audit_id": "TA-STH-043",
+      "unit_id": "OLP-0596",
+      "kind": "choice-recursion-stop-direction",
+      "action": "Assigned the stop sentinel only at and after the first exhausted stage instead of overwriting all preceding stages.",
+      "expected_missing_math": ["$\\delta\\leq\\alpha$"],
+      "expected_extra_math": ["$\\alpha\\leq\\delta$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\delta\\leq\\alpha", "to": "\\alpha\\leq\\delta", "count": 1}
+      ],
+      "source_issue_or_choice": "The source says that upon first exhaustion at alpha, g(delta)=A for every delta at most alpha. That overwrites the earlier selected values and destroys the displayed injectivity argument. The sentinel must apply from alpha onward.",
+      "chosen_treatment": "முதலில் நிற்கும் alpha நிலையிலிருந்து பின்னருள்ள delta குறிகளுக்கே நிரப்பு மதிப்பு A வழங்கப்படுகிறது; முன்னைய தேர்வுகள் பாதுகாக்கப்படுகின்றன.",
+      "alternatives_considered": "Retaining the reversed inequality or leaving the stop marker without any rigorous expansion.",
+      "rationale": "The recursion has chosen distinct elements at all stages below alpha; those values cannot be overwritten. A harmless fixed sentinel after exhaustion makes the class recursion total while the desired bijection is its pre-stop restriction.",
+      "precise_review_question": "Are all pre-stop values preserved and the sentinel confined to stages delta at least alpha?",
+      "location_needle": "SOURCE CORRECTION TA-STH-043"
+    },
+    {
+      "audit_id": "TA-STH-044",
+      "unit_id": "OLP-0596",
+      "kind": "choice-recursion-prestop-bijection-scope",
+      "action": "Scoped injectivity, range equality and the final bijection to the initial segment before the stop sentinel.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source says g is injective and finally a bijection from an ordinal to A while also specifying a constant sentinel after exhaustion. The full class function is then not injective and its range also contains the sentinel A.",
+      "chosen_treatment": "ஒருமுகத்தன்மை, வீச்சு மற்றும் இறுதி இருபுறச் சார்பு ஆகியவற்றை நிறுத்துமுன் கிடைக்கும் தொடக்கத் துண்டுக்கே உரியதாகத் தெளிவுபடுத்துகிறது.",
+      "alternatives_considered": "Calling the post-stop total class function injective, or suppressing the stop extension without explaining the domain restriction.",
+      "rationale": "Before the first exhausted stage alpha, recursion chooses new elements of A; the restriction g|alpha is an injective surjection onto A and transports the ordinal well-order.",
+      "precise_review_question": "Does the final bijection refer precisely to the restriction before the first exhausted stage?",
+      "location_needle": "SOURCE CORRECTION TA-STH-044"
+    },
+    {
+      "audit_id": "TA-STH-045",
+      "unit_id": "OLP-0597",
+      "kind": "countable-choice-finite-union-index",
+      "action": "Changed the finite-union summand from the constant A_n to the indexed A_i in Dedekind's cardinal bound.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\card{\\bigcup_{i<n}A_n}", "to": "\\card{\\bigcup_{i<n}A_i}", "count": 1}
+      ],
+      "source_issue_or_choice": "The displayed bound writes union over i<n of A_n, leaving i unused. Its right side sums A_0 through A_(n-1), and the preceding definition of B_n subtracts exactly those earlier sets.",
+      "chosen_treatment": "முடிவுறு ஒன்றிப்பின் உறுப்புக் குறியை A_n இலிருந்து A_i ஆகச் சரிசெய்து, வலப்புறக் கூட்டலுடன் ஒத்திசைக்கிறது.",
+      "alternatives_considered": "Retaining the constant A_n union, which makes the stated strict inequality false.",
+      "rationale": "The union of earlier A_i has size at most the sum of their finite cardinalities 1+2+...+2^(n-1), which is strictly below |A_n|=2^n.",
+      "precise_review_question": "Does the displayed finite union range over A_i for i<n, matching both B_n and the following sum?",
+      "location_needle": "SOURCE CORRECTION TA-STH-045"
+    },
+    {
+      "audit_id": "TA-STH-046",
+      "unit_id": "OLP-0599",
+      "kind": "tangent-bijection-parenthesis-balance",
+      "action": "Removed the superfluous closing parenthesis in the tangent map from the open unit interval to the reals.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {"from": "\\tan(\\pi(r-\\nicefrac{1}{2})))", "to": "\\tan(\\pi(r-\\nicefrac{1}{2}))", "count": 1}
+      ],
+      "source_issue_or_choice": "The source prints tan(pi(r-1/2))) with three closing parentheses for two openings. The intended tangent bijection is otherwise unambiguous.",
+      "chosen_treatment": "டேன்ஜென்ட் மற்றும் பை வாதத்தின் அடைப்புகளைச் சரியாக இரண்டாக முடிக்கிறது.",
+      "alternatives_considered": "Keeping a syntactically unbalanced displayed function in the Tamil explanation.",
+      "rationale": "The standard map r↦tan(pi(r-1/2)) sends (0,1) bijectively onto the real line and requires exactly two closing parentheses.",
+      "precise_review_question": "Is the example the balanced tangent map from (0,1) onto the reals?",
+      "location_needle": "SOURCE CORRECTION TA-STH-046"
+    },
+    {
+      "audit_id": "TA-STH-047",
+      "unit_id": "OLP-0600",
+      "kind": "rational-rotation-subgroup-closure",
+      "action": "Defined the rotation subgroup by rational multiples of pi rather than rational radian values, and clarified closure and the zero-angle inverse.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source calls angles in [0,2pi) with rational radian values a group. For rational r>0, the inverse angle 2pi-r is generally irrational, and sums reduced modulo 2pi need not be rational. The subsequent half-group doubling proof also requires closure modulo 2pi.",
+      "chosen_treatment": "கோணங்களை பையின் பகுத்தெண் மடங்குகளாக வரையறுத்து, முழுச் சுற்று அளவில் கோப்பு மூடப்பட்டிருப்பதையும் பூச்சியச் சுழற்சியின் எதிருறுப்பையும் தெளிவுபடுத்துகிறது.",
+      "alternatives_considered": "Retaining rational radian values while claiming nonexistent inverse closure; allowing all real rotations, which would lose countability.",
+      "rationale": "Rational multiples of pi modulo 2pi form a countable abelian subgroup; each half specified by [0,pi) and [pi,2pi) maps onto the whole under squaring.",
+      "precise_review_question": "Is the selected rotation set countable, closed under composition and inverses, and compatible with the half-group doubling lemma?",
+      "location_needle": "SOURCE CORRECTION TA-STH-047"
+    },
+    {
+      "audit_id": "TA-STH-048",
+      "unit_id": "OLP-0600",
+      "kind": "vitali-partition-defined-subgroup-index",
+      "action": "Used the defined first rotation half instead of an undeclared R_1 in the D_1 partition proof.",
+      "expected_missing_math": ["$\\rho\\inR_1$"],
+      "expected_extra_math": ["$\\rho\\in\\rotationsgroup_1$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\rotationsgroup"],
+      "normalized_math_replacements": [
+        {"from": "\\rho\\inR_1", "to": "\\rho\\in\\rotationsgroup_1", "count": 1}
+      ],
+      "source_issue_or_choice": "The source introduces rotationsgroup_1 and rotationsgroup_2, but then indexes the D_1 pieces by R_1, which has no declaration in this proof.",
+      "chosen_treatment": "D_1 இன் துண்டுகளை முன் வரையறுத்த முதல் சுழற்சிப் பாதியின் உறுப்புகளால் குறியிடுகிறது.",
+      "alternatives_considered": "Treating R_1 as silently synonymous with rotationsgroup_1.",
+      "rationale": "D_1 is by definition the union over rotationsgroup_1 of rho(C); its countable partition has exactly those indices.",
+      "precise_review_question": "Does the partition proof use precisely the declared rotationsgroup_1 index set?",
+      "location_needle": "SOURCE CORRECTION TA-STH-048"
+    },
+    {
+      "audit_id": "TA-STH-049",
+      "unit_id": "OLP-0600",
+      "kind": "vitali-measure-rotation-index-type",
+      "action": "Quantified rho over the rotation group, not over the representative point set C, in both congruence and equal-measure claims.",
+      "expected_missing_math": ["$\\rho\\inC$", "$\\rho\\inC$"],
+      "expected_extra_math": ["$\\rho\\in\\rotationsgroup$", "$\\rho\\in\\rotationsgroup$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\rotationsgroup", "\\rotationsgroup"],
+      "normalized_math_replacements": [
+        {"from": "\\rho\\inC", "to": "\\rho\\in\\rotationsgroup", "count": 2}
+      ],
+      "source_issue_or_choice": "The final proof twice writes rho in C, although C is a set of points and rho is applied as a rotation. All pieces in the disjoint cover are indexed by the rotation group.",
+      "chosen_treatment": "இரு இடங்களிலும் rho சுழற்சிக் குழுவின் உறுப்பு என்று வரம்பிடுகிறது.",
+      "alternatives_considered": "Keeping the type error and informally reading a point as a rotation.",
+      "rationale": "For any rotation rho, rho(C) is congruent to sigma(C); invariance gives the common measure used in the countable sum.",
+      "precise_review_question": "Do both congruence and equal-measure statements quantify over the same rotation index set as the final cover?",
+      "location_needle": "SOURCE CORRECTION TA-STH-049"
+    },
+    {
+      "audit_id": "TA-STH-050",
+      "unit_id": "OLP-0600",
+      "kind": "vitali-measure-domain-rotation-invariance",
+      "action": "Made the measurable domain rotation-invariant so measurability of one rotated representative piece implies measurability of every congruent piece.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The source assumes a measure on some sigma-algebra and equality of measures for congruent measurable sets, then infers that every rotated C is measurable from one measurable rotated C. Equality on pairs already in the domain does not itself make the domain rotation-invariant.",
+      "chosen_treatment": "அளவிடத்தக்க கணங்களின் களம் கருதப்படும் சுழற்சிகளின்கீழ் மூடப்பட்டிருக்க வேண்டும் என்ற நிபந்தனையை வெளிப்படையாகச் சேர்க்கிறது; அளவிட முடியாதது என்பதன் பொருளையும் இம்மாறாமைச் சூழலுக்குள் வரம்பிடுகிறது.",
+      "alternatives_considered": "Treating invariance of the numerical value as silently implying closure of the sigma-algebra domain.",
+      "rationale": "If one rotated piece belongs to a rotation-stable measurable domain, all its rotations do; then equal measures and countable additivity yield the displayed contradiction.",
+      "precise_review_question": "Does the corollary state the domain condition needed to transfer measurability among all rotation images?",
+      "location_needle": "SOURCE CORRECTION TA-STH-050"
     }
   ],
   "by_unit": {
@@ -6295,6 +6508,11 @@
     "OLP-0588": ["TA-STH-032"],
     "OLP-0589": ["TA-STH-033", "TA-STH-034", "TA-STH-035"],
     "OLP-0590": ["TA-STH-036", "TA-STH-037"],
-    "OLP-0591": ["TA-STH-038"]
+    "OLP-0591": ["TA-STH-038"],
+    "OLP-0595": ["TA-STH-039", "TA-STH-040", "TA-STH-041"],
+    "OLP-0596": ["TA-STH-042", "TA-STH-043", "TA-STH-044"],
+    "OLP-0597": ["TA-STH-045"],
+    "OLP-0599": ["TA-STH-046"],
+    "OLP-0600": ["TA-STH-047", "TA-STH-048", "TA-STH-049", "TA-STH-050"]
   }
 }

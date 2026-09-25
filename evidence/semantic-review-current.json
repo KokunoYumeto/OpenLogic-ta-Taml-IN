@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-25T03:49:57.633526+00:00",
+  "date_utc": "2026-09-25T04:25:35.118158+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -2942,6 +2942,51 @@
       "unit_id": "OLP-0591",
       "source_sha256": "cc111d7d7472b0e7ef940196977faef0f1b2867feaab0a74843e9d39077f5074",
       "translation_sha256": "98a3fbece15c0d78ec34847e0afdfda3fbcda2a800a74eb983cf1324bb2b0142"
+    },
+    {
+      "unit_id": "OLP-0592",
+      "source_sha256": "eba6992abe80bc796682f62b5df71990fba3f5595c6d067f9cbc26d776c6499b",
+      "translation_sha256": "c2ebbf045c210c308a0760fa891dca62b27ef5b5cc54512be72193f66a0258f4"
+    },
+    {
+      "unit_id": "OLP-0593",
+      "source_sha256": "bf4d57a0cb3263fa3b2cc386ba572017442f24e1016c995a81474e43ffaa7143",
+      "translation_sha256": "ffaf225e7538f1c6f3055dbba33d2d153c4f965df512758ef4095af30f1e394e"
+    },
+    {
+      "unit_id": "OLP-0594",
+      "source_sha256": "2cf102fa76c9cb3c1080901967626539d8da1aa6dda38dddbbc743ae5e883579",
+      "translation_sha256": "d65209a7b064283ca8a700a2a751114f9cb7c559f3539713b3b03d05544f126d"
+    },
+    {
+      "unit_id": "OLP-0595",
+      "source_sha256": "ffe4c3f0a800bd7893a39e68d109ca1eb9662b5f29cda42393cbc5777cf557c4",
+      "translation_sha256": "7895c511b1215cf6493562676b1c02227f9181bd9b845d77008cf9b0424d77da"
+    },
+    {
+      "unit_id": "OLP-0596",
+      "source_sha256": "9ca7bb6570d323e7caebb910c975827a9411c1bbe2b4dabd6d41f9ebe2f04fa4",
+      "translation_sha256": "8e31500eb515cba5a146df6fcb03518b467e970224ed986e86710c0ac9f1f541"
+    },
+    {
+      "unit_id": "OLP-0597",
+      "source_sha256": "37ed80e497f07f2c96db1a56b8573d90a6d8421e119f0bc7a2865fa2f534b994",
+      "translation_sha256": "7ad4707814a51c28ee51ca3249ebaaa989fa6855506236c79c6961cb16e5637e"
+    },
+    {
+      "unit_id": "OLP-0598",
+      "source_sha256": "4ad40cf83f5d5fe896183b2bdeb7c9cb2d3879aeb4b1bb4192607241e95c4ed8",
+      "translation_sha256": "9e8fe6169d6c7cde40888e8bdb4d5858eab7db7766689ed00f419de42cbde827"
+    },
+    {
+      "unit_id": "OLP-0599",
+      "source_sha256": "51f2d8e142b4bccd21bc0aa06330ecff874360d32005b34c415955eaaa24943a",
+      "translation_sha256": "b8fcb2eb4952103b86f4a2d132407d64df397e139c8d5260fbd40c3c07cf0bd1"
+    },
+    {
+      "unit_id": "OLP-0600",
+      "source_sha256": "e9ae48138df4af723de80b69d70d43e2a77f3cc9c0ec680eded3a333c0892b32",
+      "translation_sha256": "33d84c4bc7d35a725924f2943bd105065b4aa1aea778bfaddd931d0e02ef828a"
     }
   ],
   "samples": [
@@ -8005,6 +8050,258 @@
       "assessment": "TA-STH-038 repairs the stationary-seed counterexample and secures strict growth of W.",
       "translation_segment_sha256": "38cd40d211849a72f27e8b8c6fd4632db1dc6a35ca7aa334e5c89ed1365f5a52",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0592-S01",
+      "reverse_paraphrase": "The Choice chapter imports introduction, Tarski–Scott, Hartogs, Well-Ordering, Countable Choice, intrinsic justification, Banach–Tarski and Vitali in that order.",
+      "assessment": "All eight source imports and the chapter hook remain.",
+      "translation_segment_sha256": "b69ff2b2b06705ebb40de9cfb267c92ccbbaea72d8d45627a29db84468b6af3c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0593-S01",
+      "reverse_paraphrase": "Cardinal theory as least ordinals presumes Well-Ordering; this chapter asks how equivalent Choice is used and justified.",
+      "assessment": "The cardinal chapter-range reference and distinct use/justification questions remain.",
+      "translation_segment_sha256": "456b2ba65d4efb3a19ac21322cf84467bff0ff0badde0d63f06af5fb49a7756a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0594-S01",
+      "reverse_paraphrase": "A naive cardinal as the class of all equipotent sets has no set rank; Tarski–Scott avoids this by selecting least-rank representatives.",
+      "assessment": "The singleton-at-every-stage counterexample and Frege comparison remain.",
+      "translation_segment_sha256": "84c1f43edca98c5711dad9216400d81e52aac76dc5381b70f220bf10943c8d83",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0594-S02",
+      "reverse_paraphrase": "For each formula, Tarski–Scott collects all least-rank witnesses, or the empty set if none exist; rank existence and Separation make the class a set in ZF.",
+      "assessment": "The ordinal-minimality test and V_(alpha+1) Separation expression remain.",
+      "translation_segment_sha256": "55b29d17eb0b16c56592fb79041ab5ca5dd2f55d3947cec00f088cd321c2799d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0594-S03",
+      "reverse_paraphrase": "Tarski–Scott cardinals and order types need no Well-Ordering axiom, yet preserve the cited cardinal behavior in ZF.",
+      "assessment": "Both ts-cardinality and tso order-type equations and the Potter source attribution remain.",
+      "translation_segment_sha256": "348af977ecf515aeda7b788ad7456d3767f1ad32da20058bb2b8dfbb25738e15",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0595-S01",
+      "reverse_paraphrase": "Hartogs forms the set of order types of well-orderings of subsets of A; this transitive set is an ordinal that cannot inject into A.",
+      "assessment": "TA-STH-039 restores B subset A, while TA-STH-040 transports membership with typed ordinal indices.",
+      "translation_segment_sha256": "171b7cdec508c0d72ac15b348b66699c3954e5f148961dd17d4be05ccc8c4890",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0595-S02",
+      "reverse_paraphrase": "Over ZF, Well-Ordering is equivalent to comparability by injection of every pair of sets.",
+      "assessment": "The two labeled clauses remain distinct.",
+      "translation_segment_sha256": "3cb6061c4f84e13a409f57a48d0ba7ae250f258e8fb09b2ba672aeb8a7117753",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0595-S03",
+      "reverse_paraphrase": "Well-orderings of A and B become ordinal representatives, whose containment comparison yields an injection in one direction.",
+      "assessment": "Both isomorphisms and the source composition orientation remain.",
+      "translation_segment_sha256": "71cad98c94c5cc62176ec038f3e4f345dcb823e46e35740cfe4b1fe2b1bbc217",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0595-S04",
+      "reverse_paraphrase": "Comparability plus Hartogs makes A inject into an ordinal, and pulling back ordinal membership well-orders A.",
+      "assessment": "The direction uses the no-injection Hartogs ordinal, not a new cardinal assignment.",
+      "translation_segment_sha256": "017e22721d8ffaa5191aab0f6dc904dc4bb61858210f9c2bf010211121ed6bd7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0595-S05",
+      "reverse_paraphrase": "If Well-Ordering fails, some set sizes are incomparable, so a larger of two infinite carriers need not exist.",
+      "assessment": "TA-STH-041 replaces the ill-typed nested equinumerosity with separate sum/product claims.",
+      "translation_segment_sha256": "2ffb3f9da4544966f6d0445e57bced2ef696d2ef15b0d4dcdbd33ba5013c5eef",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0596-S01",
+      "reverse_paraphrase": "A choice function selects an element from each nonempty member of a set; Cantor and Zermelo historical claims are retained as attributed source text.",
+      "assessment": "The domain excludes the empty set, while the axiom asserts a function for every set.",
+      "translation_segment_sha256": "59c00dedb97a6b315a664053ecfd4388e43989897d6ed7db80952f21ffa483e4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0596-S02",
+      "reverse_paraphrase": "Well-Ordering supplies a choice function by taking the least member of each nonempty set under a well-order of their union.",
+      "assessment": "The left-to-right direction and Union dependency remain.",
+      "translation_segment_sha256": "12dcb64f65a7d8097c4c6b377bbef6292ff56162d37d8d0fb25feba90ab1e5f7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0596-S03",
+      "reverse_paraphrase": "Choice supplies a function on nonempty subsets of A for a transfinite enumeration; the empty A case is discharged before f(A), and the stop sentinel applies only after exhaustion.",
+      "assessment": "TA-STH-042 and TA-STH-043 repair the base and stop-direction defects.",
+      "translation_segment_sha256": "82f6a36b0eded13c045c75ad2dc79c6d24338886d05e438346a382e86ca457ea",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0596-S04",
+      "reverse_paraphrase": "Before stopping, each newly chosen value is outside the earlier image, so trichotomy makes the pre-stop segment injective.",
+      "assessment": "TA-STH-044 scopes injectivity to the segment that does not contain repeated sentinels.",
+      "translation_segment_sha256": "efeaad1f136a65946c755019c8274bbf4d8dbe43f3d4ee0a7733b19b94d45186",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0596-S05",
+      "reverse_paraphrase": "Hartogs forces the enumeration to stop, and its pre-stop restriction is a bijection from an ordinal onto A.",
+      "assessment": "The final well-ordering is transported through the restricted bijection, not the constant post-stop class function.",
+      "translation_segment_sha256": "d1559cbf96b15be8b922a8853caa8279b07e61c683ba1a9d628cfed9c5d5d331",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0596-S06",
+      "reverse_paraphrase": "Well-Ordering and Choice stand or fall together, leaving their philosophical acceptability open.",
+      "assessment": "The source transition preserves the question rather than treating equivalence as justification.",
+      "translation_segment_sha256": "a82c46d3d15e3238a85c821b4950a31932b46e33fcfc4351acbb781bb0180970",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0597-S01",
+      "reverse_paraphrase": "Finite sets have choice functions without Choice, while Countable Choice asserts one for every countable set.",
+      "assessment": "Finite selection, empty-member exclusion, and the first example of finite/Dedekind-infinite comparison remain.",
+      "translation_segment_sha256": "fcb8c281c17f24401b9028bc87dc63c271b67335a9b7740bb4aefd9633df9ea8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0597-S02",
+      "reverse_paraphrase": "Dedekind selects finite subsets of sizes 2^n; their fresh differences are nonempty because earlier sizes sum to 2^n−1.",
+      "assessment": "TA-STH-045 changes the bound to the union of A_i for i<n.",
+      "translation_segment_sha256": "170daf85f3d8ea796248d636c2872f6b7d379d5045fc3f899225801edd2abe69",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0597-S03",
+      "reverse_paraphrase": "Dedekind’s proof uses Countable Choice once to pick the subset sequence and again to pick one point from each disjoint difference.",
+      "assessment": "The Cohen model attribution and possible incomparability with omega remain.",
+      "translation_segment_sha256": "940ee68f7e0f515081c766186d02a6e5d8e213fcde4e2a053f95b68a8638b13b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0597-S04",
+      "reverse_paraphrase": "A countable union of countable sets is countable under Countable Choice, used to choose a surjection from omega onto each nonempty component.",
+      "assessment": "The coordinate map from omega squared and its zig-zag reference remain.",
+      "translation_segment_sha256": "1d5777fa1b6480235e999a040c03597aa988eebf0c68a2a6edf60a0129e4cd1f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0597-S05",
+      "reverse_paraphrase": "The proof again needs a chosen sequence of functions; Russell’s boots-and-socks analogy and the Feferman–Levy model illustrate failure without Choice.",
+      "assessment": "The quotation and all source citations remain attributed, with socks distinct from sided boots.",
+      "translation_segment_sha256": "47cdaa41ae0d3b42dac72271a37ed020afcf6c4ecf80c6dea9f2f6a4ba074f55",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0597-S06",
+      "reverse_paraphrase": "A one-minute supertask imagines countably many choices but cannot justify arbitrary ordinal-length Choice.",
+      "assessment": "The geometric time schedule and the metaphysical limitation remain.",
+      "translation_segment_sha256": "5e1fdc89ba8ee0ea66317668a4dd46563c49519a9e905e1f24ad5c4b79cbbeb6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0598-S01",
+      "reverse_paraphrase": "The intrinsic justification attempts to derive Choice from a stage-accumulation principle that forms every possible collection of earlier available sets at a stage.",
+      "assessment": "The source presents this as an attempted gloss, not as a formal ZF proof.",
+      "translation_segment_sha256": "06facb14c1af899649a127964b9101d47294e3b2d3d73e093e7677d6d8d7244b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0598-S02",
+      "reverse_paraphrase": "Choice is equivalent to a choice set meeting each member of a disjoint nonempty family in exactly one point.",
+      "assessment": "The equivalence theorem and exercise reference remain.",
+      "translation_segment_sha256": "dc33c4537ab375e1cad38209aae38b7a71505a855c49e8b82b76dddc36618e04",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0598-S03",
+      "reverse_paraphrase": "The range of a choice function is a choice set for a disjoint family; the stage principle is then offered as an intrinsic motivation for its existence.",
+      "assessment": "The union A availability and source Potter reference remain.",
+      "translation_segment_sha256": "f80d66b5127647338bb35e413e1a5334545c5d13f7916ee60b541c5ed5a889ca",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0599-S01",
+      "reverse_paraphrase": "Banach–Tarski in ZFC decomposes a ball into finitely many pieces and rigidly reassembles two copies.",
+      "assessment": "The extrinsic argument and historical result are attributed without claiming an independent original reading.",
+      "translation_segment_sha256": "37ece75fdbc6b0bb7807dc037ce3cfc48efbcb92eb2ac79e9e181004bfe6fe73",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0599-S02",
+      "reverse_paraphrase": "The apparent volume doubling is contrasted with volume-preserving rigid motions, with a stronger pea-to-Big-Ben illustration.",
+      "assessment": "The distinction between ZF alone and weaker-than-Choice sufficient principles remains.",
+      "translation_segment_sha256": "e1c641d1c635bcd2f49a1e16276147395c5cf33971a6e8b7041abd4b9e57ff94",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0599-S03",
+      "reverse_paraphrase": "Line-to-square and space-filling comparisons do not require Choice; a tangent map bijects the open unit interval with the reals.",
+      "assessment": "TA-STH-046 balances the tangent formula while preserving all three examples and their references.",
+      "translation_segment_sha256": "2b1d2038d897b97b219b01525b9d6cbef76ee9bd0683af6dc4de7fbba50bd585",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0599-S04",
+      "reverse_paraphrase": "Not every piece in the finite decomposition can be measurable, so their individual volumes cannot be added to contradict rigid-motion invariance.",
+      "assessment": "The five-piece attribution and stage-accumulation reflection remain.",
+      "translation_segment_sha256": "75a25c307ce714f415598eca4d8cbed64508f603e370fd5864aa738560581d44",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0599-S05",
+      "reverse_paraphrase": "The closing two-copy Banach–Tarski word joke reflects the paradoxical duplication.",
+      "assessment": "The question-and-answer format remains in Tamil.",
+      "translation_segment_sha256": "855c52f90e911afdb808df12a1dcf9c93388ae81aa9af6c3315d1da168b3b9f5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0600-S01",
+      "reverse_paraphrase": "Vitali’s circle paradox uses countably many pieces, contrasting with finite-piece Banach–Tarski, and traces to an unmeasurable-set construction.",
+      "assessment": "The Weston quotation is translated from the frozen source with attribution.",
+      "translation_segment_sha256": "d009a29a2d030e238ff28b4828abf81ca0d4074589453bd46bc3566e8016373e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0600-S02",
+      "reverse_paraphrase": "Rotations by rational multiples of pi modulo a full turn form a countable abelian group; squaring either half covers the whole group.",
+      "assessment": "TA-STH-047 fixes closure under inverses and composition without changing the formal group labels.",
+      "translation_segment_sha256": "39669e42e28e6ef031a63ae8003a332a31eb49175c80af0da512931103d5be0e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0600-S03",
+      "reverse_paraphrase": "Choice picks one point from each rational-rotation orbit; all rotated representative sets cover the unit circle without overlap.",
+      "assessment": "The group equivalence relation, noncountable-choice footnote, cover and freeness proof remain.",
+      "translation_segment_sha256": "af1eb7c9db6988fca63808555ec31240dbd1bd03b97a6bda8b5e7325f61edc66",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0600-S04",
+      "reverse_paraphrase": "The two rotation halves partition the circle into countably many pieces, each half of which can be re-rotated to cover one copy.",
+      "assessment": "TA-STH-048 replaces undeclared R_1 with the defined first rotation half.",
+      "translation_segment_sha256": "d9568f21886b54e56cb3d788107e176cf355d3b1c688fd60d844b3602feeba24",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0600-S05",
+      "reverse_paraphrase": "Banach–Tarski repeats the Choice-on-orbits strategy with a free rotation group in three dimensions and a finite paradoxical decomposition.",
+      "assessment": "The Hausdorff statement, Weston attribution, finite versus countable contrast and joke qualification remain.",
+      "translation_segment_sha256": "dcb8e64e40f7f3271d19856d21b9e234bcdedb70029d9a21a34170a26cd4e0ce",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0600-S06",
+      "reverse_paraphrase": "Rotation-invariant measure cannot assign all countably many congruent orbit pieces one common nonnegative size summing to one.",
+      "assessment": "TA-STH-049 fixes both rotation indices, and TA-STH-050 states the measurable-domain closure needed for the contradiction.",
+      "translation_segment_sha256": "4e994bc7bbdf8cb606810f12d8b252da3d379d5b0eb319ee3b8e7d071e93a8ce",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -8917,11 +9214,31 @@
     {
       "unit_id": "OLP-0591",
       "issue": "The final beth iteration can be stationary when card(A) is already a fixed point, contradicting the claimed strict bound and injectivity of W. Tamil seeds the iteration above card(A) under TA-STH-038."
+    },
+    {
+      "unit_id": "OLP-0595",
+      "issue": "The Hartogs proof places the well-order carrier inside its relation, reuses the fixed ordinal as a variable outside its own domain, and nests an equinumerosity proposition where a set is required. Tamil repairs the carrier, transported order and separate sum/product claims under TA-STH-039 through TA-STH-041."
+    },
+    {
+      "unit_id": "OLP-0596",
+      "issue": "The well-ordering construction evaluates its choice function on the empty set, reverses the stop-stage inequality, and calls the total post-stop function injective. Tamil handles the empty case and scopes the bijection to the pre-stop restriction under TA-STH-042 through TA-STH-044."
+    },
+    {
+      "unit_id": "OLP-0597",
+      "issue": "The Dedekind argument indexes a finite union by i but repeats A_n as its summand. Tamil uses A_i under TA-STH-045."
+    },
+    {
+      "unit_id": "OLP-0599",
+      "issue": "The tangent-map example has one extra closing parenthesis. Tamil balances the expression under TA-STH-046."
+    },
+    {
+      "unit_id": "OLP-0600",
+      "issue": "The circle proof calls rational-radian rotations a group although they are not closed modulo 2pi, uses an undefined R_1 and point-set indices for rotations, and transfers measurability without a rotation-stable domain. Tamil repairs these under TA-STH-047 through TA-STH-050."
     }
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "588 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 134 frozen units still require completion.",
+  "remaining": "597 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 125 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 12,
     "distinct_unit_count": 248,
@@ -9927,6 +10244,44 @@
         "currying_and_positive_exponent_repairs": true,
         "aleph_beth_and_continuum_hypotheses": true,
         "fixed_points_stage_width_and_strict_seed": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0592",
+        "OLP-0593",
+        "OLP-0594",
+        "OLP-0595",
+        "OLP-0596",
+        "OLP-0597",
+        "OLP-0598",
+        "OLP-0599",
+        "OLP-0600"
+      ],
+      "correction_ids": [
+        "TA-STH-039",
+        "TA-STH-040",
+        "TA-STH-041",
+        "TA-STH-042",
+        "TA-STH-043",
+        "TA-STH-044",
+        "TA-STH-045",
+        "TA-STH-046",
+        "TA-STH-047",
+        "TA-STH-048",
+        "TA-STH-049",
+        "TA-STH-050"
+      ],
+      "status": "pass",
+      "checks": {
+        "eight_sections_in_frozen_order": true,
+        "tarski_scott_least_rank_and_ordinal_variant": true,
+        "hartogs_carrier_relation_and_typed_comparison_repairs": true,
+        "well_ordering_empty_and_prestop_scope": true,
+        "countable_choice_twice_and_indexed_union": true,
+        "intrinsic_stage_choice_set": true,
+        "banach_measure_and_balanced_tangent": true,
+        "vitali_countable_group_and_measure_repairs": true
       }
     }
   ]

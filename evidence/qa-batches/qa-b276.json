@@ -1,0 +1,160 @@
+{
+  "batch_id": "TA-B276",
+  "units": [
+    {
+      "unit_id": "OLP-0600",
+      "source_sha256": "e9ae48138df4af723de80b69d70d43e2a77f3cc9c0ec680eded3a333c0892b32",
+      "translation_sha256": "33d84c4bc7d35a725924f2943bd105065b4aa1aea778bfaddd931d0e02ef828a",
+      "source_bytes": 12889,
+      "translation_bytes": 28831,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\rho\\inR_1$",
+        "$\\rho\\inC$",
+        "$\\rho\\inC$"
+      ],
+      "extra_math": [
+        "$\\rho\\in\\rotationsgroup$",
+        "$\\rho\\in\\rotationsgroup$",
+        "$\\rho\\in\\rotationsgroup_1$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Theorem",
+        "align",
+        "arithmetic",
+        "banach",
+        "card",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "simp"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-047",
+          "unit_id": "OLP-0600",
+          "kind": "rational-rotation-subgroup-closure",
+          "action": "Defined the rotation subgroup by rational multiples of pi rather than rational radian values, and clarified closure and the zero-angle inverse.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source calls angles in [0,2pi) with rational radian values a group. For rational r>0, the inverse angle 2pi-r is generally irrational, and sums reduced modulo 2pi need not be rational. The subsequent half-group doubling proof also requires closure modulo 2pi.",
+          "chosen_treatment": "கோணங்களை பையின் பகுத்தெண் மடங்குகளாக வரையறுத்து, முழுச் சுற்று அளவில் கோப்பு மூடப்பட்டிருப்பதையும் பூச்சியச் சுழற்சியின் எதிருறுப்பையும் தெளிவுபடுத்துகிறது.",
+          "alternatives_considered": "Retaining rational radian values while claiming nonexistent inverse closure; allowing all real rotations, which would lose countability.",
+          "rationale": "Rational multiples of pi modulo 2pi form a countable abelian subgroup; each half specified by [0,pi) and [pi,2pi) maps onto the whole under squaring.",
+          "precise_review_question": "Is the selected rotation set countable, closed under composition and inverses, and compatible with the half-group doubling lemma?",
+          "location_needle": "SOURCE CORRECTION TA-STH-047"
+        },
+        {
+          "audit_id": "TA-STH-048",
+          "unit_id": "OLP-0600",
+          "kind": "vitali-partition-defined-subgroup-index",
+          "action": "Used the defined first rotation half instead of an undeclared R_1 in the D_1 partition proof.",
+          "expected_missing_math": [
+            "$\\rho\\inR_1$"
+          ],
+          "expected_extra_math": [
+            "$\\rho\\in\\rotationsgroup_1$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\rotationsgroup"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\rho\\inR_1",
+              "to": "\\rho\\in\\rotationsgroup_1",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source introduces rotationsgroup_1 and rotationsgroup_2, but then indexes the D_1 pieces by R_1, which has no declaration in this proof.",
+          "chosen_treatment": "D_1 இன் துண்டுகளை முன் வரையறுத்த முதல் சுழற்சிப் பாதியின் உறுப்புகளால் குறியிடுகிறது.",
+          "alternatives_considered": "Treating R_1 as silently synonymous with rotationsgroup_1.",
+          "rationale": "D_1 is by definition the union over rotationsgroup_1 of rho(C); its countable partition has exactly those indices.",
+          "precise_review_question": "Does the partition proof use precisely the declared rotationsgroup_1 index set?",
+          "location_needle": "SOURCE CORRECTION TA-STH-048"
+        },
+        {
+          "audit_id": "TA-STH-049",
+          "unit_id": "OLP-0600",
+          "kind": "vitali-measure-rotation-index-type",
+          "action": "Quantified rho over the rotation group, not over the representative point set C, in both congruence and equal-measure claims.",
+          "expected_missing_math": [
+            "$\\rho\\inC$",
+            "$\\rho\\inC$"
+          ],
+          "expected_extra_math": [
+            "$\\rho\\in\\rotationsgroup$",
+            "$\\rho\\in\\rotationsgroup$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\rotationsgroup",
+            "\\rotationsgroup"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\rho\\inC",
+              "to": "\\rho\\in\\rotationsgroup",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "The final proof twice writes rho in C, although C is a set of points and rho is applied as a rotation. All pieces in the disjoint cover are indexed by the rotation group.",
+          "chosen_treatment": "இரு இடங்களிலும் rho சுழற்சிக் குழுவின் உறுப்பு என்று வரம்பிடுகிறது.",
+          "alternatives_considered": "Keeping the type error and informally reading a point as a rotation.",
+          "rationale": "For any rotation rho, rho(C) is congruent to sigma(C); invariance gives the common measure used in the countable sum.",
+          "precise_review_question": "Do both congruence and equal-measure statements quantify over the same rotation index set as the final cover?",
+          "location_needle": "SOURCE CORRECTION TA-STH-049"
+        },
+        {
+          "audit_id": "TA-STH-050",
+          "unit_id": "OLP-0600",
+          "kind": "vitali-measure-domain-rotation-invariance",
+          "action": "Made the measurable domain rotation-invariant so measurability of one rotated representative piece implies measurability of every congruent piece.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source assumes a measure on some sigma-algebra and equality of measures for congruent measurable sets, then infers that every rotated C is measurable from one measurable rotated C. Equality on pairs already in the domain does not itself make the domain rotation-invariant.",
+          "chosen_treatment": "அளவிடத்தக்க கணங்களின் களம் கருதப்படும் சுழற்சிகளின்கீழ் மூடப்பட்டிருக்க வேண்டும் என்ற நிபந்தனையை வெளிப்படையாகச் சேர்க்கிறது; அளவிட முடியாதது என்பதன் பொருளையும் இம்மாறாமைச் சூழலுக்குள் வரம்பிடுகிறது.",
+          "alternatives_considered": "Treating invariance of the numerical value as silently implying closure of the sigma-algebra domain.",
+          "rationale": "If one rotated piece belongs to a rotation-stable measurable domain, all its rotations do; then equal measures and countable additivity yield the displayed contradiction.",
+          "precise_review_question": "Does the corollary state the domain condition needed to transfer measurability among all rotation images?",
+          "location_needle": "SOURCE CORRECTION TA-STH-050"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\rotationsgroup",
+        "\\rotationsgroup",
+        "\\rotationsgroup"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

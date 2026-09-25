@@ -1,22 +1,22 @@
 {
   "schema": "openlogic-tamil-checkpoint/4",
-  "date_utc": "2026-09-25T03:55:32.398874+00:00",
+  "date_utc": "2026-09-25T04:28:31.158923+00:00",
   "previous_goal_turn_classification": "progress",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified": 722,
   "source_total": 722,
-  "drafted_units": 588,
-  "aligned_segments": 1515,
+  "drafted_units": 597,
+  "aligned_segments": 1551,
   "canon_sources": 9,
   "canon_passages": 51,
-  "term_decisions": 235,
-  "translation_decisions": 573,
-  "translation_decision_occurrences": 27562,
+  "term_decisions": 238,
+  "translation_decisions": 588,
+  "translation_decision_occurrences": 27911,
   "reader_page_mapped_occurrences": 2897,
-  "reader_page_pending_occurrences": 24665,
+  "reader_page_pending_occurrences": 25014,
   "textual_invariants_pass": true,
-  "semantic_reviewed_units": 588,
-  "semantic_reviewed_samples": 723,
+  "semantic_reviewed_units": 597,
+  "semantic_reviewed_samples": 759,
   "reader_verified_distinct_units": 248,
   "combined_reader_verified_units": 51,
   "proof_systems_reader_verified_units": 49,
@@ -216,7 +216,7 @@
   "published_source_units": 588,
   "source_publication_readback": "publication-readback-card-arith-588.json",
   "source_publication_commit": "ff1c2ba72b943a1c91d102811bbabfebf72e2051",
-  "current_source_published": true,
+  "current_source_published": false,
   "edition_complete": false,
   "unit_artifacts": [
     {
@@ -30795,6 +30795,716 @@
         "\\ordplus"
       ],
       "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0592",
+      "source_sha256": "eba6992abe80bc796682f62b5df71990fba3f5595c6d067f9cbc26d776c6499b",
+      "translation_sha256": "c2ebbf045c210c308a0760fa891dca62b27ef5b5cc54512be72193f66a0258f4",
+      "source_bytes": 372,
+      "translation_bytes": 408,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0593",
+      "source_sha256": "bf4d57a0cb3263fa3b2cc386ba572017442f24e1016c995a81474e43ffaa7143",
+      "translation_sha256": "ffaf225e7538f1c6f3055dbba33d2d153c4f965df512758ef4095af30f1e394e",
+      "source_bytes": 589,
+      "translation_bytes": 1413,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0594",
+      "source_sha256": "2cf102fa76c9cb3c1080901967626539d8da1aa6dda38dddbbc743ae5e883579",
+      "translation_sha256": "d65209a7b064283ca8a700a2a751114f9cb7c559f3539713b3b03d05544f126d",
+      "source_bytes": 3324,
+      "translation_bytes": 7294,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "arithmetic",
+        "card",
+        "cardinals",
+        "cardsasords",
+        "chs",
+        "foundation",
+        "include",
+        "logic",
+        "open",
+        "opps",
+        "section",
+        "sfr",
+        "siz",
+        "spine"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0595",
+      "source_sha256": "ffe4c3f0a800bd7893a39e68d109ca1eb9662b5f29cda42393cbc5777cf557c4",
+      "translation_sha256": "7895c511b1215cf6493562676b1c02227f9181bd9b845d77008cf9b0424d77da",
+      "source_bytes": 3605,
+      "translation_bytes": 7188,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$B\\subseteqR$",
+        "\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\alpha),f(\\beta)}\\inA\\timesA}{\\alpha\\in\\beta}.\\end{align*}",
+        "$\\cardeq{\\cardeq{A\\disjointsumB}{A\\timesB}}{M}$"
+      ],
+      "extra_math": [
+        "$B\\subseteqA$",
+        "\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\xi),f(\\eta)}\\inA\\timesA}{\\xi\\in\\eta\\in\\alpha}.\\end{align*}",
+        "$\\cardeq{A\\disjointsumB}{M}$",
+        "$\\cardeq{A\\timesB}{M}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "addition",
+        "align",
+        "arithmetic",
+        "basic",
+        "card",
+        "include",
+        "iso",
+        "logic",
+        "open",
+        "ord",
+        "ordinals",
+        "ordtype",
+        "section",
+        "simp",
+        "sth",
+        "using"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-039",
+          "unit_id": "OLP-0595",
+          "kind": "hartogs-order-carrier-subset",
+          "action": "Restored the carrier of a well-ordering to a subset of A, not a subset of its relation R.",
+          "expected_missing_math": [
+            "$B\\subseteqR$"
+          ],
+          "expected_extra_math": [
+            "$B\\subseteqA$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "B\\subseteqR",
+              "to": "B\\subseteqA",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The proof defines C using well-orderings of subsets B of A, but the transitivity paragraph later writes B subseteq R. R is a binary relation on B, so this reverses the intended carrier condition.",
+          "chosen_treatment": "மாறுநிலை நிறுவலில் ஒழுங்கமைவின் அடிக்கணம் A இன் துணைக்கணம் என்று சரிசெய்கிறது.",
+          "alternatives_considered": "Keeping the ill-typed carrier condition and relying only on the preceding definition of C.",
+          "rationale": "Every witness (B,R) in C has B subseteq A, and each initial segment of B is again a subset of A.",
+          "precise_review_question": "Does the transitivity step use the actual defining condition of C, B subseteq A?",
+          "location_needle": "SOURCE CORRECTION TA-STH-039"
+        },
+        {
+          "audit_id": "TA-STH-040",
+          "unit_id": "OLP-0595",
+          "kind": "hartogs-transported-order-binders",
+          "action": "Used two fresh ordinal variables and explicitly bounded the transported membership relation to the domain of f.",
+          "expected_missing_math": [
+            "\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\alpha),f(\\beta)}\\inA\\timesA}{\\alpha\\in\\beta}.\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "\\begin{align*}B&=\\ran{f}\\\\R&=\\Setabs{\\tuple{f(\\xi),f(\\eta)}\\inA\\timesA}{\\xi\\in\\eta\\in\\alpha}.\\end{align*}"
+          ],
+          "expected_missing_commands": [
+            "\\alpha",
+            "\\beta",
+            "\\beta"
+          ],
+          "expected_extra_commands": [
+            "\\in",
+            "\\xi",
+            "\\xi",
+            "\\eta",
+            "\\eta"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\Setabs{\\tuple{f(\\alpha),f(\\beta)}\\inA\\timesA}{\\alpha\\in\\beta}",
+              "to": "\\Setabs{\\tuple{f(\\xi),f(\\eta)}\\inA\\timesA}{\\xi\\in\\eta\\in\\alpha}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "After fixing an ordinal alpha as the domain of f, the relation comprehension reuses alpha as a varying index and does not state that its indices belong to dom(f). Read literally, f(alpha) is outside its domain.",
+          "chosen_treatment": "உறவின் மாறும் குறிகளாக xi, eta ஆகியவற்றை எடுத்து xi∈eta∈alpha என்ற ஆட்கள வரம்பை வெளிப்படையாகக் கூறுகிறது.",
+          "alternatives_considered": "Keeping the ambiguous reused alpha and inferring the domain restriction only from definedness of f.",
+          "rationale": "The injective f transports the membership well-order on the fixed ordinal alpha to its image B exactly by pairs (f(xi),f(eta)) with xi in eta in alpha.",
+          "precise_review_question": "Is R now a well-defined relation on ran(f) isomorphic to membership on the whole fixed ordinal alpha?",
+          "location_needle": "SOURCE CORRECTION TA-STH-040"
+        },
+        {
+          "audit_id": "TA-STH-041",
+          "unit_id": "OLP-0595",
+          "kind": "cardinal-sum-product-comparison-typing",
+          "action": "Replaced a nested equinumerosity expression between a proposition and M with the two intended equinumerosity claims for disjoint union and Cartesian product.",
+          "expected_missing_math": [
+            "$\\cardeq{\\cardeq{A\\disjointsumB}{A\\timesB}}{M}$"
+          ],
+          "expected_extra_math": [
+            "$\\cardeq{A\\disjointsumB}{M}$",
+            "$\\cardeq{A\\timesB}{M}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The closing example nests cardeq(A disjoint-sum B,A times B) as the first argument of another cardeq with M. The inner expression is a proposition, not a set whose size can be compared with M, and the intended AC statement concerns each operation separately.",
+          "chosen_treatment": "வெட்டாக் கூட்டுத்தொகையும் பெருக்கற்கணமும் ஒவ்வொன்றாக பெரிய கணம் M உடன் சமஎண்ணிக்கையுடையவை என்ற இரண்டு கூற்றுகளாகக் கூறுகிறது.",
+          "alternatives_considered": "Keeping the ill-typed nested expression or only claiming that sum and product are equinumerous to each other.",
+          "rationale": "When A and B are infinite and comparable under Choice, both their disjoint union and their product have the size of the larger carrier, as the referenced theorem states.",
+          "precise_review_question": "Are both sum and product separately compared with the larger set M, with no proposition passed as a set argument?",
+          "location_needle": "SOURCE CORRECTION TA-STH-041"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\alpha",
+        "\\beta",
+        "\\beta"
+      ],
+      "extra_commands": [
+        "\\in",
+        "\\xi",
+        "\\xi",
+        "\\eta",
+        "\\eta"
+      ],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0596",
+      "source_sha256": "9ca7bb6570d323e7caebb910c975827a9411c1bbe2b4dabd6d41f9ebe2f04fa4",
+      "translation_sha256": "8e31500eb515cba5a146df6fcb03518b467e970224ed986e86710c0ac9f1f541",
+      "source_bytes": 3686,
+      "translation_bytes": 9561,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\delta\\leq\\alpha$"
+      ],
+      "extra_math": [
+        "$\\alpha\\leq\\delta$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "hartogs",
+        "include",
+        "logic",
+        "open",
+        "recursion",
+        "section",
+        "spine",
+        "sth"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-042",
+          "unit_id": "OLP-0596",
+          "kind": "choice-recursion-empty-carrier-case",
+          "action": "Handled the empty set separately before evaluating the choice function at A in the recursion base.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The construction begins with g(0)=f(A), but if A is empty then f is defined only on nonempty subsets of A and f(A) is undefined. The empty set is already well-ordered.",
+          "chosen_treatment": "காலிக் கணம் நேரடியாக நன்கு வரிசைப்படும் என்று கூறி, மீள்வரையறையில் காலியற்ற கணத்தை மட்டும் கருதுகிறது.",
+          "alternatives_considered": "Silently assuming A nonempty in the theorem for all sets.",
+          "rationale": "The theorem includes the empty set; a separate trivial case makes the displayed base value defined in the remaining case.",
+          "precise_review_question": "Is f(A) used only after the empty-carrier case has been discharged?",
+          "location_needle": "SOURCE CORRECTION TA-STH-042"
+        },
+        {
+          "audit_id": "TA-STH-043",
+          "unit_id": "OLP-0596",
+          "kind": "choice-recursion-stop-direction",
+          "action": "Assigned the stop sentinel only at and after the first exhausted stage instead of overwriting all preceding stages.",
+          "expected_missing_math": [
+            "$\\delta\\leq\\alpha$"
+          ],
+          "expected_extra_math": [
+            "$\\alpha\\leq\\delta$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\delta\\leq\\alpha",
+              "to": "\\alpha\\leq\\delta",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source says that upon first exhaustion at alpha, g(delta)=A for every delta at most alpha. That overwrites the earlier selected values and destroys the displayed injectivity argument. The sentinel must apply from alpha onward.",
+          "chosen_treatment": "முதலில் நிற்கும் alpha நிலையிலிருந்து பின்னருள்ள delta குறிகளுக்கே நிரப்பு மதிப்பு A வழங்கப்படுகிறது; முன்னைய தேர்வுகள் பாதுகாக்கப்படுகின்றன.",
+          "alternatives_considered": "Retaining the reversed inequality or leaving the stop marker without any rigorous expansion.",
+          "rationale": "The recursion has chosen distinct elements at all stages below alpha; those values cannot be overwritten. A harmless fixed sentinel after exhaustion makes the class recursion total while the desired bijection is its pre-stop restriction.",
+          "precise_review_question": "Are all pre-stop values preserved and the sentinel confined to stages delta at least alpha?",
+          "location_needle": "SOURCE CORRECTION TA-STH-043"
+        },
+        {
+          "audit_id": "TA-STH-044",
+          "unit_id": "OLP-0596",
+          "kind": "choice-recursion-prestop-bijection-scope",
+          "action": "Scoped injectivity, range equality and the final bijection to the initial segment before the stop sentinel.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says g is injective and finally a bijection from an ordinal to A while also specifying a constant sentinel after exhaustion. The full class function is then not injective and its range also contains the sentinel A.",
+          "chosen_treatment": "ஒருமுகத்தன்மை, வீச்சு மற்றும் இறுதி இருபுறச் சார்பு ஆகியவற்றை நிறுத்துமுன் கிடைக்கும் தொடக்கத் துண்டுக்கே உரியதாகத் தெளிவுபடுத்துகிறது.",
+          "alternatives_considered": "Calling the post-stop total class function injective, or suppressing the stop extension without explaining the domain restriction.",
+          "rationale": "Before the first exhausted stage alpha, recursion chooses new elements of A; the restriction g|alpha is an injective surjection onto A and transports the ordinal well-order.",
+          "precise_review_question": "Does the final bijection refer precisely to the restriction before the first exhausted stage?",
+          "location_needle": "SOURCE CORRECTION TA-STH-044"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0597",
+      "source_sha256": "37ed80e497f07f2c96db1a56b8573d90a6d8421e119f0bc7a2865fa2f534b994",
+      "translation_sha256": "7ad4707814a51c28ee51ca3249ebaaa989fa6855506236c79c6961cb16e5637e",
+      "source_bytes": 7098,
+      "translation_bytes": 16438,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\card{\\bigcup_{i<n}A_n}&\\leq\\card{A_0}+\\card{A_1}+\\ldots+\\card{A_{n-1}}\\\\&=1+2+\\ldots+2^{n-1}\\\\&=2^n-1\\\\&<2^n=\\card{A_n}\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\card{\\bigcup_{i<n}A_i}&\\leq\\card{A_0}+\\card{A_1}+\\ldots+\\card{A_{n-1}}\\\\&=1+2+\\ldots+2^{n-1}\\\\&=2^n-1\\\\&<2^n=\\card{A_n}\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "arithmetic",
+        "card",
+        "cardinals",
+        "classing",
+        "include",
+        "logic",
+        "open",
+        "pairs",
+        "section",
+        "sfr",
+        "simp",
+        "siz",
+        "zigzag"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-045",
+          "unit_id": "OLP-0597",
+          "kind": "countable-choice-finite-union-index",
+          "action": "Changed the finite-union summand from the constant A_n to the indexed A_i in Dedekind's cardinal bound.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\card{\\bigcup_{i<n}A_n}",
+              "to": "\\card{\\bigcup_{i<n}A_i}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The displayed bound writes union over i<n of A_n, leaving i unused. Its right side sums A_0 through A_(n-1), and the preceding definition of B_n subtracts exactly those earlier sets.",
+          "chosen_treatment": "முடிவுறு ஒன்றிப்பின் உறுப்புக் குறியை A_n இலிருந்து A_i ஆகச் சரிசெய்து, வலப்புறக் கூட்டலுடன் ஒத்திசைக்கிறது.",
+          "alternatives_considered": "Retaining the constant A_n union, which makes the stated strict inequality false.",
+          "rationale": "The union of earlier A_i has size at most the sum of their finite cardinalities 1+2+...+2^(n-1), which is strictly below |A_n|=2^n.",
+          "precise_review_question": "Does the displayed finite union range over A_i for i<n, matching both B_n and the following sum?",
+          "location_needle": "SOURCE CORRECTION TA-STH-045"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0598",
+      "source_sha256": "4ad40cf83f5d5fe896183b2bdeb7c9cb2d3879aeb4b1bb4192607241e95c4ed8",
+      "translation_sha256": "9e8fe6169d6c7cde40888e8bdb4d5858eab7db7766689ed00f419de42cbde827",
+      "source_bytes": 2735,
+      "translation_bytes": 6456,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "choice",
+        "include",
+        "justifications",
+        "logic",
+        "open",
+        "section",
+        "sth",
+        "story"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0599",
+      "source_sha256": "51f2d8e142b4bccd21bc0aa06330ecff874360d32005b34c415955eaaa24943a",
+      "translation_sha256": "b8fcb2eb4952103b86f4a2d132407d64df397e139c8d5260fbd40c3c07cf0bd1",
+      "source_bytes": 3942,
+      "translation_bytes": 10027,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\tan(\\pi(r-\\nicefrac{1}{2})))$"
+      ],
+      "extra_math": [
+        "$\\tan(\\pi(r-\\nicefrac{1}{2}))$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Theorem",
+        "cantorplane",
+        "extrinsic",
+        "hilbertcurve",
+        "his",
+        "include",
+        "logic",
+        "open",
+        "pathology",
+        "replacement",
+        "section",
+        "set"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-046",
+          "unit_id": "OLP-0599",
+          "kind": "tangent-bijection-parenthesis-balance",
+          "action": "Removed the superfluous closing parenthesis in the tangent map from the open unit interval to the reals.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\tan(\\pi(r-\\nicefrac{1}{2})))",
+              "to": "\\tan(\\pi(r-\\nicefrac{1}{2}))",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source prints tan(pi(r-1/2))) with three closing parentheses for two openings. The intended tangent bijection is otherwise unambiguous.",
+          "chosen_treatment": "டேன்ஜென்ட் மற்றும் பை வாதத்தின் அடைப்புகளைச் சரியாக இரண்டாக முடிக்கிறது.",
+          "alternatives_considered": "Keeping a syntactically unbalanced displayed function in the Tamil explanation.",
+          "rationale": "The standard map r↦tan(pi(r-1/2)) sends (0,1) bijectively onto the real line and requires exactly two closing parentheses.",
+          "precise_review_question": "Is the example the balanced tangent map from (0,1) onto the reals?",
+          "location_needle": "SOURCE CORRECTION TA-STH-046"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0600",
+      "source_sha256": "e9ae48138df4af723de80b69d70d43e2a77f3cc9c0ec680eded3a333c0892b32",
+      "translation_sha256": "33d84c4bc7d35a725924f2943bd105065b4aa1aea778bfaddd931d0e02ef828a",
+      "source_bytes": 12889,
+      "translation_bytes": 28831,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\rho\\inR_1$",
+        "$\\rho\\inC$",
+        "$\\rho\\inC$"
+      ],
+      "extra_math": [
+        "$\\rho\\in\\rotationsgroup$",
+        "$\\rho\\in\\rotationsgroup$",
+        "$\\rho\\in\\rotationsgroup_1$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Theorem",
+        "align",
+        "arithmetic",
+        "banach",
+        "card",
+        "include",
+        "logic",
+        "open",
+        "section",
+        "simp"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-STH-047",
+          "unit_id": "OLP-0600",
+          "kind": "rational-rotation-subgroup-closure",
+          "action": "Defined the rotation subgroup by rational multiples of pi rather than rational radian values, and clarified closure and the zero-angle inverse.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source calls angles in [0,2pi) with rational radian values a group. For rational r>0, the inverse angle 2pi-r is generally irrational, and sums reduced modulo 2pi need not be rational. The subsequent half-group doubling proof also requires closure modulo 2pi.",
+          "chosen_treatment": "கோணங்களை பையின் பகுத்தெண் மடங்குகளாக வரையறுத்து, முழுச் சுற்று அளவில் கோப்பு மூடப்பட்டிருப்பதையும் பூச்சியச் சுழற்சியின் எதிருறுப்பையும் தெளிவுபடுத்துகிறது.",
+          "alternatives_considered": "Retaining rational radian values while claiming nonexistent inverse closure; allowing all real rotations, which would lose countability.",
+          "rationale": "Rational multiples of pi modulo 2pi form a countable abelian subgroup; each half specified by [0,pi) and [pi,2pi) maps onto the whole under squaring.",
+          "precise_review_question": "Is the selected rotation set countable, closed under composition and inverses, and compatible with the half-group doubling lemma?",
+          "location_needle": "SOURCE CORRECTION TA-STH-047"
+        },
+        {
+          "audit_id": "TA-STH-048",
+          "unit_id": "OLP-0600",
+          "kind": "vitali-partition-defined-subgroup-index",
+          "action": "Used the defined first rotation half instead of an undeclared R_1 in the D_1 partition proof.",
+          "expected_missing_math": [
+            "$\\rho\\inR_1$"
+          ],
+          "expected_extra_math": [
+            "$\\rho\\in\\rotationsgroup_1$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\rotationsgroup"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\rho\\inR_1",
+              "to": "\\rho\\in\\rotationsgroup_1",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The source introduces rotationsgroup_1 and rotationsgroup_2, but then indexes the D_1 pieces by R_1, which has no declaration in this proof.",
+          "chosen_treatment": "D_1 இன் துண்டுகளை முன் வரையறுத்த முதல் சுழற்சிப் பாதியின் உறுப்புகளால் குறியிடுகிறது.",
+          "alternatives_considered": "Treating R_1 as silently synonymous with rotationsgroup_1.",
+          "rationale": "D_1 is by definition the union over rotationsgroup_1 of rho(C); its countable partition has exactly those indices.",
+          "precise_review_question": "Does the partition proof use precisely the declared rotationsgroup_1 index set?",
+          "location_needle": "SOURCE CORRECTION TA-STH-048"
+        },
+        {
+          "audit_id": "TA-STH-049",
+          "unit_id": "OLP-0600",
+          "kind": "vitali-measure-rotation-index-type",
+          "action": "Quantified rho over the rotation group, not over the representative point set C, in both congruence and equal-measure claims.",
+          "expected_missing_math": [
+            "$\\rho\\inC$",
+            "$\\rho\\inC$"
+          ],
+          "expected_extra_math": [
+            "$\\rho\\in\\rotationsgroup$",
+            "$\\rho\\in\\rotationsgroup$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\rotationsgroup",
+            "\\rotationsgroup"
+          ],
+          "normalized_math_replacements": [
+            {
+              "from": "\\rho\\inC",
+              "to": "\\rho\\in\\rotationsgroup",
+              "count": 2
+            }
+          ],
+          "source_issue_or_choice": "The final proof twice writes rho in C, although C is a set of points and rho is applied as a rotation. All pieces in the disjoint cover are indexed by the rotation group.",
+          "chosen_treatment": "இரு இடங்களிலும் rho சுழற்சிக் குழுவின் உறுப்பு என்று வரம்பிடுகிறது.",
+          "alternatives_considered": "Keeping the type error and informally reading a point as a rotation.",
+          "rationale": "For any rotation rho, rho(C) is congruent to sigma(C); invariance gives the common measure used in the countable sum.",
+          "precise_review_question": "Do both congruence and equal-measure statements quantify over the same rotation index set as the final cover?",
+          "location_needle": "SOURCE CORRECTION TA-STH-049"
+        },
+        {
+          "audit_id": "TA-STH-050",
+          "unit_id": "OLP-0600",
+          "kind": "vitali-measure-domain-rotation-invariance",
+          "action": "Made the measurable domain rotation-invariant so measurability of one rotated representative piece implies measurability of every congruent piece.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source assumes a measure on some sigma-algebra and equality of measures for congruent measurable sets, then infers that every rotated C is measurable from one measurable rotated C. Equality on pairs already in the domain does not itself make the domain rotation-invariant.",
+          "chosen_treatment": "அளவிடத்தக்க கணங்களின் களம் கருதப்படும் சுழற்சிகளின்கீழ் மூடப்பட்டிருக்க வேண்டும் என்ற நிபந்தனையை வெளிப்படையாகச் சேர்க்கிறது; அளவிட முடியாதது என்பதன் பொருளையும் இம்மாறாமைச் சூழலுக்குள் வரம்பிடுகிறது.",
+          "alternatives_considered": "Treating invariance of the numerical value as silently implying closure of the sigma-algebra domain.",
+          "rationale": "If one rotated piece belongs to a rotation-stable measurable domain, all its rotations do; then equal measures and countable additivity yield the displayed contradiction.",
+          "precise_review_question": "Does the corollary state the domain condition needed to transfer measurability among all rotation images?",
+          "location_needle": "SOURCE CORRECTION TA-STH-050"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\rotationsgroup",
+        "\\rotationsgroup",
+        "\\rotationsgroup"
+      ],
+      "command_parity_or_audited_correction": true
     }
   ],
   "state_hashes": {
@@ -30806,7 +31516,7 @@
     "CUMULATIVE-READER-RENDER-QA.json": "ec518cf14c953bb240b398c873b86ffdba2e6feb535a1c7b51a3b91b3e0e1d98",
     "CUMULATIVE-TEX-SOURCE-QA.json": "1367c6b33d6142df4cd653175984cb6dc3fdf846ce16318e10ae89b710668226",
     "CUMULATIVE-TEX-SOURCE.json": "88a83f4205056da22454fa0ff9f851499930802206a558ddb1db59ccd581c137",
-    "DECISION-REVIEW-QA.json": "153a2dc8b82eb7071e319189d4fc58b491c71b713452a814b16080f725d84706",
+    "DECISION-REVIEW-QA.json": "13721877676f9ab2d1ed97438fc378ce2323d21ab6f47844d61ba4ec1d296d36",
     "DECISION_PAGE_MAP.jsonl": "e4e04950f5d5e3d970437efa49a1af4806735b3a10220de4c4ff8292d4cbfcb8",
     "EPUB-HTML-PROOF_SYSTEMS-RECEIPT.json": "04bcb59744d6dfb8bdde2f6887d72bdb81040878d829d26c98d7b8f84cdf73e7",
     "EPUB-HTML-SETS-RECEIPT-20260912-215943.json": "ab6044ff13b6727ff03f3822657679a4395050e434b8359bb09d1821dd863207",
@@ -30824,6 +31534,7 @@
     "PUBLICATION-READBACK-AML-487-EVIDENCE.json": "29bb597f8b7ae46cfd531eaaa833ea5a887b2dd0428c916401f6ed33b500e395",
     "PUBLICATION-READBACK-AML-487.json": "bdbc1a78be59eec150a97daa37664591d8b493c7d13b77f0cf4ab02f4a82429c",
     "PUBLICATION-READBACK-CARD-ARITH-588.json": "676e2432b5fb64088f703b93f511eb7b1984fefbc843bc90b835ac3d843bc0e3",
+    "PUBLICATION-READBACK-CARD-ARITH-EVIDENCE.json": "990a48c93ca136b94a6fd06509d074853cb1bee2a4821c73aac5e41cd56e4530",
     "PUBLICATION-READBACK-CARDINALS-582.json": "ed72b360d37079905070c03257dd0b9975df715fc56843b14930a7b2a8e1b8c6",
     "PUBLICATION-READBACK-CARDINALS-EVIDENCE.json": "be7c83f181a55b992c352e6f1b633a46bf7c7506966911185725881915436fe5",
     "PUBLICATION-READBACK-CF-525-EVIDENCE.json": "816004f7f8bdef43af8aa8d3f922fe84078d3808cac637dd39c913200b101a32",
@@ -31148,9 +31859,16 @@
     "QA-B267.json": "c9ecb094144e01b30100c58b9820a948a1e8e681b978b837bb336c8ca9c58796",
     "QA-B268.json": "7e9dec8b5e84edb08e2affde518feff8d6bfc1bf36ee05c19cbc80453361b8df",
     "QA-B269.json": "99b2c6b4ea222a61451cf9d2cf84e093f7948c8ea823951316c5abeee135ae4f",
+    "QA-B270.json": "24bfe9aa5a640b5c3774db31bc37744e6030f6481a12db76f1b2bb8ebbbfdb92",
+    "QA-B271.json": "8244de68e0388cd1717374697a72fbd8463456991f8de27b22be93ef60334506",
+    "QA-B272.json": "71d03e297b5cf10bd5a3ed6211e081b7107b0058e06d7a6bead403c36740b06f",
+    "QA-B273.json": "6ad107d917c901d1a209accf3cad0fb729c02c22bd297ae78b6e3c24b45a0a29",
+    "QA-B274.json": "342d2fa856a2209039554b7fb28bd691b43165b780614ab1ad3e6d0c40e18d6d",
+    "QA-B275.json": "5af745a84728def07aac3fa305bd8d9b2c1a6a5f96514c4084d8c93efb46d45f",
+    "QA-B276.json": "d2e0c56968965079dd5cec7ba335ea5015768bbe084ac340f5f88861957026ad",
     "REPRESENTABILITY-IN-Q-RENDER-QA.json": "b6d9f9e100bc3b6529357df03724debe350a071f1fe797866fb77d3245681d79",
-    "SEGMENT_CANON_USE.jsonl": "1703443405beb7cdf16b0fad3e1980f703f52f32d0c4c97064f84df151f1f5f0",
-    "SEMANTIC_REVIEW-CURRENT.json": "bce32ce8650fca50fd82c0fcb2022bc51a4bce71c6d61a6469a89f6497ccec67",
+    "SEGMENT_CANON_USE.jsonl": "d1a3ace9a0d4bfb8ef2d269cf45841005a7f06248a4a3a3f9b21a356e8defb1e",
+    "SEMANTIC_REVIEW-CURRENT.json": "5a88d377e98d26439e6a8683f0c2d0fdd94e86ebb54bb25d17e4ce89064d1642",
     "SET-THEORY-ORDINALS-RENDER-QA.json": "77c495a10af3ca6c9731988b56036712967cd90ec87180d740f8c734ad283156",
     "SET-THEORY-REPLACEMENT-RENDER-QA.json": "5d35a110e4b32bfbf2b9f2635de9cf8453619524fa857c6ca963ce432aa6581a",
     "SET-THEORY-SPINE-RENDER-QA.json": "85b9c87911ec8b2de57304bef5003a61e7cb309c27800f3605f542497d73c0af",
@@ -31160,10 +31878,10 @@
     "SET-THEORY-Z-RENDER-QA.json": "4db09856abcb41600116a3822baccbbded7e9c7da5099291d9cd6442c0cb015f",
     "SETS-RENDER-QA.json": "d21053405c28d2f1102db50c7d2ee548efff28df150e8c2bc1fe7408d13df1b4",
     "SFR-RENDER-QA.json": "bc4310da73bd3e8131778ff092692b180250e3b0065c838f9a637bddcdfdacb9",
-    "SOURCE_CORRECTIONS.json": "46296fdfeee3906b9c50fc35af69f90e0dbaf84d4c86bc66d6271351b425794c",
+    "SOURCE_CORRECTIONS.json": "4c7d2927287c13ec31f6e1672a0498b66266592ab46c95dd30e6ce2cdcf246d3",
     "SOURCE_MANIFEST.jsonl": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155",
     "SOURCE_VERIFICATION.json": "be9dcfa502b93b6d9e3a5388d183072273e0518841360b6230ed4ef1b1fadeb9",
-    "TERM_DECISIONS.jsonl": "47f21180a2ef7cfddf6c9848b0a6c18bedadd47ae1785b697e7c1811298c8ea5",
+    "TERM_DECISIONS.jsonl": "18e01879c7a31dbbd51ede1f3d191bd713dcbb6896b0a5dac54232b7902c2859",
     "TEX-AXIOMATIC-DEDUCTION-RECEIPT.json": "839faa95fd428faae1ac203268d0cfa80de57dedc4d7d1d2c124f0345bab3223",
     "TEX-B001-RECEIPT.json": "a5a626165a01e242e480c6d08598fd7d498b8dd637314ecc7cf37632ac8b9c1c",
     "TEX-COMPLETENESS-RECEIPT.json": "3cbac0105099271b35526f8b7d15db831b51552073162e3d70cb2b387f2debb3",
@@ -31180,12 +31898,12 @@
     "TEX-SFR-PATCH-RECEIPT.json": "06f084e3e806f5a9ff5335c5b7a5cc7eb05eb02ec351050f8f208173bff28bf1",
     "TEX-SFR-RECEIPT.json": "0d8da3b49c2525be20400fccb8cc0ff3e5902de50d9d9dfe6f809a7d646a5624",
     "TEX-TURING-MACHINES-RECEIPT.json": "8a03faf4c585494983a8cb08cff2ba0066714ad94d739c67afdb436b5c36266b",
-    "TRANSLATION_DECISIONS.jsonl": "ab3c5f1cd35b73863ac3ff1c1df79892dc1ac05436fb53aaca4bcda1cc0e879a",
-    "TRANSLATION_DECISION_INDEX.md": "70409837be39a3c81e457e980725548925e780825bf2e8d7d75424351cdb260e",
-    "TRANSLATION_DECISION_OCCURRENCES.csv": "e1c7dba7dfe475f22239403b242d211f9ad0125bc7b893d74b9e96e19f46c45d",
-    "TRANSLATION_DECISION_OCCURRENCES.jsonl": "f54bee0f72902329f3ab5552524ff8e10c32b71d51f4ccce54d8cf02f20662ae",
-    "TRANSLATION_DECISION_PRIORITY.md": "127ada46e68651cc9a3f8081fa72c09493e61920096c0ec362008266b66d2300",
-    "TRANSLATION_DECISION_REVIEW.json": "56c53ddb8b5dbe36619ba71c03649a831f4878f9e04b165da21cd46a97bc48f7",
+    "TRANSLATION_DECISIONS.jsonl": "5335cfe0e6a6edf2ad2ef72ba70537ce08fa274ca3037a6c2de29593c9e815a6",
+    "TRANSLATION_DECISION_INDEX.md": "4b1ec27f86507e803646be47adfbb0089f7e8aac5467d3279fca1c145ac2733b",
+    "TRANSLATION_DECISION_OCCURRENCES.csv": "667011a146190c00fa060c7cb8d3c1b770a013f3c1475b258f9b9cdfbfa17201",
+    "TRANSLATION_DECISION_OCCURRENCES.jsonl": "91b3cb9b6df56109756826df23767462f2a2484e6a35a7cdfceec5f60f632e4b",
+    "TRANSLATION_DECISION_PRIORITY.md": "c1a45817d548a6eaf2edb1f4202b400d82f0047ee08200137782856d3b1dd427",
+    "TRANSLATION_DECISION_REVIEW.json": "4371a9863a428f75b10279c1cb793551118ced5a9245e1d23da8bf8f6129c3d5",
     "TURING-MACHINES-RENDER-QA.json": "38290c8229fefe8a1c8b66f5cca01d2c7a1f57c34744f11a8003c76da038c069",
     "VARIANT_ASSESSMENT.md": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d"
   },
@@ -31235,13 +31953,13 @@
     "readers/set-theory-stages-ranks-ta-Taml-IN.pdf": "a22bd7308a8c725f70eca6e1262401d43f5fda37743f9cc7f64fd6826bc0c58d",
     "readers/set-theory-replacement-reflection-ta-Taml-IN.pdf": "b09f6abfecf4fee6b524941a54001e880eaba49e116309ec0c3e062af69d50f6",
     "readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf": "1b5f3bd1b1395b69a503665ac86e909dd1339ef954393375a4aa48708f70846b",
-    "evidence/translation-decisions/START_HERE.md": "82296373cd3916419b0204f3e78f7733ba9fb90ef7ed317bd4edc1e76c9afc78",
-    "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md": "52bac55344d8e0b094c226d7f93444f8edf9ffe250d6f3e83021f02b0da6a9c0",
-    "evidence/translation-decisions/PRIORITY_REVIEW.md": "aed0b950d8d900cdd0eaa9cd484821c7234516f2d680e219f4ecd44a3f950136",
-    "evidence/translation-decisions/DECISION_OCCURRENCES.csv": "534a0acba46932715804d663c4cc79b90d6ef21afdcf8a97e1b37333bd766099",
-    "evidence/translation-decisions/DECISIONS.json": "8479898be32ce719995e378c1858a56c2b945735c885ecf62a52f819a08a61ce",
+    "evidence/translation-decisions/START_HERE.md": "5f3007ca7ccde26cd5f0820c5cab4b811a4d8e8cb129b19afa3d3212d760d2ef",
+    "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md": "47fc60a3ee54b657460750fd42d38d06f5457e99aec6c99724f99db3892db646",
+    "evidence/translation-decisions/PRIORITY_REVIEW.md": "f480b233b8806416371d84908ce5cd2e952523ebe4d2b5a0c939edd947284b5f",
+    "evidence/translation-decisions/DECISION_OCCURRENCES.csv": "86bcf82735795f1bf2cb6c9361173af94965f2936bfac34296735cca56ee6c21",
+    "evidence/translation-decisions/DECISIONS.json": "2a57a11cfb387b4c3a316bcb1474ab6d9ce1c3f4159f62d1948ab41693468d44",
     "evidence/translation-decisions/translation-decision.schema.json": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90",
-    "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": "f031ee73b116051959575693bd2d0a44a8f8fbadf924cd71803e68ead7af170d",
+    "evidence/translation-decisions/TRANSLATION_DECISION_QA.json": "6b034d808acae488abda96962a7a53570c9de2e7982391c2f905eb654f3bd287",
     "evidence/translation-decisions/VARIANT_ASSESSMENT.md": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d",
     "evidence/publication-readback-proof-systems-release.json": "6af3f7bb4263014103ad484aa09481c479366e34d99ee98a464f705a9508cd7c"
   },
@@ -31249,8 +31967,8 @@
   "current_release_published": false,
   "release_verification_scope": "The exact v0.4.0-cumulative-203 cumulative reader covers 203 distinct units in 384 pages, and the public repository contains all 588 accepted translated source units at source commit ff1c2ba72b943a1c91d102811bbabfebf72e2051. The release assets and all 27 files in that source commit were anonymously byte-verified.",
   "unresolved": [
-    "134 source units remain untranslated",
-    "340 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
+    "125 source units remain untranslated",
+    "349 drafted units have textual and semantic QA but are not yet in an all-page visually verified reader",
     "The 12 verified readers are interim checkpoints, not the full edition",
     "Reflowable EPUB3 production, validation and publication remain in progress for the exact bounded readers",
     "Advanced provisional terminology requires ongoing contextual canon consultation",
