@@ -1,0 +1,174 @@
+{
+  "schema": "openlogic-tamil-spine-tex-source/1",
+  "source_commit": "3d20aea0980eddfb823c4e4c9aedf84b4eaedbe3",
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "scope": {
+    "first_unit": "OLP-0558",
+    "last_unit": "OLP-0564",
+    "counted_reader_units": 7,
+    "embedded_translation_files": 7,
+    "programme_accepted_units_at_source_commit": 561,
+    "programme_total_units": 722,
+    "unaccepted_units_included": []
+  },
+  "completeness": {
+    "exact_translation_blobs_verified": 7,
+    "embedded_project_support_files": 14,
+    "project_local_inputs_generated_by_asset": true,
+    "external_requirements": "Standard TeX packages plus Nirmala UI and Consolas fonts",
+    "accepted_pdf_replaced": false,
+    "master_metadata_translation": "Tamil PDF title, subject, language and AI model disclosure in the source companion only"
+  },
+  "reader_pdf": {
+    "path": "readers/set-theory-stages-ranks-ta-Taml-IN.pdf",
+    "bytes": 153034,
+    "sha256": "a22bd7308a8c725f70eca6e1262401d43f5fda37743f9cc7f64fd6826bc0c58d"
+  },
+  "reader_master": {
+    "source_path": "build/tamil-set-theory-spine.tex",
+    "source_sha256": "2d42f79c05de159ab99fe5bff1beb0bb40eb4f930171dc1664e6071adb796d24",
+    "assembled_executable_sha256": "fbcd8eab47745a5da927e3671140762342ca5be3f49eaae4c6bd153ce261c5a3"
+  },
+  "asset": {
+    "filename": "openlogic-ta-Taml-IN-set-theory-stages-ranks-7-units.tex",
+    "bytes": 244175,
+    "sha256": "8f1dac911821e6be40811b8a9a84489a8d66e60f77dbe829f798544b8ac2603b"
+  },
+  "reader_units": [
+    {
+      "unit_id": "OLP-0558",
+      "source_path": "translation/content/set-theory/spine/spine.tex",
+      "translation_sha256": "33cb9e694069fea1f0ce53027d3c2f9bca2a630563a49290c52c09d5e292a314"
+    },
+    {
+      "unit_id": "OLP-0559",
+      "source_path": "translation/content/set-theory/spine/idea.tex",
+      "translation_sha256": "5e22009b0c2e8154629bca533a7f0d4c6e8445a6e37c366578ee7011fc00fce5"
+    },
+    {
+      "unit_id": "OLP-0560",
+      "source_path": "translation/content/set-theory/spine/recursion.tex",
+      "translation_sha256": "05eaff38fe50444b7aee8f37aa0cf726ddff12fad3c77f5f6434237e6ca14552"
+    },
+    {
+      "unit_id": "OLP-0561",
+      "source_path": "translation/content/set-theory/spine/stagesbasics.tex",
+      "translation_sha256": "bd9be5e84178987cf15b731611ddc6f0376f8bcd5d6fb51b9e9e35c68792ae30"
+    },
+    {
+      "unit_id": "OLP-0562",
+      "source_path": "translation/content/set-theory/spine/foundation.tex",
+      "translation_sha256": "e112a02fa93d31a2798ff6696e55d466e0547275708ceebb53ceda0d83daf7f8"
+    },
+    {
+      "unit_id": "OLP-0563",
+      "source_path": "translation/content/set-theory/spine/zf.tex",
+      "translation_sha256": "2174cdbbd47c9f639c039a54352773023263a65a7bde5df8fc7935854a8386ae"
+    },
+    {
+      "unit_id": "OLP-0564",
+      "source_path": "translation/content/set-theory/spine/rank.tex",
+      "translation_sha256": "b5933593e00aca0e49fb74288d6b07d4ed51f7f8b03fa9d54c5f53b771d0e7ff"
+    }
+  ],
+  "support_files": [
+    {
+      "source_path": "upstream/sty/open-logic.sty",
+      "embedded_name": "olt-spine-open-logic.sty",
+      "source_sha256": "ee7daec60886ba3813d10ac64686646e81f50d149affb4b35596fd6366aae9ad",
+      "embedded_sha256": "e74d67046cbb7497de01b1b82c378cccaf52a2898ab75973cfc5569aaaf0040c",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/open-logic-locale.sty",
+      "embedded_name": "olt-spine-open-logic-locale.sty",
+      "source_sha256": "8b5a2d82439fbadcd10f52c2509a1c7559fb507c880e8a14f4faafc0d0aa29f9",
+      "embedded_sha256": "8b5a2d82439fbadcd10f52c2509a1c7559fb507c880e8a14f4faafc0d0aa29f9",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/sty/open-logic-referencing.sty",
+      "embedded_name": "olt-spine-open-logic-referencing.sty",
+      "source_sha256": "70b8b92d71ebf121794f886d1a495a543aaf6bb732ecbad7730bfed9d4def837",
+      "embedded_sha256": "70b8b92d71ebf121794f886d1a495a543aaf6bb732ecbad7730bfed9d4def837",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/sty/open-logic-formulas.sty",
+      "embedded_name": "olt-spine-open-logic-formulas.sty",
+      "source_sha256": "e423085b198e355af8bbffea36afd511528eca67089cafb88f97b224a9242011",
+      "embedded_sha256": "e423085b198e355af8bbffea36afd511528eca67089cafb88f97b224a9242011",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/sty/open-logic-tokenize.sty",
+      "embedded_name": "olt-spine-open-logic-tokenize.sty",
+      "source_sha256": "e6b0287892308cff1effa7475894dbaef3a10dd0ed0769b7d2c768f9079387c2",
+      "embedded_sha256": "e6b0287892308cff1effa7475894dbaef3a10dd0ed0769b7d2c768f9079387c2",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/sty/open-logic-selective.sty",
+      "embedded_name": "olt-spine-open-logic-selective.sty",
+      "source_sha256": "85c9d7bfe98984922692681fbb16d784e99d33da6c1ead2e44b89a5048c93503",
+      "embedded_sha256": "85c9d7bfe98984922692681fbb16d784e99d33da6c1ead2e44b89a5048c93503",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/sty/bussproofs-extra.sty",
+      "embedded_name": "olt-spine-bussproofs-extra.sty",
+      "source_sha256": "4b678f8c9b57fdb270ed12aeac66b9da234b99956c685d4c1fd1def14575caf2",
+      "embedded_sha256": "4b678f8c9b57fdb270ed12aeac66b9da234b99956c685d4c1fd1def14575caf2",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/sty/ptolemaicastronomy.sty",
+      "embedded_name": "olt-spine-ptolemaicastronomy.sty",
+      "source_sha256": "450f79a006fbf105046f366f31d4243d6b8a4903783d8ae05717c4106c9aad85",
+      "embedded_sha256": "450f79a006fbf105046f366f31d4243d6b8a4903783d8ae05717c4106c9aad85",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/open-logic-config.sty",
+      "embedded_name": "olt-spine-open-logic-config.sty",
+      "source_sha256": "76af3674c68139572b71de9908d690700cd7e324d221d649930ecda020935724",
+      "embedded_sha256": "76af3674c68139572b71de9908d690700cd7e324d221d649930ecda020935724",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/open-logic-envs.sty",
+      "embedded_name": "olt-spine-open-logic-envs.sty",
+      "source_sha256": "8a6b92568975935135b7a2b138a7b8dbcffc33c1553cd6bb00d953aa5a312d65",
+      "embedded_sha256": "8a6b92568975935135b7a2b138a7b8dbcffc33c1553cd6bb00d953aa5a312d65",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "translation/tamil-config.sty",
+      "embedded_name": "olt-spine-tamil-config.sty",
+      "source_sha256": "a6ddf35a198784d432f603aa5e6c61e7162d278972980cbb967981b6d87d961a",
+      "embedded_sha256": "a6ddf35a198784d432f603aa5e6c61e7162d278972980cbb967981b6d87d961a",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "translation/tamil-pdf-math.sty",
+      "embedded_name": "olt-spine-tamil-pdf-math.sty",
+      "source_sha256": "cf8a47f4729b413ba3fb82e328ef2cb54ee0eadaf93e382ad5c8267f8a4d9d40",
+      "embedded_sha256": "cf8a47f4729b413ba3fb82e328ef2cb54ee0eadaf93e382ad5c8267f8a4d9d40",
+      "transformation": "project-local input path rewrite"
+    },
+    {
+      "source_path": "upstream/bib/open-logic.bib",
+      "embedded_name": "olt-spine-open-logic.bib",
+      "source_sha256": "5375d3ec87b5d38f57e95ba10b833fe3d7d68c12c7f7c550b5081d93c755d023",
+      "embedded_sha256": "5375d3ec87b5d38f57e95ba10b833fe3d7d68c12c7f7c550b5081d93c755d023",
+      "transformation": "byte-identical"
+    },
+    {
+      "source_path": "upstream/bib/natbib-oup.bst",
+      "embedded_name": "olt-spine-natbib-oup.bst",
+      "source_sha256": "4d4c270e756cf495d1ca07faa95a69b698737aa3083b976a9752336ae4a1c580",
+      "embedded_sha256": "4d4c270e756cf495d1ca07faa95a69b698737aa3083b976a9752336ae4a1c580",
+      "transformation": "byte-identical"
+    }
+  ]
+}

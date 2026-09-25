@@ -1,0 +1,32 @@
+{
+  "schema": "openlogic-tamil-spine-tex-source-qa/1",
+  "result": "pass",
+  "source_commit": "3d20aea0980eddfb823c4e4c9aedf84b4eaedbe3",
+  "asset": {
+    "filename": "openlogic-ta-Taml-IN-set-theory-stages-ranks-7-units.tex",
+    "bytes": 244175,
+    "sha256": "8f1dac911821e6be40811b8a9a84489a8d66e60f77dbe829f798544b8ac2603b"
+  },
+  "scope": {
+    "counted_reader_units": 7,
+    "exact_translation_blobs_verified": 7,
+    "unaccepted_drafts_included": 0
+  },
+  "embedded": {
+    "filecontents_blocks": 21,
+    "project_support_files": 14,
+    "all_literal_executable_inputs_embedded": true,
+    "bibliography_and_style_embedded": true
+  },
+  "checks": {
+    "asset_identity": true,
+    "reader_unit_inventory": true,
+    "translation_payloads_match_source_commit": true,
+    "project_local_input_completeness": true,
+    "support_payloads_match_source_commit_or_declared_path_rewrites": true,
+    "reader_master_identity": true,
+    "accepted_pdf_identity_and_preservation": true,
+    "unaccepted_drafts_absent": true,
+    "personal_path_absent": true
+  }
+}

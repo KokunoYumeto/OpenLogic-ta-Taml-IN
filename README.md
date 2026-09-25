@@ -1,61 +1,56 @@
-# OpenLogic — தமிழ் (ta-Taml-IN)
+# திறந்த தருக்கவியல் — தமிழ் (ta-Taml-IN)
 
-India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
-Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
+இது [Open Logic Text](https://openlogicproject.org/) நூலின் இந்தியத் தமிழ் மொழிபெயர்ப்பு. மொழிபெயர்ப்புகளின் [திட்டப் பட்டியலையும்](https://github.com/KokunoYumeto/OpenLogic-translations) பார்க்கலாம்.
 
-The full edition is in progress. **570 of 722 frozen content units are translated, source-aligned and textually and semantically audited**. The accepted source now extends through the set-theory part driver and the complete iterative-conception, Zermelo-axioms, ordinals, stages-and-ranks, and Replacement-and-Reflection chapters; 152 units remain.
-The first tagged reader remains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
-The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Sets, Relations, Functions, Size of Sets, number-system construction and Infinite Sets. Patch release v0.2.1 replaces five references to chapters outside this reader with descriptive Tamil fallbacks; the live references return automatically when those destinations are included in a later complete edition. It passed a three-pass guarded XeLaTeX/BibTeX build, font embedding and copy/search checks, plus visual inspection of every rendered page.
-Twelve verified component readers cover 248 distinct units. Each component passed a guarded TeX build, embedded-font and copy/search checks, and all-page visual inspection. The existing 384-page cumulative reader concatenates the first seven accepted components (203 units) in frozen-source order, adds section bookmarks, and preserves 626 checked links. The five set-theory readers are supplied separately and do not imply continuous reader coverage of all units through OLP-0573.
+**முழுப் பதிப்பு இன்னும் தயாராகிறது.** உறையவைக்கப்பட்ட 722 மூல உள்ளடக்க அலகுகளில் 570 அலகுகள் மொழிபெயர்க்கப்பட்டு, மூலத்துடன் ஒப்பிடப்பட்டு, உரை மற்றும் பொருள் சரிபார்ப்புகளைத் தாண்டியுள்ளன. இன்னும் 152 அலகுகள் மீதமுள்ளன. பன்னிரண்டு தனித்த வாசிப்புப் பிரதிகள் 248 வெவ்வேறு அலகுகளை உள்ளடக்குகின்றன. அவற்றில் முதல் ஏழு பிரதிகளின் 203 அலகுகள் 384 பக்கத் திரட்டப்பட்ட வாசிப்புப் பிரதியிலும் உள்ளன. கணக் கோட்பாட்டின் ஐந்து பிரதிகள் தனித்தனியாக வழங்கப்படுகின்றன; ஏற்கப்பட்ட 570 அலகுகளுக்கும் ஒரே தொடர்ச்சியான PDF இருப்பதாக இதனால் பொருள் கொள்ள வேண்டாம்.
 
-## Read and edit
+## வாசிப்புப் பிரதிகள்
 
-- [கணங்கள் — Tamil Sets chapter PDF](readers/sets-ta-Taml-IN.pdf): 13 pages including attribution and a separate edition note.
-- [கணங்கள் முதல் முடிவுறாத கணங்கள் வரை — combined Tamil PDF](readers/sets-functions-relations-ta-Taml-IN.pdf): 99 pages, 51 source units and six chapters, including separate source-correction notes.
-- [நிரூபண முறைகள் — proof-systems Tamil PDF](readers/proof-systems-sequent-natural-deduction-tableaux-ta-Taml-IN.pdf): 89 pages and 49 source units covering the proof-systems survey, sequent calculus, natural deduction and tableaux.
-- [அடிகோள் வருவித்தல் — axiomatic-deduction Tamil PDF](readers/axiomatic-deduction-ta-Taml-IN.pdf): 17 pages and 14 source units.
-- [கணிப்புத்தன்மை — computability Tamil PDF](readers/computability-ta-Taml-IN.pdf): 63 pages and 44 source units.
-- [டியூரிங் பொறிகள் — Turing-machines Tamil PDF](readers/turing-machines-ta-Taml-IN.pdf): 50 pages and 22 source units.
-- [முழுமையின்மையும் எண்கணிதமாக்கலும் — Tamil PDF](readers/incompleteness-arithmetization-ta-Taml-IN.pdf): 40 pages and 12 source units.
-- [ராபின்சன் Q இல் பிரதிநிதித்துவப்படுத்தல் — Tamil PDF](readers/representability-in-q-ta-Taml-IN.pdf): 26 pages and 11 source units.
-- [படிநிலைமுறைக் கணக் கருத்தாக்கம் — set-theory story Tamil PDF](readers/set-theory-iterative-conception-ta-Taml-IN.pdf): 12 pages and 8 source units, including both cumulative-hierarchy diagrams and Frege’s Basic Law V appendix.
-- [செர்மேலோ கணக் கோட்பாட்டை நோக்கிய படிகள் — Zermelo-axioms Tamil PDF](readers/set-theory-zermelo-axioms-ta-Taml-IN.pdf): 10 source units covering Separation, Union, Pairs, Powersets, Infinity, $Z^-$, natural-number encodings and arbitrary intersections.
-- வரிசையெண்கள்: [17-page Tamil PDF](readers/set-theory-ordinals-ta-Taml-IN.pdf) → [complete-text single-file LaTeX](release/openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex) → [pinned complete source ZIP](https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/449c3bfb90971941eb59715863f31e8e752434ba). The chapter covers 11 source units: well-orders, order-isomorphisms, von Neumann ordinals, transfinite induction, Replacement, order types, successor and limit ordinals, and the Burali–Forti paradox.
-- [படிநிலைகளும் தரநிலைகளும் — stages-and-ranks Tamil PDF](readers/set-theory-stages-ranks-ta-Taml-IN.pdf): 12 pages and 7 source units covering the $V_\alpha$ hierarchy, transfinite recursion, stage properties, Foundation and Regularity, $\ZF$, set rank and membership induction.
-- [மாற்றீடும் பிரதிபலிப்பும் — Replacement-and-Reflection Tamil PDF](readers/set-theory-replacement-reflection-ta-Taml-IN.pdf): 16 pages and 9 source units covering the strength and justification of Replacement, limitation of size, absolute infinity, Reflection, the weak-reflection equivalence and finite axiomatizability.
-- [203-unit cumulative Tamil reader](readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf): 384 A4 pages containing the seven accepted components above, in source order.
-- Editable Tamil: `translation/content/`. Each accepted file retains its frozen relative path and stable OLP unit binding in `evidence/`.
-- Frozen, unchanged English sources and original components: upstream/.
-- Reader master: build/tamil-batch001.tex.
-- Combined 51-unit checkpoint master: build/tamil-sfr.tex.
-- Propositional syntax-and-semantics source master: build/tamil-pl-syn.tex.
-- Proof-systems, sequent-calculus, natural-deduction and tableaux reader master: build/tamil-proof-systems-sequent.tex.
+- [கணங்கள் — தமிழ் PDF](readers/sets-ta-Taml-IN.pdf): 13 பக்கங்கள்; மூலம், நன்றியுரை மற்றும் பதிப்புக் குறிப்பு உட்பட.
+- [கணங்கள் முதல் முடிவுறாத கணங்கள் வரை — தமிழ் PDF](readers/sets-functions-relations-ta-Taml-IN.pdf): 99 பக்கங்கள்; 51 அலகுகள்; கணங்கள், தொடர்புகள், சார்புகள், கணங்களின் அளவு, எண் அமைப்புகள், முடிவுறாத கணங்கள்.
+- [நிறுவல் முறைமைகள் — தமிழ் PDF](readers/proof-systems-sequent-natural-deduction-tableaux-ta-Taml-IN.pdf): 89 பக்கங்கள்; 49 அலகுகள்; தொடர்கணிதம், இயற்கை வருவித்தல், அட்டவணை மரங்கள்.
+- [அடிகோள் வருவித்தல் — தமிழ் PDF](readers/axiomatic-deduction-ta-Taml-IN.pdf): 17 பக்கங்கள்; 14 அலகுகள்.
+- [கணிப்புத்தன்மை — தமிழ் PDF](readers/computability-ta-Taml-IN.pdf): 63 பக்கங்கள்; 44 அலகுகள்.
+- [டியூரிங் பொறிகள் — தமிழ் PDF](readers/turing-machines-ta-Taml-IN.pdf): 50 பக்கங்கள்; 22 அலகுகள்.
+- [முழுமையின்மையும் எண்கணிதமாக்கலும் — தமிழ் PDF](readers/incompleteness-arithmetization-ta-Taml-IN.pdf): 40 பக்கங்கள்; 12 அலகுகள்.
+- [ராபின்சன் Q இல் பிரதிநிதித்துவப்படுத்தல் — தமிழ் PDF](readers/representability-in-q-ta-Taml-IN.pdf): 26 பக்கங்கள்; 11 அலகுகள்.
+- [படிநிலைமுறைக் கணக் கருத்தாக்கம் — தமிழ் PDF](readers/set-theory-iterative-conception-ta-Taml-IN.pdf): 12 பக்கங்கள்; 8 அலகுகள்.
+- [செர்மேலோ அடிகோள்கள் — தமிழ் PDF](readers/set-theory-zermelo-axioms-ta-Taml-IN.pdf): 10 அலகுகள்.
+- வரிசையெண்கள்: [17 பக்கத் தமிழ் PDF](readers/set-theory-ordinals-ta-Taml-IN.pdf) → [முழு உரையுடன் ஒரே LaTeX கோப்பு](release/openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex) → [அந்தப் பதிப்பின் முழுத் திருத்தக்கூடிய மூலத் தொகுப்பு](https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/449c3bfb90971941eb59715863f31e8e752434ba). நன்கு வரிசைப்படுத்தல்கள் முதல் புராலி–ஃபோர்ட்டி முரண்பாடு வரை 11 அலகுகள்.
+- படிநிலைகளும் தரநிலைகளும்: [12 பக்கத் தமிழ் PDF](readers/set-theory-stages-ranks-ta-Taml-IN.pdf) → [முழு உரையுடன் ஒரே LaTeX கோப்பு](release/openlogic-ta-Taml-IN-set-theory-stages-ranks-7-units.tex) → [அந்தப் பதிப்பின் முழுத் திருத்தக்கூடிய மூலத் தொகுப்பு](https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/3d20aea0980eddfb823c4e4c9aedf84b4eaedbe3). ஏழு அலகுகளில் $V_\alpha$ படிநிலைகள், மீள்வரையறை, அடித்தளம், $\ZF$, கணத் தரநிலை உள்ளன.
+- [மாற்றீடும் பிரதிபலிப்பும் — தமிழ் PDF](readers/set-theory-replacement-reflection-ta-Taml-IN.pdf): 16 பக்கங்கள்; 9 அலகுகள்; மாற்றீட்டின் நியாயப்படுத்தல், அளவு-வரம்பு, பிரதிபலிப்பு, முடிவுறு அடிகோளாக்கத்தன்மை.
+- [203 அலகுகளின் திரட்டப்பட்ட தமிழ் வாசிப்புப் பிரதி](readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf): மேலுள்ள முதல் ஏழு வாசிப்புப் பகுதிகள் மூல வரிசையில் அமைந்த 384 A4 பக்கங்கள்.
 
-This is machine translation with source comparison and author semantic review. Independent human or native-speaker approval is not claimed.
-Every component reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 570 accepted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 1,456 aligned segments and 664 reverse-paraphrase samples. For the cumulative reader, every page content stream and page box is identical to its accepted component, all fonts remain embedded, and representative boundary and interior pages were rendered and visually inspected.
+திருத்தக்கூடிய தமிழ் TeX கோப்புகள் `translation/content/` இல் உள்ளன. ஒவ்வொரு அலகின் மூலப் பாதையும் நிலையான OLP அடையாளமும் `evidence/` இல் பதிவாகியுள்ளன. மாற்றப்படாத ஆங்கில மூலமும் அதன் துணைக்கோப்புகளும் `upstream/` இல் உள்ளன. இந்த வெளியீட்டுக்கான [ஆங்கிலத் துணை விளக்கமும்](README.en.md) விரும்புவோருக்குக் கிடைக்கிறது.
 
-PDF text reuse has measured limitations. Poppler correctly extracts five tested Tamil phrases and representative union, intersection and Cartesian-product formulas. PyMuPDF duplicates some Tamil syllables or loses spacing. Composite negation symbols may still split during extraction in some contexts; blackboard number-set letters may extract as ordinary letters. Use the editable formulas for exact mathematical reuse. This is not a claim of tagged-PDF or universal screen-reader accessibility. A semantic reader remains part of the continuing full-edition work.
+## மொழிபெயர்ப்பு, சரிபார்ப்பு, வரம்புகள்
 
-## Build
+தற்போதைய 570 அலகுகளின் இயந்திர மொழிபெயர்ப்பு, கணிதப் பொருள் ஒப்பீடு மற்றும் மூலத் திருத்தங்கள் **OpenAI Codex — GPT-5.6 Sol, Ultra முயற்சி நிலையில்** செய்யப்பட்டன. 2026-09-25 அன்று இந்த முகப்பையும் வெளியீட்டுத் தகவலையும் திருத்தியது **OpenAI Codex — GPT-6 Sol, Ultra முயற்சி நிலை**. சுயாதீன மனித அல்லது தாய்மொழி நிபுணர் ஒப்புதல் கிடைத்ததாகக் கூறப்படவில்லை.
 
-Use a Unicode-capable TeX distribution with XeLaTeX, memoir, the upstream dependencies, fontspec and accsupp. The readers use the Windows system fonts Nirmala UI and Consolas; font files are not redistributed.
-Run build/build-tamil.ps1 on Windows. It holds Global\InterlanguageTeXSlotV1 over the captured TeX process tree, every pass, optional BibTeX and log checks. A busy slot returns without starting an engine. The default master produces build/tamil-batch001.pdf. For the combined Sets-through-Infinite-Sets reader, run `build/build-tamil.ps1 -Master tamil-sfr.tex -Passes 3 -BibTeX -ReceiptName TEX-SFR-RECEIPT`. For the proof-systems reader, run `build/build-tamil.ps1 -Master tamil-proof-systems-sequent.tex -Passes 2 -ReceiptName TEX-PROOF-SYSTEMS-TABLEAUX-RECEIPT`. For the iterative-conception chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-story.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-STORY-RECEIPT`. For the Zermelo-axioms chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-z.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-Z-RECEIPT`. For the ordinals chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-ordinals.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-ORDINALS-RECEIPT`. For the stages-and-ranks chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-spine.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-SPINE-RECEIPT`. For the Replacement-and-Reflection chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-replacement.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-REPLACEMENT-RECEIPT`.
+ஏற்கப்பட்ட அலகுகள் 1,456 மூலத்துடன் இணைக்கப்பட்ட பகுதிகளாகப் பதிவாகியுள்ளன. உரை அமைப்பு, வாய்பாடுகள், கணிதக் குறிகள், அடையாளங்கள், மேற்கோள்கள், இணைப்புகள் மற்றும் Unicode சரிபார்ப்புகள் நடத்தப்பட்டன; 664 பொருள் மறுவிளக்க மாதிரிகளும் ஆய்வு செய்யப்பட்டன. வாசிப்புப் பிரதிகளின் எல்லாப் பக்கங்களும் தமிழ் எழுத்துருவம், புள்ளி, வாய்பாடு, அடிக்குறிப்பு, மேற்கோள், பக்க வெட்டு ஆகியவற்றிற்காகப் படங்களாகப் பார்த்துச் சரிபார்க்கப்பட்டன. முடிவுகளை `evidence/` இல் பார்க்கலாம். இந்தச் சரிபார்ப்பு மனித நிபுணர் வாசிப்புக்குச் சமமானது அல்ல.
 
-After the seven accepted component PDFs and their QA receipts are present, `python build/package-cumulative-reader.py` losslessly assembles the cumulative reader and `python build/qa-cumulative-reader.py` verifies page streams, geometry, navigation, links, fonts, extraction and the inspected render set. These scripts do not invoke TeX.
+PDF உரையை மீண்டும் பயன்படுத்துவதற்கு வரம்புகள் உள்ளன. Poppler மூலம் தேர்ந்தெடுக்கப்பட்ட தமிழ் வாக்கியங்களையும் கணிதக் குறிகளையும் தேடி எடுக்க முடிந்தது. சில பிற PDF நிரல்கள் தமிழ் அசைகளை இரட்டிப்பாக்கலாம் அல்லது இடைவெளிகளை இழக்கலாம்; சில கூட்டுக் குறிகளும் எழுத்துவகைகளும் பிரிந்து எடுக்கப்படலாம். கணித வாய்பாடுகளைத் துல்லியமாக மீண்டும் பயன்படுத்த வேண்டுமானால் திருத்தக்கூடிய TeX மூலத்தைப் பயன்படுத்துக. PDF-கள் அனைத்தும் அணுகலுக்கான கட்டமைப்புக் குறியிடலைக் கொண்டவை என்றோ எல்லா வாசிப்புக் கருவிகளிலும் ஒரேபோல் வேலை செய்யும் என்றோ இத்திட்டம் கூறவில்லை.
 
-## Source and evidence
+## கட்டமைத்தல்
 
-English revision: 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 of [OpenLogicProject/OpenLogic](https://github.com/OpenLogicProject/OpenLogic/tree/9620cc73f9c8e0ad003c514a5d3748f29611c4c0).
-All 722 content-file hashes were checked against the frozen manifest. Stable OLP identifiers and original paths remain in the evidence.
+Windows இல் XeLaTeX, memoir, fontspec, accsupp மற்றும் மூலத் திட்டத்தின் TeX சார்புகள் தேவை. வாசிப்புப் பிரதிகள் கணினியில் நிறுவப்பட்ட Nirmala UI, Consolas எழுத்துருக்களைப் பயன்படுத்துகின்றன; எழுத்துருக் கோப்புகள் இங்கே மறுவெளியிடப்படவில்லை. `build/build-tamil.ps1` ஒவ்வொரு TeX செயல்முறை, அதன் எல்லாப் படிகள், BibTeX மற்றும் பதிவு ஆய்வையும் `Global\InterlanguageTeXSlotV1` பாதுகாப்புப் பூட்டுக்குள் நடத்துகிறது. இயல்புநிலை வெளியீடு `build/tamil-batch001.pdf`.
 
-The evidence folder contains the source manifest, actual per-segment canon-use records, terminology decisions and scoped QA. The [canonical decision release](evidence/translation-decisions/START_HERE.md) provides the shared cross-language schema, full and priority human-readable views, one CSV row per exact occurrence, and schema-valid machine JSON. Tamil Nadu SCERT, Tamil Virtual Academy and university originals informed the work. Direct technical attestation, general scholarly register and provisional choices are distinguished. The accompanying variant assessment recommends one India-standard Tamil-script edition with international mathematical notation on the current evidence.
+தனித்த கணக் கோட்பாட்டுப் பிரதிகளுக்கான கட்டளைகள்:
 
-OpenLogic's natural numbers include zero. The source convention is retained and explained in a separate Tamil edition note, because the consulted school text uses a different convention. New editorial or learner material is kept separate from the faithful source.
+```powershell
+build/build-tamil.ps1 -Master tamil-set-theory-story.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-STORY-RECEIPT
+build/build-tamil.ps1 -Master tamil-set-theory-z.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-Z-RECEIPT
+build/build-tamil.ps1 -Master tamil-set-theory-ordinals.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-ORDINALS-RECEIPT
+build/build-tamil.ps1 -Master tamil-set-theory-spine.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-SPINE-RECEIPT
+build/build-tamil.ps1 -Master tamil-set-theory-replacement.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-REPLACEMENT-RECEIPT
+```
 
-The ordinary reader graph and remaining wrappers, all remaining translation, integration of the 322 accepted units outside the twelve component readers, reflowable EPUB3 production, ongoing terminology review and final full-edition publication are unfinished. An interim release does not complete the programme.
+முதல் ஏழு தனித்த PDF பிரதிகளும் அவற்றின் சரிபார்ப்புப் பதிவுகளும் இருந்தால், `python build/package-cumulative-reader.py` அவற்றை இழப்பின்றி இணைக்கிறது; `python build/qa-cumulative-reader.py` பக்கங்கள், இணைப்புகள், எழுத்துருக்கள், உரை எடுப்பு ஆகியவற்றை ஒப்பிடுகிறது. இவ்விரு நிரல்களும் TeX ஐ இயக்குவதில்லை.
 
-## Attribution and license
+## மூலம், முடிக்கப்படாத வேலை, உரிமம்
 
-Original text: The Open Logic Project, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-Tamil translation and new edition notes: OpenLogic Tamil translation programme, CC BY 4.0.
-Changes include translation, Tamil inflection support, layout and PDF extraction support. The original English source and component notices are preserved. See [NOTICE.md](NOTICE.md) and [the original license](upstream/LICENSE.md).
+ஆங்கில மூலம்: [OpenLogicProject/OpenLogic இன் 9620cc73f9c8e0ad003c514a5d3748f29611c4c0 திருத்தம்](https://github.com/OpenLogicProject/OpenLogic/tree/9620cc73f9c8e0ad003c514a5d3748f29611c4c0). உறையவைக்கப்பட்ட 722 மூல உள்ளடக்கக் கோப்புகளின் அடையாளங்களும் சரிபார்ப்புகளும் `evidence/` இல் உள்ளன. [மொழிபெயர்ப்புத் தேர்வுகளின் பதிவில்](evidence/translation-decisions/START_HERE.md) சொல் முடிவுகள், அவற்றுக்குப் பயன்படுத்தப்பட்ட தமிழ் கல்வி மூலங்கள், நிகழ்விடங்கள் மற்றும் இன்னும் உறுதியற்ற தேர்வுகள் உள்ளன. தமிழகப் பாடநூல்கள், தமிழ் இணையக் கல்விக்கழகம் மற்றும் பல்கலைக்கழக மூலங்களின் உண்மையில் அணுகப்பட்ட பகுதிகளே மேற்கோள் காட்டப்பட்டுள்ளன. தமிழ் நாட்டுப் பயன்பாடு தொடர்ந்து மதிப்பிடப்படுகிறது.
+
+மீதமுள்ள 152 அலகுகளின் மொழிபெயர்ப்பு, முழு வாசிப்புப் பாதை, EPUB3 பதிப்புகள், சொல் முடிவுகளின் தொடராய்வு, முழுப் பதிப்பின் இறுதிச் சரிபார்ப்பு மற்றும் வெளியீடு இன்னும் செய்யப்பட வேண்டும். இந்த இடைக்காலப் பிரதிகள் 722 அலகுகளின் முழுப் பதிப்பாகக் கருதப்படக்கூடாது.
+
+மூல நூலின் ஆசிரியர்: Open Logic Project; உரிமம் [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). தமிழ் மொழிபெயர்ப்பும் புதிய பதிப்புக் குறிப்புகளும்: OpenLogic தமிழ் மொழிபெயர்ப்பு நிரல், CC BY 4.0. மொழிபெயர்ப்பு, தமிழ் இலக்கண விகுதி ஆதரவு, பக்க அமைப்பு மற்றும் PDF உரை எடுப்பு ஆதரவு மாற்றங்களாகும். [உரிமக் குறிப்பு](NOTICE.md) மற்றும் [மூல உரிமம்](upstream/LICENSE.md) கிடைக்கின்றன.
