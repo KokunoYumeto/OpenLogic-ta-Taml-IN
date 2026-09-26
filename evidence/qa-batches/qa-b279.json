@@ -1,0 +1,80 @@
+{
+  "batch_id": "TA-B279",
+  "units": [
+    {
+      "unit_id": "OLP-0606",
+      "source_sha256": "dec51f23018334023107ecfaa7a2f31fdf964b2b0cb7aebaeeb4e1688ed6dd31",
+      "translation_sha256": "a9d5e362afafd63bb56f92fd096aa6bafa63fc8f046eb405e84721da955824ba",
+      "source_bytes": 17286,
+      "translation_bytes": 39865,
+      "source_coverage_complete": true,
+      "segments": 16,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$x\\neq\\emptyset$"
+      ],
+      "extra_math": [
+        "$A\\neq\\emptyset$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MTH-002",
+          "unit_id": "OLP-0606",
+          "kind": "existence-proof-wrong-empty-set-variable",
+          "action": "Replaced the stray element x by the set A in the equivalence derived from A being nonempty.",
+          "expected_missing_math": [
+            "$x\\neq\\emptyset$"
+          ],
+          "expected_extra_math": [
+            "$A\\neq\\emptyset$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "x\\neq\\emptyset",
+              "to": "A\\neq\\emptyset",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The explanatory quote starts from A neq emptyset, unfolds set equality and membership, but its concluding equivalence switches to x neq emptyset. The witness variable x is not the set whose nonemptiness is under proof.",
+          "chosen_treatment": "இருப்புக் கூற்றுக்குச் சமமான காலியற்ற தன்மையைக் கணம் A பற்றியே மீண்டும் கூறுகிறது; சாட்சி x பற்றிய தவறான சமன்பாட்டைத் தவிர்க்கிறது.",
+          "alternatives_considered": "Keeping the variable switch and letting readers infer that x was meant to denote A.",
+          "rationale": "The desired inference is A neq emptyset iff there exists x in A; the source's x neq emptyset statement is false for arbitrary elements and does not follow from the displayed negation of set equality.",
+          "precise_review_question": "Does the unpacked existential claim conclude A is nonempty exactly when an element of A exists?",
+          "location_needle": "SOURCE CORRECTION TA-MTH-002"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "batch_id": "TA-B282",
+  "units": [
+    {
+      "unit_id": "OLP-0609",
+      "source_sha256": "3eda384520d99069031c01f168564f639980118e7fd145ca105e8092fbe438dd",
+      "translation_sha256": "cca40fb31c73ecde15650bfea87d8533c190b5252cc5673c3f3cd69933870724",
+      "source_bytes": 9908,
+      "translation_bytes": 20445,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\notinC$"
+      ],
+      "extra_math": [
+        "$\\notinA\\cupB$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MTH-004",
+          "unit_id": "OLP-0609",
+          "kind": "contradiction-example-undeclared-set-in-negation",
+          "action": "Replaced the undeclared C in the negation of A subset A union B with the actual target set A union B.",
+          "expected_missing_math": [
+            "$\\notinC$"
+          ],
+          "expected_extra_math": [
+            "$\\notinA\\cupB$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\cup"
+          ],
+          "source_issue_or_choice": "The proof is negating A subset A union B and correctly states nearby that some x in A is outside A union B, but one parenthetical explanation abruptly says outside C although C is not introduced in this example.",
+          "chosen_treatment": "மறுக்கப்படும் உட்கணக் கூற்றின் வலப்புறமான A ஒன்றிப்பு B யையே குறிப்பிட்டு, தொடர்பில்லாத C ஐ நீக்குகிறது.",
+          "alternatives_considered": "Keeping C and making readers infer an undeclared identification of C with A union B.",
+          "rationale": "Not every x in A belongs to A union B is negated by a witness x in A and x not in A union B; the subsequent formal line and contradiction use precisely that target set.",
+          "precise_review_question": "Does the witness to A not subset A union B lie outside A union B rather than an undeclared C?",
+          "location_needle": "SOURCE CORRECTION TA-MTH-004"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\cup"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

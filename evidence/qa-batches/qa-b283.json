@@ -1,0 +1,95 @@
+{
+  "batch_id": "TA-B283",
+  "units": [
+    {
+      "unit_id": "OLP-0610",
+      "source_sha256": "e5146120b8fd42d544e1e6e51fdcad7fd3a0c721a54ae320692c4fd4277fec33",
+      "translation_sha256": "b48065d4202889fb2eaeefeed9dc29e276f8b82a8c7430a9080431f30a8604b0",
+      "source_bytes": 4885,
+      "translation_bytes": 10813,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$A\\cap(A\\cupB)\\subseteqA$",
+        "$z\\inA\\cupB)$"
+      ],
+      "extra_math": [
+        "$z\\inA\\cupB$",
+        "$A\\subseteqA\\cap(A\\cupB)$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MTH-005",
+          "unit_id": "OLP-0610",
+          "kind": "absorption-expanded-proof-repeated-containment",
+          "action": "Replaced the repeated first containment in item (b) with the second containment required by set equality.",
+          "expected_missing_math": [
+            "$A\\cap(A\\cupB)\\subseteqA$"
+          ],
+          "expected_extra_math": [
+            "$A\\subseteqA\\cap(A\\cupB)$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The expanded absorption proof states that equality needs (a) A intersection (A union B) subset A and (b) the same containment again, even though the preceding analysis and following proof explicitly give the reverse containment.",
+          "chosen_treatment": "இரண்டாம் திசையை A உட்கணம் A வெட்டு (A ஒன்றிப்பு B) என்று வெளிப்படையாகத் திருத்துகிறது.",
+          "alternatives_considered": "Retaining the duplicate would make the announced equality argument incomplete.",
+          "rationale": "Set equality requires both containments; item (b)'s subsequent proof begins with z in A and concludes z in A intersection (A union B).",
+          "precise_review_question": "Should item (b) be A subseteq A intersection (A union B), matching its subsequent argument?",
+          "location_needle": "SOURCE CORRECTION TA-MTH-005"
+        },
+        {
+          "audit_id": "TA-MTH-006",
+          "unit_id": "OLP-0610",
+          "kind": "absorption-expanded-proof-extra-math-parenthesis",
+          "action": "Removed the unmatched closing parenthesis from the final occurrence of membership in A union B.",
+          "expected_missing_math": [
+            "$z\\inA\\cupB)$"
+          ],
+          "expected_extra_math": [
+            "$z\\inA\\cupB$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The final bracketed explanation prints z in A union B with a closing parenthesis inside math although no corresponding opening parenthesis belongs to that formula.",
+          "chosen_treatment": "கூடுதலான மூடும் அடைப்பை நீக்கி z ஒன்றிப்பில் உள்ளது என்ற உறுப்புரிமைக் கூற்றை வைத்திருக்கிறது.",
+          "alternatives_considered": "Leaving an unmatched parenthesis in the displayed mathematical statement.",
+          "rationale": "The line cites clause (2), which is exactly z in A union B without any surrounding mathematical parenthesis.",
+          "precise_review_question": "Does the final clause cite z in A union B, without a closing parenthesis in its formula?",
+          "location_needle": "SOURCE CORRECTION TA-MTH-006"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

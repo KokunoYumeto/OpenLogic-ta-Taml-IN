@@ -1,0 +1,80 @@
+{
+  "batch_id": "TA-B281",
+  "units": [
+    {
+      "unit_id": "OLP-0608",
+      "source_sha256": "cbef120cea559b153f4e6b828d2fe7942050d3534e3bb61e642fd467f897aa80",
+      "translation_sha256": "7299ccc05c0ce4dc613201771d9a393d8c9814b39c37f27af787caf597909b12",
+      "source_bytes": 4828,
+      "translation_bytes": 9224,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$C\\subseteq(A\\cup(C\\setminusA)$"
+      ],
+      "extra_math": [
+        "$C\\subseteq(A\\cup(C\\setminusA))$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MTH-003",
+          "unit_id": "OLP-0608",
+          "kind": "subset-conjunction-unbalanced-parenthesis",
+          "action": "Closed the outer parenthesis around A union (C minus A) in the second subset statement.",
+          "expected_missing_math": [
+            "$C\\subseteq(A\\cup(C\\setminusA)$"
+          ],
+          "expected_extra_math": [
+            "$C\\subseteq(A\\cup(C\\setminusA))$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "C\\subseteq(A\\cup(C\\setminusA)",
+              "to": "C\\subseteq(A\\cup(C\\setminusA))",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The equality-proof outline encloses A union (C minus A) in an outer pair of parentheses but lacks the outer closing parenthesis. The second containment is otherwise clear from the same sentence and following proof.",
+          "chosen_treatment": "இரண்டாம் உட்கணக் கூற்றில் வெளியிலுள்ள திறந்த அடைப்புக்கு உரிய மூடும் அடைப்பைச் சேர்க்கிறது.",
+          "alternatives_considered": "Leaving the printed formula with unmatched parentheses or deleting the outer opening parenthesis without marking the source discrepancy.",
+          "rationale": "The correctly balanced expression matches the equality A union (C minus A) equals C and the subsequent reverse-containment argument.",
+          "precise_review_question": "Is the right-hand union in C subseteq (A union (C minus A)) fully parenthesized?",
+          "location_needle": "SOURCE CORRECTION TA-MTH-003"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

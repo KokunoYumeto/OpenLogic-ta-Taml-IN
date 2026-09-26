@@ -1,0 +1,72 @@
+{
+  "batch_id": "TA-B278",
+  "units": [
+    {
+      "unit_id": "OLP-0605",
+      "source_sha256": "0496b9489f10eb402e2eb91b503c7b522c2e73349e1481ceb9781f2e191a3bce",
+      "translation_sha256": "7cf40144392dfb9caf6d29bd4478fb5b979eccaf72e994ae29b59dca3baed7e3",
+      "source_bytes": 5369,
+      "translation_bytes": 12775,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MTH-001",
+          "unit_id": "OLP-0605",
+          "kind": "proofs-definitions-copied-part-identifier",
+          "action": "Restored the Methods part component of the section file identifier from mod to mth.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "\\olfileid{mod}{prf}{def}",
+              "to": "\\olfileid{mth}{prf}{def}",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The Methods part and Proofs chapter use mth/prf, and every other Proofs section identifies itself as mth/prf; this section alone retains a mod/prf file identifier.",
+          "chosen_treatment": "பகுதியின் mth அடையாளத்திற்கேற்ப இந்தப் பிரிவின் கோப்பு அடையாளத்தையும் mth/prf/def என்று திருத்துகிறது.",
+          "alternatives_considered": "Keeping an identifier whose part component disagrees with the importing Methods part and its sibling sections.",
+          "rationale": "The part driver declares mth, the chapter driver declares mth/prf, and all nine neighboring section identifiers share mth/prf.",
+          "precise_review_question": "Does the definitions section identify itself as mth/prf/def in the imported Methods chapter?",
+          "location_needle": "SOURCE CORRECTION TA-MTH-001"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

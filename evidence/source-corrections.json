@@ -6309,6 +6309,123 @@
       "rationale": "If one rotated piece belongs to a rotation-stable measurable domain, all its rotations do; then equal measures and countable additivity yield the displayed contradiction.",
       "precise_review_question": "Does the corollary state the domain condition needed to transfer measurability among all rotation images?",
       "location_needle": "SOURCE CORRECTION TA-STH-050"
+    },
+    {
+      "audit_id": "TA-MTH-001",
+      "unit_id": "OLP-0605",
+      "kind": "proofs-definitions-copied-part-identifier",
+      "action": "Restored the Methods part component of the section file identifier from mod to mth.",
+      "expected_missing_math": [],
+      "expected_extra_math": [],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "identifier_replacements": [
+        {
+          "from": "\\olfileid{mod}{prf}{def}",
+          "to": "\\olfileid{mth}{prf}{def}",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The Methods part and Proofs chapter use mth/prf, and every other Proofs section identifies itself as mth/prf; this section alone retains a mod/prf file identifier.",
+      "chosen_treatment": "பகுதியின் mth அடையாளத்திற்கேற்ப இந்தப் பிரிவின் கோப்பு அடையாளத்தையும் mth/prf/def என்று திருத்துகிறது.",
+      "alternatives_considered": "Keeping an identifier whose part component disagrees with the importing Methods part and its sibling sections.",
+      "rationale": "The part driver declares mth, the chapter driver declares mth/prf, and all nine neighboring section identifiers share mth/prf.",
+      "precise_review_question": "Does the definitions section identify itself as mth/prf/def in the imported Methods chapter?",
+      "location_needle": "SOURCE CORRECTION TA-MTH-001"
+    },
+    {
+      "audit_id": "TA-MTH-002",
+      "unit_id": "OLP-0606",
+      "kind": "existence-proof-wrong-empty-set-variable",
+      "action": "Replaced the stray element x by the set A in the equivalence derived from A being nonempty.",
+      "expected_missing_math": ["$x\\neq\\emptyset$"],
+      "expected_extra_math": ["$A\\neq\\emptyset$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "x\\neq\\emptyset",
+          "to": "A\\neq\\emptyset",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The explanatory quote starts from A neq emptyset, unfolds set equality and membership, but its concluding equivalence switches to x neq emptyset. The witness variable x is not the set whose nonemptiness is under proof.",
+      "chosen_treatment": "இருப்புக் கூற்றுக்குச் சமமான காலியற்ற தன்மையைக் கணம் A பற்றியே மீண்டும் கூறுகிறது; சாட்சி x பற்றிய தவறான சமன்பாட்டைத் தவிர்க்கிறது.",
+      "alternatives_considered": "Keeping the variable switch and letting readers infer that x was meant to denote A.",
+      "rationale": "The desired inference is A neq emptyset iff there exists x in A; the source's x neq emptyset statement is false for arbitrary elements and does not follow from the displayed negation of set equality.",
+      "precise_review_question": "Does the unpacked existential claim conclude A is nonempty exactly when an element of A exists?",
+      "location_needle": "SOURCE CORRECTION TA-MTH-002"
+    },
+    {
+      "audit_id": "TA-MTH-003",
+      "unit_id": "OLP-0608",
+      "kind": "subset-conjunction-unbalanced-parenthesis",
+      "action": "Closed the outer parenthesis around A union (C minus A) in the second subset statement.",
+      "expected_missing_math": ["$C\\subseteq(A\\cup(C\\setminusA)$"],
+      "expected_extra_math": ["$C\\subseteq(A\\cup(C\\setminusA))$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "normalized_math_replacements": [
+        {
+          "from": "C\\subseteq(A\\cup(C\\setminusA)",
+          "to": "C\\subseteq(A\\cup(C\\setminusA))",
+          "count": 1
+        }
+      ],
+      "source_issue_or_choice": "The equality-proof outline encloses A union (C minus A) in an outer pair of parentheses but lacks the outer closing parenthesis. The second containment is otherwise clear from the same sentence and following proof.",
+      "chosen_treatment": "இரண்டாம் உட்கணக் கூற்றில் வெளியிலுள்ள திறந்த அடைப்புக்கு உரிய மூடும் அடைப்பைச் சேர்க்கிறது.",
+      "alternatives_considered": "Leaving the printed formula with unmatched parentheses or deleting the outer opening parenthesis without marking the source discrepancy.",
+      "rationale": "The correctly balanced expression matches the equality A union (C minus A) equals C and the subsequent reverse-containment argument.",
+      "precise_review_question": "Is the right-hand union in C subseteq (A union (C minus A)) fully parenthesized?",
+      "location_needle": "SOURCE CORRECTION TA-MTH-003"
+    },
+    {
+      "audit_id": "TA-MTH-004",
+      "unit_id": "OLP-0609",
+      "kind": "contradiction-example-undeclared-set-in-negation",
+      "action": "Replaced the undeclared C in the negation of A subset A union B with the actual target set A union B.",
+      "expected_missing_math": ["$\\notinC$"],
+      "expected_extra_math": ["$\\notinA\\cupB$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": ["\\cup"],
+      "source_issue_or_choice": "The proof is negating A subset A union B and correctly states nearby that some x in A is outside A union B, but one parenthetical explanation abruptly says outside C although C is not introduced in this example.",
+      "chosen_treatment": "மறுக்கப்படும் உட்கணக் கூற்றின் வலப்புறமான A ஒன்றிப்பு B யையே குறிப்பிட்டு, தொடர்பில்லாத C ஐ நீக்குகிறது.",
+      "alternatives_considered": "Keeping C and making readers infer an undeclared identification of C with A union B.",
+      "rationale": "Not every x in A belongs to A union B is negated by a witness x in A and x not in A union B; the subsequent formal line and contradiction use precisely that target set.",
+      "precise_review_question": "Does the witness to A not subset A union B lie outside A union B rather than an undeclared C?",
+      "location_needle": "SOURCE CORRECTION TA-MTH-004"
+    },
+    {
+      "audit_id": "TA-MTH-005",
+      "unit_id": "OLP-0610",
+      "kind": "absorption-expanded-proof-repeated-containment",
+      "action": "Replaced the repeated first containment in item (b) with the second containment required by set equality.",
+      "expected_missing_math": ["$A\\cap(A\\cupB)\\subseteqA$"],
+      "expected_extra_math": ["$A\\subseteqA\\cap(A\\cupB)$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The expanded absorption proof states that equality needs (a) A intersection (A union B) subset A and (b) the same containment again, even though the preceding analysis and following proof explicitly give the reverse containment.",
+      "chosen_treatment": "இரண்டாம் திசையை A உட்கணம் A வெட்டு (A ஒன்றிப்பு B) என்று வெளிப்படையாகத் திருத்துகிறது.",
+      "alternatives_considered": "Retaining the duplicate would make the announced equality argument incomplete.",
+      "rationale": "Set equality requires both containments; item (b)'s subsequent proof begins with z in A and concludes z in A intersection (A union B).",
+      "precise_review_question": "Should item (b) be A subseteq A intersection (A union B), matching its subsequent argument?",
+      "location_needle": "SOURCE CORRECTION TA-MTH-005"
+    },
+    {
+      "audit_id": "TA-MTH-006",
+      "unit_id": "OLP-0610",
+      "kind": "absorption-expanded-proof-extra-math-parenthesis",
+      "action": "Removed the unmatched closing parenthesis from the final occurrence of membership in A union B.",
+      "expected_missing_math": ["$z\\inA\\cupB)$"],
+      "expected_extra_math": ["$z\\inA\\cupB$"],
+      "expected_missing_commands": [],
+      "expected_extra_commands": [],
+      "source_issue_or_choice": "The final bracketed explanation prints z in A union B with a closing parenthesis inside math although no corresponding opening parenthesis belongs to that formula.",
+      "chosen_treatment": "கூடுதலான மூடும் அடைப்பை நீக்கி z ஒன்றிப்பில் உள்ளது என்ற உறுப்புரிமைக் கூற்றை வைத்திருக்கிறது.",
+      "alternatives_considered": "Leaving an unmatched parenthesis in the displayed mathematical statement.",
+      "rationale": "The line cites clause (2), which is exactly z in A union B without any surrounding mathematical parenthesis.",
+      "precise_review_question": "Does the final clause cite z in A union B, without a closing parenthesis in its formula?",
+      "location_needle": "SOURCE CORRECTION TA-MTH-006"
     }
   ],
   "by_unit": {
@@ -6513,6 +6630,11 @@
     "OLP-0596": ["TA-STH-042", "TA-STH-043", "TA-STH-044"],
     "OLP-0597": ["TA-STH-045"],
     "OLP-0599": ["TA-STH-046"],
-    "OLP-0600": ["TA-STH-047", "TA-STH-048", "TA-STH-049", "TA-STH-050"]
+    "OLP-0600": ["TA-STH-047", "TA-STH-048", "TA-STH-049", "TA-STH-050"],
+    "OLP-0605": ["TA-MTH-001"],
+    "OLP-0606": ["TA-MTH-002"],
+    "OLP-0608": ["TA-MTH-003"],
+    "OLP-0609": ["TA-MTH-004"],
+    "OLP-0610": ["TA-MTH-005", "TA-MTH-006"]
   }
 }
