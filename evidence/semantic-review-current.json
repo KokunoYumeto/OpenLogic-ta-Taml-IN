@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-26T03:09:25.986538+00:00",
+  "date_utc": "2026-09-26T03:31:15.707555+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -3182,6 +3182,21 @@
       "unit_id": "OLP-0639",
       "source_sha256": "bda8e7a38876ea87b03d2564ab16b39e2b1d1d6ec75a73fae27ca1faa73ab832",
       "translation_sha256": "9ead4485db9a3fc6a83f04db65e6bf28064958d0645c86edc7b9cdde04a6ef94"
+    },
+    {
+      "unit_id": "OLP-0640",
+      "source_sha256": "e1a1e9d585e0ff820b123b585730d046219b9d91f0579be373b01805bece581c",
+      "translation_sha256": "f3da3c094e37dcaacddfcef8523e4b9b6d9e1e8c758b9b6262eb02a0fd53e8e5"
+    },
+    {
+      "unit_id": "OLP-0641",
+      "source_sha256": "67556451d23cb84d04fa7cb22c5728e508e170cd6fc0ca3ded3e2fb018986822",
+      "translation_sha256": "70ea0778b8f3e949175581a80c7728ee8a457b11f805ea4b0f5aa9bfd1b0291f"
+    },
+    {
+      "unit_id": "OLP-0642",
+      "source_sha256": "1d7fdf353e1d5a1bc8ad310f7674e55e711e6979d7395558ba7f92a213d8550b",
+      "translation_sha256": "00caf9978403a8411db764e31131525bce7916f7b065bbdd97176ef7025a3a39"
     }
   ],
   "samples": [
@@ -9939,6 +9954,27 @@
       "assessment": "Source heuristic retained and precise proof limitation made visible under TA-HIS-005.",
       "translation_segment_sha256": "a12f803b6ac5af2bafe0fce108feccacadea0cb84d21641f5606ceb971820c8b",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0640-S01",
+      "reverse_paraphrase": "The Reference part collects alphabet, notation, definition and rule lists for textbook appendices, then imports Greek and Fraktur alphabets in that order.",
+      "assessment": "Part identifier, editorial scope, both imports and end hook remain.",
+      "translation_segment_sha256": "89c97e5469e23fd7cbc9c4a144cd1eff43194b8d39a5d0e26431bbd9281ccd0f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0641-S01",
+      "reverse_paraphrase": "The Greek table pairs the Tamil transliterations of all twenty-four source letter names with their exact lower- and upper-case source glyphs in two parallel columns.",
+      "assessment": "All twenty-four names, row pairings and mathematical symbols retain the source order; the source writes Latin o for omicron.",
+      "translation_segment_sha256": "752bc49b5aa1a6d7633a2622c4f40bf9481f821b99143e028cbe7c4094801930",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0642-S01",
+      "reverse_paraphrase": "The Fraktur table pairs all twenty-six uppercase and lowercase Latin letters with the corresponding mathematical Fraktur glyphs, from A/N through M/Z.",
+      "assessment": "All fifty-two Latin labels and fifty-two Fraktur formulas remain in exactly paired rows.",
+      "translation_segment_sha256": "421771645c55a91788eee369b2e86e703cd2831f1bfc4f63e18f6064e4a91f77",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -10895,10 +10931,10 @@
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "636 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 86 frozen units still require completion.",
+  "remaining": "639 source units now pass textual and author semantic QA. Fourteen exact PDF readers visually verify 257 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 83 frozen units still require completion.",
   "visual_reader_coverage": {
-    "reader_count": 13,
-    "distinct_unit_count": 254,
+    "reader_count": 14,
+    "distinct_unit_count": 257,
     "readers": [
       {
         "name": "combined sets/relations/functions",
@@ -10951,6 +10987,10 @@
       {
         "name": "set theory: ordinal arithmetic",
         "distinct_units": 6
+      },
+      {
+        "name": "reference: Greek and Fraktur alphabets",
+        "distinct_units": 3
       }
     ]
   },

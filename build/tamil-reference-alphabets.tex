@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper,openany]{memoir}
+\newcommand{\olpath}{../upstream}
+\usepackage{fontspec}
+\ifLuaTeX
+\setmainfont{Nirmala UI}[Script=Tamil,Renderer=HarfBuzz,WordSpace=1.3,ItalicFont={Nirmala UI},ItalicFeatures={FakeSlant=0.15}]
+\setsansfont{Nirmala UI}[Script=Tamil,Renderer=HarfBuzz,WordSpace=1.3]
+\else
+\setmainfont{Nirmala UI}[Script=Tamil,Renderer=OpenType,WordSpace=1.3,ItalicFont={Nirmala UI},ItalicFeatures={FakeSlant=0.15}]
+\setsansfont{Nirmala UI}[Script=Tamil,Renderer=OpenType,WordSpace=1.3]
+\fi
+\setmonofont{Consolas}
+\input{\olpath/sty/open-logic.sty}
+\ifXeTeX
+  \XeTeXlinebreaklocale "ta"
+  \XeTeXlinebreakskip=0pt plus 1pt
+  \XeTeXgenerateactualtext=1
+\fi
+\setlrmarginsandblock{16mm}{16mm}{*}
+\setulmarginsandblock{22mm}{25mm}{*}
+\checkandfixthelayout
+\linespread{1.17}
+\emergencystretch=2em
+\input{../translation/tamil-config.sty}
+\input{../translation/tamil-pdf-math.sty}
+\tagtrue{novice,math,compsci,FOL}
+\addto\captionsenglish{%
+  \renewcommand{\chaptername}{அத்தியாயம்}%
+  \renewcommand{\partname}{பகுதி}%
+  \renewcommand{\appendixname}{இணைப்பு}%
+  \renewcommand{\contentsname}{பொருளடக்கம்}%
+}
+\crefname{part}{பகுதி}{பகுதிகள்}
+\Crefname{part}{பகுதி}{பகுதிகள்}
+\crefname{chapter}{அத்தியாயம்}{அத்தியாயங்கள்}
+\Crefname{chapter}{அத்தியாயம்}{அத்தியாயங்கள்}
+\hypersetup{pdftitle={திறந்த தருக்கவியல் — மேற்கோள் குறிப்புகள்: எழுத்துமாலைகள்},pdfauthor={OpenLogic தமிழ் மொழிபெயர்ப்பு நிரல்},pdfsubject={OpenAI Codex GPT-6 Sol (Ultra) இயந்திர மொழிபெயர்ப்பு; OLP-0640 முதல் OLP-0642 வரை; 722 மூல அலகுகளில் 3},pdflang={ta-IN}}
+\begin{document}
+\raggedright
+\pagestyle{plain}
+\chapter*{திறந்த தருக்கவியல்}
+\noindent தமிழ் மொழிபெயர்ப்பு — மேற்கோள் குறிப்புகள்: எழுத்துமாலைகள்
+
+\noindent மூல ஆசிரியர்கள்: Open Logic Project.
+\href{https://github.com/OpenLogicProject/OpenLogic}{மூல நூல்},
+\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+இந்தப் பிரதி OpenAI Codex — GPT-6 Sol, Ultra முயற்சி நிலையில்
+இயந்திர மொழிபெயர்க்கப்பட்டு மூலத்துடன் ஒப்பிடப்பட்டது.
+சுயாதீன மனிதச் சரிபார்ப்பு செய்யப்பட்டதாகக் கூறப்படவில்லை.
+முழுப் பதிப்பு இன்னும் தயாராகவில்லை.
+
+\noindent இந்தத் தனித்த வாசிப்புப் பிரதியில் 722 உறையவைக்கப்பட்ட மூல
+அலகுகளில் OLP-0640 முதல் OLP-0642 வரையிலான 3 அலகுகள் இடம்பெறுகின்றன.
+கிரேக்க எழுத்துப் பெயர்கள் தமிழில் ஒலிபெயர்க்கப்பட்டுள்ளன;
+கிரேக்க, ஃபிராக்டூர் கணிதக் குறிகளும் இலத்தீன் எழுத்து இணைகளும்
+மூலப் பட்டியலிலிருந்தபடியே வைக்கப்பட்டுள்ளன.
+
+\clearpage
+\tableofcontents*
+\subfile{../translation/content/reference/reference.tex}
+\end{document}

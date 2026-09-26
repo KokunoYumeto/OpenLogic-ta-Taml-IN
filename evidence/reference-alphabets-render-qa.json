@@ -1,0 +1,80 @@
+{
+  "schema": "openlogic-tamil-render-qa/1",
+  "result": "pass",
+  "review_date": "2026-09-26",
+  "scope": {
+    "reader_units": 3,
+    "first_unit": "OLP-0640",
+    "last_unit": "OLP-0642",
+    "unit_ids": ["OLP-0640", "OLP-0641", "OLP-0642"],
+    "programme_completed_units": 639,
+    "total_frozen_units": 722,
+    "source_master": "build/tamil-reference-alphabets.tex",
+    "public_reader": "readers/reference-alphabets-ta-Taml-IN.pdf"
+  },
+  "textual_unit_qa": {
+    "batch_receipts": ["QA-B302.json"],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass; every Greek and Fraktur mathematical glyph retains its frozen-source formula and table pairing"
+  },
+  "tex_guard": {
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "receipt": "evidence/tex-reference-alphabets-receipt.json",
+    "receipt_bytes": 915,
+    "receipt_sha256": "964aa63979d4bb4e15a2a0030162de563742f2f9ca5bb2aa7507cf7bb062f5c8",
+    "engine": "xelatex",
+    "passes": 3,
+    "bibtex": false,
+    "status": "built",
+    "final_pass_undefined_references": 0,
+    "missing_character_messages": 0,
+    "multiply_defined_labels": 0,
+    "overfull_messages": 0,
+    "benign_requested_file_warnings": 2
+  },
+  "master": {
+    "path": "build/tamil-reference-alphabets.tex",
+    "bytes": 3915,
+    "sha256": "c1b0c9c923fb260faf0f1482e44714a0b18de083d99492aa5480ae507cdd25bb"
+  },
+  "pdf": {
+    "path": "readers/reference-alphabets-ta-Taml-IN.pdf",
+    "bytes": 69809,
+    "sha256": "a4efd6aed15ae3775aa072d4fd77c4e82cc51720088f4f35b5a180c5e597ff01",
+    "pages": 5,
+    "page_size": "A4",
+    "encrypted": false,
+    "fonts_embedded": true,
+    "fonts_subset": true,
+    "all_fonts_unicode_mapped": true,
+    "annotations": 5,
+    "metadata": {
+      "title": "திறந்த தருக்கவியல் — மேற்கோள் குறிப்புகள்: எழுத்துமாலைகள்",
+      "author": "OpenLogic தமிழ் மொழிபெயர்ப்பு நிரல்",
+      "subject": "OpenAI Codex GPT-6 Sol (Ultra) இயந்திர மொழிபெயர்ப்பு; OLP-0640 முதல் OLP-0642 வரை; 722 மூல அலகுகளில் 3"
+    }
+  },
+  "render": {
+    "resolution_dpi": 130,
+    "pages_rendered": 5,
+    "all_pages_directly_inspected": true,
+    "page_sha256": [
+      "364073e5b03d2f34eff27c8424cccafaa4e4ddce6423c3295b398b2c599f2df4",
+      "b52ab25d2899026bcedec5f31c47a5bf8747f7fa431a82220f7758129bc4c64b",
+      "caf1ade18b349270c0b79eed7c1faf091ad7eb3cd4ec5ec5f613d9b2821b92d3",
+      "393e67531cf3f52f18a8881d4b86b80a0cc7f7802d3a32ef4d677762e41d93ad",
+      "00922dcd89d7f517ad1a9035ddc613ba062515a0cae140f4c4e592663a1409ac"
+    ],
+    "font_shaping_legible": true,
+    "table_glyph_pairing_legible": true,
+    "clipping_or_overlap": false,
+    "page_transitions_legible": true
+  },
+  "copy_search": {
+    "tool": "pdftotext -layout -enc UTF-8",
+    "replacement_characters": 0,
+    "phrases_present": ["மேற்கோள் குறிப்புகள்", "கிரேக்க எழுத்துமாலை", "ஃபிராக்டூர் எழுத்துமாலை", "ஆல்ஃபா", "ஒமேகா", "பொருளடக்கம்"],
+    "limitation": "Fraktur glyphs can extract as their ordinary Latin base letters; use the editable TeX for exact glyph identity."
+  },
+  "independent_human_or_native_review_claimed": false
+}

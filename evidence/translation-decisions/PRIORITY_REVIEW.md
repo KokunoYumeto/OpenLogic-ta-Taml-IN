@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 617/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 619/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -23702,6 +23702,7 @@ Please double-check: **is “முடிவிலி அடிகோள் / �
 - `TA-OCC-6aa8a349766fb48e` — OLP-0545 / `OLP-0545-S01`; source `content/set-theory/z/nat.tex:30`; Tamil `translation/content/set-theory/z/nat.tex:30`; PDF page pending.
 - `TA-OCC-abc9ba386eb0daee` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:17`; Tamil `translation/content/set-theory/ordinals/introduction.tex:14`; PDF page pending.
 - `TA-OCC-a8c41240683ef3dd` — OLP-0548 / `OLP-0548-S01`; source `content/set-theory/ordinals/introduction.tex:18`; Tamil `translation/content/set-theory/ordinals/introduction.tex:18`; PDF page pending.
+- `TA-OCC-83b0933b8812b09e` — OLP-0641 / `OLP-0641-S01`; source `content/reference/greek-alphabet/greek-alphabet.tex:35`; Tamil `translation/content/reference/greek-alphabet/greek-alphabet.tex:36`; PDF page pending.
 
 ## TA-T209 — set-theoretic simulation / Benacerraf problem / alternative representations
 
@@ -26322,6 +26323,7 @@ Please double-check: **is “வரையறை / வரையறுக்கப
 - `TA-OCC-1f93199591ff0b7c` — OLP-0636 / `OLP-0636-S03`; source `content/history/set-theory/pathologies.tex:57`; Tamil `translation/content/history/set-theory/pathologies.tex:70`; PDF page pending.
 - `TA-OCC-8a250f8e6a48a51c` — OLP-0639 / `OLP-0639-S07`; source `content/history/set-theory/hilbert-curve.tex:109`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:163`; PDF page pending.
 - `TA-OCC-a68e97cc8c4effb1` — OLP-0639 / `OLP-0639-S07`; source `content/history/set-theory/hilbert-curve.tex:109`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:164`; PDF page pending.
+- `TA-OCC-bd122530cead4189` — OLP-0640 / `OLP-0640-S01`; source `content/reference/reference.tex:11`; Tamil `translation/content/reference/reference.tex:12`; PDF page pending.
 
 ## TA-T241 — inference pattern / conditional proof / proof by cases / universal claim / existence claim
 
