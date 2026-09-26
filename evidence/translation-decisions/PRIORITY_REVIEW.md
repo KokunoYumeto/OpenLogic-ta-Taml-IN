@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 593/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 600/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -6085,6 +6085,7 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-580c589c39b426c7` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:194`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:243`; PDF page pending.
 - `TA-OCC-fd7bcb25537dfc77` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:194`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:269`; PDF page pending.
 - `TA-OCC-56e15e16e95e11f2` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:194`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:277`; PDF page pending.
+- `TA-OCC-b11554941a07fa8a` — OLP-0619 / `OLP-0619-S04`; source `content/methods/induction/relations.tex:42`; Tamil `translation/content/methods/induction/relations.tex:80`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -6484,541 +6485,6 @@ Alternatives: None recorded.
 Please double-check: **is “கண வேறுபாடு / குறியீட்டுக் கணம்” the established India-standard Tamil expression for “set difference / index set” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
 
 - `TA-OCC-42df5dd67c69324f` — OLP-0008 / `OLP-0008-S14`; source `content/sets-functions-relations/sets/unions-and-intersections.tex:144`; Tamil `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:168`; PDF page pending.
-
-## TA-T022 — induction / proof
-
-Chosen rendering: **தொகுத்தறிதல் / நிறுவல்**
-
-Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
-
-Intended sense and rationale: Mathematical exposition/proof register consulted, but concept-specific induction chapter has not yet been read; no direct attestation claim for induction sense in these passages.
-
-Authority basis: TA-SC11-P6 (checked_context_only); TA-MQ-113-Q26 (checked_supports); TA-T022-EXACT-TERM-NOT-FOUND (not_found)
-
-Alternatives: கணிதத் தூண்டல் / நிரூபணம்
-
-Please double-check: **is “தொகுத்தறிதல் / நிறுவல்” the established India-standard Tamil expression for “induction / proof” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
-
-- `TA-OCC-3af0d39dd1a6ee51` — OLP-0016 / `OLP-0016-S20`; source `content/sets-functions-relations/relations/orders.tex:144`; Tamil `translation/content/sets-functions-relations/relations/orders.tex:183`; PDF page pending.
-- `TA-OCC-5f13ef1d74e47122` — OLP-0029 / `OLP-0029-S16`; source `content/sets-functions-relations/size-of-sets/enumerability.tex:180`; Tamil `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:241`; PDF page pending.
-- `TA-OCC-da337306f3dce475` — OLP-0033 / `OLP-0033-S10`; source `content/sets-functions-relations/size-of-sets/non-enumerability.tex:140`; Tamil `translation/content/sets-functions-relations/size-of-sets/non-enumerability.tex:179`; PDF page pending.
-- `TA-OCC-dcdce8c30e66a3a6` — OLP-0033 / `OLP-0033-S14`; source `content/sets-functions-relations/size-of-sets/non-enumerability.tex:180`; Tamil `translation/content/sets-functions-relations/size-of-sets/non-enumerability.tex:237`; PDF page pending.
-- `TA-OCC-87b4c8de9b2a906b` — OLP-0034 / `OLP-0034-S01`; source `content/sets-functions-relations/size-of-sets/reduction.tex:21`; Tamil `translation/content/sets-functions-relations/size-of-sets/reduction.tex:25`; PDF page pending.
-- `TA-OCC-d9cde87aec215f96` — OLP-0034 / `OLP-0034-S03`; source `content/sets-functions-relations/size-of-sets/reduction.tex:47`; Tamil `translation/content/sets-functions-relations/size-of-sets/reduction.tex:60`; PDF page pending.
-- `TA-OCC-fe8b5ab9bf81d563` — OLP-0035 / `OLP-0035-S06`; source `content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:63`; Tamil `translation/content/sets-functions-relations/size-of-sets/equinumerous-sets.tex:83`; PDF page pending.
-- `TA-OCC-c9693eb9a57f0535` — OLP-0038 / `OLP-0038-S12`; source `content/sets-functions-relations/size-of-sets/enumerability-alt.tex:131`; Tamil `translation/content/sets-functions-relations/size-of-sets/enumerability-alt.tex:162`; PDF page pending.
-- `TA-OCC-73b4475ab4ebe3d2` — OLP-0039 / `OLP-0039-S05`; source `content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex:106`; Tamil `translation/content/sets-functions-relations/size-of-sets/non-enumerability-alt.tex:132`; PDF page pending.
-- `TA-OCC-668075a0259e9e4f` — OLP-0044 / `OLP-0044-S04`; source `content/sets-functions-relations/arithmetization/reals.tex:72`; Tamil `translation/content/sets-functions-relations/arithmetization/reals.tex:92`; PDF page pending.
-- `TA-OCC-7fbadc4e0624c79e` — OLP-0044 / `OLP-0044-S04`; source `content/sets-functions-relations/arithmetization/reals.tex:72`; Tamil `translation/content/sets-functions-relations/arithmetization/reals.tex:99`; PDF page pending.
-- `TA-OCC-a9730425df6b54af` — OLP-0045 / `OLP-0045-S04`; source `content/sets-functions-relations/arithmetization/cuts.tex:52`; Tamil `translation/content/sets-functions-relations/arithmetization/cuts.tex:70`; PDF page pending.
-- `TA-OCC-30a18680e3e44cac` — OLP-0047 / `OLP-0047-S05`; source `content/sets-functions-relations/arithmetization/checking-details.tex:74`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:91`; PDF page pending.
-- `TA-OCC-c2de06eced558264` — OLP-0047 / `OLP-0047-S12`; source `content/sets-functions-relations/arithmetization/checking-details.tex:156`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:192`; PDF page pending.
-- `TA-OCC-159f77cdbf92aaf2` — OLP-0047 / `OLP-0047-S15`; source `content/sets-functions-relations/arithmetization/checking-details.tex:182`; Tamil `translation/content/sets-functions-relations/arithmetization/checking-details.tex:228`; PDF page pending.
-- `TA-OCC-d0fd87ab3a0d20be` — OLP-0048 / `OLP-0048-S16`; source `content/sets-functions-relations/arithmetization/cauchy.tex:181`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:228`; PDF page pending.
-- `TA-OCC-9baa3961cc8651cc` — OLP-0052 / `OLP-0052-S01`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:3`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:11`; PDF page pending.
-- `TA-OCC-270fdedcdfdaa7d7` — OLP-0052 / `OLP-0052-S02`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:16`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:18`; PDF page pending.
-- `TA-OCC-68873e0b3ff88a9d` — OLP-0052 / `OLP-0052-S03`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:23`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:36`; PDF page pending.
-- `TA-OCC-1496d2f9614df173` — OLP-0053 / `OLP-0053-S01`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:3`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:12`; PDF page pending.
-- `TA-OCC-87750e5cdda5b73c` — OLP-0053 / `OLP-0053-S01`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:11`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:13`; PDF page pending.
-- `TA-OCC-739a78eee10ade53` — OLP-0053 / `OLP-0053-S05`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:48`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:57`; PDF page pending.
-- `TA-OCC-6181306664d99514` — OLP-0053 / `OLP-0053-S10`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:85`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:105`; PDF page pending.
-- `TA-OCC-cfcb4329b02e96e8` — OLP-0053 / `OLP-0053-S11`; source `content/sets-functions-relations/infinite/dedekinds-proof.tex:88`; Tamil `translation/content/sets-functions-relations/infinite/dedekinds-proof.tex:110`; PDF page pending.
-- `TA-OCC-aed9a428334d1093` — OLP-0054 / `OLP-0054-S01`; source `content/sets-functions-relations/infinite/card-sb.tex:10`; Tamil `translation/content/sets-functions-relations/infinite/card-sb.tex:13`; PDF page pending.
-- `TA-OCC-393b560cfeaabcf0` — OLP-0054 / `OLP-0054-S01`; source `content/sets-functions-relations/infinite/card-sb.tex:10`; Tamil `translation/content/sets-functions-relations/infinite/card-sb.tex:23`; PDF page pending.
-- `TA-OCC-43d625d081926922` — OLP-0054 / `OLP-0054-S01`; source `content/sets-functions-relations/infinite/card-sb.tex:17`; Tamil `translation/content/sets-functions-relations/infinite/card-sb.tex:26`; PDF page pending.
-- `TA-OCC-a1cedf719f9919ea` — OLP-0054 / `OLP-0054-S10`; source `content/sets-functions-relations/infinite/card-sb.tex:85`; Tamil `translation/content/sets-functions-relations/infinite/card-sb.tex:105`; PDF page pending.
-- `TA-OCC-2a43ddaa749a69fd` — OLP-0054 / `OLP-0054-S11`; source `content/sets-functions-relations/infinite/card-sb.tex:89`; Tamil `translation/content/sets-functions-relations/infinite/card-sb.tex:110`; PDF page pending.
-- `TA-OCC-3ee569d360df7f1e` — OLP-0055 / `OLP-0055-S01`; source `content/propositional-logic/propositional-logic.tex:12`; Tamil `translation/content/propositional-logic/propositional-logic.tex:13`; PDF page pending.
-- `TA-OCC-eeef40d5712c160d` — OLP-0055 / `OLP-0055-S01`; source `content/propositional-logic/propositional-logic.tex:13`; Tamil `translation/content/propositional-logic/propositional-logic.tex:14`; PDF page pending.
-- `TA-OCC-5b8cc575bf6027ca` — OLP-0056 / `OLP-0056-S01`; source `content/propositional-logic/syntax-and-semantics/syntax-and-semantics.tex:12`; Tamil `translation/content/propositional-logic/syntax-and-semantics/syntax-and-semantics.tex:13`; PDF page pending.
-- `TA-OCC-a6c2c17ef21bdb74` — OLP-0056 / `OLP-0056-S01`; source `content/propositional-logic/syntax-and-semantics/syntax-and-semantics.tex:12`; Tamil `translation/content/propositional-logic/syntax-and-semantics/syntax-and-semantics.tex:13`; PDF page pending.
-- `TA-OCC-5cda5eef20456738` — OLP-0057 / `OLP-0057-S02`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:37`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:50`; PDF page pending.
-- `TA-OCC-36d104b9310097a5` — OLP-0057 / `OLP-0057-S02`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:37`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:51`; PDF page pending.
-- `TA-OCC-0cbf4995432be63c` — OLP-0058 / `OLP-0058-S02`; source `content/propositional-logic/syntax-and-semantics/formulas.tex:55`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:58`; PDF page pending.
-- `TA-OCC-625d81fd0f6ea133` — OLP-0058 / `OLP-0058-S02`; source `content/propositional-logic/syntax-and-semantics/formulas.tex:56`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:59`; PDF page pending.
-- `TA-OCC-7f9805de78a9937a` — OLP-0058 / `OLP-0058-S02`; source `content/propositional-logic/syntax-and-semantics/formulas.tex:57`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:61`; PDF page pending.
-- `TA-OCC-bdafd4ffce54eab9` — OLP-0058 / `OLP-0058-S05`; source `content/propositional-logic/syntax-and-semantics/formulas.tex:109`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:119`; PDF page pending.
-- `TA-OCC-18b51344184c9663` — OLP-0059 / `OLP-0059-S01`; source `content/propositional-logic/syntax-and-semantics/preliminaries.tex:13`; Tamil `translation/content/propositional-logic/syntax-and-semantics/preliminaries.tex:14`; PDF page pending.
-- `TA-OCC-2b2965a3a4174657` — OLP-0059 / `OLP-0059-S04`; source `content/propositional-logic/syntax-and-semantics/preliminaries.tex:81`; Tamil `translation/content/propositional-logic/syntax-and-semantics/preliminaries.tex:98`; PDF page pending.
-- `TA-OCC-a5413a90d50ad9b2` — OLP-0060 / `OLP-0060-S01`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:15`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:14`; PDF page pending.
-- `TA-OCC-b189bd1f34f6c180` — OLP-0060 / `OLP-0060-S03`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:68`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:97`; PDF page pending.
-- `TA-OCC-cf9e3f461b00b054` — OLP-0060 / `OLP-0060-S06`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:120`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:136`; PDF page pending.
-- `TA-OCC-838cd7efe607d7be` — OLP-0060 / `OLP-0060-S07`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:147`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:154`; PDF page pending.
-- `TA-OCC-a3bd4072222ad2f0` — OLP-0064 / `OLP-0064-S03`; source `content/first-order-logic/proof-systems/introduction.tex:41`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:44`; PDF page 4.
-- `TA-OCC-1498296e1ad224f4` — OLP-0065 / `OLP-0065-S04`; source `content/first-order-logic/proof-systems/sequent-calculus.tex:62`; Tamil `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:68`; PDF page 7.
-- `TA-OCC-5083f5b9dfa545e4` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:2`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:21`; PDF page 7.
-- `TA-OCC-18f196e67a590128` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:18`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:23`; PDF page 7.
-- `TA-OCC-60360f770a64b177` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:20`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:25`; PDF page 7.
-- `TA-OCC-85d8d4ba39ee9a96` — OLP-0066 / `OLP-0066-S05`; source `content/first-order-logic/proof-systems/natural-deduction.tex:84`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:89`; PDF page 8.
-- `TA-OCC-7722165cf0b5d2db` — OLP-0066 / `OLP-0066-S05`; source `content/first-order-logic/proof-systems/natural-deduction.tex:88`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:93`; PDF page 9.
-- `TA-OCC-c3440b83202dd140` — OLP-0067 / `OLP-0067-S05`; source `content/first-order-logic/proof-systems/tableaux.tex:78`; Tamil `translation/content/first-order-logic/proof-systems/tableaux.tex:83`; PDF page 10.
-- `TA-OCC-789ce49e6dc615f7` — OLP-0068 / `OLP-0068-S06`; source `content/first-order-logic/proof-systems/axiomatic-deduction.tex:81`; Tamil `translation/content/first-order-logic/proof-systems/axiomatic-deduction.tex:94`; PDF page 12.
-- `TA-OCC-558ec423cfb8ba4b` — OLP-0069 / `OLP-0069-S01`; source `content/first-order-logic/sequent-calculus/sequent-calculus.tex:16`; Tamil `translation/content/first-order-logic/sequent-calculus/sequent-calculus.tex:17`; PDF page 12.
-- `TA-OCC-58a4bb49d98696cd` — OLP-0077 / `OLP-0077-S01`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:3`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:19`; PDF page 24.
-- `TA-OCC-c89ae51db0e3ef5e` — OLP-0077 / `OLP-0077-S01`; source `content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:18`; Tamil `translation/content/first-order-logic/sequent-calculus/proof-theoretic-notions.tex:24`; PDF page 24.
-- `TA-OCC-8503c0ae72c5adb7` — OLP-0081 / `OLP-0081-S01`; source `content/first-order-logic/sequent-calculus/soundness.tex:19`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:19`; PDF page 29.
-- `TA-OCC-81bb3ab916853edf` — OLP-0081 / `OLP-0081-S01`; source `content/first-order-logic/sequent-calculus/soundness.tex:32`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:34`; PDF page 30.
-- `TA-OCC-265cfcf90495e35b` — OLP-0081 / `OLP-0081-S03`; source `content/first-order-logic/sequent-calculus/soundness.tex:57`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:73`; PDF page 30.
-- `TA-OCC-5a5dd34eb48e5be7` — OLP-0081 / `OLP-0081-S04`; source `content/first-order-logic/sequent-calculus/soundness.tex:90`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:94`; PDF page 31.
-- `TA-OCC-bd92b9daa1f508fd` — OLP-0081 / `OLP-0081-S05`; source `content/first-order-logic/sequent-calculus/soundness.tex:114`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:121`; PDF page 31.
-- `TA-OCC-86f1b4a56cb3d9e7` — OLP-0081 / `OLP-0081-S06`; source `content/first-order-logic/sequent-calculus/soundness.tex:143`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:150`; PDF page 31.
-- `TA-OCC-eb18c1da28e3a1a2` — OLP-0081 / `OLP-0081-S08`; source `content/first-order-logic/sequent-calculus/soundness.tex:191`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:203`; PDF page 32.
-- `TA-OCC-f76a7eb2fa076dcf` — OLP-0081 / `OLP-0081-S10`; source `content/first-order-logic/sequent-calculus/soundness.tex:237`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:255`; PDF page 32.
-- `TA-OCC-c4971081395259c7` — OLP-0081 / `OLP-0081-S12`; source `content/first-order-logic/sequent-calculus/soundness.tex:280`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:308`; PDF page 34.
-- `TA-OCC-ee8996c41ba6887e` — OLP-0081 / `OLP-0081-S13`; source `content/first-order-logic/sequent-calculus/soundness.tex:303`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:332`; PDF page 34.
-- `TA-OCC-0810f7d9bbd867ef` — OLP-0083 / `OLP-0083-S02`; source `content/first-order-logic/sequent-calculus/soundness-identity.tex:17`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness-identity.tex:33`; PDF page 36.
-- `TA-OCC-9500f2ac9a169382` — OLP-0084 / `OLP-0084-S02`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:18`; PDF page 36.
-- `TA-OCC-7af0c39454ccf490` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; PDF page 37.
-- `TA-OCC-d188396764207123` — OLP-0088 / `OLP-0088-S01`; source `content/first-order-logic/natural-deduction/derivations.tex:1`; Tamil `translation/content/first-order-logic/natural-deduction/derivations.tex:18`; PDF page 40.
-- `TA-OCC-18ce7a94435de81d` — OLP-0089 / `OLP-0089-S01`; source `content/first-order-logic/natural-deduction/proving-things.tex:31`; Tamil `translation/content/first-order-logic/natural-deduction/proving-things.tex:40`; PDF page 42.
-- `TA-OCC-ed427b16003b1311` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:3`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:14`; PDF page 50.
-- `TA-OCC-9b059a39dd6ff429` — OLP-0091 / `OLP-0091-S01`; source `content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/proof-theoretic-notions.tex:24`; PDF page 50.
-- `TA-OCC-c5e47c82e05807e2` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:19`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:20`; PDF page 55.
-- `TA-OCC-2199b96a7f5179e3` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:39`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:43`; PDF page 55.
-- `TA-OCC-2db0758c7ab5fa6d` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:45`; PDF page 55.
-- `TA-OCC-047569ed3904f0a7` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:41`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:53`; PDF page 55.
-- `TA-OCC-735cffded2680fef` — OLP-0095 / `OLP-0095-S02`; source `content/first-order-logic/natural-deduction/soundness.tex:43`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:56`; PDF page 55.
-- `TA-OCC-26afd1da6d39d93c` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:77`; PDF page 56.
-- `TA-OCC-60b4ac66137cbfea` — OLP-0095 / `OLP-0095-S03`; source `content/first-order-logic/natural-deduction/soundness.tex:65`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:86`; PDF page 56.
-- `TA-OCC-cb7dbd244849ae07` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:86`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:100`; PDF page 56.
-- `TA-OCC-bad1c0d20ed8ea3b` — OLP-0095 / `OLP-0095-S04`; source `content/first-order-logic/natural-deduction/soundness.tex:86`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:105`; PDF page 56.
-- `TA-OCC-61d951a586027243` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:109`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:124`; PDF page 57.
-- `TA-OCC-b81e8d7ffb8533b4` — OLP-0095 / `OLP-0095-S05`; source `content/first-order-logic/natural-deduction/soundness.tex:109`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:129`; PDF page 57.
-- `TA-OCC-5a5e790cf76958fb` — OLP-0095 / `OLP-0095-S06`; source `content/first-order-logic/natural-deduction/soundness.tex:130`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:145`; PDF page 57.
-- `TA-OCC-c21ad3b25d0b2cc0` — OLP-0095 / `OLP-0095-S07`; source `content/first-order-logic/natural-deduction/soundness.tex:163`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:169`; PDF page 57.
-- `TA-OCC-652bb572b35a6f3f` — OLP-0095 / `OLP-0095-S07`; source `content/first-order-logic/natural-deduction/soundness.tex:163`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:174`; PDF page 57.
-- `TA-OCC-016ab9eb22db1be1` — OLP-0095 / `OLP-0095-S08`; source `content/first-order-logic/natural-deduction/soundness.tex:169`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:190`; PDF page 57.
-- `TA-OCC-d608a5b6a6a083b6` — OLP-0095 / `OLP-0095-S11`; source `content/first-order-logic/natural-deduction/soundness.tex:228`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:247`; PDF page 58.
-- `TA-OCC-3cc959e23443f657` — OLP-0095 / `OLP-0095-S13`; source `content/first-order-logic/natural-deduction/soundness.tex:256`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:278`; PDF page 59.
-- `TA-OCC-21642fcd09c9fcca` — OLP-0097 / `OLP-0097-S02`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:39`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:41`; PDF page 61.
-- `TA-OCC-ee672688840c31ef` — OLP-0098 / `OLP-0098-S02`; source `content/first-order-logic/tableaux/tableaux.tex:16`; Tamil `translation/content/first-order-logic/tableaux/tableaux.tex:18`; PDF page 61.
-- `TA-OCC-4a83a0a4f8b28cdc` — OLP-0102 / `OLP-0102-S01`; source `content/first-order-logic/tableaux/derivations.tex:1`; Tamil `translation/content/first-order-logic/tableaux/derivations.tex:18`; PDF page 65.
-- `TA-OCC-fcb3564b09dd5e20` — OLP-0105 / `OLP-0105-S01`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:3`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:14`; PDF page 76.
-- `TA-OCC-8f44f0bf0fa28a56` — OLP-0105 / `OLP-0105-S01`; source `content/first-order-logic/tableaux/proof-theoretic-notions.tex:13`; Tamil `translation/content/first-order-logic/tableaux/proof-theoretic-notions.tex:24`; PDF page 76.
-- `TA-OCC-029545ec0ad645fc` — OLP-0109 / `OLP-0109-S01`; source `content/first-order-logic/tableaux/soundness.tex:19`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:20`; PDF page 84.
-- `TA-OCC-b09d8625878d14cd` — OLP-0109 / `OLP-0109-S01`; source `content/first-order-logic/tableaux/soundness.tex:32`; Tamil `translation/content/first-order-logic/tableaux/soundness.tex:33`; PDF page 84.
-- `TA-OCC-ded9c88d419559a9` — OLP-0118 / `OLP-0118-S01`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:3`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:14`; PDF page pending.
-- `TA-OCC-a1bb7c84a3d8f81d` — OLP-0118 / `OLP-0118-S02`; source `content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/proof-theoretic-notions.tex:21`; PDF page pending.
-- `TA-OCC-508e3dd4bb1f05a7` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:54`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:67`; PDF page pending.
-- `TA-OCC-c78e86c1c9101a82` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:61`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:69`; PDF page pending.
-- `TA-OCC-01f37d18f445733e` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:61`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:80`; PDF page pending.
-- `TA-OCC-7257e6a14044287c` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:83`; PDF page pending.
-- `TA-OCC-c9b547873b7bf6f2` — OLP-0119 / `OLP-0119-S06`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:64`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem.tex:88`; PDF page pending.
-- `TA-OCC-8d4882bfb77ac6b9` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:18`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:23`; PDF page pending.
-- `TA-OCC-a180af5334c144ad` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:25`; PDF page pending.
-- `TA-OCC-ec6160688d54ce4b` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:25`; PDF page pending.
-- `TA-OCC-3246a8cfc6473874` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:22`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:28`; PDF page pending.
-- `TA-OCC-ef8da3f0b6ac0556` — OLP-0120 / `OLP-0120-S03`; source `content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:22`; Tamil `translation/content/first-order-logic/axiomatic-deduction/deduction-theorem-quantifiers.tex:39`; PDF page pending.
-- `TA-OCC-0f90db3fcf77fe63` — OLP-0124 / `OLP-0124-S02`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:19`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:21`; PDF page pending.
-- `TA-OCC-08771c1b810fad6d` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:59`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:68`; PDF page pending.
-- `TA-OCC-dfd55e139871069f` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:60`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:79`; PDF page pending.
-- `TA-OCC-7b1d24adb3306c77` — OLP-0124 / `OLP-0124-S06`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:60`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:80`; PDF page pending.
-- `TA-OCC-072ffa228f866fc5` — OLP-0124 / `OLP-0124-S07`; source `content/first-order-logic/axiomatic-deduction/soundness.tex:82`; Tamil `translation/content/first-order-logic/axiomatic-deduction/soundness.tex:93`; PDF page pending.
-- `TA-OCC-4990dbfc2cc089e0` — OLP-0127 / `OLP-0127-S03`; source `content/first-order-logic/completeness/introduction.tex:26`; Tamil `translation/content/first-order-logic/completeness/introduction.tex:29`; PDF page pending.
-- `TA-OCC-44120ab81c4bc046` — OLP-0127 / `OLP-0127-S04`; source `content/first-order-logic/completeness/introduction.tex:50`; Tamil `translation/content/first-order-logic/completeness/introduction.tex:51`; PDF page pending.
-- `TA-OCC-4703db945d3f1fd2` — OLP-0127 / `OLP-0127-S05`; source `content/first-order-logic/completeness/introduction.tex:61`; Tamil `translation/content/first-order-logic/completeness/introduction.tex:68`; PDF page pending.
-- `TA-OCC-14d263f892dee133` — OLP-0128 / `OLP-0128-S02`; source `content/first-order-logic/completeness/outline.tex:15`; Tamil `translation/content/first-order-logic/completeness/outline.tex:17`; PDF page pending.
-- `TA-OCC-1ff4cf8017ed7237` — OLP-0128 / `OLP-0128-S02`; source `content/first-order-logic/completeness/outline.tex:16`; Tamil `translation/content/first-order-logic/completeness/outline.tex:24`; PDF page pending.
-- `TA-OCC-2f08059308dbfd0f` — OLP-0130 / `OLP-0130-S06`; source `content/first-order-logic/completeness/henkin-expansions.tex:91`; Tamil `translation/content/first-order-logic/completeness/henkin-expansions.tex:105`; PDF page pending.
-- `TA-OCC-ef1ece625c944116` — OLP-0131 / `OLP-0131-S02`; source `content/first-order-logic/completeness/lindenbaums-lemma.tex:18`; Tamil `translation/content/first-order-logic/completeness/lindenbaums-lemma.tex:22`; PDF page pending.
-- `TA-OCC-af788642525b626d` — OLP-0131 / `OLP-0131-S05`; source `content/first-order-logic/completeness/lindenbaums-lemma.tex:63`; Tamil `translation/content/first-order-logic/completeness/lindenbaums-lemma.tex:68`; PDF page pending.
-- `TA-OCC-9513be93a12bce99` — OLP-0131 / `OLP-0131-S06`; source `content/first-order-logic/completeness/lindenbaums-lemma.tex:66`; Tamil `translation/content/first-order-logic/completeness/lindenbaums-lemma.tex:74`; PDF page pending.
-- `TA-OCC-6b90b953c405f5b6` — OLP-0131 / `OLP-0131-S06`; source `content/first-order-logic/completeness/lindenbaums-lemma.tex:66`; Tamil `translation/content/first-order-logic/completeness/lindenbaums-lemma.tex:78`; PDF page pending.
-- `TA-OCC-9c419720b1045757` — OLP-0132 / `OLP-0132-S04`; source `content/first-order-logic/completeness/construction-of-model.tex:82`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:90`; PDF page pending.
-- `TA-OCC-668d2c0204ac182c` — OLP-0132 / `OLP-0132-S04`; source `content/first-order-logic/completeness/construction-of-model.tex:83`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:92`; PDF page pending.
-- `TA-OCC-86bb4bbbae6e0182` — OLP-0132 / `OLP-0132-S11`; source `content/first-order-logic/completeness/construction-of-model.tex:196`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:216`; PDF page pending.
-- `TA-OCC-fe0ef5f8812e408a` — OLP-0132 / `OLP-0132-S12`; source `content/first-order-logic/completeness/construction-of-model.tex:211`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:233`; PDF page pending.
-- `TA-OCC-83f3840616eb286c` — OLP-0132 / `OLP-0132-S13`; source `content/first-order-logic/completeness/construction-of-model.tex:223`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:245`; PDF page pending.
-- `TA-OCC-d8eceec0b2e02ed9` — OLP-0132 / `OLP-0132-S14`; source `content/first-order-logic/completeness/construction-of-model.tex:234`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:258`; PDF page pending.
-- `TA-OCC-f0c2c1a808bbe369` — OLP-0132 / `OLP-0132-S15`; source `content/first-order-logic/completeness/construction-of-model.tex:244`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:270`; PDF page pending.
-- `TA-OCC-93f928c846c127b8` — OLP-0132 / `OLP-0132-S15`; source `content/first-order-logic/completeness/construction-of-model.tex:244`; Tamil `translation/content/first-order-logic/completeness/construction-of-model.tex:282`; PDF page pending.
-- `TA-OCC-a9d36b67b00e9c32` — OLP-0133 / `OLP-0133-S11`; source `content/first-order-logic/completeness/identity.tex:167`; Tamil `translation/content/first-order-logic/completeness/identity.tex:181`; PDF page pending.
-- `TA-OCC-6861938e437a3464` — OLP-0136 / `OLP-0136-S01`; source `content/first-order-logic/completeness/compactness-direct.tex:13`; Tamil `translation/content/first-order-logic/completeness/compactness-direct.tex:14`; PDF page pending.
-- `TA-OCC-e647d205d455ac42` — OLP-0136 / `OLP-0136-S13`; source `content/first-order-logic/completeness/compactness-direct.tex:120`; Tamil `translation/content/first-order-logic/completeness/compactness-direct.tex:163`; PDF page pending.
-- `TA-OCC-b5ffd74d574a059e` — OLP-0137 / `OLP-0137-S02`; source `content/first-order-logic/completeness/downward-ls.tex:26`; Tamil `translation/content/first-order-logic/completeness/downward-ls.tex:31`; PDF page pending.
-- `TA-OCC-8efbbc61dbe9125c` — OLP-0137 / `OLP-0137-S04`; source `content/first-order-logic/completeness/downward-ls.tex:40`; Tamil `translation/content/first-order-logic/completeness/downward-ls.tex:48`; PDF page pending.
-- `TA-OCC-eafcf8e10cf19738` — OLP-0138 / `OLP-0138-S01`; source `content/first-order-logic/first-order-logic.tex:22`; Tamil `translation/content/first-order-logic/first-order-logic.tex:23`; PDF page pending.
-- `TA-OCC-17b9984c95bb4d12` — OLP-0140 / `OLP-0140-S05`; source `content/first-order-logic/introduction/first-order-logic.tex:80`; Tamil `translation/content/first-order-logic/introduction/first-order-logic.tex:94`; PDF page pending.
-- `TA-OCC-a9adbe3b34a40e70` — OLP-0141 / `OLP-0141-S02`; source `content/first-order-logic/introduction/syntax.tex:43`; Tamil `translation/content/first-order-logic/introduction/syntax.tex:45`; PDF page pending.
-- `TA-OCC-85ff268b3482c415` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:77`; PDF page pending.
-- `TA-OCC-53fd4b67b5c39ccf` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:78`; PDF page pending.
-- `TA-OCC-512fa9d46b0666c9` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:78`; PDF page pending.
-- `TA-OCC-c8839e8630cc2947` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:78`; PDF page pending.
-- `TA-OCC-f815f461ad5c4050` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:81`; PDF page pending.
-- `TA-OCC-9b49abf14558fb45` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:75`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:92`; PDF page pending.
-- `TA-OCC-42be45caf8dd2ee0` — OLP-0143 / `OLP-0143-S02`; source `content/first-order-logic/introduction/satisfaction.tex:27`; Tamil `translation/content/first-order-logic/introduction/satisfaction.tex:34`; PDF page pending.
-- `TA-OCC-5b3bf0b0ea89b6ed` — OLP-0143 / `OLP-0143-S06`; source `content/first-order-logic/introduction/satisfaction.tex:108`; Tamil `translation/content/first-order-logic/introduction/satisfaction.tex:124`; PDF page pending.
-- `TA-OCC-be5fe85bd5e96dcb` — OLP-0146 / `OLP-0146-S02`; source `content/first-order-logic/introduction/substitution.tex:30`; Tamil `translation/content/first-order-logic/introduction/substitution.tex:35`; PDF page pending.
-- `TA-OCC-8f44c6fecda788ca` — OLP-0150 / `OLP-0150-S01`; source `content/first-order-logic/syntax-and-semantics/intro-syntax.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/intro-syntax.tex:27`; PDF page pending.
-- `TA-OCC-7f27715661b2b71b` — OLP-0150 / `OLP-0150-S01`; source `content/first-order-logic/syntax-and-semantics/intro-syntax.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/intro-syntax.tex:30`; PDF page pending.
-- `TA-OCC-57fb9c0aa3e70098` — OLP-0150 / `OLP-0150-S01`; source `content/first-order-logic/syntax-and-semantics/intro-syntax.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/intro-syntax.tex:31`; PDF page pending.
-- `TA-OCC-3705dbc87c5296ab` — OLP-0151 / `OLP-0151-S01`; source `content/first-order-logic/syntax-and-semantics/first-order-languages.tex:112`; Tamil `translation/content/first-order-logic/syntax-and-semantics/first-order-languages.tex:107`; PDF page pending.
-- `TA-OCC-8d8351f4acdf9815` — OLP-0151 / `OLP-0151-S01`; source `content/first-order-logic/syntax-and-semantics/first-order-languages.tex:113`; Tamil `translation/content/first-order-logic/syntax-and-semantics/first-order-languages.tex:108`; PDF page pending.
-- `TA-OCC-ff06ef37e8db09bc` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:186`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:21`; PDF page pending.
-- `TA-OCC-79abdc33dc4571da` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:186`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:43`; PDF page pending.
-- `TA-OCC-f19dbdb79e5ec6da` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:189`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:83`; PDF page pending.
-- `TA-OCC-5c44346cfc2b01d6` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:189`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:185`; PDF page pending.
-- `TA-OCC-4edc2e5f88dd488b` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:211`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:187`; PDF page pending.
-- `TA-OCC-a44887a95804492f` — OLP-0153 / `OLP-0153-S01`; source `content/first-order-logic/syntax-and-semantics/unique-readability.tex:21`; Tamil `translation/content/first-order-logic/syntax-and-semantics/unique-readability.tex:21`; PDF page pending.
-- `TA-OCC-3e1f6deb2188d22b` — OLP-0153 / `OLP-0153-S01`; source `content/first-order-logic/syntax-and-semantics/unique-readability.tex:61`; Tamil `translation/content/first-order-logic/syntax-and-semantics/unique-readability.tex:87`; PDF page pending.
-- `TA-OCC-3d985ea90728ea22` — OLP-0153 / `OLP-0153-S01`; source `content/first-order-logic/syntax-and-semantics/unique-readability.tex:62`; Tamil `translation/content/first-order-logic/syntax-and-semantics/unique-readability.tex:91`; PDF page pending.
-- `TA-OCC-f60f5370b4df1d69` — OLP-0153 / `OLP-0153-S01`; source `content/first-order-logic/syntax-and-semantics/unique-readability.tex:62`; Tamil `translation/content/first-order-logic/syntax-and-semantics/unique-readability.tex:95`; PDF page pending.
-- `TA-OCC-437447db825eb3b7` — OLP-0153 / `OLP-0153-S01`; source `content/first-order-logic/syntax-and-semantics/unique-readability.tex:64`; Tamil `translation/content/first-order-logic/syntax-and-semantics/unique-readability.tex:100`; PDF page pending.
-- `TA-OCC-0d561c917031dadb` — OLP-0154 / `OLP-0154-S01`; source `content/first-order-logic/syntax-and-semantics/main-operator.tex:76`; Tamil `translation/content/first-order-logic/syntax-and-semantics/main-operator.tex:60`; PDF page pending.
-- `TA-OCC-b7ac383a2f08425b` — OLP-0154 / `OLP-0154-S01`; source `content/first-order-logic/syntax-and-semantics/main-operator.tex:76`; Tamil `translation/content/first-order-logic/syntax-and-semantics/main-operator.tex:76`; PDF page pending.
-- `TA-OCC-4a71161a571fb7c6` — OLP-0155 / `OLP-0155-S01`; source `content/first-order-logic/syntax-and-semantics/subformulas.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/subformulas.tex:24`; PDF page pending.
-- `TA-OCC-132374a06010dff9` — OLP-0155 / `OLP-0155-S01`; source `content/first-order-logic/syntax-and-semantics/subformulas.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/subformulas.tex:77`; PDF page pending.
-- `TA-OCC-82b052749881c0f9` — OLP-0155 / `OLP-0155-S01`; source `content/first-order-logic/syntax-and-semantics/subformulas.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/subformulas.tex:82`; PDF page pending.
-- `TA-OCC-fb4748da726242ab` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:15`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:14`; PDF page pending.
-- `TA-OCC-9c5e06736af57967` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:15`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:15`; PDF page pending.
-- `TA-OCC-1d9591ecd255676c` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:114`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:20`; PDF page pending.
-- `TA-OCC-4c144718f8fa72d3` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:145`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:147`; PDF page pending.
-- `TA-OCC-4aee0d185e40d5f3` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:145`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:185`; PDF page pending.
-- `TA-OCC-9c93c1202c0b7e7b` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:147`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:203`; PDF page pending.
-- `TA-OCC-848b25c706e45bd3` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:17`; PDF page pending.
-- `TA-OCC-1ec89d3b8c9b1594` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:1`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:43`; PDF page pending.
-- `TA-OCC-29138643409c10b1` — OLP-0163 / `OLP-0163-S01`; source `content/first-order-logic/syntax-and-semantics/satisfaction.tex:372`; Tamil `translation/content/first-order-logic/syntax-and-semantics/satisfaction.tex:28`; PDF page pending.
-- `TA-OCC-cd0b2f1269f06e2d` — OLP-0163 / `OLP-0163-S01`; source `content/first-order-logic/syntax-and-semantics/satisfaction.tex:374`; Tamil `translation/content/first-order-logic/syntax-and-semantics/satisfaction.tex:55`; PDF page pending.
-- `TA-OCC-f38f09bfd51ba013` — OLP-0163 / `OLP-0163-S01`; source `content/first-order-logic/syntax-and-semantics/satisfaction.tex:389`; Tamil `translation/content/first-order-logic/syntax-and-semantics/satisfaction.tex:230`; PDF page pending.
-- `TA-OCC-0ba3918ba2f856ec` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:35`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:48`; PDF page pending.
-- `TA-OCC-f340ec1c5a9e57e6` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:36`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:56`; PDF page pending.
-- `TA-OCC-66b97fb431e9ef25` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:36`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:121`; PDF page pending.
-- `TA-OCC-ded2db668d70ee1d` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:48`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:124`; PDF page pending.
-- `TA-OCC-04747d1154a0a8b6` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:48`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:128`; PDF page pending.
-- `TA-OCC-a53d93debb26af24` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:55`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:135`; PDF page pending.
-- `TA-OCC-ea76a1825f85b8ee` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:63`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:142`; PDF page pending.
-- `TA-OCC-07488d9ed51573cc` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:64`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:150`; PDF page pending.
-- `TA-OCC-8ae0fb07c1f4544f` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:64`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:158`; PDF page pending.
-- `TA-OCC-66c4558e982663f1` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:71`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:168`; PDF page pending.
-- `TA-OCC-f6501906fa77c674` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:108`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:185`; PDF page pending.
-- `TA-OCC-e10d83a4328d46d3` — OLP-0164 / `OLP-0164-S01`; source `content/first-order-logic/syntax-and-semantics/assignments.tex:108`; Tamil `translation/content/first-order-logic/syntax-and-semantics/assignments.tex:206`; PDF page pending.
-- `TA-OCC-bbd227737831be53` — OLP-0165 / `OLP-0165-S01`; source `content/first-order-logic/syntax-and-semantics/extensionality.tex:39`; Tamil `translation/content/first-order-logic/syntax-and-semantics/extensionality.tex:45`; PDF page pending.
-- `TA-OCC-1a596639d1ec5da4` — OLP-0165 / `OLP-0165-S01`; source `content/first-order-logic/syntax-and-semantics/extensionality.tex:40`; Tamil `translation/content/first-order-logic/syntax-and-semantics/extensionality.tex:106`; PDF page pending.
-- `TA-OCC-ad9522be8a98712c` — OLP-0166 / `OLP-0166-S01`; source `content/first-order-logic/syntax-and-semantics/semantic-notions.tex:48`; Tamil `translation/content/first-order-logic/syntax-and-semantics/semantic-notions.tex:118`; PDF page pending.
-- `TA-OCC-269f4e02166178aa` — OLP-0170 / `OLP-0170-S01`; source `content/first-order-logic/models-theories/theories.tex:56`; Tamil `translation/content/first-order-logic/models-theories/theories.tex:59`; PDF page pending.
-- `TA-OCC-a12fbda95d1dec50` — OLP-0170 / `OLP-0170-S01`; source `content/first-order-logic/models-theories/theories.tex:56`; Tamil `translation/content/first-order-logic/models-theories/theories.tex:59`; PDF page pending.
-- `TA-OCC-f6a953fd465c22da` — OLP-0175 / `OLP-0175-S01`; source `content/first-order-logic/beyond/introduction.tex:1`; Tamil `translation/content/first-order-logic/beyond/introduction.tex:18`; PDF page pending.
-- `TA-OCC-af658e39244bbc04` — OLP-0177 / `OLP-0177-S01`; source `content/first-order-logic/beyond/second-order-logic.tex:131`; Tamil `translation/content/first-order-logic/beyond/second-order-logic.tex:161`; PDF page pending.
-- `TA-OCC-7513f8e98fa78e82` — OLP-0177 / `OLP-0177-S01`; source `content/first-order-logic/beyond/second-order-logic.tex:131`; Tamil `translation/content/first-order-logic/beyond/second-order-logic.tex:175`; PDF page pending.
-- `TA-OCC-9eebb65bc576638a` — OLP-0187 / `OLP-0187-S01`; source `content/model-theory/basics/isomorphism.tex:67`; Tamil `translation/content/model-theory/basics/isomorphism.tex:100`; PDF page pending.
-- `TA-OCC-f9c637d56ddc7cf8` — OLP-0187 / `OLP-0187-S01`; source `content/model-theory/basics/isomorphism.tex:71`; Tamil `translation/content/model-theory/basics/isomorphism.tex:111`; PDF page pending.
-- `TA-OCC-7edf24af53975f96` — OLP-0189 / `OLP-0189-S01`; source `content/model-theory/basics/partial-iso.tex:58`; Tamil `translation/content/model-theory/basics/partial-iso.tex:207`; PDF page pending.
-- `TA-OCC-74b42fdb555c79be` — OLP-0189 / `OLP-0189-S01`; source `content/model-theory/basics/partial-iso.tex:78`; Tamil `translation/content/model-theory/basics/partial-iso.tex:224`; PDF page pending.
-- `TA-OCC-fd85ffb474f25b50` — OLP-0201 / `OLP-0201-S01`; source `content/model-theory/interpolation/interpolation-proof.tex:3`; Tamil `translation/content/model-theory/interpolation/interpolation-proof.tex:96`; PDF page pending.
-- `TA-OCC-94409e13366aba73` — OLP-0201 / `OLP-0201-S01`; source `content/model-theory/interpolation/interpolation-proof.tex:22`; Tamil `translation/content/model-theory/interpolation/interpolation-proof.tex:102`; PDF page pending.
-- `TA-OCC-9b184d9943ade195` — OLP-0201 / `OLP-0201-S01`; source `content/model-theory/interpolation/interpolation-proof.tex:65`; Tamil `translation/content/model-theory/interpolation/interpolation-proof.tex:103`; PDF page pending.
-- `TA-OCC-215bcf47a806f40d` — OLP-0201 / `OLP-0201-S01`; source `content/model-theory/interpolation/interpolation-proof.tex:65`; Tamil `translation/content/model-theory/interpolation/interpolation-proof.tex:109`; PDF page pending.
-- `TA-OCC-bd2390ddb14540d6` — OLP-0201 / `OLP-0201-S01`; source `content/model-theory/interpolation/interpolation-proof.tex:86`; Tamil `translation/content/model-theory/interpolation/interpolation-proof.tex:110`; PDF page pending.
-- `TA-OCC-f8de40f4deb0f3a6` — OLP-0206 / `OLP-0206-S01`; source `content/model-theory/lindstrom/ls-property.tex:36`; Tamil `translation/content/model-theory/lindstrom/ls-property.tex:41`; PDF page pending.
-- `TA-OCC-60fb02e656c109ef` — OLP-0213 / `OLP-0213-S01`; source `content/computability/recursive-functions/pr-functions.tex:88`; Tamil `translation/content/computability/recursive-functions/pr-functions.tex:54`; PDF page pending.
-- `TA-OCC-b477003c4cd7bba0` — OLP-0214 / `OLP-0214-S01`; source `content/computability/recursive-functions/notation-pr-functions.tex:1`; Tamil `translation/content/computability/recursive-functions/notation-pr-functions.tex:14`; PDF page pending.
-- `TA-OCC-9f92683596d7a6bb` — OLP-0251 / `OLP-0251-S01`; source `content/computability/computability-theory/def-functions-self-reference.tex:46`; Tamil `translation/content/computability/computability-theory/def-functions-self-reference.tex:52`; PDF page pending.
-- `TA-OCC-dbf42194b2dfd59d` — OLP-0271 / `OLP-0271-S01`; source `content/turing-machines/undecidability/verification.tex:22`; Tamil `translation/content/turing-machines/undecidability/verification.tex:35`; PDF page pending.
-- `TA-OCC-5dd7a743f44609d2` — OLP-0271 / `OLP-0271-S01`; source `content/turing-machines/undecidability/verification.tex:25`; Tamil `translation/content/turing-machines/undecidability/verification.tex:37`; PDF page pending.
-- `TA-OCC-c7a50aa9ce95ecfa` — OLP-0271 / `OLP-0271-S01`; source `content/turing-machines/undecidability/verification.tex:25`; Tamil `translation/content/turing-machines/undecidability/verification.tex:128`; PDF page pending.
-- `TA-OCC-a5c9957b81bdd8b3` — OLP-0271 / `OLP-0271-S01`; source `content/turing-machines/undecidability/verification.tex:29`; Tamil `translation/content/turing-machines/undecidability/verification.tex:132`; PDF page pending.
-- `TA-OCC-9f3fb6656c5661b7` — OLP-0271 / `OLP-0271-S01`; source `content/turing-machines/undecidability/verification.tex:29`; Tamil `translation/content/turing-machines/undecidability/verification.tex:167`; PDF page pending.
-- `TA-OCC-b1fd5978c1353741` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:73`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:75`; PDF page pending.
-- `TA-OCC-05e64f78ab074b6b` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:178`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:180`; PDF page pending.
-- `TA-OCC-07014d55c7ac181d` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:179`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:213`; PDF page pending.
-- `TA-OCC-5e74d8bd8675ce91` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:183`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:219`; PDF page pending.
-- `TA-OCC-4e724921fda5919f` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:130`; Tamil `translation/content/incompleteness/introduction/definitions.tex:130`; PDF page pending.
-- `TA-OCC-8975c3226a3c96f4` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:130`; Tamil `translation/content/incompleteness/introduction/definitions.tex:138`; PDF page pending.
-- `TA-OCC-d8662e9075652f94` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:133`; Tamil `translation/content/incompleteness/introduction/definitions.tex:142`; PDF page pending.
-- `TA-OCC-b25af17fce9c1c28` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:133`; Tamil `translation/content/incompleteness/introduction/definitions.tex:147`; PDF page pending.
-- `TA-OCC-7c8ab47609779fba` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:138`; Tamil `translation/content/incompleteness/introduction/definitions.tex:224`; PDF page pending.
-- `TA-OCC-6fbdb119b9e3159e` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:138`; Tamil `translation/content/incompleteness/introduction/definitions.tex:226`; PDF page pending.
-- `TA-OCC-cd358cc9c0e93a6b` — OLP-0277 / `OLP-0277-S01`; source `content/incompleteness/introduction/definitions.tex:143`; Tamil `translation/content/incompleteness/introduction/definitions.tex:240`; PDF page pending.
-- `TA-OCC-370529fffe7e2b67` — OLP-0278 / `OLP-0278-S01`; source `content/incompleteness/introduction/overview.tex:23`; Tamil `translation/content/incompleteness/introduction/overview.tex:25`; PDF page pending.
-- `TA-OCC-e2e8dbae041e3d6b` — OLP-0278 / `OLP-0278-S01`; source `content/incompleteness/introduction/overview.tex:28`; Tamil `translation/content/incompleteness/introduction/overview.tex:48`; PDF page pending.
-- `TA-OCC-487411cfac59c7ea` — OLP-0278 / `OLP-0278-S01`; source `content/incompleteness/introduction/overview.tex:43`; Tamil `translation/content/incompleteness/introduction/overview.tex:55`; PDF page pending.
-- `TA-OCC-ad48299fc3406020` — OLP-0279 / `OLP-0279-S01`; source `content/incompleteness/introduction/undecidability.tex:13`; Tamil `translation/content/incompleteness/introduction/undecidability.tex:126`; PDF page pending.
-- `TA-OCC-3fe8a8def4c04352` — OLP-0279 / `OLP-0279-S01`; source `content/incompleteness/introduction/undecidability.tex:16`; Tamil `translation/content/incompleteness/introduction/undecidability.tex:129`; PDF page pending.
-- `TA-OCC-a28914a1b08e4016` — OLP-0281 / `OLP-0281-S01`; source `content/incompleteness/arithmetization-syntax/introduction.tex:1`; Tamil `translation/content/incompleteness/arithmetization-syntax/introduction.tex:61`; PDF page pending.
-- `TA-OCC-70b336b84371115d` — OLP-0283 / `OLP-0283-S01`; source `content/incompleteness/arithmetization-syntax/coding-terms.tex:43`; Tamil `translation/content/incompleteness/arithmetization-syntax/coding-terms.tex:17`; PDF page pending.
-- `TA-OCC-a24eb7589eb47011` — OLP-0290 / `OLP-0290-S01`; source `content/incompleteness/representability-in-q/introduction.tex:56`; Tamil `translation/content/incompleteness/representability-in-q/introduction.tex:61`; PDF page pending.
-- `TA-OCC-6a13bd583ee402a1` — OLP-0290 / `OLP-0290-S01`; source `content/incompleteness/representability-in-q/introduction.tex:56`; Tamil `translation/content/incompleteness/representability-in-q/introduction.tex:67`; PDF page pending.
-- `TA-OCC-a81a7ead86742896` — OLP-0290 / `OLP-0290-S01`; source `content/incompleteness/representability-in-q/introduction.tex:62`; Tamil `translation/content/incompleteness/representability-in-q/introduction.tex:75`; PDF page pending.
-- `TA-OCC-b703f2d2595bf2e7` — OLP-0292 / `OLP-0292-S01`; source `content/incompleteness/representability-in-q/beta-function.tex:171`; Tamil `translation/content/incompleteness/representability-in-q/beta-function.tex:184`; PDF page pending.
-- `TA-OCC-ba5ca7b9285d3910` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:71`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:97`; PDF page pending.
-- `TA-OCC-a14fd9fd0cc03dcd` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:78`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:101`; PDF page pending.
-- `TA-OCC-5bb0aad0a6bca628` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:79`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:118`; PDF page pending.
-- `TA-OCC-a3a675e1e44b80b7` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:79`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:121`; PDF page pending.
-- `TA-OCC-24a7139419175f4b` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:88`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:177`; PDF page pending.
-- `TA-OCC-fb46ad0ef601e904` — OLP-0294 / `OLP-0294-S01`; source `content/incompleteness/representability-in-q/basic-representable.tex:88`; Tamil `translation/content/incompleteness/representability-in-q/basic-representable.tex:182`; PDF page pending.
-- `TA-OCC-25184f55bc01441f` — OLP-0295 / `OLP-0295-S01`; source `content/incompleteness/representability-in-q/composition-representable.tex:37`; Tamil `translation/content/incompleteness/representability-in-q/composition-representable.tex:105`; PDF page pending.
-- `TA-OCC-6f07d4ecc2b64334` — OLP-0296 / `OLP-0296-S01`; source `content/incompleteness/representability-in-q/minimization-representable.tex:26`; Tamil `translation/content/incompleteness/representability-in-q/minimization-representable.tex:55`; PDF page pending.
-- `TA-OCC-79a9cc3ad29f139f` — OLP-0296 / `OLP-0296-S01`; source `content/incompleteness/representability-in-q/minimization-representable.tex:37`; Tamil `translation/content/incompleteness/representability-in-q/minimization-representable.tex:65`; PDF page pending.
-- `TA-OCC-b5760dec72b30be6` — OLP-0296 / `OLP-0296-S01`; source `content/incompleteness/representability-in-q/minimization-representable.tex:38`; Tamil `translation/content/incompleteness/representability-in-q/minimization-representable.tex:133`; PDF page pending.
-- `TA-OCC-69e919a2a4f78264` — OLP-0296 / `OLP-0296-S01`; source `content/incompleteness/representability-in-q/minimization-representable.tex:38`; Tamil `translation/content/incompleteness/representability-in-q/minimization-representable.tex:143`; PDF page pending.
-- `TA-OCC-cc01cd6dc855a77c` — OLP-0296 / `OLP-0296-S01`; source `content/incompleteness/representability-in-q/minimization-representable.tex:38`; Tamil `translation/content/incompleteness/representability-in-q/minimization-representable.tex:185`; PDF page pending.
-- `TA-OCC-370e9b86f48e0795` — OLP-0297 / `OLP-0297-S01`; source `content/incompleteness/representability-in-q/comp-representable.tex:16`; Tamil `translation/content/incompleteness/representability-in-q/comp-representable.tex:48`; PDF page pending.
-- `TA-OCC-1366a99fae9a11a1` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:52`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:61`; PDF page pending.
-- `TA-OCC-57efc51ec9fc6bd5` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:53`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:67`; PDF page pending.
-- `TA-OCC-52ef552f0545ab6d` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:53`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:80`; PDF page pending.
-- `TA-OCC-668f4622d69bde86` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:64`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:210`; PDF page pending.
-- `TA-OCC-20d87b1312515c46` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:64`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:228`; PDF page pending.
-- `TA-OCC-c441a4aaa73f4363` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:75`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:236`; PDF page pending.
-- `TA-OCC-6e611c23cdad4c43` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:75`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:242`; PDF page pending.
-- `TA-OCC-d2617ba18f85984e` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:89`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:248`; PDF page pending.
-- `TA-OCC-794266e34f5df9b6` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:111`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:254`; PDF page pending.
-- `TA-OCC-b31ace54411fcdaa` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:144`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:261`; PDF page pending.
-- `TA-OCC-d9a6a82e85caffc8` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:144`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:290`; PDF page pending.
-- `TA-OCC-f5a92255e7c7df9f` — OLP-0303 / `OLP-0303-S01`; source `content/incompleteness/theories-computability/q-is-ce.tex:19`; Tamil `translation/content/incompleteness/theories-computability/q-is-ce.tex:22`; PDF page pending.
-- `TA-OCC-f425f4399dbaf711` — OLP-0304 / `OLP-0304-S01`; source `content/incompleteness/theories-computability/oconsis-ext-of-q-undec.tex:14`; Tamil `translation/content/incompleteness/theories-computability/oconsis-ext-of-q-undec.tex:16`; PDF page pending.
-- `TA-OCC-08fecbd22dcaf90a` — OLP-0310 / `OLP-0310-S01`; source `content/incompleteness/theories-computability/consis-with-q.tex:22`; Tamil `translation/content/incompleteness/theories-computability/consis-with-q.tex:41`; PDF page pending.
-- `TA-OCC-0986812329a9225b` — OLP-0311 / `OLP-0311-S01`; source `content/incompleteness/theories-computability/interpretability.tex:28`; Tamil `translation/content/incompleteness/theories-computability/interpretability.tex:31`; PDF page pending.
-- `TA-OCC-0d987b1df7da7749` — OLP-0313 / `OLP-0313-S01`; source `content/incompleteness/incompleteness-provability/introduction.tex:28`; Tamil `translation/content/incompleteness/incompleteness-provability/introduction.tex:31`; PDF page pending.
-- `TA-OCC-ce1b12e67ee62ac5` — OLP-0314 / `OLP-0314-S01`; source `content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:19`; Tamil `translation/content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:98`; PDF page pending.
-- `TA-OCC-edc6de77fa0f7e4f` — OLP-0315 / `OLP-0315-S01`; source `content/incompleteness/incompleteness-provability/first-incompleteness-thm.tex:13`; Tamil `translation/content/incompleteness/incompleteness-provability/first-incompleteness-thm.tex:22`; PDF page pending.
-- `TA-OCC-4cd78d8a0566f1b0` — OLP-0316 / `OLP-0316-S01`; source `content/incompleteness/incompleteness-provability/rosser-thm.tex:13`; Tamil `translation/content/incompleteness/incompleteness-provability/rosser-thm.tex:54`; PDF page pending.
-- `TA-OCC-61907c6a57efd441` — OLP-0317 / `OLP-0317-S01`; source `content/incompleteness/incompleteness-provability/godels-paper.tex:17`; Tamil `translation/content/incompleteness/incompleteness-provability/godels-paper.tex:19`; PDF page pending.
-- `TA-OCC-b544e8cbb6057928` — OLP-0317 / `OLP-0317-S01`; source `content/incompleteness/incompleteness-provability/godels-paper.tex:27`; Tamil `translation/content/incompleteness/incompleteness-provability/godels-paper.tex:33`; PDF page pending.
-- `TA-OCC-e37d177892cfc804` — OLP-0319 / `OLP-0319-S01`; source `content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:35`; Tamil `translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:37`; PDF page pending.
-- `TA-OCC-70c0e4283016dcb8` — OLP-0319 / `OLP-0319-S01`; source `content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:38`; Tamil `translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:47`; PDF page pending.
-- `TA-OCC-640c7220bbf78ca7` — OLP-0319 / `OLP-0319-S01`; source `content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:55`; Tamil `translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex:139`; PDF page pending.
-- `TA-OCC-7791adf8a9184094` — OLP-0320 / `OLP-0320-S01`; source `content/incompleteness/incompleteness-provability/lob-thm.tex:60`; Tamil `translation/content/incompleteness/incompleteness-provability/lob-thm.tex:94`; PDF page pending.
-- `TA-OCC-d4adad9bd84283ca` — OLP-0320 / `OLP-0320-S01`; source `content/incompleteness/incompleteness-provability/lob-thm.tex:60`; Tamil `translation/content/incompleteness/incompleteness-provability/lob-thm.tex:140`; PDF page pending.
-- `TA-OCC-0bb853ba21c9a250` — OLP-0331 / `OLP-0331-S01`; source `content/second-order-logic/metatheory/introduction.tex:14`; Tamil `translation/content/second-order-logic/metatheory/introduction.tex:18`; PDF page pending.
-- `TA-OCC-909f26c9e6b287e7` — OLP-0331 / `OLP-0331-S01`; source `content/second-order-logic/metatheory/introduction.tex:28`; Tamil `translation/content/second-order-logic/metatheory/introduction.tex:33`; PDF page pending.
-- `TA-OCC-50060a47874f21f6` — OLP-0331 / `OLP-0331-S01`; source `content/second-order-logic/metatheory/introduction.tex:29`; Tamil `translation/content/second-order-logic/metatheory/introduction.tex:34`; PDF page pending.
-- `TA-OCC-e6ceaad96a5836b4` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:30`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:32`; PDF page pending.
-- `TA-OCC-f7a8cbb61c1c12b8` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:30`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:36`; PDF page pending.
-- `TA-OCC-aaee02cf83b0960e` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:31`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:47`; PDF page pending.
-- `TA-OCC-e35acb859ef47bb4` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:31`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:102`; PDF page pending.
-- `TA-OCC-22430edf55b0713d` — OLP-0332 / `OLP-0332-S01`; source `content/second-order-logic/metatheory/second-order-arithmetic.tex:34`; Tamil `translation/content/second-order-logic/metatheory/second-order-arithmetic.tex:110`; PDF page pending.
-- `TA-OCC-eebeee337480990f` — OLP-0333 / `OLP-0333-S01`; source `content/second-order-logic/metatheory/undecidability-and-axiomatizability.tex:19`; Tamil `translation/content/second-order-logic/metatheory/undecidability-and-axiomatizability.tex:50`; PDF page pending.
-- `TA-OCC-4902fead62031d6f` — OLP-0335 / `OLP-0335-S01`; source `content/second-order-logic/metatheory/loewenheim-skolem.tex:16`; Tamil `translation/content/second-order-logic/metatheory/loewenheim-skolem.tex:19`; PDF page pending.
-- `TA-OCC-c7d336df1cc32da9` — OLP-0336 / `OLP-0336-S01`; source `content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:12`; Tamil `translation/content/second-order-logic/sol-and-set-theory/sol-and-set-theory.tex:15`; PDF page pending.
-- `TA-OCC-0e6adb4c5765823d` — OLP-0344 / `OLP-0344-S01`; source `content/lambda-calculus/introduction/syntax.tex:1`; Tamil `translation/content/lambda-calculus/introduction/syntax.tex:15`; PDF page pending.
-- `TA-OCC-1216771561f7b222` — OLP-0353 / `OLP-0353-S01`; source `content/lambda-calculus/introduction/primitive-recursion.tex:52`; Tamil `translation/content/lambda-calculus/introduction/primitive-recursion.tex:136`; PDF page pending.
-- `TA-OCC-8beb36182908e303` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:1`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:15`; PDF page pending.
-- `TA-OCC-3fccc9e0488d9721` — OLP-0357 / `OLP-0357-S01`; source `content/lambda-calculus/syntax/terms.tex:1`; Tamil `translation/content/lambda-calculus/syntax/terms.tex:20`; PDF page pending.
-- `TA-OCC-d816c65515ffce01` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:22`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:71`; PDF page pending.
-- `TA-OCC-39af3c038d39b6a8` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:28`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:81`; PDF page pending.
-- `TA-OCC-6d7f1090bfb1ca15` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:108`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:58`; PDF page pending.
-- `TA-OCC-36f249aecbf496f7` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:68`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:24`; PDF page pending.
-- `TA-OCC-7a7efd7190ca0965` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:69`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:72`; PDF page pending.
-- `TA-OCC-ddf27d56126fbc38` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:69`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:89`; PDF page pending.
-- `TA-OCC-46661a91918798c8` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:89`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:108`; PDF page pending.
-- `TA-OCC-9e87ec188dd67252` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:92`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:128`; PDF page pending.
-- `TA-OCC-6ad7e38bebed352f` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:100`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:161`; PDF page pending.
-- `TA-OCC-be6ced80cc430cf9` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:101`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:169`; PDF page pending.
-- `TA-OCC-ccd2f576a752033e` — OLP-0361 / `OLP-0361-S01`; source `content/lambda-calculus/syntax/substitution.tex:101`; Tamil `translation/content/lambda-calculus/syntax/substitution.tex:178`; PDF page pending.
-- `TA-OCC-5ba9b8c03545181b` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:69`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:56`; PDF page pending.
-- `TA-OCC-b18885446f40b8a2` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:116`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:71`; PDF page pending.
-- `TA-OCC-e5a671c903d583af` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:117`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:84`; PDF page pending.
-- `TA-OCC-ed0e9ea7e66f6f32` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:117`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:120`; PDF page pending.
-- `TA-OCC-760cafc7b0d9ce93` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:145`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:160`; PDF page pending.
-- `TA-OCC-90b516ab571b9b5f` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:148`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:241`; PDF page pending.
-- `TA-OCC-ca6fcc92b3be22fc` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:155`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:247`; PDF page pending.
-- `TA-OCC-3db56b072a5274ed` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:156`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:266`; PDF page pending.
-- `TA-OCC-7c657691015083f3` — OLP-0363 / `OLP-0363-S01`; source `content/lambda-calculus/syntax/de-bruijn.tex:1`; Tamil `translation/content/lambda-calculus/syntax/de-bruijn.tex:35`; PDF page pending.
-- `TA-OCC-322678863183b8ac` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:31`; PDF page pending.
-- `TA-OCC-159747fc3e79eea4` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:1`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:105`; PDF page pending.
-- `TA-OCC-eef87f98b4ca14e0` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:43`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:18`; PDF page pending.
-- `TA-OCC-5e68fd67f14191d4` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:45`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:56`; PDF page pending.
-- `TA-OCC-b7236d821eed80c5` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:79`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:85`; PDF page pending.
-- `TA-OCC-58b1a6acf936ee1b` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:80`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:96`; PDF page pending.
-- `TA-OCC-29518d03068149a1` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:80`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:105`; PDF page pending.
-- `TA-OCC-8c047eb234f73c7b` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:90`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:118`; PDF page pending.
-- `TA-OCC-d0520561ca56ac14` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:90`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:126`; PDF page pending.
-- `TA-OCC-80024ed777f74437` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:98`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:130`; PDF page pending.
-- `TA-OCC-0fe0d4bd368488b9` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:98`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:135`; PDF page pending.
-- `TA-OCC-32751c96328efc24` — OLP-0369 / `OLP-0369-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:100`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-reduction.tex:148`; PDF page pending.
-- `TA-OCC-96d875733aa5f257` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:16`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:28`; PDF page pending.
-- `TA-OCC-6a8bb81f8941c2e1` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:35`; PDF page pending.
-- `TA-OCC-9d9e84f2bb0ac621` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:27`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:40`; PDF page pending.
-- `TA-OCC-5c13c77455e58442` — OLP-0370 / `OLP-0370-S01`; source `content/lambda-calculus/church-rosser/beta-reduction.tex:27`; Tamil `translation/content/lambda-calculus/church-rosser/beta-reduction.tex:48`; PDF page pending.
-- `TA-OCC-63dc0bd8dd816f2e` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:37`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:20`; PDF page pending.
-- `TA-OCC-96ba5a2aa31da0b4` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:39`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:68`; PDF page pending.
-- `TA-OCC-7df4a136379fb316` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:65`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:77`; PDF page pending.
-- `TA-OCC-dd1fedf7bd24c5a4` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:86`; PDF page pending.
-- `TA-OCC-237fc26ae7c1939b` — OLP-0371 / `OLP-0371-S01`; source `content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:66`; Tamil `translation/content/lambda-calculus/church-rosser/parallel-beta-eta-reduction.tex:93`; PDF page pending.
-- `TA-OCC-844af637074cb25b` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:20`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; PDF page pending.
-- `TA-OCC-82ecddff3434c1dc` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:34`; PDF page pending.
-- `TA-OCC-70d49f5de6a1f8b8` — OLP-0372 / `OLP-0372-S01`; source `content/lambda-calculus/church-rosser/beta-eta-reduction.tex:21`; Tamil `translation/content/lambda-calculus/church-rosser/beta-eta-reduction.tex:40`; PDF page pending.
-- `TA-OCC-0dbf080f3ac737bf` — OLP-0373 / `OLP-0373-S01`; source `content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; Tamil `translation/content/lambda-calculus/lambda-definability/lambda-definability.tex:13`; PDF page pending.
-- `TA-OCC-71907be74fcef18d` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:22`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:118`; PDF page pending.
-- `TA-OCC-e68e6e4bf1305bc5` — OLP-0378 / `OLP-0378-S01`; source `content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:29`; Tamil `translation/content/lambda-calculus/lambda-definability/primitive-recursive-functions.tex:130`; PDF page pending.
-- `TA-OCC-7a09ce81a7aee35e` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:41`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:58`; PDF page pending.
-- `TA-OCC-9c345486bfcc5bca` — OLP-0391 / `OLP-0391-S01`; source `content/many-valued-logic/syntax-and-semantics/sublogics.tex:42`; Tamil `translation/content/many-valued-logic/syntax-and-semantics/sublogics.tex:67`; PDF page pending.
-- `TA-OCC-41f9c1d294d3f7c8` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:58`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:100`; PDF page pending.
-- `TA-OCC-b707c4f5849f935b` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:81`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:105`; PDF page pending.
-- `TA-OCC-c20f670cc1340a49` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:81`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:110`; PDF page pending.
-- `TA-OCC-0e1a82d52874f700` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:86`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:121`; PDF page pending.
-- `TA-OCC-f938541bce382192` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:86`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:129`; PDF page pending.
-- `TA-OCC-4209d0cdd9ebedb2` — OLP-0397 / `OLP-0397-S01`; source `content/many-valued-logic/three-valued-logics/multiple-designation.tex:91`; Tamil `translation/content/many-valued-logic/three-valued-logics/multiple-designation.tex:137`; PDF page pending.
-- `TA-OCC-5c0cd0bf2aab6faf` — OLP-0411 / `OLP-0411-S01`; source `content/normal-modal-logic/syntax-and-semantics/substitution.tex:25`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/substitution.tex:28`; PDF page pending.
-- `TA-OCC-f22e72f0d0b1d463` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:22`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:73`; PDF page pending.
-- `TA-OCC-0af49061458a8382` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:45`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:89`; PDF page pending.
-- `TA-OCC-ab3fdc37ea151ea0` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:46`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:104`; PDF page pending.
-- `TA-OCC-f328a356782833b1` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:46`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:120`; PDF page pending.
-- `TA-OCC-a1d599ee92b67d44` — OLP-0416 / `OLP-0416-S01`; source `content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:69`; Tamil `translation/content/normal-modal-logic/syntax-and-semantics/tautological-instances.tex:142`; PDF page pending.
-- `TA-OCC-fca342b993d92646` — OLP-0428 / `OLP-0428-S01`; source `content/normal-modal-logic/axioms-systems/introduction.tex:18`; Tamil `translation/content/normal-modal-logic/axioms-systems/introduction.tex:22`; PDF page pending.
-- `TA-OCC-20f665ca682f4345` — OLP-0429 / `OLP-0429-S01`; source `content/normal-modal-logic/axioms-systems/normal-logics.tex:72`; Tamil `translation/content/normal-modal-logic/axioms-systems/normal-logics.tex:90`; PDF page pending.
-- `TA-OCC-9bfeb80fc167af3a` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:62`; PDF page pending.
-- `TA-OCC-bbce90a7bc403365` — OLP-0430 / `OLP-0430-S01`; source `content/normal-modal-logic/axioms-systems/logics-proofs.tex:42`; Tamil `translation/content/normal-modal-logic/axioms-systems/logics-proofs.tex:66`; PDF page pending.
-- `TA-OCC-0bf099817b1dc59c` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:12`; PDF page pending.
-- `TA-OCC-c5ad29bc0c722f38` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:14`; PDF page pending.
-- `TA-OCC-52fce2e497ed1d43` — OLP-0431 / `OLP-0431-S01`; source `content/normal-modal-logic/axioms-systems/proofs-in-K.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-in-K.tex:16`; PDF page pending.
-- `TA-OCC-ba4033017171b564` — OLP-0433 / `OLP-0433-S01`; source `content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/more-proofs-in-K.tex:12`; PDF page pending.
-- `TA-OCC-680dc02d0156303b` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:3`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:12`; PDF page pending.
-- `TA-OCC-dc9c7ed737c2cac4` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:11`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:14`; PDF page pending.
-- `TA-OCC-416e898809fe1e5e` — OLP-0435 / `OLP-0435-S01`; source `content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:13`; Tamil `translation/content/normal-modal-logic/axioms-systems/proofs-modal-systems.tex:30`; PDF page pending.
-- `TA-OCC-f2e0a7be650b12c9` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:28`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:31`; PDF page pending.
-- `TA-OCC-b39a9d7a3d899afd` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:34`; PDF page pending.
-- `TA-OCC-d1da0560f15cbc76` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:34`; PDF page pending.
-- `TA-OCC-132e244150263a5f` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:29`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:47`; PDF page pending.
-- `TA-OCC-30c20faf7e4371b1` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:47`; PDF page pending.
-- `TA-OCC-f235c07865335c3e` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:52`; PDF page pending.
-- `TA-OCC-24da5250e2d622f7` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:32`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:52`; PDF page pending.
-- `TA-OCC-0804511aefc65c35` — OLP-0436 / `OLP-0436-S01`; source `content/normal-modal-logic/axioms-systems/soundness.tex:44`; Tamil `translation/content/normal-modal-logic/axioms-systems/soundness.tex:56`; PDF page pending.
-- `TA-OCC-68513e2d890f2ec2` — OLP-0437 / `OLP-0437-S01`; source `content/normal-modal-logic/axioms-systems/systems-distinct.tex:23`; Tamil `translation/content/normal-modal-logic/axioms-systems/systems-distinct.tex:152`; PDF page pending.
-- `TA-OCC-25efd5bd66666baf` — OLP-0439 / `OLP-0439-S01`; source `content/normal-modal-logic/axioms-systems/provability-properties.tex:37`; Tamil `translation/content/normal-modal-logic/axioms-systems/provability-properties.tex:41`; PDF page pending.
-- `TA-OCC-28ffc7477fe9a442` — OLP-0445 / `OLP-0445-S01`; source `content/normal-modal-logic/completeness/modalities-ccs.tex:27`; Tamil `translation/content/normal-modal-logic/completeness/modalities-ccs.tex:30`; PDF page pending.
-- `TA-OCC-2d20b82cd45fd97d` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:18`; PDF page pending.
-- `TA-OCC-0375771b3d9f4885` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:17`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:52`; PDF page pending.
-- `TA-OCC-73273a3074530c16` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:28`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:61`; PDF page pending.
-- `TA-OCC-e8361fade4ce91f8` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:70`; PDF page pending.
-- `TA-OCC-c8726bc3bacf8ef6` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:29`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:79`; PDF page pending.
-- `TA-OCC-03007e06cd29055c` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:141`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:92`; PDF page pending.
-- `TA-OCC-2eeac4577338f922` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:101`; PDF page pending.
-- `TA-OCC-cc873a681733aa17` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:111`; PDF page pending.
-- `TA-OCC-5073d100b07154b4` — OLP-0447 / `OLP-0447-S01`; source `content/normal-modal-logic/completeness/truth-lemma.tex:144`; Tamil `translation/content/normal-modal-logic/completeness/truth-lemma.tex:123`; PDF page pending.
-- `TA-OCC-b07cc3871315f8bd` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:95`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:114`; PDF page pending.
-- `TA-OCC-1c69f0321d512f06` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:95`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:117`; PDF page pending.
-- `TA-OCC-e3a838b7c821020a` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:114`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:122`; PDF page pending.
-- `TA-OCC-73df257fb0b8ac67` — OLP-0451 / `OLP-0451-S01`; source `content/normal-modal-logic/filtrations/introduction.tex:114`; Tamil `translation/content/normal-modal-logic/filtrations/introduction.tex:126`; PDF page pending.
-- `TA-OCC-2aa265a3bafcb006` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:61`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:67`; PDF page pending.
-- `TA-OCC-0c02eb2b6b769768` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:62`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:68`; PDF page pending.
-- `TA-OCC-0809cfdd682e39fa` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:62`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:89`; PDF page pending.
-- `TA-OCC-f0ffcdbdb0d3bca3` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:65`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:96`; PDF page pending.
-- `TA-OCC-90d60c48578c03dd` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:65`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:106`; PDF page pending.
-- `TA-OCC-1b0a9a93e5e6d009` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:83`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:116`; PDF page pending.
-- `TA-OCC-f26df521fdbaaaab` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:83`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:127`; PDF page pending.
-- `TA-OCC-56d1e84f0bb95fcf` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:89`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:142`; PDF page pending.
-- `TA-OCC-755aaaeadc8389e7` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:89`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:150`; PDF page pending.
-- `TA-OCC-cdc0a8a029e8b190` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:97`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:155`; PDF page pending.
-- `TA-OCC-5c8b9df00a39dc42` — OLP-0453 / `OLP-0453-S01`; source `content/normal-modal-logic/filtrations/filtrations-def.tex:97`; Tamil `translation/content/normal-modal-logic/filtrations/filtrations-def.tex:163`; PDF page pending.
-- `TA-OCC-833bd9db22c730b2` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:21`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:27`; PDF page pending.
-- `TA-OCC-b03b80c3fee89f9e` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:26`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:39`; PDF page pending.
-- `TA-OCC-f2464d5a6967f0bb` — OLP-0460 / `OLP-0460-S01`; source `content/normal-modal-logic/tableaux/tableaux.tex:12`; Tamil `translation/content/normal-modal-logic/tableaux/tableaux.tex:14`; PDF page pending.
-- `TA-OCC-4c0b44ca3bf50ff4` — OLP-0462 / `OLP-0462-S01`; source `content/normal-modal-logic/tableaux/rules-for-K.tex:222`; Tamil `translation/content/normal-modal-logic/tableaux/rules-for-K.tex:229`; PDF page pending.
-- `TA-OCC-8273c09b8bcb9ab3` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:14`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:15`; PDF page pending.
-- `TA-OCC-676ec0ab87a956e1` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:14`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:17`; PDF page pending.
-- `TA-OCC-189ead11b983df51` — OLP-0464 / `OLP-0464-S01`; source `content/normal-modal-logic/tableaux/soundness.tex:16`; Tamil `translation/content/normal-modal-logic/tableaux/soundness.tex:46`; PDF page pending.
-- `TA-OCC-96137d094d15702a` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:68`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:135`; PDF page pending.
-- `TA-OCC-ad396bd540189e32` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:81`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:141`; PDF page pending.
-- `TA-OCC-6ed20f9608a174dc` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:88`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:148`; PDF page pending.
-- `TA-OCC-7852645e4f21a2a3` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:106`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:155`; PDF page pending.
-- `TA-OCC-55bdb07e22a984ce` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:106`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:163`; PDF page pending.
-- `TA-OCC-72deeaa4f31eac10` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:123`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:171`; PDF page pending.
-- `TA-OCC-970537a3d4286d31` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:123`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:179`; PDF page pending.
-- `TA-OCC-7a4c35f14731318d` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:129`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:187`; PDF page pending.
-- `TA-OCC-92e35642146abcdc` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:129`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:197`; PDF page pending.
-- `TA-OCC-9e82a83595fbb2bf` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:136`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:204`; PDF page pending.
-- `TA-OCC-3c1cf57a2bdbfe17` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:136`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:212`; PDF page pending.
-- `TA-OCC-03b03a65fcc62686` — OLP-0468 / `OLP-0468-S01`; source `content/normal-modal-logic/tableaux/completeness.tex:144`; Tamil `translation/content/normal-modal-logic/tableaux/completeness.tex:222`; PDF page pending.
-- `TA-OCC-569ea256e9d637c5` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:14`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:15`; PDF page pending.
-- `TA-OCC-96c98c2cce37c394` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:18`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:21`; PDF page pending.
-- `TA-OCC-123bd1612cd0059f` — OLP-0469 / `OLP-0469-S01`; source `content/normal-modal-logic/tableaux/countermodels.tex:37`; Tamil `translation/content/normal-modal-logic/tableaux/countermodels.tex:42`; PDF page pending.
-- `TA-OCC-975c03470a9ebc7e` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:12`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:13`; PDF page pending.
-- `TA-OCC-fa0ef59d4987a3e8` — OLP-0473 / `OLP-0473-S01`; source `content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:3`; Tamil `translation/content/normal-modal-logic/sequent-calculus/proofs-in-K.tex:121`; PDF page pending.
-- `TA-OCC-b67b3fa383d52272` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:296`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:304`; PDF page pending.
-- `TA-OCC-4b9c932ca0f26b6f` — OLP-0498 / `OLP-0498-S01`; source `content/intuitionistic-logic/semantics/semantics.tex:14`; Tamil `translation/content/intuitionistic-logic/semantics/semantics.tex:15`; PDF page pending.
-- `TA-OCC-37ba8b4f34f9ba5f` — OLP-0503 / `OLP-0503-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:13`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-completeness.tex:14`; PDF page pending.
-- `TA-OCC-761a032eb0352d94` — OLP-0504 / `OLP-0504-S01`; source `content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:14`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/soundness-axd.tex:16`; PDF page pending.
-- `TA-OCC-4d426b93df60d648` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:12`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:15`; PDF page pending.
-- `TA-OCC-f4922b66b8f9249d` — OLP-0511 / `OLP-0511-S01`; source `content/intuitionistic-logic/tableaux/tableaux.tex:12`; Tamil `translation/content/intuitionistic-logic/tableaux/tableaux.tex:14`; PDF page pending.
-- `TA-OCC-0683a750b9ab5ce3` — OLP-0515 / `OLP-0515-S01`; source `content/intuitionistic-logic/tableaux/soundness.tex:24`; Tamil `translation/content/intuitionistic-logic/tableaux/soundness.tex:36`; PDF page pending.
-- `TA-OCC-5693a4937408bd68` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:63`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:68`; PDF page pending.
-- `TA-OCC-e6853bb8bca918a5` — OLP-0520 / `OLP-0520-S01`; source `content/counterfactuals/introduction/strict-conditional.tex:100`; Tamil `translation/content/counterfactuals/introduction/strict-conditional.tex:106`; PDF page pending.
-- `TA-OCC-f23db441a0387fbe` — OLP-0532 / `OLP-0532-S01`; source `content/set-theory/story/russells-paradox-again.tex:23`; Tamil `translation/content/set-theory/story/russells-paradox-again.tex:46`; PDF page pending.
-- `TA-OCC-ed830bdbd541d160` — OLP-0543 / `OLP-0543-S01`; source `content/set-theory/z/infinity-again.tex:74`; Tamil `translation/content/set-theory/z/infinity-again.tex:85`; PDF page pending.
-- `TA-OCC-a3eda21d42822b72` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:37`; Tamil `translation/content/set-theory/ordinals/wo.tex:69`; PDF page pending.
-- `TA-OCC-130dc4e1fe240534` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:10`; Tamil `translation/content/set-theory/ordinals/basic.tex:10`; PDF page pending.
-- `TA-OCC-e02790ccc2c801fc` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:10`; Tamil `translation/content/set-theory/ordinals/basic.tex:46`; PDF page pending.
-- `TA-OCC-8c6a8774e6133299` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:17`; Tamil `translation/content/set-theory/ordinals/basic.tex:59`; PDF page pending.
-- `TA-OCC-af8e3db4880ea2cf` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:28`; Tamil `translation/content/set-theory/ordinals/basic.tex:87`; PDF page pending.
-- `TA-OCC-1e1c025425743253` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:35`; Tamil `translation/content/set-theory/ordinals/basic.tex:87`; PDF page pending.
-- `TA-OCC-6a204a672291a76a` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:37`; Tamil `translation/content/set-theory/ordinals/basic.tex:105`; PDF page pending.
-- `TA-OCC-d765d38e829b6549` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:43`; Tamil `translation/content/set-theory/ordinals/basic.tex:112`; PDF page pending.
-- `TA-OCC-ce9f0ecbf1677744` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:43`; Tamil `translation/content/set-theory/ordinals/basic.tex:214`; PDF page pending.
-- `TA-OCC-f0762482ba2f472e` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:32`; Tamil `translation/content/set-theory/ordinals/opps.tex:44`; PDF page pending.
-- `TA-OCC-19fdd32700659890` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:39`; Tamil `translation/content/set-theory/ordinals/opps.tex:46`; PDF page pending.
-- `TA-OCC-1e8b6e8e93a8c571` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:14`; Tamil `translation/content/set-theory/spine/recursion.tex:39`; PDF page pending.
-- `TA-OCC-5fb9b3d5952082ba` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:14`; Tamil `translation/content/set-theory/spine/recursion.tex:61`; PDF page pending.
-- `TA-OCC-cfec215497196f8c` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:32`; Tamil `translation/content/set-theory/spine/zf.tex:33`; PDF page pending.
-- `TA-OCC-658bd17158901d4f` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:20`; Tamil `translation/content/set-theory/spine/rank.tex:41`; PDF page pending.
-- `TA-OCC-9128b9f174eb2c3b` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:22`; Tamil `translation/content/set-theory/spine/rank.tex:63`; PDF page pending.
-- `TA-OCC-6c55910aeb88ce9c` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:32`; Tamil `translation/content/set-theory/spine/rank.tex:84`; PDF page pending.
-- `TA-OCC-9ab78e57062fe182` — OLP-0564 / `OLP-0564-S01`; source `content/set-theory/spine/rank.tex:35`; Tamil `translation/content/set-theory/spine/rank.tex:129`; PDF page pending.
-- `TA-OCC-0fff8a8a9c25fbc1` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:26`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:60`; PDF page pending.
-- `TA-OCC-63159c0bf972a0d4` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:29`; Tamil `translation/content/set-theory/replacement/refproofs.tex:67`; PDF page pending.
-- `TA-OCC-a7e135a90c5f59bb` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:52`; Tamil `translation/content/set-theory/replacement/refproofs.tex:105`; PDF page pending.
-- `TA-OCC-790481b6ea1c6ca6` — OLP-0572 / `OLP-0572-S01`; source `content/set-theory/replacement/refproofs.tex:57`; Tamil `translation/content/set-theory/replacement/refproofs.tex:107`; PDF page pending.
-- `TA-OCC-21a267106c309261` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:10`; PDF page pending.
-- `TA-OCC-a7840c2960dd1eb1` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:7`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:11`; PDF page pending.
-- `TA-OCC-b20004d0d036b36c` — OLP-0573 / `OLP-0573-S01`; source `content/set-theory/replacement/finiteaxiomatizability.tex:13`; Tamil `translation/content/set-theory/replacement/finiteaxiomatizability.tex:103`; PDF page pending.
-- `TA-OCC-01ee1a4a2d0d4a06` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:150`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:194`; PDF page pending.
-- `TA-OCC-d25575d435d01c50` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:152`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:207`; PDF page pending.
-- `TA-OCC-41d545fdae883e0f` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:29`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:36`; PDF page pending.
-- `TA-OCC-d53fa786caa6457d` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:86`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:130`; PDF page pending.
-- `TA-OCC-1ebe6efbc00950f8` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:107`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:138`; PDF page pending.
-- `TA-OCC-13aa53c7c8339668` — OLP-0582 / `OLP-0582-S03`; source `content/set-theory/cardinals/cardsasords.tex:114`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:142`; PDF page pending.
-- `TA-OCC-f864748ee811d4d6` — OLP-0587 / `OLP-0587-S04`; source `content/set-theory/card-arithmetic/opps.tex:102`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:119`; PDF page pending.
-- `TA-OCC-06c1c595cf7d2df3` — OLP-0588 / `OLP-0588-S03`; source `content/set-theory/card-arithmetic/simp.tex:68`; Tamil `translation/content/set-theory/card-arithmetic/simp.tex:107`; PDF page pending.
-- `TA-OCC-2b4625f767f18da8` — OLP-0589 / `OLP-0589-S01`; source `content/set-theory/card-arithmetic/expotough.tex:13`; Tamil `translation/content/set-theory/card-arithmetic/expotough.tex:14`; PDF page pending.
-- `TA-OCC-6918bbd9d240f6e0` — OLP-0591 / `OLP-0591-S04`; source `content/set-theory/card-arithmetic/fix.tex:101`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:112`; PDF page pending.
-- `TA-OCC-49f8f228ee55f44b` — OLP-0594 / `OLP-0594-S03`; source `content/set-theory/choice/tarskiscott.tex:65`; Tamil `translation/content/set-theory/choice/tarskiscott.tex:79`; PDF page pending.
-- `TA-OCC-dc86c32413d03c28` — OLP-0597 / `OLP-0597-S03`; source `content/set-theory/choice/countablechoice.tex:78`; Tamil `translation/content/set-theory/choice/countablechoice.tex:98`; PDF page pending.
-- `TA-OCC-07127d8fcf8b5cf9` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:89`; Tamil `translation/content/set-theory/choice/countablechoice.tex:116`; PDF page pending.
-- `TA-OCC-f699a07e75979980` — OLP-0598 / `OLP-0598-S02`; source `content/set-theory/choice/justifications.tex:35`; Tamil `translation/content/set-theory/choice/justifications.tex:41`; PDF page pending.
-- `TA-OCC-a4caf11984f7ff11` — OLP-0599 / `OLP-0599-S03`; source `content/set-theory/choice/banach.tex:49`; Tamil `translation/content/set-theory/choice/banach.tex:62`; PDF page pending.
-- `TA-OCC-7c95d04f9ef33e50` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:9`; Tamil `translation/content/set-theory/choice/vitali.tex:27`; PDF page pending.
-- `TA-OCC-6329b4bc8fbf64a2` — OLP-0600 / `OLP-0600-S02`; source `content/set-theory/choice/vitali.tex:39`; Tamil `translation/content/set-theory/choice/vitali.tex:45`; PDF page pending.
-- `TA-OCC-27abd220df96377e` — OLP-0601 / `OLP-0601-S01`; source `content/methods/methods.tex:11`; Tamil `translation/content/methods/methods.tex:13`; PDF page pending.
-- `TA-OCC-0baecf582cb3af31` — OLP-0601 / `OLP-0601-S01`; source `content/methods/methods.tex:13`; Tamil `translation/content/methods/methods.tex:14`; PDF page pending.
-- `TA-OCC-78c677451d0e60c8` — OLP-0601 / `OLP-0601-S01`; source `content/methods/methods.tex:13`; Tamil `translation/content/methods/methods.tex:15`; PDF page pending.
-- `TA-OCC-418b2249dca4c63c` — OLP-0602 / `OLP-0602-S01`; source `content/methods/proofs/proofs.tex:2`; Tamil `translation/content/methods/proofs/proofs.tex:9`; PDF page pending.
-- `TA-OCC-1a69cf2cc277e167` — OLP-0603 / `OLP-0603-S01`; source `content/methods/proofs/introduction.tex:2`; Tamil `translation/content/methods/proofs/introduction.tex:17`; PDF page pending.
-- `TA-OCC-681dc639e56490b3` — OLP-0603 / `OLP-0603-S01`; source `content/methods/proofs/introduction.tex:15`; Tamil `translation/content/methods/proofs/introduction.tex:18`; PDF page pending.
-- `TA-OCC-0bb653f205d24518` — OLP-0603 / `OLP-0603-S01`; source `content/methods/proofs/introduction.tex:16`; Tamil `translation/content/methods/proofs/introduction.tex:25`; PDF page pending.
-- `TA-OCC-feddffe7eda345e6` — OLP-0603 / `OLP-0603-S01`; source `content/methods/proofs/introduction.tex:21`; Tamil `translation/content/methods/proofs/introduction.tex:29`; PDF page pending.
-- `TA-OCC-f884897d93af2108` — OLP-0603 / `OLP-0603-S02`; source `content/methods/proofs/introduction.tex:27`; Tamil `translation/content/methods/proofs/introduction.tex:35`; PDF page pending.
-- `TA-OCC-6d42bec21b6fcaf6` — OLP-0603 / `OLP-0603-S03`; source `content/methods/proofs/introduction.tex:36`; Tamil `translation/content/methods/proofs/introduction.tex:44`; PDF page pending.
-- `TA-OCC-13ee23206db2842d` — OLP-0603 / `OLP-0603-S04`; source `content/methods/proofs/introduction.tex:45`; Tamil `translation/content/methods/proofs/introduction.tex:60`; PDF page pending.
-- `TA-OCC-7bb8bd90fdf17a47` — OLP-0605 / `OLP-0605-S04`; source `content/methods/proofs/using-definitions.tex:70`; Tamil `translation/content/methods/proofs/using-definitions.tex:87`; PDF page pending.
-- `TA-OCC-6cefb4fa6afa2129` — OLP-0605 / `OLP-0605-S05`; source `content/methods/proofs/using-definitions.tex:94`; Tamil `translation/content/methods/proofs/using-definitions.tex:122`; PDF page pending.
-- `TA-OCC-2aa8f90c8dce4cb8` — OLP-0606 / `OLP-0606-S01`; source `content/methods/proofs/inference-patterns.tex:2`; Tamil `translation/content/methods/proofs/inference-patterns.tex:14`; PDF page pending.
-- `TA-OCC-e5cf55b12e61753c` — OLP-0606 / `OLP-0606-S01`; source `content/methods/proofs/inference-patterns.tex:13`; Tamil `translation/content/methods/proofs/inference-patterns.tex:23`; PDF page pending.
-- `TA-OCC-7731892024e3b51e` — OLP-0606 / `OLP-0606-S01`; source `content/methods/proofs/inference-patterns.tex:16`; Tamil `translation/content/methods/proofs/inference-patterns.tex:25`; PDF page pending.
-- `TA-OCC-c15528d0d4f8dd4d` — OLP-0606 / `OLP-0606-S01`; source `content/methods/proofs/inference-patterns.tex:22`; Tamil `translation/content/methods/proofs/inference-patterns.tex:25`; PDF page pending.
-- `TA-OCC-b0304489911415b7` — OLP-0606 / `OLP-0606-S03`; source `content/methods/proofs/inference-patterns.tex:40`; Tamil `translation/content/methods/proofs/inference-patterns.tex:63`; PDF page pending.
-- `TA-OCC-abcc191a01b912a7` — OLP-0606 / `OLP-0606-S03`; source `content/methods/proofs/inference-patterns.tex:50`; Tamil `translation/content/methods/proofs/inference-patterns.tex:66`; PDF page pending.
-- `TA-OCC-554f8db67969318f` — OLP-0606 / `OLP-0606-S07`; source `content/methods/proofs/inference-patterns.tex:96`; Tamil `translation/content/methods/proofs/inference-patterns.tex:138`; PDF page pending.
-- `TA-OCC-4f4ce7eefb7b9ae7` — OLP-0606 / `OLP-0606-S09`; source `content/methods/proofs/inference-patterns.tex:143`; Tamil `translation/content/methods/proofs/inference-patterns.tex:177`; PDF page pending.
-- `TA-OCC-1e5736c6c30b6fb9` — OLP-0606 / `OLP-0606-S10`; source `content/methods/proofs/inference-patterns.tex:166`; Tamil `translation/content/methods/proofs/inference-patterns.tex:233`; PDF page pending.
-- `TA-OCC-801d94942f5a80ea` — OLP-0606 / `OLP-0606-S12`; source `content/methods/proofs/inference-patterns.tex:237`; Tamil `translation/content/methods/proofs/inference-patterns.tex:295`; PDF page pending.
-- `TA-OCC-38ae7852c78d6d27` — OLP-0606 / `OLP-0606-S13`; source `content/methods/proofs/inference-patterns.tex:255`; Tamil `translation/content/methods/proofs/inference-patterns.tex:326`; PDF page pending.
-- `TA-OCC-cb340223884ae581` — OLP-0607 / `OLP-0607-S02`; source `content/methods/proofs/example-1.tex:24`; Tamil `translation/content/methods/proofs/example-1.tex:61`; PDF page pending.
-- `TA-OCC-1fef90e2f7cd8747` — OLP-0607 / `OLP-0607-S07`; source `content/methods/proofs/example-1.tex:158`; Tamil `translation/content/methods/proofs/example-1.tex:225`; PDF page pending.
-- `TA-OCC-993bf36225749f4f` — OLP-0608 / `OLP-0608-S02`; source `content/methods/proofs/example-2.tex:17`; Tamil `translation/content/methods/proofs/example-2.tex:33`; PDF page pending.
-- `TA-OCC-9037c5b8ec59de05` — OLP-0608 / `OLP-0608-S05`; source `content/methods/proofs/example-2.tex:100`; Tamil `translation/content/methods/proofs/example-2.tex:128`; PDF page pending.
-- `TA-OCC-54d1f513399f878d` — OLP-0609 / `OLP-0609-S02`; source `content/methods/proofs/proof-by-contradiction.tex:34`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:82`; PDF page pending.
-- `TA-OCC-bd4fb4e97a098555` — OLP-0609 / `OLP-0609-S03`; source `content/methods/proofs/proof-by-contradiction.tex:82`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:121`; PDF page pending.
-- `TA-OCC-022c4cb390096a3b` — OLP-0609 / `OLP-0609-S03`; source `content/methods/proofs/proof-by-contradiction.tex:86`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:131`; PDF page pending.
-- `TA-OCC-87030f954a203428` — OLP-0609 / `OLP-0609-S04`; source `content/methods/proofs/proof-by-contradiction.tex:119`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:170`; PDF page pending.
-- `TA-OCC-942013454f88726d` — OLP-0609 / `OLP-0609-S04`; source `content/methods/proofs/proof-by-contradiction.tex:136`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:174`; PDF page pending.
-- `TA-OCC-df46b9087100f704` — OLP-0610 / `OLP-0610-S01`; source `content/methods/proofs/reading-proofs.tex:2`; Tamil `translation/content/methods/proofs/reading-proofs.tex:11`; PDF page pending.
-- `TA-OCC-6d0dc69cbc192a78` — OLP-0610 / `OLP-0610-S01`; source `content/methods/proofs/reading-proofs.tex:3`; Tamil `translation/content/methods/proofs/reading-proofs.tex:13`; PDF page pending.
-- `TA-OCC-36cf371a337232a5` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:34`; Tamil `translation/content/methods/proofs/reading-proofs.tex:40`; PDF page pending.
-- `TA-OCC-1ad37e580d936b53` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:37`; Tamil `translation/content/methods/proofs/reading-proofs.tex:47`; PDF page pending.
-- `TA-OCC-969b9588c1d515df` — OLP-0611 / `OLP-0611-S06`; source `content/methods/proofs/cant-do-it.tex:45`; Tamil `translation/content/methods/proofs/cant-do-it.tex:71`; PDF page pending.
-- `TA-OCC-442aa7d28de59acd` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:2`; Tamil `translation/content/methods/proofs/resources.tex:13`; PDF page pending.
-- `TA-OCC-fb141fade1d4464f` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:13`; Tamil `translation/content/methods/proofs/resources.tex:22`; PDF page pending.
-- `TA-OCC-9aba901eaf23cdd2` — OLP-0612 / `OLP-0612-S02`; source `content/methods/proofs/resources.tex:27`; Tamil `translation/content/methods/proofs/resources.tex:29`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -7494,6 +6960,10 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-95d080c7be9c43e1` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:101`; PDF page pending.
 - `TA-OCC-fbd821a1728b83e0` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:85`; Tamil `translation/content/set-theory/choice/vitali.tex:118`; PDF page pending.
 - `TA-OCC-28159b1c512c387b` — OLP-0605 / `OLP-0605-S01`; source `content/methods/proofs/using-definitions.tex:16`; Tamil `translation/content/methods/proofs/using-definitions.tex:18`; PDF page pending.
+- `TA-OCC-a8cb3f9e002fd738` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:130`; Tamil `translation/content/methods/induction/induction-on-N.tex:188`; PDF page pending.
+- `TA-OCC-2b4bb8c306d579ad` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:3`; Tamil `translation/content/methods/induction/relations.tex:12`; PDF page pending.
+- `TA-OCC-af60117d296518c6` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:11`; Tamil `translation/content/methods/induction/relations.tex:16`; PDF page pending.
+- `TA-OCC-42293b020f500afd` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:86`; Tamil `translation/content/methods/induction/relations.tex:133`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -11371,6 +10841,7 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-c77d2878ec21c693` — OLP-0603 / `OLP-0603-S05`; source `content/methods/proofs/introduction.tex:65`; Tamil `translation/content/methods/proofs/introduction.tex:86`; PDF page pending.
 - `TA-OCC-cd309ad18069bd51` — OLP-0606 / `OLP-0606-S09`; source `content/methods/proofs/inference-patterns.tex:140`; Tamil `translation/content/methods/proofs/inference-patterns.tex:174`; PDF page pending.
 - `TA-OCC-5c8753dd3d22c809` — OLP-0606 / `OLP-0606-S13`; source `content/methods/proofs/inference-patterns.tex:255`; Tamil `translation/content/methods/proofs/inference-patterns.tex:327`; PDF page pending.
+- `TA-OCC-bce04ad3a4f9d7a5` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:17`; Tamil `translation/content/methods/induction/inductive-definitions.tex:21`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -13152,6 +12623,7 @@ Please double-check: **is “தனித்த வாசிப்புத்�
 - `TA-OCC-a7f61d7ae8081703` — OLP-0060 / `OLP-0060-S06`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:129`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:136`; PDF page pending.
 - `TA-OCC-1e2cd62f2f4f4104` — OLP-0060 / `OLP-0060-S07`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:144`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:152`; PDF page pending.
 - `TA-OCC-1b27d95eeaa38a56` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:10`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:51`; PDF page pending.
+- `TA-OCC-6f4ddb695fad7ebd` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:85`; Tamil `translation/content/methods/induction/relations.tex:131`; PDF page pending.
 
 ## TA-T087 — uniform substitution / local determination / monotonicity
 
@@ -14102,6 +13574,34 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-6345a13b2a51409a` — OLP-0609 / `OLP-0609-S05`; source `content/methods/proofs/proof-by-contradiction.tex:172`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:215`; PDF page pending.
 - `TA-OCC-68ba77c6c88261b7` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:189`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:235`; PDF page pending.
 - `TA-OCC-d0d2f57cdcaf074f` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:34`; Tamil `translation/content/methods/proofs/reading-proofs.tex:64`; PDF page pending.
+- `TA-OCC-e01cb8384da35268` — OLP-0614 / `OLP-0614-S01`; source `content/methods/induction/introduction.tex:1`; Tamil `translation/content/methods/induction/introduction.tex:17`; PDF page pending.
+- `TA-OCC-8dc6e88bf17a437c` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:17`; Tamil `translation/content/methods/induction/introduction.tex:26`; PDF page pending.
+- `TA-OCC-6497502614e37807` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:27`; Tamil `translation/content/methods/induction/introduction.tex:38`; PDF page pending.
+- `TA-OCC-c01daafe90f1e313` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:52`; PDF page pending.
+- `TA-OCC-109bfea511a6264a` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:53`; PDF page pending.
+- `TA-OCC-ff6e49e576d09b33` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:55`; PDF page pending.
+- `TA-OCC-dece41756475bbc9` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:57`; PDF page pending.
+- `TA-OCC-83d7ae7b5c5b56ca` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:44`; Tamil `translation/content/methods/induction/introduction.tex:65`; PDF page pending.
+- `TA-OCC-d12fce6dcc492215` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:1`; Tamil `translation/content/methods/induction/induction-on-N.tex:15`; PDF page pending.
+- `TA-OCC-22d4c85e6e8a9485` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:58`; PDF page pending.
+- `TA-OCC-ebedac8ce54f9270` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:60`; PDF page pending.
+- `TA-OCC-e198bce43be65bc8` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:62`; PDF page pending.
+- `TA-OCC-ae2145d7a8443c78` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:64`; PDF page pending.
+- `TA-OCC-bcc751c77ade37b9` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:75`; PDF page pending.
+- `TA-OCC-901f209404bd962f` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:71`; Tamil `translation/content/methods/induction/induction-on-N.tex:101`; PDF page pending.
+- `TA-OCC-d350226bbe485248` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:71`; Tamil `translation/content/methods/induction/induction-on-N.tex:102`; PDF page pending.
+- `TA-OCC-ae9b1b7f0e1a10dc` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:76`; Tamil `translation/content/methods/induction/induction-on-N.tex:104`; PDF page pending.
+- `TA-OCC-12c5dbba8ad54c4c` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:76`; Tamil `translation/content/methods/induction/induction-on-N.tex:105`; PDF page pending.
+- `TA-OCC-6087464e7a1338b0` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:130`; Tamil `translation/content/methods/induction/induction-on-N.tex:186`; PDF page pending.
+- `TA-OCC-eecdb750e0390b33` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:24`; Tamil `translation/content/methods/induction/strong-induction.tex:37`; PDF page pending.
+- `TA-OCC-03c121a72c7c6ed3` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:24`; Tamil `translation/content/methods/induction/strong-induction.tex:42`; PDF page pending.
+- `TA-OCC-fa7b3451e0e4d60c` — OLP-0616 / `OLP-0616-S04`; source `content/methods/induction/strong-induction.tex:48`; Tamil `translation/content/methods/induction/strong-induction.tex:72`; PDF page pending.
+- `TA-OCC-2b5048349aff6e24` — OLP-0617 / `OLP-0617-S04`; source `content/methods/induction/inductive-definitions.tex:52`; Tamil `translation/content/methods/induction/inductive-definitions.tex:73`; PDF page pending.
+- `TA-OCC-ac69a90e401474bb` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:110`; Tamil `translation/content/methods/induction/inductive-definitions.tex:161`; PDF page pending.
+- `TA-OCC-fceb29960ea459c0` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:124`; Tamil `translation/content/methods/induction/inductive-definitions.tex:186`; PDF page pending.
+- `TA-OCC-abcfdda81549b8e7` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:1`; Tamil `translation/content/methods/induction/structural-induction.tex:14`; PDF page pending.
+- `TA-OCC-16eb536ddd73bf78` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:1`; Tamil `translation/content/methods/induction/structural-induction.tex:18`; PDF page pending.
+- `TA-OCC-bddbdd2e305290c6` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:31`; Tamil `translation/content/methods/induction/structural-induction.tex:46`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -16294,6 +15794,8 @@ Please double-check: **is “முன்தொடர் / பின்தொட
 - `TA-OCC-239f7dbbb6578dd4` — OLP-0606 / `OLP-0606-S15`; source `content/methods/proofs/inference-patterns.tex:294`; Tamil `translation/content/methods/proofs/inference-patterns.tex:413`; PDF page pending.
 - `TA-OCC-fd136406aea43e9a` — OLP-0607 / `OLP-0607-S06`; source `content/methods/proofs/example-1.tex:125`; Tamil `translation/content/methods/proofs/example-1.tex:202`; PDF page pending.
 - `TA-OCC-c1f6b424197233fc` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:178`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:243`; PDF page pending.
+- `TA-OCC-132c88f048a92d66` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:207`; PDF page pending.
+- `TA-OCC-9b79edce81bc1c1e` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:95`; Tamil `translation/content/methods/induction/relations.tex:169`; PDF page pending.
 
 ## TA-T098 — logical rule / structural rule / weakening / contraction / exchange / cut
 
@@ -18332,6 +17834,7 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-9d3b80bbc3e4c5b3` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:111`; PDF page pending.
 - `TA-OCC-5bc9e62f2d87884f` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:153`; PDF page pending.
 - `TA-OCC-8d8764ffc1b609d1` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:81`; PDF page pending.
+- `TA-OCC-d4a4b4b65a6250c1` — OLP-0615 / `OLP-0615-S05`; source `content/methods/induction/induction-on-N.tex:78`; Tamil `translation/content/methods/induction/induction-on-N.tex:120`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -22487,6 +21990,13 @@ Please double-check: **is “ஒரேநேரப் பதிலீடு / �
 - `TA-OCC-bed50ec29f23b277` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:178`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:262`; PDF page pending.
 - `TA-OCC-9b94d01f20af18d9` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:178`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:271`; PDF page pending.
 - `TA-OCC-0e1b8268dfc8d1f3` — OLP-0610 / `OLP-0610-S01`; source `content/methods/proofs/reading-proofs.tex:1`; Tamil `translation/content/methods/proofs/reading-proofs.tex:15`; PDF page pending.
+- `TA-OCC-f844781c53384cb0` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:18`; Tamil `translation/content/methods/induction/introduction.tex:21`; PDF page pending.
+- `TA-OCC-469dfce96e70d507` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:18`; Tamil `translation/content/methods/induction/introduction.tex:28`; PDF page pending.
+- `TA-OCC-cc29e8d9468e5d4d` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:130`; Tamil `translation/content/methods/induction/induction-on-N.tex:188`; PDF page pending.
+- `TA-OCC-3bab1699edf2c76d` — OLP-0616 / `OLP-0616-S03`; source `content/methods/induction/strong-induction.tex:34`; Tamil `translation/content/methods/induction/strong-induction.tex:53`; PDF page pending.
+- `TA-OCC-447b3d227058a43a` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:83`; Tamil `translation/content/methods/induction/inductive-definitions.tex:115`; PDF page pending.
+- `TA-OCC-dc6d474f220d455e` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:168`; PDF page pending.
+- `TA-OCC-f9a467c10c5b58d1` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:203`; PDF page pending.
 
 ## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
 
@@ -23490,6 +23000,7 @@ Please double-check: **is “முன்னிலை / பின்னிலை
 - `TA-OCC-3b1f142764920a43` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:11`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:13`; PDF page pending.
 - `TA-OCC-97d59bd048042dfd` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:25`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:16`; PDF page pending.
 - `TA-OCC-b92da67c3eab9f16` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:26`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:59`; PDF page pending.
+- `TA-OCC-87c996736c5df484` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:1`; Tamil `translation/content/methods/induction/induction-on-N.tex:41`; PDF page pending.
 
 ## TA-T197 — minimal change semantics / closest possible world / ontic analysis / causal reasoning / contingent conditional
 
@@ -25923,6 +25434,16 @@ Please double-check: **is “நிறுவல் / வருவித்தல
 - `TA-OCC-5066ac1222f6218f` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:2`; Tamil `translation/content/methods/proofs/resources.tex:13`; PDF page pending.
 - `TA-OCC-d630a59130522dd7` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:13`; Tamil `translation/content/methods/proofs/resources.tex:22`; PDF page pending.
 - `TA-OCC-b16c376bd8b3b4e8` — OLP-0612 / `OLP-0612-S02`; source `content/methods/proofs/resources.tex:27`; Tamil `translation/content/methods/proofs/resources.tex:29`; PDF page pending.
+- `TA-OCC-81ab651a1dfe383a` — OLP-0614 / `OLP-0614-S01`; source `content/methods/induction/introduction.tex:13`; Tamil `translation/content/methods/induction/introduction.tex:16`; PDF page pending.
+- `TA-OCC-d369af9000d54673` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:27`; Tamil `translation/content/methods/induction/introduction.tex:36`; PDF page pending.
+- `TA-OCC-428fbd762e1e569d` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:20`; Tamil `translation/content/methods/induction/induction-on-N.tex:30`; PDF page pending.
+- `TA-OCC-97158bf0402d392e` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:23`; Tamil `translation/content/methods/induction/induction-on-N.tex:32`; PDF page pending.
+- `TA-OCC-4a8cec89c2e429cd` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:71`; Tamil `translation/content/methods/induction/induction-on-N.tex:101`; PDF page pending.
+- `TA-OCC-d6d28057919f58e6` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:76`; Tamil `translation/content/methods/induction/induction-on-N.tex:102`; PDF page pending.
+- `TA-OCC-77aa16ec2ada014b` — OLP-0616 / `OLP-0616-S04`; source `content/methods/induction/strong-induction.tex:47`; Tamil `translation/content/methods/induction/strong-induction.tex:72`; PDF page pending.
+- `TA-OCC-56b3b23d4a658ffa` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:101`; Tamil `translation/content/methods/induction/inductive-definitions.tex:161`; PDF page pending.
+- `TA-OCC-bac21298ba4d86bc` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:124`; Tamil `translation/content/methods/induction/inductive-definitions.tex:186`; PDF page pending.
+- `TA-OCC-cf2e54d9256785e5` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:136`; Tamil `translation/content/methods/induction/inductive-definitions.tex:207`; PDF page pending.
 
 ## TA-T240 — definition / definiendum / definiens / unpacking definitions
 
@@ -26546,6 +26067,22 @@ Please double-check: **is “வரையறை / வரையறுக்கப
 - `TA-OCC-a8ff0d5242e9c805` — OLP-0610 / `OLP-0610-S05`; source `content/methods/proofs/reading-proofs.tex:93`; Tamil `translation/content/methods/proofs/reading-proofs.tex:125`; PDF page pending.
 - `TA-OCC-d2a31b4c7fd25db2` — OLP-0610 / `OLP-0610-S05`; source `content/methods/proofs/reading-proofs.tex:95`; Tamil `translation/content/methods/proofs/reading-proofs.tex:127`; PDF page pending.
 - `TA-OCC-9b0e09dd6ed32470` — OLP-0610 / `OLP-0610-S06`; source `content/methods/proofs/reading-proofs.tex:103`; Tamil `translation/content/methods/proofs/reading-proofs.tex:140`; PDF page pending.
+- `TA-OCC-7042d0a088b138a3` — OLP-0615 / `OLP-0615-S07`; source `content/methods/induction/induction-on-N.tex:118`; Tamil `translation/content/methods/induction/induction-on-N.tex:168`; PDF page pending.
+- `TA-OCC-b70b14e147998f92` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:3`; Tamil `translation/content/methods/induction/inductive-definitions.tex:12`; PDF page pending.
+- `TA-OCC-a1a005cf37d2248c` — OLP-0617 / `OLP-0617-S02`; source `content/methods/induction/inductive-definitions.tex:39`; Tamil `translation/content/methods/induction/inductive-definitions.tex:55`; PDF page pending.
+- `TA-OCC-ca2b2f0d27821fcc` — OLP-0617 / `OLP-0617-S04`; source `content/methods/induction/inductive-definitions.tex:52`; Tamil `translation/content/methods/induction/inductive-definitions.tex:72`; PDF page pending.
+- `TA-OCC-c3bba07412ad8bcf` — OLP-0617 / `OLP-0617-S05`; source `content/methods/induction/inductive-definitions.tex:76`; Tamil `translation/content/methods/induction/inductive-definitions.tex:105`; PDF page pending.
+- `TA-OCC-545a1cd01de776c6` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:81`; Tamil `translation/content/methods/induction/inductive-definitions.tex:113`; PDF page pending.
+- `TA-OCC-eba2e21b3860ded1` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:82`; Tamil `translation/content/methods/induction/inductive-definitions.tex:116`; PDF page pending.
+- `TA-OCC-965a189272548d48` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:84`; Tamil `translation/content/methods/induction/inductive-definitions.tex:119`; PDF page pending.
+- `TA-OCC-db5c00809b04149d` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:19`; Tamil `translation/content/methods/induction/structural-induction.tex:23`; PDF page pending.
+- `TA-OCC-ce2c8e611346ac8a` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:28`; Tamil `translation/content/methods/induction/structural-induction.tex:34`; PDF page pending.
+- `TA-OCC-ba05a6d54ed32cab` — OLP-0619 / `OLP-0619-S03`; source `content/methods/induction/relations.tex:31`; Tamil `translation/content/methods/induction/relations.tex:46`; PDF page pending.
+- `TA-OCC-d1db07f7ce189c44` — OLP-0619 / `OLP-0619-S04`; source `content/methods/induction/relations.tex:42`; Tamil `translation/content/methods/induction/relations.tex:67`; PDF page pending.
+- `TA-OCC-d207ff440d62e7e6` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:98`; Tamil `translation/content/methods/induction/relations.tex:149`; PDF page pending.
+- `TA-OCC-ec6ab8ed82aad1a5` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:139`; Tamil `translation/content/methods/induction/relations.tex:212`; PDF page pending.
+- `TA-OCC-ed2b896efca32f69` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:167`; Tamil `translation/content/methods/induction/relations.tex:245`; PDF page pending.
+- `TA-OCC-513d2c8b74e066c4` — OLP-0619 / `OLP-0619-S12`; source `content/methods/induction/relations.tex:171`; Tamil `translation/content/methods/induction/relations.tex:251`; PDF page pending.
 
 ## TA-T241 — inference pattern / conditional proof / proof by cases / universal claim / existence claim
 
@@ -26591,6 +26128,185 @@ Please double-check: **is “முரண்பாட்டால் நிற�
 - `TA-OCC-0693e79fb7df4cf8` — OLP-0609 / `OLP-0609-S01`; source `content/methods/proofs/proof-by-contradiction.tex:13`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:14`; PDF page pending.
 - `TA-OCC-a530a7a2f05ae68c` — OLP-0610 / `OLP-0610-S01`; source `content/methods/proofs/reading-proofs.tex:15`; Tamil `translation/content/methods/proofs/reading-proofs.tex:24`; PDF page pending.
 - `TA-OCC-b0ba15b55b57763d` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:34`; Tamil `translation/content/methods/proofs/reading-proofs.tex:40`; PDF page pending.
+
+## TA-T243 — simple induction / mathematical induction / structural induction / inductively defined
+
+Chosen rendering: **எளிய தொகுத்தறிதல் / கணிதத் தொகுத்தறிதல் / கட்டமைப்புத் தொகுத்தறிதல் / தொகுத்தறிதல் முறையில் வரையறுக்கப்பட்ட**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly re-read SCERT glossary attests கணிதத் தொகுத்தறிதல் முறை as a complete mathematical-induction label. The historical logic page supports inference language, but neither consulted passage attests simple or structural induction as a complete Tamil headword. The frozen introduction contrasts enumerative emerald observations with the base-zero and successor-step proof, then defines structural induction by inductively generated formal expressions. Tamil keeps these mechanisms separate and treats the two extensions as provisional.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-SC11-P2 (checked_context_only); TA-T243-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “எளிய தொகுத்தறிதல் / கணிதத் தொகுத்தறிதல் / கட்டமைப்புத் தொகுத்தறிதல் / தொகுத்தறிதல் முறையில் வரையறுக்கப்பட்ட” the established India-standard Tamil expression for “simple induction / mathematical induction / structural induction / inductively defined” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-f9ba80be87e531ba` — OLP-0052 / `OLP-0052-S01`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:1`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:11`; PDF page pending.
+- `TA-OCC-377d4bcef6272e73` — OLP-0052 / `OLP-0052-S02`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:16`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:18`; PDF page pending.
+- `TA-OCC-54921fdda835ac03` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:78`; PDF page pending.
+- `TA-OCC-d66679f984e6d940` — OLP-0189 / `OLP-0189-S01`; source `content/model-theory/basics/partial-iso.tex:1`; Tamil `translation/content/model-theory/basics/partial-iso.tex:207`; PDF page pending.
+- `TA-OCC-a38ac95c9776682a` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:45`; Tamil `translation/content/methods/induction/introduction.tex:60`; PDF page pending.
+- `TA-OCC-01d8564b7c2b695a` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:47`; Tamil `translation/content/methods/induction/introduction.tex:65`; PDF page pending.
+- `TA-OCC-73a413b681aca3e5` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:89`; Tamil `translation/content/methods/induction/inductive-definitions.tex:127`; PDF page pending.
+- `TA-OCC-d7aa764d91f4924d` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:11`; Tamil `translation/content/methods/induction/structural-induction.tex:12`; PDF page pending.
+- `TA-OCC-5d4845000337b26c` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:31`; Tamil `translation/content/methods/induction/structural-induction.tex:38`; PDF page pending.
+- `TA-OCC-3c0c03626c385cd0` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:86`; Tamil `translation/content/methods/induction/relations.tex:132`; PDF page pending.
+
+## TA-T244 — induction basis / induction step / inductive hypothesis / recursive sum sequence
+
+Chosen rendering: **தொகுத்தறிதலின் அடிப்படை நிலை / தொகுத்தறிதலின் அடுத்த படி / தொகுத்தறிதல் எடுகோள் / மறுநிகழ்வாக வரையறுக்கப்பட்ட கூட்டுத்தொடர்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: SCERT attests mathematical induction as a lexical whole, while the historical logic pages support proof and temporary-assumption register. They do not directly attest these four full compounds. The frozen natural-number section defines the base by P(0), the step by arbitrary k with P(k) implying P(k+1), and the hypothesis by temporarily assuming P(k). In the dice theorem the base is instead P(1), after a separate zero-dice observation. The sum example gives the exact recursive equations, which govern the sequence sense.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T244-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தொகுத்தறிதலின் அடிப்படை நிலை / தொகுத்தறிதலின் அடுத்த படி / தொகுத்தறிதல் எடுகோள் / மறுநிகழ்வாக வரையறுக்கப்பட்ட கூட்டுத்தொடர்” the established India-standard Tamil expression for “induction basis / induction step / inductive hypothesis / recursive sum sequence” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-1183d6351760e7a4` — OLP-0201 / `OLP-0201-S01`; source `content/model-theory/interpolation/interpolation-proof.tex:1`; Tamil `translation/content/model-theory/interpolation/interpolation-proof.tex:96`; PDF page pending.
+- `TA-OCC-5559b45dbc2cc8b7` — OLP-0615 / `OLP-0615-S03`; source `content/methods/induction/induction-on-N.tex:60`; Tamil `translation/content/methods/induction/induction-on-N.tex:86`; PDF page pending.
+- `TA-OCC-66f8a3cc4291e990` — OLP-0615 / `OLP-0615-S03`; source `content/methods/induction/induction-on-N.tex:62`; Tamil `translation/content/methods/induction/induction-on-N.tex:89`; PDF page pending.
+- `TA-OCC-c28c86f456ade3a4` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:71`; Tamil `translation/content/methods/induction/induction-on-N.tex:102`; PDF page pending.
+- `TA-OCC-e742347513e23bae` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:110`; Tamil `translation/content/methods/induction/inductive-definitions.tex:161`; PDF page pending.
+
+## TA-T245 — strong induction / all-smaller induction / vacuous quantification
+
+Chosen rendering: **வலுவான தொகுத்தறிதல் / சிறிய எல்லா எண்களையும் கொண்ட தொகுத்தறிதல் / வெற்றிடக் கணக்கீடு**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected SCERT glossary directly attests mathematical induction only; the logic and quantifier pages supply component language, not complete strong-induction or vacuity headwords. The frozen section fixes the stronger premise as P(l) for every l<k and explains k=0 by the truth of a universal statement over an empty range. Tamil preserves the formal formula and source's P(0) wording in one vacuous illustration while differentiating it from the general P(l) antecedent.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-T245-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வலுவான தொகுத்தறிதல் / சிறிய எல்லா எண்களையும் கொண்ட தொகுத்தறிதல் / வெற்றிடக் கணக்கீடு” the established India-standard Tamil expression for “strong induction / all-smaller induction / vacuous quantification” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-a6d51d041a56bab1` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:60`; Tamil `translation/content/set-theory/ordinals/wo.tex:69`; PDF page pending.
+- `TA-OCC-1a20b8a7d8de38ae` — OLP-0616 / `OLP-0616-S01`; source `content/methods/induction/strong-induction.tex:11`; Tamil `translation/content/methods/induction/strong-induction.tex:12`; PDF page pending.
+
+## TA-T246 — inductive definition / nice term / supernice term / formation clauses
+
+Chosen rendering: **தொகுத்தறிதல் வரையறை / ஒழுங்கான சொல் / மிக ஒழுங்கான சொல் / அமைப்பு விதிகள்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The re-read school glossary attests mathematical induction, and the Grade 12 logic page supports compound-statement construction language, but neither attests the playful nice/supernice labels or a complete inductive-definition headword. The frozen section gives exact base, binary and exclusion clauses; the supernice exercise adds a unary bracket clause. Tamil uses transparent labels only for these source-defined sets, preserving all malformed contrast examples, formulas and the strong-induction length proof.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-T246-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தொகுத்தறிதல் வரையறை / ஒழுங்கான சொல் / மிக ஒழுங்கான சொல் / அமைப்பு விதிகள்” the established India-standard Tamil expression for “inductive definition / nice term / supernice term / formation clauses” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-02a34d64eab308d6` — OLP-0057 / `OLP-0057-S02`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:48`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:46`; PDF page pending.
+- `TA-OCC-71a71c9afd106186` — OLP-0057 / `OLP-0057-S02`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:50`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:50`; PDF page pending.
+- `TA-OCC-b49f050f9e1683fe` — OLP-0057 / `OLP-0057-S02`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:50`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:51`; PDF page pending.
+- `TA-OCC-1d788e1e80ff67be` — OLP-0058 / `OLP-0058-S05`; source `content/propositional-logic/syntax-and-semantics/formulas.tex:111`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:119`; PDF page pending.
+- `TA-OCC-f590f2005b286ec5` — OLP-0060 / `OLP-0060-S01`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:13`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:14`; PDF page pending.
+- `TA-OCC-d54bb5232cf6aa41` — OLP-0150 / `OLP-0150-S01`; source `content/first-order-logic/syntax-and-semantics/intro-syntax.tex:28`; Tamil `translation/content/first-order-logic/syntax-and-semantics/intro-syntax.tex:30`; PDF page pending.
+- `TA-OCC-5b7552e9aba97db9` — OLP-0150 / `OLP-0150-S01`; source `content/first-order-logic/syntax-and-semantics/intro-syntax.tex:28`; Tamil `translation/content/first-order-logic/syntax-and-semantics/intro-syntax.tex:31`; PDF page pending.
+- `TA-OCC-6d2de6f12443aece` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:84`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:83`; PDF page pending.
+- `TA-OCC-97a9d95ac5bcb7d1` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:84`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:185`; PDF page pending.
+- `TA-OCC-300335256d1b47bb` — OLP-0155 / `OLP-0155-S01`; source `content/first-order-logic/syntax-and-semantics/subformulas.tex:75`; Tamil `translation/content/first-order-logic/syntax-and-semantics/subformulas.tex:77`; PDF page pending.
+- `TA-OCC-aa96fa6796d5e7e3` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:13`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:14`; PDF page pending.
+- `TA-OCC-20464658894605e6` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:21`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:20`; PDF page pending.
+- `TA-OCC-64d1bc76b7664383` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:44`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:43`; PDF page pending.
+- `TA-OCC-2058324f652a9c24` — OLP-0163 / `OLP-0163-S01`; source `content/first-order-logic/syntax-and-semantics/satisfaction.tex:216`; Tamil `translation/content/first-order-logic/syntax-and-semantics/satisfaction.tex:230`; PDF page pending.
+- `TA-OCC-a219d847f2e01ce0` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:70`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:71`; PDF page pending.
+- `TA-OCC-7d99d2f89eefa5e8` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:28`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:31`; PDF page pending.
+- `TA-OCC-648e75a608c14b9e` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:11`; Tamil `translation/content/methods/induction/inductive-definitions.tex:12`; PDF page pending.
+- `TA-OCC-5a85be24c21a82cf` — OLP-0617 / `OLP-0617-S02`; source `content/methods/induction/inductive-definitions.tex:32`; Tamil `translation/content/methods/induction/inductive-definitions.tex:42`; PDF page pending.
+- `TA-OCC-d4da2c61b9e69aa1` — OLP-0617 / `OLP-0617-S02`; source `content/methods/induction/inductive-definitions.tex:36`; Tamil `translation/content/methods/induction/inductive-definitions.tex:51`; PDF page pending.
+- `TA-OCC-412ad0dbe632e957` — OLP-0617 / `OLP-0617-S03`; source `content/methods/induction/inductive-definitions.tex:41`; Tamil `translation/content/methods/induction/inductive-definitions.tex:64`; PDF page pending.
+- `TA-OCC-d682dc98c370a5a3` — OLP-0617 / `OLP-0617-S03`; source `content/methods/induction/inductive-definitions.tex:42`; Tamil `translation/content/methods/induction/inductive-definitions.tex:66`; PDF page pending.
+- `TA-OCC-a1d2491e83156453` — OLP-0617 / `OLP-0617-S03`; source `content/methods/induction/inductive-definitions.tex:45`; Tamil `translation/content/methods/induction/inductive-definitions.tex:67`; PDF page pending.
+- `TA-OCC-29947cccbeb8a4d0` — OLP-0617 / `OLP-0617-S04`; source `content/methods/induction/inductive-definitions.tex:52`; Tamil `translation/content/methods/induction/inductive-definitions.tex:74`; PDF page pending.
+- `TA-OCC-59512e9417bd4f76` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:81`; Tamil `translation/content/methods/induction/inductive-definitions.tex:113`; PDF page pending.
+- `TA-OCC-c92e5404b2b21bf5` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:82`; Tamil `translation/content/methods/induction/inductive-definitions.tex:117`; PDF page pending.
+- `TA-OCC-d4c670fd16b721fd` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:91`; Tamil `translation/content/methods/induction/inductive-definitions.tex:131`; PDF page pending.
+- `TA-OCC-d0fc8a1c6eff7503` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:93`; Tamil `translation/content/methods/induction/inductive-definitions.tex:136`; PDF page pending.
+- `TA-OCC-0b820a881cde2bd0` — OLP-0617 / `OLP-0617-S08`; source `content/methods/induction/inductive-definitions.tex:97`; Tamil `translation/content/methods/induction/inductive-definitions.tex:142`; PDF page pending.
+- `TA-OCC-7445478ee15cee6d` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:105`; Tamil `translation/content/methods/induction/inductive-definitions.tex:152`; PDF page pending.
+- `TA-OCC-be794a06ba08b588` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:106`; Tamil `translation/content/methods/induction/inductive-definitions.tex:154`; PDF page pending.
+- `TA-OCC-80f2a146ebfd466c` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:141`; Tamil `translation/content/methods/induction/inductive-definitions.tex:217`; PDF page pending.
+- `TA-OCC-68a6f0bdcdb423ba` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:144`; Tamil `translation/content/methods/induction/inductive-definitions.tex:218`; PDF page pending.
+- `TA-OCC-d860474590359c21` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:145`; Tamil `translation/content/methods/induction/inductive-definitions.tex:219`; PDF page pending.
+- `TA-OCC-c57c56c04d6a0d88` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:146`; Tamil `translation/content/methods/induction/inductive-definitions.tex:221`; PDF page pending.
+- `TA-OCC-0f918b071dee3dfc` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:148`; Tamil `translation/content/methods/induction/inductive-definitions.tex:222`; PDF page pending.
+- `TA-OCC-29c413b26600aa8b` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:150`; Tamil `translation/content/methods/induction/inductive-definitions.tex:224`; PDF page pending.
+- `TA-OCC-9b0486dcc224ae27` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:19`; Tamil `translation/content/methods/induction/structural-induction.tex:23`; PDF page pending.
+- `TA-OCC-711cec48db666196` — OLP-0618 / `OLP-0618-S04`; source `content/methods/induction/structural-induction.tex:45`; Tamil `translation/content/methods/induction/structural-induction.tex:57`; PDF page pending.
+- `TA-OCC-4e77288c20a87dff` — OLP-0618 / `OLP-0618-S06`; source `content/methods/induction/structural-induction.tex:65`; Tamil `translation/content/methods/induction/structural-induction.tex:91`; PDF page pending.
+- `TA-OCC-4aacf402516612bd` — OLP-0618 / `OLP-0618-S08`; source `content/methods/induction/structural-induction.tex:76`; Tamil `translation/content/methods/induction/structural-induction.tex:111`; PDF page pending.
+- `TA-OCC-c516ae9a32e24b0c` — OLP-0618 / `OLP-0618-S09`; source `content/methods/induction/structural-induction.tex:84`; Tamil `translation/content/methods/induction/structural-induction.tex:131`; PDF page pending.
+- `TA-OCC-c4acd6f12b206e07` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:14`; Tamil `translation/content/methods/induction/relations.tex:18`; PDF page pending.
+- `TA-OCC-39fae6510b74cc89` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:16`; Tamil `translation/content/methods/induction/relations.tex:22`; PDF page pending.
+- `TA-OCC-270d9ca433dee44d` — OLP-0619 / `OLP-0619-S02`; source `content/methods/induction/relations.tex:22`; Tamil `translation/content/methods/induction/relations.tex:29`; PDF page pending.
+- `TA-OCC-2a65590d2ecdcf20` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:84`; Tamil `translation/content/methods/induction/relations.tex:129`; PDF page pending.
+- `TA-OCC-e002045418b841ce` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:90`; Tamil `translation/content/methods/induction/relations.tex:138`; PDF page pending.
+- `TA-OCC-308ce939a213d446` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:99`; Tamil `translation/content/methods/induction/relations.tex:149`; PDF page pending.
+- `TA-OCC-d64e1050aa1a9211` — OLP-0619 / `OLP-0619-S09`; source `content/methods/induction/relations.tex:111`; Tamil `translation/content/methods/induction/relations.tex:180`; PDF page pending.
+- `TA-OCC-9e1ddf3a55da8bd8` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:135`; Tamil `translation/content/methods/induction/relations.tex:205`; PDF page pending.
+- `TA-OCC-edd07923c73ed8a6` — OLP-0619 / `OLP-0619-S12`; source `content/methods/induction/relations.tex:171`; Tamil `translation/content/methods/induction/relations.tex:252`; PDF page pending.
+
+## TA-T247 — structural induction / proper initial segment / constructor operation
+
+Chosen rendering: **கட்டமைப்புத் தொகுத்தறிதல் / முறையான தொடக்கப் பகுதி / உருவாக்கும் செயல்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected pages provide the induction, formal-statement and proof components but not these complete labels. The frozen section defines structural induction by checking initial objects and preservation under each constructor, and a proper initial segment by left-to-right agreement with strict shorter length. Tamil retains the two bracket-count proofs and all five exhaustive proper-prefix cases; no external attestation of the complete compounds is claimed.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports); TA-T247-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கட்டமைப்புத் தொகுத்தறிதல் / முறையான தொடக்கப் பகுதி / உருவாக்கும் செயல்” the established India-standard Tamil expression for “structural induction / proper initial segment / constructor operation” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-e0f695a3fad1a5f0` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:78`; PDF page pending.
+- `TA-OCC-b711275bee157705` — OLP-0314 / `OLP-0314-S01`; source `content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:30`; PDF page pending.
+- `TA-OCC-261bb7774e33ca25` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:1`; Tamil `translation/content/set-theory/replacement/absinf.tex:17`; PDF page pending.
+- `TA-OCC-180e8ba14eb7e423` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:47`; Tamil `translation/content/methods/induction/introduction.tex:65`; PDF page pending.
+- `TA-OCC-458e014c4a799583` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:11`; Tamil `translation/content/methods/induction/structural-induction.tex:12`; PDF page pending.
+- `TA-OCC-1d3b92b555716cdd` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:19`; Tamil `translation/content/methods/induction/structural-induction.tex:26`; PDF page pending.
+- `TA-OCC-5146491b56e709ef` — OLP-0618 / `OLP-0618-S05`; source `content/methods/induction/structural-induction.tex:49`; Tamil `translation/content/methods/induction/structural-induction.tex:67`; PDF page pending.
+- `TA-OCC-22e35e96f7aa6737` — OLP-0618 / `OLP-0618-S07`; source `content/methods/induction/structural-induction.tex:68`; Tamil `translation/content/methods/induction/structural-induction.tex:99`; PDF page pending.
+- `TA-OCC-d2eb7c32f6563c81` — OLP-0618 / `OLP-0618-S07`; source `content/methods/induction/structural-induction.tex:71`; Tamil `translation/content/methods/induction/structural-induction.tex:104`; PDF page pending.
+- `TA-OCC-d90690a8c2185ec6` — OLP-0618 / `OLP-0618-S09`; source `content/methods/induction/structural-induction.tex:83`; Tamil `translation/content/methods/induction/structural-induction.tex:121`; PDF page pending.
+- `TA-OCC-4cdb229c290aeae8` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:95`; Tamil `translation/content/methods/induction/relations.tex:164`; PDF page pending.
+
+## TA-T248 — subterm / bracketless term / unique readability / syntactic depth
+
+Chosen rendering: **துணைச்சொல் / அடைப்பில்லாத சொல் / தனித்த வாசிப்புத்தன்மை / தொடரமைப்பு ஆழம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly re-read Tamil pages establish relation, function and formal-expression components, while the mathematical-induction glossary anchors the method. They do not attest the complete four specialist headwords. The frozen source defines subterm recursively through equality or either immediate child, demonstrates failure of unique readability for unbracketed binary terms, proves uniqueness for bracketed terms using the proper-prefix lemma, and defines depth by a max-plus-one recursion. Tamil preserves the two different g values, 3 and 2, which show why a nonunique recursion does not define a function.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC11-P358-GLOSSARY (checked_supports); TA-T248-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “துணைச்சொல் / அடைப்பில்லாத சொல் / தனித்த வாசிப்புத்தன்மை / தொடரமைப்பு ஆழம்” the established India-standard Tamil expression for “subterm / bracketless term / unique readability / syntactic depth” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-f31cc817ad8d8559` — OLP-0059 / `OLP-0059-S03`; source `content/propositional-logic/syntax-and-semantics/preliminaries.tex:58`; Tamil `translation/content/propositional-logic/syntax-and-semantics/preliminaries.tex:63`; PDF page pending.
+- `TA-OCC-9d41d8bb7dadf9ec` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:10`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:51`; PDF page pending.
+- `TA-OCC-6f113d324d6fb36d` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:16`; Tamil `translation/content/methods/induction/relations.tex:20`; PDF page pending.
+- `TA-OCC-b60fd0f46d0ab0fa` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:18`; Tamil `translation/content/methods/induction/relations.tex:23`; PDF page pending.
+- `TA-OCC-147792e5186d32a4` — OLP-0619 / `OLP-0619-S02`; source `content/methods/induction/relations.tex:22`; Tamil `translation/content/methods/induction/relations.tex:30`; PDF page pending.
+- `TA-OCC-f19019a82ddfcdaf` — OLP-0619 / `OLP-0619-S05`; source `content/methods/induction/relations.tex:55`; Tamil `translation/content/methods/induction/relations.tex:93`; PDF page pending.
+- `TA-OCC-75f1c1695be34b10` — OLP-0619 / `OLP-0619-S05`; source `content/methods/induction/relations.tex:57`; Tamil `translation/content/methods/induction/relations.tex:95`; PDF page pending.
+- `TA-OCC-04c30a5c0227578a` — OLP-0619 / `OLP-0619-S05`; source `content/methods/induction/relations.tex:58`; Tamil `translation/content/methods/induction/relations.tex:96`; PDF page pending.
+- `TA-OCC-2232d18a2e335af1` — OLP-0619 / `OLP-0619-S06`; source `content/methods/induction/relations.tex:64`; Tamil `translation/content/methods/induction/relations.tex:105`; PDF page pending.
+- `TA-OCC-7b20c57132999c92` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:85`; Tamil `translation/content/methods/induction/relations.tex:131`; PDF page pending.
+- `TA-OCC-0ec6f3e17237be39` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:138`; Tamil `translation/content/methods/induction/relations.tex:220`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

@@ -1,6 +1,6 @@
 # Full translation decision register
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 593/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 600/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -6555,6 +6555,8 @@ Please double-check: **do the listed uses of “கணம்” preserve the Ope
 - `TA-OCC-76c3261089b17048` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:178`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:255`; PDF page pending.
 - `TA-OCC-35154712c786e00b` — OLP-0610 / `OLP-0610-S01`; source `content/methods/proofs/reading-proofs.tex:22`; Tamil `translation/content/methods/proofs/reading-proofs.tex:25`; PDF page pending.
 - `TA-OCC-76bc331882e56de7` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:37`; Tamil `translation/content/methods/proofs/reading-proofs.tex:44`; PDF page pending.
+- `TA-OCC-b4a8360be519fcb5` — OLP-0615 / `OLP-0615-S06`; source `content/methods/induction/induction-on-N.tex:91`; Tamil `translation/content/methods/induction/induction-on-N.tex:132`; PDF page pending.
+- `TA-OCC-d1cb43c011c7d049` — OLP-0617 / `OLP-0617-S03`; source `content/methods/induction/inductive-definitions.tex:42`; Tamil `translation/content/methods/induction/inductive-definitions.tex:59`; PDF page pending.
 
 ## TA-T002 — element/member
 
@@ -7244,6 +7246,14 @@ Please double-check: **do the listed uses of “உறுப்பு” preserv
 - `TA-OCC-8891e14391a554a8` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:52`; Tamil `translation/content/methods/proofs/reading-proofs.tex:62`; PDF page pending.
 - `TA-OCC-df714bc47e9e22e0` — OLP-0610 / `OLP-0610-S04`; source `content/methods/proofs/reading-proofs.tex:70`; Tamil `translation/content/methods/proofs/reading-proofs.tex:86`; PDF page pending.
 - `TA-OCC-09ec71567d466d84` — OLP-0610 / `OLP-0610-S04`; source `content/methods/proofs/reading-proofs.tex:70`; Tamil `translation/content/methods/proofs/reading-proofs.tex:88`; PDF page pending.
+- `TA-OCC-6446a59df12c7646` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:39`; Tamil `translation/content/methods/induction/introduction.tex:52`; PDF page pending.
+- `TA-OCC-f528fab22b484371` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:89`; Tamil `translation/content/methods/induction/inductive-definitions.tex:128`; PDF page pending.
+- `TA-OCC-614bdf8cf333f6dd` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:15`; Tamil `translation/content/methods/induction/structural-induction.tex:17`; PDF page pending.
+- `TA-OCC-70d70a0bd4b172b6` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:20`; Tamil `translation/content/methods/induction/structural-induction.tex:24`; PDF page pending.
+- `TA-OCC-e7746562df2b9e9e` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:21`; Tamil `translation/content/methods/induction/structural-induction.tex:25`; PDF page pending.
+- `TA-OCC-6b5029058394a435` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:20`; Tamil `translation/content/methods/induction/structural-induction.tex:26`; PDF page pending.
+- `TA-OCC-7ecab50699c08a47` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:32`; Tamil `translation/content/methods/induction/structural-induction.tex:39`; PDF page pending.
+- `TA-OCC-24bb635c066705d0` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:32`; Tamil `translation/content/methods/induction/structural-induction.tex:40`; PDF page pending.
 
 ## TA-T003 — empty set
 
@@ -7439,6 +7449,7 @@ Please double-check: **do the listed uses of “தருக்கவியல�
 - `TA-OCC-d513e4b3d5c9af69` — OLP-0179 / `OLP-0179-S01`; source `content/first-order-logic/beyond/intuitionistic-logic.tex:1`; Tamil `translation/content/first-order-logic/beyond/intuitionistic-logic.tex:204`; PDF page pending.
 - `TA-OCC-99630f2e07ccecd2` — OLP-0249 / `OLP-0249-S01`; source `content/computability/computability-theory/fixed-point-thm.tex:5`; Tamil `translation/content/computability/computability-theory/fixed-point-thm.tex:57`; PDF page pending.
 - `TA-OCC-a702a93e6c21d4cc` — OLP-0518 / `OLP-0518-S01`; source `content/counterfactuals/introduction/material-conditional.tex:5`; Tamil `translation/content/counterfactuals/introduction/material-conditional.tex:17`; PDF page pending.
+- `TA-OCC-89a47678218b6011` — OLP-0614 / `OLP-0614-S01`; source `content/methods/induction/introduction.tex:5`; Tamil `translation/content/methods/induction/introduction.tex:14`; PDF page pending.
 
 ## TA-T009 — if and only if
 
@@ -8215,6 +8226,7 @@ Please double-check: **is “ரஸ்ஸலின் முரண்பாட�
 - `TA-OCC-580c589c39b426c7` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:194`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:243`; PDF page pending.
 - `TA-OCC-fd7bcb25537dfc77` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:194`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:269`; PDF page pending.
 - `TA-OCC-56e15e16e95e11f2` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:194`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:277`; PDF page pending.
+- `TA-OCC-b11554941a07fa8a` — OLP-0619 / `OLP-0619-S04`; source `content/methods/induction/relations.tex:42`; Tamil `translation/content/methods/induction/relations.tex:80`; PDF page pending.
 
 ## TA-T017 — axiom / naive
 
@@ -8811,19 +8823,19 @@ Please double-check: **is “கண வேறுபாடு / குறிய�
 
 - `TA-OCC-42df5dd67c69324f` — OLP-0008 / `OLP-0008-S14`; source `content/sets-functions-relations/sets/unions-and-intersections.tex:144`; Tamil `translation/content/sets-functions-relations/sets/unions-and-intersections.tex:168`; PDF page pending.
 
-## TA-T022 — induction / proof
+## TA-T022 — induction / mathematical induction / proof
 
-Chosen rendering: **தொகுத்தறிதல் / நிறுவல்**
+Chosen rendering: **தொகுத்தறிதல் / கணிதத் தொகுத்தறிதல் முறை / நிறுவல்**
 
-Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+Kind: `terminology`; confidence: `high`; provisional: `false`; priority: `low`.
 
-Intended sense and rationale: Mathematical exposition/proof register consulted, but concept-specific induction chapter has not yet been read; no direct attestation claim for induction sense in these passages.
+Intended sense and rationale: Revised after directly re-reading the SCERT Class 11 glossary, printed p.358, which pairs mathematical induction with கணிதத் தொகுத்தறிதல் முறை. The 1967 Tamil logic proof pages support the proof register. The glossary is lexical evidence only; the frozen chapter's zero/base and successor-step clauses govern mathematical sense. It does not establish structural-induction or observation-based simple-induction terminology. The earlier generic induction/proof occurrence keys remain indexed so existing contextual uses are not dropped.
 
-Authority basis: TA-SC11-P6 (checked_context_only); TA-MQ-113-Q26 (checked_supports); TA-T022-EXACT-TERM-NOT-FOUND (not_found)
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports)
 
 Alternatives: கணிதத் தூண்டல் / நிரூபணம்
 
-Please double-check: **is “தொகுத்தறிதல் / நிறுவல்” the established India-standard Tamil expression for “induction / proof” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+Please double-check: **do the listed uses of “தொகுத்தறிதல் / கணிதத் தொகுத்தறிதல் முறை / நிறுவல்” preserve the OpenLogic sense of “induction / mathematical induction / proof” and read naturally in India-standard mathematical Tamil?**
 
 - `TA-OCC-3af0d39dd1a6ee51` — OLP-0016 / `OLP-0016-S20`; source `content/sets-functions-relations/relations/orders.tex:144`; Tamil `translation/content/sets-functions-relations/relations/orders.tex:183`; PDF page pending.
 - `TA-OCC-5f13ef1d74e47122` — OLP-0029 / `OLP-0029-S16`; source `content/sets-functions-relations/size-of-sets/enumerability.tex:180`; Tamil `translation/content/sets-functions-relations/size-of-sets/enumerability.tex:241`; PDF page pending.
@@ -9345,6 +9357,60 @@ Please double-check: **is “தொகுத்தறிதல் / நிறு
 - `TA-OCC-442aa7d28de59acd` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:2`; Tamil `translation/content/methods/proofs/resources.tex:13`; PDF page pending.
 - `TA-OCC-fb141fade1d4464f` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:13`; Tamil `translation/content/methods/proofs/resources.tex:22`; PDF page pending.
 - `TA-OCC-9aba901eaf23cdd2` — OLP-0612 / `OLP-0612-S02`; source `content/methods/proofs/resources.tex:27`; Tamil `translation/content/methods/proofs/resources.tex:29`; PDF page pending.
+- `TA-OCC-e5cc1424467ee87a` — OLP-0613 / `OLP-0613-S01`; source `content/methods/induction/induction.tex:2`; Tamil `translation/content/methods/induction/induction.tex:9`; PDF page pending.
+- `TA-OCC-9a309d8db853003f` — OLP-0614 / `OLP-0614-S01`; source `content/methods/induction/introduction.tex:2`; Tamil `translation/content/methods/induction/introduction.tex:16`; PDF page pending.
+- `TA-OCC-4ffe4a5957d3ce62` — OLP-0614 / `OLP-0614-S01`; source `content/methods/induction/introduction.tex:2`; Tamil `translation/content/methods/induction/introduction.tex:16`; PDF page pending.
+- `TA-OCC-41c983246035aef9` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:17`; Tamil `translation/content/methods/induction/introduction.tex:20`; PDF page pending.
+- `TA-OCC-6661be37779dd427` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:17`; Tamil `translation/content/methods/induction/introduction.tex:26`; PDF page pending.
+- `TA-OCC-9b09fc857eded1c0` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:27`; Tamil `translation/content/methods/induction/introduction.tex:36`; PDF page pending.
+- `TA-OCC-085182b7beab366e` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:29`; Tamil `translation/content/methods/induction/introduction.tex:36`; PDF page pending.
+- `TA-OCC-0c047cc0821e5a38` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:44`; Tamil `translation/content/methods/induction/introduction.tex:60`; PDF page pending.
+- `TA-OCC-82850b377f001ff1` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:44`; Tamil `translation/content/methods/induction/introduction.tex:63`; PDF page pending.
+- `TA-OCC-c422a078ced7fb8e` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:47`; Tamil `translation/content/methods/induction/introduction.tex:65`; PDF page pending.
+- `TA-OCC-36a57e1039f8be2c` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:2`; Tamil `translation/content/methods/induction/induction-on-N.tex:12`; PDF page pending.
+- `TA-OCC-38354f5ab9ccd7be` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:2`; Tamil `translation/content/methods/induction/induction-on-N.tex:15`; PDF page pending.
+- `TA-OCC-853c300b76b8c8ac` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:3`; Tamil `translation/content/methods/induction/induction-on-N.tex:30`; PDF page pending.
+- `TA-OCC-be2aff50e753b561` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:3`; Tamil `translation/content/methods/induction/induction-on-N.tex:32`; PDF page pending.
+- `TA-OCC-37c2d42406652404` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:65`; Tamil `translation/content/methods/induction/induction-on-N.tex:102`; PDF page pending.
+- `TA-OCC-4bb79e01ce3be1bd` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:65`; Tamil `translation/content/methods/induction/induction-on-N.tex:107`; PDF page pending.
+- `TA-OCC-00c559720f920c6b` — OLP-0615 / `OLP-0615-S05`; source `content/methods/induction/induction-on-N.tex:88`; Tamil `translation/content/methods/induction/induction-on-N.tex:112`; PDF page pending.
+- `TA-OCC-ae2ff567ef2639f1` — OLP-0615 / `OLP-0615-S05`; source `content/methods/induction/induction-on-N.tex:88`; Tamil `translation/content/methods/induction/induction-on-N.tex:127`; PDF page pending.
+- `TA-OCC-46e09ea12e7d3f42` — OLP-0615 / `OLP-0615-S06`; source `content/methods/induction/induction-on-N.tex:90`; Tamil `translation/content/methods/induction/induction-on-N.tex:133`; PDF page pending.
+- `TA-OCC-d918ede3f487d9df` — OLP-0615 / `OLP-0615-S07`; source `content/methods/induction/induction-on-N.tex:112`; Tamil `translation/content/methods/induction/induction-on-N.tex:163`; PDF page pending.
+- `TA-OCC-72698b105c785fce` — OLP-0615 / `OLP-0615-S07`; source `content/methods/induction/induction-on-N.tex:128`; Tamil `translation/content/methods/induction/induction-on-N.tex:169`; PDF page pending.
+- `TA-OCC-ff2e1e355f73798c` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:131`; Tamil `translation/content/methods/induction/induction-on-N.tex:182`; PDF page pending.
+- `TA-OCC-50139a72e73092fb` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:131`; Tamil `translation/content/methods/induction/induction-on-N.tex:184`; PDF page pending.
+- `TA-OCC-e37d1c9dcead4175` — OLP-0616 / `OLP-0616-S01`; source `content/methods/induction/strong-induction.tex:2`; Tamil `translation/content/methods/induction/strong-induction.tex:12`; PDF page pending.
+- `TA-OCC-4cd81850cab32016` — OLP-0616 / `OLP-0616-S01`; source `content/methods/induction/strong-induction.tex:2`; Tamil `translation/content/methods/induction/strong-induction.tex:14`; PDF page pending.
+- `TA-OCC-9332fd3ae47de264` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:22`; Tamil `translation/content/methods/induction/strong-induction.tex:26`; PDF page pending.
+- `TA-OCC-9965c97b9dad8b0f` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:2`; Tamil `translation/content/methods/induction/inductive-definitions.tex:12`; PDF page pending.
+- `TA-OCC-8e2e0820f8952be8` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:2`; Tamil `translation/content/methods/induction/inductive-definitions.tex:15`; PDF page pending.
+- `TA-OCC-321983eaf32950f0` — OLP-0617 / `OLP-0617-S02`; source `content/methods/induction/inductive-definitions.tex:32`; Tamil `translation/content/methods/induction/inductive-definitions.tex:54`; PDF page pending.
+- `TA-OCC-92faeba07a78aed5` — OLP-0617 / `OLP-0617-S03`; source `content/methods/induction/inductive-definitions.tex:41`; Tamil `translation/content/methods/induction/inductive-definitions.tex:60`; PDF page pending.
+- `TA-OCC-46c1923a464c57d0` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:81`; Tamil `translation/content/methods/induction/inductive-definitions.tex:113`; PDF page pending.
+- `TA-OCC-c6f434417fcda703` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:90`; Tamil `translation/content/methods/induction/inductive-definitions.tex:127`; PDF page pending.
+- `TA-OCC-87306a9346c29d4c` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:101`; Tamil `translation/content/methods/induction/inductive-definitions.tex:161`; PDF page pending.
+- `TA-OCC-00608f9abadd8044` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:124`; Tamil `translation/content/methods/induction/inductive-definitions.tex:167`; PDF page pending.
+- `TA-OCC-01481e1090649acb` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:124`; Tamil `translation/content/methods/induction/inductive-definitions.tex:185`; PDF page pending.
+- `TA-OCC-b9159f3c077d51ef` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:136`; Tamil `translation/content/methods/induction/inductive-definitions.tex:205`; PDF page pending.
+- `TA-OCC-5aed7b73d530c61d` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:2`; Tamil `translation/content/methods/induction/structural-induction.tex:12`; PDF page pending.
+- `TA-OCC-fccc9726481cb2ee` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:2`; Tamil `translation/content/methods/induction/structural-induction.tex:16`; PDF page pending.
+- `TA-OCC-fa2b1abf54c9df6a` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:3`; Tamil `translation/content/methods/induction/structural-induction.tex:20`; PDF page pending.
+- `TA-OCC-ba00b5202fca8ce4` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:19`; Tamil `translation/content/methods/induction/structural-induction.tex:23`; PDF page pending.
+- `TA-OCC-8bc3ff0a58ef295d` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:19`; Tamil `translation/content/methods/induction/structural-induction.tex:33`; PDF page pending.
+- `TA-OCC-51aa8c05cd75dee3` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:31`; Tamil `translation/content/methods/induction/structural-induction.tex:38`; PDF page pending.
+- `TA-OCC-8c875a851077bf4c` — OLP-0618 / `OLP-0618-S05`; source `content/methods/induction/structural-induction.tex:48`; Tamil `translation/content/methods/induction/structural-induction.tex:64`; PDF page pending.
+- `TA-OCC-6d5e09197f92592c` — OLP-0618 / `OLP-0618-S09`; source `content/methods/induction/structural-induction.tex:80`; Tamil `translation/content/methods/induction/structural-induction.tex:118`; PDF page pending.
+- `TA-OCC-91154fb4293dc6ee` — OLP-0618 / `OLP-0618-S09`; source `content/methods/induction/structural-induction.tex:81`; Tamil `translation/content/methods/induction/structural-induction.tex:132`; PDF page pending.
+- `TA-OCC-3f04db327b0d5e2f` — OLP-0618 / `OLP-0618-S09`; source `content/methods/induction/structural-induction.tex:81`; Tamil `translation/content/methods/induction/structural-induction.tex:143`; PDF page pending.
+- `TA-OCC-770fc9dd4b1f8817` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:2`; Tamil `translation/content/methods/induction/relations.tex:15`; PDF page pending.
+- `TA-OCC-041d73dfbe969f8d` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:2`; Tamil `translation/content/methods/induction/relations.tex:24`; PDF page pending.
+- `TA-OCC-783df99a713e2875` — OLP-0619 / `OLP-0619-S05`; source `content/methods/induction/relations.tex:54`; Tamil `translation/content/methods/induction/relations.tex:90`; PDF page pending.
+- `TA-OCC-3bf65b6deea65ea7` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:84`; Tamil `translation/content/methods/induction/relations.tex:132`; PDF page pending.
+- `TA-OCC-642d8f259db2fb83` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:95`; Tamil `translation/content/methods/induction/relations.tex:149`; PDF page pending.
+- `TA-OCC-5c207ecefb4884ac` — OLP-0619 / `OLP-0619-S09`; source `content/methods/induction/relations.tex:110`; Tamil `translation/content/methods/induction/relations.tex:173`; PDF page pending.
+- `TA-OCC-7d1612b33c6f70ec` — OLP-0619 / `OLP-0619-S09`; source `content/methods/induction/relations.tex:110`; Tamil `translation/content/methods/induction/relations.tex:182`; PDF page pending.
+- `TA-OCC-9e4ffea96d8b65ee` — OLP-0619 / `OLP-0619-S12`; source `content/methods/induction/relations.tex:170`; Tamil `translation/content/methods/induction/relations.tex:250`; PDF page pending.
 
 ## TA-T023 — relation / binary relation
 
@@ -9820,6 +9886,10 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-95d080c7be9c43e1` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:101`; PDF page pending.
 - `TA-OCC-fbd821a1728b83e0` — OLP-0600 / `OLP-0600-S03`; source `content/set-theory/choice/vitali.tex:85`; Tamil `translation/content/set-theory/choice/vitali.tex:118`; PDF page pending.
 - `TA-OCC-28159b1c512c387b` — OLP-0605 / `OLP-0605-S01`; source `content/methods/proofs/using-definitions.tex:16`; Tamil `translation/content/methods/proofs/using-definitions.tex:18`; PDF page pending.
+- `TA-OCC-a8cb3f9e002fd738` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:130`; Tamil `translation/content/methods/induction/induction-on-N.tex:188`; PDF page pending.
+- `TA-OCC-2b4bb8c306d579ad` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:3`; Tamil `translation/content/methods/induction/relations.tex:12`; PDF page pending.
+- `TA-OCC-af60117d296518c6` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:11`; Tamil `translation/content/methods/induction/relations.tex:16`; PDF page pending.
+- `TA-OCC-42293b020f500afd` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:86`; Tamil `translation/content/methods/induction/relations.tex:133`; PDF page pending.
 
 ## TA-T024 — domain / range / codomain
 
@@ -14277,6 +14347,7 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-c77d2878ec21c693` — OLP-0603 / `OLP-0603-S05`; source `content/methods/proofs/introduction.tex:65`; Tamil `translation/content/methods/proofs/introduction.tex:86`; PDF page pending.
 - `TA-OCC-cd309ad18069bd51` — OLP-0606 / `OLP-0606-S09`; source `content/methods/proofs/inference-patterns.tex:140`; Tamil `translation/content/methods/proofs/inference-patterns.tex:174`; PDF page pending.
 - `TA-OCC-5c8753dd3d22c809` — OLP-0606 / `OLP-0606-S13`; source `content/methods/proofs/inference-patterns.tex:255`; Tamil `translation/content/methods/proofs/inference-patterns.tex:327`; PDF page pending.
+- `TA-OCC-bce04ad3a4f9d7a5` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:17`; Tamil `translation/content/methods/induction/inductive-definitions.tex:21`; PDF page pending.
 
 ## TA-T042 — integer / whole number / natural number
 
@@ -14949,6 +15020,16 @@ Please double-check: **do the listed uses of “முழு, முழுக்
 - `TA-OCC-27d6d70e09447710` — OLP-0609 / `OLP-0609-S02`; source `content/methods/proofs/proof-by-contradiction.tex:34`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:88`; PDF page pending.
 - `TA-OCC-ce6a8ec38c81dd93` — OLP-0610 / `OLP-0610-S01`; source `content/methods/proofs/reading-proofs.tex:1`; Tamil `translation/content/methods/proofs/reading-proofs.tex:15`; PDF page pending.
 - `TA-OCC-9f2c7cab3e09db57` — OLP-0611 / `OLP-0611-S02`; source `content/methods/proofs/cant-do-it.tex:21`; Tamil `translation/content/methods/proofs/cant-do-it.tex:24`; PDF page pending.
+- `TA-OCC-e64bc43ad8a9a2da` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:30`; Tamil `translation/content/methods/induction/introduction.tex:39`; PDF page pending.
+- `TA-OCC-a108cb2e233eb253` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:30`; Tamil `translation/content/methods/induction/introduction.tex:40`; PDF page pending.
+- `TA-OCC-19473be44dbd4961` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:49`; PDF page pending.
+- `TA-OCC-c69cb4900c461a64` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:14`; Tamil `translation/content/methods/induction/induction-on-N.tex:12`; PDF page pending.
+- `TA-OCC-eb4ab78861fb6f35` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:14`; Tamil `translation/content/methods/induction/induction-on-N.tex:14`; PDF page pending.
+- `TA-OCC-d47dba648a435876` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:15`; Tamil `translation/content/methods/induction/induction-on-N.tex:17`; PDF page pending.
+- `TA-OCC-e820d4da79252ca6` — OLP-0615 / `OLP-0615-S06`; source `content/methods/induction/induction-on-N.tex:90`; Tamil `translation/content/methods/induction/induction-on-N.tex:137`; PDF page pending.
+- `TA-OCC-8b32bdec7bffa704` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:1`; Tamil `translation/content/methods/induction/structural-induction.tex:14`; PDF page pending.
+- `TA-OCC-64f92a74ce44821f` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:27`; Tamil `translation/content/methods/induction/structural-induction.tex:33`; PDF page pending.
+- `TA-OCC-122461e228e3c0f1` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:13`; Tamil `translation/content/methods/induction/relations.tex:14`; PDF page pending.
 
 ## TA-T043 — numerical successor/predecessor versus tree cover
 
@@ -15099,6 +15180,7 @@ Please double-check: **do the listed uses of “தொடரி / முன்�
 - `TA-OCC-6e7157d59fd0647a` — OLP-0549 / `OLP-0549-S01`; source `content/set-theory/ordinals/idea.tex:1`; Tamil `translation/content/set-theory/ordinals/idea.tex:23`; PDF page pending.
 - `TA-OCC-202a65641015aeab` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:11`; PDF page pending.
 - `TA-OCC-486735b291c8bb3a` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:1`; Tamil `translation/content/set-theory/ordinals/opps.tex:74`; PDF page pending.
+- `TA-OCC-5080fa5e15bfacf7` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:1`; Tamil `translation/content/methods/induction/induction-on-N.tex:41`; PDF page pending.
 
 ## TA-T044 — sequence / closure: recovered alternatives
 
@@ -16090,6 +16172,17 @@ Please double-check: **do the listed uses of “தொடர் / அடைவ�
 - `TA-OCC-b41f48e1157a2f51` — OLP-0606 / `OLP-0606-S15`; source `content/methods/proofs/inference-patterns.tex:294`; Tamil `translation/content/methods/proofs/inference-patterns.tex:400`; PDF page pending.
 - `TA-OCC-e814aa3c8ba5478b` — OLP-0607 / `OLP-0607-S02`; source `content/methods/proofs/example-1.tex:24`; Tamil `translation/content/methods/proofs/example-1.tex:62`; PDF page pending.
 - `TA-OCC-8c0995bb41591718` — OLP-0609 / `OLP-0609-S03`; source `content/methods/proofs/proof-by-contradiction.tex:81`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:110`; PDF page pending.
+- `TA-OCC-cee925dd83395b7f` — OLP-0615 / `OLP-0615-S06`; source `content/methods/induction/induction-on-N.tex:90`; Tamil `translation/content/methods/induction/induction-on-N.tex:132`; PDF page pending.
+- `TA-OCC-3a17c324c6725d22` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:131`; Tamil `translation/content/methods/induction/induction-on-N.tex:188`; PDF page pending.
+- `TA-OCC-fc4ec2aef01b6d02` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:17`; Tamil `translation/content/methods/induction/inductive-definitions.tex:29`; PDF page pending.
+- `TA-OCC-2b4df80e4d077bdd` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:17`; Tamil `translation/content/methods/induction/inductive-definitions.tex:30`; PDF page pending.
+- `TA-OCC-70680cadf758056a` — OLP-0618 / `OLP-0618-S07`; source `content/methods/induction/structural-induction.tex:68`; Tamil `translation/content/methods/induction/structural-induction.tex:98`; PDF page pending.
+- `TA-OCC-6e76087c81cbd9a6` — OLP-0618 / `OLP-0618-S07`; source `content/methods/induction/structural-induction.tex:68`; Tamil `translation/content/methods/induction/structural-induction.tex:102`; PDF page pending.
+- `TA-OCC-b3ef01121fe208f2` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:1`; Tamil `translation/content/methods/induction/relations.tex:12`; PDF page pending.
+- `TA-OCC-cc93c5cd1cd0bc13` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:1`; Tamil `translation/content/methods/induction/relations.tex:16`; PDF page pending.
+- `TA-OCC-eaf4598fa4e43df6` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:1`; Tamil `translation/content/methods/induction/relations.tex:24`; PDF page pending.
+- `TA-OCC-e89f5b962eabab51` — OLP-0619 / `OLP-0619-S02`; source `content/methods/induction/relations.tex:21`; Tamil `translation/content/methods/induction/relations.tex:30`; PDF page pending.
+- `TA-OCC-5d678b6563f1178b` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:84`; Tamil `translation/content/methods/induction/relations.tex:133`; PDF page pending.
 
 ## TA-T045 — function / mapping / argument / value
 
@@ -17913,6 +18006,13 @@ Please double-check: **do the listed uses of “சார்பு / இணை�
 - `TA-OCC-4845f2ea9335cf3c` — OLP-0607 / `OLP-0607-S02`; source `content/methods/proofs/example-1.tex:24`; Tamil `translation/content/methods/proofs/example-1.tex:52`; PDF page pending.
 - `TA-OCC-db4afdb1a816c16d` — OLP-0607 / `OLP-0607-S06`; source `content/methods/proofs/example-1.tex:125`; Tamil `translation/content/methods/proofs/example-1.tex:182`; PDF page pending.
 - `TA-OCC-795b8f4a3f56da28` — OLP-0608 / `OLP-0608-S02`; source `content/methods/proofs/example-2.tex:17`; Tamil `translation/content/methods/proofs/example-2.tex:52`; PDF page pending.
+- `TA-OCC-be3a74f34388ce3b` — OLP-0615 / `OLP-0615-S05`; source `content/methods/induction/induction-on-N.tex:80`; Tamil `translation/content/methods/induction/induction-on-N.tex:120`; PDF page pending.
+- `TA-OCC-1b3596369ac1372c` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:29`; Tamil `translation/content/methods/induction/structural-induction.tex:35`; PDF page pending.
+- `TA-OCC-89ec10c60bd92679` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:11`; Tamil `translation/content/methods/induction/relations.tex:12`; PDF page pending.
+- `TA-OCC-b89d7ef7aee6237e` — OLP-0619 / `OLP-0619-S09`; source `content/methods/induction/relations.tex:110`; Tamil `translation/content/methods/induction/relations.tex:173`; PDF page pending.
+- `TA-OCC-8cb1caaa351b3262` — OLP-0619 / `OLP-0619-S09`; source `content/methods/induction/relations.tex:110`; Tamil `translation/content/methods/induction/relations.tex:176`; PDF page pending.
+- `TA-OCC-e9d819b9228ebc0a` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:167`; Tamil `translation/content/methods/induction/relations.tex:243`; PDF page pending.
+- `TA-OCC-7969d62e432792c9` — OLP-0619 / `OLP-0619-S12`; source `content/methods/induction/relations.tex:171`; Tamil `translation/content/methods/induction/relations.tex:250`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -20230,6 +20330,18 @@ Please double-check: **do the listed uses of “கூற்றுத் தர�
 - `TA-OCC-d17db6d6527587bf` — OLP-0609 / `OLP-0609-S04`; source `content/methods/proofs/proof-by-contradiction.tex:115`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:150`; PDF page pending.
 - `TA-OCC-ab7ce456b617ac80` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:34`; Tamil `translation/content/methods/proofs/reading-proofs.tex:44`; PDF page pending.
 - `TA-OCC-637d638d4a6267c2` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:34`; Tamil `translation/content/methods/proofs/reading-proofs.tex:47`; PDF page pending.
+- `TA-OCC-e6bde3a19ff689f7` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:17`; Tamil `translation/content/methods/induction/introduction.tex:22`; PDF page pending.
+- `TA-OCC-35af091be7190f2d` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:17`; Tamil `translation/content/methods/induction/introduction.tex:29`; PDF page pending.
+- `TA-OCC-c5185cd61908cd76` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:50`; PDF page pending.
+- `TA-OCC-63cc64174e0c6e9c` — OLP-0615 / `OLP-0615-S03`; source `content/methods/induction/induction-on-N.tex:56`; Tamil `translation/content/methods/induction/induction-on-N.tex:83`; PDF page pending.
+- `TA-OCC-ba3e0bf62081f887` — OLP-0616 / `OLP-0616-S01`; source `content/methods/induction/strong-induction.tex:1`; Tamil `translation/content/methods/induction/strong-induction.tex:22`; PDF page pending.
+- `TA-OCC-62f1aee375b1e036` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:22`; Tamil `translation/content/methods/induction/strong-induction.tex:28`; PDF page pending.
+- `TA-OCC-5f1111a39e5e0aab` — OLP-0616 / `OLP-0616-S03`; source `content/methods/induction/strong-induction.tex:34`; Tamil `translation/content/methods/induction/strong-induction.tex:51`; PDF page pending.
+- `TA-OCC-cf9135ac94bef846` — OLP-0616 / `OLP-0616-S04`; source `content/methods/induction/strong-induction.tex:47`; Tamil `translation/content/methods/induction/strong-induction.tex:71`; PDF page pending.
+- `TA-OCC-5d3e22430a7e8255` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:89`; Tamil `translation/content/methods/induction/inductive-definitions.tex:128`; PDF page pending.
+- `TA-OCC-36dad8df70760956` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:101`; Tamil `translation/content/methods/induction/inductive-definitions.tex:149`; PDF page pending.
+- `TA-OCC-04b4bd73f2551bee` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:175`; PDF page pending.
+- `TA-OCC-c694389a68d4597b` — OLP-0618 / `OLP-0618-S05`; source `content/methods/induction/structural-induction.tex:48`; Tamil `translation/content/methods/induction/structural-induction.tex:69`; PDF page pending.
 
 ## TA-T078 — truth value / true / false / truth table
 
@@ -21639,6 +21751,33 @@ Please double-check: **do the listed uses of “மெய்மதிப்ப�
 - `TA-OCC-930e4f8002a0571c` — OLP-0609 / `OLP-0609-S04`; source `content/methods/proofs/proof-by-contradiction.tex:133`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:164`; PDF page pending.
 - `TA-OCC-902299dacaf00ab4` — OLP-0609 / `OLP-0609-S05`; source `content/methods/proofs/proof-by-contradiction.tex:151`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:206`; PDF page pending.
 - `TA-OCC-321c6400c48ed414` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:1`; Tamil `translation/content/methods/proofs/resources.tex:24`; PDF page pending.
+- `TA-OCC-e3fefaa85104ffdf` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:16`; Tamil `translation/content/methods/induction/induction-on-N.tex:19`; PDF page pending.
+- `TA-OCC-ff6d3ea81ed8426d` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:17`; Tamil `translation/content/methods/induction/induction-on-N.tex:20`; PDF page pending.
+- `TA-OCC-ba64c91097e91f62` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:17`; Tamil `translation/content/methods/induction/induction-on-N.tex:21`; PDF page pending.
+- `TA-OCC-c1ed696926759556` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:18`; Tamil `translation/content/methods/induction/induction-on-N.tex:22`; PDF page pending.
+- `TA-OCC-081de64737541abc` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:27`; Tamil `translation/content/methods/induction/induction-on-N.tex:35`; PDF page pending.
+- `TA-OCC-9a13a108d99f03f6` — OLP-0616 / `OLP-0616-S01`; source `content/methods/induction/strong-induction.tex:15`; Tamil `translation/content/methods/induction/strong-induction.tex:16`; PDF page pending.
+- `TA-OCC-ef307767c947ba63` — OLP-0616 / `OLP-0616-S01`; source `content/methods/induction/strong-induction.tex:15`; Tamil `translation/content/methods/induction/strong-induction.tex:22`; PDF page pending.
+- `TA-OCC-b35811555c4fa606` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:22`; Tamil `translation/content/methods/induction/strong-induction.tex:28`; PDF page pending.
+- `TA-OCC-7227677031f110b4` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:22`; Tamil `translation/content/methods/induction/strong-induction.tex:29`; PDF page pending.
+- `TA-OCC-c993c6ba0c55a6bf` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:22`; Tamil `translation/content/methods/induction/strong-induction.tex:34`; PDF page pending.
+- `TA-OCC-20cef56fec8c61c2` — OLP-0616 / `OLP-0616-S03`; source `content/methods/induction/strong-induction.tex:37`; Tamil `translation/content/methods/induction/strong-induction.tex:53`; PDF page pending.
+- `TA-OCC-f2aee93c22ece668` — OLP-0616 / `OLP-0616-S03`; source `content/methods/induction/strong-induction.tex:39`; Tamil `translation/content/methods/induction/strong-induction.tex:55`; PDF page pending.
+- `TA-OCC-480624ae22e6a5a6` — OLP-0616 / `OLP-0616-S03`; source `content/methods/induction/strong-induction.tex:39`; Tamil `translation/content/methods/induction/strong-induction.tex:58`; PDF page pending.
+- `TA-OCC-61c7b95cdfa00957` — OLP-0616 / `OLP-0616-S03`; source `content/methods/induction/strong-induction.tex:41`; Tamil `translation/content/methods/induction/strong-induction.tex:61`; PDF page pending.
+- `TA-OCC-fd1732437a6bf46a` — OLP-0616 / `OLP-0616-S03`; source `content/methods/induction/strong-induction.tex:43`; Tamil `translation/content/methods/induction/strong-induction.tex:64`; PDF page pending.
+- `TA-OCC-f0db639e29a88c8f` — OLP-0616 / `OLP-0616-S04`; source `content/methods/induction/strong-induction.tex:49`; Tamil `translation/content/methods/induction/strong-induction.tex:71`; PDF page pending.
+- `TA-OCC-1d7ec59fce79bb1f` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:103`; Tamil `translation/content/methods/induction/inductive-definitions.tex:149`; PDF page pending.
+- `TA-OCC-369e26d633bd45f1` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:108`; Tamil `translation/content/methods/induction/inductive-definitions.tex:157`; PDF page pending.
+- `TA-OCC-f6930b1c880510fe` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:175`; PDF page pending.
+- `TA-OCC-a71a5aed14f7c05a` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:40`; Tamil `translation/content/methods/induction/structural-induction.tex:51`; PDF page pending.
+- `TA-OCC-f24a76643c573a34` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:40`; Tamil `translation/content/methods/induction/structural-induction.tex:52`; PDF page pending.
+- `TA-OCC-892e9a2d21de327e` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:41`; Tamil `translation/content/methods/induction/structural-induction.tex:53`; PDF page pending.
+- `TA-OCC-0a726890b6fde258` — OLP-0618 / `OLP-0618-S05`; source `content/methods/induction/structural-induction.tex:53`; Tamil `translation/content/methods/induction/structural-induction.tex:69`; PDF page pending.
+- `TA-OCC-bae7446dff8c24b5` — OLP-0619 / `OLP-0619-S03`; source `content/methods/induction/relations.tex:35`; Tamil `translation/content/methods/induction/relations.tex:55`; PDF page pending.
+- `TA-OCC-1ce0a95b15aa07f7` — OLP-0619 / `OLP-0619-S03`; source `content/methods/induction/relations.tex:38`; Tamil `translation/content/methods/induction/relations.tex:60`; PDF page pending.
+- `TA-OCC-d485f7754dda69a1` — OLP-0619 / `OLP-0619-S03`; source `content/methods/induction/relations.tex:40`; Tamil `translation/content/methods/induction/relations.tex:64`; PDF page pending.
+- `TA-OCC-651b8234c73d2ec9` — OLP-0619 / `OLP-0619-S04`; source `content/methods/induction/relations.tex:42`; Tamil `translation/content/methods/induction/relations.tex:84`; PDF page pending.
 
 ## TA-T079 — logical connective / negation / conjunction / disjunction
 
@@ -21799,6 +21938,7 @@ Please double-check: **do the listed uses of “நிபந்தனைக் �
 - `TA-OCC-9995ed928180d50a` — OLP-0526 / `OLP-0526-S01`; source `content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:15`; Tamil `translation/content/counterfactuals/minimal-change-semantics/antecedent-strengthening.tex:29`; PDF page pending.
 - `TA-OCC-1a592f6a18057dbe` — OLP-0608 / `OLP-0608-S02`; source `content/methods/proofs/example-2.tex:21`; Tamil `translation/content/methods/proofs/example-2.tex:23`; PDF page pending.
 - `TA-OCC-64bbe3f3662422aa` — OLP-0609 / `OLP-0609-S02`; source `content/methods/proofs/proof-by-contradiction.tex:38`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:45`; PDF page pending.
+- `TA-OCC-777ad08b3083bfab` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:103`; Tamil `translation/content/methods/induction/inductive-definitions.tex:149`; PDF page pending.
 
 ## TA-T081 — formula / atomic formula / compound formula
 
@@ -23130,6 +23270,7 @@ Please double-check: **do the listed uses of “வாய்பாடு / அ�
 - `TA-OCC-b3620b7431a1ba8a` — OLP-0603 / `OLP-0603-S05`; source `content/methods/proofs/introduction.tex:65`; Tamil `translation/content/methods/proofs/introduction.tex:84`; PDF page pending.
 - `TA-OCC-60aeac65b08aa935` — OLP-0603 / `OLP-0603-S05`; source `content/methods/proofs/introduction.tex:65`; Tamil `translation/content/methods/proofs/introduction.tex:86`; PDF page pending.
 - `TA-OCC-dc19ae4b6d69561c` — OLP-0606 / `OLP-0606-S09`; source `content/methods/proofs/inference-patterns.tex:140`; Tamil `translation/content/methods/proofs/inference-patterns.tex:174`; PDF page pending.
+- `TA-OCC-b25062b460fe6dc9` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:17`; Tamil `translation/content/methods/induction/inductive-definitions.tex:21`; PDF page pending.
 
 ## TA-T082 — valuation / evaluation function
 
@@ -23592,6 +23733,7 @@ Please double-check: **is “தனித்த வாசிப்புத்�
 - `TA-OCC-a7f61d7ae8081703` — OLP-0060 / `OLP-0060-S06`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:129`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:136`; PDF page pending.
 - `TA-OCC-1e2cd62f2f4f4104` — OLP-0060 / `OLP-0060-S07`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:144`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:152`; PDF page pending.
 - `TA-OCC-1b27d95eeaa38a56` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:10`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:51`; PDF page pending.
+- `TA-OCC-6f4ddb695fad7ebd` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:85`; Tamil `translation/content/methods/induction/relations.tex:131`; PDF page pending.
 
 ## TA-T087 — uniform substitution / local determination / monotonicity
 
@@ -24572,6 +24714,10 @@ Please double-check: **do the listed uses of “வருவித்தல் /
 - `TA-OCC-c9f17eaffc2e1ba8` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:2`; Tamil `translation/content/methods/proofs/resources.tex:13`; PDF page pending.
 - `TA-OCC-b818401b6daf0389` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:13`; Tamil `translation/content/methods/proofs/resources.tex:22`; PDF page pending.
 - `TA-OCC-0f655e99c9643427` — OLP-0612 / `OLP-0612-S02`; source `content/methods/proofs/resources.tex:27`; Tamil `translation/content/methods/proofs/resources.tex:29`; PDF page pending.
+- `TA-OCC-91a0feab737fb43c` — OLP-0614 / `OLP-0614-S01`; source `content/methods/induction/introduction.tex:13`; Tamil `translation/content/methods/induction/introduction.tex:16`; PDF page pending.
+- `TA-OCC-1b1c5d6c542351aa` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:27`; Tamil `translation/content/methods/induction/introduction.tex:36`; PDF page pending.
+- `TA-OCC-c92ef5bd4c340ed8` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:20`; Tamil `translation/content/methods/induction/induction-on-N.tex:30`; PDF page pending.
+- `TA-OCC-b10a8808ef804e7b` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:23`; Tamil `translation/content/methods/induction/induction-on-N.tex:32`; PDF page pending.
 
 ## TA-T089 — premise / conclusion / assumption / hypothesis / discharge
 
@@ -25495,6 +25641,34 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-6345a13b2a51409a` — OLP-0609 / `OLP-0609-S05`; source `content/methods/proofs/proof-by-contradiction.tex:172`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:215`; PDF page pending.
 - `TA-OCC-68ba77c6c88261b7` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:189`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:235`; PDF page pending.
 - `TA-OCC-d0d2f57cdcaf074f` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:34`; Tamil `translation/content/methods/proofs/reading-proofs.tex:64`; PDF page pending.
+- `TA-OCC-e01cb8384da35268` — OLP-0614 / `OLP-0614-S01`; source `content/methods/induction/introduction.tex:1`; Tamil `translation/content/methods/induction/introduction.tex:17`; PDF page pending.
+- `TA-OCC-8dc6e88bf17a437c` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:17`; Tamil `translation/content/methods/induction/introduction.tex:26`; PDF page pending.
+- `TA-OCC-6497502614e37807` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:27`; Tamil `translation/content/methods/induction/introduction.tex:38`; PDF page pending.
+- `TA-OCC-c01daafe90f1e313` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:52`; PDF page pending.
+- `TA-OCC-109bfea511a6264a` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:53`; PDF page pending.
+- `TA-OCC-ff6e49e576d09b33` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:55`; PDF page pending.
+- `TA-OCC-dece41756475bbc9` — OLP-0614 / `OLP-0614-S04`; source `content/methods/induction/introduction.tex:37`; Tamil `translation/content/methods/induction/introduction.tex:57`; PDF page pending.
+- `TA-OCC-83d7ae7b5c5b56ca` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:44`; Tamil `translation/content/methods/induction/introduction.tex:65`; PDF page pending.
+- `TA-OCC-d12fce6dcc492215` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:1`; Tamil `translation/content/methods/induction/induction-on-N.tex:15`; PDF page pending.
+- `TA-OCC-22d4c85e6e8a9485` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:58`; PDF page pending.
+- `TA-OCC-ebedac8ce54f9270` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:60`; PDF page pending.
+- `TA-OCC-e198bce43be65bc8` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:62`; PDF page pending.
+- `TA-OCC-ae2145d7a8443c78` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:64`; PDF page pending.
+- `TA-OCC-bcc751c77ade37b9` — OLP-0615 / `OLP-0615-S02`; source `content/methods/induction/induction-on-N.tex:37`; Tamil `translation/content/methods/induction/induction-on-N.tex:75`; PDF page pending.
+- `TA-OCC-901f209404bd962f` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:71`; Tamil `translation/content/methods/induction/induction-on-N.tex:101`; PDF page pending.
+- `TA-OCC-d350226bbe485248` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:71`; Tamil `translation/content/methods/induction/induction-on-N.tex:102`; PDF page pending.
+- `TA-OCC-ae9b1b7f0e1a10dc` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:76`; Tamil `translation/content/methods/induction/induction-on-N.tex:104`; PDF page pending.
+- `TA-OCC-12c5dbba8ad54c4c` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:76`; Tamil `translation/content/methods/induction/induction-on-N.tex:105`; PDF page pending.
+- `TA-OCC-6087464e7a1338b0` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:130`; Tamil `translation/content/methods/induction/induction-on-N.tex:186`; PDF page pending.
+- `TA-OCC-eecdb750e0390b33` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:24`; Tamil `translation/content/methods/induction/strong-induction.tex:37`; PDF page pending.
+- `TA-OCC-03c121a72c7c6ed3` — OLP-0616 / `OLP-0616-S02`; source `content/methods/induction/strong-induction.tex:24`; Tamil `translation/content/methods/induction/strong-induction.tex:42`; PDF page pending.
+- `TA-OCC-fa7b3451e0e4d60c` — OLP-0616 / `OLP-0616-S04`; source `content/methods/induction/strong-induction.tex:48`; Tamil `translation/content/methods/induction/strong-induction.tex:72`; PDF page pending.
+- `TA-OCC-2b5048349aff6e24` — OLP-0617 / `OLP-0617-S04`; source `content/methods/induction/inductive-definitions.tex:52`; Tamil `translation/content/methods/induction/inductive-definitions.tex:73`; PDF page pending.
+- `TA-OCC-ac69a90e401474bb` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:110`; Tamil `translation/content/methods/induction/inductive-definitions.tex:161`; PDF page pending.
+- `TA-OCC-fceb29960ea459c0` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:124`; Tamil `translation/content/methods/induction/inductive-definitions.tex:186`; PDF page pending.
+- `TA-OCC-abcfdda81549b8e7` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:1`; Tamil `translation/content/methods/induction/structural-induction.tex:14`; PDF page pending.
+- `TA-OCC-16eb536ddd73bf78` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:1`; Tamil `translation/content/methods/induction/structural-induction.tex:18`; PDF page pending.
+- `TA-OCC-bddbdd2e305290c6` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:31`; Tamil `translation/content/methods/induction/structural-induction.tex:46`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -27687,6 +27861,8 @@ Please double-check: **is “முன்தொடர் / பின்தொட
 - `TA-OCC-239f7dbbb6578dd4` — OLP-0606 / `OLP-0606-S15`; source `content/methods/proofs/inference-patterns.tex:294`; Tamil `translation/content/methods/proofs/inference-patterns.tex:413`; PDF page pending.
 - `TA-OCC-fd136406aea43e9a` — OLP-0607 / `OLP-0607-S06`; source `content/methods/proofs/example-1.tex:125`; Tamil `translation/content/methods/proofs/example-1.tex:202`; PDF page pending.
 - `TA-OCC-c1f6b424197233fc` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:178`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:243`; PDF page pending.
+- `TA-OCC-132c88f048a92d66` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:207`; PDF page pending.
+- `TA-OCC-9b79edce81bc1c1e` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:95`; Tamil `translation/content/methods/induction/relations.tex:169`; PDF page pending.
 
 ## TA-T098 — logical rule / structural rule / weakening / contraction / exchange / cut
 
@@ -29725,6 +29901,7 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-9d3b80bbc3e4c5b3` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:111`; PDF page pending.
 - `TA-OCC-5bc9e62f2d87884f` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:153`; PDF page pending.
 - `TA-OCC-8d8764ffc1b609d1` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:81`; PDF page pending.
+- `TA-OCC-d4a4b4b65a6250c1` — OLP-0615 / `OLP-0615-S05`; source `content/methods/induction/induction-on-N.tex:78`; Tamil `translation/content/methods/induction/induction-on-N.tex:120`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -34135,6 +34312,13 @@ Please double-check: **is “ஒரேநேரப் பதிலீடு / �
 - `TA-OCC-bed50ec29f23b277` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:178`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:262`; PDF page pending.
 - `TA-OCC-9b94d01f20af18d9` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:178`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:271`; PDF page pending.
 - `TA-OCC-0e1b8268dfc8d1f3` — OLP-0610 / `OLP-0610-S01`; source `content/methods/proofs/reading-proofs.tex:1`; Tamil `translation/content/methods/proofs/reading-proofs.tex:15`; PDF page pending.
+- `TA-OCC-f844781c53384cb0` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:18`; Tamil `translation/content/methods/induction/introduction.tex:21`; PDF page pending.
+- `TA-OCC-469dfce96e70d507` — OLP-0614 / `OLP-0614-S02`; source `content/methods/induction/introduction.tex:18`; Tamil `translation/content/methods/induction/introduction.tex:28`; PDF page pending.
+- `TA-OCC-cc29e8d9468e5d4d` — OLP-0615 / `OLP-0615-S08`; source `content/methods/induction/induction-on-N.tex:130`; Tamil `translation/content/methods/induction/induction-on-N.tex:188`; PDF page pending.
+- `TA-OCC-3bab1699edf2c76d` — OLP-0616 / `OLP-0616-S03`; source `content/methods/induction/strong-induction.tex:34`; Tamil `translation/content/methods/induction/strong-induction.tex:53`; PDF page pending.
+- `TA-OCC-447b3d227058a43a` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:83`; Tamil `translation/content/methods/induction/inductive-definitions.tex:115`; PDF page pending.
+- `TA-OCC-dc6d474f220d455e` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:168`; PDF page pending.
+- `TA-OCC-f9a467c10c5b58d1` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:203`; PDF page pending.
 
 ## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
 
@@ -35212,6 +35396,7 @@ Please double-check: **is “முன்னிலை / பின்னிலை
 - `TA-OCC-3b1f142764920a43` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:11`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:13`; PDF page pending.
 - `TA-OCC-97d59bd048042dfd` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:25`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:16`; PDF page pending.
 - `TA-OCC-b92da67c3eab9f16` — OLP-0528 / `OLP-0528-S01`; source `content/counterfactuals/minimal-change-semantics/contraposition.tex:26`; Tamil `translation/content/counterfactuals/minimal-change-semantics/contraposition.tex:59`; PDF page pending.
+- `TA-OCC-87c996736c5df484` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:1`; Tamil `translation/content/methods/induction/induction-on-N.tex:41`; PDF page pending.
 
 ## TA-T197 — minimal change semantics / closest possible world / ontic analysis / causal reasoning / contingent conditional
 
@@ -37859,6 +38044,16 @@ Please double-check: **is “நிறுவல் / வருவித்தல
 - `TA-OCC-5066ac1222f6218f` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:2`; Tamil `translation/content/methods/proofs/resources.tex:13`; PDF page pending.
 - `TA-OCC-d630a59130522dd7` — OLP-0612 / `OLP-0612-S01`; source `content/methods/proofs/resources.tex:13`; Tamil `translation/content/methods/proofs/resources.tex:22`; PDF page pending.
 - `TA-OCC-b16c376bd8b3b4e8` — OLP-0612 / `OLP-0612-S02`; source `content/methods/proofs/resources.tex:27`; Tamil `translation/content/methods/proofs/resources.tex:29`; PDF page pending.
+- `TA-OCC-81ab651a1dfe383a` — OLP-0614 / `OLP-0614-S01`; source `content/methods/induction/introduction.tex:13`; Tamil `translation/content/methods/induction/introduction.tex:16`; PDF page pending.
+- `TA-OCC-d369af9000d54673` — OLP-0614 / `OLP-0614-S03`; source `content/methods/induction/introduction.tex:27`; Tamil `translation/content/methods/induction/introduction.tex:36`; PDF page pending.
+- `TA-OCC-428fbd762e1e569d` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:20`; Tamil `translation/content/methods/induction/induction-on-N.tex:30`; PDF page pending.
+- `TA-OCC-97158bf0402d392e` — OLP-0615 / `OLP-0615-S01`; source `content/methods/induction/induction-on-N.tex:23`; Tamil `translation/content/methods/induction/induction-on-N.tex:32`; PDF page pending.
+- `TA-OCC-4a8cec89c2e429cd` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:71`; Tamil `translation/content/methods/induction/induction-on-N.tex:101`; PDF page pending.
+- `TA-OCC-d6d28057919f58e6` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:76`; Tamil `translation/content/methods/induction/induction-on-N.tex:102`; PDF page pending.
+- `TA-OCC-77aa16ec2ada014b` — OLP-0616 / `OLP-0616-S04`; source `content/methods/induction/strong-induction.tex:47`; Tamil `translation/content/methods/induction/strong-induction.tex:72`; PDF page pending.
+- `TA-OCC-56b3b23d4a658ffa` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:101`; Tamil `translation/content/methods/induction/inductive-definitions.tex:161`; PDF page pending.
+- `TA-OCC-bac21298ba4d86bc` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:124`; Tamil `translation/content/methods/induction/inductive-definitions.tex:186`; PDF page pending.
+- `TA-OCC-cf2e54d9256785e5` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:136`; Tamil `translation/content/methods/induction/inductive-definitions.tex:207`; PDF page pending.
 
 ## TA-T240 — definition / definiendum / definiens / unpacking definitions
 
@@ -38482,6 +38677,22 @@ Please double-check: **is “வரையறை / வரையறுக்கப
 - `TA-OCC-a8ff0d5242e9c805` — OLP-0610 / `OLP-0610-S05`; source `content/methods/proofs/reading-proofs.tex:93`; Tamil `translation/content/methods/proofs/reading-proofs.tex:125`; PDF page pending.
 - `TA-OCC-d2a31b4c7fd25db2` — OLP-0610 / `OLP-0610-S05`; source `content/methods/proofs/reading-proofs.tex:95`; Tamil `translation/content/methods/proofs/reading-proofs.tex:127`; PDF page pending.
 - `TA-OCC-9b0e09dd6ed32470` — OLP-0610 / `OLP-0610-S06`; source `content/methods/proofs/reading-proofs.tex:103`; Tamil `translation/content/methods/proofs/reading-proofs.tex:140`; PDF page pending.
+- `TA-OCC-7042d0a088b138a3` — OLP-0615 / `OLP-0615-S07`; source `content/methods/induction/induction-on-N.tex:118`; Tamil `translation/content/methods/induction/induction-on-N.tex:168`; PDF page pending.
+- `TA-OCC-b70b14e147998f92` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:3`; Tamil `translation/content/methods/induction/inductive-definitions.tex:12`; PDF page pending.
+- `TA-OCC-a1a005cf37d2248c` — OLP-0617 / `OLP-0617-S02`; source `content/methods/induction/inductive-definitions.tex:39`; Tamil `translation/content/methods/induction/inductive-definitions.tex:55`; PDF page pending.
+- `TA-OCC-ca2b2f0d27821fcc` — OLP-0617 / `OLP-0617-S04`; source `content/methods/induction/inductive-definitions.tex:52`; Tamil `translation/content/methods/induction/inductive-definitions.tex:72`; PDF page pending.
+- `TA-OCC-c3bba07412ad8bcf` — OLP-0617 / `OLP-0617-S05`; source `content/methods/induction/inductive-definitions.tex:76`; Tamil `translation/content/methods/induction/inductive-definitions.tex:105`; PDF page pending.
+- `TA-OCC-545a1cd01de776c6` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:81`; Tamil `translation/content/methods/induction/inductive-definitions.tex:113`; PDF page pending.
+- `TA-OCC-eba2e21b3860ded1` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:82`; Tamil `translation/content/methods/induction/inductive-definitions.tex:116`; PDF page pending.
+- `TA-OCC-965a189272548d48` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:84`; Tamil `translation/content/methods/induction/inductive-definitions.tex:119`; PDF page pending.
+- `TA-OCC-db5c00809b04149d` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:19`; Tamil `translation/content/methods/induction/structural-induction.tex:23`; PDF page pending.
+- `TA-OCC-ce2c8e611346ac8a` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:28`; Tamil `translation/content/methods/induction/structural-induction.tex:34`; PDF page pending.
+- `TA-OCC-ba05a6d54ed32cab` — OLP-0619 / `OLP-0619-S03`; source `content/methods/induction/relations.tex:31`; Tamil `translation/content/methods/induction/relations.tex:46`; PDF page pending.
+- `TA-OCC-d1db07f7ce189c44` — OLP-0619 / `OLP-0619-S04`; source `content/methods/induction/relations.tex:42`; Tamil `translation/content/methods/induction/relations.tex:67`; PDF page pending.
+- `TA-OCC-d207ff440d62e7e6` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:98`; Tamil `translation/content/methods/induction/relations.tex:149`; PDF page pending.
+- `TA-OCC-ec6ab8ed82aad1a5` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:139`; Tamil `translation/content/methods/induction/relations.tex:212`; PDF page pending.
+- `TA-OCC-ed2b896efca32f69` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:167`; Tamil `translation/content/methods/induction/relations.tex:245`; PDF page pending.
+- `TA-OCC-513d2c8b74e066c4` — OLP-0619 / `OLP-0619-S12`; source `content/methods/induction/relations.tex:171`; Tamil `translation/content/methods/induction/relations.tex:251`; PDF page pending.
 
 ## TA-T241 — inference pattern / conditional proof / proof by cases / universal claim / existence claim
 
@@ -38527,6 +38738,185 @@ Please double-check: **is “முரண்பாட்டால் நிற�
 - `TA-OCC-0693e79fb7df4cf8` — OLP-0609 / `OLP-0609-S01`; source `content/methods/proofs/proof-by-contradiction.tex:13`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:14`; PDF page pending.
 - `TA-OCC-a530a7a2f05ae68c` — OLP-0610 / `OLP-0610-S01`; source `content/methods/proofs/reading-proofs.tex:15`; Tamil `translation/content/methods/proofs/reading-proofs.tex:24`; PDF page pending.
 - `TA-OCC-b0ba15b55b57763d` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:34`; Tamil `translation/content/methods/proofs/reading-proofs.tex:40`; PDF page pending.
+
+## TA-T243 — simple induction / mathematical induction / structural induction / inductively defined
+
+Chosen rendering: **எளிய தொகுத்தறிதல் / கணிதத் தொகுத்தறிதல் / கட்டமைப்புத் தொகுத்தறிதல் / தொகுத்தறிதல் முறையில் வரையறுக்கப்பட்ட**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly re-read SCERT glossary attests கணிதத் தொகுத்தறிதல் முறை as a complete mathematical-induction label. The historical logic page supports inference language, but neither consulted passage attests simple or structural induction as a complete Tamil headword. The frozen introduction contrasts enumerative emerald observations with the base-zero and successor-step proof, then defines structural induction by inductively generated formal expressions. Tamil keeps these mechanisms separate and treats the two extensions as provisional.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-SC11-P2 (checked_context_only); TA-T243-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “எளிய தொகுத்தறிதல் / கணிதத் தொகுத்தறிதல் / கட்டமைப்புத் தொகுத்தறிதல் / தொகுத்தறிதல் முறையில் வரையறுக்கப்பட்ட” the established India-standard Tamil expression for “simple induction / mathematical induction / structural induction / inductively defined” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-f9ba80be87e531ba` — OLP-0052 / `OLP-0052-S01`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:1`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:11`; PDF page pending.
+- `TA-OCC-377d4bcef6272e73` — OLP-0052 / `OLP-0052-S02`; source `content/sets-functions-relations/infinite/dedekind-induction.tex:16`; Tamil `translation/content/sets-functions-relations/infinite/dedekind-induction.tex:18`; PDF page pending.
+- `TA-OCC-54921fdda835ac03` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:78`; PDF page pending.
+- `TA-OCC-d66679f984e6d940` — OLP-0189 / `OLP-0189-S01`; source `content/model-theory/basics/partial-iso.tex:1`; Tamil `translation/content/model-theory/basics/partial-iso.tex:207`; PDF page pending.
+- `TA-OCC-a38ac95c9776682a` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:45`; Tamil `translation/content/methods/induction/introduction.tex:60`; PDF page pending.
+- `TA-OCC-01d8564b7c2b695a` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:47`; Tamil `translation/content/methods/induction/introduction.tex:65`; PDF page pending.
+- `TA-OCC-73a413b681aca3e5` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:89`; Tamil `translation/content/methods/induction/inductive-definitions.tex:127`; PDF page pending.
+- `TA-OCC-d7aa764d91f4924d` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:11`; Tamil `translation/content/methods/induction/structural-induction.tex:12`; PDF page pending.
+- `TA-OCC-5d4845000337b26c` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:31`; Tamil `translation/content/methods/induction/structural-induction.tex:38`; PDF page pending.
+- `TA-OCC-3c0c03626c385cd0` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:86`; Tamil `translation/content/methods/induction/relations.tex:132`; PDF page pending.
+
+## TA-T244 — induction basis / induction step / inductive hypothesis / recursive sum sequence
+
+Chosen rendering: **தொகுத்தறிதலின் அடிப்படை நிலை / தொகுத்தறிதலின் அடுத்த படி / தொகுத்தறிதல் எடுகோள் / மறுநிகழ்வாக வரையறுக்கப்பட்ட கூட்டுத்தொடர்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: SCERT attests mathematical induction as a lexical whole, while the historical logic pages support proof and temporary-assumption register. They do not directly attest these four full compounds. The frozen natural-number section defines the base by P(0), the step by arbitrary k with P(k) implying P(k+1), and the hypothesis by temporarily assuming P(k). In the dice theorem the base is instead P(1), after a separate zero-dice observation. The sum example gives the exact recursive equations, which govern the sequence sense.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T244-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தொகுத்தறிதலின் அடிப்படை நிலை / தொகுத்தறிதலின் அடுத்த படி / தொகுத்தறிதல் எடுகோள் / மறுநிகழ்வாக வரையறுக்கப்பட்ட கூட்டுத்தொடர்” the established India-standard Tamil expression for “induction basis / induction step / inductive hypothesis / recursive sum sequence” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-1183d6351760e7a4` — OLP-0201 / `OLP-0201-S01`; source `content/model-theory/interpolation/interpolation-proof.tex:1`; Tamil `translation/content/model-theory/interpolation/interpolation-proof.tex:96`; PDF page pending.
+- `TA-OCC-5559b45dbc2cc8b7` — OLP-0615 / `OLP-0615-S03`; source `content/methods/induction/induction-on-N.tex:60`; Tamil `translation/content/methods/induction/induction-on-N.tex:86`; PDF page pending.
+- `TA-OCC-66f8a3cc4291e990` — OLP-0615 / `OLP-0615-S03`; source `content/methods/induction/induction-on-N.tex:62`; Tamil `translation/content/methods/induction/induction-on-N.tex:89`; PDF page pending.
+- `TA-OCC-c28c86f456ade3a4` — OLP-0615 / `OLP-0615-S04`; source `content/methods/induction/induction-on-N.tex:71`; Tamil `translation/content/methods/induction/induction-on-N.tex:102`; PDF page pending.
+- `TA-OCC-e742347513e23bae` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:110`; Tamil `translation/content/methods/induction/inductive-definitions.tex:161`; PDF page pending.
+
+## TA-T245 — strong induction / all-smaller induction / vacuous quantification
+
+Chosen rendering: **வலுவான தொகுத்தறிதல் / சிறிய எல்லா எண்களையும் கொண்ட தொகுத்தறிதல் / வெற்றிடக் கணக்கீடு**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected SCERT glossary directly attests mathematical induction only; the logic and quantifier pages supply component language, not complete strong-induction or vacuity headwords. The frozen section fixes the stronger premise as P(l) for every l<k and explains k=0 by the truth of a universal statement over an empty range. Tamil preserves the formal formula and source's P(0) wording in one vacuous illustration while differentiating it from the general P(l) antecedent.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-TVA-D0412-QUANTIFIER (checked_supports); TA-T245-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “வலுவான தொகுத்தறிதல் / சிறிய எல்லா எண்களையும் கொண்ட தொகுத்தறிதல் / வெற்றிடக் கணக்கீடு” the established India-standard Tamil expression for “strong induction / all-smaller induction / vacuous quantification” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-a6d51d041a56bab1` — OLP-0550 / `OLP-0550-S01`; source `content/set-theory/ordinals/wo.tex:60`; Tamil `translation/content/set-theory/ordinals/wo.tex:69`; PDF page pending.
+- `TA-OCC-1a20b8a7d8de38ae` — OLP-0616 / `OLP-0616-S01`; source `content/methods/induction/strong-induction.tex:11`; Tamil `translation/content/methods/induction/strong-induction.tex:12`; PDF page pending.
+
+## TA-T246 — inductive definition / nice term / supernice term / formation clauses
+
+Chosen rendering: **தொகுத்தறிதல் வரையறை / ஒழுங்கான சொல் / மிக ஒழுங்கான சொல் / அமைப்பு விதிகள்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The re-read school glossary attests mathematical induction, and the Grade 12 logic page supports compound-statement construction language, but neither attests the playful nice/supernice labels or a complete inductive-definition headword. The frozen section gives exact base, binary and exclusion clauses; the supernice exercise adds a unary bracket clause. Tamil uses transparent labels only for these source-defined sets, preserving all malformed contrast examples, formulas and the strong-induction length proof.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-IL1967-P112-113-INFERENCE (checked_supports); TA-T246-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தொகுத்தறிதல் வரையறை / ஒழுங்கான சொல் / மிக ஒழுங்கான சொல் / அமைப்பு விதிகள்” the established India-standard Tamil expression for “inductive definition / nice term / supernice term / formation clauses” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-02a34d64eab308d6` — OLP-0057 / `OLP-0057-S02`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:48`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:46`; PDF page pending.
+- `TA-OCC-71a71c9afd106186` — OLP-0057 / `OLP-0057-S02`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:50`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:50`; PDF page pending.
+- `TA-OCC-b49f050f9e1683fe` — OLP-0057 / `OLP-0057-S02`; source `content/propositional-logic/syntax-and-semantics/introduction.tex:50`; Tamil `translation/content/propositional-logic/syntax-and-semantics/introduction.tex:51`; PDF page pending.
+- `TA-OCC-1d788e1e80ff67be` — OLP-0058 / `OLP-0058-S05`; source `content/propositional-logic/syntax-and-semantics/formulas.tex:111`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formulas.tex:119`; PDF page pending.
+- `TA-OCC-f590f2005b286ec5` — OLP-0060 / `OLP-0060-S01`; source `content/propositional-logic/syntax-and-semantics/formation-sequences.tex:13`; Tamil `translation/content/propositional-logic/syntax-and-semantics/formation-sequences.tex:14`; PDF page pending.
+- `TA-OCC-d54bb5232cf6aa41` — OLP-0150 / `OLP-0150-S01`; source `content/first-order-logic/syntax-and-semantics/intro-syntax.tex:28`; Tamil `translation/content/first-order-logic/syntax-and-semantics/intro-syntax.tex:30`; PDF page pending.
+- `TA-OCC-5b7552e9aba97db9` — OLP-0150 / `OLP-0150-S01`; source `content/first-order-logic/syntax-and-semantics/intro-syntax.tex:28`; Tamil `translation/content/first-order-logic/syntax-and-semantics/intro-syntax.tex:31`; PDF page pending.
+- `TA-OCC-6d2de6f12443aece` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:84`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:83`; PDF page pending.
+- `TA-OCC-97a9d95ac5bcb7d1` — OLP-0152 / `OLP-0152-S01`; source `content/first-order-logic/syntax-and-semantics/terms-formulas.tex:84`; Tamil `translation/content/first-order-logic/syntax-and-semantics/terms-formulas.tex:185`; PDF page pending.
+- `TA-OCC-300335256d1b47bb` — OLP-0155 / `OLP-0155-S01`; source `content/first-order-logic/syntax-and-semantics/subformulas.tex:75`; Tamil `translation/content/first-order-logic/syntax-and-semantics/subformulas.tex:77`; PDF page pending.
+- `TA-OCC-aa96fa6796d5e7e3` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:13`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:14`; PDF page pending.
+- `TA-OCC-20464658894605e6` — OLP-0156 / `OLP-0156-S01`; source `content/first-order-logic/syntax-and-semantics/formation-sequences.tex:21`; Tamil `translation/content/first-order-logic/syntax-and-semantics/formation-sequences.tex:20`; PDF page pending.
+- `TA-OCC-64d1bc76b7664383` — OLP-0157 / `OLP-0157-S01`; source `content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:44`; Tamil `translation/content/first-order-logic/syntax-and-semantics/free-vars-sentences.tex:43`; PDF page pending.
+- `TA-OCC-2058324f652a9c24` — OLP-0163 / `OLP-0163-S01`; source `content/first-order-logic/syntax-and-semantics/satisfaction.tex:216`; Tamil `translation/content/first-order-logic/syntax-and-semantics/satisfaction.tex:230`; PDF page pending.
+- `TA-OCC-a219d847f2e01ce0` — OLP-0362 / `OLP-0362-S01`; source `content/lambda-calculus/syntax/alpha.tex:70`; Tamil `translation/content/lambda-calculus/syntax/alpha.tex:71`; PDF page pending.
+- `TA-OCC-7d99d2f89eefa5e8` — OLP-0365 / `OLP-0365-S01`; source `content/lambda-calculus/syntax/beta.tex:28`; Tamil `translation/content/lambda-calculus/syntax/beta.tex:31`; PDF page pending.
+- `TA-OCC-648e75a608c14b9e` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:11`; Tamil `translation/content/methods/induction/inductive-definitions.tex:12`; PDF page pending.
+- `TA-OCC-5a85be24c21a82cf` — OLP-0617 / `OLP-0617-S02`; source `content/methods/induction/inductive-definitions.tex:32`; Tamil `translation/content/methods/induction/inductive-definitions.tex:42`; PDF page pending.
+- `TA-OCC-d4da2c61b9e69aa1` — OLP-0617 / `OLP-0617-S02`; source `content/methods/induction/inductive-definitions.tex:36`; Tamil `translation/content/methods/induction/inductive-definitions.tex:51`; PDF page pending.
+- `TA-OCC-412ad0dbe632e957` — OLP-0617 / `OLP-0617-S03`; source `content/methods/induction/inductive-definitions.tex:41`; Tamil `translation/content/methods/induction/inductive-definitions.tex:64`; PDF page pending.
+- `TA-OCC-d682dc98c370a5a3` — OLP-0617 / `OLP-0617-S03`; source `content/methods/induction/inductive-definitions.tex:42`; Tamil `translation/content/methods/induction/inductive-definitions.tex:66`; PDF page pending.
+- `TA-OCC-a1d2491e83156453` — OLP-0617 / `OLP-0617-S03`; source `content/methods/induction/inductive-definitions.tex:45`; Tamil `translation/content/methods/induction/inductive-definitions.tex:67`; PDF page pending.
+- `TA-OCC-29947cccbeb8a4d0` — OLP-0617 / `OLP-0617-S04`; source `content/methods/induction/inductive-definitions.tex:52`; Tamil `translation/content/methods/induction/inductive-definitions.tex:74`; PDF page pending.
+- `TA-OCC-59512e9417bd4f76` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:81`; Tamil `translation/content/methods/induction/inductive-definitions.tex:113`; PDF page pending.
+- `TA-OCC-c92e5404b2b21bf5` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:82`; Tamil `translation/content/methods/induction/inductive-definitions.tex:117`; PDF page pending.
+- `TA-OCC-d4c670fd16b721fd` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:91`; Tamil `translation/content/methods/induction/inductive-definitions.tex:131`; PDF page pending.
+- `TA-OCC-d0fc8a1c6eff7503` — OLP-0617 / `OLP-0617-S07`; source `content/methods/induction/inductive-definitions.tex:93`; Tamil `translation/content/methods/induction/inductive-definitions.tex:136`; PDF page pending.
+- `TA-OCC-0b820a881cde2bd0` — OLP-0617 / `OLP-0617-S08`; source `content/methods/induction/inductive-definitions.tex:97`; Tamil `translation/content/methods/induction/inductive-definitions.tex:142`; PDF page pending.
+- `TA-OCC-7445478ee15cee6d` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:105`; Tamil `translation/content/methods/induction/inductive-definitions.tex:152`; PDF page pending.
+- `TA-OCC-be794a06ba08b588` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:106`; Tamil `translation/content/methods/induction/inductive-definitions.tex:154`; PDF page pending.
+- `TA-OCC-80f2a146ebfd466c` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:141`; Tamil `translation/content/methods/induction/inductive-definitions.tex:217`; PDF page pending.
+- `TA-OCC-68a6f0bdcdb423ba` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:144`; Tamil `translation/content/methods/induction/inductive-definitions.tex:218`; PDF page pending.
+- `TA-OCC-d860474590359c21` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:145`; Tamil `translation/content/methods/induction/inductive-definitions.tex:219`; PDF page pending.
+- `TA-OCC-c57c56c04d6a0d88` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:146`; Tamil `translation/content/methods/induction/inductive-definitions.tex:221`; PDF page pending.
+- `TA-OCC-0f918b071dee3dfc` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:148`; Tamil `translation/content/methods/induction/inductive-definitions.tex:222`; PDF page pending.
+- `TA-OCC-29c413b26600aa8b` — OLP-0617 / `OLP-0617-S11`; source `content/methods/induction/inductive-definitions.tex:150`; Tamil `translation/content/methods/induction/inductive-definitions.tex:224`; PDF page pending.
+- `TA-OCC-9b0486dcc224ae27` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:19`; Tamil `translation/content/methods/induction/structural-induction.tex:23`; PDF page pending.
+- `TA-OCC-711cec48db666196` — OLP-0618 / `OLP-0618-S04`; source `content/methods/induction/structural-induction.tex:45`; Tamil `translation/content/methods/induction/structural-induction.tex:57`; PDF page pending.
+- `TA-OCC-4e77288c20a87dff` — OLP-0618 / `OLP-0618-S06`; source `content/methods/induction/structural-induction.tex:65`; Tamil `translation/content/methods/induction/structural-induction.tex:91`; PDF page pending.
+- `TA-OCC-4aacf402516612bd` — OLP-0618 / `OLP-0618-S08`; source `content/methods/induction/structural-induction.tex:76`; Tamil `translation/content/methods/induction/structural-induction.tex:111`; PDF page pending.
+- `TA-OCC-c516ae9a32e24b0c` — OLP-0618 / `OLP-0618-S09`; source `content/methods/induction/structural-induction.tex:84`; Tamil `translation/content/methods/induction/structural-induction.tex:131`; PDF page pending.
+- `TA-OCC-c4acd6f12b206e07` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:14`; Tamil `translation/content/methods/induction/relations.tex:18`; PDF page pending.
+- `TA-OCC-39fae6510b74cc89` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:16`; Tamil `translation/content/methods/induction/relations.tex:22`; PDF page pending.
+- `TA-OCC-270d9ca433dee44d` — OLP-0619 / `OLP-0619-S02`; source `content/methods/induction/relations.tex:22`; Tamil `translation/content/methods/induction/relations.tex:29`; PDF page pending.
+- `TA-OCC-2a65590d2ecdcf20` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:84`; Tamil `translation/content/methods/induction/relations.tex:129`; PDF page pending.
+- `TA-OCC-e002045418b841ce` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:90`; Tamil `translation/content/methods/induction/relations.tex:138`; PDF page pending.
+- `TA-OCC-308ce939a213d446` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:99`; Tamil `translation/content/methods/induction/relations.tex:149`; PDF page pending.
+- `TA-OCC-d64e1050aa1a9211` — OLP-0619 / `OLP-0619-S09`; source `content/methods/induction/relations.tex:111`; Tamil `translation/content/methods/induction/relations.tex:180`; PDF page pending.
+- `TA-OCC-9e1ddf3a55da8bd8` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:135`; Tamil `translation/content/methods/induction/relations.tex:205`; PDF page pending.
+- `TA-OCC-edd07923c73ed8a6` — OLP-0619 / `OLP-0619-S12`; source `content/methods/induction/relations.tex:171`; Tamil `translation/content/methods/induction/relations.tex:252`; PDF page pending.
+
+## TA-T247 — structural induction / proper initial segment / constructor operation
+
+Chosen rendering: **கட்டமைப்புத் தொகுத்தறிதல் / முறையான தொடக்கப் பகுதி / உருவாக்கும் செயல்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected pages provide the induction, formal-statement and proof components but not these complete labels. The frozen section defines structural induction by checking initial objects and preservation under each constructor, and a proper initial segment by left-to-right agreement with strict shorter length. Tamil retains the two bracket-count proofs and all five exhaustive proper-prefix cases; no external attestation of the complete compounds is claimed.
+
+Authority basis: TA-SC11-P358-GLOSSARY (checked_supports); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-IL1967-P264-265-PROOF (checked_supports); TA-T247-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கட்டமைப்புத் தொகுத்தறிதல் / முறையான தொடக்கப் பகுதி / உருவாக்கும் செயல்” the established India-standard Tamil expression for “structural induction / proper initial segment / constructor operation” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-e0f695a3fad1a5f0` — OLP-0142 / `OLP-0142-S05`; source `content/first-order-logic/introduction/formulas.tex:72`; Tamil `translation/content/first-order-logic/introduction/formulas.tex:78`; PDF page pending.
+- `TA-OCC-b711275bee157705` — OLP-0314 / `OLP-0314-S01`; source `content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/fixed-point-lemma.tex:30`; PDF page pending.
+- `TA-OCC-261bb7774e33ca25` — OLP-0570 / `OLP-0570-S01`; source `content/set-theory/replacement/absinf.tex:1`; Tamil `translation/content/set-theory/replacement/absinf.tex:17`; PDF page pending.
+- `TA-OCC-180e8ba14eb7e423` — OLP-0614 / `OLP-0614-S05`; source `content/methods/induction/introduction.tex:47`; Tamil `translation/content/methods/induction/introduction.tex:65`; PDF page pending.
+- `TA-OCC-458e014c4a799583` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:11`; Tamil `translation/content/methods/induction/structural-induction.tex:12`; PDF page pending.
+- `TA-OCC-1d3b92b555716cdd` — OLP-0618 / `OLP-0618-S02`; source `content/methods/induction/structural-induction.tex:19`; Tamil `translation/content/methods/induction/structural-induction.tex:26`; PDF page pending.
+- `TA-OCC-5146491b56e709ef` — OLP-0618 / `OLP-0618-S05`; source `content/methods/induction/structural-induction.tex:49`; Tamil `translation/content/methods/induction/structural-induction.tex:67`; PDF page pending.
+- `TA-OCC-22e35e96f7aa6737` — OLP-0618 / `OLP-0618-S07`; source `content/methods/induction/structural-induction.tex:68`; Tamil `translation/content/methods/induction/structural-induction.tex:99`; PDF page pending.
+- `TA-OCC-d2eb7c32f6563c81` — OLP-0618 / `OLP-0618-S07`; source `content/methods/induction/structural-induction.tex:71`; Tamil `translation/content/methods/induction/structural-induction.tex:104`; PDF page pending.
+- `TA-OCC-d90690a8c2185ec6` — OLP-0618 / `OLP-0618-S09`; source `content/methods/induction/structural-induction.tex:83`; Tamil `translation/content/methods/induction/structural-induction.tex:121`; PDF page pending.
+- `TA-OCC-4cdb229c290aeae8` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:95`; Tamil `translation/content/methods/induction/relations.tex:164`; PDF page pending.
+
+## TA-T248 — subterm / bracketless term / unique readability / syntactic depth
+
+Chosen rendering: **துணைச்சொல் / அடைப்பில்லாத சொல் / தனித்த வாசிப்புத்தன்மை / தொடரமைப்பு ஆழம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly re-read Tamil pages establish relation, function and formal-expression components, while the mathematical-induction glossary anchors the method. They do not attest the complete four specialist headwords. The frozen source defines subterm recursively through equality or either immediate child, demonstrates failure of unique readability for unbracketed binary terms, proves uniqueness for bracketed terms using the proper-prefix lemma, and defines depth by a max-plus-one recursion. Tamil preserves the two different g values, 3 and 2, which show why a nonunique recursion does not define a function.
+
+Authority basis: TA-SC11-P19 (checked_context_only); TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P253-CONNECTIVES (checked_context_only); TA-SC11-P358-GLOSSARY (checked_supports); TA-T248-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “துணைச்சொல் / அடைப்பில்லாத சொல் / தனித்த வாசிப்புத்தன்மை / தொடரமைப்பு ஆழம்” the established India-standard Tamil expression for “subterm / bracketless term / unique readability / syntactic depth” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-f31cc817ad8d8559` — OLP-0059 / `OLP-0059-S03`; source `content/propositional-logic/syntax-and-semantics/preliminaries.tex:58`; Tamil `translation/content/propositional-logic/syntax-and-semantics/preliminaries.tex:63`; PDF page pending.
+- `TA-OCC-9d41d8bb7dadf9ec` — OLP-0358 / `OLP-0358-S01`; source `content/lambda-calculus/syntax/unique-readability.tex:10`; Tamil `translation/content/lambda-calculus/syntax/unique-readability.tex:51`; PDF page pending.
+- `TA-OCC-6f113d324d6fb36d` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:16`; Tamil `translation/content/methods/induction/relations.tex:20`; PDF page pending.
+- `TA-OCC-b60fd0f46d0ab0fa` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:18`; Tamil `translation/content/methods/induction/relations.tex:23`; PDF page pending.
+- `TA-OCC-147792e5186d32a4` — OLP-0619 / `OLP-0619-S02`; source `content/methods/induction/relations.tex:22`; Tamil `translation/content/methods/induction/relations.tex:30`; PDF page pending.
+- `TA-OCC-f19019a82ddfcdaf` — OLP-0619 / `OLP-0619-S05`; source `content/methods/induction/relations.tex:55`; Tamil `translation/content/methods/induction/relations.tex:93`; PDF page pending.
+- `TA-OCC-75f1c1695be34b10` — OLP-0619 / `OLP-0619-S05`; source `content/methods/induction/relations.tex:57`; Tamil `translation/content/methods/induction/relations.tex:95`; PDF page pending.
+- `TA-OCC-04c30a5c0227578a` — OLP-0619 / `OLP-0619-S05`; source `content/methods/induction/relations.tex:58`; Tamil `translation/content/methods/induction/relations.tex:96`; PDF page pending.
+- `TA-OCC-2232d18a2e335af1` — OLP-0619 / `OLP-0619-S06`; source `content/methods/induction/relations.tex:64`; Tamil `translation/content/methods/induction/relations.tex:105`; PDF page pending.
+- `TA-OCC-7b20c57132999c92` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:85`; Tamil `translation/content/methods/induction/relations.tex:131`; PDF page pending.
+- `TA-OCC-0ec6f3e17237be39` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:138`; Tamil `translation/content/methods/induction/relations.tex:220`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

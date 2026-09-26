@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-25T05:09:58.266790+00:00",
+  "date_utc": "2026-09-26T01:53:33.802409+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -3047,6 +3047,41 @@
       "unit_id": "OLP-0612",
       "source_sha256": "69bf95954428e38a55dfca85aa13d62ba2b9992afa406364da4a0b251d86fa44",
       "translation_sha256": "e1747beda77031db3e95734a5a846f6c8edee0b02fd064b53d172fe95cce0209"
+    },
+    {
+      "unit_id": "OLP-0613",
+      "source_sha256": "a473475ad8fdd83af7da9474e389385d9b3fc9b0fe3673fbb7dc9c6a413df5af",
+      "translation_sha256": "29e112ae5bf2f39317318d2f4b4a99d60570e2dabf456a38a87c2fdc6a02c22c"
+    },
+    {
+      "unit_id": "OLP-0614",
+      "source_sha256": "45629bfdf1f5502361156b1f4e061afe2a2820a7983eb612c18473dfc12cfa51",
+      "translation_sha256": "a0fbd4cefa7d16789a06918a13e08be2c1cdc2c06e433e8c5abd2994d2071bdd"
+    },
+    {
+      "unit_id": "OLP-0615",
+      "source_sha256": "30a7fe3bf67517b5744d826eeb819782d399cf28a018313f5a7eff12843fe222",
+      "translation_sha256": "90b2d6afca835ff48ad5c78142e4a0f485aa060b10e5bb0332c164bb4813e70c"
+    },
+    {
+      "unit_id": "OLP-0616",
+      "source_sha256": "0cec55c0265daa331a4b473daad197d39ef0aaddaa518ae051d3230c1df2560f",
+      "translation_sha256": "00c085d2b6dffe670859c7f9cb59dda1479f206fcca3350db50cfa666a75b011"
+    },
+    {
+      "unit_id": "OLP-0617",
+      "source_sha256": "d26441b4fbfb76bcee62babdfcee3470e1879624623b8ccf76f85512086054e9",
+      "translation_sha256": "5cd4759ef2ef3aac041e6b556a2a629e77eb4182c6b57027d68f591e943ddba0"
+    },
+    {
+      "unit_id": "OLP-0618",
+      "source_sha256": "f57f94a62ed4aab37f569b5d56430b3756ee6e3a5281a0488cae5c233f2a62d8",
+      "translation_sha256": "58477ffb5e2ba04e88907f7ec7981edf60e986f304c87dc8eb82c743b2494a53"
+    },
+    {
+      "unit_id": "OLP-0619",
+      "source_sha256": "66fc09c76443827350bdabf32900631432ebb9f043e51fe33b447fe64f3c0ba4",
+      "translation_sha256": "938b928455b893df1295a6aed9520304568362bb42da6fd7716d374d3d844041"
     }
   ],
   "samples": [
@@ -8817,6 +8852,363 @@
       "assessment": "The source does not describe video content, so the translation does not invent it.",
       "translation_segment_sha256": "653fb9734800c4f37b5e8aa8751cc71a057eaf4fa31d38dd8adf221f4847939f",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0613-S01",
+      "reverse_paraphrase": "The Induction chapter driver imports its introduction, natural-number induction, strong induction, inductive definitions, structural induction and relations sections in source order.",
+      "assessment": "Chapter identity, six imports and end hook remain.",
+      "translation_segment_sha256": "672e72340b59eb2a45929f76d8bdc0ab8b4d935c2406da2c48dadd2e9bdd428a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0614-S01",
+      "reverse_paraphrase": "Induction in several forms is an important proof technique across logic, theoretical computer science and mathematics.",
+      "assessment": "The claim of broad use and importance for logic results remains.",
+      "translation_segment_sha256": "05fac40e2e483b59f47f6ca73feb37c3936bac1a82ffd4c109c232a83378c6d9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0614-S02",
+      "reverse_paraphrase": "Enumerative induction generalizes from observed green emeralds; mathematical induction also concludes a generality but is fundamentally different.",
+      "assessment": "The examples-to-general contrast is not treated as the mathematical proof rule.",
+      "translation_segment_sha256": "7140de77a7e3d01822385ff070b4f4293e6a2edb6b4a61965179559b907c39c1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0614-S03",
+      "reverse_paraphrase": "For natural numbers, the induction proof establishes the property at zero and proves that whenever k has it, k plus one has it.",
+      "assessment": "The zero convention and the implication direction are exact.",
+      "translation_segment_sha256": "99f0bfea198232cf9275be79e319b23754c1d60951039b95869087837853c696",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0614-S04",
+      "reverse_paraphrase": "Induction on numbers can prove claims about all finite sets by using their finite sizes n as indices.",
+      "assessment": "The quantified claim for each n transfers to every finite set without assuming a uniform chosen enumeration.",
+      "translation_segment_sha256": "28511a4c09de11b8bec2d34f809b27cd7d24fb6c8625038d7deedab14daa0968",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0614-S05",
+      "reverse_paraphrase": "Inductively defined formal-language expressions, including first-order formulas, are amenable to structural induction.",
+      "assessment": "The generalization concerns construction of expressions, not observational induction.",
+      "translation_segment_sha256": "8ca22e0b0f11f51c43c3e7097ff3ccfd235a58349d8944df4cd359a6e2685fad",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0615-S01",
+      "reverse_paraphrase": "Ordinary induction proves P for every natural number by proving P(0) and, for arbitrary k, P(k) implies P(k+1); repeated modus ponens then reaches each n.",
+      "assessment": "The distinction between the general zero base and later dice example base at one remains.",
+      "translation_segment_sha256": "5f1992e732f89d3da9ccabb7cb917ccc2591c0dd50f42d7d6c48d40aa649b25c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0615-S02",
+      "reverse_paraphrase": "With n dice, sums range from n to 6n, yielding at most 5n plus one values; observed counts for zero through three dice suggest all are attainable.",
+      "assessment": "The zero-dice case has one attainable sum, zero; maximum count alone is not claimed to prove attainability.",
+      "translation_segment_sha256": "845bbc5fa2b420a2ab67e6fdc8fd601e703291665772f46bd8f527a9fc996097",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0615-S03",
+      "reverse_paraphrase": "For the dice theorem, P(n) means every integer between n and 6n is attainable, with base P(1) and step P(k) implies P(k+1).",
+      "assessment": "The theorem and proof keep the source-specific base at one.",
+      "translation_segment_sha256": "caade1106723b5083bfd3482b9f2f4c92e4a927c6e06f63c290a8d5db70ff668",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0615-S04",
+      "reverse_paraphrase": "A six-sided die supplies every one-die sum; for the step, assume P(k) and relate the extra die to k-die sums.",
+      "assessment": "The inductive hypothesis is a temporary premise to prove the successor, not the conclusion.",
+      "translation_segment_sha256": "a68474963aba9e6b547e1a9d9b0f3fa650f25d3f1b3f05c97948d487bd415a47",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0615-S05",
+      "reverse_paraphrase": "A final die showing one covers k+1 through 6k+1; k dice all showing six and a final die showing two through six cover 6k+2 through 6k+6.",
+      "assessment": "The two intervals join exactly to k+1 through 6(k+1), with no missing sum.",
+      "translation_segment_sha256": "ac81e3263b26612496de7e521e971c54a9ae4b5bd100b10cd60872a911e00cae",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0615-S06",
+      "reverse_paraphrase": "The sum sequence starts at s0=0 and satisfies s(n+1)=s(n)+(n+1), giving s1=1, s2=3 and s3=6.",
+      "assessment": "Both aligned displays retain every recurrence and sample value.",
+      "translation_segment_sha256": "b2e683ebc0114bcad7be0edb6b0d4a86e088a5f5c8aef8950030b7c1b5258d6f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0615-S07",
+      "reverse_paraphrase": "Inductively, s(n)=n(n+1)/2: substitute the hypothesis s(k)=k(k+1)/2 into the recurrence and simplify to (k+1)(k+2)/2.",
+      "assessment": "The base zero and every displayed fraction-equality step remain.",
+      "translation_segment_sha256": "0d9453cd763a0a08dd143da083a26a1e5e8373e2260269f16867a6dcd5e27b73",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0615-S08",
+      "reverse_paraphrase": "Induction is natural for recursively defined sequences, and may also work elsewhere when the k+1 case can be linked to the k case.",
+      "assessment": "The dice example is identified as a nonrecursive use.",
+      "translation_segment_sha256": "e55e639f6daa57b1f77e5714662e16887ce2bbcd35a627b3e18d75ae52dbc61e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0616-S01",
+      "reverse_paraphrase": "Ordinary induction infers each successor from its predecessor: P(k) implies P(k+1), equivalently P(k-1) implies P(k) where defined.",
+      "assessment": "The argument requires a universally applicable successor step, not merely a single observed transition.",
+      "translation_segment_sha256": "13c6c4071ecdd1199cca1de3a3924a26b03ed33d1b747c8ad4c3c66c0970e516",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0616-S02",
+      "reverse_paraphrase": "Strong induction assumes P(l) for every l smaller than k to infer P(k); after P(0), the cases k=1 and k=2 follow successively.",
+      "assessment": "The all-smaller hypothesis is kept distinct from only P(k-1).",
+      "translation_segment_sha256": "1d07a42d04dac7b13526ef3452ee8eb9c2fe42023a284151906443438b711d79",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0616-S03",
+      "reverse_paraphrase": "The general conditional for all k already gives P(0), because its antecedent over l<0 is vacuously true.",
+      "assessment": "The formal quantified formula, empty-range explanation and source-specific P(0) phrasing are retained.",
+      "translation_segment_sha256": "ef49602edc7a6f42010143c168d8f5052bf1ce9ec1a4595921ee5f3f96d3c82b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0616-S04",
+      "reverse_paraphrase": "Strong induction is useful when proving P(k) requires one or more earlier cases beyond the immediate predecessor.",
+      "assessment": "The passage does not claim this version is logically stronger in conclusion than ordinary induction.",
+      "translation_segment_sha256": "3d2cdfa9986541f6aa5f6aae073d551ec4d43c822b589c25549e3b03f1012d11",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S01",
+      "reverse_paraphrase": "Inductive definitions generate objects by rules from earlier objects; two malformed bracket/operator strings contrast with a single letter and a well-bracketed compound.",
+      "assessment": "The exact four strings, alphabet and symbol list remain; malformed examples are not silently repaired.",
+      "translation_segment_sha256": "cf6595b0cbdb87e0dac913a5ccccb61874a19ffe60d1c96ebd51a119d3a9e680",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S02",
+      "reverse_paraphrase": "A nice term is either a letter or a bracketed combination [t circle s] of two nice terms.",
+      "assessment": "Both necessity and construction directions motivate the inductive definition.",
+      "translation_segment_sha256": "4fc03d0abe15372797bdb7707723880389920b78ff8f451bcec5a554c6e302d6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S03",
+      "reverse_paraphrase": "The definition has four base letters, a binary constructor [s1 circle s2], and an exclusion clause forbidding anything else.",
+      "assessment": "The third clause is essential for the exhaustive case analysis later.",
+      "translation_segment_sha256": "d9a2902cb25f1ea4da5e0c12b2f57a92333f2b638116d7f8ee7eda30386db42d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S04",
+      "reverse_paraphrase": "Finite construction stages produce letters first, then pairs of letters, then compounds of previously built terms.",
+      "assessment": "The specific nested examples, their t/s assignments and role of exclusion are retained.",
+      "translation_segment_sha256": "00e3e3f37529bb861b5c34bfd93b8eca4a622eef96fcab38d556cc9912a1dec6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S05",
+      "reverse_paraphrase": "The author has not proved that everything intuitively nice is formally generated, but generated terms visibly balance brackets and connect suitable parts.",
+      "assessment": "Only the one-way informal observation is asserted.",
+      "translation_segment_sha256": "05df1c246b263efa176b2533869ce584469083b3acaf3b3684bcd660614b5a92",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S06",
+      "reverse_paraphrase": "The inductive definition makes a case split exhaustive: a nice term t is a letter or [s1 circle s2].",
+      "assessment": "The exclusion clause justifies there being no third case.",
+      "translation_segment_sha256": "291fb6bca2b453c80b40024b3455edd8fab6df2b073c35d578836591e52d2dff",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S07",
+      "reverse_paraphrase": "For every length n, a nice term has fewer than n/2 opening brackets; the claim is recast as a number-indexed strong-induction statement.",
+      "assessment": "Strict inequality and opening-bracket count remain.",
+      "translation_segment_sha256": "c8579e54f4b8a842aa42d8686f19969d3ecf42c004ba29a8fad30ab2bd4c032d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S08",
+      "reverse_paraphrase": "The proposition states for any n that a nice term of length n contains fewer than n/2 opening brackets.",
+      "assessment": "The statement does not weaken strict inequality to non-strict.",
+      "translation_segment_sha256": "a5d8fc08eddfc09905029914bc64d64b817d8e0bc58086e50f567371b5e3baa4",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S09",
+      "reverse_paraphrase": "The strong-induction hypothesis covers every length l<k, with fewer than l/2 opening brackets in each nice term; prove the corresponding k claim.",
+      "assessment": "The universal scope over all shorter lengths and all terms is explicit.",
+      "translation_segment_sha256": "8072e6ee1daa127932ccd651338b907270d6c28e3ea7782deba8efe9f2647834",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S10",
+      "reverse_paraphrase": "In the letter case k=1 and bracket count zero; in the compound case k=l1+l2+3, each subterm is shorter, and m1+m2+1 is strictly below k/2 by the displayed chain.",
+      "assessment": "Both cases, subterm counts and each strict inequality remain.",
+      "translation_segment_sha256": "00ce20f9b3d36883bda808bb81c74f9079f67ca2bb2a9cd7e23cccf26f4b65a7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0617-S11",
+      "reverse_paraphrase": "The exercise defines supernice terms by letter base, unary brackets, binary brackets with circle, and exclusion, then asks for opening-bracket count at most n/2+1.",
+      "assessment": "The extra unary constructor and weaker non-strict target remain.",
+      "translation_segment_sha256": "0d7528be86dd207e9759824e18bf9798291cc553ff5ee40527363f5af051efdf",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S01",
+      "reverse_paraphrase": "Structural induction proves properties directly of every element of an inductively defined set by using the structure of its objects.",
+      "assessment": "The comparison with prior induction over natural numbers remains.",
+      "translation_segment_sha256": "b24c38524f7d3d78382b7dea1ec2bb2bb4ed19b4e90a1e85ffe4c0da7b68eead",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S02",
+      "reverse_paraphrase": "An inductive definition has initial objects and constructors; nice terms have letters and o(s1,s2)=[s1 circle s2], while naturals have zero and successor.",
+      "assessment": "The binary operation and natural-number analogy remain distinct.",
+      "translation_segment_sha256": "54a02be28323a544694ac029c6e63f16d52a3fa412bd77515d5cf261e06d1cd1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S03",
+      "reverse_paraphrase": "To prove every generated object has P, verify initial objects and that each operation preserves P from its arguments to its result.",
+      "assessment": "Both obligations and the nice-term instance are explicit.",
+      "translation_segment_sha256": "692e610e2349e9807d55db9a90905c6f43fe6796556098a6b793ca58e68ef513",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S04",
+      "reverse_paraphrase": "Every nice term has equal counts of opening and closing brackets.",
+      "assessment": "The proposition is for all nice terms, with both symbols distinguished.",
+      "translation_segment_sha256": "2686465e6859435ac2573342de0fcd1cf23e8f61037a0482dbd54bfd42148db1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S05",
+      "reverse_paraphrase": "Letters have zero of each bracket; applying the binary constructor adds one opening and one closing bracket to sums of the subterm counts.",
+      "assessment": "The structural proof uses exactly two constructor cases.",
+      "translation_segment_sha256": "5a1897de5f0e7aea55b12f16f8a19258812f85b61034cdd4c76166bdf9196e43",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S06",
+      "reverse_paraphrase": "An exercise asks to prove structurally that no nice term begins with a closing bracket.",
+      "assessment": "The exercise remains a task, not an asserted proved result.",
+      "translation_segment_sha256": "4b80f6573489a7eed7211f53e69f9351bf5bcdc378995a8310b1e78b057c5d92",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S07",
+      "reverse_paraphrase": "A proper initial segment matches a string from the left but is strictly shorter; [a circle is one of [a circle b], unlike the mismatching or equally long examples.",
+      "assessment": "Strictness and left-to-right agreement both remain.",
+      "translation_segment_sha256": "1ca6129d6e4622bee4a0c155b095ad74ad0b1a4103a43df050869f387af3bbbe",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S08",
+      "reverse_paraphrase": "Every proper initial segment of a nice term has more opening than closing brackets.",
+      "assessment": "The result is strict and quantifies over every proper prefix.",
+      "translation_segment_sha256": "98bea89619ba7057508931b63920950f602658e97270d2d89f7bcd4b52117091",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0618-S09",
+      "reverse_paraphrase": "Structural induction handles a single letter vacuously and a compound [s1 circle s2] by five prefix shapes: [, [r1, [s1 or [s1 circle, [s1 circle r2, and [s1 circle s2.",
+      "assessment": "Each nested case invokes the previous bracket-equality result or the appropriate subterm hypothesis.",
+      "translation_segment_sha256": "ad66d9523f5e06ce3f23ab85058bd186ca92516f042cfeb119a33ea5f4c6968c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S01",
+      "reverse_paraphrase": "Subterm relation on nice terms is introduced as occurrence within a term, including self-subtermhood t subseteq t.",
+      "assessment": "The relation is to be defined inductively on the enclosing term.",
+      "translation_segment_sha256": "a2690c03909efdb0a7f3e8365a30ba3f3e61e3d221c98de0fc929b6456f4a643",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S02",
+      "reverse_paraphrase": "If t2 is a letter, t1 is its subterm iff equal; if t2=[s1 circle s2], t1 is its subterm iff equal to t2 or a subterm of either child.",
+      "assessment": "Both constructor cases and the disjunction are retained.",
+      "translation_segment_sha256": "484e26d90c55547460cf9045d9afb1d23260eda9f3d2121fa8b8cc2ad9c90e50",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S03",
+      "reverse_paraphrase": "a is a subterm of [b circle a] because only the final disjunct a subseteq a is true; equality with the whole or with b is false.",
+      "assessment": "The source-specific bare b in one formula is preserved as printed; no unrecorded mathematical normalization.",
+      "translation_segment_sha256": "29a563722dfcb4df8c7be1335e5d3809b778817e5bab189e88fdb3688ec20c70",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S04",
+      "reverse_paraphrase": "The recursive relation is coherent only if the two children of a composite nice term are uniquely determined; competing decompositions could disagree on subtermhood.",
+      "assessment": "The concern is about a not-yet-proved uniqueness fact, not a claim that the bracketed definition has already failed.",
+      "translation_segment_sha256": "7f3359fcea3fcdde999375313727cbd4e603619be98446fb0897165b84381033",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S05",
+      "reverse_paraphrase": "Bracketless terms have letter bases, binary circle composition without brackets, and an exclusion clause.",
+      "assessment": "The new syntax is separate from the earlier bracketed nice terms.",
+      "translation_segment_sha256": "edc35132bb59dd3cc1aa761733176904ba7d9f2e7bc1257bb2035ee6741e2d1d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S06",
+      "reverse_paraphrase": "b circle a circle b can be parsed as b | a circle b or b circle a | b, giving opposing answers to whether a circle b is a subterm.",
+      "assessment": "Both decompositions and their align display remain.",
+      "translation_segment_sha256": "7fead0a005c798b806724ef3a96204ef8e836db701dde31e2f4472d79ffe629d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S07",
+      "reverse_paraphrase": "Unique readability says each composite nice term has one pair of constituent nice terms.",
+      "assessment": "The proposition allows the alternative base case of a single letter.",
+      "translation_segment_sha256": "35ed7daf65aeb9a6e5e701d312bf0a562ea43ac65423c01c1985fe2e7510ded0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S08",
+      "reverse_paraphrase": "If [s1 circle s2]=[r1 circle r2], unequal first children would make one a proper prefix of the other, impossible for balanced nice terms by the earlier lemma; then second children also agree.",
+      "assessment": "The cross-reference to the proved proper-prefix proposition is retained.",
+      "translation_segment_sha256": "79f8f24bba1eb9b317f1de4acc7ad340fd8e7662aef250e53260a64e07a6bb6e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S09",
+      "reverse_paraphrase": "Depth f is zero on letters and max of child depths plus one on a bracketed composite.",
+      "assessment": "The recursive function depends on the unique parse established above.",
+      "translation_segment_sha256": "5f6df969dcda7a3c4be884634d7c599bacc902af887bbaab92e1f67ef1322d2a",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S10",
+      "reverse_paraphrase": "The displayed examples give depth one to [a circle b] and depth two to [[a circle b] circle c].",
+      "assessment": "Both aligned max calculations and exact outputs remain.",
+      "translation_segment_sha256": "2e070ccbdb0040350e03e8eafc0942b7e62b23542f49e98cb30bd501338e8873",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S11",
+      "reverse_paraphrase": "The analogous recursion g on bracketless terms is ill-defined: a circle b circle c circle d yields three under one parse and two under another.",
+      "assessment": "Both parsing displays and calculations are preserved; a function must give one value per input.",
+      "translation_segment_sha256": "769a13783098e7175a7ec1b918bd3e4d1830a557fbc598108e22d2552485d3f1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S12",
+      "reverse_paraphrase": "An exercise asks for an inductive definition of l(t), the number of symbols in a nice term.",
+      "assessment": "The requested definition remains to be supplied by the reader.",
+      "translation_segment_sha256": "f38c3af0cb13b35fb3296fbf233c8970bf781365946ce55b2186f7910c54b124",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0619-S13",
+      "reverse_paraphrase": "A second exercise asks to prove by structural induction that depth f(t) is less than symbol count l(t), with a reference to the depth definition.",
+      "assessment": "The strict inequality and exact definition reference remain.",
+      "translation_segment_sha256": "b8d1d3137e3c590d110ede5c5a2cef8dd9c5e982fd1fc63b19484cf2402de045",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -9773,7 +10165,7 @@
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "609 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 113 frozen units still require completion.",
+  "remaining": "616 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 106 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 12,
     "distinct_unit_count": 248,
@@ -10856,6 +11248,30 @@
         "reading_proofs_both_containments_and_repairs": true,
         "advice_four_steps_and_recovery": true,
         "resources_all_citations_and_video_links": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0613",
+        "OLP-0614",
+        "OLP-0615",
+        "OLP-0616",
+        "OLP-0617",
+        "OLP-0618",
+        "OLP-0619"
+      ],
+      "correction_ids": [],
+      "status": "pass",
+      "checks": {
+        "six_section_imports_in_source_order": true,
+        "observational_vs_mathematical_distinction": true,
+        "zero_and_successor_conditions": true,
+        "finite_set_and_structural_generalizations": true,
+        "natural_induction_base_successor_and_two_examples": true,
+        "strong_induction_all_smaller_and_empty_base": true,
+        "inductive_definition_three_clauses_and_length_proof": true,
+        "structural_induction_constructors_and_five_prefix_cases": true,
+        "relations_unique_readability_depth_and_ambiguous_g": true
       }
     }
   ]
