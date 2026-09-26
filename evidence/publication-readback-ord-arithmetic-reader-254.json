@@ -1,0 +1,118 @@
+{
+  "schema": "openlogic-tamil-public-raw-readback/1",
+  "checked_at_utc": "2026-09-26T03:13:14.767419+00:00",
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "branch": "main",
+  "commit": "36bde41feb790bf331411e5f994f02647e69f8c4",
+  "parent_commit": "59b4d025b6ccdd0aab60e708cb101745bdda114b",
+  "anonymous_commit_api": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/commits/36bde41feb790bf331411e5f994f02647e69f8c4",
+    "http_status": 200,
+    "reported_sha": "36bde41feb790bf331411e5f994f02647e69f8c4",
+    "matches_requested_commit": true
+  },
+  "anonymous_main_ref": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/git/ref/heads/main",
+    "http_status": 200,
+    "reported_sha": "36bde41feb790bf331411e5f994f02647e69f8c4",
+    "matches_requested_commit": true
+  },
+  "changed_file_count": 10,
+  "changed_files": [
+    {
+      "path": "README.en.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/README.en.md",
+      "http_status": 200,
+      "bytes": 14214,
+      "sha256": "d54122ebfa422c7a3f7e78c7847d6496ce3b184be772cadd1b8cd29ccdcbc8bd",
+      "matches_local_commit": true
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/README.md",
+      "http_status": 200,
+      "bytes": 23120,
+      "sha256": "86fb96651b8577724a8e9c0e5feb61bc3e2c9073d382e91eb66057d3d8d1eb30",
+      "matches_local_commit": true
+    },
+    {
+      "path": "build/TEX-SET-THEORY-ORD-ARITHMETIC-RECEIPT.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/build/TEX-SET-THEORY-ORD-ARITHMETIC-RECEIPT.json",
+      "http_status": 200,
+      "bytes": 1140,
+      "sha256": "f80bf6d818eb4a98cd841dadcf9d7ce8dccb6184ea7bad77e854e9e66272a603",
+      "matches_local_commit": true
+    },
+    {
+      "path": "build/tamil-set-theory-ord-arithmetic.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/build/tamil-set-theory-ord-arithmetic.tex",
+      "http_status": 200,
+      "bytes": 9060,
+      "sha256": "238d892d809eeedb366adc6d1472a2dca78d38b5e660ecd58372e70c770f8c06",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/checkpoint-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/evidence/checkpoint-current.json",
+      "http_status": 200,
+      "bytes": 1477568,
+      "sha256": "59aae7dda827e84b25565f6883aa201b6ec9d5da93310bc7d19366948fe41e05",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/cursor-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/evidence/cursor-current.json",
+      "http_status": 200,
+      "bytes": 12911,
+      "sha256": "43577fbe4731b7aaf481868453d8d87ad2a816b0dd490a9f7d251b6069aa8108",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/evidence/qa-current.json",
+      "http_status": 200,
+      "bytes": 4170,
+      "sha256": "d9a1d2fe0f46192caad02cb6c98702e6a6d2d0f73e4796978f0dc2a54ae63337",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/semantic-review-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/evidence/semantic-review-current.json",
+      "http_status": 200,
+      "bytes": 746474,
+      "sha256": "9366c98f0045887879c44973a1169c1fc31946216bc53148b5afdd5e9c244b62",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/set-theory-ord-arithmetic-render-qa.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/evidence/set-theory-ord-arithmetic-render-qa.json",
+      "http_status": 200,
+      "bytes": 4205,
+      "sha256": "8df7d401d5a9333de01a27ca1a7e2e1386ace209ac6feaa87ece301816650160",
+      "matches_local_commit": true
+    },
+    {
+      "path": "readers/set-theory-ordinal-arithmetic-ta-Taml-IN.pdf",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/36bde41feb790bf331411e5f994f02647e69f8c4/readers/set-theory-ordinal-arithmetic-ta-Taml-IN.pdf",
+      "http_status": 200,
+      "bytes": 137136,
+      "sha256": "6af673e8141b8b7078b79f6841fe89a9ca9dd6515276cb70048ab2737280f281",
+      "matches_local_commit": true
+    }
+  ],
+  "all_new_and_changed_files_public_and_identical": true,
+  "reader": {
+    "path": "readers/set-theory-ordinal-arithmetic-ta-Taml-IN.pdf",
+    "expected_sha256": "6af673e8141b8b7078b79f6841fe89a9ca9dd6515276cb70048ab2737280f281",
+    "matches_expected_sha256": true
+  },
+  "scope": {
+    "accepted_units": 636,
+    "aligned_segments": 1757,
+    "semantic_samples": 965,
+    "visually_verified_distinct_reader_units": 254
+  },
+  "repository_public": true,
+  "anonymous_repository_files_verified": 10,
+  "result": "pass"
+}
