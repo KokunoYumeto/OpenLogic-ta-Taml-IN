@@ -2,7 +2,7 @@
 
 இது [Open Logic Text](https://openlogicproject.org/) நூலின் இந்தியத் தமிழ் மொழிபெயர்ப்பு. மொழிபெயர்ப்புகளின் [திட்டப் பட்டியலையும்](https://github.com/KokunoYumeto/OpenLogic-translations) பார்க்கலாம்.
 
-**முழுப் பதிப்பு இன்னும் தயாராகிறது.** உறையவைக்கப்பட்ட 722 மூல உள்ளடக்க அலகுகளில் 636 அலகுகள் மொழிபெயர்க்கப்பட்டு, மூலத்துடன் ஒப்பிடப்பட்டு, உரை மற்றும் பொருள் சரிபார்ப்புகளைத் தாண்டியுள்ளன. இன்னும் 86 அலகுகள் மீதமுள்ளன. பன்னிரண்டு தனித்த வாசிப்புப் பிரதிகள் 248 வெவ்வேறு அலகுகளை உள்ளடக்குகின்றன. அவற்றில் முதல் ஏழு பிரதிகளின் 203 அலகுகள் 384 பக்கத் திரட்டப்பட்ட வாசிப்புப் பிரதியிலும் உள்ளன. கணக் கோட்பாட்டின் ஐந்து பிரதிகள் தனித்தனியாக வழங்கப்படுகின்றன; ஏற்கப்பட்ட 636 அலகுகளுக்கும் ஒரே தொடர்ச்சியான PDF இருப்பதாக இதனால் பொருள் கொள்ள வேண்டாம்.
+**முழுப் பதிப்பு இன்னும் தயாராகிறது.** உறையவைக்கப்பட்ட 722 மூல உள்ளடக்க அலகுகளில் 636 அலகுகள் மொழிபெயர்க்கப்பட்டு, மூலத்துடன் ஒப்பிடப்பட்டு, உரை மற்றும் பொருள் சரிபார்ப்புகளைத் தாண்டியுள்ளன. இன்னும் 86 அலகுகள் மீதமுள்ளன. பதின்மூன்று தனித்த வாசிப்புப் பிரதிகள் 254 வெவ்வேறு அலகுகளை உள்ளடக்குகின்றன. அவற்றில் முதல் ஏழு பிரதிகளின் 203 அலகுகள் 384 பக்கத் திரட்டப்பட்ட வாசிப்புப் பிரதியிலும் உள்ளன. கணக் கோட்பாட்டின் ஆறு பிரதிகள் தனித்தனியாக வழங்கப்படுகின்றன; ஏற்கப்பட்ட 636 அலகுகளுக்கும் ஒரே தொடர்ச்சியான PDF இருப்பதாக இதனால் பொருள் கொள்ள வேண்டாம்.
 
 ## வாசிப்புப் பிரதிகள்
 
@@ -19,7 +19,7 @@
 - வரிசையெண்கள்: [17 பக்கத் தமிழ் PDF](readers/set-theory-ordinals-ta-Taml-IN.pdf) → [முழு உரையுடன் ஒரே LaTeX கோப்பு](release/openlogic-ta-Taml-IN-set-theory-ordinals-11-units.tex) → [அந்தப் பதிப்பின் முழுத் திருத்தக்கூடிய மூலத் தொகுப்பு](https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/449c3bfb90971941eb59715863f31e8e752434ba). நன்கு வரிசைப்படுத்தல்கள் முதல் புராலி–ஃபோர்ட்டி முரண்பாடு வரை 11 அலகுகள்.
 - படிநிலைகளும் தரநிலைகளும்: [12 பக்கத் தமிழ் PDF](readers/set-theory-stages-ranks-ta-Taml-IN.pdf) → [முழு உரையுடன் ஒரே LaTeX கோப்பு](release/openlogic-ta-Taml-IN-set-theory-stages-ranks-7-units.tex) → [அந்தப் பதிப்பின் முழுத் திருத்தக்கூடிய மூலத் தொகுப்பு](https://codeload.github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/zip/3d20aea0980eddfb823c4e4c9aedf84b4eaedbe3). ஏழு அலகுகளில் $V_\alpha$ படிநிலைகள், மீள்வரையறை, அடித்தளம், $\ZF$, கணத் தரநிலை உள்ளன.
 - [மாற்றீடும் பிரதிபலிப்பும் — தமிழ் PDF](readers/set-theory-replacement-reflection-ta-Taml-IN.pdf): 16 பக்கங்கள்; 9 அலகுகள்; மாற்றீட்டின் நியாயப்படுத்தல், அளவு-வரம்பு, பிரதிபலிப்பு, முடிவுறு அடிகோளாக்கத்தன்மை.
-- [வரிசையெண் எண்கணிதம் — திருத்தக்கூடிய தமிழ் TeX](translation/content/set-theory/ord-arithmetic/ord-arithmetic.tex): 6 அலகுகள்; கூட்டல், தரநிலைக் கணக்குகள், பெருக்கல், அடுக்கேற்றம். இந்த அத்தியாயத்தின் PDF இன்னும் கட்டமைக்கப்படவில்லை.
+- வரிசையெண் எண்கணிதம்: [11 பக்கத் தமிழ் PDF](readers/set-theory-ordinal-arithmetic-ta-Taml-IN.pdf) → [திருத்தக்கூடிய வாசிப்புப் பிரதி TeX](build/tamil-set-theory-ord-arithmetic.tex) → [ஆறு அலகுகளின் தமிழ் TeX](translation/content/set-theory/ord-arithmetic/ord-arithmetic.tex). கூட்டல், தரநிலைக் கணக்குகள், பெருக்கல், அடுக்கேற்றம் ஆகியவை அடங்கும்.
 - [கண அளவெண்கள் — திருத்தக்கூடிய தமிழ் TeX](translation/content/set-theory/cardinals/cardinals.tex): 6 அலகுகள்; காண்டோரின் கொள்கை, கண அளவெண்களாக வரிசையெண்கள், $\ZFC$, முடிவுறு மற்றும் முடிவுறாத கண அளவெண்கள், ஹியூமின் கொள்கை. இந்த அத்தியாயத்தின் PDF இன்னும் கட்டமைக்கப்படவில்லை.
 - [கண அளவெண் எண்கணிதம் — திருத்தக்கூடிய தமிழ் TeX](translation/content/set-theory/card-arithmetic/card-arithmetic.tex): 6 அலகுகள்; அடிப்படைச் செயல்கள், கூட்டல், பெருக்கல், அடுக்கேற்றம், தொடரகக் கருதுகோள், நிலைப்புள்ளிகள். இந்த அத்தியாயத்தின் PDF இன்னும் கட்டமைக்கப்படவில்லை.
 - [தேர்வு — திருத்தக்கூடிய தமிழ் TeX](translation/content/set-theory/choice/choice.tex): 9 அலகுகள்; டார்ஸ்கி--ஸ்காட் உத்தி, ஹார்டாக்ஸ் துணைத்தேற்றம், நன்கு வரிசைப்படுத்தல், எண்ணத்தக்க தேர்வு, பனாக்--டார்ஸ்கி முரண்புதிர், விட்டாலி கட்டமைப்பு. இந்த அத்தியாயத்தின் PDF இன்னும் கட்டமைக்கப்படவில்லை.
@@ -49,6 +49,7 @@ Windows இல் XeLaTeX, memoir, fontspec, accsupp மற்றும் ம�
 build/build-tamil.ps1 -Master tamil-set-theory-story.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-STORY-RECEIPT
 build/build-tamil.ps1 -Master tamil-set-theory-z.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-Z-RECEIPT
 build/build-tamil.ps1 -Master tamil-set-theory-ordinals.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-ORDINALS-RECEIPT
+build/build-tamil.ps1 -Master tamil-set-theory-ord-arithmetic.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-ORD-ARITHMETIC-RECEIPT
 build/build-tamil.ps1 -Master tamil-set-theory-spine.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-SPINE-RECEIPT
 build/build-tamil.ps1 -Master tamil-set-theory-replacement.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-REPLACEMENT-RECEIPT
 ```

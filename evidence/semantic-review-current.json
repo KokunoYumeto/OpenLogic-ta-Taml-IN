@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-26T02:56:59.536028+00:00",
+  "date_utc": "2026-09-26T03:09:25.986538+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -10897,8 +10897,8 @@
   "release_ready": false,
   "remaining": "636 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 86 frozen units still require completion.",
   "visual_reader_coverage": {
-    "reader_count": 12,
-    "distinct_unit_count": 248,
+    "reader_count": 13,
+    "distinct_unit_count": 254,
     "readers": [
       {
         "name": "combined sets/relations/functions",
@@ -10947,6 +10947,10 @@
       {
         "name": "set theory: replacement and reflection",
         "distinct_units": 9
+      },
+      {
+        "name": "set theory: ordinal arithmetic",
+        "distinct_units": 6
       }
     ]
   },

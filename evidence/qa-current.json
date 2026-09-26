@@ -13,7 +13,7 @@
     "drafted": 636,
     "textual_invariants_pass": 636,
     "semantic_reviewed": 636,
-    "reader_verified_distinct": 248,
+    "reader_verified_distinct": 254,
     "combined_reader_verified": 51,
     "proof_systems_reader_verified": 49,
     "axiomatic_deduction_reader_verified": 14,
@@ -26,6 +26,7 @@
     "set_theory_ordinals_reader_verified": 11,
     "set_theory_spine_reader_verified": 7,
     "set_theory_replacement_reader_verified": 9,
+    "set_theory_ord_arithmetic_reader_verified": 6,
     "release_verified": 203,
     "published_sources": 636,
     "total": 722
@@ -41,7 +42,7 @@
   "current_checkpoint": "checkpoint-current.json",
   "laptop_reconciliation": "laptop-canon-reconciliation.md",
   "publication_readback": "publication-readback-current.json",
-  "pdf_scope": "12 exact interim readers cover 248 distinct units. Each completed reader passed a protected build, embedded-font and copy/search checks, and all-page visual QA.",
+  "pdf_scope": "13 exact interim readers cover 254 distinct units. Each completed reader passed a protected build, embedded-font and copy/search checks, and all-page visual QA.",
   "translation_decision_log": "translation-decisions.jsonl",
   "combined_build_attempt": "tex-sfr-patch-receipt.json",
   "combined_build_qa": "tex-sfr-patch-receipt.json",
@@ -75,5 +76,7 @@
   "set_theory_spine_build_qa": "tex-set-theory-spine-receipt.json",
   "set_theory_spine_render_qa": "set-theory-spine-render-qa.json",
   "set_theory_replacement_build_qa": "tex-set-theory-replacement-receipt.json",
-  "set_theory_replacement_render_qa": "set-theory-replacement-render-qa.json"
+  "set_theory_replacement_render_qa": "set-theory-replacement-render-qa.json",
+  "set_theory_ord_arithmetic_build_qa": "../build/TEX-SET-THEORY-ORD-ARITHMETIC-RECEIPT.json",
+  "set_theory_ord_arithmetic_render_qa": "set-theory-ord-arithmetic-render-qa.json"
 }

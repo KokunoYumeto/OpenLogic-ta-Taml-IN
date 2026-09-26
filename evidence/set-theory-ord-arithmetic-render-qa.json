@@ -1,0 +1,86 @@
+{
+  "schema": "openlogic-tamil-render-qa/1",
+  "result": "pass",
+  "review_date": "2026-09-26",
+  "scope": {
+    "reader_units": 6,
+    "first_unit": "OLP-0574",
+    "last_unit": "OLP-0579",
+    "unit_ids": ["OLP-0574", "OLP-0575", "OLP-0576", "OLP-0577", "OLP-0578", "OLP-0579"],
+    "programme_completed_units": 636,
+    "total_frozen_units": 722,
+    "source_master": "build/tamil-set-theory-ord-arithmetic.tex",
+    "public_reader": "readers/set-theory-ordinal-arithmetic-ta-Taml-IN.pdf"
+  },
+  "textual_unit_qa": {
+    "batch_receipts": ["QA-B255.json", "QA-B256.json", "QA-B257.json", "QA-B258.json", "QA-B259.json"],
+    "source_coverage_complete": true,
+    "math_token_identifier_environment_command_and_nfc_gates": "pass, including audited corrections TA-STH-023 through TA-STH-029"
+  },
+  "tex_guard": {
+    "mutex": "Global\\InterlanguageTeXSlotV1",
+    "receipt": "build/TEX-SET-THEORY-ORD-ARITHMETIC-RECEIPT.json",
+    "receipt_bytes": 1140,
+    "receipt_sha256": "f80bf6d818eb4a98cd841dadcf9d7ce8dccb6184ea7bad77e854e9e66272a603",
+    "engine": "xelatex",
+    "passes": 3,
+    "bibtex": true,
+    "status": "built",
+    "final_pass_undefined_references": 0,
+    "missing_character_messages": 0,
+    "multiply_defined_labels": 0,
+    "overfull_messages": 0,
+    "benign_requested_file_warnings": 2
+  },
+  "master": {
+    "path": "build/tamil-set-theory-ord-arithmetic.tex",
+    "bytes": 9060,
+    "sha256": "238d892d809eeedb366adc6d1472a2dca78d38b5e660ecd58372e70c770f8c06"
+  },
+  "pdf": {
+    "path": "readers/set-theory-ordinal-arithmetic-ta-Taml-IN.pdf",
+    "bytes": 137136,
+    "sha256": "6af673e8141b8b7078b79f6841fe89a9ca9dd6515276cb70048ab2737280f281",
+    "pages": 11,
+    "page_size": "A4",
+    "encrypted": false,
+    "fonts_embedded": true,
+    "fonts_subset": true,
+    "all_fonts_unicode_mapped": true,
+    "metadata": {
+      "title": "திறந்த தருக்கவியல் — வரிசையெண் எண்கணிதம்",
+      "author": "OpenLogic தமிழ் மொழிபெயர்ப்பு நிரல்",
+      "subject": "OpenAI Codex GPT-6 Sol (Ultra) இயந்திர மொழிபெயர்ப்பு; OLP-0574 முதல் OLP-0579 வரை; 722 மூல அலகுகளில் 6"
+    }
+  },
+  "render": {
+    "resolution_dpi": 130,
+    "pages_rendered": 11,
+    "all_pages_directly_inspected": true,
+    "additional_detail_review": "Page 4 rerendered at 200 dpi to inspect the long reverse-lexicographic definition and limit formula; no overlap or clipping.",
+    "page_sha256": [
+      "efe9ed7d6b6bc07f37ab46a4c873e30cdc7f47894a6d685ba5db461f4147ccb6",
+      "854de2b5c59450e30c98bbf9a6fed57cddb9beb2f1cefa346b89dea6cfe9997d",
+      "f7427870ece0dfa04a61054991dcce7c7dec4370cc6789981cd76c2b19205d85",
+      "79a0186db4967ff8b654f09d4f60ba6ddb09da1a0ae2d75e3a0f619c43d5201a",
+      "b0348b0e8d2f61953c2d07e1312476e07ba0c93243a5c9009aab894934d248d3",
+      "749fc85eec4293500496d59bad1060f8853f2b9d12a5059ae79d3744e3366979",
+      "cc1ded9267b606747f45355465bf1360b073588ef558f7cd33d8428d0d2adab4",
+      "417b68fe7b792e9770fc734880f6a2dba5b5dfb40ffbb1e952d5ed8e091c3bdd",
+      "a0a2b1ef7e6f1e780360e719e68f792854b794155d1224a3a2fbb448242fa66b",
+      "2f8c95d3234c9a4c04405c85ee09a133bd8ce2116a9fd738dc97a3bb145d35df",
+      "3b9f93c401f555406afd70d1cbcd258bca77e5a94309d33c6a6bcbe81c77b3f7"
+    ],
+    "font_shaping_legible": true,
+    "formulas_legible": true,
+    "clipping_or_overlap": false,
+    "page_transitions_and_bibliography_legible": true
+  },
+  "copy_search": {
+    "tool": "pdftotext -layout -enc UTF-8",
+    "replacement_characters": 0,
+    "phrases_present": ["வரிசையெண் எண்கணிதம்", "வரிசையெண் கூட்டல்", "வரிசையெண் பெருக்கல்", "வரிசையெண் அடுக்கேற்றம்", "பொருளடக்கம்", "மேற்கோள் நூல்"],
+    "limitation": "Some mathematical superscripts and composed symbols flatten during text extraction; use the editable TeX for exact formulas."
+  },
+  "independent_human_or_native_review_claimed": false
+}
