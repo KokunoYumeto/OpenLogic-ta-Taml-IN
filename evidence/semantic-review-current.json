@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-26T02:21:03.359455+00:00",
+  "date_utc": "2026-09-26T02:56:59.536028+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -3147,6 +3147,41 @@
       "unit_id": "OLP-0632",
       "source_sha256": "2bf8bef1ebdfcadf3ae701be0416db71d1a24786269cec3b8e41a767f8499a41",
       "translation_sha256": "b0acecc8e5f40766fee2eb1a14490e81ac4aba0d51f81a80ee2ecfab3885090d"
+    },
+    {
+      "unit_id": "OLP-0633",
+      "source_sha256": "ee70b24e3407317f80b68ff14169f662199c01faeb4a9e9c3d1b532f375432bb",
+      "translation_sha256": "9f7f35b07f262ae74a1c0294b061841d8f6cc1770dffc661db662ac94816d4f9"
+    },
+    {
+      "unit_id": "OLP-0634",
+      "source_sha256": "3786a8e92d38becf74effa7b233c16f9bca37d5f6b0ac90d7049e71e77118436",
+      "translation_sha256": "6ab766bb3601725a7045fc8d44f2feff2e282b60fb9bf1c146beec519d9da7bf"
+    },
+    {
+      "unit_id": "OLP-0635",
+      "source_sha256": "df5d36d65e7abafe7503527229866dfc618527177e567b16ce33ec01c683783d",
+      "translation_sha256": "5b07801ab369cd653243391e1bcecba3a1a8abb66154687a5187d4a7e4658337"
+    },
+    {
+      "unit_id": "OLP-0636",
+      "source_sha256": "e48c454ab4d3058f89b6ce709da28387e9d633459425ffac9cd67b64d3de96e8",
+      "translation_sha256": "3c71f36174b82152dc2f104d18139b7bebfb88e89ef59e879933ec71090c6a18"
+    },
+    {
+      "unit_id": "OLP-0637",
+      "source_sha256": "2ffceffef7cc6445f66391a252c598448190642ea60f60a748c6fe5e6a1ec55e",
+      "translation_sha256": "6f3a742a5a1c36edb51f64f1496d80623b2162e15048b5ff80f31fb2923ddee6"
+    },
+    {
+      "unit_id": "OLP-0638",
+      "source_sha256": "6abfeede65f95ac668d6e679053e537b0beb2ffcd566c1cdbdc223b0b767c737",
+      "translation_sha256": "61ec30056b960f11aee4160877e8fae8b6bc7fe6e9f6579e8465139bb9b0a245"
+    },
+    {
+      "unit_id": "OLP-0639",
+      "source_sha256": "bda8e7a38876ea87b03d2564ab16b39e2b1d1d6ec75a73fae27ca1faa73ab832",
+      "translation_sha256": "9ead4485db9a3fc6a83f04db65e6bf28064958d0645c86edc7b9cdde04a6ef94"
     }
   ],
   "samples": [
@@ -9680,6 +9715,230 @@
       "assessment": "All five citation keys and language distinctions remain.",
       "translation_segment_sha256": "a75aa2d58701848bf2df5f3f4a1a655f6354f01cdc08655572641d058fc1715c",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0633-S01",
+      "reverse_paraphrase": "The History of Set Theory chapter incorporates Tim Button’s historical prelude and imports six sections in frozen order, from infinitesimals through Hilbert’s curve.",
+      "assessment": "Chapter identity, editorial attribution and all six imports remain.",
+      "translation_segment_sha256": "f676f01e337d7eb78d43c44feaa287bf37a2fb9027c3c3efda38169d78d5d6a5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0634-S01",
+      "reverse_paraphrase": "Newton and Leibniz independently developed calculus in the late seventeenth century; differentiation concerns instantaneous rate of change or slope.",
+      "assessment": "Historical attribution and the textbook-attested calculus register remain distinct.",
+      "translation_segment_sha256": "8b4ba9e98373e20e5a7b181acf2f4225e95b878582040888457e732adece93f2",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0634-S02",
+      "reverse_paraphrase": "The plotted example is f(x)=x squared over four plus one half; three coloured triangles share the point at one half.",
+      "assessment": "All TikZ coordinates, colours, axis labels and formula tokens are unchanged.",
+      "translation_segment_sha256": "158328cd3c2199ebccb9159c6633969d4b5e3c254a77b4e02b9dd9677ca3fa41",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0634-S03",
+      "reverse_paraphrase": "At c=one half the base-three, base-two and base-one secants have slopes one, three quarters and one half, respectively.",
+      "assessment": "Every base length, difference quotient, colour token and numeric slope remains exact.",
+      "translation_segment_sha256": "01b693ab09a138795c5d69300704400fd1889cf471383ce08a5ef3ea3a42da1e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0634-S04",
+      "reverse_paraphrase": "The historical infinitesimal quotient promises an exact derivative but beta zero causes division by zero and beta positive gives only an approximation.",
+      "assessment": "The two sides of the dilemma and the displayed formula remain.",
+      "translation_segment_sha256": "c00050e51944737c75ded8ab748d8170f4a1786a0950f97da29358534c5cc470",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0634-S05",
+      "reverse_paraphrase": "Berkeley objects to switching beta between increment and nothing, rejects even tiny mathematical errors, and the source notes the Latin passage nearly quotes Newton.",
+      "assessment": "Both quotations, citation sections, source-variable disclaimer, Latin and 1704 work remain.",
+      "translation_segment_sha256": "33c9406ddbf02e04e128622399bfca4fc2c262abd9c3d2c4c8cc2e94f54f9b96",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0635-S01",
+      "reverse_paraphrase": "The modern approach replaces infinitesimals with rigorously defined limits.",
+      "assessment": "The section’s transition is complete.",
+      "translation_segment_sha256": "9f8ced34407e602e0caeb38008d22e49b656804e640cbcbf892a1408e8f7d481",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0635-S02",
+      "reverse_paraphrase": "The varying difference quotient approaches the desired slope as beta tends to zero; the fixed derivative value itself is not the varying object.",
+      "assessment": "Mathematical source slip corrected under TA-HIS-001 without changing the historical explanation.",
+      "translation_segment_sha256": "d7dabd4da17237714897fbb477159af211f39c7f3f0c4151f324e984411eb603",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0635-S03",
+      "reverse_paraphrase": "For every positive epsilon a positive delta keeps g(x) within epsilon of ell whenever zero is less than |x-c| and |x-c| is less than delta.",
+      "assessment": "The punctured-neighbourhood correction TA-HIS-002 distinguishes an ordinary limit from continuity at c.",
+      "translation_segment_sha256": "0ccf45f3eaac760578a19ec3b572b8b0ed5cd235732cc5c59b2d995be27cdb71",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0635-S04",
+      "reverse_paraphrase": "Absolute value is x for nonnegative x and minus x for negative x; the graph is V-shaped and delta controls the output error.",
+      "assessment": "Piecewise signs, TikZ figure, epsilon and delta remain.",
+      "translation_segment_sha256": "4686f438607120db1176f9386721f628100418b422d4db2ecec1d5f30ac89b31",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0635-S05",
+      "reverse_paraphrase": "The derivative is the limit of the difference quotient when that limit exists; |x| fails to be differentiable at zero because right and left slopes are one and minus one.",
+      "assessment": "Both one-sided directions and the differentiability qualification remain.",
+      "translation_segment_sha256": "764a2230fc315808cb686ee345e3326031369ac53e4077a2f732f10285992a91",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0635-S06",
+      "reverse_paraphrase": "Continuity at c requires f(c) to equal the limit as x tends to c; the source connects this with Bolzano by 1817.",
+      "assessment": "Input-output precision, shifted input and exact equality remain.",
+      "translation_segment_sha256": "115c2145485840f7759ec919c4391f9a722739f1feb8e7985b756f96e7ba183e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0635-S07",
+      "reverse_paraphrase": "The historical moral is that nineteenth-century mathematicians replaced infinitesimals with rigorous limits before the text returns to set theory.",
+      "assessment": "Scope transition remains.",
+      "translation_segment_sha256": "a1fef428d6cb07bd8f64ef3f7693da1c165740c003a5374cc7427bad008ce9c7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0636-S01",
+      "reverse_paraphrase": "Bolzano found a continuous-everywhere, differentiable-nowhere function in the 1830s; Weierstrass independently brought the idea to mathematicians in 1872.",
+      "assessment": "Unpublished status, citation footnote and pointwise-versus-nowhere distinction remain.",
+      "translation_segment_sha256": "b9e3617767e2867f5830acafe34ff5d6ffda0c4d43008fc6d9946ee02c0ff1e7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0636-S02",
+      "reverse_paraphrase": "Cantor asked Dedekind in January 1874 whether a boundary-inclusive square and endpoint-inclusive line could be put in one-to-one correspondence, then reversed his expectation by June 1877.",
+      "assessment": "Two dates, quoted doubt, French phrase, cardinality claim and references remain.",
+      "translation_segment_sha256": "0937c4a66ae9e70012d21d83bf4e99d0e27bed787d85aeea8ab45d2c6118e081",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0636-S03",
+      "reverse_paraphrase": "Peano constructed a space-filling curve in 1890, Hilbert described a pictorial variant in 1891, and the figure displays the first six construction stages.",
+      "assessment": "The six original TikZ stages, citations and Euclid definition remain.",
+      "translation_segment_sha256": "329315abf0af26349cf6fcccff79ba302bfc1f0e309c55219b0c5a29babc2c8f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0636-S04",
+      "reverse_paraphrase": "The source treats the limiting square as filled and calls Hilbert’s curve continuous but nowhere differentiable, then describes the later rhetoric against geometric intuition.",
+      "assessment": "Source claims remain attributed; the more detailed Hilbert section carries a proof-limit note.",
+      "translation_segment_sha256": "e02f4ddb03cfc5515c87a3b7319121cb7166d719971638c7c8d677407434b365",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0637-S01",
+      "reverse_paraphrase": "Cantor’s famous French phrase is restored to its letter context: he requests Dedekind’s check of an unexpected proof, not necessarily declaring his result unbelievable.",
+      "assessment": "Both exact French quotations and Gouvêa references remain.",
+      "translation_segment_sha256": "e48b95c872a2c03fd3b3214abeac903d52b5aa8a9e76161c08036d60f7e91144",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0637-S02",
+      "reverse_paraphrase": "Peano published no diagrams, while Hilbert explicitly used geometric intuition and diagrams; mathematicians still frequently use them in proofs.",
+      "assessment": "The historical counterpoint and citations remain.",
+      "translation_segment_sha256": "d85ba6c506283bb61c03c5c36e30b2ca98acc59bb340f71c3c5c9e86429dcbae",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0638-S01",
+      "reverse_paraphrase": "The section presents Cantor’s first attempted comparison of the unit interval and unit square and ties it to the later Schröder–Bernstein theorem.",
+      "assessment": "Both unit objects, cardinal equality and prior-section reference remain.",
+      "translation_segment_sha256": "91cebc0c02f7cb5feadbccd68b083acd01dc0effe8b052ff1fe82ec8f5f311bf",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0638-S02",
+      "reverse_paraphrase": "Interleaving the binary digits of a and b yields a proposed injection from square to line; the proof recovers each input digit from alternating output positions.",
+      "assessment": "The two binary expansions, interleaving alignment and injectivity reasoning remain.",
+      "translation_segment_sha256": "df7a8e6cddf85a8bf6f826f9516b07c4cc6a1d0cf0fb3a88084ef7b707aeddad",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0638-S03",
+      "reverse_paraphrase": "The repeating output 0.1010... forces the first input to be 0.111...=1; choosing one representation for 1 leaves this output unattained, so the proposed map is not surjective.",
+      "assessment": "Dyadic representation choice, binary terminology correction and injection/surjection distinction remain.",
+      "translation_segment_sha256": "3efb132e5bb304e8bf6f618a727ffd8b1cd6940d23202f249f9fbc785c59a672",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0638-S04",
+      "reverse_paraphrase": "Cantor combines injections in both directions using Schröder–Bernstein in a retrospective completion, but that theorem was unavailable to him in 1877; he later gave another proof.",
+      "assessment": "Both inequalities, theorem reference, 1897 date and historical caveat remain.",
+      "translation_segment_sha256": "6c2bf08e654844788956b2f22554e669063d7ff56f77a502409d2cfc6d9ff1ef",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S01",
+      "reverse_paraphrase": "Hilbert’s space-filling construction is explicitly informal, with a small red-segment modification and a citation to a rigorous account.",
+      "assessment": "Scope and footnote qualification remain.",
+      "translation_segment_sha256": "55b22086e9023c72c189103499b9feff854679ae86290fc867cace429297e7ef",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S02",
+      "reverse_paraphrase": "The first two approximants traverse a two-by-two then finer grid, with black recursive pieces and coloured joining and boundary segments.",
+      "assessment": "Both original TikZ drawings, coordinates and construction order remain.",
+      "translation_segment_sha256": "06ad8dd644f32ad09e0f8b9d20b6778aa741b3127a3b5d11fe80772e6d03394e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S03",
+      "reverse_paraphrase": "Four scaled non-red copies of the first path are connected with one colour and then to the square boundary with another.",
+      "assessment": "Colour tokens preserve distinct construction roles.",
+      "translation_segment_sha256": "7b510a14cf9648d693a1332df685231db25c73c2223256c4b2ffcbf6fb9d063e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S04",
+      "reverse_paraphrase": "The third stage repeats the four-copy construction with the source’s complete TikZ drawing.",
+      "assessment": "Every scope, segment and grid command remains; no diagram is simplified.",
+      "translation_segment_sha256": "9fc8169151212532f743ac245f8ab26a73c598ea8f6f14813f8d9d4cca6e8897",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S05",
+      "reverse_paraphrase": "The curve h is defined by a pointwise limit of h_n with parameter x in the unit line.",
+      "assessment": "The source’s unit-square parameter typo is corrected under TA-HIS-004.",
+      "translation_segment_sha256": "87eb0fabf58ef3ed30744f8cd5381997757225222bf259cd502248a66770ebc8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S06",
+      "reverse_paraphrase": "The source bounds each grid cell diagonal by two to the one-half minus n and argues that every square point has zero distance to the limiting curve.",
+      "assessment": "Exact bound and limit formula remain; the missing convergence justification is flagged in the visible note.",
+      "translation_segment_sha256": "3900e0d0d278f1dc97ec0da96207226902e564af2e0f585e0e288c0b2fc5f62b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S07",
+      "reverse_paraphrase": "A curve is a continuous map from the unit line to R squared; the source proposes an output-neighbourhood condition around each chosen p.",
+      "assessment": "The proposal is translated faithfully but not misidentified as a proof of input-wise continuity.",
+      "translation_segment_sha256": "6f230d6b74d1346e97a5b1914a96e7d9817fad877344e27f0e773b14dfe6d1f1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S08",
+      "reverse_paraphrase": "Given p and epsilon, the source chooses a grid cell wholly within the epsilon circle around p.",
+      "assessment": "Centre, radius, refinement and possible boundary spill remain.",
+      "translation_segment_sha256": "4711d9f537d3c3f82cbbb1c6fbe4b9c7f9d1f392aeb666fd0173f9fa1a5ccecf",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0639-S09",
+      "reverse_paraphrase": "The source takes an input interval mapped into that cell at later stages; the edition note explains why this alone neither proves continuity at a prescribed input nor supplies the convergence control for surjectivity.",
+      "assessment": "Source heuristic retained and precise proof limitation made visible under TA-HIS-005.",
+      "translation_segment_sha256": "a12f803b6ac5af2bafe0fce108feccacadea0cb84d21641f5606ceb971820c8b",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -10636,7 +10895,7 @@
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "629 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 93 frozen units still require completion.",
+  "remaining": "636 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 86 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 12,
     "distinct_unit_count": 248,
@@ -11776,6 +12035,36 @@
         "robinson_decision_domains_and_jr": true,
         "turing_two_ciphers_and_death_uncertainty": true,
         "zermelo_choice_1904_axioms_1908": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0633",
+        "OLP-0634",
+        "OLP-0635",
+        "OLP-0636",
+        "OLP-0637",
+        "OLP-0638",
+        "OLP-0639"
+      ],
+      "correction_ids": [
+        "TA-HIS-001",
+        "TA-HIS-002",
+        "TA-HIS-003",
+        "TA-HIS-004",
+        "TA-HIS-005"
+      ],
+      "status": "pass",
+      "checks": {
+        "six_sections_in_source_order": true,
+        "infinitesimal_three_secants": true,
+        "ordinary_limit_punctured_and_explained": true,
+        "absolute_value_one_sided_derivatives": true,
+        "six_pathology_stages": true,
+        "cantor_context_and_binary_representation": true,
+        "hilbert_three_tikz_diagrams": true,
+        "hilbert_parameter_domain_corrected": true,
+        "hilbert_proof_limit_visible": true
       }
     }
   ]

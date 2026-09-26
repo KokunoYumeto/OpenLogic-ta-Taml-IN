@@ -1,0 +1,103 @@
+{
+  "batch_id": "TA-B298",
+  "units": [
+    {
+      "unit_id": "OLP-0635",
+      "source_sha256": "df5d36d65e7abafe7503527229866dfc618527177e567b16ce33ec01c683783d",
+      "translation_sha256": "5b07801ab369cd653243391e1bcecba3a1a8abb66154687a5187d4a7e4658337",
+      "source_bytes": 4097,
+      "translation_bytes": 9492,
+      "source_coverage_complete": true,
+      "segments": 7,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$f'(c)$",
+        "$f'(c)$",
+        "\\[(\\forall\\epsilon>0)(\\exists\\delta>0)\\forallx\\left(|x-c|<\\delta\\lif|g(x)-\\ell|<\\epsilon\\right).\\]"
+      ],
+      "extra_math": [
+        "\\[(\\forall\\epsilon>0)(\\exists\\delta>0)\\forallx\\left(0<|x-c|<\\delta\\lif|g(x)-\\ell|<\\epsilon\\right).\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "above",
+        "below",
+        "gray",
+        "include",
+        "left",
+        "logic",
+        "node",
+        "open",
+        "right",
+        "scale",
+        "section",
+        "shift",
+        "thick"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-HIS-001",
+          "unit_id": "OLP-0635",
+          "kind": "fixed-derivative-value-described-as-varying",
+          "action": "Replaced both references to the fixed f'(c) as the object that changes when beta approaches zero with the varying difference quotient.",
+          "expected_missing_math": [
+            "$f'(c)$",
+            "$f'(c)$"
+          ],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says the value of f'(c) tends to the gradient and then describes the trend of f'(c) as beta approaches zero. For a fixed c, f'(c) does not vary with beta, and it has not yet been defined by this account.",
+          "chosen_treatment": "மாறிவரும் வித்தியாச ஈவின் மதிப்பே சாய்வை அணுகுவதாகவும் அதன் நெருங்கும் போக்கையே ஆராய்வதாகவும் கூறுகிறது.",
+          "alternatives_considered": "Retaining f'(c) as though it were beta-dependent would misstate the limit construction.",
+          "rationale": "The preceding section gives the varying quotient (f(c+beta)-f(c))/beta; its limit, when it exists, defines f'(c).",
+          "precise_review_question": "Is the varying difference quotient, rather than the already fixed f'(c), the object whose beta-to-zero trend is intended?",
+          "location_needle": "SOURCE CORRECTION TA-HIS-001"
+        },
+        {
+          "audit_id": "TA-HIS-002",
+          "unit_id": "OLP-0635",
+          "kind": "ordinary-limit-definition-missing-puncture",
+          "action": "Added 0 < |x-c| to the epsilon-delta antecedent and explained that g need not be defined at c.",
+          "expected_missing_math": [
+            "\\[(\\forall\\epsilon>0)(\\exists\\delta>0)\\forallx\\left(|x-c|<\\delta\\lif|g(x)-\\ell|<\\epsilon\\right).\\]"
+          ],
+          "expected_extra_math": [
+            "\\[(\\forall\\epsilon>0)(\\exists\\delta>0)\\forallx\\left(0<|x-c|<\\delta\\lif|g(x)-\\ell|<\\epsilon\\right).\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source's limit formula requires the implication even at x=c. That would force g(c)=ell when g is defined, describing continuity at c rather than an ordinary limit, and would exclude functions undefined at c.",
+          "chosen_treatment": "சாதாரண எல்லைக்கு உரிய துளையிடப்பட்ட அண்மையை 0 < |x-c| < delta என எழுதுகிறது.",
+          "alternatives_considered": "Keeping the unpunctured formula and calling it a limit would conflate limit with continuity at the point.",
+          "rationale": "The section later defines continuity separately by f(c)=lim f(x), which requires the limit itself to be independent of the value at c.",
+          "precise_review_question": "Should the quantified implication require 0 < |x-c| < delta to represent the ordinary limit being described?",
+          "location_needle": "SOURCE CORRECTION TA-HIS-002"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

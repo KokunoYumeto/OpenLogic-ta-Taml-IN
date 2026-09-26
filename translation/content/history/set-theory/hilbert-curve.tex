@@ -1,0 +1,243 @@
+% SEGMENT OLP-0639-S01
+% Part: history
+% Chapter: set-theory
+% Section: hilbert-curve
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{his}{set}{hilbertcurve}
+
+\olsection{இணைப்பு: ஹில்பர்ட்டின் வெளிநிரப்பு வளைவுகள்}
+
+\olref[pathology]{sec} அத்தியாயத்தில், ஒரு கோட்டிலும்
+ஒரு சதுரத்திலும் ஒரே எண்ணிக்கையிலான புள்ளிகள் உள்ளன என்ற
+காண்டோரின் நிறுவல்
+(\olref[his][set][cantorplane]{thm:cantorplane}),
+வெளியை நிரப்பும் \emph{வளைவு} இருக்குமா என்று பியானோவைக்
+கேட்கத் தூண்டியதைக் குறிப்பிட்டோம். 1890-இல் அதற்கு
+உடன்பாடான பதிலை அவர் பெற்றார். இப்பகுதியில், சிறிய மாற்றத்துடன்,
+ஹில்பர்ட்டின் வெளிநிரப்பு வளைவை எவ்வாறு கட்டலாம் என்பதை
+(முழு முறைசார்ந்த நிறுவலாக அல்லாமல்) விளக்குகிறோம்.\footnote{இன்னும்
+துல்லியமான விளக்கத்திற்கு \cite{Rose2010}-ஐப் பார்க்கவும்.
+கீழுள்ள வளைவுகளின் சிவப்புப் பகுதிகளைச் சேர்ப்பதே இங்கு
+செய்யப்படும் சிறிய மாற்றம். இதனால் வளைவு தொடர்ச்சியானது
+என்பதைச் சரிபார்ப்பது சற்றே எளிதாகிறது.}
+
+$h_1$, $h_2$, $h_3$, \dots\@ என்ற சார்புகளின் தொடரின்
+எல்லையாக $h$ என்ற சார்பை வரையறுக்க வேண்டும். முதலில்
+கட்டுமானத்தை விளக்குகிறோம். பின்னர் அது வெளியை நிரப்புகிறது
+என்று காட்டுகிறோம். இறுதியாக அது ஒரு வளைவு என்றும்
+காட்டுகிறோம்.
+
+% SEGMENT OLP-0639-S02
+$h$-இன் வீச்சாக அலகுச் சதுரமான $\unitsquare$-ஐ
+எடுத்துக்கொள்வோம். $h$-க்கான முதல் தோராயம், அதாவது
+$h_1$, இதோ:
+\begin{center}
+	\begin{tikzpicture}
+	\draw[gray] (0pt, 0pt) rectangle (80pt, 80pt);
+	\draw[step = 40pt, gray, very thin] (0pt, 0pt) grid (80pt, 80pt);
+	\draw[oldiagcolorC, thick] (20pt, 0)--(20pt, 20pt);
+	\draw[oldiagcolorC, thick] (60pt, 0)--(60pt, 20pt);
+	\begin{scope}[xshift=20pt, yshift=20pt]
+	\draw [black, thick, l-system={Hilbert curve, step=40pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+நிலைகளைப் பின்தொடர உதவ, சதுரத்தின்மேல் $2 \times 2$
+கட்டத்தை அமைத்திருக்கிறோம். வளைவு கீழ் இடது கால்
+பகுதியில் தொடங்கி, மேல் இடது பகுதிக்கும், பின்னர் மேல்
+வலது பகுதிக்கும், இறுதியாகக் கீழ் வலது பகுதிக்கும்
+செல்வதாகக் கருதலாம். கட்டுமானத்தின் இரண்டாம் நிலை,
+அதாவது $h_2$, இதோ:
+\begin{center}
+	\begin{tikzpicture}
+	\draw[gray] (0pt, 0pt) rectangle (80pt, 80pt);
+	\draw[step = 20pt, gray, very thin] (0pt, 0pt) grid (80pt, 80pt);
+	\draw[oldiagcolorC, thick] (0pt, 10pt)--(10pt, 10pt);
+	\draw[oldiagcolorC, thick] (70pt, 10pt)--(80pt, 10pt);
+	\draw[thick, oldiagcolorE] (10pt, 30pt)--(10pt, 50pt);
+	\draw[thick, oldiagcolorE] (30pt, 50pt)--(50pt, 50pt);
+	\draw[thick, oldiagcolorE] (70pt, 50pt)--(70pt, 30pt); \begin{scope}[xshift=10pt, yshift=30pt]
+	\draw [thick, rotate=270,black, l-system={Hilbert curve, step=20pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=10pt, yshift=50pt]
+	\draw [thick, black, l-system={Hilbert curve, step=20pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=50pt, yshift=50pt]
+	\draw [thick, black, l-system={Hilbert curve, step=20pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=70pt, yshift=10pt]
+	\draw [thick, rotate=90,black, l-system={Hilbert curve, step=20pt, angle=90, axiom=L, order=1}]  lindenmayer system;
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+
+% SEGMENT OLP-0639-S03
+வெவ்வேறு நிறங்கள், $h_2$ எப்படி அமைக்கப்பட்டது
+என்பதை விளக்க உதவும். முதலில் $h_1$-இன் !!{colorC}
+அல்லாத பகுதியின் அளவு குறைக்கப்பட்ட நகல்களைச்
+சதுரத்தின் கீழ் இடது, மேல் இடது, மேல் வலது, கீழ்
+வலது பகுதிகளில் வைக்கிறோம் (கருப்பு நிறத்தில்).
+பிறகு இந்த நான்கு வடிவங்களையும் (!!{colorE} கோடுகளால்)
+இணைக்கிறோம். இறுதியாக வடிவத்தைச் சதுரத்தின்
+எல்லையுடன் (!!{colorC} கோடுகளால்) இணைக்கிறோம்.
+% SEGMENT OLP-0639-S04
+இப்போது $h_3$-ஐப் பார்ப்போம். $h_2$ ஆனது
+$h_1$-இன் சிவப்பு அல்லாத பகுதியின் அளவு குறைக்கப்பட்ட
+நான்கு நகல்களை இணைத்து அமைக்கப்பட்டதுபோல,
+$h_3$ ஆனது $h_2$-இன் சிவப்பு அல்லாத பகுதியின்
+அளவு குறைக்கப்பட்ட நான்கு நகல்களால் (கருப்பு நிறத்தில்)
+அமைக்கப்படுகிறது. அவை பிறகு (!!{colorE} கோடுகளால்)
+ஒன்றோடொன்று இணைக்கப்பட்டு, இறுதியாக
+(!!{colorC} கோடுகளால்) சதுரத்தின் எல்லையுடன்
+இணைக்கப்படுகின்றன.
+\begin{center}
+	\begin{tikzpicture}
+	\draw[gray] (0pt, 0pt) rectangle (80pt, 80pt);
+	\draw[step = 10pt, gray, very thin] (0pt, 0pt) grid (80pt, 80pt);
+	\draw[thick, oldiagcolorC](5pt, 0pt)--(5pt, 5pt);
+	\draw[thick, oldiagcolorC] (75pt, 0pt)--(75pt, 5pt);
+	\draw[thick, oldiagcolorE] (75pt, 45pt)--(75pt, 35pt);
+	\draw[thick, oldiagcolorE] (5pt, 35pt)--(5pt, 45pt);
+	\draw[thick, oldiagcolorE] (35pt, 45pt)--(45pt, 45pt);
+	\draw[thick, oldiagcolorE] (75pt, 45pt)--(75pt, 35pt); \begin{scope}[xshift=5pt, yshift=35pt]
+	\draw [rotate=270, thick, black, l-system={Hilbert curve, step=10pt, angle=90, axiom=L, order=2}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=5pt, yshift=45pt]
+	\draw [thick, black, l-system={Hilbert curve, step=10pt, angle=90, axiom=L, order=2}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=45pt, yshift=45pt]
+	\draw [thick, black, l-system={Hilbert curve, step=10pt, angle=90, axiom=L, order=2}]  lindenmayer system;
+	\end{scope}
+	\begin{scope}[xshift=75pt, yshift=5pt]
+	\draw [thick, rotate=90,black, l-system={Hilbert curve, step=10pt, angle=90, axiom=L, order=2}]  lindenmayer system;
+	\end{scope}
+	\end{tikzpicture}
+\end{center}
+
+% SEGMENT OLP-0639-S05
+இப்போது $h_n$-இலிருந்து $h_{n+1}$-ஐ
+வரையறுக்கும் பொதுவான முறையைக் காணலாம்.
+இறுதியாக, அடுத்தடுத்த சார்புகளான $h_1$, $h_2$,
+\dots\@ ஆகியவற்றின் புள்ளிவாரி எல்லையைக் கொண்டு
+வளைவாகிய $h$-ஐ \emph{அதையே} வரையறுக்கிறோம்.
+அதாவது, ஒவ்வொரு $x \in \unitline$-க்கும்:
+% SOURCE CORRECTION TA-HIS-004: the curve parameter lies in the unit line, not the unit square.
+\begin{align*}
+	h(x) &= \lim_{n \rightarrow \infty} h_n(x)
+\end{align*}
+
+% SEGMENT OLP-0639-S06
+இப்போது இந்த வளைவு வெளியை நிரப்புகிறது என்று
+காட்டுவோம். $h_n$ வளைவை வரையும்போது,
+$\unitsquare$ மீது $2^n \times 2^n$ கட்டத்தை
+அமைக்கிறோம். பித்தகோரசின் தேற்றப்படி, ஒவ்வொரு
+கட்டச் சிறுபகுதியின் மூலைவிட்ட நீளம்:
+\[
+\sqrt{\left(\nicefrac{1}{2^{n}}\right)^2+\left(\nicefrac{1}{2^{n}}\right)^2} = 2^{(\frac{1}{2}-n)}
+\]
+மேலும், $h_n$ ஒவ்வொரு கட்டச் சிறுபகுதியையும்
+கடந்து செல்கிறது. எனவே $\unitsquare$-இல்
+உள்ள ஒவ்வொரு புள்ளியும் $h_n$-இல் உள்ள ஏதோ
+ஒரு புள்ளியிலிருந்து \emph{அதிகபட்சம்}
+$2^{(\frac{1}{2}-n)}$ தூரத்தில்தான் உள்ளது.
+$h$ என்பது $h_1$, $h_2$, $h_3$, \dots\@
+என்ற சார்புகளின் எல்லையாக வரையறுக்கப்பட்டது.
+எனவே எந்தப் புள்ளிக்கும் $h$-க்கும் இடையிலான
+அதிகபட்சத் தூரம்:
+\[
+\lim_{n \rightarrow \infty} 2^{(\frac{1}{2}-n)} = 0.
+\]
+அதாவது, $\unitsquare$-இல் உள்ள ஒவ்வொரு
+புள்ளியும் $h$-இலிருந்து $0$ தூரத்தில் உள்ளது.
+வேறு விதமாகச் சொன்னால், $\unitsquare$-இன்
+ஒவ்வொரு புள்ளியும் வளைவின் \emph{மேலேயே}
+உள்ளது. ஆகவே $h$ வெளியை நிரப்புகிறது!{}
+
+% SEGMENT OLP-0639-S07
+$h$ உண்மையில் ஒரு \emph{வளைவு} என்பதைக்
+காட்டுவது மட்டுமே மீதமுள்ளது. இதற்காக அந்தக்
+கருத்தை வரையறுக்க வேண்டும். நவீன வரையறை,
+1887-இல் ஜோர்டான் அளித்த வரையறையை அடிப்படையாகக்
+கொண்டது (அதாவது, முதல் வெளிநிரப்பு வளைவு
+வழங்கப்படுவதற்கு சில ஆண்டுகளுக்கு முன்பு):
+
+\begin{defn}
+ஒரு வளைவு என்பது $\unitline$-இலிருந்து
+$\Real^2$-க்குச் செல்லும் தொடர்ச்சியான படமாக்கல்.
+\end{defn}
+
+இது உள்ளுணர்வுக்கு மிகவும் பொருந்துகிறது:
+ஒரு வளைவு என்பது, வழக்கமான ஒரு கோட்டிலிருந்து
+$\Real^2$ தளத்திற்குச் செல்லும் “சீரான”
+படமாக்கல் என்று கருதலாம். நமது $h$ உண்மையில்
+$\unitline$-இலிருந்து $\Real^2$-க்குச்
+செல்லும் படமாக்கல். எனவே $h$ தொடர்ச்சியானது
+என்று காட்டினால் போதும். தொடர்ச்சியை
+\olref[limits]{sec} பகுதியில் $\epsilon$/$\delta$
+குறியீட்டால் வரையறுத்தோம். அன்றாடச் சொற்களில்,
+பின்வருவதை நிறுவ விரும்புகிறோம்:
+\emph{$\unitsquare$-இல் ஒரு புள்ளி $p$-யையும்,
+விரும்பிய துல்லிய அளவு $\epsilon$-ஐயும்
+குறிப்பிட்டால், $\unitline$-இல் ஒரு திறந்த
+இடைவெளியைக் காணலாம்; அந்த இடைவெளியில் உள்ள
+எந்த $x$-ஐ எடுத்தாலும் $h(x)$ ஆனது $p$-இலிருந்து
+$\epsilon$ தூரத்திற்குள் இருக்கும்.}
+
+% SEGMENT OLP-0639-S08
+ஆகவே $p$-யையும் $\epsilon$-ஐயும்
+குறிப்பிட்டிருக்கிறீர்கள் என்று கொள்வோம்.
+இது சாராம்சத்தில், $\unitsquare$-இல் $p$-ஐ
+மையமாகவும் $\epsilon$-ஐ ஆரமாகவும் கொண்ட
+ஒரு வட்டத்தை வரைவதாகும். (வட்டத்தின் ஒரு பகுதி
+$\unitsquare$-இன் எல்லையைத் தாண்டிச்
+செல்லலாம்; அது பொருட்டல்ல.) $h_n$ சார்பை
+விளக்கும்போது $\unitsquare$ மீது
+$2^n \times 2^n$ கட்டத்தை வரைந்ததை
+நினைவுகூருங்கள். $\epsilon$ எவ்வளவு
+சிறியதாக இருந்தாலும், ஏதோ ஓர் $n$-க்கு
+$\unitsquare$ மீது அமைந்த $2^n \times 2^n$
+கட்டத்தின் ஒரு சிறுபகுதி முழுவதும்,
+$p$ மையமும் $\epsilon$ ஆரமும் கொண்ட
+வட்டத்திற்குள் அமையும் என்பது தெளிவு.
+
+% SEGMENT OLP-0639-S09
+அந்த $n$-ஐ எடுத்துக்கொண்டு, $h_n$ முழுவதுமாக
+அந்தக் கட்டச் சிறுபகுதிக்குள் படமாக்கும்
+$\unitline$-இன் மிகப் பெரிய திறந்த
+பகுதியை $I$ என்று கொள்வோம். (அத்தகைய
+$(a,b)$ இருப்பது தெளிவு; ஏனெனில் $h_n$,
+$2^n\times 2^n$ கட்டத்தின் ஒவ்வொரு
+சிறுபகுதியையும் கடந்து செல்கிறது என்று
+ஏற்கெனவே குறிப்பிட்டோம்.) இப்போது
+$x \in I$ எனும்போதெல்லாம் $h(x)$-உம்
+அதே கட்டச் சிறுபகுதியில் இருப்பதைக்
+காட்டினால் போதும். இதைச் செய்ய,
+$m > n$ என்ற எந்த மதிப்புக்கும்
+$h_m(x)$ அதே கட்டச் சிறுபகுதியில்
+இருப்பதைக் காட்டினால் போதும். \emph{இதுவும்}
+தெளிவு. $m > n$ எனும்போது $h_m$-இல்
+என்ன நடக்கிறது என்று பார்த்தால்,
+அலகு இடைவெளியின் துல்லியமாக “அதே பகுதி”
+அதே கட்டச் சிறுபகுதிக்குள் படமாக்கப்படுகிறது;
+அந்தப் பகுதியில் வளைவு மேலும் மேலும்
+நீண்டும் வளைந்தும் செல்கிறது.
+
+% SOURCE CORRECTION TA-HIS-005: the source's final neighbourhood argument is insufficient for continuity.
+பதிப்பாசிரியர் குறிப்பு: மேலுள்ள கட்டுமான விளக்கம்
+முறைசாரா ஒன்று. கடைசி வாதம், கொடுக்கப்பட்ட
+வெளியீட்டுப் புள்ளியின் அருகில் படமாகும்
+ஓர் உள்ளீட்டு இடைவெளியைத் தேடுகிறது; அது
+குறிப்பிட்ட எந்த உள்ளீட்டுப் புள்ளியிலும்
+எல்லைச் சார்பு தொடர்ச்சியானது என்பதை நிறுவவில்லை.
+மேலும், புள்ளிவாரி எல்லையை மட்டுமே
+இங்கு கூறியிருப்பதால், எல்லை வளைவு
+முழுச் சதுரத்தையும் நிரப்புகிறது என்ற
+முடிவிற்குத் தேவையான அணுகல் பண்பும்
+இங்கே நிறுவப்படவில்லை. எனவே இந்தப்
+பத்திகளை முழு நிறுவலாகக் கொள்ளக் கூடாது.
+
+\end{document}

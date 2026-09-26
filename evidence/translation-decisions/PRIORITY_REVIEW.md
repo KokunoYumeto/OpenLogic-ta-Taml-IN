@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 611/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 617/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -597,6 +597,86 @@ Alternatives: வெற்றுக் கணத்தையும் மரவ�
 Please double-check: **should the corrected condition be promoted into the translated body in the next reader revision?**
 
 - `TA-OCC-ca1460f68dacf8fc` — OLP-0018 / `OLP-0018:EDITORIAL:relations-notes:L10`; source `content/sets-functions-relations/relations/trees.tex:115`; Tamil `translation/relations-notes.tex:10`; PDF page pending.
+
+## TA-HIS-001 — The source says the value of f'(c) tends to the gradient and then describes the trend of f'(c) as beta approaches zero. For a fixed c, f'(c) does not vary with beta, and it has not yet been defined by this account.
+
+Chosen rendering: **மாறிவரும் வித்தியாச ஈவின் மதிப்பே சாய்வை அணுகுவதாகவும் அதன் நெருங்கும் போக்கையே ஆராய்வதாகவும் கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The preceding section gives the varying quotient (f(c+beta)-f(c))/beta; its limit, when it exists, defines f'(c).
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0635 (checked_supports)
+
+Alternatives: Retaining f'(c) as though it were beta-dependent would misstate the limit construction.
+
+Please double-check: **is the varying difference quotient, rather than the already fixed f'(c), the object whose beta-to-zero trend is intended?**
+
+- `TA-OCC-e239fceea0ad021d` — OLP-0635 / `OLP-0635-S02`; source `content/history/set-theory/limits.tex:16`; Tamil `translation/content/history/set-theory/limits.tex:18`; PDF page pending.
+
+## TA-HIS-002 — The source's limit formula requires the implication even at x=c. That would force g(c)=ell when g is defined, describing continuity at c rather than an ordinary limit, and would exclude functions undefined at c.
+
+Chosen rendering: **சாதாரண எல்லைக்கு உரிய துளையிடப்பட்ட அண்மையை 0 < |x-c| < delta என எழுதுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The section later defines continuity separately by f(c)=lim f(x), which requires the limit itself to be independent of the value at c.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0635 (checked_supports)
+
+Alternatives: Keeping the unpunctured formula and calling it a limit would conflate limit with continuity at the point.
+
+Please double-check: **should the quantified implication require 0 < |x-c| < delta to represent the ordinary limit being described?**
+
+- `TA-OCC-8c08741fe002559a` — OLP-0635 / `OLP-0635-S03`; source `content/history/set-theory/limits.tex:22`; Tamil `translation/content/history/set-theory/limits.tex:42`; PDF page pending.
+
+## TA-HIS-003 — Every displayed numeral in the construction uses binary digits 0 and 1, and the paragraph explicitly says to write a and b in binary notation, but the concluding summary calls these recurring decimal expansions.
+
+Chosen rendering: **சுருக்கப் பத்தியில் மீள்வரும் இரும விரிவாக்கங்கள் என்று கூறுகிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The ambiguity between terminating and repeating representations used by the example arises in base two here.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0638 (checked_supports)
+
+Alternatives: Retaining decimal would contradict the notation and the digit-interleaving construction immediately above.
+
+Please double-check: **is binary expansion the intended term in the summary of the displayed base-two example?**
+
+- `TA-OCC-85969bca7b5538d3` — OLP-0638 / `OLP-0638-S03`; source `content/history/set-theory/cantor-plane.tex:39`; Tamil `translation/content/history/set-theory/cantor-plane.tex:73`; PDF page pending.
+
+## TA-HIS-004 — The source says 'for each x in unitsquare' just before defining h(x), but later defines the curve as a map from unitline to R squared and consistently treats x as a line parameter.
+
+Chosen rendering: **புள்ளிவாரி எல்லையின் அளபுருவை அலகுக் கோட்டில் எடுக்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Each approximation h_n parametrizes a path by a point of the unit interval; the limit must have the same domain.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0639 (checked_supports)
+
+Alternatives: Keeping a square-domain parameter would conflict with the stated definition of a curve and with every subsequent use of the unit interval.
+
+Please double-check: **should the parameter domain in the displayed pointwise-limit definition be the unit line?**
+
+- `TA-OCC-0f560ab8871428d0` — OLP-0639 / `OLP-0639-S05`; source `content/history/set-theory/hilbert-curve.tex:83`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:128`; PDF page pending.
+
+## TA-HIS-005 — The source says the argument is hand-wavy, but later announces proofs of space-filling and continuity. Its final quantifiers fix an output p and find some input interval, whereas continuity must fix each input x0 and control outputs for inputs near x0. Its dense-approximation argument also has not established the convergence control needed to pass the covering property to the pointwise limit.
+
+Chosen rendering: **மூலத்தின் விளக்கத்தை முழுவதும் வைத்தே, அது முழு நிறுவல் அல்ல என்பதைத் தெளிவாகக் குறிக்கும் பதிப்பாசிரியர் குறிப்பைச் சேர்க்கிறது.**
+
+Kind: `source_correction`; confidence: `medium`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The note preserves the historical exposition while preventing readers from mistaking a weaker neighbourhood property or unproved limit passage for the claimed theorems.
+
+Authority basis: OPENLOGIC-FROZEN-OLP-0639 (checked_supports)
+
+Alternatives: Silently presenting the heuristic as a complete proof; replacing it with a new proof outside the translation scope.
+
+Please double-check: **does the note accurately distinguish the informal construction from a proof of continuity at each input and surjectivity of the limit map?**
+
+- `TA-OCC-b75fc4085605a830` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:229`; PDF page pending.
 
 ## TA-IL-001 — The surrounding formula, the immediately preceding conditional and every later occurrence use !C, while this one prose parenthesis prints bare C.
 
@@ -6968,6 +7048,7 @@ Please double-check: **is “தொடர்பு / இருமத் தொ�
 - `TA-OCC-2b4bb8c306d579ad` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:3`; Tamil `translation/content/methods/induction/relations.tex:12`; PDF page pending.
 - `TA-OCC-af60117d296518c6` — OLP-0619 / `OLP-0619-S01`; source `content/methods/induction/relations.tex:11`; Tamil `translation/content/methods/induction/relations.tex:16`; PDF page pending.
 - `TA-OCC-42293b020f500afd` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:86`; Tamil `translation/content/methods/induction/relations.tex:133`; PDF page pending.
+- `TA-OCC-93b6204095c07236` — OLP-0638 / `OLP-0638-S01`; source `content/history/set-theory/cantor-plane.tex:1`; Tamil `translation/content/history/set-theory/cantor-plane.tex:15`; PDF page pending.
 
 ## TA-T027 — identity relation / order relation
 
@@ -10860,6 +10941,9 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-3e9973a7f58fc07f` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:31`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:36`; PDF page pending.
 - `TA-OCC-3f3ae002f180b8ad` — OLP-0625 / `OLP-0625-S02`; source `content/history/biographies/kurt-goedel.tex:32`; Tamil `translation/content/history/biographies/kurt-goedel.tex:34`; PDF page pending.
 - `TA-OCC-8a3acbde5868ff38` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:41`; Tamil `translation/content/history/biographies/emmy-noether.tex:55`; PDF page pending.
+- `TA-OCC-9f19a50c54a79b70` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:60`; Tamil `translation/content/history/set-theory/cantor-plane.tex:84`; PDF page pending.
+- `TA-OCC-c5fb738f798e32cc` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:62`; Tamil `translation/content/history/set-theory/cantor-plane.tex:87`; PDF page pending.
+- `TA-OCC-4668df6bdb2dc4ac` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:62`; Tamil `translation/content/history/set-theory/cantor-plane.tex:101`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -11933,6 +12017,16 @@ Please double-check: **is “அளவில் பெரிதல்ல / அ�
 - `TA-OCC-6531821b4452efcf` — OLP-0622 / `OLP-0622-S02`; source `content/history/biographies/georg-cantor.tex:21`; Tamil `translation/content/history/biographies/georg-cantor.tex:23`; PDF page pending.
 - `TA-OCC-4c0707c265cf2ad6` — OLP-0622 / `OLP-0622-S03`; source `content/history/biographies/georg-cantor.tex:28`; Tamil `translation/content/history/biographies/georg-cantor.tex:34`; PDF page pending.
 - `TA-OCC-cf70640376dd58a5` — OLP-0622 / `OLP-0622-S04`; source `content/history/biographies/georg-cantor.tex:39`; Tamil `translation/content/history/biographies/georg-cantor.tex:43`; PDF page pending.
+- `TA-OCC-170b58fb4bbb4624` — OLP-0636 / `OLP-0636-S02`; source `content/history/set-theory/pathologies.tex:27`; Tamil `translation/content/history/set-theory/pathologies.tex:36`; PDF page pending.
+- `TA-OCC-f096a971ef028ffb` — OLP-0636 / `OLP-0636-S02`; source `content/history/set-theory/pathologies.tex:27`; Tamil `translation/content/history/set-theory/pathologies.tex:51`; PDF page pending.
+- `TA-OCC-d2e7348e2853022d` — OLP-0637 / `OLP-0637-S01`; source `content/history/set-theory/mythology.tex:1`; Tamil `translation/content/history/set-theory/mythology.tex:21`; PDF page pending.
+- `TA-OCC-dc9439740b24f082` — OLP-0637 / `OLP-0637-S01`; source `content/history/set-theory/mythology.tex:1`; Tamil `translation/content/history/set-theory/mythology.tex:38`; PDF page pending.
+- `TA-OCC-1100cf001cceb07e` — OLP-0638 / `OLP-0638-S01`; source `content/history/set-theory/cantor-plane.tex:1`; Tamil `translation/content/history/set-theory/cantor-plane.tex:17`; PDF page pending.
+- `TA-OCC-94839670c39ba988` — OLP-0638 / `OLP-0638-S01`; source `content/history/set-theory/cantor-plane.tex:1`; Tamil `translation/content/history/set-theory/cantor-plane.tex:24`; PDF page pending.
+- `TA-OCC-af8fd00aad00938a` — OLP-0638 / `OLP-0638-S03`; source `content/history/set-theory/cantor-plane.tex:39`; Tamil `translation/content/history/set-theory/cantor-plane.tex:78`; PDF page pending.
+- `TA-OCC-c12e6d181c5a1e5e` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:59`; Tamil `translation/content/history/set-theory/cantor-plane.tex:83`; PDF page pending.
+- `TA-OCC-be6aeb64610b138c` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:59`; Tamil `translation/content/history/set-theory/cantor-plane.tex:100`; PDF page pending.
+- `TA-OCC-8d41e4d822149d9b` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:59`; Tamil `translation/content/history/set-theory/cantor-plane.tex:104`; PDF page pending.
 
 ## TA-T069 — Schroder-Bernstein theorem
 
@@ -11953,6 +12047,7 @@ Please double-check: **is “ஷ்ரோடர்--பெர்ன்ஸ்ட�
 - `TA-OCC-2a8903c64631f652` — OLP-0037 / `OLP-0037-S03`; source `content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:30`; Tamil `translation/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:53`; PDF page pending.
 - `TA-OCC-28c16e769f9b3002` — OLP-0037 / `OLP-0037-S03`; source `content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:30`; Tamil `translation/content/sets-functions-relations/size-of-sets/schroder-bernstein.tex:56`; PDF page pending.
 - `TA-OCC-d6bde2fd4288eb31` — OLP-0338 / `OLP-0338-S01`; source `content/second-order-logic/sol-and-set-theory/comparing-sets.tex:1`; Tamil `translation/content/second-order-logic/sol-and-set-theory/comparing-sets.tex:89`; PDF page pending.
+- `TA-OCC-9814c79066896cb5` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:59`; Tamil `translation/content/history/set-theory/cantor-plane.tex:99`; PDF page pending.
 
 ## TA-T070 — arithmetization: construction of number systems in naive set theory
 
@@ -12220,6 +12315,27 @@ Please double-check: **is “கோஷி தொடர் / எல்லை / �
 - `TA-OCC-f76d335c8f9235e8` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:113`; PDF page pending.
 - `TA-OCC-7e705f6a34e98d4d` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:157`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:180`; PDF page pending.
 - `TA-OCC-f2fd92954bbd8997` — OLP-0622 / `OLP-0622-S03`; source `content/history/biographies/georg-cantor.tex:28`; Tamil `translation/content/history/biographies/georg-cantor.tex:33`; PDF page pending.
+- `TA-OCC-ada877bd06789cdb` — OLP-0635 / `OLP-0635-S01`; source `content/history/set-theory/limits.tex:3`; Tamil `translation/content/history/set-theory/limits.tex:12`; PDF page pending.
+- `TA-OCC-f846f4381476e230` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:61`; Tamil `translation/content/history/set-theory/limits.tex:74`; PDF page pending.
+- `TA-OCC-aac513f3f90ed164` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:65`; Tamil `translation/content/history/set-theory/limits.tex:77`; PDF page pending.
+- `TA-OCC-b1359269979376ed` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:68`; Tamil `translation/content/history/set-theory/limits.tex:79`; PDF page pending.
+- `TA-OCC-76e2d15c598e60ef` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:72`; Tamil `translation/content/history/set-theory/limits.tex:84`; PDF page pending.
+- `TA-OCC-d3419deac76c43b7` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:73`; Tamil `translation/content/history/set-theory/limits.tex:84`; PDF page pending.
+- `TA-OCC-a8f2c0f0c17184b5` — OLP-0635 / `OLP-0635-S06`; source `content/history/set-theory/limits.tex:76`; Tamil `translation/content/history/set-theory/limits.tex:88`; PDF page pending.
+- `TA-OCC-90794fbf6b6b41a7` — OLP-0635 / `OLP-0635-S07`; source `content/history/set-theory/limits.tex:91`; Tamil `translation/content/history/set-theory/limits.tex:105`; PDF page pending.
+- `TA-OCC-86d64452ea9b105f` — OLP-0636 / `OLP-0636-S01`; source `content/history/set-theory/pathologies.tex:8`; Tamil `translation/content/history/set-theory/pathologies.tex:13`; PDF page pending.
+- `TA-OCC-6da9f2ce58335199` — OLP-0636 / `OLP-0636-S02`; source `content/history/set-theory/pathologies.tex:27`; Tamil `translation/content/history/set-theory/pathologies.tex:39`; PDF page pending.
+- `TA-OCC-5a750831e9c2f7f0` — OLP-0636 / `OLP-0636-S04`; source `content/history/set-theory/pathologies.tex:91`; Tamil `translation/content/history/set-theory/pathologies.tex:106`; PDF page pending.
+- `TA-OCC-73843804243bc2ec` — OLP-0636 / `OLP-0636-S04`; source `content/history/set-theory/pathologies.tex:94`; Tamil `translation/content/history/set-theory/pathologies.tex:110`; PDF page pending.
+- `TA-OCC-3d0c93cd60f05f32` — OLP-0639 / `OLP-0639-S01`; source `content/history/set-theory/hilbert-curve.tex:20`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:29`; PDF page pending.
+- `TA-OCC-2d289612ce271410` — OLP-0639 / `OLP-0639-S03`; source `content/history/set-theory/hilbert-curve.tex:57`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:86`; PDF page pending.
+- `TA-OCC-144b6754f792b542` — OLP-0639 / `OLP-0639-S04`; source `content/history/set-theory/hilbert-curve.tex:59`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:95`; PDF page pending.
+- `TA-OCC-7abab7685c58605a` — OLP-0639 / `OLP-0639-S05`; source `content/history/set-theory/hilbert-curve.tex:85`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:125`; PDF page pending.
+- `TA-OCC-a516595dea5a2abb` — OLP-0639 / `OLP-0639-S06`; source `content/history/set-theory/hilbert-curve.tex:98`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:148`; PDF page pending.
+- `TA-OCC-87329a4c5ec5ee60` — OLP-0639 / `OLP-0639-S08`; source `content/history/set-theory/hilbert-curve.tex:128`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:196`; PDF page pending.
+- `TA-OCC-472343bc615ccd34` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:235`; PDF page pending.
+- `TA-OCC-a704792b32b011c8` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:236`; PDF page pending.
+- `TA-OCC-bb39fb7ec1cb5fbf` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:237`; PDF page pending.
 
 ## TA-T075 — Dedekind infinite / Hilbert hotel
 
@@ -13635,6 +13751,11 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-bf929217fc00f58a` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:65`; Tamil `translation/content/history/biographies/julia-robinson.tex:61`; PDF page pending.
 - `TA-OCC-e645bf5799e770a9` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:65`; Tamil `translation/content/history/biographies/julia-robinson.tex:72`; PDF page pending.
 - `TA-OCC-71e1409add95dcc8` — OLP-0632 / `OLP-0632-S02`; source `content/history/biographies/ernst-zermelo.tex:24`; Tamil `translation/content/history/biographies/ernst-zermelo.tex:32`; PDF page pending.
+- `TA-OCC-5e76b450e1958f5f` — OLP-0636 / `OLP-0636-S02`; source `content/history/set-theory/pathologies.tex:27`; Tamil `translation/content/history/set-theory/pathologies.tex:56`; PDF page pending.
+- `TA-OCC-967be0446f4669df` — OLP-0636 / `OLP-0636-S04`; source `content/history/set-theory/pathologies.tex:91`; Tamil `translation/content/history/set-theory/pathologies.tex:119`; PDF page pending.
+- `TA-OCC-59118e8c91fa5eb5` — OLP-0637 / `OLP-0637-S01`; source `content/history/set-theory/mythology.tex:1`; Tamil `translation/content/history/set-theory/mythology.tex:15`; PDF page pending.
+- `TA-OCC-25bac5dade103f64` — OLP-0637 / `OLP-0637-S01`; source `content/history/set-theory/mythology.tex:1`; Tamil `translation/content/history/set-theory/mythology.tex:37`; PDF page pending.
+- `TA-OCC-43ead2694573e72a` — OLP-0638 / `OLP-0638-S03`; source `content/history/set-theory/cantor-plane.tex:39`; Tamil `translation/content/history/set-theory/cantor-plane.tex:65`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -15579,6 +15700,9 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-7a5b9cc84653da53` — OLP-0606 / `OLP-0606-S13`; source `content/methods/proofs/inference-patterns.tex:244`; Tamil `translation/content/methods/proofs/inference-patterns.tex:327`; PDF page pending.
 - `TA-OCC-a70234368c813bfd` — OLP-0625 / `OLP-0625-S02`; source `content/history/biographies/kurt-goedel.tex:32`; Tamil `translation/content/history/biographies/kurt-goedel.tex:34`; PDF page pending.
 - `TA-OCC-af6d2cdfea459898` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:40`; Tamil `translation/content/history/biographies/emmy-noether.tex:55`; PDF page pending.
+- `TA-OCC-fe9ea3e59cad498e` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:59`; Tamil `translation/content/history/set-theory/cantor-plane.tex:84`; PDF page pending.
+- `TA-OCC-fca7574613ae0487` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:59`; Tamil `translation/content/history/set-theory/cantor-plane.tex:87`; PDF page pending.
+- `TA-OCC-f106619757177c8e` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:59`; Tamil `translation/content/history/set-theory/cantor-plane.tex:101`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -16833,6 +16957,10 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-048d1ce206ee3f60` — OLP-0627 / `OLP-0627-S02`; source `content/history/biographies/rozsa-peter.tex:20`; Tamil `translation/content/history/biographies/rozsa-peter.tex:28`; PDF page pending.
 - `TA-OCC-baa9259717cdeb66` — OLP-0628 / `OLP-0628-S02`; source `content/history/biographies/julia-robinson.tex:25`; Tamil `translation/content/history/biographies/julia-robinson.tex:32`; PDF page pending.
 - `TA-OCC-e004a6a96406533b` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:50`; Tamil `translation/content/history/biographies/julia-robinson.tex:65`; PDF page pending.
+- `TA-OCC-3f9acb8daab32c84` — OLP-0634 / `OLP-0634-S05`; source `content/history/set-theory/infinitesimals.tex:74`; Tamil `translation/content/history/set-theory/infinitesimals.tex:84`; PDF page pending.
+- `TA-OCC-af87c0142ddd85d6` — OLP-0634 / `OLP-0634-S05`; source `content/history/set-theory/infinitesimals.tex:74`; Tamil `translation/content/history/set-theory/infinitesimals.tex:84`; PDF page pending.
+- `TA-OCC-041ae5f5a4fac20e` — OLP-0634 / `OLP-0634-S05`; source `content/history/set-theory/infinitesimals.tex:74`; Tamil `translation/content/history/set-theory/infinitesimals.tex:87`; PDF page pending.
+- `TA-OCC-3b61e64b35815e2d` — OLP-0636 / `OLP-0636-S04`; source `content/history/set-theory/pathologies.tex:91`; Tamil `translation/content/history/set-theory/pathologies.tex:118`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -17094,6 +17222,7 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-62a6b8e245446375` — OLP-0626 / `OLP-0626-S02`; source `content/history/biographies/emmy-noether.tex:34`; Tamil `translation/content/history/biographies/emmy-noether.tex:36`; PDF page pending.
 - `TA-OCC-0f1e96c7aa74af0c` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:67`; Tamil `translation/content/history/biographies/julia-robinson.tex:73`; PDF page pending.
 - `TA-OCC-6e42f0dd6cacef95` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:67`; Tamil `translation/content/history/biographies/julia-robinson.tex:74`; PDF page pending.
+- `TA-OCC-fcac654be9d36c0b` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:73`; Tamil `translation/content/history/set-theory/cantor-plane.tex:99`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -17886,6 +18015,9 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-8d8764ffc1b609d1` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:81`; PDF page pending.
 - `TA-OCC-d4a4b4b65a6250c1` — OLP-0615 / `OLP-0615-S05`; source `content/methods/induction/induction-on-N.tex:78`; Tamil `translation/content/methods/induction/induction-on-N.tex:120`; PDF page pending.
 - `TA-OCC-2050b25b09a78d15` — OLP-0623 / `OLP-0623-S04`; source `content/history/biographies/alonzo-church.tex:42`; Tamil `translation/content/history/biographies/alonzo-church.tex:52`; PDF page pending.
+- `TA-OCC-6c3f68678f9300fa` — OLP-0635 / `OLP-0635-S02`; source `content/history/set-theory/limits.tex:16`; Tamil `translation/content/history/set-theory/limits.tex:21`; PDF page pending.
+- `TA-OCC-8e6ec6171762db1b` — OLP-0635 / `OLP-0635-S03`; source `content/history/set-theory/limits.tex:22`; Tamil `translation/content/history/set-theory/limits.tex:47`; PDF page pending.
+- `TA-OCC-cdfc8b7f8c435a62` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:219`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -22079,6 +22211,8 @@ Please double-check: **is “ஒரேநேரப் பதிலீடு / �
 - `TA-OCC-dc6d474f220d455e` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:168`; PDF page pending.
 - `TA-OCC-f9a467c10c5b58d1` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:203`; PDF page pending.
 - `TA-OCC-420804976b22d386` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:44`; Tamil `translation/content/history/biographies/emmy-noether.tex:52`; PDF page pending.
+- `TA-OCC-1517bb7dccd01a24` — OLP-0637 / `OLP-0637-S01`; source `content/history/set-theory/mythology.tex:1`; Tamil `translation/content/history/set-theory/mythology.tex:14`; PDF page pending.
+- `TA-OCC-bc7e0df52e7ca241` — OLP-0638 / `OLP-0638-S01`; source `content/history/set-theory/cantor-plane.tex:1`; Tamil `translation/content/history/set-theory/cantor-plane.tex:14`; PDF page pending.
 
 ## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
 
@@ -25535,6 +25669,12 @@ Please double-check: **is “நிறுவல் / வருவித்தல
 - `TA-OCC-bfe893cd035a168b` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:54`; Tamil `translation/content/history/biographies/emmy-noether.tex:59`; PDF page pending.
 - `TA-OCC-528d322eb2fd29b1` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:65`; Tamil `translation/content/history/biographies/julia-robinson.tex:73`; PDF page pending.
 - `TA-OCC-9d3d53965c1abe13` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:67`; Tamil `translation/content/history/biographies/julia-robinson.tex:74`; PDF page pending.
+- `TA-OCC-0b612d9e73d1ecf7` — OLP-0636 / `OLP-0636-S02`; source `content/history/set-theory/pathologies.tex:38`; Tamil `translation/content/history/set-theory/pathologies.tex:48`; PDF page pending.
+- `TA-OCC-320e246dc689f02b` — OLP-0637 / `OLP-0637-S02`; source `content/history/set-theory/mythology.tex:41`; Tamil `translation/content/history/set-theory/mythology.tex:53`; PDF page pending.
+- `TA-OCC-443549d9e085085c` — OLP-0638 / `OLP-0638-S02`; source `content/history/set-theory/cantor-plane.tex:24`; Tamil `translation/content/history/set-theory/cantor-plane.tex:34`; PDF page pending.
+- `TA-OCC-d2f0523768153d36` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:60`; Tamil `translation/content/history/set-theory/cantor-plane.tex:87`; PDF page pending.
+- `TA-OCC-4f70f4dffc1da8a9` — OLP-0638 / `OLP-0638-S04`; source `content/history/set-theory/cantor-plane.tex:62`; Tamil `translation/content/history/set-theory/cantor-plane.tex:99`; PDF page pending.
+- `TA-OCC-e374400c661addeb` — OLP-0639 / `OLP-0639-S01`; source `content/history/set-theory/hilbert-curve.tex:9`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:16`; PDF page pending.
 
 ## TA-T240 — definition / definiendum / definiens / unpacking definitions
 
@@ -26175,6 +26315,13 @@ Please double-check: **is “வரையறை / வரையறுக்கப
 - `TA-OCC-ed2b896efca32f69` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:167`; Tamil `translation/content/methods/induction/relations.tex:245`; PDF page pending.
 - `TA-OCC-513d2c8b74e066c4` — OLP-0619 / `OLP-0619-S12`; source `content/methods/induction/relations.tex:171`; Tamil `translation/content/methods/induction/relations.tex:251`; PDF page pending.
 - `TA-OCC-b32de6e54ec0a48f` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:30`; Tamil `translation/content/history/biographies/alonzo-church.tex:33`; PDF page pending.
+- `TA-OCC-46657272f69c8994` — OLP-0635 / `OLP-0635-S01`; source `content/history/set-theory/limits.tex:11`; Tamil `translation/content/history/set-theory/limits.tex:12`; PDF page pending.
+- `TA-OCC-a450e10777576a41` — OLP-0635 / `OLP-0635-S03`; source `content/history/set-theory/limits.tex:32`; Tamil `translation/content/history/set-theory/limits.tex:37`; PDF page pending.
+- `TA-OCC-ef45ee3e3dfc4184` — OLP-0635 / `OLP-0635-S04`; source `content/history/set-theory/limits.tex:56`; Tamil `translation/content/history/set-theory/limits.tex:67`; PDF page pending.
+- `TA-OCC-6e01455a07a2b1c5` — OLP-0636 / `OLP-0636-S01`; source `content/history/set-theory/pathologies.tex:8`; Tamil `translation/content/history/set-theory/pathologies.tex:13`; PDF page pending.
+- `TA-OCC-1f93199591ff0b7c` — OLP-0636 / `OLP-0636-S03`; source `content/history/set-theory/pathologies.tex:57`; Tamil `translation/content/history/set-theory/pathologies.tex:70`; PDF page pending.
+- `TA-OCC-8a250f8e6a48a51c` — OLP-0639 / `OLP-0639-S07`; source `content/history/set-theory/hilbert-curve.tex:109`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:163`; PDF page pending.
+- `TA-OCC-a68e97cc8c4effb1` — OLP-0639 / `OLP-0639-S07`; source `content/history/set-theory/hilbert-curve.tex:109`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:164`; PDF page pending.
 
 ## TA-T241 — inference pattern / conditional proof / proof by cases / universal claim / existence claim
 
@@ -26506,6 +26653,160 @@ Please double-check: **is “கட்டமைப்புசார் நி�
 - `TA-OCC-2e157f5af112f6ea` — OLP-0624 / `OLP-0624-S01`; source `content/history/biographies/gerhard-gentzen.tex:17`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:18`; PDF page pending.
 - `TA-OCC-856105c92fd32507` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:31`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:35`; PDF page pending.
 - `TA-OCC-3e8d3f54c25051af` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:31`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:35`; PDF page pending.
+
+## TA-T253 — infinitesimal / differentiation / derivative / slope / rate of change / limit
+
+Chosen rendering: **நுண்ணளவு / வகையிடல் / வகைக்கெழு / சாய்வு / மாறுபாட்டு வீதம் / எல்லை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The directly inspected SCERT page prints வகையிடல், சாய்வு, மாறுபாட்டு வீதம், எல்லை and a difference-quotient derivative and tangent diagram. The history chapter supplies the exact derivative and limit constructions. நுண்ணளவு is a provisional transparent compound for the historical infinitesimal, not a claim of textbook attestation. The frozen source's fixed-f'(c) slip and unpunctured limit formula are corrected under TA-HIS-001 and TA-HIS-002.
+
+Authority basis: TA-SC12V2-P2-DERIVATIVE (checked_context_only); TA-T253-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “நுண்ணளவு / வகையிடல் / வகைக்கெழு / சாய்வு / மாறுபாட்டு வீதம் / எல்லை” the established India-standard Tamil expression for “infinitesimal / differentiation / derivative / slope / rate of change / limit” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-2c433f9983561a3a` — OLP-0048 / `OLP-0048-S04`; source `content/sets-functions-relations/arithmetization/cauchy.tex:73`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:84`; PDF page pending.
+- `TA-OCC-1cf3c47b37f7ca56` — OLP-0048 / `OLP-0048-S05`; source `content/sets-functions-relations/arithmetization/cauchy.tex:75`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:90`; PDF page pending.
+- `TA-OCC-940a4cf6429bb502` — OLP-0048 / `OLP-0048-S05`; source `content/sets-functions-relations/arithmetization/cauchy.tex:76`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:91`; PDF page pending.
+- `TA-OCC-363ae4cdd301bbac` — OLP-0048 / `OLP-0048-S05`; source `content/sets-functions-relations/arithmetization/cauchy.tex:79`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:96`; PDF page pending.
+- `TA-OCC-e2c6dd3e7c89e4b1` — OLP-0048 / `OLP-0048-S05`; source `content/sets-functions-relations/arithmetization/cauchy.tex:82`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:100`; PDF page pending.
+- `TA-OCC-f7da8f91a620c15a` — OLP-0048 / `OLP-0048-S06`; source `content/sets-functions-relations/arithmetization/cauchy.tex:89`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:109`; PDF page pending.
+- `TA-OCC-c37557ea5e8deab2` — OLP-0048 / `OLP-0048-S06`; source `content/sets-functions-relations/arithmetization/cauchy.tex:93`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:113`; PDF page pending.
+- `TA-OCC-c316a56b3aee170a` — OLP-0048 / `OLP-0048-S06`; source `content/sets-functions-relations/arithmetization/cauchy.tex:105`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:127`; PDF page pending.
+- `TA-OCC-491b615e1d279e7e` — OLP-0048 / `OLP-0048-S07`; source `content/sets-functions-relations/arithmetization/cauchy.tex:112`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:134`; PDF page pending.
+- `TA-OCC-b83053c56497ddef` — OLP-0048 / `OLP-0048-S07`; source `content/sets-functions-relations/arithmetization/cauchy.tex:117`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:140`; PDF page pending.
+- `TA-OCC-cf32e71111524e5d` — OLP-0048 / `OLP-0048-S08`; source `content/sets-functions-relations/arithmetization/cauchy.tex:129`; Tamil `translation/content/sets-functions-relations/arithmetization/cauchy.tex:156`; PDF page pending.
+- `TA-OCC-8fb707c8b403f9f1` — OLP-0075 / `OLP-0075-S02`; source `content/first-order-logic/sequent-calculus/proving-things.tex:50`; Tamil `translation/content/first-order-logic/sequent-calculus/proving-things.tex:64`; PDF page 19.
+- `TA-OCC-0f0b29f4eeb8d6f6` — OLP-0218 / `OLP-0218-S01`; source `content/computability/recursive-functions/bounded-minimization.tex:1`; Tamil `translation/content/computability/recursive-functions/bounded-minimization.tex:20`; PDF page pending.
+- `TA-OCC-893e595998674704` — OLP-0229 / `OLP-0229-S01`; source `content/computability/computability-theory/introduction.tex:1`; Tamil `translation/content/computability/computability-theory/introduction.tex:66`; PDF page pending.
+- `TA-OCC-d009b796aece9260` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:95`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:96`; PDF page pending.
+- `TA-OCC-857ee399f78e199c` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:95`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:97`; PDF page pending.
+- `TA-OCC-74931e4ac67d2487` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:97`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:116`; PDF page pending.
+- `TA-OCC-88f881c3c532ba81` — OLP-0276 / `OLP-0276-S01`; source `content/incompleteness/introduction/historical-background.tex:116`; Tamil `translation/content/incompleteness/introduction/historical-background.tex:211`; PDF page pending.
+- `TA-OCC-e638c494b40f750b` — OLP-0300 / `OLP-0300-S01`; source `content/incompleteness/representability-in-q/sigma1-completeness.tex:1`; Tamil `translation/content/incompleteness/representability-in-q/sigma1-completeness.tex:17`; PDF page pending.
+- `TA-OCC-dfd3bf134e8fbd5d` — OLP-0321 / `OLP-0321-S01`; source `content/incompleteness/incompleteness-provability/tarski-thm.tex:1`; Tamil `translation/content/incompleteness/incompleteness-provability/tarski-thm.tex:132`; PDF page pending.
+- `TA-OCC-cfd2a743046ce1cf` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:6`; Tamil `translation/content/set-theory/ordinals/opps.tex:7`; PDF page pending.
+- `TA-OCC-7a34c930ac421b5e` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:15`; Tamil `translation/content/set-theory/ordinals/opps.tex:18`; PDF page pending.
+- `TA-OCC-e0dc2f920557dc40` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:49`; Tamil `translation/content/set-theory/ordinals/opps.tex:52`; PDF page pending.
+- `TA-OCC-603eab323606d081` — OLP-0557 / `OLP-0557-S01`; source `content/set-theory/ordinals/opps.tex:59`; Tamil `translation/content/set-theory/ordinals/opps.tex:63`; PDF page pending.
+- `TA-OCC-bf072d1f54dbb350` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:13`; Tamil `translation/content/set-theory/spine/idea.tex:13`; PDF page pending.
+- `TA-OCC-2a7d4e968b224924` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:22`; Tamil `translation/content/set-theory/spine/idea.tex:23`; PDF page pending.
+- `TA-OCC-f3ab67165a551aa6` — OLP-0559 / `OLP-0559-S01`; source `content/set-theory/spine/idea.tex:32`; Tamil `translation/content/set-theory/spine/idea.tex:33`; PDF page pending.
+- `TA-OCC-d71e4ee25e08b032` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:42`; Tamil `translation/content/set-theory/spine/recursion.tex:53`; PDF page pending.
+- `TA-OCC-844c699055d5befc` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:96`; Tamil `translation/content/set-theory/spine/recursion.tex:113`; PDF page pending.
+- `TA-OCC-075f8725f4325646` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:110`; Tamil `translation/content/set-theory/spine/recursion.tex:127`; PDF page pending.
+- `TA-OCC-64d3b9739cdf376f` — OLP-0560 / `OLP-0560-S01`; source `content/set-theory/spine/recursion.tex:124`; Tamil `translation/content/set-theory/spine/recursion.tex:144`; PDF page pending.
+- `TA-OCC-4cca71267a2d69ae` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:41`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:45`; PDF page pending.
+- `TA-OCC-874a38a45b443222` — OLP-0561 / `OLP-0561-S01`; source `content/set-theory/spine/stagesbasics.tex:63`; Tamil `translation/content/set-theory/spine/stagesbasics.tex:69`; PDF page pending.
+- `TA-OCC-a1895cb6fbab37de` — OLP-0563 / `OLP-0563-S01`; source `content/set-theory/spine/zf.tex:1`; Tamil `translation/content/set-theory/spine/zf.tex:38`; PDF page pending.
+- `TA-OCC-5ac756dcf8e2c5dd` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:91`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:115`; PDF page pending.
+- `TA-OCC-cbb2ad125b1cfcfa` — OLP-0576 / `OLP-0576-S03`; source `content/set-theory/ord-arithmetic/addition.tex:108`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:133`; PDF page pending.
+- `TA-OCC-c4a4526311c0c217` — OLP-0576 / `OLP-0576-S04`; source `content/set-theory/ord-arithmetic/addition.tex:166`; Tamil `translation/content/set-theory/ord-arithmetic/addition.tex:203`; PDF page pending.
+- `TA-OCC-2e4f0fd22d4aae84` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:24`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:29`; PDF page pending.
+- `TA-OCC-70f2af89d3de5d02` — OLP-0577 / `OLP-0577-S01`; source `content/set-theory/ord-arithmetic/using-addition.tex:49`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:61`; PDF page pending.
+- `TA-OCC-b9d6d3a030d113e9` — OLP-0577 / `OLP-0577-S03`; source `content/set-theory/ord-arithmetic/using-addition.tex:90`; Tamil `translation/content/set-theory/ord-arithmetic/using-addition.tex:111`; PDF page pending.
+- `TA-OCC-ea5d227f26b6ec33` — OLP-0578 / `OLP-0578-S01`; source `content/set-theory/ord-arithmetic/multiplication.tex:46`; Tamil `translation/content/set-theory/ord-arithmetic/multiplication.tex:53`; PDF page pending.
+- `TA-OCC-986408f69fa1462a` — OLP-0579 / `OLP-0579-S02`; source `content/set-theory/ord-arithmetic/exponentiation.tex:39`; Tamil `translation/content/set-theory/ord-arithmetic/exponentiation.tex:51`; PDF page pending.
+- `TA-OCC-0d2fc28de5b83a41` — OLP-0584 / `OLP-0584-S03`; source `content/set-theory/cardinals/classing.tex:86`; Tamil `translation/content/set-theory/cardinals/classing.tex:96`; PDF page pending.
+- `TA-OCC-1662b2d72b545240` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:27`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:29`; PDF page pending.
+- `TA-OCC-277cda26a77adb53` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:113`; PDF page pending.
+- `TA-OCC-c39c88abd92a54fa` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:157`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:180`; PDF page pending.
+- `TA-OCC-d9d95dbf05bcbb13` — OLP-0622 / `OLP-0622-S03`; source `content/history/biographies/georg-cantor.tex:28`; Tamil `translation/content/history/biographies/georg-cantor.tex:33`; PDF page pending.
+- `TA-OCC-a5bce2900286978b` — OLP-0634 / `OLP-0634-S01`; source `content/history/set-theory/infinitesimals.tex:5`; Tamil `translation/content/history/set-theory/infinitesimals.tex:11`; PDF page pending.
+- `TA-OCC-42e3ed837c7df58b` — OLP-0634 / `OLP-0634-S01`; source `content/history/set-theory/infinitesimals.tex:6`; Tamil `translation/content/history/set-theory/infinitesimals.tex:15`; PDF page pending.
+- `TA-OCC-6f5fbd09af98ff8c` — OLP-0634 / `OLP-0634-S01`; source `content/history/set-theory/infinitesimals.tex:6`; Tamil `translation/content/history/set-theory/infinitesimals.tex:16`; PDF page pending.
+- `TA-OCC-7f4007f553a8e90c` — OLP-0634 / `OLP-0634-S01`; source `content/history/set-theory/infinitesimals.tex:10`; Tamil `translation/content/history/set-theory/infinitesimals.tex:16`; PDF page pending.
+- `TA-OCC-3561697261e3ba18` — OLP-0634 / `OLP-0634-S01`; source `content/history/set-theory/infinitesimals.tex:10`; Tamil `translation/content/history/set-theory/infinitesimals.tex:16`; PDF page pending.
+- `TA-OCC-3fe76306ea1fbea3` — OLP-0634 / `OLP-0634-S03`; source `content/history/set-theory/infinitesimals.tex:33`; Tamil `translation/content/history/set-theory/infinitesimals.tex:48`; PDF page pending.
+- `TA-OCC-3a0db768796bbe64` — OLP-0634 / `OLP-0634-S03`; source `content/history/set-theory/infinitesimals.tex:33`; Tamil `translation/content/history/set-theory/infinitesimals.tex:52`; PDF page pending.
+- `TA-OCC-cbba3cccda285bcf` — OLP-0634 / `OLP-0634-S03`; source `content/history/set-theory/infinitesimals.tex:33`; Tamil `translation/content/history/set-theory/infinitesimals.tex:54`; PDF page pending.
+- `TA-OCC-e038bd660dc71b10` — OLP-0634 / `OLP-0634-S03`; source `content/history/set-theory/infinitesimals.tex:33`; Tamil `translation/content/history/set-theory/infinitesimals.tex:56`; PDF page pending.
+- `TA-OCC-51ce974323f0cba7` — OLP-0634 / `OLP-0634-S04`; source `content/history/set-theory/infinitesimals.tex:51`; Tamil `translation/content/history/set-theory/infinitesimals.tex:63`; PDF page pending.
+- `TA-OCC-3e5c1cf1c583d2c8` — OLP-0634 / `OLP-0634-S04`; source `content/history/set-theory/infinitesimals.tex:53`; Tamil `translation/content/history/set-theory/infinitesimals.tex:70`; PDF page pending.
+- `TA-OCC-d9d155058bdfe586` — OLP-0634 / `OLP-0634-S05`; source `content/history/set-theory/infinitesimals.tex:76`; Tamil `translation/content/history/set-theory/infinitesimals.tex:89`; PDF page pending.
+- `TA-OCC-4742bd5f0bd15449` — OLP-0634 / `OLP-0634-S05`; source `content/history/set-theory/infinitesimals.tex:77`; Tamil `translation/content/history/set-theory/infinitesimals.tex:90`; PDF page pending.
+- `TA-OCC-db6928f4304572d9` — OLP-0635 / `OLP-0635-S01`; source `content/history/set-theory/limits.tex:3`; Tamil `translation/content/history/set-theory/limits.tex:12`; PDF page pending.
+- `TA-OCC-299fdc0e14de4aec` — OLP-0635 / `OLP-0635-S01`; source `content/history/set-theory/limits.tex:9`; Tamil `translation/content/history/set-theory/limits.tex:14`; PDF page pending.
+- `TA-OCC-ccaef8cfc98a7f23` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:61`; Tamil `translation/content/history/set-theory/limits.tex:74`; PDF page pending.
+- `TA-OCC-5bb5ac9af717ec16` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:62`; Tamil `translation/content/history/set-theory/limits.tex:74`; PDF page pending.
+- `TA-OCC-460f34e59f740081` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:65`; Tamil `translation/content/history/set-theory/limits.tex:75`; PDF page pending.
+- `TA-OCC-b236e3f6a8e356a0` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:68`; Tamil `translation/content/history/set-theory/limits.tex:77`; PDF page pending.
+- `TA-OCC-93a7bce0e95778e4` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:72`; Tamil `translation/content/history/set-theory/limits.tex:79`; PDF page pending.
+- `TA-OCC-b28daa8d2330a287` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:73`; Tamil `translation/content/history/set-theory/limits.tex:82`; PDF page pending.
+- `TA-OCC-ac964120c7b61b56` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:73`; Tamil `translation/content/history/set-theory/limits.tex:83`; PDF page pending.
+- `TA-OCC-6f71cb810c20a4d3` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:73`; Tamil `translation/content/history/set-theory/limits.tex:84`; PDF page pending.
+- `TA-OCC-8b8a697b094b0054` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:73`; Tamil `translation/content/history/set-theory/limits.tex:84`; PDF page pending.
+- `TA-OCC-6b32d8ee59685709` — OLP-0635 / `OLP-0635-S06`; source `content/history/set-theory/limits.tex:75`; Tamil `translation/content/history/set-theory/limits.tex:88`; PDF page pending.
+- `TA-OCC-6edca23251025390` — OLP-0635 / `OLP-0635-S07`; source `content/history/set-theory/limits.tex:90`; Tamil `translation/content/history/set-theory/limits.tex:105`; PDF page pending.
+- `TA-OCC-33ddd37b468aa580` — OLP-0635 / `OLP-0635-S07`; source `content/history/set-theory/limits.tex:91`; Tamil `translation/content/history/set-theory/limits.tex:106`; PDF page pending.
+- `TA-OCC-0d33494947ee6084` — OLP-0636 / `OLP-0636-S01`; source `content/history/set-theory/pathologies.tex:8`; Tamil `translation/content/history/set-theory/pathologies.tex:13`; PDF page pending.
+- `TA-OCC-d10530e3a7ff0b9a` — OLP-0636 / `OLP-0636-S02`; source `content/history/set-theory/pathologies.tex:27`; Tamil `translation/content/history/set-theory/pathologies.tex:39`; PDF page pending.
+- `TA-OCC-521b410eb6fa7879` — OLP-0636 / `OLP-0636-S04`; source `content/history/set-theory/pathologies.tex:91`; Tamil `translation/content/history/set-theory/pathologies.tex:106`; PDF page pending.
+- `TA-OCC-4ed7d31a7063b04a` — OLP-0636 / `OLP-0636-S04`; source `content/history/set-theory/pathologies.tex:94`; Tamil `translation/content/history/set-theory/pathologies.tex:110`; PDF page pending.
+- `TA-OCC-01b11fca6ee92f2e` — OLP-0639 / `OLP-0639-S01`; source `content/history/set-theory/hilbert-curve.tex:20`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:29`; PDF page pending.
+- `TA-OCC-5d46872c59e53e63` — OLP-0639 / `OLP-0639-S03`; source `content/history/set-theory/hilbert-curve.tex:57`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:86`; PDF page pending.
+- `TA-OCC-58b510d5f50f5028` — OLP-0639 / `OLP-0639-S04`; source `content/history/set-theory/hilbert-curve.tex:59`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:95`; PDF page pending.
+- `TA-OCC-df93c4a431ce0272` — OLP-0639 / `OLP-0639-S05`; source `content/history/set-theory/hilbert-curve.tex:85`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:125`; PDF page pending.
+- `TA-OCC-8d37aa8eb71bbd7f` — OLP-0639 / `OLP-0639-S06`; source `content/history/set-theory/hilbert-curve.tex:98`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:148`; PDF page pending.
+- `TA-OCC-47f35a0300c6ecd3` — OLP-0639 / `OLP-0639-S08`; source `content/history/set-theory/hilbert-curve.tex:128`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:196`; PDF page pending.
+- `TA-OCC-358381ddd95fef79` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:235`; PDF page pending.
+- `TA-OCC-e33e03e8abe71fd1` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:236`; PDF page pending.
+- `TA-OCC-2d9f8388bf50d738` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:237`; PDF page pending.
+
+## TA-T254 — continuous / differentiable / space-filling curve / binary expansion
+
+Chosen rendering: **தொடர்ச்சியான / வகையிடத்தக்க / வெளிநிரப்பு வளைவு / இரும விரிவாக்கங்கள்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected school page establishes derivative and limit register but does not attest all four complete compounds. OpenLogic distinguishes continuity from differentiability, defines a curve as a continuous map from the unit interval, and constructs bit-interleaved binary expansions. The translated section keeps the nowhere-differentiable and space-filling claims as source claims, with the Hilbert proof limitation explicitly noted under TA-HIS-005.
+
+Authority basis: TA-SC12V2-P2-DERIVATIVE (checked_context_only); TA-SC11-P2 (checked_context_only); TA-T254-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “தொடர்ச்சியான / வகையிடத்தக்க / வெளிநிரப்பு வளைவு / இரும விரிவாக்கங்கள்” the established India-standard Tamil expression for “continuous / differentiable / space-filling curve / binary expansion” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-c8658d715371e631` — OLP-0178 / `OLP-0178-S01`; source `content/first-order-logic/beyond/higher-order-logic.tex:116`; Tamil `translation/content/first-order-logic/beyond/higher-order-logic.tex:131`; PDF page pending.
+- `TA-OCC-a801b248d8e3533c` — OLP-0635 / `OLP-0635-S05`; source `content/history/set-theory/limits.tex:73`; Tamil `translation/content/history/set-theory/limits.tex:85`; PDF page pending.
+- `TA-OCC-bd53c5b0aa9b609b` — OLP-0635 / `OLP-0635-S06`; source `content/history/set-theory/limits.tex:77`; Tamil `translation/content/history/set-theory/limits.tex:89`; PDF page pending.
+- `TA-OCC-968af1587aa2a587` — OLP-0635 / `OLP-0635-S06`; source `content/history/set-theory/limits.tex:79`; Tamil `translation/content/history/set-theory/limits.tex:95`; PDF page pending.
+- `TA-OCC-15d04c60850f100e` — OLP-0635 / `OLP-0635-S06`; source `content/history/set-theory/limits.tex:83`; Tamil `translation/content/history/set-theory/limits.tex:98`; PDF page pending.
+- `TA-OCC-ed1715de656b8553` — OLP-0635 / `OLP-0635-S06`; source `content/history/set-theory/limits.tex:85`; Tamil `translation/content/history/set-theory/limits.tex:99`; PDF page pending.
+- `TA-OCC-28d1ef750724cf85` — OLP-0636 / `OLP-0636-S01`; source `content/history/set-theory/pathologies.tex:11`; Tamil `translation/content/history/set-theory/pathologies.tex:17`; PDF page pending.
+- `TA-OCC-5e52812c807c88be` — OLP-0636 / `OLP-0636-S01`; source `content/history/set-theory/pathologies.tex:11`; Tamil `translation/content/history/set-theory/pathologies.tex:25`; PDF page pending.
+- `TA-OCC-14888061cfc1843e` — OLP-0636 / `OLP-0636-S01`; source `content/history/set-theory/pathologies.tex:18`; Tamil `translation/content/history/set-theory/pathologies.tex:27`; PDF page pending.
+- `TA-OCC-04300a67afd1f3ef` — OLP-0636 / `OLP-0636-S01`; source `content/history/set-theory/pathologies.tex:19`; Tamil `translation/content/history/set-theory/pathologies.tex:31`; PDF page pending.
+- `TA-OCC-90e0bc799f178271` — OLP-0636 / `OLP-0636-S04`; source `content/history/set-theory/pathologies.tex:93`; Tamil `translation/content/history/set-theory/pathologies.tex:109`; PDF page pending.
+- `TA-OCC-75a2ee00d8498992` — OLP-0636 / `OLP-0636-S04`; source `content/history/set-theory/pathologies.tex:93`; Tamil `translation/content/history/set-theory/pathologies.tex:110`; PDF page pending.
+- `TA-OCC-7820ae15a24b713a` — OLP-0638 / `OLP-0638-S03`; source `content/history/set-theory/cantor-plane.tex:39`; Tamil `translation/content/history/set-theory/cantor-plane.tex:74`; PDF page pending.
+- `TA-OCC-51163b4d998248ae` — OLP-0639 / `OLP-0639-S01`; source `content/history/set-theory/hilbert-curve.tex:7`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:12`; PDF page pending.
+- `TA-OCC-67834ba8e7a23ee8` — OLP-0639 / `OLP-0639-S01`; source `content/history/set-theory/hilbert-curve.tex:14`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:25`; PDF page pending.
+- `TA-OCC-c18c1e4cf549fa33` — OLP-0639 / `OLP-0639-S07`; source `content/history/set-theory/hilbert-curve.tex:111`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:165`; PDF page pending.
+- `TA-OCC-1597fb31543d1f3e` — OLP-0639 / `OLP-0639-S07`; source `content/history/set-theory/hilbert-curve.tex:114`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:170`; PDF page pending.
+- `TA-OCC-59138c6650f1370b` — OLP-0639 / `OLP-0639-S07`; source `content/history/set-theory/hilbert-curve.tex:120`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:178`; PDF page pending.
+- `TA-OCC-23f0c8c1d6c9c756` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:235`; PDF page pending.
+
+## TA-T255 — punctured neighbourhood / pointwise limit
+
+Chosen rendering: **துளையிடப்பட்ட அண்மை / புள்ளிவாரி எல்லை**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The textbook supplies the derivative-as-limit register, not these complete specialist labels. In the corrected ordinary-limit formula, 0 < |x-c| < delta precisely defines the punctured neighbourhood. The Hilbert section explicitly takes a pointwise limit of successive functions, while the visible edition note correctly says that pointwise convergence alone does not establish the asserted global covering or continuity.
+
+Authority basis: TA-SC12V2-P2-DERIVATIVE (checked_context_only); TA-T255-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “துளையிடப்பட்ட அண்மை / புள்ளிவாரி எல்லை” the established India-standard Tamil expression for “punctured neighbourhood / pointwise limit” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-1eea7fd5011a2b03` — OLP-0635 / `OLP-0635-S03`; source `content/history/set-theory/limits.tex:22`; Tamil `translation/content/history/set-theory/limits.tex:46`; PDF page pending.
+- `TA-OCC-dcdcd2d98d02ab03` — OLP-0639 / `OLP-0639-S05`; source `content/history/set-theory/hilbert-curve.tex:83`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:125`; PDF page pending.
+- `TA-OCC-834bcade54148171` — OLP-0639 / `OLP-0639-S09`; source `content/history/set-theory/hilbert-curve.tex:138`; Tamil `translation/content/history/set-theory/hilbert-curve.tex:236`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

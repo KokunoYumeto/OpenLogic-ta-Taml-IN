@@ -1,0 +1,123 @@
+{
+  "batch_id": "TA-B301",
+  "units": [
+    {
+      "unit_id": "OLP-0639",
+      "source_sha256": "bda8e7a38876ea87b03d2564ab16b39e2b1d1d6ec75a73fae27ca1faa73ab832",
+      "translation_sha256": "9ead4485db9a3fc6a83f04db65e6bf28064958d0645c86edc7b9cdde04a6ef94",
+      "source_bytes": 8390,
+      "translation_bytes": 18291,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$x\\in\\unitsquare$"
+      ],
+      "extra_math": [
+        "$x\\in\\unitline$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Hilbert",
+        "align",
+        "angle",
+        "axiom",
+        "black",
+        "cantorplane",
+        "curve",
+        "gray",
+        "grid",
+        "his",
+        "include",
+        "limits",
+        "lindenmayer",
+        "logic",
+        "oldiagcolorC",
+        "oldiagcolorE",
+        "open",
+        "order",
+        "pathology",
+        "rectangle",
+        "rotate",
+        "section",
+        "set",
+        "step",
+        "system",
+        "thick",
+        "thin",
+        "very",
+        "xshift",
+        "yshift"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-HIS-004",
+          "unit_id": "OLP-0639",
+          "kind": "hilbert-curve-parameter-domain",
+          "action": "Changed the quantified parameter x in the pointwise-limit definition from the unit square to the unit line.",
+          "expected_missing_math": [
+            "$x\\in\\unitsquare$"
+          ],
+          "expected_extra_math": [
+            "$x\\in\\unitline$"
+          ],
+          "expected_missing_commands": [
+            "\\unitsquare"
+          ],
+          "expected_extra_commands": [
+            "\\unitline"
+          ],
+          "source_issue_or_choice": "The source says 'for each x in unitsquare' just before defining h(x), but later defines the curve as a map from unitline to R squared and consistently treats x as a line parameter.",
+          "chosen_treatment": "புள்ளிவாரி எல்லையின் அளபுருவை அலகுக் கோட்டில் எடுக்கிறது.",
+          "alternatives_considered": "Keeping a square-domain parameter would conflict with the stated definition of a curve and with every subsequent use of the unit interval.",
+          "rationale": "Each approximation h_n parametrizes a path by a point of the unit interval; the limit must have the same domain.",
+          "precise_review_question": "Should the parameter domain in the displayed pointwise-limit definition be the unit line?",
+          "location_needle": "SOURCE CORRECTION TA-HIS-004"
+        },
+        {
+          "audit_id": "TA-HIS-005",
+          "unit_id": "OLP-0639",
+          "kind": "informal-hilbert-argument-does-not-prove-continuity",
+          "action": "Retained the translated heuristic argument and appended a visible editorial note that its final neighbourhood construction does not prove continuity at a prescribed input and that pointwise convergence alone does not establish the claimed surjectivity.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source says the argument is hand-wavy, but later announces proofs of space-filling and continuity. Its final quantifiers fix an output p and find some input interval, whereas continuity must fix each input x0 and control outputs for inputs near x0. Its dense-approximation argument also has not established the convergence control needed to pass the covering property to the pointwise limit.",
+          "chosen_treatment": "மூலத்தின் விளக்கத்தை முழுவதும் வைத்தே, அது முழு நிறுவல் அல்ல என்பதைத் தெளிவாகக் குறிக்கும் பதிப்பாசிரியர் குறிப்பைச் சேர்க்கிறது.",
+          "alternatives_considered": "Silently presenting the heuristic as a complete proof; replacing it with a new proof outside the translation scope.",
+          "rationale": "The note preserves the historical exposition while preventing readers from mistaking a weaker neighbourhood property or unproved limit passage for the claimed theorems.",
+          "precise_review_question": "Does the note accurately distinguish the informal construction from a proof of continuity at each input and surjectivity of the limit map?",
+          "location_needle": "SOURCE CORRECTION TA-HIS-005"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\unitsquare"
+      ],
+      "extra_commands": [
+        "\\unitline"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}
