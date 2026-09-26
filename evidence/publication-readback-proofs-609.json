@@ -1,0 +1,330 @@
+{
+  "schema": "openlogic-tamil-public-raw-readback/1",
+  "checked_at_utc": "2026-09-26T01:26:52.881450+00:00",
+  "repository": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN",
+  "branch": "main",
+  "commit": "be4e9b7abb799b4b792a6fd3ab6725a054d6e017",
+  "parent_commit": "6d8ed961bfb6800591cf3c441bc0f5846040750a",
+  "anonymous_commit_api": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/commits/be4e9b7abb799b4b792a6fd3ab6725a054d6e017",
+    "http_status": 200,
+    "reported_sha": "be4e9b7abb799b4b792a6fd3ab6725a054d6e017",
+    "matches_requested_commit": true
+  },
+  "anonymous_main_ref": {
+    "url": "https://api.github.com/repos/KokunoYumeto/OpenLogic-ta-Taml-IN/git/ref/heads/main",
+    "http_status": 200,
+    "reported_sha": "be4e9b7abb799b4b792a6fd3ab6725a054d6e017",
+    "matches_requested_commit": true
+  },
+  "changed_file_count": 37,
+  "changed_files": [
+    {
+      "path": "README.en.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/README.en.md",
+      "http_status": 200,
+      "bytes": 13028,
+      "sha256": "212cd7a2eee623a3a2c76cb7a1e639cf92191ce14d173c169d6b222729b9a4e6",
+      "matches_local_commit": true
+    },
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/README.md",
+      "http_status": 200,
+      "bytes": 20932,
+      "sha256": "a94ce7ab6ffb822376d3dd355c90189295b5f2f7b7e1d2b9eeeba8777bc21320",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/checkpoint-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/checkpoint-current.json",
+      "http_status": 200,
+      "bytes": 1428583,
+      "sha256": "d5f0fa365973922998d579101a0b5e7bad8445751e17288600e90c0a32bcda28",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/cursor-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/cursor-current.json",
+      "http_status": 200,
+      "bytes": 12419,
+      "sha256": "2777d6b5059d26bbb65bca9ced0ddf7c443ff86b8716ac6521a45907b123cac6",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b277.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b277.json",
+      "http_status": 200,
+      "bytes": 5328,
+      "sha256": "97ff6c16bed1fedbe0bdee4e231dcdbf1cdcc2b39172fae6e88d4768799d6dae",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b278.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b278.json",
+      "http_status": 200,
+      "bytes": 3128,
+      "sha256": "a70acd0e87dcae9c776568c3005aa1bb5e2a6511b1ab283d71ef901affb243eb",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b279.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b279.json",
+      "http_status": 200,
+      "bytes": 3485,
+      "sha256": "6b4e2d86d5aff7c29c2d9c7ee70db4d310cf0d47ceeb562b63f9ec6cdaa8988a",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b280.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b280.json",
+      "http_status": 200,
+      "bytes": 1504,
+      "sha256": "1dcb2d0a51ac3ed7ccfba243e9457482baf9d728d97fe31794d0b97a8e02f0fe",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b281.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b281.json",
+      "http_status": 200,
+      "bytes": 3443,
+      "sha256": "1340a12c6b5ebaf93a65318505ef52466f867a1225114c901b87463a9b0a609f",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b282.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b282.json",
+      "http_status": 200,
+      "bytes": 3228,
+      "sha256": "2f699fda455502321c7256113fcd8a2b25c3c396fee4f710b56ba51b2c5f5ff5",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b283.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b283.json",
+      "http_status": 200,
+      "bytes": 4660,
+      "sha256": "7c8a46abaed4c6556e72c1400d7f47785f73120b7270ec132889d0423ce7d425",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b284.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b284.json",
+      "http_status": 200,
+      "bytes": 1503,
+      "sha256": "387f960db01ce7ca6e4a72fd6223689bbcf49afdc6e9f757ff96948b190839de",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-batches/qa-b285.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-batches/qa-b285.json",
+      "http_status": 200,
+      "bytes": 2223,
+      "sha256": "18434f9c441c9322ef68bfad5f7a8ca086d1c46d542211a98d1aec01aee4d2c9",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/qa-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/qa-current.json",
+      "http_status": 200,
+      "bytes": 3927,
+      "sha256": "fe82192e1660d58efe9096f0e440688fd43d6a41d7ae91fc75450a372bec3c14",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/segment-canon-use.jsonl",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/segment-canon-use.jsonl",
+      "http_status": 200,
+      "bytes": 2563801,
+      "sha256": "6ddcee3a0bbf83ed7cbceacf6c226ca6e04c741d5ebb2ee17b8240dedaa4804f",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/semantic-review-current.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/semantic-review-current.json",
+      "http_status": 200,
+      "bytes": 671274,
+      "sha256": "60a875328609467fd095f758d7a8d46637c64230e7c155d492bb8847fae9a89e",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/source-corrections.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/source-corrections.json",
+      "http_status": 200,
+      "bytes": 535674,
+      "sha256": "51a1789f618d40bca104aaa070faf0978e320a90ffa045d0ff2ecf21114f0dc4",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/term-decisions.jsonl",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/term-decisions.jsonl",
+      "http_status": 200,
+      "bytes": 198752,
+      "sha256": "0116f3b7c015228a1f3e92ada229d1592ab869e535124148ecc5a0cc136230cf",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/translation-decisions.jsonl",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/translation-decisions.jsonl",
+      "http_status": 200,
+      "bytes": 3365542,
+      "sha256": "cdf55b0be3382e8f4260bd43a8ab41fd510a531344e29705ff0391576b76b2ef",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/translation-decisions/DECISIONS.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/translation-decisions/DECISIONS.json",
+      "http_status": 200,
+      "bytes": 96084582,
+      "sha256": "77f3ca9d01c1a41f127090a6089b1f400d00e3f6e747b72fe7b342cf6c0c1bb4",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/translation-decisions/DECISION_OCCURRENCES.csv",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/translation-decisions/DECISION_OCCURRENCES.csv",
+      "http_status": 200,
+      "bytes": 24405720,
+      "sha256": "0204f601975f5c8e3237c23b0076f5fc977ff106b5aaa23cb4465b3d7935c2d7",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/translation-decisions/PRIORITY_REVIEW.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/translation-decisions/PRIORITY_REVIEW.md",
+      "http_status": 200,
+      "bytes": 4956724,
+      "sha256": "6b664b1c872e68a1cb5043abe03f7a7112e33862e5956381c25fb9a7e20d5931",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/translation-decisions/START_HERE.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/translation-decisions/START_HERE.md",
+      "http_status": 200,
+      "bytes": 915,
+      "sha256": "f4c9c036c7fc95e6daf66b53beaa042f17aeac67a39a6606c168b6e2b3bc0d8c",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/translation-decisions/TRANSLATION_DECISIONS_FULL.md",
+      "http_status": 200,
+      "bytes": 7590658,
+      "sha256": "5b36fb181ed1b4f69a6ea8b2c60f9d431b6358252473bd7e865905fbb60efb50",
+      "matches_local_commit": true
+    },
+    {
+      "path": "evidence/translation-decisions/TRANSLATION_DECISION_QA.json",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/evidence/translation-decisions/TRANSLATION_DECISION_QA.json",
+      "http_status": 200,
+      "bytes": 2946,
+      "sha256": "f16a596c1b4ea056303aae0ee6c39646882c0b92d821b7c469c9defe788ed38e",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/methods.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/methods.tex",
+      "http_status": 200,
+      "bytes": 1441,
+      "sha256": "3b4edf53460dbde459ea9ee1499ede34475f18401d97ab07ac37163ae4e6eac0",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/cant-do-it.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/cant-do-it.tex",
+      "http_status": 200,
+      "bytes": 8426,
+      "sha256": "41be27ed497c1b1d9a021b026db1f87564a35e97d8fb909e7529468d96311081",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/example-1.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/example-1.tex",
+      "http_status": 200,
+      "bytes": 15824,
+      "sha256": "2cf4c8f258ce297e428f06eb6a7cd86f839de6613c298603b00e191bbffb3f47",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/example-2.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/example-2.tex",
+      "http_status": 200,
+      "bytes": 9224,
+      "sha256": "7299ccc05c0ce4dc613201771d9a393d8c9814b39c37f27af787caf597909b12",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/inference-patterns.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/inference-patterns.tex",
+      "http_status": 200,
+      "bytes": 39865,
+      "sha256": "a9d5e362afafd63bb56f92fd096aa6bafa63fc8f046eb405e84721da955824ba",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/introduction.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/introduction.tex",
+      "http_status": 200,
+      "bytes": 10103,
+      "sha256": "0bd5f3cb31955780fe5cda848436d060f852a50f34e9ab8ec10330e1a668e46a",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/proof-by-contradiction.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/proof-by-contradiction.tex",
+      "http_status": 200,
+      "bytes": 20445,
+      "sha256": "cca40fb31c73ecde15650bfea87d8533c190b5252cc5673c3f3cd69933870724",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/proofs.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/proofs.tex",
+      "http_status": 200,
+      "bytes": 483,
+      "sha256": "bbf8a403b1a1271f58c1640cd656306fc8e4f550a37f696c46803b94b6fe5e23",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/reading-proofs.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/reading-proofs.tex",
+      "http_status": 200,
+      "bytes": 10813,
+      "sha256": "b48065d4202889fb2eaeefeed9dc29e276f8b82a8c7430a9080431f30a8604b0",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/resources.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/resources.tex",
+      "http_status": 200,
+      "bytes": 2539,
+      "sha256": "e1747beda77031db3e95734a5a846f6c8edee0b02fd064b53d172fe95cce0209",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/starting-proofs.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/starting-proofs.tex",
+      "http_status": 200,
+      "bytes": 3389,
+      "sha256": "faec3b3da2a200f51dc085ee17e797f000bbc16885987761df63181150f19d01",
+      "matches_local_commit": true
+    },
+    {
+      "path": "translation/content/methods/proofs/using-definitions.tex",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/OpenLogic-ta-Taml-IN/be4e9b7abb799b4b792a6fd3ab6725a054d6e017/translation/content/methods/proofs/using-definitions.tex",
+      "http_status": 200,
+      "bytes": 12775,
+      "sha256": "7cf40144392dfb9caf6d29bd4478fb5b979eccaf72e994ae29b59dca3baed7e3",
+      "matches_local_commit": true
+    }
+  ],
+  "all_new_and_changed_files_public_and_identical": true,
+  "reader": null,
+  "scope": {
+    "accepted_units": 609,
+    "aligned_segments": 1616,
+    "semantic_samples": 824,
+    "visually_verified_distinct_reader_units": 248
+  },
+  "repository_public": true,
+  "anonymous_repository_files_verified": 37,
+  "result": "pass"
+}
