@@ -1,6 +1,6 @@
 # Priority review
 
-Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 600/722 source units; reader pages mapped for 49 units.
+Edition: `openlogic-ta-Taml-IN`. Frozen source: `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. Coverage: 611/722 source units; reader pages mapped for 49 units.
 
 Every pending page is explicit. Exact TeX line and byte spans remain available in `DECISIONS.json` and `DECISION_OCCURRENCES.csv`.
 
@@ -5660,6 +5660,7 @@ Please double-check: **is “அப்போதும் அப்போது �
 - `TA-OCC-712fccb9996cd976` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:41`; Tamil `translation/content/set-theory/story/grundgesetze.tex:56`; PDF page pending.
 - `TA-OCC-93a00a7651dc82be` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:42`; Tamil `translation/content/set-theory/story/grundgesetze.tex:58`; PDF page pending.
 - `TA-OCC-d4a3fc54f08f292d` — OLP-0536 / `OLP-0536-S01`; source `content/set-theory/story/grundgesetze.tex:43`; Tamil `translation/content/set-theory/story/grundgesetze.tex:59`; PDF page pending.
+- `TA-OCC-c2a3131313868340` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:33`; Tamil `translation/content/history/biographies/alonzo-church.tex:35`; PDF page pending.
 
 ## TA-T010 — perfect number
 
@@ -6447,6 +6448,9 @@ Please double-check: **is “அடிகோள் / முறைசாராத
 - `TA-OCC-5b62ce18f740cc1d` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:9`; Tamil `translation/content/set-theory/cardinals/milestone.tex:10`; PDF page pending.
 - `TA-OCC-99616ad2b66b4a26` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:13`; Tamil `translation/content/set-theory/cardinals/milestone.tex:14`; PDF page pending.
 - `TA-OCC-9b4b343f18f952a9` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:133`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:155`; PDF page pending.
+- `TA-OCC-a32eb00925229717` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:34`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:37`; PDF page pending.
+- `TA-OCC-8c9760cb5238888f` — OLP-0625 / `OLP-0625-S06`; source `content/history/biographies/kurt-goedel.tex:61`; Tamil `translation/content/history/biographies/kurt-goedel.tex:83`; PDF page pending.
+- `TA-OCC-22076d5b3ef738cf` — OLP-0632 / `OLP-0632-S01`; source `content/history/biographies/ernst-zermelo.tex:21`; Tamil `translation/content/history/biographies/ernst-zermelo.tex:24`; PDF page pending.
 
 ## TA-T020 — tuple / recursive definition
 
@@ -7278,6 +7282,7 @@ Please double-check: **is “மெய்ப்பொருளியல் ச�
 - `TA-OCC-59523a747c794021` — OLP-0585 / `OLP-0585-S05`; source `content/set-theory/cardinals/hp.tex:70`; Tamil `translation/content/set-theory/cardinals/hp.tex:85`; PDF page pending.
 - `TA-OCC-7372c69858e9f108` — OLP-0585 / `OLP-0585-S05`; source `content/set-theory/cardinals/hp.tex:76`; Tamil `translation/content/set-theory/cardinals/hp.tex:89`; PDF page pending.
 - `TA-OCC-00a6a91698104e3a` — OLP-0585 / `OLP-0585-S05`; source `content/set-theory/cardinals/hp.tex:83`; Tamil `translation/content/set-theory/cardinals/hp.tex:97`; PDF page pending.
+- `TA-OCC-213db520601572f9` — OLP-0625 / `OLP-0625-S02`; source `content/history/biographies/kurt-goedel.tex:32`; Tamil `translation/content/history/biographies/kurt-goedel.tex:34`; PDF page pending.
 
 ## TA-T033 — set-theoretic reductionism
 
@@ -7386,6 +7391,8 @@ Please double-check: **is “முன்வரிசை / பகுதி வ�
 - `TA-OCC-d07d2bffceaec444` — OLP-0507 / `OLP-0507-S01`; source `content/intuitionistic-logic/soundness-completeness/canonical-model.tex:59`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/canonical-model.tex:64`; PDF page pending.
 - `TA-OCC-30f3dc26ce964910` — OLP-0509 / `OLP-0509-S01`; source `content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:44`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/completeness-thm.tex:48`; PDF page pending.
 - `TA-OCC-a61e7698248092ca` — OLP-0553 / `OLP-0553-S01`; source `content/set-theory/ordinals/basic.tex:1`; Tamil `translation/content/set-theory/ordinals/basic.tex:180`; PDF page pending.
+- `TA-OCC-aeb1f561e9485169` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:47`; Tamil `translation/content/history/biographies/emmy-noether.tex:51`; PDF page pending.
+- `TA-OCC-7d0c3a8dab3a70ab` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:50`; Tamil `translation/content/history/biographies/emmy-noether.tex:53`; PDF page pending.
 
 ## TA-T036 — tree / root / branch
 
@@ -7870,6 +7877,10 @@ Please double-check: **is “மீச்சிறு உறுப்பு / �
 - `TA-OCC-7d17967a1c38ae22` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:7`; PDF page pending.
 - `TA-OCC-44f0ab11a0d08ef8` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:15`; PDF page pending.
 - `TA-OCC-8dd4dc4ab71eddae` — OLP-0606 / `OLP-0606-S07`; source `content/methods/proofs/inference-patterns.tex:96`; Tamil `translation/content/methods/proofs/inference-patterns.tex:139`; PDF page pending.
+- `TA-OCC-03a620f0298ff476` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:42`; Tamil `translation/content/history/biographies/emmy-noether.tex:45`; PDF page pending.
+- `TA-OCC-9fa52b4deeb6dbc6` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:43`; Tamil `translation/content/history/biographies/emmy-noether.tex:47`; PDF page pending.
+- `TA-OCC-21e32d00d831c652` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:49`; Tamil `translation/content/history/biographies/emmy-noether.tex:53`; PDF page pending.
+- `TA-OCC-ae1c1866f435163c` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:51`; Tamil `translation/content/history/biographies/emmy-noether.tex:55`; PDF page pending.
 
 ## TA-T038 — successor / predecessor / initial segment
 
@@ -10842,6 +10853,13 @@ Please double-check: **is “வாய்பாடு / வருவித்த
 - `TA-OCC-cd309ad18069bd51` — OLP-0606 / `OLP-0606-S09`; source `content/methods/proofs/inference-patterns.tex:140`; Tamil `translation/content/methods/proofs/inference-patterns.tex:174`; PDF page pending.
 - `TA-OCC-5c8753dd3d22c809` — OLP-0606 / `OLP-0606-S13`; source `content/methods/proofs/inference-patterns.tex:255`; Tamil `translation/content/methods/proofs/inference-patterns.tex:327`; PDF page pending.
 - `TA-OCC-bce04ad3a4f9d7a5` — OLP-0617 / `OLP-0617-S01`; source `content/methods/induction/inductive-definitions.tex:17`; Tamil `translation/content/methods/induction/inductive-definitions.tex:21`; PDF page pending.
+- `TA-OCC-110d2ea8b71384c2` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:31`; Tamil `translation/content/history/biographies/alonzo-church.tex:37`; PDF page pending.
+- `TA-OCC-84b7d081d9bc47e9` — OLP-0624 / `OLP-0624-S01`; source `content/history/biographies/gerhard-gentzen.tex:17`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:17`; PDF page pending.
+- `TA-OCC-9319d7e1d159d8af` — OLP-0624 / `OLP-0624-S01`; source `content/history/biographies/gerhard-gentzen.tex:17`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:18`; PDF page pending.
+- `TA-OCC-e9c4c8a32e7f64a2` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:31`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:35`; PDF page pending.
+- `TA-OCC-3e9973a7f58fc07f` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:31`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:36`; PDF page pending.
+- `TA-OCC-3f3ae002f180b8ad` — OLP-0625 / `OLP-0625-S02`; source `content/history/biographies/kurt-goedel.tex:32`; Tamil `translation/content/history/biographies/kurt-goedel.tex:34`; PDF page pending.
+- `TA-OCC-8a3acbde5868ff38` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:41`; Tamil `translation/content/history/biographies/emmy-noether.tex:55`; PDF page pending.
 
 ## TA-T046 — function extensionality
 
@@ -11909,6 +11927,12 @@ Please double-check: **is “அளவில் பெரிதல்ல / அ�
 - `TA-OCC-48841d97040736d4` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:15`; PDF page pending.
 - `TA-OCC-71a253ae67ebea03` — OLP-0597 / `OLP-0597-S04`; source `content/set-theory/choice/countablechoice.tex:88`; Tamil `translation/content/set-theory/choice/countablechoice.tex:112`; PDF page pending.
 - `TA-OCC-e372ae8a98e8238e` — OLP-0603 / `OLP-0603-S04`; source `content/methods/proofs/introduction.tex:43`; Tamil `translation/content/methods/proofs/introduction.tex:61`; PDF page pending.
+- `TA-OCC-cc268e73599d8df4` — OLP-0622 / `OLP-0622-S01`; source `content/history/biographies/georg-cantor.tex:1`; Tamil `translation/content/history/biographies/georg-cantor.tex:12`; PDF page pending.
+- `TA-OCC-b15e58a446cc0d46` — OLP-0622 / `OLP-0622-S01`; source `content/history/biographies/georg-cantor.tex:1`; Tamil `translation/content/history/biographies/georg-cantor.tex:14`; PDF page pending.
+- `TA-OCC-1f83ee751b2bc4cb` — OLP-0622 / `OLP-0622-S01`; source `content/history/biographies/georg-cantor.tex:1`; Tamil `translation/content/history/biographies/georg-cantor.tex:16`; PDF page pending.
+- `TA-OCC-6531821b4452efcf` — OLP-0622 / `OLP-0622-S02`; source `content/history/biographies/georg-cantor.tex:21`; Tamil `translation/content/history/biographies/georg-cantor.tex:23`; PDF page pending.
+- `TA-OCC-4c0707c265cf2ad6` — OLP-0622 / `OLP-0622-S03`; source `content/history/biographies/georg-cantor.tex:28`; Tamil `translation/content/history/biographies/georg-cantor.tex:34`; PDF page pending.
+- `TA-OCC-cf70640376dd58a5` — OLP-0622 / `OLP-0622-S04`; source `content/history/biographies/georg-cantor.tex:39`; Tamil `translation/content/history/biographies/georg-cantor.tex:43`; PDF page pending.
 
 ## TA-T069 — Schroder-Bernstein theorem
 
@@ -12195,6 +12219,7 @@ Please double-check: **is “கோஷி தொடர் / எல்லை / �
 - `TA-OCC-76f645da4dfdbf6e` — OLP-0590 / `OLP-0590-S01`; source `content/set-theory/card-arithmetic/ch.tex:27`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:29`; PDF page pending.
 - `TA-OCC-f76d335c8f9235e8` — OLP-0590 / `OLP-0590-S03`; source `content/set-theory/card-arithmetic/ch.tex:83`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:113`; PDF page pending.
 - `TA-OCC-7e705f6a34e98d4d` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:157`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:180`; PDF page pending.
+- `TA-OCC-f2fd92954bbd8997` — OLP-0622 / `OLP-0622-S03`; source `content/history/biographies/georg-cantor.tex:28`; Tamil `translation/content/history/biographies/georg-cantor.tex:33`; PDF page pending.
 
 ## TA-T075 — Dedekind infinite / Hilbert hotel
 
@@ -13602,6 +13627,14 @@ Please double-check: **is “முன்கோள் / முடிவு / எ
 - `TA-OCC-abcfdda81549b8e7` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:1`; Tamil `translation/content/methods/induction/structural-induction.tex:14`; PDF page pending.
 - `TA-OCC-16eb536ddd73bf78` — OLP-0618 / `OLP-0618-S01`; source `content/methods/induction/structural-induction.tex:1`; Tamil `translation/content/methods/induction/structural-induction.tex:18`; PDF page pending.
 - `TA-OCC-bddbdd2e305290c6` — OLP-0618 / `OLP-0618-S03`; source `content/methods/induction/structural-induction.tex:31`; Tamil `translation/content/methods/induction/structural-induction.tex:46`; PDF page pending.
+- `TA-OCC-fa30a5c30398e25a` — OLP-0625 / `OLP-0625-S02`; source `content/history/biographies/kurt-goedel.tex:27`; Tamil `translation/content/history/biographies/kurt-goedel.tex:35`; PDF page pending.
+- `TA-OCC-180fb7bde0e9b674` — OLP-0625 / `OLP-0625-S02`; source `content/history/biographies/kurt-goedel.tex:27`; Tamil `translation/content/history/biographies/kurt-goedel.tex:39`; PDF page pending.
+- `TA-OCC-c9313922eee12155` — OLP-0627 / `OLP-0627-S02`; source `content/history/biographies/rozsa-peter.tex:20`; Tamil `translation/content/history/biographies/rozsa-peter.tex:34`; PDF page pending.
+- `TA-OCC-4d16e764b51d0c43` — OLP-0627 / `OLP-0627-S02`; source `content/history/biographies/rozsa-peter.tex:20`; Tamil `translation/content/history/biographies/rozsa-peter.tex:37`; PDF page pending.
+- `TA-OCC-a4d7604c9e3a0219` — OLP-0628 / `OLP-0628-S03`; source `content/history/biographies/julia-robinson.tex:40`; Tamil `translation/content/history/biographies/julia-robinson.tex:47`; PDF page pending.
+- `TA-OCC-bf929217fc00f58a` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:65`; Tamil `translation/content/history/biographies/julia-robinson.tex:61`; PDF page pending.
+- `TA-OCC-e645bf5799e770a9` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:65`; Tamil `translation/content/history/biographies/julia-robinson.tex:72`; PDF page pending.
+- `TA-OCC-71e1409add95dcc8` — OLP-0632 / `OLP-0632-S02`; source `content/history/biographies/ernst-zermelo.tex:24`; Tamil `translation/content/history/biographies/ernst-zermelo.tex:32`; PDF page pending.
 
 ## TA-T090 — axiom / axiom schema / axiomatic derivation
 
@@ -13947,6 +13980,8 @@ Please double-check: **is “அடிகோள் / அடிகோள் வ�
 - `TA-OCC-19447f0f06495153` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:9`; Tamil `translation/content/set-theory/cardinals/milestone.tex:10`; PDF page pending.
 - `TA-OCC-d283fc52358f646a` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:13`; Tamil `translation/content/set-theory/cardinals/milestone.tex:14`; PDF page pending.
 - `TA-OCC-e683a64d066e3be3` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:133`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:155`; PDF page pending.
+- `TA-OCC-4bea1cd064905d0d` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:34`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:37`; PDF page pending.
+- `TA-OCC-65b1a57858a591c4` — OLP-0632 / `OLP-0632-S01`; source `content/history/biographies/ernst-zermelo.tex:21`; Tamil `translation/content/history/biographies/ernst-zermelo.tex:24`; PDF page pending.
 
 ## TA-T091 — sequent / sequent calculus / initial sequent
 
@@ -14182,6 +14217,8 @@ Please double-check: **is “தொடரணி / தொடரணிக் க�
 - `TA-OCC-fb0b081f0622f219` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:262`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:285`; PDF page pending.
 - `TA-OCC-0681845fc30c9c43` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:278`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:301`; PDF page pending.
 - `TA-OCC-d5e066f951a502a3` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:294`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:361`; PDF page pending.
+- `TA-OCC-10105099f0d7ad12` — OLP-0624 / `OLP-0624-S01`; source `content/history/biographies/gerhard-gentzen.tex:17`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:18`; PDF page pending.
+- `TA-OCC-54e24d1a6c088ba6` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:30`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:35`; PDF page pending.
 
 ## TA-T092 — natural deduction / introduction rule / elimination rule
 
@@ -14224,6 +14261,8 @@ Please double-check: **is “இயல்பான வருவித்தல�
 - `TA-OCC-37f6b45081bb6a78` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:13`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:14`; PDF page pending.
 - `TA-OCC-a4d0f9f8995d4715` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:19`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:20`; PDF page pending.
 - `TA-OCC-5ac02692d6d91c83` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:237`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:243`; PDF page pending.
+- `TA-OCC-2bfa6b11d3a4c054` — OLP-0624 / `OLP-0624-S01`; source `content/history/biographies/gerhard-gentzen.tex:16`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:17`; PDF page pending.
+- `TA-OCC-936d0a9f7ae8b712` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:31`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:35`; PDF page pending.
 
 ## TA-T093 — tableau / truth tree / signed formula / closed branch / open branch
 
@@ -15538,6 +15577,8 @@ Please double-check: **is “சரித்தன்மை / நிறைவு
 - `TA-OCC-6ac621a972275872` — OLP-0587 / `OLP-0587-S05`; source `content/set-theory/card-arithmetic/opps.tex:125`; Tamil `translation/content/set-theory/card-arithmetic/opps.tex:174`; PDF page pending.
 - `TA-OCC-329ff6ba6b355225` — OLP-0603 / `OLP-0603-S04`; source `content/methods/proofs/introduction.tex:51`; Tamil `translation/content/methods/proofs/introduction.tex:64`; PDF page pending.
 - `TA-OCC-7a5b9cc84653da53` — OLP-0606 / `OLP-0606-S13`; source `content/methods/proofs/inference-patterns.tex:244`; Tamil `translation/content/methods/proofs/inference-patterns.tex:327`; PDF page pending.
+- `TA-OCC-a70234368c813bfd` — OLP-0625 / `OLP-0625-S02`; source `content/history/biographies/kurt-goedel.tex:32`; Tamil `translation/content/history/biographies/kurt-goedel.tex:34`; PDF page pending.
+- `TA-OCC-af6d2cdfea459898` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:40`; Tamil `translation/content/history/biographies/emmy-noether.tex:55`; PDF page pending.
 
 ## TA-T095 — consistency / inconsistency
 
@@ -15623,6 +15664,7 @@ Please double-check: **is “முரணின்மை / முரணுடை
 - `TA-OCC-23d8e2f55fb789ae` — OLP-0506 / `OLP-0506-S01`; source `content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:17`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/lindenbaum.tex:18`; PDF page pending.
 - `TA-OCC-f48ebbb38d9677ea` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:75`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:99`; PDF page pending.
 - `TA-OCC-ac3f07a7890d9feb` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:75`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:106`; PDF page pending.
+- `TA-OCC-cea5c5f998a969de` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:34`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:37`; PDF page pending.
 
 ## TA-T096 — quantifier
 
@@ -15796,6 +15838,7 @@ Please double-check: **is “முன்தொடர் / பின்தொட
 - `TA-OCC-c1f6b424197233fc` — OLP-0609 / `OLP-0609-S06`; source `content/methods/proofs/proof-by-contradiction.tex:178`; Tamil `translation/content/methods/proofs/proof-by-contradiction.tex:243`; PDF page pending.
 - `TA-OCC-132c88f048a92d66` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:207`; PDF page pending.
 - `TA-OCC-9b79edce81bc1c1e` — OLP-0619 / `OLP-0619-S08`; source `content/methods/induction/relations.tex:95`; Tamil `translation/content/methods/induction/relations.tex:169`; PDF page pending.
+- `TA-OCC-9496246a2875ddf2` — OLP-0628 / `OLP-0628-S03`; source `content/history/biographies/julia-robinson.tex:40`; Tamil `translation/content/history/biographies/julia-robinson.tex:51`; PDF page pending.
 
 ## TA-T098 — logical rule / structural rule / weakening / contraction / exchange / cut
 
@@ -16787,6 +16830,9 @@ Please double-check: **is “மாறி / மாறிலிக் குற�
 - `TA-OCC-2ad01394c9232164` — OLP-0607 / `OLP-0607-S06`; source `content/methods/proofs/example-1.tex:133`; Tamil `translation/content/methods/proofs/example-1.tex:175`; PDF page pending.
 - `TA-OCC-9d2a68d8667343bc` — OLP-0608 / `OLP-0608-S02`; source `content/methods/proofs/example-2.tex:23`; Tamil `translation/content/methods/proofs/example-2.tex:26`; PDF page pending.
 - `TA-OCC-7c88613237f56a10` — OLP-0610 / `OLP-0610-S03`; source `content/methods/proofs/reading-proofs.tex:38`; Tamil `translation/content/methods/proofs/reading-proofs.tex:46`; PDF page pending.
+- `TA-OCC-048d1ce206ee3f60` — OLP-0627 / `OLP-0627-S02`; source `content/history/biographies/rozsa-peter.tex:20`; Tamil `translation/content/history/biographies/rozsa-peter.tex:28`; PDF page pending.
+- `TA-OCC-baa9259717cdeb66` — OLP-0628 / `OLP-0628-S02`; source `content/history/biographies/julia-robinson.tex:25`; Tamil `translation/content/history/biographies/julia-robinson.tex:32`; PDF page pending.
+- `TA-OCC-e004a6a96406533b` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:50`; Tamil `translation/content/history/biographies/julia-robinson.tex:65`; PDF page pending.
 
 ## TA-T101 — proof-theoretic notion / theorem / provability / nonderivability / compactness
 
@@ -17044,6 +17090,10 @@ Please double-check: **is “நிறுவல்-கோட்பாட்ட�
 - `TA-OCC-be871b3a3564ffcb` — OLP-0603 / `OLP-0603-S04`; source `content/methods/proofs/introduction.tex:50`; Tamil `translation/content/methods/proofs/introduction.tex:64`; PDF page pending.
 - `TA-OCC-a1839cc974ec21c8` — OLP-0606 / `OLP-0606-S07`; source `content/methods/proofs/inference-patterns.tex:98`; Tamil `translation/content/methods/proofs/inference-patterns.tex:126`; PDF page pending.
 - `TA-OCC-e25964115190995d` — OLP-0606 / `OLP-0606-S07`; source `content/methods/proofs/inference-patterns.tex:102`; Tamil `translation/content/methods/proofs/inference-patterns.tex:132`; PDF page pending.
+- `TA-OCC-3d018eeac5c971ee` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:35`; Tamil `translation/content/history/biographies/alonzo-church.tex:36`; PDF page pending.
+- `TA-OCC-62a6b8e245446375` — OLP-0626 / `OLP-0626-S02`; source `content/history/biographies/emmy-noether.tex:34`; Tamil `translation/content/history/biographies/emmy-noether.tex:36`; PDF page pending.
+- `TA-OCC-0f1e96c7aa74af0c` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:67`; Tamil `translation/content/history/biographies/julia-robinson.tex:73`; PDF page pending.
+- `TA-OCC-6e42f0dd6cacef95` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:67`; Tamil `translation/content/history/biographies/julia-robinson.tex:74`; PDF page pending.
 
 ## TA-T102 — valid sequent / satisfaction of a sequent / induction hypothesis
 
@@ -17835,6 +17885,7 @@ Please double-check: **is “பொருட்களம் / பயனிலை
 - `TA-OCC-5bc9e62f2d87884f` — OLP-0590 / `OLP-0590-S04`; source `content/set-theory/card-arithmetic/ch.tex:111`; Tamil `translation/content/set-theory/card-arithmetic/ch.tex:153`; PDF page pending.
 - `TA-OCC-8d8764ffc1b609d1` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:81`; PDF page pending.
 - `TA-OCC-d4a4b4b65a6250c1` — OLP-0615 / `OLP-0615-S05`; source `content/methods/induction/induction-on-N.tex:78`; Tamil `translation/content/methods/induction/induction-on-N.tex:120`; PDF page pending.
+- `TA-OCC-2050b25b09a78d15` — OLP-0623 / `OLP-0623-S04`; source `content/history/biographies/alonzo-church.tex:42`; Tamil `translation/content/history/biographies/alonzo-church.tex:52`; PDF page pending.
 
 ## TA-T112 — first-order logic / quantificational logic / predicate logic / metalogical investigation
 
@@ -18410,6 +18461,10 @@ Please double-check: **is “கணிப்புத்தன்மை / கண
 - `TA-OCC-2d70072a80032446` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:13`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:16`; PDF page pending.
 - `TA-OCC-31841fdd4638ce69` — OLP-0457 / `OLP-0457-S01`; source `content/normal-modal-logic/filtrations/S5-decidable.tex:14`; Tamil `translation/content/normal-modal-logic/filtrations/S5-decidable.tex:19`; PDF page pending.
 - `TA-OCC-99eebe6aa1bcc4c9` — OLP-0510 / `OLP-0510-S01`; source `content/intuitionistic-logic/soundness-completeness/decidability.tex:1`; Tamil `translation/content/intuitionistic-logic/soundness-completeness/decidability.tex:12`; PDF page pending.
+- `TA-OCC-1aa0e6b77de27dda` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:31`; Tamil `translation/content/history/biographies/alonzo-church.tex:35`; PDF page pending.
+- `TA-OCC-6e7e38c45d60c241` — OLP-0628 / `OLP-0628-S03`; source `content/history/biographies/julia-robinson.tex:43`; Tamil `translation/content/history/biographies/julia-robinson.tex:49`; PDF page pending.
+- `TA-OCC-20d78442d8fd560b` — OLP-0628 / `OLP-0628-S03`; source `content/history/biographies/julia-robinson.tex:46`; Tamil `translation/content/history/biographies/julia-robinson.tex:52`; PDF page pending.
+- `TA-OCC-0193075cb63b3796` — OLP-0631 / `OLP-0631-S02`; source `content/history/biographies/alan-turing.tex:26`; Tamil `translation/content/history/biographies/alan-turing.tex:26`; PDF page pending.
 
 ## TA-T114 — recursive definition / primitive recursion / partial recursive function / general recursive function
 
@@ -18899,6 +18954,14 @@ Please double-check: **is “மீள்வரையறை / முதன்ம
 - `TA-OCC-a4b7258807afd160` — OLP-0591 / `OLP-0591-S06`; source `content/set-theory/card-arithmetic/fix.tex:153`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:176`; PDF page pending.
 - `TA-OCC-3cc65e2f246e374c` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:66`; PDF page pending.
 - `TA-OCC-b38566ac8540f250` — OLP-0596 / `OLP-0596-S03`; source `content/set-theory/choice/wellorderingproblem.tex:48`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:76`; PDF page pending.
+- `TA-OCC-9f8de29d7d7c6b94` — OLP-0627 / `OLP-0627-S01`; source `content/history/biographies/rozsa-peter.tex:1`; Tamil `translation/content/history/biographies/rozsa-peter.tex:17`; PDF page pending.
+- `TA-OCC-44363936e594c28f` — OLP-0627 / `OLP-0627-S01`; source `content/history/biographies/rozsa-peter.tex:1`; Tamil `translation/content/history/biographies/rozsa-peter.tex:18`; PDF page pending.
+- `TA-OCC-1ae013449ba02bdd` — OLP-0627 / `OLP-0627-S02`; source `content/history/biographies/rozsa-peter.tex:20`; Tamil `translation/content/history/biographies/rozsa-peter.tex:39`; PDF page pending.
+- `TA-OCC-d617b439dcc1d113` — OLP-0627 / `OLP-0627-S03`; source `content/history/biographies/rozsa-peter.tex:41`; Tamil `translation/content/history/biographies/rozsa-peter.tex:44`; PDF page pending.
+- `TA-OCC-abee105fe3533cd9` — OLP-0627 / `OLP-0627-S03`; source `content/history/biographies/rozsa-peter.tex:41`; Tamil `translation/content/history/biographies/rozsa-peter.tex:46`; PDF page pending.
+- `TA-OCC-c9805ef42a17c1fd` — OLP-0627 / `OLP-0627-S03`; source `content/history/biographies/rozsa-peter.tex:41`; Tamil `translation/content/history/biographies/rozsa-peter.tex:47`; PDF page pending.
+- `TA-OCC-013db052c22217d4` — OLP-0627 / `OLP-0627-S03`; source `content/history/biographies/rozsa-peter.tex:41`; Tamil `translation/content/history/biographies/rozsa-peter.tex:48`; PDF page pending.
+- `TA-OCC-c69824f528e01f86` — OLP-0627 / `OLP-0627-S03`; source `content/history/biographies/rozsa-peter.tex:41`; Tamil `translation/content/history/biographies/rozsa-peter.tex:52`; PDF page pending.
 
 ## TA-T115 — characteristic function / bounded quantification / bounded minimization / projection function
 
@@ -19675,6 +19738,11 @@ Please double-check: **is “டியூரிங் பொறி / நாட�
 - `TA-OCC-df836897a2648c99` — OLP-0278 / `OLP-0278-S01`; source `content/incompleteness/introduction/overview.tex:1`; Tamil `translation/content/incompleteness/introduction/overview.tex:76`; PDF page pending.
 - `TA-OCC-512a0afc0ecc1cc1` — OLP-0281 / `OLP-0281-S01`; source `content/incompleteness/arithmetization-syntax/introduction.tex:88`; Tamil `translation/content/incompleteness/arithmetization-syntax/introduction.tex:88`; PDF page pending.
 - `TA-OCC-4ff300c24cf5569f` — OLP-0281 / `OLP-0281-S01`; source `content/incompleteness/arithmetization-syntax/introduction.tex:89`; Tamil `translation/content/incompleteness/arithmetization-syntax/introduction.tex:90`; PDF page pending.
+- `TA-OCC-57f3c30eaba1f8e2` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:30`; Tamil `translation/content/history/biographies/alonzo-church.tex:31`; PDF page pending.
+- `TA-OCC-fc4df465e0d885e3` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:34`; Tamil `translation/content/history/biographies/alonzo-church.tex:35`; PDF page pending.
+- `TA-OCC-c16b37096c99f6f7` — OLP-0631 / `OLP-0631-S02`; source `content/history/biographies/alan-turing.tex:25`; Tamil `translation/content/history/biographies/alan-turing.tex:28`; PDF page pending.
+- `TA-OCC-a77997f3816d6c51` — OLP-0631 / `OLP-0631-S05`; source `content/history/biographies/alan-turing.tex:73`; Tamil `translation/content/history/biographies/alan-turing.tex:84`; PDF page pending.
+- `TA-OCC-49278636ac219af3` — OLP-0631 / `OLP-0631-S05`; source `content/history/biographies/alan-turing.tex:73`; Tamil `translation/content/history/biographies/alan-turing.tex:86`; PDF page pending.
 
 ## TA-T123 — unary representation / binary representation / disciplined machine / halting state
 
@@ -19884,6 +19952,7 @@ Please double-check: **is “நிற்றல் சார்பு / நி�
 - `TA-OCC-a5e2bf0789a35f2e` — OLP-0272 / `OLP-0272-S01`; source `content/turing-machines/undecidability/unsolvability-decision-problem.tex:14`; Tamil `translation/content/turing-machines/undecidability/unsolvability-decision-problem.tex:16`; PDF page pending.
 - `TA-OCC-48ed608df9e1b8f1` — OLP-0273 / `OLP-0273-S01`; source `content/turing-machines/undecidability/trakhtenbrot.tex:17`; Tamil `translation/content/turing-machines/undecidability/trakhtenbrot.tex:20`; PDF page pending.
 - `TA-OCC-ab583a036417892d` — OLP-0273 / `OLP-0273-S01`; source `content/turing-machines/undecidability/trakhtenbrot.tex:236`; Tamil `translation/content/turing-machines/undecidability/trakhtenbrot.tex:261`; PDF page pending.
+- `TA-OCC-64e043ca0f480176` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:36`; Tamil `translation/content/history/biographies/alonzo-church.tex:38`; PDF page pending.
 
 ## TA-T128 — finite satisfiability / finite validity / Trakhtenbrot's theorem
 
@@ -20100,6 +20169,16 @@ Please double-check: **is “முறைப்படுத்தல் / கோ
 - `TA-OCC-623199ed3cc02505` — OLP-0568 / `OLP-0568-S01`; source `content/set-theory/replacement/extrinsic.tex:39`; Tamil `translation/content/set-theory/replacement/extrinsic.tex:59`; PDF page pending.
 - `TA-OCC-b0a6cc332c601a3d` — OLP-0582 / `OLP-0582-S01`; source `content/set-theory/cardinals/cardsasords.tex:8`; Tamil `translation/content/set-theory/cardinals/cardsasords.tex:9`; PDF page pending.
 - `TA-OCC-517b091bc1838cca` — OLP-0583 / `OLP-0583-S01`; source `content/set-theory/cardinals/milestone.tex:13`; Tamil `translation/content/set-theory/cardinals/milestone.tex:14`; PDF page pending.
+- `TA-OCC-1a09e44f1baad52e` — OLP-0622 / `OLP-0622-S02`; source `content/history/biographies/georg-cantor.tex:22`; Tamil `translation/content/history/biographies/georg-cantor.tex:27`; PDF page pending.
+- `TA-OCC-5be1a170a31427e5` — OLP-0622 / `OLP-0622-S02`; source `content/history/biographies/georg-cantor.tex:23`; Tamil `translation/content/history/biographies/georg-cantor.tex:27`; PDF page pending.
+- `TA-OCC-b97189659e6c68a9` — OLP-0622 / `OLP-0622-S05`; source `content/history/biographies/georg-cantor.tex:41`; Tamil `translation/content/history/biographies/georg-cantor.tex:51`; PDF page pending.
+- `TA-OCC-50bb90558627aab6` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:40`; Tamil `translation/content/history/biographies/emmy-noether.tex:59`; PDF page pending.
+- `TA-OCC-7216898f472d4bf8` — OLP-0627 / `OLP-0627-S01`; source `content/history/biographies/rozsa-peter.tex:18`; Tamil `translation/content/history/biographies/rozsa-peter.tex:18`; PDF page pending.
+- `TA-OCC-6796e16843525cd4` — OLP-0627 / `OLP-0627-S02`; source `content/history/biographies/rozsa-peter.tex:31`; Tamil `translation/content/history/biographies/rozsa-peter.tex:39`; PDF page pending.
+- `TA-OCC-2356f4b6e70ec766` — OLP-0628 / `OLP-0628-S03`; source `content/history/biographies/julia-robinson.tex:43`; Tamil `translation/content/history/biographies/julia-robinson.tex:49`; PDF page pending.
+- `TA-OCC-a2537a77f9fc2e5e` — OLP-0628 / `OLP-0628-S03`; source `content/history/biographies/julia-robinson.tex:45`; Tamil `translation/content/history/biographies/julia-robinson.tex:50`; PDF page pending.
+- `TA-OCC-2f4febc19ba46fce` — OLP-0628 / `OLP-0628-S03`; source `content/history/biographies/julia-robinson.tex:46`; Tamil `translation/content/history/biographies/julia-robinson.tex:51`; PDF page pending.
+- `TA-OCC-23ad8a97bad9ebb4` — OLP-0629 / `OLP-0629-S05`; source `content/history/biographies/bertrand-russell.tex:63`; Tamil `translation/content/history/biographies/bertrand-russell.tex:70`; PDF page pending.
 
 ## TA-T130 — axiomatized / axiomatizable / induction schema / Robinson Q / Peano arithmetic
 
@@ -21036,6 +21115,8 @@ Please double-check: **is “லாம்டா கலனம் / லாம்�
 - `TA-OCC-59ef27e5d073da53` — OLP-0359 / `OLP-0359-S01`; source `content/lambda-calculus/syntax/abbreviated-syntax.tex:19`; Tamil `translation/content/lambda-calculus/syntax/abbreviated-syntax.tex:20`; PDF page pending.
 - `TA-OCC-32a3d58d20d2b437` — OLP-0360 / `OLP-0360-S01`; source `content/lambda-calculus/syntax/free-variables.tex:12`; Tamil `translation/content/lambda-calculus/syntax/free-variables.tex:13`; PDF page pending.
 - `TA-OCC-18b534f4e9332feb` — OLP-0374 / `OLP-0374-S01`; source `content/lambda-calculus/lambda-definability/introduction.tex:12`; Tamil `translation/content/lambda-calculus/lambda-definability/introduction.tex:13`; PDF page pending.
+- `TA-OCC-ad4ecd2580fc1849` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:29`; Tamil `translation/content/history/biographies/alonzo-church.tex:36`; PDF page pending.
+- `TA-OCC-41c6c6361e839632` — OLP-0623 / `OLP-0623-S04`; source `content/history/biographies/alonzo-church.tex:44`; Tamil `translation/content/history/biographies/alonzo-church.tex:48`; PDF page pending.
 
 ## TA-T153 — lambda term / alpha-equivalent / bound and free variable / capture-avoiding substitution
 
@@ -21997,6 +22078,7 @@ Please double-check: **is “ஒரேநேரப் பதிலீடு / �
 - `TA-OCC-447b3d227058a43a` — OLP-0617 / `OLP-0617-S06`; source `content/methods/induction/inductive-definitions.tex:83`; Tamil `translation/content/methods/induction/inductive-definitions.tex:115`; PDF page pending.
 - `TA-OCC-dc6d474f220d455e` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:168`; PDF page pending.
 - `TA-OCC-f9a467c10c5b58d1` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:113`; Tamil `translation/content/methods/induction/inductive-definitions.tex:203`; PDF page pending.
+- `TA-OCC-420804976b22d386` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:44`; Tamil `translation/content/history/biographies/emmy-noether.tex:52`; PDF page pending.
 
 ## TA-T169 — relational model / relational semantics / truth at a world / truth in a model / accessible from / vacuously true / modal duality
 
@@ -23112,6 +23194,8 @@ Please double-check: **is “கோள மாதிரி / கோளங்க�
 - `TA-OCC-e38694fe443c9a7a` — OLP-0591 / `OLP-0591-S05`; source `content/set-theory/card-arithmetic/fix.tex:135`; Tamil `translation/content/set-theory/card-arithmetic/fix.tex:155`; PDF page pending.
 - `TA-OCC-2b2be069a18fc84d` — OLP-0596 / `OLP-0596-S01`; source `content/set-theory/choice/wellorderingproblem.tex:1`; Tamil `translation/content/set-theory/choice/wellorderingproblem.tex:12`; PDF page pending.
 - `TA-OCC-11a9c7054ebb3ad9` — OLP-0600 / `OLP-0600-S01`; source `content/set-theory/choice/vitali.tex:1`; Tamil `translation/content/set-theory/choice/vitali.tex:12`; PDF page pending.
+- `TA-OCC-82e0549dcd9d76e9` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:50`; Tamil `translation/content/history/biographies/julia-robinson.tex:65`; PDF page pending.
+- `TA-OCC-72d652cf755e82f0` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:50`; Tamil `translation/content/history/biographies/julia-robinson.tex:66`; PDF page pending.
 
 ## TA-T199 — truth-functional / vacuously true / non-vacuously true / monotonic conditional / transitive conditional
 
@@ -25444,6 +25528,13 @@ Please double-check: **is “நிறுவல் / வருவித்தல
 - `TA-OCC-56b3b23d4a658ffa` — OLP-0617 / `OLP-0617-S09`; source `content/methods/induction/inductive-definitions.tex:101`; Tamil `translation/content/methods/induction/inductive-definitions.tex:161`; PDF page pending.
 - `TA-OCC-bac21298ba4d86bc` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:124`; Tamil `translation/content/methods/induction/inductive-definitions.tex:186`; PDF page pending.
 - `TA-OCC-cf2e54d9256785e5` — OLP-0617 / `OLP-0617-S10`; source `content/methods/induction/inductive-definitions.tex:136`; Tamil `translation/content/methods/induction/inductive-definitions.tex:207`; PDF page pending.
+- `TA-OCC-d0a0d1beefd85407` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:35`; Tamil `translation/content/history/biographies/alonzo-church.tex:36`; PDF page pending.
+- `TA-OCC-ad59880ab00e7aad` — OLP-0624 / `OLP-0624-S01`; source `content/history/biographies/gerhard-gentzen.tex:15`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:16`; PDF page pending.
+- `TA-OCC-0e2647c318d69630` — OLP-0626 / `OLP-0626-S02`; source `content/history/biographies/emmy-noether.tex:34`; Tamil `translation/content/history/biographies/emmy-noether.tex:36`; PDF page pending.
+- `TA-OCC-bb5ba5a094ab13da` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:41`; Tamil `translation/content/history/biographies/emmy-noether.tex:45`; PDF page pending.
+- `TA-OCC-bfe893cd035a168b` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:54`; Tamil `translation/content/history/biographies/emmy-noether.tex:59`; PDF page pending.
+- `TA-OCC-528d322eb2fd29b1` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:65`; Tamil `translation/content/history/biographies/julia-robinson.tex:73`; PDF page pending.
+- `TA-OCC-9d3d53965c1abe13` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:67`; Tamil `translation/content/history/biographies/julia-robinson.tex:74`; PDF page pending.
 
 ## TA-T240 — definition / definiendum / definiens / unpacking definitions
 
@@ -26083,6 +26174,7 @@ Please double-check: **is “வரையறை / வரையறுக்கப
 - `TA-OCC-ec6ab8ed82aad1a5` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:139`; Tamil `translation/content/methods/induction/relations.tex:212`; PDF page pending.
 - `TA-OCC-ed2b896efca32f69` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:167`; Tamil `translation/content/methods/induction/relations.tex:245`; PDF page pending.
 - `TA-OCC-513d2c8b74e066c4` — OLP-0619 / `OLP-0619-S12`; source `content/methods/induction/relations.tex:171`; Tamil `translation/content/methods/induction/relations.tex:251`; PDF page pending.
+- `TA-OCC-b32de6e54ec0a48f` — OLP-0623 / `OLP-0623-S02`; source `content/history/biographies/alonzo-church.tex:30`; Tamil `translation/content/history/biographies/alonzo-church.tex:33`; PDF page pending.
 
 ## TA-T241 — inference pattern / conditional proof / proof by cases / universal claim / existence claim
 
@@ -26307,6 +26399,113 @@ Please double-check: **is “துணைச்சொல் / அடைப்ப
 - `TA-OCC-2232d18a2e335af1` — OLP-0619 / `OLP-0619-S06`; source `content/methods/induction/relations.tex:64`; Tamil `translation/content/methods/induction/relations.tex:105`; PDF page pending.
 - `TA-OCC-7b20c57132999c92` — OLP-0619 / `OLP-0619-S07`; source `content/methods/induction/relations.tex:85`; Tamil `translation/content/methods/induction/relations.tex:131`; PDF page pending.
 - `TA-OCC-0ec6f3e17237be39` — OLP-0619 / `OLP-0619-S11`; source `content/methods/induction/relations.tex:138`; Tamil `translation/content/methods/induction/relations.tex:220`; PDF page pending.
+
+## TA-T249 — Noetherian ring / ascending chain condition / descending chain condition / Noetherian induction
+
+Chosen rendering: **நேதரியன் வளையம் / ஏறுவரிசைச் சங்கிலி நிபந்தனை / இறங்குவரிசைச் சங்கிலி நிபந்தனை / நேதரியன் தொகுத்தறிதல்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The inspected pages support set, mathematical-induction and proof components, but do not attest the specialist Noetherian compounds. The biography explicitly defines the ascending condition by absence of an infinite strictly increasing chain of ideals and the dual descending condition by absence of an infinite strictly decreasing sequence. It then links the latter to induction over a well-founded order. The displayed ideal chain, strict direction and natural-number comparison determine the senses; proper names are transliterated consistently.
+
+Authority basis: TA-SC11-P2 (checked_context_only); TA-SC11-P358-GLOSSARY (checked_supports); TA-IL1967-P264-265-PROOF (checked_supports); TA-T249-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “நேதரியன் வளையம் / ஏறுவரிசைச் சங்கிலி நிபந்தனை / இறங்குவரிசைச் சங்கிலி நிபந்தனை / நேதரியன் தொகுத்தறிதல்” the established India-standard Tamil expression for “Noetherian ring / ascending chain condition / descending chain condition / Noetherian induction” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-77cc5902c373717d` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:42`; Tamil `translation/content/history/biographies/emmy-noether.tex:45`; PDF page pending.
+- `TA-OCC-7fd3d55c6b1f5bf6` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:44`; Tamil `translation/content/history/biographies/emmy-noether.tex:53`; PDF page pending.
+- `TA-OCC-1463439c0b2f3e63` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:49`; Tamil `translation/content/history/biographies/emmy-noether.tex:55`; PDF page pending.
+- `TA-OCC-347617b0f07e5226` — OLP-0626 / `OLP-0626-S03`; source `content/history/biographies/emmy-noether.tex:51`; Tamil `translation/content/history/biographies/emmy-noether.tex:59`; PDF page pending.
+
+## TA-T250 — Academic Doctor of Mathematics
+
+Chosen rendering: **கணிதத்திற்கான Academic Doctor தகுதி**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The title is retained partly in English because the consulted Tamil mathematics page does not attest an equivalent qualification, and translating it as an ordinary education doctorate would misidentify the source distinction. The Rózsa Péter biography separately states her 1935 PhD and later first-woman Academic Doctor status; the two are not conflated. Exact degree nomenclature is open to historical expert review.
+
+Authority basis: TA-SC12V2-P251-LOGIC (checked_supports); TA-T250-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கணிதத்திற்கான Academic Doctor தகுதி” the established India-standard Tamil expression for “Academic Doctor of Mathematics” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-72490d96a2f65f67` — OLP-0627 / `OLP-0627-S04`; source `content/history/biographies/rozsa-peter.tex:60`; Tamil `translation/content/history/biographies/rozsa-peter.tex:66`; PDF page pending.
+
+## TA-T251 — Diophantine problem / exponential Diophantine problem / Hilbert's tenth problem
+
+Chosen rendering: **டியோஃபான்டைன் சிக்கல் / அடுக்குசார் டியோஃபான்டைன் சிக்கல் / ஹில்பர்ட்டின் பத்தாவது சிக்கல்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: The consulted school pages support mathematical problem and function register but not the full Diophantine specialist headwords. The Julia Robinson biography defines the decision question by an integer-coefficient polynomial equation with integer solutions and explicitly says exponential variants allow unknowns in exponents. It keeps the J.R. conjecture implication distinct from Matijasevich's later proof and the combined MRDP theorem.
+
+Authority basis: TA-SC11-P27-FUNCTION (checked_context_only); TA-SC12V2-P251-LOGIC (checked_supports); TA-T251-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “டியோஃபான்டைன் சிக்கல் / அடுக்குசார் டியோஃபான்டைன் சிக்கல் / ஹில்பர்ட்டின் பத்தாவது சிக்கல்” the established India-standard Tamil expression for “Diophantine problem / exponential Diophantine problem / Hilbert's tenth problem” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-8e629b00fa3ded81` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:51`; Tamil `translation/content/history/biographies/julia-robinson.tex:63`; PDF page pending.
+- `TA-OCC-73d9e0b5d0a1153c` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:56`; Tamil `translation/content/history/biographies/julia-robinson.tex:66`; PDF page pending.
+- `TA-OCC-e78cd6a5ba659087` — OLP-0628 / `OLP-0628-S04`; source `content/history/biographies/julia-robinson.tex:59`; Tamil `translation/content/history/biographies/julia-robinson.tex:68`; PDF page pending.
+
+## TA-T252 — structural proof theory / natural deduction / sequent calculus
+
+Chosen rendering: **கட்டமைப்புசார் நிறுவல் கோட்பாடு / இயல்பான வருவித்தல் / தொடரணிக் கணியம்**
+
+Kind: `terminology`; confidence: `low`; provisional: `true`; priority: `high`.
+
+Intended sense and rationale: Natural deduction and sequent calculus continue the earlier edition decisions TA-T092 and TA-T091, whose complete compounds were provisional. The present directly reread proof and logic pages support component register but not the complete structural-proof-theory label. Gentzen's biography gives the historical creator and two named derivation systems, so the specialist umbrella phrase remains provisional rather than falsely canon-attested.
+
+Authority basis: TA-IL1967-P264-265-PROOF (checked_supports); TA-SC12V2-P251-LOGIC (checked_supports); TA-T252-EXACT-TERM-NOT-FOUND (not_found)
+
+Alternatives: None recorded.
+
+Please double-check: **is “கட்டமைப்புசார் நிறுவல் கோட்பாடு / இயல்பான வருவித்தல் / தொடரணிக் கணியம்” the established India-standard Tamil expression for “structural proof theory / natural deduction / sequent calculus” in the exact senses at the listed segments; if not, what replacement preserves the distinctions in the rationale?**
+
+- `TA-OCC-5fa0ab9fe8d76ba3` — OLP-0064 / `OLP-0064-S03`; source `content/first-order-logic/proof-systems/introduction.tex:38`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:44`; PDF page 4.
+- `TA-OCC-66ec4b09b80df637` — OLP-0064 / `OLP-0064-S03`; source `content/first-order-logic/proof-systems/introduction.tex:38`; Tamil `translation/content/first-order-logic/proof-systems/introduction.tex:45`; PDF page 4.
+- `TA-OCC-a4a4568aafb6eac3` — OLP-0065 / `OLP-0065-S01`; source `content/first-order-logic/proof-systems/sequent-calculus.tex:13`; Tamil `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:14`; PDF page 6.
+- `TA-OCC-f1e5b8396ebd16d9` — OLP-0065 / `OLP-0065-S01`; source `content/first-order-logic/proof-systems/sequent-calculus.tex:16`; Tamil `translation/content/first-order-logic/proof-systems/sequent-calculus.tex:17`; PDF page 6.
+- `TA-OCC-e4eae0764d6a4b9f` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:13`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:14`; PDF page 7.
+- `TA-OCC-3ee0e96fead02814` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:15`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:16`; PDF page 7.
+- `TA-OCC-1c7b4bb703d9c34f` — OLP-0066 / `OLP-0066-S01`; source `content/first-order-logic/proof-systems/natural-deduction.tex:24`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:26`; PDF page 7.
+- `TA-OCC-4b18bbd6a00a806e` — OLP-0066 / `OLP-0066-S02`; source `content/first-order-logic/proof-systems/natural-deduction.tex:33`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:48`; PDF page 8.
+- `TA-OCC-b675a97e526ce541` — OLP-0066 / `OLP-0066-S05`; source `content/first-order-logic/proof-systems/natural-deduction.tex:81`; Tamil `translation/content/first-order-logic/proof-systems/natural-deduction.tex:85`; PDF page 8.
+- `TA-OCC-a0d5455dd46a689f` — OLP-0069 / `OLP-0069-S01`; source `content/first-order-logic/sequent-calculus/sequent-calculus.tex:9`; Tamil `translation/content/first-order-logic/sequent-calculus/sequent-calculus.tex:10`; PDF page 12.
+- `TA-OCC-67cb06eb64237b99` — OLP-0069 / `OLP-0069-S01`; source `content/first-order-logic/sequent-calculus/sequent-calculus.tex:10`; Tamil `translation/content/first-order-logic/sequent-calculus/sequent-calculus.tex:11`; PDF page 12.
+- `TA-OCC-7ebec86783437b10` — OLP-0069 / `OLP-0069-S01`; source `content/first-order-logic/sequent-calculus/sequent-calculus.tex:13`; Tamil `translation/content/first-order-logic/sequent-calculus/sequent-calculus.tex:15`; PDF page 12.
+- `TA-OCC-dac80c3500fce424` — OLP-0081 / `OLP-0081-S01`; source `content/first-order-logic/sequent-calculus/soundness.tex:16`; Tamil `translation/content/first-order-logic/sequent-calculus/soundness.tex:17`; PDF page 29.
+- `TA-OCC-bf9db8ffef8048b0` — OLP-0084 / `OLP-0084-S01`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:9`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:10`; PDF page 36.
+- `TA-OCC-2fe130049e896a4b` — OLP-0084 / `OLP-0084-S01`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:10`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:11`; PDF page 36.
+- `TA-OCC-5ae26a7d0f5c1837` — OLP-0084 / `OLP-0084-S02`; source `content/first-order-logic/natural-deduction/natural-deduction.tex:13`; Tamil `translation/content/first-order-logic/natural-deduction/natural-deduction.tex:15`; PDF page 36.
+- `TA-OCC-58d0e0117d5af325` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:17`; PDF page 37.
+- `TA-OCC-14eb3da86e62b8e2` — OLP-0085 / `OLP-0085-S01`; source `content/first-order-logic/natural-deduction/rules-and-proofs.tex:18`; Tamil `translation/content/first-order-logic/natural-deduction/rules-and-proofs.tex:19`; PDF page 37.
+- `TA-OCC-4996b8ff6a9fc62b` — OLP-0094 / `OLP-0094-S01`; source `content/first-order-logic/natural-deduction/provability-quantifiers.tex:17`; Tamil `translation/content/first-order-logic/natural-deduction/provability-quantifiers.tex:18`; PDF page 54.
+- `TA-OCC-5a26174e1600f303` — OLP-0095 / `OLP-0095-S01`; source `content/first-order-logic/natural-deduction/soundness.tex:16`; Tamil `translation/content/first-order-logic/natural-deduction/soundness.tex:17`; PDF page 55.
+- `TA-OCC-34802deb51dd4d4f` — OLP-0097 / `OLP-0097-S01`; source `content/first-order-logic/natural-deduction/soundness-identity.tex:14`; Tamil `translation/content/first-order-logic/natural-deduction/soundness-identity.tex:15`; PDF page 61.
+- `TA-OCC-3888928dfc1eedd0` — OLP-0140 / `OLP-0140-S04`; source `content/first-order-logic/introduction/first-order-logic.tex:66`; Tamil `translation/content/first-order-logic/introduction/first-order-logic.tex:71`; PDF page pending.
+- `TA-OCC-b5c717888315c5f4` — OLP-0140 / `OLP-0140-S04`; source `content/first-order-logic/introduction/first-order-logic.tex:68`; Tamil `translation/content/first-order-logic/introduction/first-order-logic.tex:78`; PDF page pending.
+- `TA-OCC-46f22002271ed636` — OLP-0402 / `OLP-0402-S01`; source `content/many-valued-logic/sequent-calculus/sequent-calculus.tex:8`; Tamil `translation/content/many-valued-logic/sequent-calculus/sequent-calculus.tex:10`; PDF page pending.
+- `TA-OCC-0da7e70d788529ae` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:13`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:14`; PDF page pending.
+- `TA-OCC-a59b9f9dc3df116b` — OLP-0403 / `OLP-0403-S01`; source `content/many-valued-logic/sequent-calculus/introduction.tex:16`; Tamil `translation/content/many-valued-logic/sequent-calculus/introduction.tex:80`; PDF page pending.
+- `TA-OCC-824ef0605708c94a` — OLP-0404 / `OLP-0404-S01`; source `content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:38`; Tamil `translation/content/many-valued-logic/sequent-calculus/rules-and-proofs.tex:73`; PDF page pending.
+- `TA-OCC-899ed85b38015666` — OLP-0470 / `OLP-0470-S01`; source `content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:8`; Tamil `translation/content/normal-modal-logic/sequent-calculus/sequent-calculus.tex:9`; PDF page pending.
+- `TA-OCC-bb753dcc76cfa58c` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:13`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:45`; PDF page pending.
+- `TA-OCC-107f10bd13d4eb16` — OLP-0471 / `OLP-0471-S01`; source `content/normal-modal-logic/sequent-calculus/introduction.tex:44`; Tamil `translation/content/normal-modal-logic/sequent-calculus/introduction.tex:48`; PDF page pending.
+- `TA-OCC-adb141bd26ccf683` — OLP-0474 / `OLP-0474-S01`; source `content/normal-modal-logic/sequent-calculus/more-rules.tex:294`; Tamil `translation/content/normal-modal-logic/sequent-calculus/more-rules.tex:301`; PDF page pending.
+- `TA-OCC-3d1dbe304d0fcf29` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:11`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:12`; PDF page pending.
+- `TA-OCC-2874fedb3a8b32df` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:13`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:14`; PDF page pending.
+- `TA-OCC-a174acfb920a10a4` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:19`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:20`; PDF page pending.
+- `TA-OCC-84a63b0559693a34` — OLP-0496 / `OLP-0496-S01`; source `content/intuitionistic-logic/introduction/natural-deduction.tex:237`; Tamil `translation/content/intuitionistic-logic/introduction/natural-deduction.tex:243`; PDF page pending.
+- `TA-OCC-d0d1534d3cb0fc8e` — OLP-0624 / `OLP-0624-S01`; source `content/history/biographies/gerhard-gentzen.tex:16`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:17`; PDF page pending.
+- `TA-OCC-2e157f5af112f6ea` — OLP-0624 / `OLP-0624-S01`; source `content/history/biographies/gerhard-gentzen.tex:17`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:18`; PDF page pending.
+- `TA-OCC-856105c92fd32507` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:31`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:35`; PDF page pending.
+- `TA-OCC-3e8d3f54c25051af` — OLP-0624 / `OLP-0624-S02`; source `content/history/biographies/gerhard-gentzen.tex:31`; Tamil `translation/content/history/biographies/gerhard-gentzen.tex:35`; PDF page pending.
 
 ## TA-TAB-001 — The tableaux chapter says that prfTab controls material relevant to natural deduction as a proof system, although the tag name and every imported section concern tableaux.
 

@@ -5,10 +5,10 @@ For the reader-facing Tamil edition information, see [தமிழ் முக�
 India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
 Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
 
-The full edition is in progress. **616 of 722 frozen content units are translated, source-aligned and textually and semantically audited**. The accepted source now extends through the complete Induction chapter; 106 units remain.
+The full edition is in progress. **629 of 722 frozen content units are translated, source-aligned and textually and semantically audited**. The accepted source now extends through the complete Biographies chapter; 93 units remain.
 The first tagged reader remains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
 The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Sets, Relations, Functions, Size of Sets, number-system construction and Infinite Sets. Patch release v0.2.1 replaces five references to chapters outside this reader with descriptive Tamil fallbacks; the live references return automatically when those destinations are included in a later complete edition. It passed a three-pass guarded XeLaTeX/BibTeX build, font embedding and copy/search checks, plus visual inspection of every rendered page.
-Twelve verified component readers cover 248 distinct units. Each component passed a guarded TeX build, embedded-font and copy/search checks, and all-page visual inspection. The existing 384-page cumulative reader concatenates the first seven accepted components (203 units) in frozen-source order, adds section bookmarks, and preserves 626 checked links. The five set-theory readers are supplied separately. The Ordinal Arithmetic, Cardinals, Cardinal Arithmetic, Choice, Proofs and Induction chapters are editable source; their PDF readers have not yet been built.
+Twelve verified component readers cover 248 distinct units. Each component passed a guarded TeX build, embedded-font and copy/search checks, and all-page visual inspection. The existing 384-page cumulative reader concatenates the first seven accepted components (203 units) in frozen-source order, adds section bookmarks, and preserves 626 checked links. The five set-theory readers are supplied separately. The Ordinal Arithmetic, Cardinals, Cardinal Arithmetic, Choice, Proofs, Induction and Biographies chapters are editable source; their PDF readers have not yet been built.
 
 ## Read and edit
 
@@ -31,6 +31,7 @@ Twelve verified component readers cover 248 distinct units. Each component passe
 - [தேர்வு — editable Choice Tamil TeX](translation/content/set-theory/choice/choice.tex): nine accepted units, covering Tarski–Scott, Hartogs, Well-Ordering, Countable Choice, the Banach–Tarski paradox and Vitali's circle construction; reader PDF pending.
 - [நிறுவல்கள் — editable Proofs Tamil TeX](translation/content/methods/proofs/proofs.tex): twelve accepted units including the Methods part opener, covering definitions, inference patterns, worked examples, contradiction, reading proofs and study guidance; reader PDF pending.
 - [தொகுத்தறிதல் — editable Induction Tamil TeX](translation/content/methods/induction/induction.tex): seven accepted units covering induction on naturals, strong induction, inductive definitions, structural induction, relations and functions; reader PDF pending.
+- [வாழ்க்கை வரலாறுகள் — editable Biographies Tamil TeX](translation/content/history/biographies/biographies.tex): thirteen accepted units including the History part opener and eleven biographies from Cantor through Zermelo; reader PDF pending.
 - [203-unit cumulative Tamil reader](readers/openlogic-ta-Taml-IN-cumulative-reader-203-units.pdf): 384 A4 pages containing the seven accepted components above, in source order.
 - Editable Tamil: `translation/content/`. Each accepted file retains its frozen relative path and stable OLP unit binding in `evidence/`.
 - Frozen, unchanged English sources and original components: upstream/.
@@ -39,8 +40,8 @@ Twelve verified component readers cover 248 distinct units. Each component passe
 - Propositional syntax-and-semantics source master: build/tamil-pl-syn.tex.
 - Proof-systems, sequent-calculus, natural-deduction and tableaux reader master: build/tamil-proof-systems-sequent.tex.
 
-The first 570 units were translated and author reviewed with OpenAI Codex GPT-5.6 Sol, Ultra reasoning. OLP-0574–OLP-0619 and this metadata update were produced with OpenAI Codex GPT-6 Sol, Ultra reasoning. Independent human or native-speaker approval is not claimed.
-Every component reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 616 accepted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 1,667 aligned segments and 875 reverse-paraphrase samples. Seven Ordinal Arithmetic, two Cardinals, seven Cardinal Arithmetic, twelve Choice and six Methods corrections are documented in [the source-correction ledger](evidence/source-corrections.json). For the cumulative reader, every page content stream and page box is identical to its accepted component, all fonts remain embedded, and representative boundary and interior pages were rendered and visually inspected.
+The first 570 units were translated and author reviewed with OpenAI Codex GPT-5.6 Sol, Ultra reasoning. OLP-0574–OLP-0632 and this metadata update were produced with OpenAI Codex GPT-6 Sol, Ultra reasoning. Independent human or native-speaker approval is not claimed.
+Every component reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 629 accepted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 1,725 aligned segments and 933 reverse-paraphrase samples. Seven Ordinal Arithmetic, two Cardinals, seven Cardinal Arithmetic, twelve Choice and six Methods corrections are documented in [the source-correction ledger](evidence/source-corrections.json). For the cumulative reader, every page content stream and page box is identical to its accepted component, all fonts remain embedded, and representative boundary and interior pages were rendered and visually inspected.
 
 PDF text reuse has measured limitations. Poppler correctly extracts five tested Tamil phrases and representative union, intersection and Cartesian-product formulas. PyMuPDF duplicates some Tamil syllables or loses spacing. Composite negation symbols may still split during extraction in some contexts; blackboard number-set letters may extract as ordinary letters. Use the editable formulas for exact mathematical reuse. This is not a claim of tagged-PDF or universal screen-reader accessibility. A semantic reader remains part of the continuing full-edition work.
 
@@ -60,7 +61,7 @@ The evidence folder contains the source manifest, actual per-segment canon-use r
 
 OpenLogic's natural numbers include zero. The source convention is retained and explained in a separate Tamil edition note, because the consulted school text uses a different convention. New editorial or learner material is kept separate from the faithful source.
 
-The ordinary reader graph and remaining wrappers, all remaining translation, integration of the 368 accepted units outside the twelve component readers, reflowable EPUB3 production, ongoing terminology review and final full-edition publication are unfinished. An interim release does not complete the programme.
+The ordinary reader graph and remaining wrappers, all remaining translation, integration of the 381 accepted units outside the twelve component readers, reflowable EPUB3 production, ongoing terminology review and final full-edition publication are unfinished. An interim release does not complete the programme.
 
 ## Attribution and license
 

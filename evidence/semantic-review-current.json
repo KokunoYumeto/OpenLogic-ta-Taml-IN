@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-semantic-review/1",
-  "date_utc": "2026-09-26T01:53:33.802409+00:00",
+  "date_utc": "2026-09-26T02:21:03.359455+00:00",
   "reviewer": "Translation agent; no independent human/native review claimed",
   "unit_bindings": [
     {
@@ -3082,6 +3082,71 @@
       "unit_id": "OLP-0619",
       "source_sha256": "66fc09c76443827350bdabf32900631432ebb9f043e51fe33b447fe64f3c0ba4",
       "translation_sha256": "938b928455b893df1295a6aed9520304568362bb42da6fd7716d374d3d844041"
+    },
+    {
+      "unit_id": "OLP-0620",
+      "source_sha256": "666329ac5880a112d9c17360202bde7bc27d3ebe1c8021c5f1429d9bb8832517",
+      "translation_sha256": "1bed4636b6352cc0995c8402dee903a9f07aed38a449106f85f948799e7af050"
+    },
+    {
+      "unit_id": "OLP-0621",
+      "source_sha256": "0fec4f601a1b14fbd3fb4e4dd810bfb3ae79fa295f217ad5a4efb7aab70bdd10",
+      "translation_sha256": "8cd3171d07429684b95c90713b1f34bf65e291f64444aacb9c5ddc8a0211480a"
+    },
+    {
+      "unit_id": "OLP-0622",
+      "source_sha256": "aadadf813251dfc5337fde2b1a4da6dff17e1de0c4b9629e5f541edb030fe9fe",
+      "translation_sha256": "e3b57d9b3e71ed60fc2b853105b5539ee90c0a8455758fc30e4e08b50e56946d"
+    },
+    {
+      "unit_id": "OLP-0623",
+      "source_sha256": "4ddf4dbe8cb1049a23e149abf11a8d1ab46dacfbc3a8351b90bb954c8133119e",
+      "translation_sha256": "d775c796d2166999f8424bf2c66f0c071705f1a13d380c00dfe1fe67c2bedb42"
+    },
+    {
+      "unit_id": "OLP-0624",
+      "source_sha256": "408dd58408ae82521025e8fcaa688d6025ed3bd84752721b826906bfcde5e6a0",
+      "translation_sha256": "94f72307607aceec60d62f115fed53e690209edd392eaea88dbad001e8aee732"
+    },
+    {
+      "unit_id": "OLP-0625",
+      "source_sha256": "b1096c00b2909587e2ac9bae78c9fb1484e4b056e4ebc13c08316cb85afc2664",
+      "translation_sha256": "8f58499f383fed0873cb1cdc5ab7f7ab988d1234028d7f1994fc56209795da5c"
+    },
+    {
+      "unit_id": "OLP-0626",
+      "source_sha256": "db6fbf6574c82c930646e6faaa5e486fb360c04aee3da1419e418a4a0616162d",
+      "translation_sha256": "6588fd0f29259c0a14674b4f7fa14669e8b85b08810425e07c0963b5c661a5ac"
+    },
+    {
+      "unit_id": "OLP-0627",
+      "source_sha256": "cd1559c7f682712f7257c16abe9afa075178ba9aa6a587b035d7e466d3bf668f",
+      "translation_sha256": "8d905d1a51f8b49215dbe289b6fd24a61a17deda8c533379adbf588ab9acdb82"
+    },
+    {
+      "unit_id": "OLP-0628",
+      "source_sha256": "bdc5d38306c267699a1e3bfa1fc136f93e0b83ebe03de1ac81987ae35f7b599d",
+      "translation_sha256": "2fb1a7ddf80c5b55ea6d026e3a52351755022ae876106dc5a243dc1a3ccf42a0"
+    },
+    {
+      "unit_id": "OLP-0629",
+      "source_sha256": "4b13fffaac861f87a7e36182296f5896a8be923bf21d19dfbcf1b0a7bb253bbd",
+      "translation_sha256": "dcc51bfd86d584955b2573a2de57764b4feb6fdd0b7a93319ec962fe57f9bb29"
+    },
+    {
+      "unit_id": "OLP-0630",
+      "source_sha256": "216dca1713254d519d4f75b7f2f80cdf13dd614341b45631f6addefc26850688",
+      "translation_sha256": "eeb00886ff3e990d0cd5e48b5c8d2d797d607c4c30b63d9a38ec85084e3adb22"
+    },
+    {
+      "unit_id": "OLP-0631",
+      "source_sha256": "105de99d822a0dbb375d0d4bd8e3ed3847b7f77d1f1c4760f62cbcd0b7f2671b",
+      "translation_sha256": "01b7c22091089f472d133b2e1e2303718b43aa556dc55df2caf69abe2d54b3b1"
+    },
+    {
+      "unit_id": "OLP-0632",
+      "source_sha256": "2bf8bef1ebdfcadf3ae701be0416db71d1a24786269cec3b8e41a767f8499a41",
+      "translation_sha256": "b0acecc8e5f40766fee2eb1a14490e81ac4aba0d51f81a80ee2ecfab3885090d"
     }
   ],
   "samples": [
@@ -9209,6 +9274,412 @@
       "assessment": "The strict inequality and exact definition reference remain.",
       "translation_segment_sha256": "b8d1d3137e3c590d110ede5c5a2cef8dd9c5e982fd1fc63b19484cf2402de045",
       "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0620-S01",
+      "reverse_paraphrase": "The History part imports Biographies and the History of Set Theory in that order.",
+      "assessment": "Part identity, both imports and the closing hook are retained; no historical narrative is added.",
+      "translation_segment_sha256": "af8ff99929f75391d58bd54f365cf0305c4e5f7c696c035b147173d1a403c869",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0621-S01",
+      "reverse_paraphrase": "The Biographies chapter imports eleven named lives, from Cantor through Zermelo, in the frozen order.",
+      "assessment": "All eleven imports, chapter identity and closing hook are retained.",
+      "translation_segment_sha256": "814a29f87bedecc113a9f00aa9bd5ccd0e65dfb51d4262933085f54df6fc92e1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0622-S01",
+      "reverse_paraphrase": "An early Cantor biography claimed he was found after birth aboard a ship bound for Saint Petersburg, but that story is false; the actual birth place and year are Saint Petersburg and 1845.",
+      "assessment": "The false claim is explicitly attributed and rejected, while the source pronunciation guide remains.",
+      "translation_segment_sha256": "c6b7da5ae20f717d3f8ed18e5f41712620461f6328db6cc6cab35a8feb410d16",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0622-S02",
+      "reverse_paraphrase": "Cantor earned a Berlin mathematics doctorate in 1867, helped found set theory as a distinct discipline, first proved different infinite sizes, and faced controversy.",
+      "assessment": "Date, place, two distinct achievements and contemporary dispute remain.",
+      "translation_segment_sha256": "9f2d7dfa36406ae70b8ee801972b6221d0ae173c93ee8b06f5404702e46e7c97",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0622-S03",
+      "reverse_paraphrase": "Cantor linked religious belief with transfinite mathematics; later hospitalization, criticism, the Kronecker rift, depression, philosophy, literature and his Bacon–Shakespeare theory all appear.",
+      "assessment": "The reported causal account is translated as a source claim, without independent diagnosis or extrapolation.",
+      "translation_segment_sha256": "044b033e3031c1569b6fff48637379a5d98e1647115610cb6f30e1c2802d5dd8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0622-S04",
+      "reverse_paraphrase": "Cantor died in a Halle sanatorium on 6 January 1918.",
+      "assessment": "Date and place are exact.",
+      "translation_segment_sha256": "96c983d458bad54ceebd1b5d451ff3cc82d774787702b2737c3816aa6334a442",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0622-S05",
+      "reverse_paraphrase": "The reading list points to two biographies, the BBC Radio 4 programme and a rap account of Cantor theories.",
+      "assessment": "All four citation keys and the original programme title remain.",
+      "translation_segment_sha256": "6d8c9df157d22a7b0300c60b555a1c64aff16b6dd8d68702bf26febb1b58dbc0",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0623-S01",
+      "reverse_paraphrase": "Church was born in Washington on 14 June 1903, lost sight in one eye in childhood, studied at Princeton from 1920, completed doctoral work in 1927, and had the cited habits and hobbies.",
+      "assessment": "Chronology, injury, Duco cement, science-fiction letters and place names remain.",
+      "translation_segment_sha256": "9e815d5371d4e5f4738ba05ad24e52b63015ed35aadb618e97d3461000ef5a2c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0623-S02",
+      "reverse_paraphrase": "Church, Kleene and Rosser developed lambda calculus independently of Turing machines; their calculability definitions agree, the Church–Turing thesis connects effective calculation to those models, and Church proved first-order validity undecidable.",
+      "assessment": "The thesis is not presented as a proved theorem; Church theorem remains separate.",
+      "translation_segment_sha256": "79e37497656d6e7aff3fd5dce71efb4dfdda0dcdb0043afdc0ea87b43072bfb5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0623-S03",
+      "reverse_paraphrase": "Church moved from Princeton to UCLA in 1967, retired in 1990 and died on 1 August 1995 aged 92.",
+      "assessment": "All years, date, institutions and age remain.",
+      "translation_segment_sha256": "f49129158002e124a4a7110b5b4edbbc4a002a4eb92a2c93a384cb5f37292c1c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0623-S04",
+      "reverse_paraphrase": "The reading list includes a short life, two original 1936 papers, an interview about 1930s Princeton and reviews from 1936 through 1979 archived online.",
+      "assessment": "All bibliography keys, original journal title and date bounds remain.",
+      "translation_segment_sha256": "6d779d3f2f2336d171c936f32a4c78ee2dfe0db78e5a51ba746b373655d86f0d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0624-S01",
+      "reverse_paraphrase": "Gentzen created structural proof theory, natural deduction and sequent calculus; he was born in Greifswald on 24 November 1909 and showed mathematical and literary talent despite delayed schooling.",
+      "assessment": "Both derivation tokens, birthplace, date, schooling and poetry/play details remain.",
+      "translation_segment_sha256": "105a7f6e73a406aa3270a77b8ec08c5f0b186e6a8a8c10b60b26814fcedebed6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0624-S02",
+      "reverse_paraphrase": "Gentzen studied across four German cities, earned a 1933 doctorate under Weyl after Bernays was dismissed, assisted Hilbert in 1934, published his two deduction papers and proved Peano arithmetic consistency in 1936.",
+      "assessment": "Academic sequence, the distinction between formal supervisor and main working supervisor, original German title and proof-system names remain.",
+      "translation_segment_sha256": "cfc5b10c83187a768c9112973fecbdf8f4d168895e95b4846ec230370061c7bb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0624-S03",
+      "reverse_paraphrase": "Gentzen joined the university SA branch and Nazi party, served in wartime telecommunications, was released after a breakdown in 1942, and his reasons for joining remain uncertain.",
+      "assessment": "The translation preserves the source uncertainty instead of assigning a motive.",
+      "translation_segment_sha256": "45482a86f4ded6cd32961f6c52f879311e7594e441083e2e2df468b95f885f73",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0624-S04",
+      "reverse_paraphrase": "Gentzen accepted a Prague position in 1943, was arrested after the 1945 revolt and Soviet arrival, sent to forced labour because of Nazi membership, and died in detention from malnutrition on 4 August 1945 aged 35.",
+      "assessment": "Event order, causal wording, death date and age remain.",
+      "translation_segment_sha256": "b2882fa8e43878f9816371f8c1ebf2f9a36b9ae5f6bf6fdd5955eaaad92f301c",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0624-S05",
+      "reverse_paraphrase": "The reading list gives a full Gentzen biography, a book on mathematicians under Nazi rule, two German original papers and an English collection with a biographical sketch.",
+      "assessment": "All five citation keys and language distinctions remain.",
+      "translation_segment_sha256": "0be6f72fd72b025265a96366ea4aac503c8bb34f52aacc9f1b074a8705691578",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0625-S01",
+      "reverse_paraphrase": "Gödel was born on 28 April 1906 in Austro-Hungarian Brünn, now Brno; family nickname, school performance, poor health, childhood rheumatic fever and his disputed lifelong heart belief remain.",
+      "assessment": "The medical assessment is explicitly contrary to Gödel’s belief, and the original nickname and pronunciation guide remain.",
+      "translation_segment_sha256": "a6163565de75ac1fcdbbe0c9fd26557e5c6467e9770654d70148cacffd84d910",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0625-S02",
+      "reverse_paraphrase": "Gödel began Vienna studies in 1924, completed his doctorate in 1929, proved first-order completeness with identity, obtained both incompleteness results a year later, and took part in the Vienna Circle.",
+      "assessment": "Supervisor Hahn, Carnap’s influence, both publication keys and theorem distinctions remain.",
+      "translation_segment_sha256": "b43ea60a74d656ff0c620e73908e90184f4cecf2b05638c631768730635a5beb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0625-S03",
+      "reverse_paraphrase": "Gödel married Adele Nimbursky in 1938 despite parental displeasure about her age, divorce and nightclub work, and the marriage lasted happily until his death.",
+      "assessment": "The source’s social context is reported without endorsing the objections.",
+      "translation_segment_sha256": "3b8c94fd6ffda442d339f854c287ad9facd1790fcaff2ef9cd915ba2a8879a48",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0625-S04",
+      "reverse_paraphrase": "After the 1938 annexation the couple emigrated to the United States; at Princeton IAS Gödel published across three fields and became close to Einstein.",
+      "assessment": "Place, institution, date, research fields and friendship remain.",
+      "translation_segment_sha256": "e055adeb87ffe55b37225dbcadfd66a614ddf9f118a57e6136803661286c94a9",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0625-S05",
+      "reverse_paraphrase": "Gödel’s later mental health declined; after his wife’s 1977 hospitalization he feared poisoning, refused food and died of starvation in Princeton on 14 January 1978.",
+      "assessment": "The source’s reported causal sequence is preserved without an independent diagnosis.",
+      "translation_segment_sha256": "bcf84d2c6c9e72f78a0d46524c1e39c1d8925eb2ee2c84f14895c24dc4ac98a7",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0625-S06",
+      "reverse_paraphrase": "The reading list gives a full biography, four further works, the German dissertation and incompleteness paper, two Collected Papers volumes, a detailed theorem account and a philosophical podcast.",
+      "assessment": "All citation keys and original/English language distinctions remain.",
+      "translation_segment_sha256": "8be12b83207b90aec1f84bbabe204ff9fc6717827ae60d480e2bf7defda6639f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0626-S01",
+      "reverse_paraphrase": "Noether was born in Erlangen on 23 March 1882, faced barriers to women’s education, audited at Göttingen and Erlangen, enrolled at Erlangen after its 1904 change and earned a 1907 doctorate.",
+      "assessment": "Family background, modern-algebra epithet, institutional chronology and both fields of contribution remain.",
+      "translation_segment_sha256": "96a8960d2ca55e948cb55764360c86bcd847c1ae3c6c6eb54f4192985737f28d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0626-S02",
+      "reverse_paraphrase": "Despite qualifications Noether taught unpaid in Erlangen from 1908 to 1915, then lectured under Hilbert’s name unpaid at Göttingen, proved her physics theorem, won teaching rights in 1919 and faced continuing faculty resistance.",
+      "assessment": "The attributed bathhouse remark remains a reported quotation, and the two unpaid periods stay distinct.",
+      "translation_segment_sha256": "76707ecbce4f24b56fdc7116b7791b9e5745aa171c587409f70b7fe63d6a3ba8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0626-S03",
+      "reverse_paraphrase": "Noether’s later abstract algebra used ascending-chain conditions; Noetherian rings have no infinite strictly ascending ideal chain, and the dual descending-chain condition supports induction in well-founded orders.",
+      "assessment": "The displayed ideal chain, strict direction, partial-order generalization, natural-number comparison and Noetherian induction label remain.",
+      "translation_segment_sha256": "e198f401177a19e8e2aae42b64e0de8b1b0f61717f1d5f756cb01adbcd93b9fd",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0626-S04",
+      "reverse_paraphrase": "Dismissed as a Jew in 1933, Noether moved to Bryn Mawr, also lectured at Princeton despite finding it unwelcoming to women, and died of infection after a 1935 uterine-tumour operation.",
+      "assessment": "The page-specific citation, burial at Bryn Mawr and source chronology remain.",
+      "translation_segment_sha256": "e2e142bdd9e5cc38158fbdac2664e99e9c617b768dabac53de5c7e014c039d4b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0626-S05",
+      "reverse_paraphrase": "The reading list gives a biography, Perimeter Institute lectures, a history podcast and Noether’s collected works in German.",
+      "assessment": "All four citation keys and the podcast’s original title remain.",
+      "translation_segment_sha256": "14a79ec233055f5929bea470941d1bc710e35a6370d5adc3c9ea1fa9b56661fb",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0627-S01",
+      "reverse_paraphrase": "Rózsa Péter was born Politzer in Budapest on 17 February 1905 and made foundational contributions to recursive-function theory.",
+      "assessment": "Birth name, date, city and precise research area remain.",
+      "translation_segment_sha256": "0dc48ca2883357cabfe0534a6e887a49504c8315ed0e7b08149988ce1d5fe0aa",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0627-S02",
+      "reverse_paraphrase": "Péter finished girls’ school in 1922, changed from chemistry to mathematics, graduated in 1927, survived Depression-era work, re-entered study after discouragement, independently reproved Gödel results, earned a 1935 PhD and joined the journal in 1937.",
+      "assessment": "Her father’s influence, both university names, Hilbert programme and cause of regained confidence remain.",
+      "translation_segment_sha256": "acf3240367912f68cb400f50aff520e9b3b0085e5de29ef5fda5bcf85fa1c53f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0627-S03",
+      "reverse_paraphrase": "Her 1935 papers compared recursive schemes and gave a non-primitive-recursive function simplifying Ackermann; the function bears both Ackermann and Ackermann–Péter names, and she wrote the first book in the field.",
+      "assessment": "Both original paper keys, the distinction between recursive and primitive recursive, and the book key remain.",
+      "translation_segment_sha256": "4faacf15919fe3a54c8c33322be662470a1722de6c43e3278f18773116a7f728",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0627-S04",
+      "reverse_paraphrase": "Antisemitic restrictions and confinement in Budapest’s guarded Jewish ghetto preceded its 1945 liberation; Péter then taught at a teachers’ college and from 1955 at the university, and was first among Hungarian women in two academic honours.",
+      "assessment": "The exact sequence and source’s Academic Doctor designation remain; it is not conflated with her 1935 PhD.",
+      "translation_segment_sha256": "f4bebca7be130b7a5d3c3ad8f5d972f2f1c897226e712067e746b780c22cb4ca",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0627-S05",
+      "reverse_paraphrase": "Péter explored problems with students rather than merely lecturing, earned the Aunt Rosa nickname and died in 1977 aged 71.",
+      "assessment": "Pedagogical contrast, nickname, year and age remain.",
+      "translation_segment_sha256": "80bdd23ba2bb18f9c2cf40754b6a45d824c83c8caeba12cb63cb76889b71c5ae",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0627-S06",
+      "reverse_paraphrase": "The reading list points to two biographical pieces, an interview and her Playing With Infinity book.",
+      "assessment": "All four citation keys and book title remain.",
+      "translation_segment_sha256": "e97fc83409090c738e11b681ffa8988fdcd7a6d14f4185e2a6ff8dd597c94758",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0628-S01",
+      "reverse_paraphrase": "Julia Bowman Robinson, born in Saint Louis on 8 December 1919, worked on decision problems and Hilbert’s tenth; childhood scarlet and recurrent rheumatic fever interrupted schooling and had lasting physical effects.",
+      "assessment": "The childhood number-interest citation and tutor-assisted recovery remain.",
+      "translation_segment_sha256": "8b4b659f3185c5c003e8283e3b0f19730b8b10d9469b46b4e45d667b3224dfe5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0628-S02",
+      "reverse_paraphrase": "Robinson moved from San Diego State to Berkeley, married Raphael Robinson in 1941, was barred from teaching as a faculty spouse, and after pneumonia received a prognosis of death before forty and advice against children.",
+      "assessment": "Institutional restriction, medical cause, prognosis and page citation remain distinct.",
+      "translation_segment_sha256": "a4e837a7929dea2ab03994b268a8167ab477fde32f6f3646a3dd42b20360d2fe",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0628-S03",
+      "reverse_paraphrase": "Under Tarski she completed a 1948 PhD proving the first-order theory of rationals undecidable, contrasted with decidable reals and undecidable naturals.",
+      "assessment": "The three domains, decision statuses and thesis-year citation remain.",
+      "translation_segment_sha256": "cf0a8c3625493d3b4631bd4c0765bea4e45322f212fb7d3c18bd917709e3cb32",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0628-S04",
+      "reverse_paraphrase": "Hilbert’s tenth asks for a finite-time algorithm deciding integer solutions to integer-coefficient polynomial equations; Davis, Putnam and Robinson showed exponential Diophantine undecidability and a J.R. implication, proved in 1970 by Matijasevich, yielding MRDP.",
+      "assessment": "The exact example equation, conditional direction, collaboration and attributed letter quotation remain.",
+      "translation_segment_sha256": "af02905338c58061894a366e237d3aa3380fcae47c6fee62663fff51d0b462aa",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0628-S05",
+      "reverse_paraphrase": "Robinson was the first woman president of the American Mathematical Society and first woman elected to the National Academy, and died of leukemia on 30 July 1985 aged 65.",
+      "assessment": "Both firsts, cause, date and age remain.",
+      "translation_segment_sha256": "a8867635d5edadce21c3acba8182962a5955f9b31e3ec771d94ff1b191dd14c8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0628-S06",
+      "reverse_paraphrase": "The reading list includes collected works with a memoir, Reid’s interview-based autobiography and full memoir, a documentary and Matijasevich’s collaboration memoir.",
+      "assessment": "All citation keys and the original collection title remain.",
+      "translation_segment_sha256": "26e26a2267805c85e3f38ad7d4d6d9c75f413ccdb5771093b0d05668a082a224",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0629-S01",
+      "reverse_paraphrase": "Russell, born on 18 May 1872, was a founder of analytic philosophy, a popular author across subjects and a lifelong political activist.",
+      "assessment": "Logic and philosophy remain separate domains of his work.",
+      "translation_segment_sha256": "e3deecd7b0b9e5bffe9896eea0fc184f5ee38b56896be5894b2c9fbcad044159",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0629-S02",
+      "reverse_paraphrase": "Russell was born in Trellech, Wales to aristocratic free-thinking parents, lost them young, received a religious upbringing from strict grandparents and was mostly taught at home in adolescence.",
+      "assessment": "The contrast with his parents’ wishes remains.",
+      "translation_segment_sha256": "e731774015b4dd902aec59f57d62da65b6dd90a0b4fbdefda755c24b5ed891e6",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0629-S03",
+      "reverse_paraphrase": "At Trinity Cambridge Russell studied under Whitehead’s influence; their 1910 Principia Mathematica promoted logicism, and Russell later produced many works and won the 1950 literature Nobel.",
+      "assessment": "Institution, collaboration, first-volume date, reduction claim and award remain.",
+      "translation_segment_sha256": "cf077e5dc081a388fbd420ddf0bde59fd7282272373e539562ef570c86595bd1",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0629-S04",
+      "reverse_paraphrase": "Russell was jailed for World War I pacifism and again after a 1961 nuclear-disarmament rally, survived a 1948 crash linked in his own telling to the smoking section, married four times and died in Wales on 2 February 1970 aged 97.",
+      "assessment": "The six-month first sentence, quotation, attribution of his smoking claim and private-life statement remain.",
+      "translation_segment_sha256": "c7f78e03f32dd1952122079b9f309caaff364166e25a2299bb75e01c9a373e03",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0629-S05",
+      "reverse_paraphrase": "The reading list covers a three-part autobiography, McMaster archive, On Denoting, Stanford audio, video interview and free audiobooks.",
+      "assessment": "All source keys, dates and original titles remain.",
+      "translation_segment_sha256": "8cc502e4623c7993de35f8568bffbc32b21928a2d544e2742e82ec948e74e0aa",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0630-S01",
+      "reverse_paraphrase": "Tarski was born in Warsaw on 14 January 1901 under Russian rule; the source describes his energetic lecture style with a wastebasket-fire anecdote.",
+      "assessment": "Date, geopolitical parenthesis, attributed characterisation and anecdote remain.",
+      "translation_segment_sha256": "51650cbe45b0116c3b05ff8ae9472f5045350a95f0907da87dc958b208a3fa42",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0630-S02",
+      "reverse_paraphrase": "His claim that logic alone earned a B is contradicted by school records of all As; he studied in Warsaw 1918–1924 and earned a doctorate under Leśniewski after changing from biology toward logic and philosophy.",
+      "assessment": "The anecdote is explicitly contrasted with records; supervisor spelling and original TeX name command remain.",
+      "translation_segment_sha256": "b27ec5e5035ea061fab1f52b6e23b7c6b51b7ee829510fec9a21a3ede02cf43b",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0630-S03",
+      "reverse_paraphrase": "Tarski developed consequence and truth work while teaching school, was in the United States during the 1939 invasion, could not return as a Jew, and after family reunification taught at several institutions before founding Berkeley’s logic-methodology programme.",
+      "assessment": "Timeline, family separation, four US institutions, programme and death on 26 October 1983 aged 82 remain.",
+      "translation_segment_sha256": "d07c58cfcc29143bd1aa9ea02e63091e5b1d662e5967efeba2dbac65c40de179",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0630-S04",
+      "reverse_paraphrase": "The reading list names a biography, English consequence and truth writings, and a four-volume original-works series.",
+      "assessment": "All three citation keys and title remain.",
+      "translation_segment_sha256": "ab6c72b7e0a6624e944d68b5b39604b245789f4ba9b89b9bd7d637ca19b6f77d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0631-S01",
+      "reverse_paraphrase": "Turing, born in London on 23 June 1912, is called the father of theoretical computer science; early science and mathematics interests conflicted with classical school priorities.",
+      "assessment": "Birth place/date, attributed epithet, school-performance consequence and photograph placement remain.",
+      "translation_segment_sha256": "af6af47f6ec7275fabc03f0e0aa78df6787c664902a76c7fb0f824923bfe0f96",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0631-S02",
+      "reverse_paraphrase": "At Cambridge Turing developed the machine concept in 1936 to define computability and prove decision-problem undecidability; Church had reached the result through lambda calculus, and Turing studied under him at Princeton in 1936–1938.",
+      "assessment": "Both independent methods, priority statement, paper’s acknowledgement and doctorate remain.",
+      "translation_segment_sha256": "d69150f2c44dac6f815e993cac151d004fa1cb56105241d28d2007c7faf47a50",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0631-S03",
+      "reverse_paraphrase": "At Bletchley Park Turing helped break naval Enigma using statistical and cryptanalytic machinery called a bombe; the source also credits his ideas in Colossus and Lorenz work.",
+      "assessment": "The translation marks the first-programmable-computer description as the source’s claim and preserves both ciphers and machine names.",
+      "translation_segment_sha256": "c7654c2867893e9f9958ec7b6c2021efa5904999da60ff167deb8ddaa2cdf522",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0631-S04",
+      "reverse_paraphrase": "Turing was gay, ended an engagement with Clarke, was prosecuted after reporting a 1952 burglary, chose hormone treatment over prison, died after cyanide exposure on 8 June 1954 with suicide presented as likely, and received a 2013 pardon.",
+      "assessment": "Legal chronology, uncertainty about death and no unsupported assertion of certainty remain.",
+      "translation_segment_sha256": "ecd98b8d05f2e0e05a54b655eaf10d08a83c1942d2b2e6f27a10d449165383a5",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0631-S05",
+      "reverse_paraphrase": "The reading list gives a biography, two dramatisations, podcasts, a BBC documentary, a working LEGO machine video and the original 1937 paper.",
+      "assessment": "All citations, original media titles and source centenary year remain.",
+      "translation_segment_sha256": "9667799b88c60c6be50c84296c8acd19802889372be0b3b0a9c38e6612c16a1e",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0632-S01",
+      "reverse_paraphrase": "Zermelo was born in Berlin on 27 July 1871, became orphaned at seventeen, loved poetry, and introduced Choice in 1904 and set-theory axioms in 1908.",
+      "assessment": "Five sisters, three surviving to adulthood and both distinct mathematical achievements remain.",
+      "translation_segment_sha256": "ebe1f4c6aec01d419beb7542a3a3b91d1906e5a19948a8d83fe99cc1a748278f",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0632-S02",
+      "reverse_paraphrase": "After studies across physics, mathematics and philosophy Zermelo completed a 1894 Berlin dissertation under Schwarz, moved to Göttingen in 1897, qualified in 1899 and waited eleven years for a professorship.",
+      "assessment": "Hilbert influence, original dissertation title and only tentative explanation for the delay remain.",
+      "translation_segment_sha256": "e341ab4f9e2b3441c29a41b64208d28c52490350e8e8dcba952c1ddb6dda1fae",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0632-S03",
+      "reverse_paraphrase": "Zermelo held a paid Zurich chair from 1910 until tuberculosis forced retirement in 1916, received an honorary Freiburg chair in 1921, criticized Skolem and Gödel, and was dismissed in 1935.",
+      "assessment": "Illness, dates, distinction between paid and honorary roles, and source’s two stated dismissal factors remain.",
+      "translation_segment_sha256": "419a0da5fa364128c027871158838b914c7cb88a481de3063753ef2c6db32c1d",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0632-S04",
+      "reverse_paraphrase": "After dismissal Zermelo left mathematics, lived modestly in the country, married in 1944, lost sight completely by 1951 and died in Günterstal on 21 May 1953.",
+      "assessment": "Isolation, dependence on wife, blindness chronology and exact death details remain.",
+      "translation_segment_sha256": "15dba75ad1e45e55f01d190ee4c443e2f0f275ddd432301beecbafc7cf24beb8",
+      "status": "author-reviewed"
+    },
+    {
+      "segment_id": "OLP-0632-S05",
+      "reverse_paraphrase": "The reading list points to a full biography, the 1904/1908 originals in German and collected works including physics in English.",
+      "assessment": "All five citation keys and language distinctions remain.",
+      "translation_segment_sha256": "a75aa2d58701848bf2df5f3f4a1a655f6354f01cdc08655572641d058fc1715c",
+      "status": "author-reviewed"
     }
   ],
   "source_issues": [
@@ -10165,7 +10636,7 @@
   ],
   "prior_review": "SEMANTIC_REVIEW-B001-B003.json remains historical; later audited corrections are covered here and by rerun structural QA",
   "release_ready": false,
-  "remaining": "616 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 106 frozen units still require completion.",
+  "remaining": "629 source units now pass textual and author semantic QA. Twelve exact PDF readers visually verify 248 distinct units; EPUB production for those bounded readers is in progress under the protected converter workflow. The remaining 93 frozen units still require completion.",
   "visual_reader_coverage": {
     "reader_count": 12,
     "distinct_unit_count": 248,
@@ -11272,6 +11743,39 @@
         "inductive_definition_three_clauses_and_length_proof": true,
         "structural_induction_constructors_and_five_prefix_cases": true,
         "relations_unique_readability_depth_and_ambiguous_g": true
+      }
+    },
+    {
+      "unit_ids": [
+        "OLP-0620",
+        "OLP-0621",
+        "OLP-0622",
+        "OLP-0623",
+        "OLP-0624",
+        "OLP-0625",
+        "OLP-0626",
+        "OLP-0627",
+        "OLP-0628",
+        "OLP-0629",
+        "OLP-0630",
+        "OLP-0631",
+        "OLP-0632"
+      ],
+      "correction_ids": [],
+      "status": "pass",
+      "checks": {
+        "part_two_chapters_in_order": true,
+        "eleven_lives_in_source_order": true,
+        "eleven_photographs": true,
+        "cantor_false_anecdote_rejected": true,
+        "church_thesis_theorem_distinction": true,
+        "gentzen_proof_systems_and_uncertain_motive": true,
+        "godel_two_theorem_kinds": true,
+        "noether_chain_duality": true,
+        "peter_academic_distinction": true,
+        "robinson_decision_domains_and_jr": true,
+        "turing_two_ciphers_and_death_uncertainty": true,
+        "zermelo_choice_1904_axioms_1908": true
       }
     }
   ]
