@@ -1,16 +1,18 @@
 {
   "schema": "openlogic-translation-decision-qa/1.0.0",
-  "generated_utc": "2026-09-26T03:32:49.221069+00:00",
+  "generated_utc": "2026-09-28T14:38:48.619509+00:00",
   "status": "PASS",
   "edition_id": "openlogic-ta-Taml-IN",
-  "coverage_state": "partial",
+  "coverage_state": "complete",
   "counts": {
-    "decisions": 616,
-    "occurrences": 30449,
-    "source_units": 619,
+    "decisions": 742,
+    "occurrences": 38855,
+    "source_units": 722,
+    "decision_occurrence_units": 701,
+    "localized_decisions": 12,
     "reader_units_with_mapped_pages": 49,
-    "available_reader_occurrences": 3089,
-    "pending_reader_occurrences": 27360
+    "available_reader_occurrences": 3291,
+    "pending_reader_occurrences": 35564
   },
   "normative_schema": {
     "bytes": 10787,
@@ -18,6 +20,7 @@
     "draft": "2020-12"
   },
   "checks": {
+    "complete_722_unit_corpus_scope": true,
     "canonical_schema_validation": true,
     "unique_decision_ids": true,
     "unique_occurrence_ids": true,
@@ -37,41 +40,56 @@
     "markdown_csv_json_projection_counts_agree": true,
     "state_public_byte_identity": true,
     "canonical_schema_byte_identity": true,
+    "compressed_decisions_exact_roundtrip": true,
     "pending_reader_pages_are_explicit": true
   },
   "schema_errors": [],
   "surfaces": {
     "START_HERE.md": {
-      "bytes": 915,
-      "sha256": "0ac3658ce35660b10ba25b0a67e5b0afa85cc6fb77be53df94cb12c3765b3bd5"
+      "bytes": 4321,
+      "sha256": "d61482a21b923e2ff9f633e0292d24cb3e750f681c5294e711af19316d79ba7c"
+    },
+    "TRANSLATION_DECISIONS_TAMIL.md": {
+      "bytes": 1258600,
+      "sha256": "75fa03caf72fb547852dfc41bb6d74961e3747e3853173b4b22df0eb753abe42"
     },
     "TRANSLATION_DECISIONS_FULL.md": {
-      "bytes": 7779788,
-      "sha256": "58a73210dcae207e26b1a3170e6c9f03eeeceb44ec87cb85df4af452f18487da"
+      "bytes": 11406130,
+      "sha256": "fa46faf8f5468d442f0b1862d0d10a5840c867641978b78e673bbc9332edd737"
     },
     "PRIORITY_REVIEW.md": {
-      "bytes": 4963563,
-      "sha256": "dc1a61f8159adac598fd2377457dfdfbe6fa5b1d202be17dff261a1217a2f41b"
+      "bytes": 7382615,
+      "sha256": "4bb274280ae7fec8692da8f466a03a1837b84febeeb70cadfe4ba7bc832c9287"
     },
     "DECISION_OCCURRENCES.csv": {
-      "bytes": 25155185,
-      "sha256": "3193cefbaa9d9491481d87742245da31022b5d890525b17955bb96858ad29623"
+      "bytes": 32000478,
+      "sha256": "934215cd847eb9e97927e42909d52242b0f109500ee2296fd066be5fcfdf7a3b"
     },
     "DECISIONS.json": {
-      "bytes": 99209397,
-      "sha256": "ed64465aaf4ff2c644b95d6a1176ff8403db91e8f1f286d5b79aed825e79e5a2"
+      "bytes": 129582098,
+      "sha256": "bcf13b882f32bd95cb9fa48c658453240a3a9f532eb9dcd1eb0d24be51301a88"
+    },
+    "DECISIONS.json.gz": {
+      "bytes": 4351038,
+      "sha256": "1c1332b62d9ac5df9329fe4dbdcfc5e70219807649fac5b2b92ead65133ed140"
     },
     "translation-decision.schema.json": {
       "bytes": 10787,
       "sha256": "50e7fa407b62c711f92f8b93be591d3b4a6e1c4adb1386c398bb5f76844d9f90"
     },
     "VARIANT_ASSESSMENT.md": {
+      "bytes": 11862,
+      "sha256": "652d94d14004f67915feee8bb2bb2096b7df58a7bbc7a1e4121cb6f986d89f36"
+    },
+    "VARIANT_ASSESSMENT.en.md": {
       "bytes": 4374,
       "sha256": "fa73d16cefeed550b6c604f0e9530940a7b2c3098e89907235d57013f23e799d"
     }
   },
   "limitations": [
-    "The edition is partial, so pending reader pages are permitted and explicitly recorded.",
+    "The translation corpus is complete; distinct decision occurrences are recorded in 701 of its 722 units, since a separate decision is not required for every unit.",
+    "Tamil explanations and review questions have been individually localized for 12 decisions; the other 730 remain explicitly marked pending in the Tamil-first view.",
+    "Pending reader pages are explicitly recorded rather than inferred from other PDFs.",
     "Source spans marked as a segment-boundary fallback identify the exact audited semantic segment when a source lexeme cannot be paired mechanically.",
     "No independent Tamil specialist review is claimed."
   ]

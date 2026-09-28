@@ -5,7 +5,16 @@ For the reader-facing Tamil edition information, see [தமிழ் முக�
 India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
 Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
 
-The full edition is in progress. **639 of 722 frozen content units are translated, source-aligned and textually and semantically audited**. The accepted source now extends through the Greek and Fraktur alphabet appendices; 83 units remain.
+All **722 frozen content units** are translated and aligned in 2,242 source/target segments. The complete main reader contains 695 units and the source companion contains the other 27, covering each unit once. EPUB validation and public release of the complete edition are in progress.
+
+- [Complete main Tamil PDF](readers/tamil-complete.pdf): 1,171 A4 pages.
+- [Full-text editable main LaTeX](build/tamil-complete-direct.tex).
+- [Complete editable source archive](https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v1.0.0-complete/03-openlogic-ta-Taml-IN-complete-source.zip): both full-text LaTeX files, modular Tamil and frozen English sources, figures, bibliography, build scripts, and evidence.
+- [Tamil source companion PDF](readers/tamil-source-companion.pdf): 56 A4 pages of alternate source sections and explanatory material. Keep the PDFs in the same directory for the companion's links to the main volume.
+- [Full-text editable companion LaTeX](build/tamil-source-companion-direct.tex). The complete source archive carries both files' build dependencies.
+
+## Earlier component readers
+
 The first tagged reader remains the complete **Sets chapter: 7 source units, 6 sections, 69 aligned segments**.
 The wider 51-unit reader is a verified interim edition: 99 A4 pages covering Sets, Relations, Functions, Size of Sets, number-system construction and Infinite Sets. Patch release v0.2.1 replaces five references to chapters outside this reader with descriptive Tamil fallbacks; the live references return automatically when those destinations are included in a later complete edition. It passed a three-pass guarded XeLaTeX/BibTeX build, font embedding and copy/search checks, plus visual inspection of every rendered page.
 Fourteen verified component readers cover 257 distinct units. Each component passed a guarded TeX build, embedded-font and copy/search checks, and all-page visual inspection. The existing 384-page cumulative reader concatenates the first seven accepted components (203 units) in frozen-source order, adds section bookmarks, and preserves 626 checked links. The six set-theory readers and the Reference reader are supplied separately. The Cardinals, Cardinal Arithmetic, Choice, Proofs, Induction, Biographies and History of Set Theory chapters are editable source; their PDF readers have not yet been built.
@@ -42,15 +51,16 @@ Fourteen verified component readers cover 257 distinct units. Each component pas
 - Propositional syntax-and-semantics source master: build/tamil-pl-syn.tex.
 - Proof-systems, sequent-calculus, natural-deduction and tableaux reader master: build/tamil-proof-systems-sequent.tex.
 
-The first 570 units were translated and author reviewed with OpenAI Codex GPT-5.6 Sol, Ultra reasoning. OLP-0574–OLP-0642 and this metadata update were produced with OpenAI Codex GPT-6 Sol, Ultra reasoning. Independent human or native-speaker approval is not claimed.
-Every component reader was checked page by page for Tamil shaping, formulas, diagrams, references and clipping. All 639 accepted units pass mathematical, citation, identifier and structural parity checks or a specifically audited source correction. The evidence records 1,760 aligned segments and 968 reverse-paraphrase samples. Corrections in Ordinal Arithmetic, Cardinals, Cardinal Arithmetic, Choice, Methods and History of Set Theory are documented in [the source-correction ledger](evidence/source-corrections.json). For the cumulative reader, every page content stream and page box is identical to its accepted component, all fonts remain embedded, and representative boundary and interior pages were rendered and visually inspected.
+Machine translation and corrections of the first 570 units were performed with OpenAI Codex — GPT-5.6 Sol, Ultra effort. Translation of the remaining 152 units, later corrections, complete-edition assembly and automated checks were performed with OpenAI Codex — GPT-6 Sol, Ultra effort. The split is verified against this task's session metadata. Independent human or native-speaker approval is not claimed. All 722 units have source/target segment coverage across 2,242 segments, and 1,457 semantic reverse samples were checked. The 1,227 pages of the two complete PDFs passed a low-resolution scan for empty pages, edge clipping, and very low ink coverage; contact sheets and selected full pages were visually inspected. This is not individual human review of every glyph. Source corrections are documented in [the source-correction ledger](evidence/source-corrections.json).
 
-PDF text reuse has measured limitations. Poppler correctly extracts five tested Tamil phrases and representative union, intersection and Cartesian-product formulas. PyMuPDF duplicates some Tamil syllables or loses spacing. Composite negation symbols may still split during extraction in some contexts; blackboard number-set letters may extract as ordinary letters. Use the editable formulas for exact mathematical reuse. This is not a claim of tagged-PDF or universal screen-reader accessibility. A semantic reader remains part of the continuing full-edition work.
+PDF text reuse has measured limitations. Poppler finds seven tested Tamil phrases and the companion's 18 cross-reader links. One visible nonmembership symbol extracts out of formula order, and other PDF engines may duplicate Tamil syllables or lose spacing. Use the editable formulas for exact mathematical reuse. These PDFs are not claimed to be tagged or universally accessible to screen readers.
 
 ## Build
 
 Use a Unicode-capable TeX distribution with XeLaTeX, memoir, the upstream dependencies, fontspec and accsupp. The readers use the Windows system fonts Nirmala UI and Consolas; font files are not redistributed.
 Run build/build-tamil.ps1 on Windows. It holds Global\InterlanguageTeXSlotV1 over the captured TeX process tree, every pass, optional BibTeX and log checks. A busy slot returns without starting an engine. The default master produces build/tamil-batch001.pdf. For the combined Sets-through-Infinite-Sets reader, run `build/build-tamil.ps1 -Master tamil-sfr.tex -Passes 3 -BibTeX -ReceiptName TEX-SFR-RECEIPT`. For the proof-systems reader, run `build/build-tamil.ps1 -Master tamil-proof-systems-sequent.tex -Passes 2 -ReceiptName TEX-PROOF-SYSTEMS-TABLEAUX-RECEIPT`. For the iterative-conception chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-story.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-STORY-RECEIPT`. For the Zermelo-axioms chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-z.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-Z-RECEIPT`. For the ordinals chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-ordinals.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-ORDINALS-RECEIPT`. For the stages-and-ranks chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-spine.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-SPINE-RECEIPT`. For the Replacement-and-Reflection chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-replacement.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-REPLACEMENT-RECEIPT`.
+
+For the complete edition, use `build/build-tamil.ps1 -Master tamil-complete.tex -Passes 3 -BibTeX -ReceiptName TEX-COMPLETE-RECEIPT`, then `build/build-tamil.ps1 -Master tamil-source-companion.tex -Passes 3 -ReceiptName TEX-COMPANION-RECEIPT` from the unpacked archive root. The companion imports the main volume's references and should be built second.
 
 For the Reference alphabets reader, run `build/build-tamil.ps1 -Master tamil-reference-alphabets.tex -Passes 3 -ReceiptName TEX-REFERENCE-ALPHABETS-RECEIPT`.
 
@@ -65,7 +75,7 @@ The evidence folder contains the source manifest, actual per-segment canon-use r
 
 OpenLogic's natural numbers include zero. The source convention is retained and explained in a separate Tamil edition note, because the consulted school text uses a different convention. New editorial or learner material is kept separate from the faithful source.
 
-The ordinary reader graph and remaining wrappers, all remaining translation, integration of the 382 accepted units outside the fourteen component readers, reflowable EPUB3 production, ongoing terminology review and final full-edition publication are unfinished. An interim release does not complete the programme.
+The source translation and two complete PDFs are prepared. Reflowable EPUB3 validation and public release remain in progress. Terminology can be refined through later independent review.
 
 ## Attribution and license
 

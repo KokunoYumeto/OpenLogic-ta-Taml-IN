@@ -1,0 +1,120 @@
+{
+  "batch_id": "TA-B338",
+  "units": [
+    {
+      "unit_id": "OLP-0678",
+      "source_sha256": "070919f142090f49cb60e3e8456cca3b2b34c369c2f22796767795a1bb6bbc67",
+      "translation_sha256": "089aea230682c9ad798bba0edb01e749c0bcaffd7b712b3c33d147380fa6c09f",
+      "source_bytes": 12978,
+      "translation_bytes": 26504,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\delta'$",
+        "$\\Gamma_1\\Sequent!D$",
+        "$!E,\\Gamma_1'\\Sequent!A$"
+      ],
+      "extra_math": [
+        "$\\Delta$",
+        "$!C\\ident\\lfalse$",
+        "$\\Delta=\\{!A\\}$",
+        "$!C$",
+        "$\\Delta=\\emptyset$",
+        "$\\Delta=\\emptyset$",
+        "$!E,\\Gamma_2'\\Sequent!A$",
+        "$\\Gamma_1'\\Sequent!D$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "nat",
+        "open",
+        "section",
+        "tgi",
+        "tni"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0678",
+          "audit_id": "TA-PT-034",
+          "kind": "normal-proof-translation-system-scope-and-falsity-succedent",
+          "action": "Correct G2i/N2i names and the end-sequent correspondence in the first corollary; qualify the reverse cut-free translation by normality; separate the introduction and elimination cases; replace undefined delta-prime with delta-one; explain that the frozen optional right-weakening diagrams do not prove the promised empty succedent; include open assumptions in the final subformula assertion; localize the two in-diagram connector words. Correct the G2i induction premises' contexts to unlabelled Gamma-one-prime and the second branch's Gamma-two-prime.",
+          "expected_missing_math": [
+            "$\\delta'$",
+            "$\\Gamma_1\\Sequent!D$",
+            "$!E,\\Gamma_1'\\Sequent!A$"
+          ],
+          "expected_extra_math": [
+            "$\\Delta$",
+            "$!C\\ident\\lfalse$",
+            "$\\Delta=\\{!A\\}$",
+            "$!C$",
+            "$\\Delta=\\emptyset$",
+            "$\\Delta=\\emptyset$",
+            "$!E,\\Gamma_2'\\Sequent!A$",
+            "$\\Gamma_1'\\Sequent!D$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\delta"
+          ],
+          "expected_extra_commands": [
+            "\\Delta",
+            "\\Delta",
+            "\\Delta",
+            "\\Delta",
+            "\\ident",
+            "\\lfalse",
+            "\\emptyset",
+            "\\emptyset",
+            "\\item"
+          ],
+          "source_issue_or_choice": "The opening misnames G2i as 2i, the corollary misnames N2c for N2i and omits the relation between C and the G2i succedent, and the reverse sentence omits the normality hypothesis. The elimination branch is nested under the introduction item. The conjunction induction count cites undefined delta-prime. In the bottom-conclusion cases the source diagrams add right weakening to produce a nonempty succedent, contradicting the proposition's empty-succedent requirement. The closing subformula claim omits open assumptions for N1i. The diagrams contain English 'into'. The final implication induction incorrectly names labelled Gamma-one for the first G2i premise and repeats Gamma-one-prime instead of Gamma-two-prime for the second.",
+          "chosen_treatment": "Use the adjacent G2i-to-N2i proposition's exact system and succedent cases; state normality and the Cut-extended proof scope; make the elimination case a separate list item; refer to the constructed delta-one; retain the frozen diagrams but explicitly distinguish their nonempty-succedent variants from the empty-succedent proof, explaining which right-weakening step to omit and when left-implication needs one; include undischarged assumptions in the subformula comparison; translate the two diagram connector words. Match the displayed left-implication tree by using unlabelled Gamma-one-prime and Gamma-two-prime in the prose premises.",
+          "alternatives_considered": "Silently copy the incorrect system name and missing hypothesis; treat diagrams ending with bottom on the right as proofs of the promised empty succedent; discard open assumptions from the subformula bound; silently alter proof-tree formulas.",
+          "rationale": "Frozen natural-deduction/translation-G2i.tex prop:G2i-to-N2i yields N2i and explicitly distinguishes empty and singleton G2i succedents. Frozen natural-deduction/translation-N2i.tex prop:N2-to-G2 defines the reverse mapping and the empty succedent for bottom. The displayed conjunction and implication inductions preserve an empty right side under left rules; the source's final RightWeakening adds bottom, changing the end sequent. A normal N1i derivation from an open P-and-Q assumption to P is a counterexample to the unqualified end-formula-only subformula claim. The source diagrams and proof-rule IDs remain available for review. In the preceding N2i display the first subproof has Gamma-one and the second transformed subproof has Gamma-two; the following G2i left-implication display has Gamma-one-prime and Gamma-two-prime, so the prose context indices must match.",
+          "precise_review_question": "Do the stated empty-succedent cases and the open-assumption bound repair the theorem claims while the preserved source diagrams remain transparently labelled as nonmatching variants?",
+          "location_needle": "வெற்று-வலப்புற முடிவு அல்ல"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\delta"
+      ],
+      "extra_commands": [
+        "\\Delta",
+        "\\Delta",
+        "\\Delta",
+        "\\Delta",
+        "\\ident",
+        "\\lfalse",
+        "\\emptyset",
+        "\\emptyset",
+        "\\item"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

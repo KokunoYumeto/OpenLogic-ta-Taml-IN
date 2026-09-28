@@ -1,0 +1,532 @@
+{
+  "schema": "openlogic-tamil-token-coverage/1",
+  "checked_utc": "2026-09-28T00:36:42.041148+00:00",
+  "result": "pass",
+  "scope": {
+    "content_files": 722,
+    "used_literal_keys": 66,
+    "natural_language_keys": 62,
+    "config_keys": 64,
+    "article_keys_used": 37
+  },
+  "config": {
+    "path": "translation/tamil-config.sty",
+    "bytes": 19603,
+    "sha256": "b43e39230e26f15e20467aaf6b819c224b160ae80e1a3286209e33dc8fc5c220"
+  },
+  "unmapped_natural_language_keys": [],
+  "article_override_failures": [],
+  "new_overrides": {
+    "depth": {
+      "tamil": "ஆழம்",
+      "term_decision": "TA-T296",
+      "occurrences": 1,
+      "example_paths": [
+        "translation/content/proof-theory/proof-search/completeness.tex"
+      ]
+    },
+    "introduction": {
+      "tamil": "அறிமுகம்",
+      "term_decision": "TA-T092",
+      "occurrences": 24,
+      "example_paths": [
+        "translation/content/proof-theory/natural-deduction/introduction.tex",
+        "translation/content/proof-theory/natural-deduction/introduction.tex",
+        "translation/content/proof-theory/natural-deduction/rules-proofs.tex"
+      ]
+    },
+    "elimination": {
+      "tamil": "நீக்கல்",
+      "term_decision": "TA-T092",
+      "occurrences": 29,
+      "example_paths": [
+        "translation/content/proof-theory/natural-deduction/introduction.tex",
+        "translation/content/proof-theory/natural-deduction/introduction.tex",
+        "translation/content/proof-theory/natural-deduction/rules-proofs.tex"
+      ]
+    },
+    "parameter": {
+      "tamil": "அளவுரு",
+      "term_decision": "TA-T205",
+      "occurrences": 2,
+      "example_paths": [
+        "translation/content/lambda-calculus/syntax/terms.tex",
+        "translation/content/lambda-calculus/syntax/terms.tex"
+      ]
+    },
+    "relational model": {
+      "tamil": "தொடர்புசார் மாதிரி",
+      "term_decision": "TA-T169",
+      "occurrences": 7,
+      "example_paths": [
+        "translation/content/intuitionistic-logic/semantics/introduction.tex",
+        "translation/content/intuitionistic-logic/semantics/introduction.tex",
+        "translation/content/intuitionistic-logic/semantics/propositions.tex"
+      ]
+    }
+  },
+  "new_article_overrides": [
+    {
+      "key": "main operator",
+      "tamil": "ஒரு",
+      "article_occurrences": 1,
+      "example_locations": [
+        {
+          "path": "translation/content/first-order-logic/syntax-and-semantics/main-operator.tex",
+          "line": 62
+        }
+      ]
+    },
+    {
+      "key": "undischarged",
+      "tamil": "ஒரு",
+      "article_occurrences": 3,
+      "example_locations": [
+        {
+          "path": "translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex",
+          "line": 281
+        },
+        {
+          "path": "translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex",
+          "line": 292
+        },
+        {
+          "path": "translation/content/incompleteness/arithmetization-syntax/proofs-in-nd.tex",
+          "line": 302
+        }
+      ]
+    },
+    {
+      "key": "axiomatizable",
+      "tamil": "ஓர்",
+      "article_occurrences": 1,
+      "example_locations": [
+        {
+          "path": "translation/content/incompleteness/incompleteness-provability/lob-thm.tex",
+          "line": 59
+        }
+      ]
+    },
+    {
+      "key": "derivability",
+      "tamil": "ஒரு",
+      "article_occurrences": 4,
+      "example_locations": [
+        {
+          "path": "translation/content/incompleteness/incompleteness-provability/lob-thm.tex",
+          "line": 139
+        },
+        {
+          "path": "translation/content/incompleteness/incompleteness-provability/lob-thm.tex",
+          "line": 157
+        },
+        {
+          "path": "translation/content/incompleteness/incompleteness-provability/second-incompleteness-thm.tex",
+          "line": 34
+        }
+      ]
+    },
+    {
+      "key": "decidable",
+      "tamil": "ஒரு",
+      "article_occurrences": 2,
+      "example_locations": [
+        {
+          "path": "translation/content/incompleteness/introduction/definitions.tex",
+          "line": 205
+        },
+        {
+          "path": "translation/content/incompleteness/introduction/definitions.tex",
+          "line": 209
+        }
+      ]
+    },
+    {
+      "key": "lambda definable",
+      "tamil": "ஒரு",
+      "article_occurrences": 1,
+      "example_locations": [
+        {
+          "path": "translation/content/lambda-calculus/lambda-definability/minimization.tex",
+          "line": 16
+        }
+      ]
+    }
+  ],
+  "intentional_exceptions": [
+    {
+      "key": "colorC",
+      "occurrences": 5,
+      "reason": "Nonvisible plotting configuration: the frozen color name red is an input to the graphics/color engine, not prose.",
+      "example_paths": [
+        "translation/content/history/set-theory/hilbert-curve.tex",
+        "translation/content/history/set-theory/hilbert-curve.tex",
+        "translation/content/history/set-theory/hilbert-curve.tex"
+      ]
+    },
+    {
+      "key": "colorD",
+      "occurrences": 1,
+      "reason": "Nonvisible plotting configuration: the frozen color name blue is an input to the graphics/color engine, not prose.",
+      "example_paths": [
+        "translation/content/history/set-theory/infinitesimals.tex"
+      ]
+    },
+    {
+      "key": "colorE",
+      "occurrences": 3,
+      "reason": "Nonvisible plotting configuration: the frozen color name green is an input to the graphics/color engine, not prose.",
+      "example_paths": [
+        "translation/content/history/set-theory/hilbert-curve.tex",
+        "translation/content/history/set-theory/hilbert-curve.tex",
+        "translation/content/history/set-theory/infinitesimals.tex"
+      ]
+    },
+    {
+      "key": "hp",
+      "occurrences": 2,
+      "reason": "The source-defined hp initialism denotes height-preserving in two parenthetical technical labels. Both target passages spell out the property in Tamil immediately before the retained initialism; it is a formal abbreviation, not an untranslated sentence.",
+      "example_paths": [
+        "translation/content/proof-theory/sequent-calculus/admissible-derivable.tex",
+        "translation/content/proof-theory/sequent-calculus/invertibility.tex"
+      ]
+    }
+  ],
+  "all_used_keys": [
+    {
+      "key": "axiomatizability",
+      "occurrences": 2,
+      "article_occurrences": 0
+    },
+    {
+      "key": "axiomatizable",
+      "occurrences": 34,
+      "article_occurrences": 1
+    },
+    {
+      "key": "axiomatized",
+      "occurrences": 1,
+      "article_occurrences": 0
+    },
+    {
+      "key": "biconditional",
+      "occurrences": 14,
+      "article_occurrences": 0
+    },
+    {
+      "key": "bijection",
+      "occurrences": 60,
+      "article_occurrences": 45
+    },
+    {
+      "key": "bijective",
+      "occurrences": 14,
+      "article_occurrences": 5
+    },
+    {
+      "key": "c.e.",
+      "occurrences": 10,
+      "article_occurrences": 0
+    },
+    {
+      "key": "colorC",
+      "occurrences": 5,
+      "article_occurrences": 0
+    },
+    {
+      "key": "colorD",
+      "occurrences": 1,
+      "article_occurrences": 0
+    },
+    {
+      "key": "colorE",
+      "occurrences": 3,
+      "article_occurrences": 0
+    },
+    {
+      "key": "complete",
+      "occurrences": 47,
+      "article_occurrences": 8
+    },
+    {
+      "key": "computably enumerable",
+      "occurrences": 7,
+      "article_occurrences": 0
+    },
+    {
+      "key": "conditional",
+      "occurrences": 11,
+      "article_occurrences": 0
+    },
+    {
+      "key": "constant",
+      "occurrences": 191,
+      "article_occurrences": 35
+    },
+    {
+      "key": "decidable",
+      "occurrences": 39,
+      "article_occurrences": 2
+    },
+    {
+      "key": "denumerable",
+      "occurrences": 39,
+      "article_occurrences": 10
+    },
+    {
+      "key": "depth",
+      "occurrences": 1,
+      "article_occurrences": 0
+    },
+    {
+      "key": "derivability",
+      "occurrences": 66,
+      "article_occurrences": 4
+    },
+    {
+      "key": "derivable",
+      "occurrences": 84,
+      "article_occurrences": 0
+    },
+    {
+      "key": "derivation",
+      "occurrences": 699,
+      "article_occurrences": 219
+    },
+    {
+      "key": "derive",
+      "occurrences": 110,
+      "article_occurrences": 0
+    },
+    {
+      "key": "discharge",
+      "occurrences": 5,
+      "article_occurrences": 0
+    },
+    {
+      "key": "discharged",
+      "occurrences": 18,
+      "article_occurrences": 0
+    },
+    {
+      "key": "domain",
+      "occurrences": 81,
+      "article_occurrences": 10
+    },
+    {
+      "key": "element",
+      "occurrences": 481,
+      "article_occurrences": 109
+    },
+    {
+      "key": "elimination",
+      "occurrences": 29,
+      "article_occurrences": 19
+    },
+    {
+      "key": "enumerable",
+      "occurrences": 132,
+      "article_occurrences": 14
+    },
+    {
+      "key": "falsity",
+      "occurrences": 11,
+      "article_occurrences": 0
+    },
+    {
+      "key": "formula",
+      "occurrences": 1348,
+      "article_occurrences": 287
+    },
+    {
+      "key": "free for",
+      "occurrences": 15,
+      "article_occurrences": 0
+    },
+    {
+      "key": "function",
+      "occurrences": 96,
+      "article_occurrences": 9
+    },
+    {
+      "key": "height",
+      "occurrences": 48,
+      "article_occurrences": 0
+    },
+    {
+      "key": "hp",
+      "occurrences": 2,
+      "article_occurrences": 0
+    },
+    {
+      "key": "identity",
+      "occurrences": 22,
+      "article_occurrences": 0
+    },
+    {
+      "key": "injection",
+      "occurrences": 35,
+      "article_occurrences": 29
+    },
+    {
+      "key": "injective",
+      "occurrences": 53,
+      "article_occurrences": 9
+    },
+    {
+      "key": "introduction",
+      "occurrences": 24,
+      "article_occurrences": 13
+    },
+    {
+      "key": "lambda definable",
+      "occurrences": 51,
+      "article_occurrences": 1
+    },
+    {
+      "key": "lambda define",
+      "occurrences": 25,
+      "article_occurrences": 0
+    },
+    {
+      "key": "lambda defined",
+      "occurrences": 9,
+      "article_occurrences": 0
+    },
+    {
+      "key": "language",
+      "occurrences": 50,
+      "article_occurrences": 9
+    },
+    {
+      "key": "main operator",
+      "occurrences": 36,
+      "article_occurrences": 1
+    },
+    {
+      "key": "nonderivability",
+      "occurrences": 4,
+      "article_occurrences": 0
+    },
+    {
+      "key": "nonenumerable",
+      "occurrences": 70,
+      "article_occurrences": 1
+    },
+    {
+      "key": "operator",
+      "occurrences": 9,
+      "article_occurrences": 0
+    },
+    {
+      "key": "parameter",
+      "occurrences": 2,
+      "article_occurrences": 0
+    },
+    {
+      "key": "predicate",
+      "occurrences": 109,
+      "article_occurrences": 9
+    },
+    {
+      "key": "proof",
+      "occurrences": 618,
+      "article_occurrences": 225
+    },
+    {
+      "key": "propositional variable",
+      "occurrences": 66,
+      "article_occurrences": 3
+    },
+    {
+      "key": "provable",
+      "occurrences": 18,
+      "article_occurrences": 0
+    },
+    {
+      "key": "prove",
+      "occurrences": 31,
+      "article_occurrences": 0
+    },
+    {
+      "key": "proving",
+      "occurrences": 3,
+      "article_occurrences": 0
+    },
+    {
+      "key": "relational model",
+      "occurrences": 7,
+      "article_occurrences": 3
+    },
+    {
+      "key": "represents",
+      "occurrences": 23,
+      "article_occurrences": 0
+    },
+    {
+      "key": "sentence",
+      "occurrences": 567,
+      "article_occurrences": 118
+    },
+    {
+      "key": "signed formula",
+      "occurrences": 103,
+      "article_occurrences": 12
+    },
+    {
+      "key": "structure",
+      "occurrences": 413,
+      "article_occurrences": 148
+    },
+    {
+      "key": "subformula",
+      "occurrences": 34,
+      "article_occurrences": 1
+    },
+    {
+      "key": "surjection",
+      "occurrences": 17,
+      "article_occurrences": 15
+    },
+    {
+      "key": "surjective",
+      "occurrences": 74,
+      "article_occurrences": 20
+    },
+    {
+      "key": "tableau",
+      "occurrences": 249,
+      "article_occurrences": 89
+    },
+    {
+      "key": "truth",
+      "occurrences": 10,
+      "article_occurrences": 0
+    },
+    {
+      "key": "undischarged",
+      "occurrences": 65,
+      "article_occurrences": 3
+    },
+    {
+      "key": "valuation",
+      "occurrences": 85,
+      "article_occurrences": 43
+    },
+    {
+      "key": "value",
+      "occurrences": 19,
+      "article_occurrences": 2
+    },
+    {
+      "key": "variable",
+      "occurrences": 157,
+      "article_occurrences": 36
+    }
+  ],
+  "release_ready": false,
+  "limitations": [
+    "This audits shorthand and explicit printtoken/usetoken registrations and explicit Tamil article overrides, not a TeX/font/layout proof.",
+    "Full rendered-text and visible-prose review, including dynamic aliases and grammatical case use, remains required."
+  ]
+}

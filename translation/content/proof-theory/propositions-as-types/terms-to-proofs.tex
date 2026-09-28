@@ -1,0 +1,118 @@
+% SEGMENT OLP-0695-S01
+% Part: proof-theory
+% Chapter: propositions-as-types
+% Section: terms-to-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{tp}
+
+\olsection{நிறுவல் சொற்களிலிருந்து
+\usetoken{P}{derivation} ஐ மீட்டமைத்தல்}
+
+இப்போது மறுதிசையைப் பார்ப்போம்: நிறுவல் சொல்~$N$
+இலிருந்து \Log{N2i} இல் !!a{proof} ஐ மீட்டமைத்தல்.
+பொதுவாக, அந்த நிறுவல் சொல்லில் கட்டற்றதாக வரும்
+ஒவ்வொரு மாறி~$x$ க்கும் $x : !A$ என்ற இணை உள்ள
+சூழலைப் பொறுத்தே இதைச் செய்ய முடியும். ஆனால் முதலில்
+கட்டற்ற மாறிகள் இல்லாத ஓர் எடுத்துக்காட்டை,
+அதாவது பின்வரும் சொல்லைப் பார்ப்போம்:
+\[
+\lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}]
+\]
+இது $\lambd[\typeof{x}{!A \land !B}][N_1]$
+என்ற வடிவில் உள்ளது. இந்த வடிவிலான சொல்லை
+உருவாக்கும் \Log{tN2i} இன் ஒரே விதி
+\Intro{\lif} என்பதால், $N$ குறியாக்கும்
+!!{proof}, \Intro{\lif} விதியிலேயே முடியும்
+என்று அறிவோம்; அதாவது அதன் முடிவு:
+  \[
+  \Axiom$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !C$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif !C$
+  \DisplayProof
+  \]
+$!C$ என்னவென்று இன்னும் தெரியாது. ஆனால்
+முன்னிலை $!A \land !B$ என்பதும், முன்கூற்றின்
+சூழலில் $x:!A \land !B$ இருக்க வேண்டும்
+என்பதும் தெரியும்.
+
+% SEGMENT OLP-0695-S02
+இப்போது முன்கூற்றுக்குரிய நிறுவல் சொல்
+$\pair{\proj{2}{x}}{\proj{1}{x}}$
+என ஏற்கெனவே தீர்மானிக்கப்பட்டுள்ளது. \emph{அது} குறியாக்கும்
+!!{proof} \Intro{\land} விதியில் முடிய வேண்டும்.
+$!C$ என்னவென்று இன்னும் தெரியாவிட்டாலும்,
+அது \Intro{\land} இன் முடிவு என்பதால்
+இணையலாகவே இருக்க வேண்டும்; அதாவது
+$!C \ident (!C_1 \land !C_2)$. மீட்டமைப்பைத்
+தொடர்கிறோம்:
+  \[
+  \Axiom$x : !A\land !B \fCenter \proj{2}{x} : !C_1$
+  \Axiom$x : !A\land !B \fCenter \proj{1}{x} : !C_2$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !C_1 \land !C_2$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif (!C_1 \land !C_2)$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0695-S03
+$\pi_2(x)$ என்ற நிறுவல் சொல், இடப்புற மிக
+மேலுள்ள தொடருரு \Elim{\land}[2] விதியால்
+பெறப்பட்டது என்பதைக் காட்டுகிறது; ஆகவே அதன்
+முன்கூற்று $!D \land !C_1$ வடிவில் இருக்கும்.
+வலப்புறத்தில் $!C_2$ க்கு வழிவகுக்கும்
+அனுமானம் \Elim{\land}[1] ஆக வேண்டும் என்றும்,
+அதன் முன்கூற்று $!C_2 \land !E$ வடிவில்
+இருக்கும் என்றும் தீர்மானிக்கலாம்.
+  \[
+  \Axiom$x : !A\land !B \fCenter x: !D\land !C_1$
+  \RightLabel{\Elim\land[2]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{2}{x} : !C_1$
+  \Axiom$x : !A\land !B \fCenter x: !C_2\land !E$
+  \RightLabel{\Elim\land[1]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{1}{x} : !C_2$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !C_1 \land !C_2$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif (!C_1 \land !C_2)$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0695-S04
+மிக மேலுள்ள தொடருருக்களின் நிறுவல் சொற்கள்
+இப்போது மாறிகளாக இருப்பதால், அவை அடிக்கோள்களாக
+இருக்க வேண்டும். இது $!C_1$, $!C_2$, $!D$,
+$!E$ ஆகியவற்றைத் தீர்மானிக்கிறது: இடப்புறத்
+தொடருரு அடிக்கோளாக இருக்க $!D \ident !A$,
+$!C_1 \ident !B$ வேண்டும்; வலப்புறத்
+தொடருரு அடிக்கோளாக இருக்க $!C_2 \ident !A$,
+$!E \ident !B$ வேண்டும். இப்போது முழு
+நிறுவலையும் மீட்டமைத்துவிட்டோம்:
+  \[
+  \Axiom$x : !A\land !B \fCenter x: !A\land !B$
+  \RightLabel{\Elim\land[2]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{2}{x} : !B$
+  \Axiom$x : !A\land !B \fCenter x: !A\land !B$
+  \RightLabel{\Elim\land[1]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{1}{x} : !A$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} : 
+    !B \land !A$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif (!B \land !A)$
+  \DisplayProof
+  \]
+
+\end{document}

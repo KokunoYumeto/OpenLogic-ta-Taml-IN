@@ -1,0 +1,144 @@
+% SEGMENT OLP-0696-S01
+% Part: proof-theory
+% Chapter: propositions-as-types
+% Section: type-preservation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{tpr}
+
+\olsection{வகை மாறாமை}
+
+இங்கு கருதப்பட்ட குறைப்பு உருமாற்றங்களையும் வரிசைமாற்று
+உருமாற்றங்களையும் \Log{tN2i}, \Log{tN3i} முறைமைகளுக்கே
+நேரடியாக வரையறுக்கலாம். \Log{tN3i} முறைமை, சூழல்~$\Gamma$
+சார்ந்து $N$ என்ற $\lambd$-சொல்லின் வகையைப் பின்வருமாறு
+வரையறுக்கிறது: $\Gamma \Sequent N : !A$ என்பதற்கு
+\Log{tN3i} இல் !!a{proof} இருந்தால், அந்த வகை
+!!{formula}~$!A$ ஆகும். $\lambd$-சொற்களுக்கான
+$\beta$-குறைத்தல் விதிகள், !!{proof}s இன் குறைப்பு மற்றும்
+வரிசைமாற்று உருமாற்றங்களைத் துல்லியமாகப் பிரதிபலிப்பதால்
+ஒரு முக்கிய விளைவு கிடைக்கிறது: சூழல்~$\Gamma$
+சார்ந்த $\lambd$-சொல்லின் வகை, $\beta$-மாற்றத்திற்குப்
+பின்னும் மாறாது. இப்பண்பு \emph{வகை மாறாமை} எனப்படுகிறது.
+
+\begin{prop}
+$\Gamma$ சார்ந்து $N$ இன் வகை~$!A$ ஆகவும்
+$N \redone N'$ ஆகவும் இருந்தால், $\Gamma$ சார்ந்து
+$N'$ இன் வகையும்~$!A$ ஆகும்.
+\end{prop}
+
+% SEGMENT OLP-0696-S02
+\begin{proof}
+  $N$ மீதும், $\Gamma \Sequent N : !A$ என்பதன்
+  !!{proof}~$\delta$ இன் உயரம் மீதும் தொகுத்தறிந்து
+  பின்வருவதை எளிதில் நிறுவலாம். $M$ என்பது~$N$ இன்
+  ஓர் உட்சொல்லாக இருந்தால், $\Gamma' \Sequent M : !B$
+  இல் முடியும் துணை-!!{proof}~$\delta_1$ ஒன்று
+  $\delta$ வில் இருக்கும். $M$ ஒரு ரெடெக்ஸ் என்றால்,
+  $\delta_1$ க்கு ஓர் உருமாற்றம் பொருந்தும்.
+  $\delta_1$ க்குக் குறைப்பைப் பயன்படுத்தி,
+  $\Gamma' \Sequent M' : !B$ என்பதன்
+  !!a{proof}~$\delta_1'$ ஐப் பெறுகிறோம்.
+  \Log{tN3i} இன் உருமாற்றங்களைப் பரிசோதித்தால்,
+  $M'$ என்பது~$M$ இன் சுருக்கவிளைவு என்று தெரிகிறது.
+  $\delta$ வில் $\delta_1$ ஐ $\delta_1'$ ஆல்
+  மாற்றுவதால், $\Gamma \Sequent N' : !A$ என்பதன்
+  !!a{proof}~$\delta'$ கிடைக்கிறது; இங்கு $N$ இல்
+  உட்சொல்~$M$ ஐ~$M'$ ஆல் மாற்றியதே~$N'$.
+
+% SEGMENT OLP-0696-S03
+  எடுத்துக்காட்டாக, \Intro{\land} ஐத் தொடர்ந்து
+  \Elim{\land} வரும் குறைப்பு உருமாற்றத்தைப் பார்ப்போம்:
+  \[
+  \bottomAlignProof
+  \AxiomC{}
+  \Deduce$\Gamma \fCenter N_1 : !B_1$
+  \AxiomC{}
+  \Deduce$\Gamma \fCenter N_2 : !B_2$
+  \RightLabel{\Intro{\land}}
+  \BinaryInf$\Gamma \fCenter \pair{N_1}{N_2} : !B_1 \land !B_2$
+  \RightLabel{\Elim{\land}[i]}
+  \UnaryInf$\Gamma \fCenter \proj{i}{\pair{N_1}{N_2}} : !B_i$
+  \DisplayProof
+  \quad\redone\quad
+  \bottomAlignProof
+  \AxiomC{}
+  \Deduce$\Gamma \fCenter N_i : !B_i$
+  \DisplayProof
+  \]
+  வலப்புற !!{proof}~$\delta_1'$ இன் நிறுவல் சொல்
+  $N_i$ என்பதைப் பார்க்கிறோம். இடப்புற !!{proof}~$\delta_1$
+  இன் நிறுவல் சொல் $\proj{i}{\pair{N_1}{N_2}}$ மீது
+  $\beta$-மாற்றத்தைப் பயன்படுத்தினால் கிடைப்பதும்
+  துல்லியமாக இதுவே.
+
+% SEGMENT OLP-0696-S04
+  அல்லது \Intro{\lif} ஐத் தொடர்ந்து வரும்
+  \Elim{\lif} அனுமானத்தையும் அதற்குப் பயன்படுத்தப்படும்
+  குறைப்பு உருமாற்றத்தையும் பார்ப்போம்:
+  \begin{multline*}
+  \bottomAlignProof
+  \AxiomC{$\delta_2$}
+  \Deduce$x: !B_1, \Gamma \fCenter N : !B_2$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter \lambd[\typeof{x}{!B_1}][N] : !B_1 \lif !B_2$
+  \AxiomC{}
+  \RightLabel{$\delta_3$}
+  \Deduce$\Gamma \fCenter M : !B_1$
+  \RightLabel{\Elim{\lif}}
+  \BinaryInf$\Gamma \fCenter (\lambd[\typeof{x}{!B_1}][N] M) : !B_2$
+  \DisplayProof
+  \quad\redone\\
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_3$}
+  \Deduce$\Gamma \fCenter M : !B_1$
+  \RightLabel{$\Subst{\delta_2}{\delta_3}{x:!B_1}$}
+  \Deduce$\Gamma \fCenter \Subst{N}{M}{x} : !B_2$
+  \DisplayProof
+  \end{multline*}
+  இங்கும் வலப்புற !!{proof} இன் நிறுவல் சொல்,
+  இடப்புற !!{proof} இன் நிறுவல் சொல்லை
+  $\beta$-குறைத்தால் கிடைக்கும் சொல்லே.
+  நிச்சயமாக, $\delta_2$ இன் உயரம் மீது
+  தொகுத்தறிந்து ஒரு விவரத்தைச் சரிபார்க்க வேண்டும்:
+  $\delta_2$ வில் உள்ள
+  $\Gamma' \Sequent x:!B_1$ வடிவிலான எல்லா
+  அடிக்கோள்களையும், $\Gamma \Sequent M:!B_1$
+  என்பதன் !!{proof}~$\delta_3$ ஆல் மாற்றினால்,
+  உண்மையில் $\Gamma \Sequent
+  \Subst{N}{M}{x} : !B_2$ என்பதன்
+  !!a{proof}~$\Subst{\delta_2}{\delta_3}{x:!B_1}$
+  கிடைக்கிறது என்பதைச் சரிபார்க்க வேண்டும்.
+\end{proof}
+
+% SEGMENT OLP-0696-S05
+!!{proof}s க்கும் $\lambd$-சொற்களுக்கும் இடையேயான
+நெருங்கிய பொருத்தத்திற்கு இன்னொரு விளைவு உண்டு.
+சூழல்~$\Gamma$ சார்ந்து வகை~$!A$ உடைய
+$\lambd$-சொல்~$N$ இல் ரெடெக்ஸ்~$M$ இருந்தால்
+(அதாவது, அது இயல்புவடிவத்தில் இல்லாவிட்டால்),
+$\Gamma \Sequent N : !A$ என்பதற்குரிய
+\Log{tN3i} நிறுவல்~$\delta$ வில்,
+$\Gamma' \Sequent M: !B$ இல் முடியும்
+உருமாற்றம் பொருந்தக்கூடிய ஒரு துணை-!!{proof}
+இருக்கும். $M$ ஐ அதன் சுருக்கவிளைவால் மாற்றி
+$N \redone N'$ என்று பெற்றால்,
+$\delta$ வில் அதற்குரிய குறைப்பைப் பயன்படுத்துவதன்
+விளைவு $\Gamma \Sequent N' : !A$ என்பதன்
+!!a{proof} ஆகும். ஆகவே, இயல்புவடிவத்தில் இல்லாத
+ஒவ்வொரு $\lambd$-சொல்லும் $\beta$-குறைத்தல்
+மூலம் மற்றொரு சொல்லுக்குச் செல்லும்.
+இப்பண்பு \emph{முன்னேற்றம்} எனப்படுகிறது.
+
+முன்னேற்றமும் வகை மாறாமையும் சேர்ந்து,
+$\lambd$-சொற்களின் $\beta$-குறைத்தல்
+“தேங்கி நிற்காது” என்பதை உறுதிசெய்கின்றன:
+ஒரு சொல் சரியாக வகையிடப்பட்டு,
+இயல்புவடிவத்தில் இல்லாவிட்டால்,
+அது அதே வகையுடைய மற்றொரு சொல்லாகக் குறையும்.
+
+\end{document}

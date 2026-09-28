@@ -1,0 +1,132 @@
+{
+  "batch_id": "TA-B318",
+  "units": [
+    {
+      "unit_id": "OLP-0658",
+      "source_sha256": "e2b64e1d701f79c2cb40f57cee8ace532bd2fe6f6f9ec597c0ecbc77fda9104e",
+      "translation_sha256": "f12499f6c008515e46b4d34ce818419d841a9be57265fe67cd811b3169fc2964",
+      "source_bytes": 26344,
+      "translation_bytes": 45810,
+      "source_coverage_complete": true,
+      "segments": 15,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\LangL'=\\LangL(\\Gamma')=\\LangL\\setminus\\{R\\}\\cup\\{R'\\}$",
+        "\\begin{align*}\\Gamma,\\Gamma'&\\Sequent\\lforall[x_1][\\dots\\lforall[x_n][(R(x_1,\\dots,x_n)\\liffR'(x_1,\\dots,x_n))]]$c_1$$c_n$$\\Gamma$\\Gamma,\\Gamma',R(c_1,\\dots,c_n)&\\SequentR'(c_1,\\dots,c_n)\\maeh{\\Gamma,R(c_1,\\dots,c_n)}{\\Gamma'}&\\Sequent\\maeh{\\}{R'(c_1,\\dots,c_n)}$!A\\ident!A(x_1,\\dots,x_n)$\\Gamma,R(c_1,\\dots,c_n)&\\Sequent!A(c_1,\\dots,c_n)\\\\!A(c_1,\\dots,c_n),\\Gamma'&\\SequentR'(c_1,\\dots,c_n)$\\LangL(!A)=\\LangL_1\\cap\\LangL_2=\\LangL(\\Gamma)\\setminus\\{R\\}$$!A$$R$$R'$$R$!A(c_1,\\dots,c_n),\\Gamma&\\SequentR(c_1,\\dots,c_n)\\end{align*}",
+        "$\\LangL(\\Gamma)\\subseteq\\LangL(\\Gamma_1)\\cap\\LangL(\\Gamma_2)$",
+        "$\\Gamma\\Entails/\\lnot!A$"
+      ],
+      "extra_math": [
+        "$\\LangL'=(\\LangL\\setminus\\{R\\})\\cup\\{R'\\}$",
+        "\\begin{align*}\\Gamma,\\Gamma'&\\Sequent\\lforall[x_1][\\dots\\lforall[x_n][(R(x_1,\\dots,x_n)\\liffR'(x_1,\\dots,x_n))]]$c_1$$c_n$$\\Gamma$\\Gamma,\\Gamma',R(c_1,\\dots,c_n)&\\SequentR'(c_1,\\dots,c_n)\\maeh{\\Gamma,R(c_1,\\dots,c_n)}{\\Gamma'}&\\Sequent\\maeh{\\}{R'(c_1,\\dots,c_n)}$!A\\ident!A(x_1,\\dots,x_n)$\\Gamma,R(c_1,\\dots,c_n)&\\Sequent!A(c_1,\\dots,c_n)\\\\!A(c_1,\\dots,c_n),\\Gamma'&\\SequentR'(c_1,\\dots,c_n)$\\LangL(!A)\\subseteq\\LangL(\\Gamma)\\setminus\\{R\\}$$!A$$R$$R'$$R$!A(c_1,\\dots,c_n),\\Gamma&\\SequentR(c_1,\\dots,c_n)\\end{align*}",
+        "$\\LangL(\\Gamma)=\\LangL(\\Gamma_1)\\cap\\LangL(\\Gamma_2)$",
+        "$\\Gamma_2\\Entails/\\lnot!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-009",
+          "unit_id": "OLP-0658",
+          "kind": "unhandled-variable-witness",
+          "action": "Translate the constant construction and flag the variable case as an unproved source gap.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Function-free terms can still be variables; the source proof handles only a constant witness.",
+          "chosen_treatment": "Translate the constant construction and flag the variable case as an unproved source gap.",
+          "alternatives_considered": "Repeat the false classification or invent a proof.",
+          "rationale": "The frozen term-formation definition includes variables.",
+          "precise_review_question": "Can the variable case be supplied under the sequent-calculus side conditions?",
+          "location_needle": "பதிப்புக் குறிப்பு: சார்புக்குறியீடுகள்"
+        },
+        {
+          "audit_id": "TA-PT-010",
+          "unit_id": "OLP-0658",
+          "kind": "beth-language-bound",
+          "action": "Correct the renamed language and use an inclusion bound after abstracting fresh constants.",
+          "expected_missing_math": [
+            "$\\LangL'=\\LangL(\\Gamma')=\\LangL\\setminus\\{R\\}\\cup\\{R'\\}$",
+            "\\begin{align*}\\Gamma,\\Gamma'&\\Sequent\\lforall[x_1][\\dots\\lforall[x_n][(R(x_1,\\dots,x_n)\\liffR'(x_1,\\dots,x_n))]]$c_1$$c_n$$\\Gamma$\\Gamma,\\Gamma',R(c_1,\\dots,c_n)&\\SequentR'(c_1,\\dots,c_n)\\maeh{\\Gamma,R(c_1,\\dots,c_n)}{\\Gamma'}&\\Sequent\\maeh{\\}{R'(c_1,\\dots,c_n)}$!A\\ident!A(x_1,\\dots,x_n)$\\Gamma,R(c_1,\\dots,c_n)&\\Sequent!A(c_1,\\dots,c_n)\\\\!A(c_1,\\dots,c_n),\\Gamma'&\\SequentR'(c_1,\\dots,c_n)$\\LangL(!A)=\\LangL_1\\cap\\LangL_2=\\LangL(\\Gamma)\\setminus\\{R\\}$$!A$$R$$R'$$R$!A(c_1,\\dots,c_n),\\Gamma&\\SequentR(c_1,\\dots,c_n)\\end{align*}"
+          ],
+          "expected_extra_math": [
+            "$\\LangL'=(\\LangL\\setminus\\{R\\})\\cup\\{R'\\}$",
+            "\\begin{align*}\\Gamma,\\Gamma'&\\Sequent\\lforall[x_1][\\dots\\lforall[x_n][(R(x_1,\\dots,x_n)\\liffR'(x_1,\\dots,x_n))]]$c_1$$c_n$$\\Gamma$\\Gamma,\\Gamma',R(c_1,\\dots,c_n)&\\SequentR'(c_1,\\dots,c_n)\\maeh{\\Gamma,R(c_1,\\dots,c_n)}{\\Gamma'}&\\Sequent\\maeh{\\}{R'(c_1,\\dots,c_n)}$!A\\ident!A(x_1,\\dots,x_n)$\\Gamma,R(c_1,\\dots,c_n)&\\Sequent!A(c_1,\\dots,c_n)\\\\!A(c_1,\\dots,c_n),\\Gamma'&\\SequentR'(c_1,\\dots,c_n)$\\LangL(!A)\\subseteq\\LangL(\\Gamma)\\setminus\\{R\\}$$!A$$R$$R'$$R$!A(c_1,\\dots,c_n),\\Gamma&\\SequentR(c_1,\\dots,c_n)\\end{align*}"
+          ],
+          "expected_missing_commands": [
+            "\\Lang",
+            "\\Lang",
+            "\\Lang",
+            "\\Gamma",
+            "\\cap"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source equates ambient and used vocabulary and overstates the interpolant bound while overlooking fresh constants.",
+          "chosen_treatment": "Correct the renamed language and use an inclusion bound after abstracting fresh constants.",
+          "alternatives_considered": "Keep the printed equalities or assert a fresh-constant-free interpolant prematurely.",
+          "rationale": "Maehara gives only vocabulary inclusion; shared fresh constants may occur before abstraction.",
+          "precise_review_question": "Does abstraction justify the stated bound and defining implications?",
+          "location_needle": "\\Lang L(!A) \\subseteq \\Lang L(\\Gamma) \\setminus \\{R\\}"
+        },
+        {
+          "audit_id": "TA-PT-011",
+          "unit_id": "OLP-0658",
+          "kind": "robinson-common-language",
+          "action": "Require equality with the common language and state non-entailment for Gamma_2.",
+          "expected_missing_math": [
+            "$\\LangL(\\Gamma)\\subseteq\\LangL(\\Gamma_1)\\cap\\LangL(\\Gamma_2)$",
+            "$\\Gamma\\Entails/\\lnot!A$"
+          ],
+          "expected_extra_math": [
+            "$\\LangL(\\Gamma)=\\LangL(\\Gamma_1)\\cap\\LangL(\\Gamma_2)$",
+            "$\\Gamma_2\\Entails/\\lnot!A$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Completeness in a proper sublanguage cannot decide every common-language sentence; the final non-entailment names the wrong theory.",
+          "chosen_treatment": "Require equality with the common language and state non-entailment for Gamma_2.",
+          "alternatives_considered": "Retain the weaker subset premise despite its one-element counterexample.",
+          "rationale": "The proof invokes completeness on every common-language sentence and consistency of Gamma_2.",
+          "precise_review_question": "Do the repaired premise and conclusion make the precursor theorem valid?",
+          "location_needle": "$\\Lang L(\\Gamma) = \\Lang L(\\Gamma_1)"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Lang",
+        "\\Lang",
+        "\\Lang",
+        "\\Gamma",
+        "\\cap"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -47,8 +47,14 @@
           "location_needle": "SOURCE CORRECTION TA-INC-033"
         }
       ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": false,
@@ -62,9 +68,9 @@
     {
       "unit_id": "OLP-0306",
       "source_sha256": "cefc4b7c268be41dd32831fc2258102ef090194ef6bb7df234ad618b0ddda19d",
-      "translation_sha256": "9fe924c82402ea3f76178ef42637251ffed9969cbbf50c6c081bb9dbd259927e",
+      "translation_sha256": "e87697cf526a1ab61d27454af0a2a914ee64f9390a7863f8e750ea4bded457e8",
       "source_bytes": 1259,
-      "translation_bytes": 2633,
+      "translation_bytes": 2598,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": true,
@@ -85,8 +91,14 @@
       ],
       "visual_review_complete": false,
       "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -97,9 +109,9 @@
     {
       "unit_id": "OLP-0307",
       "source_sha256": "9e43a7335031abc7140dbc38c31a0dbd1d2be1495eeaced93ece2f1739c0067c",
-      "translation_sha256": "d16ede8bf2226f6692a496b47ae8ff118f26636da7a69e55786ad7fa568d245f",
+      "translation_sha256": "96655ed59f5e0a9016fdd273a4a76327d57eb3fa6a1659f7c651bef5954bebc0",
       "source_bytes": 1361,
-      "translation_bytes": 3241,
+      "translation_bytes": 3206,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": false,
@@ -145,8 +157,14 @@
           "location_needle": "SOURCE CORRECTION TA-INC-034"
         }
       ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": false,
@@ -161,7 +179,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

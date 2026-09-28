@@ -1,0 +1,75 @@
+{
+  "batch_id": "TA-B363",
+  "units": [
+    {
+      "unit_id": "OLP-0707",
+      "source_sha256": "0beb76005abcb4f20109400d18ae1d632e7126bd6dea43c20c9f42d114c9664d",
+      "translation_sha256": "93863bb2d2191e90d699c5474bb6d95abf61e93b13252b85d3ccb65510183c03",
+      "source_bytes": 2413,
+      "translation_bytes": 2825,
+      "source_coverage_complete": true,
+      "segments": 2,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!A(t),\\lforall[x][!A(x)]\\Gamma\\fCenter\\Delta$"
+      ],
+      "extra_math": [
+        "$!A(t),\\lforall[x][!A(x)],\\Gamma\\fCenter\\Delta$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0707",
+          "audit_id": "TA-PT-052",
+          "kind": "G3c-left-universal-premise-context-comma",
+          "action": "Insert the missing comma between the retained universal formula and Gamma in the G3c left-universal premise; leave the conclusion and every other rule judgment unchanged.",
+          "expected_missing_math": [
+            "$!A(t),\\lforall[x][!A(x)]\\Gamma\\fCenter\\Delta$"
+          ],
+          "expected_extra_math": [
+            "$!A(t),\\lforall[x][!A(x)],\\Gamma\\fCenter\\Delta$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen G3c left-universal premise runs the retained principal formula directly into the Gamma multiset without a comma, while its conclusion separates the same formula and Gamma with a comma. Juxtaposition is not the multiset-context notation used throughout the chapter.",
+          "chosen_treatment": "Use !A(t), forall x A(x), Gamma on the premise's left side and keep the existing forall x A(x), Gamma conclusion. Change only that one comma inside its math span.",
+          "alternatives_considered": "Retain the malformed juxtaposition; remove Gamma from the premise; switch to the G1c rule that does not retain the universal principal formula.",
+          "rationale": "G3c is the context-retaining version of left universal: its premise contains the instance and the same universal formula in addition to Gamma. The adjacent source introduction and other G3c rules use commas to separate formula occurrences from multiset contexts.",
+          "precise_review_question": "Does the repaired premise have exactly the G3c retained universal formula, instantiated formula and Gamma context separated by commas, with the conclusion and all other math unchanged?",
+          "location_needle": "\\Axiom$ !A(t), \\lforall[x][!A(x)],\\Gamma \\fCenter \\Delta$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

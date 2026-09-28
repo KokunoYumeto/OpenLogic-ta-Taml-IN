@@ -1,0 +1,149 @@
+% SEGMENT OLP-0694-S01
+% Part: proof-theory
+% Chapter: propositions-as-types
+% Section: sequent-natural-deduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{snd}
+
+\olsection{தொடரணிகளுடன் இயல்பான வருவித்தல்}
+
+$\Gamma \Sequent !A$ என்று எழுதுவோம்: அதாவது,
+$\Gamma$ என்பது !!{undischarged} எடுகோள்களின்
+கணமாகவும் $!A$ முடிவாகவும் உள்ள இயல்பான வருவித்தல்
+!!{derivation} ஒன்று உள்ளது. $\Gamma$ காலிக் கணம்
+எனில், $\Sequent !A$ என்று எழுதுவோம்.
+
+$\Gamma \cup \{!A_1, \dots, !A_n\}$ என்பதற்கு
+$\Gamma, !A_1, \dots, !A_n$ என்றும்,
+$\Gamma \cup \Delta$ என்பதற்கு $\Gamma, \Delta$
+என்றும் எழுதுவோம்.
+
+% SEGMENT OLP-0694-S02
+$\Gamma \Sequent !A \land !B$ எனில்,
+$\Gamma$ என்பதை !!{undischarged} எடுகோள்களாகவும்
+$!A \land !B$ ஐ இறுதி-!!{formula} ஆகவும் கொண்ட
+!!a{derivation} நமக்கு உள்ளது. அதன் அடியில்
+$\Elim{\land}$ விதியைப் பயன்படுத்தி, அதே
+!!{undischarged} எடுகோள்களிலிருந்து $!A$ ஐ முடிவாகக்
+கொண்ட !!a{derivation} ஐப் பெறலாம். வேறு சொற்களில்,
+$\Gamma \Sequent !A \land !B$ எனில்
+$\Gamma \Sequent !A$:
+\begin{prooftree}
+  \Axiom$\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}$}
+  \UnaryInf$\Gamma \fCenter !A$
+  \DisplayProof\qquad\bottomAlignProof
+  \Axiom$\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}$}
+  \UnaryInf$\Gamma \fCenter !B$
+\end{prooftree}
+$\Elim{\land}$ என்ற அடையாளம், இயல்பான வருவித்தலில்
+அதே பெயருடைய விதியுடனான தொடர்பைக் காட்டுகிறது.
+
+% SEGMENT OLP-0694-S03
+அதேபோல், $\Gamma, !A \Sequent !B$ எனக் கொள்வோம்.
+அதாவது, $\Gamma, !A$ என்பவற்றை !!{undischarged}
+எடுகோள்களாகவும் $!B$ ஐ இறுதி-!!{formula} ஆகவும்
+கொண்ட !!a{derivation} உள்ளது. இதற்கு
+$\Intro{\lif}$ விதியைப் பயன்படுத்தினால்,
+$\Gamma$ என்பதை !!{undischarged} எடுகோள்களாகவும்
+$!A \lif !B$ ஐ இறுதி-!!{formula} ஆகவும் கொண்ட
+!!a{derivation} கிடைக்கும்; அதாவது,
+$\Gamma \Sequent !A \lif !B$.
+எடுகோள்களின் !!{discharge} இங்கு மேலும் தெளிவாகக்
+காட்டப்படுவதைக் கவனிக்கவும்.
+\begin{prooftree}
+  \Axiom $\Gamma, !A \fCenter !B$
+  \RightLabel{$\Intro{\lif}$}
+  \UnaryInf $\Gamma \fCenter !A \lif !B$
+\end{prooftree}
+
+இதே முறையில் மற்ற விதிகளிலிருந்தும் முடிவுகளைக்
+காணலாம்; அவை முழுவதும் பின்வருமாறு:
+\begin{gather*}
+  \Axiom $\Gamma \fCenter !A$
+  \Axiom $\Delta \fCenter !B$
+  \RightLabel{$\Intro{\land}$}
+  \BinaryInf $\Gamma,\Delta \fCenter !A \land !B$
+  \DisplayProof\\
+  \Axiom $\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}_1$}
+  \UnaryInf $\Gamma \fCenter !A$
+  \DisplayProof
+  \qquad
+  \Axiom $\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}_2$}
+  \UnaryInf $\Gamma \fCenter !B$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma \fCenter !A$
+  \RightLabel{$\Intro{\lor}_1$}
+  \UnaryInf $\Gamma \fCenter !A \lor !B$
+  \DisplayProof\qquad
+  \Axiom $\Gamma \fCenter !B$
+  \RightLabel{$\Intro{\lor}_2$}
+  \UnaryInf $\Gamma \fCenter !A \lor !B$
+  \DisplayProof\\
+  \Axiom $\Gamma \fCenter !A \lor !B$
+  \Axiom $\Delta, !A \fCenter !C$
+  \Axiom $\Delta', !B \fCenter !C$
+  \RightLabel{$\Elim{\lor}$}
+  \TrinaryInf $\Gamma, \Delta, \Delta' \fCenter !C$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma, !A \fCenter !B$
+  \RightLabel{$\Intro{\lif}$}
+  \UnaryInf $\Gamma \fCenter !A \lif !B$
+  \DisplayProof
+  \qquad
+  \Axiom $\Delta \fCenter !A \lif !B$
+  \Axiom $\Gamma \fCenter !A$
+  \RightLabel{$\Elim{\lif}$}
+  \BinaryInf $\Gamma, \Delta \fCenter !B$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma \fCenter \lfalse$
+  \RightLabel{$\FalseInt$}
+  \UnaryInf $\Gamma \fCenter !A$
+  \DisplayProof
+\end{gather*}
+
+% SEGMENT OLP-0694-S04
+ஓர் எடுகோள் தனியே $!A$ இலிருந்து $!A$ இன்
+!!a{derivation} ஆகும்; எனவே $!A \Sequent !A$
+எப்போதும் கிடைக்கும்.
+
+\begin{prooftree}
+  \AxiomC{$ $}
+  \UnaryInfC{$!A \fCenter !A$}
+\end{prooftree}
+
+இவ்விதிகளை ஒருங்கே எடுத்தால், எந்த இயல்பான வருவித்தல்
+!!{derivation}s உள்ளன என்பதை விவரிக்கும் கலனமாகக்
+கொள்ளலாம். இயல்பான வருவித்தலின் குறியீட்டு மாற்றுருவாகவும்
+கொள்ளலாம்: ஒவ்வொரு படியும் !!{derive} செய்யப்பட்ட
+!!{formula} ஐ மட்டுமன்றி, அது எந்த !!{undischarged}
+எடுகோள்களிலிருந்து !!{derive} செய்யப்பட்டது என்பதையும்
+பதிவுசெய்கிறது.
+
+எடுத்துக்காட்டாக, பின்வரும் நிறுவலைக் காண்க:
+\begin{prooftree}
+  \Axiom$!A \fCenter !A$
+  \UnaryInf $!A \fCenter !A \lor (!A \lif \lfalse)$
+  \Axiom $!B \fCenter !B$
+  \BinaryInf$!A, !B \fCenter \lfalse$
+  \UnaryInf$!B \fCenter !A \lif \lfalse$
+  \UnaryInf$!B \fCenter !A \lor (!A \lif \lfalse)$
+  \Axiom$!B \fCenter !B$
+  \BinaryInf$!B \fCenter \lfalse$
+  \UnaryInf$\fCenter !B \lif \lfalse$
+\end{prooftree}
+இங்கு $!B$ என்பது
+$(!A \lor (!A \lif \lfalse))\lif \lfalse$
+என்பதன் சுருக்கம்.
+
+\end{document}

@@ -1,0 +1,37 @@
+{
+  "schema": "openlogic-tamil-companion-runtime/1",
+  "checked_utc": "2026-09-28T14:02:51.259812+00:00",
+  "result": "pass",
+  "source_units_loaded": 27,
+  "driver_metadata_units": 4,
+  "english_content_inputs": [],
+  "verified_main_anchors": 18,
+  "main_pdf_sha256": "b92e14376c897a2d2fda39c06317ea08b509395cc50cf05c6907dc6f7c3933ec",
+  "master_sha256": "c597b56f6218e40babb6767a7f54f27671352286284fedd2a0452dc1a2716f71",
+  "assembly_qa_sha256": "008f8d88ca7ffa065fcd0d4bdf8e3d091bc20d43b2cf3a354213dbe29e931b3c",
+  "build_receipt_sha256": "082a81e4c50605766775b4151d2a351c7ab98870be4271f1da02751105b899c9",
+  "pdf": {
+    "path": "build/tamil-source-companion.pdf",
+    "bytes": 379023,
+    "sha256": "dcb173a7cfc84ba3cbd4ef94026dfb9b0fb2c6123c1c7a4e3b4fb1e550bdf4dd",
+    "pages": 56
+  },
+  "recorder": {
+    "bytes": 59031,
+    "sha256": "ca03722668e45db582ca3035d8fc02ca04394102ec52850e28ce8e314b3a5f1b"
+  },
+  "log_sha256": "1416b43b37fa09327d5897bbb0a6f204ecd32d61f9207deace8b79522c4d2a94",
+  "remaining_log_findings": {
+    "missing_characters": 0,
+    "undefined_references": 0,
+    "undefined_text_tokens": 0,
+    "boxes_wider_than_10pt": 0,
+    "largest_box_overflow_pt": 0
+  },
+  "all_page_visual_review_complete": false,
+  "release_ready": false,
+  "limitations": [
+    "Runtime scope, resolved cross-references, and major TeX log defects checked.",
+    "All-page visual QA, Tamil copy/search, direct-source equivalence, EPUB and public-byte verification remain."
+  ]
+}

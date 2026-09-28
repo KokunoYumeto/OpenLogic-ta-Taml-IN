@@ -1,0 +1,82 @@
+{
+  "batch_id": "TA-B367",
+  "units": [
+    {
+      "unit_id": "OLP-0711",
+      "source_sha256": "ef1231f53bdbfff4b0cab8f4a96223632447f783e6cb85ac9e774dceba28b699",
+      "translation_sha256": "9bc6dd096ee5dacca38bda26348aa147c5e41847f21ba2d093dba953e63347d0",
+      "source_bytes": 7851,
+      "translation_bytes": 15119,
+      "source_coverage_complete": true,
+      "segments": 10,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!D,!E\\Sequent!E$",
+        "$\\Log{G3c}\\Proves[4]!D\\land!E\\fCenter!D\\land!E$"
+      ],
+      "extra_math": [
+        "$!D,!E\\Sequent!D$",
+        "$\\Log{G3c}\\Proves[2]!D\\land!E\\fCenter!D\\land!E$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0711",
+          "audit_id": "TA-PT-056",
+          "kind": "worked-sequent-identity-and-proof-height-precision",
+          "action": "Make the multiset example compare sequents with the same succedent D; give the proved tree its computed sharp height bound 2; describe height by inference steps in agreement with the recursive definition.",
+          "expected_missing_math": [
+            "$!D,!E\\Sequent!E$",
+            "$\\Log{G3c}\\Proves[4]!D\\land!E\\fCenter!D\\land!E$"
+          ],
+          "expected_extra_math": [
+            "$!D,!E\\Sequent!D$",
+            "$\\Log{G3c}\\Proves[2]!D\\land!E\\fCenter!D\\land!E$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source's multiset reminder calls D,E entails E and E,D entails D the same sequent, although their right sides differ. Its height prose describes sequents between the endpoints ambiguously while the inductive clauses assign height zero to an axiom and add one per inference. The final Proves[4] claim is valid because Proves[n] means height at most n, but weaker than the immediately computed height 2 and likely an editorial slip.",
+          "chosen_treatment": "In the multiset reminder use D,E entails D and E,D entails D; leave the preceding E-axiom instance intact. State maximum inference steps and conclude Proves[2] for the exhibited tree. Preserve all displayed trees, labels, rule premises, recursive height equations, and the inclusive source sense that a proof is among its own subproofs.",
+          "alternatives_considered": "Treat different succedents as identical under multiset exchange; alter the E-axiom instance instead; retain the loose Proves[4] upper bound despite the exact height calculation; count sequent nodes instead of inference steps.",
+          "rationale": "Multiset permutation may change order on the left but cannot turn a right-side E into D. The source's own recursion gives the two-leaf derivation height one and the final left-conjunction step height two, so the sharp bound is justified without changing the proof tree. The prose clarification avoids a competing node-count convention.",
+          "precise_review_question": "Does the example now compare only D-succedent sequents under left multiset permutation, and does the unchanged tree have height exactly two under the stated recursion?",
+          "location_needle": "\\Log{G3c} \\Proves[2]"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

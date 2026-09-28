@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0153",
       "source_sha256": "6965d26327ea625a4697236ead340f76d3d83acdd087dc6cbe2bde3eebe33833",
-      "translation_sha256": "80a9458b1d325ab22959a803ed1c83277c9a06d31956ea06112c52e347772da6",
+      "translation_sha256": "e794582ce6203a239a92ad75107fa2c8a90a869ebed91d28c1ed71033d4cc220",
       "source_bytes": 7664,
-      "translation_bytes": 14559,
+      "translation_bytes": 14641,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": true,
@@ -18,9 +18,6 @@
       "unicode_nfc": true,
       "replacement_char_absent": true,
       "english_words_for_review": [
-        "Proper",
-        "Readability",
-        "Unique",
         "fol",
         "include",
         "logic",
@@ -29,7 +26,6 @@
         "notprvEx",
         "open",
         "operator",
-        "prefix",
         "prvAll",
         "section",
         "syn",
@@ -37,8 +33,14 @@
       ],
       "visual_review_complete": false,
       "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -51,7 +53,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

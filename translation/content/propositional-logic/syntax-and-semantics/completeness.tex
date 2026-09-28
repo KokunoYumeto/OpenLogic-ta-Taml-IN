@@ -1,0 +1,167 @@
+% SEGMENT OLP-0714-S01
+% Part: propositional-logic
+% Chapter: propositional-logic
+% Section: completeness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{prp}{com}
+
+\olsection{கூற்றுத் தருக்கத்தின் நிறைவுத்தன்மை}
+
+\begin{defn}
+\ollabel{def:MaxCon}
+!!{formula}s கொண்ட கணம்~$\Gamma$, முரணற்றதாகவும்,
+$\Gamma \subseteq \Delta$ ஆக இருக்கும் முரணற்ற
+கணம்~$\Delta$ எதற்கும் $\Gamma = \Delta$ ஆகவும்
+இருந்தால், அது \emph{அதிகபட்ச முரணற்றது} எனப்படும்.
+\end{defn}
+
+% SEGMENT OLP-0714-S02
+\begin{lem}[மெய்மைத் துணைத்தேற்றம்]
+  \ollabel{lem:truth}
+$\Gamma$ அதிகபட்ச முரணற்றது என்க. அப்போது:
+\begin{enumerate}
+\item \ollabel{lem:truth-1} $!A \in \Gamma$ அப்போதும்
+  அப்போது மட்டுமே $\lnot !A \notin \Gamma$;
+\item \ollabel{lem:truth-2} $\Gamma \Proves !A$ அப்போதும்
+  அப்போது மட்டுமே $!A \in \Gamma$;
+\item \ollabel{lem:truth-3} $!A \lif !B \in \Gamma$
+  அப்போதும் அப்போது மட்டுமே $!A \notin \Gamma$
+  அல்லது $!B \in \Gamma$.
+\end{enumerate}
+\end{lem}
+
+% SEGMENT OLP-0714-S03
+\begin{proof}
+\begin{enumerate}
+\item $!A \in \Gamma$ என்க. மேலும் $\lnot !A \in \Gamma$
+  எனில் $\Gamma$ முரணுடையது. $!A$ உம்
+  $\lnot!A$ உம் இரண்டுமே $\Gamma$ இல் இல்லை எனில்,
+  $\Gamma\cup\{!A\}$, $\Gamma \cup \{\lnot !A\}$
+  என்ற இரு விரிவாக்கங்களும் முரணுடையவையாக இருக்க
+  முடியாது: அப்படியாயின் வழக்கமான இருநிலை
+  முரண்-பிரிப்பு வாதத்தால் ஆரம்பக் கணமே முரணுடையதாகும்.
+  ஆகவே அவற்றில் ஒன்று முரணற்றது; இது $\Gamma$
+  அதிகபட்சமானது என்பதற்கு முரண். மறுதிசையும்
+  இதே முறையில் நிறுவப்படுகிறது.
+
+% SEGMENT OLP-0714-S04
+\item $!A \in \Gamma$ எனில் உடனே
+  $\Gamma \Proves !A$. மறுபுறம், $\Gamma \Proves !A$
+  என்க. $!A \notin \Gamma$ எனில்
+  \olref{lem:truth-1} இன் படி $\lnot !A \in \Gamma$.
+  ஆகவே $\Gamma \Proves !A$ மற்றும்
+  $\Gamma \Proves \lnot !A$ இரண்டும் கிடைக்கும்;
+  இது முரண்பாடு.
+\item பயிற்சி.
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0714-S05
+\olref{lem:truth}\olref{lem:truth-2} இன் இடமிருந்து
+வலத்திற்கான திசை, $\Gamma$ என்பது
+\emph{வருவித்தலின் கீழ் மூடப்பட்டது} எனக் காட்டுகிறது:
+எந்த~$!A$ க்கும் $\Gamma \Proves !A$ எனில்
+$!A \in \Gamma$.
+
+\begin{prob}
+  \olref{lem:truth} இன் நிறுவலை நிறைவு செய்க.
+\end{prob}
+
+% SEGMENT OLP-0714-S06
+\begin{thm}[நிறைவுத்தன்மை]
+\ollabel{thm:completeness}
+$\Gamma$ முரணற்றது எனில் $\Gamma$ நிறைவுறத்தக்கது.
+\end{thm}
+
+\begin{proof}
+மொழியின் எல்லா !!{formula}s ஐயும் முழுமையாகப்
+பட்டியலிடும் $!A_0$, $!A_1$,~\dots என்ற வரிசையை
+எடுத்துக் கொள்வோம். !!{formula}s கொண்ட
+அதிகரிக்கும் கணங்களின் வரிசை $\Gamma_0$,
+$\Gamma_1$,~\dots ஐப் பின்வருமாறு தொகுத்தறிதலாக
+வரையறுக்கிறோம்:
+\begin{align*}
+\Gamma_0 & = \Gamma\\
+\Gamma_{n+1} &  =
+\begin{cases}
+  \Gamma_n \cup \{!A_n\} & \text{$\Gamma_n \cup \{!A_n\}$ முரணற்றது எனில்;}\\
+  \Gamma_n \cup \{\lnot !A_n\} & \text{இல்லாவிட்டால்}.
+\end{cases}
+\end{align*}
+பின்னர்
+\[
+\Gamma^* = \bigcup_{0\le n}\Gamma_n.
+\]
+என வரையறுக்கிறோம்.
+
+% SEGMENT OLP-0714-S07
+இப்போது பின்வரும் உண்மைகளை வரிசையாக நிறுவ வேண்டும்:
+\begin{enumerate}
+\item ஒவ்வொரு $n$ க்கும் $\Gamma_n$ முரணற்றது.
+  இதை $n$ மீது தொகுத்தறிதலாலும், ஒரு முரணற்ற
+  கணத்துடன் ஒரு வாய்பாட்டையோ அதன் மறுப்பையோ
+  சேர்க்கும் இரு விரிவாக்கங்களில் குறைந்தது ஒன்று
+  முரணற்றது என்ற மேலுள்ள தேர்வு வாதத்தாலும் பெறுகிறோம்;
+\item $\Gamma^*$ முரணற்றது;
+\item $\Gamma^*$ அதிகபட்சமானது.
+\end{enumerate}
+பின்னர் $p_i \in \Gamma^*$ அப்போதும் அப்போது
+மட்டுமே $v(p_i) = \True$ என்றவாறு மெய்மதிப்பு
+ஒதுக்கீடு~$v$ ஐ வரையறுக்கிறோம். $!A$ மீது
+தொகுத்தறிதலால், சிக்கலான !!{sentence}s க்கும்
+$\Gamma^*$ இல் இருப்பதும் $v$ இன் படி மெய்யாக
+இருப்பதும் ஒன்றே, அதாவது
+$\overline{v}(!A) = \True$ அப்போதும் அப்போது
+மட்டுமே $!A \in \Gamma^*$ என்று காட்டுகிறோம்.
+குறிப்பாக, $v$ ஆனது $\Gamma^*$ ஐ நிறைவுறுத்துகிறது;
+மேலும் $\Gamma \subseteq \Gamma^*$ என்பதால்
+வேண்டியபடி $\Gamma$ உம் நிறைவுறத்தக்கது.
+\end{proof}
+
+% SEGMENT OLP-0714-S08
+\begin{cor}
+$\Gamma \Entails !A$ எனில் $\Gamma \Proves !A$.
+\end{cor}
+
+\begin{proof}
+$\Gamma\Proves/ !A$ எனில்
+$\Gamma \cup \{\lnot !A\}$ முரணற்றது:
+இது முரணுடையதாக இருந்தால், நிறுவத்தக்கதன்மைக்கும்
+முரணுக்குமான வழக்கமான தொடர்பால் $\Gamma$ விலிருந்து
+அந்த வாய்பாடு நிறுவப்படும்; அது கருதுகோளுக்கு முரண்.
+ஆகவே நிறைவுத்தன்மைத் தேற்றத்தின்படி
+$\Gamma \cup \{\lnot !A\}$ நிறைவுறத்தக்கது.
+எனவே $\Gamma \Entails/ !A$.
+\end{proof}
+
+% SEGMENT OLP-0714-S09
+\begin{prop}[இறுக்கத்தன்மைத் தேற்றம்]
+\ollabel{prop:compactness}
+$\Gamma$ நிறைவுறத்தக்கது அப்போதும் அப்போது
+மட்டுமே, $\Gamma$ வின் ஒவ்வொரு
+\emph{முடிவுறு} உட்கணமும்~$\Gamma_0$
+நிறைவுறத்தக்கது.
+\end{prop}
+
+\begin{proof}
+$\Gamma$ நிறைவுற இயலாதது அப்போதும் அப்போது
+மட்டுமே அது முரணுடையது; அப்போதும் அப்போது
+மட்டுமே $\Gamma$ வின் ஏதோ ஒரு முடிவுறு
+உட்கணம்~$\Gamma_0$ முரணுடையது; அப்போதும்
+அப்போது மட்டுமே அந்த முடிவுறு
+உட்கணம்~$\Gamma_0$ நிறைவுற இயலாதது.
+\end{proof}
+
+% SEGMENT OLP-0714-S10
+\begin{cor}
+$\Gamma \Entails !A$ அப்போதும் அப்போது
+மட்டுமே, $\Gamma$ வின் ஏதோ ஒரு முடிவுறு
+உட்கணம்~$\Gamma_0$ க்கு
+$\Gamma_0 \Entails !A$.
+\end{cor}
+
+\end{document}

@@ -1,0 +1,121 @@
+{
+  "batch_id": "TA-B329",
+  "units": [
+    {
+      "unit_id": "OLP-0669",
+      "source_sha256": "838a883ad78be2c58a1c21cd84ac9dca8469872ad5ec0ed8ad01e3e8e82b2d54",
+      "translation_sha256": "0669c6d9b35a91c6b0fd667d75d4428c60ec3a9f80c7337d15fdc67041a37ecb",
+      "source_bytes": 5618,
+      "translation_bytes": 10475,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\delta'$",
+        "\\[\\AxiomC{}\\RightLabel{$\\delta_1'$}\\Deduce$x:B,\\Gamma\\fCenter!C$\\RightLabel{\\Intro{\\lif}}\\UnaryInf$\\Gamma\\fCenter!B\\lif!C$\\DisplayProof\\]",
+        "\\[\\bottomAlignProof\\AxiomC{$\\Discharge{!B}{x}$}\\RightLabel{$\\delta_1$}\\DeduceC{$!C$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!C$}\\DisplayProof\\quad\\quad\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!C$}\\RightLabel{\\Intro{\\lif}}\\UnaryInfC{$!B\\lif!C$}\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "$\\delta_1'$",
+        "\\[\\AxiomC{}\\RightLabel{$\\delta_1'$}\\Deduce$x:!B,\\Gamma\\fCenter!C$\\RightLabel{\\Intro{\\lif}}\\UnaryInf$\\Gamma\\fCenter!B\\lif!C$\\DisplayProof\\]",
+        "\\[\\bottomAlignProof\\AxiomC{$\\Discharge{!B}{x}$}\\RightLabel{$\\delta_1'$}\\DeduceC{$!C$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!C$}\\DisplayProof\\quad\\quad\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_1'$}\\DeduceC{$!C$}\\RightLabel{\\Intro{\\lif}}\\UnaryInfC{$!B\\lif!C$}\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0669",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "audit_id": "TA-PT-024",
+          "kind": "N1-system-name-in-sequent-bridge",
+          "action": "Name the source natural-deduction proof N1c/N1i rather than G1c/G1i in the opening.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "source_issue_or_choice": "The opening says G1c/G1i, while the adjacent chapter and both propositions compare N1c/N1i proofs with N2c/N2i sequent proofs.",
+          "chosen_treatment": "Use N1c/N1i in that opening; preserve all protected identifiers and the N2 table link.",
+          "alternatives_considered": "Keep the incompatible G1 name and require the reader to infer a system switch.",
+          "rationale": "The source's own displayed N1 proof rules and two propositions fix the intended source system.",
+          "precise_review_question": "Does the opening now refer to the same N1 systems as both propositions?",
+          "location_needle": "\\Log{N1c} அல்லது \\Log{N1i} இல்"
+        },
+        {
+          "unit_id": "OLP-0669",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "audit_id": "TA-PT-025",
+          "kind": "labelled-N2-premise-formula-marker",
+          "action": "Restore ! before B in the forward implication-introduction displayed premise.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\delta_1'$}\\Deduce$x:B,\\Gamma\\fCenter!C$\\RightLabel{\\Intro{\\lif}}\\UnaryInf$\\Gamma\\fCenter!B\\lif!C$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\delta_1'$}\\Deduce$x:!B,\\Gamma\\fCenter!C$\\RightLabel{\\Intro{\\lif}}\\UnaryInf$\\Gamma\\fCenter!B\\lif!C$\\DisplayProof\\]"
+          ],
+          "source_issue_or_choice": "The forward proof prose and N2 implication rule require x:!B, Gamma in the premise, but its displayed sequent prints x:B, Gamma.",
+          "chosen_treatment": "Display x:!B, Gamma => C while preserving the conclusion and all rule names.",
+          "alternatives_considered": "Keep a non-formula B after the assumption label x.",
+          "rationale": "The labelled context stores formulas; x:!B is the exact assumption discharged by implication introduction.",
+          "precise_review_question": "Does the displayed premise match the preceding context equation and N2 rule schema?",
+          "location_needle": "\\Deduce$x:!B, \\Gamma \\fCenter !C$"
+        },
+        {
+          "unit_id": "OLP-0669",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "audit_id": "TA-PT-026",
+          "kind": "reverse-induction-subproof-identity",
+          "action": "Name the induction-hypothesis N1 subproof delta_1-prime, place the open B^x assumption in it, and label both final N1 diagrams with that translated subproof.",
+          "expected_missing_math": [
+            "$\\delta'$",
+            "\\[\\bottomAlignProof\\AxiomC{$\\Discharge{!B}{x}$}\\RightLabel{$\\delta_1$}\\DeduceC{$!C$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!C$}\\DisplayProof\\quad\\quad\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!C$}\\RightLabel{\\Intro{\\lif}}\\UnaryInfC{$!B\\lif!C$}\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "$\\delta_1'$",
+            "\\[\\bottomAlignProof\\AxiomC{$\\Discharge{!B}{x}$}\\RightLabel{$\\delta_1'$}\\DeduceC{$!C$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!C$}\\DisplayProof\\quad\\quad\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_1'$}\\DeduceC{$!C$}\\RightLabel{\\Intro{\\lif}}\\UnaryInfC{$!B\\lif!C$}\\DisplayProof\\]"
+          ],
+          "source_issue_or_choice": "The source calls B^x open in the whole delta-prime before constructing it and labels the N1 output diagrams delta_1, the N2 input subproof.",
+          "chosen_treatment": "Introduce delta_1-prime for the induction-hypothesis N1 proof of C; locate the open assumption there and use that label in the two N1 diagrams. Keep delta_1 in the N2 input diagrams.",
+          "alternatives_considered": "Retain the input subproof label in output diagrams or claim the discharged B^x remains open in the whole proof.",
+          "rationale": "The first output rule discharges B^x, so the assumption is open only in its immediate subproof. The induction hypothesis constructs a new N1 subproof from N2 delta_1.",
+          "precise_review_question": "Are input and translated subproofs distinguished, and is B^x open only before discharge?",
+          "location_needle": "\\RightLabel{$\\delta_1'$}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

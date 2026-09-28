@@ -1,0 +1,85 @@
+{
+  "batch_id": "TA-B365",
+  "units": [
+    {
+      "unit_id": "OLP-0709",
+      "source_sha256": "04fc54bec445b78a7c47a7c9db8a8fbb38feb33fc693a90bd530238d118cd485",
+      "translation_sha256": "135f0f89418bb735382e65ecff8ad426a268b1d97c891f360ec37946f050c226",
+      "source_bytes": 3517,
+      "translation_bytes": 3860,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": false,
+      "missing_math": [],
+      "extra_math": [
+        "$\\Lambda$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0709",
+          "audit_id": "TA-PT-054",
+          "kind": "LK-unique-table-label-and-exchange-context-caption",
+          "action": "Give the distinct LK table tab:LK instead of the frozen duplicate tab:G1c and include Lambda with Gamma, Delta and Pi in the sequence-metavariable caption because its right-exchange rule uses Lambda.",
+          "expected_missing_math": [],
+          "expected_extra_math": [
+            "$\\Lambda$"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\ollabel{tab:G1c}",
+              "to": "\\ollabel{tab:LK}",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\Lambda"
+          ],
+          "source_issue_or_choice": "The frozen LK table ends with tab:G1c, duplicating the separately imported G1c table. Its caption calls Gamma, Delta and Pi formula sequences but omits Lambda, even though Lambda is the trailing right-side sequence in both right-exchange judgments.",
+          "chosen_treatment": "Use tab:LK for this LK-only auxiliary table and list Gamma, Delta, Pi and Lambda as formula sequences. Keep every exchange, weakening, contraction, connective and quantifier proof tree unchanged, along with the eigenconstant condition.",
+          "alternatives_considered": "Keep the duplicate G1c label; rename the genuine G1c table; leave Lambda's sequence role unstated; remove Lambda from the right-exchange rule to avoid mentioning it.",
+          "rationale": "The G1c and LK tables have different structural rules, so one reference label must not identify both. LK has explicit exchange because its contexts are ordered sequences rather than multisets. Lambda occurs in the right-exchange premise and conclusion in the same sequence position that Pi occupies on the left, so the caption should name it without changing the rule.",
+          "precise_review_question": "Are the LK and G1c labels distinct, do all four context metavariables have the stated sequence role, and are all displayed LK rule judgments unchanged?",
+          "location_needle": "\\ollabel{tab:LK}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\Lambda"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

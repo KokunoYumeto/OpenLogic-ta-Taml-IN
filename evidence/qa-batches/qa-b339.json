@@ -1,0 +1,102 @@
+{
+  "batch_id": "TA-B339",
+  "units": [
+    {
+      "unit_id": "OLP-0679",
+      "source_sha256": "4ae649a8588a1ae4f82c22b142fa67690bfd8615cada1499b02d1d62db87a665",
+      "translation_sha256": "f447b86a577cc70d3c31a7ddd6339d4e06d35cac73b9fffcc871bbbba7058c18",
+      "source_bytes": 8998,
+      "translation_bytes": 19844,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!\\in\\Delta$",
+        "$\\Pi_n\\Sequent\\Delta_n$",
+        "$\\Assign{f}{M}(t_1,\\dots,t_m)=f(t_1,\\dots,t_n)$",
+        "$\\Assign{R}{M}=\\Setabs{\\tuple{t_1,\\dots,t_m}\\in\\Domain{M}^n}{R(t_1,\\dots,t_n)\\in\\Theta}$",
+        "$\\Sat{M}{R(t_1,\\dots,t_n)}$",
+        "$R(t_1,\\dots,t_n)\\in\\Theta$"
+      ],
+      "extra_math": [
+        "$!A\\in\\Delta$",
+        "$\\Assign{f}{M}(t_1,\\dots,t_m)=f(t_1,\\dots,t_m)$",
+        "$\\Assign{R}{M}=\\Setabs{\\tuple{t_1,\\dots,t_m}\\in\\Domain{M}^m}{R(t_1,\\dots,t_m)\\in\\Theta}$",
+        "$\\Sat{M}{R(t_1,\\dots,t_m)}$",
+        "$R(t_1,\\dots,t_m)\\in\\Theta$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Knig",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0679",
+          "audit_id": "TA-PT-035",
+          "kind": "proof-search-completeness-model-notation-and-index-fairness",
+          "action": "Restore the missing formula marker in the opening succedent membership; use Lambda_n for the branch's right side; align all m-place function and predicate term arguments and predicate-domain powers with m; spell out the non-atomic choice and fresh-index condition required by the adjacent algorithm's fairness argument.",
+          "expected_missing_math": [
+            "$!\\in\\Delta$",
+            "$\\Pi_n\\Sequent\\Delta_n$",
+            "$\\Assign{f}{M}(t_1,\\dots,t_m)=f(t_1,\\dots,t_n)$",
+            "$\\Assign{R}{M}=\\Setabs{\\tuple{t_1,\\dots,t_m}\\in\\Domain{M}^n}{R(t_1,\\dots,t_n)\\in\\Theta}$",
+            "$\\Sat{M}{R(t_1,\\dots,t_n)}$",
+            "$R(t_1,\\dots,t_n)\\in\\Theta$"
+          ],
+          "expected_extra_math": [
+            "$!A\\in\\Delta$",
+            "$\\Assign{f}{M}(t_1,\\dots,t_m)=f(t_1,\\dots,t_m)$",
+            "$\\Assign{R}{M}=\\Setabs{\\tuple{t_1,\\dots,t_m}\\in\\Domain{M}^m}{R(t_1,\\dots,t_m)\\in\\Theta}$",
+            "$\\Sat{M}{R(t_1,\\dots,t_m)}$",
+            "$R(t_1,\\dots,t_m)\\in\\Theta$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\Sequent",
+            "\\Delta",
+            "\\Pi"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen opening prints an unbound ! in Delta. Its C_n sentence switches from Lambda_n to Delta_n. The model assigns an m-place f and R using n-tuples and Domain^n, even though m is their arity. The induction prose calls the selected index simply smallest, while the adjacent algorithm chooses the smallest non-atomic index and erroneously reuses its current maximum k as a supposedly fresh index.",
+          "chosen_treatment": "Use A in the opening membership, Lambda_n for branch right contexts, and m consistently in the term-model clauses and atomic predicate interpretation. Qualify the selection as among non-atomic formulas and state that new indices must exceed the previous maximum; preserve the source's k symbols here and repair the adjacent algorithm when OLP-0683 is translated. Correct the duplicated 'If if' typographically.",
+          "alternatives_considered": "Copy the unbound symbol and mixed arities; leave the fair-index claim dependent on an uncorrected maximum-index assignment; alter proof-tree identities without source comparison.",
+          "rationale": "The opening immediately quantifies formulas A on both sides of the starting sequent. Failure branches were defined as Pi_n Sequent Lambda_n. An m-place interpretation takes m arguments and is a subset of Domain^m. The adjacent search-algorithm section chooses the least indexed non-atomic formula; selecting an already maximal index for a new formula does not guarantee increasing chosen indices, whereas fresh indices above the old maximum do.",
+          "precise_review_question": "Are the model interpretations uniformly m-ary and the proof's fairness step supported by the index assignment used in the later algorithm section?",
+          "location_needle": "முந்தைய மிகப் பெரிய எண்ணைவிடப் பெரியதாக"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Sequent",
+        "\\Delta",
+        "\\Pi"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

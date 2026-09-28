@@ -1,0 +1,168 @@
+% SEGMENT OLP-0671-S01
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: translation-N2i
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{tni}
+
+\olsection{\Log{N2} இலிருந்து \Log{G2} க்கு மாற்றுதல்}
+
+\begin{prop}\ollabel{prop:N2-to-G2}
+$\Log{N2c}\ (\Log{N2i}) \Proves \Gamma \Sequent !A$ எனில்,
+$\Log{G2c}\ (\Log{G2i}) + \Cut \Proves \Gamma'
+\Sequent \Delta$; இதில் $\Gamma$ இலிருந்து அடையாளங்களை
+நீக்குவதால் கிடைக்கும் !!{formula}s இன் பன்மைக் கணம்~$\Gamma'$.
+$!A$ என்பது~$\lfalse$ அல்ல என்றால் $\Delta = \{!A\}$;
+அதுவே அபத்தம் என்றால் $\Delta = \emptyset$.
+\end{prop}
+
+\begin{proof}
+$\Gamma \Sequent !A$ இன் !!{proof}~$\delta$ இன்
+உயரத்தின் மீதே மீண்டும் தொகுத்தறிகிறோம். $\delta$ என்பது
+$x:!A \Sequent !A$ என்ற அடிகோள் எனில், $\pi$ என்பது
+அதற்கொத்த $!A \Sequent !A$ அடிகோள்; $!A \ident \lfalse$
+எனில் $\lfalse \Sequent \ $ என்ற அடிகோள்.
+
+$\delta$ ஓர் அனுமான விதியில் முடிந்தால், நேர்வுகளைப்
+பிரிப்போம்:
+\begin{enumerate}
+
+% SEGMENT OLP-0671-S02
+  \item $R$ என்பது \Intro{\lif} என்றும், அதன் முதன்மை
+  வாய்ப்பாடு $!B \lif !C$ என்றும், $x:!B$ முன்கோளின்
+  சூழலில் இருந்து முடிவின் சூழலில் இல்லையென்றும் கொள்வோம்.
+  அப்போது $\delta$ பின்வருமாறு முடியும்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$x:!B, \Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+  தொகுத்தறிதல் கருதுகோளால் $!B, \Gamma' \Sequent !C$
+  இன் !!a{proof}~$\pi_1$ கிடைக்கும்; $!C \ident \lfalse$
+  எனில் அது $!B, \Gamma' \Sequent \ $ இன் நிறுவலாகும்.
+  இரண்டாம் நேர்வில் முதலில் \RightR{\Weakening} ஐப்
+  பயன்படுத்தி, பின்னர் இரு நேர்வுகளிலும்~\RightR{\lif} ஐப்
+  பயன்படுத்தி $\pi$ ஐப் பெறுகிறோம்.
+
+% SEGMENT OLP-0671-S03
+  \item $R$ என்பது \Intro{\lif}, ஆனால் $x:!B$ முன்கோளின்
+  சூழலில் இல்லை எனில், $\delta$ பின்வருமாறு முடியும்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$\Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+  தொகுத்தறிதல் கருதுகோளால் $\Gamma' \Sequent !C$ இன்
+  !!a{proof}~$\pi_1$ கிடைக்கும். $!C \ident \lfalse$
+  எனில் அதன் பின்விலை வெற்றாக இருக்கும்; அந்த நேர்வில்
+  முதலில் \RightR{\Weakening} மூலம் அபத்தத்தை வலப்புறம்
+  சேர்ப்போம். பின்னர் $!B$ உடன் \LeftR{\Weakening} ஐயும்,
+  அதன் பின்~\RightR{\lif} ஐயும் பயன்படுத்தி $\pi$ ஐப்
+  பெறுகிறோம்.
+
+% SEGMENT OLP-0671-S04
+  \item $R$ என்பது \Elim{\lif} எனில், $\delta$
+  பின்வருமாறு முடியும்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$\Gamma_1 \fCenter !B \lif !A$
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \Deduce$\Gamma_2 \fCenter !B$
+  \RightLabel{\Elim{\lif}}
+  \BinaryInf$\Gamma_1, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \]
+  இங்கு $\Gamma = \Gamma_1 \cup \Gamma_2$.
+  தொகுத்தறிதல் கருதுகோளால் $\Gamma_1' \Sequent !B \lif !A$
+  இன் !!{proof}s~$\pi_1$ உம், $\Gamma_2' \Sequent !B$
+  இன் நிறுவல்~$\pi_2$ உம் கிடைக்கும். !!{proof}~$\pi$ ஐப்
+  பின்வருமாறு பெறுகிறோம்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma_1' \fCenter !B \lif !A$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$\Gamma_2' \fCenter !B$
+  \Axiom$!A \fCenter !A$
+  \RightLabel{\LeftR{\lif}}
+  \BinaryInf$!B \lif !A, \Gamma_2' \fCenter !A$
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0671-S05
+  $\Gamma_1' \cup \Gamma_2'$ என்ற பன்மைக் கணம்
+  $\Gamma' = (\Gamma_1 \cup \Gamma_2)'$ க்குச் சமமாக
+  இல்லாமலும் இருக்கலாம். எடுத்துக்காட்டாக $\Gamma_1$
+  மற்றும் $\Gamma_2$ இரண்டிலும் $x:!C$ இருந்தால்,
+  $\Gamma_1' \cup \Gamma_2'$ இல் $!C$ இன் இரண்டு
+  பிரதிகள் வரும்; ஆனால் $(\Gamma_1 \cup \Gamma_2)'$
+  இல் ஒரு பிரதி மட்டுமே வரும். ஏற்ற \LeftR{\Contraction}
+  அனுமானங்களைச் சேர்த்து இதைச் சரிசெய்யலாம்.
+
+  $!A \ident \lfalse$ ஆகும் நேர்வில், $\delta_2$ க்கான
+  தொகுத்தறிதல் கருதுகோள் $\Gamma_2' \Sequent !B$ இன்
+  !!a{proof} ஐத்தான் தருகிறது; வெற்றுப் பின்விலையின்
+  நிறுவலைத் தராது. மேலுள்ள மரத்தில் $!A \Sequent !A$
+  என்ற அடிகோளுக்குப் பதில் $\lfalse \Sequent \ $
+  என்ற இட அபத்த அடிகோளை வைத்து, அதே
+  \LeftR{\lif} மற்றும் \Cut படிகளைப் பயன்படுத்தினால்
+  $\Gamma_1', \Gamma_2' \Sequent \ $ இன் !!{proof}~$\pi$
+  கிடைக்கும். தேவைப்படும் \LeftR{\Contraction} படிகள்
+  சூழலில் மீளும் பிரதிகளை நீக்கும்.
+
+% SEGMENT OLP-0671-S06
+  \item $R$ என்பது \FalseCl எனில், $\delta$
+  பின்வருமாறு முடியும்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$x: \lnot !A, \Gamma \fCenter \lfalse$
+  \RightLabel{\FalseCl}
+  \UnaryInf$\Gamma \fCenter !A$
+  \DisplayProof
+  \]
+  தொகுத்தறிதல் கருதுகோளால் $\lnot !A, \Gamma'
+  \Sequent \ $ இன் !!a{proof}~$\pi_1$ உள்ளது.
+  $!A$ அபத்தம் அல்லாத நேர்வில், !!{proof}~$\pi$ ஐப்
+  பின்வருமாறு எடுத்துக்கொள்வோம்:
+  \[
+  \Axiom$!A \fCenter !A$
+  \RightLabel{\RightR{\lnot}}
+  \UnaryInf$\fCenter !A, \lnot !A$
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\lnot !A, \Gamma' \fCenter $
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma' \fCenter !A$
+  \DisplayProof
+  \]
+  $!A \ident \lfalse$ எனில், மேலுள்ள முதல் அடிகோளாக
+  இட அபத்த அடிகோளை எடுத்தால், வல மறுப்பும் வெட்டும்
+  இறுதியில் வெற்றுப் பின்விலையைத் தரும்.
+\end{enumerate}
+பல வலப்புற !!{formula}s உடைய இடைத் தொடரணியைக் கொண்ட
+!!a{proof}~$\pi$ என்பது \FalseCl{} இன் மாற்றத்தில் மட்டுமே
+கட்டப்படுகிறது.
+ஆகவே \Log{N2i} இன் !!{proof} ஐ மாற்றினால், கிடைப்பது
+\Log{G2i} இன் !!{proof} ஆகும்.
+\end{proof}
+
+பதிப்புக் குறிப்பு: தொகுத்தறிதலின் மற்ற விதி நேர்வுகள்
+உறைந்த மூலத்தில் தரப்படவில்லை.
+
+\end{document}

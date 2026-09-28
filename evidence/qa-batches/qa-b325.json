@@ -1,0 +1,135 @@
+{
+  "batch_id": "TA-B325",
+  "units": [
+    {
+      "unit_id": "OLP-0665",
+      "source_sha256": "1729af6de07c7d3d94f148e87ebf8ac54c84f784036cb0dd47dc3326882d3cdc",
+      "translation_sha256": "116241ef4c8412d78808d4161b6dcc12b030a89b72a47166adfa7244465547dd",
+      "source_bytes": 7246,
+      "translation_bytes": 14510,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!C$",
+        "\\[\\AxiomC{}\\RightLabel{$\\Subst{\\delta'}{t}{c}$}\\DeduceC{$!A(a,t)$}\\RightLabel{\\Intro{\\lforall}}\\UnaryInfC{$\\lforall[x][!A(x,t)]$}\\DisplayProof\\]",
+        "$\\lexists[x][!A(x,c)]$"
+      ],
+      "extra_math": [
+        "$\\Subst{!C}{t}{c}$",
+        "$\\lexists[x][!A(x,t)]$",
+        "\\[\\AxiomC{}\\RightLabel{$\\Subst{\\delta_1'}{t}{c}$}\\DeduceC{$\\lexists[x][!A(x,t)]$}\\AxiomC{$\\Discharge{!A(a,t)}{x}$}\\RightLabel{$\\Subst{\\delta_2'}{t}{c}$}\\DeduceC{$\\Subst{!C}{t}{c}$}\\DischargeRule{\\Elim{\\lexists}}{x}\\BinaryInfC{$\\Subst{!C}{t}{c}$}\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-016",
+          "unit_id": "OLP-0665",
+          "kind": "existential-elimination-substitution-case",
+          "action": "Restore the substituted existential major premise and minor conclusion and replace the copied universal-introduction display with the correct existential-elimination tree.",
+          "expected_missing_math": [
+            "$!C$",
+            "\\[\\AxiomC{}\\RightLabel{$\\Subst{\\delta'}{t}{c}$}\\DeduceC{$!A(a,t)$}\\RightLabel{\\Intro{\\lforall}}\\UnaryInfC{$\\lforall[x][!A(x,t)]$}\\DisplayProof\\]",
+            "$\\lexists[x][!A(x,c)]$"
+          ],
+          "expected_extra_math": [
+            "$\\Subst{!C}{t}{c}$",
+            "$\\lexists[x][!A(x,t)]$",
+            "\\[\\AxiomC{}\\RightLabel{$\\Subst{\\delta_1'}{t}{c}$}\\DeduceC{$\\lexists[x][!A(x,t)]$}\\AxiomC{$\\Discharge{!A(a,t)}{x}$}\\RightLabel{$\\Subst{\\delta_2'}{t}{c}$}\\DeduceC{$\\Subst{!C}{t}{c}$}\\DischargeRule{\\Elim{\\lexists}}{x}\\BinaryInfC{$\\Subst{!C}{t}{c}$}\\DisplayProof\\]"
+          ],
+          "expected_missing_commands": [
+            "\\Intro",
+            "\\lforall",
+            "\\lforall",
+            "\\UnaryInfC"
+          ],
+          "expected_extra_commands": [
+            "\\Elim",
+            "\\lexists",
+            "\\lexists",
+            "\\delta",
+            "\\Subst",
+            "\\Subst",
+            "\\Subst",
+            "\\Subst",
+            "\\AxiomC",
+            "\\DeduceC",
+            "\\Discharge",
+            "\\DischargeRule",
+            "\\BinaryInfC"
+          ],
+          "source_issue_or_choice": "The induction-hypothesis prose leaves c in the existential major premise and C unsubstituted; the transformed display repeats an unrelated universal-introduction proof with undefined delta-prime.",
+          "chosen_treatment": "Show the substituted major proof of exists-x A(x,t), the minor proof from discharged A(a,t) to Subst(C,t,c), and existential elimination to that same conclusion.",
+          "alternatives_considered": "Translate the copied universal-introduction tree literally, or omit the existential-elimination case.",
+          "rationale": "Uniform substitution sends every c to t in both subproofs and their end formulas. The source's eigenvariable restriction excludes a from t, the original conclusion and open assumptions, so existential elimination remains applicable.",
+          "precise_review_question": "Does the repaired two-premise existential-elimination tree correctly witness regular substitution and preserve the discharge label?",
+          "location_needle": "\\DischargeRule{\\Elim{\\lexists}}{x}"
+        },
+        {
+          "audit_id": "TA-PT-017",
+          "unit_id": "OLP-0665",
+          "kind": "regularization-induction-measure",
+          "action": "Choose a topmost dirty eigenvariable inference, allow clean eigenvariable inferences above it, and state that the dirty-inference count falls to at most n-1.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source chooses an arbitrary highest eigenvariable inference, then assumes its upper proof contains no eigenvariable inferences and claims the dirty count is exactly n-1; these assertions do not follow from the induction setup.",
+          "chosen_treatment": "Select a topmost dirty inference; its upper proof contains no dirty inferences and is regular. Replacing the selected eigenconstant by a fresh one lowers the dirty count by at least one without asserting that other inferences cannot also become clean.",
+          "alternatives_considered": "Keep the invalid measure claim, or remove the proof rather than state the needed invariant.",
+          "rationale": "A clean inference may lie above a topmost dirty inference. Cleanliness relative to the full proof implies the upper subproof is regular, and a fresh name makes the selected inference clean without creating new collisions. For the displayed universal case, a reused c above would itself make a dirty inference, so the substitution lemma's hypothesis is met.",
+          "precise_review_question": "Does the revised induction measure decrease strictly for both universal introduction and the remaining existential-elimination exercise?",
+          "location_needle": "தூய்மையற்ற தனிமாறி அனுமானங்கள் அதிகபட்சம்"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Intro",
+        "\\lforall",
+        "\\lforall",
+        "\\UnaryInfC"
+      ],
+      "extra_commands": [
+        "\\Elim",
+        "\\lexists",
+        "\\lexists",
+        "\\delta",
+        "\\Subst",
+        "\\Subst",
+        "\\Subst",
+        "\\Subst",
+        "\\AxiomC",
+        "\\DeduceC",
+        "\\Discharge",
+        "\\DischargeRule",
+        "\\BinaryInfC"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

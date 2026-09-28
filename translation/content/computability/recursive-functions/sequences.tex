@@ -51,7 +51,7 @@ n = p_0^{a_0} \cdot p_1^{a_1} \cdot \dots \cdot p_k^{a_k}
 \begin{proof}
   உறவு $R(i, s)$ பின்வருமாறு வரையறுக்கப்படட்டும்:
   \[
-  R(i, s) \text{ iff }
+  R(i, s) \text{ அப்போதும் அப்போது மட்டுமே }
   p_i \mid s \land p_{i+1} \nmid s.
   \]
   $R$ ஒரு முதன்மை மீள்வரையறை உறவு என்பது தெளிவு. $s$ ஒரு
@@ -105,7 +105,7 @@ n = p_0^{a_0} \cdot p_1^{a_1} \cdot \dots \cdot p_k^{a_k}
   \[
   \fn{element}(s,i) =
   \begin{cases}
-    0 & \mbox{if $i \geq \len{s}$} \\
+    0 & \mbox{$i \geq \len{s}$ எனில்} \\
     \bmin{a < s}{(p_i^{a+2} \nmid s)} & \text{இல்லையெனில்.}
   \end{cases}
   \]

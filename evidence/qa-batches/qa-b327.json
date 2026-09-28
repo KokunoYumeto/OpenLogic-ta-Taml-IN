@@ -1,0 +1,65 @@
+{
+  "batch_id": "TA-B327",
+  "units": [
+    {
+      "unit_id": "OLP-0667",
+      "source_sha256": "5ab9f486ec46f049b02af8cd9da4c08ce15664b45f1fe54fdf3d0a4d7600f1fa",
+      "translation_sha256": "20a6bd1f4438b0dd041f5bf5012626dd3942cf6992ec4e4e1b302627166baac5",
+      "source_bytes": 2881,
+      "translation_bytes": 3531,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-019",
+          "unit_id": "OLP-0667",
+          "kind": "N2-existential-elimination-major-premise-freshness",
+          "action": "Require the eigenconstant to be absent from both the conclusion sequent and the existential major premise's end formula.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The N2 caption repeats absence from the conclusion sequent but omits absence from the existential major premise formula. This permits an unsound application when A(x) contains the same constant a outside the replaced variable.",
+          "chosen_treatment": "The Tamil caption retains the conclusion-sequent condition and adds that, in existential elimination, a must also be absent from the major premise's end formula.",
+          "alternatives_considered": "Translate the repeated source condition literally, or silently alter a displayed rule instead of stating the missing side condition.",
+          "rationale": "With A(x)=R(x,a), Gamma_1 asserting forall y exists x R(x,y), and Gamma_2 asserting forall y not R(y,y), the printed restriction permits existential elimination to derive arbitrary C from a satisfiable two-element irreflexive serial relation. Excluding a from the major premise formula blocks this counterexample and matches the adjacent N1 and first-order quantifier explanations.",
+          "precise_review_question": "Does N2 existential elimination require a to be absent from the major premise formula as well as the conclusion sequent?",
+          "location_needle": "இரண்டாவதில், இருப்பளவை முதன்முன்கோளின்"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

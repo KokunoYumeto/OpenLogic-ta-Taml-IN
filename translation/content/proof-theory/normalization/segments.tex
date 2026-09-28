@@ -1,0 +1,141 @@
+% SEGMENT OLP-0677-S01
+% Part: proof-theory
+% Chapter: normalization
+% Section: segments
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nor}{seg}
+
+\olsection{தொடர்களும் வெட்டுகளும்}
+
+!!^a{introduction} விதியைத் தொடர்ந்து !!a{elimination} விதி
+வருவது !!a{proof} இல் ஒரு சுற்றுவழி; !!a{proof} ஐ
+இயல்பாக்குவது இத்தகைய சுற்றுவழிகளை அகற்றுவதாகும்.
+ஆனால் \Elim{\lor}, \Elim{\lexists} விதிகளால்,
+“நாம் அகற்ற விரும்பும் சுற்றுவழி” என்பதையே
+வரையறுப்பது சற்றுச் சிக்கலாகிறது. சிக்கல் இதுதான்:
+இந்த விதிகள் இருப்பதால், ஒரு சுற்றுவழியில்
+!!{introduction} விதியை !!{elimination} விதி
+\emph{உடனடியாகத்} தொடரும் என்று உறுதியில்லை.
+இடையில் \Elim{\lor} அல்லது \Elim{\lexists}
+வரலாம்; எடுத்துக்காட்டாக,
+\[
+\AxiomC{}
+\DeduceC{$\lexists[x][!C(x)]$}
+\AxiomC{$\Discharge{!A}{x}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lexists}}{y}
+\BinaryInfC{$!A \lif !B$}
+\AxiomC{}
+\DeduceC{$!A$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!B$}
+\DisplayProof
+\]
+
+% SEGMENT OLP-0677-S02
+உண்மையில், \Intro{\lif} ஐயும் \Elim{\lif} ஐயும்
+எத்தனை \Elim{\lor} அல்லது \Elim{\lexists}
+விதிகள் வேண்டுமானாலும் பிரிக்கலாம்; எடுத்துக்காட்டாக,
+\[
+\AxiomC{}
+\DeduceC{$\lexists[x][!C(x)]$}
+\AxiomC{}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!A}{x}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !B$}
+\AxiomC{$\Discharge{!A}{x}$}
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !B$}
+\RightLabel{\Elim{\lor}}
+\TrinaryInfC{$!A \lif !B$}
+\DischargeRule{\Elim{\lexists}}{y}
+\BinaryInfC{$!A \lif !B$}
+\AxiomC{}
+\DeduceC{$!A$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!B$}
+\DisplayProof
+\]
+ஒன்றுக்கு மேற்பட்ட~\Intro{\lif} களைத் தொடர்ந்து
+வருவதால், ஒரே \Elim{\lif} கூட பல சுற்றுவழிகளில்
+இடம்பெறலாம் என்பதை இந்த எடுத்துக்காட்டு காட்டுகிறது.
+இந்த எல்லா வாய்ப்புகளையும் கணக்கில் கொள்ள,
+\Log{N1i} நிறுவலில் !!{formula} நிகழ்வுகளின்
+சில வகை வரிசைகளை \emph{தொடர்கள்} என்று கொண்டு,
+அவற்றின் வழியாகச் சுற்றுவழிகளை வரையறுக்கிறோம்.
+எடுத்துக்காட்டில் அது~$!A \lif !B$ இன் நிகழ்வுகளால்
+ஆன வரிசை: $\Elim{\lor}$ அல்லது
+$\Elim{\lexists}$ இன் சிறுமுன்கோளாக இருக்கும்
+ஒரு நிகழ்வை அந்த அனுமானத்தின் முடிவாக இருக்கும்
+அடுத்த நிகழ்வு தொடர்கிறது. இவ்வெடுத்துக்காட்டில்
+அத்தகைய இரண்டு தொடர்கள் உள்ளன; ஒவ்வொன்றிலும்
+மூன்று~$!A \lif !B$ நிகழ்வுகள் உள்ளன.
+இப்போது முறையான வரையறை:
+
+% SEGMENT OLP-0677-S03
+\begin{defn}
+\Log{N1i} !!{proof}~$\delta$ இல் \emph{தொடர்}
+என்பது, ஒரே !!{formula}~$!A$ இன்
+$!A_1$, \dots, $!A_n$ நிகழ்வுகள்~$\delta$ இல்
+அமைக்கும் வரிசை;
+அதற்கு பின்வரும் நிபந்தனைகள் உண்டு:
+\begin{enumerate}
+  \item $!A_1$ என்பது \Elim{\lor} அல்லது
+  \Elim{\lexists} இன் முடிவாக இருக்கக்கூடாது;
+  \item $!A_n$ என்பது \Elim{\lor} அல்லது
+  \Elim{\lexists} இன் சிறுமுன்கோளாக
+  இருக்கக்கூடாது;
+  \item $i = 1$, \dots,~$n-1$ ஒவ்வொன்றுக்கும்,
+  $!A_i$ என்பது \Elim{\lor} அல்லது
+  \Elim{\lexists} இன் சிறுமுன்கோள்;
+  $!A_{i+1}$ என்பது அதே அனுமானத்தின் முடிவு.
+\end{enumerate}
+அந்தத் தொடரின் \emph{நீளம்}~$n$.
+\end{defn}
+
+% SEGMENT OLP-0677-S04
+ஒவ்வொரு தொடரும் அகற்றப்பட வேண்டிய சுற்றுவழி
+அல்ல. அகற்றப்பட வேண்டியவை \emph{வெட்டுகள்}
+எனப்படும்.
+
+\begin{defn}
+\emph{வெட்டு} என்பது $!A_n$ ஓர்
+!!a{elimination} அனுமானத்தின் முதன்முன்கோளாக
+இருக்கும் ஒரு தொடர்; மேலும், $n=1$ ஆகவும்
+$!A_1 = !A_n$ ஓர் !!a{introduction}
+அனுமானத்தின் அல்லது~\FalseInt இன் முடிவாகவும்
+இருக்க வேண்டும், அல்லது~$n>1$ ஆக இருக்க வேண்டும்.
+\end{defn}
+
+வெட்டான தொடர் ஓர் !!a{introduction} விதியின்
+முடிவில் தொடங்க வேண்டியதில்லை. அது ஓர்
+!!a{elimination} விதியின் முதன்முன்கோளில்
+முடிவதே பொதுத் தேவை. ஆனால் நீளம்~$1$
+கொண்ட தொடர் வெட்டாக இருக்க வேண்டுமானால்,
+அது !!{introduction} விதியின் முடிவாகவோ
+பொய்யிலிருந்து வருவித்தலின் முடிவாகவோ இருக்க வேண்டும்.
+
+% SEGMENT OLP-0677-S05
+\begin{defn}
+ஒரு வெட்டின் \emph{நிலை}~$\depth{!A}$.
+!!a{proof}~$\delta$ இன் \emph{வெட்டு
+நிலை}~$\cutrank{\delta}$ என்பது~$\delta$
+இல் உள்ள வெட்டுகளின் நிலைகளில் மிகப் பெரியது.
+ஒரு வெட்டின் நிலை~$\cutrank{\delta}$
+ஆக இருந்தால், அதாவது அதன் நிலை மிகப் பெரியதாக
+இருந்தால், அது~$\delta$ இல்
+\emph{மிகுநிலை} வெட்டு. $\delta$ இன்
+\emph{வெட்டு நீளம்} என்பது அதன் எல்லா
+மிகுநிலை வெட்டுகளின் நீளங்களின் கூட்டுத்தொகை.
+\end{defn}
+
+\end{document}

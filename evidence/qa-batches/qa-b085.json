@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0173",
       "source_sha256": "8b7238c293db0a3717f1fcf3ad2420e093cd65593237c26faaaf36d7b131e934",
-      "translation_sha256": "df723a3cbc25996b158fac039500fd9e45b77c0b1165f29df0ae8ed8b5bb23e8",
+      "translation_sha256": "208bacb5be8d18ab16f4bae0f646f465f0696d0bee46f287fff99bff01778948",
       "source_bytes": 2376,
-      "translation_bytes": 3940,
+      "translation_bytes": 4280,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": true,
@@ -19,7 +19,6 @@
       "replacement_char_absent": true,
       "english_words_for_review": [
         "Skolem",
-        "iff",
         "include",
         "logic",
         "multline",
@@ -29,8 +28,14 @@
       ],
       "visual_review_complete": false,
       "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -43,7 +48,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

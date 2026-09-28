@@ -1,0 +1,190 @@
+% SEGMENT OLP-0644-S01
+% Part: first-order-logic
+% Chapter: completeness
+% Section: maximally-consistent-sets
+
+% அதிகபட்ச முரணற்ற கணங்களின் வரையறை. நிறைவு நிறுவலுக்குத் தேவையான
+% பண்புகள், பயன்படுத்தப்படும் நிறுவல் முறையின் அத்தியாயத்தில் உள்ளன.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{fol}{com}{mcs}
+\olsection{அதிகபட்ச முரணற்ற \usetoken{P}{sentence}-கணங்கள்}
+
+\begin{defn}[அதிகபட்ச முரணற்ற கணம்]
+\ollabel{mcs}
+!!{sentence}s கொண்ட கணம்~$\Gamma$, பின்வரும் இரண்டு நிபந்தனைகளும்
+நிறைவேறினால், அப்போதும் அப்போது மட்டுமே \emph{அதிகபட்ச முரணற்றது}:
+\begin{enumerate}
+\item $\Gamma$ முரணற்றது; மேலும்
+\item $\Gamma \subsetneq \Gamma'$ எனில், $\Gamma'$ முரணுடையது.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0644-S02
+\begin{explain}
+மேலுள்ளதற்குச் சமானமான மற்றொரு வரையறை இதுதான்: வாக்கியக்
+கணம்~$\Gamma$, பின்வரும் இரண்டு நிபந்தனைகளும் நிறைவேறினால்,
+அப்போதும் அப்போது மட்டுமே \emph{அதிகபட்ச முரணற்றது}:
+\begin{enumerate}
+\item $\Gamma$ முரணற்றது; மேலும்
+\item $\Gamma \cup \{ !A \}$ முரணற்றது எனில், $!A \in \Gamma$.
+\end{enumerate}
+வேறு சொற்களில், ஏற்கெனவே~$\Gamma$ இல் இல்லாத !!{sentence}s ஐ
+அதிகபட்ச முரணற்ற கணம்~$\Gamma$ உடன் சேர்த்தால், அதன் விளைவான பெரிய கணம்
+முரணுடையதாகிவிடும்.
+\end{explain}
+
+% SEGMENT OLP-0644-S03
+\begin{explain}
+நிறைவு நிறுவலில் அதிகபட்ச முரணற்ற கணங்கள் முக்கியமானவை. ஏனெனில்,
+!!{sentence}s கொண்ட எந்த முரணற்ற கணம்~$\Gamma$ உம் ஓர் அதிகபட்ச
+முரணற்ற கணம்~$\Gamma^*$ இல் அடங்கும் என்பதை உறுதிசெய்யலாம். மேலும்,
+அதிகபட்ச முரணற்ற கணம், ஒவ்வொரு !!{sentence}~$!A$ க்கும் $!A$
+அல்லது அதன் மறுப்பு~$\lnot !A$ இவற்றில் ஒன்றைக் கொண்டிருக்கும்.
+இது குறிப்பாக அணு !!{sentence}s க்கும் பொருந்துகிறது. எனவே
+!!{constant}s ஐ ஏற்றவாறு சேர்த்து விரிவாக்கிய மொழியில் உள்ள
+அதிகபட்ச முரணற்ற கணத்திலிருந்து, எந்த அணு !!{sentence}s ஆனவை
+$\Gamma^*$ இல் உள்ளன என்பதன்படி !!{predicate}s இன் பொருள்விளக்கம்
+வரையறுக்கப்படும் !!a{structure} ஒன்றைக் கட்டமைக்கலாம். இந்த
+!!{structure} ஆனது~$\Gamma^*$ இல் உள்ள அனைத்து !!{sentence}s ஐயும்
+(ஆகவே~$\Gamma$ இல் உள்ள அனைத்தையும்) மெய்யாக்கும் என்று பின்னர்
+காட்டலாம். இந்தப் பின்னைய கூற்றை நிறுவ, $\lnot !A \in
+\Gamma^*$ அப்போதும் அப்போது மட்டுமே $!A \notin \Gamma^*$;
+$(!A \lor !B) \in \Gamma^*$ அப்போதும் அப்போது மட்டுமே $!A
+\in \Gamma^*$ அல்லது $!B \in \Gamma^*$; இதுபோன்ற பண்புகள் தேவை.
+\end{explain}
+
+% SEGMENT OLP-0644-S04
+\begin{prop}
+\ollabel{prop:mcs}
+$\Gamma$ அதிகபட்ச முரணற்றது என்க. அப்போது:
+\begin{enumerate}
+\item \ollabel{prop:mcs-prov-in} $\Gamma \Proves !A$ எனில், $!A \in
+  \Gamma$.
+
+\item \ollabel{prop:mcs-either-or} எந்த $!A$ க்கும், $!A \in
+  \Gamma$ அல்லது $\lnot !A \in \Gamma$.
+
+\tagitem{prvAnd}{\ollabel{prop:mcs-and} $(!A \land !B) \in \Gamma$
+  அப்போதும் அப்போது மட்டுமே $!A \in \Gamma$, $!B \in \Gamma$ இரண்டும்.}{}
+
+\tagitem{prvOr}{\ollabel{prop:mcs-or} $(!A \lor !B) \in \Gamma$
+  அப்போதும் அப்போது மட்டுமே $!A \in \Gamma$ அல்லது $!B \in \Gamma$.}{}
+
+\tagitem{prvIf}{\ollabel{prop:mcs-if} $(!A \lif !B) \in \Gamma$
+  அப்போதும் அப்போது மட்டுமே $!A \notin \Gamma$ அல்லது $!B \in \Gamma$.}{}
+\end{enumerate}
+\end{prop}
+
+% SEGMENT OLP-0644-S05
+\begin{proof}
+பின்வரும் அனைத்திலும் $\Gamma$ அதிகபட்ச முரணற்றது எனக் கொள்வோம்.
+\begin{enumerate}
+\item $\Gamma \Proves !A$ எனில், $!A \in \Gamma$.
+
+$\Gamma \Proves !A$ என்க. இதற்கு மாறாக $!A
+\notin \Gamma$ எனக் கொள்வோம். $\Gamma$ அதிகபட்ச முரணற்றது என்பதால்,
+$\Gamma \cup \{!A\}$ முரணுடையது; எனவே $\Gamma \cup \{!A\} \Proves
+\lfalse$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:prv:prop:provability-contr},prfND/{fol:ntd:prv:prop:provability-contr}},
+$\Gamma$ முரணுடையது. இது $\Gamma$ முரணற்றது என்ற கருதுகோளுக்கு
+முரணாகும். ஆகவே $!A \notin
+\Gamma$ என்பது இயலாது; எனவே $!A \in \Gamma$.
+
+\item எந்த $!A$ க்கும், $!A \in \Gamma$ அல்லது $\lnot !A \in \Gamma$.
+
+இதற்கு மாறாக, ஏதோ~$!A$ க்கு $!A \notin \Gamma$ மற்றும்
+$\lnot !A \notin \Gamma$ இரண்டும் எனக் கொள்வோம். $\Gamma$ அதிகபட்ச
+முரணற்றது என்பதால், $\Gamma \cup \{!A\}$ மற்றும்
+$\Gamma \cup \{\lnot !A\}$ இரண்டும் முரணுடையவை. எனவே
+$\Gamma \cup \{!A\} \Proves \lfalse$ மற்றும் $\Gamma \cup
+\{\lnot !A\} \Proves \lfalse$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:prv:prop:provability-exhaustive},prfND/{fol:ntd:prv:prop:provability-exhaustive}},
+$\Gamma$ முரணுடையது; இது முரண்பாடு. ஆகவே அத்தகைய
+!!a{sentence}~$!A$ இருக்க முடியாது. இதனால் ஒவ்வொரு $!A$ க்கும்,
+$!A \in \Gamma$ அல்லது $\lnot !A
+\in \Gamma$.
+
+% SEGMENT OLP-0644-S06
+\tagitem{defAnd}{}{%
+\iftag{probAnd}{பயிற்சி.}{%
+$(!A \land !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+$!A \in \Gamma$, $!B \in \Gamma$ இரண்டும்:
+
+முன்னோக்கிய திசைக்கு, $(!A \land !B) \in \Gamma$ என்க. அப்போது
+$\Gamma \Proves !A \land !B$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-land-left},prfND/{fol:ntd:ppr:prop:provability-land-left}},
+$\Gamma \Proves !A$ மற்றும் $\Gamma \Proves !B$. தேவையானவாறு,
+\olref{prop:mcs-prov-in} படி $!A \in \Gamma$ மற்றும் $!B \in \Gamma$.
+
+மறுதிசைக்கு, $!A \in \Gamma$ மற்றும் $!B \in
+\Gamma$ என்க. அப்போது $\Gamma \Proves !A$ மற்றும்
+$\Gamma \Proves !B$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-land-right},prfND/{fol:ntd:ppr:prop:provability-land-right}},
+$\Gamma \Proves !A \land !B$. \olref{prop:mcs-prov-in} படி,
+$(!A \land !B) \in \Gamma$.}}
+
+% SEGMENT OLP-0644-S07
+\tagitem{defOr}{}{%
+\iftag{probOr}{பயிற்சி.}{%
+$(!A \lor !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+$!A \in \Gamma$ அல்லது $!B \in \Gamma$.
+
+முன்னோக்கிய திசையின் எதிர்மறைநேர்மாற்றை நிறுவ, $!A
+\notin \Gamma$ மற்றும் $!B \notin \Gamma$ என்க. நாம் $(!A \lor
+!B) \notin \Gamma$ என்பதைக் காட்ட வேண்டும். $\Gamma$ அதிகபட்ச
+முரணற்றது என்பதால், $\Gamma \cup \{!A\} \Proves \lfalse$ மற்றும்
+$\Gamma \cup \{!B\} \Proves \lfalse$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lor},prfND/{fol:ntd:ppr:prop:provability-lor}},
+$\Gamma \cup \{(!A \lor !B)\}$ முரணுடையது. ஆகவே தேவையானபடி,
+$(!A \lor !B)
+\notin \Gamma$.
+
+மறுதிசைக்கு, $!A \in \Gamma$ அல்லது $!B \in
+\Gamma$ என்க. அப்போது $\Gamma \Proves !A$ அல்லது
+$\Gamma \Proves !B$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lor},prfND/{fol:ntd:ppr:prop:provability-lor}},
+$\Gamma \Proves !A \lor !B$. \olref{prop:mcs-prov-in} படி,
+தேவையானபடி $(!A \lor
+!B) \in \Gamma$.}}
+
+% SEGMENT OLP-0644-S08
+\tagitem{defIf}{}{%
+\iftag{probIf}{பயிற்சி.}{%
+$(!A \lif !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+$!A \notin \Gamma$ அல்லது $!B \in \Gamma$:
+
+முன்னோக்கிய திசைக்கு, $(!A \lif !B) \in \Gamma$ என்க. இதற்கு
+மாறாக $!A \in \Gamma$ மற்றும் $!B \notin \Gamma$ எனக் கொள்வோம்.
+இந்தக் கருதுகோள்களின்படி $\Gamma \Proves !A \lif !B$ மற்றும்
+$\Gamma \Proves !A$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif-left},prfND/{fol:ntd:ppr:prop:provability-lif-left}},
+$\Gamma \Proves !B$. ஆனால் \olref{prop:mcs-prov-in} படி $!B \in
+\Gamma$; இது $!B \notin \Gamma$ என்ற கருதுகோளுக்கு முரணாகும்.
+
+மறுதிசையில், முதலில் $!A \notin
+\Gamma$ என்ற நிலையை எடுத்துக்கொள்வோம். \olref{prop:mcs-either-or}
+படி $\lnot !A \in \Gamma$; ஆகவே $\Gamma \Proves \lnot !A$.
+பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif-right},prfND/{fol:ntd:ppr:prop:provability-lif-right}},
+$\Gamma \Proves !A \lif !B$. மீண்டும் \olref{prop:mcs-prov-in}
+படி, தேவையானபடி $(!A \lif !B) \in \Gamma$.
+
+இப்போது $!B \in \Gamma$ என்ற நிலையை எடுத்துக்கொள்வோம். அப்போது
+$\Gamma \Proves !B$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif-right},prfND/{fol:ntd:ppr:prop:provability-lif-right}},
+$\Gamma \Proves !A \lif !B$. \olref{prop:mcs-prov-in} படி,
+$(!A \lif
+!B) \in \Gamma$.}}
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0644-S09
+\begin{prob}
+\olref[fol][com][mcs]{prop:mcs} இன் நிறுவலை நிறைவு செய்க.
+\end{prob}
+
+\end{document}

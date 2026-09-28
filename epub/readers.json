@@ -2,14 +2,14 @@
   "schema": "openlogic-tamil-epub-readers/1",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_total_units": 722,
-  "modified": "2026-09-10T00:00:00Z",
+  "modified": "2026-09-28T00:00:00Z",
   "readers": [
     {
       "slug": "sets",
       "master": "tamil-batch001.tex",
       "filename": "sets-ta-Taml-IN.epub",
       "title": "திறந்த தருக்கவியல்: கணங்கள்",
-      "subtitle": "OpenLogic Tamil development reader — sets",
+      "subtitle": "கணங்கள் பற்றிய தமிழ்ப் பகுதிப் பிரதி",
       "first_unit": 4,
       "last_unit": 10,
       "unit_count": 7
@@ -19,7 +19,7 @@
       "master": "tamil-sfr.tex",
       "filename": "sets-functions-relations-ta-Taml-IN.epub",
       "title": "திறந்த தருக்கவியல்: கணங்கள், தொடர்புகள், சார்புகள், அளவு, எண்முறைமைகள், முடிவுறாத கணங்கள்",
-      "subtitle": "OpenLogic Tamil development reader — sets, relations, functions, size, arithmetization, and infinite sets",
+      "subtitle": "கணங்கள், தொடர்புகள், சார்புகள், அளவு, எண்கணிதமாக்கல், முடிவுறாத கணங்கள்",
       "first_unit": 4,
       "last_unit": 54,
       "unit_count": 51
@@ -29,7 +29,7 @@
       "master": "tamil-proof-systems-sequent.tex",
       "filename": "proof-systems-sequent-natural-deduction-tableaux-ta-Taml-IN.epub",
       "title": "திறந்த தருக்கவியல்: நிறுவல் முறைமைகள், தொடரணிக் கணியம், இயல்பான வருவித்தல், அட்டவணை மரங்கள்",
-      "subtitle": "OpenLogic Tamil development reader — proof systems, sequent calculus, natural deduction, and tableaux",
+      "subtitle": "நிறுவல் முறைமைகள், தொடர்கணிதம், இயற்கை வருவித்தல், அட்டவணை மரங்கள்",
       "first_unit": 63,
       "last_unit": 111,
       "unit_count": 49
@@ -39,7 +39,7 @@
       "master": "tamil-axiomatic-deduction.tex",
       "filename": "axiomatic-deduction-ta-Taml-IN.epub",
       "title": "திறந்த தருக்கவியல்: அடிகோள் வருவித்தல்",
-      "subtitle": "OpenLogic Tamil development reader — axiomatic deduction",
+      "subtitle": "அடிகோள் வருவித்தல் பற்றிய தமிழ்ப் பகுதிப் பிரதி",
       "first_unit": 112,
       "last_unit": 125,
       "unit_count": 14
@@ -49,7 +49,7 @@
       "master": "tamil-computability.tex",
       "filename": "computability-ta-Taml-IN.epub",
       "title": "திறந்த தருக்கவியல்: கணிப்புத்தன்மை",
-      "subtitle": "OpenLogic Tamil development reader — computability",
+      "subtitle": "கணிப்புத்தன்மை பற்றிய தமிழ்ப் பகுதிப் பிரதி",
       "first_unit": 208,
       "last_unit": 251,
       "unit_count": 44
@@ -59,7 +59,7 @@
       "master": "tamil-turing-machines.tex",
       "filename": "turing-machines-ta-Taml-IN.epub",
       "title": "திறந்த தருக்கவியல்: டியூரிங் பொறிகள்",
-      "subtitle": "OpenLogic Tamil development reader — Turing machines",
+      "subtitle": "டியூரிங் பொறிகள் பற்றிய தமிழ்ப் பகுதிப் பிரதி",
       "first_unit": 252,
       "last_unit": 273,
       "unit_count": 22
@@ -69,7 +69,7 @@
       "master": "tamil-incompleteness-arithmetization.tex",
       "filename": "incompleteness-arithmetization-ta-Taml-IN.epub",
       "title": "திறந்த தருக்கவியல்: எண்கணிதமயமாக்கல்",
-      "subtitle": "OpenLogic Tamil development reader — incompleteness and arithmetization",
+      "subtitle": "முழுமையின்மையும் எண்கணிதமாக்கலும் பற்றிய தமிழ்ப் பகுதிப் பிரதி",
       "first_unit": 288,
       "last_unit": 299,
       "unit_count": 12
@@ -79,10 +79,34 @@
       "master": "tamil-representability-in-q.tex",
       "filename": "representability-in-q-ta-Taml-IN.epub",
       "title": "திறந்த தருக்கவியல்: Q-இல் பிரதிநிதித்துவப்படுத்தத்தக்க தன்மை",
-      "subtitle": "OpenLogic Tamil development reader — representability in Q",
+      "subtitle": "Q இல் பிரதிநிதித்துவப்படுத்தத்தக்க தன்மை பற்றிய தமிழ்ப் பகுதிப் பிரதி",
       "first_unit": 300,
       "last_unit": 310,
       "unit_count": 11
+    },
+    {
+      "slug": "complete-main",
+      "master": "tamil-complete.tex",
+      "filename": "openlogic-ta-Taml-IN-complete-main.epub",
+      "title": "திறந்த தருக்கவியல்: முழுத் தமிழ்ப் பதிப்பு",
+      "subtitle": "இந்தியத் தமிழில் முதன்மை வாசிப்பு நூல்",
+      "first_unit": 1,
+      "last_unit": 713,
+      "unit_count": 695,
+      "complete_edition": true,
+      "omit_units": ["OLP-0643", "OLP-0644", "OLP-0645", "OLP-0646", "OLP-0647", "OLP-0648", "OLP-0649", "OLP-0650", "OLP-0651", "OLP-0652", "OLP-0653", "OLP-0654", "OLP-0660", "OLP-0694", "OLP-0705", "OLP-0708", "OLP-0709", "OLP-0710"]
+    },
+    {
+      "slug": "complete-companion",
+      "master": "tamil-source-companion.tex",
+      "filename": "openlogic-ta-Taml-IN-complete-companion.epub",
+      "title": "திறந்த தருக்கவியல்: தமிழ்ப் பதிப்பின் மூலத் துணைநூல்",
+      "subtitle": "மாற்று மூலப்பிரிவுகளும் விளக்கங்களும்",
+      "first_unit": 643,
+      "last_unit": 722,
+      "unit_count": 27,
+      "complete_edition": true,
+      "unit_ids": ["OLP-0643", "OLP-0644", "OLP-0645", "OLP-0646", "OLP-0647", "OLP-0648", "OLP-0649", "OLP-0650", "OLP-0651", "OLP-0652", "OLP-0653", "OLP-0654", "OLP-0660", "OLP-0694", "OLP-0705", "OLP-0708", "OLP-0709", "OLP-0710", "OLP-0714", "OLP-0715", "OLP-0716", "OLP-0717", "OLP-0718", "OLP-0719", "OLP-0720", "OLP-0721", "OLP-0722"]
     }
   ]
 }

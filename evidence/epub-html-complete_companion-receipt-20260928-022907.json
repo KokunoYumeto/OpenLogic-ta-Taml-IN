@@ -1,0 +1,54 @@
+{
+  "schema": "openlogic-tamil-epub-html-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 1000,
+  "process_timeout_minutes": 20,
+  "master": "tamil-source-companion.tex",
+  "master_sha256": "53771c7f33f56fee81160bc62c8b4b9ff6d5d8d20141d74bea3910732d5fb08f",
+  "adapter_sha256": "0dff19950ed86771175195b9b2f56967240433d17e3ebbd58bf5501ed3ed387d",
+  "reader_slug": "complete-companion",
+  "converter": "make4ht",
+  "converter_version": "make4ht version v0.4e",
+  "backend": "tex4ht",
+  "options": [
+    "lualatex",
+    "html5",
+    "mathml",
+    "charset=utf-8",
+    "fn-in",
+    "no-shell-escape"
+  ],
+  "started_utc": "2026-09-28T02:27:08.8453208Z",
+  "status": "converter-failed",
+  "abandoned_mutex": false,
+  "exit_code": 1,
+  "issues": [
+    {
+      "line": "LaTeX Warning: You have requested file `',",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: You have requested file `',",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: Command `\\theHfootnote' already defined -- not changed on input",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: First page is already shipped out, ignoring",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "! LaTeX Error: Can be used only in preamble.",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "!  ==> Fatal error occurred, bad output DVI file produced!",
+      "file": "complete-companion.log"
+    }
+  ],
+  "output_files": [],
+  "error": "make4ht failed with exit code 1",
+  "finished_utc": "2026-09-28T02:27:22.5644803Z"
+}

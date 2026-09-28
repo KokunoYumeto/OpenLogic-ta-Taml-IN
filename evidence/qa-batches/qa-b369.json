@@ -1,0 +1,87 @@
+{
+  "batch_id": "TA-B369",
+  "units": [
+    {
+      "unit_id": "OLP-0713",
+      "source_sha256": "9ae0e40622effab9a067226754c58eeac00c1e21b1ac899c9e2acdebbd12d92c",
+      "translation_sha256": "6fb039d818220f91413ff26396803275130cb39404167bf203842b45d39af5bf",
+      "source_bytes": 3744,
+      "translation_bytes": 8262,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!A\\land!B,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!A\\land!B,!A\\land!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!A\\land!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\qquad\\Axiom$\\Gamma\\fCenter\\Delta,!A,!B$\\RightLabel{\\RightR{\\lor}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B,!B$\\RightLabel{\\RightR{\\lor}}\\UnaryInf$\\Gamma\\fCenter\\Delta,,!A\\lor!B,!A\\lor!B$\\RightLabel{\\RightR{\\Contraction}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B$\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "\\[\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!A\\land!B,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!A\\land!B,!A\\land!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!A\\land!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\qquad\\Axiom$\\Gamma\\fCenter\\Delta,!A,!B$\\RightLabel{\\RightR{\\lor}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B,!B$\\RightLabel{\\RightR{\\lor}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B,!A\\lor!B$\\RightLabel{\\RightR{\\Contraction}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B$\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "adm",
+        "include",
+        "inv",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0713",
+          "audit_id": "TA-PT-057",
+          "kind": "g1c-g3c-proof-direction-and-quantifier-case-repair",
+          "action": "Correct the G3c non-atomic identity-axiom claim, replace the reverse-direction admissibility citation with the G3c weakening proposition, account for the retained quantified principal formulas in both translations, and remove a duplicate comma in the right-disjunction derivation.",
+          "expected_missing_math": [
+            "\\[\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!A\\land!B,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!A\\land!B,!A\\land!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!A\\land!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\qquad\\Axiom$\\Gamma\\fCenter\\Delta,!A,!B$\\RightLabel{\\RightR{\\lor}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B,!B$\\RightLabel{\\RightR{\\lor}}\\UnaryInf$\\Gamma\\fCenter\\Delta,,!A\\lor!B,!A\\lor!B$\\RightLabel{\\RightR{\\Contraction}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!A\\land!B,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!A\\land!B,!A\\land!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!A\\land!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\qquad\\Axiom$\\Gamma\\fCenter\\Delta,!A,!B$\\RightLabel{\\RightR{\\lor}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B,!B$\\RightLabel{\\RightR{\\lor}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B,!A\\lor!B$\\RightLabel{\\RightR{\\Contraction}}\\UnaryInf$\\Gamma\\fCenter\\Delta,!A\\lor!B$\\DisplayProof\\]"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[adm]{prop:lor-G3-adm}",
+              "to": "\\olref[adm]{prop:weak-G3c-adm}",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen G1c-to-G3c base case calls arbitrary A entails A a G3c axiom, although its G3c table limits identity axioms to atomic C and the cited proposition proves general identity sequents. The source cites prop:lor-G3-adm for the forward direction, but that proposition proves G3c's left-conjunction and right-disjunction rules derivable in G1c, i.e. the reverse direction. Its same-rule shortcut omits G3c's retained quantified principal formulas, and the reverse proof likewise omits contraction after the G1c quantified rules. The final right-disjunction tree has Delta followed by two commas.",
+          "chosen_treatment": "State that arbitrary A identity sequents are provable, not generally axioms, and preserve the source's correct [ex] cross-file locator for the earlier proposition. In the forward translation use G3c weakening admissibility to add the companion or retained principal formula before the G3c left-conjunction, right-disjunction, left-universal and right-existential rules. In the reverse translation use the shown G1c conjunction/disjunction derivations; for the two quantified rules use the retained principal formula as context, then contract its duplicate. Remove only the extra comma from the displayed right-disjunction tree.",
+          "alternatives_considered": "Repeat the false G3c axiom claim; cite the reverse-direction proposition in the forward argument; silently treat G3c and G1c quantifier rules as syntactically identical; delete retained formulas from the frozen rule tables; replace the mathematical proof trees wholesale.",
+          "rationale": "G3c's table requires atomic C for identity axioms, while prop:G3c-axioms supplies derivability for arbitrary A. G1c's one-formula left-conjunction/right-disjunction and unretained quantified rules differ from G3c's corresponding rules. Weakening in G3c and contraction in G1c bridge those exact premise differences. The double comma has no sequent meaning and contradicts the immediately preceding and following right contexts.",
+          "precise_review_question": "Do both translations now use their own direction's established weakening/contraction arguments, does the base case distinguish G3c axiom from provable identity, and is the right-disjunction display changed only by the duplicate-comma removal?",
+          "location_needle": "\\olref[adm]{prop:weak-G3c-adm}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

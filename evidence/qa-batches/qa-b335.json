@@ -1,0 +1,83 @@
+{
+  "batch_id": "TA-B335",
+  "units": [
+    {
+      "unit_id": "OLP-0675",
+      "source_sha256": "7e7ecafb16908e749788e898e1651da247561dfe79c9a2539bf79e73099348ed",
+      "translation_sha256": "fd82c502c1b274069e9fea53cb98cb48d66d77c26cedc0ac11ff44130c7e1e0c",
+      "source_bytes": 11943,
+      "translation_bytes": 18519,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!A\\ident!B\\lor!C$"
+      ],
+      "extra_math": [
+        "$!A\\ident!B\\land!C$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0675",
+          "audit_id": "TA-PT-031",
+          "kind": "permutation-cut-formula-and-eigenvariable-regularity",
+          "action": "Change the opening example's A from B-or-C to B-and-C; state that eigenvariables in a duplicated subproof must be renamed to retain regularity.",
+          "expected_missing_math": [
+            "$!A\\ident!B\\lor!C$"
+          ],
+          "expected_extra_math": [
+            "$!A\\ident!B\\land!C$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\lor"
+          ],
+          "expected_extra_commands": [
+            "\\land"
+          ],
+          "source_issue_or_choice": "The introductory line sets A equal to B-or-C, whereas its proof tree and next paragraph identify the cut formula as B-and-C. The displayed permuted existential case duplicates the same eigenvariable in two inferences, contrary to the adjacent definition of regular proof.",
+          "chosen_treatment": "Translate A as B-and-C and add a prose instruction to refresh eigenvariable names in one copied subproof; leave the proof tree itself source-aligned.",
+          "alternatives_considered": "Preserve the contradictory disjunction and silently treat the duplicated regular proof as already regular.",
+          "rationale": "The conjunction-elimination major premise and the following A_n explanation determine B-and-C. The frozen quantifiers.tex definition requires each eigenvariable to belong to only one inference, and its regularization proposition permits renaming.",
+          "precise_review_question": "Does the corrected cut formula match the displayed derivation, and does freshening every eigenvariable in one copy restore regularity without changing the inference?",
+          "location_needle": "தனிமாறிப் பெயர்களையும் ஒரு நகலில் புதிதாக மாற்றினால்தான்"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\lor"
+      ],
+      "extra_commands": [
+        "\\land"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

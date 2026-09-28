@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0217",
       "source_sha256": "9ab1255a55ef04404aadcde303e86a6d245f8d92c42f096de134658aebf82f97",
-      "translation_sha256": "295318d54a975e7039b30d120d2be46da063de764ba82c64e7a3aad74a25e646",
+      "translation_sha256": "73f8db1af54e097752617b16df8cd800ed0a0a8a223e53de0bf1cbdc322ab5f4",
       "source_bytes": 5533,
-      "translation_bytes": 10727,
+      "translation_bytes": 10740,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": true,
@@ -26,8 +26,14 @@
       ],
       "visual_review_complete": false,
       "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -40,7 +46,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

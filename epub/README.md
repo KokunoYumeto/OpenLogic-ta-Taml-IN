@@ -1,28 +1,11 @@
-# Tamil EPUB readers
+# தமிழ் EPUB வாசிப்பு நூல்கள்
 
-These EPUB 3.3 readers are reflowable counterparts to the bounded Tamil PDF
-readers in `readers/`. They are built from the same translated TeX masters.
-Mathematics is emitted as native MathML by TeX4ht; the EPUBs do not wrap PDF
-pages or rasterized page images.
+இந்த EPUB 3.3 நூல்கள், தமிழ்ப் PDF வாசிப்பு நூல்களின் திரையளவுக்கு ஏற்ப மாறும் இணைப் பதிப்புகள். அதே மொழிபெயர்க்கப்பட்ட TeX முதன்மைக் கோப்புகளிலிருந்து உருவாக்கப்படுகின்றன. முழு முதன்மை EPUB 695 மூல அலகுகளையும் துணைநூல் மற்ற 27 அலகுகளையும் கொண்டிருக்கும். கணித வாய்பாடுகள் PDF பக்கப் படங்களாக அல்லாமல் TeX4ht உருவாக்கும் MathML ஆக வழங்கப்படும்.
 
-The TeX-to-XHTML phase must be run through `build/build-epub-html.ps1`. That
-script owns `Global\InterlanguageTeXSlotV1` for the complete `make4ht` process
-tree and records a receipt outside the repository. `package_epub.py` then
-normalizes the XHTML, creates a source-unit crosswalk, packages a deterministic
-EPUB, and writes a packaging receipt. `audit_epub.py` performs independent ZIP,
-package, language, navigation, MathML, source-coverage, and local-link checks and
-runs EPUBCheck 5.3.0.
+TeX இலிருந்து XHTML உருவாக்க `build/build-epub-html.ps1` ஐப் பயன்படுத்துக. `make4ht` செயல்முறை முழுவதும் `Global\InterlanguageTeXSlotV1` பாதுகாப்புப் பூட்டுக்குள் நடைபெறும்; அதன் சான்று களஞ்சியத்திற்கு வெளியே பதியப்படும். பின்னர் `package_epub.py` XHTML கோப்புகளைச் சீரமைத்து, மூல அலகு பொருத்தப் பட்டியலை உருவாக்கி, மீளுருவாக்கக்கூடிய EPUB தொகுப்பை எழுதும். `audit_epub.py` ZIP அமைப்பு, நூல் வரிசை, மொழிக் குறி, வழிசெலுத்தல், MathML, மூல அலகுக் கணக்கு, உள்ளக இணைப்புகள் ஆகியவற்றைத் தனியாகச் சரிபார்த்து EPUBCheck 5.3.0 ஐ இயக்கும்.
 
-The default conversion backend is `tex4ht` with LuaLaTeX. The optional
-`lua4ht` backend is accepted only when `kpsewhich lua4ht.sty` resolves it;
-otherwise the guarded receipt records `backend-unavailable` before any TeX
-engine is started.
+இயல்பான மாற்றி LuaLaTeX உடன் `tex4ht`. விருப்பமான `lua4ht` மாற்றியைப் பயன்படுத்துவதற்கு முன் `kpsewhich lua4ht.sty` அதன் நிறுவலை உறுதிப்படுத்த வேண்டும்; இல்லாவிட்டால் எந்த TeX செயல்முறையும் தொடங்குமுன் `backend-unavailable` சான்றில் பதியப்படும்.
 
-Pass the pinned validator as `--epubcheck-jar PATH`, or set the
-`EPUBCHECK_JAR` environment variable. The validator binary is not redistributed
-in this source tree.
+சரிபார்ப்புக் கருவியின் பாதையை `--epubcheck-jar PATH` ஆகக் கொடுக்கலாம் அல்லது `EPUBCHECK_JAR` சூழல் மாறியில் அமைக்கலாம். கருவி இம்மூலத் தொகுப்பில் மறுவெளியிடப்படவில்லை.
 
-Each reader states its exact OLP unit range and that it is an interim,
-machine-translated development reader without a claim of independent human
-review. The authoritative frozen English source revision is
-`9620cc73f9c8e0ad003c514a5d3748f29611c4c0`.
+முதல் 570 அலகுகளின் இயந்திரத் தமிழாக்கம் OpenAI Codex — GPT-5.6 Sol, Ultra சிந்தனை நிலையில்; மீதமுள்ள 152 அலகுகளின் தமிழாக்கமும் பின்னைய பதிப்புப் பணியும் OpenAI Codex — GPT-6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன. சுயாதீன மனித மதிப்புரை செய்யப்பட்டதாகக் கூறப்படவில்லை. உறையவைக்கப்பட்ட ஆங்கில மூலத் திருத்தம் `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`.

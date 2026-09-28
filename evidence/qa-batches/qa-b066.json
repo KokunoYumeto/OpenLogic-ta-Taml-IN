@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0152",
       "source_sha256": "8a31bcb40fff1de629e4bb540c781a6b49d32c412cb87cb2bc5a29efd32461e3",
-      "translation_sha256": "18fe4990229a67241aac342f45e3106c57a46f54620b6b4b431b0ad052e9c3b5",
+      "translation_sha256": "bd2bb07454783d5b49d29da003f948ca39c1ef1775b3b96eb54c26418689b6ea",
       "source_bytes": 8909,
-      "translation_bytes": 17165,
+      "translation_bytes": 17351,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": true,
@@ -18,10 +18,6 @@
       "unicode_nfc": true,
       "replacement_char_absent": true,
       "english_words_for_review": [
-        "Formulas",
-        "Principle",
-        "Syntactic",
-        "Terms",
         "defAll",
         "defAnd",
         "defEx",
@@ -33,21 +29,24 @@
         "defTrue",
         "fol",
         "frm",
-        "identity",
         "include",
-        "induction",
         "logic",
         "notprvAll",
         "notprvEx",
         "open",
         "section",
-        "syn",
-        "terms"
+        "syn"
       ],
       "visual_review_complete": false,
       "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -60,7 +59,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

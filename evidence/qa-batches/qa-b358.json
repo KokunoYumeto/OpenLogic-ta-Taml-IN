@@ -1,0 +1,158 @@
+{
+  "batch_id": "TA-B358",
+  "units": [
+    {
+      "unit_id": "OLP-0702",
+      "source_sha256": "c19f22b1b416d0cfbc56182056961ac353bee13b6f662e915c3b2699edc36ce8",
+      "translation_sha256": "043c5801eae55d822a9b1064e05d998ca4fd71a2d1395e9cf16692328746e440",
+      "source_bytes": 13015,
+      "translation_bytes": 21494,
+      "source_coverage_complete": true,
+      "segments": 16,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma=\\{!C\\lif(!D\\lif!E)\\}$",
+        "\\[\\Axiom$!D,!C\\fCenter!E,!C$\\Axiom$!D,!C\\fCenter!E,!D$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!D,!C\\fCenter!E,!C\\land!D$\\Axiom$!D,!C,!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\BinaryInf$!D,!C,(!C\\land!D)\\lif!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$!C,(!C\\land!D)\\lif!E\\fCenter!D\\lif!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$(!C\\land!D)\\lif!E\\fCenter!C\\lif(!D\\lif!E)$\\DisplayProof\\]",
+        "\\[\\Axiom$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!C$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!C$\\]",
+        "\\[\\Axiom$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!C$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!C$\\Axiom$!D\\fCenter!D$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!D$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!D$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!D,!C\\fCenter!E,!C\\land!D$\\Axiom$!E\\fCenter!E$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!C,!E\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C,!E\\fCenter!E$\\RightLabel{\\LeftR{\\lif}}\\BinaryInf$!D,!C,(!C\\land!D)\\lif!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$!C,(!C\\land!D)\\lif!E\\fCenter!D\\lif!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$(!C\\land!D)\\lif!E\\fCenter!C\\lif(!D\\lif!E)$\\DisplayProof\\]",
+        "$!A\\ident\\lforall[x][A]$",
+        "$!A\\ident\\lexists[x][A]$",
+        "$!A\\ident\\lforall[x][A(x)]$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$!B,\\fCenter!B$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!B,!C,\\fCenter!B$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!C\\fCenter!B$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!B\\land!C\\fCenter!B$\\AxiomC{}\\RightLabel{$\\pi_2$}\\Deduce$!C,\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!B,!C,\\fCenter!C$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!C\\fCenter!C$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!B\\land!C\\fCenter!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!B\\land!C\\fCenter!B\\land!C$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!B\\land!C\\fCenter!B$\\DisplayProof\\]",
+        "$!A\\ident\\lforall[x][B(x)]$",
+        "$\\lforall[x][B(x)]$",
+        "$\\depth{B(c)}=\\depth{!B(x)}<\\depth{!A}$",
+        "$\\lforall[x][B(x)]\\Sequent\\lforall[x][B(x)]$",
+        "$!A\\ident\\lexists[x][B(x)]$",
+        "$!A\\ident\\lexists[x][B(x)]$",
+        "$D!$",
+        "$\\Pi=!B,\\Lambda$"
+      ],
+      "extra_math": [
+        "$\\Gamma=\\{(!C\\land!D)\\lif!E\\}$",
+        "\\[\\Axiom$!D,!C\\fCenter!E,!C$\\Axiom$!D,!C\\fCenter!E,!D$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!D,!C\\fCenter!E,!C\\land!D$\\Axiom$!D,!C,!E\\fCenter!E$\\RightLabel{\\LeftR{\\lif}}\\BinaryInf$!D,!C,(!C\\land!D)\\lif!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$!C,(!C\\land!D)\\lif!E\\fCenter!D\\lif!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$(!C\\land!D)\\lif!E\\fCenter!C\\lif(!D\\lif!E)$\\DisplayProof\\]",
+        "\\[\\Axiom$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!C$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!C$\\DisplayProof\\]",
+        "\\[\\Axiom$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!C$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!C$\\Axiom$!D\\fCenter!D$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!D$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!D$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!D,!C\\fCenter!E,!C\\land!D$\\Axiom$!E\\fCenter!E$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!C,!E\\fCenter!E$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C,!E\\fCenter!E$\\RightLabel{\\LeftR{\\lif}}\\BinaryInf$!D,!C,(!C\\land!D)\\lif!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$!C,(!C\\land!D)\\lif!E\\fCenter!D\\lif!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$(!C\\land!D)\\lif!E\\fCenter!C\\lif(!D\\lif!E)$\\DisplayProof\\]",
+        "$!D$",
+        "$!A\\ident\\lforall[x][!B(x)]$",
+        "$!A\\ident\\lforall[x][!B(x)]$",
+        "$!A\\ident\\lforall[x][!B(x)]$",
+        "$!A\\ident\\lexists[x][!B(x)]$",
+        "$!A\\ident\\lexists[x][!B(x)]$",
+        "$!A\\ident\\lexists[x][!B(x)]$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$!B\\fCenter!B$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!B,!C\\fCenter!B$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!C\\fCenter!B$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!B\\land!C\\fCenter!B$\\AxiomC{}\\RightLabel{$\\pi_2$}\\Deduce$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!B,!C\\fCenter!C$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!C\\fCenter!C$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!B\\land!C\\fCenter!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!B\\land!C,!B\\land!C\\fCenter!B\\land!C$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!B\\land!C\\fCenter!B\\land!C$\\DisplayProof\\]",
+        "$\\lforall[x][!B(x)]$",
+        "$\\depth{!B(c)}=\\depth{!B(x)}<\\depth{!A}$",
+        "$\\lforall[x][!B(x)]\\Sequent\\lforall[x][!B(x)]$",
+        "$\\Pi=!B,\\Gamma$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0702",
+          "audit_id": "TA-PT-049",
+          "kind": "G1c-G3c-proof-example-context-rule-depth-and-induction-repairs",
+          "action": "Repair the worked G1c proof search context and two inference trees; render the weakening tree; use one consistent quantified matrix in the depth and identity examples; restore the two-copy conjunction premise/conclusion; and correct the G3c induction variables.",
+          "expected_missing_math": [
+            "$\\Gamma=\\{!C\\lif(!D\\lif!E)\\}$",
+            "\\[\\Axiom$!D,!C\\fCenter!E,!C$\\Axiom$!D,!C\\fCenter!E,!D$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!D,!C\\fCenter!E,!C\\land!D$\\Axiom$!D,!C,!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\BinaryInf$!D,!C,(!C\\land!D)\\lif!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$!C,(!C\\land!D)\\lif!E\\fCenter!D\\lif!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$(!C\\land!D)\\lif!E\\fCenter!C\\lif(!D\\lif!E)$\\DisplayProof\\]",
+            "\\[\\Axiom$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!C$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!C$\\]",
+            "\\[\\Axiom$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!C$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!C$\\Axiom$!D\\fCenter!D$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!D$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!D$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!D,!C\\fCenter!E,!C\\land!D$\\Axiom$!E\\fCenter!E$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!C,!E\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C,!E\\fCenter!E$\\RightLabel{\\LeftR{\\lif}}\\BinaryInf$!D,!C,(!C\\land!D)\\lif!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$!C,(!C\\land!D)\\lif!E\\fCenter!D\\lif!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$(!C\\land!D)\\lif!E\\fCenter!C\\lif(!D\\lif!E)$\\DisplayProof\\]",
+            "$!A\\ident\\lforall[x][A]$",
+            "$!A\\ident\\lexists[x][A]$",
+            "$!A\\ident\\lforall[x][A(x)]$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$!B,\\fCenter!B$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!B,!C,\\fCenter!B$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!C\\fCenter!B$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!B\\land!C\\fCenter!B$\\AxiomC{}\\RightLabel{$\\pi_2$}\\Deduce$!C,\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!B,!C,\\fCenter!C$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!C\\fCenter!C$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!B\\land!C\\fCenter!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!B\\land!C\\fCenter!B\\land!C$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!B\\land!C\\fCenter!B$\\DisplayProof\\]",
+            "$!A\\ident\\lforall[x][B(x)]$",
+            "$\\lforall[x][B(x)]$",
+            "$\\depth{B(c)}=\\depth{!B(x)}<\\depth{!A}$",
+            "$\\lforall[x][B(x)]\\Sequent\\lforall[x][B(x)]$",
+            "$!A\\ident\\lexists[x][B(x)]$",
+            "$!A\\ident\\lexists[x][B(x)]$",
+            "$D!$",
+            "$\\Pi=!B,\\Lambda$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma=\\{(!C\\land!D)\\lif!E\\}$",
+            "\\[\\Axiom$!D,!C\\fCenter!E,!C$\\Axiom$!D,!C\\fCenter!E,!D$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!D,!C\\fCenter!E,!C\\land!D$\\Axiom$!D,!C,!E\\fCenter!E$\\RightLabel{\\LeftR{\\lif}}\\BinaryInf$!D,!C,(!C\\land!D)\\lif!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$!C,(!C\\land!D)\\lif!E\\fCenter!D\\lif!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$(!C\\land!D)\\lif!E\\fCenter!C\\lif(!D\\lif!E)$\\DisplayProof\\]",
+            "\\[\\Axiom$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!C$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!C$\\DisplayProof\\]",
+            "\\[\\Axiom$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!C$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!C$\\Axiom$!D\\fCenter!D$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!D$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!D,!C\\fCenter!E,!D$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!D,!C\\fCenter!E,!C\\land!D$\\Axiom$!E\\fCenter!E$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!C,!E\\fCenter!E$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!D,!C,!E\\fCenter!E$\\RightLabel{\\LeftR{\\lif}}\\BinaryInf$!D,!C,(!C\\land!D)\\lif!E\\fCenter!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$!C,(!C\\land!D)\\lif!E\\fCenter!D\\lif!E$\\RightLabel{\\RightR{\\lif}}\\UnaryInf$(!C\\land!D)\\lif!E\\fCenter!C\\lif(!D\\lif!E)$\\DisplayProof\\]",
+            "$!D$",
+            "$!A\\ident\\lforall[x][!B(x)]$",
+            "$!A\\ident\\lforall[x][!B(x)]$",
+            "$!A\\ident\\lforall[x][!B(x)]$",
+            "$!A\\ident\\lexists[x][!B(x)]$",
+            "$!A\\ident\\lexists[x][!B(x)]$",
+            "$!A\\ident\\lexists[x][!B(x)]$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$!B\\fCenter!B$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!B,!C\\fCenter!B$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!C\\fCenter!B$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!B\\land!C\\fCenter!B$\\AxiomC{}\\RightLabel{$\\pi_2$}\\Deduce$!C\\fCenter!C$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!B,!C\\fCenter!C$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!C\\fCenter!C$\\RightLabel{\\LeftR{\\land}}\\UnaryInf$!B\\land!C,!B\\land!C\\fCenter!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$!B\\land!C,!B\\land!C\\fCenter!B\\land!C$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!B\\land!C\\fCenter!B\\land!C$\\DisplayProof\\]",
+            "$\\lforall[x][!B(x)]$",
+            "$\\depth{!B(c)}=\\depth{!B(x)}<\\depth{!A}$",
+            "$\\lforall[x][!B(x)]\\Sequent\\lforall[x][!B(x)]$",
+            "$\\Pi=!B,\\Gamma$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\lif",
+            "\\RightR",
+            "\\Lambda"
+          ],
+          "expected_extra_commands": [
+            "\\land",
+            "\\land",
+            "\\land",
+            "\\Gamma",
+            "\\DisplayProof",
+            "\\LeftR"
+          ],
+          "source_issue_or_choice": "The frozen worked example assigns Gamma the goal succedent rather than its antecedent; labels a left-implication step RightR; omits DisplayProof in the weakening tree; changes E to C under left weakening; and gives a contraction conclusion incompatible with its two-copy conjunction premises. Its depth/quantifier prose switches between A and B matrices, and its G3c induction says D! and substitutes Lambda into Pi where the resulting tree has Gamma.",
+          "chosen_treatment": "The Tamil sets Gamma to {(C and D) implies E}, names the left rule LeftR, displays the weakening tree, preserves E through left weakening, derives the duplicated antecedent before left contraction and keeps B-and-C in the final succedent. It removes dangling commas from conjunction-tree leaves, uses B(x) consistently as the quantified matrix under the formula markup, and changes D! to !D and Pi=!B,Lambda to Pi=!B,Gamma. All other displayed rule steps and proof obligations remain.",
+          "alternatives_considered": "Copy the incompatible frozen contexts and inference labels; leave the G1c conjunction proof ending in B despite the proposition's B-and-C goal; or replace whole proof trees instead of bounded span repairs.",
+          "rationale": "The initial goal sequent fixes Gamma for right implication. The principal implication is left of the turnstile. Left weakening cannot alter the succedent E. G1c right conjunction preserves the two-copy antecedent shared by its premises, and left contraction removes one copy without changing the right conjunction. The surrounding quantified proof trees fix B(x) as matrix; the G3c induction's demonstrated output fixes Gamma in Pi.",
+          "precise_review_question": "Do all repaired G1c and G3c trees instantiate their displayed frozen rules, preserve the intended identity sequents and leave the rest of the source formulas untouched?",
+          "location_needle": "\\BinaryInf$!B \\land !C, !B \\land !C \\fCenter !B \\land !C$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\lif",
+        "\\RightR",
+        "\\Lambda"
+      ],
+      "extra_commands": [
+        "\\land",
+        "\\land",
+        "\\land",
+        "\\Gamma",
+        "\\DisplayProof",
+        "\\LeftR"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

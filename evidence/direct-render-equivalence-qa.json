@@ -1,0 +1,69 @@
+{
+  "schema": "openlogic-tamil-direct-render-equivalence/1",
+  "checked_utc": "2026-09-28T14:06:31.549086+00:00",
+  "result": "pass-with-localized-raster-differences",
+  "volumes": {
+    "main": {
+      "files": [
+        {
+          "path": "build/tamil-complete.pdf",
+          "bytes": 7025554,
+          "sha256": "b92e14376c897a2d2fda39c06317ea08b509395cc50cf05c6907dc6f7c3933ec",
+          "text_sha256": "6a6402bb06329a79fc11a1d51028db472ed72720fc5d377a87e778537462f81a"
+        },
+        {
+          "path": "build/tamil-complete-direct.pdf",
+          "bytes": 7025549,
+          "sha256": "fe5cb3fd95a906137aa27629c2735cd2a1971673f333dac494afef9a16d61aba",
+          "text_sha256": "6a6402bb06329a79fc11a1d51028db472ed72720fc5d377a87e778537462f81a"
+        }
+      ],
+      "pages": [
+        1171,
+        1171
+      ],
+      "extracted_text_equal": true,
+      "page_count_equal": true,
+      "raster_resolution_dpi": 54,
+      "raster_different_pages": [
+        47,
+        1153
+      ],
+      "text_and_pagination_pass": true,
+      "raster_exact": false
+    },
+    "companion": {
+      "files": [
+        {
+          "path": "build/tamil-source-companion.pdf",
+          "bytes": 379023,
+          "sha256": "dcb173a7cfc84ba3cbd4ef94026dfb9b0fb2c6123c1c7a4e3b4fb1e550bdf4dd",
+          "text_sha256": "8c4acdbe0ac5bf2b7cf335abeb1ff6fd0c747c2272da0786e9bc1a296ac6325d"
+        },
+        {
+          "path": "build/tamil-source-companion-direct.pdf",
+          "bytes": 379010,
+          "sha256": "653494473fc6af16ee344f3c9fdec116eae340aa74e76fc7e1dfb0504f9b834e",
+          "text_sha256": "8c4acdbe0ac5bf2b7cf335abeb1ff6fd0c747c2272da0786e9bc1a296ac6325d"
+        }
+      ],
+      "pages": [
+        56,
+        56
+      ],
+      "extracted_text_equal": true,
+      "page_count_equal": true,
+      "raster_resolution_dpi": 54,
+      "raster_different_pages": [
+        32
+      ],
+      "text_and_pagination_pass": true,
+      "raster_exact": false
+    }
+  },
+  "reviewed_raster_differences": {
+    "main": "Pages 47 and 1153 each differ by nine antialiased pixels in a single glyph; the visible text and page geometry are unchanged.",
+    "companion": "Page 32 differs in the horizontal spacing of its final Tamil line by about 1.7 pt; text and pagination are unchanged."
+  },
+  "limitation": "All extracted text and page counts match. These PDFs are not pixel-identical; this does not establish independent full-size visual review or formula copy-order fidelity."
+}

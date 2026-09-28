@@ -1,0 +1,77 @@
+{
+  "batch_id": "TA-B321",
+  "units": [
+    {
+      "unit_id": "OLP-0661",
+      "source_sha256": "e070f69fe844339b3b9b3a4e53468aaf331a24b2596eb36a28f909fa3387aa99",
+      "translation_sha256": "545ecd6e3f7df4a6083f3b70954160b4db8608c984ba4b4d9383295e8aae395c",
+      "source_bytes": 11741,
+      "translation_bytes": 24497,
+      "source_coverage_complete": true,
+      "segments": 11,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\pi_1'$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_2$}\\Deduce$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!A(t),!B$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$!\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!B$\\AxiomC{}\\RightLabel{$\\pi_3$}\\Deduce$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!B\\land!C$\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "$\\pi_1$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_2$}\\Deduce$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!A(t),!B$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!B$\\AxiomC{}\\RightLabel{$\\pi_3$}\\Deduce$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!B\\land!C$\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-013",
+          "unit_id": "OLP-0661",
+          "kind": "midsequent-proof-label-and-existential-context",
+          "action": "Use the displayed top-subproof label pi_1, handle the zero-quantifier base case, and remove the stray exclamation mark before Gamma-prime.",
+          "expected_missing_math": [
+            "$\\pi_1'$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_2$}\\Deduce$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!A(t),!B$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$!\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!B$\\AxiomC{}\\RightLabel{$\\pi_3$}\\Deduce$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!B\\land!C$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "$\\pi_1$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_2$}\\Deduce$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!A(t),!B$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!B$\\AxiomC{}\\RightLabel{$\\pi_3$}\\Deduce$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$\\Gamma'\\fCenter\\Delta',\\lexists[x][!A(x)],!B\\land!C$\\DisplayProof\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The extraction paragraph refers to pi_1-prime before it is introduced although the displayed subproof is pi_1; the order-zero proof overlooks the case of no quantifier inference; and the existential-right example writes !Gamma-prime in the rule conclusion.",
+          "chosen_treatment": "Refer to pi_1, let the end sequent itself be midsequent when no quantifier inference occurs, and restore Gamma-prime in the displayed rule.",
+          "alternatives_considered": "Retain the label mismatch and malformed context with only a reader note, or silently assume a quantifier inference exists.",
+          "rationale": "The displayed label and adjacent references establish pi_1. The order-zero theorem permits a midsequent without quantifier steps. The existential-right rule preserves Gamma-prime from its premise.",
+          "precise_review_question": "Are the corrected proof reference and existential-right context faithful to the displayed derivations, and is the no-quantifier base case handled?",
+          "location_needle": "\\UnaryInf$\\Gamma' \\fCenter \\Delta', \\lexists[x][!A(x)], !B$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

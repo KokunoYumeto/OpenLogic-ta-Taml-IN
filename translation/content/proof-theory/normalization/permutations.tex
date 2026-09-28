@@ -1,0 +1,461 @@
+% SEGMENT OLP-0675-S01
+% Part: proof-theory
+% Chapter: normalization
+% Section: permutations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nor}{per}
+
+\olsection{வரிசைமாற்று உருமாற்றங்கள்}
+
+\Log{N1i} இல் உள்ள வெட்டுகள், ஓர் !!a{elimination} விதியின்
+முதன்முன்கோளில் முடியும் தொடர்கள். இயல்பாக்க நிறுவலின்
+ஒரு நேர்வில், மிகுநிலை வெட்டுகளின் நீளத்தையும் அதன் மூலம்
+!!{proof} இன் வெட்டு நீளத்தையும் குறைக்க வேண்டும்.
+நீளம் $>1$ கொண்ட வெட்டு பல வழிகளில் முடிவடையலாம்.
+அந்த வெட்டில் $!A$ இன் கடைசி !!{formula} நிகழ்வு
+(\Elim{\lor} அல்லது \Elim{\lexists}) இன் முடிவா
+என்பதையும், அது எந்த !!{elimination} அனுமானத்தின்
+முதன்முன்கோளாக உள்ளது என்பதையும் இது பொறுத்தது.
+
+% SEGMENT OLP-0675-S02
+எடுத்துக்காட்டாக, தொடர்புடைய அனுமானங்கள் \Elim{\lor},
+\Elim{\land} ஆகவும், $!A \ident !B \land !C$ ஆகவும்,
+துணை-!!{proof}~$\delta_1$ பின்வருமாறு முடிவதாகவும் இருக்கட்டும்:
+\[
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B \land !C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$!B \land !C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DisplayProof
+\]
+வெட்டின் கடைசி !!{formula} நிகழ்வான~$!A_n$,
+\Elim{\lor} இன் முடிவான கீழுள்ள $!B \land !C$ ஆகும்.
+அதற்கு முந்தைய !!{formula} நிகழ்வான~$!A_{n-1}$,
+\Elim{\lor} இன் சிறுமுன்கோள்களில் ஒன்றாகும்.
+
+% SEGMENT OLP-0675-S03
+இந்த வெட்டின் நீளத்தைக் குறைக்க, \Elim{\lor} மற்றும்
+\Elim{\land} அனுமானங்களின் வரிசையை மாற்றலாம்
+(வரிசைமாற்றலாம்). அதாவது $\delta$ இல் உள்ள
+துணைநிறுவல்~$\delta_1$ ஐப் பின்வருவதாக மாற்றுகிறோம்:
+\[
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\AxiomC{$\Discharge{!E}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B$}
+\DisplayProof
+\]
+\Elim{\lor} க்குக் கீழே உள்ள \Elim{\land} இன்
+முன்கோளில் முடிந்த வெட்டுகள், இப்போது \Elim{\lor}
+இன் சிறுமுன்கோள்களுக்கு மேலுள்ள \Elim{\land}
+அனுமானங்களில் ஒன்றின் முன்கோளில் முடிகின்றன.
+அதாவது ஒவ்வொன்றின் நீளமும்~$1$ குறைந்துள்ளது.
+
+மேலும், $\delta_2$, $\delta_3$, $\delta_4$ இவற்றில்
+முழுவதுமாகவோ, அல்லது $\delta$ இல் $\delta_1$ க்கு
+முற்றிலும் வெளியிலோ அமைந்துள்ள எந்த வெட்டும் மாறாது:
+அதே !!{formula}s இடம்பெறுகின்றன; அதே அனுமானங்கள்
+வழியாகச் செல்கிறது. ஆகவே $\delta$ இன் ஒத்த வெட்டுக்கு
+இருந்த அதே நிலையும் நீளமும் இதற்கும் உண்டு. எனவே
+புதிய !!{proof} இன் வெட்டு நிலை உயரவில்லை;
+புதிய !!{proof} இன் வெட்டு நீளம் பழைய
+!!{proof} இன் வெட்டு நீளத்தைவிடக் குறைவு.
+
+\begin{prob}
+ஒரு வரிசைமாற்று உருமாற்றத்துக்குப் பின் குறைந்தது
+ஒரு வெட்டின் நீளம்~$1$ குறைகிறது. \Elim{\land}
+ஐ ஓர்~\Elim{\lor} வழியாக மேலே மாற்றினால்,
+நீளம் குறையும் வெட்டுத் தொடர்கள் உண்மையில் இரண்டு;
+ஆகவே இந்நேர்வில் !!{proof} இன் வெட்டு நீளம்
+குறைந்தது~$2$ குறையும். ஒரே இத்தகைய வரிசைமாற்றால்
+!!a{proof} இன் வெட்டு நீளம்~$2$ ஐவிட அதிகமாகக்
+குறைய முடியுமா? வெட்டு \emph{நிலை} குறைய முடியுமா?
+\end{prob}
+
+ஓர் !!a{elimination} விதியை \Elim{\lor} அல்லது
+\Elim{\lexists} விதிக்கு மேலே நகர்த்தும் செயல்
+\emph{வரிசைமாற்று உருமாற்றம்} எனப்படும். சில விதி
+இணைகளுக்கான வடிவங்கள்
+\olref{tab:permutation-conversions} இல்
+தரப்பட்டுள்ளன. (மீதியுள்ளவைப் பயிற்சிகளாக
+விடப்பட்டுள்ளன.)
+
+% SEGMENT OLP-0675-S04
+% \begin{table}
+% \begin{multline*}
+% \shoveleft{\AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \land !C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \land !C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B \land !C$}
+% \RightLabel{\Elim{\land}[1]}
+% \UnaryInfC{$!B$}
+% \DisplayProof}\\
+% \shoveright{\longrightarrow\ 
+% \AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \land !C$}
+% \RightLabel{\Elim{\land}[1]}
+% \UnaryInfC{$!B$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \land !C$}
+% \RightLabel{\Elim{\land}[1]}
+% \UnaryInfC{$!B$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B$}
+% \DisplayProof}
+% \\
+% \shoveleft{\AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \DisplayProof}\\
+% \shoveright{\longrightarrow\ 
+% \AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!C$}
+% \DisplayProof}
+% \\
+% \shoveleft{\AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \DisplayProof}\\
+% \shoveright{\longrightarrow\ 
+% \AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$!B \lif !C$}
+% \AxiomC{$!B$}
+% \RightLabel{\Elim{\lif}}
+% \BinaryInfC{$!C$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!C$}
+% \DisplayProof}
+% \\
+% \shoveleft{\AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$\lforall[x][!B(x)]$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$\lforall[x][!B(x)]$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$\lforall[x][!B(x)]$}
+% \RightLabel{\Elim{\lforall}}
+% \UnaryInfC{$!B(t)$}
+% \DisplayProof}\\
+% \shoveright{\longrightarrow\ 
+% \AxiomC{$!D \lor !E$}
+% \AxiomC{$\Discharge{!D}{x}$}
+% \shortDeduce
+% \DeduceC{$\lforall[x][!B(x)]$}
+% \RightLabel{\Elim{\lforall}}
+% \UnaryInfC{$!B(t)$}
+% \AxiomC{$\Discharge{!E}{y}$}
+% \shortDeduce
+% \DeduceC{$\lforall[x][!B(x)]$}
+% \RightLabel{\Elim{\lforall}}
+% \UnaryInfC{$!B(t)$}
+% \DischargeRule{\Elim{\lor}}{x\,y}
+% \TrinaryInfC{$!B(t)$}
+% \DisplayProof}
+% \end{multline*}
+% \caption{Some permutation conversions for \Log{N1i}.}
+% \ollabel{tab:permutation-conversions}
+% \end{table}
+
+{\small
+\begin{longtable}{@{}l@{}}
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \land !C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \land !C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DisplayProof
+$\longrightarrow$\\[6ex]
+\quad\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B$}
+\DisplayProof
+\\[10ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+$\longrightarrow$\\[6ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!C$}
+\DisplayProof
+\\[10ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+$\longrightarrow$\\[6ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$!B \lif !C$}
+\AxiomC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!C$}
+\DisplayProof
+\\[10ex]
+\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$\lforall[x][!B(x)]$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$\lforall[x][!B(x)]$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$\lforall[x][!B(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(t)$}
+\DisplayProof
+\quad$\longrightarrow$\\[8ex]
+\quad\AxiomC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\shortDeduce
+\DeduceC{$\lforall[x][!B(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(t)$}
+\AxiomC{$\Discharge{!E}{y}$}
+\shortDeduce
+\DeduceC{$\lforall[x][!B(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(t)$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!B(t)$}
+\DisplayProof
+\\
+\caption{\Log{N1i} இன் சில வரிசைமாற்று உருமாற்றங்கள்.}
+\ollabel{tab:permutation-conversions}
+\end{longtable}
+}
+
+% SEGMENT OLP-0675-S05
+\begin{prob}
+\Elim{\lor} ஐத் தொடர்ந்து \Elim{\lor} அல்லது
+\Elim{\lnot} வரும்போது பொருந்தும் வரிசைமாற்று
+உருமாற்றங்களைக் கொடுக்கவும்.
+\end{prob}
+
+\begin{prob}
+\Elim{\lexists} ஐத் தொடர்ந்து \Elim{\exists}
+வரும்போது பொருந்தும் வரிசைமாற்று உருமாற்றங்களைக்
+கொடுக்கவும். பிந்தைய நேர்வில் எந்தத் தனிமாறி
+நிபந்தனையும் ஏன் மீறப்படவில்லை என்பதை விளக்கவும்.
+\end{prob}
+
+% SEGMENT OLP-0675-S06
+வரிசைமாற்று உருமாற்றத்தைப் பயன்படுத்தும்போது
+அறியாமல் தனிமாறி நிபந்தனையை மீறிவிடவில்லை என்பதை
+உறுதிசெய்துகொள்வோம். பின்வருவதைக் கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!E}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$\lexists[x][!B(x)]$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!B(c)}{z}$}
+\RightLabel{$\delta_5$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lexists}}{z}
+\BinaryInfC{$!C$}
+\DisplayProof
+\]
+% SEGMENT OLP-0675-S07
+இதற்குப் பதிலாகப் பின்வருவதை வைத்தால்
+\[
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$!D \lor !E$}
+\AxiomC{$\Discharge{!D}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!B(c)}{z}$}
+\RightLabel{$\delta_5$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lexists}}{z}
+\BinaryInfC{$!C$}
+\AxiomC{$\Discharge{!E}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!B(c)}{z}$}
+\RightLabel{$\delta_5$}
+\DeduceC{$!C$}
+\DischargeRule{\Elim{\lexists}}{z}
+\BinaryInfC{$!C$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!C$}
+\DisplayProof
+\]
+% SEGMENT OLP-0675-S08
+தனிமாறி~$c$, எடுத்துக்காட்டாக~$!D$ இல்
+இடம்பெறலாம் என நாம் கவலைப்படலாம். ஏனெனில்,
+முதலில் இருந்த~$\Elim{\lexists}$ க்கு மேலே
+$!D$ எடுகோள் விடுவிக்கப்படுகிறது; அதனால் அசல்
+!!{proof} இல் அந்த எடுகோள் \Elim{\exists}
+அனுமானத்தின் முதன்முன்கோளுக்கு மேலே திறந்த
+எடுகோளாக இல்லை. எனவே அங்கே தனிமாறி நிபந்தனை
+நிறைவேறுகிறது. ஆனால் புதிய !!{proof} இல்,
+\Elim{\lexists} அனுமானங்களுக்குப் பின்னரே $!D$
+விடுவிக்கப்படுகிறது; ஆகவே அந்நிபந்தனை மீறப்படும்
+போலத் தோன்றுகிறது. இருப்பினும் நாம் கருதும்
+!!{proof}s ஒழுங்குறுவன என்பதை நினைவில் கொள்ளவும்:
+ஒவ்வொரு தனிமாறியும் ஒரே ஓர் அனுமானத்தின் தனிமாறியாக
+இருக்கிறது; முழு !!{proof} இலும் \Elim{\lexists}
+இன் சிறுமுன்கோளுக்கு மேலே மட்டுமே இடம்பெறுகிறது.
+குறிப்பாக, $c$ ஆனது $\delta_3$ இலோ $\delta_4$
+இலோ இடம்பெற முடியாது.
+
+வரிசைமாற்றத்தால் நகலாகும் துணைநிறுவலின் அனைத்து
+தனிமாறிப் பெயர்களையும் ஒரு நகலில் புதிதாக மாற்றினால்தான்
+புதிய நிறுவலும் ஒழுங்குறுவதாக இருக்கும்.
+
+% SEGMENT OLP-0675-S09
+இந்த எடுத்துக்காட்டு மேலும் ஒன்றைக் காட்டுகிறது:
+புதிய !!{proof} இல்~$\delta_5$ இன் இரண்டு
+நகல்கள் உள்ளன. எனவே $\delta_5$ இல் மிகுநிலை
+வெட்டு இருந்தால், வெட்டு நீளத்தைக் குறைத்துவிட்டோம்
+என்று \emph{சொல்ல முடியாது}! ஆகவே $\delta_5$
+இல் மிகுநிலை வெட்டு இல்லை என்பது தெரிந்திருந்தால்தான்
+வரிசைமாற்று உருமாற்றத்தைப் பயன்படுத்த வேண்டும்.
+இதற்காக எப்போதும் \emph{மிக மேலுள்ள} மிகுநிலை
+வெட்டைத் தேர்ந்தெடுப்போம்; அதாவது, அதன்
+துணை-!!{proof} இல் (இந்நேர்வில்~$\delta_1$)
+அந்தத் துணை-!!{proof} இன் கடைசி அனுமானத்துக்கு
+மேலே முடியும் வேறெந்த மிகுநிலை வெட்டும்
+இல்லாததாகும். இதனால்~$\delta_5$ இலும்
+(உண்மையில் $\delta_2$, $\delta_3$, $\delta_4$
+இவற்றிலும்) வேறு மிகுநிலை வெட்டுகள் இருக்கும்
+வாய்ப்பு விலக்கப்படுகிறது.
+
+\end{document}

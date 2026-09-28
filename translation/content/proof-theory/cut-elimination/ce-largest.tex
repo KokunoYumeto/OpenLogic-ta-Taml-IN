@@ -1,0 +1,540 @@
+% SEGMENT OLP-0655-S01
+% Part: proof-theory
+% Chapter: cut-elimination
+% Section: ce-largest
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{cut}{inv}
+
+\olsection{மிக உயர்ந்த தர வெட்டுகளை நீக்குதல்}
+
+\olref[seq][inv]{lem:G3c-invert} இன் நிறுவல் காட்டியபடி, \Log{G3c}
+ஓர் அனுமான விதியின் முடிவை !!{prove} முடிந்தால், \RightR{\lexists},
+\LeftR{\lforall} ஆகிய இரு விதிகளைத் தவிர, அதன் ஒவ்வொரு
+முன்கோளையும் நிறுவலின் !!{height} ஐ உயர்த்தாமலே !!{prove}
+முடியும். இதை மேலும் வலுப்படுத்தி, $ \Log{G3c} + \CutCS$ க்கும்
+இதே பண்பு பொருந்தும் எனக் காட்டுவோம்.
+
+முன்போலவே, ஒரு \CutCS{} அனுமானத்தின் \emph{வெட்டுத் தரம்}
+என்பது அதன் வெட்டு !!{formula} வின் ஆழம்.
+
+\begin{lem}\ollabel{lem:inv-G3c-cut}
+$\Log{G3c} + \CutCS$ இல் !!a{proof}~$\pi$ கொண்டு,
+\RightR{\lexists}, \LeftR{\lforall} ஆகியவற்றைத் தவிர்த்த
+ஓர் அனுமான விதி~$R$ இன் முடிவை !!{prove} முடிந்தால்,
+அதன் ஒவ்வொரு முன்கோளையும் !!{proof}~$\pi'$ கொண்டும்
+(விதிக்கு இரண்டு முன்கோள்கள் இருந்தால் !!{proof}s~$\pi'$,
+$\pi''$ கொண்டும்) !!{prove} முடியும். மேலும்,
+(a)~$\pheight{\pi'}\le\pheight{\pi}$
+(மற்றும் $\pheight{\pi''}\le\pheight{\pi}$);
+(b)~$\pi'$ இல் (மற்றும் $\pi''$ இல்) உள்ள \CutCS{}
+அனுமானங்களின் எண்ணிக்கையும் அவற்றின் தரங்களும்~$\pi$ இல்
+இருப்பனவே.
+\end{lem}
+
+% SEGMENT OLP-0655-S02
+\begin{proof}
+\cref{pt:seq:inv:lem:G3c-invert,pt:seq:inv:lem:invert-quant}
+ஆகியவற்றின் நிறுவல்களை ஆராய்ந்தால் போதும். அவற்றில்
+$\pheight{\pi}$ மீது தொகுத்தறிதல் பயன்படுத்தப்பட்டது.
+அடிப்படை நேர்வில் ஓர் அடிக்கோளை மற்றோர் அடிக்கோளால்
+மாற்றினோம். எனவே (a), (b) உடனே நிறைவேறுகின்றன.
+~$\pi$ இன் கடைசி விதி~$R$ ஆக இருந்தால், அதன் உடனடி
+உள்-!!{proof}s ஆன~$\pi_i$ களே நமக்கு வேண்டிய
+!!{proof}s; இங்கும் (a), (b) நிறைவேறுகின்றன.
+மற்ற எல்லா நேர்வுகளிலும், ~$\pi$ இன் உடனடி
+உள்-!!{proof}s களுக்கு, அதாவது கடைசி அனுமானம்~$R$
+இன் முன்கோள்களுக்கு இட்டுச் செல்பவற்றிற்குத்,
+தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்தினோம்; பின்னர்
+அதன் விளைவுகளுக்கு அதே விதி $R$ ஐப் பயன்படுத்தினோம்.
+புதிய நிறுவலின் உடனடி உள்-!!{proof}s களில் (a), (b)
+நிறைவேறுவதால் முழு நிறுவலிலும் அவை நிறைவேறுகின்றன.
+கடைசி அனுமானம்~\CutCS{} ஆகும் நேர்வை மட்டும்
+இனி உறுதிசெய்ய வேண்டும். இதற்கும் ஓர் எடுத்துக்காட்டையே
+பார்ப்போம்: $\pi$ என்பது \LeftR{\land} இன் முடிவான
+$!B \land !C, \Gamma \Sequent \Delta$ இன் !!a{proof}
+என்றும் அது~\CutCS{} இல் முடிகிறது என்றும் கொள்வோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B \land !C, \Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A, !B \land !C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B \land !C, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+$\pi_1$, $\pi_2$ இரண்டும் $\LeftR{\land}$ இன்
+முடிவுகளின் நேர்வுகளுக்கான !!{proof}s என்பதால்,
+தொகுத்தறிதல் கருதுகோளை அவற்றிற்குப் பயன்படுத்தலாம்.
+அதன் மூலம் முறையே
+$!B, !C, \Gamma \fCenter \Delta, !A$,
+$!A, !B, !C, \Gamma \fCenter \Delta$
+ஆகியவற்றின் !!{proof}s~$\pi_1'$,~$\pi_2'$
+கிடைக்கும். \CutCS{} கொண்டு இவற்றை இணைத்து~$\pi'$
+ஐப் பெறுகிறோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, !C, \Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!A, !B, !C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B, !C, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+(a), (b) இங்கும் நிறைவேறுவது தெளிவு.
+\end{proof}
+
+\CutCS{} க்குப் பதிலாக \Cut{} ஐப் பயன்படுத்தினால்
+இது செயல்படாது. அப்போது கடைசி !!{proof} இன் முடிவில்,
+முன்பக்கத்தில் $!B, !C, \Gamma$ இருமுறையும்
+பின்பக்கத்தில் $\Delta$ இருமுறையும் வரும். சுருக்கலின்
+ஏற்கத்தக்கதன்மையை நாட வேண்டியிருக்கும்; ஆனால்
+\olref[seq][inv]{prop:G3c-cont-adm} இன் நிறுவல்
+மீளாக்கத் துணைத்தேற்றத்தைப் பயன்படுத்துகிறது.
+அப்படிச் செய்தால் வட்டம்வாதமாகிவிடும்.
+
+% SEGMENT OLP-0655-S03
+\cref{pt:cut:inv:lem:inv-G3c-cut} ஐப் பயன்படுத்தி
+வெட்டு நீக்குதலுக்கு மாற்று நிறுவல் தரலாம். இதில்
+உச்சியிலுள்ள \CutCS{} அனுமானங்களை ஒவ்வொன்றாக
+நீக்குவதற்குப் பதிலாக, மிக உயர்ந்த தரமுடைய
+\CutCS{} அனுமானங்களை நீக்குகிறோம். அதாவது
+$\Log{G3c} + \CutCS$ இல் ஓர் !!a{proof}~$\pi$
+கொண்டு, அதில் எங்குள்ள வெட்டாக இருந்தாலும்
+அதை நீக்குகிறோம்; சிறிய தரமுடைய வெட்டுகள் அதன்
+இடத்தில் வரலாம். வெட்டு எதுவும் மீதமிராதவரை
+இதைத் தொடர்கிறோம். நாம் கையாளும் வெட்டுக்கு
+மேலே அதே தரமோ அதைவிட உயர்ந்த தரமோ உடைய
+வெட்டுகள் இருக்கக்கூடாது என்பதே நிபந்தனை.
+
+\begin{lem}\ollabel{lem:max-cut-red-G3c}
+$\Log{G3c}+\CutCS$ இல் உள்ள !!a{proof}~$\pi$,
+தரம்~$n$ உடைய~\CutCS{} அனுமானத்தில் முடிந்து,
+மற்ற இடங்களில்~$\Log{G3c}$ இன் விதிகளையோ
+தரம் $<n$ உடைய \CutCS{} அனுமானங்களையோ
+மட்டுமே பயன்படுத்தினால், அதே இறுதித்
+தொடரணிக்கான~$\Log{G3c} + \CutCS$ இல்
+ஓர் நிறுவல்~$\pi'$ உண்டு; அதிலுள்ள ஒவ்வொரு
+\CutCS{} அனுமானத்தின் தரமும்~$<n$.
+\end{lem}
+
+\begin{proof}
+!!{proof}~$\pi$ இவ்வாறு முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+~$!A$ இன் வடிவத்தைப் பொறுத்து நேர்வுகளைப் பிரிப்போம்.
+
+முதலில் $!A$ அணுவாய்பாடு என்க. ~$\pi_1$,
+~$\pi_2$ இல் உள்ள எல்லா \CutCS{} அனுமானங்களின்
+தரமும் $< \depth{!A} = 0$ ஆக வேண்டும் என்ற
+நிபந்தனையால், ~$\pi_1$ அல்லது~$\pi_2$ இல்
+\CutCS{} அனுமானம் எதுவும் இருக்க முடியாது.
+$ \pheight{\pi_2}$ மீது
+தொகுத்தறிந்து $\Gamma \Sequent \Delta$ க்கு
+வெட்டற்ற நிறுவல் உண்டு எனக் காட்டுவோம்.
+$\pheight{\pi_2} = 0$ எனில்,
+$!A, \Gamma \Sequent \Delta$ ஓர் அடிக்கோள்.
+$!A$ முதன்மை வாய்பாடல்ல எனில், ஓர் அணு
+$!C$ ஆனது~$\Gamma$, $\Delta$ இரண்டிலும்
+!!a{element} ஆகும்; ஆகவே
+$\Gamma \Sequent \Delta$ தானும் அடிக்கோள்.
+$!A$ முதன்மை வாய்பாடு எனில்,
+$\Delta = \Delta', !A$. இந்நேர்வில்
+$\pi_1$ ஆனது
+$\Gamma \Sequent \Delta', !A, !A$
+இல் முடிகிறது.
+\olref[seq][inv]{prop:G3c-cont-adm}
+(சுருக்கலின் ஏற்கத்தக்கதன்மை) பயன்படுத்தி
+$\Gamma \Sequent \Delta', !A$ க்கு
+வெட்டற்ற நிறுவல் பெறுகிறோம்.
+$\pheight{\pi_2} > 0$ எனில் அது
+ஒரு விதி~$R$ இல் முடிகிறது. அந்த விதியின்
+ஒரு முன்கோள் $!A, \Gamma', \Pi \Sequent
+\Delta', \Lambda$ என்ற வடிவில் இருக்கும்;
+இங்கு $\Pi$, $\Lambda$ ஆகியவை~$R$ இன்
+செயல்படு !!{formula}s.
+\olref[seq][adm]{prop:weak-G3c-adm} ஐ
+~$\pi_1$, $\pi_2$ ஆகியவற்றிற்குப்
+பயன்படுத்தினால்
+$\Gamma, \Gamma', \Pi \Sequent \Delta, \Delta', \Lambda, !A$
+மற்றும்
+$!A, \Gamma, \Gamma', \Pi \Sequent \Delta, \Delta', \Lambda$
+ஆகியவற்றின் !!{proof}s கிடைக்கும்.
+இவற்றிற்கு தொகுத்தறிதல் கருதுகோள் பொருந்தி,
+~$R$ இன் ஒவ்வொரு முன்கோளுக்கும்
+$\Gamma, \Gamma', \Pi \Sequent \Delta, \Delta', \Lambda$
+இன் !!a{proof} ஐத் தருகிறது.
+~$R$ ஐப் பயன்படுத்தினால்
+$\Gamma, \Gamma \Sequent \Delta, \Delta$
+கிடைக்கும்; பின்னர்
+\olref[seq][inv]{prop:G3c-cont-adm}
+மூலம் $\Gamma \Sequent \Delta$ க்கான
+வெட்டற்ற நிறுவல் கிடைக்கும்.
+
+% SEGMENT OLP-0655-S04
+$!A$ அணுவாய்பாடல்ல எனில், ~$!A$ இன்
+!!{main operator} ஐப் பொறுத்து நேர்வுகளைப்
+பிரிப்போம். ஒவ்வொரு நேர்விலும்,
+$!A$ முதன்மை வாய்பாடாக உள்ள இடப்புற,
+வலப்புற விதிகளின் முன்கோள்களுக்கான
+!!{proof}s பெற \olref{lem:inv-G3c-cut}
+ஐப் பயன்படுத்துகிறோம். பின்னர்
+\olref[top]{lem:cut-adm-G3c} இன்
+நிறுவலில் உள்ள E நேர்வைப் போலத் தொடர்கிறோம்.
+\begin{enumerate}
+  \item $!A \ident \lnot !B$.
+  !!{proof}s~$\pi_1$, $\pi_2$ முறையே
+  $\Gamma \Sequent \Delta, \lnot !B$,
+  $\lnot !B, \Gamma \Sequent \Delta$
+  ஆகியவற்றில் முடிகின்றன.
+  \olref{lem:inv-G3c-cut} மூலம்
+  $!B, \Gamma \Sequent \Delta$,
+  $\Gamma \Sequent \Delta, !B$
+  ஆகியவற்றின் !!{proof}s~$\pi_1'$, $\pi_2'$
+  கிடைக்கின்றன. !!{proof}~$\pi'$ இதுவே:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_2'$}
+  \Deduce$\Gamma \fCenter \Delta, !B$
+  \AxiomC{}
+  \RightLabel{$\pi_1'$}
+  \Deduce$!B, \Gamma \fCenter \Delta$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma \fCenter \Delta$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0655-S05
+  \item $!A \ident (!B \lor !C)$.
+  !!{proof}s~$\pi_1$, $\pi_2$ முறையே
+  $\Gamma \Sequent \Delta, !B \lor !C$,
+  $!B \lor !C, \Gamma \Sequent \Delta$
+  ஆகியவற்றில் முடிகின்றன.
+  ~$\pi_1$ க்கு \RightR{\lor} இன்
+  மீளாக்கத்தை வழங்கும்
+  \olref{lem:inv-G3c-cut} ஐப் பயன்படுத்தி
+  $\Gamma \Sequent \Delta, !B, !C$
+  இன் !!a{proof}~$\pi_1'$ பெறுகிறோம்.
+  ~$\pi_2$ க்கு \LeftR{\lor} இன்
+  மீளாக்கத்தை வழங்கும்
+  \olref{lem:inv-G3c-cut} மூலம்
+  $!B, \Gamma \Sequent \Delta$ இன்
+  !!a{proof}~$\pi_2'$ உம்
+  $!C, \Gamma \Sequent \Delta$ இன்
+  !!a{proof}~$\pi_2''$ உம் கிடைக்கின்றன.
+  $\pi_2''$ க்கு
+  \olref[seq][adm]{prop:weak-G3c-adm}
+  ஐப் பயன்படுத்தி
+  $!C, \Gamma \Sequent \Delta, !B$
+  இன் !!a{proof}~$\pi_2'''$ உம்
+  பெறுகிறோம். !!{proof}~$\pi'$ இதுவே:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1'$}
+  \Deduce$\Gamma \fCenter \Delta, !B, !C$
+  \AxiomC{}
+  \RightLabel{$\pi_2'''$}
+  \Deduce$!C, \Gamma \fCenter \Delta, !B$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma \fCenter \Delta, !B$
+  \AxiomC{}
+  \RightLabel{$\pi_2'$}
+  \Deduce$!B, \Gamma \fCenter \Delta$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma \fCenter \Delta$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0655-S06
+  \item $!A \ident (!B \land !C)$.
+  பயிற்சி.
+  \item $!A \ident (!B \lif !C)$.
+  !!{proof}s~$\pi_1$, $\pi_2$ முறையே
+  $\Gamma \Sequent \Delta, !B \lif !C$,
+  $!B \lif !C, \Gamma \Sequent \Delta$
+  ஆகியவற்றில் முடிகின்றன.
+  ~$\pi_1$ க்கு \RightR{\lif} இன்
+  மீளாக்கத்தை வழங்கும்
+  \olref{lem:inv-G3c-cut} மூலம்
+  $!B, \Gamma \Sequent \Delta, !C$
+  இன் !!a{proof}~$\pi_1'$ கிடைக்கிறது.
+  ~$\pi_2$ க்கு \LeftR{\lif} இன்
+  மீளாக்கத்தை வழங்கும்
+  \olref{lem:inv-G3c-cut} மூலம்
+  $\Gamma \Sequent \Delta, !B$
+  இன் !!a{proof}~$\pi_2'$ உம்
+  $!C, \Gamma \Sequent \Delta$
+  இன் !!a{proof}~$\pi_2''$ உம்
+  கிடைக்கின்றன.
+  $\pi_2''$ க்கு
+  \olref[seq][adm]{prop:weak-G3c-adm}
+  ஐப் பயன்படுத்தி
+  $!C, !B, \Gamma \Sequent \Delta$
+  இன் !!a{proof}~$\pi_2'''$ உம்
+  பெறுகிறோம். !!{proof}~$\pi'$ இதுவே:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_2'$}
+  \Deduce$\Gamma \fCenter \Delta, !B$
+  \AxiomC{}
+  \RightLabel{$\pi_1'$}
+  \Deduce$!B, \Gamma \fCenter \Delta, !C$
+  \AxiomC{}
+  \RightLabel{$\pi_2'''$}
+  \Deduce$!C, !B, \Gamma \fCenter \Delta$
+  \RightLabel{\CutCS}
+  \BinaryInf$!B, \Gamma \fCenter \Delta$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma \fCenter \Delta$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0655-S07
+  \item $!A \ident \lforall[x][!B(x)]$.
+  !!{proof}s~$\pi_1$, $\pi_2$ முறையே
+  $\Gamma \Sequent \Delta, \lforall[x][!B(x)]$,
+  $\lforall[x][!B(x)], \Gamma \Sequent \Delta$
+  ஆகியவற்றில் முடிகின்றன.
+  \olref{lem:inv-G3c-cut} மூலம்
+  $\Gamma \Sequent \Delta, !B(c)$ இன்
+  !!a{proof}~$\pi_1'$ கிடைக்கிறது.
+
+  இப்போது !!{proof}~$\pi_2$ ஐக் கருதுவோம்.
+  அது $\lforall[x][!B(x)], \Gamma \Sequent
+  \Delta$ இல் முடிகிறது.
+  ~$\pi_2$ இன் இறுதித் தொடரணியிலிருந்து
+  மேல்நோக்கிச் செல்லும்போது, இடப்புறத்தில்
+  வரும் $\lforall[x][!B(x)]$ இன்
+  எந்த நிகழ்வு, ~$\pi_2$ இன்
+  இறுதித் தொடரணியிலுள்ள
+  $\lforall[x][!B(x)]$ இன் நிகழ்வுக்கு
+  “இட்டுச் செல்கிறதோ” அந்த ஒவ்வொன்றையும்
+  குறியிடுவோம். குறிப்பாக:
+  (a)~$\pi_2$ இன் இறுதித் தொடரணியில்
+  $\lforall[x][!B(x)]$ ஐக் குறியிடுக.
+  (b)~ஒரு விதியின் முடிவின் சூழலில்
+  $\lforall[x][!B(x)]$ வந்து
+  குறியிடப்பட்டிருந்தால், அதன்
+  முன்கோளில் அல்லது முன்கோள்களில்
+  ஒத்த நிகழ்வைக் குறியிடுக.
+  (c)~ஒரு \LeftR{\lforall} விதியின்
+  முடிவில் $\lforall[x][!B(x)]$
+  முதன்மை வாய்பாடாக வந்து
+  குறியிடப்பட்டிருந்தால், அதன்
+  முன்கோளிலுள்ள ஒத்த செயல்படு
+  நிகழ்வுகளான
+  $\lforall[x][!B(x)]$,
+  $!B(t)$ ஆகிய இரண்டையும் குறியிடுக.
+
+  இவ்வாறு குறியிடப்பட்ட
+  $\lforall[x][!B(x)]$ இன் எல்லா
+  நிகழ்வுகளையும் கருதுவோம்.
+  அவற்றுள் எதுவும் \LeftR{\lforall}
+  அல்லாத விதியில் செயல்படுவதில்லை;
+  \LeftR{\lforall} இன் செயல்படு
+  !!{formula}s மட்டுமே குறியிடப்படும்.
+  ~$\pi_2$ இல் குறியிடப்பட்ட
+  $\lforall[x][!B(x)]$ இன்
+  எல்லா நிகழ்வுகளையும் நீக்குக.
+  இதனால் சரியான !!{proof} கிடைத்தால்,
+  குறியிடப்பட்ட $\lforall[x][!B(x)]$
+  நிகழ்வுகள் ஒருபோதும்
+  செயல்படவில்லை; அவை அனைத்தும்
+  நேரடியாக அடிக்கோள்களிலிருந்து
+  வந்தன. அந்த !!{proof} ஆனது
+  $\Gamma \Sequent \Delta$ இல்
+  முடிவதால்~$\pi$ ஐ அதனால்
+  மாற்றலாம். மிக உயர்ந்த தரமுடைய
+  ஒரு வெட்டை இவ்வாறு நீக்கியிருக்கிறோம்.
+
+% SEGMENT OLP-0655-S08
+  மாறாக, சில \LeftR{\lforall}
+  அனுமானங்களில் செயல்பட்ட
+  $\lforall[x][!B(x)]$
+  !!{formula}s ஐ நாம் நீக்கியதால்,
+  கிடைத்தது சரியான நிறுவலாக
+  இல்லாமலும் இருக்கலாம். அப்போது
+  அவை பின்வரும் வடிவிலான
+  “அனுமானங்களாக” மாறியிருக்கும்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_t$}
+  \Deduce$!B(t), \Pi \fCenter \Lambda$
+  \RightLabel{\LeftR{\lforall}}
+  \UnaryInf$\Pi \fCenter \Lambda$
+  \DisplayProof
+  \]
+  இவ்வகையில் உச்சியில்
+  முதலில் வரும் ஒவ்வோர்
+  “அனுமானத்தையும்” பின்வருவதாக
+  மாற்றுக:
+  \[
+  \AxiomC{}
+  \RightLabel{$\Subst{\pi_1'}{t}{c}[\Pi \Sequent \Lambda]$}
+  \Deduce$\Gamma, \Pi \fCenter \Delta, \Lambda, !B(t)$
+  \AxiomC{}
+  \RightLabel{$\pi_t[\Gamma \Sequent \Delta]$}
+  \Deduce$!B(t), \Gamma, \Pi \fCenter \Delta, \Lambda$
+  \RightLabel{\CutCS}
+  \BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda$
+  \DisplayProof
+  \]
+  அதன் கீழுள்ள ஒவ்வொரு தொடரணியின்
+  இடப்புறத்தில் $\Gamma$ வையும்
+  வலப்புறத்தில் $\Delta$ வையும்
+  சேர்க்குக. முன்கோளில்
+  குறியிடப்பட்ட $!B(t)$ உள்ள
+  எல்லா \LeftR{\lforall}
+  “அனுமானங்களும்” ஏதேனும்
+  $!B(t)$ மீதான \CutCS{}
+  அனுமானத்தால் மாற்றப்படும் வரை
+  இதைத் தொடர்க.
+  இப்போது கிடைக்கும் !!{proof}
+  சரியான !!{proof} ஆகும்; அதன் இறுதித்
+  தொடரணி
+  $\Gamma, \dots, \Gamma \Sequent
+  \Delta, \dots, \Delta$ என்ற
+  வடிவில் இருக்கும். சுருக்கலின்
+  ஏற்கத்தக்கதன்மையைப் பயன்படுத்தி
+  இதனை~$\Gamma \Sequent \Delta$
+  இன் !!a{proof} ஆக மாற்றி,
+  அதனால்~$\pi$ ஐ மாற்றுக.
+  $\lforall[x][!B(x)]$ மீதான
+  ஒரு வெட்டுக்குப் பதிலாக,
+  $!B(t)$ மீதான வெட்டுகளை
+  (பலவாகவும் இருக்கலாம்)
+  அமைத்துள்ளோம்; அவற்றின்
+  தரம் அனைத்தும் குறைவு.
+  ஏற்கெனவே $\pi_1$ அல்லது
+  $\pi_2$ இல் இருந்த வெட்டுகள்
+  தொடர்ந்து இருக்கும்; அவற்றின்
+  தரமும் குறைவுதான்.
+\end{enumerate}
+\end{proof}
+
+பதிப்புக் குறிப்பு: இருத்தல் அளவையுள்ள வெட்டு வாய்பாட்டின் நேர்வு
+மூல நிறுவலின் நேர்வாய்வில் எழுதப்படவில்லை. எனவே மேலுள்ள
+நேர்வாய்வு மட்டும் துணைத்தேற்றத்தின் எல்லா வாய்பாடுகளுக்கும்
+முழு நிறுவலாகாது.
+
+% SEGMENT OLP-0655-S09
+\begin{prob}
+\olref{lem:max-cut-red-G3c} இன்
+நிறுவலில் $!A \ident (!B \land !C)$
+என்ற நேர்வை உறுதிசெய்க.
+அதாவது, கீழ்க்கண்ட வடிவில்
+முடியும் !!a{proof}~$\pi$ இருந்தால்
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !B \land !C$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!B \land !C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+மேலும் $\pi_1$, $\pi_2$ இரண்டிலும்
+$<\depth{!B \land !C}$ தரமுள்ள
+வெட்டுகள் மட்டுமே இருந்தால்,
+$\Gamma \Sequent \Delta$ இன்
+!!a{proof}~$\pi'$ ஒன்றில்
+$<\depth{!B \land !C}$ தரமுள்ள
+வெட்டுகள் மட்டுமே இருக்கும்
+எனக் காட்டுக.
+\end{prob}
+
+% \begin{prob}
+% $!A \ident \lexists[x][!B(x)]$ என்ற நேர்வை
+% \olref{lem:inv-G3c-cut} இன் நிறுவலில் உறுதிசெய்க.
+% \end{prob}
+
+% SEGMENT OLP-0655-S10
+\olref{lem:max-cut-red-G3c} மூலம்,
+ஓர் !!a{proof} இல் மிக உயர்ந்த
+தரமுடைய \CutCS{} அனுமானத்தை
+அதற்குக் குறைந்த தரமுள்ள
+\CutCS{} அனுமானங்களால்
+மாற்ற முடியும். இதே
+துணைத்தேற்றத்தை மீண்டும்
+பயன்படுத்தி, மிக உயர்ந்த தரமுள்ள
+\CutCS{} இல் முடியும் உச்சி
+உள்-!!{proof}s களுக்கு அதை
+ஒவ்வொன்றாகப் பயன்படுத்துவதன்
+மூலம், ஓர் !!a{proof} இலுள்ள
+எத்தனை \CutCS{} அனுமானங்களையும்
+நீக்க முடியும்.
+
+\begin{thm}\ollabel{thm:cut-elim-G3c-largest}
+$\Log{G3c} + \CutCS$ இல் உள்ள
+எந்த !!{proof}~$\pi$ ஐயும்
+\Log{G3c} இல் ஒரு நிறுவலாக
+மாற்றலாம்.
+\end{thm}
+
+% SEGMENT OLP-0655-S11
+\begin{proof}
+  முதலில்~$\pi$ இல் மிக உயர்ந்த
+  தரமுள்ள எல்லா வெட்டுகளையும்
+  நீக்க முடியும் எனக் காட்டுவோம்.
+  ~$\pi$ இல் உள்ள வெட்டுகளின்
+  மிக உயர்ந்த தரம்~$d$ எனவும்,
+  தரம்~$d$ உள்ள வெட்டுகளின்
+  எண்ணிக்கை~$n$ எனவும் கொள்வோம்.
+  ~$n$ மீது தொகுத்தறிந்து நிறுவுவோம்.
+  $n=0$ எனில் செய்ய எதுவும் இல்லை.
+  $n>0$ எனில், தரம்~$d$ உடைய
+  உச்சியிலுள்ள ஒரு வெட்டைத்
+  தேர்ந்து, அதில் முடியும்
+  உள்-!!{proof}~$\pi_1$ ஐக் கொள்வோம்.
+  \olref{lem:max-cut-red-G3c}
+  மூலம் அதே இறுதித் தொடரணிக்கான
+  !!a{proof}~$\pi_1'$ உண்டு;
+  அதில் உள்ள எல்லா வெட்டுகளின்
+  தரமும் $<d$. ~$\pi$ இல்
+  $\pi_1$ க்குப் பதிலாக
+  $\pi_1'$ ஐ வைக்கிறோம்.
+  விளைவாக, தரம்~$d$ உள்ள
+  வெட்டுகள் $n-1$ மட்டுமே
+  கொண்ட !!a{proof} கிடைக்கிறது;
+  அதற்குத் தொகுத்தறிதல்
+  கருதுகோள் பொருந்தும்.
+
+  இப்போது~$d$ மீது தொகுத்தறிந்து
+  தேற்றத்தைப் பெறுகிறோம்.
+  $d=0$ எனில் எல்லா
+  வெட்டுகளும் அணுவாய்பாடுகள்
+  மீதானவை; முந்தைய முடிவினால்
+  அவை அனைத்தையும் நீக்கலாம்.
+  $d>0$ எனில், முந்தைய முடிவு
+  தரம் $d$ உள்ள எல்லா
+  வெட்டுகளும் தரம்~$<d$
+  உள்ள வெட்டுகளால் மாற்றப்பட்ட
+  ஒரு நிறுவலைத் தருகிறது.
+  ~$\pi$ இன் மிக உயர்ந்த
+  வெட்டுத் தரம் $d$ என்பதால்,
+  இப்போது மிக உயர்ந்த
+  வெட்டுத் தரமே $<d$
+  உள்ள ஒரு நிறுவல்
+  கிடைத்துள்ளது. அதற்குத்
+  தொகுத்தறிதல் கருதுகோள் பொருந்தும்.
+\end{proof}
+
+\end{document}

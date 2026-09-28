@@ -94,8 +94,8 @@ $\varAssign{s'}{s}{x}$ என்று எழுதுகிறோம்.
   என்றும் $m \in \Domain{M}$ என்றும் கொள்வோம். அப்போது
   $\Subst{s}{m}{x}$ என்பது பின்வருமாறு வரையறுக்கப்படும் மாறி ஒதுக்கீடு:
   \[\Subst{s}{m}{x}(y) = \begin{cases}
-    m & \text{if } y \ident x\\
-    s(y) & \text{otherwise}.
+    m & y \ident x\text{ எனில்}\\
+    s(y) & \text{இல்லையெனில்}.
   \end{cases}\]
 \end{defn}
 
@@ -178,10 +178,10 @@ $\Struct{M}$ இல் பெயரிடும் அளவுக்கு உ�
 தீர்க்கிறோம்; அவை மாறிகளை பொருட்களத்தின் !!{element}s உடன் நேரடியாக
 இணைக்கின்றன. ஆகவே, எடுத்துக்காட்டாக,
 \iftag{prvEx}{$\lexists[x][!B(x)]$}{$\lforall[x][!B(x)]$} என்பது நிறைவுறுத்தப்படுகிறது
-$\Struct M$ இல் iff \iftag{prvEx}{குறைந்தது ஒரு $m \in
+$\Struct M$ இல் அப்போதும் அப்போது மட்டுமே \iftag{prvEx}{குறைந்தது ஒரு $m \in
 \Domain{M}$ க்கு}{ஒவ்வொரு $m \in \Domain{M}$ க்கும், $\Sat{M}{!B(m)}$},
 என்று சொல்வதற்குப் பதிலாக, அது
-$\Struct M$ இல் $s$ ஐ \emph{சார்ந்து} நிறைவுறுத்தப்படுகிறது iff
+$\Struct M$ இல் $s$ ஐ \emph{சார்ந்து} நிறைவுறுத்தப்படுகிறது அப்போதும் அப்போது மட்டுமே
 $!B(x)$ ஆனது $\Subst{s}{m}{x}$ ஐச் சார்ந்து
 \iftag{prvEx}{குறைந்தது ஒரு}{ஒவ்வொரு} $m \in \Domain M$ க்கும்
 நிறைவுறுத்தப்படுகிறது என்று சொல்கிறோம்.
@@ -195,7 +195,8 @@ $a$ மற்றும் $b$ !!{constant}s, $f$ இரு-இட !!{function}, 
 \item $\Domain M = \{1, 2, 3, 4\}$
 \item $\Assign{a}{M} = 1$
 \item $\Assign{b}{M} = 2$
-\item $\Assign{f}{M}(x, y) = x+y$ if $x+y \le 3$ and $= 3$ otherwise.
+\item $x+y \le 3$ எனில் $\Assign{f}{M}(x, y) = x+y$;
+  மற்ற நிலைகளில் சார்பின் மதிப்பு $= 3$.
 \item $\Assign{R}{M} = \{\tuple{1, 1}, \tuple{1, 2}, \tuple{2, 3}, \tuple{2, 4}\}$
 \end{enumerate}
 ஒவ்வொரு !!{variable} க்கும் $1 \in \Domain{M}$ ஐ ஒதுக்கும்
@@ -231,14 +232,14 @@ $\tuple{1, 3} \notin \Assign{R}{M}[s]$.
 பயன்படுத்த வேண்டும். உதாரணமாக, $R(a, a) \lif (R(b,
 x) \lor R(x, b))$ இன் முதன்மை இணைப்பி~$\lif$; மேலும்
 \begin{align*}
-  & \Sat{M}{R(a, a) \lif (R(b, x) \lor R(x, b))}[s] \text{ iff }\\
+  & \Sat{M}{R(a, a) \lif (R(b, x) \lor R(x, b))}[s] \text{ அப்போதும் அப்போது மட்டுமே }\\
   & \qquad
-  \Sat/{M}{R(a,a)}[s] \text{ or } \Sat{M}{R(b, x) \lor R(x, b)}[s]
+  \Sat/{M}{R(a,a)}[s] \text{ அல்லது } \Sat{M}{R(b, x) \lor R(x, b)}[s]
   \intertext{$\Sat{M}{R(a,a)}[s]$ (ஏனெனில் $\tuple{1,1} \in
     \Assign{R}{M}$) என்பதால் விடையை இன்னும் தீர்மானிக்க முடியாது;
     முதலில் $\Sat{M}{R(b, x) \lor R(x, b)}[s]$ உண்மையா என்பதை அறிய வேண்டும்:}
-  & \Sat{M}{R(b, x) \lor R(x, b)}[s] \text{ iff }\\
-  & \qquad \Sat{M}{R(b,x)}[s] \text{ or } \Sat{M}{R(x, b)}[s]
+  & \Sat{M}{R(b, x) \lor R(x, b)}[s] \text{ அப்போதும் அப்போது மட்டுமே }\\
+  & \qquad \Sat{M}{R(b,x)}[s] \text{ அல்லது } \Sat{M}{R(x, b)}[s]
   \intertext{இது உண்மை; ஏனெனில் $\Sat{M}{R(x, b)}[s]$
     (மற்றும் $\tuple{1,2} \in \Assign{R}{M}$).}
 \end{align*}
@@ -273,23 +274,26 @@ $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ ஆகிறதா என்பதைப் �
   எந்த $m \in \Domain{M}$ ஐத் தேர்ந்தெடுத்தாலும்
   $\Sat/{M}{R(b,x) \land R(x,b)}[\Subst{s}{m}{x}]$.}{}
 
-\iftag{prvAll}{To determine if a universally quantified
-  !!{formula}~$\lforall[x][!A(x)]$ is satisfied, we have to determine
-  if $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ for all $m \in \Domain M$. So,
+\iftag{prvAll}{அனைத்தளவையிடப்பட்ட
+  !!{formula}~$\lforall[x][!A(x)]$ நிறைவுறுத்தப்படுகிறதா என்பதைத்
+  தீர்மானிக்க, எல்லா $m \in \Domain M$ க்கும்
+  $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ ஆகிறதா என்பதைப் பார்க்க வேண்டும். ஆகவே,
   \[
   \Sat{M}{\lforall[x][(R(x,a) \lif R(a,x))]}[s],
   \]
-  since $\Sat{M}{R(x,a) \lif R(a,x)}[\Subst{s}{m}{x}]$ for all $m \in
-  \Domain M$. For $m = 1$, we have $\Sat{M}{R(a,x)}[\Subst{s}{1}{x}]$
-  so the consequent is true; for $m = 2$, $3$, and~$4$, we have
-  $\Sat/{M}{R(x,a)}[\Subst{s}{m}{x}]$, so the antecedent is false.
-  But,
+  ஏனெனில் எல்லா $m \in \Domain M$ க்கும்
+  $\Sat{M}{R(x,a) \lif R(a,x)}[\Subst{s}{m}{x}]$ ஆகும்.
+  $m = 1$ க்கு $\Sat{M}{R(a,x)}[\Subst{s}{1}{x}]$ ஆகும்;
+  எனவே பின்விளைவு மெய். $m = 2$, $3$, மற்றும்~$4$ க்கு
+  $\Sat/{M}{R(x,a)}[\Subst{s}{m}{x}]$ ஆகும்;
+  எனவே முன்னிலை பொய். ஆனால்,
   \[
   \Sat/{M}{\lforall[x][(R(a,x) \lif R(x,a))]}[s]
   \]
-  since $\Sat/{M}{R(a,x) \lif R(x,a)}[\Subst{s}{2}{x}]$ (because
-  $\Sat{M}{R(a, x)}[\Subst{s}{2}{x}]$ and $\Sat/{M}{R(x,
-  a)}[\Subst{s}{2}{x}]$).}{}
+  ஏனெனில் $\Sat/{M}{R(a,x) \lif R(x,a)}[\Subst{s}{2}{x}]$
+  (இங்கு $\Sat{M}{R(a, x)}[\Subst{s}{2}{x}]$ ஆகவும்
+  $\Sat/{M}{R(x,
+  a)}[\Subst{s}{2}{x}]$ ஆகவும் இருப்பதால்).}{}
 
 \iftag{defEx}{%
 !!{formula}~$\lexists[x][!A(x)]$ நிறைவுறுத்தப்படுகிறதா என்பதைத்
@@ -310,7 +314,7 @@ $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ ஆகிறதா என்பதைப் �
   ஏனெனில் $\Sat{M}{\lforall[x][\lnot(R(b,x) \land
   R(x,b))]}[s]$; எந்த $m \in \Domain M$ க்கும்
   $\Sat{M}{R(b,x) \land R(x,b)}[\Subst{s}{m}{x}]$ ஆகாது. இந்த
-  எடுத்துக்காட்டுகளிலிருந்து, $\Sat{M}{\lexists[x][!A(x)]}[s]$ iff
+  எடுத்துக்காட்டுகளிலிருந்து, $\Sat{M}{\lexists[x][!A(x)]}[s]$ அப்போதும் அப்போது மட்டுமே
   $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ குறைந்தது ஒரு $m \in \Domain
   M$ க்கு என்பதை ஊகிக்கலாம்.}{}
 
@@ -335,7 +339,7 @@ $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ ஆகிறதா என்பதைப் �
   ஏனெனில் $\Sat/{M}{R(a,x) \lif R(x,a)}[\Subst{s}{2}{x}]$; ஆகவே
   $\Sat{M}{\lexists[x][\lnot(R(a,x) \lif R(x,a))]}[s]$. இந்த
   எடுத்துக்காட்டுகளிலிருந்து, $\Sat{M}{\lforall[x][!A(x)]}[s]$
-  iff $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ ஒவ்வொரு $m \in \Domain
+  அப்போதும் அப்போது மட்டுமே $\Sat{M}{!A(x)}[\Subst{s}{m}{x}]$ ஒவ்வொரு $m \in \Domain
   M$ க்கும் என்பதை ஊகிக்கலாம்.}{}
 
 இன்னும் சிக்கலான நிலையாக, பின்வருவதைக் கருதுக:
@@ -386,7 +390,7 @@ $m \in \Domain M$ எதுவும் இல்லை.
 
 \iftag{defEx}{%
 \begin{prop}\ollabel{prop:sat-ex}
-$\Sat{M}{\lexists[x][!B(x)]}[s]$ iff $s$ இன் ஒரு $x$-மாறுபாடு~$s'$
+$\Sat{M}{\lexists[x][!B(x)]}[s]$ அப்போதும் அப்போது மட்டுமே $s$ இன் ஒரு $x$-மாறுபாடு~$s'$
     உள்ளது; அதற்கு $\Sat{M}{!B(x)}[s']$.
 \end{prop}
 
@@ -403,7 +407,7 @@ $\Sat{M}{\lexists[x][!B(x)]}[s]$ iff $s$ இன் ஒரு $x$-மாறுப
 
 \iftag{defAll}{%
 \begin{prop}\ollabel{prop:sat-all}
-$\Sat{M}{\lforall[x][!B(x)]}[s]$ iff $s$ இன் ஒவ்வொரு
+$\Sat{M}{\lforall[x][!B(x)]}[s]$ அப்போதும் அப்போது மட்டுமே $s$ இன் ஒவ்வொரு
 $x$-மாறுபாடு~$s'$ க்கும் $\Sat{M}{!B(x)}[s']$.
 \end{prop}
 

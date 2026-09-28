@@ -36,22 +36,22 @@ $\lforall[x][\lforall[y][\eq[(x + y)][(y+x)]]]$ ஐப் பொய்யாக�
   \Assign{\Obj{0}}{K} & = 0\\
   \Assign{\prime}{K}(x) & =
   \begin{cases}
-    x+1 & \text{if $x\in \Nat$}\\
-    a & \text{if $x = a$}
+    x+1 & \text{$x\in \Nat$ எனில்}\\
+    a & \text{$x = a$ எனில்}
   \end{cases}\\
   \Assign{+}{K}(x, y) & =
   \begin{cases}
-    x+y & \text{if $x$, $y \in\Nat$}\\
-    a & \text{otherwise}
+    x+y & \text{$x$, $y \in\Nat$ எனில்}\\
+    a & \text{இல்லையெனில்}
   \end{cases}\\
   \Assign{\times}{K}(x, y) & =
   \begin{cases}
-    xy & \text{if $x$, $y \in\Nat$}\\
-    0 & \text{if $x = 0$ or $y = 0$}\\
-    a & \text{otherwise}\\
+    xy & \text{$x$, $y \in\Nat$ எனில்}\\
+    0 & \text{$x = 0$ அல்லது $y = 0$ எனில்}\\
+    a & \text{இல்லையெனில்}\\
   \end{cases}\\
   \Assign{<}{K} & =
-  \Setabs{\tuple{x,y}}{x, y \in \Nat \text{ and } x<y} \cup
+  \Setabs{\tuple{x,y}}{x, y \in \Nat \text{ மற்றும் } x<y} \cup
   \Setabs{\tuple{x,a}}{x \in \Domain{K}}
 \end{align*}
 $\Sat{K}{\Th{Q}}$ என்று காட்ட,~$\Th{Q}$ இன் எல்லா அடிகோள்களும்
@@ -109,12 +109,14 @@ $\Sat{K}{\lforall[x][\lforall[y][\eq[(x + y')][(x + y)']]]}$ சற்றுச�
 சிக்கலானது. $n$, $m$ ஆகிய இரண்டும் நிலையானவை எனில்:
 \begin{align*}
 (n \nsplus m^\nssucc) & = (n+(m+1)) = (n+m)+1 = (n \nsplus m)^\nssucc
-\intertext{since $\nsplus$ and $^\nssucc$ agree with $+$ and $\prime$ on
-  standard numbers.  Now suppose $x \in \Domain{K}$. Then}
+\intertext{ஏனெனில் நிலையான எண்களில் $\nsplus$ மற்றும் $^\nssucc$
+  ஆகியவை $+$ மற்றும் $\prime$ உடன் ஒத்துப்போகின்றன.
+  இப்போது $x \in \Domain{K}$ என்க. அப்போது}
 (x \nsplus a^\nssucc) & = (x \nsplus a) = a = a^\nssucc = (x \nsplus a)^\nssucc
-\intertext{The remaining case is if $y \in \Domain{K}$ but $x =
-  a$. Here we also have to distinguish cases according to whether $y =
-  n$ is standard or $y = b$:}
+\intertext{மீதமுள்ள நிலை, $y \in \Domain{K}$ ஆகவும் $x =
+  a$ ஆகவும் இருப்பது. இங்கும் $y =
+  n$ என்பது நிலையான எண்ணா அல்லது $y = a$ ஆகிறதா என்பதற்கேற்ப
+  நிலைகளைப் பிரிக்க வேண்டும்:}
 (a \nsplus n^\nssucc) & = (a \nsplus (n+1)) = a = a^\nssucc = (a \nsplus n)^\nssucc\\
 (a \nsplus a^\nssucc) & = (a \nsplus a) = a = a^\nssucc = (a \nsplus a)^\nssucc
 \end{align*}
@@ -182,7 +184,7 @@ x^\nssucc = (x \nsplus y)^\nssucc$. $x$ மற்றும் $y$ இரண்�
 &  b \nsplus b^\nssucc  = a = a^\nssucc = (b \nsplus b)^\nssucc\\
 &  b \nsplus a^\nssucc  = b = b^\nssucc = (b \nsplus y)^\nssucc\\
 &  a \nsplus b^\nssucc  = a = a^\nssucc = (a \nsplus b)^\nssucc\\
-\intertext{If $x$ is standard, but $y$ is non-standard, we have}
+\intertext{$x$ நிலையானதாகவும் $y$ நிலையற்றதாகவும் இருந்தால், பின்வருவது கிடைக்கும்}
 &  n \nsplus a^\nssucc  = n \nsplus a = b = b^\nssucc = (n \nsplus a)^\nssucc\\
 &  n \nsplus b^\nssucc  = n \nsplus b = a = a^\nssucc = (n \nsplus b)^\nssucc
 \end{align*}

@@ -1,0 +1,77 @@
+{
+  "batch_id": "TA-B322",
+  "units": [
+    {
+      "unit_id": "OLP-0662",
+      "source_sha256": "a7157a4cffa4a4a862c3ccca068d1b57b190ac830bbc7ce53a2df999663fe519",
+      "translation_sha256": "3d92fb904acbbcdcaf2e2c71c957b50bb133771719b093e393bde040195fbe05",
+      "source_bytes": 3176,
+      "translation_bytes": 6515,
+      "source_coverage_complete": true,
+      "segments": 4,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\AxiomC{$\\Discharge{!B}{x}$}\\DeduceC{$!A$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!C$}\\AxiomC{}\\DeduceC{$!B$}\\RightLabel{\\Elim{\\lif}}\\BinaryInfC{$!A$}\\DisplayProof\\]",
+        "$\\pheight{\\delta}$"
+      ],
+      "extra_math": [
+        "\\[\\AxiomC{$\\Discharge{!B}{x}$}\\DeduceC{$!A$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!A$}\\AxiomC{}\\DeduceC{$!B$}\\RightLabel{\\Elim{\\lif}}\\BinaryInfC{$!A$}\\DisplayProof\\]",
+        "$\\pheight{\\delta_1}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-014",
+          "unit_id": "OLP-0662",
+          "kind": "grafting-implication-system-and-height-typos",
+          "action": "Use B implies A in the displayed derivation, N2c/N2i for the sequent proof delta_2, and induct on the host proof delta_1.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{$\\Discharge{!B}{x}$}\\DeduceC{$!A$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!C$}\\AxiomC{}\\DeduceC{$!B$}\\RightLabel{\\Elim{\\lif}}\\BinaryInfC{$!A$}\\DisplayProof\\]",
+            "$\\pheight{\\delta}$"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{$\\Discharge{!B}{x}$}\\DeduceC{$!A$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!A$}\\AxiomC{}\\DeduceC{$!B$}\\RightLabel{\\Elim{\\lif}}\\BinaryInfC{$!A$}\\DisplayProof\\]",
+            "$\\pheight{\\delta_1}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The implication-introduction tree concludes B implies C from a derivation of A; the N2 sequent substitution definition calls delta_2 an N1 proof despite a sequent conclusion; and the final proof refers to an undefined delta.",
+          "chosen_treatment": "Correct the displayed consequent to A, give delta_2 the N2c/N2i sequent-proof type, and name delta_1 as the induction-height argument.",
+          "alternatives_considered": "Retain the source symbols with a note, or silently treat N1 as a sequent calculus.",
+          "rationale": "The preceding prose explicitly states B implies A; the source introduction defines N2 as the sequent-style systems; and the host proof delta_1 is the structure traversed by grafting.",
+          "precise_review_question": "Do the corrected consequent, N2 proof class, and height parameter match the intended grafting proposition?",
+          "location_needle": "$\\pheight{\\delta_1}$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

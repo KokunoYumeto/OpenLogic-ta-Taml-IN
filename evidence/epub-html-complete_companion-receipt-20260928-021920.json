@@ -1,0 +1,29 @@
+{
+  "schema": "openlogic-tamil-epub-html-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 1000,
+  "process_timeout_minutes": 20,
+  "master": "tamil-source-companion.tex",
+  "master_sha256": "53771c7f33f56fee81160bc62c8b4b9ff6d5d8d20141d74bea3910732d5fb08f",
+  "adapter_sha256": "462d60e10d0cb66881efcb3d7c1457c0984107da337341604620f8783488248f",
+  "reader_slug": "complete-companion",
+  "converter": "make4ht",
+  "converter_version": "",
+  "backend": "tex4ht",
+  "options": [
+    "lualatex",
+    "html5",
+    "mathml",
+    "charset=utf-8",
+    "fn-in",
+    "no-shell-escape"
+  ],
+  "started_utc": "2026-09-28T02:16:04.9810523Z",
+  "status": "slot-unavailable",
+  "abandoned_mutex": false,
+  "exit_code": null,
+  "issues": [],
+  "output_files": [],
+  "error": "TeX slot unavailable within bounded timeout",
+  "finished_utc": "2026-09-28T02:16:05.9993759Z"
+}

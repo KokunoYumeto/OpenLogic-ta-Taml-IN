@@ -1,0 +1,81 @@
+{
+  "batch_id": "TA-B332",
+  "units": [
+    {
+      "unit_id": "OLP-0672",
+      "source_sha256": "0fa27f608c760663b6380ea308e56269a9d6659e37cfad14a5e3ec7ca6940dd5",
+      "translation_sha256": "9a9f6e82f9f95253d4eef8ae1975311bdb0bdd9d44169d7098c285555d0c0aa5",
+      "source_bytes": 2388,
+      "translation_bytes": 5500,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\delta_1$",
+        "\\[\\AxiomC{$\\Discharge{!A}{x}$}\\RightLabel{$\\delta_2$}\\DeduceC{$!B$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!A\\lif!B$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A$}\\RightLabel{\\Elim{\\lif}}\\BinaryInfC{$!B$}\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "\\[\\AxiomC{$\\Discharge{!A}{x}$}\\RightLabel{$\\delta_2$}\\DeduceC{$!B$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!A\\lif!B$}\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A$}\\RightLabel{\\Elim{\\lif}}\\BinaryInfC{$!B$}\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0672",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\delta"
+          ],
+          "expected_extra_commands": [],
+          "audit_id": "TA-PT-029",
+          "kind": "normalization-detour-label-and-subformula-scope",
+          "action": "Keep delta_1 for the A proof and delta_2 for the B-from-A subproof, repairing the right diagram label; state the subformula property relative to open assumptions and conclusion.",
+          "expected_missing_math": [
+            "$\\delta_1$",
+            "\\[\\AxiomC{$\\Discharge{!A}{x}$}\\RightLabel{$\\delta_2$}\\DeduceC{$!B$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!A\\lif!B$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A$}\\RightLabel{\\Elim{\\lif}}\\BinaryInfC{$!B$}\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{$\\Discharge{!A}{x}$}\\RightLabel{$\\delta_2$}\\DeduceC{$!B$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!A\\lif!B$}\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A$}\\RightLabel{\\Elim{\\lif}}\\BinaryInfC{$!B$}\\DisplayProof\\]"
+          ],
+          "source_issue_or_choice": "The source reuses delta_1 for the conditional proof after naming it the proof of A and prints delta_2 on both diagram branches; it states a conclusion-only subformula property despite open assumptions.",
+          "chosen_treatment": "Leave the conditional proof unnamed, label the diagram's A branch delta_1, and state the subformula property for formulas in open assumptions or the conclusion.",
+          "alternatives_considered": "Keep contradictory proof labels; make the false conclusion-only subformula claim.",
+          "rationale": "The diagram's left branch derives B from A, while the right branch separately proves A. A normal proof of B from open A-and-B may contain A-and-B, so open assumptions belong in the subformula scope.",
+          "precise_review_question": "Are the A and B-from-A proof labels distinct, and is the subformula property scoped to both open assumptions and conclusion?",
+          "location_needle": "\\RightLabel{$\\delta_1$}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\delta"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

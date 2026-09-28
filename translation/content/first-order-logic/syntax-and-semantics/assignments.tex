@@ -27,7 +27,7 @@ $t$ இல் உள்ள எல்லா மாறிகளிலும் ஒ
 ஒதுக்கீடுகளும் ஒரே மதிப்பைத் தருகின்றன என்றும், $!A$ இன் எல்லாக்
 கட்டற்ற மாறிகளிலும் இரண்டு ஒதுக்கீடுகள் ஒத்துப்போனால் ஒன்றைச் சார்ந்து
 $!A$ நிறைவுறுத்தப்படுவது மற்றொன்றைச் சார்ந்து நிறைவுறுத்தப்படுவதற்கு
-iff என்றும் காட்டுகிறோம்.
+அப்போதும் அப்போது மட்டுமே என்றும் காட்டுகிறோம்.
 \end{explain}
 
 \begin{prop}\ollabel{prop:valindep}
@@ -66,7 +66,7 @@ $t_1$, \dots, $t_k$ ஒவ்வொன்றுக்கும் கூற்�
 $!A$ இன் கட்டற்ற !!{variable}s, $x_1$, \dots,~$x_n$ ஆகியவற்றுள்
 இருந்து, $i = 1$, \dots,~$n$ ஒவ்வொன்றுக்கும்
 $s_1(x_i) = s_2(x_i)$ எனில், $\Sat{M}{!A}[s_1]$
-iff $\Sat{M}{!A}[s_2]$.
+அப்போதும் அப்போது மட்டுமே $\Sat{M}{!A}[s_2]$.
 \end{prop}
 
 \begin{proof}
@@ -116,7 +116,7 @@ $\Atom{R}{t_1, \dots, t_k}$, அல்லது சொற்கள் $t_1$ ம�
 \end{enumerate}
 
 இப்போது, $!A$ ஐவிடக் குறைந்த சிக்கல்தன்மையுள்ள எல்லா !!{formula}s
-$!B$ க்கும் $\Sat{M}{!B}[s_1]$ iff $\Sat{M}{!B}[s_2]$ எனக் கொள்க.
+$!B$ க்கும் $\Sat{M}{!B}[s_1]$ அப்போதும் அப்போது மட்டுமே $\Sat{M}{!B}[s_2]$ எனக் கொள்க.
 $!A$ இன் முதன்மை இணைப்பியால் தீர்மானிக்கப்படும் நிலைகளாகத்
 தொகுத்தறிதல் படி அமைகிறது. ஒவ்வொரு நிலையிலும் !!{biconditional} இன்
 முன்னோக்கு திசையை மட்டுமே காட்டுகிறோம்; பின்னோக்கு திசையின் நிரூபணம்
@@ -212,7 +212,7 @@ $!A$ இன் முதன்மை இணைப்பியால் தீர
 தொகுத்தறிதலால், $!A$ இன் கட்டற்ற !!{variable}s $x_1$, \dots, $x_n$
 ஆகியவற்றுள் இருந்து, $i = 1$, \dots,~$n$ ஒவ்வொன்றுக்கும்
 $s_1(x_i)=s_2(x_i)$ எனும்போதெல்லாம்
-$\Sat{M}{!A}[s_1]$ iff $\Sat{M}{!A}[s_2]$ என்று கிடைக்கிறது.
+$\Sat{M}{!A}[s_1]$ அப்போதும் அப்போது மட்டுமே $\Sat{M}{!A}[s_2]$ என்று கிடைக்கிறது.
 \end{proof}
 
 \begin{probtag}{probNot,probOr,probAnd,probIf,probIff,probEx,probAll}
@@ -234,7 +234,7 @@ $\Sat{M}{!A}[s_1]$ iff $\Sat{M}{!A}[s_2]$ என்று கிடைக்க�
 \begin{cor}
 \ollabel{cor:sat-sentence}
 $!A$ ஒரு !!a{sentence} ஆகவும் $s$ ஒரு மாறி ஒதுக்கீடாகவும் இருந்தால்,
-ஒவ்வொரு மாறி ஒதுக்கீடு~$s'$ க்கும் $\Sat{M}{!A}[s]$ iff
+ஒவ்வொரு மாறி ஒதுக்கீடு~$s'$ க்கும் $\Sat{M}{!A}[s]$ அப்போதும் அப்போது மட்டுமே
 $\Sat{M}{!A}[s']$.
 \end{cor}
 
@@ -244,13 +244,13 @@ $\Sat{M}{!A}[s']$.
   மாறி ஒதுக்கீடு~$s'$ உம், $s$ போலவே, $!A$ இன் எல்லாக் கட்டற்ற
   மாறிகளுக்கும் அற்பமாக ஒரேவற்றை ஒதுக்குகிறது. எனவே
   \olref{prop:satindep} இன் நிபந்தனை நிறைவேறுகிறது; இதனால்
-  $\Sat{M}{!A}[s]$ iff $\Sat{M}{!A}[s']$.
+  $\Sat{M}{!A}[s]$ அப்போதும் அப்போது மட்டுமே $\Sat{M}{!A}[s']$.
 \end{proof}
 
 \begin{defn}
 \ollabel{defn:satisfaction}
 $!A$ ஒரு !!a{sentence} எனில், எல்லா மாறி ஒதுக்கீடுகள்~$s$ க்கும்
-$\Sat{M}{!A}[s]$ iff, !!a{structure}~$\Struct M$ ஆனது $!A$ ஐ
+$\Sat{M}{!A}[s]$ அப்போதும் அப்போது மட்டுமே, !!a{structure}~$\Struct M$ ஆனது $!A$ ஐ
 \emph{நிறைவுறுத்துகிறது}, $\Sat{M}{!A}$, என்கிறோம்.
 \end{defn}
 
@@ -262,14 +262,14 @@ $\Sat{M}{!A}$ எனில், \emph{$!A$ ஆனது $\Struct{M}$ இல் �
 \begin{defn}
 \ollabel{defn:sat}
 $\Gamma$ என்பது !!{sentence}s~$\Gamma$ இன் தொகுப்பு எனில், எல்லா
-$!A \in \Gamma$ க்கும் $\Sat{M}{!A}$ iff, !!a{structure}~$\Struct M$
+$!A \in \Gamma$ க்கும் $\Sat{M}{!A}$ அப்போதும் அப்போது மட்டுமே, !!a{structure}~$\Struct M$
 ஆனது $\Gamma$ ஐ \emph{நிறைவுறுத்துகிறது}, $\Sat{M}{\Gamma}$, என்கிறோம்.
 \end{defn}
 
 \begin{prop}\ollabel{prop:sentence-sat-true}
   $\Struct{M}$ ஒரு !!a{structure} ஆகவும், $!A$ ஒரு !!a{sentence}
   ஆகவும், $s$ ஒரு மாறி ஒதுக்கீடாகவும் இருக்கட்டும்.
-  $\Sat{M}{!A}$ iff $\Sat{M}{!A}[s]$.
+  $\Sat{M}{!A}$ அப்போதும் அப்போது மட்டுமே $\Sat{M}{!A}[s]$.
 \end{prop}
 
 \begin{proof}
@@ -284,9 +284,9 @@ $!A \in \Gamma$ க்கும் $\Sat{M}{!A}$ iff, !!a{structure}~$\Struct M$
   $!A(x)$ இல் $x$ மட்டுமே கட்டற்றதாக உள்ளது என்றும், $\Struct M$
   ஒரு !!a{structure} என்றும் கொள்க. அப்போது:
   \begin{tagenumerate}{prvEx,prvAll}
-    \tagitem{prvEx}{$\Sat{M}{\lexists[x][!A(x)]}$ iff $\Sat{M}{!A(x)}[s]$
+    \tagitem{prvEx}{$\Sat{M}{\lexists[x][!A(x)]}$ அப்போதும் அப்போது மட்டுமே $\Sat{M}{!A(x)}[s]$
       குறைந்தது ஒரு மாறி ஒதுக்கீடு~$s$ க்கு.}{}
-    \tagitem{prvAll}{$\Sat{M}{\lforall[x][!A(x)]}$ iff $\Sat{M}{!A(x)}[s]$
+    \tagitem{prvAll}{$\Sat{M}{\lforall[x][!A(x)]}$ அப்போதும் அப்போது மட்டுமே $\Sat{M}{!A(x)}[s]$
   எல்லா மாறி ஒதுக்கீடுகள்~$s$ க்கும்.}{}
 \end{tagenumerate}
 \end{prop}
@@ -315,45 +315,45 @@ $\Struct M \VDash !A$ ஐப் பின்வருமாறு வரைய�
   \indcase{!A}{\ltrue}{$\Struct{M} \VDash \indfrm$.}}{}
 
 \item \indcase{!A}{\Atom{R}{d_1, \dots, d_n}}{$\Struct M \VDash \indfrm$
-  iff $\langle \Assign{d_1}{M}, \dots, \Assign{d_n}{M} \rangle \in
+  அப்போதும் அப்போது மட்டுமே $\langle \Assign{d_1}{M}, \dots, \Assign{d_n}{M} \rangle \in
   \Assign{R}{M}$.}
 
-\item \indcase{!A}{\eq[d_1][d_2]}{$\Struct M \VDash \indfrm$ iff
+\item \indcase{!A}{\eq[d_1][d_2]}{$\Struct M \VDash \indfrm$ அப்போதும் அப்போது மட்டுமே
   $\Assign{d_1}{M} = \Assign{d_2}{M}$.}
 
 \tagitem{prvNot}{%
-  \indcase{!A}{\lnot !B}{$\Struct{M} \VDash \indfrm$ iff
+  \indcase{!A}{\lnot !B}{$\Struct{M} \VDash \indfrm$ அப்போதும் அப்போது மட்டுமே
     $\Struct{M} \VDash {!B}$ அன்று.}}{}
 
 \tagitem{prvAnd}{%
   \indcase{!A}{(!B \land !C)}{$\Struct{M} \VDash
-    \indfrm$ iff $\Struct{M} \VDash!B$ மற்றும்
+    \indfrm$ அப்போதும் அப்போது மட்டுமே $\Struct{M} \VDash!B$ மற்றும்
     $\Struct{M} \VDash !C$.}}{}
 
 \tagitem{prvOr}{%
-  \indcase{!A}{(!B \lor !C)}{$\Struct{M} \VDash \indfrm$ iff
+  \indcase{!A}{(!B \lor !C)}{$\Struct{M} \VDash \indfrm$ அப்போதும் அப்போது மட்டுமே
     $\Struct{M} \VDash !B$ அல்லது $\Struct{M} \VDash !C$
     (அல்லது இரண்டுமே).}}{}
 
 \tagitem{prvIf}{%
-  \indcase{!A}{(!B \lif !C)}{$\Struct{M} \VDash \indfrm$ iff
+  \indcase{!A}{(!B \lif !C)}{$\Struct{M} \VDash \indfrm$ அப்போதும் அப்போது மட்டுமே
     $\Struct {M} \VDash !B$ அன்று அல்லது $\Struct M \VDash !C$
     (அல்லது இரண்டுமே).}}{}
 
 \tagitem{prvIff}{%
-  \indcase{!A}{(!B \liff !C)}{$\Struct{M} \VDash {\indfrm}$ iff
+  \indcase{!A}{(!B \liff !C)}{$\Struct{M} \VDash {\indfrm}$ அப்போதும் அப்போது மட்டுமே
     $\Struct{M} \VDash {!B}$ மற்றும் $\Struct{M} \VDash {!C}$ இரண்டுமே,
     அல்லது $\Struct{M} \VDash {!B}$ மற்றும் $\Struct{M} \VDash {!C}$
     இரண்டுமே அல்ல.}}{}
 
 \tagitem{prvAll}{%
   \indcase{!A}{\lforall[x][!B]}{$c$ ஆனது $!B$ இல் தோன்றவில்லை எனில்,
-    $\Struct{M} \VDash {\indfrm}$ iff எல்லா $a \in \Domain{M}$ க்கும்
+    $\Struct{M} \VDash {\indfrm}$ அப்போதும் அப்போது மட்டுமே எல்லா $a \in \Domain{M}$ க்கும்
     $\Struct{M[a/c]} \VDash \Subst{!B}{c}{x}$.}}{}
 
 \tagitem{prvEx}{%
   \indcase{!A}{\lexists[x][!B]}{$\Struct{M} \VDash
-  {\indfrm}$ iff, $c$ ஆனது $!B$ இல் தோன்றவில்லை எனில்,
+  {\indfrm}$ அப்போதும் அப்போது மட்டுமே, $c$ ஆனது $!B$ இல் தோன்றவில்லை எனில்,
   $\Struct{M[a/c]} \VDash \Subst{!B}{c}{x}$ ஆகும் ஓர்
   $a \in \Domain M$ உள்ளது.}}{}
 \end{enumerate}
@@ -362,7 +362,7 @@ $x_1$, \dots, $x_n$ ஆகியவை $!A$ இன் எல்லாக் க�
 குறியீடுகளாகவும், $a_1$, \dots, $a_n \in \Domain M$ ஆகவும்,
 $s(x_i) = a_i$ ஆகவும் இருக்கட்டும்.
 
-$\Sat{M}{!A}[s]$ iff $\Struct M[a_1/c_1,\dots,a_n/c_n]
+$\Sat{M}{!A}[s]$ அப்போதும் அப்போது மட்டுமே $\Struct M[a_1/c_1,\dots,a_n/c_n]
 \VDash \Subst{\Subst{!A}{c_1}{x_1}\dots}{c_n}{x_n}$ என்று காட்டுக.
 
 (மாறி ஒதுக்கீடுகள் இல்லாமலே முதல்தர தர்க்கத்திற்கு ஒரு பொருளியலை
@@ -372,7 +372,7 @@ $\Sat{M}{!A}[s]$ iff $\Struct M[a_1/c_1,\dots,a_n/c_n]
 \begin{prob}
 $f$ ஆனது $!A(x,y)$ இல் இல்லாத ஒரு சார்புக் குறியீடு எனக் கொள்க.
 $\Sat{M}{\lforall[x][\lexists[y][!A(x,y)]]}$ ஆகும் ஒரு
-!!a{structure}~$\Struct{M}$ உள்ளது iff
+!!a{structure}~$\Struct{M}$ உள்ளது அப்போதும் அப்போது மட்டுமே
 $\Sat{M'}{\lforall[x][!A(x,f(x))]}$ ஆகும் ஓர்~$\Struct M'$ உள்ளது
 என்று காட்டுக.
 

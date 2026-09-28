@@ -1,0 +1,74 @@
+{
+  "batch_id": "TA-B361",
+  "units": [
+    {
+      "unit_id": "OLP-0705",
+      "source_sha256": "b16548e594dc5a0a414c919e26078d474488c3186487c7cbdce170fb23035b7b",
+      "translation_sha256": "6a52040593872550089ff34972ffe1e78a694fb7c06cb3742d254cdd694fac4f",
+      "source_bytes": 3151,
+      "translation_bytes": 3787,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0705",
+          "audit_id": "TA-PT-051",
+          "kind": "G1i-table-header-and-duplicate-G1c-label",
+          "action": "Correct the inert section comment from rules-G1c to rules-G1i and give the G1i auxiliary rule table its own tab:G1i label instead of duplicating the G1c table label.",
+          "identifier_replacements": [
+            {
+              "from": "\\ollabel{tab:G1c}",
+              "to": "\\ollabel{tab:G1i}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen rules-G1i.tex source names Section: rules-G1c in its comment and ends with tab:G1c even though the adjacent rules-G1c.tex already carries that label. The caption and the right-side context restrictions identify this as the intuitionistic G1i table.",
+          "chosen_treatment": "Name the comment rules-G1i and label the distinct table tab:G1i. Preserve all rule premises, conclusions, side conditions, G1m description and the genuine tab:G1c in the classical table.",
+          "alternatives_considered": "Keep two distinct rule tables under tab:G1c; rename the classical table; rewrite the intuitionistic rule judgments to match the classical table.",
+          "rationale": "A unique table label is needed for an unambiguous future reference. The G1i filename and caption, absent right contraction, empty-or-single-formula succedent and restricted right weakening all identify the intended system without changing any mathematics.",
+          "precise_review_question": "Does tab:G1i identify only the intuitionistic table while the classical table retains tab:G1c and every G1i rule judgment stays unchanged?",
+          "location_needle": "\\ollabel{tab:G1i}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

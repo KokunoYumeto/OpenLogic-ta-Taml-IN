@@ -1,0 +1,90 @@
+% SEGMENT OLP-0710-S01
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: rules-mG3i
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\begin{table}
+\begin{tabular}{@{}c@{}c@{}}
+\multicolumn{2}{@{}c@{}}{அடிக்கோள்கள்}\\[2ex]
+$!C, \Gamma \Sequent \Delta, !C$ & $\lfalse, \Gamma \Sequent \Delta$
+\\[2ex]
+% SEGMENT OLP-0710-S02
+\multicolumn{2}{@{}c@{}}{தருக்க விதிகள்}\\[2ex]
+\Axiom$\lnot !A, \Gamma \fCenter \Delta, !A $
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$!A, \Gamma \fCenter$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lnot !A $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter \Delta, !A \land !B $
+\DisplayProof
+\\[4ex]\Axiom$!A, \Gamma \fCenter \Delta$
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!A \lor !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$\Gamma \fCenter \Delta, !A, !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+\DisplayProof
+\\[4ex]
+\Axiom$!A \lif !B, \Gamma \fCenter \Delta, !A$
+\Axiom$ !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!A \lif !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ !A, \Gamma \fCenter !B$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lif !B $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(t), \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \lforall[x][!A(x)]$
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(a), \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][!A(x)], \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta, \lexists[x][!A(x)], !A(t) $
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lexists[x][!A(x)]$
+\DisplayProof
+\end{tabular}
+\caption{உள்ளுணர்வுவாதத் தருக்கத்திற்கான பல-முடிவு
+\Log{mG3i} விதிகள். $\RightR{\forall}$ மற்றும்
+$\LeftR{\exists}$ ஆகிய விதிகளில், !!{constant}~$a$
+முடிவுத் தொடரணியில் இடம்பெறக் கூடாது. $\Gamma$ மற்றும்
+$\Delta$ ஆகியவை !!{formula}s இன் பன்மைக் கணங்கள்.
+அடிக்கோள்களில் !!{formula}~$!C$ அணு வாய்பாடாக இருக்க வேண்டும்.
+\Log{mG1m} என்பது $\lfalse, \Gamma \Sequent \Delta$
+என்ற அடிக்கோள்கள் நீக்கப்பட்ட \Log{mG1i} ஆகும்.}
+\ollabel{tab:mG3i}
+\end{table}
+
+\end{document}

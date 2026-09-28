@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0371",
       "source_sha256": "88130e362effc83767b2fae97dcab4b6ae13f657a7d7a43da2df13883c9d54f2",
-      "translation_sha256": "2333aba5efee5beefbcd2078f124d5614651b78bc99f18005467f13c47128b3b",
+      "translation_sha256": "0d096713fe515c6eadfaeadaa2ab6cfe133a2c8488d07e91aaa6c9deaaa40a75",
       "source_bytes": 3412,
-      "translation_bytes": 5383,
+      "translation_bytes": 5410,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": false,
@@ -77,10 +77,33 @@
           "rationale": "The reflexivity and induction proofs invoke abstraction closure for beredpar, the conditions all denote the established free-variable set, and N is the body in lambda x.Nx and the premise N beredpar N'.",
           "precise_review_question": "Do these repairs make the definition and both eta proof cases use exactly their stated parallel relation, body and freshness condition?",
           "location_needle": "SOURCE CORRECTION TA-LAM-031"
+        },
+        {
+          "audit_id": "TA-FINAL-005",
+          "unit_id": "OLP-0371",
+          "kind": "rendering-only-line-wrap",
+          "action": "ஒரு நீண்ட பக்கநிபந்தனைக்கு வரி மடக்கல் பெட்டி சேர்க்கப்பட்டது; நிபந்தனையும் வாய்பாடும் மாற்றப்படவில்லை.",
+          "expected_extra_commands": [
+            "\\parbox",
+            "\\linewidth"
+          ],
+          "expected_missing_commands": [],
+          "source_issue_or_choice": "முழு வாசிப்பு நூலின் 643 ஆம் பக்கத்தில் வளர்த்தல் வரையறையின் பக்கநிபந்தனை ஓரத்தைத் தாண்டியது.",
+          "chosen_treatment": "0.32 linewidth அகலமுள்ள வரி மடக்கல் பெட்டி.",
+          "alternatives_considered": "வாய்பாட்டைச் சிறிதாக்குதல்.",
+          "rationale": "கணிதக் கூறுகளின் படிக்கத்தக்க அளவு மாறாமல் பக்கநிபந்தனையை மடக்குகிறது.",
+          "precise_review_question": "P லாம்டா அருவமாக இல்லாத நிபந்தனை அதே சமன்பாட்டுடன் இணைந்துள்ளதா?",
+          "location_needle": "\\parbox[t]{.32\\linewidth}"
         }
       ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": false,
@@ -93,7 +116,9 @@
         "\\FV",
         "\\FV",
         "\\FV",
-        "\\FV"
+        "\\FV",
+        "\\parbox",
+        "\\linewidth"
       ],
       "command_parity_or_audited_correction": true
     },
@@ -159,8 +184,14 @@
           "location_needle": "SOURCE CORRECTION TA-LAM-032"
         }
       ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": false,
@@ -197,8 +228,14 @@
       ],
       "visual_review_complete": false,
       "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -285,8 +322,14 @@
           "location_needle": "SOURCE CORRECTION TA-LAM-034"
         }
       ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": false,
@@ -303,7 +346,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

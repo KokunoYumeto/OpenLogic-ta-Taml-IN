@@ -1,0 +1,228 @@
+% SEGMENT OLP-0691-S01
+% Part: proof-theory
+% Chapter: propositions-as-types
+% Section: reduction
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{red}
+
+\olsection{குறைத்தல்}
+
+இயல்பான வருவித்தலின் !!{derivation}s இல்,
+!!a{introduction} விதியை உடனே !!a{elimination} விதி
+பின்தொடர்ந்தால், அது ``குறைக்கக்கூடிய'' சுற்றுவழி.
+எடுத்துக்காட்டாக, $\Intro{\land}$ விதியை
+$\Elim{\land}$ விதி பின்தொடர்ந்தால் அவை ஒன்றையொன்று
+``நீக்குகின்றன'': \Intro{\land} உருவாக்கும்
+இணையலின் ஒரு கூறுதான் $\Elim{\land}$ இன் முடிவு;
+$\Intro{\land}$ இன் இரு முன்கூற்றுகளும் அந்தக்
+கூறுகளைத் தனித்தனியாகவே நிறுவியுள்ளன. ஆகவே,
+ஏதேனும் ஒரு கூறின் !!a{derivation} தேவைப்பட்டால்,
+இணையலை அறிமுகப்படுத்தி மீண்டும் நீக்குவதற்குப்
+பதிலாக, அந்த !!{derivation} ஐயே பயன்படுத்தலாம்:
+\begin{gather*}
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!A_1$}
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!A_2$}
+  \RightLabel{$\Intro{\land}$}
+  \BinaryInfC{$!A_1 \land !A_2$}
+  \RightLabel{$\Elim{\land}_i$}
+  \UnaryInfC{$!A_i$}
+  \DisplayProof\bottomAlignProof
+  \quad
+  \redone
+  \quad
+  \AxiomC{}
+  \RightLabel{$\delta_i$}
+  \DeduceC{$!A_i$}
+  \DisplayProof
+\end{gather*}
+
+% SEGMENT OLP-0691-S02
+இந்த எளிமைப்படுத்தலுக்குப் பொருந்திய நிறுவல்
+சொற்களிலும் இதேபோன்ற குறைத்தல் தொடர்பைக் கொள்ளலாம்.
+$\delta_1$ இன் நிறுவல் சொல்~$N_1$ ஆகவும்,
+$\delta_2$ இன் நிறுவல் சொல்~$N_2$ ஆகவும் இருந்தால்,
+இடப்புற நிறுவலின் சொல் ஒரு படியில் வலப்புற
+நிறுவலின் சொல்லாகக் குறைகிறது:
+\[
+  \proj{i}{\pair{N_1}{N_2}} \redone N_i
+\]
+வகையிட்ட லாம்டா கலனத்தில், இது பெருக்கல் வகைக்கான
+\emph{பீட்டா குறைத்தல்} விதி.
+
+இயல்பான வருவித்தலில், \Intro{\land} ஐ
+\Elim{\land} பின்தொடர்வது போன்ற குறைக்கத்தக்க
+இரு அனுமானங்களின் இணை \emph{வெட்டு} எனப்படுகிறது.
+வகையிட்ட லாம்டா கலனத்தில் $\redone$ இன் இடப்புறச்
+சொல் \emph{ரெடெக்ஸ்}; வலப்புறச் சொல் அதன்
+\emph{சுருக்கவிளைவு}. வகையிடப்படாத லாம்டா கலனத்தில்
+$(\lambd[x][N])Q$ மட்டுமே ரெடெக்ஸாகக் கருதப்படுகிறது.
+வகையிட்ட கலனத்தில் $\pair{N}{M}$,
+$\proj{i}{N}$, $\inj[!A]{i}{N}$,
+$\dcase{N}{x_1}{M_1}{x_2}{M_2}$,
+$\abort{!A}{N}$ ஆகியவற்றையும் கொண்ட சொற்களுக்குக்
+கட்டமைப்பு விரிகிறது; அவற்றுடன் தொடர்புடைய குறைப்பு
+வடிவங்களையும் கருதுகிறோம். ஆனால் வெற்று வகை நீக்கச்
+செயற்குறிக்கு இங்கு தனிப் பீட்டா-சுருக்க விதி தரப்படவில்லை.
+
+% SEGMENT OLP-0691-S03
+இதேபோல் பிரிப்பிணைவுக்கும் குறைத்தல் உண்டு:
+\begin{gather*}
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta$}
+  \DeduceC{$!A_i$}
+  \RightLabel{$\Intro{\lor}$}
+  \UnaryInfC{$!A_1 \lor !A_2$}
+  \AxiomC{$\Discharge{!A_1}{x_1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C$}
+  \AxiomC{$\Discharge{!A_2}{x_2}$}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!C$}
+  \DischargeRule{$\Elim{\lor}$}{x_1,x_2}
+  \TrinaryInfC{$!C$}
+  \DisplayProof\bottomAlignProof
+  \quad
+  \redone
+  \quad
+  \AxiomC{}
+  \RightLabel{$\delta$}
+  \DeduceC{$!A_i$}
+  \RightLabel{$\delta_i$}
+  \DeduceC{$!C$}
+  \DisplayProof
+\end{gather*}
+இதற்குப் பொருந்திய நிறுவல் சொற்களின் குறைத்தல்:
+\begin{gather*}
+  \dcase{\inj[!A_{3-i}]{i}{M}}{x_1}{N_1}{x_2}{N_2}
+    \redone \Subst{N_i}{M}{x_i}
+\end{gather*}
+இங்கு $M$ என்பது~$\delta$ வின் நிறுவல் சொல்;
+$N_i$ என்பது~$\delta_i$ இன் நிறுவல் சொல்.
+இது கூட்டல் வகைக்கான பீட்டா குறைத்தல் விதி.
+$\Subst{N_i}{M}{x_i}$ என்பது $N_i$ இல் கட்டற்றதாக
+வரும் $x_i$ இன் எல்லா நிகழ்வுகளையும்~$M$ ஆல்
+மாற்றுவதைக் குறிக்கும். செலுத்தலின் மேல் குறி,
+தேர்ந்தெடுக்கப்படாத மற்ற பிரிப்பிணைவுக் கூறைக்
+குறிப்பிடுகிறது.
+
+% SEGMENT OLP-0691-S04
+சார்பு வகையைக் குறைத்தல், $\Intro\lif$ விதியை
+$\Elim\lif$ விதி பின்தொடரும் சுற்றுவழியை அகற்றுவதற்குப்
+பொருந்துகிறது:
+\begin{gather*}
+  \bottomAlignProof
+  \AxiomC{$\Discharge{!A}{x}$}
+  \RightLabel{$\delta$}
+  \DeduceC{$!B$}
+  \DischargeRule{$\Intro{\lif}$}{x}
+  \UnaryInfC{$!A \lif !B$}
+  \AxiomC{}
+  \RightLabel{$\delta'$}
+  \DeduceC{$!A$}
+  \RightLabel{$\Elim{\lif}$}
+  \BinaryInfC{$!B$}
+  \DisplayProof\bottomAlignProof
+  \quad
+  \redone
+  \quad
+  \AxiomC{}
+  \RightLabel{$\delta'$}
+  \DeduceC{$!A$}
+  \RightLabel{$\delta$}
+  \DeduceC{$!B$}
+  \DisplayProof
+\end{gather*}
+நிறுவல் சொற்களில் இது வழக்கமான பீட்டா குறைத்தலாகும்:
+\begin{gather*}
+  (\lambd[\typeof{x}{!A}][N]M)
+  \redone \Subst{N}{M}{x}
+\end{gather*}
+
+% SEGMENT OLP-0691-S05
+!!{proof}s இல் குறைப்பு உருமாற்றங்களுடன்
+வரிசைமாற்று உருமாற்றங்களையும் கருதலாம்.
+\Elim{\lor} விதியில் முடிந்து, அதன் பின் மற்றொரு
+!!{elimination} விதி வரும் (துணை-)!!{proof}s க்கு
+அவை பொருந்துகின்றன. எடுத்துக்காட்டாக:
+\begin{multline*}
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta$}
+  \DeduceC{$!A_i$}
+  \RightLabel{$\Intro{\lor}$}
+  \UnaryInfC{$!A_1 \lor !A_2$}
+  \AxiomC{$\Discharge{!A_1}{x_1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C_1 \land !C_2$}
+  \AxiomC{$\Discharge{!A_2}{x_2}$}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!C_1 \land !C_2$}
+  \DischargeRule{$\Elim{\lor}$}{x_1,x_2}
+  \TrinaryInfC{$!C_1 \land !C_2$}
+  \RightLabel{\Elim{\land}[i]}
+  \UnaryInfC{$!C_i$}
+  \DisplayProof\bottomAlignProof
+  \quad
+  \redone
+  \\
+  \AxiomC{}
+  \RightLabel{$\delta$}
+  \DeduceC{$!A_i$}
+  \RightLabel{$\Intro{\lor}$}
+  \UnaryInfC{$!A_1 \lor !A_2$}
+  \AxiomC{$\Discharge{!A_1}{x_1}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C_1 \land !C_2$}
+  \RightLabel{\Elim{\land}[i]}
+  \UnaryInfC{$!C_i$}
+  \AxiomC{$\Discharge{!A_2}{x_2}$}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!C_1 \land !C_2$}
+  \RightLabel{\Elim{\land}[i]}
+  \UnaryInfC{$!C_i$}
+  \DischargeRule{$\Elim{\lor}$}{x_1,x_2}
+  \TrinaryInfC{$!C_i$}
+  \DisplayProof
+\end{multline*}
+$\delta$, $\delta_1$, $\delta_2$ ஆகியவற்றின்
+நிறுவல் சொற்கள் முறையே $M$, $N_1$, $N_2$ என்றால்,
+நிறுவல் சொற்களுக்கான, அதாவது $\lambd$-சொற்களுக்கான,
+தொடர்புடைய குறைத்தல் விதி:
+\[
+  \proj{i}{\dcase{M}{x_1}{N_1}{x_2}{N_2}} \redone
+  \dcase{M}{x_1}{\proj{i}{N_1}}{x_2}{\proj{i}{N_2}}
+\]
+
+% SEGMENT OLP-0691-S06
+சுற்றுவழிகள் !!{proof}s இன் முடிவில் மட்டுமல்ல;
+சுற்றுவழியில் முடியும் துணை-!!{proof} ஒன்றுக்குக் குறைப்பு
+உருமாற்றத்தைப் பயன்படுத்தி, அத்தகைய !!{proof}s இன் உள்ளேயும்
+அவற்றை அகற்றலாம். அதேபோல், $\lambd$-சொற்களின்
+உட்சொற்களுக்கும் $\beta$-குறைத்தல் பொருந்தும்.
+$N$ என்பது $M$ இன் ஓர் உட்சொல்லாகவும்
+$N \redone N'$ ஆகவும் இருந்தால், $M$ இல் அந்த
+உட்சொல்~$N$ ஐ~$N'$ ஆல் மாற்றி $M'$ ஐப் பெறலாம்.
+அப்போதும் $M \redone M'$ என எழுதுகிறோம்.
+$M = M_1 \redone M_2 \redone M_3 \redone \dots
+\redone M_k = M'$ என்ற படித் தொடர் இருந்தால்,
+$k=1$ என்ற பூச்சியப் படித் தொடரையும் ($M=M'$)
+உள்ளடக்கி, $M \red M'$ என எழுதுகிறோம்.
+
+எந்தத் துணை-!!{proof} க்கும் உருமாற்றம் பயன்படுத்த
+முடியாத !!{proof} \emph{இயல்பு வடிவ நிறுவல்} எனப்படும்.
+அதேபோல், எந்த உட்சொல்லிலும் உருமாற்றம் பயன்படுத்த
+முடியாத $\lambd$-சொல் \emph{இயல்பானது} எனப்படும்.
+இத்தகைய $\lambd$-சொல்லை \emph{இயல்புவடிவம்}
+என்றும் அழைப்பார்கள்.
+
+\end{document}

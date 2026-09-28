@@ -1,0 +1,123 @@
+{
+  "batch_id": "TA-B330",
+  "units": [
+    {
+      "unit_id": "OLP-0670",
+      "source_sha256": "c47d1aa05da27e96ff4459611148ca86943441176ce46a67427c3aa59bf38276",
+      "translation_sha256": "093eada6979d9c388a466d694fbd122e2be9220919dd8968ceafa5caacfa2852",
+      "source_bytes": 8437,
+      "translation_bytes": 16400,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\pi_1$",
+        "$\\pi_1$",
+        "$\\pi_1$",
+        "$\\pi_1$",
+        "$\\pi_1$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\Gamma\\fCenter\\Delta$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!A,\\Gamma\\fCenter\\Delta$\\DisplayProof\\]",
+        "\\[\\Axiom$x:!A\\lif!B\\fCenter!A\\lif!B$\\AxiomC{}\\RightLabel{$\\delta_1$}\\Deduce$\\Gamma_1'\\fCenter!A$\\RightLabel{\\Elim{\\lif}}\\BinaryInf$x:!A\\lif!B\\fCenter!B$\\DisplayProof\\]",
+        "$\\Gamma_2'\\Sequent!A$",
+        "$\\pi_2$"
+      ],
+      "extra_math": [
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!A,\\Gamma\\fCenter\\Delta$\\DisplayProof\\]",
+        "$\\delta_1$",
+        "\\[\\Axiom$x:!A\\lif!B\\fCenter!A\\lif!B$\\AxiomC{}\\RightLabel{$\\delta_1$}\\Deduce$\\Gamma_1'\\fCenter!A$\\RightLabel{\\Elim{\\lif}}\\BinaryInf$x:!A\\lif!B,\\Gamma_1'\\fCenter!B$\\DisplayProof\\]",
+        "$\\Gamma_2'\\Sequent!B$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0670",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\pi",
+            "\\pi",
+            "\\pi",
+            "\\pi",
+            "\\pi",
+            "\\pi",
+            "\\RightR"
+          ],
+          "expected_extra_commands": [
+            "\\Gamma",
+            "\\Cut",
+            "\\delta",
+            "\\LeftR"
+          ],
+          "audit_id": "TA-PT-027",
+          "kind": "G2i-to-N2i-source-consistency-repairs",
+          "action": "Correct G2ci, left-weakening, N2-subproof references, implication-introduction direction, the omitted implication-elimination context, the second conjunction premise, and the reversed left-conjunction sentence; flag absent rule cases.",
+          "expected_missing_math": [
+            "$\\pi_1$",
+            "$\\pi_1$",
+            "$\\pi_1$",
+            "$\\pi_1$",
+            "$\\pi_1$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\Gamma\\fCenter\\Delta$\\RightLabel{\\RightR{\\Weakening}}\\UnaryInf$!A,\\Gamma\\fCenter\\Delta$\\DisplayProof\\]",
+            "\\[\\Axiom$x:!A\\lif!B\\fCenter!A\\lif!B$\\AxiomC{}\\RightLabel{$\\delta_1$}\\Deduce$\\Gamma_1'\\fCenter!A$\\RightLabel{\\Elim{\\lif}}\\BinaryInf$x:!A\\lif!B\\fCenter!B$\\DisplayProof\\]",
+            "$\\Gamma_2'\\Sequent!A$",
+            "$\\pi_2$"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Weakening}}\\UnaryInf$!A,\\Gamma\\fCenter\\Delta$\\DisplayProof\\]",
+            "$\\delta_1$",
+            "\\[\\Axiom$x:!A\\lif!B\\fCenter!A\\lif!B$\\AxiomC{}\\RightLabel{$\\delta_1$}\\Deduce$\\Gamma_1'\\fCenter!A$\\RightLabel{\\Elim{\\lif}}\\BinaryInf$x:!A\\lif!B,\\Gamma_1'\\fCenter!B$\\DisplayProof\\]",
+            "$\\Gamma_2'\\Sequent!B$"
+          ],
+          "source_issue_or_choice": "The frozen induction has inconsistent system, rule and subproof names, an incomplete auxiliary sequent, and unshown G2i rule cases.",
+          "chosen_treatment": "Keep the theorem, cases and protected identifiers while making localized repairs in OLP-0670-source-audit.md and adding a Tamil note on omitted cases.",
+          "alternatives_considered": "Retain contradictory names and an incomplete displayed context; invent unprovided rule cases.",
+          "rationale": "The theorem's G2i plus Cut premise, N2 rule table, proof trees and context propagation determine the local repairs. The frozen source does not supply the remaining cases.",
+          "precise_review_question": "Do the repaired proof trees and subproof references match G2i-to-N2i, with the source gap visible?",
+          "location_needle": "\\BinaryInf$x: !A \\lif !B, \\Gamma_1' \\fCenter !B$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\pi",
+        "\\pi",
+        "\\pi",
+        "\\pi",
+        "\\pi",
+        "\\pi",
+        "\\RightR"
+      ],
+      "extra_commands": [
+        "\\Gamma",
+        "\\Cut",
+        "\\delta",
+        "\\LeftR"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

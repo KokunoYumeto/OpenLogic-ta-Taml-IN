@@ -1,0 +1,184 @@
+% SEGMENT OLP-0669-S01
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: sequents
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{seq}
+
+\olsection{தொடரணிகளுடன் இயல்பான வருவித்தல்: \Log{N2c}
+மற்றும்~\Log{N2i}}
+
+\Log{N1c} அல்லது \Log{N1i} இல் உள்ள !!^a{proof}~$\delta$,
+தனது திறந்த எடுகோள்களிலிருந்து இறுதி-!!{formula}~$!A$
+பின்தொடர்வதைக் காட்டுகிறது. $\delta$ இல் $!B^x$ திறந்த
+எடுகோளாக வரும் எல்லா !!{formula}s~$!B$ இன் கணம்~$\Gamma$
+எனில், இதை $\delta \Proves \Gamma \Sequent !A$ என்று
+எழுதலாம். தொடரணிகளுக்கும் இயல்பான வருவித்தல் முறைமை
+அமைக்கலாம் என்பதை இது உணர்த்துகிறது. அத்தகைய முறைமையில்
+ஒவ்வொரு தொடரணியும் வலப்புற !!{formula} எந்தத் திறந்த
+எடுகோள்களைச் சார்ந்திருக்கிறது என்ற தகவலைக் கொண்டிருக்கும்;
+அதாவது அந்தத் தொடரணியில் முடியும் உள்-!!{proof} இல் எவை
+திறந்துள்ளன என்பதைத் தெரிவிக்கும். இதுவே தொடரணிகளுடன்
+இயல்பான வருவித்தல், அல்லது ``தொடரணிப் பாணி'' இயல்பான
+வருவித்தல். கிடைக்கும் முறைமைகளை \Log{N2c} மற்றும்~\Log{N2i}
+என அழைப்போம்.
+
+% SEGMENT OLP-0669-S02
+\Log{N1}, \Log{N2} இடையிலான தொடர்பை மேலும் நெருக்கமாக்க,
+இடப்புறக் கணங்கள்~$\Gamma$ ஐ $x:!B$ என்ற அடையாளமிட்ட
+!!{formula}s கொண்டு அமைப்போம். \Log{N1} விதிகள்
+முன்கோள்களிலுள்ள !!{formula}s மீதே, அதாவது உடனடி
+உள்-!!{proof}s இன் இறுதி-!!{formula}s மீதே செயல்படுவதால்,
+\Log{N2} விதிகள் தொடரணியின் வலப்புற முடிவின்மீதே
+செயல்படுகின்றன. எனவே தொடரணிகளின் இடப்புற அடையாளமிட்ட
+வாய்ப்பாடுகளைச் சூழல் என்று அழைக்கலாம்.
+
+எடுகோள்களுக்குப் பதிலாக, \Log{N2} நிறுவல்களின் மிக
+மேலுள்ள தொடரணிகள் பின்வரும் வடிவ அடிகோள்களாக இருக்கும்:
+\[x:!A \Sequent !A.\]
+விதிகள் \Log{N1} விதிகளுடன் துல்லியமாகப் பொருந்துகின்றன;
+அவை \olref{tab:N2} இல் தரப்பட்டுள்ளன.
+
+\subfile{rules-N2}
+
+% SEGMENT OLP-0669-S03
+\Log{N1c}, \Log{N1i} இல் செய்வதுபோலவே, \Intro{\lif},
+\Intro{\lnot}, \Elim{\lor}, \Elim{\lexists} விதிகள்
+எடுகோள்களை விடுவிக்கலாம்; ஆனால் அவசியம் விடுவிக்க
+வேண்டியதில்லை. ஆகவே \Log{N2c}, \Log{N2i} இல் இவற்றுக்கு
+ஒத்த விதிகளின் சரியான பயன்பாடுகளை, உரிய முன்கோளின்
+சூழலில் $!A$, $!B$, $!A(a)$ என்ற !!{formula}s
+இல்லாதபோதும் அனுமதிக்கிறோம்.
+
+% SEGMENT OLP-0669-S04
+\begin{prop}
+$\delta$ என்பது \Log{N1c} அல்லது \Log{N1i} இல்~$!A$
+இன் !!a{proof} எனில், அதற்கொத்த \Log{N2c} (\Log{N2i}) இல்
+$\Gamma \Sequent !A$ இன் !!a{proof}~$\delta'$ உள்ளது.
+இங்கு~$\Gamma$ என்பது $!B^x$, $\delta$ இன் திறந்த
+எடுகோளாக இருக்கும் எல்லா~$x:!B$ களின் கணம்.
+\end{prop}
+
+\begin{proof}
+  $n=\pheight{\delta}$ மீது தொகுத்தறிவோம். $n=0$ எனில்,
+  $\delta$ என்பது திறந்த எடுகோள்~$!A^x$ ஒன்றே. அப்போது
+  $\Gamma = \{x:!A\}$; $\Gamma \Sequent !A$ என்பது
+  \Log{N2c} அல்லது~\Log{N2i} இன் அடிகோள்.
+
+% SEGMENT OLP-0669-S05
+  $n>0$ எனில், $\delta$ இன் இறுதி அனுமானத்துக்கேற்ப
+  நேர்வுகளை வேறுபடுத்துவோம். ஒரு நேர்வை மட்டும் விவாதித்து,
+  மற்றவற்றைப் பயிற்சிகளாக விட்டுவிடுகிறோம்.
+
+  இறுதி அனுமானம் $\Intro{\lif}$ எனக் கொள்வோம். அப்போது
+  $\delta$ பின்வருமாறு முடியும்:
+  \[
+  \AxiomC{$\Discharge{!B}{x}$}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!C$}
+  \DischargeRule{\Intro{\lif}}{x}
+  \UnaryInfC{$!B \lif !C$}
+  \DisplayProof
+  \]
+  தொகுத்தறிதல் கருதுகோளால், \Log{N2c} (\Log{N2i}) இல்
+  $\Gamma' \Sequent !C$ இன் !!a{proof}~$\delta_1'$ உள்ளது;
+  இங்கு $\Gamma'$ என்பது $\delta_1$ இல் திறந்துள்ள
+  அடையாளமிட்ட எடுகோள்களின் கணம். $!B^x$ ஆனது
+  $\delta_1$ இன் திறந்த எடுகோள் எனில், \Intro{\lif}
+  அனுமானத்தில் அது விடுவிக்கப்படும். ஆகவே $\delta$ இன்
+  திறந்த எடுகோள்கள் $\Gamma = \Gamma' \setminus \{x:!B\}$.
+  வேறு சொற்களில், $\delta_1'$ என்பது~$x:!B, \Gamma \Sequent !C$
+  இன் !!a{proof}; எனவே $\delta'$ ஐப் பின்வருமாறு
+  எடுத்துக்கொள்ளலாம்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\delta_1'$}
+  \Deduce$x:!B, \Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+% SEGMENT OLP-0669-S06
+  $!B^x$ ஆனது $\delta_1$ இன் திறந்த எடுகோள் இல்லையெனில்,
+  \Intro{\lif} எந்த எடுகோளையும் விடுவிக்காது; $\delta$,
+  $\delta_1$ ஆகியவற்றின் திறந்த எடுகோள்கள் ஒன்றே.
+  \Log{N2c}, \Log{N2i} இல் \Intro{\lif} இன் முன்கோள்
+  சூழலில் $x:!B$ கட்டாயம் இருக்க வேண்டியதில்லை. எனவே
+  $\delta'$ ஐப் பின்வருமாறு எடுத்துக்கொள்ளலாம்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\delta_1'$}
+  \Deduce$\Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+
+  $\delta$ வேறொரு விதியில் முடியும் நேர்வுகளும் இதேபோன்றவை.
+\end{proof}
+
+% SEGMENT OLP-0669-S07
+\begin{prop}
+$\delta$ என்பது \Log{N2c} அல்லது \Log{N2i} இல்
+$\Gamma \Sequent !A$ இன் !!a{proof} எனில்,
+அதற்கொத்த \Log{N1c} (\Log{N1i}) இல் இறுதி-!!{formula}~$!A$
+உடைய !!a{proof}~$\delta'$ உள்ளது; $x:!B \in \Gamma$
+ஒவ்வொன்றுக்கும் $!B^x$ அதன் திறந்த எடுகோள்.
+\end{prop}
+
+\begin{proof}
+  மீண்டும் $\delta$ இன் !!{height}~$n$ மீது தொகுத்தறிவோம்.
+  $n=0$ எனில், $\delta$ என்பது $x:!A \Sequent !A$
+  என்ற அடிகோள். !!{proof}~$\delta'$ என்பது எடுகோள்~$!A^x$.
+
+% SEGMENT OLP-0669-S08
+  $n>0$ எனில், $\delta$ இன் இறுதி அனுமானத்துக்கேற்ப
+  நேர்வுகளை வேறுபடுத்துவோம். எடுத்துக்காட்டாக, அது
+  $\Intro{\lif}$ எனில், $\delta$ பின்வருமாறு முடியும்:
+  \[
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$x:!B, \Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \quad\text{ அல்லது }\quad
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$\Gamma \fCenter !C$
+  \RightLabel{\Intro{\lif}}
+  \UnaryInf$\Gamma \fCenter !B \lif !C$
+  \DisplayProof
+  \]
+  தொகுத்தறிதல் கருதுகோளால், \Log{N1c} (\Log{N1i}) இல்
+  $!C$ இன் !!a{proof}~$\delta_1'$ உள்ளது. முதல் நேர்வில்
+  $!B^x$ அதன் திறந்த எடுகோள்; இரண்டாவதில் அப்படி இல்லை.
+  எனவே முழு !!{proof}~$\delta'$ ஐப் பின்வருமாறு
+  எடுத்துக்கொள்ளலாம்:
+  \[
+  \bottomAlignProof
+  \AxiomC{$\Discharge{!B}{x}$}
+  \RightLabel{$\delta_1'$}
+  \DeduceC{$!C$}
+  \DischargeRule{\Intro{\lif}}{x}
+  \UnaryInfC{$!B \lif !C$}
+  \DisplayProof
+  \quad\text{ அல்லது }\quad
+  \bottomAlignProof
+  \AxiomC{}
+  \RightLabel{$\delta_1'$}
+  \DeduceC{$!C$}
+  \RightLabel{\Intro{\lif}}
+  \UnaryInfC{$!B \lif !C$}
+  \DisplayProof
+  \]
+  முறையே.
+\end{proof}
+
+\end{document}

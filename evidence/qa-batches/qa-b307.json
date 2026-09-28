@@ -1,0 +1,78 @@
+{
+  "batch_id": "TA-B307",
+  "units": [
+    {
+      "unit_id": "OLP-0647",
+      "source_sha256": "95d02f4982ae3ce8a01422b06515b4a37aeaedfac49e2f883dcad351def072d0",
+      "translation_sha256": "683a5b0e79cebf557b1117c44cf1465fb45b66c9fbf2afe503721fca666d444d",
+      "source_bytes": 7585,
+      "translation_bytes": 18390,
+      "source_coverage_complete": true,
+      "segments": 10,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{multline*}\\lexists[z_0\\dots][\\lexists[z_{k-1}][(!A_{g_0}(x_0,\\dots,x_{l-1},z_0)\\land\\dots\\land!A_{g_{k-1}}(x_0,\\dots,x_{l-1},z_{k-1})\\land]]\\\\!A_f(z_0,\\dots,z_{k-1},y)).\\end{multline*}"
+      ],
+      "extra_math": [
+        "\\begin{multline*}\\lexists[z_0\\dots][\\lexists[z_{k-1}][(!A_{g_0}(x_0,\\dots,x_{l-1},z_0)\\land\\dots\\land!A_{g_{k-1}}(x_0,\\dots,x_{l-1},z_{k-1})\\land\\\\!A_f(z_0,\\dots,z_{k-1},y))]]\\end{multline*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "eqnarray",
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-INC-041",
+          "unit_id": "OLP-0647",
+          "kind": "composition-representation-scoping-and-bracketing",
+          "action": "Moved the final representing conjunct inside the existential matrix and balanced both quantifier bodies.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\land]]\\\\!A_f(z_0,\\dots,z_{k-1},y)).",
+              "to": "\\land\\\\!A_f(z_0,\\dots,z_{k-1},y))]]",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The frozen displayed formula closes both existential brackets immediately after a trailing conjunction, leaving the final A_f conjunct outside their scope and with unmatched closing punctuation.",
+          "chosen_treatment": "இருத்தல் அளவையடைகளின் உட்பகுதிக்குள் எல்லா g_i வாய்பாடுகளையும் இறுதி f வாய்பாட்டையும் இணைத்து, அடைப்புகளைச் சமநிலைப்படுத்துகிறது.",
+          "alternatives_considered": "Keep the frozen brackets and leave a syntactically broken formula that cannot represent composition.",
+          "rationale": "Representing h requires one simultaneous witness tuple z_0 through z_{k-1} satisfying every g_i graph formula and the f graph formula; all conjuncts must be inside the existential scope.",
+          "precise_review_question": "Does the repaired matrix quantify every intermediate value and conjoin exactly the g_i and f representation formulas?",
+          "location_needle": "SOURCE CORRECTION TA-INC-041"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

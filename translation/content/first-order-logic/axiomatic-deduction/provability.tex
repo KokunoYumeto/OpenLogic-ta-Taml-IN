@@ -1,0 +1,353 @@
+% SEGMENT OLP-0643-S01
+% Part: first-order-logic
+% Chapter: axiomatic-deduction
+% Section: provability
+
+% நிறைவுத் தேற்றத்தில் மிகும முரணற்ற கணங்களுக்குத் தேவைப்படும் பண்புகள்.
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{prv}}
+      {\olfileid{pl}{axd}{prv}}
+
+\olsection{\usetoken{S}{derivability} இன் பண்புகள்}
+
+\begin{prop}[ஒருபோக்குத்தன்மை] $\Gamma \subseteq \Delta$ மற்றும்
+$\Gamma \Proves !A$ எனில், $\Delta \Proves !A$ உம் ஆகும்.
+\end{prop}
+
+\begin{proof} $\Gamma$ இன் எந்த முடிவுறு உட்கணம்~$\Gamma_0$ உம்
+$\Delta$ இன் முடிவுறு உட்கணமாகும். ஆகவே $\Gamma_0 \Proves !A$ என்பதற்கான
+!!a{derivation}, $\Delta \Proves !A$ என்பதையும் காட்டுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0643-S02
+\begin{prop}\ollabel{prop:provability} $\Gamma \Proves !A$ என்பது,
+$\Gamma\cup \{\lnot!A \}$ முரணுடையதாக இருந்தால், அப்போதும் அப்போது
+மட்டுமே ஆகும். \end{prop}
+
+\begin{prop} \begin{enumerate}
+\item \ollabel{prop:provability-contr} $\Gamma \Proves !A$ மற்றும்
+$\Gamma \cup \{ !A\} \Proves \lfalse$ எனில், $\Gamma$ முரணுடையது.
+
+\item \ollabel{prop:provability-lnot} $\Gamma \cup \{!A\}
+\Proves \lfalse$ எனில், $\Gamma \Proves \lnot !A$.
+
+\item \ollabel{prop:provability-exhaustive} $\Gamma \cup \{!A\}
+\Proves \lfalse$ மற்றும் $\Gamma \cup \{\lnot !A\} \Proves
+\lfalse$ எனில், $\Gamma \Proves \lfalse$.
+
+\tagitem{prvOr}{\ollabel{prop:provability-lor-left} $\Gamma \cup \{!A\}
+\Proves \lfalse$ மற்றும் $\Gamma \cup \{!B\} \Proves
+\lfalse$ எனில், $\Gamma \cup \{!A \lor !B\} \Proves \lfalse$.}{}
+
+\tagitem{prvOr}{\ollabel{prop:provability-lor-right} $\Gamma
+\Proves !A$ அல்லது $\Gamma \Proves !B$ எனில், $\Gamma
+\Proves !A \lor !B$.}{}
+
+\tagitem{prvAnd}{\ollabel{prop:provability-land-left} $\Gamma
+\Proves !A \land !B$ எனில், $\Gamma \Proves !A$ மற்றும்
+$\Gamma \Proves !B$ ஆகிய இரண்டும் கிடைக்கும்.}{}
+
+\tagitem{prvAnd}{\ollabel{prop:provability-land-right} $\Gamma
+\Proves !A$ மற்றும் $\Gamma \Proves !B$ எனில், $\Gamma
+\Proves !A \land !B$.}{}
+
+\tagitem{prvIf}{\ollabel{prop:provability-mp} $\Gamma \Proves
+!A$ மற்றும் $\Gamma \Proves !A \lif !B$ எனில், $\Gamma
+\Proves !B$.}{}
+
+\tagitem{prvIf}{\ollabel{prop:provability-lif} $\Gamma \Proves
+\lnot !A$ அல்லது $\Gamma \Proves !B$ எனில், $\Gamma \Proves
+!A \lif !B$.}{} \end{enumerate} \end{prop}
+
+% SEGMENT OLP-0643-S03
+\begin{proof}
+\begin{enumerate}
+\item $\Gamma_0 \cup \{!A\} \Proves \lfalse$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \cup \{!A\} \Proves \lfalse$ & கருதுகோள் \\
+2. & $\Gamma_1 \Proves !A$ & கருதுகோள் \\
+3. & $\Gamma_0 \cup \Gamma_1 \Proves \lfalse$ & வெட்டு \\
+\end{derivation}
+
+$\Gamma_0 \subseteq \Gamma$ மற்றும் $\Gamma_1 \subseteq \Gamma$ என்பதால்,
+$\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$. எனவே $\Gamma \Proves \lfalse$.
+
+% SOURCE CORRECTION TA-FOL-PRV-001: the frozen derivation proves the
+% opposite-direction proposition, rather than this negation conclusion.
+\item $\Gamma_0 \cup\{!A\} \Proves \lfalse$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \cup\{!A\} \Proves \lfalse$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !A \lif \lfalse$ & கழித்தல் தேற்றம் \\
+3. & $\Gamma_0 \Proves (!A \lif \lfalse) \lif \lnot !A$ & Ax0 \\
+4. & $\Gamma_0 \Proves \lnot !A$ & MP 2, 3 \\
+\end{derivation}
+
+\item $\Gamma \cup \{ !A \} \Proves \lfalse$ மற்றும்
+$\Gamma_1 \cup \{\lnot !A \} \Proves \lfalse$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \cup\{!A\} \Proves \lfalse$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !A \lif \lfalse$ & கழித்தல் தேற்றம் \\
+3. & $\Gamma_1 \cup \{\lnot !A \} \Proves \lfalse$ & கருதுகோள் \\
+4. & $\Gamma_0 \Proves (!A \lif \lfalse) \lif \lnot !A$ & Ax0 \\
+5. & $\Gamma_0 \Proves \lnot !A$ & MP 2, 4 \\
+6. & $\Gamma_0 \cup \Gamma_1 \Proves \lfalse$ & வெட்டு 3, 5 \\
+\end{derivation}
+
+$\Gamma_0 \subseteq \Gamma$ மற்றும் $\Gamma_1 \subseteq \Gamma$ என்பதால்,
+$\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$. எனவே $\Gamma \Proves \lfalse$.
+
+% SEGMENT OLP-0643-S04
+% prop:provability-lor-left
+\tagitem{defOr}{}{\iftag{probOr}{பயிற்சி.}{பயிற்சி.}}
+
+% prop:provability-lor-right
+\tagitem{defOr}{}{\iftag{probOr}{பயிற்சி.}{
+$\Gamma_0 \Proves !A$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves !A$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !A \lif (!A \lor !B)$ & Ax0 \\
+3. & $\Gamma_0 \Proves !A \lor !B$ & MP 1, 2 \\
+\end{derivation}
+
+எனவே $\Gamma \Proves !A \lor !B$. $\Gamma \Proves !B$ என்ற
+நிலைக்கான நிறுவலும் இதேபோன்றது.}}
+
+% prop:provability-land-left
+\tagitem{defAnd}{}{\iftag{probAnd}{பயிற்சி.}{
+$\Gamma_0 \Proves !A \land !B$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves !A \land !B$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves (!A\land !B) \lif !A $ & Ax0 \\
+% SOURCE CORRECTION TA-FOL-PRV-002: MP yields A, not A-or-B.
+3. & $\Gamma_0 \Proves !A$ & MP 1, 2 \\
+\end{derivation}
+
+ஆகவே $\Gamma \Proves !A$. இதேபோன்ற மற்றொரு !!{derivation} மூலம்
+$\Gamma \Proves !B$ என்பதையும் காட்டலாம்.}}
+
+% prop:provability-land-right
+\tagitem{defAnd}{}{\iftag{probAnd}{பயிற்சி.}{பயிற்சி.}}
+
+% prop:provability-mp
+\tagitem{defIf}{}{\iftag{probIf}{பயிற்சி.}{
+இரு வருவித்தல்களிலும் பயன்படும் முடிவுறு கருதுகோள்களை ஒன்றிணைத்து,
+அவற்றுக்கு ஒரு பொதுவான முடிவுறு துணைக்கணத்தை எடுத்துக்கொள்ளலாம்.
+$\Gamma_0 \Proves !A$ மற்றும் $\Gamma_0 \Proves !A \lif !B $
+ஆகிய இரண்டையும் கருதுவோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves !A$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !A \lif !B $ & கருதுகோள் \\
+3. & $\Gamma_0 \Proves !B$ & MP 1, 2 \\
+\end{derivation}
+
+% SOURCE CORRECTION TA-FOL-PRV-003: Gamma_1 is absent from this proof.
+$\Gamma_0 \subseteq \Gamma$ என்பதால், $\Gamma \Proves !B$.}}
+
+% prop:provability-lif
+\tagitem{defIf}{}{\iftag{probIf}{பயிற்சி.}{
+முதலில் $\Gamma \Proves \lnot !A$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves \lnot !A$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves \lnot !A \lif (!A \lif !B) $ & Ax0 \\
+3. & $\Gamma_0 \Proves !A \lif !B$ & MP 1, 2 \\
+\end{derivation}
+
+$\Gamma \Proves !B$ என்பதற்கான நிறுவலும் இதேபோன்றது:
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves !B$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !B \lif (!A \lif !B) $ & Ax0 \\
+3. & $\Gamma_0 \Proves !A \lif !B$ & MP 1, 2 \\
+\end{derivation}}}
+
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0643-S05
+\begin{probtag}{probOr,probAnd,probIf} \olref[fol][axd][prv]{prop:provability}
+இன் நிறுவலை நிறைவு செய்க.
+\end{probtag}
+
+% SEGMENT OLP-0643-S06
+\begin{thm}[பொதுமைப்படுத்தல்] \ollabel{thm:Generalization}
+$\Gamma \Proves !A$ என்றும், $\Gamma$ இல் உள்ள எந்த !!{formula} விலும்
+$x$ கட்டற்றதாக இல்லை என்றும் வைத்துக்கொண்டால், $\Gamma
+\Proves \lforall[x][!A]$.
+\end{thm}
+
+\begin{proof} $\mathsf{Thm}_\Gamma$ மீது தொகுத்தறிதல் செய்வோம். $!A$
+ஓர் அடிகோள் எனில், $\lforall[x][!A]$ உம் ஓர் அடிகோள். $!A\in \Gamma$
+எனில், $!A$ இல் $x$ கட்டற்றதாக இல்லை. ஆகவே $!A \lif
+\lforall[x][!A]$ ஓர் அடிகோள் (\textbf{Ax3}); மோடஸ் போனென்ஸால்
+$\Gamma \Proves \lforall[x][!A]$. இப்போது $\Gamma \Proves !B$ மற்றும்
+$\Gamma \Proves !B \lif !A$ என்பவற்றிலிருந்து மோடஸ் போனென்ஸால் $!A$
+கிடைக்கிறது என்க. தொகுத்தறிதல் கருதுகோளின்படி $\Gamma \Proves
+\lforall[x][!B]$ மற்றும் $\Gamma \Proves \lforall[x][( !B \lif
+!A)]$. மேலும் \textbf{Ax2} இன்படி
+\[ \Gamma \Proves
+\lforall[x][( !B \lif !A)] \lif (\lforall[x][ !B] \lif \lforall[x][!A]), \]
+எனவே மோடஸ் போனென்ஸை இருமுறை பயன்படுத்தினால், தேவையானபடி
+$\Gamma \Proves \lforall[x][!A]$ கிடைக்கும்.
+\end{proof}
+
+% SEGMENT OLP-0643-S07
+\begin{thm}\ollabel{thm:WeakGen} (\emph{மாறிலிக் குறிகள் குறித்த பலவீனமான
+பொதுமைப்படுத்தல்})
+$\Gamma \Proves !A$ என்றும், $c$ என்பது $\Gamma$ இல் தோன்றாத
+!!a{constant} என்றும் வைத்துக்கொள்வோம். அப்போது $!A$ இல் தோன்றாத
+ஒரு மாறி~$x$ உண்டு; அதற்கு $\Gamma \Proves
+\lforall[x][\Subst{!A}{x}{c}]$. மேலும் இந்த நிறுவலில் $c$ இடம்பெறாது.
+\end{thm}
+
+\begin{proof} $!A_1,\ldots,!A_n$ என்பது $\Gamma$ இலிருந்து $!A$ க்கான
+நிறுவல் என்றும் $!A=!A_n$ என்றும் கொள்வோம். $!A_1,\ldots,!A_n$ இல்
+தோன்றாத மாறி~$x$ ஐத் தேர்ந்தெடுத்து, புதிய வரிசையைக் கருதுவோம்:
+$\Subst{!A_1}{x}{c},\ldots,\Subst{!A_n}{x}{c}.$
+இந்த வரிசை $\Gamma$ இலிருந்து $\Subst{!A}{x}{c}$ க்கான நிறுவல்.
+உண்மையில், ஒவ்வொரு $i=1,\ldots,n$ க்கும்:
+\begin{itemize}
+% SOURCE CORRECTION TA-FOL-PRV-004: the axiom case concerns A_i.
+\item $!A_i$ ஓர் அடிகோள் எனில், $\Subst{!A_i}{x}{c}$ உம் அடிகோளே;
+\item $!A_i \in \Gamma$ எனில், $c$ ஆனது $\Gamma$ இல் இல்லாததால்,
+$\Subst{!A_i}{x}{c} = !A_i \in \Gamma$;
+\item $!A_j$ மற்றும் $!A_j \lif !A_i$ ஆகியவற்றிலிருந்து $!A_i$
+பெறப்பட்டிருந்தால், $\Subst{!A_j}{x}{c}$ மற்றும்
+$\Subst{(!A_j \lif !A_i)}{x}{c}
+= \Subst{!A_j}{x}{c} \lif \Subst{!A_i}{x}{c}$ ஆகியவற்றிலிருந்து
+மோடஸ் போனென்ஸால் $\Subst{!A_i}{x}{c}$ கிடைக்கும்.
+\end{itemize}
+புதிய வரிசையில் !!{constant}~$c$ இனி தோன்றாது. இப்போது
+$\Subst{!A}{x}{c}$ இன் !!{derivation} இல் இடம்பெறும் $\Gamma$ வின்
+!!{formula}s அனைத்தையும் கொண்டது $\Gamma'$ என்க. அப்போது $\Gamma'$ இன்
+எந்த !!{formula} விலும் $x$ கட்டற்றதாக இல்லை; மேலும் $\Gamma'
+\Proves \Subst{!A}{x}{c}$. பொதுமைப்படுத்தலின்படி
+(\olref{thm:Generalization}), $\Gamma'
+\Proves \lforall[x][\Subst{!A}{x}{c}]$; ஒருபோக்குத்தன்மையால்
+தேவையானபடி $\Gamma \Proves \lforall[x][\Subst{!A}{x}{c}]$.
+\end{proof}
+
+% SEGMENT OLP-0643-S08
+\begin{explain}
+\olref{thm:WeakGen} இல் $x$ ஆனது $!A$ இல் எங்குமே தோன்றக் கூடாது
+என்ற நிபந்தனை உள்ளது. அதற்குப் பதிலாக, $x$ ஆனது $!A$ இல் கட்டற்றதாக
+இருக்கக் கூடாது என்றும், $!A$ இல் $c$ க்காக !!{free for} ஆக இருக்க
+வேண்டும் என்றும் கூறும் மெலிந்த நிபந்தனைகளைப் பெறுவதே நமது நோக்கம்.
+கட்டுண்ட !!{variable} யை மாற்றுவதன் மூலம் இதைச் செய்யலாம்; அதை முதலில்
+நிறுவுவோம்.
+\end{explain}
+
+% SEGMENT OLP-0643-S09
+\begin{lem}
+\ollabel{lem:free-for}
+$!A$ இல் $c$ க்காக $x$ இடைநிறுத்தத்தக்கதாகவும், $!A$ இல் $y$
+கட்டற்றதாக இல்லாமலும் இருந்தால், $\Subst{!A}{y}{c}$ இல் $y$ க்காக $x$
+!!{free for} ஆகும்.
+\end{lem}
+
+\begin{proof}
+% SOURCE CORRECTION TA-FOL-PRV-005: test the same substituted formula
+% as in the lemma statement and the following sentence.
+$\Subst{!A}{y}{c}$ இல் $y$ க்காக $x$ !!{free for} ஆகவில்லை என்க.
+அப்போது $\Subst{!A}{y}{c}$ இல் கட்டற்றதாகத் தோன்றும் $y$ வின் ஓர்
+இடம், $\lforall[x]$ என்ற அளவையடையின் ஆளுகைக்குள் இருக்கும். ஆனால்
+கருதுகோளின்படி $!A$ இல் $y$ கட்டற்றதாக இல்லை. எனவே அவ்விடங்கள் அனைத்தும்
+$\Subst{}{y}{c}$ என்ற இடைநிறுத்தலிலிருந்து வந்தவை. ஆகவே $c$ இன் ஓர்
+இடம் $\lforall[x]$ இன் ஆளுகைக்குள் உள்ளது; அதனால் $!A$ இல் $c$
+க்காக $x$ !!{free for} ஆகாது.
+\end{proof}
+
+% SEGMENT OLP-0643-S10
+\begin{lem}[கட்டுண்ட மாறியை மாற்றுதல்]
+\ollabel{lem:ChangeBdVar}
+$!A$ இல் $x$, $y$ இரண்டும் கட்டற்றதாக இல்லாமல், இரண்டும் $!A$ இல் $c$
+க்காக !!{free for} ஆக இருந்தால்,
+$\Proves \lforall[x][\Subst{!A}{x}{c}] \equiv
+\lforall[y][\Subst{!A}{y}{c}]$; இந்த நிறுவலில் $c$ இடம்பெறாது.
+\end{lem}
+
+\begin{proof}
+கருதுகோள்களின்படி $!A$ இல் $c$ க்காக $y$ !!{free for} ஆகும்;
+$!A$ இல் $x$ கட்டற்றதாக இல்லை. எனவே முந்தைய
+\olref{lem:free-for} படி, $\Subst{!A}{x}{c}$ இல் $x$ க்காக $y$
+!!{free for} ஆகும். ஆகவே
+$\lforall[x][\Subst{!A}{x}{c} \lif \Subst{!A}{x}{c} \Subst{}{y}{x}]$
+ஓர் அடிகோள் (\textbf{Ax1}). $!A$ இல் $x$ கட்டற்றதாக இல்லாததால்,
+$\Subst{!A}{x}{c} \Subst{}{y}{x} = \Subst{!A}{y}{c}$. எனவே
+\[
+\Proves \lforall[x][\Subst{!A}{x}{c}] \lif \Subst{!A}{y}{c},
+\]
+கழித்தல் தேற்றத்தால் $\lforall[x][\Subst{!A}{x}{c}] \Proves
+\Subst{!A}{y}{c}$. மேலும் $!A$ இல் $y$ கட்டற்றதாக இல்லாததால்,
+$\lforall[x][\Subst{!A}{x}{c}]$ இலும் அது கட்டற்றதாக இல்லை. எனவே
+பொதுமைப்படுத்தலால்
+$\lforall[x][\Subst{!A}{x}{c}] \Proves
+\lforall[y][\Subst{!A}{y}{c}]$; கழித்தல் தேற்றத்தை மீண்டும்
+பயன்படுத்தினால் $\Proves
+\lforall[x][\Subst{!A}{x}{c}] \lif \lforall[y][\Subst{!A}{y}{c}]$.
+$\Proves \lforall[y][\Subst{!A}{y}{c}] \lif \lforall[x]
+[\Subst{!A}{x}{c}]$ என்பதற்கான நிறுவல் இதன் சமச்சீரான வடிவமே.
+ஆகவே தர்க்கமெய்மையால் முடிவு கிடைக்கிறது.
+\end{proof}
+
+% SEGMENT OLP-0643-S11
+\begin{thm}[மாறிலிக் குறிகளின் வலிமையான பொதுமைப்படுத்தல்]
+\ollabel{thm:StrongGen}
+$\Gamma \Proves !A$ என்றும், !!{constant}~$c$ ஆனது $\Gamma$ இல்
+தோன்றாது என்றும், $x$ ஆனது $!A$ இல் கட்டற்றதாக இல்லாமல் $!A$ இல் $c$
+க்காக !!{free for} ஆகும் என்றும் வைத்துக்கொள்வோம். அப்போது
+$\Gamma \Proves \lforall[x][\Subst{!A}{x}{c}]$.
+\end{thm}
+
+\begin{proof}
+$\Gamma \Proves !A$ என்றும் $c$ ஆனது $\Gamma$ இல் இல்லை என்றும்
+கொண்டால், பலவீனமான பொதுமைப்படுத்தலால் $!A$ இல் தோன்றாத
+!!a{variable}~$y$ ஒன்று உண்டு; அதற்கு $\Gamma \Proves
+\lforall[y][\Subst{!A}{y}{c}]$. $!A$ இல் $y$ எங்குமே தோன்றாததால்,
+அது $!A$ இல் கட்டற்றதாகவும் இல்லை; $!A$ இல் $c$ க்காக
+!!{free for} ஆகவும் இருக்கிறது. மேலும், கருதுகோளின்படி $x$ உம்
+$!A$ இல் கட்டற்றதாக இல்லாமல் $!A$ இல் $c$ க்காக !!{free for} ஆகிறது.
+எனவே கட்டுண்ட !!{variable} யை மாற்றுவதற்கான நிபந்தனைகள் நிறைவேறுகின்றன:
+$\Proves \lforall[x][\Subst{!A}{x}{c}] \equiv
+\lforall[y][\Subst{!A}{y}{c}]$. இதிலிருந்து $\Gamma \Proves
+\lforall[x][\Subst{!A}{x}{c}]$ கிடைக்கும்.
+\end{proof}
+
+% SEGMENT OLP-0643-S12
+\begin{thm}
+\ollabel{thm:provability-quantifiers}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$\Gamma \Proves !A(t)$ எனில், $\Gamma \Proves
+  \lexists[x][!A(x)]$.}{}
+\tagitem{prvAll}{$\Gamma \Proves \lforall[x][!A(x)]$ எனில், $\Gamma
+  \Proves !A(t)$.}{}
+\end{tagenumerate}
+\end{thm}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+%% இருப்பளவைக்கான அடிகோள்கள் தேவை
+\tagitem{prvEx}{பயிற்சி.}{}
+\tagitem{prvAll}{ $\Gamma_0 \Proves \lforall[x][!A(x)]$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves \lforall[x][!A(x)]$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves \lforall[x][!A(x)] \lif \Subst{!A}{t}{x}$ & Ax1 \\
+3. & $\Gamma_0 \Proves \Subst{!A}{t}{x}$ & MP 1, 2 \\
+\end{derivation}}{}
+
+\end{tagenumerate}
+\end{proof}
+
+\end{document}

@@ -1,0 +1,249 @@
+\documentclass[11pt,a4paper,openany]{memoir}
+\newcommand{\olpath}{../upstream}
+\usepackage[no-math]{fontspec}
+\ifLuaTeX
+\setmainfont{Nirmala UI}[Script=Tamil,Renderer=HarfBuzz,WordSpace=1.3,ItalicFont={Nirmala UI},ItalicFeatures={FakeSlant=0.15}]
+\setsansfont{Nirmala UI}[Script=Tamil,Renderer=HarfBuzz,WordSpace=1.3]
+\else
+\setmainfont{Nirmala UI}[Script=Tamil,Renderer=OpenType,WordSpace=1.3,ItalicFont={Nirmala UI},ItalicFeatures={FakeSlant=0.15}]
+\setsansfont{Nirmala UI}[Script=Tamil,Renderer=OpenType,WordSpace=1.3]
+\fi
+\setmonofont{Consolas}
+\usepackage{xr-hyper}
+\input{\olpath/sty/open-logic.sty}
+\ifXeTeX
+  \XeTeXlinebreaklocale "ta"
+  \XeTeXlinebreakskip=0pt plus 1pt
+  \XeTeXgenerateactualtext=1
+\fi
+\setlrmarginsandblock{25mm}{25mm}{*}
+\setulmarginsandblock{22mm}{25mm}{*}
+\checkandfixthelayout
+\linespread{1.17}
+\emergencystretch=2em
+\input{../translation/tamil-config.sty}
+\input{../translation/tamil-pdf-math.sty}
+\input{../translation/tamil-reader-rendering.sty}
+\tagtrue{novice,math,compsci,FOL,prvTrue,prvFalse,prvEx,prvAll}
+\addto\captionsenglish{%
+  \renewcommand{\chaptername}{அத்தியாயம்}%
+  \renewcommand{\partname}{பகுதி}%
+  \renewcommand{\appendixname}{இணைப்பு}%
+  \renewcommand{\tablename}{அட்டவணை}%
+}
+\setlocalecaption{english}{photocredits}{படங்களுக்கான நன்றியுரை}
+\setlocalecaption{english}{history}{வரலாற்றுக் குறிப்புகள்}
+\setlocalecaption{english}{reading}{மேலும் படிக்க}
+\setlocalecaption{english}{appendix}{இணைப்பு}
+\setlocalecaption{english}{appendices}{இணைப்புகள்}
+\setlocalecaption{english}{definition}{வரையறை}
+\setlocalecaption{english}{example}{எடுத்துக்காட்டு}
+\setlocalecaption{english}{lemma}{துணைத்தேற்றம்}
+\setlocalecaption{english}{proposition}{கூற்று}
+\setlocalecaption{english}{corollary}{தொடர்விளைவு}
+\setlocalecaption{english}{problem}{பயிற்சி}
+\setlocalecaption{english}{problems}{பயிற்சிகள்}
+\setlocalecaption{english}{theorem}{தேற்றம்}
+\setlocalecaption{english}{remark}{குறிப்பு}
+\setlocalecaption{english}{axiom}{அடிகோள்}
+\setlocalecaption{english}{note}{குறிப்பு}
+\setlocalecaption{english}{case}{நிலை}
+\setlocalecaption{english}{convention}{மரபு}
+\addto\captionsenglish{\renewcommand{\proofname}{நிறுவல்}}
+\addto\captionsenglish{\renewcommand{\figurename}{படம்}}
+\crefname{page}{பக்கம்}{பக்கங்கள்}
+\Crefname{page}{பக்கம்}{பக்கங்கள்}
+\crefname{part}{பகுதி}{பகுதிகள்}
+\Crefname{part}{பகுதி}{பகுதிகள்}
+\crefname{chapter}{அத்தியாயம்}{அத்தியாயங்கள்}
+\Crefname{chapter}{அத்தியாயம்}{அத்தியாயங்கள்}
+\crefname{section}{பிரிவு}{பிரிவுகள்}
+\Crefname{section}{பிரிவு}{பிரிவுகள்}
+\crefname{subsection}{பிரிவு}{பிரிவுகள்}
+\Crefname{subsection}{பிரிவு}{பிரிவுகள்}
+\crefname{figure}{படம்}{படங்கள்}
+\Crefname{figure}{படம்}{படங்கள்}
+\crefname{table}{அட்டவணை}{அட்டவணைகள்}
+\Crefname{table}{அட்டவணை}{அட்டவணைகள்}
+\crefname{equation}{சமன்பாடு}{சமன்பாடுகள்}
+\Crefname{equation}{சமன்பாடு}{சமன்பாடுகள்}
+\crefname{defn}{வரையறை}{வரையறைகள்}
+\Crefname{defn}{வரையறை}{வரையறைகள்}
+\crefname{thm}{தேற்றம்}{தேற்றங்கள்}
+\Crefname{thm}{தேற்றம்}{தேற்றங்கள்}
+\crefname{ex}{எடுத்துக்காட்டு}{எடுத்துக்காட்டுகள்}
+\Crefname{ex}{எடுத்துக்காட்டு}{எடுத்துக்காட்டுகள்}
+\crefname{lem}{துணைத்தேற்றம்}{துணைத்தேற்றங்கள்}
+\Crefname{lem}{துணைத்தேற்றம்}{துணைத்தேற்றங்கள்}
+\crefname{prop}{கூற்று}{கூற்றுகள்}
+\Crefname{prop}{கூற்று}{கூற்றுகள்}
+\crefname{prob}{பயிற்சி}{பயிற்சிகள்}
+\Crefname{prob}{பயிற்சி}{பயிற்சிகள்}
+\crefname{rem}{குறிப்பு}{குறிப்புகள்}
+\Crefname{rem}{குறிப்பு}{குறிப்புகள்}
+\crefname{cor}{தொடர்விளைவு}{தொடர்விளைவுகள்}
+\Crefname{cor}{தொடர்விளைவு}{தொடர்விளைவுகள்}
+\crefname{axiom}{அடிகோள்}{அடிகோள்கள்}
+\Crefname{axiom}{அடிகோள்}{அடிகோள்கள்}
+\crefname{note}{குறிப்பு}{குறிப்புகள்}
+\Crefname{note}{குறிப்பு}{குறிப்புகள்}
+\crefname{case}{நிலை}{நிலைகள்}
+\Crefname{case}{நிலை}{நிலைகள்}
+\crefname{conv}{மரபு}{மரபுகள்}
+\Crefname{conv}{மரபு}{மரபுகள்}
+\AtBeginEnvironment{align*}{\fontsize{9.5}{12}\selectfont}
+\hypersetup{pdftitle={திறந்த தருக்கவியல் — மூல மாற்று வடிவங்கள்},pdfauthor={Open Logic Project; தமிழ் மொழிபெயர்ப்புத் திட்டம்},pdfsubject={உறைந்த OpenLogic மூலத்தின் மாற்று வடிவங்கள்; இயந்திரத் தமிழ் மொழிபெயர்ப்பு}}
+\addto\captionsenglish{\renewcommand{\contentsname}{பொருளடக்கம்}\renewcommand{\bibname}{மேற்கோள் நூல்}}
+\tagtrue{prfSC,prfND,prfTab,prfAX}
+\includeenv{editorial}
+\externaldocument{tamil-complete}[tamil-complete.pdf]
+\makeatletter
+\newcommand\TADriverHeadingMode{\def\ol@chaptercs{section}\def\ol@partcs{section}}
+\makeatother
+% Alternate drivers retain their headings, editorial prose and import
+% inventories. Their shared chapters are read in the principal volume.
+\NewDocumentCommand\TADriverImport{s o m o}{%
+  \par\noindent மூல உள்ளீடு:
+  \IfBooleanT{#1}{\texttt{*}}%
+  \IfNoValueF{#2}{\texttt{\detokenize{#2}/}}%
+  \texttt{\detokenize{#3}.tex}%
+  \IfNoValueF{#4}{\quad பிரிவு வடிவம்: \texttt{\detokenize{#4}}}%
+  \par
+}
+\NewDocumentCommand\TACompanionUnit{m m}{%
+  \clearpage
+  \noindent மூல அலகு: \texttt{#1}\par
+  \subfile{../translation/#2}%
+}
+\NewDocumentCommand\TACompanionDriver{m m m m}{%
+  \clearpage
+  \noindent மூல அலகு: \texttt{#1}\par
+  \begingroup
+  \TADriverHeadingMode
+  \olchapterid{#3}{#4}%
+  \RenewDocumentCommand\olimport{s o m o}{%
+    \IfBooleanTF{##1}{%
+      \IfNoValueTF{##2}{%
+        \IfNoValueTF{##4}{\TADriverImport*{##3}}{\TADriverImport*{##3}[##4]}%
+      }{%
+        \IfNoValueTF{##4}{\TADriverImport*[##2]{##3}}{\TADriverImport*[##2]{##3}[##4]}%
+      }%
+    }{%
+      \IfNoValueTF{##2}{%
+        \IfNoValueTF{##4}{\TADriverImport{##3}}{\TADriverImport{##3}[##4]}%
+      }{%
+        \IfNoValueTF{##4}{\TADriverImport[##2]{##3}}{\TADriverImport[##2]{##3}[##4]}%
+      }%
+    }%
+  }%
+  \subfile{../translation/#2}%
+  \endgroup
+}
+\begin{document}
+\raggedright
+\pagestyle{plain}
+\chapter*{மூல மாற்று வடிவங்களும் கூடுதல் பகுதிகளும்}
+\noindent இந்தியத் தமிழ்ப் பதிப்பு — ta-Taml-IN
+
+\noindent மூல நூல்: Open Logic Project.
+\href{https://github.com/OpenLogicProject/OpenLogic}{மூலத் திட்டம்},
+\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+மூலத் திருத்தம்: \texttt{9620cc73f9c8e0ad003c514a5d3748f29611c4c0}.
+
+\noindent முதல் 570 அலகுகளின் இயந்திரத் தமிழாக்கமும் திருத்தங்களும்
+OpenAI Codex — GPT-5.6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன.
+மீதமுள்ள 152 அலகுகளின் தமிழாக்கமும் பின்னைய பதிப்புத் திருத்தங்களும்
+OpenAI Codex — GPT-6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன.
+சுயாதீனமான தாய்மொழி மதிப்புரை செய்யப்பட்டதாகக் கூறப்படவில்லை.
+இந்தத் துணைநூலும் முதன்மை நூலும்
+சேர்ந்து உறைந்த மூலத்தின் 722 அலகுகளையும் கணக்கிடுகின்றன.
+
+\noindent முதன்மை வாசிப்பு நூலின் 695 மூல அலகுகளுடன்,
+இங்கு 27 தனித்த மூல அலகுகள் சேர்க்கப்படுகின்றன.
+அவற்றில் நான்கு மாற்று அத்தியாயம் அல்லது பகுதி அமைப்புக் கோப்புகள்.
+அவற்றின் தமிழ்த் தலைப்புகள், ஆசிரியர் குறிப்புகள் மற்றும் மூல
+உள்ளீட்டுப் பட்டியல்கள் இங்கே உள்ளன; ஏற்கெனவே முதன்மை நூலில்
+இடம்பெறும் அத்தியாயங்கள் மீண்டும் அச்சிடப்படவில்லை.
+மற்ற 23 அலகுகளின் முழுப் பாடப்பொருள் இங்கே இடம்பெறுகிறது.
+அனைத்து 722 அலகுகளின் திருத்தத்தக்க மூலக் கோப்புகளும்
+முழு மூலத் தொகுப்பில் உள்ளன.
+
+\noindent \href{tamil-complete.pdf}{முதன்மை வாசிப்பு நூலைத் திறக்க}.
+மூலத்தின் மாற்று வடிவங்கள் சில இடங்களில் அதே அடையாளங்களைப்
+பயன்படுத்துகின்றன. இந்நூலில் உள்ள உள்ளூர் முடிவுகளின் இணைப்புகள்
+இந்நூலுக்குள்ளும், பிற மேற்கோள்கள் முதன்மை நூலுக்கும் செல்கின்றன.
+உறைந்த மூலத்தில் இல்லாத நிறுவல் அல்லது விளக்கம் சேர்க்கப்பட்டதாகக்
+கூறப்படவில்லை.
+
+\clearpage
+\begingroup
+\sloppy
+\renewcommand{\cftsectionfont}{\small}
+\tableofcontents*
+\endgroup
+\chapter{முதல்தரத் தருக்கத்தின் மாற்று வடிவங்கள்}
+\TACompanionUnit{OLP-0643}{content/first-order-logic/axiomatic-deduction/provability.tex}
+\TACompanionUnit{OLP-0644}{content/first-order-logic/completeness/maximally-consistent-sets.tex}
+\TACompanionUnit{OLP-0645}{content/first-order-logic/syntax-and-semantics/introduction.tex}
+\TACompanionDriver{OLP-0646}{content/first-order-logic/syntax-and-semantics/syntax-and-semantics.tex}{fol}{syn}
+
+\chapter{பிற தருக்கப் பகுதிகள்}
+% The definition of C precedes the theorem about representability in Q.
+\TACompanionUnit{OLP-0648}{content/incompleteness/representability-in-q/c.tex}
+\TACompanionUnit{OLP-0647}{content/incompleteness/representability-in-q/c-representable.tex}
+\TACompanionUnit{OLP-0649}{content/intuitionistic-logic/semantics/propositions.tex}
+\TACompanionUnit{OLP-0650}{content/lambda-calculus/lambda-definability/lists.tex}
+\TACompanionUnit{OLP-0651}{content/lambda-calculus/syntax/conversion.tex}
+\TACompanionUnit{OLP-0652}{content/many-valued-logic/sequent-calculus/proof-theoretic-notions.tex}
+\TACompanionUnit{OLP-0653}{content/model-theory/basics/nonstandard-arithmetic.tex}
+\TACompanionUnit{OLP-0654}{content/normal-modal-logic/syntax-and-semantics/normal-modal-logics.tex}
+
+\chapter{நிறுவல் கோட்பாட்டின் கூடுதல் பகுதிகள்}
+\clearpage
+\section{வெட்டு நீக்கலின் தனித்த மூலத் துணுக்கு}
+\noindent மூல அலகு: \texttt{OLP-0660}.
+இது முழு அத்தியாயமாக அமைக்கப்படாத தனித்த நிறுவல் துணுக்கு.
+கோப்பின் பெயர் \texttt{intuitionistic.tex} என்றாலும், அதன்
+வாய்பாடுகளில் பலமுடிவு \Log{G3c} தொடரணிகளே பயன்படுத்தப்படுகின்றன.
+பெயரை வைத்து நிறுவல் முறைமை மாற்றப்படவில்லை.
+\begingroup
+\olfileid{pt}{cut}{int}
+\input{../translation/content/proof-theory/cut-elimination/intuitionistic.tex}
+\endgroup
+\TACompanionUnit{OLP-0694}{content/proof-theory/propositions-as-types/sequent-natural-deduction.tex}
+
+\clearpage
+\section{மாற்று தொடர்கணித விதி அட்டவணைகள்}
+\noindent மூல அலகுகள்:
+\texttt{OLP-0705}, \texttt{OLP-0708}, \texttt{OLP-0709}, \texttt{OLP-0710}.
+மூலத்தில் வழங்கப்பட்ட விதிகளும் நிபந்தனைகளும் அப்படியே பாதுகாக்கப்படுகின்றன.
+\begingroup
+\olfileid{pt}{seq}{rai}
+\subfile{../translation/content/proof-theory/sequent-calculus/rules-G1i.tex}
+\clearpage
+\subfile{../translation/content/proof-theory/sequent-calculus/rules-G3i.tex}
+\clearpage
+\subfile{../translation/content/proof-theory/sequent-calculus/rules-LK.tex}
+\clearpage
+\subfile{../translation/content/proof-theory/sequent-calculus/rules-mG3i.tex}
+\clearpage
+\endgroup
+
+\chapter{கூற்றுத் தருக்கமும் இரண்டாம்தரத் தருக்கமும்}
+\TACompanionUnit{OLP-0715}{content/propositional-logic/syntax-and-semantics/soundness.tex}
+\TACompanionUnit{OLP-0714}{content/propositional-logic/syntax-and-semantics/completeness.tex}
+\TACompanionUnit{OLP-0716}{content/second-order-logic/syntax-and-semantics/language-of-sol.tex}
+
+\chapter{கணங்கள், தொடர்புகள், சார்புகளின் மாற்று வடிவங்கள்}
+\TACompanionUnit{OLP-0717}{content/sets-functions-relations/functions/isomorphic-functions.tex}
+\TACompanionUnit{OLP-0718}{content/sets-functions-relations/inductive-defs-proofs/introduction.tex}
+\TACompanionUnit{OLP-0721}{content/sets-functions-relations/sets/proofs-about-sets.tex}
+\TACompanionDriver{OLP-0719}{content/sets-functions-relations/relations/relations.tex}{sfr}{rel}
+\TACompanionDriver{OLP-0720}{content/sets-functions-relations/sets-functions-relations.tex}{sfr}{}
+\TACompanionDriver{OLP-0722}{content/sets-functions-relations/size-of-sets/size-of-sets.tex}{sfr}{siz}
+
+\nocite{Frege1953}
+\bibliographystyle{../upstream/bib/natbib-oup}
+\bibliography{../upstream/bib/open-logic}
+\end{document}
+

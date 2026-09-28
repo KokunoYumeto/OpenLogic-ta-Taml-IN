@@ -1,0 +1,15 @@
+﻿{
+    "schema":  "openlogic-tamil-tex-guard/1",
+    "mutex":  "Global\\InterlanguageTeXSlotV1",
+    "acquisition_timeout_ms":  1000,
+    "master":  "tamil-proof-theory-sequent.tex",
+    "engine":  "xelatex",
+    "started_utc":  "2026-09-27T23:21:00.9250195Z",
+    "passes":  [
+
+               ],
+    "status":  "slot-unavailable",
+    "abandoned_mutex":  false,
+    "error":  "TeX slot unavailable within bounded timeout",
+    "finished_utc":  "2026-09-27T23:21:01.9440268Z"
+}

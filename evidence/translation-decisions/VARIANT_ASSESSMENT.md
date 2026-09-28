@@ -1,50 +1,49 @@
-+# Tamil script, notation, register, and regional-variant assessment
+# தமிழ்ப் பதிப்பின் எழுத்து, குறியீடு, நடை, வட்டாரத் தேர்வு
 
-Status: active edition policy for `openlogic-ta-Taml-IN`, assessed 2026-09-05.
+`openlogic-ta-Taml-IN` பதிப்புக்கான நடைமுறைக் கொள்கை; 2026-09-05 அன்று மதிப்பிடப்பட்டது.
 
-## Recommendation
+## பரிந்துரை
 
-Publish one semantic Tamil edition in the Tamil script for readers in India. Keep OpenLogic's international mathematical notation and the modern Tamil Nadu curricular prose register. Do not create parallel Latin-transliteration, Tamil-numeral, classical-register, or Sri Lankan-Tamil editions at this stage.
+இந்திய வாசகர்களுக்குத் தமிழ் எழுத்தில் ஒரே பொருள் சார்ந்த தமிழ்ப் பதிப்பை வெளியிடுக. OpenLogic நூலின் பன்னாட்டுக் கணிதக் குறியீடுகளையும் தமிழகப் பாடநூல்களில் பயன்படும் இன்றைய விளக்க நடையையும் வைத்திருக்க வேண்டும். தற்போதைய ஆதாரத்தில் இலத்தீன் எழுத்துப் பெயர்ப்பு, தமிழ் எண்கள், செவ்வியல் நடை அல்லது இலங்கைத் தமிழ் ஆகியவற்றுக்குத் தனித் துணைப் பதிப்புகளை உருவாக்க வேண்டியதில்லை.
 
-The TeX token layer remains configurable so a future evidence-backed regional edition can reuse formulas and document structure. A separate edition would be preferable if a Sri Lankan audience later requires sustained lexical and pedagogical differences; a simple script switch would not express those differences accurately.
+எதிர்காலத்தில் ஆதாரம் கிடைத்தால் வட்டாரப் பதிப்பு வாய்பாடுகளையும் ஆவண அமைப்பையும் மீண்டும் பயன்படுத்தும் வகையில் TeX சொல்லாட்சி அமைப்பு மாற்றத்தக்கதாக உள்ளது. இலங்கை வாசகர்களுக்குத் தொடர்ச்சியான சொல் மற்றும் கற்பித்தல் வேறுபாடுகள் தேவை என்பது உறுதியானால் தனிப் பொருள் சார்ந்த பதிப்பே பொருத்தம்; எழுத்தை மட்டும் மாற்றுவது அந்த வேறுபாட்டைச் சரியாக வெளிப்படுத்தாது.
 
-## Intended audience
+## நோக்கப்பட்ட வாசகர்கள்
 
-The present reader is for Tamil-reading secondary, university, and independent logic learners in India. It uses contemporary mathematical exposition rather than literary or purely philosophical prose.
+இந்தியாவில் தமிழில் படிக்கும் பள்ளி, பல்கலைக்கழக மற்றும் சுயகற்றல் தருக்க மாணவர்களுக்கான பதிப்பு இது. இலக்கிய அல்லது தத்துவ நடையை மட்டும் பின்பற்றாமல் இன்றைய கணித விளக்க நடையைப் பயன்படுத்துகிறது.
 
-## Evidence considered
+## கருதப்பட்ட ஆதாரங்கள்
 
-- `TA-SCERT-6-2018-RECOVERED`, `TA-SCERT-11-MATH`, and `TA-SCERT-12-MATH-V2` provide current Tamil Nadu school mathematical prose, international digits, symbolic notation, and a logic chapter.
-- `TA-TVA-MATH-QA` and `TA-TVA-MODERN-GRAMMAR-QUANTIFIER` provide India-based higher-education terminology and native Tamil prose.
-- `TA-ALAGAPPA-BSC-2021` provides Tamil Nadu university-level mathematical terminology in actual questions.
-- `TA-NOOLAHAM-INTERMEDIATE-LOGIC-1967` provides valuable historical Ceylon Tamil logic vocabulary. Its age, region, and Aristotelian scope make it contextual evidence rather than grounds for silently changing the India-standard edition or manufacturing a second regional reader.
-- Every cited source, exact passage locator, hash, limitation, and consultation role is recorded in `evidence/canon-sources.jsonl` and `evidence/canon-passages.jsonl`.
+- `TA-SCERT-6-2018-RECOVERED`, `TA-SCERT-11-MATH`, `TA-SCERT-12-MATH-V2`: தமிழகப் பள்ளிக் கணித உரைநடை, பன்னாட்டு எண்கள், குறியீடுகள், தருக்கப் பாடப்பகுதி.
+- `TA-TVA-MATH-QA`, `TA-TVA-MODERN-GRAMMAR-QUANTIFIER`: இந்திய உயர்கல்விச் சொல்லாட்சியும் இயல்பான தமிழ் உரைநடையும்.
+- `TA-ALAGAPPA-BSC-2021`: தமிழகப் பல்கலைக்கழகக் கேள்விகளில் உண்மையில் பயன்படுத்தப்பட்ட கணிதச் சொல்லாட்சி.
+- `TA-NOOLAHAM-INTERMEDIATE-LOGIC-1967`: இலங்கைத் தமிழின் வரலாற்றுத் தருக்கச் சொல்லாட்சி. அதன் காலம், வட்டாரம், அரிஸ்டாட்டிலிய உள்ளடக்கம் ஆகியவற்றால் அது ஒப்பீட்டு ஆதாரம்; இந்தியத் தமிழ்ப் பதிப்பை அமைதியாக மாற்றவோ இரண்டாம் வட்டாரப் பதிப்பைத் தானாக உருவாக்கவோ போதிய ஆதாரம் அல்ல.
+- ஒவ்வொரு மேற்கோள் ஆதாரத்தின் பக்க இடம், அடையாளக் குறி, வரம்பு, உண்மையில் பயன்படுத்தப்பட்ட பங்கு ஆகியவை `evidence/canon-sources.jsonl`, `evidence/canon-passages.jsonl` கோப்புகளில் உள்ளன.
 
-## Script and orthography
+## எழுத்தும் எழுத்துமுறையும்
 
-Use Unicode Tamil script (`Taml`) normalized to NFC. Preserve Latin proper names, symbolic metavariables, and mathematical control notation where the discipline requires them. No readership evidence supports a full Latin transliteration companion, and such a projection would lose distinctions that Tamil readers already receive directly in the standard script.
+NFC ஒழுங்காக்கப்பட்ட Unicode தமிழ் எழுத்தை (`Taml`) பயன்படுத்துக. துறைக்கு வேண்டிய இடங்களில் இலத்தீன் தனிப்பெயர்கள், குறியீட்டு மாறிகள், கணிதக் கட்டளைகள் மாறாமல் இருக்க வேண்டும். முழு உரைக்கும் இலத்தீன் எழுத்துப் பெயர்ப்புத் துணைநூல் தேவை என்பதை வாசகர் ஆதாரம் காட்டவில்லை; அதனால் தமிழ் எழுத்திலேயே தெரியும் வேறுபாடுகளும் இழக்கப்படலாம்.
 
-Use contemporary India-standard spelling. Historical spellings or Sri Lankan forms may be cited when they supply evidence, but they are not imposed on the main prose without current India evidence.
+இன்றைய இந்தியத் தமிழில் ஏற்ற எழுத்துமுறையைப் பயன்படுத்துக. வரலாற்று அல்லது இலங்கை வடிவங்களைச் சான்றாக மேற்கோள் காட்டலாம்; இன்றைய இந்தியப் பயன்பாட்டுச் சான்று இல்லாமல் அவற்றை முதன்மை உரைக்கு விதிக்க வேண்டாம்.
 
-## Numerals and notation
+## எண்களும் குறியீடுகளும்
 
-Retain international digits `0–9`, OpenLogic formula notation, and the source's logical symbols. The consulted Tamil Nadu curricular materials use this mixed Tamil-prose/international-notation practice. A Tamil-digit edition would add a visual difference without evidence of a distinct learner need and would complicate formulas, search, copying, accessibility, and cross-language comparison.
+`0–9` என்ற பன்னாட்டு எண்கள், OpenLogic வாய்பாட்டுக் குறியீடு, மூலத்தின் தருக்கக் குறிகள் ஆகியவற்றை வைத்திருக்க வேண்டும். ஆலோசிக்கப்பட்ட தமிழகப் பாடப்பொருட்களும் தமிழ் உரையுடன் பன்னாட்டுக் குறியீடுகளைப் பயன்படுத்துகின்றன. தனித் தமிழ்-எண் பதிப்புக்கான வாசகர் தேவை குறித்த ஆதாரம் இல்லை; அது வாய்பாடு, தேடல், நகலெடுப்பு, அணுகல் மற்றும் மொழிகளுக்கிடையிலான ஒப்பீட்டையும் சிக்கலாக்கும்.
 
-## Register and region
+## நடையும் வட்டாரமும்
 
-Use a modern didactic mathematical register. Formal definitions and displayed inference rules govern newly composed proof-theory terms whenever an exact modern Tamil headword is not attested.
+இன்றைய கற்பித்தல் நோக்கமுள்ள கணித நடையைப் பயன்படுத்துக. நிறுவல் கோட்பாட்டின் துல்லியமான இன்றைய தமிழ் தலைச்சொல் கிடைக்காத இடங்களில் முறையான வரையறைகளும் காட்சிப்படுத்திய உய்த்தறிதல் விதிகளும் புதிதாக அமைக்கப்படும் சொல்லை ஆள வேண்டும்.
 
-The current evidence does not justify separate colloquial, literary, or Sri Lankan-Tamil products. If expert review or readership demand later establishes a systematic regional vocabulary, create a distinct semantic edition with its own decision ledger and QA. Keep formulas and stable OpenLogic identifiers compatible across editions.
+தனிப் பேச்சு, இலக்கிய அல்லது இலங்கைத் தமிழ்ப் பதிப்புக்கு இப்போதைய ஆதாரம் போதவில்லை. பின்னர் வாசகர் தேவை அல்லது நிபுணர் மதிப்புரை ஒரு நிலையான வட்டாரச் சொல்லாட்சியைக் காட்டினால், தனித் தேர்வுப் பதிவும் சரிபார்ப்பும் உடைய பொருள் சார்ந்த பதிப்பை உருவாக்கலாம். வாய்பாடுகளும் நிலையான OpenLogic அடையாளங்களும் பதிப்புகளுக்கிடையே பொருந்த வேண்டும்.
 
-## Build and compatibility implications
+## கட்டமைப்பும் பொருத்தமும்
 
-- One `ta-Taml-IN` build profile is sufficient now.
-- UTF-8 Tamil, NFC checks, Tamil-capable font shaping, ActualText/copy-search QA, and unchanged mathematical identifiers remain required.
-- Tokenized terminology makes later evidence-backed replacements reversible without reworking formulas.
-- Reader-page mappings belong to exact PDF hashes; a rebuild must regenerate them through SyncTeX.
-- The decision register must expose every provisional or sensitive choice and must never guess a pending page.
+- இப்போது ஒரு `ta-Taml-IN` கட்டமைப்பு அமைவு போதும்.
+- UTF-8 தமிழ், NFC சோதனை, தமிழ் எழுத்துரு வடிவமைப்பு, ActualText நகலெடுப்பு/தேடல் சோதனை, மாறாத கணித அடையாளங்கள் ஆகியவை தொடர்ந்து தேவை.
+- சொல்லாட்சி சின்னங்களாகக் குறிக்கப்பட்டிருப்பதால் பின்னர் ஆதாரத்துடன் செய்யும் மாற்றங்களை வாய்பாடுகளை மீண்டும் எழுதாமல் திருத்த முடியும்.
+- வாசிப்புப் பக்கப் பொருத்தங்கள் துல்லியமான PDF அடையாளக் குறிகளுக்குரியவை; மறுகட்டமைப்பு ஏற்பட்டால் SyncTeX மூலம் அவற்றை மீண்டும் உருவாக்க வேண்டும்.
+- தற்காலிகமான அல்லது நுட்பமான ஒவ்வொரு தேர்வும் தேர்வுப் பதிவில் வெளிப்படையாக இருக்க வேண்டும்; இன்னும் தெரியாத பக்க எண்ணை ஊகிக்கக் கூடாது.
 
-## Expert question
+## பின்னைய மதிப்புரைக்கான கேள்வி
 
-Please double-check whether any current India-based logic curriculum or substantial learner community requires a second script, Tamil-digit notation, or a systematically different regional/register edition. If so, identify the audience and an authoritative corpus broad enough to support a separate profile.
-
+இந்தியாவில் தற்போது பயன்படும் தருக்கப் பாடத்திட்டமோ கணிசமான வாசகர் குழுவோ இரண்டாம் எழுத்து, தமிழ் எண்கள் அல்லது முறையாக வேறுபடும் வட்டார/நடைப் பதிப்பைத் தேவைப்படுத்துகிறதா? அப்படியானால் வாசகர்களையும் தனி அமைவைத் தாங்கும் அளவிலான அதிகாரப்பூர்வ மூலத் தொகுப்பையும் அடையாளம் காண்க. இதற்கான பதிலை எதிர்பார்த்து தற்போதைய வெளியீடு நிறுத்தப்படவில்லை.

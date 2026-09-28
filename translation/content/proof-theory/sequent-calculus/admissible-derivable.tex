@@ -1,0 +1,388 @@
+% SEGMENT OLP-0698-S01
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: admissible-derivable
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{adm}
+
+\olsection{அனுமதிக்கத்தக்க மற்றும் வருவிக்கத்தக்க விதிகள்}
+
+ஒரு குறிப்பிட்ட விதியைக் கொண்டு !!{prove} செய்யக்கூடிய
+அனைத்தையும் அந்த விதி இல்லாமலும் !!{prove} செய்ய
+முடியுமா என்ற முடிவுகளை நிறுவல் கோட்பாட்டின் பல
+முடிவுகள் பற்றியோ பயன்படுத்தியோ உள்ளன.
+வெட்டு நீக்கத் தேற்றம் இதற்கு மிகவும் அறியப்பட்ட
+எடுத்துக்காட்டு. \Cut{} உள்ள தொடரணி முறைமையின்
+விதிகளைக் கொண்டு !!{prove} செய்யக்கூடிய எந்தத்
+தொடரணியையும் \Cut இன்றியும் !!{prove} செய்யலாம்
+என்பதை அது காட்டுகிறது. இத்தகைய பண்பு
+முக்கியமானதால், அதற்கொரு பெயர் உண்டு.
+
+\begin{defn}
+ஒரு தொடரணி முறைமையுடன் விதி~$R$ ஐச் சேர்த்து
+நிறுவக்கூடிய எந்தத் தொடரணியையும், $R$ இன்றி
+அந்த முறைமையிலேயே நிறுவ முடிந்தால்,
+அந்த முறைமையில் விதி~$R$ \emph{அனுமதிக்கத்தக்கது}.
+\end{defn}
+
+% SEGMENT OLP-0698-S02
+\begin{ex}\ollabel{ex:land-deriv}
+$\LeftR{\land}$ விதி \Log{G1c} யிலும்
+\Log{G3c} யிலும் வேறுவேறு வடிவங்களைக் கொள்கிறது.
+\Log{G1c} இல் அதற்கு இரு வடிவங்கள் உள்ளன:
+ஒன்றின் முன்கூற்றில் முதன்மை
+!!{formula}~$!A \land !B$ இன் இடக்கூறு~$!A$
+உள்ளது; மற்றொன்றில் வலக்கூறு~$!B$ உள்ளது:
+\[
+\Axiom$ !A, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_1$}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\qquad
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_2$}
+\UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+இதற்கு மாறாக, \Log{G3c} இல் ஒரே ஒரு விதிதான் உண்டு:
+\[
+\Axiom$ !A, !B, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_3$}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+இப்போது “\Log{G3c} இன்
+$\LeftR{\land}_3$ விதி \Log{G1c} இல்
+அனுமதிக்கத்தக்கதா?” என்று கேட்கலாம்.
+ஆம்: $\LeftR{\land}_3$ ஐப் பயன்படுத்தும்
+எந்த அனுமானத்தையும் \Log{G1c} இன்
+விதிகளால் நேரடியாகப் பாவனை செய்யலாம்.
+$\LeftR{\land}_1$, $\LeftR{\land}_2$
+ஆகியவற்றோடு, கட்டமைப்பு விதியான
+$\LeftR{\Contraction}$ உம் தேவைப்படும்:
+\[
+\Axiom$!A, !B, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_1$}
+\UnaryInf$!A \land !B, !B, \Gamma \fCenter \Delta$
+\RightLabel{$\LeftR{\land}_2$}
+\UnaryInf$!A \land !B, !A \land !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\Contraction}}
+\UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+\end{ex}
+
+% SEGMENT OLP-0698-S03
+ஒரு விதியைப் பயன்படுத்தும் அனுமானங்களை
+மற்ற விதிகளால் பாவனை செய்வது, அந்த விதி
+அனுமதிக்கத்தக்கது என்பதைக் காட்டும் ஒரு வழி.
+ஆனால் அதுவே ஒரே வழியல்ல; இவ்வாறு பாவனை
+செய்ய முடியாவிட்டாலும் சில விதிகள்
+அனுமதிக்கத்தக்கவை. பாவனை செய்ய முடியும்
+விதிகளை \emph{வருவிக்கத்தக்கவை} என்போம்.
+
+\begin{defn}
+ஒரு விதி~$R$,
+\[
+\AxiomC{$S_1$}
+\AxiomC{$\dots$}
+\AxiomC{$S_n$}
+\RightLabel{$R$}
+\TrinaryInfC{$S$}
+\DisplayProof
+\]
+என்பது, முறைமையின் விதிகளையும்
+அடிக்கோள்களையும், மேலும் $S_1$, \dots,~$S_n$
+வடிவங்களிலான கூடுதல் தொடக்கத் தொடரணிகளையும்
+கொண்டு $S$ தொடரணிக்கு ஒரு திட்டவடிவ
+!!{proof} இருந்தால், அந்த முறைமையில்
+\emph{வருவிக்கத்தக்கது} எனப்படும்.
+\end{defn}
+
+\olref{ex:land-deriv} இல் தரப்பட்ட !!{proof},
+$\LeftR{\land}_3$ என்பது \Log{G1c} இல்
+வருவிக்கத்தக்க விதி என்பதைக் காட்டுகிறது.
+ஏனெனில் அந்த !!{proof},
+$\LeftR{\land}_3$ இன்
+முன்கூற்றுகளைத் தொடக்கத் தொடரணிகளாகக் கொண்டு,
+\Log{G1c} இன் விதிகளை மட்டும் பயன்படுத்தி
+$\LeftR{\land}_3$ இன் முடிவுக்கான திட்டவடிவ
+!!{proof} ஆகிறது. (\Log{G1c} இன்
+அடிக்கோள்கள் எதையும் அது பயன்படுத்தவில்லை.)
+
+\begin{prop}\ollabel{prop:lor-G3-adm}
+\Log{G3c} இன் $\LeftR{\land}$,
+$\RightR{\lor}$ விதிகள் \Log{G1c} இல்
+வருவிக்கத்தக்கவை.
+\end{prop}
+
+\begin{proof}
+  $\LeftR{\land}$ க்கான நிறுவல்
+  \olref{ex:land-deriv} இல் உள்ளது.
+  $\RightR{\lor}$ க்கான நிறுவல்
+  பயிற்சியாக விடப்படுகிறது.
+\end{proof}
+
+\begin{prob}
+\Log{G3c} இன் $\RightR{\lor}$ விதி
+\Log{G1c} இல் வருவிக்கத்தக்கது
+என்பதைக் காட்டுக.
+\end{prob}
+
+\begin{prob}
+$\liff$ என்பது வரையறுக்கப்பட்ட
+!!{operator} என்று கொள்க:
+$!A \liff !B$ என்பது
+$(!A \lif !B) \land (!B \lif !A)$
+என்பதன் சுருக்கக் குறியீடு.
+பின்வரும் விதிகள் (a)~\Log{G1c} யிலும்
+(b)~\Log{G3c} யிலும் வருவிக்கத்தக்கவை
+என்பதைக் காட்டுக:
+\begin{enumerate}
+\item \Axiom$\Gamma, !A, !B \fCenter \Delta$
+\Axiom$\Gamma \fCenter \Delta, !A, !B$
+\RightLabel{\LeftR{\liff}}
+\BinaryInf$!A \liff !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\item
+\Axiom$!A, \Gamma \fCenter \Delta, !B$
+\Axiom$!B, \Gamma \fCenter \Delta, !A$
+\RightLabel{\RightR{\liff}}
+\BinaryInf$\Gamma \fCenter \Delta, !A \liff !B$
+\DisplayProof
+\end{enumerate}
+\end{prob}
+
+% SEGMENT OLP-0698-S04
+\begin{ex}\ollabel{ex:weak-adm}
+\Log{G1c} இன் $\RightR{\Weakening}$ விதி,
+\[
+\Axiom$ \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A$
+\DisplayProof
+\]
+\Log{G3c} இல் அனுமதிக்கத்தக்கது.
+நிறுவலின் கருத்து எளிது: \Log{G3c} இல்
+முன்கூற்று $\Gamma \Sequent \Delta$
+வுக்கான !!a{proof}~$\pi$ உள்ளது
+என்று கொள்வோம். $\pi$ இன் ஒவ்வொரு
+தொடரணியின் வலப்புறத்திலும்
+!!{formula}~$!A$ ஐச் சேர்ப்போம்.
+அடிக்கோள்கள் அடிக்கோள்களாகவே இருக்கும்;
+சரியான அனுமானங்களும் சரியானவையாகவே
+இருக்கும். புதிய !!{proof} இன்
+இறுதித் தொடரணி $\Gamma \Sequent
+\Delta, !A$ ஆகும்.
+
+% SEGMENT OLP-0698-S05
+ஆனால் $\RightR{\Weakening}$ விதி
+\Log{G3c} இல் வருவிக்கத்தக்கதல்ல.
+அது வருவிக்கத்தக்கது என்றால்,
+\Log{G3c} இன் அடிக்கோள்களையும்
+விதிகளையும், தேவையானால் கூடுதல்
+தொடக்கத் தொடரணியான
+$\Gamma \Sequent \Delta$ ஐயும்
+பயன்படுத்தி $\Gamma \Sequent
+\Delta, !A$ க்கான !!a{proof} ஐக்
+கண்டுபிடிக்கலாம் என்று கொள்வோம்.
+$\RightR{\Weakening}$ வருவிக்கத்தக்கதாக
+இருக்க வேண்டியதுபோல் அந்த !!{proof}
+முழுமையான திட்டவடிவில் இருந்தால்,
+$\Gamma$ வையும்~$\Delta$ வையும்
+நீக்கி அதை $\Sequent !A$ என்பதற்கான
+!!a{proof} ஆக மாற்றலாம். அப்போது
+கூடுதல் தொடக்கத் தொடரணிகளான
+$\Gamma \Sequent \Delta$,
+வெற்றுத் தொடரணி~$\quad \Sequent \quad$
+ஆக மாறும். வெற்றுத் தொடரணியில்
+!!{formula}s எதுவுமே இல்லை;
+ஆனால் \Log{G3c} இன் எல்லா விதிகளின்
+முன்கூற்றுகளிலும் குறைந்தது ஒரு செயலில்
+உள்ள !!{formula} தேவைப்படுவதால்,
+இந்தத் திட்டவடிவ !!{proof} இல்
+வெற்றுத் தொடரணி எந்த அனுமானத்துக்கும்
+முன்கூற்றாக முடியாது. ஆகவே கூடுதல்
+தொடரணி $\Gamma \Sequent \Delta$ ஐ
+உண்மையில் தொடக்கத் தொடரணியாகப்
+பயன்படுத்தாதிருந்தால்தான் அந்த
+!!{proof} திட்டவடிவமாக இருக்க முடியும்.
+வேறு சொற்களில், அது \Log{G3c} இன்
+அடிக்கோள்களையும் விதிகளையும் மட்டும்
+பயன்படுத்தி $\Gamma \Sequent
+\Delta, !A$ க்கான திட்டவடிவ
+வருவித்தலாக இருக்கும்; அந்த
+வடிவிலான எந்தத் தொடரணிக்கும்
+\Log{G3c} இல் !!a{proof}
+இருக்கிறது என்று காட்டியிருப்போம்.
+ஆனால் அது இயலாது: \Log{G3c}
+சரியானது; ஆகவே ஒவ்வொரு
+!!{structure} இலும் மெய்யான
+தொடரணிகளையே அது !!{prove} செய்யும்.
+$\Gamma = \Delta
+= \emptyset$ என்றும்
+$!A \ident \lfalse$ என்றும் எடுத்தால்,
+எடுத்துக்காட்டாக, $\quad \Sequent \lfalse$
+என்ற தொடரணியை \Log{G3c}
+!!{prove} செய்ய வேண்டியிருக்கும்;
+அது அவ்வாறு செய்யாது.
+\end{ex}
+
+% SEGMENT OLP-0698-S06
+\Log{G3c} இல் தளர்த்தல் அனுமதிக்கத்தக்க விதி
+என்பதற்கு ஓர் அழகிய தொகுத்தறிதல் நிறுவலைத்
+தருவோம். உண்மையில், உள்ளுணர்வு வாதம்
+காட்டுவதுபோல், சற்றுக் கூடுதலான வலிமையுள்ள
+முடிவு கிடைக்கிறது: $\pi$ இன் ஒவ்வொரு
+தொடரணியின் வலப்புறத்திலும் $!A$ ஐச்
+சேர்க்கும்போது, !!{proof} இன் கட்டமைப்பு
+மாறுவதில்லை; குறிப்பாக, அதன் உயரம்
+அதிகரிப்பதில்லை. இது முக்கியமானதால்,
+இதற்குத் தனி வரையறை தருவோம்.
+
+\begin{defn}
+ஒரு விதி~$R$,
+\[
+\AxiomC{$S_1$}
+\AxiomC{$\dots$}
+\AxiomC{$S_n$}
+\RightLabel{$R$}
+\TrinaryInfC{$S$}
+\DisplayProof
+\]
+என்பது, $i = 1$, \dots,~$n$ ஒவ்வொன்றுக்கும்
+$\Proves[h_i] S_i$ எனில்,
+$m = \max(h_1, \dots,
+h_n)$ உடன் $\Proves_m S$
+ஆகுமானால், அந்த முறைமையில்
+\emph{!!{height}-பேணும் அனுமதிக்கத்தக்க}
+(அல்லது \emph{!!{hp}-அனுமதிக்கத்தக்க})
+விதி எனப்படும்.
+\end{defn}
+
+ஒரு விதி !!{height}-பேணும்
+அனுமதிக்கத்தக்க விதி என்பதை நிறுவ,
+முன்கூற்றுகள்~$S_i$ க்கு
+!!{height}~$h_i = \pheight{\pi_i}$
+உடைய !!{proof}s~$\pi_i$ இருக்கும்போதெல்லாம்,
+முடிவுக்கு $\pi$ என்ற !!a{proof}
+ஒன்று இருந்து, அதன்
+!!{height}~$\pheight{\pi}$,
+$h_i$ களின் மிகப்பெரிய மதிப்பை
+மீறாது என்பதைக் காட்டினால் போதும்.
+குறிப்பாக, ஒரே ஒரு முன்கூற்று~$S_1$
+மட்டுமே இருந்தால்,
+$\pheight{\pi} \le \pheight{\pi_1}$
+என்பதே போதும்.
+$\RightR{\Weakening}$ மற்றும்
+$\LeftR{\Weakening}$ நிலைகளில்
+உண்மையில் $\pheight{\pi} = \pheight{\pi_1}$
+கிடைக்கிறது; ஆனால் அது தேவையானதல்ல.
+
+% SEGMENT OLP-0698-S07
+\begin{prop}\ollabel{prop:weak-G3c-adm}
+\Log{G1c} இன் $\RightR{\Weakening}$,
+$\LeftR{\Weakening}$ விதிகள் \Log{G3c} இல்
+!!{height}-பேணும் அனுமதிக்கத்தக்க விதிகள்.
+\end{prop}
+
+\begin{proof}
+  $\pheight{\pi} = n$ என்ற
+  !!{height} உடைய !!{proof}~$\pi$
+  கொண்டு $\Log{G3c} \Proves \Gamma \Sequent \Delta$
+  எனில், $\pheight{\pi'} = n$ உடைய
+  $\Gamma \Sequent \Delta, !A$ என்பதன்
+  \Log{G3c}-!!{proof}~$\pi'$ உண்டு
+  என்பதைக் காட்ட வேண்டும். $n$ மீது
+  தொகுத்தறிந்து நிறுவுவோம். $n=0$
+  என்றால், $\pi$ என்பது
+  $\Gamma \Sequent \Delta$ என்ற
+  அடிக்கோள்தான்; அதாவது ஓர் அணு
+  $!C$, $\Gamma$ விலும்~$\Delta$
+  விலும் வருகிறது. ஆகவே
+  $\Gamma \Sequent \Delta, !A$ உம்
+  அடிக்கோள்தான்.
+
+% SEGMENT OLP-0698-S08
+  $n = \pheight{\pi} >0$ என்றால்,
+  !!{proof}~$\pi$ ஒரு கடைசி
+  அனுமானத்தைக் கொண்டிருக்கும்.
+  எந்த விதி பயன்படுத்தப்பட்டது
+  என்பதைப் பொறுத்து நிலைகளைப்
+  பிரிக்கிறோம். ஓர் எடுத்துக்காட்டை
+  மட்டும் தருகிறோம்: கடைசி
+  அனுமானம் $\RightR{\land}$
+  என்று கொள்வோம். அப்போது
+  $\Delta = \Delta', !B \land !C$;
+  கடைசி அனுமானத்தின் உடனடித்
+  துணை-!!{proof}s $\pi_1$ உம்~$\pi_2$
+  உம் முறையே $\Gamma \Sequent \Delta', !B$,
+  $\Gamma \Sequent
+  \Delta', !C$ என்ற இறுதித்
+  தொடரணிகளைக் கொண்டிருக்கும்.
+  அதாவது, $\pi$ இவ்வாறு இருக்கும்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma \fCenter \Delta', !B$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$\Gamma \fCenter \Delta', !C$
+  \RightLabel{\RightR{\land}}
+  \BinaryInf$\Gamma \fCenter \Delta', !B \land !C$
+  \DisplayProof
+  \]
+  மேலும் $n =
+  \max(\pheight{\pi_1}, \pheight{\pi_2}) + 1$.
+  எனவே $\pheight{\pi_1} <
+  n$ மற்றும் $\pheight{\pi_2} < n$;
+  தொகுத்தறிதல் கருதுகோள் பொருந்தும்:
+  $\Gamma \Sequent
+  \Delta', !B, !A$ மற்றும்
+  $\Gamma \Sequent \Delta', !C, !A$
+  என்பவற்றுக்கான !!{proof}s
+  $\pi_1'$ உம்~$\pi_2'$ உம் கிடைக்கும்.
+  $\RightR{\land}$ விதியால்,
+  $\Gamma \Sequent
+  \Delta', !B \land !C, !A$
+  என்பதன் !!a{proof}~$\pi'$
+  ஐப் பெறுகிறோம்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1'$}
+  \Deduce$\Gamma \fCenter \Delta', !B, !A$
+  \AxiomC{}
+  \RightLabel{$\pi_2'$}
+  \Deduce$\Gamma \fCenter \Delta', !C, !A$
+  \RightLabel{\RightR{\land}}
+  \BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !A$
+  \DisplayProof
+  \]
+  இதன் உயரம்
+  $\pheight{\pi'} =
+  \max(\pheight{\pi_1'}, \pheight{\pi_2'}) + 1 = \max(\pheight{\pi_1},
+  \pheight{\pi_2}) + 1 = \pheight{\pi}$.
+\end{proof}
+
+% SEGMENT OLP-0698-S09
+\olref{prop:weak-G3c-adm} மிகவும் பயனுள்ளது.
+இதைத் திரும்பத் திரும்பப் பயன்படுத்துவதற்கு
+ஒரு குறியீட்டை அறிமுகப்படுத்துவோம்:
+$\pi$ என்பது~$\Gamma \Sequent \Delta$
+என்பதன் !!a{proof} என்றால்,
+$\pi[\Pi \Sequent \Lambda]$
+என்பது, இடப்புறத்தில்~$\Pi$ இல் உள்ள
+எல்லா !!{formula}s உடனும்,
+வலப்புறத்தில்~$\Lambda$ இல் உள்ள
+எல்லா !!{formula}s உடனும்
+தளர்த்தலின் அனுமதிக்கத்தன்மையைப்
+பயன்படுத்தியதன் விளைவு.
+இது $\Gamma, \Pi
+\Sequent \Delta, \Lambda$
+என்பதன் !!a{proof} ஆகும்.
+
+\end{document}

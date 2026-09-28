@@ -1,0 +1,59 @@
+% part: intuitionistic-logic
+% chapter: semantics
+% section: propositions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+% SEGMENT OLP-0649-S01
+\olfileid{int}{sem}{pro}
+
+\olsection{கூற்றுகள்}
+
+!!a{relational model}~$\mModel{M}$ இல் !!a{formula}~$!A$ மெய்யாகும்
+உலகங்களின் கணத்திற்குப் பெயர் தருவது சில வேளைகளில் பயனுள்ளதாக இருக்கும்.
+அதை~$!A$ வரையறுக்கும் \emph{கூற்று} என்று அழைத்து,
+$\Prop{M}{!A}$ என எழுதுகிறோம்.
+
+% SEGMENT OLP-0649-S02
+\begin{defn}
+  $V$ என்ற சார்பை, $\Prop{M}{!A} \colon \Frm
+  \to \Pow{W}$ என்ற சார்பாகப் பின்வருமாறு தொகுத்தறிதல் முறையில்
+  விரிவுபடுத்துகிறோம்:
+  \begin{enumerate}
+  \item $\Prop{M}{\lfalse} = \emptyset$
+  \item $\Prop{M}{p} = V(p)$
+  \item $\Prop{M}{\lnot !B} = {}$
+    \[
+      \Setabs{w \in W}{\text{ஒவ்வொரு $w'$ க்கும், $Rww'$ எனில், $w'
+          \notin \Prop{M}{!B}$}}.
+    \]
+  \item $\Prop{M}{!B \land !C} = \Prop{M}{!B} \cap \Prop{M}{!C}$.
+  \item $\Prop{M}{!B \lor !C} = \Prop{M}{!B} \cup \Prop{M}{!C}$.
+  \item $\Prop{M}{!B \lif !C} = {}$
+    \[
+      \Setabs{w \in W}{\text{ஒவ்வொரு $w'$ க்கும், $Rww'$ எனில், $w'
+          \in \Prop{M}{!B}$ என்றால் $w' \in \Prop{M}{!C}$}}.
+    \]
+  \end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0649-S03
+\begin{prop}
+  \ollabel{prop:propositions-true}
+  % SOURCE CORRECTION TA-IL-025: truth at a world is \mSat, not the model constructor.
+  $\mSat{M}{!A}[w]$ எனில், எனில் மட்டுமே, $w \in \Prop{M}{!A}$
+\end{prop}
+
+% SEGMENT OLP-0649-S04
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+% SEGMENT OLP-0649-S05
+\begin{prob}
+  \olref[int][sem][pro]{prop:propositions-true} ஐ நிறுவுக.
+\end{prob}
+
+\end{document}

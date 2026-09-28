@@ -1,0 +1,105 @@
+{
+  "batch_id": "TA-B357",
+  "units": [
+    {
+      "unit_id": "OLP-0701",
+      "source_sha256": "08233bea6d0d9dedcf1d7ed436524c5d36d87a89ba9ea28226f2caefe8c08023",
+      "translation_sha256": "92c9bb44523b6bc9ea5d17310bc2eee9c8cda95b15ebf0a4d9fb39ec0bdf6073",
+      "source_bytes": 15397,
+      "translation_bytes": 25589,
+      "source_coverage_complete": true,
+      "segments": 18,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$!A\\land!B,\\Gamma'\\Sequent\\Delta,!C$",
+        "$!A\\land!B,\\Gamma',!D\\Sequent\\Delta$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\Gamma\\fCenter\\Delta,\\lforall[x][!B(x)],!B(a)$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Gamma\\fCenter\\Delta,\\lforall[x][!B(x)],\\lforall[x][!B(x)]$\\DisplayProof\\]",
+        "$\\Gamma\\Sequent\\Delta,\\lexists[x][!B(x)],!B$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$\\Gamma\\fCenter\\Delta,\\lexists[x][!B(x)],!B$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Gamma\\fCenter\\Delta,\\lexists[x][!B(x)]$\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "$!A,!B,\\Gamma'\\Sequent\\Delta,!C$",
+        "$!A,!B,\\Gamma',!D\\Sequent\\Delta$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\Gamma\\fCenter\\Delta,\\lforall[x][!B(x)],!B(a)$\\RightLabel{\\RightR{\\lforall}}\\UnaryInf$\\Gamma\\fCenter\\Delta,\\lforall[x][!B(x)],\\lforall[x][!B(x)]$\\DisplayProof\\]",
+        "$\\Gamma\\Sequent\\Delta,\\lexists[x][!B(x)],!B(t)$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$\\Gamma\\fCenter\\Delta,\\lexists[x][!B(x)],!B(t)$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Gamma\\fCenter\\Delta,\\lexists[x][!B(x)]$\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "qua",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0701",
+          "audit_id": "TA-PT-048",
+          "kind": "G3c-invertibility-induction-premises-and-quantifier-rules",
+          "action": "Use the induction hypothesis's decomposed A,B context, relabel the displayed right-universal rule as forall, and keep the existential witness term t in both the prose and final premise.",
+          "expected_missing_math": [
+            "$!A\\land!B,\\Gamma'\\Sequent\\Delta,!C$",
+            "$!A\\land!B,\\Gamma',!D\\Sequent\\Delta$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\Gamma\\fCenter\\Delta,\\lforall[x][!B(x)],!B(a)$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Gamma\\fCenter\\Delta,\\lforall[x][!B(x)],\\lforall[x][!B(x)]$\\DisplayProof\\]",
+            "$\\Gamma\\Sequent\\Delta,\\lexists[x][!B(x)],!B$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$\\Gamma\\fCenter\\Delta,\\lexists[x][!B(x)],!B$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Gamma\\fCenter\\Delta,\\lexists[x][!B(x)]$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "$!A,!B,\\Gamma'\\Sequent\\Delta,!C$",
+            "$!A,!B,\\Gamma',!D\\Sequent\\Delta$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\Gamma\\fCenter\\Delta,\\lforall[x][!B(x)],!B(a)$\\RightLabel{\\RightR{\\lforall}}\\UnaryInf$\\Gamma\\fCenter\\Delta,\\lforall[x][!B(x)],\\lforall[x][!B(x)]$\\DisplayProof\\]",
+            "$\\Gamma\\Sequent\\Delta,\\lexists[x][!B(x)],!B(t)$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$\\Gamma\\fCenter\\Delta,\\lexists[x][!B(x)],!B(t)$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Gamma\\fCenter\\Delta,\\lexists[x][!B(x)]$\\DisplayProof\\]"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\land",
+            "\\land",
+            "\\lexists"
+          ],
+          "expected_extra_commands": [
+            "\\lforall"
+          ],
+          "source_issue_or_choice": "The frozen left-conjunction nonprincipal-case prose repeats A-and-B in the induction outputs although its following proof tree uses A,B. The right-universal contraction display is labeled RightR exists. The right-existential contraction case drops the witness argument t in its inductive output and final displayed premise.",
+          "chosen_treatment": "The Tamil prose states A,B for both induction outputs; the universal display names RightR forall; the existential inductive output and final premise both retain B(t). The surrounding derivation heights and other judgments are preserved. The unbound h_i in the opening definition is explained as some premise-specific height without changing the displayed Proves[h_i] judgment.",
+          "alternatives_considered": "Retain the conflicting judgments and wrong rule label, or silently change the source without an audit.",
+          "rationale": "The immediately adjacent proof tree already derives the A,B-context premises. The G3c rule table gives RightR forall for a universal conclusion, and RightR exists requires the same instantiated witness B(t) in its premise. Removing (t) changes the formula and breaks that inference.",
+          "precise_review_question": "Do the three bounded repairs make the induction outputs and quantifier rule applications match the unchanged G3c rule table while retaining all remaining proof judgments?",
+          "location_needle": "\\RightLabel{\\RightR{\\lforall}}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\land",
+        "\\land",
+        "\\lexists"
+      ],
+      "extra_commands": [
+        "\\lforall"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

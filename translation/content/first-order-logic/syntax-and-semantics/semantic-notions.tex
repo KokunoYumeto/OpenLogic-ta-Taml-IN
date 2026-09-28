@@ -27,13 +27,13 @@
 \end{explain}
 
 \begin{defn}[செல்லுபடித்தன்மை]
-ஒவ்வொரு !!{structure}~$\Struct M$ க்கும் $\Sat{M}{!A}$ iff, வாக்கியம்
+ஒவ்வொரு !!{structure}~$\Struct M$ க்கும் $\Sat{M}{!A}$ அப்போதும் அப்போது மட்டுமே, வாக்கியம்
 $!A$ \emph{செல்லுபடியாகும்}, $\Entails !A$, என்கிறோம்.
 \end{defn}
 
 \begin{defn}[உட்கிடை]
 $\Sat{M}{\Gamma}$ ஆகும் ஒவ்வொரு !!{structure}~$\Struct M$ க்கும்
-$\Sat{M}{!A}$ iff, வாக்கியங்களின் தொகுப்பு~$\Gamma$ ஆனது
+$\Sat{M}{!A}$ அப்போதும் அப்போது மட்டுமே, வாக்கியங்களின் தொகுப்பு~$\Gamma$ ஆனது
 வாக்கியம்~$!A$ ஐ \emph{உட்கிடையச் செய்கிறது}, $\Gamma
 \Entails !A$, என்கிறோம்.
 \end{defn}
@@ -48,7 +48,7 @@ $\Gamma$ நிறைவுசெய்யத்தக்கதல்ல என�
 
 \begin{prop}
 ஒவ்வொரு வாக்கியத் தொகுப்பு~$\Gamma$ க்கும்
-$\Gamma \Entails !A$ iff, வாக்கியம் $!A$ செல்லுபடியாகும்.
+$\Gamma \Entails !A$ அப்போதும் அப்போது மட்டுமே, வாக்கியம் $!A$ செல்லுபடியாகும்.
 \end{prop}
 
 \begin{proof}
@@ -67,7 +67,7 @@ $\Sat{M}{\Gamma}$. ஆகவே, $\Sat{M}{\Gamma}$ ஆனால் $\Sat/{M}{!A}
 
 \begin{prop}
 \ollabel{prop:entails-unsat}
-$\Gamma \Entails !A$ iff $\Gamma \cup \{\lnot !A\}$
+$\Gamma \Entails !A$ அப்போதும் அப்போது மட்டுமே $\Gamma \cup \{\lnot !A\}$
 நிறைவுசெய்யத்தக்கதல்ல.
 \end{prop}
 
@@ -91,12 +91,12 @@ $\Struct M$ க்கும் $\Sat{M}{!A}$; எனவே $\Gamma \Entails !A$.
 
 \begin{prob}
 \begin{enumerate}
-\item $\Gamma \Entails \bot$ iff $\Gamma$ நிறைவுசெய்யத்தக்கதல்ல என்று
+\item $\Gamma \Entails \bot$ அப்போதும் அப்போது மட்டுமே $\Gamma$ நிறைவுசெய்யத்தக்கதல்ல என்று
   காட்டுக.
-\item $\Gamma \cup \{!A\} \Entails \bot$ iff
+\item $\Gamma \cup \{!A\} \Entails \bot$ அப்போதும் அப்போது மட்டுமே
   $\Gamma \Entails \lnot !A$ என்று காட்டுக.
 \item $c$ ஆனது $!A$ அல்லது $\Gamma$ இல் தோன்றவில்லை என்க.
-  $\Gamma \Entails \lforall[x][!A]$ iff
+  $\Gamma \Entails \lforall[x][!A]$ அப்போதும் அப்போது மட்டுமே
   $\Gamma \Entails \Subst{!A}{c}{x}$ என்று காட்டுக.
 \end{enumerate}
 \end{prob}
@@ -117,7 +117,7 @@ $\Sat{M}{!A}$; எனவே $\Gamma' \Entails !A$.
 
 \begin{thm}[பொருண்மை நிறுவல் தேற்றம்]
 \ollabel{thm:sem-deduction}
-$\Gamma \cup \{!A\} \Entails !B$ iff $\Gamma \Entails !A \lif !B$.
+$\Gamma \cup \{!A\} \Entails !B$ அப்போதும் அப்போது மட்டுமே $\Gamma \Entails !A \lif !B$.
 \end{thm}
 
 \begin{proof}

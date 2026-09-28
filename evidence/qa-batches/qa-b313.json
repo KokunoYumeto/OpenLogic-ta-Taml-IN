@@ -1,0 +1,202 @@
+{
+  "batch_id": "TA-B313",
+  "units": [
+    {
+      "unit_id": "OLP-0653",
+      "source_sha256": "12f6c3e97c59d1f37b73695f126c7c03cffc6fcbd659e6a21ab95437bd15ab9d",
+      "translation_sha256": "deef6dbb3b24df8c026ddd938ca4787e31a10bceefe8e7cd0e18a20a22155461",
+      "source_bytes": 11091,
+      "translation_bytes": 24510,
+      "source_coverage_complete": true,
+      "segments": 15,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Lang{L}$",
+        "${\\prec}=\\Assign{<}{M}\\subseteqM^2$",
+        "$x\\precy$",
+        "$\\Sat{N}{\\lforall[y][\\lforall[x][(y=x+x\\lory=x+x+\\Obj{0}')]]}$"
+      ],
+      "extra_math": [
+        "$\\Lang{L_N}$",
+        "${\\prec}=\\Assign{<}{M}\\subseteq\\Domain{M}^2$",
+        "$x^*\\precy$",
+        "$\\Sat{N}{\\lforall[y][\\lexists[x][(y=x+x\\lory=x+x+\\Obj{0}')]]}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Skolem",
+        "dlo",
+        "include",
+        "iso",
+        "logic",
+        "open",
+        "owenheim",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-MOD-001",
+          "unit_id": "OLP-0653",
+          "kind": "undefined-language-name-and-symbol-class",
+          "action": "Restored the defined arithmetic language L_N in the interpretation paragraph and called the full list nonlogical symbols rather than constants.",
+          "expected_missing_math": [
+            "$\\Lang{L}$"
+          ],
+          "expected_extra_math": [
+            "$\\Lang{L_N}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen paragraph switches from the defined L_N to L and calls a predicate and functions constants.",
+          "chosen_treatment": "வரையறுக்கப்பட்ட L_N மொழியையும் அதன் தருக்கமல்லாத குறியீடுகளையும் குறிப்பிடுகிறது.",
+          "alternatives_considered": "Retain L and leave an undefined language; call functions and a predicate constants.",
+          "rationale": "The preceding definition provides only L_N, and the paragraph explicitly assigns all its relation and operation symbols.",
+          "precise_review_question": "Does L_N match the intended arithmetic signature here?",
+          "location_needle": "SOURCE CORRECTION TA-MOD-001"
+        },
+        {
+          "audit_id": "TA-MOD-002",
+          "unit_id": "OLP-0653",
+          "kind": "relation-carrier-type",
+          "action": "Typed the interpretation of < as a subset of the domain squared.",
+          "expected_missing_math": [
+            "${\\prec}=\\Assign{<}{M}\\subseteqM^2$"
+          ],
+          "expected_extra_math": [
+            "${\\prec}=\\Assign{<}{M}\\subseteq\\Domain{M}^2$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\Domain"
+          ],
+          "source_issue_or_choice": "The frozen formula uses M^2 although M names the structure and its carrier was just named Domain(M).",
+          "chosen_treatment": "தொடர்பின் தளத்தை ஆட்களத்தின் இருபடியாகக் குறிப்பிடுகிறது.",
+          "alternatives_considered": "Treat M as both structure and underlying set without saying so.",
+          "rationale": "A binary relation in this interpretation is a subset of Domain(M) squared.",
+          "precise_review_question": "Is Domain(M)^2 the correct carrier for the interpreted binary predicate?",
+          "location_needle": "SOURCE CORRECTION TA-MOD-002"
+        },
+        {
+          "audit_id": "TA-MOD-003",
+          "unit_id": "OLP-0653",
+          "kind": "successor-inequality-conclusion",
+          "action": "Restored x-star < y after ruling out x-star = y.",
+          "expected_missing_math": [
+            "$x\\precy$"
+          ],
+          "expected_extra_math": [
+            "$x^*\\precy$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen sentence concludes x < y, which merely repeats its hypothesis instead of using the displayed successor dichotomy.",
+          "chosen_treatment": "இரண்டாவது நேர்வு நீக்கப்பட்ட பின் வலுவான x-star சிறியது y என்ற முடிவை எழுதுகிறது.",
+          "alternatives_considered": "Keep the repeated x < y and leave the proof step vacuous.",
+          "rationale": "The immediately preceding disjunction is x-star < y or x-star = y, and non-equivalence rules out only the latter.",
+          "precise_review_question": "Does the conclusion x-star < y follow from the stated case split?",
+          "location_needle": "SOURCE CORRECTION TA-MOD-003"
+        },
+        {
+          "audit_id": "TA-MOD-004",
+          "unit_id": "OLP-0653",
+          "kind": "block-order-missing-distinctness",
+          "action": "Qualified the lifted order to distinct equivalence classes.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen statement says x < y implies the block of x is below the block of y, but x and y may lie in the same block.",
+          "chosen_treatment": "ஒரே தொகுதியில் உள்ள x,y ஐத் தவிர்த்து, வெவ்வேறு தொகுதிகளுக்கே வரிசையை உயர்த்துகிறது.",
+          "alternatives_considered": "Keep a strict order of a block below itself.",
+          "rationale": "The preceding item establishes separation only when x is not equivalent to y; a strict quotient order is defined on distinct blocks.",
+          "precise_review_question": "Is the distinct-block qualification sufficient and faithful to the surrounding proof?",
+          "location_needle": "SOURCE CORRECTION TA-MOD-004"
+        },
+        {
+          "audit_id": "TA-MOD-005",
+          "unit_id": "OLP-0653",
+          "kind": "false-universal-division-formula",
+          "action": "Replaced the inner universal x by existential x in the parity sentence.",
+          "expected_missing_math": [
+            "$\\Sat{N}{\\lforall[y][\\lforall[x][(y=x+x\\lory=x+x+\\Obj{0}')]]}$"
+          ],
+          "expected_extra_math": [
+            "$\\Sat{N}{\\lforall[y][\\lexists[x][(y=x+x\\lory=x+x+\\Obj{0}')]]}$"
+          ],
+          "expected_missing_commands": [
+            "\\lforall"
+          ],
+          "expected_extra_commands": [
+            "\\lexists"
+          ],
+          "source_issue_or_choice": "The frozen sentence claims every y equals two x or two x plus one for every x, which is false in the standard natural numbers.",
+          "chosen_treatment": "ஒவ்வொரு y க்கும் ஏதோவொரு x உள்ளது என்ற இருத்தல் அளவையடையை மீட்டமைக்கிறது.",
+          "alternatives_considered": "Keep the universal x and derive the next existence claim from a false sentence.",
+          "rationale": "Division with remainder one says every y has some quotient x, and the next sentence explicitly invokes that existence in M.",
+          "precise_review_question": "Does the existential x exactly state the required parity fact?",
+          "location_needle": "SOURCE CORRECTION TA-MOD-005"
+        },
+        {
+          "audit_id": "TA-MOD-006",
+          "unit_id": "OLP-0653",
+          "kind": "automorphism-reduct-clarification",
+          "action": "Specified that the exercise's automorphism is of the ordered reduct.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen exercise says automorphism of Domain(M) without naming a structure, although a shift need not preserve addition or multiplication.",
+          "chosen_treatment": "வரிசைச் சுயஓரினச்சார்பு என்று தெளிவுபடுத்துகிறது.",
+          "alternatives_considered": "Read the automorphism as preserving the full arithmetic language.",
+          "rationale": "The preceding conclusion proves only isomorphism of the <,= reducts; the exercise works in the same order language L.",
+          "precise_review_question": "Does the order-reduct clarification remove ambiguity without changing the exercise?",
+          "location_needle": "SOURCE CORRECTION TA-MOD-006"
+        },
+        {
+          "audit_id": "TA-MOD-007",
+          "unit_id": "OLP-0653",
+          "kind": "standard-block-not-biinfinite",
+          "action": "Restricted the doubly infinite Z-chain description to nonstandard blocks.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen text says each equivalence block is doubly infinite, but the standard block begins at zero and has no predecessor there.",
+          "chosen_treatment": "இரு திசைகளிலும் முடிவிலாத சங்கிலி என்பது நிலையற்ற தொகுதிகளுக்கே என்று தெளிவுபடுத்துகிறது.",
+          "alternatives_considered": "Claim the standard block has predecessors below zero.",
+          "rationale": "The earlier standard-part clause is order-isomorphic to the natural numbers with least element z; only nonstandard blocks have predecessors at every point.",
+          "precise_review_question": "Does restricting the Z-chain claim to nonstandard blocks preserve the later order-type argument?",
+          "location_needle": "SOURCE CORRECTION TA-MOD-007"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\lforall"
+      ],
+      "extra_commands": [
+        "\\Domain",
+        "\\lexists"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,116 @@
+% SEGMENT OLP-0689-S01
+% Part: proof-theory
+% Chapter: propositions-as-types
+% Section: proofs-to-terms
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{int}{pty}{pt}
+
+\olsection{\usetoken{P}{derivation} ஐ நிறுவல் சொற்களாக மாற்றுதல்}
+
+இயல்பான வருவித்தலின் !!{proof}s ஐ நிறுவல் சொற்களாக
+மாற்றுவது, அதாவது \Log{N2i} இன் !!{proof}s ஐ
+\Log{tN2i} இன் !!{proof}s ஆக மொழிமாற்றுவது,
+மிகவும் நேரடியான செயல். அந்த !!{derivation} இல்
+ஒவ்வொரு தொடருருவின் வலப்புற !!{formula} வுக்கும்
+இடப்புறம் ஒரு நிறுவல் சொல்லை எழுதினால் போதும்;
+அப்போது $\Gamma \Sequent M : !A$ என்ற வடிவத்
+தொடருருக்கள் கிடைக்கும். பின்னர், சூழல்~$\Gamma$ இல்
+$!A$ க்கு $M$ \emph{சான்றாக அமைகிறது} என்போம்.
+எந்த நிறுவல் சொல்லை எழுதுவது என்பதை
+\Log{tN2i} இன் விதிகளே முழுவதும் தீர்மானிக்கின்றன.
+
+\begin{prop}
+\Log{N2i} இல் $\Gamma \Sequent !A$ என்பதற்கான
+ஒவ்வொரு !!{proof}~$\delta$ வுக்கும், \Log{tN2i} இல்
+$\Gamma \Sequent N : !A$ என்பதற்கான !!a{proof}~$\delta'$
+பொருந்தும். நிறுவல் சொல்~$N$ ஐ $\delta$ தனித்துத்
+தீர்மானிக்கிறது.
+\end{prop}
+
+% SEGMENT OLP-0689-S02
+\begin{proof}
+$\delta$ வின் உயரத்தின்மீது தொகுத்தறிதல் செய்வோம்.
+$\delta$ என்பது $x:!A \Sequent !A$ என்ற அடிக்கோள்
+என்றால், $\delta'$ என்பது $x:!A \Sequent x:!A$
+என்ற அடிக்கோள். $\delta$ ஓர் அனுமான விதியில் முடிந்தால்,
+தொகுத்தறிதல் கருதுகோள் அதன் ஒவ்வொரு முன்கூற்றுக்கும்
+ஒரு நிறுவல் சொல்லையும், அந்த முன்கூற்றுக்குப் பொருந்திய
+நிறுவல் சொல் அடங்கிய தொடருருவிற்கான
+\Log{tN2i}-!!{proof}s ஐயும் தருகிறது. அதற்குப்
+பொருந்திய \Log{tN2i} விதியைப் பயன்படுத்துகிறோம்;
+முடிவின் நிறுவல் சொல்லை அந்த \Log{tN2i} அனுமான
+விதியே தீர்மானிக்கிறது.
+\end{proof}
+
+% SEGMENT OLP-0689-S03
+\begin{ex}
+  $(!A \land !B) \lif (!B \land !A)$ என்பதற்கான
+  \Log{N1i} இன் மிக எளிய !!{proof} ஒன்றைக் காண்போம்:
+  \[
+  \AxiomC{$\Discharge{!A\land !B}{x}$}
+  \RightLabel{\Elim\land[2]}
+  \UnaryInfC{$!B$}
+  \AxiomC{$\Discharge{!A\land !B}{x}$}
+  \RightLabel{\Elim\land[1]}
+  \UnaryInfC{$!A$}
+  \RightLabel{\Intro\land}
+  \BinaryInfC{$!B \land !A$}
+  \DischargeRule{\Intro\lif}{x}
+  \UnaryInfC{$(!A \land !B) \lif (!B \land !A)$}
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0689-S04
+  \Log{N2i} இல் அது பின்வருமாறு அமையும்:
+  \[
+  \Axiom$x : !A\land !B \fCenter !A\land !B$
+  \RightLabel{\Elim\land[2]}
+  \UnaryInf$x : !A\land !B \fCenter !B$
+  \Axiom$x : !A\land !B \fCenter !A\land !B$
+  \RightLabel{\Elim\land[1]}
+  \UnaryInf$x : !A\land !B \fCenter !A$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter !B \land !A$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter (!A \land !B) \lif (!B \land !A)$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0689-S05
+  நிறுவல் சொற்களை மேலிருந்து கீழாக ஒதுக்குகிறோம்.
+  அடிக்கோள்களுக்குரிய நிறுவல் சொல், சூழலிலுள்ள
+  அதே மாறியான~$x$. $\Elim\land[i]$ விதிகளுக்குரிய
+  நிறுவல் சொற்கள் முறையே $\proj{2}{x}$ என்றும்
+  $\proj{1}{x}$ என்றும் தீர்மானிக்கப்படுகின்றன.
+  \Intro{\land} விதியைப் பயன்படுத்தும்போது,
+  இவ்விரு நிறுவல் சொற்களையும்
+  $\pair{\proj{2}{x}}{\proj{1}{x}}$ என இணைக்கிறோம்.
+  இறுதியாக, \Intro{\lif} விதி ஒரு $\lambd$-சுருக்கத்தைப்
+  பயன்படுத்துகிறது: அது~$x$ ஐக் கட்டுப்படுத்தி,
+  $!A \land !B$ என்ற அனுமானத்தின் அடையாளம்~$x$
+  என்பதையும் பதிவுசெய்கிறது. ஆகவே நிறுவல் சொல்
+  $\lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}]$.
+  \Log{tN2i} இல் உள்ள !!{proof} பின்வருமாறு:
+  \[
+  \Axiom$x : !A\land !B \fCenter x: !A\land !B$
+  \RightLabel{\Elim\land[2]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{2}{x} : !B$
+  \Axiom$x : !A\land !B \fCenter x: !A\land !B$
+  \RightLabel{\Elim\land[1]}
+  \UnaryInf$x : !A\land !B \fCenter \proj{1}{x} : !A$
+  \RightLabel{\Intro\land}
+  \BinaryInf$x : !A\land !B \fCenter \pair{\proj{2}{x}}{\proj{1}{x}} :
+    !B \land !A$
+  \RightLabel{\Intro\lif}
+  \UnaryInf$\fCenter \lambd[\typeof{x}{!A \land
+  !B}][\pair{\proj{2}{x}}{\proj{1}{x}}] : (!A \land !B) \lif (!B \land !A)$
+  \DisplayProof
+  \]
+\end{ex}
+
+\end{document}

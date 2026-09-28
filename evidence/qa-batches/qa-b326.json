@@ -1,0 +1,65 @@
+{
+  "batch_id": "TA-B326",
+  "units": [
+    {
+      "unit_id": "OLP-0666",
+      "source_sha256": "a3109a0cde4f15f7f90482f4143b4ea73c890d36f085927499cc57396beaef02",
+      "translation_sha256": "758bc0371a1bb852fc4da5159af722f8f55bdf1d55de62d3ffec6606344675bf",
+      "source_bytes": 2650,
+      "translation_bytes": 3114,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-018",
+          "unit_id": "OLP-0666",
+          "kind": "N1-existential-elimination-caption-clarification",
+          "action": "Clarify that the existential-elimination eigenconstant is absent from the two premise derivations' end formulas and from undischarged open assumptions, while the temporary assumption discharged by the rule contains it.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The caption says the eigenconstant must not occur in the premises or an open assumption, but the displayed rule necessarily has the temporary assumption A(a) inside its minor derivation.",
+          "chosen_treatment": "Name the premise end formulas and explicitly exempt the temporary assumption discharged by existential elimination; retain every displayed rule and formula.",
+          "alternatives_considered": "Translate the shorthand literally and leave readers to infer the exception, or weaken the eigenvariable condition beyond the rule.",
+          "rationale": "The major premise and the minor derivation's end formula must be free of the eigenconstant, as must all undischarged open assumptions except the temporary A(a) occurrences the elimination discharges. This matches the displayed rule and the source-aligned natural-deduction quantifier section.",
+          "precise_review_question": "Does the clarified caption state the N1 existential-elimination eigenvariable condition without excluding its necessary discharged assumption?",
+          "location_needle": "விடுவிக்கப்படும் தற்காலிக"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

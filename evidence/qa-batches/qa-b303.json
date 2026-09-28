@@ -1,0 +1,217 @@
+{
+  "batch_id": "TA-B303",
+  "units": [
+    {
+      "unit_id": "OLP-0643",
+      "source_sha256": "150b411bdceac490428e642969889123ecc14db1668fde926adfc1d831e28745",
+      "translation_sha256": "3856cfa15db843b807b92faff65d6230a05253c2e4dc4aecd4e726b6b47a5eff",
+      "source_bytes": 11796,
+      "translation_bytes": 20160,
+      "source_coverage_complete": true,
+      "segments": 12,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma_0\\cup\\Gamma_1\\subseteq\\Gamma$",
+        "$\\Gamma_0\\cup\\{\\lnot!A\\}\\Proves\\lfalse$",
+        "$\\Gamma_0\\cup\\{\\lnot!A\\}\\Proves\\lfalse$",
+        "$\\Gamma_0\\Proves\\lnot!A\\lif\\lfalse$",
+        "$\\Gamma_0\\Proves(\\lnot!A\\lif\\lfalse)\\lif!A$",
+        "$\\Gamma_0\\Proves!A\\lor!B$",
+        "$!A$",
+        "$\\Subst{!A}{y}{x}$"
+      ],
+      "extra_math": [
+        "$\\Gamma$",
+        "$\\Gamma_0$",
+        "$\\Gamma_0\\cup\\{!A\\}\\Proves\\lfalse$",
+        "$\\Gamma_0\\cup\\{!A\\}\\Proves\\lfalse$",
+        "$\\Gamma_0\\Proves!A\\lif\\lfalse$",
+        "$\\Gamma_0\\Proves(!A\\lif\\lfalse)\\lif\\lnot!A$",
+        "$\\Gamma_0\\Proves\\lnot!A$",
+        "$!A_i$",
+        "$\\Subst{!A}{y}{c}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "axd",
+        "fol",
+        "for",
+        "free",
+        "include",
+        "logic",
+        "open",
+        "probAnd",
+        "probIf",
+        "probOr",
+        "prv",
+        "prvAll",
+        "prvEx",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-FOL-PRV-001",
+          "unit_id": "OLP-0643",
+          "kind": "negation-proof-proves-opposite-direction",
+          "action": "Repaired the displayed derivation for item 2 so that the assumed contradiction from A yields not-A. The frozen derivation instead assumed not-A and concluded A, proving a different direction of the preceding equivalence.",
+          "expected_missing_math": [
+            "$\\Gamma_0\\cup\\{\\lnot!A\\}\\Proves\\lfalse$",
+            "$\\Gamma_0\\cup\\{\\lnot!A\\}\\Proves\\lfalse$",
+            "$\\Gamma_0\\Proves\\lnot!A\\lif\\lfalse$",
+            "$\\Gamma_0\\Proves(\\lnot!A\\lif\\lfalse)\\lif!A$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma_0\\cup\\{!A\\}\\Proves\\lfalse$",
+            "$\\Gamma_0\\cup\\{!A\\}\\Proves\\lfalse$",
+            "$\\Gamma_0\\Proves!A\\lif\\lfalse$",
+            "$\\Gamma_0\\Proves(!A\\lif\\lfalse)\\lif\\lnot!A$",
+            "$\\Gamma_0\\Proves\\lnot!A$"
+          ],
+          "expected_missing_commands": [
+            "\\lnot",
+            "\\lnot"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The item states Gamma union {A} proves falsity implies Gamma proves not-A, yet the frozen proof starts with Gamma union {not-A} and concludes A.",
+          "chosen_treatment": "இரண்டாம் உருப்படியின் ஊகத்திலிருந்து கழித்தல் தேற்றத்தாலும் Ax0, MP படிகளாலும் மறுப்பு கிடைக்குமாறு வருவித்தலைத் திருத்துகிறது.",
+          "alternatives_considered": "Keep the contrary-direction display and add a note; this would leave the numbered proposition without its promised proof.",
+          "rationale": "The same Ax0 form is used correctly in item 3. The change restores the claimed implication without changing the theorem statement. The source's other occurrence of Gamma_0 proves A and the corrected conjunction proof offset in the aggregate math multiset.",
+          "precise_review_question": "Do the four corrected lines now derive not-A from Gamma_0 union {A} proving falsity in this calculus?",
+          "location_needle": "SOURCE CORRECTION TA-FOL-PRV-001"
+        },
+        {
+          "audit_id": "TA-FOL-PRV-002",
+          "unit_id": "OLP-0643",
+          "kind": "conjunction-projection-wrong-conclusion",
+          "action": "Corrected the conjunction-left MP line from A-or-B to A, the consequent of the displayed axiom.",
+          "expected_missing_math": [
+            "$\\Gamma_0\\Proves!A\\lor!B$"
+          ],
+          "expected_extra_math": [],
+          "expected_missing_commands": [
+            "\\lor"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen derivation cites (A and B) implies A but prints A or B as the MP conclusion, then concludes A in prose.",
+          "chosen_treatment": "மோடஸ் போனென்ஸ் படியின் முடிவை A எனத் திருத்துகிறது.",
+          "alternatives_considered": "Preserve A-or-B and leave the claimed A unproved.",
+          "rationale": "The displayed implication entails A, and the symmetric projection to B is described immediately after. The new Gamma_0 proves A occurrence is offset by the removal of the erroneous item-2 conclusion in the aggregate math multiset.",
+          "precise_review_question": "Is A the exact consequent needed for the first conjunction projection?",
+          "location_needle": "SOURCE CORRECTION TA-FOL-PRV-002"
+        },
+        {
+          "audit_id": "TA-FOL-PRV-003",
+          "unit_id": "OLP-0643",
+          "kind": "unused-second-witness-in-mp-proof",
+          "action": "Changed the final subset observation to Gamma_0 subset Gamma because the displayed MP proof uses Gamma_0 in both premises and never introduces Gamma_1.",
+          "expected_missing_math": [
+            "$\\Gamma_0\\cup\\Gamma_1\\subseteq\\Gamma$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma_0$",
+            "$\\Gamma$"
+          ],
+          "expected_missing_commands": [
+            "\\Gamma",
+            "\\subseteq",
+            "\\cup"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen closing sentence introduces Gamma_1 only after a derivation whose two premises and result all use Gamma_0.",
+          "chosen_treatment": "இறுதி அடங்கலை Gamma_0 subset Gamma என்று கூறுகிறது.",
+          "alternatives_considered": "Introduce a separate Gamma_1 premise and change all subsequent witness sets.",
+          "rationale": "One finite witness set suffices for the two same-context premises, and monotonicity then gives the Gamma conclusion.",
+          "precise_review_question": "Does the one-witness final step establish the proposition under its shared Gamma context?",
+          "location_needle": "SOURCE CORRECTION TA-FOL-PRV-003"
+        },
+        {
+          "audit_id": "TA-FOL-PRV-004",
+          "unit_id": "OLP-0643",
+          "kind": "induction-axiom-case-index",
+          "action": "Changed the weak-generalization proof's axiom case from A to the sequence member A_i.",
+          "expected_missing_math": [
+            "$!A$"
+          ],
+          "expected_extra_math": [
+            "$!A_i$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The proof checks each i in the derivation, but its first case asks whether the final formula A is an axiom rather than whether A_i is one.",
+          "chosen_treatment": "ஒவ்வொரு படிக்கும் உரிய A_i அடிகோள் எனில் என்ற நிபந்தனையை எழுதுகிறது.",
+          "alternatives_considered": "Keep A and leave the induction over intermediate proof lines incomplete.",
+          "rationale": "The two subsequent cases already refer to A_i, and the new sequence must be validated member by member.",
+          "precise_review_question": "Is A_i the intended axiom case for every proof step i?",
+          "location_needle": "SOURCE CORRECTION TA-FOL-PRV-004"
+        },
+        {
+          "audit_id": "TA-FOL-PRV-005",
+          "unit_id": "OLP-0643",
+          "kind": "free-for-lemma-inconsistent-substitution",
+          "action": "Made the lemma proof's first substituted formula match the lemma statement and its own next sentence: substitute y for c, not y for x.",
+          "expected_missing_math": [
+            "$\\Subst{!A}{y}{x}$"
+          ],
+          "expected_extra_math": [
+            "$\\Subst{!A}{y}{c}$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen lemma and its proof's second sentence concern Subst(A,y,c), but the proof's first sentence switches to Subst(A,y,x).",
+          "chosen_treatment": "முதல் வரியிலும் முடிவுரை தொடர்புடைய அதே மாற்றிய வாய்பாட்டைக் குறிப்பிடுகிறது.",
+          "alternatives_considered": "Keep the mismatched x argument and make the proof premise about a different formula.",
+          "rationale": "The contradiction relies on free y occurrences introduced in place of c, exactly as both the lemma statement and the following sentence say.",
+          "precise_review_question": "Does changing the first occurrence to Subst(A,y,c) restore the lemma's contradiction argument?",
+          "location_needle": "SOURCE CORRECTION TA-FOL-PRV-005"
+        },
+        {
+          "audit_id": "TA-FINAL-008",
+          "unit_id": "OLP-0643",
+          "kind": "faithful-heading-compression",
+          "action": "வலிமையான பொதுமைப்படுத்தல் தேற்றத்தின் தலைப்பு, அதே பொருளுடன் சுருக்கமான தமிழ் உருபில் அமைக்கப்பட்டது.",
+          "expected_extra_commands": [],
+          "expected_missing_commands": [],
+          "source_issue_or_choice": "இணை வாசிப்பு நூலின் 7 ஆம் பக்கத்தில் நீண்ட தமிழ் தலைப்பு வலது ஓரத்தை 16.61446 புள்ளிகள் கடந்தது. Frozen English: Strong Generalization on Constants.",
+          "chosen_treatment": "`மாறிலிக் குறிகளின் வலிமையான பொதுமைப்படுத்தல்` என்பது அதே மூலப் பொருளைச் சுருக்கமாகத் தருகிறது.",
+          "alternatives_considered": "முந்தைய நீண்ட `மாறிலிக் குறிகள் குறித்த ...` வடிவம்; முழு நூலின் எழுத்துருவைச் சிறிதாக்குதல்.",
+          "rationale": "கணிதக் கருதுகோள்கள், சொற்கள் மற்றும் தேற்றத்தின் வாசிப்பு அளவை மாற்றாமல் வாக்கிய உருபை மட்டும் சுருக்குகிறது. மீண்டும் நேரடியாகப் பார்த்த தமிழ் தருக்க நூல் பக்.264–265 நிறுவல் பதிவை ஆதரிக்கிறது; இந்த நவீன தேற்றத் தலைப்பின் நேரடி சான்றாகக் கோரப்படவில்லை.",
+          "precise_review_question": "சுருக்கப்பட்ட தலைப்பு Strong Generalization on Constants என்ற பொருளையும் தொடர்ச்சியான கலைச்சொல்லையும் காக்கிறதா?",
+          "location_needle": "மாறிலிக் குறிகளின் வலிமையான பொதுமைப்படுத்தல்"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Gamma",
+        "\\subseteq",
+        "\\cup",
+        "\\lnot",
+        "\\lnot",
+        "\\lor"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Final full-corpus verification pending",
+    "Whole reader and publication pending"
+  ]
+}

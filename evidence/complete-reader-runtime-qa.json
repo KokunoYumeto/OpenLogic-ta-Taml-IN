@@ -1,0 +1,37 @@
+{
+  "schema": "openlogic-tamil-complete-reader-runtime/1",
+  "checked_utc": "2026-09-28T14:02:51.199332+00:00",
+  "result": "pass",
+  "reader_input_units": 695,
+  "english_content_inputs": [],
+  "pdf": {
+    "path": "build/tamil-complete.pdf",
+    "bytes": 7025554,
+    "sha256": "b92e14376c897a2d2fda39c06317ea08b509395cc50cf05c6907dc6f7c3933ec",
+    "pages": 1171
+  },
+  "master_sha256": "f7f43ba3d17a804f334d42bec56050a2f5d90700bacbd81dc0cbebc926d92b56",
+  "assembly_qa_sha256": "008f8d88ca7ffa065fcd0d4bdf8e3d091bc20d43b2cf3a354213dbe29e931b3c",
+  "rendering_style_sha256": "2c9a7622527e7b43ba0e457cb7f404d3e40c2ca87952409a42294ab371a67f16",
+  "log_sha256": "1541d65b4f48a18928bd683cad8042fb02ceac876c26bac5bcb6bf305591642f",
+  "recorder": {
+    "bytes": 398981,
+    "sha256": "a69a48504d4a2cccc5817232fd61bccde119586bde36ca656ff87a811a70210a"
+  },
+  "build_receipt_sha256": "6b568046a10cc166a6be960e36d3efcd56dfb07f8f33e5c04ad2d5142d1057b4",
+  "remaining_log_findings": {
+    "missing_characters": 0,
+    "overfull_boxes": 631,
+    "boxes_wider_than_10pt": 0,
+    "largest_box_overflow_pt": 9.39609,
+    "undefined_reference_warnings": 0,
+    "undefined_text_tokens": []
+  },
+  "release_ready": false,
+  "all_page_visual_review_complete": false,
+  "limitations": [
+    "This verifies actual translated-input scope after the guarded build.",
+    "Successful compilation does not certify layout, resolved references, Tamil shaping or copy/search.",
+    "Companion, direct-source equivalence, all-page visual QA and publication verification remain."
+  ]
+}

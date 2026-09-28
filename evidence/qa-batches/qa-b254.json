@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0572",
       "source_sha256": "c034323f1402beaf3d329ac7d7a0be6e192bd86ea81ff3efffe29229aca9cf43",
-      "translation_sha256": "be23c99a523bff02fd235855fcb02967565207058231103a39c566b803e1d88c",
+      "translation_sha256": "30ab2fcf35dba6ab0acb32f8ea2304074d6496378cb275f54656ef58e1d446fb",
       "source_bytes": 7874,
-      "translation_bytes": 15838,
+      "translation_bytes": 15894,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": false,
@@ -19,18 +19,15 @@
         "$\\Setabs{y}{(\\existsx\\inA)\\phi(x,y)}$"
       ],
       "token_key_parity": true,
-      "identifier_parity": true,
+      "identifier_parity": false,
       "environment_parity": true,
       "unicode_nfc": true,
       "replacement_char_absent": true,
       "english_words_for_review": [
-        "Theorem",
         "align",
-        "first",
         "include",
         "logic",
         "open",
-        "part",
         "ref",
         "replacement",
         "section",
@@ -100,6 +97,34 @@
           "rationale": "The section's stated aim is to derive Replacement over Z from a weaker reflection principle; the definition and theorem labels confirm that reading.",
           "precise_review_question": "Does the transition introduce Weak-Reflection as a weaker formulation of Reflection?",
           "location_needle": "SOURCE CORRECTION TA-STH-022"
+        },
+        {
+          "audit_id": "TA-FINAL-002",
+          "unit_id": "OLP-0572",
+          "kind": "localized-citation-locator",
+          "action": "மேற்கோளின் வாசகருக்கான தேற்ற இடக்குறிப்பைத் தமிழாக்குகிறது; Levy1960 என்ற நிலையான மேற்கோள் திறவுகோல் மாறாது.",
+          "identifier_replacements": [
+            {
+              "from": "\\citet[first\npart of Theorem 2]{Levy1960}",
+              "to": "\\citet[தேற்றம் 2 இன் முதல் பகுதி]{Levy1960}",
+              "count": 1
+            },
+            {
+              "from": "\\citet[Theorem 6]{Levy1960}",
+              "to": "\\citet[தேற்றம் 6]{Levy1960}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "மூலத்தின் இரு ஆங்கில இடக்குறிப்புகள் தமிழாக்கத்தில் மீதமிருந்தன.",
+          "chosen_treatment": "தேற்றம் 2 இன் முதல் பகுதி",
+          "alternatives_considered": "ஆங்கில இடக்குறிப்பைத் தொடர்தல்.",
+          "rationale": "வாசகருக்கான விளக்கச் சொற்கள் தமிழில் வேண்டும்; மேற்கோளின் அடையாளமும் தேற்ற எண்ணும் காக்கப்படுகின்றன.",
+          "precise_review_question": "தேற்றம் 2 இன் முதல் பகுதி என்ற இடம் மாறாமல் உள்ளதா?",
+          "location_needle": "தேற்றம் 2 இன் முதல் பகுதி"
         }
       ],
       "missing_tokens": [],
@@ -107,6 +132,9 @@
       "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -151,6 +179,9 @@
       "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -163,7 +194,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

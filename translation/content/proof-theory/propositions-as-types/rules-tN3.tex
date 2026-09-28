@@ -1,0 +1,74 @@
+% SEGMENT OLP-0693-S01
+% Part: proof-theory
+% Chapter: propositions-as-types
+% Section: rules-tN3
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\begin{table}
+\begin{tabular}{@{}c@{}c@{}}
+\multicolumn{2}{l}{\textbf{அடிக்கோள்கள்:}}\\
+\multicolumn{2}{c}{$x:!A \in \Gamma$ எனில் $\Gamma \Sequent x:!A$}\\[3ex]
+\multicolumn{2}{l}{\textbf{அனுமான விதிகள்:}}\\[3ex]
+\multicolumn{2}{c}{\Axiom$x: !A, \Gamma \fCenter N:!B$
+\RightLabel{\Intro{\lif}}
+\UnaryInf$\Gamma \fCenter \lambd[\typeof{x}{!A}][N] : !A \lif !B $
+\DisplayProof}
+\\[4ex]
+\multicolumn{2}{c}{\Axiom$\Gamma \fCenter N:!A \lif !B$
+\Axiom$\Gamma \fCenter M:!A$
+\RightLabel{\Elim{\lif}}
+\BinaryInf$\Gamma \fCenter (NM) : !B$
+\DisplayProof}
+\\[4ex]
+\multicolumn{2}{c}{\Axiom$\Gamma \fCenter N_1 : !A$
+\Axiom$\Gamma \fCenter N_2 : !B$
+\RightLabel{\Intro{\land}}
+\BinaryInf$\Gamma \fCenter \pair{N_1}{N_2} : !A \land !B $
+\DisplayProof}
+\\[4ex]
+\Axiom$\Gamma \fCenter N: !A \land !B$
+\RightLabel{\Elim{\land}[1]}
+\UnaryInf$\Gamma \fCenter \proj{1}{N} : !A$
+\DisplayProof
+&
+\Axiom$\Gamma \fCenter N:!A \land !B$
+\RightLabel{\Elim{\land}[2]}
+\UnaryInf$\Gamma \fCenter \proj{2}{N} : !B$
+\DisplayProof\\[3ex]
+\\[4ex]
+\Axiom$\Gamma \fCenter N: !A$
+\RightLabel{\Intro{\lor}[1]}
+\UnaryInf$\Gamma \fCenter \inj[!B]{1}{N} : !A \lor !B$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter N : !A$
+\RightLabel{\Intro{\lor}[2]}
+\UnaryInf$\Gamma \fCenter \inj[!B]{2}{N} : !B \lor !A$
+\DisplayProof\\[3ex]
+\multicolumn{2}{c}{
+\begin{tabular}[b]{@{}l@{}}
+\Axiom$\Gamma \fCenter M : !A \lor !B$
+\Axiom$x:!A, \Gamma \fCenter N_1 : !C$
+\Axiom$y:!B, \Gamma \fCenter N_2: !C$
+\RightLabel{\Elim{\lor}}
+\TrinaryInf$\Gamma \fCenter
+\dcase{M}{x}{N_1}{y}{N_2} : !C$
+\DisplayProof
+\end{tabular}
+}
+\\[4ex]
+\multicolumn{2}{c}{\Axiom$\Gamma \fCenter N: \lfalse$
+\RightLabel{\FalseInt}
+\UnaryInf$\Gamma \fCenter \abort{!A}{N} : !A$
+\DisplayProof}
+\end{tabular}
+\caption{வகை ஒதுக்கீட்டு முறைமையாகச் செயல்படும்
+கூற்றுகளுக்கான சொல்-குறியிட்ட உள்ளுணர்வுவாத இயல்பான
+வருவித்தல் முறைமை \Log{tN3ip} இன் விதிகள்.}
+\ollabel{tab:tN3ip}
+\end{table}
+
+\end{document}

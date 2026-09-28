@@ -1,13 +1,16 @@
-# Tamil translation decision evidence
+# தமிழாக்கத் தேர்வுகளின் சான்றுகளும் மதிப்புரையும்
 
-This directory contains the canonical expert-review surfaces for the `openlogic-ta-Taml-IN` partial edition at frozen OpenLogic revision `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`.
+`openlogic-ta-Taml-IN` பதிப்பின் உறையவைக்கப்பட்ட OpenLogic மூலம் `9620cc73f9c8e0ad003c514a5d3748f29611c4c0`. தமிழாக்கம் 722/722 அலகுகளுக்கு முடிந்துள்ளது. கீழுள்ள தேர்வுப் பதிவில் 701 அலகுகளில் கண்டறியப்பட்ட துல்லிய நிகழ்விடங்கள் உள்ளன; எல்லா அலகுகளிலும் தனி சொல் முடிவு இருந்ததாக இது கூறவில்லை.
 
-- `TRANSLATION_DECISIONS_FULL.md` is the complete human-readable register.
-- `PRIORITY_REVIEW.md` contains the high-priority questions.
-- `DECISION_OCCURRENCES.csv` has one row per exact source-target occurrence.
-- `DECISIONS.json` is the normative machine-readable register.
-- `translation-decision.schema.json` is the frozen cross-language schema.
-- `TRANSLATION_DECISION_QA.json` verifies the schema and projection gates.
-- `VARIANT_ASSESSMENT.md` records the evidence-based script, notation, register, and regional-edition recommendation.
+முதல் 570 அலகுகளின் இயந்திரத் தமிழாக்கமும் அப்போதைய திருத்தங்களும் OpenAI Codex — GPT-5.6 Sol, Ultra சிந்தனை நிலையில்; மீதமுள்ள 152 அலகுகளின் தமிழாக்கமும் பின்னைய பதிப்புப் பணியும் OpenAI Codex — GPT-6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன. சுயாதீன மனித மதிப்புரை செய்யப்பட்டதாகக் கூறப்படவில்லை.
 
-Current coverage is 619/722 translated source units. Reader pages are mapped for 49 units; all other page fields say `pending` and are never guessed.
+- `TRANSLATION_DECISIONS_TAMIL.md` — தமிழில் மறுபார்க்கப்பட்ட விளக்கங்கள்; தமிழாக்கம் இன்னும் நிலுவையில் உள்ள தேர்வுகளும் தெளிவாகக் குறிக்கப்பட்டுள்ளன.
+- `TRANSLATION_DECISIONS_FULL.md` — ஆங்கில மூல விளக்கங்களுடன் எல்லாத் தேர்வுகளின் துணைப் பதிவு.
+- `PRIORITY_REVIEW.md` — முன்னுரிமை மதிப்புரைக் கேள்விகள்.
+- `DECISION_OCCURRENCES.csv` — மூல/தமிழ் உரையில் ஒவ்வொரு துல்லிய நிகழ்விடத்துக்கும் ஒரு வரி.
+- `DECISIONS.json.gz` — GitHub வரம்புக்குள் உள்ள முழு அழுத்திய பதிவு; `gzip -d` மூலம் திறந்தால் பைட் மாறாத `DECISIONS.json` கிடைக்கும். அழுத்தப்படாத கோப்பு முழு மூல ZIP இலும் உள்ளது.
+- `translation-decision.schema.json` — மொழிகளுக்கிடையே உறையவைக்கப்பட்ட புல அமைப்பு.
+- `TRANSLATION_DECISION_QA.json` — புல அமைப்பையும் கோப்பு பொருத்தங்களையும் சரிபார்க்கும் சான்று.
+- `VARIANT_ASSESSMENT.md` — எழுத்து, குறியீடு, நடை, வட்டாரப் பதிப்பு பற்றிய ஆதார மதிப்பீடு.
+
+தேர்வுகளை மதிப்பிடும்போது `OLP` அலகு, மூல வரி, தமிழ் வரி, ஆதாரக் குறி ஆகியவற்றை ஒப்பிடுக. 49 அலகுகளின் வாசிப்புப் பக்கங்கள் மட்டும் இதுவரை பொருத்தப்பட்டுள்ளன; மற்றவை `pending` என்று குறிக்கப்பட்டுள்ளன, ஊகிக்கப்படவில்லை. தனிப்பட்ட பதிவுகளில் ஆங்கிலத்தில் பதியப்பட்ட மூல விளக்கங்கள் தமிழில் முழுமையாக மாற்றப்பட வேண்டியவை; அவற்றைத் தமிழ் விளக்கங்களாகக் கருத வேண்டாம்.

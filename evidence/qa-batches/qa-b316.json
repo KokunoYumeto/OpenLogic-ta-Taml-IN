@@ -1,0 +1,149 @@
+{
+  "batch_id": "TA-B316",
+  "units": [
+    {
+      "unit_id": "OLP-0656",
+      "source_sha256": "930858ac1885a22be7f561047de54c702127d914720572042917ed3c8cef3214",
+      "translation_sha256": "6849cb395e55fd9046b3735533d641624c613814cdca026184d11fd3b88fd60b",
+      "source_bytes": 22898,
+      "translation_bytes": 40691,
+      "source_coverage_complete": true,
+      "segments": 15,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\pi_2$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda,!A$\\AxiomC{}\\RightLabel{$\\pi_3'$}\\Deduce$!A,\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda$\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda$\\RightLabel{$R$}\\UnaryInf$\\Gamma,\\fCenter\\Delta',!D,!D$\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1''$}\\Deduce$\\Gamma\\fCenter\\Delta,!B\\land!C,!C,!A$\\AxiomC{}\\RightLabel{$\\pi_4'$}\\Deduce$!A,\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_5$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!B$\\AxiomC{}\\RightLabel{$\\pi_6$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$\\Gamma\\fCenter\\Delta,!B\\land!C,!B\\land!C$\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_2'$}\\Deduce$\\Gamma\\fCenter\\Delta,!B$\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$!B,\\Gamma\\fCenter\\Delta,!C$\\AxiomC{}\\RightLabel{$\\pi_2''$}\\Deduce$!C,\\Gamma\\fCenter\\Delta$\\RightLabel{\\CutCS}\\BinaryInf$!B,\\Gamma\\fCenter\\Delta$\\RightSubproofLabel{$\\pi_1''$}\\RightLabel{\\CutCS}\\BinaryInf$!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "$\\pi_1$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda,!A$\\AxiomC{}\\RightLabel{$\\pi_3'$}\\Deduce$!A,\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda$\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda$\\RightLabel{$R$}\\UnaryInf$\\Gamma\\fCenter\\Delta',!D,!D$\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1''$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!C,!A$\\AxiomC{}\\RightLabel{$\\pi_4'$}\\Deduce$!A,\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_5$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!B$\\AxiomC{}\\RightLabel{$\\pi_6$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$\\Gamma\\fCenter\\Delta',!B\\land!C,!B\\land!C$\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_2'$}\\Deduce$\\Gamma\\fCenter\\Delta,!B$\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$!B,\\Gamma\\fCenter\\Delta,!C$\\AxiomC{}\\RightLabel{$\\pi_2''$}\\Deduce$!C,\\Gamma\\fCenter\\Delta$\\RightLabel{\\CutCS}\\BinaryInf$!B,\\Gamma\\fCenter\\Delta$\\RightSubproofLabel{$\\pi_1''$}\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma\\fCenter\\Delta$\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "adm",
+        "include",
+        "inv",
+        "logic",
+        "main",
+        "open",
+        "operator",
+        "qua",
+        "section",
+        "seq"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-005",
+          "unit_id": "OLP-0656",
+          "kind": "wrong-branch-proof-label",
+          "action": "Use pi_1, whose succedent contains the duplicated A.",
+          "expected_missing_math": [
+            "$\\pi_2$"
+          ],
+          "expected_extra_math": [
+            "$\\pi_1$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The second alternative Case A branch calls the left proof pi_2 although pi_2 is the right axiom.",
+          "chosen_treatment": "Use pi_1, whose succedent contains the duplicated A.",
+          "alternatives_considered": "Preserve the erroneous frozen expression.",
+          "rationale": "Right contraction applies to the left premiss pi_1.",
+          "precise_review_question": "Is pi_1 the intended proof label?",
+          "location_needle": "இரண்டாம் நேர்வில்~$\\pi_1$"
+        },
+        {
+          "audit_id": "TA-PT-006",
+          "unit_id": "OLP-0656",
+          "kind": "stray-comma-in-generic-sequent",
+          "action": "Remove the dangling comma after Gamma.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda,!A$\\AxiomC{}\\RightLabel{$\\pi_3'$}\\Deduce$!A,\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda$\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda$\\RightLabel{$R$}\\UnaryInf$\\Gamma,\\fCenter\\Delta',!D,!D$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda,!A$\\AxiomC{}\\RightLabel{$\\pi_3'$}\\Deduce$!A,\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda$\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma,\\Pi\\fCenter\\Delta',!D,\\Lambda$\\RightLabel{$R$}\\UnaryInf$\\Gamma\\fCenter\\Delta',!D,!D$\\DisplayProof\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The generic permuted-cut conclusion has a comma after Gamma with no following antecedent.",
+          "chosen_treatment": "Remove the dangling comma after Gamma.",
+          "alternatives_considered": "Preserve the erroneous frozen expression.",
+          "rationale": "R removes active context Pi and leaves Gamma as the complete antecedent.",
+          "precise_review_question": "Is Gamma the intended antecedent?",
+          "location_needle": "\\UnaryInf$\\Gamma \\fCenter \\Delta', !D, !D$"
+        },
+        {
+          "audit_id": "TA-PT-007",
+          "unit_id": "OLP-0656",
+          "kind": "wrong-delta-context-in-two-premise-case",
+          "action": "Use Delta-prime in both displayed positions.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1''$}\\Deduce$\\Gamma\\fCenter\\Delta,!B\\land!C,!C,!A$\\AxiomC{}\\RightLabel{$\\pi_4'$}\\Deduce$!A,\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\DisplayProof\\]",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_5$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!B$\\AxiomC{}\\RightLabel{$\\pi_6$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$\\Gamma\\fCenter\\Delta,!B\\land!C,!B\\land!C$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1''$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!C,!A$\\AxiomC{}\\RightLabel{$\\pi_4'$}\\Deduce$!A,\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\DisplayProof\\]",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_5$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!B$\\AxiomC{}\\RightLabel{$\\pi_6$}\\Deduce$\\Gamma\\fCenter\\Delta',!B\\land!C,!C$\\RightLabel{\\RightR{\\land}}\\BinaryInf$\\Gamma\\fCenter\\Delta',!B\\land!C,!B\\land!C$\\DisplayProof\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Two Case D displays use Delta where Delta-prime is required; Delta already includes B-and-C.",
+          "chosen_treatment": "Use Delta-prime in both displayed positions.",
+          "alternatives_considered": "Preserve the erroneous frozen expression.",
+          "rationale": "Weakening adds C to Delta-prime,B-and-C,A, and the final right-conjunction yields exactly two B-and-C occurrences over Delta-prime.",
+          "precise_review_question": "Are both Delta-prime replacements correct?",
+          "location_needle": "\\Deduce$\\Gamma \\fCenter \\Delta', !B \\land !C, !C, !A$"
+        },
+        {
+          "audit_id": "TA-PT-008",
+          "unit_id": "OLP-0656",
+          "kind": "wrong-final-implication-cut-conclusion",
+          "action": "Conclude Gamma => Delta in the outer cut.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_2'$}\\Deduce$\\Gamma\\fCenter\\Delta,!B$\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$!B,\\Gamma\\fCenter\\Delta,!C$\\AxiomC{}\\RightLabel{$\\pi_2''$}\\Deduce$!C,\\Gamma\\fCenter\\Delta$\\RightLabel{\\CutCS}\\BinaryInf$!B,\\Gamma\\fCenter\\Delta$\\RightSubproofLabel{$\\pi_1''$}\\RightLabel{\\CutCS}\\BinaryInf$!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_2'$}\\Deduce$\\Gamma\\fCenter\\Delta,!B$\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$!B,\\Gamma\\fCenter\\Delta,!C$\\AxiomC{}\\RightLabel{$\\pi_2''$}\\Deduce$!C,\\Gamma\\fCenter\\Delta$\\RightLabel{\\CutCS}\\BinaryInf$!B,\\Gamma\\fCenter\\Delta$\\RightSubproofLabel{$\\pi_1''$}\\RightLabel{\\CutCS}\\BinaryInf$\\Gamma\\fCenter\\Delta$\\DisplayProof\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The outer displayed implication-case cut retains B on the left after cutting it.",
+          "chosen_treatment": "Conclude Gamma => Delta in the outer cut.",
+          "alternatives_considered": "Preserve the erroneous frozen expression.",
+          "rationale": "Cut eliminates the shared B and the following text identifies Gamma => Delta as the result.",
+          "precise_review_question": "Does the outer cut conclude Gamma => Delta?",
+          "location_needle": "\\RightSubproofLabel{$\\pi_1''$}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

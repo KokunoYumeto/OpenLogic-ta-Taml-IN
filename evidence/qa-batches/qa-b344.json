@@ -1,0 +1,94 @@
+{
+  "batch_id": "TA-B344",
+  "units": [
+    {
+      "unit_id": "OLP-0687",
+      "source_sha256": "56c9430670f6e37d7ceb3781c63f2ffd1258f7533dbf4bf9e4c99278b43e67be",
+      "translation_sha256": "8f24f1c38496bfb7a46266683fec698ccf391bd3c188751bc5e31581bc91c956",
+      "source_bytes": 10997,
+      "translation_bytes": 27352,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}\\cutrank{(\\lambd[\\typeof{x}{!A}][\\typeof{N}{!B}])Q}&=\\len{!A}+\\len{!B}+1\\\\\\cutrank{\\ande{i}{\\andi{\\typeof{M}{!A}}{\\typeof{N}{!B}}}}&=\\len{!A}+\\len{!B}+1\\\\\\cutrank{\\ore{\\ori{i}{!A_{i}}{\\typeof{M}{!A_i}}}{\\typeof{x_1}{!A_1}}{\\typeof{N_1}{!C}}{\\typeof{x_2}{!A_2}}{\\typeof{N_2}{!C}}}&=\\len{!A}+\\len{!B}+1\\end{align*}",
+        "$\\ore{i}{x_1}{P_1}{x_2}{P_2}$",
+        "$\\cutrank{\\Subst{M}{N}{x}}=\\len{!A})$",
+        "$\\cutrank{x}$",
+        "$O_2$"
+      ],
+      "extra_math": [
+        "\\begin{align*}\\cutrank{(\\lambd[\\typeof{x}{!A}][\\typeof{N}{!B}])Q}&=\\len{!A}+\\len{!B}+1\\\\\\cutrank{\\ande{i}{\\andi{\\typeof{M}{!A}}{\\typeof{N}{!B}}}}&=\\len{!A}+\\len{!B}+1\\\\\\cutrank{\\ore{\\ori{i}{!A_{i}}{\\typeof{M}{!A_i}}}{\\typeof{x_1}{!A_1}}{\\typeof{N_1}{!C}}{\\typeof{x_2}{!A_2}}{\\typeof{N_2}{!C}}}&=\\len{!A_1}+\\len{!A_2}+1\\end{align*}",
+        "$\\ore{x}{x_1}{P_1}{x_2}{P_2}$",
+        "$\\cutrank{\\Subst{M}{N}{x}}=\\len{!A}$",
+        "$O_1'$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0687",
+          "audit_id": "TA-PT-039",
+          "kind": "typed-normalization-cut-rank-local-confluence-and-proof-scope",
+          "action": "Correct the disjunction redex rank to lengths A1 and A2 plus one; use x as the scrutinee in the substitution lemma; remove the stray parenthesis and undefined cutrank(x); correct projection-first output from O2 to O1-prime. State the empty-maximum convention and accurately bound the unproved strong-normalization and local-confluence claims.",
+          "expected_missing_math": [
+            "\\begin{align*}\\cutrank{(\\lambd[\\typeof{x}{!A}][\\typeof{N}{!B}])Q}&=\\len{!A}+\\len{!B}+1\\\\\\cutrank{\\ande{i}{\\andi{\\typeof{M}{!A}}{\\typeof{N}{!B}}}}&=\\len{!A}+\\len{!B}+1\\\\\\cutrank{\\ore{\\ori{i}{!A_{i}}{\\typeof{M}{!A_i}}}{\\typeof{x_1}{!A_1}}{\\typeof{N_1}{!C}}{\\typeof{x_2}{!A_2}}{\\typeof{N_2}{!C}}}&=\\len{!A}+\\len{!B}+1\\end{align*}",
+            "$\\ore{i}{x_1}{P_1}{x_2}{P_2}$",
+            "$\\cutrank{\\Subst{M}{N}{x}}=\\len{!A})$",
+            "$\\cutrank{x}$",
+            "$O_2$"
+          ],
+          "expected_extra_math": [
+            "\\begin{align*}\\cutrank{(\\lambd[\\typeof{x}{!A}][\\typeof{N}{!B}])Q}&=\\len{!A}+\\len{!B}+1\\\\\\cutrank{\\ande{i}{\\andi{\\typeof{M}{!A}}{\\typeof{N}{!B}}}}&=\\len{!A}+\\len{!B}+1\\\\\\cutrank{\\ore{\\ori{i}{!A_{i}}{\\typeof{M}{!A_i}}}{\\typeof{x_1}{!A_1}}{\\typeof{N_1}{!C}}{\\typeof{x_2}{!A_2}}{\\typeof{N_2}{!C}}}&=\\len{!A_1}+\\len{!A_2}+1\\end{align*}",
+            "$\\ore{x}{x_1}{P_1}{x_2}{P_2}$",
+            "$\\cutrank{\\Subst{M}{N}{x}}=\\len{!A}$",
+            "$O_1'$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\cutrank"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen disjunction cut-rank line uses unbound A,B instead of its displayed A1,A2. Its substitution lemma makes the case scrutinee i rather than the variable x being replaced, prints len(A)) and equates a new redex rank to undefined cutrank(x). The projection local-confluence example ends at discarded O2 rather than selected O1-prime. The rank proof addresses beta-shaped redexes but not earlier permutation conversions, later strong normalization is asserted without proof here, the weak Church-Rosser sketch omits cases, and Newman's argument needs a normal form of the common reduct.",
+          "chosen_treatment": "Use A1,A2 in the disjunction rank and x in the case scrutinee; remove the typo and undefined rank; end the projection diamond at O1-prime; preserve every other formula and rule. Add narrow Tamil prose for max-empty zero, rank-m selection, unproved commuting-conversion/strong-normalization scope, omitted local-confluence cases and Newman's common normal form.",
+          "alternatives_considered": "Keep the unbound rank and wrong projection result; infer strong normalization from a proof of one normalizing strategy; treat the common reduct N-triple-prime itself as already normal; silently invent a full local-confluence proof.",
+          "rationale": "The disjunction constructor is typed A1-or-A2, so its length is len(A1)+len(A2)+1. Substitution for x can create a case-elimination redex only when the case scrutinee is x and N is an injection. A variable is not a redex and has no cutrank. First projection selects O1; both contraction orders join at O1-prime when the inner reduction is in O1. Existence of one terminating path does not imply all paths terminate. For Newman's descent, choose a normal form of the common reduct before comparison.",
+          "precise_review_question": "Do the corrected cut-rank expressions and projection diamond match the displayed types and reduction rules, and are the unproved strong-normalization and omitted overlap cases labelled accurately?",
+          "location_needle": "\\len{!A_1} + \\len{!A_2} + 1"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\cutrank"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

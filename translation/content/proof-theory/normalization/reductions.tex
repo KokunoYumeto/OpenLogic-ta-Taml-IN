@@ -1,0 +1,392 @@
+% SEGMENT OLP-0676-S01
+% Part: proof-theory
+% Chapter: normalization
+% Section: reductions
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nor}{red}
+
+\olsection{குறைப்பு உருமாற்றங்கள்}
+
+\Log{N1i} இல் உள்ள !!a{proof} இன் வெட்டு
+ஒன்றின் நீளம்~$1$ என்றால், அது ஒரே !!{formula}
+நிகழ்வைக் கொண்ட தொடர். அந்த !!{formula} ஓர்
+!!a{elimination} அனுமானத்தின் முதன்முன்கோள்.
+முதலில் பரிசீலிக்கும் நேர்வில் அது ஓர்
+!!a{introduction} அனுமானத்தின் முடிவும் ஆகும்;
+பொய்யிலிருந்து வருவிக்கும் நேர்வை இறுதியில் பார்ப்போம்.
+இயல்பாக்க நிறுவலில் இத்தகைய !!{introduction}/
+!!{elimination} இணையில் முடியும் துணை-!!{proof}
+ஐ, அவ்விரு அனுமானங்களும் நீக்கப்பட்ட புதிய
+!!{proof} ஆல் மாற்றிக் குறைக்கிறோம். இந்த மாற்றத்தால்
+புதிய வெட்டுகள் உருவாகலாம். ஆனால் அவற்றின் நிலை,
+குறைக்கப்படும் வெட்டின் நிலையைவிடத் தாழ்ந்தது என்பதை
+கீழே உறுதிசெய்வோம். எனவே உரிய மிகுநிலை வெட்டைத்
+தேர்ந்தெடுத்தால், புதிய !!{proof} இன் வெட்டு நீளம்
+குறையும் (நீளம்~$1$ கொண்ட மிகுநிலை வெட்டு
+நீக்கப்படுவதால்); அல்லது, அந்த வெட்டே ஒரே மிகுநிலை
+வெட்டாக இருந்தால், !!{proof} இன் வெட்டு நிலை குறையும்.
+
+% SEGMENT OLP-0676-S02
+எடுத்துக்காட்டாக, தொடர்புடைய அனுமானங்கள்
+\Intro{\lif}, \Elim{\lif} ஆகவும்,
+$!A \ident !B \lif !C$ ஆகவும், துணை-!!{proof}~$\delta_1$
+பின்வருமாறு முடிவதாகவும் கொள்வோம்:
+\[
+\AxiomC{$\Discharge{!B}{x}$}
+\RightLabel{$\delta_2$}
+\DeduceC{$!C$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!B \lif !C$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+\]
+இந்த வெட்டை அகற்ற, $\delta$ இல் உள்ள
+துணைநிறுவல்~$\delta_1$ ஐப் பின்வருவதாக மாற்றுகிறோம்:
+\[
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B$}
+\RightLabel{$\Subst{\delta_2}{\delta_3}{!B^x}$}
+\DeduceC{$!C$}
+\DisplayProof
+\]
+$\Subst{\delta_2}{\delta_3}{!B^x}$ என்பதன் பொருள்:
+$\delta_2$ இல் $x$ என்று குறிக்கப்பட்ட ஒவ்வொரு
+$!B$ எடுகோளுக்குப் பதிலாகவும் முழு !!{proof}~$\delta_3$
+ஐ வைத்துப் பெறும் !!{proof}. இந்தப் புதிய !!{proof} இல்
+$x$ குறியுடைய திறந்த $!B$ எடுகோள்கள் எஞ்சாது.
+ஒரே குறியால் இரண்டு வெவ்வேறு !!{formula}s எடுகோள்களாக
+வராது என்று வழக்கம்போலக் கொள்வதால், வேறு எந்த
+எடுகோளுக்கும் $x$ குறி இருக்காது. ஆகவே புதிய !!{proof}
+இன் திறந்த எடுகோள்கள்~$\delta_1$ இன்வையே.
+$\delta_2$ இல் எடுகோள்களை விடுவிக்கும் ஒவ்வோர் அனுமானமும்
+$\Subst{\delta_2}{\delta_3}{!B^x}$ இலும் அதே
+எடுகோள்களை விடுவிக்கிறது; $\delta_3$ இல் எடுகோள்களை
+விடுவிக்கும் ஒவ்வோர் அனுமானமும்
+$\Subst{\delta_2}{\delta_3}{!B^x}$ இல் தோன்றும்
+ஒன்று அல்லது பல நகல்களில் தொடர்புடைய எடுகோள்களை
+விடுவிக்கிறது. ஒட்டப்பட்ட நகல்களில் தனிமாறிகள்
+மோதுமானால், அவற்றுக்கு வேறுபட்ட புதுப் பெயர்களை
+ஒதுக்குகிறோம்.
+
+% SEGMENT OLP-0676-S03
+$\delta_2$ அல்லது $\delta_3$ இன் ஒரு நகலுக்குள்
+முழுவதுமாகவோ, அல்லது $\delta$ இல்~$\delta_1$
+க்கு முற்றிலும் வெளியிலோ இருக்கும் ஒவ்வொரு வெட்டும்
+தனித்தனியாக மாறாது: அதே !!{formula}s மற்றும்
+அனுமானங்களைக் கொண்டிருப்பதால் $\delta$ இன்
+ஒத்த வெட்டுக்குரிய அதே நிலையும் நீளமும் கொண்டது.
+ஆனால் ஒட்டப்படும் நிறுவலின் நகல்களின் எண்ணிக்கை மாறலாம்;
+அதனால் மொத்த வெட்டு நீளம் குறைந்தது என்று இந்தக்
+குறிப்பிலிருந்து மட்டும் பின்தொடராது. நீளம்~$1$
+கொண்ட ஒரு மிகுநிலை வெட்டை நீக்கியுள்ளோம். $\delta$
+இன் வெட்டு நீளம்~$1$ ஆகவும் இதுவே ஒரே மிகுநிலை
+வெட்டாகவும் இருந்தால் வெட்டு நிலை குறையும்; மற்ற
+நேர்வுகளில் நகலாக்கத்தின் விளைவையும் கணக்கில் கொள்ள
+வேண்டும்.
+
+% SEGMENT OLP-0676-S04
+ஆயினும் இரு நிகழ்வுகளைக் கவனிக்க வேண்டும்:
+\begin{enumerate}
+  \item $!B^x$ என்ற எல்லா எடுகோள்களுக்கும்
+  $\delta_3$ ஐப் பதிலிடும்போது, $\delta_3$ இல் உள்ள
+  வெட்டுகளும் நகலாகின்றன. அவற்றில் மிகுநிலை
+  வெட்டுகள் இருந்தால், புதிய !!{proof} இன் வெட்டு
+  நீளம் பழைய !!{proof} இன் வெட்டு நீளத்தைவிட
+  அதிகமாகலாம்.
+  இதைத் தவிர்க்க, \emph{மிக வலப்புறமான} மிகுநிலை
+  வெட்டுகளுக்கு மட்டுமே குறைப்பு உருமாற்றத்தைப்
+  பயன்படுத்துகிறோம். அதாவது குறைக்கப்படும் வெட்டுக்கு
+  வலப்புறமாக $\delta$ இன் எந்தக் கிளையிலும் மற்றொரு
+  மிகுநிலை வெட்டு இருக்கக்கூடாது. $\delta_3$ இல்
+  மிகுநிலை வெட்டு இருந்தால் அது இங்கு குறைக்கப்படும்
+  வெட்டின் வலப்புறம் இருக்கும்; எனவே தேர்ந்தெடுக்கப்பட்ட
+  வெட்டு மிக வலப்புறமானதாக இருக்காது. இவ்வாறு
+  தேர்ந்தெடுப்பதால் !!{proof} இன் வெட்டு நீளத்தைக்
+  குறைக்கவோ, வெட்டு நிலையையே குறைக்கவோ முடிகிறது.
+  \item $\delta_2$ இல் $!B^x$ எடுகோள் ஓர்
+  !!a{elimination} அனுமானத்தின் முதன்முன்கோளாக
+  இருந்து, $\delta_3$ இன் கடைசி அனுமானம்
+  \Elim{\lor}, \Elim{\lexists} அல்லது ஓர்
+  !!a{introduction} அனுமானமாக இருந்தால்,
+  அந்த இடத்தில்~$\delta_3$ ஐ $\delta_2$ உடன்
+  ஒட்டுவதால் புதிய வெட்டு தோன்றும். $\delta_2$
+  இல் வெறும் எடுகோளாக இருந்தது இப்போது
+  நீளம்~$1$ கொண்ட வெட்டாகலாம் (ஓர்
+  !!a{introduction} அனுமானத்தின் முடிவும்
+  !!a{elimination} அனுமானத்தின் முதன்முன்கோளும்);
+  அல்லது வெட்டுத் தொடரின் கடைசி !!{formula}
+  நிகழ்வாகலாம் (ஓர் !!a{elimination} அனுமானத்தின்
+  முதன்முன்கோளும் \Elim{\lor} அல்லது
+  \Elim{\lexists} இன் முடிவும்). $!B^x$ என்பது
+  \Elim{\lor} அல்லது \Elim{\lexists} இன்
+  சிறுமுன்கோளாக இருந்தால், அது ஏற்கெனவே ஒரு
+  தொடரின் முதல் !!{formula} நிகழ்வாகவும்,
+  ஒருவேளை வெட்டுத் தொடரின் முதல் நிகழ்வாகவும்
+  இருந்தது. புதிய !!{proof} இல் அந்தத் தொடர்
+  நீளமாகலாம். ஆனால் புதிதாக உண்டான வெட்டின்
+  அல்லது நீண்ட தொடரின் !!{formula}~$!B$ ஆகும்;
+  மேலும் $\depth{!B} < \depth{!B \lif !C}$.
+  எனவே வெட்டுகள் சேர்ந்தாலும் அவற்றின் நீளம்
+  அதிகரித்தாலும், புதிதாக வந்தவை எதுவும்
+  மிகுநிலை வெட்டுகள் அல்ல. ஆகவே வெட்டு நிலை
+  குறையும்; அதே நிலையில் வெட்டுகள் எஞ்சினால்,
+  வெட்டு நீளம் குறையும்.
+\end{enumerate}
+
+% SEGMENT OLP-0676-S05
+நீளம்~$1$ கொண்ட வெட்டைக் குறைக்கும் செயல்
+\emph{குறைப்பு உருமாற்றம்} (அல்லது
+\emph{சுற்றுவழி உருமாற்றம்}) எனப்படுகிறது.
+சில விதி இணைகளுக்கான வடிவங்கள்
+\olref{tab:reduction-conversions} இல் தரப்பட்டுள்ளன.
+(மீதியுள்ளவைப் பயிற்சிகளாக விடப்பட்டுள்ளன.)
+
+\begin{table}
+\begin{multline*}
+\bottomAlignProof
+\AxiomC{$\Discharge{!B}{x}$}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!C$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!B \lif !C$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+\quad \longrightarrow\quad
+\shoveright{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!B$}
+\RightLabel{$\Subst{\delta_2}{\delta_3}{!B^x}$}
+\shortDeduce
+\DeduceC{$!C$}
+\DisplayProof}
+\\[4ex]
+\shoveleft{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!C$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!B \land !C$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!B$}
+\DisplayProof
+\quad \longrightarrow\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\DisplayProof}\qquad
+\shoveright{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!C$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!B \land !C$}
+\RightLabel{\Elim{\land}[2]}
+\UnaryInfC{$!C$}
+\DisplayProof
+\quad \longrightarrow\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!C$}
+\DisplayProof}
+\\[4ex]
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\RightLabel{\Intro{\lor}[1]}
+\UnaryInfC{$!B \lor !C$}
+\AxiomC{$\Discharge{!B}{x}$}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!D$}
+\AxiomC{$\Discharge{!C}{y}$}
+\RightLabel{$\delta_4$}
+\shortDeduce
+\DeduceC{$!D$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!D$}
+\DisplayProof
+\quad \longrightarrow\quad
+\shoveright{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B$}
+\RightLabel{$\Subst{\delta_3}{\delta_2}{!B^x}$}
+\shortDeduce
+\DeduceC{$!D$}
+\DisplayProof}
+\\[2ex]
+\shoveleft{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B(c)$}
+\RightLabel{\Intro{\lforall}}
+\UnaryInfC{$\lforall[x][!B(x)]$}
+\RightLabel{\Elim{\lforall}}
+\UnaryInfC{$!B(t)$}
+\DisplayProof
+\quad \longrightarrow\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\Subst{\delta_2}{t}{c}$}
+\shortDeduce
+\DeduceC{$!B(t)$}
+\DisplayProof}
+\\[4ex]
+\shoveright{\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B(t)$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!B(x)]$}
+\AxiomC{$\Discharge{!B(c)}{x}$}
+\RightLabel{$\delta_3$}
+\shortDeduce
+\DeduceC{$!D$}
+\DischargeRule{\Elim{\lexists}}{x}
+\BinaryInfC{$!D$}
+\DisplayProof
+\quad \longrightarrow\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\shortDeduce
+\DeduceC{$!B(t)$}
+\RightLabel{$\Subst{\Subst{\delta_3}{t}{c}}{\delta_2}{!B(t)^x}$}
+\shortDeduce
+\DeduceC{$!D$}
+\DisplayProof}
+\end{multline*}
+\caption{\Log{N1i} இன் சில குறைப்பு உருமாற்றங்கள்.}
+\ollabel{tab:reduction-conversions}
+\end{table}
+
+% SEGMENT OLP-0676-S06
+\begin{prob}
+\Intro{\lnot} ஐத் தொடர்ந்து \Elim{\lnot}
+வரும்போது பொருந்தும் குறைப்பு உருமாற்றத்தைக்
+கொடுக்கவும்.
+\end{prob}
+
+இன்னும் ஒரு நேர்வைப் பரிசீலிக்க வேண்டும்.
+வெட்டின் வரையறை, நீளம்~$1$ ஆகவும் $!A$
+என்பது \FalseInt{} இன் முடிவாகவும் ஓர்
+!!a{elimination} அனுமானத்தின் முதன்முன்கோளாகவும்
+இருக்கும் நேர்வையும் உள்ளடக்குகிறது. $!A$
+ஓர் !!a{introduction} விதியின் முடிவாக இருக்கும்
+நேர்வைப் போலவே இதையும் கையாளலாம். எடுத்துக்காட்டாக,
+பின்வருவதை மாற்றுக:
+\[
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\UnaryInfC{$!B \lif !C$}
+\AxiomC{}
+\RightLabel{$\delta_3$}
+\DeduceC{$!B$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!C$}
+\DisplayProof
+\quad\text{இதற்கு பதில்}\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\UnaryInfC{$!C$}
+\DisplayProof
+\]
+
+% SEGMENT OLP-0676-S07
+ஆனால் $!A \ident (!B \lor !C)$ அல்லது
+$!A \ident \lexists[x][!B(x)]$ என்ற
+நேர்வுகளில் சிறிது கவனம் தேவை. எடுத்துக்காட்டாக,
+பின்வருவதை மாற்றினால்
+\[
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!B \lor !C$}
+\AxiomC{$\Discharge{!B}{x}$}
+\RightLabel{$\delta_3$}
+\DeduceC{$!D$}
+\AxiomC{$\Discharge{!C}{y}$}
+\RightLabel{$\delta_4$}
+\DeduceC{$!D$}
+\DischargeRule{\Elim{\lor}}{x\,y}
+\TrinaryInfC{$!D$}
+\DisplayProof
+\quad\text{இதற்கு பதில்}\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!D$}
+\DisplayProof
+\]
+வெட்டு !!{formula}~$!D$ கொண்ட புதிய வெட்டு
+உண்டாகலாம்; $\depth{!D} < \depth{!B \lor !C}$!{}
+என்பதற்கு உத்தரவாதம் இல்லை. ஆகவே இங்கேயும்
+\Intro{\lor}/\Elim{\lor} குறைப்பு நேர்வைப் போலச்
+செயல்பட்டு, பின்வருவதாக மாற்ற வேண்டும்:
+\[
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!B$}
+\RightLabel{$\delta_3$}
+\DeduceC{$!D$}
+\DisplayProof
+\quad\text{அல்லது}\quad
+\bottomAlignProof
+\AxiomC{}
+\RightLabel{$\delta_2$}
+\DeduceC{$\lfalse$}
+\RightLabel{\FalseInt}
+\UnaryInfC{$!C$}
+\RightLabel{$\delta_4$}
+\DeduceC{$!D$}
+\DisplayProof
+\]
+
+\end{document}

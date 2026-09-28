@@ -1,0 +1,518 @@
+% SEGMENT OLP-0678-S01
+% Part: proof-theory
+% Chapter: normalization
+% Section: translations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nor}{tr}
+
+\olsection{இயல்பு வடிவ \Log{N2i}-\usetoken{P}{proof} களுக்கும் \Log{G2i} க்கும் இடையிலான மாற்றம்}
+
+\Log{N2i} இல் உள்ள !!^{proof}s ஐ \Log{G2i} இல் உள்ள
+!!{proof}s ஆகவும் மறுதிசையிலும் மாற்றலாம். முதலில்,
+வெட்டில்லாத \Log{G2i} !!{proof}s ஐ மாற்றும்போது
+இயல்பு வடிவ \Log{N2i}-!!{proof}s கிடைக்கும்.
+
+இந்த முடிவைச் சொல்ல, \Log{N2i}, \Log{G2i}
+ஆகியவற்றின் தொடரணி இடப்புறங்களை ஒப்பிட ஒரு சொல்
+தேவை. அடையாளமிட்ட வாய்ப்பாடுகளின் கணம்~$\Gamma'$,
+அடையாளமற்ற !!{formula}s இன் பன்மைக் கணம்~$\Gamma$
+க்கு \emph{ஒத்திருக்கிறது} என்பதன் பொருள்:
+ஒவ்வொரு !!{formula}~$!A$ க்கும்,
+$\Gamma'$ இல் $x : !A$ வடிவில் உள்ள !!{element}s
+இன் எண்ணிக்கை, $\Gamma$ இல் $!A$ இன்
+நிகழ்வெண்ணை மீறக்கூடாது.
+
+\begin{cor}
+$\Log{G2i} \Proves \Gamma \Sequent \Delta$ எனில்,
+$\Gamma' \Sequent !C$ க்கு இயல்பு வடிவ
+\Log{N2i}-!!{proof}~$\delta$ உண்டு. இங்கே
+$\Delta$ வெற்றானால் $!C \ident \lfalse$;
+$\Delta=\{!A\}$ என்றால் $!C$ அந்த ஒற்றை~$!A$.
+மேலும் அடையாளமிட்ட !!{formula}s இன் கணம்~$\Gamma'$,
+அடையாளமற்ற !!{formula}s இன் பன்மைக் கணம்~$\Gamma$
+க்கு ஒத்திருக்கிறது; அதாவது ஒவ்வொரு
+!!{formula}~$!A$ க்கும், $\Gamma'$ இல்
+$x : !A$ வடிவில் உள்ள !!{element}s இன் எண்ணிக்கை,
+$\Gamma$ இல் $!A$ இன் பிரதிகளின் எண்ணிக்கையை
+மீறாது.
+\end{cor}
+
+\begin{proof}
+\olref[nat][tgi]{prop:G2i-to-N2i} இன்
+நிறுவலைப் பரிசீலித்தால் இது தெரிகிறது:
+!!{introduction} விதிகளை !!{proof}s இன்
+இறுதியில் சேர்க்கிறோம்; !!{elimination} விதிகளை
+இத்தகைய !!{proof}s இன் மேற்பகுதியில் மட்டுமே சேர்க்கிறோம்.
+ஆகவே !!a{elimination} விதிக்கு மேலாக
+!!{introduction} விதியை உருவாக்குவதில்லை.
+\end{proof}
+
+% SEGMENT OLP-0678-S02
+ஆனால் \olref[nat][tgi]{prop:G2i-to-N2i} இல்
+தரப்பட்ட \Cut{} விதியின் மாற்றம், கிடைக்கும்
+\Log{N2i}-!!{proof}~$\delta$ இல் வெட்டுகளை
+உருவாக்கலாம். \Cut{} விதியுடன் விரிவாக்கப்பட்ட
+\Log{G2i} !!{proof} அந்த விதியில் முடிவதாகவும்,
+அதன் உடனடி துணை-!!{proof}s $\pi_1$, $\pi_2$
+முறையே $\Gamma_1 \Sequent !A$,
+$!A, \Gamma_2 \Sequent \Delta_2$ ஆகியவற்றின்
+நிறுவல்களாகவும் இருக்கட்டும். $\pi_2$ இன்
+மாற்றமான~$\delta_2$ இல் வரும்
+$x:!A \Sequent !A$ அடிகோள்களில், $\pi_1$
+இன் மாற்றமான~$\delta_1$ ஐ ஒட்டுகிறோம்.
+$\delta_1$ இன் கடைசி விதி, முதன்மை
+!!{formula}~$!A$ ஐக் கொண்ட
+!!a{introduction} விதியாகவும், $\delta_2$
+இன் $x:!A \Sequent !A$ அடிகோள் ஓர்
+!!a{elimination} விதியின் முதன்முன்கோளாகவும்
+இருந்தால், விளைவான~$\delta$ இல் வெட்டு உருவாகும்.
+
+\Log{N2i} இன் !!{proof}s ஐ~\Log{G2i}
+இன் !!{proof}s ஆகவும் மாற்றலாம்.
+\olref[nat][tni]{prop:N2-to-G2} இன்
+நிறுவலில் \Elim{\land}, \Elim{\lif},
+\Elim{\lnot}, \Elim{\lforall} ஆகியவற்றை
+மாற்றும்போது கிடைக்கும் \Log{G2i} !!{proof}
+இல் \Cut{} அனுமானங்கள் தோன்றுகின்றன.
+ஆனால் தொடக்க \Log{N2i}-!!{proof}
+இயல்பு வடிவில் இருந்தால், அவற்றைத் தவிர்க்கலாம்.
+
+% SEGMENT OLP-0678-S03
+\Log{N2i}-!!{proof}~$\delta$ இல் வரும்
+தொடரணி நிகழ்வுகளின் $S_1$, \dots,~$S_n$
+என்ற பட்டியலை \emph{கிளை} என்போம்:
+$S_1$ ஓர் அடிகோளாகவும், $S_i$ ஓர்
+அனுமானத்தின் முதன்முன்கோளாக இருக்கும்
+ஒவ்வொரு நேர்விலும் $S_{i+1}$ அந்த
+அனுமானத்தின் முடிவாகவும் இருக்க வேண்டும்.
+அதாவது, ஒரு கிளை அடிகோளிலிருந்து~$\delta$
+இல் கீழ்நோக்கித் தொடரணிகளைப் பின்தொடர்கிறது;
+ஆனால் !!{elimination} விதிகளின்
+சிறுமுன்கோள்களில் நின்றுவிடுகிறது.
+$S_n$ இறுதித் தொடரணியாக இருக்கும் கிளை~$\delta$
+இன் \emph{முதன்மைக் கிளை}. ஒவ்வொரு
+!!{proof}~$\delta$ வுக்கும் குறைந்தது ஒரு
+முதன்மைக் கிளை உண்டு: ஒவ்வொரு விதிக்கும்
+குறைந்தது ஒரு முதன்முன்கோள் உண்டு;
+\Intro{\land} க்கு மட்டுமே இரண்டு உள்ளன.
+
+% SEGMENT OLP-0678-S04
+\begin{prop}\ollabel{prop:normal-N2i-to-G2i}
+$\delta$ என்பது~$\Gamma \Sequent !A$ இன்
+இயல்பு வடிவ $\Log{N2c}$ அல்லது
+$\Log{N2i}$-!!{proof} எனில்,
+$\Gamma' \Sequent \Delta$ இன் வெட்டில்லாத
+$\Log{G2c}$-!!{proof} (முறையே
+$\Log{G2i}$-!!{proof})~$\pi$ உண்டு.
+இங்கே $\Gamma$ இலிருந்து அடையாளங்களை
+நீக்குவதால் கிடைக்கும் !!{formula}s இன்
+பன்மைக் கணம்~$\Gamma'$. $!A$ என்பது
+$\lfalse$ அல்ல எனில் $\Delta=\{!A\}$;
+அதுவே அபத்தம் எனில் $\Delta=\emptyset$.
+\end{prop}
+
+\begin{proof}
+இம்முறை $\Gamma \Sequent !A$ இன்
+!!{proof}~$\delta$ விலுள்ள அனுமானங்களின்
+எண்ணிக்கையின் மீது தொகுத்தறிகிறோம்.
+$\delta$ இல் அனுமானமே இல்லை எனில்,
+அது $x:!A \Sequent !A$ என்ற அடிகோள்.
+அதற்கொத்த $!A \Sequent !A$ அடிகோளே~$\pi$;
+$!A \ident \lfalse$ எனில்
+$\lfalse \Sequent \ $ என்ற அடிகோள்.
+
+$\delta$ ஓர் அனுமான விதியில்
+முடிந்தால் நேர்வுகளைப் பிரிப்போம்:
+\begin{enumerate}
+  \item $R$ என்பது !!a{introduction} விதியோ
+  \FalseInt ஓ எனில், மாற்றம்
+  \olref[nat][tni]{prop:N2-to-G2} இன்
+  நிறுவலில் உள்ளபடியே நடக்கிறது;
+  \Cut{} தேவையில்லை.
+
+  \item $R$ ஓர் !!a{elimination} விதி
+  எனில், முதன்மைக் கிளைகள் குறித்துப்
+  பின்வருவனவற்றைக் கவனிப்போம்:
+  \begin{enumerate}
+    \item $\delta$ இன் முதன்மைக் கிளையில்
+    !!{introduction} விதியோ \FalseInt{}
+    விதியோ இருக்காது. அப்படியிருந்தால்,
+    அதே கிளையில் !!a{introduction} விதியையோ
+    பொய்யிலிருந்து வருவித்தலையோ ஓர்
+    !!a{elimination} விதி தொடர்ந்து
+    இயல்பு வடிவத்துக்கு முரணாகும்.
+    \item எனவே எந்த !!{introduction} விதியும்
+    இல்லாத~$\delta$ வுக்கு ஒரே
+    முதன்மைக் கிளை உண்டு. \Intro{\land}
+    க்கு மட்டுமே இரண்டு முதன்முன்கோள்கள்
+    உண்டு; பல முதன்மைக் கிளைகள் இருக்க
+    அவை \Intro{\land} இன் இரு
+    முன்கோள்கள் வழியே செல்ல வேண்டும்.
+    \item $\delta$ வின் முதன்மைக் கிளையில் \Elim{\lor}
+    அல்லது \Elim{\lexists} இன்
+    முதன்முன்கோள் வந்தால், அத்தகைய விதி
+    ஒன்றே இருக்கும்; அதுவே இறுதி விதி~$R$.
+    இல்லையெனில் \Elim{\lor} அல்லது
+    \Elim{\lexists} இன் முடிவு மற்றோர்
+    !!a{elimination} விதியின்
+    முதன்முன்கோளாகி, வரிசைமாற்று
+    உருமாற்றத்தால் அகற்றக்கூடிய வெட்டு
+    தோன்றும்.
+    \item $\delta$ வின் முதன்மைக் கிளையில்
+    \Elim{\lor},
+    \Elim{\lexists} தவிர்ந்த
+    !!{elimination} விதிகள் எடுகோள்களை
+    விடுவிப்பதில்லை. \Elim{\lor},
+    \Elim{\lexists} ஆகிய விதிகளும்
+    சிறுமுன்கோளுக்கு மேலேயுள்ள
+    எடுகோள்களை மட்டுமே விடுவிக்கின்றன.
+    ஆகவே முதன்மைக் கிளையின் ஒரு தொடரணி
+    $S_i$ இன் இடச்சூழல்~$\Gamma_1$
+    எனில், $S_i$ ஐ முதன்முன்கோளாகக் கொண்ட
+    அனுமானத்தின் முடிவான~$S_{i+1}$
+    இன் இடச்சூழல் $\Gamma_1'
+    \supseteq \Gamma_1$ ஆகும்.
+    \item இதனால் $\delta$ வின் முதன்மைக் கிளையின்
+    மேற்பகுதி தொடரணி~$S_1$
+    $x: !C \Sequent !C$ எனில்,
+    $x:!C \in \Gamma$.
+  \end{enumerate}
+  இப்போது~$!C$ இன் வடிவத்தைப் பொறுத்து
+  நேர்வுகளைப் பிரிப்போம். அந்தக்
+  கிளையிலுள்ள ஒவ்வொரு $S_i$ யும் ஓர்
+  !!a{elimination} விதியின்
+  முதன்முன்கோள்; எனவே
+  $x:!C \Sequent !C$ க்கும் இது பொருந்தும்.
+
+% SEGMENT OLP-0678-S05
+  \item $!C \ident !D \land !E$ எனில்,
+  $\delta$ வின் வடிவம்:
+  \[
+  \Axiom$x:!D \land !E \fCenter !D \land !E$
+  \RightLabel{\Elim{\land}[1]}
+  \UnaryInf$x:!D \land !E \fCenter !D$
+  \Deduce$x:!D \land !E, \Gamma_1 \fCenter !A$
+  \DisplayProof
+  \]
+  இங்கு முதன்மைக் கிளையில்
+  $x:!D \land !E \Sequent !D$ வருகிறது.
+  அந்தக் கிளையில் \Intro{\lif},
+  \Intro{\lnot} அறிமுகங்களோ
+  \Elim{\lor}, \Elim{\lexists}
+  சிறுமுன்கோள்களோ இல்லாததால்,
+  அதன் சூழலில் உள்ள !!{formula}s இல்
+  $x:!D \land !E$ எடுகோள்
+  விடுவிக்கப்படாமல் இறுதிச் சூழலிலும்
+  இருக்கும். அதனால்தான் இறுதித்
+  தொடரணியின் சூழலில்~$x:!D \land !E$
+  இடம்பெறுகிறது. மேலும்,
+  \Elim{\land} இல் முடியும்
+  துணை-!!{proof} க்குப் பதிலாக
+  $x:!D \Sequent !D$ ஐ வைத்து,
+  முதன்மைக் கிளையின் ஒவ்வொரு
+  தொடரணிச் சூழலிலும்
+  $x:!D \land !E$ க்குப் பதிலாக
+  $x:!D$ ஐ வைக்கிறோம். இவ்வாறு
+  !!{proof}~$\delta$ இலிருந்து !!{proof}~$\delta_1$
+  கிடைக்கும்:
+  \[
+  \bottomAlignProof
+  \Axiom$x:!D \land !E \fCenter !D \land !E$
+  \RightLabel{\Elim{\land}[1]}
+  \UnaryInf$x:!D \land !E \fCenter !D$
+  \Deduce$x:!D \land !E, \Gamma_1 \fCenter !A$
+  \DisplayProof
+  \quad\text{ இதுவாக }\quad
+  \bottomAlignProof
+  \Axiom$x:!D \fCenter !D$
+  \Deduce$x:!D, \Gamma_1 \fCenter !A$
+  \DisplayProof
+  \]
+  $\delta_1$ இல் $\delta$ வை விட
+  $1$ அனுமானம் குறைவு; ஆகவே
+  தொகுத்தறிதல் கருதுகோள் அதற்குப்
+  பொருந்தும். அசல் அடையாளமிட்ட
+  $x:!D,\Gamma_1 \Sequent !A$
+  தொடரணியிலிருந்து, இடப்புற
+  அடையாளங்களை நீக்கிய
+  \Log{G2i}-!!{proof}~$\pi_1$
+  கிடைக்கிறது. \LeftR{\land} ஐப்
+  பயன்படுத்தி !!{proof}~$\pi$ ஐப் பெறுகிறோம்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!D, \Gamma_1' \fCenter !A$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!D \land !E, \Gamma_1' \fCenter !A$
+  \DisplayProof
+  \]
+  $!A \ident \lfalse$ எனில்,
+  இந்தக் கட்டத்திலேயே முடிவின்
+  வலப்புறம் வெற்றாக இருக்க வேண்டும்;
+  இதுவே முன்மொழிவின்
+  $\Delta=\emptyset$ நேர்வு.
+  பின்வரும் மூலக் காட்சி
+  \RightR{\Weakening} ஐ மேலும்
+  சேர்த்து வலப்புறத்தில் அபத்தத்தை
+  வைக்கிறது; அதன் இறுதி தொடரணி
+  வெற்று-வலப்புற முடிவு அல்ல:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!D, \Gamma_1' \fCenter $
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!D \land !E, \Gamma_1' \fCenter $
+  \RightLabel{\RightR{\Weakening}}
+  \UnaryInf$!D \land !E, \Gamma_1' \fCenter !A$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0678-S06
+  \item $!C \ident !D \lor !E$ எனில்,
+  அது \Elim{\lor} இன்
+  முதன்முன்கோள். இந்த விதியே
+  முதன்மைக் கிளையின் இறுதி விதி~$R$.
+  எனவே $\delta$ வின் வடிவம்:
+  \[
+  \Axiom$x:!D \lor !E \fCenter !D \lor !E$
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$y:!D, \Gamma_1 \fCenter!A$
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \Deduce$z:!E, \Gamma_2 \fCenter !A$
+  \RightLabel{\Elim{\lor}}
+  \TrinaryInf$x:!D \lor !E, \Gamma_1, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \]
+  துணை-!!{proof}s $\delta_1$,
+  $\delta_2$ மீது தொகுத்தறிதல்
+  கருதுகோளைப் பயன்படுத்தி,
+  முறையே $!D,\Gamma_1'
+  \Sequent !A$,
+  $!E,\Gamma_2' \Sequent !A$
+  ஆகியவற்றின் \Log{G2i}-!!{proof}s
+  $\pi_1$, $\pi_2$ ஐப் பெறுகிறோம்;
+  $!A$ ஆனது $\lfalse$ எனில் இவற்றின்
+  வலப்புறங்கள் வெற்றாகும்.
+  $\LeftR{\lor}$ ஐப் பயன்படுத்தி
+  $\pi$ ஐப் பெறுகிறோம்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!D, \Gamma_1' \fCenter !A$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$!E, \Gamma_2' \fCenter !A$
+  \RightLabel{\LeftR{\lor}}
+  \BinaryInf$!D \lor !E, \Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+  $\Elim{\lor}$ ஆனது $y: !D$
+  அல்லது $z: !E$ ஐ விடுவிக்காத
+  நேர்வில், அவை தொடர்புடைய
+  சிறுமுன்கோள்களின் சூழலில்
+  இல்லாததால், தேவையான
+  \LeftR{\Weakening} ஐச்
+  சேர்க்கிறோம். இறுதி வாய்ப்பாடு
+  அபத்தம் எனில், முன்மொழிவுக்கான
+  முடிவின் வலப்புறம் வெற்றாகவே
+  இருக்க வேண்டும். பின்வரும்
+  மூலக் காட்சியில் இடப்புற
+  பலவீனமாக்கல்களுடன் இறுதியில்
+  \RightR{\Weakening} உம்
+  சேர்ந்து வலப்புறத்தில் அபத்தம்
+  வருகிறது; வெற்று-வலப்புற
+  முடிவைப் பெற அந்த இறுதிப்
+  படியை விட வேண்டும்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma_1' \fCenter $
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!D, \Gamma_1' \fCenter $
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$\Gamma_2' \fCenter $
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!E, \Gamma_2' \fCenter $
+  \RightLabel{\LeftR{\lor}}
+  \BinaryInf$!D \lor !E, \Gamma_1', \Gamma_2' \fCenter $
+  \RightLabel{\RightR{\Weakening}}
+  \UnaryInf$!D \lor !E, \Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0678-S07
+  \item $!C \ident !D \lif !E$
+  எனில், $\delta$ வின் வடிவம்:
+  \[
+  \Axiom$x:!D \lif !E \fCenter !D \lif !E$
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \Deduce$\Gamma_1 \fCenter!D$
+  \RightLabel{\Elim{\lif}}
+  \BinaryInf$x:!D \lif !E, \Gamma_1 \fCenter !E$
+  \RightLabel{$\delta_2$}
+  \Deduce$x:!D \lif !E, \Gamma_1, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \]
+  முதன்மைக் கிளையில்
+  $x:!D \lif !E,\Gamma_1
+  \Sequent !E$ உள்ளது. அந்தக்
+  கிளையில் \Intro{\lif},
+  \Intro{\lnot} அறிமுகங்களோ
+  \Elim{\lor}, \Elim{\lexists}
+  சிறுமுன்கோள்களோ இல்லாததால்,
+  $x:!D \lif !E,\Gamma_1$ இன்
+  சூழலில் உள்ள !!{formula}s
+  இறுதிச் சூழலிலும் எஞ்சுகின்றன;
+  ஆகவே அந்தச் சூழல் இறுதித் தொடரணியின்
+  இடப்புறத்திலும் வருகிறது:
+  $x:!D \lif !E,\Gamma_1$.
+  $\delta_2$ என்ற துணை-!!{proof}
+  இன் தொடக்கத்தில் \Elim{\lif}
+  இல் முடியும் பகுதியை
+  $x:!E \Sequent !E$ ஆல்
+  மாற்றி, அதனுடைய முதன்மைக்
+  கிளையின் ஒவ்வொரு தொடரணிச்
+  சூழலிலும்
+  $x:!D \lif !E,\Gamma_1$
+  க்குப் பதிலாக $x:!E$ ஐ
+  வைக்கிறோம். இதனால்
+  !!{proof}~$\delta_2'$ கிடைக்கும்:
+  \[
+  \bottomAlignProof
+  \Axiom$x:!D \lif !E, \Gamma_1 \fCenter !E$
+  \RightLabel{$\delta_2$}
+  \Deduce$x:!D \lif !E, \Gamma_1, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \quad\text{ இதுவாக }\quad
+  \bottomAlignProof
+  \Axiom$x:!E \fCenter !E$
+  \RightLabel{$\delta_2'$}
+  \Deduce$x:!E, \Gamma_2 \fCenter !A$
+  \DisplayProof
+  \]
+  !!{proof}s ஆன $\delta_1$, $\delta_2'$
+  இரண்டுக்கும் தொகுத்தறிதல்
+  கருதுகோள் பொருந்தும்.
+  $\delta$ வின் அனுமான எண்ணிக்கை,
+  $\delta_1$ மற்றும் $\delta_2$
+  வின் அனுமான எண்ணிக்கைகளின்
+  கூட்டுத்தொகையைவிட $1$ அதிகம்;
+  அந்த ஒன்று முதன்மைக் கிளைத்
+  தொடக்கத்திலுள்ள \Elim{\lif}.
+  இதுவே~$\delta$ இன் இறுதி விதி~$R$ ஆக
+  இருந்தால், $\delta_1$ இல்
+  அனுமானங்கள்~$0$ ஆகவும்
+  இருக்கலாம்.
+
+  தொகுத்தறிதல் கருதுகோளால்
+  $\Gamma_1' \Sequent !D$
+  மற்றும் $!E,\Gamma_2'
+  \Sequent !A$ தொடர்பான
+  \Log{G2i}-!!{proof}s
+  $\pi_1$, $\pi_2$ கிடைக்கும்;
+  அவற்றின் இடப்புறங்களில்
+  அடையாளங்கள் நீக்கப்பட்டவை,
+  முடிவு அபத்தமான
+  நேர்வுகளில் வலப்புறம்
+  வெற்றானது. \LeftR{\lif}
+  ஐப் பயன்படுத்தி !!{proof}~$\pi$
+  கிடைக்கும்:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma_1' \fCenter !D$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$!E, \Gamma_2' \fCenter !A$
+  \RightLabel{\LeftR{\lif}}
+  \BinaryInf$!D \lif !E, \Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+  உட்படுத்தலின் முன்னுறுப்பு அபத்தம் எனில்,
+  உட்படுத்தல்-இடது விதியின் இடது
+  முன்கோளுக்கு $!D$ வலப்புறம்
+  தேவைப்படுவதால், வெற்று
+  வலப்புறமுள்ள முதல் நிறுவலுக்கு
+  \RightR{\Weakening}
+  சேர்க்கலாம். ஆனால்
+  $!A \ident \lfalse$ எனில்,
+  முன்மொழிவின் முடிவில்
+  வலப்புறம் வெற்றாகவே இருக்க
+  வேண்டும்; இரண்டாம் நிறுவலுக்கு
+  வலப்புறப் பலவீனமாக்கலைச்
+  சேர்க்கக் கூடாது. பின்வரும்
+  மூலக் காட்சி இரண்டையும்
+  சேர்க்கும் மாற்று வடிவம்;
+  அதன் இறுதி வலப்புறம்
+  முன்மொழிவின்
+  $\Delta=\emptyset$ நேர்வைத்
+  தருவதில்லை:
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$\Gamma_1' \fCenter $
+  \RightLabel{\RightR{\Weakening}}
+  \UnaryInf$\Gamma_1' \fCenter !D$
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \Deduce$!E, \Gamma_2' \fCenter $
+  \RightLabel{\RightR{\Weakening}}
+  \UnaryInf$!E, \Gamma_2' \fCenter !A$
+  \RightLabel{\LeftR{\lif}}
+  \BinaryInf$!D \lif !E, \Gamma_1', \Gamma_2' \fCenter !A$
+  \DisplayProof
+  \]
+
+\end{enumerate}
+மீதமுள்ள நேர்வுகளும் இதேபோல்
+கையாளப்படுகின்றன; அவை
+பயிற்சிகளாக விடப்படுகின்றன.
+\end{proof}
+
+% SEGMENT OLP-0678-S08
+\begin{cor}
+இயல்பு வடிவ \Log{N1i} அல்லது
+\Log{N2i}-!!{proof} இல் வரும்
+ஒவ்வொரு !!{formula} வும், இறுதி
+வாய்ப்பாட்டின் அல்லது
+விடுவிக்கப்படாத எடுகோள்களின்
+துணை-!!{formula} ஆகும்; தொடரணி
+வடிவில் சொன்னால், இறுதித்
+தொடரணியில் வரும் ஏதோ ஒரு
+வாய்ப்பாட்டின்
+துணை-!!{formula} ஆகும்.
+\end{cor}
+
+\begin{proof}
+\olref{prop:normal-N2i-to-G2i}
+இன்படி ஒவ்வொரு இயல்பு வடிவ
+\Log{N2i}-!!{proof} ஐயும்
+\Log{G2i}-!!{proof} ஆக
+மாற்றலாம். மாற்றத்தைப்
+பரிசீலித்தால்,
+\Log{N2i}-!!{proof} இல்
+வரும் ஒவ்வொரு !!{formula}
+வும் \Log{G2i}-!!{proof}
+இலும் வருகிறது.
+\Log{G2i} இல் \Cut{}
+இல்லாததால் அதற்கு
+துணை-!!{formula} பண்பு
+உண்டு. இயல்பான வருவித்தலின்
+விடுவிக்கப்படாத எடுகோள்கள்
+தொடரணி வடிவில் இடப்புற
+சூழலாகின்றன; ஆகவே
+அவற்றையும் இறுதி வாய்ப்பாட்டையும்
+சேர்த்தே துணைவாய்ப்பாட்டு
+உறவைச் சொல்ல வேண்டும்.
+\end{proof}
+
+\end{document}
+

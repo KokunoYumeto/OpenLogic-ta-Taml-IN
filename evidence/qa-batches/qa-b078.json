@@ -4,9 +4,9 @@
     {
       "unit_id": "OLP-0164",
       "source_sha256": "761e28eb126777a36e0be833eff8e34c09452a07991be2427ded51d765d919e1",
-      "translation_sha256": "d5909974c20dc06017aff1c66d157b579b5de09941240278c4851a2b30751ab2",
+      "translation_sha256": "8fed12a0187c06848cdf605dc6c21b807c876507e7f8b5e4d21ce4a42301de55",
       "source_bytes": 14133,
-      "translation_bytes": 24820,
+      "translation_bytes": 26316,
       "source_coverage_complete": true,
       "segments": 1,
       "math_multiset_parity": true,
@@ -21,7 +21,6 @@
         "align",
         "ass",
         "fol",
-        "iff",
         "include",
         "logic",
         "open",
@@ -39,8 +38,14 @@
       ],
       "visual_review_complete": false,
       "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -53,7 +58,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

@@ -1,0 +1,97 @@
+{
+  "batch_id": "TA-B347",
+  "units": [
+    {
+      "unit_id": "OLP-0691",
+      "source_sha256": "2235ecd6b10d70a165d30bcf4a2251fed13f8f75e896726caf210cbc97406215",
+      "translation_sha256": "83ba0509a3d03e1e20a6d85ada5158221a9ea8d18fb1f84edf3687203d0aa263",
+      "source_bytes": 6249,
+      "translation_bytes": 11106,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\proj{i}{\\pair{N_1,N_2}}\\redoneN_i\\]",
+        "$\\inj{i}{!A}{N}$",
+        "\\begin{gather*}\\dcase{\\inj[!A_i]{i}{M}}{x_1}{N_1}{x_2}{N_2}\\redone\\Subst{N_i}{M}{x_i}\\end{gather*}",
+        "$\\Subst{M}{N_i}{x}$",
+        "$x$",
+        "$M=M_1\\redoneM_2\\redoneM_2\\redone\\dots\\redoneM_k=M'$"
+      ],
+      "extra_math": [
+        "\\[\\proj{i}{\\pair{N_1}{N_2}}\\redoneN_i\\]",
+        "$\\inj[!A]{i}{N}$",
+        "\\begin{gather*}\\dcase{\\inj[!A_{3-i}]{i}{M}}{x_1}{N_1}{x_2}{N_2}\\redone\\Subst{N_i}{M}{x_i}\\end{gather*}",
+        "$\\Subst{N_i}{M}{x_i}$",
+        "$x_i$",
+        "$M=M_1\\redoneM_2\\redoneM_3\\redone\\dots\\redoneM_k=M'$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "gather",
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0691",
+          "audit_id": "TA-PT-042",
+          "kind": "product-sum-substitution-and-reduction-chain-notation",
+          "action": "Repair the malformed pair macro, the injection macro's optional-argument shape, the selected-versus-other disjunct annotation, the reversed substitution explanation, and the repeated M2 index in the reflexive-transitive reduction chain.",
+          "expected_missing_math": [
+            "\\[\\proj{i}{\\pair{N_1,N_2}}\\redoneN_i\\]",
+            "$\\inj{i}{!A}{N}$",
+            "\\begin{gather*}\\dcase{\\inj[!A_i]{i}{M}}{x_1}{N_1}{x_2}{N_2}\\redone\\Subst{N_i}{M}{x_i}\\end{gather*}",
+            "$\\Subst{M}{N_i}{x}$",
+            "$x$",
+            "$M=M_1\\redoneM_2\\redoneM_2\\redone\\dots\\redoneM_k=M'$"
+          ],
+          "expected_extra_math": [
+            "\\[\\proj{i}{\\pair{N_1}{N_2}}\\redoneN_i\\]",
+            "$\\inj[!A]{i}{N}$",
+            "\\begin{gather*}\\dcase{\\inj[!A_{3-i}]{i}{M}}{x_1}{N_1}{x_2}{N_2}\\redone\\Subst{N_i}{M}{x_i}\\end{gather*}",
+            "$\\Subst{N_i}{M}{x_i}$",
+            "$x_i$",
+            "$M=M_1\\redoneM_2\\redoneM_3\\redone\\dots\\redoneM_k=M'$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen product beta line calls a two-argument pair macro with one comma-containing argument. Its constructor inventory supplies three mandatory braces to inj although the local macro takes one optional and two mandatory arguments. The sum beta line labels injection i with selected type A_i although adjacent tN2ip rules use the other disjunct as the optional annotation. The following substitution gloss reverses the displayed branch-body and inserted-term roles, and the multi-step chain repeats M2 where its next distinct stage is M3. The frozen sentence also implies a root beta redex for the empty-type abort term, but no such rule is displayed; Tamil scopes that claim.",
+          "chosen_treatment": "Use pair{N1}{N2}; inj[!A]{i}{N}; inj[!A_(3-i)]{i}{M}; explain the displayed Subst{N_i}{M}{x_i} as replacing free x_i in N_i by M; write M1 -> M2 -> M3 -> ... . Preserve the three complete natural-deduction diagrams, term-level permutation equation, all identifiers and other math. State that no separate empty-type beta rule is supplied here.",
+          "alternatives_considered": "Keep the invalid macro calls as historical errors; interpret the optional injection type as the selected rather than missing summand despite the adjacent rule table; let the reversed substitution sentence misstate the displayed equation; regard the duplicated M2 as a deliberate stationary step in a schematic chain.",
+          "rationale": "The local TeX definition is inj {o m m}, pair {m m}. The tN2ip left injection of N:A has superscript B and the right injection of N:B has superscript A, so a schematic i-injection into A1-or-A2 carries the other summand A_(3-i). The beta rule substitutes the scrutinee's term M for the discharged branch variable x_i in N_i. A schematic consecutive chain requires M3 after M2, while the zero-step case is separately stated for k=1.",
+          "precise_review_question": "Do the pair and injection corrections agree with the actual macro arities and tN2ip typing table, and does the substitution gloss preserve the branch binder and reduct?",
+          "location_needle": "\\inj[!A_{3-i}]{i}{M}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

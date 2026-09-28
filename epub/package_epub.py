@@ -95,6 +95,23 @@ def tamil_tokens(text: str) -> list[str]:
     return [unicodedata.normalize("NFC", token) for token in TAMIL_RE.findall(text)]
 
 
+def configured_unit_ids(reader: dict) -> list[str]:
+    first, last = reader["first_unit"], reader["last_unit"]
+    full_range = [f"OLP-{number:04d}" for number in range(first, last + 1)]
+    if "unit_ids" in reader:
+        ids = reader["unit_ids"]
+    else:
+        omitted = set(reader.get("omit_units", []))
+        if not omitted.issubset(full_range):
+            fail("Reader omits units outside its declared span")
+        ids = [unit for unit in full_range if unit not in omitted]
+    if ids != sorted(set(ids)) or not ids or ids[0] != full_range[0] or ids[-1] != full_range[-1]:
+        fail("Reader unit selection is unordered, duplicated, or outside its declared span")
+    if len(ids) != reader["unit_count"]:
+        fail("Reader unit count is inconsistent")
+    return ids
+
+
 def load_configuration(repo: Path, slug: str) -> tuple[dict, dict]:
     configuration = json.loads((repo / "epub" / "readers.json").read_text(encoding="utf-8"))
     if configuration.get("source_revision") != SOURCE_REVISION:
@@ -105,13 +122,13 @@ def load_configuration(repo: Path, slug: str) -> tuple[dict, dict]:
     if len(matches) != 1:
         fail(f"Reader slug does not resolve uniquely: {slug}")
     reader = matches[0]
-    expected_count = reader["last_unit"] - reader["first_unit"] + 1
-    if expected_count != reader["unit_count"]:
-        fail("Reader unit range is inconsistent")
+    configured_unit_ids(reader)
     return configuration, reader
 
 
 def segment_inventory(repo: Path, reader: dict, visible_text: str) -> dict:
+    expected_ids = configured_unit_ids(reader)
+    expected_set = set(expected_ids)
     manifest_path = Path(r"C:\interlanguage-task-state\openlogic-ta-Taml-IN\SOURCE_MANIFEST.jsonl")
     source_manifest: dict[str, dict] = {}
     for line in manifest_path.read_text(encoding="utf-8-sig").splitlines():
@@ -125,14 +142,12 @@ def segment_inventory(repo: Path, reader: dict, visible_text: str) -> dict:
         matches = list(SEGMENT_RE.finditer(raw))
         for index, match in enumerate(matches):
             unit_id = match.group(1).rsplit("-S", 1)[0]
-            number = int(match.group(2))
-            if not reader["first_unit"] <= number <= reader["last_unit"]:
+            if unit_id not in expected_set:
                 continue
             end = matches[index + 1].start() if index + 1 < len(matches) else len(raw)
             block = raw[match.end():end]
             unit_blocks.setdefault(unit_id, []).append((path, match.group(1), block))
 
-    expected_ids = [f"OLP-{number:04d}" for number in range(reader["first_unit"], reader["last_unit"] + 1)]
     missing_units = [unit for unit in expected_ids if unit not in unit_blocks]
     if missing_units:
         fail(f"Translated source units missing for configured reader: {missing_units}")
@@ -179,6 +194,7 @@ def segment_inventory(repo: Path, reader: dict, visible_text: str) -> dict:
         "source_revision": SOURCE_REVISION,
         "reader_slug": reader["slug"],
         "declared_range": f"OLP-{reader['first_unit']:04d}–OLP-{reader['last_unit']:04d}",
+        "declared_selection": "selected" if reader.get("unit_ids") or reader.get("omit_units") else "contiguous",
         "declared_unit_count": reader["unit_count"],
         "units": records,
         "unit_ids_complete": len(records) == reader["unit_count"],
@@ -360,6 +376,19 @@ def make_xhtml(
     }
 
 
+def ai_disclosure(reader: dict) -> str:
+    if reader["slug"] == "complete-companion":
+        attribution = "இந்த 27 அலகுகளின் இயந்திரத் தமிழாக்கமும் பதிப்புப் பணியும் OpenAI Codex — GPT-6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன."
+    elif reader.get("complete_edition"):
+        attribution = ("முதல் 570 அலகுகளின் இயந்திரத் தமிழாக்கமும் திருத்தங்களும் OpenAI Codex — GPT-5.6 Sol, Ultra சிந்தனை நிலையில்; "
+                       "பின்னைய தமிழாக்கமும் பதிப்புப் பணியும் OpenAI Codex — GPT-6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன.")
+    elif reader["last_unit"] <= 573:
+        attribution = "இந்த அலகுகளின் இயந்திரத் தமிழாக்கமும் திருத்தங்களும் OpenAI Codex — GPT-5.6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன."
+    else:
+        attribution = "இந்த அலகுகளின் இயந்திரத் தமிழாக்கமும் திருத்தங்களும் OpenAI Codex — GPT-6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன."
+    return attribution + " சுயாதீன மனிதச் சரிபார்ப்பு செய்யப்பட்டதாகக் கூறப்படவில்லை."
+
+
 def write_title_page(path: Path, reader: dict) -> dict:
     root = etree.Element(f"{{{XHTML}}}html", nsmap={None: XHTML, "epub": EPUB})
     root.set("lang", "ta-IN")
@@ -374,15 +403,14 @@ def write_title_page(path: Path, reader: dict) -> dict:
     section.set(f"{{{EPUB}}}type", "titlepage")
     etree.SubElement(section, f"{{{XHTML}}}h1", id="title").text = reader["title"]
     etree.SubElement(section, f"{{{XHTML}}}p", attrib={"class": "subtitle"}).text = reader["subtitle"]
+    scope_kind = "தேர்ந்தெடுக்கப்பட்ட" if reader.get("unit_ids") or reader.get("omit_units") else "தொடர்ச்சியான"
     etree.SubElement(section, f"{{{XHTML}}}p").text = (
-        f"இந்த இடைக்கால வாசகர், உறையவைக்கப்பட்ட 722 மூல அலகுகளில் "
-        f"OLP-{reader['first_unit']:04d} முதல் OLP-{reader['last_unit']:04d} வரை உள்ள "
-        f"{reader['unit_count']} அலகுகளை உள்ளடக்குகிறது."
+        f"உறையவைக்கப்பட்ட 722 மூல அலகுகளில் OLP-{reader['first_unit']:04d} முதல் "
+        f"OLP-{reader['last_unit']:04d} வரையிலான {scope_kind} "
+        f"{reader['unit_count']} அலகுகளை இந்த வாசகர் உள்ளடக்குகிறது."
     )
-    etree.SubElement(section, f"{{{XHTML}}}p").text = (
-        "இது இயந்திர மொழிபெயர்ப்பு; சுயாதீன மனிதச் சரிபார்ப்பு செய்யப்பட்டதாகக் கூறப்படவில்லை. "
-        "முழுத் தமிழ் பதிப்பு இன்னும் தயாராகவில்லை."
-    )
+    disclosure = ai_disclosure(reader)
+    etree.SubElement(section, f"{{{XHTML}}}p").text = disclosure
     source = etree.SubElement(section, f"{{{XHTML}}}p")
     source.text = "மூலம்: Open Logic Project, "
     link = etree.SubElement(source, f"{{{XHTML}}}a", href="https://github.com/OpenLogicProject/OpenLogic")
@@ -409,7 +437,7 @@ def write_scope_page(path: Path, reader: dict, crosswalk: dict) -> dict:
     section.set(f"{{{EPUB}}}type", "appendix")
     etree.SubElement(section, f"{{{XHTML}}}h1", id="scope").text = "உள்ளடக்க எல்லையும் மூல இணைப்பும்"
     etree.SubElement(section, f"{{{XHTML}}}p").text = (
-        f"இந்த வாசகர் {crosswalk['declared_range']} என்ற தொடர்ச்சியான "
+        f"இந்த வாசகர் {crosswalk['declared_range']} என்ற எல்லைக்குள் "
         f"{crosswalk['declared_unit_count']} மூல அலகுகளுடன் இணைக்கப்பட்டுள்ளது."
     )
     table = etree.SubElement(section, f"{{{XHTML}}}table")
@@ -504,16 +532,17 @@ def write_opf(
     identifier.text = "urn:uuid:" + str(uuid.uuid5(uuid.NAMESPACE_URL, f"openlogic:{SOURCE_REVISION}:ta-Taml-IN:{reader['slug']}"))
     etree.SubElement(metadata, f"{{{DC}}}title").text = reader["title"]
     etree.SubElement(metadata, f"{{{DC}}}language").text = "ta-IN"
-    etree.SubElement(metadata, f"{{{DC}}}creator").text = "Open Logic Project contributors"
-    etree.SubElement(metadata, f"{{{DC}}}publisher").text = "OpenLogic Tamil translation programme"
-    etree.SubElement(metadata, f"{{{DC}}}rights").text = "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+    etree.SubElement(metadata, f"{{{DC}}}creator").text = "Open Logic Project பங்களிப்பாளர்கள்"
+    etree.SubElement(metadata, f"{{{DC}}}publisher").text = "OpenLogic தமிழ்ப் பதிப்புத் திட்டம்"
+    etree.SubElement(metadata, f"{{{DC}}}rights").text = "கிரியேட்டிவ் காமன்ஸ் பண்புக்கூறல் 4.0 பன்னாட்டு உரிமம் (CC BY 4.0)"
     etree.SubElement(metadata, f"{{{DC}}}description").text = (
-        f"Machine-translated interim Tamil reader covering OLP-{reader['first_unit']:04d} through "
-        f"OLP-{reader['last_unit']:04d} ({reader['unit_count']} of 722 frozen source units). "
-        "Reflowable EPUB with native MathML; no claim of independent human review."
+        f"உறையவைக்கப்பட்ட 722 மூல அலகுகளில் OLP-{reader['first_unit']:04d} முதல் "
+        f"OLP-{reader['last_unit']:04d} வரையிலான {reader['unit_count']} அலகுகள். "
+        "கணிதத்திற்கான MathML உடைய மறுஓட்ட EPUB. "
+        + ai_disclosure(reader)
     )
     modified = etree.SubElement(metadata, f"{{{OPF}}}meta", property="dcterms:modified")
-    modified.text = "2026-09-10T00:00:00Z"
+    modified.text = "2026-09-28T00:00:00Z"
     layout = etree.SubElement(metadata, f"{{{OPF}}}meta", property="rendition:layout")
     layout.text = "reflowable"
     for value in ("textual", "visual", "symbolic"):

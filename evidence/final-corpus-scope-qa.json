@@ -1,0 +1,479 @@
+{
+  "schema": "openlogic-tamil-final-corpus-scope/1",
+  "checked_utc": "2026-09-28T01:54:23.621769+00:00",
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "manifest_sha256": "5a6fef5c16c15a5b2f90f874c268512cfd6ed2e846bdfa850a67304a4c05a155",
+  "seed_archive_bytes": 1806644,
+  "seed_archive_sha256": "80b484b1a87076fbdb207d69f97930ca946ce1716dbd905906b29e4a74077357",
+  "result": "pass",
+  "scope": {
+    "manifest_units": 722,
+    "accepted_batch_units": 722,
+    "aligned_segments": 2242,
+    "ordinary_reader_units": 642,
+    "other_units": 80,
+    "translated_content_files": 722
+  },
+  "gates": [
+    "all frozen IDs exactly once",
+    "source and target hashes match current QA",
+    "each source byte belongs to exactly one aligned segment",
+    "every target segment has consulted canon",
+    "no omitted or extra content TeX files",
+    "ordinary import graph equals the 642-unit frozen graph",
+    "80 remaining source units accounted for separately"
+  ],
+  "reused_import_sources": [
+    {
+      "source_path": "content/first-order-logic/axiomatic-deduction/axiomatic-deduction.tex",
+      "importers": [
+        "content/first-order-logic/first-order-logic.tex",
+        "content/propositional-logic/propositional-logic.tex"
+      ]
+    },
+    {
+      "source_path": "content/first-order-logic/completeness/completeness.tex",
+      "importers": [
+        "content/first-order-logic/first-order-logic.tex",
+        "content/propositional-logic/propositional-logic.tex"
+      ]
+    },
+    {
+      "source_path": "content/first-order-logic/natural-deduction/natural-deduction.tex",
+      "importers": [
+        "content/first-order-logic/first-order-logic.tex",
+        "content/propositional-logic/propositional-logic.tex"
+      ]
+    },
+    {
+      "source_path": "content/first-order-logic/proof-systems/proof-systems.tex",
+      "importers": [
+        "content/first-order-logic/first-order-logic.tex",
+        "content/propositional-logic/propositional-logic.tex"
+      ]
+    },
+    {
+      "source_path": "content/first-order-logic/sequent-calculus/sequent-calculus.tex",
+      "importers": [
+        "content/first-order-logic/first-order-logic.tex",
+        "content/propositional-logic/propositional-logic.tex"
+      ]
+    },
+    {
+      "source_path": "content/first-order-logic/tableaux/tableaux.tex",
+      "importers": [
+        "content/first-order-logic/first-order-logic.tex",
+        "content/propositional-logic/propositional-logic.tex"
+      ]
+    }
+  ],
+  "other_units": [
+    {
+      "unit_id": "OLP-0643",
+      "source_path": "content/first-order-logic/axiomatic-deduction/provability.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0644",
+      "source_path": "content/first-order-logic/completeness/maximally-consistent-sets.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0645",
+      "source_path": "content/first-order-logic/syntax-and-semantics/introduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0646",
+      "source_path": "content/first-order-logic/syntax-and-semantics/syntax-and-semantics.tex",
+      "source_role": "chapter_driver"
+    },
+    {
+      "unit_id": "OLP-0647",
+      "source_path": "content/incompleteness/representability-in-q/c-representable.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0648",
+      "source_path": "content/incompleteness/representability-in-q/c.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0649",
+      "source_path": "content/intuitionistic-logic/semantics/propositions.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0650",
+      "source_path": "content/lambda-calculus/lambda-definability/lists.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0651",
+      "source_path": "content/lambda-calculus/syntax/conversion.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0652",
+      "source_path": "content/many-valued-logic/sequent-calculus/proof-theoretic-notions.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0653",
+      "source_path": "content/model-theory/basics/nonstandard-arithmetic.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0654",
+      "source_path": "content/normal-modal-logic/syntax-and-semantics/normal-modal-logics.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0655",
+      "source_path": "content/proof-theory/cut-elimination/ce-largest.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0656",
+      "source_path": "content/proof-theory/cut-elimination/ce-topmost.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0657",
+      "source_path": "content/proof-theory/cut-elimination/cut-elimination.tex",
+      "source_role": "chapter_driver"
+    },
+    {
+      "unit_id": "OLP-0658",
+      "source_path": "content/proof-theory/cut-elimination/interpolation.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0659",
+      "source_path": "content/proof-theory/cut-elimination/introduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0660",
+      "source_path": "content/proof-theory/cut-elimination/intuitionistic.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0661",
+      "source_path": "content/proof-theory/cut-elimination/midsequent.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0662",
+      "source_path": "content/proof-theory/natural-deduction/grafting.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0663",
+      "source_path": "content/proof-theory/natural-deduction/introduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0664",
+      "source_path": "content/proof-theory/natural-deduction/natural-deduction.tex",
+      "source_role": "chapter_driver"
+    },
+    {
+      "unit_id": "OLP-0665",
+      "source_path": "content/proof-theory/natural-deduction/quantifiers.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0666",
+      "source_path": "content/proof-theory/natural-deduction/rules-N1.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0667",
+      "source_path": "content/proof-theory/natural-deduction/rules-N2.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0668",
+      "source_path": "content/proof-theory/natural-deduction/rules-proofs.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0669",
+      "source_path": "content/proof-theory/natural-deduction/sequents.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0670",
+      "source_path": "content/proof-theory/natural-deduction/translation-G2i.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0671",
+      "source_path": "content/proof-theory/natural-deduction/translation-N2i.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0672",
+      "source_path": "content/proof-theory/normalization/introduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0673",
+      "source_path": "content/proof-theory/normalization/normalization-thm.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0674",
+      "source_path": "content/proof-theory/normalization/normalization.tex",
+      "source_role": "chapter_driver"
+    },
+    {
+      "unit_id": "OLP-0675",
+      "source_path": "content/proof-theory/normalization/permutations.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0676",
+      "source_path": "content/proof-theory/normalization/reductions.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0677",
+      "source_path": "content/proof-theory/normalization/segments.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0678",
+      "source_path": "content/proof-theory/normalization/translations.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0679",
+      "source_path": "content/proof-theory/proof-search/completeness.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0680",
+      "source_path": "content/proof-theory/proof-search/introduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0681",
+      "source_path": "content/proof-theory/proof-search/proof-search.tex",
+      "source_role": "chapter_driver"
+    },
+    {
+      "unit_id": "OLP-0682",
+      "source_path": "content/proof-theory/proof-search/rules-Tc.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0683",
+      "source_path": "content/proof-theory/proof-search/search-algorithm.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0684",
+      "source_path": "content/proof-theory/proof-search/tableaux.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0685",
+      "source_path": "content/proof-theory/proof-theory.tex",
+      "source_role": "part_driver"
+    },
+    {
+      "unit_id": "OLP-0686",
+      "source_path": "content/proof-theory/propositions-as-types/introduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0687",
+      "source_path": "content/proof-theory/propositions-as-types/normalization.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0688",
+      "source_path": "content/proof-theory/propositions-as-types/proof-terms.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0689",
+      "source_path": "content/proof-theory/propositions-as-types/proofs-to-terms.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0690",
+      "source_path": "content/proof-theory/propositions-as-types/propositions-as-types.tex",
+      "source_role": "chapter_driver"
+    },
+    {
+      "unit_id": "OLP-0691",
+      "source_path": "content/proof-theory/propositions-as-types/reduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0692",
+      "source_path": "content/proof-theory/propositions-as-types/rules-tN2.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0693",
+      "source_path": "content/proof-theory/propositions-as-types/rules-tN3.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0694",
+      "source_path": "content/proof-theory/propositions-as-types/sequent-natural-deduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0695",
+      "source_path": "content/proof-theory/propositions-as-types/terms-to-proofs.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0696",
+      "source_path": "content/proof-theory/propositions-as-types/type-preservation.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0697",
+      "source_path": "content/proof-theory/propositions-as-types/types.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0698",
+      "source_path": "content/proof-theory/sequent-calculus/admissible-derivable.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0699",
+      "source_path": "content/proof-theory/sequent-calculus/interpretation-rules.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0700",
+      "source_path": "content/proof-theory/sequent-calculus/introduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0701",
+      "source_path": "content/proof-theory/sequent-calculus/invertibility.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0702",
+      "source_path": "content/proof-theory/sequent-calculus/proof-examples.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0703",
+      "source_path": "content/proof-theory/sequent-calculus/quantifiers.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0704",
+      "source_path": "content/proof-theory/sequent-calculus/rules-G1c.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0705",
+      "source_path": "content/proof-theory/sequent-calculus/rules-G1i.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0706",
+      "source_path": "content/proof-theory/sequent-calculus/rules-G2c.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0707",
+      "source_path": "content/proof-theory/sequent-calculus/rules-G3c.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0708",
+      "source_path": "content/proof-theory/sequent-calculus/rules-G3i.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0709",
+      "source_path": "content/proof-theory/sequent-calculus/rules-LK.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0710",
+      "source_path": "content/proof-theory/sequent-calculus/rules-mG3i.tex",
+      "source_role": "auxiliary_fragment"
+    },
+    {
+      "unit_id": "OLP-0711",
+      "source_path": "content/proof-theory/sequent-calculus/rules-proofs.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0712",
+      "source_path": "content/proof-theory/sequent-calculus/sequent-calculus.tex",
+      "source_role": "chapter_driver"
+    },
+    {
+      "unit_id": "OLP-0713",
+      "source_path": "content/proof-theory/sequent-calculus/translations.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0714",
+      "source_path": "content/propositional-logic/syntax-and-semantics/completeness.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0715",
+      "source_path": "content/propositional-logic/syntax-and-semantics/soundness.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0716",
+      "source_path": "content/second-order-logic/syntax-and-semantics/language-of-sol.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0717",
+      "source_path": "content/sets-functions-relations/functions/isomorphic-functions.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0718",
+      "source_path": "content/sets-functions-relations/inductive-defs-proofs/introduction.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0719",
+      "source_path": "content/sets-functions-relations/relations/relations.tex",
+      "source_role": "chapter_driver"
+    },
+    {
+      "unit_id": "OLP-0720",
+      "source_path": "content/sets-functions-relations/sets-functions-relations.tex",
+      "source_role": "part_driver"
+    },
+    {
+      "unit_id": "OLP-0721",
+      "source_path": "content/sets-functions-relations/sets/proofs-about-sets.tex",
+      "source_role": "reader_unit"
+    },
+    {
+      "unit_id": "OLP-0722",
+      "source_path": "content/sets-functions-relations/size-of-sets/size-of-sets.tex",
+      "source_role": "chapter_driver"
+    }
+  ],
+  "targets_without_tamil_letters_for_formal_only_review": [],
+  "release_ready": false,
+  "limitations": [
+    "This establishes exact structural source coverage, not complete-reader rendering or the absence of residual English in all visible prose.",
+    "Source-authored proof-template ellipses and formal/code/bibliographic exceptions still require final corpus classification.",
+    "Final terminology, full reader build, shaping/copy-search, all-page visual QA, EPUB and anonymous publication checks remain."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "batch_id": "TA-B304",
+  "units": [
+    {
+      "unit_id": "OLP-0644",
+      "source_sha256": "f2bc62fc8b385c2c68d58c5a95e5e9a18ff11820b8f63ab17810b281aeae4b51",
+      "translation_sha256": "e1042903b8d8d8a517a7e31e0903af09a8d0bc28810fdae6b6902cac093a7437",
+      "source_bytes": 7012,
+      "translation_bytes": 12622,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "com",
+        "fol",
+        "include",
+        "logic",
+        "mcs",
+        "open",
+        "prfND",
+        "prfSC",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-FINAL-007",
+          "unit_id": "OLP-0644",
+          "kind": "frozen-cross-reference-target-repair",
+          "action": "ஏழு மேற்கோள் இடங்களின் மொத்தம் பதினான்கு இல்லாத இலக்குகள், முதல் வாசிப்பு நூலில் உண்மையில் உள்ள தொடர்புடைய தொடர்-கணித மற்றும் இயற்கை-நிறுவல் கூற்றுகளுக்குத் திருத்தப்பட்டன.",
+          "source_issue_or_choice": "மூலத்தின் ஏழு `tagrefs` அழைப்புகள் `prv` அல்லது இல்லாத `lor-left`, `lor-right`, `mp`, `lif` சுட்டிகளை எதிர்பார்க்கின்றன. கட்டப்பட்ட முதன்மை வாசிப்பு நூலின் aux இல் தொடர்புடைய கூற்றுகள் `ppr` பெயரிடைவெளியில் உள்ளன; `lor` கூற்றில் இரு நிகழ்வுகளும் ஒரே கூற்றின் உருப்படிகள்; `lif-left`, `lif-right` தனி உருப்படிகளாக உள்ளன.",
+          "chosen_treatment": "இணைப்பு, இணையல், அனுமானம், குறிக்குமான திசைகளுக்குப் பொருந்திய `ppr` இலக்குகளைத் தேர்ந்தெடுக்கிறது. செல்லுபடியான `prv` முரண்பாடு மற்றும் முழுமைச் சுட்டிகள் அப்படியே உள்ளன.",
+          "alternatives_considered": "தொகுக்கப்பட்டாலும் திறக்க முடியாத சுட்டிகளை விடுதல்; எல்லா நிகழ்வுகளையும் பொதுக் கூற்றுக்கு மாற்றுதல்.",
+          "rationale": "ஒவ்வொரு ஆதாரச் சுட்டியும் கூறப்படும் வாதத்தை உண்மையில் கொண்ட முதன்மை நூலின் இடத்திற்குச் செல்கிறது; சூத்திரங்களும் தமிழ் வாக்கியங்களும் மாறவில்லை.",
+          "precise_review_question": "ஒவ்வொரு திறக்கும் சுட்டியும் தொடர்புடைய நிரூபணத்தின் சரியான கூற்று அல்லது உருப்படியை அடைகிறதா?",
+          "location_needle": "fol:seq:ppr:prop:provability-land-left"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Final full-corpus verification pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,252 @@
+% SEGMENT OLP-0665-S01
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: quantifiers
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{qua}
+
+\olsection{ஒழுங்குறு \usetoken{P}{proof} மற்றும் பதிலீடு}
+
+\Elim{\lexists}, \Intro{\lforall} விதிகளுக்குப் பொருந்தும்
+“தனிமாறி நிபந்தனைகள்” காரணமாக அளவையடை விதிகளில் சில
+சிக்கல்கள் தோன்றுகின்றன. இந்த அனுமானங்களில் வரும்
+!!{constant}~$c$ ஐ மீண்டும் பயன்படுத்தாமல் இருப்பதன் மூலம்
+பெரும்பாலான சிக்கல்களைத் தவிர்க்கலாம். பின்வரும் வரையறையை
+அறிமுகப்படுத்துவோம்.
+
+\begin{defn}
+இயல்பான வருவித்தல் !!{proof}~$\delta$ பின்வரும் இரு
+நிபந்தனைகளையும் நிறைவுசெய்தால் அதை \emph{ஒழுங்குறு} என்போம்:
+\begin{enumerate}
+  \item எந்தத் தனிமாறி~$a$ உம் ஒன்றுக்கு மேற்பட்ட
+  \Elim{\lexists} அல்லது~\Intro{\lforall} அனுமானங்களின்
+  தனிமாறியாகப் பயன்படுத்தப்படாது;
+  \item $a$ ஆனது \Elim{\lexists} அல்லது~\Intro{\lforall}
+  அனுமானத்தின் தனிமாறியாக இருந்தால், முறையே அந்த அனுமானத்தின்
+  சிறு முன்கோளுக்கு அல்லது முன்கோளுக்கு இட்டுச் செல்லும்
+  உடனடி உள்-!!{proof} இல் மட்டுமே அது இடம்பெறும்.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0665-S02
+\begin{lem}\ollabel{lem:subst-regular}
+$\delta$ என்பது $!C$ இல் முடியும் ஒழுங்குறு நிறுவலாகவும்,
+$c$ என்பது $\delta$ இல் தனிமாறியாகப் பயன்படுத்தப்படாத
+!!a{constant} ஆகவும், $t$ என்பது $\delta$ இன் எந்தத்
+தனிமாறியையும் கொண்டிராத சொல்லாகவும் இருந்தால்,
+$\delta$ இல் $c$ வரும் ஒவ்வொரு இடத்திலும் $t$ ஐப்
+பதிலிடுவதால் கிடைக்கும் $\Subst{\delta}{t}{c}$ ஓர்
+ஒழுங்குறு !!{proof} ஆகும். $\Subst{\delta}{t}{c}$ இன்
+இறுதி-!!{formula} $\Subst{!C}{t}{c}$ ஆகும். $!A^x$
+என்பது $\delta$ இன் திறந்த எடுகோள் எனில்,
+$\Subst{!A}{t}{c}^x$ என்பது
+$\Subst{\delta}{t}{c}$ இன் திறந்த எடுகோள் ஆகும்.
+\end{lem}
+
+\begin{proof}
+  $\pheight{\delta}$ மீது தொகுத்தறிதலைப் பயன்படுத்துவோம்.
+  $\pheight{\delta} = 0$ எனில், அது வெறும்
+  எடுகோள்~$!A^x$ மட்டுமே. அப்போது
+  $\Subst{\delta}{t}{c}$ என்பது~$\Subst{!A}{t}{c}^x$.
+
+% SEGMENT OLP-0665-S03
+  $\pheight{\delta} > 0$ எனில், $\delta$ இன் இறுதி
+  அனுமான விதியைப் பொறுத்து நேர்வுகளைப் பிரிப்போம்.
+  கூற்று இணைப்பிகளுக்கான விதிகளின் நேர்வுகள் எளிதானவை;
+  அவற்றைப் பயிற்சிகளாக விடுகிறோம். $\delta$ அளவையடை
+  அனுமானத்தில் முடியும் நேர்வுகளைப் பார்ப்போம்.
+  \begin{enumerate}
+    \item இறுதி அனுமானம் $\Intro{\lforall}$ எனில்,
+    $\delta$ இன் வடிவம்
+    \[
+    \AxiomC{}
+    \RightLabel{$\delta'$}
+    \DeduceC{$!A(a,c)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x,c)]$}
+    \DisplayProof
+    \]
+    ஆகும். தொகுத்தறிதல் கருதுகோளால்
+    $\Subst{\delta'}{t}{c}$ என்பது $!A(a,t)$ இன்
+    ஒழுங்குறு !!{proof}. $a$ ஆனது~$\delta$ இன்
+    தனிமாறி என்பதால் $a$ ஆனது $t$ இல் இடம்பெறாது. ஆகவே
+    $\Subst{\delta}{t}{c}$ இன் இறுதி அனுமானம்
+    \[
+    \AxiomC{}
+    \RightLabel{$\Subst{\delta'}{t}{c}$}
+    \DeduceC{$!A(a,t)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x,t)]$}
+    \DisplayProof
+    \]
+    சரியானது: $t$ இல் $a$ இல்லாததால் முடிவிலும்
+    எந்தத் திறந்த எடுகோளிலும் $a$ இல்லை.
+
+% SEGMENT OLP-0665-S04
+    \item இறுதி அனுமானம் $\Elim{\lforall}$ எனில்,
+    $\delta$ இன் வடிவம்
+    \[
+    \AxiomC{}
+    \RightLabel{$\delta'$}
+    \DeduceC{$\lforall[x][!A(x,c)]$}
+    \RightLabel{\Elim{\lforall}}
+    \UnaryInfC{$!A(s(c),c)$}
+    \DisplayProof
+    \]
+    ஆகும். தொகுத்தறிதல் கருதுகோளால்
+    $\Subst{\delta'}{t}{c}$ என்பது
+    $\lforall[x][!A(x,t)]$ இன் ஒழுங்குறு
+    !!{proof}. (முடிவிலுள்ள சொல்~$s(c)$,
+    $c$ ஐக் கொண்டிருக்கலாம்; கொண்டிருக்க வேண்டிய
+    கட்டாயமில்லை.) $\Subst{\delta}{t}{c}$ இன்
+    இறுதி அனுமானம்
+    \[
+    \AxiomC{}
+    \RightLabel{$\Subst{\delta'}{t}{c}$}
+    \DeduceC{$\lforall[x][!A(x,t)]$}
+    \RightLabel{\Elim{\lforall}}
+    \UnaryInfC{$!A(s(t),t)$}
+    \DisplayProof
+    \]
+    சரியானது; மேலும்
+    $!A(s(t),t) \ident \Subst{!A(s(c),c)}{t}{c}$.
+    \Intro{\lexists} நேர்வும் இதைப் போன்றதே.
+
+% SEGMENT OLP-0665-S05
+  \item இறுதி அனுமானம் $\Elim{\lexists}$ எனில்,
+    $\delta$ இன் வடிவம்
+    \[
+    \AxiomC{}
+    \RightLabel{$\delta_1'$}
+    \DeduceC{$\lexists[x][!A(x,c)]$}
+    \AxiomC{$\Discharge{!A(a,c)}{x}$}
+    \RightLabel{$\delta_2'$}
+    \DeduceC{$!C$}
+    \DischargeRule{\Elim{\lexists}}{x}
+    \BinaryInfC{$!C$}
+    \DisplayProof
+    \]
+    ஆகும். தொகுத்தறிதல் கருதுகோளால்
+    $\Subst{\delta_1'}{t}{c}$ மற்றும்
+    $\Subst{\delta_2'}{t}{c}$ ஆகியவை ஒழுங்குறு
+    !!{proof}s. முதலாவது $\lexists[x][!A(x,t)]$
+    ஐ நிறுவுகிறது; இரண்டாவது $!A(a,t)$ ஐத்
+    திறந்த எடுகோளாகக் கொண்டு $\Subst{!C}{t}{c}$
+    ஐ நிறுவுகிறது. $a$ ஆனது~$\delta$
+    இன் தனிமாறி என்பதால் $a$ ஆனது $t$ இல் இடம்பெறாது.
+    ஆகவே $\Subst{\delta}{t}{c}$ இன் இறுதி
+    அனுமானம்
+    \[
+    \AxiomC{}
+    \RightLabel{$\Subst{\delta_1'}{t}{c}$}
+    \DeduceC{$\lexists[x][!A(x,t)]$}
+    \AxiomC{$\Discharge{!A(a,t)}{x}$}
+    \RightLabel{$\Subst{\delta_2'}{t}{c}$}
+    \DeduceC{$\Subst{!C}{t}{c}$}
+    \DischargeRule{\Elim{\lexists}}{x}
+    \BinaryInfC{$\Subst{!C}{t}{c}$}
+    \DisplayProof
+    \]
+    சரியானது:
+    $\Subst{!A(x,t)}{a}{x} \ident
+    \Subst{!A(a,c)}{t}{c}$; மூல முடிவு~$!C$
+    இலும் எந்தத் திறந்த எடுகோளிலும் $a$ இல்லை.
+    அந்தச் சொல்லிலும் அந்தத் தனிமாறி இல்லாததால், பதிலீட்டுக்குப்
+    பின்னரும் அந்தத் தனிமாறி நிபந்தனை நிறைவுறுகிறது.
+  \end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0665-S06
+\begin{prop}\ollabel{prop:regular}
+$\delta$ என்பது \Log{N1c} அல்லது \Log{N1i} இல்
+!!a{proof} எனில், அதே கட்டமைப்பையும் (குறிப்பாக,
+அதே !!{height} ஐயும்) கொண்ட, தனிமாறிகளின்
+பெயர்மாற்றத்தில் மட்டுமே $\delta$ இலிருந்து
+வேறுபடும் ஒழுங்குறு !!{proof}~$\delta'$ ஒன்று உள்ளது.
+\end{prop}
+
+\begin{proof}
+இந்த நிறுவலின் நோக்கத்திற்காக மட்டும், $\delta$
+இல் உள்ள ஒரு தனிமாறி அனுமானத்தின் தனிமாறி
+வேறோர் அனுமானத்தின் தனிமாறியாகவும் இல்லாமல்,
+அந்த அனுமானத்தின் உடனடி உள்-!!{proof} க்கு
+வெளியே $\delta$ இல் எங்கும் இடம்பெறாமலும்
+இருந்தால் அதை \emph{தூயது} என்போம்;
+இல்லையெனில் \emph{தூய்மையற்றது} என்போம்.
+$\delta$ இல் உள்ள தூய்மையற்ற தனிமாறி
+அனுமானங்களின் எண்ணிக்கை $n$ என்க.
+$n$ மீது தொகுத்தறிதலால் $\delta$ வை வேண்டிய
+ஒழுங்குறு !!{proof}~$\delta'$ ஆக மாற்றலாம்
+என்று காட்டுவோம். $n=0$ எனில்,
+$\delta$ இன் எல்லாத் தனிமாறி அனுமானங்களும்
+தூயவை; எனவே $\delta$ ஒழுங்குறு, நிறுவ
+வேறொன்றுமில்லை. இல்லையெனில் மிக மேலுள்ள
+தூய்மையற்ற தனிமாறி அனுமானம் ஒன்றைத் தேர்வோம்;
+அது \Intro{\lforall} என்க. அதில் முடியும்
+$\delta$ இன் உள்-!!{proof}~$\delta_1$ இன் வடிவம்
+    \[
+    \AxiomC{}
+    \RightLabel{$\delta_2$}
+    \DeduceC{$!A(c)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x)]$}
+    \DisplayProof
+    \]
+ஆகும்.
+
+% SEGMENT OLP-0665-S07
+$c$ தனிமாறி என்பதால்
+$\lforall[x][!A(x)]$ இலோ திறந்த எடுகோளிலோ
+இடம்பெறாது. $\delta_2$ இல் தூய்மையற்ற
+தனிமாறி அனுமானம் இல்லை; எனவே அது ஒழுங்குறு.
+$\delta$ இல் இடம்பெறாத !!a{constant}~$a$
+ஒன்றைத் தேர்வோம். \olref{lem:subst-regular} படி,
+$\Subst{\delta_2}{a}{c}$ என்பது $!A(a)$ இன்
+ஒழுங்குறு நிறுவல். தனிமாறி நிபந்தனையால்
+$\delta_2$ இன் எந்தத் திறந்த எடுகோளிலும்
+$c$ இல்லை; ஆகவே
+$\Subst{\delta_2}{a}{c}$ இன் எந்தத் திறந்த
+எடுகோளிலும் $a$ இல்லை. எனவே
+$\Intro{\lforall}$ ஐப் பயன்படுத்தலாம்.
+$\delta$ இல் $\delta_1$ க்குப் பதிலாகப் பின்வரும்
+நிறுவல்~$\delta_1'$ ஐ வைத்தால்,
+    \[
+    \AxiomC{}
+    \RightLabel{$\Subst{\delta_2}{a}{c}$}
+    \DeduceC{$!A(a)$}
+    \RightLabel{\Intro{\lforall}}
+    \UnaryInfC{$\lforall[x][!A(x)]$}
+    \DisplayProof
+    \]
+ஒரு தூய்மையற்ற தனிமாறி அனுமானத்தைத்
+தூய அனுமானத்தால் மாற்றியிருக்கிறோம்;
+வேறுபாடு தனிமாறி $c$ க்குப் பதிலாக~$a$
+வைத்திருப்பதே. விளைவாகக் கிடைக்கும் நிறுவலில்
+தூய்மையற்ற தனிமாறி அனுமானங்கள் அதிகபட்சம்
+$n-1$ மட்டுமே; தொகுத்தறிதல் கருதுகோள்
+முடிவைத் தருகிறது.
+\end{proof}
+
+% SEGMENT OLP-0665-S08
+\begin{prob}
+\olref{prop:regular} இன் நிறுவலில்,
+மிக மேலுள்ள தூய்மையற்ற தனிமாறி அனுமானம்
+\Elim{\lexists} ஆக இருக்கும் நேர்வை விவரிக்கவும்.
+\end{prob}
+
+இப்போது நிறுவிய முன்மொழிவை இனி வெளிப்படையாக
+மேற்கோள் காட்ட மாட்டோம். ஆனால் நாம் கருதும்
+!!{proof}s அனைத்தும் ஒழுங்குறு என்று கொள்வோம்:
+அப்படி இல்லாதவற்றின் தனிமாறிகளைப்
+பெயர்மாற்றி ஒழுங்குறச் செய்யலாம்.
+
+\Olref{lem:subst-regular} உம்
+\olref{prop:regular} உம் \Log{N2c} மற்றும்~
+\Log{N2i} க்கும் பொருந்தும். அவற்றின்
+நிறுவல்களைப் பயிற்சிகளாக விடுகிறோம்.
+
+\end{document}

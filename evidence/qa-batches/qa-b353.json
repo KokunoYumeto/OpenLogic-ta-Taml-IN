@@ -1,0 +1,89 @@
+{
+  "batch_id": "TA-B353",
+  "units": [
+    {
+      "unit_id": "OLP-0697",
+      "source_sha256": "8e3fa53eb78ebc918ee94e0eead7724d931e5a27b75d714bca1db80f04ba9152",
+      "translation_sha256": "823d85d08c572babd43082e6c35f1b9ff42c37a904a586ff20c6b7a83e14bbec",
+      "source_bytes": 5023,
+      "translation_bytes": 11152,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\inj[!B]{i}{!M}$",
+        "$\\dcase{M}{x_1}{N_1}{x_2}{N_2}$"
+      ],
+      "extra_math": [
+        "$\\inj[!B]{i}{N}$",
+        "$\\dcase{M}{x}{N_1}{y}{N_2}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0697",
+          "audit_id": "TA-PT-045",
+          "kind": "type-definition-injection-binders-and-tN3-reference",
+          "action": "Repair the injection argument from undefined !M to the premise term N, use the x/y binders named by the case premises, and point the tN3i paragraph to the uniquely labelled tN3ip rule table.",
+          "expected_missing_math": [
+            "$\\inj[!B]{i}{!M}$",
+            "$\\dcase{M}{x_1}{N_1}{x_2}{N_2}$"
+          ],
+          "expected_extra_math": [
+            "$\\inj[!B]{i}{N}$",
+            "$\\dcase{M}{x}{N_1}{y}{N_2}$"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\olref{tab:tN2ip}",
+              "to": "\\olref{tab:tN3ip}",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen type clause assumes N:A but writes inj[!B]{i}{!M}, a different undefined marked term. The case clause assumes branches under x:A and y:B yet binds x_1 and x_2 in its constructor. Its tN3i paragraph points to tab:tN2ip, the earlier tN2 table, while the adjacent tN3 table has the distinct label tab:tN3ip under TA-PT-043.",
+          "chosen_treatment": "Use inj[!B]{i}{N}, case(M,x,N1,y,N2), and olref{tab:tN3ip}. Keep the i=1/i=2 result types, all eight type clauses, the unique-type proposition, all other formulas, and the earlier tN2 label/reference.",
+          "alternatives_considered": "Keep the undefined !M and unrelated x_1/x_2 binders; change premise variables to match the erroneous constructor; retain the tN2 cross-reference despite the tN3 rule introduction.",
+          "rationale": "The source premise and adjacent tN3 injection rules both use N:A, and the macro's optional B denotes the other summand. The adjacent tN3 case rule substitutes the very x and y named by its two branch contexts. The tN3 table repeats one Gamma and carries tab:tN3ip, while tab:tN2ip belongs to the different tN2 table.",
+          "precise_review_question": "Do these three bounded repairs make the eight type clauses agree with the adjacent tN3ip table without changing their connective order or context discipline?",
+          "location_needle": "\\olref{tab:tN3ip}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Final full-corpus verification pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "batch_id": "TA-B370",
+  "units": [
+    {
+      "unit_id": "OLP-0714",
+      "source_sha256": "9222c1a4bfe25f71a47e9d2447846c67dd8f162e10b394d3a8f9185f30cc6dfe",
+      "translation_sha256": "fa8d05f37caf7da9861d769a04caa3e3e7ed6f35c711cbf16edfc5d043c164a0",
+      "source_bytes": 4010,
+      "translation_bytes": 8822,
+      "source_coverage_complete": true,
+      "segments": 10,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0714",
+          "audit_id": "TA-PL-001",
+          "kind": "orphan-propositional-completeness-broken-axiom-references",
+          "action": "Replace two frozen references to the nonexistent prop:phi and one reference to a nonexistent local prop:prov-incons with the exact consistency-splitting and provability-consistency arguments needed at those sites.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[axd]{prop:phi}",
+              "to": "",
+              "count": 2
+            },
+            {
+              "from": "\\olref[axd]{prop:prov-incons}",
+              "to": "",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\olref",
+            "\\olref",
+            "\\olref"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "This frozen propositional-logic syntax-and-semantics completeness unit is not imported by its chapter driver. Its two olref[axd]{prop:phi} references have no matching prop:phi label anywhere in the frozen upstream tree. Its olref[axd]{prop:prov-incons} resolves relative to the local pl:prp:axd namespace, which has no such labelled section; separately existing first-order proof-system propositions are in different namespaces and may depend on a selected proof system.",
+          "chosen_treatment": "Keep every source theorem, formula, label and quantified condition. At the two extension-choice sites state the elementary classical consistency split inline: both extensions of a consistent set by A and not-A cannot be inconsistent. In the semantic-completeness corollary state the needed provability-consistency contrapositive inline: if Gamma plus not-A were inconsistent, the chosen classical derivability relation would prove A from Gamma. Remove only the three dangling olref commands and do not invent a cross-chapter locator.",
+          "alternatives_considered": "Keep three broken links; fabricate prop:phi; redirect the corollary to one arbitrarily selected first-order calculus; silently drop the use of consistency splitting or reductio.",
+          "rationale": "The frozen source has no prop:phi declaration, and the chapter driver never imports this orphaned section or a pl:prp:axd module. The inline arguments preserve exactly the mathematical implications the text uses without claiming a nonexistent proof or a proof-system-independent external proposition. Every displayed formula retains source parity.",
+          "precise_review_question": "Are the three frozen local labels genuinely absent, do the inline arguments establish the same consistency split and nonderivability-to-satisfiability steps, and is every mathematical display otherwise unchanged?",
+          "location_needle": "இரு விரிவாக்கங்களும் முரணுடையவையாக இருக்க"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\olref",
+        "\\olref",
+        "\\olref"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

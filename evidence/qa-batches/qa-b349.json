@@ -1,0 +1,74 @@
+{
+  "batch_id": "TA-B349",
+  "units": [
+    {
+      "unit_id": "OLP-0693",
+      "source_sha256": "948804549f0622cc616399743fa6fc6680b1b061763d292d7c5e2106fd583656",
+      "translation_sha256": "d32f8350903f16f0d3f0c3b82d5b454e6b32c9f4c19bac4a4eaf3c365fb6a912",
+      "source_bytes": 2055,
+      "translation_bytes": 2372,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0693",
+          "audit_id": "TA-PT-043",
+          "kind": "term-labelled-tN3-table-label",
+          "action": "Give the tN3ip rule table its own tab:tN3ip label instead of the frozen duplicate tab:tN2ip; update the importing types-section cross-reference when OLP-0697 is translated.",
+          "identifier_replacements": [
+            {
+              "from": "\\ollabel{tab:tN2ip}",
+              "to": "\\ollabel{tab:tN3ip}",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Both the tN2ip and tN3ip tables in the same propositions-as-types chapter carry tab:tN2ip in frozen source. The importing types section refers to tab:tN2ip even when discussing tN3i. Keeping both labels would collide and point the type-assignment paragraph to the earlier tN2 rule table.",
+          "chosen_treatment": "Preserve every tN3 displayed judgment and rule but label this distinct table tab:tN3ip. When translating types.tex, point its tN3i sentence to tab:tN3ip, leaving proof-terms.tex's tN2 reference intact.",
+          "alternatives_considered": "Keep the duplicate label and accept an ambiguous or overwritten reference; rename the earlier tN2 table instead; change the displayed tN3 rules to the tN2 context discipline.",
+          "rationale": "The tN3 rule table repeats one Gamma in its premises and conclusion, whereas tN2 combines Gamma1 and Gamma2. Their system names and actual tables are distinct, so distinct labels and matching references are required. The frozen mathematical judgments are otherwise preserved.",
+          "precise_review_question": "Does tab:tN3ip uniquely identify the repeated-context tN3 table while tab:tN2ip still identifies the earlier combined-context table?",
+          "location_needle": "\\ollabel{tab:tN3ip}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

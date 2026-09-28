@@ -1,0 +1,67 @@
+{
+  "batch_id": "TA-B333",
+  "units": [
+    {
+      "unit_id": "OLP-0673",
+      "source_sha256": "ec1fd2839474750e88e272f8e90be4d8001f328b03f666b39e7a36518d2d12e6",
+      "translation_sha256": "61d05d7a33145314a944027221d593d073256cd09f8f5e0563b94086f6d90e79",
+      "source_bytes": 2261,
+      "translation_bytes": 5841,
+      "source_coverage_complete": true,
+      "segments": 4,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0673",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "audit_id": "TA-PT-030",
+          "kind": "zero-rank-atomic-cut-induction",
+          "action": "Assume positive cut length only; allow cut rank zero in the induction step.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "source_issue_or_choice": "The source asserts both cut rank and cut length are positive after ruling out zero cut length, but atomic cut formulas have depth and hence cut rank zero.",
+          "chosen_treatment": "The Tamil keeps the lexicographic induction and says cut length is positive while cut rank may be zero.",
+          "alternatives_considered": "Retain the false positive-rank assumption and leave atomic cuts outside the proof.",
+          "rationale": "The adjacent segment definition sets cut rank to formula depth; the frozen formula-depth definition assigns depth zero to atomic formulas.",
+          "precise_review_question": "Does the induction cover a nonempty set of atomic cuts at rank zero?",
+          "location_needle": "வெட்டு நிலை பூச்சியமாகவும் இருக்கலாம்"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

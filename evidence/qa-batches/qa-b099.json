@@ -4,35 +4,26 @@
     {
       "unit_id": "OLP-0195",
       "source_sha256": "09bdaf0730f142d22d7f8fcc6c3155cb76d851f550a90bd70b04b2de1a9855fc",
-      "translation_sha256": "c8103021353ad39250c4495fb8c2191c32af2de9d5b736f37a66f4faece14134",
+      "translation_sha256": "d6a8a158fa68d17351461fe2a3346cb84ee0ccdcbeed5c5abe306def504606d5",
       "source_bytes": 7842,
-      "translation_bytes": 12597,
+      "translation_bytes": 13295,
       "source_coverage_complete": true,
       "segments": 1,
-      "math_multiset_parity": true,
-      "missing_math": [],
-      "extra_math": [],
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}(n\\nsplusm^\\nssucc)&=(n+(m+1))=(n+m)+1=(n\\nsplusm)^\\nssucc$\\nsplus$$^\\nssucc$$+$$\\prime$$x\\in\\Domain{K}$(x\\nsplusa^\\nssucc)&=(x\\nsplusa)=a=a^\\nssucc=(x\\nsplusa)^\\nssucc$y\\in\\Domain{K}$$x=a$$y=n$$y=b$(a\\nsplusn^\\nssucc)&=(a\\nsplus(n+1))=a=a^\\nssucc=(a\\nsplusn)^\\nssucc\\\\(a\\nsplusa^\\nssucc)&=(a\\nsplusa)=a=a^\\nssucc=(a\\nsplusa)^\\nssucc\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}(n\\nsplusm^\\nssucc)&=(n+(m+1))=(n+m)+1=(n\\nsplusm)^\\nssucc$\\nsplus$$^\\nssucc$$+$$\\prime$$x\\in\\Domain{K}$(x\\nsplusa^\\nssucc)&=(x\\nsplusa)=a=a^\\nssucc=(x\\nsplusa)^\\nssucc$y\\in\\Domain{K}$$x=a$$y=n$$y=a$(a\\nsplusn^\\nssucc)&=(a\\nsplus(n+1))=a=a^\\nssucc=(a\\nsplusn)^\\nssucc\\\\(a\\nsplusa^\\nssucc)&=(a\\nsplusa)=a=a^\\nssucc=(a\\nsplusa)^\\nssucc\\end{align*}"
+      ],
       "token_key_parity": true,
       "identifier_parity": true,
       "environment_parity": true,
       "unicode_nfc": true,
       "replacement_char_absent": true,
       "english_words_for_review": [
-        "Here",
-        "Now",
-        "The",
-        "Then",
-        "according",
-        "agree",
         "align",
-        "also",
-        "and",
-        "but",
-        "case",
-        "cases",
         "ccc",
-        "distinguish",
-        "have",
         "inc",
         "include",
         "logic",
@@ -40,22 +31,44 @@
         "mdq",
         "min",
         "mod",
-        "non",
-        "numbers",
         "open",
-        "remaining",
         "req",
-        "section",
-        "since",
-        "standard",
-        "suppose",
-        "whether",
-        "with"
+        "section"
       ],
       "visual_review_complete": false,
-      "audited_source_corrections": [],
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-FINAL-001",
+          "unit_id": "OLP-0195",
+          "kind": "undefined-nonstandard-element-in-case-text",
+          "action": "நிலையான எண்களுடன் சேர்க்கப்பட்ட ஒரே புதிய உறுப்பு a என்பதால், நிலைப் பிரிப்பின் வரையறுக்கப்படாத y=b என்பதை y=a எனத் திருத்துகிறது.",
+          "normalized_math_replacements": [
+            {
+              "from": "$y=b$",
+              "to": "$y=a$",
+              "count": 1
+            }
+          ],
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "K இன் சார்பகம் இயல் எண்களும் a என்ற உறுப்பும் கொண்டது. மூலத்தின் இடைஉரை மட்டும் y=b என்கிறது; அடுத்த வரி a இன் நிலையை நிறுவுகிறது.",
+          "chosen_treatment": "இடைஉரையில் y=a; மற்ற வாய்பாடுகள், அட்டவணைகள் மற்றும் சமத்துவப் படிகள் அப்படியே.",
+          "alternatives_considered": "வரையறுக்கப்படாத b ஐ அப்படியே வைத்தல்.",
+          "rationale": "அறிமுகப்படுத்தப்பட்ட சார்பகத்திலும் அடுத்த கணக்கிலும் b இல்லை. a மட்டுமே நிலையான எண்களுக்கு வெளியான உறுப்பு.",
+          "precise_review_question": "இந்த ஒரு எழுத்துத் திருத்தம் இரண்டு நிலைகளின் முழுப் பிரிப்பைத் துல்லியமாகக் காட்டுகிறதா?",
+          "location_needle": "அல்லது $y = a$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
       "identifier_replacements_valid": true,
       "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
       "normalized_math_replacements_valid": true,
       "math_parity_or_audited_correction": true,
       "command_multiset_parity": true,
@@ -68,7 +81,7 @@
   "release_ready": false,
   "unresolved": [
     "Visual/font/copy-search checks pending",
-    "Remainder of corpus pending",
+    "Final full-corpus verification pending",
     "Whole reader and publication pending"
   ]
 }

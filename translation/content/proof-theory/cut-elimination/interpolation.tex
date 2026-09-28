@@ -1,0 +1,676 @@
+% SEGMENT OLP-0658-S01
+% Part: proof-theory
+% Chapter: cut-elimination
+% Section: interpolation
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{cut}{itp}
+
+\olsection{மாஎஹாராவின் துணைத்தேற்றமும் கிரெய்கின் இடையீட்டுத் தேற்றமும்}
+
+வில்லியம் கிரெய்கின் இடையீட்டுத் தேற்றத்தின்படி, $!A \Entails !B$
+எனில், $!A \Entails !C$ மற்றும் $!C \Entails !B$ ஆகிய இரண்டும்
+நிறைவேறுமாறு !!a{sentence}~$!C$ ஒன்று உள்ளது. இதுவே
+\emph{இடையீட்டி}. முக்கியமாக, $!C$ இல் வரும் !!{constant}s மற்றும்
+!!{predicate}s அனைத்தும் $!A$ மற்றும் $!B$ இரண்டிலும் வருமாறு
+$!C$ ஐத் தேர்ந்தெடுக்கலாம். இங்கு !!{function}s இல்லை எனக்
+கொள்கிறோம். இந்தப் பொதுக் குறியீட்டு நிபந்தனை இல்லாவிட்டால்,
+$!A$ அல்லது $!B$ ஐயே எளிதாக இடையீட்டியாகக் கொள்ளலாம்.
+
+இத்தேற்றம் செவ்வியல் முதல்நிலைத் தருக்கத்திற்குப் பொருந்துகிறது;
+கண்டறியப்பட்ட முதல்நிலைத் தருக்கத்தின் ``கடைசி முக்கியமான பண்பு''
+என்றும் இது அழைக்கப்பட்டுள்ளது. மாதிரிக் கோட்பாட்டிலும் தானியங்கித்
+தருக்கவாதத்திலும் இதற்குப் பயன்கள் உள்ளன. அறிவியல் தத்துவத்தில் ஒரு
+கோட்பாட்டை எந்த அடிப்படைக் குறியீடுகளால் அடிக்கோளாக்கலாம் அல்லது
+முடியாது என்பதை ஆய்வு செய்வதே இதன் தொடக்க நோக்கமும் பயன்பாடுமாக
+இருந்தது. ஒரு கோட்பாடு ஒரு கருத்தை மறைமுகமாக வரையறுக்க இயன்றால்,
+அதை வெளிப்படையாகவும் வரையறுக்க இயலும் எனும் பெத்தின்
+வரையறுக்கத்தக்கமைத் தேற்றமும் இதிலிருந்து பின்தொடர்கிறது.
+
+கணிதத் தருக்கத்தின் பல முடிவுகளைப் போலவே இடையீட்டுத் தேற்றத்தையும்
+மாதிரிக் கோட்பாட்டு முறைகளாலும் நிறுவல்-கோட்பாட்டு முறைகளாலும்
+நிறுவலாம். நிறுவல்-கோட்பாட்டு முறையின் சிறப்பு, இடையீட்டி இருக்கிறது
+எனக் காட்டுவதோடு நிற்காமல், $!A \Entails !B$ என்பதற்கான
+!!a{proof} இலிருந்து அதை கணக்கிடும் படிமுறையையும் தருவதாகும்;
+எடுத்துக்காட்டாக, $!A \Sequent !B$ என்பதற்கான~\Log{G3c}
+!!a{proof} இலிருந்து கணக்கிடலாம்.
+
+$\Lang L(!A)$ என்பது $!A$ இல் வரும் !!{constant}s மற்றும்
+!!{predicate}s இன் கணம் என்க; மேலும்
+$\Lang L(\Gamma) = \bigcup \Setabs{\Lang L(!A)}{!A \in
+\Gamma}$ என்க. இப்பிரிவு முழுவதும் !!{function}s இல்லாத
+!!{formula}s ஐயே கருதுகிறோம்.
+
+% SEGMENT OLP-0658-S02
+\begin{thm}[கிரெய்கின் இடையீட்டுத் தேற்றம்]\ollabel{thm:interpolation}
+$!A$ இன் !!{language}~$\Lang L(!A)$ என்றும் $!B$ இன்
+மொழி~$\Lang L(!B)$ என்றும் கொள்க. $\Log{G3c} \Proves
+!A \Sequent !B$ எனில், $\Lang L(!C) \subseteq \Lang L(!A)
+\cap \Lang L(!B)$ ஆகும் !!{language} இல் !!a{formula}~$!C$
+ஒன்று உள்ளது; மேலும் $\Log{G3c} \Proves !A \Sequent !C$
+மற்றும் $\Log{G3c} \Proves !C \Sequent !B$.
+\end{thm}
+
+~\Log{G3c} இன் !!{proof}s இன் அமைப்பைப் பயன்படுத்துவதற்காக,
+இடையீட்டுத் தேற்றத்தைப் பொதுமைப்படுத்தி நிறுவுகிறோம். ஒரு தொடரணியின்
+முன்பக்கத்தையும் பின்பக்கத்தையும் தலா இரு பகுதிகளாகப் பிரித்துக்
+கொள்க. $\maeh{\Gamma_1}{\Gamma_2} \Sequent
+\maeh{\Delta_1}{\Delta_2}$ என்ற குறியில், $\Gamma_1$ உம்
+$\Delta_1$ உம் முதல் பகுதிக்கும், $\Gamma_2$ உம் $\Delta_2$ உம்
+இரண்டாம் பகுதிக்கும் உரியவை. பின்வரும் துணைத்தேற்றத்திலிருந்து
+இடையீட்டுத் தேற்றம் உடனே பெறப்படும்.
+
+\begin{lem}[மாஎஹாராவின் துணைத்தேற்றம்]\ollabel{lem:maehara}
+$\Log{G3c} \Proves \maeh{\Gamma_1}{\Gamma_2} \Sequent
+\maeh{\Delta_1}{\Delta_2}$ எனில்,
+$\Lang L(!C) \subseteq \Lang L(\Gamma_1,
+\Delta_1) \cap \Lang L(\Gamma_2, \Delta_2)$ ஆகும்
+!!{language} இல் !!a{formula}~$!C$ ஒன்று உள்ளது; மேலும்
+$\Log{G3c} \Proves \Gamma_1 \Sequent \Delta_1, !C$
+மற்றும் $\Log{G3c} \Proves !C, \Gamma_2 \Sequent \Delta_2$.
+\end{lem}
+
+% SEGMENT OLP-0658-S03
+\begin{proof}
+  $\pi \Proves \maeh{\Gamma_1}{\Gamma_2} \Sequent
+  \maeh{\Delta_1}{\Delta_2}$ என்று கொள்க. $n=\pheight{\pi}$
+  மீது தொகுத்தறிந்து கூற்றை நிறுவுகிறோம்.
+
+  $n=0$ எனில், $\maeh{\Gamma_1}{\Gamma_2} \Sequent
+  \maeh{\Delta_1}{\Delta_2}$ ஓர் அடிக்கோள். அப்போது ஓர் அணு
+  !!{formula}~$!A$, $\Gamma_1, \Gamma_2$ இலும்
+  $\Delta_1, \Delta_2$ இலும் வருகிறது. இடப்புறத்தில் $!A$
+  எந்தப் பகுதியில் வருகிறது என்பதையும் வலப்புறத்தில் எந்தப் பகுதியில்
+  வருகிறது என்பதையும் பொறுத்து நான்கு நேர்வுகள் உள்ளன.
+  \begin{enumerate}
+    \item $!A \in \Gamma_1$ மற்றும் $!A \in \Delta_1$.
+    $\Gamma_1 \Sequent \Delta_1, !C$ மற்றும்
+    $!C, \Gamma_2 \Sequent \Delta_2$ ஆகிய இரண்டும்
+    !!{provable} ஆகும் $!C$ தேவை. $!A$ இடப்புறமும் வலப்புறமும்
+    வருவதால், $!C$ எதுவாயினும் முதலாவது தொடரணி ஏற்கெனவே
+    அடிக்கோள். $!C, \Gamma_2 \Sequent \Delta_2$ என்ற
+    இரண்டாவது தொடரணி !!{provable} என்பதை உறுதிப்படுத்துவதற்கு
+    $!C \ident \lfalse$ எனத் தேர்ந்தெடுக்கிறோம்.
+    \item $!A \in \Gamma_1$ மற்றும் $!A \in \Delta_2$.
+    அப்போது $\Gamma_1 \Sequent \Delta_1, !A$ மற்றும்
+    $!A, \Gamma_2 \Sequent \Delta_2$ இரண்டும் அடிக்கோள்கள்;
+    எனவே $!C \ident !A$ எனலாம்.
+    \item $!A \in \Gamma_2$ மற்றும் $!A \in \Delta_1$.
+    $!A, \Gamma_1 \Sequent \Delta_1$ மற்றும்
+    $\Gamma_2 \Sequent \Delta_2, !A$ அடிக்கோள்களாக
+    இருக்கும்; ஆனால் இடையீட்டிக்குத் தேவையான பக்கங்களுக்கு
+    நேர்மாறாக $!A$ அமைந்துள்ளது. ஆகவே $!A$ இடையீட்டி அல்ல.
+    இருப்பினும் $\RightR{\lnot}$ மற்றும் $\LeftR{\lnot}$
+    விதிகளால் $\Gamma_1 \Sequent \Delta_1, \lnot!A$
+    மற்றும் $\lnot !A, \Gamma_2 \Sequent \Delta_2$
+    ஆகியவற்றை !!{prove} செய்யலாம்.
+    \item $!A \in \Gamma_2$ மற்றும் $!A \in \Delta_2$.
+    பயிற்சி.
+  \end{enumerate}
+  $\lfalse \in \Gamma_1$ அல்லது $\lfalse \in \Gamma_2$
+  என்பதால் $\maeh{\Gamma_1}{\Gamma_2} \Sequent
+  \maeh{\Delta_1}{\Delta_2}$ அடிக்கோளாகும் நேர்வுகளும்
+  பயிற்சிகளாக விடப்படுகின்றன.
+
+  $n>0$ எனில், $\pi$ தருக்க அனுமானத்தில் முடிகிறது. பயன்படுத்தப்பட்ட
+  விதி எது, அதன் முதன்மை வாய்பாடு எந்தப் பகுதியைச் சேர்ந்தது என்று
+  பிரித்து நேர்வுகளைப் பார்க்க வேண்டும். $\pheight{\pi_1}<n$
+  ஆகும் ஒவ்வொரு !!{proof}~$\pi_1$ க்கும், $\pi_1$ இன் இறுதித் தொடரணி
+  எவ்வாறு இரண்டாகப் பிரிக்கப்பட்டிருந்தாலும், துணைத்தேற்றம் பொருந்தும்
+  என்பதே தொகுத்தறிதல் கருதுகோள். சில நேர்வுகளை விரிவாகப் பார்ப்போம்.
+  \begin{enumerate}
+% SEGMENT OLP-0658-S04
+    \item $\pi$, முதன்மை வாய்பாடு~$\lnot !A$ உடைய
+    $\RightR{\lnot}$ விதியில் முடிகிறது. $\lnot !A$ முதல் பகுதியிலா,
+    இரண்டாம் பகுதியிலா உள்ளது என்பதைப் பொறுத்து $\pi$ பின்வரும்
+    இரண்டில் ஒன்றில் முடிகிறது:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{!A, \Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2}$
+    \RightLabel{\RightR{\lnot}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, \lnot !A}{\Delta_2}$
+    \DisplayProof
+    \]
+    அல்லது
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{!A, \Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2}$
+    \RightLabel{\RightR{\lnot}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, \lnot !A}$
+    \DisplayProof
+    \]
+    முதன்மை !!{formula}~$\lnot !A$ முதல் பகுதியில் இருந்தால்,
+    முன்கோளில் அதன் செயல்படு !!{formula}~$!A$ ஐயும் அதே பகுதியில்
+    வைத்துள்ளோம். இது நாம் செய்யக்கூடிய தேர்வு. செயல்படு வாய்பாட்டை
+    மறுபகுதியில் வைத்தாலும் தொகுத்தறிதல் கருதுகோள் பொருந்தும்;
+    ஆனால் அப்போது இடையீட்டியைக் கண்டுபிடிக்க முடியாது
+    (பயிற்சி: முயன்று பார்க்க).
+
+    முதலில் $\lnot !A$ முதல் பகுதியில் உள்ள நேர்வைக் கருதுக.
+    தொகுத்தறிதல் கருதுகோளால் $\pi_1$ இன் இறுதித் தொடரணிக்கு
+    இடையீட்டியான !!a{formula}~$!C_1$ ஒன்று உள்ளது; அதாவது,
+    \begin{align*}
+    !A, \Gamma_1 & \Sequent \Delta_1, !C_1 &&\text{மற்றும்} &
+    !C_1, \Gamma_2 & \Sequent \Delta_2
+    \intertext{ஆகிய இரண்டும் நிறுவத்தக்கவை. நமக்குத் தேவைப்படும்
+    !!a{formula}~$!C$ பின்வரும் இரண்டையும் !!{provable} ஆக்க வேண்டும்:}
+    \Gamma_1 & \Sequent \Delta_1, \lnot !A, !C &&\text{மற்றும்} &
+    !C, \Gamma_2 & \Sequent \Delta_2
+    \end{align*}
+    $!C \ident !C_1$ எனவே கொள்ளலாம். வலப்புறத் தொடரணி
+    !!{provable} என்று தொகுத்தறிதல் கருதுகோள் ஏற்கெனவே சொல்கிறது;
+    இடப்புறத் தொடரணி, அதே கருதுகோளில் கிடைத்த தொடரணிக்கு
+    $\RightR{\lnot}$ பயன்படுத்துவதால் கிடைக்கிறது. மேலும்
+    $\Lang L(!C_1) \subseteq \Lang L(!A, \Gamma_1,
+    \Delta_1) \cap \Lang L(\Gamma_2, \Delta_2)$.
+    $\Lang L(\lnot !A) = \Lang L(!A)$ மற்றும்
+    $\Lang L(!C) = \Lang L(!C_1)$ என்பதால்,
+    $\Lang L(!C_1) \subseteq \Lang L(\Gamma_1, \Delta_1,
+    \lnot !A) \cap \Lang L(\Gamma_2, \Delta_2)$ என்பதும்
+    நிறைவேறுகிறது.
+
+    இரண்டாம் நேர்வில் $\lnot !A$ இரண்டாம் பகுதியில் உள்ளது.
+    முன்கோளின் செயல்படு !!{formula} ஐயும் இரண்டாம் பகுதியில் வைத்து,
+    தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்தினால்,
+    \begin{align*}
+    \Gamma_1 & \Sequent \Delta_1, !C_1 &&\text{மற்றும்} &
+    !C_1, !A, \Gamma_2 & \Sequent \Delta_2
+    \intertext{ஆகியவை நிறுவத்தக்கவை. இவற்றில் இரண்டாவதற்கு
+    \RightR{\lnot} விதியைப் பயன்படுத்தினால் பின்வரும்
+    தொடரணிகளுக்கு !!{proof}s கிடைக்கின்றன:}
+    \Gamma_1 & \Sequent \Delta_1, !C_1 &&\text{மற்றும்} &
+    !C_1, \Gamma_2 & \Sequent \Delta_2, \lnot !A
+    \end{align*}
+    $!C_1$ இடையீட்டி ஆக வேண்டியபோது !!{provable} ஆக வேண்டிய
+    தொடரணிகள் இவையே; மீண்டும் $!C \ident !C_1$ என்கிறோம்.
+    முன்போலவே $\Lang L(!C_1) \subseteq \Lang L(\Gamma_1,
+    \Delta_1) \cap \Lang L(\Gamma_2, \Delta_2, \lnot !A)$.
+
+% SEGMENT OLP-0658-S05
+    \item !!{proof}~$\pi$, முதன்மை !!{formula}~$!A \lif !B$ உடைய
+    $\RightR{\lif}$ விதியில் முடிகிறது. $!A \lif !B$ முதல்
+    அல்லது இரண்டாம் பகுதியில் இருப்பதைப் பொறுத்து, $\pi$ பின்வரும்
+    இரண்டில் ஒன்றில் முடிகிறது:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{!A, \Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, !B}{\Delta_2}$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, !A \lif !B}{\Delta_2}$
+    \DisplayProof
+    \]
+    அல்லது
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{!A, \Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, !B}$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, !A \lif !B}$
+    \DisplayProof
+    \]
+    இங்கும் முடிவின் முதன்மை !!{formula} எந்தப் பகுதியில் உள்ளதோ,
+    முன்கோளின் செயல்படு !!{formula}s ஐயும் அதே பகுதியில் வைத்துள்ளோம்.
+    முதல் நேர்வில் தொகுத்தறிதல் கருதுகோள்,
+    \begin{align*}
+    !A, \Gamma_1 & \Sequent \Delta_1, !B, !C_1 &&\text{மற்றும்} & !C_1, \Gamma_2 & \Sequent \Delta_2
+    \intertext{ஆகியவற்றுக்கு !!{proof}s தருகிறது. இடப்புறத் தொடரணி
+    \RightR{\lif} விதிக்குப் பொருத்தமான முன்கோள். ஆகவே பின்வரும்
+    தொடரணிகள் !!{provable}:}
+    \Gamma_1 & \Sequent \Delta_1, !A \lif !B, !C_1 &&\text{மற்றும்} & !C_1, \Gamma_2 & \Sequent \Delta_2
+    \end{align*}
+    இதனால் $!C_1$, $\pi$ இன் இறுதித் தொடரணிக்கும் இடையீட்டி;
+    மீண்டும் $!C \ident !C_1$ எனலாம். மற்ற நேர்வும் இதேபோல்
+    கையாளப்படுகிறது.
+
+% SEGMENT OLP-0658-S06
+    \item !!{proof}~$\pi$, முதன்மை !!{formula}~$!A \lif !B$ உடைய
+    $\LeftR{\lif}$ விதியில் முடிகிறது. $!A \lif !B$ முதல்
+    பகுதியில் இருந்தால், $\pi$ பின்வருமாறு முடிகிறது:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, !A}{\Delta_2}$
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$\maeh{!B, \Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2}$
+    \BinaryInf$\maeh{!A \lif !B, \Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2}$
+    \DisplayProof
+    \]
+    இடது முன்கோளின் இடையீட்டி $!C_1$ க்காக இரண்டும், இரண்டாம்
+    முன்கோளின் இடையீட்டி $!C_2$ க்காக இரண்டும் எனத் தொகுத்தறிதல்
+    கருதுகோள் நான்கு !!{provable} தொடரணிகளைத் தருகிறது:
+    \begin{align*}
+    \Gamma_1 & \Sequent \Delta_1, !A, !C_1 &&\text{(1)} &
+    !C_1, \Gamma_2 & \Sequent \Delta_2 && \text{(2)}\\
+    !B, \Gamma_1 & \Sequent \Delta_1, !C_2 &&\text{(3)} &
+    !C_2, \Gamma_2 & \Sequent \Delta_2 && \text{(4)}
+    \end{align*}
+    (1) இன் வலப்புறத்தில் $!C_2$ ஐயும் (3) இன் வலப்புறத்தில்
+    $!C_1$ ஐயும் வலுவிழக்கச் சேர்த்தால், அவை~\LeftR{\lif}
+    விதியின் முன்கோள்களாக அமையும்:
+    \[
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter \Delta_1, !A, !C_1, !C_2$
+    \AxiomC{}
+    \Deduce$!B, \Gamma_1 \fCenter \Delta_1, !C_1, !C_2$
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$!A \lif !B, \Gamma_1 \fCenter \Delta_1, !C_1, !C_2$
+    \DisplayProof
+    \]
+    $\RightR{\lor}$ ஐப் பயன்படுத்தி
+    \[
+    !A \lif !B, \Gamma_1 \fCenter \Delta_1, !C_1 \lor !C_2
+    \]
+    பெறுகிறோம். ஆகவே இந்நேர்வின் இடையீட்டியாக
+    $!C_1 \lor !C_2$ இருக்கலாம். எஞ்சிய (2), (4) தொடரணிகளிலிருந்து
+    தேவையான மற்ற தொடரணியையும் !!{prove} செய்யலாம்:
+    \[
+    \AxiomC{}
+    \Deduce$!C_1, \Gamma_2 \fCenter \Delta_2$
+    \AxiomC{}
+    \Deduce$!C_2, \Gamma_2 \fCenter \Delta_2$
+    \RightLabel{\LeftR{\lor}}
+    \BinaryInf$!C_1 \lor !C_2, \Gamma_2 \fCenter \Delta_2$
+    \DisplayProof
+    \]
+    $!C_1 \lor !C_2$ சரியான மொழியில் உள்ளது என்பதை
+    இன்னும் சரிபார்க்க வேண்டும். தொகுத்தறிதல் கருதுகோளால்
+    \begin{align*}
+    \Lang L(!C_1) & \subseteq
+    \Lang L(\Gamma_1, \Delta_1, !A) \cap \Lang L(\Gamma_2, \Delta_2) &\text{மற்றும்}\\
+    \Lang L(!C_2) & \subseteq
+    \Lang L(!B, \Gamma_1, \Delta_1) \cap \Lang L(\Gamma_2, \Delta_2)
+    \intertext{மேலும்}
+    \Lang L(!A) & \subseteq \Lang L(!A \lif !B) &\text{மற்றும்}\\
+    \Lang L(!B) & \subseteq \Lang L(!A \lif !B)
+    \intertext{என்பதால் இரண்டிற்கும்}
+    \Lang L(!C_1) & \subseteq
+    \Lang L(\Gamma_1, \Delta_1, !A \lif !B) \cap \Lang L(\Gamma_2, \Delta_2) &\text{மற்றும்}\\
+    \Lang L(!C_2) & \subseteq
+    \Lang L(\Gamma_1, \Delta_1, !A \lif !B) \cap \Lang L(\Gamma_2, \Delta_2)
+    \intertext{எனக் கிடைக்கும். இதன் விளைவாக, $\Lang L (!C_1 \lor !C_2) = {}$}
+    \Lang L(!C_1) \cup \Lang L(!C_2) & \subseteq
+    \Lang L(\Gamma_1, \Delta_1, !A \lif !B) \cap \Lang L(\Gamma_2, \Delta_2),
+    \end{align*}
+    என்று கிடைக்கிறது; இதுவே தேவை.
+
+% SEGMENT OLP-0658-S07
+    $!A \lif !B$ இரண்டாம் பகுதியில் இருந்தால் அமைப்பு மாறும்;
+    இருப்பினும் இதே முறையில் கையாளலாம். தொகுத்தறிதல் கருதுகோள்
+    மீண்டும் நான்கு !!{provable} தொடரணிகளைத் தருகிறது:
+    \begin{align*}
+    \Gamma_1 & \Sequent \Delta_1, !C_1 &&\text{(1)} &
+    !C_1, \Gamma_2 & \Sequent \Delta_2, !A && \text{(2)}\\
+    \Gamma_1 & \Sequent \Delta_1, !C_2 &&\text{(3)} &
+    !C_2, !B, \Gamma_2 & \Sequent \Delta_2 && \text{(4)}
+    \end{align*}
+    (2), (4) இல் தேவையான !!{formula}s ஐ வலுவிழக்கச் சேர்த்தால்,
+    அவை~\LeftR{\lif} விதியின் முன்கோள்களாக அமைகின்றன:
+    \[
+    \AxiomC{}
+    \Deduce$!C_1, !C_2, \Gamma_2 \fCenter \Delta_2, !A$
+    \AxiomC{}
+    \Deduce$!B, !C_1, !C_2, \Gamma_2 \fCenter \Delta_2$
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$!A \lif !B, !C_1, !C_2, \Gamma_2 \fCenter \Delta_2$
+    \DisplayProof
+    \]
+    இங்கும் $!C_1$, $!C_2$ இலிருந்து கட்டப்படும் ஒற்றை
+    !!{formula} ஒன்றை முன்பக்கத்தில் பெற வேண்டும்; ஏனெனில் இது
+    இரண்டாம் பகுதி. $\LeftR{\land}$ ஐப் பயன்படுத்தினால் போதும்:
+    $!C \ident (!C_1 \land !C_2)$ ஐ இடையீட்டியாகக் கொள்கிறோம்.
+    எஞ்சிய (1), (3) மூலம் முதல் பகுதிக்கான தொடர்புடைய தொடரணியை
+    !!{prove} செய்யலாம்:
+    \[
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter \Delta_1, !C_1$
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter \Delta_1, !C_2$
+    \RightLabel{\RightR{\land}}
+    \BinaryInf$\Gamma_1 \fCenter \Delta_1, !C_1 \land !C_2$
+    \DisplayProof
+    \]
+    முன்போலவே $\Lang L(!C_1 \land !C_2) \subseteq \Lang
+    L(\Gamma_1, \Delta_1) \cap \Lang L(\Gamma_2, \Delta_2,
+    !A \lif !B)$.
+
+% SEGMENT OLP-0658-S08
+    \item $\pi$, முதன்மை !!{formula}~$\lforall[x][!A(x)]$ உடைய
+    $\RightR{\lforall}$ விதியில் முடிகிறது:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+    \maeh{\Delta_1, !A(c)}{\Delta_2}$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, \lforall[x][!A(x)]}{\Delta_2}$
+    \DisplayProof
+    \]
+    அல்லது
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, !A(c)}$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1}{\Delta_2, \lforall[x][!A(x)]}$
+    \DisplayProof
+    \]
+    முதல் நேர்வில் தொகுத்தறிதல் கருதுகோள்
+    $\Gamma_1 \Sequent \Delta_1, !A(c), !C_1$ மற்றும்
+    $!C_1, \Gamma_2 \Sequent \Delta_2$ ஆகியவற்றுக்கு
+    !!{proof}s தருகிறது. முதலாவதற்கு $\RightR{\lforall}$
+    பயன்படுத்தி $\Gamma_1 \Sequent \Delta_1,
+    \lforall[x][!A(x)], !C_1$ ஐப் பெறலாம். ($\pi$ இன்
+    இறுதி \RightR{\lforall} விதியில் தனிமாறி நிபந்தனை
+    ஏற்கெனவே நிறைவேறுவதால் இங்கும் அது நிறைவேறுகிறது.)
+    ஆகவே $\Lang L(!C_1) \subseteq \Lang L(\Gamma_1,
+    \Delta_1, \lforall[x][!A(x)]) \cap \Lang L(\Gamma_2,
+    \Delta_2)$ என்ற நிபந்தனை நிறைவேறினால் $!C_1$
+    இடையீட்டியாகும். தொகுத்தறிதல் கருதுகோள்
+    $\Lang L(!C_1) \subseteq \Lang L(\Gamma_1, \Delta_1,
+    !A(c)) \cap \Lang L(\Gamma_2, \Delta_2)$ ஐத் தருகிறது.
+    எனவே $c$ பற்றி கவனிக்க வேண்டும்: $c$, $!C_1$ இல்
+    வருமா? வராது. $c$ ஆனது $!C_1$ இல் வந்தால்
+    $c \in \Lang L(\Gamma_1, \Delta_1, !A(c))$
+    என்பதோடு $c \in \Lang L(\Gamma_2, \Delta_2)$ என்பதும்
+    வேண்டும். அப்போது $\pi$ இன் $\RightR{\lforall}$ முடிவில்
+    $c$ வரும்; இது தனிமாறி நிபந்தனைக்கு முரண்.
+
+    மற்ற நேர்வும் இதேபோல் அமைகிறது.
+
+% SEGMENT OLP-0658-S09
+    \item $\pi$, முதன்மை !!{formula}~$\lexists[x][!A(x)]$
+    உடைய $\RightR{\lexists}$ விதியில் முடிகிறது. இங்கும் இரு
+    நேர்வுகள் உள்ளன. $\lexists[x][!A(x)]$ முதல் பகுதியில் உள்ள
+    நேர்வை ஆராய்ந்து, மற்றதைப் பயிற்சியாக விடுகிறோம்.
+
+    முதல் நேர்வில் $\pi$ பின்வருமாறு முடிகிறது:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, \lexists[x][!A(x)], !A(t)}{\Delta_2}$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$\maeh{\Gamma_1}{\Gamma_2} \fCenter
+      \maeh{\Delta_1, \lexists[x][!A(x)]}{\Delta_2}$
+    \DisplayProof
+    \]
+    தொகுத்தறிதல் கருதுகோளால்
+    $\Gamma_1 \Sequent \Delta_1, \lexists[x][!A(x)], !A(t), !C_1$
+    மற்றும் $!C_1, \Gamma_2 \Sequent \Delta_2$ ஆகியவற்றுக்கு
+    !!{proof}s உள்ளன. முதலாவதற்கு $\RightR{\lexists}$ பயன்படுத்தி
+    $\Gamma_1 \Sequent \Delta_1, \lexists[x][!A(x)], !C_1$
+    பெறலாம். எனவே
+    $\Lang L(!C_1) \subseteq \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)]) \cap \Lang L(\Gamma_2, \Delta_2)$
+    என்ற நிபந்தனை நிறைவேறினால் மீண்டும் $!C_1$ இடையீட்டியாகும்.
+    தொகுத்தறிதல் கருதுகோள் இங்கு
+    $\Lang L(!C_1) \subseteq \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)], !A(t)) \cap \Lang L(\Gamma_2,
+    \Delta_2)$ ஐத் தருகிறது.
+
+    !!{function}s இல்லை என்ற கருதுகோளை நினைவுகொள்க. மூல
+    வாதத்தின் அடுத்த கட்டம் $t$ ஐ !!a{constant} ஆகக் கொண்டு,
+    $t \ident b$ என்கிறது. $b \notin \Lang L(!C_1)$ என்றாலோ,
+    $b \in \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)]) \cap \Lang L(\Gamma_2, \Delta_2)$
+    என்றாலோ சிக்கல் இல்லை: $!C_1$ இடையீட்டியாகும். ஆனால்
+    $b \in \Lang L(!C_1)$ என்றும்
+    $b \notin \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)]) \cap \Lang L(\Gamma_2, \Delta_2)$
+    என்றும் இருந்தால் என்ன? $!C_1$ இல் வரும் எல்லா $b$ களுக்கும்
+    பதிலாக !!a{variable}~$y$ இட்டால்,
+    $!C_1 \ident \Subst{!C_1'}{b}{y}$ என்றும் $!C_1'$ இல்
+    $b$ வராது என்றும் எழுதலாம். மேலும்,
+    $b \notin \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)])$ அல்லது
+    $b \notin \Lang L(\Gamma_2, \Delta_2)$.
+    அதற்கேற்ப $!C \ident \lforall[y][!C_1'(y)]$ அல்லது
+    $!C \ident \lexists[y][!C_1'(y)]$ எனக் கொள்ளலாம்.
+    முதல் நேர்வில்:
+    \[
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], !A(b), !C_1'(b)$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$\Gamma_1 \fCenter \Delta_1, \lexists[x][!A(x)], !C_1'(b)$
+    \RightLabel{\RightR{\lforall}}
+    \UnaryInf$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], \lforall[y][!C_1'(y)]$
+    \DisplayProof
+    \]
+    மேலும்
+    \[
+    \AxiomC{}
+    \Deduce$!C_1'(b), \lforall[y][!C_1'(y)], \Gamma_2 \fCenter \Delta_2$
+    \RightLabel{\LeftR{\lforall}}
+    \UnaryInf$\lforall[y][!C_1'(y)], \Gamma_2 \fCenter \Delta_2$
+    \DisplayProof
+    \]
+    மேலுள்ள தொடரணிகளின் !!{proof}s தொகுத்தறிதல் கருதுகோளால்
+    கிடைக்கின்றன; இரண்டாவதில் முன்பக்கத்தில்
+    $\lforall[y][!C_1'(y)]$ ஐ வலுவிழக்கச் சேர்க்கும் விதியின்
+    ஏற்கத்தக்கதன்மையையும் பயன்படுத்துகிறோம். முதல் !!{proof}
+    இன் \RightR{\lforall} இல் தனிமாறி நிபந்தனை நிறைவேறுகிறது:
+    $b \notin \Lang L(\Gamma_1, \Delta_1,
+    \lexists[x][!A(x)])$; மேலும் $!C_1'$ இல் $b$ வராதபடி
+    வரையறுத்துள்ளோம்.
+
+    இரண்டாம் நேர்வில், தொகுத்தறிதல் கருதுகோளையும்
+    $\lexists[y][!C_1'(y)]$ ஐ வலுவிழக்கச் சேர்க்கும்
+    ஏற்கத்தக்கதன்மையையும் கொண்டு:
+    \[
+    \AxiomC{}
+    \Deduce$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], !A(b), \lexists[y][!C_1'(y)], !C_1'(b)$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], \lexists[y][!C_1'(y)], !C_1'(b)$
+    \RightLabel{\RightR{\lexists}}
+    \UnaryInf$\Gamma_1 \fCenter
+      \Delta_1, \lexists[x][!A(x)], \lexists[y][!C_1'(y)]$
+    \DisplayProof
+    \]
+    மேலும்
+    \[
+    \AxiomC{}
+    \Deduce$!C_1'(b), \Gamma_2 \fCenter \Delta_2$
+    \RightLabel{\LeftR{\lexists}}
+    \UnaryInf$\lexists[y][!C_1'(y)], \Gamma_2 \fCenter \Delta_2$
+    \DisplayProof
+    \]
+    இரண்டாம் !!{proof} இன் \LeftR{\lexists} இல்
+    தனிமாறி நிபந்தனை நிறைவேறுகிறது: $b \notin \Lang
+    L(\Gamma_2, \Delta_2)$; மேலும் $!C_1'$ இல் $b$ வராது.
+  \end{enumerate}
+  மற்ற நேர்வுகளும் இதேபோல அமைவதால் அவை பயிற்சிகளாக
+  விடப்படுகின்றன.
+\end{proof}
+
+பதிப்புக் குறிப்பு: சார்புக்குறியீடுகள் இல்லாவிட்டாலும் மாறிகள்
+பதங்களாக இருக்கலாம். மேலுள்ள மூல வாதம் மாறிலி சாட்சி என்ற
+மாறிலி நேர்வை மட்டுமே விரிவாகக் கையாள்கிறது; மாறி நேர்வுக்கான
+கூடுதல் படி உறைந்த மூலத்தில் வழங்கப்படவில்லை.
+
+% SEGMENT OLP-0658-S10
+\begin{prob}
+$\lnand$ என்ற இணைப்பிக்கு பின்வரும் விதிகள் இருப்பதாகக் கொள்க:
+\[
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$\Gamma \fCenter \Delta, !B$
+\RightLabel{\LeftR{\lnand}}
+\BinaryInf$!A \lnand !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\quad
+\Axiom$!A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\lnand}}
+\UnaryInf$\Gamma \fCenter \Delta, !A \lnand !B$
+\DisplayProof
+\]
+$\pi$ இவ்விதிகளில் ஒன்றில் முடியும் நேர்வுகளை
+\olref{lem:maehara} இன் நிறுவலில் செய்து,
+மாஎஹாராவின் துணைத்தேற்றம் தொடர்ந்து பொருந்துகிறது எனக் காட்டுக.
+\end{prob}
+
+மாஎஹாராவின் துணைத்தேற்றத்தை நிறுவியதால், அதைக் கொண்டு கிரெய்கின்
+இடையீட்டுத் தேற்றத்தை நிறுவலாம்.
+
+% SEGMENT OLP-0658-S11
+\begin{proof}[\olref{thm:interpolation} இன் நிறுவல்]
+  $!A \Sequent !B$ !!{provable} என்று கொள்க.
+  $\maeh{!A}{\ } \Sequent \maeh{\ }{!B}$ க்கு
+  \olref{lem:maehara} ஐப் பயன்படுத்தி இடையீட்டி~$!C$
+  பெறுக. அப்போது $\Proves !A \Sequent !C$ மற்றும்
+  $\Proves !C \Sequent !B$.
+\end{proof}
+
+% SEGMENT OLP-0658-S12
+$n$-இடப் பயனிலை~$R$ ஐக் கொண்ட !!a{language}~$\Lang L$
+இல் $\Gamma$ ஒரு கோட்பாடு, அதாவது !!{sentence}s இன் கணம் என்க.
+பின்வரும் நிபந்தனை இருந்தால், இருந்தால்தான், $\Gamma$ ஆனது
+$R$ ஐ \emph{மறைமுகமாக வரையறுக்கிறது} என்போம்:
+\begin{align*}
+\Gamma, \Gamma'
+& \Entails \lforall[x_1][\dots\lforall[x_n][(R(x_1,\dots,x_n) \liff
+R'(x_1, \dots, x_n))]],
+\intertext{இங்கு $\Gamma'$ என்பது $\Gamma$ இல் வரும் $R$ இன்
+எல்லா நிகழ்வுகளுக்கும் பதிலாக $R' \notin \Lang L$ ஐ இட்டுப்
+பெறப்பட்டது. $\Gamma$ ஆனது $R$ ஐ
+\emph{வெளிப்படையாக வரையறுக்கிறது} என்பதற்கு,
+$!A(x_1, \dots, x_n)$ என்ற, $R$ இல்லாத வாய்பாடு ஒன்று இருந்து
+பின்வருவது நிறைவேற வேண்டும்:}
+\Gamma &\Entails
+\lforall[x_1][\dots\lforall[x_n][(R(x_1,\dots,x_n) \liff !A(x_1,
+\dots, x_n))]].
+\end{align*}
+$\Gamma$ ஆனது $R$ ஐ வெளிப்படையாக வரையறுத்தால் $R$ ஐ மறைமுகமாகவும்
+வரையறுக்கும் என்பது தெளிவு. இதன் மறுதிசை உடனடியாகத் தெளிவாகாவிட்டாலும்
+உண்மையாகும்:
+
+% SEGMENT OLP-0658-S13
+\begin{lem}[பெத் வரையறுக்கத்தக்கமைத் தேற்றம்]
+  $\Gamma$ ஆனது $R$ ஐ மறைமுகமாக வரையறுத்தால்,
+  அதனை வெளிப்படையாகவும் வரையறுக்கிறது.
+\end{lem}
+
+\begin{proof}
+  $\Gamma$ ஆனது $R$ ஐ மறைமுகமாக வரையறுக்கிறது என்க.
+  மேலே கூறிய $R'$, $\Gamma'$ ஆகியவற்றை எடுத்துக்கொண்டு
+  $\Lang L' = (\Lang L \setminus \{R\}) \cup \{R'\}$
+  என்க. கருதுகோளால்,
+  \begin{align*}
+    \Gamma, \Gamma' &
+    \Sequent \lforall[x_1][\dots\lforall[x_n][(R(x_1,\dots,x_n)
+    \liff R'(x_1, \dots, x_n))]]
+  \intertext{$c_1$, \dots,~$c_n$ என்பவை $\Gamma$ இல் வராத
+  புதிய !!{constant}s என்க. மீளாக்கத் துணைத்தேற்றத்தால்}
+    \Gamma, \Gamma', R(c_1,\dots,c_n) & \Sequent  R'(c_1, \dots, c_n)
+  \intertext{பெறுகிறோம். பின்வருவதற்கு மாஎஹாராவின் துணைத்தேற்றத்தைப்
+  பயன்படுத்துக:}
+    \maeh{\Gamma, R(c_1,\dots,c_n)}{\Gamma'} & \Sequent
+      \maeh{\ }{R'(c_1, \dots, c_n)}
+  \intertext{கிடைக்கும் இடையீட்டியில் புதிய மாறிலிகளை முறையே
+  கட்டிலா மாறிகளால் மாற்றி $!A \ident !A(x_1, \dots, x_n)$
+  பெறுகிறோம். அப்போது பின்வரும் தொடரணிகளுக்கு !!{proof}s உள்ளன:}
+    \Gamma, R(c_1,\dots,c_n) & \Sequent !A(c_1, \dots, c_n) \\
+    !A(c_1, \dots, c_n), \Gamma' & \Sequent R'(c_1, \dots, c_n)
+  \intertext{இடையீட்டியின் சொற்குறிகள் இருபுறத்துக்கும் பொதுவானவை.
+  புதிய மாறிலிகளை மாறிகளால் மாற்றிய பிறகு,
+  $\Lang L(!A) \subseteq \Lang L(\Gamma) \setminus \{R\}$;
+  எனவே $!A$ இல் $R$ வராது. இரண்டாம் தொடரணியின் !!{proof}
+  முழுவதிலும் $R'$ க்குப் பதிலாக $R$ ஐ இட்டால் பின்வருவதற்கான
+  !!a{proof} கிடைக்கும்:}
+    !A(c_1, \dots, c_n), \Gamma & \Sequent R(c_1, \dots, c_n)
+  \end{align*}
+  இரு திசைகளின் விளைவுகளையும் சேர்த்து, \RightR{\lif} மற்றும்
+  \RightR{\lforall} ஐப் பயன்படுத்தினால் பின்வருவதற்கான
+  !!a{proof} கிடைக்கும்:
+  \[
+    \Gamma \Sequent \lforall[x_1][\dots\lforall[x_n][(R(x_1,\dots,x_n) \liff !A(x_1, \dots, x_n))]].
+  \]
+  ஆகவே $!A(x_1, \dots, x_n)$, $\Gamma$ இல் $!R$ ஐ
+  வெளிப்படையாக வரையறுக்கிறது.
+\end{proof}
+
+% SEGMENT OLP-0658-S14
+இடையீட்டுக்குச் சமானமானதும், அதைப் போல மாஎஹாராவின்
+துணைத்தேற்றத்தால் நிறுவக்கூடியதுமான மூன்றாம் முடிவு இதுவாகும்:
+முரணின்மையுடைய $\Gamma_1$, $\Gamma_2$ என்ற இரு கோட்பாடுகளும்,
+அவற்றின் பொதுமொழியான
+$\Lang L(\Gamma) = \Lang L(\Gamma_1) \cap \Lang L(\Gamma_2)$
+இல் நிறைவான $\Gamma$ என்ற கோட்பாட்டை உட்கொண்டால்,
+$\Gamma_1 \cup \Gamma_2$ முரணின்மையுடையது.
+
+நிறைவான கோட்பாட்டின் மொழியில் உள்ள ஒவ்வொரு
+!!{sentence}~$!A$ க்கும் $\Gamma \Proves !A$ அல்லது
+$\Gamma \Proves \lnot !A$ ஆகும். $\Gamma_1$ உம்
+$\Gamma_2$ உம் $\Gamma$ இன் முரணின்மையுடைய நீட்சிகள் என்பதால்
+$\Gamma$ உம் முரணின்மையுடையது. ஆகவே
+$\Lang L(\Gamma_1) \cap \Lang L(\Gamma_2)$ இன்
+!!a{sentence}~$!A$ க்கு ஒரே நேரத்தில்
+$\Gamma_1 \Entails !A$ மற்றும்
+$\Gamma_2 \Entails \lnot !A$ ஆக முடியாது. அவ்வாறு
+ஒரு $!A$ இருப்பதாகக் கொள்க. $\Gamma_1 \Entails !A$
+எனில் $\Gamma \Entails !A$ ஆகவேண்டும்: இல்லையேல்
+$\Gamma$ இன் நிறைவுமையால் $\Gamma \Entails \lnot !A$;
+$\Gamma \subseteq \Gamma_1$ என்பதால்
+$\Gamma_1 \Entails \lnot !A$ ஆகி $\Gamma_1$
+முரண்படும். எனவே $\Gamma \Entails !A$; மேலும்
+$\Gamma \subseteq \Gamma_2$ என்பதால்
+$\Gamma_2 \Entails !A$. இப்போது
+$\Gamma_2 \Entails/ \lnot !A$; இல்லையெனில்
+$\Gamma_2$ முரண்படும்.
+
+பொது !!{language}~$\Lang L(\Gamma_1) \cap
+\Lang L(\Gamma_2)$ இல் $\Gamma_1 \Entails !A$ மற்றும்
+$\Gamma_2 \Entails \lnot !A$ ஆகிய இரண்டும் நிறைவேறும்
+!!a{sentence}~$!A$ இல்லாமை மட்டுமே நிறுவலுக்குத் தேவை.
+மாஎஹாராவின் துணைத்தேற்றத்தைக் கொண்டு நிறுவல்-கோட்பாட்டு முறையில்
+அதை இப்போது நிறுவுகிறோம்.
+
+% SEGMENT OLP-0658-S15
+\begin{thm}[ராபின்சனின் கூட்டு முரணின்மைத் தேற்றம்]
+$\Gamma_1$, $\Gamma_2$ முரணின்மையுடைய கோட்பாடுகள் என்க.
+!!{language}~$\Lang L(\Gamma_1) \cap \Lang L(\Gamma_2)$ இல்
+உள்ள எந்த $!A$ க்கும் $\Gamma_1 \Entails !A$ மற்றும்
+$\Gamma_2 \Entails \lnot !A$ ஆகிய இரண்டும் நிறைவேறவில்லை
+எனில், $\Gamma_1 \cup \Gamma_2$ முரணின்மையுடையது.
+\end{thm}
+
+\begin{proof}
+  மாறாக $\Gamma_1 \cup \Gamma_2$ முரண்படுகிறது என்க.
+  அப்போது $\Gamma_1, \Gamma_2 \Sequent \ $ என்ற தொடரணிக்கு
+  !!a{proof} உள்ளது. $\maeh{\Gamma_1}{\Gamma_2}
+  \Sequent \maeh{\ }{\ }$ க்கு மாஎஹாராவின் துணைத்தேற்றத்தைப்
+  பயன்படுத்தினால், பொது !!{language}~$\Lang L(\Gamma_1) \cap
+  \Lang L(\Gamma_2)$ இல் !!a{sentence}~$!A$ ஒன்று கிடைக்கும்;
+  அதற்கு $\Proves \Gamma_1 \Sequent !A$ மற்றும்
+  $\Proves !A, \Gamma_2 \Sequent \quad$.
+  இரண்டாவதிலிருந்து $\Proves \Gamma_2 \Sequent \lnot !A$
+  பெறுகிறோம். அத்தகைய !!{sentence} இல்லை என்று கருதினோம்.
+\end{proof}
+
+மேலே $\Gamma$, $\Gamma_1$, $\Gamma_2$ முடிவுறு கோட்பாடுகள்
+என்று மறைமுகமாகக் கொண்டோம். கச்சிதத்தன்மையால் முடிவிலாக்
+கோட்பாடுகளுக்கும் முடிவுகள் பொருந்தும்.
+
+\end{document}

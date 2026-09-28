@@ -19,6 +19,7 @@ from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urlsplit
 
 from lxml import etree
+from package_epub import configured_unit_ids
 
 XHTML = "http://www.w3.org/1999/xhtml"
 MATHML = "http://www.w3.org/1998/Math/MathML"
@@ -260,7 +261,7 @@ def main() -> int:
 
     crosswalk_path = state / f"EPUB-SOURCE-CROSSWALK-{reader['slug'].upper().replace('-', '_')}.json"
     crosswalk = json.loads(crosswalk_path.read_text(encoding="utf-8"))
-    expected_ids = [f"OLP-{number:04d}" for number in range(reader["first_unit"], reader["last_unit"] + 1)]
+    expected_ids = configured_unit_ids(reader)
     actual_ids = [unit["unit_id"] for unit in crosswalk["units"]]
     check(actual_ids == expected_ids, "Source crosswalk unit coverage drift")
     check(crosswalk["source_revision"] == SOURCE_REVISION, "Source crosswalk revision drift")

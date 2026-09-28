@@ -1,0 +1,101 @@
+{
+  "batch_id": "TA-B320",
+  "units": [
+    {
+      "unit_id": "OLP-0660",
+      "source_sha256": "4fc53ce7b95d519d63b400945ad34012779aee9d48404b74cfbfee829a0c9b26",
+      "translation_sha256": "e6822abbd7974e758d369eefd1f3fff21e487f58c13a0e7d6aa45fa2a46f25e6",
+      "source_bytes": 2132,
+      "translation_bytes": 3319,
+      "source_coverage_complete": true,
+      "segments": 4,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$B!,\\Gamma\\fCenter\\Delta,!C$\\AxiomC{}\\RightLabel{$\\pi_2''$}\\Deduce$!C,\\Pi\\fCenter\\Lambda$\\RightLabel{\\Cut}\\BinaryInf$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$\\DisplayProof\\]",
+        "$!B,\\Gamma,\\Pi,\\Pi\\fCenter\\Delta,\\Lambda,\\Lambda$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1''$}\\Deduce$\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda,!B$\\AxiomC{}\\RightLabel{$\\pi_2'''$}\\Deduce$!B,\\Gamma,\\Pi,\\Pi\\fCenter\\Delta,\\Lambda,\\Lambda$\\RightLabel{\\Cut}\\BinaryInf$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$\\DisplayProof\\]",
+        "$\\Gamma,\\Gamma,\\Pi,\\Pi,\\Pi\\fCenter\\Delta,\\Lambda,\\Lambda,\\Lambda$"
+      ],
+      "extra_math": [
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$!B,\\Gamma\\fCenter\\Delta,!C$\\AxiomC{}\\RightLabel{$\\pi_2''$}\\Deduce$!C,\\Pi\\fCenter\\Lambda$\\RightLabel{\\Cut}\\BinaryInf$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$\\DisplayProof\\]",
+        "$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$",
+        "\\[\\AxiomC{}\\RightLabel{$\\pi_1''$}\\Deduce$\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda,!B$\\AxiomC{}\\RightLabel{$\\pi_2'''$}\\Deduce$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$\\RightLabel{\\Cut}\\BinaryInf$\\Gamma,\\Gamma,\\Pi,\\Pi\\fCenter\\Delta,\\Delta,\\Lambda,\\Lambda$\\DisplayProof\\]",
+        "$\\Gamma,\\Gamma,\\Pi,\\Pi\\fCenter\\Delta,\\Delta,\\Lambda,\\Lambda$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "inv",
+        "seq"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-012",
+          "unit_id": "OLP-0660",
+          "kind": "ordinary-cut-implication-fragment-inconsistent-sequents",
+          "action": "Repair the B metavariable, use the actual conclusion of the second smaller cut, and derive the final ordinary-cut context before contraction.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$B!,\\Gamma\\fCenter\\Delta,!C$\\AxiomC{}\\RightLabel{$\\pi_2''$}\\Deduce$!C,\\Pi\\fCenter\\Lambda$\\RightLabel{\\Cut}\\BinaryInf$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$\\DisplayProof\\]",
+            "$!B,\\Gamma,\\Pi,\\Pi\\fCenter\\Delta,\\Lambda,\\Lambda$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1''$}\\Deduce$\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda,!B$\\AxiomC{}\\RightLabel{$\\pi_2'''$}\\Deduce$!B,\\Gamma,\\Pi,\\Pi\\fCenter\\Delta,\\Lambda,\\Lambda$\\RightLabel{\\Cut}\\BinaryInf$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$\\DisplayProof\\]",
+            "$\\Gamma,\\Gamma,\\Pi,\\Pi,\\Pi\\fCenter\\Delta,\\Lambda,\\Lambda,\\Lambda$"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1'$}\\Deduce$!B,\\Gamma\\fCenter\\Delta,!C$\\AxiomC{}\\RightLabel{$\\pi_2''$}\\Deduce$!C,\\Pi\\fCenter\\Lambda$\\RightLabel{\\Cut}\\BinaryInf$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$\\DisplayProof\\]",
+            "$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$",
+            "\\[\\AxiomC{}\\RightLabel{$\\pi_1''$}\\Deduce$\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda,!B$\\AxiomC{}\\RightLabel{$\\pi_2'''$}\\Deduce$!B,\\Gamma,\\Pi\\fCenter\\Delta,\\Lambda$\\RightLabel{\\Cut}\\BinaryInf$\\Gamma,\\Gamma,\\Pi,\\Pi\\fCenter\\Delta,\\Delta,\\Lambda,\\Lambda$\\DisplayProof\\]",
+            "$\\Gamma,\\Gamma,\\Pi,\\Pi\\fCenter\\Delta,\\Delta,\\Lambda,\\Lambda$"
+          ],
+          "expected_missing_commands": [
+            "\\Pi",
+            "\\Pi",
+            "\\Lambda",
+            "\\Lambda"
+          ],
+          "expected_extra_commands": [
+            "\\Gamma",
+            "\\Delta",
+            "\\Delta"
+          ],
+          "source_issue_or_choice": "The unimported fragment types B! in one premise, attributes unsupported extra Pi and Lambda contexts to an induction proof, prints a final cut conclusion retaining B, and gives a prose conclusion missing a duplicate Delta.",
+          "chosen_treatment": "Use B, Gamma, Pi => Delta, Lambda for the second smaller cut, then Gamma,Gamma,Pi,Pi => Delta,Delta,Lambda,Lambda for the final cut and contract.",
+          "alternatives_considered": "Preserve the conflicting printed sequents with a warning, or add needless weakening to force the extra contexts.",
+          "rationale": "The ordinary Cut rule concatenates the nonprincipal antecedent and succedent contexts of its two premises. Both smaller cuts already give the exact contexts needed for a lower-rank cut on B.",
+          "precise_review_question": "Do the repaired second and final cut conclusions follow by ordinary Cut, and does admissible contraction yield Gamma,Pi => Delta,Lambda?",
+          "location_needle": "\\BinaryInf$\\Gamma, \\Gamma, \\Pi, \\Pi \\fCenter"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Pi",
+        "\\Pi",
+        "\\Lambda",
+        "\\Lambda"
+      ],
+      "extra_commands": [
+        "\\Gamma",
+        "\\Delta",
+        "\\Delta"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

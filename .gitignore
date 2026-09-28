@@ -5,3 +5,4 @@ build/*
 release/
 __pycache__/
 *.pyc
+evidence/translation-decisions/DECISIONS.json

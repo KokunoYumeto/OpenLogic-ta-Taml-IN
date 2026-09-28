@@ -1,0 +1,170 @@
+{
+  "batch_id": "TA-B328",
+  "units": [
+    {
+      "unit_id": "OLP-0668",
+      "source_sha256": "0bcf0b2ee130188295f81cabb47e058a856ed3e6eeec2e5df8e552e3e4e8df56",
+      "translation_sha256": "02c156159b53c77c08242f6ecc47b50da619a42330d33859a4e511b8fdb837dd",
+      "source_bytes": 10788,
+      "translation_bytes": 20498,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\AxiomC{$\\Discharge{!A}{y}$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!A$}\\DischargeRule{\\Intro{\\lif}}{y}\\UnaryInfC{$!A\\lif(!B\\lif!A)$}\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\RightLabel{$R$}\\UnaryInfC{$!A$}\\DisplayProof\\qquad\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A_2$}\\RightLabel{$R$}\\BinaryInfC{$!A$}\\DisplayProof\\qquad\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A_2$}\\AxiomC{}\\RightLabel{$\\delta_3$}\\DeduceC{$!A_2$}\\RightLabel{$R$}\\TrinaryInfC{$!A$}\\DisplayProof\\]",
+        "\\[!A\\land!B^x\\]",
+        "\\[\\AxiomC{$!A\\land!B^x$}\\RightLabel{\\Elim{\\land}[2]}\\UnaryInfC{$!B$}\\DisplayProof\\qquad\\AxiomC{$!A\\land!B^x$}\\RightLabel{\\Elim{\\land}[1]}\\UnaryInfC{$!A$}\\DisplayProof\\]",
+        "$\\pheight{\\delta_1}=\\pheight{\\delta_2}=1$",
+        "\\[\\AxiomC{$!A\\land!B^x$}\\RightLabel{\\Elim{\\land}[2]}\\UnaryInfC{$!B$}\\LeftSubproofLabel{$\\delta_2$}\\AxiomC{$!A\\land!B^x$}\\RightLabel{\\Elim{\\land}[1]}\\UnaryInfC{$!A$}\\RightSubproofLabel{$\\delta_3$}\\RightLabel{\\Intro{\\land}}\\BinaryInfC{$!B\\land!A$}\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "\\[\\AxiomC{$\\Discharge{!A}{y}$}\\RightLabel{\\Intro{\\lif}}\\UnaryInfC{$!B\\lif!A$}\\DischargeRule{\\Intro{\\lif}}{y}\\UnaryInfC{$!A\\lif(!B\\lif!A)$}\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\RightLabel{$R$}\\UnaryInfC{$!A$}\\DisplayProof\\qquad\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A_2$}\\RightLabel{$R$}\\BinaryInfC{$!A$}\\DisplayProof\\qquad\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A_2$}\\AxiomC{}\\RightLabel{$\\delta_3$}\\DeduceC{$!A_3$}\\RightLabel{$R$}\\TrinaryInfC{$!A$}\\DisplayProof\\]",
+        "\\[(!A\\land!B)^x\\]",
+        "\\[\\AxiomC{$(!A\\land!B)^x$}\\RightLabel{\\Elim{\\land}[2]}\\UnaryInfC{$!B$}\\DisplayProof\\qquad\\AxiomC{$(!A\\land!B)^x$}\\RightLabel{\\Elim{\\land}[1]}\\UnaryInfC{$!A$}\\DisplayProof\\]",
+        "$\\pheight{\\delta_1}=0$",
+        "$\\pheight{\\delta_2}=\\pheight{\\delta_3}=1$",
+        "\\[\\AxiomC{$(!A\\land!B)^x$}\\RightLabel{\\Elim{\\land}[2]}\\UnaryInfC{$!B$}\\LeftSubproofLabel{$\\delta_2$}\\AxiomC{$(!A\\land!B)^x$}\\RightLabel{\\Elim{\\land}[1]}\\UnaryInfC{$!A$}\\RightSubproofLabel{$\\delta_3$}\\RightLabel{\\Intro{\\land}}\\BinaryInfC{$!B\\land!A$}\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0668",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "audit_id": "TA-PT-020",
+          "kind": "vacuous-discharge-label",
+          "action": "Omit the first implication-introduction discharge index, as the source prose says.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{$\\Discharge{!A}{y}$}\\DischargeRule{\\Intro{\\lif}}{x}\\UnaryInfC{$!B\\lif!A$}\\DischargeRule{\\Intro{\\lif}}{y}\\UnaryInfC{$!A\\lif(!B\\lif!A)$}\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{$\\Discharge{!A}{y}$}\\RightLabel{\\Intro{\\lif}}\\UnaryInfC{$!B\\lif!A$}\\DischargeRule{\\Intro{\\lif}}{y}\\UnaryInfC{$!A\\lif(!B\\lif!A)$}\\DisplayProof\\]"
+          ],
+          "expected_missing_commands": [
+            "\\DischargeRule"
+          ],
+          "expected_extra_commands": [
+            "\\RightLabel"
+          ],
+          "source_issue_or_choice": "The prose says the first implication introduction has no discharge label, but the display prints index x.",
+          "chosen_treatment": "Use RightLabel for that first rule; retain the effective y discharge.",
+          "alternatives_considered": "Keep the contradictory x label or rewrite the prose to accept it.",
+          "rationale": "The only open assumption is A labelled y, not B labelled x.",
+          "precise_review_question": "Does the first introduction omit an index while the outer one discharges y?",
+          "location_needle": "\\AxiomC{$\\Discharge{!A}{y}$}\n\\RightLabel{\\Intro{\\lif}}"
+        },
+        {
+          "unit_id": "OLP-0668",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "audit_id": "TA-PT-021",
+          "kind": "N1-definition-and-table-reference",
+          "action": "Correct the N1 formula-tree definition, optional assumption labels, third premise endpoint, and table name.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\RightLabel{$R$}\\UnaryInfC{$!A$}\\DisplayProof\\qquad\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A_2$}\\RightLabel{$R$}\\BinaryInfC{$!A$}\\DisplayProof\\qquad\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A_2$}\\AxiomC{}\\RightLabel{$\\delta_3$}\\DeduceC{$!A_2$}\\RightLabel{$R$}\\TrinaryInfC{$!A$}\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\RightLabel{$R$}\\UnaryInfC{$!A$}\\DisplayProof\\qquad\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A_2$}\\RightLabel{$R$}\\BinaryInfC{$!A$}\\DisplayProof\\qquad\\AxiomC{}\\RightLabel{$\\delta_1$}\\DeduceC{$!A_1$}\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$!A_2$}\\AxiomC{}\\RightLabel{$\\delta_3$}\\DeduceC{$!A_3$}\\RightLabel{$R$}\\TrinaryInfC{$!A$}\\DisplayProof\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The source calls N1 proofs sequent trees from axioms, then defines formula trees from assumption leaves; the definition wrongly requires labels, the third diagram ends delta_3 at A_2, and tab:N1 is called N2.",
+          "chosen_treatment": "State the formula/assumption account, permit unlabelled leaves, show A_3 under delta_3, and name N1c/N1i without changing tab:N1.",
+          "alternatives_considered": "Retain mutually inconsistent accounts or point to the wrong N2 table.",
+          "rationale": "The diagrams, preceding optional-label sentence and included rules-N1 file settle the intended objects.",
+          "precise_review_question": "Are the definition, third diagram and included table consistent?",
+          "location_needle": "\\DeduceC{$!A_3$}"
+        },
+        {
+          "unit_id": "OLP-0668",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "audit_id": "TA-PT-022",
+          "kind": "whole-conjunction-assumption-label",
+          "action": "Group the whole conjunction before superscript x in all five worked-example occurrences.",
+          "expected_missing_math": [
+            "\\[!A\\land!B^x\\]",
+            "\\[\\AxiomC{$!A\\land!B^x$}\\RightLabel{\\Elim{\\land}[2]}\\UnaryInfC{$!B$}\\DisplayProof\\qquad\\AxiomC{$!A\\land!B^x$}\\RightLabel{\\Elim{\\land}[1]}\\UnaryInfC{$!A$}\\DisplayProof\\]",
+            "\\[\\AxiomC{$!A\\land!B^x$}\\RightLabel{\\Elim{\\land}[2]}\\UnaryInfC{$!B$}\\LeftSubproofLabel{$\\delta_2$}\\AxiomC{$!A\\land!B^x$}\\RightLabel{\\Elim{\\land}[1]}\\UnaryInfC{$!A$}\\RightSubproofLabel{$\\delta_3$}\\RightLabel{\\Intro{\\land}}\\BinaryInfC{$!B\\land!A$}\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[(!A\\land!B)^x\\]",
+            "\\[\\AxiomC{$(!A\\land!B)^x$}\\RightLabel{\\Elim{\\land}[2]}\\UnaryInfC{$!B$}\\DisplayProof\\qquad\\AxiomC{$(!A\\land!B)^x$}\\RightLabel{\\Elim{\\land}[1]}\\UnaryInfC{$!A$}\\DisplayProof\\]",
+            "\\[\\AxiomC{$(!A\\land!B)^x$}\\RightLabel{\\Elim{\\land}[2]}\\UnaryInfC{$!B$}\\LeftSubproofLabel{$\\delta_2$}\\AxiomC{$(!A\\land!B)^x$}\\RightLabel{\\Elim{\\land}[1]}\\UnaryInfC{$!A$}\\RightSubproofLabel{$\\delta_3$}\\RightLabel{\\Intro{\\land}}\\BinaryInfC{$!B\\land!A$}\\DisplayProof\\]"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The prose labels the whole A-and-B assumption x, but the source displays A and B^x.",
+          "chosen_treatment": "Typeset (A and B)^x in the one-line and both two-branch trees.",
+          "alternatives_considered": "Leave the visual ambiguity or relabel only B.",
+          "rationale": "Both elimination branches use the whole conjunction, which the final implication introduction discharges.",
+          "precise_review_question": "Does x visibly label the whole conjunction in each occurrence?",
+          "location_needle": "(!A \\land !B)^x"
+        },
+        {
+          "unit_id": "OLP-0668",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "audit_id": "TA-PT-023",
+          "kind": "worked-example-height-equation",
+          "action": "State height(delta_1)=0 and height(delta_2)=height(delta_3)=1.",
+          "expected_missing_math": [
+            "$\\pheight{\\delta_1}=\\pheight{\\delta_2}=1$"
+          ],
+          "expected_extra_math": [
+            "$\\pheight{\\delta_1}=0$",
+            "$\\pheight{\\delta_2}=\\pheight{\\delta_3}=1$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\delta",
+            "\\pheight"
+          ],
+          "source_issue_or_choice": "The source first gives delta_1 height 0, then falsely sets its height and delta_2's height both to 1.",
+          "chosen_treatment": "Keep height 0 for the assumption and height 1 for each one-step elimination proof.",
+          "alternatives_considered": "Preserve the contradictory equation.",
+          "rationale": "The inductive height definition adds one to the immediate subproof's height; delta_4 then has height 2 as printed.",
+          "precise_review_question": "Does the equation match all displayed heights?",
+          "location_needle": "\\pheight{\\delta_1} = 0"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\DischargeRule"
+      ],
+      "extra_commands": [
+        "\\RightLabel",
+        "\\delta",
+        "\\pheight"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

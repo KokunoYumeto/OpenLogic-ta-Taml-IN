@@ -1,0 +1,86 @@
+% SEGMENT OLP-0660-S01
+% Part: proof-theory
+% Chapter: cut-elimination
+% Auxiliary fragment: not imported into the reader
+
+$!A \ident (!B \lif !C)$ எனில், $\pi$ பின்வருமாறு முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lif !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B \lif !C, \Pi \fCenter \Lambda, !B$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Pi \fCenter \Lambda$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!B \lif !C, \Pi \fCenter \Lambda$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\Cut}
+\BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+
+% SEGMENT OLP-0660-S02
+\Cut{} இல் முடியும் பின்வரும் !!{proof} ஐக் கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lif !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B \lif !C, \Pi \fCenter \Lambda, !B$
+\RightLabel{\Cut}
+\BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda, !B$
+\DisplayProof
+\]
+இதன் வெட்டு !!{height}, $\pi$ இன் வெட்டு உயரத்தைவிடக் குறைவு.
+தொகுத்தறிதல் கருதுகோள் $\Gamma, \Pi \fCenter \Delta,
+\Lambda, !B$ இன் !!a{proof}~$\pi_1''$ ஐத் தருகிறது.
+
+% SEGMENT OLP-0660-S03
+\Cut{} இல் முடியும் பின்வரும் !!{proof} ஐக் கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Pi \fCenter \Lambda$
+\RightLabel{\Cut}
+\BinaryInf$!B, \Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+இதன் வெட்டுத் தரமும் வெட்டு !!{height} உம் $\pi$ இன்
+வெட்டுத் தரம், வெட்டு !!{height} ஆகிய இரண்டையும்விடக் குறைவு.
+எனவே தொகுத்தறிதல் கருதுகோள் $!B, \Gamma, \Pi
+\fCenter \Delta, \Lambda$ இன் \Log{G3c}-!!{proof}~$\pi_2'''$
+ஐத் தருகிறது.
+
+% SEGMENT OLP-0660-S04
+இப்போது \Cut{} இல் முடியும் பின்வரும் !!{proof} க்குத்
+தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்துக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma, \Pi \fCenter \Delta, \Lambda, !B$
+\AxiomC{}
+\RightLabel{$\pi_2'''$}
+\Deduce$!B, \Gamma, \Pi \fCenter \Delta, \Lambda$
+\RightLabel{\Cut}
+\BinaryInf$\Gamma, \Gamma, \Pi, \Pi \fCenter \Delta, \Delta, \Lambda, \Lambda$
+\DisplayProof
+\]
+(இதன் வெட்டுத் தரம் $< \cutr{\pi}$.) ஆகவே
+$\Gamma, \Gamma, \Pi, \Pi \fCenter \Delta, \Delta,
+\Lambda, \Lambda$ இன் !!a{proof} கிடைக்கிறது.
+\olref[seq][inv]{prop:G3c-cont-adm} ஐப் பயன்படுத்திச் சுருக்கினால்,
+$\Gamma, \Pi \fCenter \Delta, \Lambda$ இன்
+!!{proof}~$\pi'$ கிடைக்கிறது.

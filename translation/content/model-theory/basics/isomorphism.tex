@@ -51,7 +51,7 @@ $\Struct{M} \simeq \Struct M'$ என எழுதுகிறோம்:
   $h(\Assign{c}{M}) = \Assign{c}{M'}$;
 \item \ollabel{defn:iso-pred}ஒவ்வொரு $n$-இட !!{predicate}~$P$ க்கும்:
   \[
-  \tuple{a_1, \dots, a_n}\in \Assign{P}{M} \quad\text{iff}\quad
+  \tuple{a_1, \dots, a_n}\in \Assign{P}{M} \quad\text{அப்போதும் அப்போது மட்டுமே}\quad
   \tuple{h(a_1), \dots, h(a_n)} \in \Assign{P}{M'};
   \]
 \item \ollabel{defn:iso-func}ஒவ்வொரு $n$-இட !!{function} $f$ க்கும்:
@@ -92,7 +92,7 @@ $\Struct{M'}$ இலுள்ள ஒதுக்கீடு. $t$ மற்ற�
   h(s(x)) = \Value{x}{M'}[h \circ s]$.
 \item $t \ident f(t_1, \dots, t_n)$ எனில்,
   \begin{align*}
-    \Value{t}{M}[s] & = \Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \quad\text{and}\\
+    \Value{t}{M}[s] & = \Assign{f}{M}(\Value{t_1}{M}[s], \dots, \Value{t_n}{M}[s]) \quad\text{மற்றும்}\\
   \Value{t}{M'}[h \circ s] & = \Assign{f}{M}(\Value{t_1}{M'}[h \circ
     s], \dots, \Value{t_n}{M'}[h \circ s]).
   \end{align*}

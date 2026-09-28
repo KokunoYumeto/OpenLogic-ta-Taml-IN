@@ -1,0 +1,91 @@
+{
+  "batch_id": "TA-B359",
+  "units": [
+    {
+      "unit_id": "OLP-0703",
+      "source_sha256": "a27d60734d10b75dad7ff081448ddad7036694cdb489b2a0cfa8c97d002bc480",
+      "translation_sha256": "8c9106b31a66827c2fc45ef25475ac5bd8cb66a91f2846d2548150dea42b9866",
+      "source_bytes": 6648,
+      "translation_bytes": 13054,
+      "source_coverage_complete": true,
+      "segments": 10,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\AxiomC{}\\RightLabel{$\\pi'$}\\Deduce$!A(s(c),c),\\lforall[x][!A(x,c)],\\Gamma(c)\\fCenter\\Delta'(c)$\\RightLabel{\\RightR{\\lforall}}\\UnaryInf$\\lforall[x][!A(x,c)],\\Gamma(c)\\fCenter\\Delta'(c)$\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\Subst{\\pi'}{t}{c}$}\\Deduce$!A(s(t),t),\\lforall[x][!A(x,t)],\\Gamma(t)\\fCenter\\Delta'(t)$\\RightLabel{\\RightR{\\lforall}}\\UnaryInf$\\lforall[x][!A(x,t)],\\Gamma(t)\\fCenter\\Delta'(t)$\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "\\[\\AxiomC{}\\RightLabel{$\\pi'$}\\Deduce$!A(s(c),c),\\lforall[x][!A(x,c)],\\Gamma(c)\\fCenter\\Delta'(c)$\\RightLabel{\\LeftR{\\lforall}}\\UnaryInf$\\lforall[x][!A(x,c)],\\Gamma(c)\\fCenter\\Delta'(c)$\\DisplayProof\\]",
+        "\\[\\AxiomC{}\\RightLabel{$\\Subst{\\pi'}{t}{c}$}\\Deduce$!A(s(t),t),\\lforall[x][!A(x,t)],\\Gamma(t)\\fCenter\\Delta'(t)$\\RightLabel{\\LeftR{\\lforall}}\\UnaryInf$\\lforall[x][!A(x,t)],\\Gamma(t)\\fCenter\\Delta'(t)$\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0703",
+          "audit_id": "TA-PT-050",
+          "kind": "G3c-left-universal-label-and-regularization-proof-repair",
+          "action": "Relabel both left-universal inference trees as LeftR forall, clarify the malformed substitution-proof final paragraph, and choose a highest dirty eigenvariable inference while allowing clean eigenvariable inferences in its regular immediate subproof.",
+          "expected_missing_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi'$}\\Deduce$!A(s(c),c),\\lforall[x][!A(x,c)],\\Gamma(c)\\fCenter\\Delta'(c)$\\RightLabel{\\RightR{\\lforall}}\\UnaryInf$\\lforall[x][!A(x,c)],\\Gamma(c)\\fCenter\\Delta'(c)$\\DisplayProof\\]",
+            "\\[\\AxiomC{}\\RightLabel{$\\Subst{\\pi'}{t}{c}$}\\Deduce$!A(s(t),t),\\lforall[x][!A(x,t)],\\Gamma(t)\\fCenter\\Delta'(t)$\\RightLabel{\\RightR{\\lforall}}\\UnaryInf$\\lforall[x][!A(x,t)],\\Gamma(t)\\fCenter\\Delta'(t)$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\AxiomC{}\\RightLabel{$\\pi'$}\\Deduce$!A(s(c),c),\\lforall[x][!A(x,c)],\\Gamma(c)\\fCenter\\Delta'(c)$\\RightLabel{\\LeftR{\\lforall}}\\UnaryInf$\\lforall[x][!A(x,c)],\\Gamma(c)\\fCenter\\Delta'(c)$\\DisplayProof\\]",
+            "\\[\\AxiomC{}\\RightLabel{$\\Subst{\\pi'}{t}{c}$}\\Deduce$!A(s(t),t),\\lforall[x][!A(x,t)],\\Gamma(t)\\fCenter\\Delta'(t)$\\RightLabel{\\LeftR{\\lforall}}\\UnaryInf$\\lforall[x][!A(x,t)],\\Gamma(t)\\fCenter\\Delta'(t)$\\DisplayProof\\]"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\RightR",
+            "\\RightR"
+          ],
+          "expected_extra_commands": [
+            "\\LeftR",
+            "\\LeftR"
+          ],
+          "source_issue_or_choice": "The frozen G3c left-universal case twice labels a rule RightR forall although the quantified principal formula occurs on the left. The final substitution paragraph contains an unfinished 'and Since' clause. The regularization proof selects a highest eigenvariable inference without saying it is dirty, then asserts that its immediate subproof contains no eigenvariable inference; a highest dirty inference may have clean eigenvariable inferences above it.",
+          "chosen_treatment": "The Tamil uses LeftR forall in only the two affected trees. It states that t contains no eigenvariable of pi, so substitution preserves the eigenvariable set and none appears in the new end-sequent. For the second proposition it selects a dirty eigenvariable inference with no dirty inference above; its immediate subproof may contain clean inferences, is regular, and does not use c as an eigenvariable. Fresh renaming then lowers the dirty count.",
+          "alternatives_considered": "Keep a right-rule label on a left principal formula; reproduce the syntactically broken final paragraph; assume without justification that the highest dirty subproof has no eigenvariable inferences at all.",
+          "rationale": "The adjacent frozen G3c table puts the universal formula in the antecedent under LeftR forall. The regularity definition confines each eigenvariable above its own inference; a substitution term free of old eigenvariables does not add any to the conclusion. Picking a highest dirty inference ensures all eigenvariable inferences in its immediate subproof are clean, so the substitution lemma applies and the dirty count decreases.",
+          "precise_review_question": "Do the two rule labels and the strengthened induction step justify regular substitution and renaming without changing any other displayed sequent?",
+          "location_needle": "\\RightLabel{\\LeftR{\\lforall}}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\RightR",
+        "\\RightR"
+      ],
+      "extra_commands": [
+        "\\LeftR",
+        "\\LeftR"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

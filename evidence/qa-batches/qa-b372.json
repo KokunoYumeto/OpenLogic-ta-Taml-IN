@@ -1,0 +1,79 @@
+{
+  "batch_id": "TA-B372",
+  "units": [
+    {
+      "unit_id": "OLP-0716",
+      "source_sha256": "49d9beabf33f0727dafafd28fb282489083c4b146bfaf1c66c01ac80dd8f7856",
+      "translation_sha256": "8ff252e13fc325ef1db25b40aa6c5eafc8686ef2ed27a5d8d3d6c6ab81f421ff",
+      "source_bytes": 1707,
+      "translation_bytes": 3870,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": false,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0716",
+          "audit_id": "TA-SOL-010",
+          "kind": "undefined-plural-sentence-token-in-orphan-sol-language",
+          "action": "Replace the frozen undefined plural token key !!{sentences} with the defined !!{sentence}s form used by the identical passage in terms-formulas.tex.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "identifier_replacements": [],
+          "expected_missing_tokens": [
+            "sentences"
+          ],
+          "expected_extra_tokens": [
+            "sentence"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen orphan language-of-sol.tex writes !!{sentences} at its final paragraph. Neither the frozen token definitions nor the Tamil token configuration defines a sentences key; the already imported terms-formulas.tex version of the same paragraph writes !!{sentence}s and renders the intended plural.",
+          "chosen_treatment": "தமிழில் வரையறுக்கப்பட்ட !!{sentence}s குறியைப் பயன்படுத்தி வாக்கியங்களின் பன்மையைத் துல்லியமாக வைத்தோம்.",
+          "alternatives_considered": "Retain an undefined token; define a redundant sentences key only for an unimported duplicate passage; remove the plural sense.",
+          "rationale": "The existing singular sentence token has the correct Tamil plural form and the imported parallel passage supplies the exact intended key; no mathematical or syntactic claim changes.",
+          "precise_review_question": "Does !!{sentence}s reproduce the source's intended plural without adding another token key or changing any second-order syntax?",
+          "location_needle": "!!{sentence}s நிச்சயமாக உள்ளன"
+        }
+      ],
+      "missing_tokens": [
+        "sentences"
+      ],
+      "extra_tokens": [
+        "sentence"
+      ],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

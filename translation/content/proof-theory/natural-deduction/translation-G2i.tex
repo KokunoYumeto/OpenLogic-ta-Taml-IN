@@ -1,0 +1,272 @@
+% SEGMENT OLP-0670-S01
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: translation-G2i
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{tgi}
+
+\olsection{\Log{G2i} இலிருந்து \Log{N2i} க்கு மாற்றுதல்}
+
+\Log{G2i} தொடரணிகளின் இடப்புறங்கள் !!{formula}s அடங்கிய
+பன்மைக் கணங்கள்~$\Gamma$; ஆனால் \Log{N2i} தொடரணிகளின்
+இடப்புறங்கள், ஒவ்வொரு அடையாளமும் ஒருமுறை மட்டுமே வரும்
+அடையாளமிட்ட !!{formula}s இன் கணங்கள்~$\Gamma'$. ஒவ்வொரு
+!!{formula}~$!A$ க்கும், $\Gamma'$ இல் $x : !A$ வடிவிலான
+!!{element}s இன் எண்ணிக்கை, $\Gamma$ இல் $!A$ இன்
+நிகழ்வெண்ணை, அதாவது $!A$ இன் பிரதிகளின் எண்ணிக்கையை,
+விடக் கூடாமலிருந்தால், அடையாளமிட்ட வாய்ப்பாடுகளின்
+கணம்~$\Gamma'$ பன்மைக் கணம்~$\Gamma$ க்கு
+\emph{ஒத்திருக்கிறது} எனக் கூறுவோம்.
+
+\begin{prop}\ollabel{prop:G2i-to-N2i}
+$\Log{G2i} + \Cut \Proves \Gamma \Sequent \Delta$ எனில்,
+$\Log{N2i} \Proves \Gamma' \Sequent !C$; இதில் $\Delta$
+வெற்றாக இருந்தால் $!C \ident \lfalse$, இல்லையெனில்
+$\Delta = \{!A\}$; அப்போது முடிவின் வலப்புறம் அந்த
+ஒற்றை வாய்ப்பாடாகும். மேலும் $\Gamma'$ ஆனது~$\Gamma$ க்கு
+ஒத்திருக்கிறது.
+\end{prop}
+
+\begin{proof}
+  $\pi$ என்பது \Log{G2i} மற்றும் \Cut இல் $\Gamma \Sequent
+  \Delta$ இன் !!a{proof} எனில், $\Gamma$ க்கு ஒத்த~$\Gamma'$
+  ஒன்றும், \Log{N2i} இல் $\Gamma' \Sequent !C$ இன்
+  !!a{proof}~$\delta$ ஒன்றும் உள்ளன என்று காட்டுவோம்.
+  இதை $n = \pheight{\pi}$ மீது தொகுத்தறிந்து நிறுவுகிறோம்.
+
+  $n = 0$ எனில், $\pi$ ஓர் அடிகோள். அது $\lfalse \Sequent
+  \quad$ என்ற அடிகோளாக இருந்தால், $\delta$ என்பது
+  $x:\lfalse \Sequent \lfalse$ என்ற அடிகோள்; அதாவது
+  $\Gamma' = \{x:\lfalse\}$ மற்றும் $!C \ident \lfalse$.
+  $\pi$ ஆனது $!A \Sequent !A$ வடிவிலான அடிகோள் எனில்,
+  $\delta$ என்பது $x: !A \Sequent !A$.
+
+% SEGMENT OLP-0670-S02
+  $n>0$ எனில், $\pi$ ஒரு விதி~$R$ இல் முடியும். அந்த
+  விதியின் முன்கோள்களுக்கு ஒத்த தொடரணிகளின் !!{proof}s
+  \Log{N2i} இல் உள்ளன என்று தொகுத்தறிதல் கருதுகோள்
+  உறுதி செய்கிறது. அவற்றில் விடுவிப்பு அடையாளங்கள் அனைத்தும்
+  வெவ்வேறானவை என்றும், ஓர் அடையாளம்~$x$ விடுவிக்கப்படுமானால்
+  அதை விடுவிக்கும் அனுமானத்திற்கு மேலே மட்டுமே அது வரும்
+  என்றும், தேவைப்பட்டால் அடையாளங்களை மாற்றி அமைத்துக்
+  கொள்ளலாம். இப்போது இந்த !!{proof}s ஐ இணைத்து ஏற்ற
+  $\Gamma' \Sequent !C$ இன் நிறுவலை எவ்வாறு பெறுவது எனக்
+  காண்போம். $R$ க்கு ஏற்ப நேர்வுகளைப் பிரிப்போம்.
+
+  \begin{enumerate}
+    \item $R$ என்பது \RightR{\Weakening} எனில்,
+    $\pi$ பின்வருமாறு முடியும்:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma \fCenter$
+    \RightLabel{\RightR{\Weakening}}
+    \UnaryInf$\Gamma \fCenter !A$
+    \DisplayProof
+    \]
+    $\pi_1$ க்குத் தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்தினால்
+    $\Gamma' \Sequent \lfalse$ இன் !!a{proof} கிடைக்கும்.
+    அதற்கு $\FalseInt$ ஐப் பயன்படுத்தி $\Gamma' \Sequent !A$
+    இன் !!a{proof} பெறுகிறோம்.
+
+% SEGMENT OLP-0670-S03
+    \item $R$ என்பது \LeftR{\Weakening} எனில்,
+    $\pi$ பின்வருமாறு முடியும்:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\Weakening}}
+    \UnaryInf$!A, \Gamma \fCenter \Delta$
+    \DisplayProof
+    \]
+    $\pi_1$ க்குத் தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்தினால்
+    $\Gamma' \Sequent !C$ இன் !!a{proof} கிடைக்கும்.
+    இதையே $\delta$ ஆக எடுத்துக்கொள்வோம். $\Gamma'$ ஆனது
+    $\Gamma$ க்கு ஒத்திருந்தால், அது $!A, \Gamma$ க்கும்
+    ஒத்திருக்கிறது: $\Gamma'$ இலுள்ள $x : !A$ களின்
+    எண்ணிக்கை, $\Gamma$ இலுள்ள~$!A$ பிரதிகளின்
+    எண்ணிக்கையை விட அதிகமல்ல; எனவே $\Gamma \cup \{!A\}$
+    இலுள்ள $!A$ பிரதிகளின் எண்ணிக்கையையும் விட அதிகமல்ல.
+
+% SEGMENT OLP-0670-S04
+    \item $R$ என்பது \LeftR{\Contraction} எனில்,
+    $\pi$ பின்வருமாறு முடியும்:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$!A, !A, \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\Contraction}}
+    \UnaryInf$!A, \Gamma \fCenter \Delta$
+    \DisplayProof
+    \]
+    $\pi_1$ க்குத் தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்தினால்,
+    $\Pi \subseteq \{x : !A, y:!A\}$ ஆகும் வகையில்
+    $\Pi, \Gamma' \Sequent !C$ இன் !!a{proof} கிடைக்கும்.
+    $\Pi = \{x : !A, y:!A\}$ எனில், அப்படி கிடைத்த
+    நிறுவலில் வரும் எல்லா அடையாளமிட்ட
+    !!{formula}s~$y:!A$ ஐயும் $x:!A$ ஆக மாற்றுவோம்.
+    $x$ அதன் இறுதித் தொடரணியின் சூழலில் வருவதால்,
+    அந்த நிறுவலில் எந்த அனுமானமும் $x:!B$ வடிவிலான
+    !!a{formula} ஐ விடுவிக்காது என்று எடுத்துக்கொள்ளலாம்;
+    அதாவது அந்த நிறுவலின் தொடரணி இடப்புறத்தில் வரும்
+    எந்த $x:!B$ உம் செயல்நிலையிலிருக்காது. ஆகவே மாற்றிய
+    பிறகும் கிடைப்பது \Log{N2i} இன் !!a{proof} ஆகும்.
+
+% SEGMENT OLP-0670-S05
+    \item $R$ என்பது $\RightR{\lif}$ எனில்,
+    $\pi$ பின்வருமாறு முடியும்:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$!A, \Gamma \fCenter !B$
+    \RightLabel{\RightR{\lif}}
+    \UnaryInf$\Gamma \fCenter !A \lif !B$
+    \DisplayProof
+    \]
+    தொகுத்தறிதல் கருதுகோளால், $x: !A, \Gamma'
+    \Sequent !B$ அல்லது $\Gamma' \Sequent !B$ இன்
+    !!a{proof}~$\delta_1$ உள்ளது; இங்கு $\Gamma'$ ஆனது
+    $\Gamma$ க்கு ஒத்திருக்கிறது. $\delta_1$ இன்
+    இறுதித் தொடரணிக்கு \Intro{\lif} விதியைப் பயன்படுத்தி
+    $\delta$ ஐப் பெறலாம்.
+
+% SEGMENT OLP-0670-S06
+    \item $R$ என்பது \LeftR{\lif} எனில்,
+    $\pi$ பின்வருமாறு முடியும்:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma_1 \fCenter !A$
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$!B, \Gamma_2 \fCenter \Delta$
+    \RightLabel{\LeftR{\lif}}
+    \BinaryInf$!A \lif !B, \Gamma_1, \Gamma_2 \fCenter \Delta$
+    \DisplayProof
+    \]
+    தொகுத்தறிதல் கருதுகோளால் $\Gamma_1' \Sequent !A$
+    இன் !!{proof}~$\delta_1$ உம், $x: !B, \Gamma_2'
+    \Sequent !C$ அல்லது $\Gamma_2' \Sequent !C$ இன்
+    நிறுவல்~$\delta_2$ உம் கிடைக்கின்றன. இரண்டாம் வடிவில்
+    $\delta_2$ இருந்தால், அதையே~$\delta$ ஆகக் கொள்ளலாம்.
+    இல்லையெனில், $\delta_1$ மற்றும்~$\delta_2$ இரண்டிலும்
+    ஒரே அடையாளம் வராதவாறு $\delta_1$ இலுள்ள வாய்ப்பாட்டு
+    அடையாளங்களையும் விடுவிப்பு அடையாளங்களையும் மாற்றலாம்.
+    அப்போது $\Gamma_1' \cup \Gamma_2'$ ஆனது $\Gamma_1
+    \cup \Gamma_2$ க்கு ஒத்திருக்கிறது. $x:!B$ ஆனது
+    $\delta_2$ இன் இறுதித் தொடரணியில் வருவதால்,
+    $\delta_2$ இல் விடுவிப்பு அடையாளம்~$x$ உடைய எந்த
+    அனுமானத்திலும் $x:!B$ செயல்நிலையிலிருக்க முடியாது.
+    $\delta_2$ இலுள்ள ஒவ்வொரு $x:!B \Sequent !B$
+    அடிகோளுக்கும் பதிலாகப் பின்வரும் !!{proof}~$\delta_3$
+    ஐப் பதிப்போம்:
+    \[
+    \Axiom$x: !A \lif !B \fCenter !A \lif !B$
+    \AxiomC{}
+    \RightLabel{$\delta_1$}
+    \Deduce$\Gamma_1' \fCenter !A$
+    \RightLabel{\Elim{\lif}}
+    \BinaryInf$x: !A \lif !B, \Gamma_1' \fCenter !B$
+    \DisplayProof
+    \]
+    மேலும் $\delta_2$ இலுள்ள ஒவ்வொரு $x:!B$ ஐயும்
+    $x:!A \lif !B$ ஆக மாற்றுவோம். இவ்வாறு கிடைக்கும்
+    $\Subst{\delta_2}{\delta_3}{x:!B}$ ஆனது
+    $x:!A \lif !B, \Gamma_1', \Gamma_2' \Sequent !C$
+    இன் !!a{proof} ஆகும்.
+
+% SEGMENT OLP-0670-S07
+    \item $R$ என்பது \RightR{\land} எனில்,
+    $\pi$ பின்வருமாறு முடியும்:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma_1 \fCenter !A$
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$\Gamma_2 \fCenter !B$
+    \RightLabel{\RightR{\land}}
+    \BinaryInf$\Gamma_1, \Gamma_2 \fCenter !A \land !B$
+    \DisplayProof
+    \]
+    தொகுத்தறிதல் கருதுகோளால் $\Gamma_1' \Sequent !A$
+    இன் நிறுவல்~$\delta_1$ உம், $\Gamma_2' \Sequent !B$
+    இன் நிறுவல்~$\delta_2$ உம் கிடைக்கும். $\delta_2$
+    இலுள்ள எல்லா வாய்ப்பாட்டு அடையாளங்களையும் விடுவிப்பு
+    அடையாளங்களையும் மாற்றுவதன் மூலம், $\delta_1$ மற்றும்
+    $\delta_2$ இரண்டிலும் ஒரே அடையாளம் வராமல் செய்யலாம்.
+    அப்போது $\Gamma_1' \cup \Gamma_2'$ ஆனது $\Gamma_1
+    \cup \Gamma_2$ க்கு ஒத்திருக்கிறது. $\delta_1$ மற்றும்
+    $\delta_2$ இன் இறுதித் தொடரணிகளுக்கு
+    $\Intro{\land}$ ஐப் பயன்படுத்தி !!a{proof}~$\delta$
+    பெறுகிறோம்.
+
+% SEGMENT OLP-0670-S08
+    \item $R$ என்பது $\LeftR{\land}$ எனில்,
+    எடுத்துக்காட்டாக $\pi$ பின்வருமாறு முடியும்:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$!A, \Gamma \fCenter \Delta$
+    \RightLabel{\LeftR{\land}}
+    \UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+    \DisplayProof
+    \]
+    தொகுத்தறிதல் கருதுகோளால் $x: !A, \Gamma'
+    \Sequent !C$ அல்லது $\Gamma' \Sequent !C$ இன்
+    !!a{proof}~$\delta_1$ உள்ளது; இதில் $\Gamma'$ ஆனது
+    $\Gamma$ க்கு ஒத்திருக்கிறது. இரண்டாம் நேர்வில்
+    $\delta_1$ ஐயே~$\delta$ ஆகக் கொள்ளலாம். முதல்
+    நேர்வில், $x:!A$ இறுதித் தொடரணியில் வருவதால்,
+    $\delta_1$ இல் விடுவிப்பு அடையாளம்~$x$ உடைய எந்த
+    அனுமானத்திலும் $x:!A$ செயல்நிலையிலிருக்காது. ஒவ்வொரு
+    $x:!A \Sequent !A$ அடிகோளுக்கும் பதிலாகப் பின்வரும்
+    !!{proof}~$\delta_2$ ஐப் பதிப்போம்:
+    \[
+    \Axiom$x: !A \land !B \fCenter !A \land !B$
+    \RightLabel{\Elim{\land}}
+    \UnaryInf$x: !A \land !B \fCenter !A$
+    \DisplayProof
+    \]
+    மேலும் ஒவ்வொரு $x:!A$ ஐயும் $x:!A \land !B$ ஆக
+    மாற்றுவோம்; அதாவது
+    $\Subst{\delta_1}{\delta_2}{x:!A}$ ஐக் கொள்வோம்.
+    இது $x:!A \land !B, \Gamma' \Sequent !C$ இன்
+    !!a{proof} ஆகும்.
+
+% SEGMENT OLP-0670-S09
+    \item $R$ என்பது \Cut எனில், $\pi$ பின்வருமாறு
+    முடியும்:
+    \[
+    \AxiomC{}
+    \RightLabel{$\pi_1$}
+    \Deduce$\Gamma_1 \fCenter !A$
+    \AxiomC{}
+    \RightLabel{$\pi_2$}
+    \Deduce$!A, \Gamma_2 \fCenter \Delta$
+    \RightLabel{\Cut}
+    \BinaryInf$\Gamma_1, \Gamma_2 \fCenter \Delta$
+    \DisplayProof
+    \]
+    தொகுத்தறிதல் கருதுகோளால் $\Gamma_1' \Sequent !A$
+    இன் நிறுவல்~$\delta_1$ உம், $x:!A, \Gamma_2'
+    \Sequent !C$ அல்லது $\Gamma_2' \Sequent !C$ இன்
+    நிறுவல்~$\delta_2$ உம் கிடைக்கும். இரண்டாம் நேர்வில்
+    $\delta$ ஐ~$\delta_2$ ஆகக் கொள்வோம். இல்லையெனில்,
+    $\delta_2$ இலுள்ள ஒவ்வொரு $x:!A \Sequent !A$
+    அடிகோளையும் $\delta_1$ ஆல் மாற்றி,
+    $\Subst{\delta_2}{\delta_1}{x:!A}$ என்ற
+    $\Gamma_1', \Gamma_2' \Sequent !C$ இன்
+    !!a{proof}~$\delta$ ஐப் பெறுகிறோம்.
+  \end{enumerate}
+\end{proof}
+
+பதிப்புக் குறிப்பு: தொகுத்தறிதலின் மற்ற விதி நேர்வுகள்
+உறைந்த மூலத்தில் தரப்படவில்லை.
+
+\end{document}

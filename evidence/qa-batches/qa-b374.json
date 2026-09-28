@@ -1,0 +1,148 @@
+{
+  "batch_id": "TA-B374",
+  "units": [
+    {
+      "unit_id": "OLP-0718",
+      "source_sha256": "fdfbf3efe6aa648adad1e98d6567ecd7941dc41aeb1917b41548ad9568bb41a2",
+      "translation_sha256": "4a13308fd2b322051cebdb0d26346b99a2f6d4e0fd4f211a0b4eaea940179ccd",
+      "source_bytes": 5009,
+      "translation_bytes": 11259,
+      "source_coverage_complete": true,
+      "segments": 10,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}0+1+\\ldots+k&=\\frac{k(k+1)}{2}\\tag{Assumption}\\\\0+1+\\ldots+k+(k+1)&=\\frac{k(k+1)}{2}+(k+1)\\tag{Add$k+1$tobothsides}\\\\&=\\frac{k(k+1)+2(k+1)}{2}\\\\&=\\frac{2k+k+2k+2}{2}\\\\&=\\frac{(k+1)(k+2)}{2}\\end{align*}",
+        "$!!^a$",
+        "$!!^a$",
+        "$!!^a$",
+        "$!!^a$",
+        "$!!^a$",
+        "$\\mathcalE_\\land(!!^a,!B)=!!^a\\land!B$",
+        "$\\lnot!!^a$",
+        "$\\lnot!!^a$",
+        "$!!^a\\land!B$",
+        "$!!^a\\land!B$",
+        "$!!^a\\lor!B$",
+        "$!!^a\\lif!B$",
+        "$!!^a\\liff!B$",
+        "$\\lforall[x]!!^a$",
+        "$\\lexists[x]!!^a$"
+      ],
+      "extra_math": [
+        "\\begin{align*}0+1+\\ldots+k&=\\frac{k(k+1)}{2}\\tag{எடுகோள்}\\\\0+1+\\ldots+k+(k+1)&=\\frac{k(k+1)}{2}+(k+1)\\tag{இருபக்கங்களிலும்$k+1$ஐச்சேர்க்க}\\\\&=\\frac{k(k+1)+2(k+1)}{2}\\\\&=\\frac{k^2+k+2k+2}{2}\\\\&=\\frac{(k+1)(k+2)}{2}\\end{align*}",
+        "$!A$",
+        "$!A$",
+        "$!A$",
+        "$!A$",
+        "$!A$",
+        "$\\mathcalE_\\land(!A,!B)=!A\\land!B$",
+        "$\\lnot!A$",
+        "$\\lnot!A$",
+        "$!A\\land!B$",
+        "$!A\\land!B$",
+        "$!A\\lor!B$",
+        "$!A\\lif!B$",
+        "$!A\\liff!B$",
+        "$\\lforall[x]!A$",
+        "$\\lexists[x]!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0718",
+          "audit_id": "TA-SFR-IND-001",
+          "kind": "orphan-induction-path-sum-expansion-and-constructor-arity",
+          "action": "Repair the section class path, state the displayed zero-through-n sum consistently in the claim and base case, replace the erroneous 2k expansion by k squared, distinguish unary and binary formula constructors, and localize the two mathematical prose tags.",
+          "normalized_math_replacements": [
+            {
+              "from": "\\frac{2k+k+2k+2}{2}",
+              "to": "\\frac{k^2+k+2k+2}{2}",
+              "count": 1
+            },
+            {
+              "from": "\\tag{Assumption}",
+              "to": "\\tag{எடுகோள்}",
+              "count": 1
+            },
+            {
+              "from": "\\tag{Add$k+1$tobothsides}",
+              "to": "\\tag{இருபக்கங்களிலும்$k+1$ஐச்சேர்க்க}",
+              "count": 1
+            }
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\documentclass[../../include/open-logic-section]{subfiles}",
+              "to": "\\documentclass[../../../include/open-logic-section]{subfiles}",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen file has no importing driver and its relative class path is one level too short. Its sum is explicitly 0+1+...+n although the claim and base use first-n language with zero counted as natural. The align chain expands k(k+1) as 2k+k, which is false except at isolated k. The prose says every constructor joins two formulas even though its own cases include unary negation and quantified formulas. The two English tag strings are mathematical prose, not invariant symbols.",
+          "chosen_treatment": "பூச்சியத்திலிருந்து n வரையிலான கூட்டுத்தொகை எனத் தெளிவுபடுத்தி, k(k+1) இன் விரிவை k^2+k எனத் திருத்தினோம்; ஒற்றை மற்றும் இரட்டை உள்ளீடுகளை உரையில் வேறுபடுத்தினோம்.",
+          "alternatives_considered": "Retain the false expansion, count an incompatible first-n sequence, keep every constructor binary, or add this unimported source as a duplicate chapter in the ordinary reader.",
+          "rationale": "Distributivity gives k(k+1)+2(k+1)=k^2+3k+2=(k+1)(k+2). The displayed sum includes both endpoints zero and n. Negation and each fixed-variable quantifier take one formula, while the four displayed binary connectives take two. The existing include directory is three levels above this source section.",
+          "precise_review_question": "Does the corrected expansion agree with all adjacent equalities, does the base case match the zero-through-n sum, and does the constructor prose respect the arities of all seven preserved cases?",
+          "location_needle": "\\frac{k^2 + k + 2k +2}{2}"
+        },
+        {
+          "audit_id": "TA-FINAL-006",
+          "unit_id": "OLP-0718",
+          "kind": "invalid-frozen-formula-token",
+          "action": "உறைந்த மூலத்தின் வாய்பாடு தொகுத்தறிதல் பகுதியில் கணிதத்துக்குள் தவறாகப் பயன்படுத்தப்பட்ட 16 `!!^a` குறியீடுகள் `!A` என ஒரே மாதிரியாகச் சரிசெய்யப்பட்டன.",
+          "normalized_math_replacements": [
+            {
+              "from": "!!^a",
+              "to": "!A",
+              "count": 16
+            }
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "Frozen OLP-0718 இன் உதாரணமும் தொகுத்தறிதல் செய்முறையும் `!!^a` என்பதை அணு வாய்பாட்டாகக் காட்டுகின்றன. ஆனால் `!!` என்பது கட்டுரையின் சொல்-அடையாளச் சுருக்கம்; கட்டாய அடையாளமின்றி அடுத்த `$` ஐ விழுங்கி தொகுப்பை முறிக்கிறது. அருகிலுள்ள இரண்டாம் வாய்பாடு `!B`, இணைப்பும் மறுப்பும் முதல் வாய்பாடு `!A` ஆக இருக்க வேண்டுமென்பதைக் காட்டுகின்றன.",
+          "chosen_treatment": "முதல் வாய்பாட்டை எல்லா 16 இடங்களிலும் `!A` என்று நிலையாகக் குறிக்கிறது; `!B`, செயற்பாடுகள், மாறிலிகள் மற்றும் வாத வரிசை மாற்றப்படவில்லை.",
+          "alternatives_considered": "தொகுக்க இயலாத `!!^a` ஐ வைத்திருத்தல்; அச்சுப் பிரதியில் வேறு குறியீட்டுடன் பொதுவாக மாற்றுதல்.",
+          "rationale": "இரண்டு வாய்பாடுகளையும் தெளிவாக வேறுபடுத்தி மூலத்தின் இணைப்பு, மறுப்பு மற்றும் அளவையுருப் படிகளைச் சரியாக வைத்திருக்கிறது.",
+          "precise_review_question": "அணு அடிப்படையில் தொடங்கும் `!A` மற்றும் அடுத்தபடி `!A`, `!B` வாதங்களின் எல்லா நிகழ்வுகளும் பொருந்துகின்றனவா?",
+          "location_needle": "$!A$, $!B$ என்ற இரண்டு"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Final full-corpus verification pending",
+    "Whole reader and publication pending"
+  ]
+}

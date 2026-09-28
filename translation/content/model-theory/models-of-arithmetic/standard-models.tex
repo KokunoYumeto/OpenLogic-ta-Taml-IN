@@ -159,13 +159,13 @@ h(\Assign{\Obj{0}}{N}) =\Assign{\Obj{0}}{M}$; எனவே $g(0) = h(0)$.
 
 இப்போது $n+1$ நிலையைப் பார்க்க:
 \begin{align*}
-  g(n+1) & = \Value{\num{n+1}}{M} \text{ by definition of~$g$}\\
-  & = \Value{\num{n}'}{M} \text{ since $\num{n+1}\ident \num{n}'$}\\
+  g(n+1) & = \Value{\num{n+1}}{M} \text{ $g$ இன் வரையறைப்படி}\\
+  & = \Value{\num{n}'}{M} \text{ $\num{n+1}\ident \num{n}'$ என்பதால்}\\
   & = \Assign{\prime}{M}(\Value{\num{n}}{M})
-    \text{ by definition of $\Value{t'}{M}$}\\
-  & = \Assign{\prime}{M}(g(n))  \text{ by definition of~$g$}\\
-  & = \Assign{\prime}{M}(h(n)) \text{ by induction hypothesis}\\
-  & = h(\Assign{\prime}{N}(n)) \text{ since $h$ is an isomorphism}\\
+    \text{ $\Value{t'}{M}$ இன் வரையறைப்படி}\\
+  & = \Assign{\prime}{M}(g(n))  \text{ $g$ இன் வரையறைப்படி}\\
+  & = \Assign{\prime}{M}(h(n)) \text{ தொகுத்தறிதல் கருதுகோளின்படி}\\
+  & = h(\Assign{\prime}{N}(n)) \text{ $h$ ஓர் ஓரினச்சார்பு என்பதால்}\\
   & = h(n+1)
 \end{align*}
 \end{proof}

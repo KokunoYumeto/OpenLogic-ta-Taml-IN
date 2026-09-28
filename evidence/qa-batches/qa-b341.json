@@ -1,0 +1,157 @@
+{
+  "batch_id": "TA-B341",
+  "units": [
+    {
+      "unit_id": "OLP-0681",
+      "source_sha256": "220593da177adca3549b62d14f85753b6f71e9e4555a18a093453275e54420c1",
+      "translation_sha256": "09ef05fa89e37f2c2d28d112e8484d33d71f5ce9ccba336962509b0b98beb213",
+      "source_bytes": 292,
+      "translation_bytes": 340,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "chapter",
+        "include",
+        "logic",
+        "open"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0682",
+      "source_sha256": "766ce01962f35ef9833f3be95a35250d13a9fca800100f15885dd9009cc74241",
+      "translation_sha256": "b9713978e234aa1a89d9dc4de0f90c0d294273b16b5c54b39c1e8a1977352d4a",
+      "source_bytes": 2156,
+      "translation_bytes": 2443,
+      "source_coverage_complete": true,
+      "segments": 1,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    },
+    {
+      "unit_id": "OLP-0683",
+      "source_sha256": "2ce7994ec2166ec4f50b3c3698d4767f49ff3fd4a39c942f79ba304ca9c1a8a2",
+      "translation_sha256": "ec8a44a1c596998bc4d0ad273692c95c06d40fcd8a0f7c6e3de7e6813841577a",
+      "source_bytes": 6609,
+      "translation_bytes": 15450,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\Axiom$\\Pi\\fCenter\\Lambda,\\lexists[x][!B(x)]^k,!B(t)^{k+1}$\\RightLabel{\\LeftR{\\lexists}}\\UnaryInf$\\Pi\\fCenter\\Lambda,\\lexists[x][!B(x)]^i$\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "\\[\\Axiom$\\Pi\\fCenter\\Lambda,\\lexists[x][!B(x)]^k,!B(t)^{k+1}$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Pi\\fCenter\\Lambda,\\lexists[x][!B(x)]^i$\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "main",
+        "open",
+        "operator",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0683",
+          "audit_id": "TA-PT-036",
+          "kind": "proof-search-fresh-indices-and-right-existential-rule",
+          "action": "Treat k as one greater than the existing maximum so each introduced formula index is fresh; change the right-existential displayed inference label from LeftR(exists) to RightR(exists), matching the frozen G3c rule table and the premise/conclusion side.",
+          "expected_missing_math": [
+            "\\[\\Axiom$\\Pi\\fCenter\\Lambda,\\lexists[x][!B(x)]^k,!B(t)^{k+1}$\\RightLabel{\\LeftR{\\lexists}}\\UnaryInf$\\Pi\\fCenter\\Lambda,\\lexists[x][!B(x)]^i$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "\\[\\Axiom$\\Pi\\fCenter\\Lambda,\\lexists[x][!B(x)]^k,!B(t)^{k+1}$\\RightLabel{\\RightR{\\lexists}}\\UnaryInf$\\Pi\\fCenter\\Lambda,\\lexists[x][!B(x)]^i$\\DisplayProof\\]"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\LeftR"
+          ],
+          "expected_extra_commands": [
+            "\\RightR"
+          ],
+          "source_issue_or_choice": "The frozen algorithm defines k as the current maximal index and immediately assigns that existing index to a new formula, breaking distinct/fresh indexing and the later completeness proof's rising-index fairness argument. Its displayed right-existential inference is labelled LeftR(exists) even though the principal formula and copied instance are on the right.",
+          "chosen_treatment": "Define k in Tamil prose as previous maximum plus one, leaving the displayed k and k+1 notation otherwise intact. Change the sole erroneous proof-tree label to RightR(exists). Keep all other proof-tree formulas and the branch-constant policy as source, and retain unshown connective/universal cases as exercises.",
+          "alternatives_considered": "Retain the old maximum as a new index and claim fairness anyway; retain the left rule label on a right-side existential; silently alter each index expression throughout the diagrams.",
+          "rationale": "The initial indexing clause gives distinct indices. Each reduction must append formulas with indices beyond all existing ones for the least-eligible-index argument in OLP-0679 to hold. Taking k=max+1 achieves this in every displayed branch. Frozen sequent-calculus/rules-G3c.tex has the same right-existential premise and conclusion with RightR(exists), so the source's left label is a local typo.",
+          "precise_review_question": "With k=old maximum+1, do all generated indices stay fresh, and does the right-existential diagram now match the G3c rule used in the neighboring completeness proof?",
+          "location_needle": "\\RightLabel{\\RightR{\\lexists}}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\LeftR"
+      ],
+      "extra_commands": [
+        "\\RightR"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

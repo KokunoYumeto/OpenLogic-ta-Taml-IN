@@ -1,0 +1,328 @@
+% SEGMENT OLP-0668-S01
+% Part: proof-theory
+% Chapter: natural-deduction
+% Section: rules-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{nat}{rp}
+
+\olsection{விதிகளும் \usetoken{P}{proof}களும்}
+
+சில வரையறைகளைக் கொடுத்து, பயன்படுத்தவுள்ள சொற்களின்
+பொருளைத் தெளிவுபடுத்துவதிலிருந்து தொடங்குவோம்.
+
+\Log{N1c}, \Log{N1i} ஆகியவற்றில் $!A \lif !B$ ஐக் கொண்டிருக்கும்
+பின்வரும் இரு விதிகளைக் கவனிப்போம்.
+\[
+\bottomAlignProof
+\AxiomC{$\Discharge{!A}{x}$}
+\shortDeduce
+\DeduceC{$!B$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !B$}
+\DisplayProof
+\qquad
+\bottomAlignProof
+\AxiomC{$!A \lif !B$}
+\AxiomC{$!A$}
+\RightLabel{\Elim{\lif}}
+\BinaryInfC{$!B$}
+\DisplayProof
+\]
+\Elim{\lif} விதி எளிமையானது. கோட்டுக்கு மேலுள்ள !!{formula}s
+\emph{முன்கோள்கள்}. இடப்புற !!{formula} என்பது \emph{முதன்மை}
+!!{formula}~$!A \lif !B$. ஒவ்வொரு !!{elimination} விதிக்கும்
+இவ்வாறான ஒரு முன்கோள் உண்டு; அது எப்போதும் மிக இடப்புறத்தில்
+இருக்கும். அதனை அந்த அனுமானத்தின் \emph{முதன்முன்கோள்} என்போம்.
+இங்கு இருப்பதைப் போல் பிற முன்கோள்கள் இருந்தால், அவை
+\emph{சிறுமுன்கோள்கள்}. !!{introduction} விதிகளின் முன்கோள்களும்
+முதன்முன்கோள்கள் எனப்படும். கோட்டுக்குக் கீழுள்ள !!{formula}
+\emph{முடிவு}.
+
+% SEGMENT OLP-0668-S02
+\Intro{\lif} விதிக்கு ஒரே ஒரு முன்கோள். இங்கு முடிவு முதன்மை
+வாய்ப்பாடு~$!A \lif !B$. எல்லா !!{introduction} விதிகளிலும்
+இவ்வாறே முடிவே முதன்மை வாய்ப்பாடு; அதன் முதன்மைச் செயலியே
+``அறிமுகப்படுத்தப்படும்'' செயலியாகும்.
+
+% SEGMENT OLP-0668-S03
+$\Discharge{!A}{x}$ என்ற குறியீடு பின்வருவதைச் சொல்கிறது. ஓர்
+!!a{proof} இல் \Intro{\lif} அனுமானம், முன்கோளான !!a{formula}~$!B$
+மீது பயன்படுத்தப்படுகிறது. $!B$ இல் முடியும் உள்-!!{proof} இன்
+தொடக்கத்தில் பல !!{formula}s உள்ளன. அவை \emph{எடுகோள்கள்}.
+$!A$ வடிவிலான ஒன்று அல்லது பல எடுகோள்களிலிருந்து $!B$ இன்
+!!^a{proof} என்பது $!A$ இலிருந்து $!B$ பின்தொடர்வதற்கான
+!!a{proof}. \Intro{\lif} விதியைப் பயன்படுத்தும்போது $!A \lif !B$
+என முடிக்கிறோம்; அப்போது முடிவு $!A$ என்ற எடுகோளை இனிச்
+சார்ந்திருக்காது. இதைக் குறிக்க, \Intro{\lif} அனுமானத்தையும்
+உள்ளடக்கிய !!{proof} இல் $!A$ வடிவிலான எடுகோள்கள்
+\emph{விடுவிக்கப்படுகின்றன}, அல்லது \emph{மூடப்படுகின்றன}.
+எந்த எடுகோள்களை விடுவிக்கலாம் என்பதை விதி குறிப்பிடுகிறது.
+முடிவு $!A \lif !B$ ஆகும் \Intro{\lif} இல் அவை நிபந்தனைக்
+கூற்றின் முற்பகுதியான $!A$ உடன் பொருந்தும் எடுகோள்கள்.
+எந்த விதியில் எந்த எடுகோள்கள் விடுவிக்கப்படுகின்றன என்பதைக்
+காட்டுவது சில நேரங்களில் முக்கியம்; அதற்காக விடுவிப்பு
+அடையாளம்~$x$ பயன்படுகிறது. முக்கியமாக, எடுகோள்களை
+விடுவிக்கும் விதிகள் தேவையான வடிவிலான \emph{எல்லா}
+எடுகோள்களையும், அல்லது ஒன்றையும்கூட, விடுவிக்க
+\emph{வேண்டியதில்லை}. எடுத்துக்காட்டாக, பின்வரும் நிறுவல்
+சரியானதே; இதில் முதல் \Intro{\lif} எந்த எடுகோளையும்
+விடுவிப்பதில்லை:
+\[
+\AxiomC{$\Discharge{!A}{y}$}
+\RightLabel{\Intro{\lif}}
+\UnaryInfC{$!B \lif !A$}
+\DischargeRule{\Intro{\lif}}{y}
+\UnaryInfC{$!A \lif (!B \lif !A)$}
+\DisplayProof
+\]
+ஒரு விதி எந்த எடுகோளையும் விடுவிக்காதபோது, இங்கு
+செய்ததுபோல் விடுவிப்பு அடையாளத்தை விடுகிறோம்.
+
+% SEGMENT OLP-0668-S04
+பின்வரும் !!{proof} இல்
+\[
+\AxiomC{$\Discharge{!A}{x}$}
+\AxiomC{$\Discharge{!A}{y}$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!A \land !A$}
+\RightLabel{\Elim{\land}}
+\UnaryInfC{$!A$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$!A \lif !A$}
+\DischargeRule{\Intro{\lif}}{y}
+\UnaryInfC{$!A \lif (!A \lif !A)$}
+\DisplayProof
+\]
+முதல் \Intro{\lif} அனுமானம் இடப்புற எடுகோள்~$!A^x$ ஐயும்,
+இரண்டாவது வலப்புற எடுகோள்~$!A^y$ ஐயும் விடுவிக்கின்றன. அதாவது,
+$x$ அடையாளமுள்ள எல்லா எடுகோள்களும் $x$ அடையாளமுள்ள
+\Intro{\lif} ஆலும், $y$ அடையாளமுள்ளவை $y$ அடையாளமுள்ள
+அனுமானத்தாலும் விடுவிக்கப்படுகின்றன. இது செயல்பட,
+ஒரே அடையாளமுள்ள எல்லா எடுகோள்களும் ஒரே !!{formula}வாக
+இருப்பது முக்கியம்.
+
+% SEGMENT OLP-0668-S05
+அளவையடை விதிகள் சற்றுச் சிக்கலானவை. எடுத்துக்காட்டாக,
+\Log{N1i} இல் $\lexists$ க்கான விதிகள் பின்வருமாறு:
+\[
+\bottomAlignProof
+\AxiomC{$!A(t)$}
+\RightLabel{\Intro{\lexists}}
+\UnaryInfC{$\lexists[x][!A(x)]$}
+\DisplayProof
+\qquad
+\bottomAlignProof
+\AxiomC{$\lexists[x][!A(x)]$} 
+\AxiomC{$\Discharge{!A(c)}{x}$}
+\shortDeduce
+\DeduceC{$!B$}
+\DischargeRule{\Elim{\lexists}}{x}
+\BinaryInfC{$!B$} \DisplayProof 
+\bottomAlignProof
+\]
+\Intro{\lexists} விதியில் முன்கோள்~$!A(t)$; இங்கு $t$ ஒரு மூடிய
+சொல், அதாவது மாறிகள் இல்லாத சொல். முடிவு $\lexists[x][!A]$,
+முன்கோள்~$\Subst{!A}{t}{x}$ ஆக அமையுமாறு ஏதோ ஓர்
+!!{formula}~$!A$, மாறி~$x$, மூடிய சொல்~$t$ இருக்கும்போதும்
+அப்போது மட்டுமே அந்த அனுமானம் சரியானது; அதாவது அது
+\Intro{\lexists} திட்டவடிவ விதியுடன் பொருந்துகிறது.
+\Elim{\lexists} விதி $!A(c)$ வடிவிலான எடுகோள்களை
+விடுவிக்க அனுமதிக்கிறது: ஒவ்வோர் அனுமானத்திற்கும் ஏதோ ஒரு
+!!{constant}~$c$ உண்டு; $\Subst{!A}{c}{x}$ வடிவிலான
+எடுகோள்களை விடுவிக்கலாம். ஓர் அனுமானத்தில் விடுவிக்கப்படும்
+எல்லா எடுகோள்களும் அதே~$c$ ஐப் பயன்படுத்த வேண்டும்.
+இந்தக் குறியீட்டை \Elim{\lexists} அனுமானத்தின் \emph{தனிமாறி}
+என்போம். விடுவிக்கப்படும்~$!A(c)$ எடுகோள்களைத் தவிர வேறு
+எந்தத் திறந்த எடுகோளிலும் $c$ இடம்பெறாமலும், $!B$ இலும்
+$!A$ இலும் இடம்பெறாமலும் இருந்தால் மட்டுமே அந்த அனுமானம்
+சரியானது. இதுவே \emph{தனிமாறி நிபந்தனை}.
+
+\Log{N1c}, \Log{N1i} ஆகியவற்றில் !!^{proof}s என்பவை
+தொடக்க எடுகோள்களிலிருந்து அனுமான விதிகளால் தொகுத்தறிதலாகக்
+கட்டப்படும் வாய்ப்பாடுகளின் முடிவுறு மரங்கள். ஒவ்வோர் இலையும்
+ஓர் எடுகோள்; அதற்கு விடுவிப்பு அடையாளம்
+இருக்கலாம். மற்ற ஒவ்வொரு !!{formula}வும் அதற்கு உடனே மேலுள்ள
+!!{formula}s இலிருந்து முறைமையின் ஓர் அனுமான விதியால்
+பின்வருகிறது. ஓர் அனுமானத்துக்கு மேலுள்ள மரத்தில் எடுகோளாக
+வரும் !!{formula}வின் நிகழ்வு, அதற்கு மேலுள்ள அனுமானத்தால்
+விடுவிக்கப்படாமல் இருந்தால், அந்த அனுமான நிலையில் அது
+\emph{திறந்த} எடுகோள் எனப்படும்.
+
+% SEGMENT OLP-0668-S06
+\begin{defn}\ollabel{defn:proof}
+\Log{N1c}, \Log{N1i} ஆகியவற்றின் \emph{!!^{proof}s} என்பவைப்
+பின்வருமாறு தொகுத்தறிதலாக வரையறுக்கப்படும் முடிவுறு
+!!{formula}s மரங்கள்:
+\begin{enumerate}
+  \item\ollabel{defn:prf:assumption} விடுவிப்பு அடையாளம்~$x$
+  அல்லது $y$ இடப்பட்டிருந்தாலும் இல்லாவிட்டாலும், தனியாக
+  நிற்கும் ஒவ்வொரு !!{formula}வும் !!a{proof}. ஒரே
+  !!{formula}வை மட்டும் கொண்ட !!a{proof} இல் அந்த
+  !!{formula} திறந்த எடுகோளாகக் கருதப்படும்.
+  \item\ollabel{defn:prf:one-prem} $R$ என்பது ஒன்று, இரண்டு,
+  அல்லது மூன்று முன்கோள்கள் $!A_1$, $!A_2$, $!A_3$ மற்றும்
+  முடிவு~$!A$ உடைய விதியாகவும்; $\delta_1$, $\delta_2$,
+  $\delta_3$ முறையே $!A_1$, $!A_2$, $!A_3$ இல் முடியும்
+  !!{proof}s ஆகவும் இருந்தால், பின்வரும் வடிவங்கள்
+  \[
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!A_1$}
+  \RightLabel{$R$}
+  \UnaryInfC{$!A$}
+  \DisplayProof
+\qquad
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!A_1$}
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!A_2$}
+  \RightLabel{$R$}
+  \BinaryInfC{$!A$}
+  \DisplayProof
+\qquad
+  \AxiomC{}
+  \RightLabel{$\delta_1$}
+  \DeduceC{$!A_1$}
+  \AxiomC{}
+  \RightLabel{$\delta_2$}
+  \DeduceC{$!A_2$}
+  \AxiomC{}
+  \RightLabel{$\delta_3$}
+  \DeduceC{$!A_3$}
+  \RightLabel{$R$}
+  \TrinaryInfC{$!A$}
+  \DisplayProof
+  \]
+  முறையே !!a{proof} ஆகும்; அவற்றின் எடுகோள் அடையாளங்கள்
+  பொருந்தியிருக்க வேண்டும் (வேறுபட்ட இரு !!{formula}s க்கு
+  ஒரே விடுவிப்பு அடையாளம் இருக்கக்கூடாது), மேலும் அனுமானங்கள்
+  $R$ இன் சரியான பயன்பாடுகளாக இருக்க வேண்டும்.
+  \item புதிய !!{proof} இன் மிக மேலுள்ள !!{formula}
+  நிகழ்வுகள் $\delta_1$, $\delta_2$, அல்லது~$\delta_3$ இன்
+  திறந்த எடுகோள்களாக இருந்தால், அவை புதிய !!{proof} இன்
+  \emph{திறந்த எடுகோள்கள்}; ஆனால் விதியால் விடுவிக்கப்படும்
+  நிகழ்வுகள் விலக்கப்படும். விதிக்கு~$x$ (அல்லது $x\, y$)
+  அடையாளம் இருந்தால், \Intro{\lif}, \Intro{\lnot} இல்
+  $\delta_1$ இன் $x$ அடையாளமுள்ள எல்லாத் திறந்த எடுகோள்களும்;
+  \Elim{\lexists} இல் $\delta_2$ இன் $x$ அடையாளமுள்ளவை
+  அனைத்தும்; \Elim{\lor} இல் $\delta_2$ இன் $x$
+  அடையாளமுள்ளவை அனைத்தும், $\delta_3$ இன் $y$
+  அடையாளமுள்ளவை அனைத்தும் விடுவிக்கப்படும்.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0668-S07
+!!a{proof} இன் தொகுத்தறிதல் கட்டமைப்பில் பயன்படுத்தப்பட்ட
+!!{proof}s அதன் \emph{உள்-!!{proof}s} எனப்படும். ஓர்
+அனுமானத்தின் முன்கோள்களில் முடியும் உள்-!!{proof}s அந்த
+அனுமானத்தின் \emph{உடனடி உள்-!!{proof}s} எனப்படும்.
+\Log{N1c}, \Log{N1i} விதிகள் \olref{tab:N1} இல்
+தரப்பட்டுள்ளன.
+
+\subfile{rules-N1}
+
+\begin{defn}
+!!a{proof}~$\delta$ இன் \emph{!!{height}}~$\pheight{\delta}$
+பின்வருமாறு தொகுத்தறிதலாக வரையறுக்கப்படுகிறது.
+\begin{enumerate}
+  \item $\delta$ ஓர் எடுகோளை மட்டும் கொண்டிருந்தால்,
+  $\pheight{\delta} = 0$.
+  \item $\delta$ ஒரு முன்கோளுடைய அனுமானத்தில் முடிந்து,
+  அதன் உடனடி உள்-!!{proof}~$\delta_1$ என்றால்,
+  $\pheight{\delta} = \pheight{\delta_1} + 1$.
+  \item $\delta$ இரு முன்கோள்களுடைய அனுமானத்தில் முடிந்து,
+  அதன் உடனடி உள்-!!{proof}s~$\delta_1$, $\delta_2$ என்றால்,
+  $\pheight{\delta} = \max(\pheight{\delta_1}, \pheight{\delta_2}) + 1$.
+  \item $\delta$ இன் இறுதி அனுமானம் \Elim{\lor} ஆகவும்,
+  அதன் உடனடி உள்-!!{proof}s~$\delta_1$, $\delta_2$,
+  $\delta_3$ ஆகவும் இருந்தால்,
+  $\pheight{\delta} = \max(\pheight{\delta_1}, \pheight{\delta_2}, \pheight{\delta_3}) + 1$.
+\end{enumerate}
+தொடரணி~$S$ க்கு உயரம் $\le n$ உடைய !!a{proof}
+இருந்தால், $\Proves[n] S$ என்று எழுதுவோம்.
+\end{defn}
+
+% SEGMENT OLP-0668-S08
+\begin{ex}
+\Log{N1i} இல் எந்த !!{formula}வும் தன்னையே திறந்த
+எடுகோளாகக் கொண்டு !!a{proof} ஆகும். ஆகவே
+\[
+(!A \land !B)^x
+\]
+என்பது !!a{proof}~$\delta_1$. அதன் உயரம்~$0$.
+$\delta_1$ இலிருந்து \Elim{\land} இன் இரு வடிவங்களில்
+ஒவ்வொன்றைப் பயன்படுத்தி இரண்டு !!{proof}s~$\delta_2$,
+$\delta_3$ ஐப் பெறலாம்:
+\[
+\AxiomC{$(!A \land !B)^x$}
+\RightLabel{\Elim{\land}[2]}
+\UnaryInfC{$!B$}
+\DisplayProof
+\qquad
+\AxiomC{$(!A \land !B)^x$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!A$}
+\DisplayProof
+\]
+$\delta_2$, $\delta_3$ இன் இறுதி அனுமானங்களுக்கான
+உடனடி உள்-!!{proof} இரண்டிலும் ஒன்றே: $!A \land !B$.
+இரு !!{proof}s இலும் $!A\land !B$
+நிகழ்வு திறந்த எடுகோளாக உள்ளது. உயரங்கள்
+$\pheight{\delta_1} = 0$, $\pheight{\delta_2} =
+\pheight{\delta_3} = 1$.
+
+% SEGMENT OLP-0668-S09
+\Intro{\land} விதி $!B$, $!A$ வடிவிலான இரு முன்கோள்களைக்
+கொண்டு $!B \land !A$ வடிவிலான முடிவை நியாயப்படுத்துகிறது.
+எனவே பின்வருவது !!a{proof}~$\delta_4$:
+\[
+\AxiomC{$(!A \land !B)^x$}
+\RightLabel{\Elim{\land}[2]}
+\UnaryInfC{$!B$}
+\LeftSubproofLabel{$\delta_2$}
+\AxiomC{$(!A \land !B)^x$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!A$}
+\RightSubproofLabel{$\delta_3$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!B \land !A$}
+\DisplayProof
+\]
+அதன் உயரம் $\pheight{\delta_4} = \max(\pheight{\delta_2},
+\pheight{\delta_3})+1 = \max(1,1) + 1 = 2$. அதற்கு
+$!A \land !B$ இன் இரண்டு நிகழ்வுகள் எடுகோள்களாக உள்ளன;
+இரண்டும் திறந்தவை.
+
+இறுதியாக \Intro{\lif} ஐப் பயன்படுத்தி $\delta_5$ ஐப் பெறலாம்:
+\[
+\AxiomC{$\Discharge{!A \land !B}{x}$}
+\RightLabel{\Elim{\land}[2]}
+\UnaryInfC{$!B$}
+\LeftSubproofLabel{$\delta_2$}
+\AxiomC{$\Discharge{!A \land !B}{x}$}
+\RightLabel{\Elim{\land}[1]}
+\UnaryInfC{$!A$}
+\RightSubproofLabel{$\delta_3$}
+\RightLabel{\Intro{\land}}
+\BinaryInfC{$!B \land !A$}
+\DischargeRule{\Intro{\lif}}{x}
+\UnaryInfC{$(!A \land !B) \lif (!B \land !A)$}
+\DisplayProof
+\]
+அதன் உயரம் $\pheight{\delta_4} + 1 = 3$. \Intro{\lif}
+அனுமானம் $x$ அடையாளமுடைய, $!A \land !B$ வடிவிலான
+எடுகோள்களின் எல்லா நிகழ்வுகளையும், அதாவது உடனடி
+உள்-!!{proof} இல் முன்பு திறந்திருந்த இரண்டு எடுகோள்களையும்
+விடுவிக்கிறது. இவையே $\delta_5$ இன் ஒரே எடுகோள்கள்;
+ஆகவே அதற்குத் திறந்த எடுகோள்கள் இல்லை. எனவே அது
+தனது இறுதி-!!{formula}~$(!A \land !B) \lif (!B \land !A)$
+\emph{இன்} !!a{proof} ஆகும்.
+\end{ex}
+
+\end{document}

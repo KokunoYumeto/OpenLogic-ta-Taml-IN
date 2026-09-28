@@ -1,0 +1,144 @@
+{
+  "batch_id": "TA-B315",
+  "units": [
+    {
+      "unit_id": "OLP-0655",
+      "source_sha256": "1ea55e9f187e9daf9de01d795d158934d0871b216a0a61f98b062c0ab8b4ec1c",
+      "translation_sha256": "acc2eab267a72aea9501ccfc2985f08e87e35aa670e9d9b9655b6aff10994d3f",
+      "source_bytes": 14456,
+      "translation_bytes": 29148,
+      "source_coverage_complete": true,
+      "segments": 11,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Delta=\\Delta,!A$"
+      ],
+      "extra_math": [
+        "$\\Delta=\\Delta',!A$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "adm",
+        "include",
+        "inv",
+        "invert",
+        "lem",
+        "logic",
+        "main",
+        "open",
+        "operator",
+        "quant",
+        "section",
+        "seq",
+        "top"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-001",
+          "unit_id": "OLP-0655",
+          "kind": "wrong-conjunction-exercise-reference",
+          "action": "Pointed the conjunction cut-rank exercise at the maximal-rank reduction lemma rather than the invertibility lemma.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "\\olref{lem:inv-G3c-cut}. That is",
+              "to": "\\olref{lem:max-cut-red-G3c}. That is",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The exercise's lower-cut-rank conclusion is a case of lem:max-cut-red-G3c, not of the preceding inversion lemma.",
+          "chosen_treatment": "பயிற்சியின் இணைப்பை மீப்பெரு-தர வெட்டுக் குறைப்புத் துணைத்தேற்றத்துக்கு மாற்றுகிறது.",
+          "alternatives_considered": "Retain the inversion-lemma link and misidentify the exercise's claim.",
+          "rationale": "The displayed hypothesis and conclusion match the immediately preceding maximal-rank reduction lemma verbatim.",
+          "precise_review_question": "Does the exercise belong to lem:max-cut-red-G3c?",
+          "location_needle": "\\olref{lem:max-cut-red-G3c} இன்"
+        },
+        {
+          "audit_id": "TA-PT-002",
+          "unit_id": "OLP-0655",
+          "kind": "wrong-maximal-cut-reference",
+          "action": "Linked the paragraph about replacing a highest-rank cut with lower-rank cuts to the just-proved maximal-rank lemma.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[top]{lem:cut-adm-G3c} establishes",
+              "to": "\\olref{lem:max-cut-red-G3c} establishes",
+              "count": 1
+            }
+          ],
+          "source_issue_or_choice": "The cited topmost-cut admissibility lemma proves a different result; lem:max-cut-red-G3c is the local rank-reduction result invoked here.",
+          "chosen_treatment": "உரிய தரக் குறைப்புத் துணைத்தேற்றத்திற்குக் குறுக்கிணைப்பைத் திருத்துகிறது.",
+          "alternatives_considered": "Keep the topmost-cut lemma and attribute maximal-rank replacement to it.",
+          "rationale": "The local lemma explicitly states that all replacement cuts have rank below n.",
+          "precise_review_question": "Is lem:max-cut-red-G3c the intended reference in the transition to the theorem?",
+          "location_needle": "\\olref{lem:max-cut-red-G3c} மூலம்,"
+        },
+        {
+          "audit_id": "TA-PT-003",
+          "unit_id": "OLP-0655",
+          "kind": "omitted-existential-case-in-source-proof",
+          "action": "Preserved the missing existential-quantifier derivation as a source gap and added a reader-facing Tamil editorial note, without fabricating a proof.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The non-atomic case split lists negation, disjunction, conjunction, implication and universal quantification, but no existential case; only a commented-out exercise mentions it.",
+          "chosen_treatment": "இருத்தல் அளவையுள்ள நேர்வு விடுபட்டிருப்பதைப் பதிப்புக் குறிப்பில் வெளிப்படையாகச் சொல்கிறது.",
+          "alternatives_considered": "Silently assert that the enumerated cases exhaust all formulas; invent an unreviewed existential proof.",
+          "rationale": "A missing quantified case prevents the displayed case analysis alone from proving the unrestricted rank-reduction lemma.",
+          "precise_review_question": "Should a future edition supply a separate, fully checked existential case?",
+          "location_needle": "பதிப்புக் குறிப்பு: இருத்தல் அளவையுள்ள வெட்டு வாய்பாட்டின் நேர்வு"
+        },
+        {
+          "audit_id": "TA-PT-004",
+          "unit_id": "OLP-0655",
+          "kind": "self-referential-succedent-decomposition",
+          "action": "Restored the fresh remainder Delta-prime in the principal atomic-axiom case.",
+          "expected_missing_math": [
+            "$\\Delta=\\Delta,!A$"
+          ],
+          "expected_extra_math": [
+            "$\\Delta=\\Delta',!A$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen equation Delta = Delta,A cannot hold for a finite succedent and the next sentence uses Delta-prime as its remainder.",
+          "chosen_treatment": "\\Delta=\\Delta',!A என எஞ்சிய பின்பக்கத்தைத் தெளிவுபடுத்துகிறது.",
+          "alternatives_considered": "Retain the impossible self-equation Delta = Delta,A.",
+          "rationale": "If atomic A is principal in the axiom A,Gamma => Delta, then Delta decomposes into a remainder Delta-prime and A; contraction on the other branch gives Gamma => Delta-prime,A.",
+          "precise_review_question": "Is Delta-prime the intended remainder in the principal-axiom case?",
+          "location_needle": "$\\Delta = \\Delta', !A$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

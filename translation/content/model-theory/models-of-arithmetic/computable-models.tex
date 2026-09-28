@@ -51,22 +51,22 @@ $\Assign{<}{M}$ தீர்மானிக்கத்தக்க உறவு
   \Assign{\Obj{0}}{K} & = 0\\
   \Assign{\prime}{K}(x) & =
   \begin{cases}
-    x+1 & \text{if $x\in \Nat$}\\
-    a & \text{if $x = a$}
+    x+1 & \text{$x\in \Nat$ எனில்}\\
+    a & \text{$x = a$ எனில்}
   \end{cases}\\
   \Assign{+}{K}(x, y) & =
   \begin{cases}
-    x+y & \text{if $x$, $y \in\Nat$}\\
-    a & \text{otherwise}
+    x+y & \text{$x$, $y \in\Nat$ எனில்}\\
+    a & \text{இல்லையெனில்}
   \end{cases}\\
   \Assign{\times}{K}(x, y) & =
   \begin{cases}
-    xy & \text{if $x$, $y \in\Nat$}\\
-    0 & \text{if $x=0$ or $y=0$}\\
-    a & \text{otherwise}\\
+    xy & \text{$x$, $y \in\Nat$ எனில்}\\
+    0 & \text{$x=0$ அல்லது $y=0$ எனில்}\\
+    a & \text{இல்லையெனில்}\\
   \end{cases}\\
   \Assign{<}{K} & =
-  \Setabs{\tuple{x,y}}{x, y \in \Nat \text{ and } x<y} \cup
+  \Setabs{\tuple{x,y}}{x, y \in \Nat \text{ மற்றும் } x<y} \cup
   \Setabs{\tuple{x,a}}{n \in \Domain{K}}
 \end{align*}
 ஆனால் $\Domain{K}$ !!{denumerable}; எனவே~$\Nat$ உடன் சமஎண்ணளவுடையது.
@@ -89,14 +89,14 @@ $\Assign{\prime}{K'}(0) = 0$. கூட்டலுக்கும் பெர�
 \begin{align*}
 \Assign{+}{K'}(x, y) & =
   \begin{cases}
-    x+y-1 & \text{if $x$, $y >0$}\\
-    0 & \text{otherwise}
+    x+y-1 & \text{$x$, $y >0$ எனில்}\\
+    0 & \text{இல்லையெனில்}
   \end{cases}\\
   \Assign{\times}{K'}(x, y) & =
   \begin{cases}
-    1 & \text{if $x = 1$ or $y = 1$}\\
-    xy - x - y + 2 & \text{if $x$, $y > 1$}\\
-    0 & \text{otherwise}\\
+    1 & \text{$x = 1$ அல்லது $y = 1$ எனில்}\\
+    xy - x - y + 2 & \text{$x$, $y > 1$ எனில்}\\
+    0 & \text{இல்லையெனில்}\\
   \end{cases}
 \end{align*}
 மேலும் $\tuple{x, y} \in \Assign{<}{K'}$ எனில், எனில் மட்டுமே,

@@ -1,0 +1,87 @@
+{
+  "batch_id": "TA-B309",
+  "units": [
+    {
+      "unit_id": "OLP-0649",
+      "source_sha256": "20c8335bd58196ed260e7376435aa13c0b073441a29a4341305057fa56f7012a",
+      "translation_sha256": "a2f7d73f97439eeb98ec3019d748d4da08036f4be6a745761001e78dcd2bdef3",
+      "source_bytes": 1355,
+      "translation_bytes": 2175,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\mModel{M}{!A}[w]$"
+      ],
+      "extra_math": [
+        "$\\mSat{M}{!A}[w]$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Rww",
+        "include",
+        "int",
+        "logic",
+        "model",
+        "open",
+        "pro",
+        "relational",
+        "section",
+        "sem"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-IL-025",
+          "unit_id": "OLP-0649",
+          "kind": "intuitionistic-proposition-truth-notation",
+          "action": "Replaced the model-constructor macro in the proposition's truth-at-a-world condition with the satisfaction macro defined in the same semantics chapter.",
+          "expected_missing_math": [
+            "$\\mModel{M}{!A}[w]$"
+          ],
+          "expected_extra_math": [
+            "$\\mSat{M}{!A}[w]$"
+          ],
+          "expected_missing_commands": [
+            "\\mModel"
+          ],
+          "expected_extra_commands": [
+            "\\mSat"
+          ],
+          "source_issue_or_choice": "The frozen proposition uses \\mModel{M}{!A}[w] although the preceding relational-model section defines \\mSat{M}{!A}[w] for a formula true at world w; \\mModel constructs the model object.",
+          "chosen_treatment": "கூற்று ஒரு உலகில் மெய்யாக இருப்பதைக் குறிக்க ஏற்கெனவே வரையறுக்கப்பட்ட நிறைவுறுத்தல் குறிமானத்தைப் பயன்படுத்துகிறது.",
+          "alternatives_considered": "Keep the model-constructor expression and leave the proposition disconnected from its own semantics definition.",
+          "rationale": "The equivalence concerns truth at w; the inductive clauses defining Prop are aligned with the earlier \\mSat truth clauses, not with the model-constructor macro.",
+          "precise_review_question": "Does the corrected biconditional use the established truth-at-a-world relation with the same M, A and w?",
+          "location_needle": "SOURCE CORRECTION TA-IL-025"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\mModel"
+      ],
+      "extra_commands": [
+        "\\mSat"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

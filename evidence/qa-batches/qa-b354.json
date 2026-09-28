@@ -1,0 +1,83 @@
+{
+  "batch_id": "TA-B354",
+  "units": [
+    {
+      "unit_id": "OLP-0698",
+      "source_sha256": "b23007a09bbf7b4b8390943539aab59ee00277b3af8450b5d07142eaf9d1af10",
+      "translation_sha256": "381b77d9df74eaa3ac11be20c73a1b222788125b659fc6cd0fbb2ab529daddaf",
+      "source_bytes": 9990,
+      "translation_bytes": 19760,
+      "source_coverage_complete": true,
+      "segments": 9,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{$\\LeftR{\\land}_1$}\\UnaryInf$!A\\land!B,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{$\\LeftR{\\land}_2$}\\UnaryInf$!A\\land!B,!A\\land!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!A\\land!B\\Gamma\\fCenter\\Delta$\\DisplayProof\\]",
+        "$\\Gamma\\fCenter\\Delta,!A\\liff!B$"
+      ],
+      "extra_math": [
+        "\\[\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{$\\LeftR{\\land}_1$}\\UnaryInf$!A\\land!B,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{$\\LeftR{\\land}_2$}\\UnaryInf$!A\\land!B,!A\\land!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!A\\land!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\]",
+        "$!A\\liff!B,\\Gamma\\fCenter\\Delta$"
+      ],
+      "token_key_parity": false,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0698",
+          "audit_id": "TA-PT-046",
+          "kind": "sequent-rule-comma-left-biconditional-and-end-sequent",
+          "action": "Insert the missing comma in the G1c conjunction-contraction conclusion, put the left biconditional's conclusion on the left of the turnstile, and call the displayed final object a sequent rather than a formula.",
+          "expected_missing_math": [
+            "\\[\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{$\\LeftR{\\land}_1$}\\UnaryInf$!A\\land!B,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{$\\LeftR{\\land}_2$}\\UnaryInf$!A\\land!B,!A\\land!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!A\\land!B\\Gamma\\fCenter\\Delta$\\DisplayProof\\]",
+            "$\\Gamma\\fCenter\\Delta,!A\\liff!B$"
+          ],
+          "expected_extra_math": [
+            "\\[\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{$\\LeftR{\\land}_1$}\\UnaryInf$!A\\land!B,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{$\\LeftR{\\land}_2$}\\UnaryInf$!A\\land!B,!A\\land!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\LeftR{\\Contraction}}\\UnaryInf$!A\\land!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\]",
+            "$!A\\liff!B,\\Gamma\\fCenter\\Delta$"
+          ],
+          "expected_missing_tokens": [
+            "formula"
+          ],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen G1c simulation displays A-and-B Gamma with no comma, breaking the sequent context. The exercise labels a two-premise biconditional rule LeftR but puts A-iff-B in the succedent; that formula's conclusion is incompatible with the rule label and with its premises. The weakening explanation calls Gamma entails Delta,A the end-formula of a proof although it is a sequent.",
+          "chosen_treatment": "Write A-and-B, Gamma in the contraction conclusion; write A-iff-B, Gamma entails Delta in the LeftR iff exercise; describe Gamma entails Delta,A as the end-sequent. Preserve both premises, the right iff exercise, all derivations, heights and other judgments.",
+          "alternatives_considered": "Keep the comma-free judgment; reinterpret the first iff rule as a right rule despite its label and counterexample; call a whole sequent a formula to avoid a token-key difference.",
+          "rationale": "The simulated G3c conjunction-left conclusion and both G1c intermediate contexts require a comma before Gamma. For left iff, if A and B have equal truth values, the two premises cover both-true and both-false cases; the corresponding conclusion has A iff B on the antecedent. The original right-side conclusion fails for A true and B false, when the second premise is true while the conclusion can be false. Gamma entails Delta,A is syntactically a sequent, not one formula.",
+          "precise_review_question": "Do the comma, left-iff conclusion and end-sequent wording repair only these three source slips while preserving the stated G1c/G3c admissibility and height arguments?",
+          "location_needle": "\\BinaryInf$!A \\liff !B, \\Gamma \\fCenter \\Delta$"
+        }
+      ],
+      "missing_tokens": [
+        "formula"
+      ],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

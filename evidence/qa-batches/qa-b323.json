@@ -1,0 +1,79 @@
+{
+  "batch_id": "TA-B323",
+  "units": [
+    {
+      "unit_id": "OLP-0663",
+      "source_sha256": "782f91d07d6f92f5ae9cea347d3d04f6a84c140008cbe9381d125c63d352ddb9",
+      "translation_sha256": "312b0d355a24bfb1b2e3a724c23b8a82133411f53e8e43369ff1d64f5d055bb0",
+      "source_bytes": 5294,
+      "translation_bytes": 12909,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma\\Entails!B$"
+      ],
+      "extra_math": [
+        "$\\Gamma\\Entails!A\\lif!B$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "Gentzen",
+        "Gerhard",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "audit_id": "TA-PT-015",
+          "unit_id": "OLP-0663",
+          "kind": "natural-deduction-box-and-conditional-conclusion",
+          "action": "State the assumed antecedent A as the first Jaśkowski box line and the consequent B as the last; correct implication introduction from Gamma+A entails B to Gamma entails A implies B.",
+          "expected_missing_math": [
+            "$\\Gamma\\Entails!B$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\Entails!A\\lif!B$"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\lif"
+          ],
+          "source_issue_or_choice": "The Jaśkowski prose names B as both first and last lines, and the sequent-style implication rule wrongly concludes Gamma entails B after discharging A.",
+          "chosen_treatment": "In the box prose, identify the assumed A first and derived B last; in the entailment rule, conclude Gamma entails A implies B.",
+          "alternatives_considered": "Translate both source slips literally, or remove the box account and rule explanation.",
+          "rationale": "Conditional introduction assumes A to derive B; discharging A yields A implies B. Both displayed natural-deduction trees in this section confirm the intended consequent.",
+          "precise_review_question": "Does the corrected box description match Jaśkowski-style conditional introduction, and does the repaired entailment express exactly the discharge rule?",
+          "location_needle": "$\\Gamma \\Entails !A \\lif !B$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\lif"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

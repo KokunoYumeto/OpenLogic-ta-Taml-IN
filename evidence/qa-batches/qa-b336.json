@@ -1,0 +1,92 @@
+{
+  "batch_id": "TA-B336",
+  "units": [
+    {
+      "unit_id": "OLP-0676",
+      "source_sha256": "2785b7f36d7c9deb83028e80f89d1143f05e56ea6ca37ffeda8a66af4f4ce731",
+      "translation_sha256": "a018fa28e7aea88b890645e12f1e730dd874f5a13796c368df0a07b307a210cc",
+      "source_bytes": 10081,
+      "translation_bytes": 18152,
+      "source_coverage_complete": true,
+      "segments": 7,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\delta_4$",
+        "$B^x$",
+        "\\[\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$\\lfalse$}\\RightLabel{\\FalseInt}\\UnaryInfC{$!B\\lor!C$}\\AxiomC{$\\Discharge{!B}{x}$}\\RightLabel{$\\delta_3$}\\DeduceC{$!D$}\\AxiomC{$\\Discharge{!C}{x}$}\\RightLabel{$\\delta_4$}\\DeduceC{$!D$}\\RightLabel{\\Elim{\\lor}}\\TrinaryInfC{$!D$}\\DisplayProof\\quad\\quad\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$\\lfalse$}\\RightLabel{\\FalseInt}\\UnaryInfC{$!D$}\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "$!B^x$",
+        "\\[\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$\\lfalse$}\\RightLabel{\\FalseInt}\\UnaryInfC{$!B\\lor!C$}\\AxiomC{$\\Discharge{!B}{x}$}\\RightLabel{$\\delta_3$}\\DeduceC{$!D$}\\AxiomC{$\\Discharge{!C}{y}$}\\RightLabel{$\\delta_4$}\\DeduceC{$!D$}\\DischargeRule{\\Elim{\\lor}}{x\\,y}\\TrinaryInfC{$!D$}\\DisplayProof\\quad\\quad\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$\\lfalse$}\\RightLabel{\\FalseInt}\\UnaryInfC{$!D$}\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "multline",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0676",
+          "audit_id": "TA-PT-032",
+          "kind": "reduction-cut-scope-grafting-and-discharge",
+          "action": "Qualify the length-one opening for the later falsity-introduction case; correct the copied unchanged-cut claim and absent delta-four; restore the missing formula marker on B^x; make the disjunction tree discharge distinct x and y assumptions; state fresh eigenvariable naming for copied subproofs.",
+          "expected_missing_math": [
+            "$\\delta_4$",
+            "$B^x$",
+            "\\[\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$\\lfalse$}\\RightLabel{\\FalseInt}\\UnaryInfC{$!B\\lor!C$}\\AxiomC{$\\Discharge{!B}{x}$}\\RightLabel{$\\delta_3$}\\DeduceC{$!D$}\\AxiomC{$\\Discharge{!C}{x}$}\\RightLabel{$\\delta_4$}\\DeduceC{$!D$}\\RightLabel{\\Elim{\\lor}}\\TrinaryInfC{$!D$}\\DisplayProof\\quad\\quad\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$\\lfalse$}\\RightLabel{\\FalseInt}\\UnaryInfC{$!D$}\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "$!B^x$",
+            "\\[\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$\\lfalse$}\\RightLabel{\\FalseInt}\\UnaryInfC{$!B\\lor!C$}\\AxiomC{$\\Discharge{!B}{x}$}\\RightLabel{$\\delta_3$}\\DeduceC{$!D$}\\AxiomC{$\\Discharge{!C}{y}$}\\RightLabel{$\\delta_4$}\\DeduceC{$!D$}\\DischargeRule{\\Elim{\\lor}}{x\\,y}\\TrinaryInfC{$!D$}\\DisplayProof\\quad\\quad\\bottomAlignProof\\AxiomC{}\\RightLabel{$\\delta_2$}\\DeduceC{$\\lfalse$}\\RightLabel{\\FalseInt}\\UnaryInfC{$!D$}\\DisplayProof\\]"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\delta",
+            "\\RightLabel"
+          ],
+          "expected_extra_commands": [
+            "\\DischargeRule"
+          ],
+          "source_issue_or_choice": "The frozen opening treats every length-one cut as introduction then elimination although the cut definition also allows FalseInt. A copied paragraph cites nonexistent delta-four and infers a total cut-length decrease before accounting for duplicated delta-three cuts; a later sentence excludes any right-side cut rather than only maximal cuts. One minor-premise B^x lacks the formula sigil. The falsity/disjunction diagram gives B and C the same discharge label and omits the disjunction discharge marker.",
+          "chosen_treatment": "Translate the introduction as the first case, defer the FalseInt case explicitly, describe per-copy unchanged cuts and reserve total-length decrease for the rightmost-maximal choice, omit nonexistent delta-four, write !B^x, and use x/y with a disjunction discharge rule. Add a prose reminder to freshen eigenvariables when copied subproofs conflict.",
+          "alternatives_considered": "Repeat the false universal opening, nonexistent subproof and unqualified length claim; leave the two different assumptions with one discharge label.",
+          "rationale": "Frozen normalization/segments.tex includes FalseInt in the length-one cut definition and defines total cut length as a sum over maximal cuts. In the displayed example only delta-two and delta-three exist. Frozen natural-deduction/rules-proofs.tex requires a shared label to denote the same formula and defines disjunction elimination as discharging x and y in its two minor premises. The regular-proof convention permits fresh eigenvariable renaming.",
+          "precise_review_question": "Are the repaired case split, per-copy cut accounting and distinct discharged assumptions sufficient for the displayed reduction without asserting an unsupported cut-length decrease?",
+          "location_needle": "\\DischargeRule{\\Elim{\\lor}}{x\\,y}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\delta",
+        "\\RightLabel"
+      ],
+      "extra_commands": [
+        "\\DischargeRule"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

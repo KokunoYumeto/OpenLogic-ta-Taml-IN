@@ -1,0 +1,3361 @@
+% இந்தியத் தமிழ்ப் பதிப்பின் முழு திருத்தத்தக்க வாசிப்பு மூலம்.
+% கட்டமைப்பு மற்றும் பக்கச் சரிபார்ப்பின் விவரங்கள் முழு மூல ZIP இன் சான்றுகளில் உள்ளன.
+% கணித உள்ளடக்கமும் மொழிபெயர்ப்பும் இக்கோப்பில் நேரடியாக உள்ளன.
+% எழுத்துருக்கள், upstream styles/assets/bibliography மற்றும் translation styles முழு மூல ZIP இல் தேவை.
+\documentclass[11pt,a4paper,openany]{memoir}
+\newcommand{\olpath}{../upstream}
+\usepackage[no-math]{fontspec}
+\ifLuaTeX
+\setmainfont{Nirmala UI}[Script=Tamil,Renderer=HarfBuzz,WordSpace=1.3,ItalicFont={Nirmala UI},ItalicFeatures={FakeSlant=0.15}]
+\setsansfont{Nirmala UI}[Script=Tamil,Renderer=HarfBuzz,WordSpace=1.3]
+\else
+\setmainfont{Nirmala UI}[Script=Tamil,Renderer=OpenType,WordSpace=1.3,ItalicFont={Nirmala UI},ItalicFeatures={FakeSlant=0.15}]
+\setsansfont{Nirmala UI}[Script=Tamil,Renderer=OpenType,WordSpace=1.3]
+\fi
+\setmonofont{Consolas}
+\usepackage{xr-hyper}
+\input{\olpath/sty/open-logic.sty}
+\ifXeTeX
+  \XeTeXlinebreaklocale "ta"
+  \XeTeXlinebreakskip=0pt plus 1pt
+  \XeTeXgenerateactualtext=1
+\fi
+\setlrmarginsandblock{25mm}{25mm}{*}
+\setulmarginsandblock{22mm}{25mm}{*}
+\checkandfixthelayout
+\linespread{1.17}
+\emergencystretch=2em
+\input{../translation/tamil-config.sty}
+\input{../translation/tamil-pdf-math.sty}
+\input{../translation/tamil-reader-rendering.sty}
+\tagtrue{novice,math,compsci,FOL,prvTrue,prvFalse,prvEx,prvAll}
+\addto\captionsenglish{%
+  \renewcommand{\chaptername}{அத்தியாயம்}%
+  \renewcommand{\partname}{பகுதி}%
+  \renewcommand{\appendixname}{இணைப்பு}%
+  \renewcommand{\tablename}{அட்டவணை}%
+}
+\setlocalecaption{english}{photocredits}{படங்களுக்கான நன்றியுரை}
+\setlocalecaption{english}{history}{வரலாற்றுக் குறிப்புகள்}
+\setlocalecaption{english}{reading}{மேலும் படிக்க}
+\setlocalecaption{english}{appendix}{இணைப்பு}
+\setlocalecaption{english}{appendices}{இணைப்புகள்}
+\setlocalecaption{english}{definition}{வரையறை}
+\setlocalecaption{english}{example}{எடுத்துக்காட்டு}
+\setlocalecaption{english}{lemma}{துணைத்தேற்றம்}
+\setlocalecaption{english}{proposition}{கூற்று}
+\setlocalecaption{english}{corollary}{தொடர்விளைவு}
+\setlocalecaption{english}{problem}{பயிற்சி}
+\setlocalecaption{english}{problems}{பயிற்சிகள்}
+\setlocalecaption{english}{theorem}{தேற்றம்}
+\setlocalecaption{english}{remark}{குறிப்பு}
+\setlocalecaption{english}{axiom}{அடிகோள்}
+\setlocalecaption{english}{note}{குறிப்பு}
+\setlocalecaption{english}{case}{நிலை}
+\setlocalecaption{english}{convention}{மரபு}
+\addto\captionsenglish{\renewcommand{\proofname}{நிறுவல்}}
+\addto\captionsenglish{\renewcommand{\figurename}{படம்}}
+\crefname{page}{பக்கம்}{பக்கங்கள்}
+\Crefname{page}{பக்கம்}{பக்கங்கள்}
+\crefname{part}{பகுதி}{பகுதிகள்}
+\Crefname{part}{பகுதி}{பகுதிகள்}
+\crefname{chapter}{அத்தியாயம்}{அத்தியாயங்கள்}
+\Crefname{chapter}{அத்தியாயம்}{அத்தியாயங்கள்}
+\crefname{section}{பிரிவு}{பிரிவுகள்}
+\Crefname{section}{பிரிவு}{பிரிவுகள்}
+\crefname{subsection}{பிரிவு}{பிரிவுகள்}
+\Crefname{subsection}{பிரிவு}{பிரிவுகள்}
+\crefname{figure}{படம்}{படங்கள்}
+\Crefname{figure}{படம்}{படங்கள்}
+\crefname{table}{அட்டவணை}{அட்டவணைகள்}
+\Crefname{table}{அட்டவணை}{அட்டவணைகள்}
+\crefname{equation}{சமன்பாடு}{சமன்பாடுகள்}
+\Crefname{equation}{சமன்பாடு}{சமன்பாடுகள்}
+\crefname{defn}{வரையறை}{வரையறைகள்}
+\Crefname{defn}{வரையறை}{வரையறைகள்}
+\crefname{thm}{தேற்றம்}{தேற்றங்கள்}
+\Crefname{thm}{தேற்றம்}{தேற்றங்கள்}
+\crefname{ex}{எடுத்துக்காட்டு}{எடுத்துக்காட்டுகள்}
+\Crefname{ex}{எடுத்துக்காட்டு}{எடுத்துக்காட்டுகள்}
+\crefname{lem}{துணைத்தேற்றம்}{துணைத்தேற்றங்கள்}
+\Crefname{lem}{துணைத்தேற்றம்}{துணைத்தேற்றங்கள்}
+\crefname{prop}{கூற்று}{கூற்றுகள்}
+\Crefname{prop}{கூற்று}{கூற்றுகள்}
+\crefname{prob}{பயிற்சி}{பயிற்சிகள்}
+\Crefname{prob}{பயிற்சி}{பயிற்சிகள்}
+\crefname{rem}{குறிப்பு}{குறிப்புகள்}
+\Crefname{rem}{குறிப்பு}{குறிப்புகள்}
+\crefname{cor}{தொடர்விளைவு}{தொடர்விளைவுகள்}
+\Crefname{cor}{தொடர்விளைவு}{தொடர்விளைவுகள்}
+\crefname{axiom}{அடிகோள்}{அடிகோள்கள்}
+\Crefname{axiom}{அடிகோள்}{அடிகோள்கள்}
+\crefname{note}{குறிப்பு}{குறிப்புகள்}
+\Crefname{note}{குறிப்பு}{குறிப்புகள்}
+\crefname{case}{நிலை}{நிலைகள்}
+\Crefname{case}{நிலை}{நிலைகள்}
+\crefname{conv}{மரபு}{மரபுகள்}
+\Crefname{conv}{மரபு}{மரபுகள்}
+\AtBeginEnvironment{align*}{\fontsize{9.5}{12}\selectfont}
+\hypersetup{pdftitle={திறந்த தருக்கவியல் — மூல மாற்று வடிவங்கள்},pdfauthor={Open Logic Project; தமிழ் மொழிபெயர்ப்புத் திட்டம்},pdfsubject={உறைந்த OpenLogic மூலத்தின் மாற்று வடிவங்கள்; இயந்திரத் தமிழ் மொழிபெயர்ப்பு}}
+\addto\captionsenglish{\renewcommand{\contentsname}{பொருளடக்கம்}\renewcommand{\bibname}{மேற்கோள் நூல்}}
+\tagtrue{prfSC,prfND,prfTab,prfAX}
+\includeenv{editorial}
+\externaldocument{tamil-complete}[tamil-complete.pdf]
+\makeatletter
+\newcommand\TADriverHeadingMode{\def\ol@chaptercs{section}\def\ol@partcs{section}}
+\makeatother
+% Alternate drivers retain their headings, editorial prose and import
+% inventories. Their shared chapters are read in the principal volume.
+\NewDocumentCommand\TADriverImport{s o m o}{%
+  \par\noindent மூல உள்ளீடு:
+  \IfBooleanT{#1}{\texttt{*}}%
+  \IfNoValueF{#2}{\texttt{\detokenize{#2}/}}%
+  \texttt{\detokenize{#3}.tex}%
+  \IfNoValueF{#4}{\quad பிரிவு வடிவம்: \texttt{\detokenize{#4}}}%
+  \par
+}
+\NewDocumentCommand\TACompanionUnit{m m}{%
+  \clearpage
+  \noindent மூல அலகு: \texttt{#1}\par
+  \subfile{../translation/#2}%
+}
+\NewDocumentCommand\TACompanionDriver{m m m m}{%
+  \clearpage
+  \noindent மூல அலகு: \texttt{#1}\par
+  \begingroup
+  \TADriverHeadingMode
+  \olchapterid{#3}{#4}%
+  \RenewDocumentCommand\olimport{s o m o}{%
+    \IfBooleanTF{##1}{%
+      \IfNoValueTF{##2}{%
+        \IfNoValueTF{##4}{\TADriverImport*{##3}}{\TADriverImport*{##3}[##4]}%
+      }{%
+        \IfNoValueTF{##4}{\TADriverImport*[##2]{##3}}{\TADriverImport*[##2]{##3}[##4]}%
+      }%
+    }{%
+      \IfNoValueTF{##2}{%
+        \IfNoValueTF{##4}{\TADriverImport{##3}}{\TADriverImport{##3}[##4]}%
+      }{%
+        \IfNoValueTF{##4}{\TADriverImport[##2]{##3}}{\TADriverImport[##2]{##3}[##4]}%
+      }%
+    }%
+  }%
+  \subfile{../translation/#2}%
+  \endgroup
+}
+\begin{document}
+\raggedright
+\pagestyle{plain}
+\chapter*{மூல மாற்று வடிவங்களும் கூடுதல் பகுதிகளும்}
+\noindent இந்தியத் தமிழ்ப் பதிப்பு — ta-Taml-IN
+
+\noindent மூல நூல்: Open Logic Project.
+\href{https://github.com/OpenLogicProject/OpenLogic}{மூலத் திட்டம்},
+\href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+மூலத் திருத்தம்: \texttt{9620cc73f9c8e0ad003c514a5d3748f29611c4c0}.
+
+\noindent முதல் 570 அலகுகளின் இயந்திரத் தமிழாக்கமும் திருத்தங்களும்
+OpenAI Codex — GPT-5.6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன.
+மீதமுள்ள 152 அலகுகளின் தமிழாக்கமும் பின்னைய பதிப்புத் திருத்தங்களும்
+OpenAI Codex — GPT-6 Sol, Ultra சிந்தனை நிலையில் செய்யப்பட்டன.
+சுயாதீனமான தாய்மொழி மதிப்புரை செய்யப்பட்டதாகக் கூறப்படவில்லை.
+இந்தத் துணைநூலும் முதன்மை நூலும்
+சேர்ந்து உறைந்த மூலத்தின் 722 அலகுகளையும் கணக்கிடுகின்றன.
+
+\noindent முதன்மை வாசிப்பு நூலின் 695 மூல அலகுகளுடன்,
+இங்கு 27 தனித்த மூல அலகுகள் சேர்க்கப்படுகின்றன.
+அவற்றில் நான்கு மாற்று அத்தியாயம் அல்லது பகுதி அமைப்புக் கோப்புகள்.
+அவற்றின் தமிழ்த் தலைப்புகள், ஆசிரியர் குறிப்புகள் மற்றும் மூல
+உள்ளீட்டுப் பட்டியல்கள் இங்கே உள்ளன; ஏற்கெனவே முதன்மை நூலில்
+இடம்பெறும் அத்தியாயங்கள் மீண்டும் அச்சிடப்படவில்லை.
+மற்ற 23 அலகுகளின் முழுப் பாடப்பொருள் இங்கே இடம்பெறுகிறது.
+அனைத்து 722 அலகுகளின் திருத்தத்தக்க மூலக் கோப்புகளும்
+முழு மூலத் தொகுப்பில் உள்ளன.
+
+\noindent \href{tamil-complete.pdf}{முதன்மை வாசிப்பு நூலைத் திறக்க}.
+மூலத்தின் மாற்று வடிவங்கள் சில இடங்களில் அதே அடையாளங்களைப்
+பயன்படுத்துகின்றன. இந்நூலில் உள்ள உள்ளூர் முடிவுகளின் இணைப்புகள்
+இந்நூலுக்குள்ளும், பிற மேற்கோள்கள் முதன்மை நூலுக்கும் செல்கின்றன.
+உறைந்த மூலத்தில் இல்லாத நிறுவல் அல்லது விளக்கம் சேர்க்கப்பட்டதாகக்
+கூறப்படவில்லை.
+
+\clearpage
+\begingroup
+\sloppy
+\renewcommand{\cftsectionfont}{\small}
+\tableofcontents*
+\endgroup
+\chapter{முதல்தரத் தருக்கத்தின் மாற்று வடிவங்கள்}
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0643}\par
+
+% BEGIN SOURCE UNIT OLP-0643 content/first-order-logic/axiomatic-deduction/provability.tex
+% Exact modular target bytes: 20160; SHA256: 3856cfa15db843b807b92faff65d6230a05253c2e4dc4aecd4e726b6b47a5eff
+% SEGMENT OLP-0643-S01
+
+
+\iftag{FOL}
+      {\olfileid{fol}{axd}{prv}}
+      {\olfileid{pl}{axd}{prv}}
+
+\olsection{\usetoken{S}{derivability} இன் பண்புகள்}
+
+\begin{prop}[ஒருபோக்குத்தன்மை] $\Gamma \subseteq \Delta$ மற்றும்
+$\Gamma \Proves !A$ எனில், $\Delta \Proves !A$ உம் ஆகும்.
+\end{prop}
+
+\begin{proof} $\Gamma$ இன் எந்த முடிவுறு உட்கணம்~$\Gamma_0$ உம்
+$\Delta$ இன் முடிவுறு உட்கணமாகும். ஆகவே $\Gamma_0 \Proves !A$ என்பதற்கான
+!!a{derivation}, $\Delta \Proves !A$ என்பதையும் காட்டுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0643-S02
+\begin{prop}\ollabel{prop:provability} $\Gamma \Proves !A$ என்பது,
+$\Gamma\cup \{\lnot!A \}$ முரணுடையதாக இருந்தால், அப்போதும் அப்போது
+மட்டுமே ஆகும். \end{prop}
+
+\begin{prop} \begin{enumerate}
+\item \ollabel{prop:provability-contr} $\Gamma \Proves !A$ மற்றும்
+$\Gamma \cup \{ !A\} \Proves \lfalse$ எனில், $\Gamma$ முரணுடையது.
+
+\item \ollabel{prop:provability-lnot} $\Gamma \cup \{!A\}
+\Proves \lfalse$ எனில், $\Gamma \Proves \lnot !A$.
+
+\item \ollabel{prop:provability-exhaustive} $\Gamma \cup \{!A\}
+\Proves \lfalse$ மற்றும் $\Gamma \cup \{\lnot !A\} \Proves
+\lfalse$ எனில், $\Gamma \Proves \lfalse$.
+
+\tagitem{prvOr}{\ollabel{prop:provability-lor-left} $\Gamma \cup \{!A\}
+\Proves \lfalse$ மற்றும் $\Gamma \cup \{!B\} \Proves
+\lfalse$ எனில், $\Gamma \cup \{!A \lor !B\} \Proves \lfalse$.}{}
+
+\tagitem{prvOr}{\ollabel{prop:provability-lor-right} $\Gamma
+\Proves !A$ அல்லது $\Gamma \Proves !B$ எனில், $\Gamma
+\Proves !A \lor !B$.}{}
+
+\tagitem{prvAnd}{\ollabel{prop:provability-land-left} $\Gamma
+\Proves !A \land !B$ எனில், $\Gamma \Proves !A$ மற்றும்
+$\Gamma \Proves !B$ ஆகிய இரண்டும் கிடைக்கும்.}{}
+
+\tagitem{prvAnd}{\ollabel{prop:provability-land-right} $\Gamma
+\Proves !A$ மற்றும் $\Gamma \Proves !B$ எனில், $\Gamma
+\Proves !A \land !B$.}{}
+
+\tagitem{prvIf}{\ollabel{prop:provability-mp} $\Gamma \Proves
+!A$ மற்றும் $\Gamma \Proves !A \lif !B$ எனில், $\Gamma
+\Proves !B$.}{}
+
+\tagitem{prvIf}{\ollabel{prop:provability-lif} $\Gamma \Proves
+\lnot !A$ அல்லது $\Gamma \Proves !B$ எனில், $\Gamma \Proves
+!A \lif !B$.}{} \end{enumerate} \end{prop}
+
+% SEGMENT OLP-0643-S03
+\begin{proof}
+\begin{enumerate}
+\item $\Gamma_0 \cup \{!A\} \Proves \lfalse$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \cup \{!A\} \Proves \lfalse$ & கருதுகோள் \\
+2. & $\Gamma_1 \Proves !A$ & கருதுகோள் \\
+3. & $\Gamma_0 \cup \Gamma_1 \Proves \lfalse$ & வெட்டு \\
+\end{derivation}
+
+$\Gamma_0 \subseteq \Gamma$ மற்றும் $\Gamma_1 \subseteq \Gamma$ என்பதால்,
+$\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$. எனவே $\Gamma \Proves \lfalse$.
+
+% SOURCE CORRECTION TA-FOL-PRV-001: the frozen derivation proves the
+% opposite-direction proposition, rather than this negation conclusion.
+\item $\Gamma_0 \cup\{!A\} \Proves \lfalse$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \cup\{!A\} \Proves \lfalse$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !A \lif \lfalse$ & கழித்தல் தேற்றம் \\
+3. & $\Gamma_0 \Proves (!A \lif \lfalse) \lif \lnot !A$ & Ax0 \\
+4. & $\Gamma_0 \Proves \lnot !A$ & MP 2, 3 \\
+\end{derivation}
+
+\item $\Gamma \cup \{ !A \} \Proves \lfalse$ மற்றும்
+$\Gamma_1 \cup \{\lnot !A \} \Proves \lfalse$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \cup\{!A\} \Proves \lfalse$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !A \lif \lfalse$ & கழித்தல் தேற்றம் \\
+3. & $\Gamma_1 \cup \{\lnot !A \} \Proves \lfalse$ & கருதுகோள் \\
+4. & $\Gamma_0 \Proves (!A \lif \lfalse) \lif \lnot !A$ & Ax0 \\
+5. & $\Gamma_0 \Proves \lnot !A$ & MP 2, 4 \\
+6. & $\Gamma_0 \cup \Gamma_1 \Proves \lfalse$ & வெட்டு 3, 5 \\
+\end{derivation}
+
+$\Gamma_0 \subseteq \Gamma$ மற்றும் $\Gamma_1 \subseteq \Gamma$ என்பதால்,
+$\Gamma_0 \cup \Gamma_1 \subseteq \Gamma$. எனவே $\Gamma \Proves \lfalse$.
+
+% SEGMENT OLP-0643-S04
+% prop:provability-lor-left
+\tagitem{defOr}{}{\iftag{probOr}{பயிற்சி.}{பயிற்சி.}}
+
+% prop:provability-lor-right
+\tagitem{defOr}{}{\iftag{probOr}{பயிற்சி.}{
+$\Gamma_0 \Proves !A$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves !A$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !A \lif (!A \lor !B)$ & Ax0 \\
+3. & $\Gamma_0 \Proves !A \lor !B$ & MP 1, 2 \\
+\end{derivation}
+
+எனவே $\Gamma \Proves !A \lor !B$. $\Gamma \Proves !B$ என்ற
+நிலைக்கான நிறுவலும் இதேபோன்றது.}}
+
+% prop:provability-land-left
+\tagitem{defAnd}{}{\iftag{probAnd}{பயிற்சி.}{
+$\Gamma_0 \Proves !A \land !B$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves !A \land !B$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves (!A\land !B) \lif !A $ & Ax0 \\
+% SOURCE CORRECTION TA-FOL-PRV-002: MP yields A, not A-or-B.
+3. & $\Gamma_0 \Proves !A$ & MP 1, 2 \\
+\end{derivation}
+
+ஆகவே $\Gamma \Proves !A$. இதேபோன்ற மற்றொரு !!{derivation} மூலம்
+$\Gamma \Proves !B$ என்பதையும் காட்டலாம்.}}
+
+% prop:provability-land-right
+\tagitem{defAnd}{}{\iftag{probAnd}{பயிற்சி.}{பயிற்சி.}}
+
+% prop:provability-mp
+\tagitem{defIf}{}{\iftag{probIf}{பயிற்சி.}{
+இரு வருவித்தல்களிலும் பயன்படும் முடிவுறு கருதுகோள்களை ஒன்றிணைத்து,
+அவற்றுக்கு ஒரு பொதுவான முடிவுறு துணைக்கணத்தை எடுத்துக்கொள்ளலாம்.
+$\Gamma_0 \Proves !A$ மற்றும் $\Gamma_0 \Proves !A \lif !B $
+ஆகிய இரண்டையும் கருதுவோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves !A$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !A \lif !B $ & கருதுகோள் \\
+3. & $\Gamma_0 \Proves !B$ & MP 1, 2 \\
+\end{derivation}
+
+% SOURCE CORRECTION TA-FOL-PRV-003: Gamma_1 is absent from this proof.
+$\Gamma_0 \subseteq \Gamma$ என்பதால், $\Gamma \Proves !B$.}}
+
+% prop:provability-lif
+\tagitem{defIf}{}{\iftag{probIf}{பயிற்சி.}{
+முதலில் $\Gamma \Proves \lnot !A$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves \lnot !A$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves \lnot !A \lif (!A \lif !B) $ & Ax0 \\
+3. & $\Gamma_0 \Proves !A \lif !B$ & MP 1, 2 \\
+\end{derivation}
+
+$\Gamma \Proves !B$ என்பதற்கான நிறுவலும் இதேபோன்றது:
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves !B$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves !B \lif (!A \lif !B) $ & Ax0 \\
+3. & $\Gamma_0 \Proves !A \lif !B$ & MP 1, 2 \\
+\end{derivation}}}
+
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0643-S05
+\begin{probtag}{probOr,probAnd,probIf} \olref[fol][axd][prv]{prop:provability}
+இன் நிறுவலை நிறைவு செய்க.
+\end{probtag}
+
+% SEGMENT OLP-0643-S06
+\begin{thm}[பொதுமைப்படுத்தல்] \ollabel{thm:Generalization}
+$\Gamma \Proves !A$ என்றும், $\Gamma$ இல் உள்ள எந்த !!{formula} விலும்
+$x$ கட்டற்றதாக இல்லை என்றும் வைத்துக்கொண்டால், $\Gamma
+\Proves \lforall[x][!A]$.
+\end{thm}
+
+\begin{proof} $\mathsf{Thm}_\Gamma$ மீது தொகுத்தறிதல் செய்வோம். $!A$
+ஓர் அடிகோள் எனில், $\lforall[x][!A]$ உம் ஓர் அடிகோள். $!A\in \Gamma$
+எனில், $!A$ இல் $x$ கட்டற்றதாக இல்லை. ஆகவே $!A \lif
+\lforall[x][!A]$ ஓர் அடிகோள் (\textbf{Ax3}); மோடஸ் போனென்ஸால்
+$\Gamma \Proves \lforall[x][!A]$. இப்போது $\Gamma \Proves !B$ மற்றும்
+$\Gamma \Proves !B \lif !A$ என்பவற்றிலிருந்து மோடஸ் போனென்ஸால் $!A$
+கிடைக்கிறது என்க. தொகுத்தறிதல் கருதுகோளின்படி $\Gamma \Proves
+\lforall[x][!B]$ மற்றும் $\Gamma \Proves \lforall[x][( !B \lif
+!A)]$. மேலும் \textbf{Ax2} இன்படி
+\[ \Gamma \Proves
+\lforall[x][( !B \lif !A)] \lif (\lforall[x][ !B] \lif \lforall[x][!A]), \]
+எனவே மோடஸ் போனென்ஸை இருமுறை பயன்படுத்தினால், தேவையானபடி
+$\Gamma \Proves \lforall[x][!A]$ கிடைக்கும்.
+\end{proof}
+
+% SEGMENT OLP-0643-S07
+\begin{thm}\ollabel{thm:WeakGen} (\emph{மாறிலிக் குறிகள் குறித்த பலவீனமான
+பொதுமைப்படுத்தல்})
+$\Gamma \Proves !A$ என்றும், $c$ என்பது $\Gamma$ இல் தோன்றாத
+!!a{constant} என்றும் வைத்துக்கொள்வோம். அப்போது $!A$ இல் தோன்றாத
+ஒரு மாறி~$x$ உண்டு; அதற்கு $\Gamma \Proves
+\lforall[x][\Subst{!A}{x}{c}]$. மேலும் இந்த நிறுவலில் $c$ இடம்பெறாது.
+\end{thm}
+
+\begin{proof} $!A_1,\ldots,!A_n$ என்பது $\Gamma$ இலிருந்து $!A$ க்கான
+நிறுவல் என்றும் $!A=!A_n$ என்றும் கொள்வோம். $!A_1,\ldots,!A_n$ இல்
+தோன்றாத மாறி~$x$ ஐத் தேர்ந்தெடுத்து, புதிய வரிசையைக் கருதுவோம்:
+$\Subst{!A_1}{x}{c},\ldots,\Subst{!A_n}{x}{c}.$
+இந்த வரிசை $\Gamma$ இலிருந்து $\Subst{!A}{x}{c}$ க்கான நிறுவல்.
+உண்மையில், ஒவ்வொரு $i=1,\ldots,n$ க்கும்:
+\begin{itemize}
+% SOURCE CORRECTION TA-FOL-PRV-004: the axiom case concerns A_i.
+\item $!A_i$ ஓர் அடிகோள் எனில், $\Subst{!A_i}{x}{c}$ உம் அடிகோளே;
+\item $!A_i \in \Gamma$ எனில், $c$ ஆனது $\Gamma$ இல் இல்லாததால்,
+$\Subst{!A_i}{x}{c} = !A_i \in \Gamma$;
+\item $!A_j$ மற்றும் $!A_j \lif !A_i$ ஆகியவற்றிலிருந்து $!A_i$
+பெறப்பட்டிருந்தால், $\Subst{!A_j}{x}{c}$ மற்றும்
+$\Subst{(!A_j \lif !A_i)}{x}{c}
+= \Subst{!A_j}{x}{c} \lif \Subst{!A_i}{x}{c}$ ஆகியவற்றிலிருந்து
+மோடஸ் போனென்ஸால் $\Subst{!A_i}{x}{c}$ கிடைக்கும்.
+\end{itemize}
+புதிய வரிசையில் !!{constant}~$c$ இனி தோன்றாது. இப்போது
+$\Subst{!A}{x}{c}$ இன் !!{derivation} இல் இடம்பெறும் $\Gamma$ வின்
+!!{formula}s அனைத்தையும் கொண்டது $\Gamma'$ என்க. அப்போது $\Gamma'$ இன்
+எந்த !!{formula} விலும் $x$ கட்டற்றதாக இல்லை; மேலும் $\Gamma'
+\Proves \Subst{!A}{x}{c}$. பொதுமைப்படுத்தலின்படி
+(\olref{thm:Generalization}), $\Gamma'
+\Proves \lforall[x][\Subst{!A}{x}{c}]$; ஒருபோக்குத்தன்மையால்
+தேவையானபடி $\Gamma \Proves \lforall[x][\Subst{!A}{x}{c}]$.
+\end{proof}
+
+% SEGMENT OLP-0643-S08
+\begin{explain}
+\olref{thm:WeakGen} இல் $x$ ஆனது $!A$ இல் எங்குமே தோன்றக் கூடாது
+என்ற நிபந்தனை உள்ளது. அதற்குப் பதிலாக, $x$ ஆனது $!A$ இல் கட்டற்றதாக
+இருக்கக் கூடாது என்றும், $!A$ இல் $c$ க்காக !!{free for} ஆக இருக்க
+வேண்டும் என்றும் கூறும் மெலிந்த நிபந்தனைகளைப் பெறுவதே நமது நோக்கம்.
+கட்டுண்ட !!{variable} யை மாற்றுவதன் மூலம் இதைச் செய்யலாம்; அதை முதலில்
+நிறுவுவோம்.
+\end{explain}
+
+% SEGMENT OLP-0643-S09
+\begin{lem}
+\ollabel{lem:free-for}
+$!A$ இல் $c$ க்காக $x$ இடைநிறுத்தத்தக்கதாகவும், $!A$ இல் $y$
+கட்டற்றதாக இல்லாமலும் இருந்தால், $\Subst{!A}{y}{c}$ இல் $y$ க்காக $x$
+!!{free for} ஆகும்.
+\end{lem}
+
+\begin{proof}
+% SOURCE CORRECTION TA-FOL-PRV-005: test the same substituted formula
+% as in the lemma statement and the following sentence.
+$\Subst{!A}{y}{c}$ இல் $y$ க்காக $x$ !!{free for} ஆகவில்லை என்க.
+அப்போது $\Subst{!A}{y}{c}$ இல் கட்டற்றதாகத் தோன்றும் $y$ வின் ஓர்
+இடம், $\lforall[x]$ என்ற அளவையடையின் ஆளுகைக்குள் இருக்கும். ஆனால்
+கருதுகோளின்படி $!A$ இல் $y$ கட்டற்றதாக இல்லை. எனவே அவ்விடங்கள் அனைத்தும்
+$\Subst{}{y}{c}$ என்ற இடைநிறுத்தலிலிருந்து வந்தவை. ஆகவே $c$ இன் ஓர்
+இடம் $\lforall[x]$ இன் ஆளுகைக்குள் உள்ளது; அதனால் $!A$ இல் $c$
+க்காக $x$ !!{free for} ஆகாது.
+\end{proof}
+
+% SEGMENT OLP-0643-S10
+\begin{lem}[கட்டுண்ட மாறியை மாற்றுதல்]
+\ollabel{lem:ChangeBdVar}
+$!A$ இல் $x$, $y$ இரண்டும் கட்டற்றதாக இல்லாமல், இரண்டும் $!A$ இல் $c$
+க்காக !!{free for} ஆக இருந்தால்,
+$\Proves \lforall[x][\Subst{!A}{x}{c}] \equiv
+\lforall[y][\Subst{!A}{y}{c}]$; இந்த நிறுவலில் $c$ இடம்பெறாது.
+\end{lem}
+
+\begin{proof}
+கருதுகோள்களின்படி $!A$ இல் $c$ க்காக $y$ !!{free for} ஆகும்;
+$!A$ இல் $x$ கட்டற்றதாக இல்லை. எனவே முந்தைய
+\olref{lem:free-for} படி, $\Subst{!A}{x}{c}$ இல் $x$ க்காக $y$
+!!{free for} ஆகும். ஆகவே
+$\lforall[x][\Subst{!A}{x}{c} \lif \Subst{!A}{x}{c} \Subst{}{y}{x}]$
+ஓர் அடிகோள் (\textbf{Ax1}). $!A$ இல் $x$ கட்டற்றதாக இல்லாததால்,
+$\Subst{!A}{x}{c} \Subst{}{y}{x} = \Subst{!A}{y}{c}$. எனவே
+\[
+\Proves \lforall[x][\Subst{!A}{x}{c}] \lif \Subst{!A}{y}{c},
+\]
+கழித்தல் தேற்றத்தால் $\lforall[x][\Subst{!A}{x}{c}] \Proves
+\Subst{!A}{y}{c}$. மேலும் $!A$ இல் $y$ கட்டற்றதாக இல்லாததால்,
+$\lforall[x][\Subst{!A}{x}{c}]$ இலும் அது கட்டற்றதாக இல்லை. எனவே
+பொதுமைப்படுத்தலால்
+$\lforall[x][\Subst{!A}{x}{c}] \Proves
+\lforall[y][\Subst{!A}{y}{c}]$; கழித்தல் தேற்றத்தை மீண்டும்
+பயன்படுத்தினால் $\Proves
+\lforall[x][\Subst{!A}{x}{c}] \lif \lforall[y][\Subst{!A}{y}{c}]$.
+$\Proves \lforall[y][\Subst{!A}{y}{c}] \lif \lforall[x]
+[\Subst{!A}{x}{c}]$ என்பதற்கான நிறுவல் இதன் சமச்சீரான வடிவமே.
+ஆகவே தர்க்கமெய்மையால் முடிவு கிடைக்கிறது.
+\end{proof}
+
+% SEGMENT OLP-0643-S11
+\begin{thm}[மாறிலிக் குறிகளின் வலிமையான பொதுமைப்படுத்தல்]
+\ollabel{thm:StrongGen}
+$\Gamma \Proves !A$ என்றும், !!{constant}~$c$ ஆனது $\Gamma$ இல்
+தோன்றாது என்றும், $x$ ஆனது $!A$ இல் கட்டற்றதாக இல்லாமல் $!A$ இல் $c$
+க்காக !!{free for} ஆகும் என்றும் வைத்துக்கொள்வோம். அப்போது
+$\Gamma \Proves \lforall[x][\Subst{!A}{x}{c}]$.
+\end{thm}
+
+\begin{proof}
+$\Gamma \Proves !A$ என்றும் $c$ ஆனது $\Gamma$ இல் இல்லை என்றும்
+கொண்டால், பலவீனமான பொதுமைப்படுத்தலால் $!A$ இல் தோன்றாத
+!!a{variable}~$y$ ஒன்று உண்டு; அதற்கு $\Gamma \Proves
+\lforall[y][\Subst{!A}{y}{c}]$. $!A$ இல் $y$ எங்குமே தோன்றாததால்,
+அது $!A$ இல் கட்டற்றதாகவும் இல்லை; $!A$ இல் $c$ க்காக
+!!{free for} ஆகவும் இருக்கிறது. மேலும், கருதுகோளின்படி $x$ உம்
+$!A$ இல் கட்டற்றதாக இல்லாமல் $!A$ இல் $c$ க்காக !!{free for} ஆகிறது.
+எனவே கட்டுண்ட !!{variable} யை மாற்றுவதற்கான நிபந்தனைகள் நிறைவேறுகின்றன:
+$\Proves \lforall[x][\Subst{!A}{x}{c}] \equiv
+\lforall[y][\Subst{!A}{y}{c}]$. இதிலிருந்து $\Gamma \Proves
+\lforall[x][\Subst{!A}{x}{c}]$ கிடைக்கும்.
+\end{proof}
+
+% SEGMENT OLP-0643-S12
+\begin{thm}
+\ollabel{thm:provability-quantifiers}
+\begin{tagenumerate}{prvEx,prvAll}
+\tagitem{prvEx}{$\Gamma \Proves !A(t)$ எனில், $\Gamma \Proves
+  \lexists[x][!A(x)]$.}{}
+\tagitem{prvAll}{$\Gamma \Proves \lforall[x][!A(x)]$ எனில், $\Gamma
+  \Proves !A(t)$.}{}
+\end{tagenumerate}
+\end{thm}
+
+\begin{proof}
+\begin{tagenumerate}{prvEx,prvAll}
+%% இருப்பளவைக்கான அடிகோள்கள் தேவை
+\tagitem{prvEx}{பயிற்சி.}{}
+\tagitem{prvAll}{ $\Gamma_0 \Proves \lforall[x][!A(x)]$ எனக் கொள்வோம்.
+
+\begin{derivation}
+1. & $\Gamma_0 \Proves \lforall[x][!A(x)]$ & கருதுகோள் \\
+2. & $\Gamma_0 \Proves \lforall[x][!A(x)] \lif \Subst{!A}{t}{x}$ & Ax1 \\
+3. & $\Gamma_0 \Proves \Subst{!A}{t}{x}$ & MP 1, 2 \\
+\end{derivation}}{}
+
+\end{tagenumerate}
+\end{proof}
+
+
+% END SOURCE UNIT OLP-0643
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0644}\par
+
+% BEGIN SOURCE UNIT OLP-0644 content/first-order-logic/completeness/maximally-consistent-sets.tex
+% Exact modular target bytes: 12622; SHA256: e1042903b8d8d8a517a7e31e0903af09a8d0bc28810fdae6b6902cac093a7437
+% SEGMENT OLP-0644-S01
+
+
+\olfileid{fol}{com}{mcs}
+\olsection{அதிகபட்ச முரணற்ற \usetoken{P}{sentence}-கணங்கள்}
+
+\begin{defn}[அதிகபட்ச முரணற்ற கணம்]
+\ollabel{mcs}
+!!{sentence}s கொண்ட கணம்~$\Gamma$, பின்வரும் இரண்டு நிபந்தனைகளும்
+நிறைவேறினால், அப்போதும் அப்போது மட்டுமே \emph{அதிகபட்ச முரணற்றது}:
+\begin{enumerate}
+\item $\Gamma$ முரணற்றது; மேலும்
+\item $\Gamma \subsetneq \Gamma'$ எனில், $\Gamma'$ முரணுடையது.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0644-S02
+\begin{explain}
+மேலுள்ளதற்குச் சமானமான மற்றொரு வரையறை இதுதான்: வாக்கியக்
+கணம்~$\Gamma$, பின்வரும் இரண்டு நிபந்தனைகளும் நிறைவேறினால்,
+அப்போதும் அப்போது மட்டுமே \emph{அதிகபட்ச முரணற்றது}:
+\begin{enumerate}
+\item $\Gamma$ முரணற்றது; மேலும்
+\item $\Gamma \cup \{ !A \}$ முரணற்றது எனில், $!A \in \Gamma$.
+\end{enumerate}
+வேறு சொற்களில், ஏற்கெனவே~$\Gamma$ இல் இல்லாத !!{sentence}s ஐ
+அதிகபட்ச முரணற்ற கணம்~$\Gamma$ உடன் சேர்த்தால், அதன் விளைவான பெரிய கணம்
+முரணுடையதாகிவிடும்.
+\end{explain}
+
+% SEGMENT OLP-0644-S03
+\begin{explain}
+நிறைவு நிறுவலில் அதிகபட்ச முரணற்ற கணங்கள் முக்கியமானவை. ஏனெனில்,
+!!{sentence}s கொண்ட எந்த முரணற்ற கணம்~$\Gamma$ உம் ஓர் அதிகபட்ச
+முரணற்ற கணம்~$\Gamma^*$ இல் அடங்கும் என்பதை உறுதிசெய்யலாம். மேலும்,
+அதிகபட்ச முரணற்ற கணம், ஒவ்வொரு !!{sentence}~$!A$ க்கும் $!A$
+அல்லது அதன் மறுப்பு~$\lnot !A$ இவற்றில் ஒன்றைக் கொண்டிருக்கும்.
+இது குறிப்பாக அணு !!{sentence}s க்கும் பொருந்துகிறது. எனவே
+!!{constant}s ஐ ஏற்றவாறு சேர்த்து விரிவாக்கிய மொழியில் உள்ள
+அதிகபட்ச முரணற்ற கணத்திலிருந்து, எந்த அணு !!{sentence}s ஆனவை
+$\Gamma^*$ இல் உள்ளன என்பதன்படி !!{predicate}s இன் பொருள்விளக்கம்
+வரையறுக்கப்படும் !!a{structure} ஒன்றைக் கட்டமைக்கலாம். இந்த
+!!{structure} ஆனது~$\Gamma^*$ இல் உள்ள அனைத்து !!{sentence}s ஐயும்
+(ஆகவே~$\Gamma$ இல் உள்ள அனைத்தையும்) மெய்யாக்கும் என்று பின்னர்
+காட்டலாம். இந்தப் பின்னைய கூற்றை நிறுவ, $\lnot !A \in
+\Gamma^*$ அப்போதும் அப்போது மட்டுமே $!A \notin \Gamma^*$;
+$(!A \lor !B) \in \Gamma^*$ அப்போதும் அப்போது மட்டுமே $!A
+\in \Gamma^*$ அல்லது $!B \in \Gamma^*$; இதுபோன்ற பண்புகள் தேவை.
+\end{explain}
+
+% SEGMENT OLP-0644-S04
+\begin{prop}
+\ollabel{prop:mcs}
+$\Gamma$ அதிகபட்ச முரணற்றது என்க. அப்போது:
+\begin{enumerate}
+\item \ollabel{prop:mcs-prov-in} $\Gamma \Proves !A$ எனில், $!A \in
+  \Gamma$.
+
+\item \ollabel{prop:mcs-either-or} எந்த $!A$ க்கும், $!A \in
+  \Gamma$ அல்லது $\lnot !A \in \Gamma$.
+
+\tagitem{prvAnd}{\ollabel{prop:mcs-and} $(!A \land !B) \in \Gamma$
+  அப்போதும் அப்போது மட்டுமே $!A \in \Gamma$, $!B \in \Gamma$ இரண்டும்.}{}
+
+\tagitem{prvOr}{\ollabel{prop:mcs-or} $(!A \lor !B) \in \Gamma$
+  அப்போதும் அப்போது மட்டுமே $!A \in \Gamma$ அல்லது $!B \in \Gamma$.}{}
+
+\tagitem{prvIf}{\ollabel{prop:mcs-if} $(!A \lif !B) \in \Gamma$
+  அப்போதும் அப்போது மட்டுமே $!A \notin \Gamma$ அல்லது $!B \in \Gamma$.}{}
+\end{enumerate}
+\end{prop}
+
+% SEGMENT OLP-0644-S05
+\begin{proof}
+பின்வரும் அனைத்திலும் $\Gamma$ அதிகபட்ச முரணற்றது எனக் கொள்வோம்.
+\begin{enumerate}
+\item $\Gamma \Proves !A$ எனில், $!A \in \Gamma$.
+
+$\Gamma \Proves !A$ என்க. இதற்கு மாறாக $!A
+\notin \Gamma$ எனக் கொள்வோம். $\Gamma$ அதிகபட்ச முரணற்றது என்பதால்,
+$\Gamma \cup \{!A\}$ முரணுடையது; எனவே $\Gamma \cup \{!A\} \Proves
+\lfalse$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:prv:prop:provability-contr},prfND/{fol:ntd:prv:prop:provability-contr}},
+$\Gamma$ முரணுடையது. இது $\Gamma$ முரணற்றது என்ற கருதுகோளுக்கு
+முரணாகும். ஆகவே $!A \notin
+\Gamma$ என்பது இயலாது; எனவே $!A \in \Gamma$.
+
+\item எந்த $!A$ க்கும், $!A \in \Gamma$ அல்லது $\lnot !A \in \Gamma$.
+
+இதற்கு மாறாக, ஏதோ~$!A$ க்கு $!A \notin \Gamma$ மற்றும்
+$\lnot !A \notin \Gamma$ இரண்டும் எனக் கொள்வோம். $\Gamma$ அதிகபட்ச
+முரணற்றது என்பதால், $\Gamma \cup \{!A\}$ மற்றும்
+$\Gamma \cup \{\lnot !A\}$ இரண்டும் முரணுடையவை. எனவே
+$\Gamma \cup \{!A\} \Proves \lfalse$ மற்றும் $\Gamma \cup
+\{\lnot !A\} \Proves \lfalse$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:prv:prop:provability-exhaustive},prfND/{fol:ntd:prv:prop:provability-exhaustive}},
+$\Gamma$ முரணுடையது; இது முரண்பாடு. ஆகவே அத்தகைய
+!!a{sentence}~$!A$ இருக்க முடியாது. இதனால் ஒவ்வொரு $!A$ க்கும்,
+$!A \in \Gamma$ அல்லது $\lnot !A
+\in \Gamma$.
+
+% SEGMENT OLP-0644-S06
+\tagitem{defAnd}{}{%
+\iftag{probAnd}{பயிற்சி.}{%
+$(!A \land !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+$!A \in \Gamma$, $!B \in \Gamma$ இரண்டும்:
+
+முன்னோக்கிய திசைக்கு, $(!A \land !B) \in \Gamma$ என்க. அப்போது
+$\Gamma \Proves !A \land !B$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-land-left},prfND/{fol:ntd:ppr:prop:provability-land-left}},
+$\Gamma \Proves !A$ மற்றும் $\Gamma \Proves !B$. தேவையானவாறு,
+\olref{prop:mcs-prov-in} படி $!A \in \Gamma$ மற்றும் $!B \in \Gamma$.
+
+மறுதிசைக்கு, $!A \in \Gamma$ மற்றும் $!B \in
+\Gamma$ என்க. அப்போது $\Gamma \Proves !A$ மற்றும்
+$\Gamma \Proves !B$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-land-right},prfND/{fol:ntd:ppr:prop:provability-land-right}},
+$\Gamma \Proves !A \land !B$. \olref{prop:mcs-prov-in} படி,
+$(!A \land !B) \in \Gamma$.}}
+
+% SEGMENT OLP-0644-S07
+\tagitem{defOr}{}{%
+\iftag{probOr}{பயிற்சி.}{%
+$(!A \lor !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+$!A \in \Gamma$ அல்லது $!B \in \Gamma$.
+
+முன்னோக்கிய திசையின் எதிர்மறைநேர்மாற்றை நிறுவ, $!A
+\notin \Gamma$ மற்றும் $!B \notin \Gamma$ என்க. நாம் $(!A \lor
+!B) \notin \Gamma$ என்பதைக் காட்ட வேண்டும். $\Gamma$ அதிகபட்ச
+முரணற்றது என்பதால், $\Gamma \cup \{!A\} \Proves \lfalse$ மற்றும்
+$\Gamma \cup \{!B\} \Proves \lfalse$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lor},prfND/{fol:ntd:ppr:prop:provability-lor}},
+$\Gamma \cup \{(!A \lor !B)\}$ முரணுடையது. ஆகவே தேவையானபடி,
+$(!A \lor !B)
+\notin \Gamma$.
+
+மறுதிசைக்கு, $!A \in \Gamma$ அல்லது $!B \in
+\Gamma$ என்க. அப்போது $\Gamma \Proves !A$ அல்லது
+$\Gamma \Proves !B$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lor},prfND/{fol:ntd:ppr:prop:provability-lor}},
+$\Gamma \Proves !A \lor !B$. \olref{prop:mcs-prov-in} படி,
+தேவையானபடி $(!A \lor
+!B) \in \Gamma$.}}
+
+% SEGMENT OLP-0644-S08
+\tagitem{defIf}{}{%
+\iftag{probIf}{பயிற்சி.}{%
+$(!A \lif !B) \in \Gamma$ அப்போதும் அப்போது மட்டுமே
+$!A \notin \Gamma$ அல்லது $!B \in \Gamma$:
+
+முன்னோக்கிய திசைக்கு, $(!A \lif !B) \in \Gamma$ என்க. இதற்கு
+மாறாக $!A \in \Gamma$ மற்றும் $!B \notin \Gamma$ எனக் கொள்வோம்.
+இந்தக் கருதுகோள்களின்படி $\Gamma \Proves !A \lif !B$ மற்றும்
+$\Gamma \Proves !A$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif-left},prfND/{fol:ntd:ppr:prop:provability-lif-left}},
+$\Gamma \Proves !B$. ஆனால் \olref{prop:mcs-prov-in} படி $!B \in
+\Gamma$; இது $!B \notin \Gamma$ என்ற கருதுகோளுக்கு முரணாகும்.
+
+மறுதிசையில், முதலில் $!A \notin
+\Gamma$ என்ற நிலையை எடுத்துக்கொள்வோம். \olref{prop:mcs-either-or}
+படி $\lnot !A \in \Gamma$; ஆகவே $\Gamma \Proves \lnot !A$.
+பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif-right},prfND/{fol:ntd:ppr:prop:provability-lif-right}},
+$\Gamma \Proves !A \lif !B$. மீண்டும் \olref{prop:mcs-prov-in}
+படி, தேவையானபடி $(!A \lif !B) \in \Gamma$.
+
+இப்போது $!B \in \Gamma$ என்ற நிலையை எடுத்துக்கொள்வோம். அப்போது
+$\Gamma \Proves !B$. பின்வரும் மேற்கோளின்படி,
+\tagrefs{prfSC/{fol:seq:ppr:prop:provability-lif-right},prfND/{fol:ntd:ppr:prop:provability-lif-right}},
+$\Gamma \Proves !A \lif !B$. \olref{prop:mcs-prov-in} படி,
+$(!A \lif
+!B) \in \Gamma$.}}
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0644-S09
+\begin{prob}
+\olref[fol][com][mcs]{prop:mcs} இன் நிறுவலை நிறைவு செய்க.
+\end{prob}
+
+
+% END SOURCE UNIT OLP-0644
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0645}\par
+
+% BEGIN SOURCE UNIT OLP-0645 content/first-order-logic/syntax-and-semantics/introduction.tex
+% Exact modular target bytes: 9518; SHA256: a378bf53bd76cc2760151e8a96f14ce8d19cb70d00689ae781150bcc98ae6b4f
+
+
+
+% SEGMENT OLP-0645-S01
+\olfileid{fol}{syn}{int}
+
+\olsection{அறிமுகம்}
+
+% SEGMENT OLP-0645-S02
+முதல்தர தருக்கத்தின் கோட்பாட்டையும் மேல்கோட்பாட்டையும் வளர்க்க, அதன்
+வெளிப்பாடுகளின் தொடரமைப்பையும் பொருண்மையியலையும் முதலில் வரையறுக்க வேண்டும்.
+முதல்தர தருக்கத்தின் வெளிப்பாடுகள் சொற்களும் !!{formula}s உம் ஆகும். சொற்கள்
+!!{variable}s, !!{constant}s மற்றும் !!{function}s ஆகியவற்றிலிருந்து
+உருவாக்கப்படுகின்றன. !!^{formula}s, மறுபுறம், !!{predicate}s மற்றும் சொற்களுடன்
+சேர்ந்து உருவாகின்றன (இவை மிகச் சிறிய, ``அணு'' !!{formula}s); பின்னர் அணு
+!!{formula}s இலிருந்து தருக்கத் தொடுப்புக்குறிகளையும் அளவையடைகளையும் கொண்டு
+மிகச் சிக்கலானவற்றை உருவாக்கலாம். உருவாக்க விதிகளை எழுதுவதற்குப் பல வழிகள்
+உள்ளன; அவற்றில் ஒரு சாத்தியமான வழியை மட்டுமே தருகிறோம். பிற அமைப்புகள்
+வேறு குறிகளைத் தேர்ந்தெடுக்கலாம், முதன்மையான தொடுப்புக்குறிகளின் வேறு
+தொகுப்பைத் தேர்ந்தெடுக்கலாம், அடைப்புக்குறிகளை வேறுவிதமாகப் பயன்படுத்தலாம்
+(அல்லது போலிஷ் குறியீட்டில் போல அவற்றைப் பயன்படுத்தாமலும் இருக்கலாம்).
+எல்லா அணுகுமுறைகளுக்கும் பொதுவானது என்னவென்றால், உருவாக்க விதிகள் சொற்களின்
+மற்றும் !!{formula}s இன் தொகுப்பை \emph{தொகுத்தறிதல் வழியாக} வரையறுக்கின்றன.
+அது முறையாகச் செய்யப்பட்டால், ஒவ்வொரு வெளிப்பாடும் உருவாக்க விதிகளின்படி
+அடிப்படையில் ஒரே ஒரு வழியில் மட்டுமே பெறப்படும். வெளிப்பாடுகள்
+\emph{தனித்த வாசிப்புடையவை} ஆகும் என்ற இந்தத் தொகுத்தறிதல் வரையறை,
+அதே முறையை---தொகுத்தறிதல் வரையறையைப் பயன்படுத்தி---அவற்றுக்கு
+பொருள்களையும் வழங்க வழி செய்கிறது.
+
+% SEGMENT OLP-0645-S03
+வெளிப்பாடுகளுக்குப் பொருள் வழங்குவது பொருண்மையியலின் களம். பொருண்மையியலின்
+மையக் கருத்து !!a{structure} இல் நிறைவுறுத்தல். !!^a{structure} மொழியின்
+கட்டுமானக் கூறுகளுக்குப் பொருள் வழங்குகிறது: !!a{domain} என்பது வெறுமையற்ற
+பொருட்களின் தொகுப்பு. அளவையடைகள் இப்பொருட்களத்தில் இயங்குவதாகப்
+பொருள்படுத்தப்படுகின்றன; !!{constant}s பொருட்களத்தின் உறுப்புகளுக்கு
+ஒதுக்கப்படுகின்றன; !!{function}s !!{domain} இலிருந்து அதற்கே செல்லும்
+சார்புகளுக்கு ஒதுக்கப்படுகின்றன; !!{predicate}s !!{domain} மீது உள்ள
+தொடர்புகளுக்கு ஒதுக்கப்படுகின்றன. !!{domain} மற்றும் அடிப்படைச்
+சொற்களஞ்சியத்திற்கான ஒதுக்கீடுகள் சேர்ந்து !!a{structure} ஐ உருவாக்குகின்றன.
+!!^{variable}s !!{formula}s இல் தோன்றலாம்; அவற்றுக்கு பொருண்மையியல்
+வழங்க, !!{domain} இன் !!{element}s ஐ அவற்றுக்கும் ஒதுக்க வேண்டும்---இதுவே
+மாறி ஒதுக்கீடு. இறுதியாக, நிறைவுறுத்தல் தொடர்பு இக்கூறுகளை ஒன்றிணைக்கிறது.
+!!^a{formula} ஒன்று !!a{structure}~$\Struct{M}$ இல்,
+மாறி ஒதுக்கீடு~$s$ சார்பாக நிறைவுறுத்தப்படலாம்; இதை
+$\Sat{M}{!A}[s]$ என்று எழுதுகிறோம். இத்தொடர்பும்~$!A$ இன் கட்டமைப்பின்
+மீது தொகுத்தறிதலால் வரையறுக்கப்படுகிறது; உதாரணமாக, தருக்கத் தொடுப்புக்குறிகளின்
+மெய்மை அட்டவணைகளைப் பயன்படுத்தி $!A \land !B$ இன் நிறைவுறுத்தலை
+$!A$ மற்றும் ~$!B$ ஆகியவற்றின் நிறைவுறுத்தல் (அல்லது நிறைவுறுத்தாமை) அடிப்படையில்
+வரையறுக்கிறோம். மாறி ஒதுக்கீடு, !!{formula}~$!A$
+!!a{sentence} ஆக, அதாவது கட்டற்ற மாறிகள் இல்லாததாக, இருந்தால் பொருத்தமற்றது
+என்பது பின்னர் தெரியவரும்; எனவே !!{sentence}s !!{structure}s இல்
+வெறுமனே நிறைவுறுத்தப்படுகின்றனவா இல்லையா என்று பேசலாம்.
+
+% SEGMENT OLP-0645-S04
+வாக்கியங்களுக்கான நிறைவுறுத்தல் தொடர்பு~$\Sat{M}{!A}$ அடிப்படையில்,
+செல்லுபடியாகும் தன்மை, உட்கிடை, நிறைவுசெய்யத்தக்க தன்மை ஆகிய அடிப்படைப்
+பொருண்மையியல் கருத்துகளை வரையறுக்கலாம். ஒரு வாக்கியம் செல்லுபடியாகும்,
+$\Entails !A$, எனில் ஒவ்வொரு கட்டமைப்பும் அதை நிறைவுறுத்தும்.
+!!{sentence}s கொண்ட ஒரு கணத்தால் அது உட்கிடையாகிறது,
+$\Gamma \Entails !A$, எனில்~$\Gamma$ இல் உள்ள எல்லா !!{sentence}s ஐயும்
+நிறைவுறுத்தும் ஒவ்வொரு !!{structure} உம்~$!A$ ஐயும் நிறைவுறுத்தும்.
+மேலும், வாக்கியங்கள் கொண்ட ஒரு கணம் நிறைவுசெய்யத்தக்கது எனில், அதிலுள்ள
+எல்லா !!{sentence}s ஐயும் ஒரே நேரத்தில் நிறைவுறுத்தும் !!{structure} ஒன்று
+உள்ளது. !!{formula}s தொகுத்தறிதலால் வரையறுக்கப்பட்டுள்ளன; நிறைவுறுத்தலும்
+!!{formula}s இன் கட்டமைப்பின் மீது தொகுத்தறிதலால் வரையறுக்கப்படுகிறது.
+எனவே, நமது பொருண்மையியலின் பண்புகளை நிறுவவும் வரையறுக்கப்பட்ட
+பொருண்மையியல் கருத்துகளைத் தொடர்புபடுத்தவும் தொகுத்தறிதலைப் பயன்படுத்தலாம்.
+
+
+% END SOURCE UNIT OLP-0645
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0646}\par
+\begingroup
+\TADriverHeadingMode
+\olchapterid{fol}{syn}
+
+% BEGIN SOURCE UNIT OLP-0646 content/first-order-logic/syntax-and-semantics/syntax-and-semantics.tex
+% Exact modular target bytes: 718; SHA256: 8d0f26f61639efd51a2de832519cf54920e61a5b7646501c72eebdbd29347bf3
+
+
+
+% SEGMENT OLP-0646-S01
+\olchapter{fol}{syn}{தொடரமைப்பும் பொருண்மையியலும்}
+
+\TADriverImport{introduction}
+
+\TADriverImport{first-order-languages}
+
+\TADriverImport{terms-formulas}
+
+\TADriverImport{unique-readability}
+
+\TADriverImport{main-operator}
+
+\TADriverImport{subformulas}
+
+\TADriverImport{formation-sequences}
+
+\TADriverImport{free-vars-sentences}
+
+\TADriverImport{substitution}
+
+\TADriverImport{structures}
+
+\TADriverImport{covered-structures}
+
+\TADriverImport{satisfaction}
+
+\TADriverImport{assignments}
+
+\TADriverImport{extensionality}
+
+\TADriverImport{semantic-notions}
+
+\OLEndChapterHook
+
+
+% END SOURCE UNIT OLP-0646
+
+\endgroup
+
+
+\chapter{பிற தருக்கப் பகுதிகள்}
+% The definition of C precedes the theorem about representability in Q.
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0648}\par
+
+% BEGIN SOURCE UNIT OLP-0648 content/incompleteness/representability-in-q/c.tex
+% Exact modular target bytes: 2711; SHA256: 4e9682d78ec1d51f5e174542b12cb12d7b966265b9aca73a2d99c44d2aac6b7c
+
+
+
+% SEGMENT OLP-0648-S01
+\olfileid{inc}{req}{cee}
+\olsection{சார்புக் கணம் $C$}
+
+$C$ என்பது பின்வருவனவற்றைக் கொண்ட மிகச் சிறிய சார்புக் கணமாக இருக்கட்டும்:
+\begin{enumerate}
+\item $0$,
+\item அடுத்தெண்,
+\item கூட்டல்,
+\item பெருக்கல்,
+\item வீழ்த்தல்கள், மற்றும்
+\item சமத்துவத்தின் சிறப்பியல்புச் சார்பு, $\Char{=}$;
+\end{enumerate}
+மேலும் பின்வருவனவற்றின் கீழ் அது மூடப்பட்டிருக்கட்டும்:
+\begin{enumerate}
+\item சேர்ப்பு, மற்றும்
+\item ஒழுங்கான சார்புகளுக்குப் பயன்படுத்தப்படும் வரம்பற்ற தேடல்.
+\end{enumerate}
+
+% SEGMENT OLP-0648-S02
+கடைசிக் கட்டுப்பாட்டின் பொருள், விளைவு எங்கும் வரையறுக்கப்பட்டதாக
+இருக்கும்போது மட்டுமே $\mu$ செயல்பாட்டைப் பயன்படுத்தலாம் என்பதே.
+இதைப் \emph{பொது மீள்வரையறைச்} சார்புகளின் வரையறையுடன் ஒப்பிடுக:
+இங்கு கூட்டல், பெருக்கல், $\Char{=}$ ஆகியவற்றைச் சேர்த்துள்ளோம்;
+ஆனால் அடிப்படை மீள்வரையறையை நீக்கியுள்ளோம்.
+
+கூட்டல், பெருக்கல், $\Char{=}$ ஆகியவை மீள்வரையறைச் சார்புகள் என்பதால்,
+$C$ இலுள்ள அனைத்தும் மீள்வரையறைச் சார்புகளே என்பது தெளிவு.
+இதன் மறுதிசையும் உண்மை என்று காட்டுவோம்; அதாவது $C$ இல் உள்ள மற்ற
+செயல்முறைகளைக் கொண்டு அடிப்படை மீள்வரையறையைச் செய்ய முடியும்.
+
+
+% END SOURCE UNIT OLP-0648
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0647}\par
+
+% BEGIN SOURCE UNIT OLP-0647 content/incompleteness/representability-in-q/c-representable.tex
+% Exact modular target bytes: 18390; SHA256: 683a5b0e79cebf557b1117c44cf1465fb45b66c9fbf2afe503721fca666d444d
+
+
+
+% SEGMENT OLP-0647-S01
+\olfileid{inc}{req}{cre}
+\olsection{$C$ இலுள்ள சார்புகள் $\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்கவை}
+
+$C$ இலுள்ள ஒவ்வொரு சார்பும் $\Th{Q}$ இல் பிரதிநிதித்துவப்படுத்தத்தக்கது
+என்று நாம் காட்ட வேண்டும். இறுதியில், $C$ இலுள்ள ஒவ்வொரு $k$-இடச்
+சார்பு $f(x_0,\dots,x_{k-1})$ க்கும் அதைப் பிரதிநிதித்துவப்படுத்தும்
+வாய்பாடு $!A_f(x_0,\dots,x_{k-1},y)$ ஒன்றை எவ்வாறு ஒதுக்குவது என்று
+காட்ட வேண்டும்.
+
+% SEGMENT OLP-0647-S02
+\begin{lem}
+இயல் எண்கள் $n$, $m$ கொடுக்கப்பட்டிருக்க, $n \neq m$ எனில்
+$Q \Proves \num n \neq \num m$.
+\end{lem}
+
+% SEGMENT OLP-0647-S03
+\begin{proof}
+ஒவ்வொரு $m$ க்கும், $n \neq m$ எனில்
+$Q \Proves \eq/[\num n][\num m]$ என்று காட்ட $n$ மீது
+தொகுத்தறிதலைப் பயன்படுத்துவோம்.
+
+அடிப்படை நிலையில் $n = 0$. $m$ ஆனது $0$ க்குச் சமமல்ல எனில், ஏதோ
+இயல் எண் $k$ க்கு $m = k + 1$. நம்மிடம்
+$\lforall[x][\eq/[0][x']]$ என்று கூறும் அடிகோள் உள்ளது.
+அளவையடை அடிகோளைப் பயன்படுத்தி $x$ க்குப் பதிலாக $\num k$ ஐ இட்டால்,
+$\eq/[0][\num k']$ என்று முடிக்கலாம். ஆனால் $\num k'$ என்பது
+$\num m$ தான்.
+
+தொகுத்தறிதல் படியில், கூற்று $n$ க்கு உண்மை என்று எடுகொண்டு,
+$n+1$ ஐக் கருதுவோம். $m$ தன்னிச்சையான இயல் எண்ணாக இருக்கட்டும்.
+இரண்டு வாய்ப்புகள் உள்ளன: $m = 0$, அல்லது ஏதோ $k$ க்கு
+$m = k+1$. முதல் நேர்வை மேலே கண்டவாறே கையாளலாம். இரண்டாம் நேர்வில்
+$n+1 \neq k+1$ என்று கொள்க. அப்போது $n \neq k$.
+$n$ க்கான தொகுத்தறிதல் எடுகோளால்
+$\Th{Q} \Proves \eq/[\num n][\num k]$. நம்மிடம்
+$\lforall[x][\lforall[y][\eq[x'][y'] \lif \eq[x][y]]]$
+என்று கூறும் அடிகோள் உள்ளது. அளவையடை அடிகோளைப் பயன்படுத்தி,
+$\eq[\num n'][\num k'] \lif \eq[\num n][\num
+  k]$ ஐப் பெறுகிறோம். கூற்றுத் தருக்கத்தைப் பயன்படுத்தி,
+$\Th{Q}$ இல்
+$\eq/[\num n][\num k] \lif \eq/[\num n'][\num k']$
+என்று முடிக்கலாம். விதிப்படி உட்படுத்தலால்
+$\eq/[\num n'][\num k']$ ஐப் பெறுகிறோம். $\num k'$ என்பது
+$\num m$ என்பதால், இதுவே வேண்டியது.
+\end{proof}
+
+% SEGMENT OLP-0647-S04
+இந்தத் துணைத்தேற்றம் கூறுவது மிக அதிகமல்ல: வெவ்வேறு எண்ணுருக்கள்
+வெவ்வேறு பொருட்களைக் குறிக்கின்றன என்பதை $\Th{Q}$ நிறுவ முடியும்
+என்பதே அதன் சாரம். எடுத்துக்காட்டாக, $0'' \neq 0'''$ ஐ
+$\Th{Q}$ நிறுவுகிறது. ஆனால் இது பொதுவாகப் பொருந்துகிறது என்று
+காட்டுவதற்குச் சற்றுக் கவனம் தேவை. நாம் தொகுத்தறிதலைப் பயன்படுத்தினாலும்,
+அது $\Th{Q}$ க்கு \emph{வெளியே} நடைபெறும் தொகுத்தறிதல் என்பதையும்
+கவனிக்க.
+
+சுழியம், அடுத்தெண், கூட்டல், பெருக்கல், சமத்துவத்தின் சிறப்பியல்புச்
+சார்பு, வீழ்த்தல்கள் ஆகியவற்றை நம்மால் பிரதிநிதித்துவப்படுத்த முடியும்.
+ஒவ்வொரு நேர்விலும் பொருத்தமான பிரதிநிதித்துவ வாய்பாடு முற்றிலும்
+நேரடியானது; எடுத்துக்காட்டாக, சுழியம் பின்வரும் வாய்பாட்டால்
+பிரதிநிதித்துவப்படுத்தப்படுகிறது:
+\[
+y = 0,
+\]
+அடுத்தெண் பின்வரும் வாய்பாட்டால் பிரதிநிதித்துவப்படுத்தப்படுகிறது:
+\[
+x_0' = y,
+\]
+கூட்டல் பின்வரும் வாய்பாட்டால் பிரதிநிதித்துவப்படுத்தப்படுகிறது:
+\[
+x_0 + x_1 = y.
+\]
+தொடர்புடைய கூற்றுகளை $\Th{Q}$ நிறுவ முடியும் என்று காட்டுவதில்தான்
+பணி உள்ளது; எடுத்துக்காட்டாக, மேலுள்ள வாய்பாடு கூட்டலைப்
+பிரதிநிதித்துவப்படுத்துகிறது என்பதற்கு, ஒவ்வோர் இயல் எண் சோடி
+$m$,~$n$ க்கும் $\Th{Q}$ பின்வருவதை நிறுவுகிறது என்று காட்ட வேண்டும்:
+\[
+\eq[\num n + \num m][\num {n+m}]
+\]
+மேலும் பின்வருவதையும் நிறுவுகிறது:
+\[
+\lforall[y][(\eq[(\num n + \num m)][y] \lif \eq[y][\num {n+m}])].
+\]
+
+% SEGMENT OLP-0647-S05
+சேர்ப்பு பற்றி என்ன? $h$ பின்வருமாறு வரையறுக்கப்படுகிறது என்று கொள்க:
+\[
+h(x_0,\dots,x_{l-1}) = f(g_0(x_0,\dots,x_{l-1}), \dots,
+g_{k-1}(x_0,\dots,x_{l-1})).
+\]
+இங்கு $f,g_0,\dots,g_{k-1}$ ஆகிய சார்புகளை முறையே
+பிரதிநிதித்துவப்படுத்தும் $!A_f, !A_{g_0}, \dots,
+!A_{g_{k-1}}$ என்ற வாய்பாடுகளை ஏற்கெனவே கண்டுள்ளோம். அப்போது
+$h$ ஐப் பிரதிநிதித்துவப்படுத்தும் $!A_h$ என்ற வாய்பாட்டை,
+$!A_h(x_0,\dots,x_{l-1},y)$ பின்வருவதாக வரையறுப்பதன் மூலம்
+அமைக்கலாம்:
+% SOURCE CORRECTION TA-INC-041: keep all representing conjuncts in the quantifier scope.
+\begin{multline*}
+  \lexists[z_0\dots][\lexists[z_{k-1}][(!A_{g_0}(x_0,\dots,x_{l-1},z_0) \land
+  \dots \land !A_{g_{k-1}}(x_0,\dots,x_{l-1},z_{k-1}) \land\\
+  !A_f(z_0,\dots,z_{k-1},y))]]
+\end{multline*}
+
+% SEGMENT OLP-0647-S06
+இறுதியாக வரம்பற்ற தேடலைக் கருதுவோம். $g(x,\vec z)$ ஒழுங்கானதாகவும்,
+$!A_g(x,\vec z,y)$ என்ற வாய்பாட்டால் $\Th{Q}$ இல்
+பிரதிநிதித்துவப்படுத்தத்தக்கதாகவும் இருக்கட்டும். $f$ ஆனது
+$f(\vec z) = \mu x \; g(x,\vec z)$ என்பதால் வரையறுக்கப்படட்டும்.
+$f$ ஐப் பிரதிநிதித்துவப்படுத்தும் $!A_f(\vec z,y)$ என்ற
+வாய்பாட்டைக் கண்டறிய விரும்புகிறோம். இயல்பான தேர்வு இதுதான்:
+\[
+!A_f(\vec z,y) \ident !A_g(y,\vec z,0) \land \lforall[w][(w < y
+\lif \lnot !A_g(w,\vec z,0))].
+\]
+
+இது செயல்படுகிறது என்பதைச் சில கூடுதல் துணைத்தேற்றங்களின் உதவியால்
+காட்டலாம்; எடுத்துக்காட்டாக:
+
+\begin{lem}
+  ஒவ்வொரு மாறி $x$ க்கும் ஒவ்வோர் இயல் எண் $n$ க்கும்,
+  $\Th{Q}$ ஆனது $\eq[(x'
+  + \num n)][(x + \num n)']$ ஐ நிறுவுகிறது.
+\end{lem}
+
+இது, $\Th{Q}$ ஆனது
+$\lforall[x][\lforall[y][(x' + y) = (x +y)']]$
+ஐ நிறுவுகிறது என்று கூறுவதைவிட வலுக்குறைந்தது என்பதை மீண்டும்
+குறிப்பிட வேண்டும்; அதை நிறுவ முடியும் என்ற வலுவான கூற்று பொய்.
+
+% SEGMENT OLP-0647-S07
+\begin{proof}
+வழக்கம்போல $n$ மீது தொகுத்தறிதலால் நிறுவுவோம். அடிப்படை நிலையில்
+$n = 0$; $\Th{Q}$ ஆனது
+$\eq[(x'+0)][(x+0)']$ ஐ நிறுவுகிறது என்று காட்ட வேண்டும்.
+ஆனால் நம்மிடம் பின்வருவன உள்ளன:
+\begin{eqnarray*}
+& & \eq[(x' + 0)][x'] \quad \text{அடிகோள் 4 இன்படி} \\
+& & \eq[(x + 0)][x] \quad \text{அடிகோள் 4 இன்படி} \\
+& & \eq[(x+0)'][x'] \quad \text{இரண்டாம் வரியின்படி} \\
+& & \eq[(x' + 0)][(x + 0)'] \quad \text{முதல், மூன்றாம் வரிகளின்படி}
+\end{eqnarray*}
+தொகுத்தறிதல் படியில், $\Th{Q}$ இல்
+$\eq[(x' + \num n)][(x + \num n)']$ ஐ
+வருவித்துள்ளோம் என்று எடுகொள்கிறோம். $\num{n+1}$ என்பது
+$\num n'$ என்பதால், $\Th{Q}$ ஆனது
+$\eq[(x' + \num n')][(x + \num n')']$
+ஐ நிறுவுகிறது என்று காட்ட வேண்டும். பின்வரும் சமத்துவத் தொடரை
+$\Th{Q}$ இல் வருவிக்கலாம்:
+\begin{eqnarray*}
+(x' + \num n') & \eq & (x' + \num n)' \quad \text{அடிகோள் 5 இன்படி} \\
+& \eq & (x + \num n')' \quad \text{தொகுத்தறிதல் எடுகோளின்படி}
+\end{eqnarray*}
+\end{proof}
+
+% SEGMENT OLP-0647-S08
+\begin{lem}
+\begin{enumerate}
+\item $\Th{Q}$ ஆனது $\lnot (x < \num 0)$ ஐ நிறுவுகிறது.
+\item ஒவ்வோர் இயல் எண் $n$ க்கும், $\Th{Q}$ பின்வருவதை நிறுவுகிறது:
+\[
+x < \num {n+1} \lif (\eq[x][\num 0] \lor \dots \lor \eq[x][\num n]).
+\]
+\end{enumerate}
+\end{lem}
+
+% SEGMENT OLP-0647-S09
+\begin{proof}
+1 ஐயும் 2 இன் ஒரு பகுதியையும் முறைசாரா வகையில் நிறுவுவோம்
+(அதாவது முறைசார் !!{derivation} ஐ அமைப்பதற்கான குறிப்புகளை மட்டுமே
+தருவோம்).
+
+1 ஆம் பகுதிக்கு, $<$ இன் வரையறையின்படி
+$\Th{Q}$ இல்
+$\lnot \lexists[y][\eq[(y'+x)][0]]$
+ஐ நிறுவ வேண்டும்; இது முதல்தர தருக்கத்தின் அடிகோள்களையும் விதிகளையும்
+பயன்படுத்தினால்
+$\lforall[y][\eq/[(y' +
+    x)][0]]$
+என்பதற்குச் சமம். எண்ணம் இதுதான்: $\eq[(y'+x)][0]$
+என்று கொள்க. $x$ ஆனது 0 எனில், $\eq[(y' + 0)][0]$
+கிடைக்கும். ஆனால் $\Th{Q}$ இன் அடிகோள் 4 இன்படி
+$\eq[(y' + 0)][y']$; அடிகோள் 2 இன்படி
+$\eq/[y'][0]$; இது முரண்.
+$x$ ஆனது $0$ அல்ல எனில், அடிகோள் 3 இன்படி
+$\eq[x][z']$ ஆகும் $z$ ஒன்று உள்ளது. ஆனால் அப்போது
+$\eq[(y' + z')][0]$ கிடைக்கும். அடிகோள்~5 இன்படி
+$\eq[(y' + z)'][0]$ கிடைக்கிறது; இதுவும் அடிகோள்~2 உடன்
+முரண்படுகிறது. இரு நேர்வுகளிலும்
+$\lforall[y][\eq/[(y' +x)][0]]$ பெறப்படுகிறது.
+
+2 ஆம் பகுதிக்கு, $n$ மீது தொகுத்தறிதலைப் பயன்படுத்துக.
+$n =0$ என்ற அடிப்படை நிலையைக் கருதுவோம். அப்போது
+$x < \num 1 \lif \eq[x][\num
+  0]$ என்று காட்ட வேண்டும். $x < \num 1$ என்க.
+$<$ க்கான வரையறுக்கும் அடிகோளின்படி
+$\lexists[y][\eq[(y'+x)][0']]$ கிடைக்கும்.
+அப்பண்புடைய $y$ ஒன்று இருப்பதாகக் கொள்க; எனவே
+$\eq[y'+x][0']$.
+
+$\eq[x][0]$ என்று காட்ட வேண்டும். அடிகோள் 3 இன்படி,
+$x$ ஆனது 0 அல்ல எனில், அது ஏதோ $z$ க்கு $z'$ ஆகும்.
+அப்போது $\eq[(y' + z')][0']$ கிடைக்கும்.
+$\Th{Q}$ இன் அடிகோள்~5 இன்படி
+$\eq[(y'+z)'][0']$ கிடைக்கும். அடிகோள் 1 இன்படி
+$\eq[(y' +
+    z)][0]$ கிடைக்கும். ஆனால், வரையறையின்படி இதற்கு
+$z < 0$ என்று பொருள்; இது 1 ஆம் பகுதிக்கு முரணானது.
+\end{proof}
+
+% SEGMENT OLP-0647-S10
+\begin{explain}
+கணிக்கத்தக்க சார்புகளின் கணத்தை, $\Th{Q}$ இல்
+பிரதிநிதித்துவப்படுத்தத்தக்க சார்புகளின் கணமாக வகைப்படுத்தலாம் என்று
+காட்டியுள்ளோம். உண்மையில், நிறுவல் இன்னும் பொதுவானது.
+பிரதிநிதித்துவப்படுத்தத்தக்கது என்பதன் வரையறையிலிருந்து,
+$\Th{Q}$ ஐ விரிவாக்கும் எந்தக் கோட்பாட்டிலும்
+(அல்லது $\Th{Q}$ ஐப் பொருள்படுத்தக்கூடிய கோட்பாட்டிலும்)
+கணிக்கத்தக்க சார்புகளைப் பிரதிநிதித்துவப்படுத்தலாம் என்பதை
+எளிதில் காணலாம். மறுபுறம், நிறுவல் என்ற கருத்து கணிக்கத்தக்கதாக
+இருக்கும் எந்த !!{derivation} அமைப்பிலும் பிரதிநிதித்துவப்படுத்தத்தக்க
+ஒவ்வொரு சார்பும் கணிக்கத்தக்கது. ஆகவே, எடுத்துக்காட்டாக,
+கணிக்கத்தக்க சார்புகளின் கணம், பியானோ எண்கணிதத்தில் அல்லது
+செர்மெலோ--ஃபிராங்கல் கணக் கோட்பாட்டில்கூட
+பிரதிநிதித்துவப்படுத்தத்தக்க சார்புகளின் கணமாக வகைப்படுத்தப்படலாம்.
+கோடல் குறிப்பிட்டதுபோல இது சற்றே வியப்பூட்டுகிறது.
+நிறுவத்தன்மையைப் பொறுத்தவரை, எந்தக் கோட்பாட்டைக் கருதுகிறோம்
+என்பதைப் பொறுத்துக் கேள்விகள் மிகவும் மாறுகின்றன என்பதைக் காண்போம்:
+தோராயமாகச் சொன்னால், அடிகோள்கள் வலுப்பெறும்போது கூடுதலாக நிறுவலாம்.
+ஆனால் பரந்த வகை அடிகோள் கோட்பாடுகளில், பிரதிநிதித்துவப்படுத்தத்தக்க
+சார்புகள் துல்லியமாகக் கணிக்கத்தக்க சார்புகளே.
+\end{explain}
+
+
+% END SOURCE UNIT OLP-0647
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0649}\par
+
+% BEGIN SOURCE UNIT OLP-0649 content/intuitionistic-logic/semantics/propositions.tex
+% Exact modular target bytes: 2175; SHA256: a2f7d73f97439eeb98ec3019d748d4da08036f4be6a745761001e78dcd2bdef3
+
+
+
+% SEGMENT OLP-0649-S01
+\olfileid{int}{sem}{pro}
+
+\olsection{கூற்றுகள்}
+
+!!a{relational model}~$\mModel{M}$ இல் !!a{formula}~$!A$ மெய்யாகும்
+உலகங்களின் கணத்திற்குப் பெயர் தருவது சில வேளைகளில் பயனுள்ளதாக இருக்கும்.
+அதை~$!A$ வரையறுக்கும் \emph{கூற்று} என்று அழைத்து,
+$\Prop{M}{!A}$ என எழுதுகிறோம்.
+
+% SEGMENT OLP-0649-S02
+\begin{defn}
+  $V$ என்ற சார்பை, $\Prop{M}{!A} \colon \Frm
+  \to \Pow{W}$ என்ற சார்பாகப் பின்வருமாறு தொகுத்தறிதல் முறையில்
+  விரிவுபடுத்துகிறோம்:
+  \begin{enumerate}
+  \item $\Prop{M}{\lfalse} = \emptyset$
+  \item $\Prop{M}{p} = V(p)$
+  \item $\Prop{M}{\lnot !B} = {}$
+    \[
+      \Setabs{w \in W}{\text{ஒவ்வொரு $w'$ க்கும், $Rww'$ எனில், $w'
+          \notin \Prop{M}{!B}$}}.
+    \]
+  \item $\Prop{M}{!B \land !C} = \Prop{M}{!B} \cap \Prop{M}{!C}$.
+  \item $\Prop{M}{!B \lor !C} = \Prop{M}{!B} \cup \Prop{M}{!C}$.
+  \item $\Prop{M}{!B \lif !C} = {}$
+    \[
+      \Setabs{w \in W}{\text{ஒவ்வொரு $w'$ க்கும், $Rww'$ எனில், $w'
+          \in \Prop{M}{!B}$ என்றால் $w' \in \Prop{M}{!C}$}}.
+    \]
+  \end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0649-S03
+\begin{prop}
+  \ollabel{prop:propositions-true}
+  % SOURCE CORRECTION TA-IL-025: truth at a world is \mSat, not the model constructor.
+  $\mSat{M}{!A}[w]$ எனில், எனில் மட்டுமே, $w \in \Prop{M}{!A}$
+\end{prop}
+
+% SEGMENT OLP-0649-S04
+\begin{proof}
+  பயிற்சி.
+\end{proof}
+
+% SEGMENT OLP-0649-S05
+\begin{prob}
+  \olref[int][sem][pro]{prop:propositions-true} ஐ நிறுவுக.
+\end{prob}
+
+
+% END SOURCE UNIT OLP-0649
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0650}\par
+
+% BEGIN SOURCE UNIT OLP-0650 content/lambda-calculus/lambda-definability/lists.tex
+% Exact modular target bytes: 3561; SHA256: 64d4722f7569c9dd595d22f3f461937307310e939bf523d5f3a69e8f14c983ca
+
+
+
+% SEGMENT OLP-0650-S01
+\olfileid{lam}{ldf}{lst}
+\olsection{பட்டியல்கள்}
+
+$[M_1, M_2, \ldots, M_n]$ என்ற பட்டியலைப் பின்வருமாறு வரையறுக்கலாம்:
+\[
+  [M_1, M_2, \ldots, M_n] \ident \lambd[sz][s M_1 (s M_2 (\ldots (s M_n z)))]
+\]
+முறைசாரா வகையில் சொன்னால், பட்டியலைக் குறிக்கும் சொல் அதன்
+‘திரட்டுச் சார்பு’ ஆகும்: அது இரண்டு சொற்களை ஏற்கும் சார்பு.
+முதலாவது, புதிய உறுப்பையும் இதுவரை திரட்டிய மதிப்பையும் பெற்று
+புதிய திரண்ட மதிப்பைத் தரும் சார்பு; இரண்டாவது, தொடக்கத் திரண்ட
+மதிப்பு. இவ்வாறு உறுப்புகளை ஒவ்வொன்றாகத் திரட்டி இறுதியில்
+விளைவைத் தருகிறது.
+
+% SEGMENT OLP-0650-S02
+\begin{digress}
+  சார்புசார் நிரலாக்கத்தை அறிந்தவர்களுக்கு, இந்த வரையறை
+  \emph{வலப்புற மடிப்பு} என்பதற்கு ஒத்ததாகத் தோன்றும்:
+  ஒரு பட்டியல், அதிலுள்ள உறுப்புகள்மீது வலப்புற மடிப்பைச் செய்யும்
+  சார்பாக வரையறுக்கப்படுகிறது.
+\end{digress}
+
+% SEGMENT OLP-0650-S03
+இந்தக் குறியாக்கத்தின் அடிப்படையில் பயனுள்ள சில சார்புகளை எளிதில்
+வரையறுக்கலாம்:
+\begin{align*}
+  \fn{Sum} & \ident
+  \lambd[l][l \, (\lambd[xa][\fn{Add} \, x \, a])\,  \num{0}]\\
+  \fn{Len} & \ident
+  \lambd[l][l \, (\lambd[xa][\fn{Add} \, a \, \num{1}]) \num{0}]
+\end{align*}
+
+$\fn{Sum}$ ஆனது சர்ச் எண்ணுருக்களின் பட்டியலில் உள்ளவற்றின்
+கூட்டுத்தொகையைக் கணக்கிடுகிறது. தொடக்க மதிப்பு $\num{0}$
+ஆக இருக்கும் திரட்டலைப் பட்டியல்மீது செய்கிறது; ஒவ்வோர் உறுப்புக்கும்,
+புதிய மதிப்பாக $\fn{Add} \, x\, a$ ஐத் தருகிறது
+(இங்கு $x$ தற்போதைய உறுப்பு, $a$ இதுவரை திரண்ட மதிப்பு).
+விளைவு எல்லா உறுப்புகளின் கூட்டுத்தொகை.
+
+% SEGMENT OLP-0650-S04
+\begin{prob}
+  $\fn{Len}$ என்ன செய்கிறது? விளக்குக.
+\end{prob}
+
+% SEGMENT OLP-0650-S05
+\begin{prob}
+  ஒரு பட்டியலைத் தலைகீழாக்கும் சார்பை வரையறுக்க.
+\end{prob}
+
+% END SOURCE UNIT OLP-0650
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0651}\par
+
+% BEGIN SOURCE UNIT OLP-0651 content/lambda-calculus/syntax/conversion.tex
+% Exact modular target bytes: 1533; SHA256: bcbca0e0cdda210137c3fcbd177ecd0d05d7eb1d1a2b2ae16742cede6bebbd3b
+
+
+
+% SEGMENT OLP-0651-S01
+\olfileid{lam}{int}{con}
+\olsection{மாற்றமும் குறைத்தலும்}
+
+% SEGMENT OLP-0651-S02
+லாம்டா கலனத்தில் மூன்று வகையான மாற்றங்கள் அல்லது குறைத்தல்கள் உள்ளன.
+நாம் காணப்போவதுபோல், இங்கு உருமாற்றம் ஒருதிசையில் நிகழ்கிறதா,
+இருதிசைகளிலும் நிகழ்கிறதா என்பதே மாற்றத்திற்கும் குறைத்தலுக்கும்
+இடையிலான வேறுபாடு.
+
+% SEGMENT OLP-0651-S03
+$\alpha$-மாற்றம் என்பது மாறிகளை மறுபெயரிடுவது பற்றியது.
+$\lambda x. x$ உம் $\lambda y.y$ உம் ஒரே சார்பை
+(சமனிச் சார்பை) குறிக்கின்றன என்று கருதுவது இயல்பானது.
+இந்தக் கருத்தைப் பின்வருமாறு முறைப்படுத்துகிறோம்:
+
+% Frozen source unit ends after this lead-in; the ordinary alpha chapter carries the definition.
+
+% END SOURCE UNIT OLP-0651
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0652}\par
+
+% BEGIN SOURCE UNIT OLP-0652 content/many-valued-logic/sequent-calculus/proof-theoretic-notions.tex
+% Exact modular target bytes: 10614; SHA256: dd94f9178d9545b8dd84f429d9d40d3dad5adf2d6ab86a976cbeb03cac21fed9
+% SEGMENT OLP-0652-S01
+
+
+\olfileid{mvl}{seq}{prf}
+
+\olsection{நிறுவல்-கோட்பாட்டுக் கருத்துகள்}
+
+\begin{explain}
+பல முக்கியமான பொருண்மைக் கருத்துகளை (செல்லுபடித்தன்மை, பின்விளைவு,
+நிறைவுறத்தக்கதன்மை) நாம் வரையறுத்ததைப் போலவே, அவற்றுடன் தொடர்புடைய
+\emph{நிறுவல்-கோட்பாட்டுக் கருத்துகளை} இப்போது வரையறுக்கிறோம். இவை
+!!{structure}s[loc] !!{sentence}s நிறைவுறுவதைச் சார்ந்து வரையறுக்கப்படாமல்,
+குறிப்பிட்ட தொடரணிகளின் !!{derivability} அல்லது !!{nonderivability} ஐச்
+சார்ந்து வரையறுக்கப்படுகின்றன. இந்தக் கருத்துகள் ஒன்றுபடுகின்றன என்பது ஒரு
+முக்கியமான கண்டுபிடிப்பு. அவை ஒன்றுபடுவதே \emph{சரித்தன்மைத் தேற்றம்} மற்றும்
+\emph{நிறைவுத் தேற்றம்} ஆகியவற்றின் உள்ளடக்கம்.
+\end{explain}
+
+% SEGMENT OLP-0652-S02
+\begin{defn}[தேற்றங்கள்]
+!!^a{sentence}~$!A$ க்கு $\quad \Sequent !A$ தொடரணியின்
+!!a{derivation} ஒன்று~$\Log{LK}$ இல் இருந்தால், அந்த வாக்கியம் ஒரு \emph{தேற்றம்}.
+$!A$ தேற்றமாக இருந்தால் $\Proves !A$ என்றும், இல்லையெனில் $\Proves/ !A$
+என்றும் எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0652-S03
+\begin{defn}[!!^{derivability}]
+!!^a{sentence}~$!A$ என்பது !!{sentence}s கொண்ட~$\Gamma$ கணத்திலிருந்து
+\emph{!!{derivable}} என்பதை $\Gamma \Proves !A$ என்று எழுதுகிறோம். இதன்
+பொருள், $\Gamma_0 \subseteq \Gamma$ என்ற முடிவுறு உட்கணமும்,
+$\Gamma_0$ விலுள்ள !!{sentence}s[gen] $\Gamma_0'$ என்ற தொடரும் இருந்து,
+$\Log{LK}$ ஆனது $\Gamma_0' \Sequent !A$ ஐ !!{derive}s என்பதாகும். $!A$
+ஆனது $\Gamma$ இலிருந்து !!{derivable} அல்ல என்றால் $\Gamma \Proves/ !A$
+என்று எழுதுகிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0652-S04
+சுருக்கல், தளர்த்தல், இடமாற்றம் ஆகிய விதிகளால்~$\Gamma_0'$ இல் உள்ள
+!!{sentence}s[gen] வரிசையும் எண்ணிக்கையும் பொருட்டல்ல: $\Gamma_0' \Sequent
+!A$ என்ற தொடரணி !!{derivable} எனில்,~$\Gamma_0'$ இலுள்ள அதே !!{sentence}s[acc]
+கொண்ட எந்த $\Gamma_0''$ க்கும் $\Gamma_0'' \Sequent !A$ தொடரணியும்
+!!{derivable}. எடுத்துக்காட்டாக, $\Gamma_0 = \{!B, !C\}$ எனில்,
+$\Gamma_0' = \tuple{!B, !B, !C}$, $\Gamma_0'' = \tuple{!C, !C, !B}$
+ஆகிய இரண்டும்~$\Gamma_0$ விலுள்ள !!{sentence}s[acc] மட்டுமே கொண்ட தொடர்கள்.
+ஒன்றைக் கொண்ட ஒரு தொடரணி வருவிக்கத்தக்கது எனில் மற்றொன்றைக் கொண்ட தொடரணியும்
+அவ்வாறே; எடுத்துக்காட்டாக:
+\begin{prooftree}
+  \AxiomC{}
+  \Deduce$!B, !B, !C \fCenter !A$
+  \RightLabel{\LeftR{\Contraction}}
+  \UnaryInf$!B, !C \fCenter !A$
+  \RightLabel{\LeftR{\Exchange}}
+  \UnaryInf$!C, !B \fCenter !A$
+  \RightLabel{\LeftR{\Weakening}}
+  \UnaryInf$!C, !C, !B \fCenter !A$
+\end{prooftree}
+இனிமேல் $\Gamma_0$ என்பது !!{sentence}s கொண்ட ஒரு முடிவுறு கணமாக இருந்தால்,
+$\Gamma_0 \Sequent !A$ என்பது முன்தொடரில்~$\Gamma_0$ விலுள்ள !!{sentence}s[gen]
+ஒரு தொடரைக் கொண்ட ஏதேனும் ஒரு தொடரணி என்று கூறுவோம்; தேவையான சுருக்கல்கள்,
+இடமாற்றங்கள், தளர்த்தல்கள் ஆகியவற்றை மறைமுகமாகச் சேர்த்துக்கொள்வோம்.
+
+% SEGMENT OLP-0652-S05
+\begin{defn}[முரணின்மை]
+$\Gamma$ என்ற வாக்கியக் கணம் \emph{முரணுடையது} என்பது, $\Gamma_0 \subseteq
+\Gamma$ என்ற ஏதோவொரு முடிவுறு உட்கணம் இருந்து, $\Log{LK}$ ஆனது $\Gamma_0
+\Sequent \quad$ ஐ !!{derive}s என்பதாகும். $\Gamma$ முரணுடையதல்ல எனில்,
+அதாவது ஒவ்வொரு முடிவுறு $\Gamma_0 \subseteq \Gamma$ க்கும் $\Log{LK}$ ஆனது
+$\Gamma_0 \Sequent \quad$ ஐ !!{derive} இயலாது எனில், அது \emph{முரணற்றது}
+என்கிறோம்.
+\end{defn}
+
+% SEGMENT OLP-0652-S06
+\begin{prop}[தற்சுட்டுப் பண்பு]
+\ollabel{prop:reflexivity}
+$!A \in \Gamma$ எனில், $\Gamma \Proves !A$.
+\end{prop}
+
+\begin{proof}
+தொடக்கத் தொடரணி $!A \Sequent !A$ !!{derivable}; மேலும் $\{!A\}
+\subseteq \Gamma$.
+\end{proof}
+  
+% SEGMENT OLP-0652-S07
+\begin{prop}[ஒருபோக்குத்தன்மை]
+\ollabel{prop:monotonicity}
+$\Gamma \subseteq \Delta$ மற்றும் $\Gamma \Proves !A$ எனில், $\Delta
+\Proves !A$.
+\end{prop}
+
+\begin{proof}
+$\Gamma \Proves !A$ என்க. அதாவது, $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+முடிவுறு உட்கணம் இருந்து, $\Gamma_0 \Sequent !A$ !!{derivable}. $\Gamma
+\subseteq \Delta$ என்பதால், $\Gamma_0$ ஆனது~$\Delta$ வின் முடிவுறு உட்கணமும்
+ஆகும். ஆகவே $\Gamma_0 \Sequent !A$ இன் !!{derivation} ஆனது $\Delta
+\Proves !A$ என்பதையும் காட்டுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0652-S08
+\begin{prop}[கடப்புப் பண்பு]
+\ollabel{prop:transitivity}
+$\Gamma \Proves !A$ மற்றும் $\{!A\} \cup \Delta \Proves !B$ எனில்,
+$\Gamma \cup \Delta \Proves !B$.
+\end{prop}
+
+\begin{proof}
+$\Gamma \Proves !A$ எனில், ஒரு முடிவுறு $\Gamma_0 \subseteq \Gamma$ உம்,
+$\Gamma_0 \Sequent !A$ இன் !!a{derivation}~$\pi_0$ உம் உள்ளன. $\{!A\}
+\cup \Delta \Proves !B$ எனில், ஏதோவொரு முடிவுறு $\Delta_0 \subseteq
+\Delta$ க்கு $!A, \Delta_0 \Sequent !B$ இன் !!a{derivation}~$\pi_1$
+உள்ளது. பின்வரும் !!{derivation}[acc] கருதுக:
+\begin{prooftree}
+  \AxiomC{}
+  \RightLabel{$\pi_0$}
+  \Deduce$\Gamma_0 \fCenter !A$
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \Deduce$!A, \Delta_0 \fCenter !B$
+  \RightLabel{\Cut}
+  \BinaryInf$\Gamma_0, \Delta_0 \fCenter !B$
+\end{prooftree}
+$\Gamma_0 \cup \Delta_0 \subseteq \Gamma \cup \Delta$ என்பதால், இது
+$\Gamma \cup \Delta \Proves !B$ என்பதைக் காட்டுகிறது.
+\end{proof}
+
+குறிப்பாக, $\Gamma \Proves !A$ மற்றும் $!A \Proves !B$ எனில் $\Gamma
+\Proves !B$ என்பது இதன் பொருள் என்பதைக் கவனிக்கவும். மேலும் $!A_1,
+\dots, !A_n \Proves !B$ என்றும், ஒவ்வொரு~$i$ க்கும் $\Gamma \Proves !A_i$
+என்றும் இருந்தால், $\Gamma \Proves !B$ என்பதும் பின்வருகிறது.
+
+% SEGMENT OLP-0652-S09
+\begin{prop}
+\ollabel{prop:incons}
+$\Gamma$ முரணுடையது என்பது, அப்போதும் அப்போது மட்டுமே, ஒவ்வொரு
+வாக்கியம்~$!A$ க்கும் $\Gamma \Proves {!A}$.
+\end{prop}
+
+\begin{proof}
+பயிற்சி.
+\end{proof}
+
+\begin{prob}
+\olref[fol][seq][ptn]{prop:incons} ஐ நிறுவுக.
+\end{prob}
+
+% SEGMENT OLP-0652-S10
+\begin{prop}[இறுக்கத்தன்மை]
+  \ollabel{prop:proves-compact}
+  \begin{enumerate}
+  \item $\Gamma \Proves !A$ எனில், $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+    முடிவுறு உட்கணம் இருந்து, $\Gamma_0 \Proves !A$.
+  \item $\Gamma$ வின் ஒவ்வொரு முடிவுறு உட்கணமும் முரணற்றது எனில்,
+    $\Gamma$ முரணற்றது.
+  \end{enumerate}
+\end{prop}
+
+\begin{proof}
+  \begin{enumerate}
+    \item $\Gamma \Proves !A$ எனில், $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+      முடிவுறு உட்கணம் இருந்து, $\Gamma_0 \Sequent !A$ தொடரணிக்கு
+      !!a{derivation} உள்ளது. இதனால் $\Gamma_0 \Proves !A$.
+    \item $\Gamma$ முரணுடையது எனில், $\Gamma_0 \subseteq \Gamma$ என்ற ஒரு
+      முடிவுறு உட்கணம் இருந்து, $\Log{LK}$ ஆனது $\Gamma_0 \Sequent \quad$ ஐ
+      !!{derive}s. ஆனால் அப்போது~$\Gamma_0$, $\Gamma$ வின் முரணுடைய ஒரு
+      முடிவுறு உட்கணமாகும்.
+  \end{enumerate}
+\end{proof}
+
+
+% END SOURCE UNIT OLP-0652
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0653}\par
+
+% BEGIN SOURCE UNIT OLP-0653 content/model-theory/basics/nonstandard-arithmetic.tex
+% Exact modular target bytes: 24510; SHA256: deef6dbb3b24df8c026ddd938ca4787e31a10bceefe8e7cd0e18a20a22155461
+% SEGMENT OLP-0653-S01
+
+
+\olfileid{mod}{bas}{nsa}
+\section{எண்கணிதத்தின் நிலையற்ற மாதிரிகள்}
+
+\begin{defn}
+$\Lang{L_N}$ என்பது எண்கணிதத்தின் !!{language} ஆகட்டும். அதில்
+!!{constant} $\Obj{0}$, இரு இட !!{predicate} $<$, ஓரிட
+!!{function} $\prime$, இரு இட !!{function}s $+$ மற்றும் $\times$
+ஆகியவை உள்ளன.
+\begin{enumerate}
+\item எண்கணிதத்தின் \emph{நிலையான மாதிரி} என்பது $\Lang{L_N}$
+  க்கான !!{structure}~$\Struct{N}$. அதன் ஆட்களம்
+  $\Nat = \{ 0, 1, 2, \dots\}$; அதில் $\Obj{0}$ என்பது $0$ ஆகவும்,
+  $<$ என்பது~$\Nat$ மீதான சிறியது-என்னும் தொடர்பாகவும்,
+  $\prime$, $+$, $\times$ ஆகியவை முறையே~$\Nat$ மீதான
+  அடுத்தெண், கூட்டல், பெருக்கல் செயல்களாகவும் பொருள்கொள்ளப்படுகின்றன.
+\item \emph{மெய் எண்கணிதம்} என்பது $\Theory{N}$ கோட்பாடு.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0653-S02
+$\Lang{L_N}$ இல் செயல்படும்போது, $\Obj{0}$ இற்கு அடுத்தெண்
+செயலியை~$n$ முறைப் பயன்படுத்திப் பெறும்
+$\Obj{0}^{\prime\dots\prime}$ வடிவிலான ஒவ்வொரு சொல்லையும்
+$\num{n}$ எனச் சுருக்கி எழுதுகிறோம்.
+
+\begin{defn}
+$\Lang{L_N}$ க்கான !!{structure}~$\Struct{M}$ ஆனது
+$\Struct{N} \iso \Struct{M}$ எனில், எனில் மட்டுமே,
+\emph{நிலையானது}.
+\end{defn}
+
+% SEGMENT OLP-0653-S03
+\begin{thm}\ollabel{thm:non-std}
+மெய் எண்கணிதத்திற்கு நிலையற்ற !!{enumerable}
+மாதிரிகள் உள்ளன.
+\end{thm}
+
+\begin{proof}
+புதிய !!{constant}~$c$ ஒன்றைச் சேர்த்து $\Lang{L_N}$ ஐ விரிவாக்கி,
+பின்வரும் கோட்பாட்டைக் கருதுக:
+\[
+\Theory{N} \cup \Setabs{\num{n} < c}{n \in \Nat}.
+\]
+இக்கோட்பாட்டின் ஒவ்வொரு முடிவுறு பகுதியும் நிறைவுறத்தக்கது.
+ஆகவே இறுக்கத்தன்மையால் இதற்கு மாதிரி~$\Struct{M}$ ஒன்று உண்டு;
+கீழ்நோக்கிய L\"owenheim--Skolem தேற்றத்தால் அதை
+!!{enumerable} ஆக எடுத்துக்கொள்ளலாம்.
+$\Domain{M}$ என்பது~$\Struct{M}$ இன் ஆட்களம் என்க. அப்போது
+% SOURCE CORRECTION TA-MOD-001: use the defined L_N, and call all interpretations symbols.
+$\Lang{L_N}$ இன் தருக்கமல்லாத குறியீடுகளுக்கான
+$\Struct{M}$ இன் பொருள்கோள்கள் பின்வருமாறு இருக்கட்டும்:
+$\mathbf{z} = \Assign{\Obj{0}}{M} \in \Domain{M}$,
+% SOURCE CORRECTION TA-MOD-002: relation on the domain, not on the structure object.
+${\prec} =
+\Assign{<}{M} \subseteq \Domain{M}^2$,
+$* = \Assign{\prime}{M} \colon
+\Domain{M} \to \Domain{M}$, மற்றும்
+$\oplus = \Assign{+}{M}, \otimes =
+\Assign{\times}{M} \colon \Domain{M}^2 \to \Domain{M}$.
+ஒவ்வொரு $x \in \Domain{M}$ க்கும், $*$ ஐ~$x$ இற்குப்
+பயன்படுத்திப் பெறும் $\Domain{M}$ இன் உறுப்பை $x^*$ என எழுதுகிறோம்.
+
+இப்போது $\Struct{N}$ க்கும் $\Struct{M}$ க்கும் இடையில்
+ஓரினச்சார்பு~$h$ ஒன்று உண்டென்றால், ஏதோவொரு
+$n \in \Nat$ க்கு $h(n) = \Assign{c}{M}$ ஆக வேண்டும்.
+எனவே $s(x) = n$ ஆகும்~$\Struct{N}$ இன் ஏதேனும் ஒதுக்கீடு~$s$
+ஐ எடுத்துக்கொள்க. அப்போது
+$\Sat{N}{\eq[\num{n}][x]}[s]$; \olref[iso]{thm:isom} இன்
+நிரூபிப்பின்படி
+$\Sat{M}{\eq[\num{n}][x]}[h \circ s]$ உம் பொருந்தும்.
+ஆகவே $\Assign{c}{M} =
+\mathbf{z}^{*\cdots *}$ ($*$ ஐ~$n$ முறைத் தொடர்ச்சியாகப்
+பயன்படுத்தியது). ஆனால்
+$\Sat{M}{\num{n} < c}$ என்றும் $\prec$ தற்சுட்டற்றது
+என்றும் கருதப்பட்டதால் இது இயலாது. எனவே $\Struct{M}$
+நிலையற்றது.
+\end{proof}
+
+% SEGMENT OLP-0653-S04
+\begin{prob}
+கணம்~$X$ மீதான தொடர்பு~$R$ ஆனது \emph{நன்கு நிறுவப்பட்டது}
+என்பது,~$R$ இல் முடிவிலா இறங்கும் சங்கிலிகள் இல்லாதபோது,
+அப்போது மட்டுமே; அதாவது
+$\dots x_2Rx_1Rx_0$ ஆக அமையும்
+$x_0$, $x_1$, $x_2$,~\dots ஆகியவை~$X$ இல் இல்லாதபோது.
+செர்மெலோ--ஃபிரேங்கல் கணக் கோட்பாடு~$ZF$ முரணற்றது
+என்று கொண்டு, $ZF$ இன் நன்கு நிறுவப்படாத மாதிரிகள்
+உள்ளன என்று காட்டுக; அதாவது,
+$\dots x_2 \in x_1 \in x_0$ ஆக அமையும்
+மாதிரிகள்~$\mathfrak{M}$ உள்ளன என்று காட்டுக.
+\end{prob}
+
+% SEGMENT OLP-0653-S05
+\olref{thm:non-std} இல் கிடைத்த நிலையற்ற மாதிரி~$\Struct{M}$
+நிலையான மாதிரியுடன் அடிப்படைச் சமானமானது. எனவே
+$\Struct{M}$ இன் பல பண்புகளை வருவிக்கலாம்.
+இந்தப் பிரிவின் எஞ்சிய பகுதி அந்தப் பணியை மேற்கொள்கிறது;
+அதன் மூலம் $\Theory{N}$ இன் !!{enumerable} நிலையற்ற
+மாதிரிகளுக்குத் துல்லியமான தன்மைப்படுத்தலைப் பெறுவோம்.
+
+\begin{enumerate}
+\item $\Domain{M}$ இன் எந்த உறுப்பும் தன்னைவிட
+  $\prec$-சிறியது அல்ல: $\lforall[x][\lnot x < x]$
+  என்ற வாக்கியம் $\Struct{N}$ இல் மெய்; ஆகவே
+  $\Struct{M}$ இலும் மெய்.
+\item அதே போன்ற காரணத்தால், $\prec$ ஆனது
+  $\Domain{M}$ இன் \emph{நேரியல் வரிசை}; அதாவது
+  $\Domain{M}$ மீதான முழுமையான, தற்சுட்டற்ற,
+  கடப்புப் பண்புள்ள தொடர்பு.
+\item $\mathbf{z}$ என்பது $\Domain{M}$ இன்
+  $\prec$-மீச்சிறு உறுப்பு.
+\item $\Domain{M}$ இன் ஒவ்வோர் உறுப்பும் அதன்
+  $*$-அடுத்தெண்ணைவிட $\prec$-சிறியது; மேலும்
+  $x$ ஐவிடப் பெரிய $\Domain{M}$ உறுப்புகளில்
+  $\prec$-மீச்சிறியது $x^*$.
+
+% SEGMENT OLP-0653-S06
+\item $\Struct{M}$ இல்~$\Nat$ க்கு ஓரினமான
+  $\prec$-தொடக்கப் பகுதி ஒன்று உள்ளது:
+  $\mathbf{z}, \mathbf{z}^*, \mathbf{z}^{**}, \dots$.
+  இதனை $\Domain{M}$ இன் \emph{நிலையான பகுதி}
+  என்கிறோம். $\Domain{M}$ இன் மற்ற எந்த உறுப்பும்
+  \emph{நிலையற்றது}. நிலையற்ற உறுப்புகள்
+  $\Domain{M}$ இல் இருக்கவேண்டும்; இல்லையெனில்
+  \olref{thm:non-std} இன் நிரூபிப்பிலுள்ள சார்பு~$h$
+  ஓரினச்சார்பாகிவிடும். $\Struct{M}$ இன் இந்நிலையான
+  பகுதியில் மதிப்பெடுக்கும் !!{variable}s ஆக
+  $n, m, \dots$ ஐப் பயன்படுத்துகிறோம்.
+\item ஒவ்வொரு நிலையற்ற உறுப்பும் எந்த நிலையான
+  உறுப்பையும்விடப் பெரியது. ஏனெனில்
+  ஒவ்வொரு $n \in \Nat$ க்கும்,
+  \[
+  \Sat{N}{\lforall[z][(\lnot(\eq[z][\Obj{0}] \lor
+  \dots \lor \eq[z][\num{n}]) \lif \num{n} < z)]},
+  \]
+  எனவே $z \in \Domain{M}$ நிலையான உறுப்புகள்
+  அனைத்திலிருந்தும் வேறுபட்டால், அவை அனைத்தையும்விட
+  அது \emph{பெரியது}.
+\item $\mathbf{z}$ தவிர $\Domain{M}$ இன் ஒவ்வோர்
+  உறுப்பும் $\Domain{M}$ இன் ஒரேயொரு உறுப்பின்
+  $*$-அடுத்தெண்; அந்த முன்னெண்ணை $^*x$
+  எனக் குறிக்கிறோம். $x = y^*$ எனில், $x$, $y$
+  ஆகியவற்றுள் ஒன்று நிலையானதாக இருந்தால் இரண்டும்
+  நிலையானவை; ஒன்று நிலையற்றதாக இருந்தால் இரண்டும்
+  நிலையற்றவை.
+
+% SEGMENT OLP-0653-S07
+\item $\Domain{M}$ மீதான சமானத் தொடர்பு~$\approx$
+  ஐப் பின்வருமாறு வரையறுக்கிறோம்: ஏதோவொரு
+  \emph{நிலையான}~$n$ க்கு
+  $x \oplus n = y$ அல்லது $y \oplus n =x$
+  எனில், எனில் மட்டுமே, $x \approx y$.
+  வேறுவிதமாகச் சொன்னால், $x$, $y$ இரண்டும்
+  முடிவுறு தொலைவில் இருந்தால், எனில் மட்டுமே,
+  $x \approx y$. $n$, $m$ நிலையானவை எனில்
+  $n \approx m$. $x$ இன் \emph{தொகுதி}
+  என்பது அதன் சமான வகுப்பு
+  $[x] = \Setabs{y}{x
+  \approx y}$.
+
+% SEGMENT OLP-0653-S08
+\item $x \prec y$ மற்றும் $x \not\approx y$
+  என்க. $\Sat{N}{\lforall[x][\lforall[y][(x < y \lif (x' < y \lor x' =
+      y))]]}$ என்பதால், $x^* \prec y$ அல்லது
+  $x^* = y$. இரண்டாவது வாய்ப்பு
+  $x \approx y$ என்பதைக் கொடுப்பதால் இயலாது;
+  % SOURCE CORRECTION TA-MOD-003: retain the strengthened successor inequality.
+  ஆகவே $x^* \prec y$. அதேபோல்,
+  $x \prec y$ மற்றும் $x \not\approx y$
+  எனில், $x \prec {^*y}$. எனவே
+  $x \prec y$ மற்றும் $x \not\approx y$
+  எனில், $w \approx x$ ஆகும் ஒவ்வோர்
+  உறுப்பும், $v \approx y$ ஆகும் ஒவ்வோர்
+  உறுப்பைவிடவும் $\prec$-சிறியது.
+  % SOURCE CORRECTION TA-MOD-007: only non-standard blocks extend in both directions.
+  இதனால் ஒவ்வொரு நிலையற்ற தொகுதி~$[x]$ உம்
+  இரு திசைகளிலும் முடிவிலாத சங்கிலியாக அமைகிறது:
+  \[
+  \cdots \prec  {^{**}x} \prec {^*}x \prec x \prec x^* \prec x^{**}
+  \prec \cdots
+  \]
+  முழுக்களின் வரிசை வகையைக் கொண்டதால் இது
+  $Z$-சங்கிலி எனப்படும்.
+
+% SEGMENT OLP-0653-S09
+% SOURCE CORRECTION TA-MOD-004: order only distinct blocks.
+\item $\prec$ வரிசையை வெவ்வேறு தொகுதிகளுக்கும்
+  உயர்த்தலாம்: $x \prec y$ ஆகவும் அவை
+  வெவ்வேறு தொகுதிகளைச் சேர்ந்தவையாகவும் இருந்தால்,
+  $x$ இன் தொகுதி $y$ இன் தொகுதியைவிடச் சிறியது.
+  நிலையற்ற உறுப்பைக் கொண்ட தொகுதி
+  \emph{நிலையற்ற} தொகுதி. நிலையான தொகுதியே
+  மீச்சிறு தொகுதி.
+
+% SEGMENT OLP-0653-S10
+\item மீச்சிறு நிலையற்ற தொகுதி இல்லை:
+  $y$ நிலையற்றது எனில், $x \prec y$,
+  $x$ நிலையற்றது, $x \not\approx y$
+  என அமையும் உறுப்பு ஒன்று உண்டு.
+  நிரூபிப்பு: நிலையான மாதிரி~$\Struct{N}$ இல்
+  ஒவ்வோர் எண்ணும் இரண்டால் வகுபடும்; மீதி ஒன்று
+  இருக்கலாம். அதாவது
+  % SOURCE CORRECTION TA-MOD-005: every y has some half, not every x is its half.
+  $\Sat{N}{\lforall[y][\lexists[x][(y = x + x \lor y = x + x +
+        \Obj{0}')]]}$.
+  அடிப்படைச் சமானத்தால், ஒவ்வொரு
+  $y \in \Domain{M}$ க்கும்
+  $x \oplus x = y$ அல்லது
+  $x \oplus x \oplus \mathbf{z}^*= y$
+  ஆக அமையும் $x \in \Domain{M}$ ஒன்று உண்டு.
+  $x$ நிலையானதாக இருந்தால் $y$ உம்
+  நிலையானதாகிவிடும்; ஆகவே $x$ நிலையற்றது.
+  நிலையற்ற உறுப்பு பூச்சியைவிடப் பெரியது
+  என்பதால், அது அதன் இரட்டிப்பைவிடச் சிறியது.
+  மேலும் $x$, $y$ வெவ்வேறு தொகுதிகளைச்
+  சேர்ந்தவை; அதாவது $x \not\approx y$.
+  அப்படியல்லாமல், ஏதோவொரு நிலையான~$n$
+  க்கு $x \oplus n = y$ என்க.
+  $y = x \oplus x$ எனில்,
+  $x \oplus n = x \oplus x$;
+  கூட்டலின் நீக்கல் விதியால்
+  ($\Struct{N}$ இலும், ஆகவே $\Struct{M}$
+  இலும் அது பொருந்தும்) $x = n$ கிடைக்கும்.
+  அப்போது $x$ நிலையானதாகிவிடும்.
+  $y = x \oplus x \oplus \mathbf{z}^*$
+  எனும்போதும் இதே போன்றது.
+% SEGMENT OLP-0653-S11
+\item இதே போன்ற வாதத்தால், மீப்பெரு தொகுதியும் இல்லை.
+% SEGMENT OLP-0653-S12
+\item தொகுதிகளின் வரிசை செறிந்தது:
+  $[x]$ ஆனது~$[y]$ ஐவிடச் சிறிதாகவும்
+  ($x \not\approx y$), அவை வேறுபட்டவையாகவும்
+  இருந்தால், அவற்றுக்கு இடையில் இரண்டிலிருந்தும்
+  வேறுபட்ட தொகுதி~$[z]$ ஒன்று உண்டு.
+  $x \prec y$ என்க. முன்போல,
+  $x \oplus y$ இரண்டால் வகுபடும்
+  (மீதி இருக்கலாம்). எனவே
+  $x \oplus y = u \oplus u$ அல்லது
+  $x \oplus y = u \oplus u \oplus \mathbf{z}^*$
+  ஆக அமையும் $u
+  \in \Domain{M}$ ஒன்று உண்டு.
+  $u$ என்பது $x$, $y$ ஆகியவற்றின்
+  சராசரி; ஆகவே அவற்றுக்கிடையில் உள்ளது.
+  $x \oplus y = u \oplus u$ எனக் கொள்க
+  (மற்ற நேர்வும் இதே போன்றது).
+  $u \approx x$ எனில், ஏதோவொரு
+  நிலையான~$n$ க்கு
+  \[
+  x \oplus y = x \oplus n \oplus x \oplus n,
+  \]
+  ஆகவே $y = x \oplus n \oplus n$;
+  இது கருதுகோளுக்கு மாறாக $x \approx y$
+  என்பதைக் கொடுக்கும். எனவே
+  $u \not\approx x$. இதே போன்ற வாதம்
+  $u \not\approx y$ என்பதையும் தருகிறது.
+\end{enumerate}
+% SEGMENT OLP-0653-S13
+எனவே நிலையற்ற தொகுதிகள் விகிதமுறு எண்களைப்
+போல வரிசைப்படுத்தப்பட்டுள்ளன: அவை முனைகளற்ற
+!!a{enumerable} செறிந்த நேரியல் வரிசையாக அமைகின்றன.
+இதனால் மெய் எண்கணிதத்தின் எந்த இரு
+!!{enumerable} நிலையற்ற மாதிரிகள்
+$\Struct{M}_1$, $\Struct{M_2}$ ஆகியவற்றின்
+$<$ மற்றும் $=$ ஐ மட்டுமே கொண்ட மொழிக்கான
+குறைப்புகள் ஓரினமானவை என்று பின்வருகிறது.
+உண்மையில் ஓரினச்சார்பு~$h$ ஐப்
+பின்வருமாறு வரையறுக்கலாம்:
+$\Struct{M_1}$, $\Struct{M_2}$
+இன் நிலையான பகுதிகள் நிலையான மாதிரி
+$\Struct{N}$ க்கு ஓரினமானவை;
+எனவே ஒன்றுக்கொன்றும் ஓரினமானவை.
+நிலையற்ற பகுதியை உருவாக்கும் தொகுதிகள்
+விகிதமுறு எண்களைப் போலவே வரிசைப்படுத்தப்பட்டுள்ளன;
+எனவே \olref[dlo]{thm:cantorQ} படி
+அவையும் ஓரினமானவை. தொகுதிகளுக்கிடையிலான
+ஓரினச்சார்பை, ஒவ்வொரு தொகுதியிலும்
+தன்னிச்சையான உறுப்புகளைப் பொருத்தி,
+பின்னர் $\Struct{M_1}$ இல்~$x$
+இன் அடுத்தெண்ணின் படிமம்,
+$\Struct{M_2}$ இல்~$x$ இன் படிமத்தின்
+அடுத்தெண்ணாக இருக்குமாறு அமைத்து,
+தொகுதிகளுக்கு \emph{உள்ளேயும்}
+ஓரினச்சார்பாக நீட்டிக்கலாம்.
+இதனால் $\mathfrak{M}_1$,
+$\mathfrak{M}_2$ ஆகியவை எண்கணிதத்தின்
+முழு மொழியில் ஓரினமானவை என்று
+\emph{பின்வராது} என்பதைக் கவனிக்க:
+ஓரினத்தன்மை எப்போதும் ஒரு
+குறியீட்டமைப்பைச் சார்ந்தது;
+$\Domain{M_1}$, $\Domain{M_2}$
+மீதான கூட்டலையும் பெருக்கலையும்
+ஓரினமற்ற வழிகளில் வரையறுக்கலாம்.
+(ஒரு நிறைவான கோட்பாட்டின்
+எண்ணத்தக்க மாதிரிகளின் எண்ணிக்கை~2
+ஆக இருக்க முடியாது என்ற வாட்டின்
+புகழ்பெற்ற தேற்றத்திலிருந்தும்
+இது பின்வருகிறது.)
+
+% SEGMENT OLP-0653-S14
+\begin{prob}
+எண்கணிதத்தின் நிலையற்ற மாதிரியில்
+மீப்பெரு தொகுதி இருக்க முடியாது என்று காட்டுக.
+\end{prob}
+
+% SEGMENT OLP-0653-S15
+\begin{prob}
+$\Lang{L}$ என்பது $\eq$ தவிர
+$<$ ஐ மட்டுமே !!{predicate}
+ஆகக் கொண்ட முதல்தர !!{language}
+ஆகட்டும்; $\Struct{N} = (\Nat,
+<)$ என்க. $\Struct{N}$ இன்
+முடிவுறும் அல்லது நிரப்பி முடிவுறும்
+உட்கணங்கள் அனைத்தும் வரையறுக்கத்தக்கவை.
+$\Struct{N}$ இன் வரையறுக்கத்தக்க
+உட்கணங்கள் இவை \emph{மட்டுமே}
+என்று காட்டுக.
+
+(குறிப்பு: முதலில்
+$\Obj{prc}(x,y)$ என்பது
+“$x$ ஆனது $y$ இன் உடனடி முன்னெண்”
+என்பதைச் சுருக்கி எழுதும்
+$\Lang{L}$-வாய்பாடு என்க:
+\[
+x<y \land \lnot \lexists[z][(x<z \land z < y)].
+\]
+இப்போது $\Struct{N}$ இன் ஒவ்வொரு
+வரையறுக்கத்தக்க உட்கணத்துக்கும்
+$\Lang{L}$ இல் வாய்பாடு~$!A(x)$
+ஒன்று உண்டு. அத்தகைய ஒவ்வொரு
+$!A$ க்கும் வாக்கியம்~$!D$ ஐக் கருதுக:
+\[
+\lexists[x][\lforall[y][\lforall[z][((x<y \land x<z \land \Obj{prc}(y,z)
+  \land !A(y)) \lif !A(z))]]].
+\]
+$!A$ வரையறுக்கும் $\Struct{N}$
+இன் உட்கணம் முடிவுறுவதோ அல்லது
+அதன் நிரப்பி முடிவுறுவதோ,
+$\Sat{N}{!D}$ எனும்போது,
+அப்போது மட்டுமே என்று காட்டுக.
+
+இப்போது $\Struct{N}$ உடன்
+அடிப்படைச் சமானமான நிலையற்ற
+மாதிரி~$\Struct{M}$ ஐ எடுத்துக்கொள்க.
+$a \in \Domain{M}$ நிலையற்றது எனில்,
+$a$ ஐவிடப் பெரிய
+$b, c \in \Domain{M}$ ஐ எடுத்துக்கொள்க;
+$c$ இன் உடனடி முன்னெண்~$b$
+ஆகட்டும். அப்போது $h(b)=c$
+% SOURCE CORRECTION TA-MOD-006: h is an automorphism of the order reduct.
+ஆக அமையும் $\Domain{M}$ இன்
+வரிசைச் சுயஓரினச்சார்பு~$h$
+ஒன்று உண்டு (ஏன்?).
+எனவே $b$ ஆனது~$!A$ ஐ
+நிறைவுறுத்தினால் $c$ உம்
+நிறைவுறுத்தும் (ஏன்?).
+இதனால் $!D$ ஆனது
+$\Struct{M}$ இல் மெய்;
+ஆகவே $\Struct{N}$ இலும் மெய்.
+இதன்படி $!A$ வரையறுக்கும்
+$\Struct{N}$ இன் உட்கணம்
+முடிவுறுவதோ அல்லது
+அதன் நிரப்பி முடிவுறுவதோ
+ஆகும்.
+\end{prob}
+
+
+% END SOURCE UNIT OLP-0653
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0654}\par
+
+% BEGIN SOURCE UNIT OLP-0654 content/normal-modal-logic/syntax-and-semantics/normal-modal-logics.tex
+% Exact modular target bytes: 5967; SHA256: af5e915cfbaa62b774a52ba31b87a6ab2ad105db5729e6b806ef74f7331a3f91
+% SEGMENT OLP-0654-S01
+
+
+\olfileid{nml}{syn}{nor}
+
+\olsection{இயல்பான வாய்ப்புநிலைத் தருக்கங்கள்}
+
+தகுந்த ஒழுங்குப் பண்புகள் உள்ள !!{formula}s இன் எந்தக் கணத்தையும்
+வாய்ப்புநிலைத் தருக்கமாகக் கருதலாம். சில வாய்ப்புநிலைத் தருக்கங்கள்
+அவற்றின் சுவாரஸ்யமான பொருள்கோள்களாலும் பயன்பாடுகளாலும்,
+முக்கியமாக அவற்றைப் பற்றிய கோட்பாட்டு அறிவு நன்கு வளர்ந்திருப்பதாலும்,
+சிறப்பாகக் கவனிக்கப்படுகின்றன. இவையே இயல்பான வாய்ப்புநிலைத்
+தருக்கங்கள் எனப்படுகின்றன.
+
+% SEGMENT OLP-0654-S02
+\begin{defn}\ollabel{defn:modal-logic}
+\emph{வாய்ப்புநிலைத் தருக்கம்}~$\Log L$ என்பது அடிப்படை
+வாய்ப்புநிலை மொழியின் !!{formula}s இன் கணம்; அது
+\begin{enumerate}
+\item கூற்றுத் தருக்க மெய்மங்கள் அனைத்தையும் கொண்டிருக்கும்;
+\item சீரான பதிலீட்டின் கீழ் மூடப்பட்டிருக்கும்; மேலும்
+\item மோடஸ் போனென்ஸின் கீழ் மூடப்பட்டிருக்கும்; அதாவது
+  $!A$ மற்றும் $(!A \lif
+  !B) \in \Log L$ எனில், $!B \in \Log L$ உம் பொருந்தும்.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0654-S03
+\begin{ex}
+இவ்வரையறையை நிறைவுசெய்வதால் வாய்ப்புநிலைத் தருக்கங்களாகக்
+கணிக்கப்படும், பெரிதாக ஆர்வமூட்டாத !!{formula}s இன்
+கணங்களுக்குச் சில எடுத்துக்காட்டுகள்:
+\begin{enumerate}
+\item மெய்மங்கள் அனைத்தின் கணம்;
+\item எல்லா !!{formula}s இன் கணம் (முரணுடைய வாய்ப்புநிலைத் தருக்கம்).
+\end{enumerate}
+\end{ex}
+
+% SEGMENT OLP-0654-S04
+\begin{defn}\label{defn:normal-modal-logic}
+வாய்ப்புநிலைத் தருக்கம்~$\Log L$ \emph{இயல்பானது}
+எனில், எனில் மட்டுமே,
+\begin{enumerate}
+\item அது பின்வரும் இரண்டையும் கொண்டிருக்கும்:
+\begin{align}
+\tag{K} \Box(p \lif q) & \lif (\Box p \lif \Box q) \\
+\tag{Dual} \Diamond p & \liff \lnot \Box \lnot p
+\end{align}
+\item மேலும் அது இன்றியமையாக்கலின் கீழ் மூடப்பட்டிருக்கும்;
+  அதாவது $!A \in
+  \Log L$ எனும்போதெல்லாம் $ \Box !A \in \Log L$ உம் பொருந்தும்.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0654-S05
+வாய்ப்புநிலைத் தருக்கங்களை வரையறுக்கும் இரண்டு முதன்மை வழிகளை
+நாம் காண்போம். ஒன்று நிறுவல்-கோட்பாட்டு வழி: குறிப்பிட்ட
+!!{derivation} முறைமைகளில் வருவிக்கத்தக்க !!{formula}s இன்
+கணங்களாக அவற்றைக் கொள்வது. மற்றொன்று மாதிரிக் கோட்பாட்டு வழி:
+குறிப்பிட்ட மாதிரி வகுப்புகளில் செல்லுபடியாகும் !!{formula}s
+இன் கணங்களாக அவற்றைக் கொள்வது. இது சாதாரண கூற்றுத்
+தருக்கத்திலும் (அதேபோல் முதல்தரத் தருக்கத்திலும்) நிலவும்
+நிலையைப் பிரதிபலிக்கிறது. அங்கும் ஓர் !!{formula}s இன்
+கணத்தை இரு வேறு வழிகளில் குறிப்பிடலாம்: எடுத்துக்காட்டாக,
+எல்லா மெய்மதிப்பு ஒதுக்கீடுகளிலும் மெய்யான மெய்மங்களின்
+கணமாகவும், ஏதோவொரு !!{derivation} முறைமையில்
+!!{derivable} ஆகும் எல்லா !!{formula}s இன்
+கணமாகவும் குறிப்பிடலாம். இயல்பான வாய்ப்புநிலைத் தருக்கங்களுக்கு,
+தொடர்புசார் மாதிரிகளையும் அடிகோள்சார் (ஹில்பர்ட் வகை)
+நிறுவல் முறைமைகளையும் பயன்படுத்தி இந்த இருவழி
+குறிப்பீட்டை அமைக்கலாம்.
+
+% END SOURCE UNIT OLP-0654
+
+
+\chapter{நிறுவல் கோட்பாட்டின் கூடுதல் பகுதிகள்}
+\clearpage
+\section{வெட்டு நீக்கலின் தனித்த மூலத் துணுக்கு}
+\noindent மூல அலகு: \texttt{OLP-0660}.
+இது முழு அத்தியாயமாக அமைக்கப்படாத தனித்த நிறுவல் துணுக்கு.
+கோப்பின் பெயர் \texttt{intuitionistic.tex} என்றாலும், அதன்
+வாய்பாடுகளில் பலமுடிவு \Log{G3c} தொடரணிகளே பயன்படுத்தப்படுகின்றன.
+பெயரை வைத்து நிறுவல் முறைமை மாற்றப்படவில்லை.
+\begingroup
+\olfileid{pt}{cut}{int}
+
+% BEGIN SOURCE UNIT OLP-0660 content/proof-theory/cut-elimination/intuitionistic.tex
+% Exact modular target bytes: 3319; SHA256: e6822abbd7974e758d369eefd1f3fff21e487f58c13a0e7d6aa45fa2a46f25e6
+% SEGMENT OLP-0660-S01
+% Part: proof-theory
+% Chapter: cut-elimination
+% Auxiliary fragment: not imported into the reader
+
+$!A \ident (!B \lif !C)$ எனில், $\pi$ பின்வருமாறு முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lif !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B \lif !C, \Pi \fCenter \Lambda, !B$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Pi \fCenter \Lambda$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!B \lif !C, \Pi \fCenter \Lambda$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\Cut}
+\BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+
+% SEGMENT OLP-0660-S02
+\Cut{} இல் முடியும் பின்வரும் !!{proof} ஐக் கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lif !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B \lif !C, \Pi \fCenter \Lambda, !B$
+\RightLabel{\Cut}
+\BinaryInf$\Gamma, \Pi \fCenter \Delta, \Lambda, !B$
+\DisplayProof
+\]
+இதன் வெட்டு !!{height}, $\pi$ இன் வெட்டு உயரத்தைவிடக் குறைவு.
+தொகுத்தறிதல் கருதுகோள் $\Gamma, \Pi \fCenter \Delta,
+\Lambda, !B$ இன் !!a{proof}~$\pi_1''$ ஐத் தருகிறது.
+
+% SEGMENT OLP-0660-S03
+\Cut{} இல் முடியும் பின்வரும் !!{proof} ஐக் கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Pi \fCenter \Lambda$
+\RightLabel{\Cut}
+\BinaryInf$!B, \Gamma, \Pi \fCenter \Delta, \Lambda$
+\DisplayProof
+\]
+இதன் வெட்டுத் தரமும் வெட்டு !!{height} உம் $\pi$ இன்
+வெட்டுத் தரம், வெட்டு !!{height} ஆகிய இரண்டையும்விடக் குறைவு.
+எனவே தொகுத்தறிதல் கருதுகோள் $!B, \Gamma, \Pi
+\fCenter \Delta, \Lambda$ இன் \Log{G3c}-!!{proof}~$\pi_2'''$
+ஐத் தருகிறது.
+
+% SEGMENT OLP-0660-S04
+இப்போது \Cut{} இல் முடியும் பின்வரும் !!{proof} க்குத்
+தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்துக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma, \Pi \fCenter \Delta, \Lambda, !B$
+\AxiomC{}
+\RightLabel{$\pi_2'''$}
+\Deduce$!B, \Gamma, \Pi \fCenter \Delta, \Lambda$
+\RightLabel{\Cut}
+\BinaryInf$\Gamma, \Gamma, \Pi, \Pi \fCenter \Delta, \Delta, \Lambda, \Lambda$
+\DisplayProof
+\]
+(இதன் வெட்டுத் தரம் $< \cutr{\pi}$.) ஆகவே
+$\Gamma, \Gamma, \Pi, \Pi \fCenter \Delta, \Delta,
+\Lambda, \Lambda$ இன் !!a{proof} கிடைக்கிறது.
+\olref[seq][inv]{prop:G3c-cont-adm} ஐப் பயன்படுத்திச் சுருக்கினால்,
+$\Gamma, \Pi \fCenter \Delta, \Lambda$ இன்
+!!{proof}~$\pi'$ கிடைக்கிறது.
+
+% END SOURCE UNIT OLP-0660
+
+\endgroup
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0694}\par
+
+% BEGIN SOURCE UNIT OLP-0694 content/proof-theory/propositions-as-types/sequent-natural-deduction.tex
+% Exact modular target bytes: 6598; SHA256: 84ef6aa6702713458859311804d63e0738a850a4c4c0eebad0cd446664cc3641
+% SEGMENT OLP-0694-S01
+
+
+\olfileid{int}{pty}{snd}
+
+\olsection{தொடரணிகளுடன் இயல்பான வருவித்தல்}
+
+$\Gamma \Sequent !A$ என்று எழுதுவோம்: அதாவது,
+$\Gamma$ என்பது !!{undischarged} எடுகோள்களின்
+கணமாகவும் $!A$ முடிவாகவும் உள்ள இயல்பான வருவித்தல்
+!!{derivation} ஒன்று உள்ளது. $\Gamma$ காலிக் கணம்
+எனில், $\Sequent !A$ என்று எழுதுவோம்.
+
+$\Gamma \cup \{!A_1, \dots, !A_n\}$ என்பதற்கு
+$\Gamma, !A_1, \dots, !A_n$ என்றும்,
+$\Gamma \cup \Delta$ என்பதற்கு $\Gamma, \Delta$
+என்றும் எழுதுவோம்.
+
+% SEGMENT OLP-0694-S02
+$\Gamma \Sequent !A \land !B$ எனில்,
+$\Gamma$ என்பதை !!{undischarged} எடுகோள்களாகவும்
+$!A \land !B$ ஐ இறுதி-!!{formula} ஆகவும் கொண்ட
+!!a{derivation} நமக்கு உள்ளது. அதன் அடியில்
+$\Elim{\land}$ விதியைப் பயன்படுத்தி, அதே
+!!{undischarged} எடுகோள்களிலிருந்து $!A$ ஐ முடிவாகக்
+கொண்ட !!a{derivation} ஐப் பெறலாம். வேறு சொற்களில்,
+$\Gamma \Sequent !A \land !B$ எனில்
+$\Gamma \Sequent !A$:
+\begin{prooftree}
+  \Axiom$\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}$}
+  \UnaryInf$\Gamma \fCenter !A$
+  \DisplayProof\qquad\bottomAlignProof
+  \Axiom$\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}$}
+  \UnaryInf$\Gamma \fCenter !B$
+\end{prooftree}
+$\Elim{\land}$ என்ற அடையாளம், இயல்பான வருவித்தலில்
+அதே பெயருடைய விதியுடனான தொடர்பைக் காட்டுகிறது.
+
+% SEGMENT OLP-0694-S03
+அதேபோல், $\Gamma, !A \Sequent !B$ எனக் கொள்வோம்.
+அதாவது, $\Gamma, !A$ என்பவற்றை !!{undischarged}
+எடுகோள்களாகவும் $!B$ ஐ இறுதி-!!{formula} ஆகவும்
+கொண்ட !!a{derivation} உள்ளது. இதற்கு
+$\Intro{\lif}$ விதியைப் பயன்படுத்தினால்,
+$\Gamma$ என்பதை !!{undischarged} எடுகோள்களாகவும்
+$!A \lif !B$ ஐ இறுதி-!!{formula} ஆகவும் கொண்ட
+!!a{derivation} கிடைக்கும்; அதாவது,
+$\Gamma \Sequent !A \lif !B$.
+எடுகோள்களின் !!{discharge} இங்கு மேலும் தெளிவாகக்
+காட்டப்படுவதைக் கவனிக்கவும்.
+\begin{prooftree}
+  \Axiom $\Gamma, !A \fCenter !B$
+  \RightLabel{$\Intro{\lif}$}
+  \UnaryInf $\Gamma \fCenter !A \lif !B$
+\end{prooftree}
+
+இதே முறையில் மற்ற விதிகளிலிருந்தும் முடிவுகளைக்
+காணலாம்; அவை முழுவதும் பின்வருமாறு:
+\begin{gather*}
+  \Axiom $\Gamma \fCenter !A$
+  \Axiom $\Delta \fCenter !B$
+  \RightLabel{$\Intro{\land}$}
+  \BinaryInf $\Gamma,\Delta \fCenter !A \land !B$
+  \DisplayProof\\
+  \Axiom $\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}_1$}
+  \UnaryInf $\Gamma \fCenter !A$
+  \DisplayProof
+  \qquad
+  \Axiom $\Gamma \fCenter !A \land !B$
+  \RightLabel{$\Elim{\land}_2$}
+  \UnaryInf $\Gamma \fCenter !B$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma \fCenter !A$
+  \RightLabel{$\Intro{\lor}_1$}
+  \UnaryInf $\Gamma \fCenter !A \lor !B$
+  \DisplayProof\qquad
+  \Axiom $\Gamma \fCenter !B$
+  \RightLabel{$\Intro{\lor}_2$}
+  \UnaryInf $\Gamma \fCenter !A \lor !B$
+  \DisplayProof\\
+  \Axiom $\Gamma \fCenter !A \lor !B$
+  \Axiom $\Delta, !A \fCenter !C$
+  \Axiom $\Delta', !B \fCenter !C$
+  \RightLabel{$\Elim{\lor}$}
+  \TrinaryInf $\Gamma, \Delta, \Delta' \fCenter !C$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma, !A \fCenter !B$
+  \RightLabel{$\Intro{\lif}$}
+  \UnaryInf $\Gamma \fCenter !A \lif !B$
+  \DisplayProof
+  \qquad
+  \Axiom $\Delta \fCenter !A \lif !B$
+  \Axiom $\Gamma \fCenter !A$
+  \RightLabel{$\Elim{\lif}$}
+  \BinaryInf $\Gamma, \Delta \fCenter !B$
+  \DisplayProof
+  \\
+  \Axiom $\Gamma \fCenter \lfalse$
+  \RightLabel{$\FalseInt$}
+  \UnaryInf $\Gamma \fCenter !A$
+  \DisplayProof
+\end{gather*}
+
+% SEGMENT OLP-0694-S04
+ஓர் எடுகோள் தனியே $!A$ இலிருந்து $!A$ இன்
+!!a{derivation} ஆகும்; எனவே $!A \Sequent !A$
+எப்போதும் கிடைக்கும்.
+
+\begin{prooftree}
+  \AxiomC{$ $}
+  \UnaryInfC{$!A \fCenter !A$}
+\end{prooftree}
+
+இவ்விதிகளை ஒருங்கே எடுத்தால், எந்த இயல்பான வருவித்தல்
+!!{derivation}s உள்ளன என்பதை விவரிக்கும் கலனமாகக்
+கொள்ளலாம். இயல்பான வருவித்தலின் குறியீட்டு மாற்றுருவாகவும்
+கொள்ளலாம்: ஒவ்வொரு படியும் !!{derive} செய்யப்பட்ட
+!!{formula} ஐ மட்டுமன்றி, அது எந்த !!{undischarged}
+எடுகோள்களிலிருந்து !!{derive} செய்யப்பட்டது என்பதையும்
+பதிவுசெய்கிறது.
+
+எடுத்துக்காட்டாக, பின்வரும் நிறுவலைக் காண்க:
+\begin{prooftree}
+  \Axiom$!A \fCenter !A$
+  \UnaryInf $!A \fCenter !A \lor (!A \lif \lfalse)$
+  \Axiom $!B \fCenter !B$
+  \BinaryInf$!A, !B \fCenter \lfalse$
+  \UnaryInf$!B \fCenter !A \lif \lfalse$
+  \UnaryInf$!B \fCenter !A \lor (!A \lif \lfalse)$
+  \Axiom$!B \fCenter !B$
+  \BinaryInf$!B \fCenter \lfalse$
+  \UnaryInf$\fCenter !B \lif \lfalse$
+\end{prooftree}
+இங்கு $!B$ என்பது
+$(!A \lor (!A \lif \lfalse))\lif \lfalse$
+என்பதன் சுருக்கம்.
+
+
+% END SOURCE UNIT OLP-0694
+
+
+\clearpage
+\section{மாற்று தொடர்கணித விதி அட்டவணைகள்}
+\noindent மூல அலகுகள்:
+\texttt{OLP-0705}, \texttt{OLP-0708}, \texttt{OLP-0709}, \texttt{OLP-0710}.
+மூலத்தில் வழங்கப்பட்ட விதிகளும் நிபந்தனைகளும் அப்படியே பாதுகாக்கப்படுகின்றன.
+\begingroup
+\olfileid{pt}{seq}{rai}
+
+% BEGIN SOURCE UNIT OLP-0705 content/proof-theory/sequent-calculus/rules-G1i.tex
+% Exact modular target bytes: 3787; SHA256: 6a52040593872550089ff34972ffe1e78a694fb7c06cb3742d254cdd694fac4f
+% SEGMENT OLP-0705-S01
+
+
+\begin{table}
+\begin{tabular}{@{}c@{}c@{}}
+\multicolumn{2}{@{}c@{}}{அடிக்கோள்கள்}\\[2ex]
+$!A \Sequent !A$ & $\lfalse \Sequent \quad$
+\\[2ex]
+% SEGMENT OLP-0705-S02
+\multicolumn{2}{@{}c@{}}{கட்டமைப்பு விதிகள்}\\[2ex]
+\Axiom$ \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter $
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$ \Gamma \fCenter !A$
+\DisplayProof
+\\[4ex]
+\Axiom$ !A, !A, \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Contraction}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\\[4ex]
+% SEGMENT OLP-0705-S03
+\multicolumn{2}{@{}c@{}}{தருக்க விதிகள்}\\[2ex]
+\Axiom$ \Gamma \fCenter !A $
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$ \lnot !A, \Gamma \fCenter $
+\DisplayProof
+&
+\Axiom$!A, \Gamma \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \Gamma \fCenter \lnot !A $
+\DisplayProof
+\\[4ex]\begin{tabular}[t]{@{}l@{}}
+\Axiom$ !A, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\\[3ex]
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof\\[3ex]
+\end{tabular}
+&
+\Axiom$\Gamma \fCenter !A$
+\Axiom$ \Gamma \fCenter !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter !A \land !B $
+\DisplayProof
+\\[4ex]\Axiom$!A, \Gamma \fCenter \Delta$
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!A \lor !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\begin{tabular}[t]{@{}r@{}}
+\Axiom$\Gamma \fCenter !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter !A \lor !B$
+\DisplayProof
+\\[3ex]
+\Axiom$ \Gamma \fCenter !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter !A \lor !B$
+\DisplayProof\\[3ex]
+\end{tabular}
+\\[4ex]
+\Axiom$ \Gamma \fCenter !A$
+\Axiom$ !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !A \lif !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ !A, \Gamma \fCenter !B$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \Gamma \fCenter !A \lif !B $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(t), \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \lforall[x][!A(x)]$
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(a), \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][!A(x)], \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter !A(t) $
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$ \Gamma \fCenter \lexists[x][!A(x)]$
+\DisplayProof
+\end{tabular}
+\caption{உள்ளுணர்வுவாதத் தருக்கத்திற்கான \Log{G1i} விதிகள்.
+$\RightR{\forall}$ மற்றும் $\LeftR{\exists}$ ஆகிய விதிகளில்,
+!!{constant}~$a$ முடிவுத் தொடரணியில் இடம்பெறக் கூடாது.
+$\Gamma$ என்பது !!{formula}s இன் பன்மைக் கணம்;
+$\Delta$ வெறுமையாகவோ ஒரே ஓர் !!{formula} மட்டும் கொண்டதாகவோ
+இருக்கலாம். \RightR{\Contraction} விதி இல்லை.
+\Log{G1m} என்பது \RightR{\Weakening} விதியும்
+$\lfalse, \Gamma \Sequent \Delta$ என்ற அடிக்கோள்களும்
+நீக்கப்பட்ட \Log{G1i} ஆகும்.}
+\ollabel{tab:G1i}
+\end{table}
+
+
+% END SOURCE UNIT OLP-0705
+
+\clearpage
+
+% BEGIN SOURCE UNIT OLP-0708 content/proof-theory/sequent-calculus/rules-G3i.tex
+% Exact modular target bytes: 3293; SHA256: e7d819fc86f53ea95a692d5c5eca5f403d8739c448316a4f74ac8dca3d81602f
+% SEGMENT OLP-0708-S01
+
+
+\begin{table}
+\begin{tabular}{@{}c@{}c@{}}
+\multicolumn{2}{@{}c@{}}{அடிக்கோள்கள்}\\[2ex]
+$!C, \Gamma \Sequent !C$ & $\lfalse, \Gamma \Sequent \Delta$
+\\[2ex]
+% SEGMENT OLP-0708-S02
+\multicolumn{2}{@{}c@{}}{தருக்க விதிகள்}\\[2ex]
+\Axiom$\lnot !A, \Gamma \fCenter !A $
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$!A, \Gamma \fCenter$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \Gamma \fCenter \lnot !A $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$\Gamma \fCenter !A$
+\Axiom$ \Gamma \fCenter !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter !A \land !B $
+\DisplayProof
+\\[4ex]\Axiom$!A, \Gamma \fCenter \Delta$
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!A \lor !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\begin{tabular}[t]{@{}r@{}}
+\Axiom$\Gamma \fCenter !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter !A \lor !B$
+\DisplayProof
+\\[3ex]
+\Axiom$\Gamma \fCenter !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter !A \lor !B$
+\DisplayProof\\[3ex]
+\end{tabular}
+\\[4ex]
+\Axiom$!A \lif !B, \Gamma \fCenter !A$
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!A \lif !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$!A, \Gamma \fCenter !B$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \Gamma \fCenter !A \lif !B $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(t), \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \lforall[x][!A(x)]$
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(a), \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][!A(x)], \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter !A(t) $
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$ \Gamma \fCenter \lexists[x][!A(x)]$
+\DisplayProof
+\end{tabular}
+\caption{உள்ளுணர்வுவாதத் தருக்கத்திற்கான \Log{G3i} விதிகள்.
+$\RightR{\forall}$ மற்றும் $\LeftR{\exists}$ ஆகிய விதிகளில்,
+!!{constant}~$a$ முடிவுத் தொடரணியில் இடம்பெறக் கூடாது.
+$\Gamma$ என்பது !!{formula}s இன் பன்மைக் கணம்;
+$\Delta$ வெறுமையாகவோ ஒரே ஓர் !!{formula} மட்டும் கொண்டதாகவோ
+இருக்கலாம். அடிக்கோள்களில் !!{formula}~$!C$
+அணு வாய்பாடாக இருக்க வேண்டும். \Log{G1m} என்பது
+\Log{G1i} இல் \RightR{\Weakening} விதியும்
+$\lfalse, \Gamma \Sequent \Delta$ என்ற அடிக்கோள்களும்
+நீக்கப்பட்ட முறைமை.}
+\ollabel{tab:G3i}
+\end{table}
+
+
+% END SOURCE UNIT OLP-0708
+
+\clearpage
+
+% BEGIN SOURCE UNIT OLP-0709 content/proof-theory/sequent-calculus/rules-LK.tex
+% Exact modular target bytes: 3860; SHA256: 135f0f89418bb735382e65ecff8ad426a268b1d97c891f360ec37946f050c226
+% SEGMENT OLP-0709-S01
+
+
+\begin{table}
+\begin{tabular}{@{}c@{}c@{}}
+\multicolumn{2}{@{}c@{}}{அடிக்கோள்கள்}\\[2ex]
+$!A \Sequent !A$ & $\lfalse \Sequent \quad$
+\\[2ex]
+% SEGMENT OLP-0709-S02
+\multicolumn{2}{@{}c@{}}{கட்டமைப்பு விதிகள்}\\[2ex]
+\Axiom$ \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A$
+\DisplayProof
+\\[4ex]
+\Axiom$ !A, !A, \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\Contraction}}
+\UnaryInf$ !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta, !A, !A$
+\RightLabel{\RightR{\Contraction}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A$
+\DisplayProof
+\\[4ex]
+\Axiom$ \Gamma, !A, !B, \Pi \fCenter \Delta $
+\RightLabel{\LeftR{\Exchange}}
+\UnaryInf$\Gamma, !B, !A, \Pi \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta, !A, !B, \Lambda$
+\RightLabel{\RightR{\Exchange}}
+\UnaryInf$ \Gamma \fCenter \Delta, !B, !A, \Lambda$
+\DisplayProof
+\\[4ex]
+% SEGMENT OLP-0709-S03
+\multicolumn{2}{@{}c@{}}{தருக்க விதிகள்}\\[2ex]
+\Axiom$ \Gamma \fCenter \Delta, !A $
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$ \lnot !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$!A, \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lnot !A $
+\DisplayProof
+\\[4ex]\begin{tabular}[t]{@{}l@{}}
+\Axiom$ !A, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\\[3ex]
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof\\[3ex]
+\end{tabular}
+&
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter \Delta, !A \land !B $
+\DisplayProof
+\\[4ex]\Axiom$!A, \Gamma \fCenter \Delta$
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!A \lor !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\begin{tabular}[t]{@{}r@{}}
+\Axiom$\Gamma \fCenter \Delta, !A$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+\DisplayProof
+\\[3ex]
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+\DisplayProof\\[3ex]
+\end{tabular}
+\\[4ex]
+\Axiom$ \Gamma \fCenter \Delta, !A$
+\Axiom$ !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !A \lif !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ !A, \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lif !B $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(t), \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta, !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(a), \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][!A(x)], \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta, !A(t) $
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lexists[x][!A(x)]$
+\DisplayProof
+\end{tabular}
+\caption{\Log{LK} இன் விதிகள். $\RightR{\forall}$ மற்றும்
+$\LeftR{\exists}$ ஆகிய விதிகளில், !!{constant}~$a$
+முடிவுத் தொடரணியில் இடம்பெறக் கூடாது. $\Gamma$, $\Delta$,
+$\Pi$, $\Lambda$ ஆகியவை !!{formula}s இன் வரிசைகள்.}
+\ollabel{tab:LK}
+\end{table}
+
+
+% END SOURCE UNIT OLP-0709
+
+\clearpage
+
+% BEGIN SOURCE UNIT OLP-0710 content/proof-theory/sequent-calculus/rules-mG3i.tex
+% Exact modular target bytes: 3098; SHA256: 9800548758f58b99f905996abe4f623cf564beb2b7f6601972137b98997dbc5e
+% SEGMENT OLP-0710-S01
+
+
+\begin{table}
+\begin{tabular}{@{}c@{}c@{}}
+\multicolumn{2}{@{}c@{}}{அடிக்கோள்கள்}\\[2ex]
+$!C, \Gamma \Sequent \Delta, !C$ & $\lfalse, \Gamma \Sequent \Delta$
+\\[2ex]
+% SEGMENT OLP-0710-S02
+\multicolumn{2}{@{}c@{}}{தருக்க விதிகள்}\\[2ex]
+\Axiom$\lnot !A, \Gamma \fCenter \Delta, !A $
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$!A, \Gamma \fCenter$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lnot !A $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter \Delta, !A \land !B $
+\DisplayProof
+\\[4ex]\Axiom$!A, \Gamma \fCenter \Delta$
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!A \lor !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$\Gamma \fCenter \Delta, !A, !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+\DisplayProof
+\\[4ex]
+\Axiom$!A \lif !B, \Gamma \fCenter \Delta, !A$
+\Axiom$ !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!A \lif !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ !A, \Gamma \fCenter !B$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lif !B $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(t), \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \lforall[x][!A(x)]$
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(a), \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][!A(x)], \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta, \lexists[x][!A(x)], !A(t) $
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lexists[x][!A(x)]$
+\DisplayProof
+\end{tabular}
+\caption{உள்ளுணர்வுவாதத் தருக்கத்திற்கான பல-முடிவு
+\Log{mG3i} விதிகள். $\RightR{\forall}$ மற்றும்
+$\LeftR{\exists}$ ஆகிய விதிகளில், !!{constant}~$a$
+முடிவுத் தொடரணியில் இடம்பெறக் கூடாது. $\Gamma$ மற்றும்
+$\Delta$ ஆகியவை !!{formula}s இன் பன்மைக் கணங்கள்.
+அடிக்கோள்களில் !!{formula}~$!C$ அணு வாய்பாடாக இருக்க வேண்டும்.
+\Log{mG1m} என்பது $\lfalse, \Gamma \Sequent \Delta$
+என்ற அடிக்கோள்கள் நீக்கப்பட்ட \Log{mG1i} ஆகும்.}
+\ollabel{tab:mG3i}
+\end{table}
+
+
+% END SOURCE UNIT OLP-0710
+
+\clearpage
+\endgroup
+
+\chapter{கூற்றுத் தருக்கமும் இரண்டாம்தரத் தருக்கமும்}
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0715}\par
+
+% BEGIN SOURCE UNIT OLP-0715 content/propositional-logic/syntax-and-semantics/soundness.tex
+% Exact modular target bytes: 1810; SHA256: d0bd58391df12477c251b31194d5b081cd7fd39c49d8288d8f930af717b559b1
+% SEGMENT OLP-0715-S01
+
+
+\olfileid{pl}{prp}{snd}
+
+\olsection{கூற்றுத் தருக்கத்தின் சரித்தன்மை}
+
+\begin{thm}[சரித்தன்மை]
+\ollabel{thm:soundness}
+$\Gamma\Proves!A$ எனில் $\Gamma \Entails !A$.
+\end{thm}
+
+% SEGMENT OLP-0715-S02
+\begin{proof}
+தேற்றங்களின் மீது தொகுத்தறிதல் செய்கிறோம். $!A$ ஓர் அடிகோள் எனில்,
+$\Entails !A$; எனவே குறிப்பாக $\Gamma \Entails!A$.
+அதேபோல் $!A \in \Gamma$ எனில், $\Gamma \Entails!A$.
+தொகுத்தறிதல் படியில், $!C$ மற்றும் $!C\lif!A$ ஆகியவற்றிலிருந்து
+\emph{மோடஸ் போனென்ஸ்} விதியால் $!A$ பெறப்படுகிறது என்க;
+மேலும் $!C\lif !A$ க்கும் $!C$ க்கும் தேற்றம் பொருந்துகிறது என்பது
+தொகுத்தறிதல் எடுகோள் என்க. அப்போது
+\olref[pl][syn][sem]{prop:semanticalfacts} இன் இரண்டாவது உருப்படி
+தேவையான முடிவைக் கொடுக்கிறது.
+\end{proof}
+
+% SEGMENT OLP-0715-S03
+\begin{cor}
+$\Gamma$ நிறைவுறத்தக்கது எனில், $\Gamma$ முரணற்றது.
+எனவே கூற்றுத் தருக்கம் முரணற்றது.
+\end{cor}
+
+
+% END SOURCE UNIT OLP-0715
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0714}\par
+
+% BEGIN SOURCE UNIT OLP-0714 content/propositional-logic/syntax-and-semantics/completeness.tex
+% Exact modular target bytes: 8822; SHA256: fa8d05f37caf7da9861d769a04caa3e3e7ed6f35c711cbf16edfc5d043c164a0
+% SEGMENT OLP-0714-S01
+
+
+\olfileid{pl}{prp}{com}
+
+\olsection{கூற்றுத் தருக்கத்தின் நிறைவுத்தன்மை}
+
+\begin{defn}
+\ollabel{def:MaxCon}
+!!{formula}s கொண்ட கணம்~$\Gamma$, முரணற்றதாகவும்,
+$\Gamma \subseteq \Delta$ ஆக இருக்கும் முரணற்ற
+கணம்~$\Delta$ எதற்கும் $\Gamma = \Delta$ ஆகவும்
+இருந்தால், அது \emph{அதிகபட்ச முரணற்றது} எனப்படும்.
+\end{defn}
+
+% SEGMENT OLP-0714-S02
+\begin{lem}[மெய்மைத் துணைத்தேற்றம்]
+  \ollabel{lem:truth}
+$\Gamma$ அதிகபட்ச முரணற்றது என்க. அப்போது:
+\begin{enumerate}
+\item \ollabel{lem:truth-1} $!A \in \Gamma$ அப்போதும்
+  அப்போது மட்டுமே $\lnot !A \notin \Gamma$;
+\item \ollabel{lem:truth-2} $\Gamma \Proves !A$ அப்போதும்
+  அப்போது மட்டுமே $!A \in \Gamma$;
+\item \ollabel{lem:truth-3} $!A \lif !B \in \Gamma$
+  அப்போதும் அப்போது மட்டுமே $!A \notin \Gamma$
+  அல்லது $!B \in \Gamma$.
+\end{enumerate}
+\end{lem}
+
+% SEGMENT OLP-0714-S03
+\begin{proof}
+\begin{enumerate}
+\item $!A \in \Gamma$ என்க. மேலும் $\lnot !A \in \Gamma$
+  எனில் $\Gamma$ முரணுடையது. $!A$ உம்
+  $\lnot!A$ உம் இரண்டுமே $\Gamma$ இல் இல்லை எனில்,
+  $\Gamma\cup\{!A\}$, $\Gamma \cup \{\lnot !A\}$
+  என்ற இரு விரிவாக்கங்களும் முரணுடையவையாக இருக்க
+  முடியாது: அப்படியாயின் வழக்கமான இருநிலை
+  முரண்-பிரிப்பு வாதத்தால் ஆரம்பக் கணமே முரணுடையதாகும்.
+  ஆகவே அவற்றில் ஒன்று முரணற்றது; இது $\Gamma$
+  அதிகபட்சமானது என்பதற்கு முரண். மறுதிசையும்
+  இதே முறையில் நிறுவப்படுகிறது.
+
+% SEGMENT OLP-0714-S04
+\item $!A \in \Gamma$ எனில் உடனே
+  $\Gamma \Proves !A$. மறுபுறம், $\Gamma \Proves !A$
+  என்க. $!A \notin \Gamma$ எனில்
+  \olref{lem:truth-1} இன் படி $\lnot !A \in \Gamma$.
+  ஆகவே $\Gamma \Proves !A$ மற்றும்
+  $\Gamma \Proves \lnot !A$ இரண்டும் கிடைக்கும்;
+  இது முரண்பாடு.
+\item பயிற்சி.
+\end{enumerate}
+\end{proof}
+
+% SEGMENT OLP-0714-S05
+\olref{lem:truth}\olref{lem:truth-2} இன் இடமிருந்து
+வலத்திற்கான திசை, $\Gamma$ என்பது
+\emph{வருவித்தலின் கீழ் மூடப்பட்டது} எனக் காட்டுகிறது:
+எந்த~$!A$ க்கும் $\Gamma \Proves !A$ எனில்
+$!A \in \Gamma$.
+
+\begin{prob}
+  \olref{lem:truth} இன் நிறுவலை நிறைவு செய்க.
+\end{prob}
+
+% SEGMENT OLP-0714-S06
+\begin{thm}[நிறைவுத்தன்மை]
+\ollabel{thm:completeness}
+$\Gamma$ முரணற்றது எனில் $\Gamma$ நிறைவுறத்தக்கது.
+\end{thm}
+
+\begin{proof}
+மொழியின் எல்லா !!{formula}s ஐயும் முழுமையாகப்
+பட்டியலிடும் $!A_0$, $!A_1$,~\dots என்ற வரிசையை
+எடுத்துக் கொள்வோம். !!{formula}s கொண்ட
+அதிகரிக்கும் கணங்களின் வரிசை $\Gamma_0$,
+$\Gamma_1$,~\dots ஐப் பின்வருமாறு தொகுத்தறிதலாக
+வரையறுக்கிறோம்:
+\begin{align*}
+\Gamma_0 & = \Gamma\\
+\Gamma_{n+1} &  =
+\begin{cases}
+  \Gamma_n \cup \{!A_n\} & \text{$\Gamma_n \cup \{!A_n\}$ முரணற்றது எனில்;}\\
+  \Gamma_n \cup \{\lnot !A_n\} & \text{இல்லாவிட்டால்}.
+\end{cases}
+\end{align*}
+பின்னர்
+\[
+\Gamma^* = \bigcup_{0\le n}\Gamma_n.
+\]
+என வரையறுக்கிறோம்.
+
+% SEGMENT OLP-0714-S07
+இப்போது பின்வரும் உண்மைகளை வரிசையாக நிறுவ வேண்டும்:
+\begin{enumerate}
+\item ஒவ்வொரு $n$ க்கும் $\Gamma_n$ முரணற்றது.
+  இதை $n$ மீது தொகுத்தறிதலாலும், ஒரு முரணற்ற
+  கணத்துடன் ஒரு வாய்பாட்டையோ அதன் மறுப்பையோ
+  சேர்க்கும் இரு விரிவாக்கங்களில் குறைந்தது ஒன்று
+  முரணற்றது என்ற மேலுள்ள தேர்வு வாதத்தாலும் பெறுகிறோம்;
+\item $\Gamma^*$ முரணற்றது;
+\item $\Gamma^*$ அதிகபட்சமானது.
+\end{enumerate}
+பின்னர் $p_i \in \Gamma^*$ அப்போதும் அப்போது
+மட்டுமே $v(p_i) = \True$ என்றவாறு மெய்மதிப்பு
+ஒதுக்கீடு~$v$ ஐ வரையறுக்கிறோம். $!A$ மீது
+தொகுத்தறிதலால், சிக்கலான !!{sentence}s க்கும்
+$\Gamma^*$ இல் இருப்பதும் $v$ இன் படி மெய்யாக
+இருப்பதும் ஒன்றே, அதாவது
+$\overline{v}(!A) = \True$ அப்போதும் அப்போது
+மட்டுமே $!A \in \Gamma^*$ என்று காட்டுகிறோம்.
+குறிப்பாக, $v$ ஆனது $\Gamma^*$ ஐ நிறைவுறுத்துகிறது;
+மேலும் $\Gamma \subseteq \Gamma^*$ என்பதால்
+வேண்டியபடி $\Gamma$ உம் நிறைவுறத்தக்கது.
+\end{proof}
+
+% SEGMENT OLP-0714-S08
+\begin{cor}
+$\Gamma \Entails !A$ எனில் $\Gamma \Proves !A$.
+\end{cor}
+
+\begin{proof}
+$\Gamma\Proves/ !A$ எனில்
+$\Gamma \cup \{\lnot !A\}$ முரணற்றது:
+இது முரணுடையதாக இருந்தால், நிறுவத்தக்கதன்மைக்கும்
+முரணுக்குமான வழக்கமான தொடர்பால் $\Gamma$ விலிருந்து
+அந்த வாய்பாடு நிறுவப்படும்; அது கருதுகோளுக்கு முரண்.
+ஆகவே நிறைவுத்தன்மைத் தேற்றத்தின்படி
+$\Gamma \cup \{\lnot !A\}$ நிறைவுறத்தக்கது.
+எனவே $\Gamma \Entails/ !A$.
+\end{proof}
+
+% SEGMENT OLP-0714-S09
+\begin{prop}[இறுக்கத்தன்மைத் தேற்றம்]
+\ollabel{prop:compactness}
+$\Gamma$ நிறைவுறத்தக்கது அப்போதும் அப்போது
+மட்டுமே, $\Gamma$ வின் ஒவ்வொரு
+\emph{முடிவுறு} உட்கணமும்~$\Gamma_0$
+நிறைவுறத்தக்கது.
+\end{prop}
+
+\begin{proof}
+$\Gamma$ நிறைவுற இயலாதது அப்போதும் அப்போது
+மட்டுமே அது முரணுடையது; அப்போதும் அப்போது
+மட்டுமே $\Gamma$ வின் ஏதோ ஒரு முடிவுறு
+உட்கணம்~$\Gamma_0$ முரணுடையது; அப்போதும்
+அப்போது மட்டுமே அந்த முடிவுறு
+உட்கணம்~$\Gamma_0$ நிறைவுற இயலாதது.
+\end{proof}
+
+% SEGMENT OLP-0714-S10
+\begin{cor}
+$\Gamma \Entails !A$ அப்போதும் அப்போது
+மட்டுமே, $\Gamma$ வின் ஏதோ ஒரு முடிவுறு
+உட்கணம்~$\Gamma_0$ க்கு
+$\Gamma_0 \Entails !A$.
+\end{cor}
+
+
+% END SOURCE UNIT OLP-0714
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0716}\par
+
+% BEGIN SOURCE UNIT OLP-0716 content/second-order-logic/syntax-and-semantics/language-of-sol.tex
+% Exact modular target bytes: 3870; SHA256: 8ff252e13fc325ef1db25b40aa6c5eafc8686ef2ed27a5d8d3d6c6ab81f421ff
+% SEGMENT OLP-0716-S01
+
+
+\olfileid{sol}{syn}{lan}
+
+\olsection{இரண்டாம்தரத் தருக்கத்தின் மொழி}
+
+முதல்தரத் தருக்கத்தைப் போலவே, இரண்டாம்தரத் தருக்கத்தின் கோவைகள்
+\emph{!!{variable}s}, \emph{!!{constant}s}, \emph{!!{predicate}s},
+சில நேரங்களில் \emph{!!{function}s} ஆகியவற்றைக் கொண்ட அடிப்படைச்
+சொற்கோவையிலிருந்து கட்டியெழுப்பப்படுகின்றன. இவற்றுடன் தருக்க
+இணைப்பிகள், அளவையடைகள், அடைப்புக்குறிகள் மற்றும் காற்புள்ளிகள் போன்ற
+நிறுத்தற்குறிகளைச் சேர்த்து, \emph{உறுப்புகளும்}
+\emph{!!{formula}s உம்} அமைக்கப்படுகின்றன. பொருள்களுக்கான மாறிகளோடு,
+உறவுகளுக்கும் சார்புகளுக்குமான மாறிகளையும் இரண்டாம்தரத் தருக்கம்
+கொண்டிருப்பதும், அவற்றின்மீது அளவையிடலை அனுமதிப்பதுமே வேறுபாடு.
+எனவே இரண்டாம்தரத் தருக்கத்தின் தருக்கக் குறிகள் முதல்தரத்
+தருக்கத்தின் குறிகளுடன் பின்வருவனவற்றையும் கொண்டவை:
+
+% SEGMENT OLP-0716-S02
+\begin{enumerate}
+\item ஒவ்வோர் இட எண்ணிக்கை~$n$ க்கும் இரண்டாம்தர உறவு
+  !!{variable}s இன் ஓர் !!{denumerable}s கணம்:
+  $\Obj V_0^n$, $\Obj V_1^n$, $\Obj V_2^n$, \dots
+\item இரண்டாம்தரச் சார்பு !!{variable}s இன் ஓர் !!{denumerable}s கணம்:
+  $\Obj u_0^n$, $\Obj u_1^n$, $\Obj u_2^n$, \dots
+\end{enumerate}
+
+% SEGMENT OLP-0716-S03
+முதல்தரத் தருக்கத்தில் !!{identity}~$\eq$ பொதுவாகச் சேர்க்கப்படுகிறது.
+முதல்தரத் தருக்கத்தில், ஒரு மொழி~$\Lang{L}$ இன் தருக்கமல்லாத குறிகள்
+சுவையான எதையும் வெளிப்படுத்த இன்றியமையாதவை. தருக்கமல்லாத குறிகள்
+எதையும் பயன்படுத்தாத !!{sentence}s நிச்சயமாக உள்ளன; ஆனால்~$\eq$
+மட்டும் கொண்டு சுவையான எதையும் கூறுவது கடினம். இரண்டாம்தரத்
+தருக்கத்தில், உறவு மற்றும் சார்பு மாறிகள் வரம்பின்றிக் கிடைப்பதால்,
+தருக்கமல்லாத குறிகளின் தனிப்பட்ட தொகுதி இல்லாமலேயே ஒரு முதல்தர
+மொழியில் சொல்லக்கூடிய எதையும் நம்மால் சொல்ல முடியும்.
+
+
+% END SOURCE UNIT OLP-0716
+
+
+\chapter{கணங்கள், தொடர்புகள், சார்புகளின் மாற்று வடிவங்கள்}
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0717}\par
+
+% BEGIN SOURCE UNIT OLP-0717 content/sets-functions-relations/functions/isomorphic-functions.tex
+% Exact modular target bytes: 3441; SHA256: 24ae25a6f9e0bf71d07cf6d5b03169e69b5072b47b453b8979574ed1816cf339
+% SEGMENT OLP-0717-S01
+
+
+\olfileid{sfr}{fun}{iso}
+\olsection{ஓரினச்சார்பு}
+
+\begin{explain}
+\emph{ஓரினச்சார்பு} என்பது, அது தொடர்புபடுத்தும் கணங்களின்
+அமைப்பைப் பேணும் ஓர் இருபுறச் சார்பு; இங்கு அமைப்பு என்பது
+அக்கணங்களின் !!{element}s இடையே நிலவும் உறவுகளைச் சார்ந்தது.
+பின்வரும் இரண்டு கணங்களைக் கருதுக: $X=\{1,2,3\}$ மற்றும்
+$Y=\{4,5,6\}$. இரு கணங்களுக்கும் தொடரி, சிறியது,
+பெரியது ஆகிய உறவுகளால் அமைப்பு வழங்கப்படுகிறது.
+இரு கணங்களுக்கிடையிலான ஓரினச்சார்பு அவ்வமைப்புகளைப் பேணும்
+!!a{bijection} ஆகும். எனவே !!a{bijective} சார்பு $f \colon X
+\to Y$ ஆனது $i<j$ அப்போதும் அப்போது மட்டுமே $f(i)<f(j)$,
+$i>j$ அப்போதும் அப்போது மட்டுமே $f(i)>f(j)$, மேலும் $j$ ஆனது
+$i$ இன் தொடரி அப்போதும் அப்போது மட்டுமே $f(j)$ ஆனது
+$f(i)$ இன் தொடரி எனில், அது ஓரினச்சார்பு ஆகும்.
+\end{explain}
+
+% SEGMENT OLP-0717-S02
+\begin{defn}[ஓரினச்சார்பு]
+$U$ என்பது $\langle X, R\rangle$ என்ற ஜோடியாகவும், $V$ என்பது
+$\langle Y, S\rangle$ என்ற ஜோடியாகவும் இருக்கட்டும்; இங்கு
+$X$, $Y$ கணங்கள், $R$, $S$ முறையே $X$, $Y$ மீதான உறவுகள்.
+$X$ இலிருந்து $Y$ க்குச் செல்லும் !!a{bijection}~$f$ உறவு
+அமைப்பைப் பேணினால், அப்போதும் அப்போது மட்டுமே, அது $U$ இலிருந்து
+$V$ க்குச் செல்லும் \emph{ஓரினச்சார்பு} ஆகும். அதாவது,
+$X$ இல் உள்ள எந்த $x_{1}$, $x_{2}$ க்கும்
+$\tuple{x_1,x_2} \in R$ அப்போதும் அப்போது மட்டுமே
+$\tuple{f(x_1),f(x_2)} \in S$.
+\end{defn}
+
+% SEGMENT OLP-0717-S03
+\begin{ex}
+பின்வரும் இரண்டு கணங்கள் $X=\{1,2,3\}$,
+$Y=\{4,5,6\}$ மற்றும் சிறியது, பெரியது என்ற உறவுகளைக்
+கருதுக. $f(x) = 7-x$ என வரையறுக்கப்படும்
+$f\colon X \to Y$ என்ற சார்பு, $\tuple{X,<}$ க்கும்
+$\tuple{Y,>}$ க்கும் இடையிலான ஓரினச்சார்பு ஆகும்.
+\end{ex}
+
+
+% END SOURCE UNIT OLP-0717
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0718}\par
+
+% BEGIN SOURCE UNIT OLP-0718 content/sets-functions-relations/inductive-defs-proofs/introduction.tex
+% Exact modular target bytes: 11259; SHA256: 4a13308fd2b322051cebdb0d26346b99a2f6d4e0fd4f211a0b4eaea940179ccd
+% SEGMENT OLP-0718-S01
+
+
+\olfileid{sfr}{ind}{int}
+
+\olsection{அறிமுகம்}
+
+\begin{explain}
+தருக்கத்தில் பரவலாகப் பயன்படுத்தப்படும் கணித நிறுவல் உத்தி
+தொகுத்தறிதல். கணிதத்தில் இயல் எண்கள் மீது தொகுத்தறிதல் செய்வதை
+நீங்கள் அறிந்திருக்கலாம். ஆனால் கணிதத்திலும் தருக்கத்திலும்
+பொருள்களைக் கொண்ட பல்வேறு வகைக் கணங்கள் தொகுத்தறிதலுக்கு ஏற்றவை.
+
+பொதுவாகத் தொகுத்தறிதல், அனைத்தையும் பற்றிய ஒரு கூற்றை நிறுவ
+உதவுகிறது: ஒரு குறிப்பிட்ட வகையைச் சேர்ந்த ஒவ்வொரு பொருளுக்கும்
+ஒரு பண்பு உள்ளது என்று காட்டுகிறது. குறிப்பாக,
+``அனைத்தளவை அறிமுகம்'' வகை நிறுவல் முறை மிகவும் சிக்கலாக இருக்கும்
+இடங்களில் தொகுத்தறிதல் பயனுள்ளதாக இருக்கும். சிறப்பு முறைகளில்
+அமைக்கப்பட்ட கணிதப் பொருள்களுக்கே தொகுத்தறிதல் பொருந்தும்:
+ஒரு கணத்தின் ஒவ்வோர் உறுப்பும் அடிப்படை உறுப்பாகவோ,
+அடிப்படை உறுப்புகளிலிருந்து உருவாக்கப்பட்டதாகவோ இருந்தால்,
+அதன்மீது தொகுத்தறிதல் செய்யலாம். இன்னும் துல்லியமாகச் சொல்வதானால்:
+\end{explain}
+
+% SEGMENT OLP-0718-S02
+\begin{defn}
+ஒரு கணம் $S$, ஒரு சார்பு $f$ இன் கீழ் \emph{மூடப்பட்டது}
+என்பது, அப்போதும் அப்போது மட்டுமே, $x \in S$ எனும்போதெல்லாம்
+$f(x) \in S$ ஆகும்.
+\end{defn}
+
+\begin{explain}
+எடுத்துக்காட்டாக, இயல் எண்களின் கணம் ($\mathbb{N}$),
+தொடரிச் சார்பு $f(x) = x+1$ இன் கீழ் மூடப்பட்டது.
+$x$ ஓர் இயல் எண் எனில், $x+1$ உம் இயல் எண்.
+ஆனால் முன்னிச் சார்பு $f(x) = x-1$ இன் கீழ் இயல் எண்களின்
+கணம் மூடப்படவில்லை; ஏனெனில் $0$ ஓர் இயல் எண்,
+ஆனால் $-1$ இயல் எண் அல்ல.
+\end{explain}
+
+% SEGMENT OLP-0718-S03
+\begin{defn}
+ஒரு பண்பு $P$, ஒரு சார்பு $f(x)$ இன் கீழ் \emph{பேணப்படுகிறது}
+எனப்படுவது, $f$ இன் சார்பகத்தில் உள்ள எந்தப் பொருள் $a$ க்கும்,
+$P(a)$ எனில் $P(f(a))$ ஆகும்போது ஆகும்
+($a$ க்குப் பண்பு $P$ இருந்தால், $f(a)$ க்கும் அப்பண்பு உண்டு).
+\end{defn}
+
+\begin{explain}
+``இரட்டை எண்ணாக இருத்தல்'' என்ற பண்பு, $f(x) = x+2$
+என்ற சார்பின் கீழ் பேணப்படுகிறது; ஏனெனில் $x$ இரட்டை எண்
+எனில், $x+2$ உம் இரட்டை எண். ஆனால் இப்பண்பு தொடரிச்
+சார்பின் கீழ் பேணப்படுவதில்லை; $x$ இரட்டை எண் எனில்,
+$x+1$ ஒற்றை எண்.
+
+ஒவ்வோர் இயல் எண்ணையும் 0 இலிருந்து தொடரிச் சார்பை முடிவுறு
+எண்ணிக்கையிலான முறை பயன்படுத்தி அடையலாம் என்பதால்தான்
+இயல் எண்கள் மீது தொகுத்தறிதல் செய்ய முடிகிறது.
+தொகுத்தறிதல் செய்யக்கூடிய எந்தக் கணத்திற்கும் இத்தகைய
+உருவாக்கப் பண்பு உண்டு.
+\end{explain}
+
+% SEGMENT OLP-0718-S04
+\begin{defn}[$\Nat$ மீது தொகுத்தறிதல்]
+0 க்கு ஒரு பண்பு $P$ இருந்து, $P$ தொடரிச் சார்பின் கீழ்
+பேணப்பட்டால், ஒவ்வோர் இயல் எண்ணுக்கும் பண்பு $P$ உண்டு.
+\end{defn}
+
+% SEGMENT OLP-0718-S05
+\begin{ex}
+பூச்சியத்திலிருந்து $n$ வரையிலான இயல் எண்களின் கூட்டுத்தொகை
+$\frac{n(n+1)}{2}$. \\
+
+\textbf{அடிப்படை நிலை.} பூச்சியத்திலிருந்து பூச்சியம் வரையிலான கூட்டுத்தொகை
+$0=\frac{0\cdot 1}{2}$.\\
+
+\textbf{தொகுத்தறிதலின் அடுத்த படி.} $k$ க்குப் பண்பு
+பொருந்துகிறது என்க. அது $k+1$ க்கும் பொருந்துகிறது என்று
+காட்டுவோம். அதாவது, $P(k)$ பொருந்துகிறது என்க:
+\[ 0 + 1 + \ldots + k = \frac{k(k+1)}{2} \]
+$P(k+1)$ பொருந்துகிறது என்று, அதாவது
+\[ 0 + 1 + \ldots + k + (k+1) = \frac{(k+1)(k+2)}{2} \]
+என்று, $P(k)$ என்ற எடுகோளைப் பயன்படுத்திக் காட்டுவோம்.
+
+% SEGMENT OLP-0718-S06
+\begin{align*}
+0 + 1 + \ldots + k &= \frac{k(k+1)}{2} \tag{எடுகோள்} \\
+0 + 1 + \ldots + k + (k+1) &= \frac{k(k+1)}{2} + (k+1)
+\tag{இரு பக்கங்களிலும் $k+1$ ஐச் சேர்க்க} \\
+&= \frac{k(k+1) + 2(k+1)}{2} \\
+&= \frac{k^2 + k + 2k +2}{2} \\
+&=\frac{(k+1)(k+2)}{2}
+\end{align*}
+எனவே தொகுத்தறிதலின் அடுத்த படி நிறுவப்பட்டது;
+இதனால் கூற்றை நிறுவியுள்ளோம்.
+\end{ex}
+
+% SEGMENT OLP-0718-S07
+\begin{explain}
+!!{formula}s க்கான அடிப்படை உறுப்புகள் அணு !!{formula}s.
+எளிய !!{formula}s ஐச் செயலிகளால் இணைத்து மேலும் சிக்கலான
+!!{formula}s பெறப்படுகின்றன. ஒவ்வொரு செயலிக்கும் அதற்குரிய
+ஒன்று அல்லது இரண்டு !!{formula}s ஐ உள்ளீடாகப் பெற்று,
+அச்செயலியைப் பயன்படுத்திப் புதிய !!{formula} ஒன்றை உருவாக்கும்
+சார்பு இருப்பதாகக் கருதலாம். எடுத்துக்காட்டாக,
+$!A$, $!B$ என்ற இரண்டு !!{formula}s ஐ இணையல் வாய்பாடாக
+இணைக்கும் சார்பை $\mathcal E _\land (!A,
+!B) = !A \land !B$ என்று எழுதலாம். இவற்றை
+\emph{வாய்பாடுகளை உருவாக்கும் சார்புகள்} எனலாம்.
+!!{formula}s இன் கணம் இச்சார்புகளின் கீழ் மூடப்பட்டது:
+$!A$, $!B$ ஆகியவை !!{formula}s எனும்போதெல்லாம்,
+$\lnot !A$, $!A \land !B$ முதலியவையும் இக்கணத்தில் அடங்கும்.
+\end{explain}
+
+% SEGMENT OLP-0718-S08
+\begin{defn}[!!{formula}s மீது தொகுத்தறிதல்]
+ஒவ்வோர் அணு !!{formula} க்கும் பண்பு $P$ இருந்து,
+!!{formula} உருவாக்கும் சார்புகளின் கீழ் $P$ பேணப்பட்டால்,
+ஒவ்வொரு !!{formula} க்கும் பண்பு $P$ உண்டு.
+\end{defn}
+
+% SEGMENT OLP-0718-S09
+\begin{explain}
+இந்த வரையறை, !!{formula}s மீதான தொகுத்தறிதல் நிறுவல்களுக்கு
+ஒரு செய்முறையைத் தருகிறது. ஒவ்வொரு !!{formula} க்கும்
+பண்பு $P$ உண்டு என்று காட்ட வேண்டுமெனில், பின்வரும்
+படிகளைப் பின்பற்றுக:\\
+
+\textbf{அடிப்படை நிலை.} $!A$ ஓர் அணு !!{formula} என்க.
+[\ldots] எனவே $!A$ க்குப் பண்பு $P$ உண்டு.
+
+% SEGMENT OLP-0718-S10
+\textbf{தொகுத்தறிதலின் அடுத்த படி.} $!A$, $!B$ இரண்டும்
+பண்பு $P$ உடைய !!{formula}s என்க.
+
+$\lnot$ நிகழ்வு: [\ldots] எனவே $\lnot !A$ க்குப் பண்பு $P$ உண்டு.
+
+$\land$ நிகழ்வு: [\ldots] எனவே $!A \land !B$ க்குப் பண்பு $P$ உண்டு.
+
+$\lor$ நிகழ்வு: [\ldots] எனவே $!A \lor !B$ க்குப் பண்பு $P$ உண்டு.
+
+$\lif$ நிகழ்வு: [\ldots] எனவே $!A \lif !B$ க்குப் பண்பு $P$ உண்டு.
+
+$\liff$ நிகழ்வு: [\ldots] எனவே $!A \liff !B$ க்குப் பண்பு $P$ உண்டு.
+
+$\lforall[]$ நிகழ்வு: [\ldots] எனவே $\lforall[x] !A$ க்குப் பண்பு $P$ உண்டு.
+
+$\lexists[]$ நிகழ்வு: [\ldots] எனவே $\lexists[x] !A$ க்குப் பண்பு $P$ உண்டு. \\
+
+எனவே ஒவ்வொரு !!{formula} க்கும் பண்பு $P$ உண்டு.
+\end{explain}
+
+
+% END SOURCE UNIT OLP-0718
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0721}\par
+
+% BEGIN SOURCE UNIT OLP-0721 content/sets-functions-relations/sets/proofs-about-sets.tex
+% Exact modular target bytes: 9988; SHA256: 944a2320276e4fc7cadfe8660e196f999a4a763588fa4a6b0af551b17dd6df9c
+% SEGMENT OLP-0721-S01
+
+
+\olfileid{sfr}{set}{prf}
+\olsection{கணங்கள் பற்றிய நிறுவல்கள்}
+
+\begin{editorial}
+இப்பிரிவுக்குப் பதிலாக \verb|content/methods/proofs| பயன்படுத்தப்படுகிறது;
+எனவே இயல்பான அமைப்பில் இப்பிரிவு இந்த அத்தியாயத்திலிருந்து
+நீக்கப்பட்டுள்ளது.
+\end{editorial}
+
+% SEGMENT OLP-0721-S02
+\begin{explain}
+கணங்களும் இதுவரை அறிமுகப்படுத்திய குறியீடுகளும்,
+கணங்களைக் குறிப்பிடவும் அவற்றுக்கிடையிலான தொடர்புகளை
+வெளிப்படுத்தவும் வசதியான சுருக்கக் குறியீடுகளைத் தருகின்றன.
+அத்தகைய தொடர்புகள் பற்றிய கூற்றுகளை நிறுவுவதும் அடிக்கடி
+தேவைப்படும். கணித நிறுவல்களை நீங்கள் அறிந்திருக்காவிட்டால்,
+இது புதிதாக இருக்கலாம். ஆகவே ஓர் எளிய எடுத்துக்காட்டைப்
+படிப்படியாகப் பார்ப்போம். எந்தக் கணங்கள் $X$, $Y$ க்கும்
+$X \cap (X \cup Y) = X$ எப்போதும் பொருந்தும் என்று
+நிறுவுவோம். இத்தகைய கணச் சமத்துவத்தை எவ்வாறு நிறுவுவது?
+கணங்கள் அவற்றின் !!{element}s ஆல் மட்டுமே தீர்மானிக்கப்படுகின்றன
+என்பதை நினைவுகூர்க. அதாவது, கணங்கள் ஒரே !!{element}s ஐக்
+கொண்டிருந்தால், அப்போதும் அப்போது மட்டுமே, அவை சமம்.
+எனவே இங்கு (a) $X \cap (X \cup Y)$ இன் ஒவ்வோர் !!{element}
+உம் $X$ இன் !!{element} என்றும், மறுதிசையில்
+(b) $X$ இன் ஒவ்வோர் !!{element} உம் $X \cap (X \cup Y)$ இன்
+!!{element} என்றும் நிறுவ வேண்டும். வேறு சொற்களில்,
+(a) $X \cap (X \cup Y) \subseteq X$ என்பதையும்
+(b) $X \subseteq X \cap (X \cup Y)$ என்பதையும் காட்டுகிறோம்.
+
+% SEGMENT OLP-0721-S03
+``$X \cap (X \cup Y)$ இன் ஒவ்வோர் !!{element}~$z$ உம்
+$X$ இன் !!{element}'' போன்ற பொதுக் கூற்றை நிறுவும்போது,
+முதலில் தன்னிச்சையான $z \in X \cap (X \cup Y)$ கொடுக்கப்பட்டுள்ளது
+என்று எடுத்துக்கொண்டு, அந்த எடுகோளிலிருந்து $z \in X$ என்பதை
+நிறுவுகிறோம். இவ்வடிவத்தை ``பொது நிபந்தனை நிறுவல்'' என்று
+நீங்கள் அறிந்திருக்கலாம். இந்நிறுவலில், எடுகோளிலும் முடிவிலும்
+பயன்படும் வரையறைகளையும் பயன்படுத்த வேண்டும்; இங்கு
+``$\cap$'', ``$\cup$'' ஆகியவற்றின் வரையறைகள் அவை.
+எனவே (a) நிகழ்வை பின்வருமாறு நிறுவலாம்:
+
+% SEGMENT OLP-0721-S04
+\begin{quote}
+(a) முதலில் $X \cap (X \cup Y) \subseteq X$ என்பதைக்
+காட்ட விரும்புகிறோம். அதாவது, $\subseteq$ இன் வரையறையின்படி,
+எந்த~$z$ க்கும் $z \in X \cap (X \cup Y)$ எனில்
+$z \in X$ என்று காட்ட வேண்டும். ஆகவே
+$z \in X \cap (X \cup Y)$ என்க. $z$ என்ற !!{element},
+இரண்டு கணங்களின் வெட்டுக் கணத்தில் இருப்பது, இரு கணங்களிலும்
+!!{element} ஆக இருந்தால், அப்போதும் அப்போது மட்டுமே ஆகும்.
+எனவே $z \in X$ என்றும் $z \in X \cup Y$ என்றும் முடிவு
+செய்யலாம். குறிப்பாக, $z \in X$; இதையே காட்ட விரும்பினோம்.
+\end{quote}
+
+% SEGMENT OLP-0721-S05
+இதனால் நிறுவலின் முதல் பாதி முடிந்தது. கடைசிப் படியில்,
+ஓர் எடுகோளிலிருந்து ஓர் இணையல் ($z \in X$ மற்றும்
+$z \in X \cup Y$) பின்தொடர்ந்தால், அதே எடுகோளிலிருந்து
+அதன் ஒவ்வோர் இணைக் கூற்றும் பின்தொடரும் என்ற உண்மையைப்
+பயன்படுத்தினோம். இவ்விதியை ``இணையல் நீக்கல்'' அல்லது
+$\land$ நீக்கல் என்று நீங்கள் அறிந்திருக்கலாம்.
+இப்போது (b) ஐ நிறுவுவோம்:
+
+% SEGMENT OLP-0721-S06
+\begin{quote}
+(b) இப்போது $X \subseteq X \cap (X \cup Y)$ என்பதை
+நிறுவுகிறோம். அதாவது, $\subseteq$ இன் வரையறையின்படி,
+எந்த~$z$ க்கும் $z \in X$ எனில்
+$z \in X \cap (X \cup Y)$ உம் ஆகும்.
+$z \in X$ என்க. $z \in X \cap (X \cup Y)$ என்பதை
+நிறுவ, ``$\cap$'' இன் வரையறையின்படி, (i) $z \in X$
+என்பதையும் (ii) $z \in X \cup Y$ என்பதையும் காட்ட வேண்டும்.
+(i) நமது எடுகோளே; ஆகவே மேலும் நிறுவ வேண்டியது ஏதுமில்லை.
+(ii) க்கு, $z$, கணங்களின் சேர்ப்புக் கணத்தின் !!{element}
+ஆக இருப்பது, அக்கணங்களில் குறைந்தது ஒன்றின் !!{element}
+ஆக இருந்தால், அப்போதும் அப்போது மட்டுமே என்பதை நினைவுகூர்க.
+$z \in X$ என்பதாலும், $X \cup Y$ என்பது $X$, $Y$ இன்
+சேர்ப்புக் கணம் என்பதாலும், இங்கு அவ்வாறே உள்ளது.
+ஆகவே $z \in X \cup Y$. (i) $z \in X$ என்பதையும்
+(ii) $z \in X \cup Y$ என்பதையும் காட்டிவிட்டோம்;
+எனவே ``$\cap$'' இன் வரையறையின்படி
+$z \in X \cap (X \cup Y)$.
+\end{quote}
+
+% SEGMENT OLP-0721-S07
+இது சற்றே விரிவான விளக்கம்; ஆனால் கணங்களையும்
+அவற்றுக்கிடையிலான தொடர்புகளையும் பற்றி எவ்வாறு காரணம்
+கூறுகிறோம் என்பதைக் காட்டுகிறது. வழக்கமாக இவ்வளவு
+வெளிப்படையாக ஒவ்வொரு படியையும் கூறுவதில்லை; குறிப்பாக,
+எல்லா வரையறைகளையும் மீண்டும் கூறாமல் இருக்கலாம்.
+மேம்பட்ட பாடநூலில் இம்முடிவுக்கான நிறுவல் மிகவும்
+சுருக்கமாக இருக்கும். அது பின்வருமாறு அமையலாம்.
+\end{explain}
+
+% SEGMENT OLP-0721-S08
+\begin{prop}[உட்கவர் பண்பு]
+எல்லாக் கணங்கள் $X$, $Y$ க்கும்,
+\[
+X \cap (X \cup Y) = X
+\]
+\end{prop}
+
+\begin{proof}
+(a) $z \in X \cap (X \cup Y)$ என்க. அப்போது $z \in X$;
+ஆகவே $X \cap (X \cup Y) \subseteq X$.
+
+(b) இப்போது $z \in X$ என்க. அப்போது $z \in X \cup Y$
+உம், எனவே $z \in X \cap (X \cup Y)$ உம் ஆகும்.
+ஆகவே $X \subseteq X \cap (X \cup Y)$.
+\end{proof}
+
+% SEGMENT OLP-0721-S09
+\begin{prob}
+$X \cup (X \cap Y) = X$ என்பதை விரிவாக நிறுவுக.
+பின்னர் அதன் சுருக்கமான நிறுவலைத் தருக.
+(குறிப்பு: $X \cup (X \cap Y) \subseteq X$ என்ற திசைக்கு,
+நிகழ்வுகளைப் பிரித்து நிறுவுதல், அதாவது $\lor$ நீக்கல்,
+தேவைப்படும்.)
+\end{prob}
+
+
+% END SOURCE UNIT OLP-0721
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0719}\par
+\begingroup
+\TADriverHeadingMode
+\olchapterid{sfr}{rel}
+
+% BEGIN SOURCE UNIT OLP-0719 content/sets-functions-relations/relations/relations.tex
+% Exact modular target bytes: 421; SHA256: cf0096bb6fd694a4bb0f7106ded9a8f9faa2971f92dddedced7636e12f9deeab
+% SEGMENT OLP-0719-S01
+
+
+\olchapter{sfr}{rel}{தொடர்புகள்}
+
+\TADriverImport{relations-as-sets}
+
+\TADriverImport{special-properties}
+
+\TADriverImport{equivalence-relations}
+
+\TADriverImport{orders}
+
+\TADriverImport{graphs}
+
+\TADriverImport{trees}
+
+\TADriverImport{operations}
+
+\OLEndChapterHook
+
+
+% END SOURCE UNIT OLP-0719
+
+\endgroup
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0720}\par
+\begingroup
+\TADriverHeadingMode
+\olchapterid{sfr}{}
+
+% BEGIN SOURCE UNIT OLP-0720 content/sets-functions-relations/sets-functions-relations.tex
+% Exact modular target bytes: 2177; SHA256: 0b6ccd73855b62bf8aecade1078d78b84df3b598c463b93863947d6778cf9f4c
+% SEGMENT OLP-0720-S01
+
+
+\olpart{sfr}{கணங்கள், தொடர்புகள், சார்புகள்}
+
+\begin{editorial}
+இந்தக் கோப்பு, முறைசாராத கணக்கோட்பாடு பற்றிய பகுதியின்
+முதல் நான்கு அத்தியாயங்களை, படிப்படியாக விரித்துரைக்கும்
+மூல வடிவத்தில் சேர்க்கிறது. முழுப் பகுதியும்
+\verb|sets-functions-relations-complete.tex| மூலம் சேர்க்கப்படுகிறது.
+இப்பகுதியின் பாடப்பொருள், அடிப்படை முறைசாராத கணக்கோட்பாட்டிற்கு
+ஓரளவு முழுமையான அறிமுகம். மாணவர்களுக்கு இப்பின்னணி
+இருக்கும் என்று கருத முடியாவிட்டால், இப்பாடப்பொருளை,
+குறைந்தது கணங்கள், சார்புகள், தொடர்புகள் பற்றியவற்றை,
+மீள்பார்ப்பதுடன் பாடத்திட்டத்தைத் தொடங்குவது நல்லது.
+இதனால் மற்ற தருக்கப் பகுதிகளில் எதற்கும் தேவையான
+கணிதக் குறியீடுகளைப் பயன்படுத்தும் அடிப்படைத் திறன்
+எல்லா மாணவர்களுக்கும் இருப்பதை உறுதிப்படுத்தலாம்.
+\end{editorial}
+
+% SEGMENT OLP-0720-S02
+\TADriverImport[sets]{sets}
+
+\TADriverImport[relations]{relations}
+
+\TADriverImport[functions]{functions}
+
+\TADriverImport[size-of-sets]{size-of-sets}
+
+\OLEndPartHook
+
+% END SOURCE UNIT OLP-0720
+
+\endgroup
+
+\clearpage
+\noindent மூல அலகு: \texttt{OLP-0722}\par
+\begingroup
+\TADriverHeadingMode
+\olchapterid{sfr}{siz}
+
+% BEGIN SOURCE UNIT OLP-0722 content/sets-functions-relations/size-of-sets/size-of-sets.tex
+% Exact modular target bytes: 1574; SHA256: 26c74a88d9c075fc7c1cd00a436331be60056857bb4af8557c66dd991b32921e
+% SEGMENT OLP-0722-S01
+
+
+\olchapter{sfr}{siz}{கணங்களின் அளவு}
+
+\begin{editorial}
+இந்த அத்தியாயம் பட்டியலாக்கங்கள், எண்ணிடத்தக்க தன்மை,
+எண்ணிடத்தகாத தன்மை ஆகியவற்றை விவாதிக்கிறது.
+சில பிரிவுகளுக்கு இரண்டு வடிவங்கள் உள்ளன:
+ஒரு தொடக்கநிலை வடிவமும், கணக்கோட்பாட்டை இன்னும்
+விரிவாக விவாதிக்கும்போது பயன்படுத்துவதற்கான ஒரு மேம்பட்ட
+வடிவமும். இக்கோப்பு தொடக்கநிலை வடிவங்களை மட்டுமே சேர்க்கிறது.
+மேம்பட்ட வடிவங்கள் \verb|size-of-sets-complete| மூலம் சேர்க்கப்படுகின்றன.
+\end{editorial}
+
+% SEGMENT OLP-0722-S02
+\TADriverImport{introduction}
+
+\TADriverImport{enumerability}
+
+\TADriverImport{zig-zag}
+
+\TADriverImport{pairing}
+
+\TADriverImport{pairing-alt}
+
+\TADriverImport{non-enumerability}
+
+\TADriverImport{reduction}
+
+\TADriverImport{equinumerous-sets}
+
+\TADriverImport{comparing-size}
+
+\TADriverImport{schroder-bernstein}
+
+\OLEndChapterHook
+
+
+% END SOURCE UNIT OLP-0722
+
+\endgroup
+
+
+\nocite{Frege1953}
+\bibliographystyle{../upstream/bib/natbib-oup}
+\bibliography{../upstream/bib/open-logic}
+\end{document}
+

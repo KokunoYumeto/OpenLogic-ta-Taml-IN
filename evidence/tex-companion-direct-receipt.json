@@ -1,0 +1,89 @@
+{
+  "schema": "openlogic-tamil-tex-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 1000,
+  "master": "tamil-source-companion-direct.tex",
+  "engine": "xelatex",
+  "started_utc": "2026-09-28T14:05:49.4971234Z",
+  "passes": [
+    {
+      "pass": 1,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Label `fol:axd:prv:sec' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:sec@cref' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-contr' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-contr@cref' multiply defined",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-exhaustive' multiply defined",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-exhaustive@cref' multiply de",
+        "LaTeX Warning: Label `fol:syn::chap' multiply defined.",
+        "LaTeX Warning: Label `fol:syn::chap@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:rel::chap' multiply defined.",
+        "LaTeX Warning: Label `sfr:rel::chap@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:::part' multiply defined.",
+        "LaTeX Warning: Label `sfr:::part@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:siz::chap' multiply defined.",
+        "LaTeX Warning: Label `sfr:siz::chap@cref' multiply defined.",
+        "LaTeX Warning: There were multiply-defined labels."
+      ],
+      "exit_code": 0
+    },
+    {
+      "pass": 2,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Label `fol:axd:prv:sec' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:sec@cref' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-contr' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-contr@cref' multiply defined",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-exhaustive' multiply defined",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-exhaustive@cref' multiply de",
+        "LaTeX Warning: Label `fol:syn::chap' multiply defined.",
+        "LaTeX Warning: Label `fol:syn::chap@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:rel::chap' multiply defined.",
+        "LaTeX Warning: Label `sfr:rel::chap@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:::part' multiply defined.",
+        "LaTeX Warning: Label `sfr:::part@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:siz::chap' multiply defined.",
+        "LaTeX Warning: Label `sfr:siz::chap@cref' multiply defined.",
+        "LaTeX Warning: There were multiply-defined labels."
+      ],
+      "exit_code": 0
+    },
+    {
+      "pass": 3,
+      "issues": [
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: You have requested file `',",
+        "LaTeX Warning: Label `fol:axd:prv:sec' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:sec@cref' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-contr' multiply defined.",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-contr@cref' multiply defined",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-exhaustive' multiply defined",
+        "LaTeX Warning: Label `fol:axd:prv:prop:provability-exhaustive@cref' multiply de",
+        "LaTeX Warning: Label `fol:syn::chap' multiply defined.",
+        "LaTeX Warning: Label `fol:syn::chap@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:rel::chap' multiply defined.",
+        "LaTeX Warning: Label `sfr:rel::chap@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:::part' multiply defined.",
+        "LaTeX Warning: Label `sfr:::part@cref' multiply defined.",
+        "LaTeX Warning: Label `sfr:siz::chap' multiply defined.",
+        "LaTeX Warning: Label `sfr:siz::chap@cref' multiply defined.",
+        "LaTeX Warning: There were multiply-defined labels."
+      ],
+      "exit_code": 0
+    }
+  ],
+  "status": "built",
+  "abandoned_mutex": false,
+  "bibliography": {
+    "issues": [
+      "Warning--can't use both author and editor fields in Frege1953\r"
+    ],
+    "exit_code": 0,
+    "engine": "bibtex"
+  },
+  "finished_utc": "2026-09-28T14:05:59.2965979Z"
+}

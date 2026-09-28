@@ -1,0 +1,88 @@
+{
+  "batch_id": "TA-B342",
+  "units": [
+    {
+      "unit_id": "OLP-0684",
+      "source_sha256": "593c823ad413a4db7c58f783d612a3fb14cc8fbaa790c50c26d0f7709b6a8d14",
+      "translation_sha256": "f50460add6a4ad14a2922e2fcaf46be451d7870cebb49de65d1ebcc1fc243559",
+      "source_bytes": 8583,
+      "translation_bytes": 17792,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\sFmla{\\True}{!A},\\sFmla{\\True}{!B},\\sFmla{\\False}{!C},\\sFmla{\\True}{!D}$"
+      ],
+      "extra_math": [
+        "$\\sFmla{\\True}{!A},\\sFmla{\\True}{!B},\\sFmla{\\False}{!C},\\sFmla{\\False}{!D}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "checked",
+        "close",
+        "cpl",
+        "include",
+        "just",
+        "logic",
+        "move",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0684",
+          "audit_id": "TA-PT-037",
+          "kind": "signed-tableau-initial-polarity-and-search-scope",
+          "action": "Change the starting sign on succedent D from True to False; clarify that the staged expansion selects a rule-applicable unchecked formula, that quantifier exceptions are treated separately, and that only a closed tableau yields a G3c proof.",
+          "expected_missing_math": [
+            "$\\sFmla{\\True}{!A},\\sFmla{\\True}{!B},\\sFmla{\\False}{!C},\\sFmla{\\True}{!D}$"
+          ],
+          "expected_extra_math": [
+            "$\\sFmla{\\True}{!A},\\sFmla{\\True}{!B},\\sFmla{\\False}{!C},\\sFmla{\\False}{!D}$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\True"
+          ],
+          "expected_extra_commands": [
+            "\\False"
+          ],
+          "source_issue_or_choice": "The frozen example labels D True in the initial signed list for A,B entails C,D, although the next sentence explicitly requires both C and D false to witness invalidity. The prose has duplicated structure wording and calls the displayed closed tree 'clause'. The stage rule does not explicitly exclude atomic formulas without expansion rules, and its finite-open-branch statement overlooks the quantifier forms it has just said are never checked off. The final G3c translation claim must be restricted to closed tableaux.",
+          "chosen_treatment": "Set the initial D sign to False, matching the sequent countermodel. Render the duplicated sentence and 'clause' typo coherently in Tamil; select only rule-applicable unchecked formulas, state the checked-off condition only for checkable non-atomic formulas, and specify closed tableaux for G3c proof conversion. Preserve every tableau branch, rule annotation and G3c displayed inference, and localize the two branch-membership phrases inside math text.",
+          "alternatives_considered": "Retain D as True despite the stated falsity condition; let an atomic leaf stall the procedure; claim an open tableau converts to a proof; silently modify displayed tableau branches.",
+          "rationale": "A sequent countermodel satisfies every antecedent and falsifies every succedent, so D must be False. The imported Tc rules only expand composite formulas; the next paragraph expressly exempts True-universal and False-existential from checkoff. An open branch supplies a countermodel rather than an axiom-closed G3c proof. The displayed four-branch tableau and translated proof tree already match the intended closed derivation.",
+          "precise_review_question": "Does the corrected False D start identify exactly the countermodel condition, and are all stage and G3c statements scoped to rule-applicable formulas and closed tableaux?",
+          "location_needle": "\\sFmla{\\False}{!D}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\True"
+      ],
+      "extra_commands": [
+        "\\False"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

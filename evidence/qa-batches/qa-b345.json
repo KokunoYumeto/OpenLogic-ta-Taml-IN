@@ -1,0 +1,90 @@
+{
+  "batch_id": "TA-B345",
+  "units": [
+    {
+      "unit_id": "OLP-0688",
+      "source_sha256": "efeb3a9e0573794a31ef1cc56221cfb9f52c166ed73b4408118d0e9a2357aa66",
+      "translation_sha256": "8e5be18ad5e449f882f885cfc9776c18e7d4e2a4de3a70d8b34deb71536b4794",
+      "source_bytes": 5828,
+      "translation_bytes": 12904,
+      "source_coverage_complete": true,
+      "segments": 7,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\[\\Axiom$\\Gamma_1\\fCenterN:!A$\\Axiom$\\Gamma_2\\fCenterM:!B$\\RightLabel{\\Intro{\\land}}\\BinaryInf$\\Gamma_1,\\Gamma_2\\fCenterc^\\land(N,m):!A\\land!B$\\DisplayProof\\quad\\Axiom$\\Gamma\\fCenterN:!A\\land!B$\\RightLabel{\\Elim{\\land}[1]}\\UnaryInf$\\Gamma\\fCenterd^\\land_1(N):!A$\\DisplayProof\\]",
+        "\\[\\Axiom$\\Gamma\\fCenterN:!A$\\RightLabel{\\Intro{\\lor}[1]}\\UnaryInf$\\Gamma\\fCenterc^{\\lor{!B}}_1:!A\\lor!B$\\DisplayProof\\quad\\Axiom$\\Gamma\\fCenterN:\\lfalse$\\RightLabel{\\FalseInt}\\UnaryInf$\\Gamma\\fCenterd^\\lfalse_{!A}(N):!A$\\DisplayProof\\]",
+        "$\\inj[!A]{i}{!M}$"
+      ],
+      "extra_math": [
+        "\\[\\Axiom$\\Gamma_1\\fCenterN:!A$\\Axiom$\\Gamma_2\\fCenterM:!B$\\RightLabel{\\Intro{\\land}}\\BinaryInf$\\Gamma_1,\\Gamma_2\\fCenterc^\\land(N,M):!A\\land!B$\\DisplayProof\\quad\\Axiom$\\Gamma\\fCenterN:!A\\land!B$\\RightLabel{\\Elim{\\land}[1]}\\UnaryInf$\\Gamma\\fCenterd^\\land_1(N):!A$\\DisplayProof\\]",
+        "\\[\\Axiom$\\Gamma\\fCenterN:!A$\\RightLabel{\\Intro{\\lor}[1]}\\UnaryInf$\\Gamma\\fCenterc^{\\lor{!B}}_1(N):!A\\lor!B$\\DisplayProof\\quad\\Axiom$\\Gamma\\fCenterN:\\lfalse$\\RightLabel{\\FalseInt}\\UnaryInf$\\Gamma\\fCenterd^\\lfalse_{!A}(N):!A$\\DisplayProof\\]",
+        "$\\inj[!A]{i}{N}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0688",
+          "audit_id": "TA-PT-040",
+          "kind": "proof-term-notation-and-unbound-argument",
+          "action": "Correct the conjunction constructor's lowercase m to the premise term M; supply the premise term N as the omitted argument of the disjunction constructor; replace the unintroduced formula-like !M with the introduced proof term N in the injection grammar.",
+          "normalized_math_replacements": [
+            {
+              "from": "c^\\land(N,m)",
+              "to": "c^\\land(N,M)",
+              "count": 1
+            },
+            {
+              "from": "c^{\\lor{!B}}_1:",
+              "to": "c^{\\lor{!B}}_1(N):",
+              "count": 1
+            },
+            {
+              "from": "\\inj[!A]{i}{!M}",
+              "to": "\\inj[!A]{i}{N}",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The displayed conjunction introduction has premises N and M but concludes c^land(N,m), with an unintroduced lowercase m. The disjunction introduction display drops its premise term N from the constructor, leaving no term to encode the derivation. The proof-term grammar introduces N but writes inj[!A]{i}{!M}, where M is unbound and !M denotes a formula-style token rather than the proof term. The adjacent frozen rules-tN2.tex confirms c^land(N,M), inj[!B]{1}{N}/inj[!A]{2}{N}, and the typed argument-bearing introduction rules.",
+          "chosen_treatment": "Use the three premise-bound terms in the displayed/formal expressions, preserve all other mathematical notation, identifiers, source structure and the rules-tN2 subfile reference. Align the inert part comment with the importing proof-theory part without changing protected int/pty/ter.",
+          "alternatives_considered": "Retain m and !M as unexplained new variables; interpret the argument-free disjunction constructor as an intentional constant despite its premise N; silently rewrite the generic tN2i system name to tN2ip.",
+          "rationale": "A proof term must encode its premise derivation: conjunction has N and M, the left disjunction introduction has N and the other disjunct formula !B, and the inductive injection constructor must apply to the introduced proof term N. The adjacent rule table settles the intended syntax while tN2i can remain a generic family name before the propositional specialization.",
+          "precise_review_question": "Do the three corrected term expressions exactly track their displayed premises and the adjacent tN2ip rule table, while preserving the generic term-grammar scope?",
+          "location_needle": "c^\\land(N, M)"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

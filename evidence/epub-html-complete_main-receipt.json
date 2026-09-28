@@ -1,0 +1,47 @@
+{
+  "schema": "openlogic-tamil-epub-html-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 1000,
+  "process_timeout_minutes": 20,
+  "master": "tamil-complete.tex",
+  "master_sha256": "013c80d6bae15e12d55f4a1b971f314b8c019d0c0feda1810686907368d3ccf3",
+  "adapter_sha256": "b890374321b23666389c8138454bdc9590195d579bfe58a1c7707f6fe659b473",
+  "reader_slug": "complete-main",
+  "import_external_labels": false,
+  "converter": "make4ht",
+  "converter_version": "make4ht version v0.4e",
+  "backend": "tex4ht",
+  "options": [
+    "lualatex",
+    "html5",
+    "mathml",
+    "charset=utf-8",
+    "fn-in",
+    "no-shell-escape"
+  ],
+  "started_utc": "2026-09-28T03:05:29.5688695Z",
+  "status": "converter-failed",
+  "abandoned_mutex": false,
+  "exit_code": 1,
+  "issues": [
+    {
+      "file": "complete-main.log",
+      "line": "LaTeX Warning: You have requested file `',"
+    },
+    {
+      "file": "complete-main.log",
+      "line": "LaTeX Warning: You have requested file `',"
+    },
+    {
+      "file": "complete-main.log",
+      "line": "! LaTeX Error: Missing \\begin{document} in `'."
+    },
+    {
+      "file": "complete-main.log",
+      "line": "!  ==> Fatal error occurred, bad output DVI file produced!"
+    }
+  ],
+  "output_files": [],
+  "error": "make4ht failed with exit code 1",
+  "finished_utc": "2026-09-28T03:08:30.2316050Z"
+}

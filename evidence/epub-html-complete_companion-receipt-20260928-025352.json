@@ -1,0 +1,74 @@
+{
+  "schema": "openlogic-tamil-epub-html-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 1000,
+  "process_timeout_minutes": 20,
+  "master": "tamil-source-companion.tex",
+  "master_sha256": "53771c7f33f56fee81160bc62c8b4b9ff6d5d8d20141d74bea3910732d5fb08f",
+  "adapter_sha256": "eba26310ced4d4f3a89bf04082127e48f237296a0a4fd30ae8b3fe1824d4d8ac",
+  "reader_slug": "complete-companion",
+  "converter": "make4ht",
+  "converter_version": "make4ht version v0.4e",
+  "backend": "tex4ht",
+  "options": [
+    "lualatex",
+    "html5",
+    "mathml",
+    "charset=utf-8",
+    "fn-in",
+    "no-shell-escape"
+  ],
+  "started_utc": "2026-09-28T02:30:37.9718819Z",
+  "status": "converter-failed",
+  "abandoned_mutex": false,
+  "exit_code": 1,
+  "issues": [
+    {
+      "line": "LaTeX Warning: You have requested file `',",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: You have requested file `',",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: Command `\\theHfootnote' already defined -- not changed on input",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: Label `fol:axd:prv:sec' multiply defined.",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: Label `fol:axd:prv:sec@cref' multiply defined.",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: Label `fol:axd:prv:prop:provability-contr' multiply defined.",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: Label `fol:axd:prv:prop:provability-contr@cref' multiply defined",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: Label `fol:axd:prv:prop:provability-exhaustive' multiply defined",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "LaTeX Warning: Label `fol:axd:prv:prop:provability-exhaustive@cref' multiply de",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "! File ended while scanning use of \\n:wlbl.",
+      "file": "complete-companion.log"
+    },
+    {
+      "line": "!  ==> Fatal error occurred, bad output DVI file produced!",
+      "file": "complete-companion.log"
+    }
+  ],
+  "output_files": [],
+  "error": "make4ht failed with exit code 1",
+  "finished_utc": "2026-09-28T02:36:53.1470766Z"
+}

@@ -1,0 +1,38 @@
+% SEGMENT OLP-0715-S01
+% Part: propositional-logic
+% Chapter: propositional-logic
+% Section: soundness
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pl}{prp}{snd}
+
+\olsection{கூற்றுத் தருக்கத்தின் சரித்தன்மை}
+
+\begin{thm}[சரித்தன்மை]
+\ollabel{thm:soundness}
+$\Gamma\Proves!A$ எனில் $\Gamma \Entails !A$.
+\end{thm}
+
+% SEGMENT OLP-0715-S02
+\begin{proof}
+தேற்றங்களின் மீது தொகுத்தறிதல் செய்கிறோம். $!A$ ஓர் அடிகோள் எனில்,
+$\Entails !A$; எனவே குறிப்பாக $\Gamma \Entails!A$.
+அதேபோல் $!A \in \Gamma$ எனில், $\Gamma \Entails!A$.
+தொகுத்தறிதல் படியில், $!C$ மற்றும் $!C\lif!A$ ஆகியவற்றிலிருந்து
+\emph{மோடஸ் போனென்ஸ்} விதியால் $!A$ பெறப்படுகிறது என்க;
+மேலும் $!C\lif !A$ க்கும் $!C$ க்கும் தேற்றம் பொருந்துகிறது என்பது
+தொகுத்தறிதல் எடுகோள் என்க. அப்போது
+\olref[pl][syn][sem]{prop:semanticalfacts} இன் இரண்டாவது உருப்படி
+தேவையான முடிவைக் கொடுக்கிறது.
+\end{proof}
+
+% SEGMENT OLP-0715-S03
+\begin{cor}
+$\Gamma$ நிறைவுறத்தக்கது எனில், $\Gamma$ முரணற்றது.
+எனவே கூற்றுத் தருக்கம் முரணற்றது.
+\end{cor}
+
+\end{document}

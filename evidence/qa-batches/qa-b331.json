@@ -1,0 +1,121 @@
+{
+  "batch_id": "TA-B331",
+  "units": [
+    {
+      "unit_id": "OLP-0671",
+      "source_sha256": "bcdc9e912c815aca8702cfe0346eba3a308dd2569e4dcca2950cfa0c590a0be4",
+      "translation_sha256": "0f2665f159110fedcd8a23328acd511042e3114ce0ac9bb05701c7c7967d5283",
+      "source_bytes": 4249,
+      "translation_bytes": 8781,
+      "source_coverage_complete": true,
+      "segments": 6,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Log{G2c}\\(\\Log{N2i})+\\Cut\\Proves\\Gamma'\\Sequent\\Delta$",
+        "$\\Gamma_2'\\Sequent\\$",
+        "\\[\\Axiom$!A\\fCenter!A$\\RightLabel{\\RightR{\\lnot}}\\UnaryInf$\\fCenter!A,\\lnot!A$\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$x:\\lnot!A,\\Gamma'\\fCenter$\\RightLabel{\\Cut}\\BinaryInf$\\Gamma'\\fCenter!A$\\DisplayProof\\]"
+      ],
+      "extra_math": [
+        "$\\Log{G2c}\\(\\Log{G2i})+\\Cut\\Proves\\Gamma'\\Sequent\\Delta$",
+        "$!A\\Sequent!A$",
+        "$!A\\ident\\lfalse$",
+        "$\\lfalse\\Sequent\\$",
+        "$\\Gamma_2'\\Sequent!B$",
+        "$\\Gamma_1',\\Gamma_2'\\Sequent\\$",
+        "\\[\\Axiom$!A\\fCenter!A$\\RightLabel{\\RightR{\\lnot}}\\UnaryInf$\\fCenter!A,\\lnot!A$\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\lnot!A,\\Gamma'\\fCenter$\\RightLabel{\\Cut}\\BinaryInf$\\Gamma'\\fCenter!A$\\DisplayProof\\]"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0671",
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\Weakening"
+          ],
+          "expected_extra_commands": [
+            "\\Gamma",
+            "\\Gamma",
+            "\\Sequent",
+            "\\Sequent",
+            "\\Sequent",
+            "\\Cut",
+            "\\lfalse",
+            "\\lfalse",
+            "\\ident",
+            "\\lif",
+            "\\LeftR",
+            "\\Contraction"
+          ],
+          "audit_id": "TA-PT-028",
+          "kind": "N2-to-G2-empty-succedent-and-system-repairs",
+          "action": "Name G2i rather than N2i in the target pair; repair vacuous implication introduction and false-conclusion implication elimination; strip an N2 label from the G2 classical-falsity display; handle false conclusion and distinguish intermediate from final multi-succedent sequents; flag unshown rule cases.",
+          "expected_missing_math": [
+            "$\\Log{G2c}\\(\\Log{N2i})+\\Cut\\Proves\\Gamma'\\Sequent\\Delta$",
+            "$\\Gamma_2'\\Sequent\\$",
+            "\\[\\Axiom$!A\\fCenter!A$\\RightLabel{\\RightR{\\lnot}}\\UnaryInf$\\fCenter!A,\\lnot!A$\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$x:\\lnot!A,\\Gamma'\\fCenter$\\RightLabel{\\Cut}\\BinaryInf$\\Gamma'\\fCenter!A$\\DisplayProof\\]"
+          ],
+          "expected_extra_math": [
+            "$\\Log{G2c}\\(\\Log{G2i})+\\Cut\\Proves\\Gamma'\\Sequent\\Delta$",
+            "$!A\\Sequent!A$",
+            "$!A\\ident\\lfalse$",
+            "$\\lfalse\\Sequent\\$",
+            "$\\Gamma_2'\\Sequent!B$",
+            "$\\Gamma_1',\\Gamma_2'\\Sequent\\$",
+            "\\[\\Axiom$!A\\fCenter!A$\\RightLabel{\\RightR{\\lnot}}\\UnaryInf$\\fCenter!A,\\lnot!A$\\AxiomC{}\\RightLabel{$\\pi_1$}\\Deduce$\\lnot!A,\\Gamma'\\fCenter$\\RightLabel{\\Cut}\\BinaryInf$\\Gamma'\\fCenter!A$\\DisplayProof\\]"
+          ],
+          "source_issue_or_choice": "The frozen proposition misnames the second G2 target, its false-conclusion cases mismatch their induction hypotheses, and a translated G2 proof tree retains an N2 label.",
+          "chosen_treatment": "Apply the localized proof corrections in OLP-0671-source-audit.md, preserving the shown rule constructions and adding a Tamil note for omitted cases.",
+          "alternatives_considered": "Repeat the incompatible target system and false-branch claims; make a translated G2 context retain an N2 assumption label; invent omitted cases.",
+          "rationale": "The proposition's sequent mapping sends bottom to an empty succedent; N2i corresponds to G2i. The actual subproof conclusions, left/right rules and final displayed sequents determine the corrections.",
+          "precise_review_question": "Do the repaired bottom branches end with empty succedents and do all G2 antecedents omit N2 labels?",
+          "location_needle": "\\Deduce$\\lnot !A, \\Gamma' \\fCenter $"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\Weakening"
+      ],
+      "extra_commands": [
+        "\\Gamma",
+        "\\Gamma",
+        "\\Sequent",
+        "\\Sequent",
+        "\\Sequent",
+        "\\Cut",
+        "\\lfalse",
+        "\\lfalse",
+        "\\ident",
+        "\\lif",
+        "\\LeftR",
+        "\\Contraction"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

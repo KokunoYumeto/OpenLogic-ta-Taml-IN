@@ -1,0 +1,245 @@
+% SEGMENT OLP-0711-S01
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: rules-proofs
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{rp}
+
+\olsection{விதிகளும் \usetoken{S}{proof}களும்}
+
+சில வரையறைகளைக் கொடுத்து, பயன்படுத்தவுள்ள சொற்களின்
+பொருளைத் தெளிவுபடுத்துவதிலிருந்து தொடங்குவோம்.
+
+எடுத்துக்காட்டாக, $!A \land !B$ ஐக் கொண்ட தொடரணிகளை,
+$!A$, $!B$ ஆகியவற்றைக் கொண்ட தொடரணிகளிலிருந்து
+!!{proving} செய்வதற்கு உதவும் \Log{G3c} இன் இரு விதிகளைக்
+கவனிப்போம்:
+\[
+\Axiom$ !A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+\qquad
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter \Delta, !A \land !B $
+\DisplayProof
+\]
+கோட்டுக்கு மேலுள்ள தொடரணிகள் \emph{முன்கூற்றுகள்};
+கீழுள்ள தொடரணி \emph{முடிவு}. ஒவ்வொரு விதியிலும்
+$\Gamma$, $\Delta$ ஆகியவற்றில் உள்ள !!{formula}s
+\emph{சூழல்} அல்லது \emph{பக்க !!{formula}s}
+எனப்படும். முடிவில் சூழலுக்குச் சேராத !!{formula},
+\emph{முதன்மை} !!{formula} எனப்படும். முன்கூற்றுகளில்
+சூழலுக்குச் சேராத !!{formula}s \emph{செயலுக்குரிய}
+(அல்லது \emph{துணை}) !!{formula}s எனப்படும்.
+
+% SEGMENT OLP-0711-S02
+அளவையடை விதிகள் சற்றுச் சிக்கலானவை. எடுத்துக்காட்டாக,
+\Log{G1c} இல் $\lforall$ க்கான விதிகள்:
+\[\Axiom$ !A(t), \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+\qquad
+\Axiom$ \Gamma \fCenter \Delta, !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+\DisplayProof
+\]
+\LeftR{\lforall} விதியில் செயலுக்குரிய !!{formula}~$!A(t)$;
+இங்கு $t$ ஒரு மூடிய சொல், அதாவது மாறிகள் இல்லாத சொல்.
+ஏதோ ஓர் !!{formula}~$!A$, மாறி~$x$, மூடிய சொல்~$t$
+இருந்து, முடிவின் முதன்மை !!{formula}~$\lforall[x][!A]$
+ஆகவும் முன்கூற்றின் செயலுக்குரிய !!{formula}~$\Subst{!A}{t}{x}$
+ஆகவும் இருந்தால் மட்டுமே இந்த அனுமானம் சரியானது;
+அதாவது அது \LeftR{\lforall} திட்டவடிவ விதிக்குப் பொருந்துகிறது.
+\RightR{\lforall} விதியும் இதைப் போன்றதே. ஆனால் அதில்
+எந்தச் சொல்~$t$ வேண்டுமானாலும் வருவதில்லை;
+முன்கூற்றின் செயலுக்குரிய !!{formula}~$\Subst{!A}{a}{x}$
+ஆக இருக்க வேண்டும்; இங்கு $a$ என்பது !!a{constant}.
+இந்த மாறிலி \RightR{\lforall} அனுமானத்தின்
+\emph{தனிமாறி} எனப்படும். கீழுள்ள தொடரணியில்~$a$
+இல்லாவிட்டால் மட்டுமே அனுமானம் சரியானது; அதாவது
+$\Gamma$, $\Delta$, $!A$ ஆகிய எதிலும் $a$ இடம்பெறக் கூடாது.
+இதுவே \emph{தனிமாறி நிபந்தனை}.
+
+% SEGMENT OLP-0711-S03
+\Log{G1c}, \Log{G3c} போன்ற தொடரணி முறைமைகளில்,
+இவ்வாறு திட்டவடிவில் குறிப்பிடப்பட்ட விதிகளின் தொகுப்பும்,
+அடிக்கோள்களாகக் கருதப்படும் திட்டவடிவில் குறிப்பிடப்பட்ட
+சில தொடரணிகளும் உள்ளன. அம்முறைமையின் !!^{proof}s,
+அடிக்கோள்களிலிருந்து அனுமான விதிகளால் தொகுத்தறிதலாகக்
+கட்டப்படும் தொடரணிகளின் முடிவுறு மரங்கள். ஒவ்வோர்
+இலையும் ஓர் அடிக்கோள்; மற்ற ஒவ்வொரு தொடரணியும்
+அதற்கு உடனே மேலுள்ள தொடரணிகளிலிருந்து முறைமையின்
+ஓர் அனுமான விதியால் பின்வருகிறது.
+
+% SEGMENT OLP-0711-S04
+\begin{defn}\ollabel{defn:proof}
+தொடரணி முறைமையில் \emph{!!^{proof}s} என்பவை பின்வருமாறு
+தொகுத்தறிதலாக வரையறுக்கப்படும் தொடரணிகளின்
+முடிவுறு மரங்கள்:
+\begin{enumerate}
+  \item\ollabel{defn:prf:axiom} ஒவ்வோர் அடிக்கோளும்
+  !!a{proof}.
+  \item\ollabel{defn:prf:one-prem} $\pi_1$ என்பது
+  $S_1$ என்ற தொடரணியில் முடியும் !!a{proof} என்க.
+  ஒரு முன்கூற்றுள்ள $R$ விதியின்படி $S_1$ இலிருந்து
+  $S$ என்ற தொடரணி பின்வருமானால்,
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \DeduceC{$S_1$}
+  \RightLabel{$R$}
+  \UnaryInfC{$S$}
+  \DisplayProof
+  \]
+  என்பது !!a{proof}.
+  \item\ollabel{defn:prf:two-prem} $\pi_1$, $\pi_2$
+  ஆகியவை முறையே $S_1$, $S_2$ தொடரணிகளில்
+  முடியும் !!{proof}s என்க. இரண்டு முன்கூற்றுள்ள
+  $R$ விதியின்படி $S_1$, $S_2$ ஆகியவற்றிலிருந்து
+  $S$ என்ற தொடரணி பின்வருமானால்,
+  \[
+  \AxiomC{}
+  \RightLabel{$\pi_1$}
+  \DeduceC{$S_1$}
+  \AxiomC{}
+  \RightLabel{$\pi_2$}
+  \DeduceC{$S_2$}
+  \RightLabel{$R$}
+  \BinaryInfC{$S$}
+  \DisplayProof
+  \]
+  என்பது !!a{proof}.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0711-S05
+\Olref{defn:proof} இல் !!{proof}s தொடரணிகளின்
+மரங்களாக வரையறுக்கப்படுகின்றன. இந்த மரங்கள்
+``மேல்நோக்கி வளரும்'' எனக் கொள்கிறோம். மரத்தின்
+மிக மேலுள்ள இலைக் கணுக்கள் அடிக்கோள்கள்;
+அவை \emph{தொடக்கத் தொடரணிகள்} எனப்படும். மிகக்
+கீழுள்ள தொடரணி \emph{இறுதித் தொடரணி}. $\pi$
+என்பது இறுதித் தொடரணி~$S$ உடைய !!a{proof}
+எனில் $\pi \Proves S$ என்றும் எழுதுவோம். ஒரு
+தொடரணி~$S$ க்கு !!a{proof} இருந்தால் $\Proves S$
+என எழுதுவோம். தேவைப்பட்டால், எந்த முறைமையில்
+அந்த நிறுவல் இருக்கிறது என்பதை $\Proves$ குறிக்கு
+இடப்புறம் காட்டலாம்; எடுத்துக்காட்டாக,
+$\Log{G1c} \Proves !A, !B \Sequent !A \land
+!B$. ஓர் !!a{proof} இல் தொடக்கத் தொடரணிகளைத்
+தவிர மற்ற ஒவ்வொரு தொடரணியும் ஏதோ ஒரு
+விதி~$R$ மூலம் செய்யப்பட்ட அனுமானத்தின்
+\emph{முடிவு}. ஒரு தொடரணிக்கு உடனே மேலிருக்கும்
+ஒன்று அல்லது இரண்டு தொடரணிகள், அதாவது அந்தக்
+கணுவின் பெற்றோர் கணுக்கள், அனுமானத்தின்
+\emph{முன்கூற்றுகள்} எனப்படும்.
+
+% SEGMENT OLP-0711-S06
+ஓர் !!a{proof} ஐத் தொகுத்தறிதலாகக் கட்டும்போது
+பயன்படும் !!{proof}s அதன் \emph{உள்-!!{proof}s}.
+ஓர் அனுமானத்தின் முன்கூற்றுகளில் முடியும்
+உள்-!!{proof}s, அந்த அனுமானத்தின்
+\emph{உடனடி உள்-!!{proof}s} எனப்படும்.
+
+!!{proof}s இன் சிக்கலை ஓர் இயல் எண்ணால்
+அளவிடுவது பல நேரங்களில் தேவை. ஓர் !!a{proof} இல்
+உள்ள தொடரணிகளை வெறுமனே எண்ணலாம்.
+ஆனால் !!a{proof} இன் !!{height} பெரும்பாலும்
+பயனுள்ள அளவு: இறுதித் தொடரணியிலிருந்து ஓர்
+தொடக்கத் தொடரணிக்கு மேல்நோக்கிச் செல்லும்
+பாதையில் உள்ள அனுமானங்களின் அதிகபட்ச எண்ணிக்கை.
+இதற்கு ஒரு தொகுத்தறி வரையறையும் தரலாம்.
+
+% SEGMENT OLP-0711-S07
+\begin{defn}
+ஓர் !!a{proof}~$\pi$ இன் \emph{!!{height}}~$\pheight{\pi}$
+பின்வருமாறு தொகுத்தறிதலாக வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $\pi$ ஒரே ஓர் அடிக்கோளைக் கொண்டிருந்தால்,
+  $\pheight{\pi} = 0$.
+  \item $\pi$ ஒரு முன்கூற்றுள்ள அனுமானத்தில் முடிந்து,
+  அதன் உடனடி உள்-!!{proof}~$\pi_1$ எனில்,
+  $\pheight{\pi} = \pheight{\pi_1} + 1$.
+  \item $\pi$ இரண்டு முன்கூற்றுள்ள அனுமானத்தில் முடிந்து,
+  அதன் உடனடி உள்-!!{proof}s~$\pi_1$, $\pi_2$ எனில்,
+  $\pheight{\pi} =
+  \max(\pheight{\pi_1}, \pheight{\pi_2}) + 1$.
+\end{enumerate}
+ஒரு தொடரணி~$S$ க்கு $\le n$ உயரமுள்ள !!a{proof}
+இருந்தால், $\Proves[n] S$ என எழுதுவோம்.
+\end{defn}
+
+% SEGMENT OLP-0711-S08
+\begin{ex}
+\Log{G3c} இல் $!C, \Gamma \Sequent \Delta, !C$
+என்ற வடிவிலான ஒவ்வொரு தொடரணியும் அடிக்கோள்;
+இங்கு $!C$ அணு வாய்பாடாக இருக்க வேண்டும். $!D$,
+$!E$ ஆகியவை அணுக் கூற்றுகள் என்க. அப்போது
+$!D, !E \Sequent !D$, $!D, !E \Sequent !E$
+ஆகிய இரண்டும் $!C, \Gamma \Sequent \Delta, !C$
+என்ற அடிக்கோளின் நிகழ்வுகள். எடுத்துக்காட்டாக,
+$!C \ident !E$, $\Gamma = \{!D\}$, $\Delta = \emptyset$
+என்று $!C, \Gamma \Sequent \Delta, !C$ இல் எடுத்தால்,
+துல்லியமாக $!D, !E \Sequent !E$ கிடைக்கும்.
+இங்கு பன்மைக் \emph{கணங்களுடன்} செயல்படுகிறோம்
+என்பதை நினைவில் கொள்க: $!D, !E \Sequent !D$
+மற்றும் $!E, !D \Sequent !D$ ஒரே தொடரணி.
+
+% SEGMENT OLP-0711-S09
+$!D, !E \Sequent !D$ என்பது \Log{G3c} இன் ஓர்
+அடிக்கோளின் நிகழ்வு என்பதால், அது தனியாகவே
+\Log{G3c} இல் !!a{proof}; $!D, !E \Sequent !E$
+உம் \olref{defn:proof}\olref{defn:prf:axiom}
+இன் படி அப்படியே. அவற்றை முறையே $\pi_1$,
+$\pi_2$ என அழைப்போம். \olref{defn:prf:two-prem}
+இன் படி, இவ்விரு !!{proof}s ஐயும்
+இரண்டு முன்கூற்றுள்ள $\RightR{\land}$ விதியில்
+பயன்படுத்தி ஒரு புதிய !!{proof}~$\pi_3$ ஐக்
+கட்டலாம்:
+\[
+\Axiom$!D, !E \fCenter !D$
+\Axiom$!D, !E \fCenter !E$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!D, !E  \fCenter !D \land !E $
+\DisplayProof
+\]
+$\pi_3$ இலிருந்து மேலும் !!{proof}~$\pi_4$ ஐப்
+பெறுகிறோம்:
+\[
+\Axiom$!D, !E \fCenter !D$
+\Axiom$!D, !E \fCenter !E$
+\RightLabel{\RightR{\land}}
+\insertBetweenHyps{\hspace{5ex}}
+\BinaryInf$!D, !E  \fCenter !D \land !E $
+\LeftSubproofLabel{$\pi_3$}
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!D \land !E  \fCenter !D \land !E$
+\RightSubproofLabel{$\pi_4$}
+\DisplayProof
+\]
+
+% SEGMENT OLP-0711-S10
+இங்கு ஒரு முன்கூற்றுள்ள $\LeftR{\land}$ விதியைப்
+பயன்படுத்தினோம் (\olref{defn:proof}\olref{defn:prf:one-prem}).
+$\pi_4$ இன் கடைசி அனுமானத்தின் உடனடி
+உள்-!!{proof}~$\pi_3$. $\RightR{\land}$
+அனுமானத்தின் உடனடி உள்-!!{proof}s $\pi_1$,
+$\pi_2$. $\pi_4$ இன் உள்-!!{proof}s
+$\pi_1$, $\pi_2$, $\pi_3$ மற்றும் $\pi_4$ தானும்.
+இங்கு $\pheight{\pi_1} =
+\pheight{\pi_2} = 0$, $\pheight{\pi_3} = 1$,
+$\pheight{\pi_4} = 2$. ஆகவே அணுவான எந்த
+$!D$, $!E$ க்கும் $\Log{G3c} \Proves[2] !D \land !E  \fCenter !D
+\land !E$ என்பதை நிறுவியுள்ளோம்.
+\end{ex}
+
+\end{document}

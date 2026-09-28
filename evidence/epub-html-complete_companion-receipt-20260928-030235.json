@@ -1,0 +1,50 @@
+{
+  "schema": "openlogic-tamil-epub-html-guard/1",
+  "mutex": "Global\\InterlanguageTeXSlotV1",
+  "acquisition_timeout_ms": 1000,
+  "process_timeout_minutes": 20,
+  "master": "tamil-source-companion.tex",
+  "master_sha256": "b3b1b7ed7c96c89084dfdec7a1c0cfd47dcdc38dd8650089c458fb7a7db1cb0a",
+  "adapter_sha256": "270e13e6da88e5f94bf2a6ae206c1e9e97113fc3f0df281955788cf495d8e45b",
+  "reader_slug": "complete-companion",
+  "converter": "make4ht",
+  "converter_version": "make4ht version v0.4e",
+  "backend": "tex4ht",
+  "options": [
+    "lualatex",
+    "html5",
+    "mathml",
+    "charset=utf-8",
+    "fn-in",
+    "no-shell-escape"
+  ],
+  "started_utc": "2026-09-28T02:56:50.9162881Z",
+  "status": "converter-failed",
+  "abandoned_mutex": false,
+  "exit_code": 1,
+  "issues": [
+    {
+      "file": "complete-companion.log",
+      "line": "LaTeX Warning: You have requested file `',"
+    },
+    {
+      "file": "complete-companion.log",
+      "line": "LaTeX Warning: You have requested file `',"
+    },
+    {
+      "file": "complete-companion.log",
+      "line": "LaTeX Warning: Command `\\theHfootnote' already defined -- not changed on input"
+    },
+    {
+      "file": "complete-companion.log",
+      "line": "! File ended while scanning use of \\n:wlbl."
+    },
+    {
+      "file": "complete-companion.log",
+      "line": "!  ==> Fatal error occurred, bad output DVI file produced!"
+    }
+  ],
+  "output_files": [],
+  "error": "make4ht failed with exit code 1",
+  "finished_utc": "2026-09-28T02:58:52.2751743Z"
+}

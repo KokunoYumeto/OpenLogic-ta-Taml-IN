@@ -1,0 +1,133 @@
+{
+  "batch_id": "TA-B364",
+  "units": [
+    {
+      "unit_id": "OLP-0708",
+      "source_sha256": "3b754ac3aadeb92362d6eeb398cfa914e2a757e079d5305f3994f938e0ff6933",
+      "translation_sha256": "e7d819fc86f53ea95a692d5c5eca5f403d8739c448316a4f74ac8dca3d81602f",
+      "source_bytes": 2427,
+      "translation_bytes": 3293,
+      "source_coverage_complete": true,
+      "segments": 2,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma\\fCenter!A,!B$",
+        "$!A(t),\\lforall[x][!A(x)]\\Gamma\\fCenter\\Delta$"
+      ],
+      "extra_math": [
+        "$\\Gamma\\fCenter!A$",
+        "$\\Gamma\\fCenter!B$",
+        "$\\Gamma\\fCenter!A\\lor!B$",
+        "$!A(t),\\lforall[x][!A(x)],\\Gamma\\fCenter\\Delta$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": false,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0708",
+          "audit_id": "TA-PT-053",
+          "kind": "G3i-single-succedent-right-disjunction-and-table-identity",
+          "action": "Replace the copied two-formula right-disjunction premise with the two alternative single-succedent introduction trees, separate Gamma from the retained universal formula, give the G3i table its own label, and restore the omitted right-weakening deletion in the G1m caption definition.",
+          "expected_missing_math": [
+            "$\\Gamma\\fCenter!A,!B$",
+            "$!A(t),\\lforall[x][!A(x)]\\Gamma\\fCenter\\Delta$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\fCenter!A$",
+            "$\\Gamma\\fCenter!B$",
+            "$\\Gamma\\fCenter!A\\lor!B$",
+            "$!A(t),\\lforall[x][!A(x)],\\Gamma\\fCenter\\Delta$"
+          ],
+          "identifier_replacements": [
+            {
+              "from": "\\ollabel{tab:G3c}",
+              "to": "\\ollabel{tab:G3i}",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_environments": [],
+          "expected_extra_environments": [
+            "\\begin{tabular}",
+            "\\end{tabular}"
+          ],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [
+            "\\begin",
+            "\\Gamma",
+            "\\Gamma",
+            "\\Axiom",
+            "\\fCenter",
+            "\\fCenter",
+            "\\RightLabel",
+            "\\UnaryInf",
+            "\\DisplayProof",
+            "\\RightR",
+            "\\RightR",
+            "\\lor",
+            "\\lor",
+            "\\end",
+            "\\Weakening"
+          ],
+          "source_issue_or_choice": "The G3i caption restricts Delta to zero or one formula, but the copied right-disjunction premise has A and B together on the right, as in the adjacent multi-conclusion mG3i table. The left-universal premise omits the comma before Gamma. The file's inert header and tab:G3c label duplicate the separate G3c table. The caption calls G1m the result of deleting only falsity axioms from G1i, contradicting the G1i table's explicit additional deletion of right weakening.",
+          "chosen_treatment": "Use the two G1i-style right-disjunction alternatives Gamma entails A and Gamma entails B, each concluding Gamma entails A or B; insert the one missing left-universal comma; identify this table as tab:G3i and its inert comment as rules-G3i; retain the G1m/G1i referents while adding the missing RightR Weakening deletion to the caption. Preserve every other G3i rule and the atomic axiom and eigenconstant restrictions.",
+          "alternatives_considered": "Retain a two-formula succedent despite the stated single-succedent discipline; show only the A introduction and drop B; change the caption to a speculative G3m system whose negation-left rule would still permit explosion; keep duplicate G3c labels; repeat the false one-deletion description of G1m.",
+          "rationale": "The adjacent G1i table supplies both single-succedent disjunction alternatives, whereas mG3i explicitly allows a multi-conclusion right-disjunction premise. G3i's own Delta restriction rules out the frozen two-formula premise. The universal premise requires a comma as in the adjacent G3c rule and its own conclusion. The classical G3c and intuitionistic G3i tables need distinct reference labels. The adjacent G1i caption states both deletions needed for G1m; no unsupported G3m claim is introduced.",
+          "precise_review_question": "Do both right-disjunction branches have exactly one succedent formula, does the G1m sentence agree with the adjacent G1i definition, and are all other G3i proof judgments and side conditions preserved?",
+          "location_needle": "\\ollabel{tab:G3i}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [
+        "\\begin{tabular}",
+        "\\end{tabular}"
+      ],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [],
+      "extra_commands": [
+        "\\begin",
+        "\\Gamma",
+        "\\Gamma",
+        "\\Axiom",
+        "\\fCenter",
+        "\\fCenter",
+        "\\RightLabel",
+        "\\UnaryInf",
+        "\\DisplayProof",
+        "\\RightR",
+        "\\RightR",
+        "\\lor",
+        "\\lor",
+        "\\end",
+        "\\Weakening"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

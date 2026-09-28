@@ -1,0 +1,36 @@
+% Latin diacritics retain their spelling; Tamil remains in Nirmala UI.
+% fontspec must be loaded with no-math so legacy mathematical accent fonts
+% are not replaced by a text font lacking the mathematical bar glyph.
+\newfontfamily\TALatinFont{Cambria}
+\RenewDocumentCommand\L{}{{\TALatinFont\char"0141}}
+\RenewDocumentCommand\l{}{{\TALatinFont\char"0142}}
+\NewCommandCopy\TAOriginalAcute\'
+\RenewDocumentCommand\'{m}{{\TALatinFont\TAOriginalAcute{#1}}}
+\usepackage{newunicodechar}
+\newunicodechar{Ł}{{\TALatinFont\char"0141}}
+\newunicodechar{ł}{{\TALatinFont\char"0142}}
+\newunicodechar{ś}{{\TALatinFont\char"015B}}
+\AtBeginEnvironment{thebibliography}{\TALatinFont}
+% cleveref's list joins and enumerate labels are generated prose; localize them
+% after babel has selected the document language.
+\AtBeginDocument{%
+  \crefname{enumi}{படி}{படிகள்}%
+  \Crefname{enumi}{படி}{படிகள்}%
+  \crefname{enumii}{படி}{படிகள்}%
+  \Crefname{enumii}{படி}{படிகள்}%
+  \renewcommand{\crefpairconjunction}{ மற்றும் }%
+  \renewcommand{\crefmiddleconjunction}{, }%
+  \renewcommand{\creflastconjunction}{ மற்றும் }%
+  \renewcommand{\crefpairgroupconjunction}{ மற்றும் }%
+  \renewcommand{\crefmiddlegroupconjunction}{, }%
+  \renewcommand{\creflastgroupconjunction}{, மற்றும் }%
+  \renewcommand{\crefrangeconjunction}{--}%
+}
+% The upstream starred induction case and exercise marker contain hard-coded
+% English even when their source arguments are translated.
+\RenewDocumentCommand\indcase { s t{!} m m +m }{%
+  \DeclareDocumentMacro \indfrm {#3}%
+  \DeclareDocumentMacro \indfrmp {#3}%
+  \DeclareDocumentMacro \indcomplex {#4}%
+  \IfBooleanTF{#1}{$#3$ அணு வாய்பாடு: }{$#3 \ident #4$: }%
+  \IfBooleanTF{#2}{பயிற்சி.}{#5}}

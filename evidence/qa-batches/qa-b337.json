@@ -1,0 +1,75 @@
+{
+  "batch_id": "TA-B337",
+  "units": [
+    {
+      "unit_id": "OLP-0677",
+      "source_sha256": "083d9544d8870daa58030ddf36209e1447fa7bcbbb2a1cc08f3d1eaf8c3cc9db",
+      "translation_sha256": "0a9d4b9152b33be753137d9443f43d3ffc781c45dcb1a15019f4fd8e18490572",
+      "source_bytes": 3683,
+      "translation_bytes": 7683,
+      "source_coverage_complete": true,
+      "segments": 5,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$A_{i+1}$"
+      ],
+      "extra_math": [
+        "$!A_{i+1}$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0677",
+          "audit_id": "TA-PT-033",
+          "kind": "segment-occurrence-sigil-and-falsity-cut",
+          "action": "Restore the formula marker on A_{i+1} in the segment definition, include FalseInt in the length-one cut explanation, and correct the inert Section comment to segments.",
+          "expected_missing_math": [
+            "$A_{i+1}$"
+          ],
+          "expected_extra_math": [
+            "$!A_{i+1}$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The definition begins with formula occurrences !A_1,...,!A_n but condition 3 unexpectedly writes A_{i+1}. The prose after the cut definition says a length-one cut must conclude an introduction rule, omitting the definition's explicit FalseInt alternative. The source header says Section: introduction though the file ID and title are segments.",
+          "chosen_treatment": "Write !A_{i+1} as the conclusion of the intervening inference, state that a length-one cut can also conclude FalseInt, and set the target's inert section comment to segments. Retain the displayed proof trees and all protected rule identifiers.",
+          "alternatives_considered": "Copy the missing formula marker and exclude the explicitly defined FalseInt length-one cut.",
+          "rationale": "Every occurrence in the segment is an occurrence of the same formula !A; the two example trees propagate !A implies !B without stripping the formula marker. The adjacent cut definition explicitly names FalseInt, and reductions.tex handles that case separately.",
+          "precise_review_question": "Does the corrected condition still identify the same formula occurrence across disjunction/existential elimination, and is the FalseInt case included without changing the n>1 criterion?",
+          "location_needle": "$!A_{i+1}$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

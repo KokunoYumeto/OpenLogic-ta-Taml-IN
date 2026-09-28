@@ -1,0 +1,139 @@
+% SEGMENT OLP-0713-S01
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: translations
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{tr}
+
+\olsection{\Log{G1c} மற்றும் \Log{G3c} இடையிலான மாற்றங்கள்}
+
+\Log{G1c}, \Log{G3c} ஆகிய இரண்டும் செவ்வியல் தருக்கத்துக்கு
+வலிதன்மையும் நிறைவுத்தன்மையும் உடையவை என்று முன்பு குறிப்பிட்டோம்.
+அதாவது, ஒவ்வொரு !!{structure} இலும் மெய்யான
+தொடரணிகளை மட்டுமே, அவை அனைத்தையும், ஒவ்வொரு முறைமையும்
+நிறுவுகிறது. குறிப்பாக, இரண்டும் ஒரே தொடரணிகளை நிறுவுகின்றன.
+இப்போது வலிதன்மை, நிறைவுத்தன்மை தேற்றங்கள் வழியாகச்
+செல்லாமல், நிறுவல் கோட்பாட்டுக்குள்ளேயே இதை நிறுவலாம்.
+இந்த வகையான நிறுவல், \Log{G1c} இல் உள்ள
+!!{proof}s ஐ \Log{G3c} இல் உள்ள !!{proof}s ஆகவும்
+மறுதிசையிலும் மாற்றும் \emph{மாற்றங்களை} வழங்குகிறது.
+
+% SEGMENT OLP-0713-S02
+\begin{prop}
+$\Log{G1c} \Proves S$ எனில் $\Log{G3c} \Proves S$.
+\end{prop}
+
+\begin{proof}
+  $\pi$ என்பது \Log{G1c} இல் !!a{proof} எனில்,
+  $S$ க்கு \Log{G3c} இல் !!a{proof}~$\pi'$ உண்டு
+  என்று காட்டுவோம். இதற்கு $n = \pheight{\pi}$
+  மீது தொகுத்தறிதலைப் பயன்படுத்துகிறோம்.
+
+% SEGMENT OLP-0713-S03
+  $n = 0$ எனில் $\pi$ ஓர் அடிக்கோள்.
+  $\lfalse \Sequent \quad$ என்பது \Log{G3c}
+  இலும் ஓர் அடிக்கோள்; இங்கு சூழல்கள் $\Gamma,
+  \Delta$ இரண்டும் வெறுமையாக எடுக்கப்படுகின்றன.
+  பொதுவான, அணுவாக இருக்க வேண்டியதில்லாத $!A$ உடைய
+  $!A \Sequent !A$ என்பது \Log{G3c} இன்
+  அடிக்கோளாக வேண்டியதில்லை. ஆனால் இத்தகைய
+  எல்லாத் தொடரணிகளும் \Log{G3c} இல்
+  !!{provable} என்பதை
+  \olref[ex]{prop:G3c-axioms} இல் நிறுவியுள்ளோம்.
+
+% SEGMENT OLP-0713-S04
+  $n>0$ எனில் $\pi$ ஒரு விதி~$R$ இல் முடிகிறது.
+  தொகுத்தறி கருதுகோளின்படி அந்த விதியின்
+  முன்கூற்றுகளுக்கு \Log{G3c} இல் !!{proof}s
+  உள்ளன; அதாவது உடனடி உள்-!!{proof}s க்கு
+  \Log{G3c} இல் மாற்றங்கள் உள்ளன.
+  $R$ இரு முறைமைகளிலும் ஒரே வடிவிலிருந்தால்,
+  மொழிமாற்றப்பட்ட முன்கூற்றுகளின் !!{proof}s
+  மீது அந்த விதியை நேரடியாகப் பயன்படுத்தலாம்.
+  இட இணைப்பு, வல பிரிப்பு, இட அனைத்தளவையடை,
+  வல இருப்பளவையடை விதிகளின் \Log{G3c}
+  முன்கூற்றில் கூடுதல் வாய்பாடு தேவைப்படும்;
+  \olref[adm]{prop:weak-G3c-adm} இன் வலுவிழக்கச்
+  சேர்த்தல் அனுமதியால் அதைச் சேர்த்தபின் அந்த
+  முறைமையின் தொடர்புடைய விதியைப் பயன்படுத்துகிறோம்.
+  குறிப்பாக, $R$ என்பது $\LeftR{\land}$ அல்லது
+  $\RightR{\lor}$ எனில் இந்த முறையே பொருந்தும்.
+  வலுவிழக்கச் சேர்த்தல் விதி எனில்
+  \olref[adm]{prop:weak-G3c-adm} ஐப் பயன்படுத்துகிறோம்;
+  சுருக்க விதி எனில் \olref[inv]{prop:G3c-cont-adm}
+  ஐப் பயன்படுத்துகிறோம்.
+\end{proof}
+
+% SEGMENT OLP-0713-S05
+\begin{prop}
+$\Log{G3c} \Proves S$ எனில் $\Log{G1c} \Proves S$.
+\end{prop}
+
+\begin{proof}
+  மீண்டும், $S$ க்கான !!a{proof}~$\pi$ இன்
+  !!{height} மீது தொகுத்தறிதலால் செயல்படுவோம்.
+  \Log{G3c} இன் ஒவ்வோர் அடிக்கோளையும்
+  \Log{G1c} இல் ஓர் அடிக்கோளிலிருந்து
+  \LeftR{\Weakening}, \RightR{\Weakening}
+  விதிகளைப் பலமுறை பயன்படுத்தி !!{prove} செய்யலாம்:
+  \[
+  \Axiom$!C \fCenter !C$
+  \RightLabel{\LeftR{\Weakening}}
+  \Deduce$!C, \Gamma \fCenter !C$
+  \RightLabel{\RightR{\Weakening}}
+  \Deduce$!C, \Gamma \fCenter \Delta, !C$
+  \DisplayProof
+\qquad
+  \Axiom$\lfalse \fCenter$
+  \RightLabel{\LeftR{\Weakening}}
+  \Deduce$\lfalse, \Gamma \fCenter$
+  \RightLabel{\RightR{\Weakening}}
+  \Deduce$\lfalse, \Gamma \fCenter \Delta$
+  \DisplayProof
+  \]
+
+% SEGMENT OLP-0713-S06
+  $\pi$ ஒரு விதி~$R$ இல் முடிந்தால்,
+  தொகுத்தறி கருதுகோள் அதன் முன்கூற்றுகளுக்கு
+  \Log{G1c} இல் !!{proof}s தருகிறது.
+  இரு முறைமைகளிலும் வடிவம் ஒன்றாக உள்ள
+  விதி~$R$ ஐ அந்த !!{proof}s மீது
+  அப்படியே பயன்படுத்தலாம். ஆனால்
+  \LeftR{\land}, \RightR{\lor} விதிகள்
+  \Log{G1c}, \Log{G3c} இல் வேறுபடுகின்றன.
+  \Log{G3c} இன் வடிவங்களை \Log{G1c} இல்
+  பின்வருமாறு வருவிக்கலாம்:
+  \[
+  \Axiom$!A, !B, \Gamma \fCenter \Delta$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!A \land !B, !B, \Gamma \fCenter \Delta$
+  \RightLabel{\LeftR{\land}}
+  \UnaryInf$!A \land !B, !A \land !B, \Gamma \fCenter \Delta$
+  \RightLabel{\LeftR{\Contraction}}
+  \UnaryInf$!A \land !B, \Gamma \fCenter \Delta$
+    \DisplayProof
+\qquad
+  \Axiom$\Gamma \fCenter \Delta, !A, !B$
+  \RightLabel{\RightR{\lor}}
+  \UnaryInf$\Gamma \fCenter \Delta, !A \lor !B, !B$
+  \RightLabel{\RightR{\lor}}
+  \UnaryInf$\Gamma \fCenter \Delta, !A \lor !B, !A \lor !B$
+  \RightLabel{\RightR{\Contraction}}
+  \UnaryInf$\Gamma \fCenter \Delta, !A \lor !B$
+    \DisplayProof
+  \]
+  இட அனைத்தளவையடை, வல இருப்பளவையடை
+  விதிகளின் முன்கூற்றுகளில்
+  முதன்மை வாய்பாடும் தக்கவைக்கப்படுகிறது.
+  \Log{G1c} இன் தொடர்புடைய விதியை
+  அந்தத் தக்கவைக்கப்பட்ட வாய்பாட்டைச் சூழலாகக்
+  கொண்டு பயன்படுத்தி, முடிவில் கிடைக்கும்
+  இரட்டைப் பிரதிகளை இட அல்லது வல சுருக்கத்தால்
+  ஒன்றாக்குகிறோம்.
+\end{proof}
+
+\end{document}

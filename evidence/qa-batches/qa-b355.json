@@ -1,0 +1,88 @@
+{
+  "batch_id": "TA-B355",
+  "units": [
+    {
+      "unit_id": "OLP-0699",
+      "source_sha256": "5563118c0574c226f19802adfbafc206db1df4d36ced8f3c841814a2f42f3d3a",
+      "translation_sha256": "a9d229bac370ab6e5476882410fe3c0aab6ef29bce99ab7704de6488c253d0aa",
+      "source_bytes": 6617,
+      "translation_bytes": 15506,
+      "source_coverage_complete": true,
+      "segments": 8,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "\\begin{align*}&\\Axiom$\\Gamma\\fCenter\\Delta,!A,!B$\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\RightR{\\oplus}}\\BinaryInf$\\Gamma\\fCenter\\Delta,!A\\oplus!B$\\DisplayProof\\\\&\\Axiom$!A,\\Gamma\\fCenter\\Delta,!B$\\Axiom$!B,\\Gamma\\fCenter\\Delta,!A$\\RightLabel{\\RightR{\\oplus}}\\BinaryInf$!A\\oplus!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\end{align*}"
+      ],
+      "extra_math": [
+        "\\begin{align*}&\\Axiom$\\Gamma\\fCenter\\Delta,!A,!B$\\Axiom$!A,!B,\\Gamma\\fCenter\\Delta$\\RightLabel{\\RightR{\\oplus}}\\BinaryInf$\\Gamma\\fCenter\\Delta,!A\\oplus!B$\\DisplayProof\\\\&\\Axiom$!A,\\Gamma\\fCenter\\Delta,!B$\\Axiom$!B,\\Gamma\\fCenter\\Delta,!A$\\RightLabel{\\LeftR{\\oplus}}\\BinaryInf$!A\\oplus!B,\\Gamma\\fCenter\\Delta$\\DisplayProof\\end{align*}"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "NOR",
+        "align",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0699",
+          "audit_id": "TA-PT-047",
+          "kind": "xor-left-rule-label-and-sequent-truth-witness",
+          "action": "Name the displayed XOR rule with its principal formula in the antecedent as a left rule, and state the sequent truth witness on the false left or true right side.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "normalized_math_replacements": [
+            {
+              "from": "\\RightLabel{\\RightR{\\oplus}}\\BinaryInf$!A\\oplus!B",
+              "to": "\\RightLabel{\\LeftR{\\oplus}}\\BinaryInf$!A\\oplus!B",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\RightR"
+          ],
+          "expected_extra_commands": [
+            "\\LeftR"
+          ],
+          "source_issue_or_choice": "The frozen XOR display labels its second rule RightR although its principal XOR formula is in the antecedent. Its later structural-rule soundness paragraph reverses the semantic witnesses, saying a false formula on the right or a true formula on the left makes a sequent true; the section's own opening gives the correct false-left or true-right condition.",
+          "chosen_treatment": "Label only the second XOR rule LeftR and describe a false antecedent or true succedent witness in the soundness explanation. Preserve both premise and conclusion judgments, the first RightR rule, and the one-way weakening argument.",
+          "alternatives_considered": "Retain the wrong RightR label; copy the inverted truth-condition prose despite conflict with the section's definition; alter the displayed sequents instead of their mislabeled rule name.",
+          "rationale": "The second conclusion has A XOR B to the left of the sequent sign, so its rule is LeftR. A sequent Gamma entails Delta is true exactly when some formula in Gamma is false or some formula in Delta is true. Adding A on the right preserves an existing witness regardless of A's value, whereas the converse can fail when the added A alone is true.",
+          "precise_review_question": "Does the bounded label and prose correction restore the stated sequent semantics without changing any XOR premise, conclusion or weakening inference?",
+          "location_needle": "\\RightLabel{\\LeftR{\\oplus}}"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\RightR"
+      ],
+      "extra_commands": [
+        "\\LeftR"
+      ],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

@@ -4,6 +4,7 @@ param(
   [ValidateSet('tex4ht','lua4ht')][string]$Backend='tex4ht',
   [ValidateRange(1000,60000)][int]$AcquisitionTimeoutMs=60000,
   [ValidateRange(1,20)][int]$ProcessTimeoutMinutes=12,
+  [switch]$ImportExternalLabels,
   [string]$StateDirectory='C:\interlanguage-task-state\openlogic-ta-Taml-IN'
 )
 
@@ -37,11 +38,72 @@ $pdfMath='\input{../translation/tamil-pdf-math.sty}'
 if($masterText.IndexOf($pdfMath,[StringComparison]::Ordinal) -ge 0){
   $masterText=$masterText.Replace($pdfMath,'% EPUB uses native MathML; PDF ActualText wrappers are intentionally omitted.')
 }
+$pdfExternal='\externaldocument{tamil-complete}[tamil-complete.pdf]'
+$labelInput=''
+if($masterText.IndexOf($pdfExternal,[StringComparison]::Ordinal) -ge 0){
+  # Import only label records from the validated main PDF AUX. This retains
+  # section/theorem numbers without TeX4ht's cross-document PDF-link parser.
+  $mainAux=Join-Path $build 'tamil-complete.aux'
+  if(-not (Test-Path -LiteralPath $mainAux -PathType Leaf)){throw 'Main-volume AUX is required for companion references'}
+  # These are the 19 distinct cross-volume destinations observed in the
+  # validated companion PDF. Import each ordinary and cleveref label only;
+  # loading every main-volume label also duplicates local names and makes
+  # TeX4ht's label writer pathological.
+  $externalKeys=@(
+    'pl:syn:sem:prop:semanticalfacts',
+    'fol:seq:ptn:prop:incons',
+    'fol:seq:prv:prop:provability-contr',
+    'fol:seq:prv:prop:provability-exhaustive',
+    'fol:seq:ppr:prop:provability-land-left',
+    'fol:seq:ppr:prop:provability-land-right',
+    'fol:seq:ppr:prop:provability-lor',
+    'fol:seq:ppr:prop:provability-lif-left',
+    'fol:seq:ppr:prop:provability-lif-right',
+    'fol:ntd:prv:prop:provability-contr',
+    'fol:ntd:prv:prop:provability-exhaustive',
+    'fol:ntd:ppr:prop:provability-land-left',
+    'fol:ntd:ppr:prop:provability-land-right',
+    'fol:ntd:ppr:prop:provability-lor',
+    'fol:ntd:ppr:prop:provability-lif-left',
+    'fol:ntd:ppr:prop:provability-lif-right',
+    'mod:bas:iso:thm:isom',
+    'mod:bas:dlo:thm:cantorQ',
+    'pt:seq:inv:prop:G3c-cont-adm'
+  )
+  $wanted=[Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
+  foreach($key in $externalKeys){[void]$wanted.Add($key);[void]$wanted.Add($key+'@cref')}
+  $labels=@(Get-Content -LiteralPath $mainAux -Encoding UTF8 | Where-Object {
+    $_ -match '^\\newlabel\{([^}]+)\}' -and $wanted.Contains($Matches[1])
+  })
+  if($labels.Count -ne $wanted.Count){throw "Main-volume AUX does not contain all 38 cross-volume labels: $($labels.Count)"}
+  $definitions=@('% Read-only main-volume label values; no cross-EPUB PDF hyperlink targets.')
+  foreach($line in $labels){
+    if($line -notmatch '^\\newlabel\{([^}]+)\}(\{.*\})$'){throw 'Malformed selected main-volume label record'}
+    $key=$Matches[1]
+    $value=$Matches[2]
+    $body=$value.Substring(1,$value.Length-2)
+    $definitions+='\expandafter\gdef\csname r@'+$key+'\endcsname{'+$body+'}'
+  }
+  $labelFile=Join-Path $auxDir 'main-volume-labels.tex'
+  [IO.File]::WriteAllLines($labelFile,[string[]]$definitions,[Text.UTF8Encoding]::new($false))
+  if($ImportExternalLabels){$labelInput='\input{../epub/work/'+$ReaderSlug+'/aux/main-volume-labels.tex}'}
+  $masterText=$masterText.Replace($pdfExternal,'% Main-volume reference numbers are imported before begin-document.')
+}
+$pdfOpen='\href{tamil-complete.pdf}{முதன்மை வாசிப்பு நூலைத் திறக்க}'
+if($masterText.IndexOf($pdfOpen,[StringComparison]::Ordinal) -ge 0){
+  $masterText=$masterText.Replace($pdfOpen,'முதன்மை EPUB வாசிப்பு நூல் தனியாக வழங்கப்படுகிறது')
+}
+$pdfReferenceClaim='பிற மேற்கோள்கள் முதன்மை நூலுக்கும் செல்கின்றன.'
+if($masterText.IndexOf($pdfReferenceClaim,[StringComparison]::Ordinal) -ge 0){
+  $masterText=$masterText.Replace($pdfReferenceClaim,'பிற மேற்கோள்கள் முதன்மை நூலின் இடங்களைச் சுட்டுகின்றன.')
+}
 $begin='\begin{document}'
 $beginIndex=$masterText.IndexOf($begin,[StringComparison]::Ordinal)
 if($beginIndex -lt 0){throw 'Master has no begin-document marker'}
 $compat="\ifdefined\HCode`n  \catcode 33=12\relax`n  \AtBeginDocument{\catcode 33=13\relax}`n\fi`n"
-$adapted=$masterText.Substring(0,$beginIndex)+$compat+$masterText.Substring($beginIndex)
+$adapted=$masterText.Substring(0,$beginIndex)+$compat
+if($labelInput){$adapted+=$labelInput+"`n"}
+$adapted+=$masterText.Substring($beginIndex)
 $adaptedMaster=Join-Path $auxDir ($ReaderSlug+'-epub-master.tex')
 [IO.File]::WriteAllText($adaptedMaster,$adapted,[Text.UTF8Encoding]::new($false))
 
@@ -57,6 +119,7 @@ $receipt=[ordered]@{
   master_sha256=(Get-FileHash -Algorithm SHA256 -LiteralPath $masterPath).Hash.ToLowerInvariant()
   adapter_sha256=(Get-FileHash -Algorithm SHA256 -LiteralPath $adaptedMaster).Hash.ToLowerInvariant()
   reader_slug=$ReaderSlug
+  import_external_labels=[bool]$ImportExternalLabels
   converter='make4ht'
   converter_version=''
   backend=$Backend

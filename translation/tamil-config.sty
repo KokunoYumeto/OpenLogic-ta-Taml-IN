@@ -9,7 +9,33 @@
 \settexttoken{formula}{வாய்பாடு}{வாய்பாடுகள்}[வாய்பாடு][வாய்பாடுகள்]
 \definetoken{p-gen}{formula}{வாய்பாடுகளின்}
 \settexttoken{derivation}{வருவித்தல்}{வருவித்தல்கள்}[வருவித்தல்][வருவித்தல்கள்]
+\settexttoken{proof}{நிறுவல்}{நிறுவல்கள்}[நிறுவல்][நிறுவல்கள்]
+\definetoken{a}{proof}{}
+\definetoken{A}{proof}{}
+\settexttoken{prove}{நிறுவல்}{நிறுவல்}[நிறுவல்][நிறுவல்]
+\settexttoken{proving}{நிறுவல்}{நிறுவல்}[நிறுவல்][நிறுவல்]
+\settexttoken{provable}{நிறுவத்தக்க}{நிறுவத்தக்க}[நிறுவத்தக்க][நிறுவத்தக்க]
+\settexttoken{provability}{நிறுவத்தக்கதன்மை}{நிறுவத்தக்கதன்மை}[நிறுவத்தக்கதன்மை][நிறுவத்தக்கதன்மை]
+\settexttoken{nonprovability}{நிறுவவியலாமை}{நிறுவவியலாமை}[நிறுவவியலாமை][நிறுவவியலாமை]
+\settexttoken{height}{உயரம்}{உயரங்கள்}[உயரம்][உயரங்கள்]
+\settexttoken{depth}{ஆழம்}{ஆழங்கள்}[ஆழம்][ஆழங்கள்]
+\definetoken{a}{depth}{ஓர்}
+\definetoken{A}{depth}{ஓர்}
+\settexttoken{introduction}{அறிமுகம்}{அறிமுகங்கள்}[அறிமுகம்][அறிமுகங்கள்]
+\definetoken{a}{introduction}{ஓர்}
+\definetoken{A}{introduction}{ஓர்}
+\settexttoken{elimination}{நீக்கல்}{நீக்கல்கள்}[நீக்கல்][நீக்கல்கள்]
+\definetoken{a}{elimination}{ஒரு}
+\definetoken{A}{elimination}{ஒரு}
+\settexttoken{parameter}{அளவுரு}{அளவுருக்கள்}[அளவுரு][அளவுருக்கள்]
+\definetoken{a}{parameter}{ஓர்}
+\definetoken{A}{parameter}{ஓர்}
+\settexttoken{relational model}{தொடர்புசார் மாதிரி}{தொடர்புசார் மாதிரிகள்}[தொடர்புசார் மாதிரி][தொடர்புசார் மாதிரிகள்]
+\definetoken{a}{relational model}{ஒரு}
+\definetoken{A}{relational model}{ஒரு}
 \settexttoken{derivability}{வருவிக்கத்தக்கதன்மை}{வருவிக்கத்தக்கதன்மை}[வருவிக்கத்தக்கதன்மை][வருவிக்கத்தக்கதன்மை]
+\definetoken{a}{derivability}{ஒரு}
+\definetoken{A}{derivability}{ஒரு}
 \settexttoken{nonderivability}{வருவிக்கவியலாமை}{வருவிக்கவியலாமை}[வருவிக்கவியலாமை][வருவிக்கவியலாமை]
 \settexttoken{sentence}{வாக்கியம்}{வாக்கியங்கள்}[வாக்கியம்][வாக்கியங்கள்]
 \definetoken{s-acc}{sentence}{வாக்கியத்தை}
@@ -42,6 +68,8 @@
 \settexttoken{discharge}{விடுவித்தல்}{விடுவித்தல்கள்}[விடுவித்தல்][விடுவித்தல்கள்]
 \settexttoken{discharged}{விடுவிக்கப்பட்ட}{விடுவிக்கப்பட்ட}[விடுவிக்கப்பட்ட][விடுவிக்கப்பட்ட]
 \settexttoken{undischarged}{விடுவிக்கப்படாத}{விடுவிக்கப்படாத}[விடுவிக்கப்படாத][விடுவிக்கப்படாத]
+\definetoken{a}{undischarged}{ஒரு}
+\definetoken{A}{undischarged}{ஒரு}
 \settexttoken{variable}{மாறி}{மாறிகள்}[மாறி][மாறிகள்]
 \definetoken{p-dat}{variable}{மாறிகளுக்குப்}
 \settexttoken{constant}{மாறிலிக் குறி}{மாறிலிக் குறிகள்}[மாறிலிக் குறி][மாறிலிக் குறிகள்]
@@ -50,6 +78,8 @@
 \settexttoken{domain}{பொருட்களம்}{பொருட்களங்கள்}[பொருட்களம்][பொருட்களங்கள்]
 \settexttoken{value}{மதிப்பு}{மதிப்புகள்}[மதிப்பு][மதிப்புகள்]
 \settexttoken{main operator}{முதன்மைச் செயலி}{முதன்மைச் செயலிகள்}[முதன்மைச் செயலி][முதன்மைச் செயலிகள்]
+\definetoken{a}{main operator}{ஒரு}
+\definetoken{A}{main operator}{ஒரு}
 % A term is "free for" a variable when substituting it causes no capture.
 % Keep this as a predicate phrase so protected !!{free for} tokens read
 % naturally after both singular and plural mathematical subjects.
@@ -118,7 +148,11 @@
 \settexttoken{computably enumerable}{கணிக்கத்தக்கவாறு எண்ணிடத்தக்க}{கணிக்கத்தக்கவாறு எண்ணிடத்தக்க}[கணிக்கத்தக்கவாறு எண்ணிடத்தக்க][கணிக்கத்தக்கவாறு எண்ணிடத்தக்க]
 \settexttoken{c.e.}{க.வ.எ.}{க.வ.எ.}[க.வ.எ.][க.வ.எ.]
 \settexttoken{decidable}{தீர்மானிக்கத்தக்க}{தீர்மானிக்கத்தக்க}[தீர்மானிக்கத்தக்க][தீர்மானிக்கத்தக்க]
+\definetoken{a}{decidable}{ஒரு}
+\definetoken{A}{decidable}{ஒரு}
 \settexttoken{axiomatizable}{அடிகோளாக்கத்தக்க}{அடிகோளாக்கத்தக்க}[அடிகோளாக்கத்தக்க][அடிகோளாக்கத்தக்க]
+\definetoken{a}{axiomatizable}{ஓர்}
+\definetoken{A}{axiomatizable}{ஓர்}
 \settexttoken{axiomatized}{அடிகோளாக்கப்பட்ட}{அடிகோளாக்கப்பட்ட}[அடிகோளாக்கப்பட்ட][அடிகோளாக்கப்பட்ட]
 \settexttoken{axiomatizability}{அடிகோளாக்கத்தன்மை}{அடிகோளாக்கத்தன்மை}[அடிகோளாக்கத்தன்மை][அடிகோளாக்கத்தன்மை]
 \settexttoken{language}{மொழி}{மொழிகள்}[மொழி][மொழிகள்]
@@ -127,6 +161,8 @@
 \settexttoken{lambda define}{லாம்டா-வரையறுக்கிறது}{லாம்டா-வரையறுக்கின்றன}[லாம்டா-வரையறுக்கிறது][லாம்டா-வரையறுக்கின்றன]
 \settexttoken{lambda defined}{லாம்டா-வரையறுக்கப்பட்ட}{லாம்டா-வரையறுக்கப்பட்ட}[லாம்டா-வரையறுக்கப்பட்ட]
 \settexttoken{lambda definable}{லாம்டா-வரையறுக்கத்தக்க}{லாம்டா-வரையறுக்கத்தக்க}[லாம்டா-வரையறுக்கத்தக்க]
+\definetoken{a}{lambda definable}{ஒரு}
+\definetoken{A}{lambda definable}{ஒரு}
 \definetoken{a}{language}{ஒரு}
 \definetoken{A}{language}{ஒரு}
 \definetoken{a}{subformula}{ஓர்}
@@ -161,6 +197,8 @@
 \renewcommand\stagesacc{\emph{படிநிலைகள் திரள்கின்றன}}
 \renewcommand\stagessucc{\emph{படிநிலைகள் தொடர்கின்றன}}
 \renewcommand\stagesinf{\emph{படிநிலைகள் முடிவிலியை அடைகின்றன}}
+\renewcommand\stagesinex{\emph{படிநிலைகள் தீராதவை}}
+\renewcommand\stagescofin{\emph{கணத்தால் குறிக்கப்படும் படிநிலைகளை மீறும் படிநிலை உண்டு}}
 \makeatletter
 \RenewDocumentCommand \@printtoken { t^ ta m !ts O{} }{%
   \begingroup

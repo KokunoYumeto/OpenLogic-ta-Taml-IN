@@ -1,0 +1,473 @@
+% SEGMENT OLP-0702-S01
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: proof-examples
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{ex}
+
+\olsection{நிறுவல்களின் எடுத்துக்காட்டுகள்}
+
+தொடரணிகளுக்கான !!{proof}s அமைக்கும்போது,
+முடிவுத் தொடரணியிலிருந்து மேல்நோக்கிச் செல்வது
+பொதுவாக வசதியானது. அதிலுள்ள ஓர்
+!!a{formula} வைச் செயலுக்குரிய !!{formula} வாகத் தேர்ந்து,
+அதற்குரிய விதியின் முன்கூற்றுகளைத் தொடரணியின்
+மேலே எழுதி, அடிக்கோள்களை அடையும்வரை
+இம்முறையைத் தொடரலாம். எடுத்துக்காட்டாக,
+பின்வரும் தொடரணியை நிறுவ வேண்டும் என்க:
+\[(!C \land !D) \lif !E \Sequent !C \lif (!D \lif !E)\]
+$!C \lif (!D \lif !E)$ ஐப் பார்ப்போம்: இது
+$!A \lif !B$ என்ற வடிவில் தொடரணியின்
+வலப்புறத்தில் உள்ளது. முழுத் தொடரணியையும்
+\Log{G1c} இன் $\RightR{\lif}$ விதியுடன்
+ஒப்பிட்டால்,
+\[\Axiom$ !A, \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lif !B $
+\DisplayProof\]
+இங்கு $\Gamma = \{(!C \land !D) \lif !E\}$,
+$\Delta = \emptyset$,
+$!A \ident !C$, $!B \ident !D \lif !E$
+என எடுத்துக்கொள்ள வேண்டும் என்று தெரிகிறது.
+எனவே ஒரு நிறுவலின் இறுதி அனுமானம் இதுவாகலாம்:
+\[\Axiom$ !C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof\]
+
+% SEGMENT OLP-0702-S02
+இந்த எண்ணத்தை மீண்டும் பயன்படுத்தி,
+$!D \lif !E$ ஐச் செயலுக்குரிய வாய்பாடாக
+எடுத்தால் கிடைப்பது:
+\[\Axiom$ !D, !C, (!C \land !D) \lif !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof\]
+இப்போது $(!C \land !D) \lif !E$ இல்
+கவனம் செலுத்தி, \Log{G1c} இன்
+$\LeftR{\lif}$ விதியைப் பயன்படுத்த வேண்டும்:
+\[\Axiom$ \Gamma \fCenter \Delta, !A$
+\Axiom$ !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !A \lif !B, \Gamma \fCenter \Delta$
+\DisplayProof\]
+இதனால் நமக்குக் கிடைப்பது:
+\[\Axiom$!D, !C \fCenter !E, !C \land !D$
+\Axiom$!D, !C, !E \fCenter !E$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !D, !C, (!C \land !D) \lif !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof\]
+
+% SEGMENT OLP-0702-S03
+மேலுள்ள இடதுபுற உச்சித் தொடரணியில்
+உள்ள $!C \land !D$ என்ற !!{formula} வை
+முதன்மையாகக் கொண்டு $\RightR{\land}$
+விதியைப் பயன்படுத்தினால்:
+\[
+\Axiom$!D, !C \fCenter !E, !C$
+\Axiom$!D, !C \fCenter !E, !D$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!D, !C \fCenter !E, !C \land !D$
+\Axiom$!D, !C, !E \fCenter !E$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !D, !C, (!C \land !D) \lif !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof
+\]
+இதுவரை நன்றாக உள்ளது. நாம் பயன்படுத்திய
+விதிகள் \Log{G1c} மற்றும்~\Log{G3c}
+இரண்டிலும் ஒரேவிதமானவை. எனவே இதுவரை
+செய்தவை அனைத்தும் \Log{G3c} இலும் பொருந்தும்.
+இப்போது கிடைத்துள்ள !!a{proof} துண்டின்
+எல்லா உச்சித் தொடரணிகளிலும் ஒரே
+!!{formula} இடப்புறத்திலும் வலப்புறத்திலும்
+உள்ளது. ஆனால் அவை இன்னும் முற்றிலும்
+அடிக்கோள்களாகவில்லை.
+
+% SEGMENT OLP-0702-S04
+\Log{G1c} இல் உச்சித் தொடரணிகளுக்கான
+!!{proof}s ஐ $!A \Sequent !A$ என்ற வடிவிலான
+அடிக்கோள்களிலிருந்து தர வேண்டும்.
+தளர்த்தல் விதிகளால் இதை எளிதாகச் செய்யலாம்.
+எடுத்துக்காட்டாக, இடதுபுற உச்சித் தொடரணி
+$!D, !C \Sequent !E, !C$ ஐப் பின்வருமாறு
+!!{prove} செய்யலாம்:
+\[
+\Axiom$!C \fCenter !C$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !C$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !E, !C$
+\DisplayProof
+\]
+மொத்தத்தில் \Log{G1c} இல்
+நமக்கு இத்தகைய !!a{proof} உள்ளது:
+\[
+\Axiom$!C \fCenter !C$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !C$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !E, !C$
+\Axiom$!D \fCenter !D$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !D$
+\RightLabel{\RightR{\Weakening}}
+\UnaryInf$!D, !C \fCenter !E, !D$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!D, !C \fCenter !E, !C \land !D$
+\Axiom$!E \fCenter !E$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!C, !E \fCenter !E$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!D, !C, !E \fCenter !E$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !D, !C, (!C \land !D) \lif !E \fCenter !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$!C, (!C \land !D) \lif !E \fCenter !D \lif !E$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$(!C \land !D) \lif !E \fCenter !C \lif (!D \lif !E)$
+\DisplayProof
+\]
+இந்த நிறுவலின் கட்டமைப்பு, குறிப்பாக
+அதன் உயரம், $!C$, $!D$, ~$!E$
+என்பன எந்த !!{formula}s என்பதனைச்
+சார்ந்ததல்ல. மேலுள்ள !!{proof} இல்
+இந்தக் குறிகளை எந்த !!{formula}s ஆலும்
+மாற்றலாம்; கிடைப்பது \Log{G1c} இல்
+மீண்டும் ஓர் !!{proof} ஆகும்.
+இந்த \Log{G1c} நிறுவல்
+\emph{திட்டவடிவமானது}.
+
+% SEGMENT OLP-0702-S05
+\Log{G3c} இல் அடிக்கோள்கள்
+$!A, \Gamma \Sequent \Delta, !A$
+என்ற வடிவிலான தொடரணிகள்; இங்கு
+$!A$ அணு வாய்பாடாக இருக்க வேண்டும்.
+எனவே $!D, !C \Sequent !E, !C$
+என்பது \Log{G3c} அடிக்கோள் போலத்
+தோன்றினாலும்
+($\Gamma = \{!D\}$; $\Delta = \{!E\}$),
+$!C$ உண்மையில் அணுவாக இருந்தால்தான்
+அது \emph{உண்மையான} அடிக்கோள்.
+நம் நிறுவல் துண்டு, $!C$, $!D$, $!E$
+ஆகியவை அணு !!{formula}s ஆக இருந்தால்தான்
+\Log{G3c} இல் முழு நிறுவலாகும்.
+
+முறையாகச் சொன்னால்,
+\[\Log{G1c} \Proves (!C \land !D) \lif !E \fCenter !C \lif (!D \lif
+!E),\]
+என்பதை இன்னும் காட்டவில்லை என்றாலும்,
+நடைமுறையில் நாம் செய்ய வேண்டியதும்
+செய்யக்கூடியதும் இதுவே. ஏனெனில்
+$!A, \Gamma \Sequent \Delta, !A$
+என்ற வடிவிலான ஒவ்வொரு தொடரணியும்,
+$!A$ அணுவாக இல்லாவிட்டாலும்,
+\Log{G3c} இல் நிறுவத்தக்கது.
+$!A$ இன் ஆழம்~$\depth{!A}$ மீது
+தொகுத்தறிந்து இதைக் காட்டலாம்.
+
+% SEGMENT OLP-0702-S06
+\begin{defn}\ollabel{defn:depth}
+ஒரு !!a{formula} வின்
+\emph{ஆழம்}~$\depth{!A}$
+பின்வருமாறு வரையறுக்கப்படுகிறது:
+\begin{enumerate}
+  \item $!A$ அணுவானால், $\depth{!A} = 0$.
+  \item $!A \ident \lnot !B$,
+  $!A \ident \lforall[x][!B(x)]$,
+  அல்லது $!A \ident \lexists[x][!B(x)]$
+  எனில், $\depth{!A} = \depth{!B} + 1$.
+  \item $!A \ident (!B \land !C)$,
+  $(!B \lor !C)$ அல்லது $(!B \lif
+  !C)$ எனில்,
+  $\depth{!A} = \max(\depth{!B},\depth{!C}) + 1$.
+\end{enumerate}
+\end{defn}
+
+% SEGMENT OLP-0702-S07
+எந்தச் சொல்~$t$ க்கும்
+$\depth{A(x)} = \depth{A(t)}$
+என்பதை நிறுவுவது கடினமல்ல.
+நமக்கு முக்கியமானது: எந்த விதியிலும்
+முதன்மை !!{formula} வின் ஆழம்,
+அதன் செயலுக்குரிய !!{formula}s இன்
+ஆழத்தைவிட எப்போதும் அதிகம்.
+எடுத்துக்காட்டாக:
+\begin{align*}
+\depth{P(x)} = \depth{P(a)} & = 0,\\
+\depth{\lforall[x][P(x)]} & = 1,\\
+\depth{(\lforall[x][P(x)] \lif P(a))} & = \max(1,0) + 1 = 2.
+\end{align*}
+இதைக் கொண்டு $\depth{!A}$ மீது
+தொகுத்தறிந்து பின்வரும் முடிவைப் போன்ற
+சில முடிவுகளை நிறுவலாம்.
+
+% SEGMENT OLP-0702-S08
+\begin{prop}\ollabel{prop:G1c-axioms}
+எந்த~$!A$ க்கும்,
+$!A \Sequent !A$ என்பதற்கான
+$\Log{G1c}$ இல் ஒரு !!a{proof} உள்ளது;
+அதில் எல்லா அடிக்கோள்களும் அணுவானவை.
+\end{prop}
+
+\begin{proof}
+$\depth{!A}$ மீது தொகுத்தறிதல் செய்வோம்.
+$\depth{!A} = 0$ எனில் $!A$ அணு வாய்பாடு;
+$!A \Sequent !A$ ஏற்கெனவே வேண்டிய
+வடிவிலான \Log{G1c} !!{proof} ஆகும்.
+$\depth{!A} > 0$ எனில், $!A$ குறைந்த
+ஆழமுள்ள !!{formula}s இலிருந்து கட்டப்படுகிறது;
+எடுத்துக்காட்டாக $!A \ident \lnot !B$,
+$!A \ident (!B \land !C)$ அல்லது
+$!A \ident \lforall[x][!B(x)]$.
+$\depth{!D} < \depth{!A}$ உடைய எல்லா
+$!D$ க்கும் அணு அடிக்கோள்களிலிருந்து
+$\Log{G1c} \Proves !D \Sequent !D$
+என்பதே தொகுத்தறிதல் கருதுகோள்.
+
+% SEGMENT OLP-0702-S09
+$!A \ident \lnot !B$ எனில்,
+$\depth{!B} < \depth{!A}$.
+தொகுத்தறிதல் கருதுகோளால் அணு
+அடிக்கோள்களிலிருந்து $!B \Sequent !B$
+என்பதற்கான \Log{G1c} !!a{proof}~$\pi_1$
+உள்ளது. இதை $\lnot !B \Sequent \lnot !B$
+என்பதற்கான !!a{proof} ஆகப் பின்வருமாறு
+நீட்டிக்கலாம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B \fCenter !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !B, !B \fCenter $
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\lnot !B \fCenter \lnot !B$
+\DisplayProof
+\]
+
+% SEGMENT OLP-0702-S10
+$!A \ident (!B \land !C)$ எனில்,
+$\depth{!B} < \depth{!A}$ மற்றும்
+$\depth{!C} < \depth{!A}$.
+தொகுத்தறிதல் கருதுகோளால்,
+அணு அடிக்கோள்களிலிருந்து முறையே
+$!B \Sequent !B$,
+$!C \Sequent !C$ என்பவற்றுக்கான
+\Log{G1c} !!{proof}s~$\pi_1$,
+~$\pi_2$ உள்ளன. அவற்றை
+$!B \land !C \Sequent !B \land !C$
+என்பதற்கான !!a{proof} ஆகப்
+பின்வருமாறு நீட்டிக்கலாம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B \fCenter !B$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!B, !C \fCenter !B$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C, !C\fCenter !B$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C, !B \land !C \fCenter !B$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!C \fCenter !C$
+\RightLabel{\LeftR{\Weakening}}
+\UnaryInf$!B, !C \fCenter !C$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C, !C \fCenter !C$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C, !B \land !C \fCenter !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!B \land !C, !B \land !C \fCenter !B \land !C$
+\RightLabel{\LeftR{\Contraction}}
+\UnaryInf$!B \land !C \fCenter !B \land !C$
+\DisplayProof
+\]
+
+% SEGMENT OLP-0702-S11
+இப்போது $!A \ident \lforall[x][!B(x)]$
+என்க. $\lforall[x][!B(x)]$ இல்
+வராத !!a{constant}~$c$ ஐ எடுக்கவும்.
+அப்போது $\depth{!B(c)} =
+\depth{!B(x)} < \depth{!A}$.
+தொகுத்தறிதல் கருதுகோளால்,
+அணு அடிக்கோள்களிலிருந்து
+$!B(c) \Sequent !B(c)$ என்பதற்கான
+\Log{G1c} !!a{proof}~$\pi_1$ உள்ளது.
+இதை $\lforall[x][!B(x)] \Sequent
+\lforall[x][!B(x)]$ என்பதற்கான
+!!a{proof} ஆகப் பின்வருமாறு நீட்டிக்கலாம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B(c) \fCenter !B(c)$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)] \fCenter !B(c)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)] \fCenter \lforall[x][!B(x)]$
+\DisplayProof
+\]
+எஞ்சிய நிலைகள் பயிற்சிகளாக விடப்படுகின்றன.
+\end{proof}
+
+% SEGMENT OLP-0702-S12
+\begin{prob}
+  $!A \ident (!B \lor !C)$,
+  $!A \ident (!B \lif !C)$ மற்றும்
+  $!A \ident \lexists[x][!B(x)]$
+  எனும் நிலைகளைச் செய்து,
+  \olref{prop:G1c-axioms} இன்
+  நிறுவலை நிறைவு செய்க.
+\end{prob}
+
+நமது நோக்கத்திற்கு, $!A \ident \lnot !B$
+என்ற நிலையில் பின்வரும் !!{proof} ஐயும்
+பயன்படுத்தியிருக்கலாம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B \fCenter !B$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\fCenter !B, \lnot !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !B \fCenter \lnot !B$
+\DisplayProof
+\]
+ஆனால் சில தொடரணிக் கணிய முறைமைகளில்
+இது செல்லாது. உள்ளுணர்வுவாதத் தொடரணிக்
+கணி \Log{G1i}, \Log{G1c} ஐப் போன்றதே;
+ஆனால் ஒவ்வொரு தொடரணியின் வலப்புறத்திலும்
+அதிகபட்சம் ஒரு !!{formula} மட்டுமே
+அனுமதிக்கப்படுகிறது. $\Delta = \emptyset$
+எனில் முதல் !!{proof} \Log{G1i} இலும்
+!!a{proof} ஆகும்; இரண்டாவது அவ்வாறு ஆகாது.
+ஏனெனில் அதன் ஒரு தொடரணியின் வலப்புறத்தில்
+$!B$ மற்றும்~$\lnot !B$ இரண்டும் உள்ளன.
+
+% SEGMENT OLP-0702-S13
+$!A \ident \lforall[x][!B(x)]$
+என்ற நிலையிலோ, \Log{G1c} இலும்
+விதிகளை மாற்று வரிசையில் பயன்படுத்த
+முடியாது என்பதைக் கவனிக்கவும்.
+பின்வருவது \emph{!!a{proof} அல்ல}:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B(c) \fCenter !B(c)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$!B(c) \fCenter \lforall[x][!B(x)]$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)] \fCenter \lforall[x][!B(x)]$
+\DisplayProof
+\]
+ஏனெனில் $\RightR{\lforall}$ இன்
+தனிமாறி நிபந்தனை மீறப்படுகிறது.
+
+\begin{prop}\ollabel{prop:G3c-axioms}
+$!A, \Gamma \Sequent \Delta, !A$
+என்ற வடிவிலான எந்தத் தொடரணியும்,
+$!A$ அணுவாக \emph{இருக்க வேண்டியதில்லை}
+என்றாலும், \Log{G3c} இல் நிறுவத்தக்கது.
+\end{prop}
+
+% SEGMENT OLP-0702-S14
+\begin{proof}
+இந்த நிறுவல் \olref{prop:G1c-axioms}
+இன் நிறுவலை மிகவும் ஒத்தது; ஆனால்
+தொகுத்தறிதல் கருதுகோளை கவனமாகக்
+கையாள வேண்டும். $n = \depth{!A} = 0$
+என்ற நிலை மீண்டும் எளிது.
+$n=0$ எனில் $!A$ அணு வாய்பாடு;
+$!A, \Gamma \Sequent \Delta, !A$
+\Log{G3c} இன் அடிக்கோள்.
+
+$n>0$ என்க. மீண்டும் நிலைகளைப்
+பிரித்துப் பார்ப்போம்.
+தொகுத்தறிதல் கருதுகோள் இதுதான்:
+$\depth{!D} < n$ உடைய எல்லா
+$!D$ க்கும், எல்லா $\Pi$, $\Lambda$
+ஆகியவற்றுக்கும்,
+$\Log{G3c} \Proves !D, \Pi \Sequent \Lambda, !D$.
+$!A \ident (!B \land !C)$ என்ற நிலையைப்
+பார்ப்போம். தொகுத்தறிதல் கருதுகோளை
+இருமுறை பயன்படுத்துகிறோம். முதலில்
+$!D = !B$, $\Pi = !C, \Gamma$,
+$\Lambda = \Delta$ என வைத்து,
+$!B, !C, \Gamma \Sequent \Delta, !B$
+என்பதற்கான !!a{proof}~$\pi_1$ ஐப்
+பெறுகிறோம். அடுத்து
+$!D = !C$, $\Pi = !B, \Gamma$,
+$\Lambda = \Delta$ என வைத்து,
+$!B, !C, \Gamma \Sequent \Delta, !C$
+என்பதற்கான !!a{proof}~$\pi_2$ ஐப்
+பெறுகிறோம். $!B \land !C, \Gamma \Sequent
+\Delta, !B \land !C$ என்பதன்
+!!{proof} இதோ:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B, !C, \Gamma \fCenter \Delta, !B$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C, \Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!B, !C, \Gamma \fCenter \Delta, !C$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$!B \land !C, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$!B \land !C, \Gamma \fCenter \Delta, !B \land !C$
+\DisplayProof
+\]
+
+% SEGMENT OLP-0702-S15
+$!A \ident \lforall[x][!B(x)]$
+எனில், $\lforall[x][!B(x)]$,
+$\Gamma$, ~$\Delta$ ஆகியவற்றில்
+வராத !!a{constant} ஒன்றைத் தேர்க.
+$!D = !B(c)$,
+$\Pi = \lforall[x][!B(x)], \Gamma$
+மற்றும் $\Lambda = \Delta$ என வைத்து
+தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்துக.
+இதனால் $!B(c),
+\lforall[x][!B(x)], \Gamma \Sequent \Delta, !B(c)$
+என்பதற்கான !!a{proof}~$\pi_1$ கிடைக்கிறது.
+அதிலிருந்து பின்வருவது கிடைக்கும்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!B(c), \lforall[x][!B(x)], \Gamma \fCenter \Delta, !B(c)$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)], \Gamma \fCenter \Delta, !B(c)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)], \Gamma \fCenter \Delta, \lforall[x][!B(x)]$
+\DisplayProof
+\]
+$c$ ஐத் தேர்ந்த விதத்தால்
+$\RightR{\lforall}$ இன் தனிமாறி
+நிபந்தனை நிறைவேறுகிறது.
+\end{proof}
+
+% SEGMENT OLP-0702-S16
+\begin{prob}
+  $!A \ident (!B \lif !C)$ மற்றும்
+  $!A \ident \lexists[x][!B(x)]$
+  எனும் நிலைகளைச் செய்து,
+  \olref{prop:G3c-axioms} இன்
+  நிறுவலைத் தொடர்க.
+\end{prob}
+
+\end{document}
+

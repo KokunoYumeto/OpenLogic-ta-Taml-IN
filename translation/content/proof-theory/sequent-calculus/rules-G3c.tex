@@ -1,0 +1,87 @@
+% SEGMENT OLP-0707-S01
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: rules-G3c
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\begin{table}
+\begin{tabular}{@{}c@{}c@{}}
+\multicolumn{2}{@{}c@{}}{அடிக்கோள்கள்}\\[2ex]
+$!C, \Gamma \Sequent \Delta, !C$ & $\lfalse, \Gamma \Sequent \Delta$
+\\[2ex]
+% SEGMENT OLP-0707-S02
+\multicolumn{2}{@{}c@{}}{தருக்க விதிகள்}\\[2ex]
+\Axiom$ \Gamma \fCenter \Delta, !A $
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$ \lnot !A, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$!A, \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lnot !A $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A, !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\land}}
+\UnaryInf$ !A \land !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$\Gamma \fCenter \Delta, !A$
+\Axiom$ \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\land}}
+\BinaryInf$ \Gamma \fCenter \Delta, !A \land !B $
+\DisplayProof
+\\[4ex]\Axiom$!A, \Gamma \fCenter \Delta$
+\Axiom$!B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!A \lor !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$\Gamma \fCenter \Delta, !A, !B$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lor !B$
+\DisplayProof
+\\[4ex]
+\Axiom$ \Gamma \fCenter \Delta, !A$
+\Axiom$ !B, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$ !A \lif !B, \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ !A, \Gamma \fCenter \Delta, !B$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$ \Gamma \fCenter \Delta, !A \lif !B $
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(t), \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$ \lforall[x][!A(x)],\Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta, !A(a) $
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lforall[x][!A(x)]$
+\DisplayProof
+\\[4ex]
+\Axiom$ !A(a), \Gamma \fCenter \Delta $
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$ \lexists[x][!A(x)], \Gamma \fCenter \Delta$
+\DisplayProof
+&
+\Axiom$ \Gamma \fCenter \Delta, \lexists[x][!A(x)], !A(t) $
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$ \Gamma \fCenter \Delta, \lexists[x][!A(x)]$
+\DisplayProof
+\end{tabular}
+\caption{\Log{G3c} இன் விதிகள். $\RightR{\forall}$ மற்றும்
+$\LeftR{\exists}$ ஆகிய விதிகளில், !!{constant}~$a$
+முடிவுத் தொடரணியில் இடம்பெறக் கூடாது. $\Gamma$ மற்றும்
+$\Delta$ ஆகியவை !!{formula}s இன் பன்மைக் கணங்கள்.
+அடிக்கோள்களில், !!{formula}~$!C$ அணு வாய்பாடாக இருக்க வேண்டும்.}
+\ollabel{tab:G3c}
+\end{table}
+
+\end{document}

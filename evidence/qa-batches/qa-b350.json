@@ -1,0 +1,104 @@
+{
+  "batch_id": "TA-B350",
+  "units": [
+    {
+      "unit_id": "OLP-0694",
+      "source_sha256": "44525323721b70654bc19c745388c1ea8196fa4a2fe82c355799018bdeb6d705",
+      "translation_sha256": "84ef6aa6702713458859311804d63e0738a850a4c4c0eebad0cd446664cc3641",
+      "source_bytes": 4223,
+      "translation_bytes": 6598,
+      "source_coverage_complete": true,
+      "segments": 4,
+      "math_multiset_parity": false,
+      "missing_math": [
+        "$\\Gamma\\Sequent!A\\land!A$",
+        "$!A\\land!A$",
+        "$!A,!B\\lif\\fCenter\\lfalse$",
+        "$(!B\\fCenter!A\\lif\\lfalse$",
+        "$(!B\\fCenter!A\\lor(!A\\lif\\lfalse)$",
+        "$(!B\\fCenter!B$",
+        "$(!B\\fCenter\\lfalse$"
+      ],
+      "extra_math": [
+        "$\\Gamma\\Sequent!A\\land!B$",
+        "$!A\\land!B$",
+        "$!B\\fCenter!B$",
+        "$!A,!B\\fCenter\\lfalse$",
+        "$!B\\fCenter!A\\lif\\lfalse$",
+        "$!B\\fCenter!A\\lor(!A\\lif\\lfalse)$",
+        "$!B\\fCenter\\lfalse$"
+      ],
+      "token_key_parity": true,
+      "identifier_parity": true,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "gather",
+        "include",
+        "logic",
+        "open",
+        "section"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0694",
+          "audit_id": "TA-PT-044",
+          "kind": "sequent-natural-deduction-conjunction-and-closing-tree",
+          "action": "Replace the inconsistent A-and-A conjunction in the prose with A-and-B, and remove the stray implication control and four unmatched leading parentheses from the final double-negation-of-excluded-middle proof tree.",
+          "expected_missing_math": [
+            "$\\Gamma\\Sequent!A\\land!A$",
+            "$!A\\land!A$",
+            "$!A,!B\\lif\\fCenter\\lfalse$",
+            "$(!B\\fCenter!A\\lif\\lfalse$",
+            "$(!B\\fCenter!A\\lor(!A\\lif\\lfalse)$",
+            "$(!B\\fCenter!B$",
+            "$(!B\\fCenter\\lfalse$"
+          ],
+          "expected_extra_math": [
+            "$\\Gamma\\Sequent!A\\land!B$",
+            "$!A\\land!B$",
+            "$!B\\fCenter!B$",
+            "$!A,!B\\fCenter\\lfalse$",
+            "$!B\\fCenter!A\\lif\\lfalse$",
+            "$!B\\fCenter!A\\lor(!A\\lif\\lfalse)$",
+            "$!B\\fCenter\\lfalse$"
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [
+            "\\lif"
+          ],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "The frozen conjunction explanation begins with Gamma entails A-and-A and an A-and-A end formula but immediately says it means Gamma entails A-and-B and displays A/B projections. Its final proof tree has an extraneous lif after the open A,B context and unmatched opening parentheses in four subsequent sequents; those characters break the displayed judgment grammar.",
+          "chosen_treatment": "Use A-and-B in the two prose formulas, matching both displayed projections. Remove only the extra lif and four stray opening parentheses in the final tree. Preserve the tree's order, all nine judgments, the empty-context conclusion B-to-false, the B abbreviation, and every other inference display without adding rule labels.",
+          "alternatives_considered": "Keep the A-and-A opening as a special case and let the following A-and-B inference appear unjustified; retain malformed final judgments; replace the entire example with a different proof or insert unrecorded formal rule labels.",
+          "rationale": "The adjacent conjunction projection rules and the displayed two conclusions distinguish A and B. In the final tree, B abbreviates (A or (A implies false)) implies false. From assumptions A and B one obtains false, discharges A to get A implies false under B, injects this into the disjunction, uses B again to get false, then discharges B. The removed symbols have no role in those contexts or conclusions.",
+          "precise_review_question": "Do the two A-and-B prose corrections match both projection branches, and do the five minimally repaired final-tree judgments derive B implies false from no open assumptions without changing their substantive formulas?",
+          "location_needle": "\\BinaryInf$!A, !B \\fCenter \\lfalse$"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": false,
+      "missing_commands": [
+        "\\lif"
+      ],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

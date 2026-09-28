@@ -1,0 +1,79 @@
+{
+  "batch_id": "TA-B371",
+  "units": [
+    {
+      "unit_id": "OLP-0715",
+      "source_sha256": "fb8b9efb660ea25cfabb54808815759be9ec6f51b79a2a9a5ad4267bc0b02994",
+      "translation_sha256": "d0bd58391df12477c251b31194d5b081cd7fd39c49d8288d8f930af717b559b1",
+      "source_bytes": 930,
+      "translation_bytes": 1810,
+      "source_coverage_complete": true,
+      "segments": 3,
+      "math_multiset_parity": true,
+      "missing_math": [],
+      "extra_math": [],
+      "token_key_parity": true,
+      "identifier_parity": false,
+      "environment_parity": true,
+      "unicode_nfc": true,
+      "replacement_char_absent": true,
+      "english_words_for_review": [
+        "include",
+        "logic",
+        "open",
+        "section",
+        "sem",
+        "syn"
+      ],
+      "visual_review_complete": false,
+      "audited_source_corrections": [
+        {
+          "unit_id": "OLP-0715",
+          "audit_id": "TA-PL-002",
+          "kind": "orphan-propositional-soundness-wrong-semantic-reference-and-item",
+          "action": "Point to the existing propositional semantic-facts proposition in pl:syn:sem and identify its second, modus-ponens item rather than its third, finite-satisfiability item.",
+          "expected_missing_math": [],
+          "expected_extra_math": [],
+          "identifier_replacements": [
+            {
+              "from": "\\olref[sem]{prop:semanticalfacts}",
+              "to": "\\olref[pl][syn][sem]{prop:semanticalfacts}",
+              "count": 1
+            }
+          ],
+          "expected_missing_tokens": [],
+          "expected_extra_tokens": [],
+          "expected_missing_commands": [],
+          "expected_extra_commands": [],
+          "source_issue_or_choice": "With olfileid pl:prp:snd, the source's one-optional-argument reference resolves to the absent pl:prp:sem proposition. The actual label is declared in semantic-notions.tex under pl:syn:sem. There, the second enumerated claim is semantic modus ponens; the third concerns finite subsets of satisfiable sets and cannot justify the proof's inductive step.",
+          "chosen_treatment": "Keep the theorem, induction, all source formulas and corollary, make the cross-chapter file locator explicit, and say 'second item' in Tamil.",
+          "alternatives_considered": "Retain the unresolved local locator; cite the third item despite its different claim; fabricate a duplicate proposition in the orphan section.",
+          "rationale": "The existing proposition's second item says precisely that Gamma entails A and Gamma entails A implies B give Gamma entails B, matching the source's modus-ponens step.",
+          "precise_review_question": "Does the explicit pl:syn:sem locator reach prop:semanticalfacts, and is its second item exactly the entailment rule needed by the proof?",
+          "location_needle": "இன் இரண்டாவது உருப்படி"
+        }
+      ],
+      "missing_tokens": [],
+      "extra_tokens": [],
+      "token_key_parity_or_audited_correction": true,
+      "identifier_replacements_valid": true,
+      "identifier_parity_or_audited_correction": true,
+      "missing_environments": [],
+      "extra_environments": [],
+      "environment_parity_or_audited_correction": true,
+      "normalized_math_replacements_valid": true,
+      "math_parity_or_audited_correction": true,
+      "command_multiset_parity": true,
+      "missing_commands": [],
+      "extra_commands": [],
+      "command_parity_or_audited_correction": true
+    }
+  ],
+  "textual_invariants_pass": true,
+  "release_ready": false,
+  "unresolved": [
+    "Visual/font/copy-search checks pending",
+    "Remainder of corpus pending",
+    "Whole reader and publication pending"
+  ]
+}

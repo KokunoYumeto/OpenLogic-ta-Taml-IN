@@ -1,0 +1,1250 @@
+% SEGMENT OLP-0656-S01
+% Part: proof-theory
+% Chapter: cut-elimination
+% Section: ce-topmost
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{cut}{top}
+
+\olsection{உச்சியிலுள்ள வெட்டுகளை நீக்குதல்}
+
+\begin{defn}
+\CutCS{} விதியில் முடியும் !!a{proof}~$\pi$ ஐக் கருதுவோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+
+
+இதில் வேறு எந்த \CutCS{} அனுமானமும் இல்லை என்க.
+~$\pi$ இன் \emph{வெட்டு உயரம்}
+$\cheight{\pi} = \pheight{\pi_1} + \pheight{\pi_2}$.
+~$\pi$ இன் \emph{வெட்டுத் தரம்}
+$\cutrank{\pi} = \depth{!A}$.
+\end{defn}
+
+% SEGMENT OLP-0656-S02
+\begin{lem}\ollabel{lem:cut-adm-G3c}
+\CutCS{} விதி~\Log{G3c} இல் ஏற்கத்தக்கது.
+வேறு சொற்களில், ஒரே ஒரு~\CutCS{} இல் முடிந்து,
+மற்ற இடங்களில்~$\Log{G3c}$ இன் விதிகளை
+மட்டும் பயன்படுத்தும் !!a{proof}~$\pi$ இருந்தால்,
+அதே இறுதித் தொடரணிக்கான !!a{proof}~$\pi'$
+ஆனது~\Log{G3c} இல் உண்டு.
+\end{lem}
+
+\begin{proof}
+வெட்டு !!{height}, வெட்டுத் தரம் ஆகிய
+இரண்டின் மீது தொகுத்தறிந்து நிறுவுவோம்.
+!!{proof}~$\pi$ இவ்வாறு முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+
+தொகுத்தறிதலின் அடிப்படை நேர்வு:
+$\cheight{\pi} = 0$ மற்றும்
+$\cutrank{\pi} = 0$.
+$\cheight{\pi} = \pheight{\pi_1} + \pheight{\pi_2} = 0$
+ஆகையால், $\Gamma \Sequent \Delta, !A$,
+$!A, \Gamma \Sequent \Delta$
+இரண்டும் அடிக்கோள்கள்.
+இரண்டு வாய்ப்புகள் உள்ளன:
+(a)~அவற்றில் ஒன்றிலாவது $!A$
+முதன்மை வாய்பாடல்ல; அல்லது
+(b)~இரண்டிலும் $!A$ முதன்மை வாய்பாடு.
+இரண்டு நேர்வுகளிலும்
+$\Gamma \Sequent \Delta$ ஓர்
+அடிக்கோளாகவே இருக்க வேண்டும்
+என்பதைக் கீழே காட்டுவோம்;
+அதற்கு தொகுத்தறிதல் கருதுகோள்
+தேவையில்லை.
+
+இனி~$\pi_1$, $\pi_2$ ஆகியவை
+அடிக்கோள்களா அல்லது அனுமானத்தில்
+முடிகின்றனவா, அந்த அனுமானத்தில்
+~$!A$ முதன்மை வாய்பாடா இல்லையா
+என்பவற்றைப் பொறுத்து நேர்வுகளைப்
+பிரிப்போம். A, B நேர்வுகள்
+தொகுத்தறிதலின் அடிப்படை நேர்வை
+உள்ளடக்கும். தொகுத்தறிதல் படியில்
+$\cheight{\pi} > 0$ அல்லது
+$\cutrank{\pi} > 0$
+(அல்லது இரண்டும்) எனக் கொள்வோம்.
+ஒரே ஒரு~\CutCS{} இல் முடியும்
+!!{proof} ஒன்றில், வெட்டுத் தரம்
+$= \cutrank{\pi}$ ஆகவும்
+வெட்டு !!{height} ஆனது
+$< \cheight{\pi}$ ஆகவும் இருந்தாலோ,
+அல்லது வெட்டுத் தரம்
+$< \cutrank{\pi}$ ஆக இருந்தாலோ,
+அதன் இறுதி~\CutCS{} ஐ நீக்கலாம்
+என்ற தொகுத்தறிதல் கருதுகோளைப்
+பயன்படுத்தலாம். $\cheight{\pi} = 0$
+என்ற நேர்வை, அதாவது இரண்டு
+முன்கோள்களும் அடிக்கோள்களான
+நேர்வை, A மற்றும் B நேர்வுகள்
+உள்ளடக்குகின்றன.
+$\cheight{\pi} > 0$
+என்ற நேர்வுகளை C--D நேர்வுகள்
+உள்ளடக்குகின்றன.
+
+% SEGMENT OLP-0656-S03
+\paragraph{நேர்வு A:}
+ஏதோ ஒரு $!B$ ஆனது~$\Gamma$,
+~$\Delta$ இரண்டிலும் வருகிறது.
+அப்போது $!B$ அணுவாய்பாடாக
+இருந்தால் $\Gamma \Sequent \Delta$
+ஓர் அடிக்கோள்; இல்லையேல்
+\olref[seq][ex]{prop:G3c-axioms} மூலம்
+\CutCS{} இன்றி~\Log{G3c} இல்
+அதற்கு !!a{proof}~$\pi'$
+உண்டு. இது அடிப்படை
+நேர்வின் (a) பகுதியை
+உள்ளடக்குகிறது: அடிக்கோள்களான
+$\Gamma \Sequent \Delta, !A$
+அல்லது $!A, \Gamma \Sequent \Delta$
+ஆகியவற்றில் ஒன்றிலாவது
+$!A$ முதன்மை வாய்பாடல்ல எனில்,
+வேறோர் அணு~$!B$
+~$\Gamma$,~$\Delta$
+இரண்டிலும் வரவேண்டும்.
+ஒரு முன்கோள் அடிக்கோளாகவும்
+அதில் $!A$ முதன்மை வாய்பாடல்லாமலும்
+இருந்தால், மற்ற முன்கோள் ஒரு
+விதியின் முடிவாக இருந்தாலும்,
+தொகுத்தறிதல் படியையும்
+இந்நேர்வு உள்ளடக்குகிறது.
+
+\paragraph{நேர்வு B:}
+இரு முன்கோள்களும்
+அடிக்கோள்கள்; $!A$
+இரண்டிலும் முதன்மை
+வாய்பாடு, ஆகவே அணுவாய்பாடு.
+இடப்புற முன்கோளான
+$\Gamma \Sequent \Delta, !A$
+ஐக் கருதுவோம்.
+$!A$ முதன்மை வாய்பாடு
+என்பதால் அது~$\Gamma$ இல்
+வரவேண்டும்; இல்லையேல்
+$\Gamma \Sequent \Delta, !A$
+அடிக்கோளாகாது.
+அதேபோல் $!A$ ஆனது
+~$\Delta$ விலும் வரவேண்டும்;
+இல்லையேல்
+$!A, \Gamma \Sequent \Delta$
+அடிக்கோளாகாது.
+எனவே $!A$ அணுவாய்பாடாகி
+~$\Gamma$,~$\Delta$
+இரண்டிலும் வருகிறது;
+அதாவது
+$\Gamma \Sequent \Delta$
+ஓர் அடிக்கோள்.
+இது தொகுத்தறிதலின்
+அடிப்படை நேர்வின் (b)
+பகுதியை உள்ளடக்குகிறது.
+
+% SEGMENT OLP-0656-S04
+\begin{center}
+A, B நேர்வுகளுக்கான மாற்று வழிகள்
+\end{center}
+
+\paragraph{நேர்வு A:}
+வெட்டின் முன்கோள்களில் ஒன்று,
+$!C$ அணுவாய்பாடாக இருக்கும்
+$!C, \Gamma' \Sequent \Delta', !C$
+வடிவிலான அடிக்கோள்.
+$!C$ வெட்டு !!{formula}~$!A$
+அல்ல எனில், $!C$ ஆனது
+~$\Gamma$,~$\Delta$
+இரண்டிலும் வரவேண்டும்.
+அப்போது
+$\Gamma \Sequent \Delta$
+ஓர் அடிக்கோள்; அதையே~$\pi'$
+ஆகக் கொள்ளலாம்.
+$!C \ident !A$ வெட்டு
+!!{formula} ஆக இருந்தால்,
+இடப்புற முன்கோள்
+அடிக்கோளான நேர்வில்
+$!A \in \Gamma$ மற்றும்
+$\Gamma = \Gamma', !A$;
+வலப்புற முன்கோள்
+அடிக்கோளான நேர்வில்
+$!A \in \Delta$ மற்றும்
+$\Delta = \Delta', !A$.
+முதல் நேர்வில்~$\pi_2$
+என்பது
+$!A, !A, \Gamma' \Sequent \Delta$
+இன் !!a{proof}; ஆகவே
+\LeftR{\Contraction} இன்
+ஏற்கத்தக்கதன்மையால்
+(\olref[seq][inv]{prop:G3c-cont-adm})
+$\Gamma \Sequent \Delta$
+இன் !!a{proof} கிடைக்கும்.
+இரண்டாம் நேர்வில்~$\pi_1$
+என்பது
+$\Gamma \Sequent \Delta', !A, !A$
+இன் !!a{proof}; ஆகவே
+\RightR{\Contraction} இன்
+ஏற்கத்தக்கதன்மையால்
+$\Gamma \Sequent \Delta$
+இன் !!a{proof} கிடைக்கும்.
+
+\paragraph{நேர்வு B:}
+முன்கோள்களில் ஒன்று
+$\lfalse, \Gamma' \Sequent \Delta'$
+வடிவிலான அடிக்கோள்.
+இடப்புற முன்கோள்
+அத்தகைய அடிக்கோள் எனில்,
+$\lfalse \in \Gamma$;
+எனவே $\Gamma \Sequent \Delta$
+உம் அடிக்கோள்.
+வலப்புற முன்கோள்
+அத்தகைய அடிக்கோள் எனில்,
+$\lfalse \in \Gamma$
+(அப்போது
+$\Gamma \Sequent \Delta$
+மீண்டும் அடிக்கோள்)
+அல்லது $!A \ident \lfalse$.
+பிந்தைய நேர்வில்~$\pi_1$
+என்பது
+$\Gamma \Sequent \Delta, \lfalse$
+இன் !!a{proof}.
+~$\pi_1$ இன் ஒவ்வொரு
+தொடரணியின் முடிவுப்பக்கத்திலிருந்தும்
+~$\lfalse$ இன் ஒரு
+நிகழ்வை நீக்கி,
+$\Gamma \Sequent \Delta$
+இன் !!a{proof} ஆக
+மாற்றலாம்.
+(பயிற்சி: ~$\pheight{\pi_1}$
+மீது தொகுத்தறிந்து
+இதை உறுதிசெய்க.)
+
+% SEGMENT OLP-0656-S05
+இனி A, B நேர்வுகள்
+எதுவும் பொருந்தாது என்க.
+மீதமுள்ள நேர்வுகளில்
+$\cheight{\pi} > 0$;
+அதாவது குறைந்தது
+ஒரு முன்கோளாவது ஓர்
+அனுமானத்தின் முடிவாகும்.
+
+\paragraph{C, D நேர்வுகள்: வெட்டுகளின் வரிசையை மாற்றுதல்.}
+C, D நேர்வுகளுக்கெல்லாம்
+ஒரே பொது வடிவம் உண்டு.
+ஒரு முன்கோள்~$R$
+விதியால் கிடைக்கும்
+வகையில், \CutCS{} இல்
+முடியும் !!a{proof}
+ஒன்றிலிருந்து தொடங்குகிறோம்.
+அந்த~$R$ இல் வெட்டு
+!!{formula}~$!A$
+முதன்மையல்ல; வேறொரு
+!!{formula}~$!D$
+முதன்மையானது.
+அந்த !!{proof} இல்
+விதி~$R$ க்குப் பிறகு
+\CutCS{} வருகிறது.
+அதன் மாதிரி வடிவம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', !D, !A$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!A, \Gamma, \Pi \fCenter \Delta', \Lambda$
+\RightLabel{$R$}
+\UnaryInf$!A, \Gamma \fCenter \Delta', !D$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta', !D$
+\DisplayProof
+\]
+இது~$R$ ஒரு முன்கோள்
+உடைய வலப்புற விதியாகவும்,
+$A$ அதன் முதன்மை
+!!{formula} அல்லாமலும்,
+\emph{முதன்மையான} !!{formula}~$!D$
+\CutCS{} இன் வலப்புற
+முன்கோளின் முடிவுப்பக்கத்தில்
+வருவதாகவும் உள்ள நேர்வை
+மட்டுமே காட்டுகிறது.
+$!D$ முன்பக்கத்தில்
+வந்தாலோ
+(அதாவது~$R$
+இடப்புற விதியானாலோ),
+அல்லது~\CutCS{} இன்
+இடப்புற முன்கோளில்
+வந்தாலோ வடிவம்
+வேறாக இருக்கும்.
+~$\Pi$,~$\Lambda$
+இலுள்ள !!{formula}s
+விதி~$R$ இன்
+செயல்படு !!{formula}s
+ஐக் குறிக்கின்றன.
+
+இப்போது வரிசையை
+மாற்றி,~\CutCS{} க்குப்
+பிறகு~$R$ வரும்
+!!a{proof} ஐக்
+கருதுவோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma, \Pi \fCenter \Delta', !D, \Lambda, !A$
+\AxiomC{}
+\RightLabel{$\pi_3'$}
+\Deduce$!A, \Gamma, \Pi \fCenter \Delta', !D, \Lambda$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma, \Pi \fCenter \Delta', !D, \Lambda$
+\RightLabel{$R$}
+\UnaryInf$\Gamma \fCenter \Delta', !D, !D$
+\DisplayProof
+\]
+முறையே~$\pi_1$,
+~$\pi_3$ இலிருந்து
+~$\pi_1'$,~$\pi_3'$
+பெற, !!{height}
+மாறாத தளர்த்தலைப்
+பயன்படுத்துகிறோம்.
+
+\CutCS{} மற்றும்~$R$
+இவற்றின் வரிசையை
+மாற்றுவதால், இதனை
+“வெட்டை~$R$
+வழியாக மேலே
+நகர்த்துதல்” என்று
+அழைக்கிறோம்.
+இதனால்~\CutCS{} இன்
+வலப்புற முன்கோளில்
+முடியும் !!{proof} இன்
+உயரம் குறைகிறது;
+ஆகவே வெட்டு
+!!{height} உம்
+குறைகிறது.
+அதாவது புதிய~\CutCS{}
+இன் முன்கோள்களில்
+முடியும் உள்-!!{proof}s
+களின் உயரங்கள்
+~$\pi_1$,~$\pi_3$
+இவற்றின் !!{height} களை
+மீறாது எனக் கொள்ளலாம்;
+வலப்புறத்தில் ஓர்
+அனுமானத்தை நீக்கியதால்
+வெட்டு !!{height}
+குறைந்துள்ளது.
+இப்போது தொகுத்தறிதல்
+கருதுகோளால்~\CutCS{}
+ஐ நீக்கலாம்.
+இறுதியாக
+$\RightR{\Contraction}$
+இன் ஏற்கத்தக்கதன்மையைப்
+பயன்படுத்தி
+~$!D$ இன் கூடுதல்
+நிகழ்வை நீக்குகிறோம்.
+
+% SEGMENT OLP-0656-S06
+\paragraph{நேர்வு C:}
+~$\pi_1$,~$\pi_2$
+இவற்றில் குறைந்தது
+ஒன்று, ~$!A$
+முதன்மையல்லாத
+ஒரு முன்கோள் விதி~$R$
+இல் முடிகிறது.
+\CutCS{} இன் இடப்புற
+அல்லது வலப்புற
+முன்கோளில்~$!A$
+முதன்மையல்லாதது
+எதுவென்பதையும்,
+ஒன்பது ஒரு முன்கோள்
+விதிகளில்
+(\LeftR{\lnot},
+\RightR{\lnot},
+\RightR{\lor},
+\LeftR{\land},
+\RightR{\lif},
+மேலும் நான்கு
+அளவையடை விதிகள்)
+~$R$ எதுவென்பதையும்
+பொறுத்து மொத்தம்
+18 நேர்வுகள் உள்ளன.
+இரண்டு எடுத்துக்காட்டுகளை
+மட்டுமே பார்ப்போம்:
+~$\pi_2$ இன்
+கடைசி அனுமானத்தில்
+~$!A$ முதன்மையல்ல;
+அந்த அனுமானம்
+$\RightR{\lif}$
+அல்லது
+\LeftR{\lexists}
+இல் முடிகிறது.
+மற்ற நேர்வுகள்
+ஒத்தவை; அவற்றைப்
+பயிற்சிகளாக விடுகிறோம்.
+
+~$\pi$ பின்வருமாறு
+முடிகிறது என்க:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', !B \lif !C, !A$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!A, !B, \Gamma \fCenter \Delta', !C$
+\RightLabel{$\RightR{\lif}$}
+\UnaryInf$!A, \Gamma \fCenter \Delta', !B \lif !C$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta', !B \lif !C$
+\DisplayProof
+\]
+இங்கு
+$\Delta = \Delta', !B \lif !C$.
+~$\pi_1$ க்கு
+!!{height} மாறாத தளர்த்தலை
+(\olref[seq][adm]{prop:weak-G3c-adm})
+பயன்படுத்தி,
+$!B, \Gamma \fCenter \Delta', !B \lif !C, !C, !A$
+இன் !!a{proof}~$\pi_1'$
+பெறுகிறோம்
+(இடப்புறத்தில்~$!B$,
+வலப்புறத்தில்~$!C$
+சேர்க்கப்படுகின்றன).
+அதேபோல்~$\pi_3$
+க்கு
+\olref[seq][adm]{prop:weak-G3c-adm}
+பயன்படுத்தி,
+$!A, !B, \Gamma \fCenter
+\Delta', !B \lif !C, !C$
+இன் !!a{proof}~$\pi_3'$
+பெறுகிறோம்
+(வலப்புறத்தில்
+$!B \lif !C$
+சேர்க்கப்படுகிறது).
+பின்வரும் நிறுவலுக்கு
+தொகுத்தறிதல்
+கருதுகோள் பொருந்தும்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta', !B \lif !C, !C, !A$
+\AxiomC{}
+\RightLabel{$\pi_3'$}
+\Deduce$!A, !B, \Gamma \fCenter \Delta', !B \lif !C, !C$
+\RightLabel{\CutCS}
+\BinaryInf$!B, \Gamma \fCenter \Delta', !B \lif !C, !C$
+\DisplayProof
+\]
+இந்த !!{proof} இன் வெட்டு
+!!{formula}~$!A$;
+~$\pi$ வுடன்
+ஒப்பிடும்போது
+வெட்டுத் தரம்
+அதேயானாலும்,
+வெட்டு !!{height}
+குறைவு.
+எனவே
+\CutCS{} இன்றி
+~\Log{G3c} இல்
+$!B, \Gamma \fCenter \Delta', !B \lif
+!C, !C$
+இன் !!a{proof}~$\pi_4$
+கிடைக்கிறது.
+$\RightR{\lif}$
+பயன்படுத்தி
+$\Gamma \fCenter
+\Delta', !B \lif !C, !B \lif !C$
+இன் !!a{proof}
+பெறுகிறோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_4$}
+\Deduce$!B, \Gamma \fCenter \Delta', !B \lif !C, !C$
+\RightLabel{$\RightR{\lif}$}
+\UnaryInf$\Gamma \fCenter \Delta', !B \lif !C, !B \lif !C$
+\DisplayProof
+\]
+அதாவது
+$\Gamma \fCenter \Delta', !B \lif !C$
+என்ற
+$\Gamma \Sequent \Delta$
+இன் !!a{proof}~$\pi'$
+பெற, சுருக்கலின்
+ஏற்கத்தக்கதன்மையான
+\olref[seq][inv]{prop:G3c-cont-adm}
+ஐப் பயன்படுத்துக.
+
+% SEGMENT OLP-0656-S07
+இப்போது~$\pi$
+பின்வருமாறு
+முடிகிறது என்க:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\lexists[x][!B(x)], \Gamma' \fCenter \Delta, !A$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!A, !B(c), \Gamma' \fCenter \Delta$
+\RightLabel{$\LeftR{\lexists}$}
+\UnaryInf$!A, \lexists[x][!B(x)], \Gamma' \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma' \fCenter \Delta$
+\DisplayProof
+\]
+மீண்டும் பின்வரும்
+நிறுவலுக்குத்
+தொகுத்தறிதல்
+கருதுகோளைப்
+பயன்படுத்துகிறோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1[!B(c) \Sequent {}]$}
+\Deduce$\lexists[x][!B(x)], !B(c), \Gamma' \fCenter \Delta, !A$
+\AxiomC{}
+\LeftLabel{$\pi_3[\lexists[x][!B(x)] \Sequent {}]$}
+\Deduce$!A, \lexists[x][!B(x)], !B(c), \Gamma' \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\lexists[x][!B(x)], !B(c), \Gamma' \fCenter \Delta$
+\RightLabel{\LeftR{\lexists}}
+\UnaryInf$\lexists[x][!B(x)], \lexists[x][!B(x)], \Gamma' \fCenter \Delta$
+\DisplayProof
+\]
+தனிமாறி நிபந்தனை
+நிறைவேறுவதை
+கவனிக்க: ~$\pi_2$
+இல் உள்ள
+\LeftR{\lexists}
+விதியின் தனிமாறி
+நிபந்தனைப்படி
+$c$ ஆனது
+$\lexists[x][!B(x)]$,
+$\Gamma'$,
+~$\Delta$ ஆகியவற்றில்
+வராது. இறுதியாக
+\olref[seq][inv]{prop:G3c-cont-adm}
+ஐப் பயன்படுத்துக.
+
+% SEGMENT OLP-0656-S08
+\paragraph{நேர்வு D:}
+~$\pi_1$,~$\pi_2$
+இவற்றில் குறைந்தது
+ஒன்று, ~$!A$
+முதன்மையல்லாத
+இரு முன்கோள்
+விதி~$R$ இல்
+முடிகிறது.
+ஆறு நேர்வுகள்
+உள்ளன.
+~$\pi_2$ இன்
+கடைசி அனுமானத்தில்
+~$!A$ முதன்மையல்லாமல்,
+அது~$\RightR{\land}$
+இல் முடியும்
+நேர்வைக் கருதுவோம்;
+மற்ற நேர்வுகள்
+ஒத்தவை.
+
+~$\pi$ பின்வருமாறு
+முடிகிறது என்க:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !A$
+\AxiomC{}
+\RightLabel{$\pi_3$}
+\Deduce$!A, \Gamma \fCenter \Delta', !B$
+\AxiomC{}
+\RightLabel{$\pi_4$}
+\Deduce$!A, \Gamma \fCenter \Delta', !C$
+\RightLabel{$\RightR{\land}$}
+\BinaryInf$!A, \Gamma \fCenter \Delta', !B \land !C$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+தொகுத்தறிதல்
+கருதுகோள் பின்வரும்
+!!{proof}s களுக்குப்
+பொருந்தும்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !B, !A$
+\AxiomC{}
+\RightLabel{$\pi_3'$}
+\Deduce$!A, \Gamma \fCenter \Delta', !B \land !C, !B$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !B$
+\DisplayProof
+\]
+மேலும்
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !C, !A$
+\AxiomC{}
+\RightLabel{$\pi_4'$}
+\Deduce$!A, \Gamma \fCenter \Delta', !B \land !C, !C$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !C$
+\DisplayProof
+\]
+இங்கு~\Log{G3c}
+இலுள்ள !!{proof}s
+~$\pi_1'$,~$\pi_1''$
+ஆகியவை~$\pi_1$
+இலிருந்து !!{height}
+மாறாத தளர்த்தல்
+(\olref[seq][adm]{prop:weak-G3c-adm})
+மூலம் பெறப்படுகின்றன:
+ஒன்றில் வலப்புறம்
+~$!B$ உம்,
+மற்றொன்றில்~$!C$
+உம் சேர்க்கப்படுகின்றன.
+அதேபோல்
+!!{proof}s~$\pi_3'$,
+~$\pi_4'$ ஆகியவை
+முறையே~$\pi_3$,
+~$\pi_4$ இலிருந்து
+!!{height} மாறாத
+தளர்த்தல் மூலம்
+பெறப்படுகின்றன;
+~$\pi_3$,~$\pi_4$
+இரண்டிலும்
+வலப்புறம்
+$!B \land !C$
+சேர்க்கப்படுகிறது.
+
+தொகுத்தறிதல்
+கருதுகோள்,
+$\Gamma \fCenter \Delta', !B \land !C, !B$
+மற்றும்
+$\Gamma \fCenter \Delta', !B \land !C, !C$
+ஆகியவற்றின்
+~\Log{G3c}
+!!{proof}s~$\pi_5$,
+~$\pi_6$ ஐத்
+தருகிறது.
+விதி
+$\RightR{\land}$
+மூலம் இவற்றை
+இணைத்து,
+$\Gamma \Sequent \Delta', !B \land !C, !B \land !C$
+இன் !!a{proof}
+பெறுகிறோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_5$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !B$
+\AxiomC{}
+\RightLabel{$\pi_6$}
+\Deduce$\Gamma \fCenter \Delta', !B \land !C, !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !B \land !C$
+\DisplayProof
+\]
+அதாவது
+$\Gamma \fCenter \Delta', !B \land !C$
+என்ற
+$\Gamma \Sequent \Delta$
+இன் !!a{proof}
+பெற,
+\olref[seq][inv]{prop:G3c-cont-adm}
+வழங்கும் சுருக்கலின்
+ஏற்கத்தக்கதன்மையைப்
+பயன்படுத்துக.
+
+% SEGMENT OLP-0656-S09
+\paragraph{நேர்வு E: வெட்டுகளைக் குறைத்தல்.}
+கடைசி நேர்வில்,
+~$\pi_1$,~$\pi_2$
+இரண்டும்~$!A$
+முதன்மை வாய்பாடாக
+உள்ள அனுமானங்களில்
+முடிகின்றன.
+~$!A$ இன்
+சாத்தியமான ஒவ்வொரு
+!!{main operator}
+க்கும் ஒன்று என
+ஆறு நேர்வுகள்
+உள்ளன.
+
+ஒவ்வொரு நேர்விலும்,
+வெட்டு !!{formula}~$!A$
+மீதான ஒரு \CutCS{}
+ஐ, ~$!A$ இன்
+உள்-!!{formula}s
+மீதான ஒன்று அல்லது
+பல வெட்டுகளாக
+மாற்றுகிறோம்.
+அவை~$!A$ முதன்மை
+!!{formula} ஆக
+உள்ள அனுமானங்களின்
+செயல்படு !!{formula}s
+ஆகும். எனவே இந்த
+நேர்வுகள் வெட்டு
+அனுமானத்தின்
+“குறைப்பு” அல்லது
+“மாற்றம்” எனவும்
+அழைக்கப்படுகின்றன.
+
+\begin{enumerate}
+\item $!A \ident \lnot !B$
+எனில்~$\pi$
+பின்வருமாறு
+முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\RightLabel{\RightR{\lnot}}
+\UnaryInf$\Gamma \fCenter \Delta, \lnot !B$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\RightLabel{\LeftR{\lnot}}
+\UnaryInf$\lnot !B, \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+தொகுத்தறிதல்
+கருதுகோளால்
+பின்வருவதிலிருந்து
+\CutCS{} ஐ
+நீக்கலாம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+% SEGMENT OLP-0656-S10
+\item
+$!A \ident (!B \lor !C)$
+எனில்~$\pi$
+பின்வருமாறு
+முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta, !B, !C$
+\RightLabel{\RightR{\lor}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lor !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lor}}
+\BinaryInf$!B \lor !C, \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+\CutCS{} இல் முடியும்
+பின்வரும் !!{proof}
+ஐக் கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta, !B, !C$
+\AxiomC{}
+\RightLabel{$\pi_2'''$}
+\Deduce$!C, \Gamma \fCenter \Delta, !B$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta, !B$
+\DisplayProof
+\]
+இங்கு~$\pi_2'''$
+ஆனது~$\pi_2''$
+இலிருந்து !!{height}
+மாறாத தளர்த்தலால்
+பெறப்படுகிறது.
+$\depth{!C} < \depth{!B \lor !C}$
+என்பதால் இதன்
+வெட்டுத் தரம்
+$< \cutr{\pi}$;
+ஆகவே தொகுத்தறிதல்
+கருதுகோள்
+$\Gamma \fCenter \Delta, !B$
+இன்~\Log{G3c}
+இலுள்ள
+!!a{proof}~$\pi_1''$
+ஐத் தருகிறது.
+\CutCS{} இல்
+முடியும் பின்வரும்
+!!{proof} ஐக்
+கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+இதன் வெட்டுத்
+தரம்
+$= \depth{!B} < \depth{!B \lor !C}$;
+எனவே தொகுத்தறிதல்
+கருதுகோளை மீண்டும்
+பயன்படுத்தி
+$\Gamma \fCenter \Delta$
+இன் !!a{proof}~$\pi'$
+பெறுகிறோம்.
+% SEGMENT OLP-0656-S11
+\item $!A \ident (!B \land !C)$.
+பயிற்சி.
+
+\item $!A \ident (!B \lif !C)$
+எனில்~$\pi$
+பின்வருமாறு
+முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\lif}}
+\UnaryInf$\Gamma \fCenter \Delta, !B \lif !C$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!B \lif !C, \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+\CutCS{} இல்
+முடியும் பின்வரும்
+!!{proof} ஐக்
+கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B, \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+இதன் வெட்டுத்
+தரம்~$\pi$ இன்
+வெட்டுத் தரத்தைவிடக்
+குறைவு.
+தொகுத்தறிதல்
+கருதுகோள்
+$!B, \Gamma \fCenter \Delta$
+இன்
+!!a{proof}~$\pi_1''$
+ஐத் தருகிறது.
+இப்போது~\CutCS{}
+இல் முடியும்
+பின்வரும்
+!!{proof} ஐக்
+கருதுக:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$!B, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+இதன் வெட்டுத்
+தரமும்~$\pi$
+இன் வெட்டுத்
+தரத்தைவிடக்
+குறைவு; ஆகவே
+தொகுத்தறிதல்
+கருதுகோள்
+$\Gamma \fCenter \Delta$
+இன்~\Log{G3c}
+!!{proof}~$\pi'$
+ஐத் தருகிறது.
+% SEGMENT OLP-0656-S12
+\item $!A \ident \lforall[x][!B(x)]$
+எனில்~$\pi$
+பின்வருமாறு
+முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta, !B(c)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!B(x)]$
+\LeftSubproofLabel{$\pi_1$}
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B(t), \lforall[x][!B(x)], \Gamma \fCenter \Delta$
+\RightLabel{\LeftR{\lforall}}
+\UnaryInf$\lforall[x][!B(x)], \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_2$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+தொகுத்தறிதல்
+கருதுகோளால்,
+பின்வருவதிலிருந்து
+\CutCS{} ஐ
+நீக்கலாம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$!B(t), \Gamma \fCenter \Delta, \lforall[x][!B(x)]$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!B(t), \lforall[x][!B(x)], \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B(t), \Gamma \fCenter \Delta$
+\DisplayProof
+\]
+இங்கு~$\pi_1''$
+ஆனது~$\pi_1$
+இலிருந்து
+(~$\pi_1'$ இலிருந்து
+அல்ல) !!{height}
+மாறாத தளர்த்தலால்
+பெறப்படுகிறது.
+(இந்த !!{proof}
+இன் வெட்டுத்
+தரம் மாறாது;
+ஆனால் வெட்டு
+!!{height}
+குறைவாகும்.)
+இதனால்
+$!B(t), \Gamma \fCenter \Delta$
+இன்
+!!a{proof}~$\pi_2''$
+கிடைக்கிறது.
+
+!!{proof}~$\pi_1'$
+இன் இறுதித் தொடரணி
+$\Gamma \Sequent \Delta, !B(c)$;
+இங்கு~$c$ என்பது
+ஒரு
+$\RightR{\lforall}$
+அனுமானத்தின்
+தனிமாறி.
+எனவே~$c$
+ஆனது
+$!B(x)$,
+$\Gamma$,
+~$\Delta$
+ஆகியவற்றில்
+வராது.
+!!{proof}~$\pi$
+ஒழுங்கானது எனக்
+கொள்கிறோம்;
+ஆகவே~$c$
+இந்த
+$\RightR{\lforall}$
+அனுமானத்திற்கு
+மட்டுமே தனிமாறி;
+அதன் மேலே மட்டுமே
+வருகிறது.
+அதாவது~$\pi_1'$
+இல் மட்டுமே
+வருகிறது;
+~$\pi_1'$ இல்
+உள்ள வேறோர்
+அனுமானத்தின்
+தனிமாறி அல்ல.
+~$\pi_2$ இல்
+$c$ வராததால்
+~$t$ இலும்
+அது வராது.
+\olref[seq][qua]{lem:subst-regular}
+மூலம்
+!!{proof}~$\Subst{\pi_1'}{t}{c}$
+ஆனது
+$\Gamma \Sequent \Delta, !B(t)$
+இன் !!a{proof}.
+இப்போது
+பின்வரும்
+!!{proof} க்குத்
+தொகுத்தறிதல்
+கருதுகோளைப்
+பயன்படுத்துகிறோம்:
+\[
+\AxiomC{}
+\RightLabel{$\Subst{\pi_1'}{t}{c}$}
+\Deduce$\Gamma \fCenter \Delta, !B(t)$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!B(t), \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+(இங்கு வெட்டு
+!!{formula}~$!B(t)$;
+எனவே~$\pi$
+ஐவிடக் குறைந்த
+வெட்டுத் தரமுள்ள
+!!{proof} என்பதால்
+தொகுத்தறிதல்
+கருதுகோள் பொருந்தும்.)
+% SEGMENT OLP-0656-S13
+\item $!A \ident \lexists[x][!B(x)]$
+என்ற நேர்வைப்
+பயிற்சியாக விடுகிறோம்.
+\end{enumerate}
+\end{proof}
+
+\begin{prob}
+\olref{lem:cut-adm-G3c}
+இன் நிறுவலில்
+D நேர்வின்
+ஒரு துணைநேர்வை
+உறுதிசெய்க:
+~$\pi_1$ இன்
+கடைசி அனுமானத்தில்
+~$!A$ முதன்மையல்ல;
+அந்த அனுமானம்
+$\LeftR{\lif}$
+இல் முடிகிறது.
+(குறிப்பு:
+எதை நிறுவ வேண்டும்,
+அதாவது இந்நேர்வில்
+~$\pi$ எந்த
+வடிவில் இருக்கும்
+என்பதைத் தெளிவாகக்
+கூறுவதும் இந்தப்
+பயிற்சியின் ஒரு
+பகுதியாகும்.)
+\end{prob}
+
+\begin{prob}
+\olref{lem:cut-adm-G3c}
+இன் நிறுவலில்
+D நேர்வின்
+ஒரு துணைநேர்வை
+உறுதிசெய்க:
+~$\pi_1$ இன்
+கடைசி அனுமானத்தில்
+~$!A$ முதன்மையல்ல;
+அந்த அனுமானம்
+$\LeftR{\lforall}$
+இல் முடிகிறது.
+\end{prob}
+
+\begin{prob}
+\olref{lem:cut-adm-G3c}
+இன் நிறுவலில்
+E நேர்வின்
+ஒரு துணைநேர்வை
+உறுதிசெய்க:
+~$\pi_1$,~$\pi_2$
+இரண்டின் கடைசி
+அனுமானங்களிலும்
+~$!A$ முதன்மையானது;
+மேலும்
+$!A \ident (!B \land !C)$.
+\end{prob}
+
+\begin{prob}
+\olref{lem:cut-adm-G3c}
+இன் நிறுவலில்
+E நேர்வின்
+ஒரு துணைநேர்வை
+உறுதிசெய்க:
+~$\pi_1$,~$\pi_2$
+இரண்டின் கடைசி
+அனுமானங்களிலும்
+~$!A$ முதன்மையானது;
+மேலும்
+$!A \ident \lexists[x][!B(x)]$.
+\end{prob}
+% SEGMENT OLP-0656-S14
+E நேர்வில்
+தொகுத்தறிதல்
+கருதுகோளைப்
+பயன்படுத்தும்,
+\CutCS{} இல்
+முடியும்
+!!{proof} இன்
+வெட்டு !!{height},
+மூல நிறுவலின்
+வெட்டு !!{height} ஐவிட
+அதிகமாகவும்
+இருக்கலாம்
+என்பதைக் கவனிக்க.
+எடுத்துக்காட்டாக,
+$!A \ident (!B \lif !C)$
+எனில்~$\pi$
+ஐ இரண்டு~\CutCS{}
+அனுமானங்கள் உள்ள
+!!a{proof} ஆக
+மாற்றினோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!B, \Gamma \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$!C, \Gamma \fCenter \Delta$
+\RightLabel{\CutCS}
+\BinaryInf$!B, \Gamma \fCenter \Delta$
+\RightSubproofLabel{$\pi_1''$}
+\RightLabel{\CutCS}
+\BinaryInf$\Gamma \fCenter \Delta$
+\DisplayProof
+\]
+~$\pi_1'$
+மற்றும்~$\pi_2''$
+இடையிலுள்ள
+மேலிருக்கும்~\CutCS{}
+இன் வெட்டுத்
+தரமும் வெட்டு
+!!{height} உம்
+~$\pi$ இன்
+அவற்றைவிடக்
+குறைவு.
+ஆனால்
+தொகுத்தறிதல்
+கருதுகோளைப்
+பயன்படுத்திய
+விளைவான
+!!{proof}~$\pi_1''$
+க்கு இனி~$\pi$
+ஐவிடக் குறைந்த
+வெட்டு !!{height}
+இருக்க வேண்டியதில்லை.
+கீழிருக்கும்~\CutCS{}
+இன் வெட்டு
+!!{formula}~$!B$
+என்பதால்,
+அதன் வெட்டு
+\emph{தரம்} மட்டும்
+~$\pi$ இன்
+வெட்டுத் தரத்தைவிடக்
+குறைவாகவே இருக்கும்.
+
+\olref{lem:cut-adm-G3c}
+மூலம், ஓர்
+!!a{proof} இல்
+உச்சியிலுள்ள
+ஒரே ஒரு
+\CutCS{} அனுமானத்தை
+நீக்கலாம்.
+~\CutCS{} இல்
+முடியும் உச்சி
+உள்-!!{proof}s
+களுக்கு அதை
+ஒவ்வொன்றாகப்
+பயன்படுத்தி,
+ஓர் !!a{proof}
+இலுள்ள எத்தனை
+\CutCS{} அனுமானங்களையும்
+நீக்கலாம்
+எனக் காட்டலாம்.
+
+\begin{thm}\ollabel{thm:cut-elim-G3c-topmost}
+$\Log{G3c} + \CutCS$
+இல் உள்ள
+எந்த !!{proof}~$\pi$
+ஐயும்~\Log{G3c}
+இல் ஓர்
+!!a{proof} ஆக
+மாற்றலாம்.
+\end{thm}
+
+% SEGMENT OLP-0656-S15
+\begin{proof}
+  ~$\pi$ இல்
+  உள்ள~\CutCS{}
+  அனுமானங்களின்
+  எண்ணிக்கை~$n$
+  மீது தொகுத்தறிக.
+  $n=0$
+  எனில் செய்ய
+  எதுவும் இல்லை:
+  ~$\pi$ ஏற்கெனவே
+  ~\Log{G3c}
+  இல்
+  !!a{proof}.
+  இல்லையேல்,
+  உச்சியிலுள்ள
+  ஒரு~\CutCS{}
+  அனுமானத்தில்
+  முடியும்
+  உள்-!!{proof}~$\pi'$
+  ஐக் கருதுக.
+  அதில் கடைசி
+  அனுமானமாக
+  ஒரே ஒரு
+  \CutCS{} விதி
+  உள்ளது.
+  \olref{lem:cut-adm-G3c}
+  ஐப் பயன்படுத்தி
+  அதனை
+  \CutCS{} இல்லாத
+  நிறுவல்~$\pi''$
+  ஆக மாற்றி,
+  அதில்
+  உள்-!!{proof}~$\pi'$
+  க்குப் பதிலாக
+  ~$\pi''$ ஐ
+  வைக்கிறோம்.
+  இதனால்
+  $n-1$
+  \CutCS{} அனுமானங்கள்
+  உள்ள
+  !!a{proof}
+  கிடைக்கிறது;
+  அதற்குத்
+  தொகுத்தறிதல்
+  கருதுகோள்
+  பொருந்தும்.
+\end{proof}
+
+\end{document}

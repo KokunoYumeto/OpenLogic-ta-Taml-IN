@@ -1,0 +1,600 @@
+% SEGMENT OLP-0701-S01
+% Part: proof-theory
+% Chapter: sequent-calculus
+% Section: invertibility
+
+\documentclass[../../../include/open-logic-section]{subfiles}
+
+\begin{document}
+
+\olfileid{pt}{seq}{inv}
+
+\olsection{விதிகளின் மீளாக்கத்தன்மை}
+
+\begin{defn}
+ஒரு முறைமையில் விதி~$R$,
+\[
+\AxiomC{$S_1$}
+\AxiomC{$\dots$}
+\AxiomC{$S_n$}
+\RightLabel{$R$}
+\TrinaryInfC{$S$}
+\DisplayProof
+\]
+\emph{மீளாக்கத்தக்கது} எனப்படுவது:
+$\Proves S$ என்றால், $i = 1$, \dots,~$n$
+ஒவ்வொன்றுக்கும் ஏதோ ஓர் உயரத்தில்
+$\Proves[h_i] S_i$ ஆக வேண்டும்.
+மேலும் $\Proves_n S$ என்றால்,
+$i = 1$, \dots,~$n$ ஒவ்வொன்றுக்கும்
+$\Proves[n] S_i$ ஆகுமானால்,
+அது அந்த முறைமையில்
+\emph{!!{height}-பேணும் மீளாக்கத்தக்க}
+(அல்லது \emph{!!{hp}-மீளாக்கத்தக்க})
+விதி எனப்படும்.
+\end{defn}
+
+% SEGMENT OLP-0701-S02
+\begin{lem}\ollabel{lem:G3c-invert}
+\Log{G3c} இல் $\lnot$, $\land$, $\lor$,
+$\lif$ ஆகியவற்றுக்கான விதிகள்
+!!{height}-பேணும் மீளாக்கத்தக்கவை;
+அதாவது:
+\begin{enumerate}
+  \item \RightR{\lnot}: $ \Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, \lnot !A$ எனில், $\Log{G3c} \Proves[n] !A, \Gamma \Sequent
+  \Delta$.
+  \item \LeftR{\lnot}: $\Log{G3c} \Proves[n] \Gamma, \lnot !A
+  \Sequent \Delta$ எனில், $\Log{G3c} \Proves[n] \Gamma \Sequent \Delta,
+  !A$.
+  \item \RightR{\land}: $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A \land !B$ எனில், $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A$ மற்றும் $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !B$.
+  \item \LeftR{\land}: $\Log{G3c} \Proves[n] \Gamma, !A \land !B
+  \Sequent \Delta$ எனில், $\Log{G3c} \Proves[n] !A, !B, \Gamma \Sequent
+  \Delta$.
+  \item \RightR{\lor}: $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A \lor !B$ எனில், $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A, !B$.
+  \item \LeftR{\lor}: $\Log{G3c} \Proves[n] !A \lor !B, \Gamma \Sequent
+  \Delta$ எனில், $\Log{G3c} \Proves[n] !A, \Gamma \Sequent
+  \Delta$ மற்றும் $\Log{G3c} \Proves[n] !B, \Gamma \Sequent
+  \Delta$.
+  \item \RightR{\lif}: $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A \lif !B$ எனில், $\Log{G3c} \Proves[n] !A, \Gamma \Sequent
+  \Delta, !B$.
+  \item \LeftR{\lif}: $\Log{G3c} \Proves[n] !A \lif !B, \Gamma
+  \Sequent \Delta$ எனில், $\Log{G3c} \Proves[n] \Gamma \Sequent \Delta,
+  !A$ மற்றும் $\Log{G3c} \Proves[n] !B, \Gamma \Sequent \Delta$.
+\end{enumerate}
+\end{lem}
+
+% SEGMENT OLP-0701-S03
+\begin{proof}
+\Log{G3c} இன் எந்த விதி~$R$ க்கும்,
+அந்த $R$ இன் முடிவு~$S$ க்கு
+!!a{proof}~$\pi$ இருந்தால், அதன்
+அந்த $R$ இன் முன்கூற்றுகள்~$S_i$ க்கும்
+!!{proof}s~$\pi_i$ இருந்து,
+$\pheight{\pi_i} \le \pheight{\pi}$
+ஆகும் என்பதைக் காட்ட வேண்டும்.
+\LeftR{\land} விதியை எடுத்துக்கொள்க:
+$!A \land !B, \Gamma \Sequent \Delta$
+என்ற இறுதித் தொடரணியுடன்
+!!a{proof}~$\pi$ உள்ளது என்க.
+$!A, !B, \Gamma \Sequent \Delta$
+என்பதற்கான !!a{proof}~$\pi'$
+உண்டு; மேலும் $\pheight{\pi'} \le
+\pheight{\pi}$ என்பதைக் காட்ட வேண்டும்.
+$n = \pheight{\pi}$ மீது
+தொகுத்தறிந்து இதை நிறுவுவோம்.
+
+$n = 0$ எனில், $\pi$ என்பது
+$!A \land !B, \Gamma \Sequent \Delta$
+என்ற அடிக்கோள் மட்டுமே.
+\Log{G3c} இல் அடிக்கோள்கள்,
+$!C$ அணுவாக இருக்கும்
+$!C, \Gamma \Sequent \Delta, !C$
+என்ற வடிவில் உள்ளன. ஆகவே
+$!C$, $!A \land !B$ ஆக முடியாது.
+$!A \land !B, \Gamma \Sequent \Delta$
+ஓர் அடிக்கோள் எனில், ஏதோ அணு~$!C$,
+$\Gamma$ விலும்~$\Delta$ விலும்
+!!a{element} ஆக இருக்க வேண்டும்.
+அப்போது $!A, !B, \Gamma \Sequent \Delta$
+உம் ஓர் அடிக்கோள்; வேண்டிய
+!!{proof}~$\pi'$ கிடைத்தது.
+அதன் !!{height} உம்~$0$.
+
+% SEGMENT OLP-0701-S04
+$n>0$ எனில், அது ஓர் அனுமானத்தில்
+முடிகிறது. உயரம்~$n$ க்கான
+கூற்றை நிறுவ வேண்டும்; ஆனால்
+சூழல் வேறுபட்டாலும் உயரம்~$<n$
+உடைய எந்த !!{proof} க்கும்
+அது மெய் என்று கருதலாம்.
+வேறு சொற்களில்,
+எந்த $k<n$, எந்த $\Pi$, $\Lambda$
+ஆகியவற்றுக்கும்,
+$!A \land !B, \Pi \Sequent \Lambda$
+என்பதற்கு !!{height}~$k$
+உடைய !!a{proof} இருந்தால்,
+$!A, !B, \Pi \Sequent \Lambda$
+என்பதற்கு !!{height}~$\le k$
+உடைய !!a{proof} உண்டு.
+
+இரு நிலைகள் உள்ளன:
+இடப்புறம் உள்ள $!A \land !B$
+முதன்மை வாய்பாடாகவோ,
+அவ்வாறு இல்லாமலோ இருக்கும்.
+அது முதன்மையானால்,
+கடைசி அனுமானம்
+\LeftR{\land}; உடனடித்
+துணை-!!{proof}~$\pi_1$
+$!A, !B, \Gamma \Sequent \Delta$
+இல் முடிகிறது.
+$\pheight{\pi_1} < \pheight{\pi}$
+என்பதால் இந்நிலையில்
+கூற்று உடனே கிடைக்கிறது.
+
+% SEGMENT OLP-0701-S05
+$!A \land !B$ முதன்மை
+வாய்பாடல்ல எனில்,
+வேறு ஓர் !!{formula}
+முதன்மையாக இருக்கும்;
+$!A \land !B$ கடைசி
+அனுமானத்தின் சூழலில் இருக்கும்.
+அப்போது கடைசி விதி~$R$
+இன் உடனடித் துணை-!!{proof}s
+மீது தொகுத்தறிதல் கருதுகோளைப்
+பயன்படுத்தலாம். இதனால்
+!!a{proof}~$\pi_1'$
+அல்லது !!{proof}s~$\pi_1'$,
+$\pi_2'$ கிடைக்கும்; அவற்றின்
+!!{height} கள் $\pi$ இன்
+உடனடித் துணை-!!{proof}s இன்
+உயரங்களை மீறாது. $\pi_1'$,
+$\pi_2'$ ஆகியவற்றின்
+இறுதித் தொடரணிகளின்
+இடச் சூழலில் $!A \land !B$
+க்குப் பதிலாக $!A, !B$
+இருக்கும். விதி~$R$ ஐ
+மீண்டும் பயன்படுத்தி
+நிறுவல்~$\pi'$ ஐப் பெறலாம்.
+எடுத்துக்காட்டாக, $\pi$,
+\LeftR{\lif} இல்
+முடிகிறது என்க:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$!A \land !B, \Gamma' \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$!A \land !B, \Gamma', !D \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!A \land !B, \Gamma', !C \lif !D \fCenter \Delta$
+\DisplayProof
+\]
+
+% SEGMENT OLP-0701-S06
+இங்கு இடப்புறம் உள்ள
+$!C \lif !D$ முதன்மை
+வாய்பாடு; இடச் சூழல்
+$!A \land !B, \Gamma'$
+(அதாவது $\Gamma = \Gamma', !C \lif !D$).
+தொகுத்தறிதல் கருதுகோளால்,
+முறையே $!A, !B, \Gamma' \Sequent
+\Delta, !C$ மற்றும்
+$!A, !B, \Gamma', !D \Sequent \Delta$
+என்பவற்றுக்கான !!{proof}s
+$\pi_1'$, $\pi_2'$ கிடைக்கும்.
+இந்த இரு தொடரணிகளையும்
+\LeftR{\lif} இன்
+முன்கூற்றுகளாக மீண்டும்
+பயன்படுத்தி~$\pi'$ ஐப்
+பெறலாம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$!A, !B, \Gamma' \fCenter \Delta, !C$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$!A, !B, \Gamma', !D \fCenter \Delta$
+\RightLabel{\LeftR{\lif}}
+\BinaryInf$!A, !B, \Gamma', !C \lif !D \fCenter \Delta$
+\DisplayProof
+\]
+வரையறைப்படி,
+\begin{align*}
+\pheight{\pi} & = \max(\pheight{\pi_1}, \pheight{\pi_2}) + 1\\
+\pheight{\pi'} & = \max(\pheight{\pi_1'}, \pheight{\pi_2'}) + 1
+\intertext{மேலும் தொகுத்தறிதல் கருதுகோளின்படி,}
+\pheight{\pi_1'} & \le \pheight{\pi_1}\\
+\pheight{\pi_2'} & \le \pheight{\pi_2}
+\intertext{எனவே,}
+\pheight{\pi'} & \le \pheight{\pi}.
+\end{align*}
+\end{proof}
+
+% SEGMENT OLP-0701-S07
+\begin{prob}
+\RightR{\lif} க்கு
+\olref{lem:G3c-invert} இன்
+நிறுவலைத் தருக.
+\end{prob}
+
+% SEGMENT OLP-0701-S08
+\begin{lem}\ollabel{lem:invert-quant}
+\RightR{\lforall},
+\LeftR{\lexists}
+ஆகிய விதிகள்,
+பின்வரும் பொருளில்
+!!{height}-பேணும்
+மீளாக்கத்தக்கவை:
+\begin{enumerate}
+  \item $\Log{G3c} \Proves[n] \Gamma \Sequent \Delta,
+  \lforall[x][!A(x)]$ எனில்,
+  $\Log{G3c} \Proves[n] \Gamma \Sequent
+  \Delta, !A(c)$; மேலும்
+  \item $\Log{G3c} \Proves[n] \lexists[x][!A(x)], \Gamma \Sequent
+  \Delta$ எனில்,
+  $\Log{G3c} \Proves[n] !A(c), \Gamma \Sequent \Delta$.
+\end{enumerate}
+இங்கு முறையே $\Gamma$, $\Delta$,
+$\lforall[x][!A(x)]$ அல்லது
+$\lexists[x][!A(x)]$ ஆகியவற்றில்
+வராத எந்த $c$ ஐயும்
+எடுத்துக்கொள்ளலாம்.
+\end{lem}
+
+% SEGMENT OLP-0701-S09
+\begin{proof}
+  (1) ஐ நிறுவுவோம்;
+  (2) பயிற்சியாக விடப்படுகிறது.
+  வாதம் \olref{lem:G3c-invert}
+  இன் நிறுவலைப் போன்றது.
+  தொகுத்தறிதல் படியிலும்
+  இரண்டு நிலைகள் உள்ளன.
+  $\lforall[x][!A(x)]$
+  முதன்மை வாய்பாடாக
+  இருக்கும் நிலை எளிது:
+  கடைசி $\RightR{\lforall}$
+  அனுமானத்தின் முன்கூற்று
+  வேண்டிய $\Gamma
+  \Sequent \Delta, !A(a)$
+  என்ற வடிவில் உள்ளது;
+  அதில் முடியும் உடனடித்
+  துணை-!!{proof}~$\pi_1$
+  க்கு $\pheight{\pi_1}
+  < \pheight{\pi}$.
+  தனிமாறி நிபந்தனையால்
+  $a$, $\Gamma$, $\Delta$
+  அல்லது $\lforall[x][!A(x)]$
+  இல் வராது.
+  $\pi_1$ ஒழுங்கானது
+  எனக் கொள்ளலாம்;
+  ஆகவே
+  \olref[qua]{lem:subst-regular}
+  படி $\Subst{\pi_1}{c}{a}$
+  என்பது அதே
+  !!{height} உடைய
+  $\Gamma \Sequent \Delta,
+  !A(c)$ என்பதற்கான
+  !!a{proof}.
+
+% SEGMENT OLP-0701-S10
+  இரண்டாம் நிலையில்,
+  $\lforall[x][!A(x)]$
+  கடைசி அனுமானத்தில்
+  முதன்மையல்ல; வேறு
+  வாய்பாடு முதன்மை.
+  மீண்டும் ஓர் எடுத்துக்காட்டைப்
+  பார்ப்போம். கடைசி அனுமானம்
+  ~\RightR{\land} என்க.
+  $\Delta$ வில் $!B \land !C$
+  என்ற வடிவிலான ஓர்
+  !!{formula} முதன்மையாக
+  இருக்கும். !!{proof}~$\pi$
+  இவ்வாறு முடிகிறது:
+  \[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', \lforall[x][!A(x)], !B$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma \fCenter \Delta', \lforall[x][!A(x)], !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', \lforall[x][!A(x)], !B \land !C$
+\DisplayProof
+\]
+  இங்கு $\Delta = \Delta', !B \land !C$.
+  $c$ என்பது $\Delta$ வில்
+  வராத !!a{constant} என்க;
+  அப்போது அது
+  $\Delta', !B$
+  இலோ $\Delta', !C$
+  இலோ வராது.
+  எனவே தொகுத்தறிதல்
+  கருதுகோள் $\pi_1$,
+  ~$\pi_2$ ஆகியவற்றுக்குப்
+  பொருந்தும். இதனால்
+  $\pheight{\pi_1'} \le
+  \pheight{\pi_1}$
+  மற்றும்
+  $\pheight{\pi_2'} \le
+  \pheight{\pi_2}$
+  உடைய !!{proof}s~$\pi_1'$,
+  $\pi_2'$ கிடைக்கும்.
+  வேண்டிய $\Gamma \Sequent
+  \Delta, !A(c)$
+  என்பதன் !!{proof}~$\pi'$
+  இதோ:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta', !A(c), !B$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta', !A(c), !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', !A(c), !B \land !C$
+\DisplayProof
+\]
+  இதன் $\pheight{\pi'} =
+  \max(\pheight{\pi_1'},
+  \pheight{\pi_2'})+1
+  \le \pheight{\pi}$.
+\end{proof}
+
+% SEGMENT OLP-0701-S11
+வெட்டுநீக்கத் தேற்றத்தின் நிரூபணத்தில்
+\Olref{lem:G3c-invert} முக்கியப் பங்கு வகிக்கிறது.
+அதைக் கொண்டு பின்வருவதையும் காட்டலாம்:
+
+\begin{prop}\ollabel{prop:G3c-cont-adm}
+\Log{G1c} இன் சுருக்க விதிகளான
+\LeftR{\Contraction}, \RightR{\Contraction}
+ஆகியவை \Log{G3c} இல்
+!!{height}-பேணும் வகையில் ஏற்கத்தக்கவை.
+\end{prop}
+
+% SEGMENT OLP-0701-S12
+\begin{proof}
+\RightR{\Contraction}, \LeftR{\Contraction}
+ஆகிய இரண்டிற்கும் ஒரே நேரத்தில் வாதிடுவோம்.
+$\pi$ என்பது \Log{G3c} இல்
+$\Gamma \Sequent \Delta, !A, !A$
+அல்லது $!A, !A, \Gamma \Sequent \Delta$
+என்பதற்கான !!a{proof} என்க.
+முறையே $\Gamma \Sequent \Delta, !A$
+அல்லது $!A, \Gamma \Sequent \Delta$
+என்பதற்கும் $\pheight{\pi'} \le
+\pheight{\pi}$ உடைய \Log{G3c}-!!{proof}~$\pi'$
+உண்டு என்பதைக் காட்ட வேண்டும்.
+$n = \pheight{\pi}$ மீது தொகுத்தறிதல் செய்வோம்.
+
+% SEGMENT OLP-0701-S13
+$n=0$ எனில் $\pi$ ஓர் அடிக்கோளே.
+$\Gamma \Sequent \Delta, !A, !A$
+\Log{G3c} இன் அடிக்கோள் எனில்,
+$\Gamma \Sequent \Delta, !A$ உம் அடிக்கோள்தான்:
+ஏனெனில் அணு வாய்பாடான $!C$ ஒன்று
+$\Gamma$, $\Delta$ இரண்டிலும்
+!!a{element} ஆக இருக்கும்;
+அல்லது $!A$ அணு வாய்பாடாகவும்
+$\Gamma$ வின் !!a{element} ஆகவும் இருக்கும்.
+முடிவுத் தொடர்கோவை $!A, !A, \Gamma \Sequent
+\Delta$ எனிலும் இதே வாதம் பொருந்தும்.
+
+% SEGMENT OLP-0701-S14
+$n>0$ எனில் $\pi$ ஏதோ விதி~$R$ இல் முடிகிறது.
+இந்தக் கடைசி அனுமானத்தில் $!A$ முதன்மையல்ல
+எனில், \olref{lem:G3c-invert} இன் நிரூபணத்தைப் போல,
+$\pi$ இன் உடனடி உட்-!!{proof}s மீது
+தொகுத்தறிதல் கருதுகோளைப் பயன்படுத்தி,
+கிடைத்த !!{proof}(s) மீது அதே விதி~$R$ ஐப்
+பயன்படுத்தி !!a{proof}~$\pi'$ பெறலாம்.
+இங்கு தொகுத்தறிதல் கருதுகோள் இதுதான்:
+$k<n$ !!{height} உடைய
+$\Pi \Sequent \Lambda, !D, !D$
+அல்லது $!D, !D, \Pi \Sequent \Lambda$
+என்பதற்கு !!a{proof} இருந்தால்,
+முறையே $\Pi \Sequent \Lambda, !D$
+அல்லது $!D, \Pi \Sequent \Lambda$
+என்பதற்கு $\le k$ !!{height} உடைய
+!!a{proof} உண்டு. (சூழல்கள் அல்லது
+சுருக்கப்படும் !!{formula} ஆகியவை
+$\Gamma$, $\Delta$, $!A$ விலிருந்து
+வேறுபட்டிருந்தாலும் தொகுத்தறிதல் கருதுகோள்
+பொருந்தும் என்பதைக் கவனிக்கவும்!)
+
+எடுத்துக்காட்டாக $R$ என்பது $\RightR{\land}$
+என்றும் $\pi$ இவ்வாறு முடிகிறது என்றும் கொள்வோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta', !B, !A, !A$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma \fCenter \Delta', !C, !A, !A$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !A, !A$
+\DisplayProof
+\]
+இங்கு $\Delta = \Delta', !B \land !C$.
+தொகுத்தறிதல் கருதுகோளால்,
+முறையே $\Gamma \fCenter \Delta', !B, !A$
+மற்றும் $\Gamma \fCenter \Delta', !C, !A$
+என்பவற்றுக்கான $\pi_1'$, $\pi_2'$ என்னும்
+!!{proof}s கிடைக்கின்றன; மேலும்
+$\pheight{\pi_1'} \le  \pheight{\pi_1}$,
+$\pheight{\pi_2'} \le \pheight{\pi_2}$.
+வேண்டிய !!{proof}~$\pi'$ இதோ:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta', !B, !A$
+\AxiomC{}
+\RightLabel{$\pi_2'$}
+\Deduce$\Gamma \fCenter \Delta', !C, !A$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta', !B \land !C, !A$
+\DisplayProof
+\]
+
+% SEGMENT OLP-0701-S15
+கடைசி அனுமானத்தில் $!A$ முதன்மை எனில்,
+$\pi$ இன் உடனடி உட்-!!{proof}s மீது
+மீளாக்கத் துணைமுடிவை
+(\olref{lem:G3c-invert}) பயன்படுத்துவோம்;
+பின்னர் தொகுத்தறிதல் கருதுகோளையும்,
+மீண்டும் விதி~$R$ ஐயும் பயன்படுத்துவோம்.
+எடுத்துக்காட்டாக, $\pi$ என்பது
+$\Gamma \Sequent \Delta, !A, !A$ ஐ
+நிறுவுகிறது என்றும்,
+$!A \ident (!B \land !C)$ கடைசி
+அனுமானத்தில் முதன்மை என்றும் கொள்வோம்.
+அப்போது $\pi$ இவ்வாறு இருக்கும்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, !B \land !C, !B$
+\AxiomC{}
+\RightLabel{$\pi_2$}
+\Deduce$\Gamma \fCenter \Delta, !B \land !C, !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta, !B \land !C, !B \land !C$
+\DisplayProof
+\]
+$\pi_1$ மீது \olref{lem:G3c-invert} ஐப்
+பயன்படுத்தி, $\Gamma \Sequent \Delta, !B, !B$
+என்பதற்கான !!a{proof}~$\pi_1'$ ஐப் பெறுகிறோம்.
+(அதனால் $\Gamma \Sequent \Delta, !C, !B$
+என்பதற்கான !!a{proof} உம் கிடைக்கும்;
+ஆனால் அது இங்கு தேவையில்லை.)
+அதேபோல் $\pi_2$ மீது
+\olref{lem:G3c-invert} ஐப் பயன்படுத்தி,
+$\Gamma \Sequent \Delta, !C, !C$
+என்பதற்கான !!a{proof}~$\pi_2'$ ஐப் பெறுகிறோம்.
+\RightR{\land} இன் மீளாக்கம்
+!!{height}-பேணுவது என்பதால்,
+$\pheight{\pi_1'} \le  \pheight{\pi_1} < \pheight{\pi}$
+மற்றும்
+$\pheight{\pi_2'} \le  \pheight{\pi_2} < \pheight{\pi}$.
+எனவே $\pi_1'$, $\pi_2'$ மீது தொகுத்தறிதல்
+கருதுகோள் பொருந்தும்: முறையே
+$\Gamma \Sequent \Delta, !B$,
+$\Gamma \Sequent \Delta, !C$
+என்பவற்றுக்கான !!{proof}s~$\pi_1''$,
+$\pi_2''$ உள்ளன; அவற்றுக்கு
+$\pheight{\pi_1''} \le \pheight{\pi_1'}
+\le \pheight{\pi_1}$ மற்றும்
+$\pheight{\pi_2''} \le \pheight{\pi_2'}
+\le \pheight{\pi_2}$.
+ஆகவே !!{proof}~$\pi'$ இதுவாகும்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma \fCenter \Delta, !B$
+\AxiomC{}
+\RightLabel{$\pi_2''$}
+\Deduce$\Gamma \fCenter \Delta, !C$
+\RightLabel{\RightR{\land}}
+\BinaryInf$\Gamma \fCenter \Delta, !B \land !C$
+\DisplayProof
+\]
+இங்கு $\pheight{\pi'} \le \pheight{\pi}$.
+
+% SEGMENT OLP-0701-S16
+முதன்மை !!{formula} அளவையீட்டைக் கொண்டிருந்தால்,
+அதற்குரிய விதிகளில் தனிக் கவனம் தேவை.
+
+$!A \ident \lforall[x][!B(x)]$
+வலப்புறத்தில் முதன்மை என்க.
+அப்போது $\pi$ இவ்வாறு முடிகிறது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, \lforall[x][!B(x)], !B(a)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!B(x)], \lforall[x][!B(x)]$
+\DisplayProof
+\]
+\olref{lem:invert-quant} படி,
+$\Gamma \fCenter \Delta,
+\lforall[x][!B(x)], !B(a)$ இல்
+வராத எந்த $c$ க்கும்,
+$\Gamma \fCenter \Delta, !B(c), !B(a)$
+என்பதற்கான $\le \pheight{\pi_1}$
+!!{height} உடைய !!a{proof}~$\pi_1'$ உள்ளது.
+$\pi_1'$ ஒழுங்கானது எனக் கொள்ளலாம்;
+எனவே \olref[qua]{lem:subst-regular} படி
+!!{proof} $\Subst{\pi_1'}{a}{c}$ என்பது
+$\Gamma \fCenter \Delta, !B(a), !B(a)$
+என்பதற்கான, $\le \pheight{\pi_1}$
+!!{height} உடைய !!a{proof}.
+இப்போது தொகுத்தறிதல் கருதுகோளால்
+$\Gamma \fCenter \Delta, !B(a)$
+என்பதற்கான !!a{proof}~$\pi_1''$ கிடைக்கிறது.
+அதன் மீது \RightR{\lforall} விதியைப்
+பயன்படுத்தி $\pi'$ ஐப் பெறுகிறோம்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1''$}
+\Deduce$\Gamma \fCenter \Delta, !B(a)$
+\RightLabel{\RightR{\lforall}}
+\UnaryInf$\Gamma \fCenter \Delta, \lforall[x][!B(x)]$
+\DisplayProof
+\]
+இங்கு $\pheight{\pi'} \le \pheight{\pi}$.
+
+% SEGMENT OLP-0701-S17
+இப்போது $!A \ident \lexists[x][!B(x)]$
+வலப்புறத்தில் முதன்மை என்க.
+அப்போது $\pi$ இவ்வாறு உள்ளது:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1$}
+\Deduce$\Gamma \fCenter \Delta, \lexists[x][!B(x)], \lexists[x][!B(x)], !B(t)$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$\Gamma \fCenter \Delta, \lexists[x][!B(x)], \lexists[x][!B(x)]$
+\DisplayProof
+\]
+$\pi_1$ மீது தொகுத்தறிதல் கருதுகோள்
+பொருந்தும். அதனால் $\Gamma \Sequent \Delta,
+\lexists[x][!B(x)], !B(t)$ என்பதற்கான
+!!a{proof}~$\pi_1'$ கிடைக்கும்.
+(இங்கு மீளாக்கத் துணைமுடிவு தேவையில்லை
+என்பதைக் கவனிக்கவும்!)
+அப்போது !!{proof}~$\pi'$ இதுவாகும்:
+\[
+\AxiomC{}
+\RightLabel{$\pi_1'$}
+\Deduce$\Gamma \fCenter \Delta,  \lexists[x][!B(x)], !B(t)$
+\RightLabel{\RightR{\lexists}}
+\UnaryInf$\Gamma \fCenter \Delta, \lexists[x][!B(x)]$
+\DisplayProof
+\]
+இங்கு $\pheight{\pi'} \le \pheight{\pi}$.
+\end{proof}
+
+% SEGMENT OLP-0701-S18
+\begin{prob}
+\LeftR{\Contraction} க்கான
+\olref{prop:G3c-cont-adm} இன் நிரூபணத்தை
+வரைந்து காட்டுக. $!A \ident (!B \land !C)$
+மற்றும் $!A \ident (!B \lif !C)$
+ஆகிய நிலைகளை விவரிக்கவும்.
+\end{prob}
+
+\begin{prob}
+எஞ்சிய அளவையீட்டு நிலைகளில், அதாவது
+$!A \ident \lforall[x][!B(x)]$
+மற்றும் $!A \ident \lexists[x][!B(x)]$
+எனும்போது, \LeftR{\Contraction} க்கான
+\olref{prop:G3c-cont-adm} இன் நிரூபணத்தை
+வரைந்து காட்டுக.
+\end{prob}
+
+\end{document}
