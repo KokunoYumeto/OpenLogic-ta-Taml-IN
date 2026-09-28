@@ -1,0 +1,28 @@
+{
+  "schema": "openlogic-tamil-complete-722-pdf-navigation/1",
+  "status": "pass",
+  "source_pdf_sha256": {
+    "main": "b92e14376c897a2d2fda39c06317ea08b509395cc50cf05c6907dc6f7c3933ec",
+    "companion": "dcb173a7cfc84ba3cbd4ef94026dfb9b0fb2c6123c1c7a4e3b4fb1e550bdf4dd"
+  },
+  "combined_pdf": {
+    "path": "readers/openlogic-ta-Taml-IN-complete-722.pdf",
+    "bytes": 8942241,
+    "sha256": "47cf695547a5b8d68f4cb15a2645e7f85950da73215a56b7d0adfc343b00c9aa"
+  },
+  "counts": {
+    "page_streams_identical": 1227,
+    "local_links_checked": 2797,
+    "cross_volume_links_checked": 26,
+    "external_actions_preserved": 58,
+    "main_outline_entries_checked": 688,
+    "companion_outline_entries_checked": 30
+  },
+  "repaired_appendix_toc_targets": {
+    "chapter*.4": 1174,
+    "chapter*.205": 1212,
+    "section*.206": 1213,
+    "section*.244": 1218,
+    "section*.271": 1225
+  }
+}

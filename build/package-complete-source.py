@@ -18,8 +18,11 @@ ZIP_TIME = (2026, 9, 28, 0, 0, 0)
 SUPPORT = [
     "build/tamil-complete.tex", "build/tamil-source-companion.tex",
     "build/tamil-complete-direct.tex", "build/tamil-source-companion-direct.tex",
+    "build/tamil-complete-722-direct.tex", "build/tamil-complete-722-direct.qa.json",
     "build/build-tamil.ps1", "build/build-epub-html.ps1",
-    "build/assemble-complete-722-reader.py", "build/assemble-complete-722-epub.py",
+    "build/assemble-complete-722-reader.py", "build/audit-complete-722-reader.py",
+    "build/assemble-complete-722-tex.py", "build/assemble-complete-722-epub.py",
+    "build/complete-722-pdf-navigation-qa.json",
     "build/package-complete-source.py", "build/stage-complete-release.py",
     "epub/readers.json", "epub/package_epub.py", "epub/audit_epub.py", "epub/requirements.txt", "epub/README.md",
     "README.md", "README.en.md", "LICENSE.md", "NOTICE.md",
@@ -43,6 +46,7 @@ STATE_EVIDENCE = [
     "DIRECT-RENDER-EQUIVALENCE-QA.json", "ALL-PAGE-LAYOUT-SCAN-QA.json",
     "ALL-PAGE-VISUAL-REVIEW.md",
     "COMPLETE-722-READER-RECEIPT.json", "COMPLETE-722-VISUAL-QA.json",
+    "COMPLETE-722-VISUAL-QA-V2.json", "TEX-COMPLETE-722-DIRECT.json",
     "EPUB-AUDIT-COMPLETE_MAIN.json", "EPUB-AUDIT-COMPLETE_COMPANION.json",
     "EPUB-AUDIT-COMPLETE_722.json",
 ]
@@ -82,7 +86,7 @@ manifest = {
     "source_revision": SOURCE_REVISION,
     "locale": "ta-Taml-IN",
     "scope": "உறையவைக்கப்பட்ட 722 உள்ளடக்க அலகுகள்: ஒரே வாசிப்பு நூலின் முதன்மைப் பகுதியில் 695, மாற்று மூலப்பிரிவு இணைப்பில் 27",
-    "editable_masters": ["build/tamil-complete-direct.tex", "build/tamil-source-companion-direct.tex"],
+    "editable_masters": ["build/tamil-complete-722-direct.tex", "build/tamil-complete-direct.tex", "build/tamil-source-companion-direct.tex"],
     "build_dependencies": "இத்தொகுப்பில் பகுதிவாரித் தமிழ் மூலம், உறையவைக்கப்பட்ட மூலப் பாணிக் கோப்புகள், படங்கள், நூற்பட்டியல் உள்ளன; கணினியில் தமிழ் மற்றும் இலத்தீன் எழுத்துருக்களும் TeX நிறுவலும் தேவை.",
     "files": [],
 }
@@ -112,6 +116,11 @@ with zipfile.ZipFile(DESTINATION) as archive:
     ]
     if len(source_units) != 722 or len({unit["unit_id"] for unit in source_units}) != 722:
         raise RuntimeError("Frozen source manifest does not identify 722 unique units")
+    cumulative = json.loads(archive.read("build/tamil-complete-722-direct.qa.json"))
+    cumulative_path = "build/tamil-complete-722-direct.tex"
+    if (cumulative["source_units"] != 722 or cumulative["aligned_segment_markers"] != 2242
+            or cumulative["output"]["sha256"] != hash_bytes(archive.read(cumulative_path))):
+        raise RuntimeError("Cumulative full-text TeX is missing or fails its unit and segment audit")
     for unit in source_units:
         source = "upstream/" + unit["source_path"]
         target = "translation/" + unit["source_path"]

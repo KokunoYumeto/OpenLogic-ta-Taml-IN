@@ -16,8 +16,9 @@ STATE = Path(r"C:\interlanguage-task-state\openlogic-ta-Taml-IN")
 DEST = REPO / "release" / "complete-722-assets"
 ASSETS = [
     ("01-openlogic-ta-Taml-IN-complete-722.pdf", "readers/openlogic-ta-Taml-IN-complete-722.pdf"),
-    ("02-openlogic-ta-Taml-IN-complete-722.epub", "readers/openlogic-ta-Taml-IN-complete-722.epub"),
+    ("02-openlogic-ta-Taml-IN-complete-722.tex", "build/tamil-complete-722-direct.tex"),
     ("03-openlogic-ta-Taml-IN-complete-source.zip", "release/openlogic-ta-Taml-IN-complete-source.zip"),
+    ("04-openlogic-ta-Taml-IN-complete-722.epub", "readers/openlogic-ta-Taml-IN-complete-722.epub"),
     ("tamil-complete.pdf", "readers/tamil-complete.pdf"),
     ("openlogic-ta-Taml-IN-complete-main.epub", "readers/openlogic-ta-Taml-IN-complete-main.epub"),
     ("tamil-complete.tex", "build/tamil-complete-direct.tex"),
@@ -48,6 +49,8 @@ direct = read_state("COMPLETE-DIRECT-TEX-QA.json")
 equivalence = read_state("DIRECT-RENDER-EQUIVALENCE-QA.json")
 layout = read_state("ALL-PAGE-LAYOUT-SCAN-QA.json")
 source_package = read_state("SOURCE-PACKAGE-RECEIPT.json")
+cumulative = json.loads((REPO / "build" / "tamil-complete-722-direct.qa.json").read_text(encoding="utf-8"))
+navigation = json.loads((REPO / "build" / "complete-722-pdf-navigation-qa.json").read_text(encoding="utf-8"))
 if direct["result"] != "pass" or direct["aligned_segment_markers"] != 2242:
     raise RuntimeError("Full direct-source assembly is not verified")
 if equivalence["result"] != "pass-with-localized-raster-differences":
@@ -57,6 +60,9 @@ if layout["result"] != "scan-complete":
 if not (source_package["zip_readback_pass"] and source_package["entry_sha256_pass"]
         and source_package["source_target_units_verified"] == 722):
     raise RuntimeError("Complete source archive has not passed readback")
+if cumulative["source_units"] != 722 or cumulative["aligned_segment_markers"] != 2242:
+    raise RuntimeError("Cumulative direct TeX coverage is incomplete")
+check_file(REPO / cumulative["output"]["path"], cumulative["output"])
 
 direct_rows = {row["volume"]: row for row in direct["artifacts"]}
 for volume, reader_name, modular_receipt, direct_receipt in (
@@ -93,29 +99,37 @@ with zipfile.ZipFile(source_path) as archive:
     for path in ("README.md", "README.en.md", "epub/README.md", "epub/readers.json",
                  "epub/package_epub.py", "epub/audit_epub.py", "epub/requirements.txt",
                  "build/assemble-complete-722-reader.py", "build/assemble-complete-722-epub.py",
+                 "build/assemble-complete-722-tex.py", "build/audit-complete-722-reader.py",
                  "build/stage-complete-release.py",
                  "build/tamil-complete.tex", "build/tamil-source-companion.tex",
                  "build/tamil-complete-direct.tex", "build/tamil-source-companion-direct.tex",
+                 "build/tamil-complete-722-direct.tex", "build/tamil-complete-722-direct.qa.json",
+                 "build/complete-722-pdf-navigation-qa.json",
                  "evidence/translation-decisions/START_HERE.md",
                  "evidence/translation-decisions/TRANSLATION_DECISIONS_TAMIL.md",
                  "evidence/translation-decisions/DECISIONS.json.gz",
                  "evidence/translation-decisions/VARIANT_ASSESSMENT.md",
                  "evidence/translation-decisions/TRANSLATION_DECISION_QA.json"):
         check_file(REPO / path, listed[path])
-    for name in ("COMPLETE-722-VISUAL-QA.json", "EPUB-AUDIT-COMPLETE_722.json"):
+    for name in ("COMPLETE-722-VISUAL-QA.json", "COMPLETE-722-VISUAL-QA-V2.json",
+                 "TEX-COMPLETE-722-DIRECT.json", "EPUB-AUDIT-COMPLETE_722.json"):
         archive_path = f"evidence/{name}"
         check_file(STATE / name, listed[archive_path])
         if digest(STATE / name) != hashlib.sha256(archive.read(archive_path)).hexdigest():
             raise RuntimeError(f"Source archive evidence changed: {name}")
 
 combined_pdf = read_state("COMPLETE-722-READER-RECEIPT.json")
-visual = read_state("COMPLETE-722-VISUAL-QA.json")
+visual = read_state("COMPLETE-722-VISUAL-QA-V2.json")
 if (combined_pdf["source_units"]["total"] != 722 or combined_pdf["remaining_remote_pdf_actions"] != 0
-        or combined_pdf["cross_volume_links_rewritten"] != 26 or visual["status"] != "pass"):
+        or combined_pdf["cross_volume_links_rewritten"] != 26 or visual["status"] != "pass"
+        or navigation["status"] != "pass"
+        or navigation["counts"]["main_outline_entries_checked"] + navigation["counts"]["companion_outline_entries_checked"] != 718):
     raise RuntimeError("Combined 722-unit PDF validation is incomplete")
 check_file(REPO / combined_pdf["output"]["path"], combined_pdf["output"])
 if visual["pdf"]["sha256"] != combined_pdf["output"]["sha256"]:
     raise RuntimeError("Combined 722-unit PDF visual check is stale")
+if navigation["combined_pdf"]["sha256"] != combined_pdf["output"]["sha256"]:
+    raise RuntimeError("Combined 722-unit PDF navigation check is stale")
 for slug, expected_units in (("COMPLETE_MAIN", 695), ("COMPLETE_COMPANION", 27), ("COMPLETE_722", 722)):
     audit = read_state(f"EPUB-AUDIT-{slug}.json")
     if (audit["status"] != "pass" or audit["epubcheck"]["messages"] != 0

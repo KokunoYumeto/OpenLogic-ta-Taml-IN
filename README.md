@@ -4,9 +4,10 @@
 
 உறையவைக்கப்பட்ட மூலத்தின் **722 உள்ளடக்க அலகுகளும்** தமிழில் மொழிபெயர்க்கப்பட்டு, 2,242 பகுதிகளாக மூலத்துடன் இணைக்கப்பட்டுள்ளன. ஒரே முழு வாசிப்பு நூலில் முதன்மைப் பகுதியின் 695 அலகுகளும், பெயரிடப்பட்ட இணைப்பின் 27 மாற்று மூலப்பிரிவு அலகுகளும் உள்ளன. PDF மற்றும் மறுஓட்ட EPUB 3.3 பதிப்புகள் சரிபார்க்கப்பட்டுள்ளன.
 
-- [முழு 722 அலகுத் தமிழ் PDF](readers/openlogic-ta-Taml-IN-complete-722.pdf): 1,227 A4 பக்கங்கள்; இணைப்பிற்கும் முதன்மை நூலுக்கும் செல்லும் உள்ளக இணைப்புகள்.
+- [முழு 722 அலகுத் தமிழ் PDF](readers/openlogic-ta-Taml-IN-complete-722.pdf): 1,227 A4 பக்கங்கள்; இணைப்பிற்கும் முதன்மை நூலுக்கும் செல்லும் சோதிக்கப்பட்ட உள்ளக இணைப்புகள்.
+- [முழு 722 அலகுகளின் ஒரே திருத்தக்கூடிய LaTeX](https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v1.1.1-complete-722/02-openlogic-ta-Taml-IN-complete-722.tex): 722 அலகுகளின் பாடப்பொருள் இக்கோப்பில் நேரடியாக உள்ளது; [களஞ்சியப் பிரதியும்](build/tamil-complete-722-direct.tex) கிடைக்கிறது.
+- [முழுத் திருத்தக்கூடிய மூலத் தொகுப்பு](https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v1.1.1-complete-722/03-openlogic-ta-Taml-IN-complete-source.zip): ஒரே முழு உரை LaTeX, இரண்டு தனிப் பகுதி LaTeX கோப்புகள், பகுதிவாரித் தமிழ் மூலம், உறையவைக்கப்பட்ட ஆங்கில மூலம், படங்கள், நூற்பட்டியல், கட்டமைப்பு நிரல்கள், சான்றுகள்.
 - [முழு 722 அலகுத் தமிழ் EPUB](readers/openlogic-ta-Taml-IN-complete-722.epub): MathML வாய்பாடுகள், வழிசெலுத்தல், இணைப்பு ஆகியவை கொண்ட மறுஓட்ட வாசிப்பு நூல்.
-- [முழுத் திருத்தக்கூடிய மூலத் தொகுப்பு](https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v1.1.0-complete-722/03-openlogic-ta-Taml-IN-complete-source.zip): இரு முழு உரை LaTeX கோப்புகள், பகுதிவாரித் தமிழ் மூலம், உறையவைக்கப்பட்ட ஆங்கில மூலம், படங்கள், நூற்பட்டியல், கட்டமைப்பு நிரல்கள், சான்றுகள்.
 
 தனித்த பகுதிப் பிரதிகளும் வழங்கப்படுகின்றன:
 
@@ -64,7 +65,13 @@ Windows இல் XeLaTeX, memoir, fontspec, accsupp மற்றும் ம�
 ```powershell
 build/build-tamil.ps1 -Master tamil-complete.tex -Passes 3 -BibTeX -ReceiptName TEX-COMPLETE-RECEIPT
 build/build-tamil.ps1 -Master tamil-source-companion.tex -Passes 3 -ReceiptName TEX-COMPANION-RECEIPT
+python build/assemble-complete-722-reader.py --validation current-build
+python build/audit-complete-722-reader.py --main-pdf build/tamil-complete.pdf --companion-pdf build/tamil-source-companion.pdf
 ```
+
+முதன்மை நூலை முதலில் கட்டவும்; துணைநூல் அதன் மேற்கோள் இடங்களைப் பயன்படுத்துகிறது. `build/build-tamil.ps1` உருவாக்கும் `build/tamil-complete.pdf`, `build/tamil-source-companion.pdf`, இரு வெற்றிப் பதிவுகள் ஆகியவற்றையே அடுத்த நிரல் வாசிக்கிறது. புதிய கட்டமைப்பின் பக்க எண்ணிக்கை, கட்டமைப்புப் பதிவுகள், அனைத்து 2,823 உள்நூல் மற்றும் குறுக்கு இணைப்புகளின் இலக்கு ஆகியவை சோதிக்கப்படும்; பழைய PDF-இன் SHA256-ஐ அது கட்டாயப்படுத்தாது. `pypdf` மற்றும் `pdftotext` தேவை. TeX தயாரித்த PDF-களின் தேதி/கோப்புத் தகவல் மாறக்கூடும்; ஆகவே புதிய கட்டமைப்பின் பைட்டுகள் வெளியிடப்பட்ட PDF-ஐ அப்படியே ஒத்திருப்பதாகக் கூறப்படவில்லை.
+
+**வெளியிடப்பட்ட ஒரே PDF-ஐ அப்படியே மீட்டமைக்க**, அதே `v1.1.1-complete-722` வெளியீட்டிலிருந்து `tamil-complete.pdf`, `tamil-source-companion.pdf` ஆகியவற்றை `readers/` இல் அசல் பெயர்களுடன் வைத்து, `python build/assemble-complete-722-reader.py --validation release-pinned` மற்றும் `python build/audit-complete-722-reader.py` இயக்குக. முதல் நிரல் மூலத் தொகுப்பிலுள்ள வரலாற்றுப் பக்கச் சான்றுடன் இந்த இரண்டு வெளியீட்டுக் கோப்புகளின் SHA256-ஐ ஒப்பிடும். 722 அலகுகளின் ஒரே முழு உரை LaTeX-ஐ மீண்டும் உருவாக்க `python build/assemble-complete-722-tex.py` இயக்குக; அதன் சான்று `build/tamil-complete-722-direct.qa.json`. வெளியீட்டு PDF தனித்த இரண்டு TeX தொகுதிகளின் பக்கங்களை இணைத்ததே; ஒரே LaTeX கோப்பு திருத்தத்திற்கும் மாற்றுக் கட்டமைப்பிற்கும் வழங்கப்படுகிறது.
 
 தனித்த கணக் கோட்பாட்டுப் பிரதிகளுக்கான கட்டளைகள்:
 

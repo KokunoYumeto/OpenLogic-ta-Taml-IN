@@ -1,0 +1,28 @@
+{
+  "schema": "openlogic-tamil-complete-722-direct-tex/1",
+  "status": "source-assembled",
+  "output": {
+    "path": "build/tamil-complete-722-direct.tex",
+    "bytes": 6255755,
+    "sha256": "566ad1d20baeea63bb7705194d091a4dd4e73a4a64c7b1b5bf0d66a4d72bf2c0"
+  },
+  "inputs": [
+    {
+      "path": "build/tamil-complete-direct.tex",
+      "bytes": 6064760,
+      "sha256": "517603e67b445a8ea45fdf1b5128ff581291301d565b223da08200d52d072ec1",
+      "units": 695
+    },
+    {
+      "path": "build/tamil-source-companion-direct.tex",
+      "bytes": 197527,
+      "sha256": "54fc938bc9d9dca0cb1cc76a2f13984efd0a0f0bbb7458bbb9303b1ea629673a",
+      "units": 27
+    }
+  ],
+  "source_units": 722,
+  "unaltered_source_unit_blocks": 722,
+  "aligned_segment_markers": 2242,
+  "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
+  "released_reader_build": "Guarded component builds, then assemble-complete-722-reader.py"
+}
