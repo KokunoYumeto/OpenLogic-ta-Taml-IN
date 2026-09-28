@@ -121,7 +121,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("slug")
     parser.add_argument("--repo", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--state", type=Path, default=Path(r"C:\interlanguage-task-state\openlogic-ta-Taml-IN"))
+    parser.add_argument("--state", type=Path, help="Receipt directory; defaults to build/ in this source tree")
     parser.add_argument(
         "--epubcheck-jar",
         type=Path,
@@ -130,7 +130,8 @@ def main() -> int:
     )
     args = parser.parse_args()
     repo = args.repo.resolve()
-    state = args.state.resolve()
+    state = (args.state or repo / "build").resolve()
+    state.mkdir(parents=True, exist_ok=True)
     reader = load_reader(repo, args.slug)
     epub = repo / "readers" / reader["filename"]
     check(epub.is_file(), f"EPUB does not exist: {epub}")

@@ -73,6 +73,8 @@ python build/audit-complete-722-reader.py --main-pdf build/tamil-complete.pdf --
 
 **வெளியிடப்பட்ட ஒரே PDF-ஐ அப்படியே மீட்டமைக்க**, அதே `v1.1.1-complete-722` வெளியீட்டிலிருந்து `tamil-complete.pdf`, `tamil-source-companion.pdf` ஆகியவற்றை `readers/` இல் அசல் பெயர்களுடன் வைத்து, `python build/assemble-complete-722-reader.py --validation release-pinned` மற்றும் `python build/audit-complete-722-reader.py` இயக்குக. முதல் நிரல் மூலத் தொகுப்பிலுள்ள வரலாற்றுப் பக்கச் சான்றுடன் இந்த இரண்டு வெளியீட்டுக் கோப்புகளின் SHA256-ஐ ஒப்பிடும். 722 அலகுகளின் ஒரே முழு உரை LaTeX-ஐ மீண்டும் உருவாக்க `python build/assemble-complete-722-tex.py` இயக்குக; அதன் சான்று `build/tamil-complete-722-direct.qa.json`. வெளியீட்டு PDF தனித்த இரண்டு TeX தொகுதிகளின் பக்கங்களை இணைத்ததே; ஒரே LaTeX கோப்பு திருத்தத்திற்கும் மாற்றுக் கட்டமைப்பிற்கும் வழங்கப்படுகிறது.
 
+EPUB-இன் முதன்மை, இணைப்பு, ஒருங்கிணைந்த பிரதிகளை உருவாக்கும் சரியான கட்டளை வரிசை [ஆங்கிலக் கட்டமைப்பு வழிகாட்டியில்](README.en.md#build) உள்ளது. இக்கட்டளைகளின் பதிவுகள் திறந்த மூலக் கோப்புறையின் `build/` இல் சேமிக்கப்படும்; உறையவைக்கப்பட்ட மூலப் பட்டியலும் பகுதிகளின் சரிபார்ப்புகளும் ZIP-இன் `evidence/` இல் உள்ளன. வெளியிடப்பட்ட இரு பகுதி EPUB-களையும் முழு PDF-ஐயும் `readers/` இல் வைத்து, TeX4ht-ஐ மீண்டும் இயக்காமல் `python build/assemble-complete-722-epub.py`, `python epub/audit_epub.py complete-722 --epubcheck-jar PATH` கட்டளைகளை இயக்கலாம். இணைப்பு நிரல் பகுதிகளின் SHA256-ஐ சான்றுகளுடன் ஒப்பிடும்.
+
 தனித்த கணக் கோட்பாட்டுப் பிரதிகளுக்கான கட்டளைகள்:
 
 ```powershell

@@ -74,7 +74,22 @@ For a **fresh build from the source ZIP**, run `build/build-tamil.ps1 -Master ta
 
 To **reproduce the exact released combined PDF**, put `tamil-complete.pdf` and `tamil-source-companion.pdf` from the same `v1.1.1-complete-722` release in `readers/` under those names. Run `python build/assemble-complete-722-reader.py --validation release-pinned`, then `python build/audit-complete-722-reader.py`. This route checks the published component hashes against the bundled page-scan evidence and produces the combined release bytes. The single full-text TeX can be regenerated with `python build/assemble-complete-722-tex.py`; its audit is `build/tamil-complete-722-direct.qa.json`. The released combined PDF is assembled from the two component TeX builds, while the one-file TeX is provided for editing and alternative builds.
 
-`build/build-epub-html.ps1` generates the TeX4ht HTML for each volume under the global TeX mutex. `epub/package_epub.py` and `epub/audit_epub.py` package and independently audit each EPUB; `python build/assemble-complete-722-epub.py` then binds their content into one 722-unit EPUB.
+`build/build-epub-html.ps1` generates TeX4ht HTML under the global TeX mutex. From the unpacked source ZIP, the full EPUB sequence is:
+
+```powershell
+Copy-Item .\build\tamil-complete.pdf .\readers\tamil-complete.pdf
+$epubcheckJar = 'C:\path\to\epubcheck-5.3.0.jar'
+.\build\build-epub-html.ps1 -Master tamil-complete.tex -ReaderSlug complete-main -Engine xelatex -ProcessTimeoutMinutes 45
+python epub/package_epub.py complete-main
+python epub/audit_epub.py complete-main --epubcheck-jar $epubcheckJar
+.\build\build-epub-html.ps1 -Master tamil-source-companion.tex -ReaderSlug complete-companion -Engine xelatex -ImportExternalLabels -ProcessTimeoutMinutes 30
+python epub/package_epub.py complete-companion
+python epub/audit_epub.py complete-companion --epubcheck-jar $epubcheckJar
+python build/assemble-complete-722-epub.py
+python epub/audit_epub.py complete-722 --epubcheck-jar $epubcheckJar
+```
+
+Run the PDF build sequence above first, and adjust `$epubcheckJar` to an installed EPUBCheck 5.3.0 JAR. These commands write local receipts to `build/`. The frozen manifest and accepted component audits are included under `evidence/`. To reassemble the released combined EPUB without rerunning TeX4ht, place the two component EPUBs and the complete PDF from this release in `readers/`, then run the last two commands. The assembler verifies each component against its packaged audit hash; the PDF supplies the rendered vocabulary comparison.
 
 For the Reference alphabets reader, run `build/build-tamil.ps1 -Master tamil-reference-alphabets.tex -Passes 3 -ReceiptName TEX-REFERENCE-ALPHABETS-RECEIPT`.
 

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import shutil
 import sys
@@ -22,7 +23,6 @@ from package_epub import (  # noqa: E402
     write_title_page,
 )
 
-STATE = Path(r"C:\interlanguage-task-state\openlogic-ta-Taml-IN")
 COMPONENTS = (
     ("complete-main", "main", "695 அலகுகளைக் கொண்ட முதன்மை நூல்"),
     ("complete-companion", "appendix", "27 மாற்று மூலப்பிரிவு அலகுகளின் இணைப்பு"),
@@ -32,6 +32,14 @@ COMPONENTS = (
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise RuntimeError(message)
+
+
+def load_audit(repo: Path, state: Path, name: str) -> dict:
+    path = state / name
+    if not path.is_file():
+        path = repo / "evidence" / name
+    require(path.is_file(), f"Missing component EPUB audit: {name}")
+    return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
 def safe_name(name: str) -> bool:
@@ -81,13 +89,20 @@ def write_navigation(path: Path, reader: dict, components: list[dict]) -> None:
 
 
 def main() -> int:
-    _, reader = load_configuration(REPO, "complete-722")
-    main_qa = json.loads((STATE / "EPUB-AUDIT-COMPLETE_MAIN.json").read_text(encoding="utf-8"))
-    appendix_qa = json.loads((STATE / "EPUB-AUDIT-COMPLETE_COMPANION.json").read_text(encoding="utf-8"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo", type=Path, default=REPO)
+    parser.add_argument("--state", type=Path, help="Receipt directory; defaults to build/ in this source tree")
+    args = parser.parse_args()
+    repo = args.repo.resolve()
+    state = (args.state or repo / "build").resolve()
+    state.mkdir(parents=True, exist_ok=True)
+    _, reader = load_configuration(repo, "complete-722")
+    main_qa = load_audit(repo, state, "EPUB-AUDIT-COMPLETE_MAIN.json")
+    appendix_qa = load_audit(repo, state, "EPUB-AUDIT-COMPLETE_COMPANION.json")
     qa_by_slug = {"complete-main": main_qa, "complete-companion": appendix_qa}
     require(all(qa["status"] == "pass" and qa["epubcheck"]["messages"] == 0 for qa in qa_by_slug.values()), "Component EPUB audit is incomplete")
 
-    staging = REPO / "epub" / "work" / "complete-722" / "unpacked"
+    staging = repo / "epub" / "work" / "complete-722" / "unpacked"
     if staging.exists():
         shutil.rmtree(staging)
     oebps = staging / "OEBPS"
@@ -100,7 +115,8 @@ def main() -> int:
     visible: list[str] = []
     for slug, prefix, label in COMPONENTS:
         qa = qa_by_slug[slug]
-        source = Path(qa["epub"]["path"])
+        _, component_reader = load_configuration(repo, slug)
+        source = repo / "readers" / component_reader["filename"]
         require(source.is_file() and source.stat().st_size == qa["epub"]["bytes"] and file_record(source)["sha256"] == qa["epub"]["sha256"], f"Audited {slug} EPUB changed")
         with zipfile.ZipFile(source) as archive:
             names = archive.namelist()
@@ -133,11 +149,12 @@ def main() -> int:
             label_text = " ".join("".join(node.itertext()).split())
             if label_text and node.get("id"):
                 headings.append({"level": int(etree.QName(node).localname[1]), "id": node.get("id"), "label": label_text})
-        records.append({"slug": slug, "label": label, "href": f"{prefix}/content/{slug}.xhtml", "headings": headings, "input": qa["epub"]})
+        records.append({"slug": slug, "label": label, "href": f"{prefix}/content/{slug}.xhtml", "headings": headings,
+                        "input": {"path": source.relative_to(repo).as_posix(), **file_record(source)}})
 
-    crosswalk = segment_inventory(REPO, reader, " ".join(visible))
+    crosswalk = segment_inventory(repo, reader, " ".join(visible), state)
     require([row["unit_id"] for row in crosswalk["units"]] == configured_unit_ids(reader), "Combined EPUB does not cover 722 distinct units")
-    crosswalk["reference_pdf_vocabulary"] = reference_pdf_vocabulary(REPO, reader, " ".join(visible))
+    crosswalk["reference_pdf_vocabulary"] = reference_pdf_vocabulary(repo, reader, " ".join(visible))
     require(crosswalk["reference_pdf_vocabulary"] is not None and crosswalk["reference_pdf_vocabulary"]["pass"], "Combined EPUB omits Tamil vocabulary visible in the validated 722-unit PDF")
     crosswalk["component_epub_sha256"] = {row["slug"]: row["input"]["sha256"] for row in records}
 
@@ -160,9 +177,10 @@ def main() -> int:
             svg_paths.add(relative)
     write_opf(oebps / "package.opf", reader, resources, spine, math_paths, svg_paths, all_images_have_alt=True)
     write_container(staging)
-    output = REPO / "readers" / reader["filename"]
+    output = repo / "readers" / reader["filename"]
+    output.parent.mkdir(parents=True, exist_ok=True)
     epub_record = deterministic_zip(staging, output)
-    crosswalk_path = STATE / "EPUB-SOURCE-CROSSWALK-COMPLETE_722.json"
+    crosswalk_path = state / "EPUB-SOURCE-CROSSWALK-COMPLETE_722.json"
     crosswalk_path.write_text(json.dumps(crosswalk, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     receipt = {
         "schema": "openlogic-tamil-complete-722-epub-package/1",
@@ -175,10 +193,10 @@ def main() -> int:
         "navigation_headings": sum(len(row["headings"]) for row in records),
         "rendered_pdf_vocabulary": crosswalk["reference_pdf_vocabulary"],
         "crosswalk": {"path": crosswalk_path.name, **file_record(crosswalk_path)},
-        "epub": {"path": output.relative_to(REPO).as_posix(), **epub_record},
+        "epub": {"path": output.relative_to(repo).as_posix(), **epub_record},
     }
-    (STATE / "EPUB-PACKAGE-COMPLETE_722.json").write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps(receipt, ensure_ascii=False, indent=2))
+    (state / "EPUB-PACKAGE-COMPLETE_722.json").write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(receipt, ensure_ascii=True, indent=2))
     return 0
 
 

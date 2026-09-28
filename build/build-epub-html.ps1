@@ -7,7 +7,7 @@ param(
   [ValidateRange(1,60)][int]$ProcessTimeoutMinutes=12,
   [switch]$ImportExternalLabels,
   [switch]$ResumeMissingGlyph,
-  [string]$StateDirectory='C:\interlanguage-task-state\openlogic-ta-Taml-IN'
+  [string]$StateDirectory=$PSScriptRoot
 )
 
 $ErrorActionPreference='Stop'

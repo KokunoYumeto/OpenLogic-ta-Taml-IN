@@ -198,10 +198,15 @@ def load_configuration(repo: Path, slug: str) -> tuple[dict, dict]:
     return configuration, reader
 
 
-def segment_inventory(repo: Path, reader: dict, visible_text: str) -> dict:
+def segment_inventory(repo: Path, reader: dict, visible_text: str,
+                      state: Path | None = None) -> dict:
     expected_ids = configured_unit_ids(reader)
     expected_set = set(expected_ids)
-    manifest_path = Path(r"C:\interlanguage-task-state\openlogic-ta-Taml-IN\SOURCE_MANIFEST.jsonl")
+    manifest_path = repo / "evidence" / "SOURCE_MANIFEST.jsonl"
+    if not manifest_path.is_file() and state is not None:
+        manifest_path = state / "SOURCE_MANIFEST.jsonl"
+    if not manifest_path.is_file():
+        fail("Frozen source manifest is absent from evidence/ and the selected state directory")
     source_manifest: dict[str, dict] = {}
     for line in manifest_path.read_text(encoding="utf-8-sig").splitlines():
         if line.strip():
@@ -1239,10 +1244,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("slug")
     parser.add_argument("--repo", type=Path, default=Path(__file__).resolve().parents[1])
-    parser.add_argument("--state", type=Path, default=Path(r"C:\interlanguage-task-state\openlogic-ta-Taml-IN"))
+    parser.add_argument("--state", type=Path, help="Receipt directory; defaults to build/ in this source tree")
     arguments = parser.parse_args()
     repo = arguments.repo.resolve()
-    state = arguments.state.resolve()
+    state = (arguments.state or repo / "build").resolve()
+    state.mkdir(parents=True, exist_ok=True)
     _, reader = load_configuration(repo, arguments.slug)
     html_root = repo / "epub" / "work" / reader["slug"] / "html"
     if not html_root.is_dir():
@@ -1290,7 +1296,7 @@ def main() -> int:
         shutil.copyfile(source, destination)
         copied_assets.append(file_record(destination, staging / "OEBPS"))
 
-    crosswalk = segment_inventory(repo, reader, " ".join(visible_text))
+    crosswalk = segment_inventory(repo, reader, " ".join(visible_text), state)
     if not crosswalk["unit_ids_complete"]:
         fail("Source crosswalk is incomplete")
     crosswalk["reference_pdf_vocabulary"] = reference_pdf_vocabulary(repo, reader, " ".join(visible_text))
