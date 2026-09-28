@@ -19,8 +19,9 @@ SUPPORT = [
     "build/tamil-complete.tex", "build/tamil-source-companion.tex",
     "build/tamil-complete-direct.tex", "build/tamil-source-companion-direct.tex",
     "build/build-tamil.ps1", "build/build-epub-html.ps1",
+    "build/assemble-complete-722-reader.py", "build/assemble-complete-722-epub.py",
     "build/package-complete-source.py", "build/stage-complete-release.py",
-    "epub/readers.json", "epub/package_epub.py", "epub/audit_epub.py", "epub/README.md",
+    "epub/readers.json", "epub/package_epub.py", "epub/audit_epub.py", "epub/requirements.txt", "epub/README.md",
     "README.md", "README.en.md", "LICENSE.md", "NOTICE.md",
     "evidence/source-corrections.json",
     "evidence/translation-decisions/START_HERE.md",
@@ -41,6 +42,9 @@ STATE_EVIDENCE = [
     "COMPLETE-READER-ASSEMBLY-QA.json", "COMPLETE-DIRECT-TEX-QA.json",
     "DIRECT-RENDER-EQUIVALENCE-QA.json", "ALL-PAGE-LAYOUT-SCAN-QA.json",
     "ALL-PAGE-VISUAL-REVIEW.md",
+    "COMPLETE-722-READER-RECEIPT.json", "COMPLETE-722-VISUAL-QA.json",
+    "EPUB-AUDIT-COMPLETE_MAIN.json", "EPUB-AUDIT-COMPLETE_COMPANION.json",
+    "EPUB-AUDIT-COMPLETE_722.json",
 ]
 
 
@@ -77,7 +81,7 @@ manifest = {
     "schema": "openlogic-tamil-complete-source-package/1",
     "source_revision": SOURCE_REVISION,
     "locale": "ta-Taml-IN",
-    "scope": "உறையவைக்கப்பட்ட 722 உள்ளடக்க அலகுகள்: முதன்மை நூலில் 695, மூலத் துணைநூலில் 27",
+    "scope": "உறையவைக்கப்பட்ட 722 உள்ளடக்க அலகுகள்: ஒரே வாசிப்பு நூலின் முதன்மைப் பகுதியில் 695, மாற்று மூலப்பிரிவு இணைப்பில் 27",
     "editable_masters": ["build/tamil-complete-direct.tex", "build/tamil-source-companion-direct.tex"],
     "build_dependencies": "இத்தொகுப்பில் பகுதிவாரித் தமிழ் மூலம், உறையவைக்கப்பட்ட மூலப் பாணிக் கோப்புகள், படங்கள், நூற்பட்டியல் உள்ளன; கணினியில் தமிழ் மற்றும் இலத்தீன் எழுத்துருக்களும் TeX நிறுவலும் தேவை.",
     "files": [],

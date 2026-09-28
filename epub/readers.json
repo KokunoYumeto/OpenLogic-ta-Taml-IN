@@ -107,6 +107,17 @@
       "unit_count": 27,
       "complete_edition": true,
       "unit_ids": ["OLP-0643", "OLP-0644", "OLP-0645", "OLP-0646", "OLP-0647", "OLP-0648", "OLP-0649", "OLP-0650", "OLP-0651", "OLP-0652", "OLP-0653", "OLP-0654", "OLP-0660", "OLP-0694", "OLP-0705", "OLP-0708", "OLP-0709", "OLP-0710", "OLP-0714", "OLP-0715", "OLP-0716", "OLP-0717", "OLP-0718", "OLP-0719", "OLP-0720", "OLP-0721", "OLP-0722"]
+    },
+    {
+      "slug": "complete-722",
+      "master": "tamil-complete.tex + tamil-source-companion.tex",
+      "filename": "openlogic-ta-Taml-IN-complete-722.epub",
+      "title": "திறந்த தருக்கவியல்: முழு 722 அலகுத் தமிழ்ப் பதிப்பு",
+      "subtitle": "முதன்மை நூலும் மாற்று மூலப்பிரிவுகளின் இணைப்பும்",
+      "first_unit": 1,
+      "last_unit": 722,
+      "unit_count": 722,
+      "complete_edition": true
     }
   ]
 }

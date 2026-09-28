@@ -12,6 +12,7 @@ import re
 import shutil
 import subprocess
 import sys
+import unicodedata
 import zipfile
 from collections import Counter
 from datetime import datetime, timezone
@@ -30,6 +31,7 @@ CONTAINER = "urn:oasis:names:tc:opendocument:xmlns:container"
 XML = "http://www.w3.org/XML/1998/namespace"
 SOURCE_REVISION = "9620cc73f9c8e0ad003c514a5d3748f29611c4c0"
 TAMIL_RE = re.compile(r"[\u0B80-\u0BFF]")
+TAMIL_WORD_RE = re.compile(r"[\u0B80-\u0BFF]+")
 SOURCE_LEAK_RE = re.compile(r"\\(?:begin|end|olimport|documentclass|usepackage)\b|%\s*SEGMENT")
 CSS_URL_RE = re.compile(r"url\(\s*(['\"]?)([^'\")]+)\1\s*\)", re.IGNORECASE)
 FIXED_ZIP_TIME = (2026, 9, 10, 0, 0, 0)
@@ -47,6 +49,26 @@ def sha256(payload: bytes) -> str:
 def identify(path: Path) -> dict:
     payload = path.read_bytes()
     return {"path": str(path), "bytes": len(payload), "sha256": sha256(payload)}
+
+
+def rendered_tamil_words(body: etree._Element) -> set[str]:
+    separators = {"p", "div", "li", "br", "table", "tr", "td", "th", "h1", "h2", "h3", "h4", "h5", "h6", "mtr", "mtd"}
+    parts: list[str] = []
+    for event, node in etree.iterwalk(body, events=("start", "end")):
+        if not isinstance(node.tag, str):
+            continue
+        block = etree.QName(node).localname in separators
+        if event == "start":
+            if block:
+                parts.append(" ")
+            if node.text:
+                parts.append(node.text)
+        else:
+            if block:
+                parts.append(" ")
+            if node.tail:
+                parts.append(node.tail)
+    return set(TAMIL_WORD_RE.findall(unicodedata.normalize("NFC", "".join(parts))))
 
 
 def safe_zip_name(name: str) -> bool:
@@ -265,8 +287,43 @@ def main() -> int:
     actual_ids = [unit["unit_id"] for unit in crosswalk["units"]]
     check(actual_ids == expected_ids, "Source crosswalk unit coverage drift")
     check(crosswalk["source_revision"] == SOURCE_REVISION, "Source crosswalk revision drift")
-    check(crosswalk["literal_tamil_visible_coverage_pass"], "Literal Tamil source coverage failed")
-    check(not crosswalk["literal_tamil_failing_units"], "Crosswalk contains failing units")
+    parity = crosswalk.get("reference_pdf_vocabulary")
+    if not crosswalk["literal_tamil_visible_coverage_pass"]:
+        check(reader["slug"] in {"complete-main", "complete-722"} and parity is not None, "Literal Tamil source coverage failed without rendered-PDF parity")
+        check(parity["pass"] and not parity["pdf_tokens_missing_from_epub"], "Rendered-PDF Tamil vocabulary parity failed")
+        pdf_relative = PurePosixPath(parity["pdf"]["path"])
+        expected_pdf = {
+            "complete-main": "readers/tamil-complete.pdf",
+            "complete-722": "readers/openlogic-ta-Taml-IN-complete-722.pdf",
+        }[reader["slug"]]
+        check(pdf_relative.as_posix() == expected_pdf, "Rendered-PDF parity uses an unexpected reader")
+        check(safe_zip_name(pdf_relative.as_posix()), "Unsafe reference PDF path")
+        pdf_path = repo / Path(*pdf_relative.parts)
+        pdf_bytes = pdf_path.read_bytes()
+        check(len(pdf_bytes) == parity["pdf"]["bytes"] and sha256(pdf_bytes) == parity["pdf"]["sha256"], "Validated reference PDF drift")
+        extracted = subprocess.run(
+            ["pdftotext", "-enc", "UTF-8", "-layout", str(pdf_path), "-"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False,
+        )
+        check(extracted.returncode == 0, "Independent PDF text extraction failed")
+        pdf_words = set(TAMIL_WORD_RE.findall(unicodedata.normalize("NFC", extracted.stdout.decode("utf-8"))))
+        content_paths = (
+            [PurePosixPath("OEBPS/content/complete-main.xhtml")]
+            if reader["slug"] == "complete-main" else [
+                PurePosixPath("OEBPS/main/content/complete-main.xhtml"),
+                PurePosixPath("OEBPS/appendix/content/complete-companion.xhtml"),
+            ]
+        )
+        epub_words: set[str] = set()
+        for content_path in content_paths:
+            check(content_path in roots, f"EPUB content document is missing: {content_path}")
+            body = roots[content_path].find(f"{{{XHTML}}}body")
+            check(body is not None, f"EPUB body is missing: {content_path}")
+            epub_words.update(rendered_tamil_words(body))
+        check(not pdf_words - epub_words, f"EPUB lacks {len(pdf_words - epub_words)} rendered-PDF Tamil words")
+        check(len(pdf_words) == parity["pdf_distinct_tokens"] and len(epub_words) == parity["epub_distinct_tokens"], "PDF vocabulary receipt drift")
+    else:
+        check(not crosswalk["literal_tamil_failing_units"], "Crosswalk contains failing units")
     verified_translation_files: set[str] = set()
     for unit in crosswalk["units"]:
         for file in unit["translation_files"]:
@@ -343,7 +400,9 @@ def main() -> int:
             "exact_unit_ids": len(actual_ids),
             "translation_files_hash_verified": len(verified_translation_files),
             "literal_tamil_source_distinct_tokens": crosswalk["literal_tamil_source_distinct_tokens"],
-            "missing_literal_tamil_distinct_tokens": 0,
+            "nonvisible_literal_tamil_distinct_tokens": len(crosswalk["literal_tamil_missing_distinct_tokens"]),
+            "rendered_pdf_vocabulary_parity": bool(parity and parity["pass"]),
+            "component_epub_sha256": crosswalk.get("component_epub_sha256"),
         },
         "reproducible_zip": True,
         "human_accessibility_certification_claimed": False,

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage the five ordered complete-edition release files after exact QA."""
+"""Stage the single-reader 722-unit edition and its component sources after QA."""
 
 from __future__ import annotations
 
@@ -13,13 +13,17 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 STATE = Path(r"C:\interlanguage-task-state\openlogic-ta-Taml-IN")
-DEST = REPO / "release" / "complete-assets"
+DEST = REPO / "release" / "complete-722-assets"
 ASSETS = [
-    ("01-openlogic-ta-Taml-IN-complete.pdf", "readers/tamil-complete.pdf"),
-    ("02-openlogic-ta-Taml-IN-complete.tex", "build/tamil-complete-direct.tex"),
+    ("01-openlogic-ta-Taml-IN-complete-722.pdf", "readers/openlogic-ta-Taml-IN-complete-722.pdf"),
+    ("02-openlogic-ta-Taml-IN-complete-722.epub", "readers/openlogic-ta-Taml-IN-complete-722.epub"),
     ("03-openlogic-ta-Taml-IN-complete-source.zip", "release/openlogic-ta-Taml-IN-complete-source.zip"),
-    ("04-openlogic-ta-Taml-IN-source-companion.pdf", "readers/tamil-source-companion.pdf"),
-    ("05-openlogic-ta-Taml-IN-source-companion.tex", "build/tamil-source-companion-direct.tex"),
+    ("tamil-complete.pdf", "readers/tamil-complete.pdf"),
+    ("openlogic-ta-Taml-IN-complete-main.epub", "readers/openlogic-ta-Taml-IN-complete-main.epub"),
+    ("tamil-complete.tex", "build/tamil-complete-direct.tex"),
+    ("tamil-source-companion.pdf", "readers/tamil-source-companion.pdf"),
+    ("openlogic-ta-Taml-IN-complete-companion.epub", "readers/openlogic-ta-Taml-IN-complete-companion.epub"),
+    ("tamil-source-companion.tex", "build/tamil-source-companion-direct.tex"),
 ]
 
 
@@ -87,7 +91,9 @@ check_file(source_path, source_package)
 with zipfile.ZipFile(source_path) as archive:
     listed = {row["path"]: row for row in json.loads(archive.read("SOURCE_PACKAGE_MANIFEST.json"))["files"]}
     for path in ("README.md", "README.en.md", "epub/README.md", "epub/readers.json",
-                 "epub/package_epub.py", "build/stage-complete-release.py",
+                 "epub/package_epub.py", "epub/audit_epub.py", "epub/requirements.txt",
+                 "build/assemble-complete-722-reader.py", "build/assemble-complete-722-epub.py",
+                 "build/stage-complete-release.py",
                  "build/tamil-complete.tex", "build/tamil-source-companion.tex",
                  "build/tamil-complete-direct.tex", "build/tamil-source-companion-direct.tex",
                  "evidence/translation-decisions/START_HERE.md",
@@ -96,8 +102,29 @@ with zipfile.ZipFile(source_path) as archive:
                  "evidence/translation-decisions/VARIANT_ASSESSMENT.md",
                  "evidence/translation-decisions/TRANSLATION_DECISION_QA.json"):
         check_file(REPO / path, listed[path])
+    for name in ("COMPLETE-722-VISUAL-QA.json", "EPUB-AUDIT-COMPLETE_722.json"):
+        archive_path = f"evidence/{name}"
+        check_file(STATE / name, listed[archive_path])
+        if digest(STATE / name) != hashlib.sha256(archive.read(archive_path)).hexdigest():
+            raise RuntimeError(f"Source archive evidence changed: {name}")
 
-draft = (STATE / "COMPLETE-RELEASE-PUBLIC-DRAFT.md").read_text(encoding="utf-8")
+combined_pdf = read_state("COMPLETE-722-READER-RECEIPT.json")
+visual = read_state("COMPLETE-722-VISUAL-QA.json")
+if (combined_pdf["source_units"]["total"] != 722 or combined_pdf["remaining_remote_pdf_actions"] != 0
+        or combined_pdf["cross_volume_links_rewritten"] != 26 or visual["status"] != "pass"):
+    raise RuntimeError("Combined 722-unit PDF validation is incomplete")
+check_file(REPO / combined_pdf["output"]["path"], combined_pdf["output"])
+if visual["pdf"]["sha256"] != combined_pdf["output"]["sha256"]:
+    raise RuntimeError("Combined 722-unit PDF visual check is stale")
+for slug, expected_units in (("COMPLETE_MAIN", 695), ("COMPLETE_COMPANION", 27), ("COMPLETE_722", 722)):
+    audit = read_state(f"EPUB-AUDIT-{slug}.json")
+    if (audit["status"] != "pass" or audit["epubcheck"]["messages"] != 0
+            or audit["source_coverage"]["exact_unit_ids"] != expected_units
+            or not audit["reproducible_zip"]):
+        raise RuntimeError(f"EPUB audit is incomplete: {slug}")
+    check_file(Path(audit["epub"]["path"]), audit["epub"])
+
+draft = (STATE / "COMPLETE-722-RELEASE-PUBLIC-DRAFT.md").read_text(encoding="utf-8")
 positions = [draft.index(name) for name, _ in ASSETS]
 if positions != sorted(positions):
     raise RuntimeError("Tamil release links are out of asset order")
@@ -116,11 +143,11 @@ for number, (name, relative) in enumerate(ASSETS, 1):
     })
 
 receipt = {
-    "schema": "openlogic-tamil-complete-release-assets/1",
+    "schema": "openlogic-tamil-complete-722-release-assets/1",
     "staged_utc": datetime.now(timezone.utc).isoformat(),
     "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
     "status": "pass", "assets": inventory,
-    "epub_status": "pending separate validation and release",
+    "epub_status": "three independent EPUBCheck 5.3.0 audits pass",
 }
 (STATE / "COMPLETE-RELEASE-ASSETS.json").write_text(
     json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

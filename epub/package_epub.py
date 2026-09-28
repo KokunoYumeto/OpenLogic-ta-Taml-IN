@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import html as html_std
 import json
@@ -12,6 +13,7 @@ import os
 import posixpath
 import re
 import shutil
+import subprocess
 import sys
 import unicodedata
 import uuid
@@ -21,7 +23,8 @@ from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 from urllib.parse import unquote, urlsplit, urlunsplit
 
-from lxml import etree, html
+import html5lib
+from lxml import etree
 
 XHTML = "http://www.w3.org/1999/xhtml"
 MATHML = "http://www.w3.org/1998/Math/MathML"
@@ -40,6 +43,12 @@ ALLOWED_ASSETS = {
     ".css", ".svg", ".png", ".jpg", ".jpeg", ".gif", ".webp",
     ".woff", ".woff2", ".otf", ".ttf",
 }
+MATHML_ELEMENTS = {
+    "math", "mrow", "mi", "mn", "mo", "mtext", "ms", "mspace", "mstyle",
+    "mfrac", "msub", "msup", "msubsup", "mover", "munder", "munderover",
+    "mtable", "mtr", "mtd", "msqrt", "mroot", "menclose", "mpadded",
+    "mphantom", "mmultiscripts", "maction", "maligngroup", "malignmark",
+}
 MEDIA_TYPES = {
     ".xhtml": "application/xhtml+xml",
     ".css": "text/css",
@@ -54,6 +63,19 @@ MEDIA_TYPES = {
     ".otf": "font/otf",
     ".ttf": "font/ttf",
 }
+BLOCK_SEPARATORS = {
+    "p", "div", "li", "br", "table", "tr", "td", "th",
+    "h1", "h2", "h3", "h4", "h5", "h6", "mtr", "mtd",
+}
+NICEFRAC_RE = re.compile(
+    r'<sup class="nicefrac">(.*?)</sup>\s*<mo\b[^>]*>∕</mo>\s*<sub class="nicefrac">(.*?)</sub>',
+    re.DOTALL,
+)
+BROKEN_SMALL_CAPS_RE = re.compile(r'<span\u00a0class="small-caps">(.*?)</span>', re.DOTALL)
+PUBLIC_COMPANION_PDF_URL = (
+    "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/"
+    "v1.0.0-complete/04-openlogic-ta-Taml-IN-source-companion.pdf"
+)
 
 
 def fail(message: str) -> None:
@@ -93,6 +115,56 @@ def strip_tex_comments(text: str) -> str:
 
 def tamil_tokens(text: str) -> list[str]:
     return [unicodedata.normalize("NFC", token) for token in TAMIL_RE.findall(text)]
+
+
+def visible_body_text(body: etree._Element) -> str:
+    # Inline TeX4ht spans can split one Tamil word across several text nodes.
+    # Block and table-cell boundaries, however, must separate their words.
+    parts: list[str] = []
+    for event, node in etree.iterwalk(body, events=("start", "end")):
+        if not isinstance(node.tag, str):
+            continue
+        block = etree.QName(node).localname in BLOCK_SEPARATORS
+        if event == "start":
+            if block:
+                parts.append(" ")
+            if node.text:
+                parts.append(node.text)
+        else:
+            if block:
+                parts.append(" ")
+            if node.tail:
+                parts.append(node.tail)
+    return " ".join("".join(parts).split())
+
+
+def reference_pdf_vocabulary(repo: Path, reader: dict, visible_text: str) -> dict | None:
+    reference = {
+        "complete-main": "tamil-complete.pdf",
+        "complete-722": "openlogic-ta-Taml-IN-complete-722.pdf",
+    }.get(reader["slug"])
+    if reference is None:
+        return None
+    pdf = repo / "readers" / reference
+    if not pdf.is_file():
+        fail(f"Validated main PDF unavailable for EPUB rendered-text parity: {pdf}")
+    process = subprocess.run(
+        ["pdftotext", "-enc", "UTF-8", "-layout", str(pdf), "-"],
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=False,
+    )
+    if process.returncode:
+        fail(f"pdftotext could not extract the validated main PDF: {process.stderr[-500:]!r}")
+    pdf_words = set(tamil_tokens(process.stdout.decode("utf-8")))
+    epub_words = set(tamil_tokens(visible_text))
+    missing = sorted(pdf_words - epub_words)
+    return {
+        "method": "distinct NFC Tamil tokens in validated PDF text versus EPUB body text",
+        "pdf": {"path": pdf.relative_to(repo).as_posix(), **file_record(pdf)},
+        "pdf_distinct_tokens": len(pdf_words),
+        "epub_distinct_tokens": len(epub_words),
+        "pdf_tokens_missing_from_epub": missing,
+        "pass": not missing,
+    }
 
 
 def configured_unit_ids(reader: dict) -> list[str]:
@@ -205,17 +277,47 @@ def segment_inventory(repo: Path, reader: dict, visible_text: str) -> dict:
     }
 
 
-def parse_document(path: Path) -> tuple[etree._Element, str]:
+def parse_document(path: Path) -> tuple[etree._Element, str, int, dict]:
     payload = path.read_bytes()
-    mode = "xml"
-    try:
+    repaired_alternatives = 0
+    preparse_repairs: dict[str, int] = {}
+    if path.suffix.lower() in {".html", ".htm"}:
+        generated = payload.decode("utf-8")
+        generated, nicefrac_count = NICEFRAC_RE.subn(
+            lambda match: '<mfrac bevelled="true"><mrow>' + match.group(1) + '</mrow><mrow>' + match.group(2) + '</mrow></mfrac>',
+            generated,
+        )
+        preparse_repairs["nicefrac_to_mathml_fraction"] = nicefrac_count
+        generated, malformed_span_count = BROKEN_SMALL_CAPS_RE.subn(lambda match: match.group(1), generated)
+        preparse_repairs["malformed_small_caps_wrappers_removed"] = malformed_span_count
+        if path.name == "complete-main.html":
+            # The installed TeX4ht writes two tableau SVG alternatives with
+            # malformed numeric entities (&#x1xxx / &#x0x). HTML5 parsing
+            # turns these into XML-forbidden control characters. Preserve
+            # the SVGs and give each visible step table a concise Tamil name.
+            alternatives = {
+                "complete-main1411x.svg": "அட்டவணை நிரூபணத்தின் 1 முதல் 6 வரிகள்",
+                "complete-main1456x.svg": "அட்டவணை நிரூபணத்தின் 1 முதல் 8 வரிகள்",
+            }
+            for filename, description in alternatives.items():
+                pattern = re.compile(
+                    rf'(<img\s+src="{re.escape(filename)}"\s+alt=")[^"]*(")',
+                    re.DOTALL,
+                )
+                matches = list(pattern.finditer(generated))
+                if len(matches) != 1 or "&#x" not in matches[0].group(0):
+                    fail(f"Expected one malformed tableau alternative for {filename}")
+                generated = pattern.sub(lambda match: match.group(1) + description + match.group(2), generated)
+                repaired_alternatives += 1
+        payload = generated.encode("utf-8")
+        mode = "html5"
+        root = html5lib.parse(payload, treebuilder="lxml", namespaceHTMLElements=True).getroot()
+    else:
+        mode = "xml"
         root = etree.fromstring(payload, parser=etree.XMLParser(resolve_entities=False, no_network=True, huge_tree=True))
-    except etree.XMLSyntaxError:
-        mode = "html-recovery"
-        root = html.fromstring(payload, parser=html.HTMLParser(encoding="utf-8", recover=True))
     if etree.QName(root).localname.lower() != "html":
         fail(f"Generated document has no HTML root: {path}")
-    return root, mode
+    return root, mode, repaired_alternatives, preparse_repairs
 
 
 def namespace_tree(node: etree._Element, inherited: str = XHTML) -> None:
@@ -225,13 +327,24 @@ def namespace_tree(node: etree._Element, inherited: str = XHTML) -> None:
     local = qname.localname.lower()
     namespace = qname.namespace
     target = inherited
-    if namespace in {MATHML, SVG, XHTML}:
+    if inherited == MATHML and local in MATHML_ELEMENTS:
+        target = MATHML
+    elif namespace in {MATHML, SVG, XHTML}:
         target = namespace
     elif local == "math" or inherited == MATHML:
         target = MATHML
     elif local == "svg" or inherited == SVG:
         target = SVG
     node.tag = f"{{{target}}}{local}"
+    # lxml's HTML recovery parser keeps xml:lang as a literal attribute name.
+    # Qualify it before moving the node into a strict XHTML tree.
+    for key in list(node.attrib):
+        if key == "xmlns" or key.startswith("{http://www.w3.org/2000/xmlns/}"):
+            del node.attrib[key]
+        elif key.startswith("xml:") or key.startswith("xmlU0003A"):
+            value = node.attrib.pop(key)
+            local = key.split(":", 1)[1] if ":" in key else key.removeprefix("xmlU0003A")
+            node.set(f"{{{XML}}}{local}", value)
     for child in node:
         namespace_tree(child, target)
 
@@ -246,11 +359,441 @@ def ensure_root_namespaces(root: etree._Element) -> etree._Element:
     for child in list(root):
         root.remove(child)
         replacement.append(child)
+    etree.cleanup_namespaces(replacement)
     return replacement
 
 
 def local_name(node: etree._Element) -> str:
     return etree.QName(node).localname.lower() if isinstance(node.tag, str) else ""
+
+
+def repair_broken_less_than(root: etree._Element) -> int:
+    """Repair TeX4ht's lost opening <mo> for a literal less-than relation."""
+    repaired = 0
+    for node in list(root.iter()):
+        if not isinstance(node.tag, str) or etree.QName(node).namespace != MATHML:
+            continue
+        if not (node.text or "").startswith("/mo>"):
+            continue
+        if node.get("class") != "MathClass-rel":
+            fail("An unrecognized MathML fragment contains TeX4ht's broken /mo> marker")
+        parent = node.getparent()
+        if parent is None:
+            fail("Broken MathML relation has no parent")
+        position = parent.index(node)
+        replacement = etree.Element(f"{{{MATHML}}}mo")
+        replacement.set("class", "MathClass-rel")
+        replacement.set("stretchy", "false")
+        replacement.text = "<"
+        replacement.tail = (node.text or "")[4:]
+        parent.insert(position, replacement)
+        last = replacement
+        for child in list(node):
+            node.remove(child)
+            position += 1
+            parent.insert(position, child)
+            last = child
+        last.tail = (last.tail or "") + (node.tail or "")
+        parent.remove(node)
+        repaired += 1
+    return repaired
+
+
+def split_nested_math(root: etree._Element) -> int:
+    """Restore separate formulas and prose swallowed by malformed MathML."""
+    repaired = 0
+
+    def is_math(node: etree._Element) -> bool:
+        return isinstance(node.tag, str) and etree.QName(node).namespace == MATHML and local_name(node) == "math"
+
+    def has_nested_math(node: etree._Element) -> bool:
+        return any(is_math(child) for child in node.iterdescendants())
+
+    def has_tamil_spill(node: etree._Element) -> bool:
+        if not isinstance(node.tag, str) or etree.QName(node).namespace != MATHML:
+            return False
+        if local_name(node) in {"mi", "mn", "mo", "mtext", "ms"}:
+            return False
+        if TAMIL_RE.search(node.text or ""):
+            return True
+        for child in node:
+            if TAMIL_RE.search(child.tail or "") or has_tamil_spill(child):
+                return True
+        return False
+
+    def events(node: etree._Element):
+        if is_math(node):
+            clone = copy.deepcopy(node)
+            clone.tail = None
+            yield ("formula", clone)
+            return
+        if not has_nested_math(node) and not has_tamil_spill(node):
+            clone = copy.deepcopy(node)
+            clone.tail = None
+            yield ("piece", clone)
+            return
+        if node.text and node.text.strip():
+            yield ("text", node.text)
+        for child in node:
+            if not isinstance(child.tag, str):
+                continue
+            yield from events(child)
+            if child.tail and child.tail.strip():
+                yield ("text", child.tail)
+
+    for _ in range(10):
+        candidates = [
+            node for node in root.iter()
+            if is_math(node)
+            and node.getparent() is not None
+            and etree.QName(node.getparent()).namespace != MATHML
+            and (has_nested_math(node) or has_tamil_spill(node))
+        ]
+        if not candidates:
+            return repaired
+        for outer in candidates:
+            parent = outer.getparent()
+            if parent is None:
+                continue
+            position = parent.index(outer)
+            preceding = parent[position - 1] if position else None
+            trailing = outer.tail or ""
+            stream = []
+            if outer.text and outer.text.strip():
+                stream.append(("text", outer.text))
+            for child in outer:
+                if not isinstance(child.tag, str):
+                    continue
+                stream.extend(events(child))
+                if child.tail and child.tail.strip():
+                    stream.append(("text", child.tail))
+            parent.remove(outer)
+            last = preceding
+            pending: list[etree._Element] = []
+            first_group = True
+
+            def add_text(value: str) -> None:
+                if last is None:
+                    parent.text = (parent.text or "") + value
+                else:
+                    last.tail = (last.tail or "") + value
+
+            def flush() -> None:
+                nonlocal last, position, first_group
+                if not pending:
+                    return
+                formula = etree.Element(f"{{{MATHML}}}math")
+                if first_group and outer.get("display"):
+                    formula.set("display", outer.get("display"))
+                if first_group and outer.get("id"):
+                    formula.set("id", outer.get("id"))
+                if len(pending) == 1:
+                    formula.append(pending.pop())
+                else:
+                    row = etree.SubElement(formula, f"{{{MATHML}}}mrow")
+                    for piece in pending:
+                        row.append(piece)
+                    pending.clear()
+                parent.insert(position, formula)
+                position += 1
+                last = formula
+                first_group = False
+
+            for kind, value in stream:
+                if kind == "piece":
+                    pending.append(value)
+                elif kind == "formula":
+                    flush()
+                    parent.insert(position, value)
+                    position += 1
+                    last = value
+                    first_group = False
+                else:
+                    flush()
+                    add_text(value)
+            flush()
+            add_text(trailing)
+            repaired += 1
+    fail("Nested TeX4ht MathML exceeded the bounded normalization pass")
+
+
+def normalize_generated_math(root: etree._Element) -> dict:
+    changes = Counter()
+    for node in list(root.iter()):
+        if not isinstance(node.tag, str):
+            continue
+        qname = etree.QName(node)
+        local = qname.localname.lower()
+        if qname.namespace == MATHML:
+            if local in {"mi", "mn", "mo", "mtext", "ms"} and any(
+                isinstance(child.tag, str) and local_name(child) not in {"malignmark", "mglyph"}
+                for child in node
+            ):
+                attributes = dict(node.attrib)
+                original_text = node.text or ""
+                node.tag = f"{{{MATHML}}}mrow"
+                node.attrib.clear()
+                if "id" in attributes:
+                    node.set("id", attributes.pop("id"))
+                node.text = None
+                if original_text.strip():
+                    prefix = etree.Element(f"{{{MATHML}}}{local}", attrib=attributes)
+                    prefix.text = original_text
+                    node.insert(0, prefix)
+                else:
+                    node.text = original_text
+                for child in list(node):
+                    if child.tail and child.tail.strip():
+                        trailing = child.tail
+                        child.tail = None
+                        suffix = etree.Element(f"{{{MATHML}}}{local}", attrib=attributes)
+                        suffix.text = trailing
+                        node.insert(node.index(child) + 1, suffix)
+                changes["compound_math_token_expanded"] += 1
+                local = "mrow"
+            if local == "a":
+                node.tag = f"{{{MATHML}}}mrow"
+                local = "mrow"
+                changes["math_anchor_to_row"] += 1
+            if local != "mo" and "stretchy" in node.attrib:
+                del node.attrib["stretchy"]
+                changes["invalid_stretchy_removed"] += 1
+            if local == "mtable" and node.get("rowlines") == "":
+                del node.attrib["rowlines"]
+                changes["empty_rowlines_removed"] += 1
+            if local in {"math", "mrow", "mstyle", "mtd"}:
+                if node.text and node.text.strip():
+                    value = node.text
+                    node.text = None
+                    token = etree.Element(f"{{{MATHML}}}mtext")
+                    token.text = value
+                    node.insert(0, token)
+                    changes["bare_math_text_wrapped"] += 1
+                for child in list(node):
+                    if child.tail and child.tail.strip():
+                        value = child.tail
+                        child.tail = None
+                        token = etree.Element(f"{{{MATHML}}}mtext")
+                        token.text = value
+                        node.insert(node.index(child) + 1, token)
+                        changes["bare_math_text_wrapped"] += 1
+        elif qname.namespace == XHTML and local in {"mtr", "mtd", "mspace"}:
+            original_class = node.get("class", "")
+            for key in list(node.attrib):
+                if key not in {"id", "class"}:
+                    del node.attrib[key]
+            node.tag = f"{{{XHTML}}}span"
+            node.set("class", f"tex4ht-{local}" + (f" {original_class}" if original_class else ""))
+            if local == "mspace" and not (node.text or "").strip():
+                node.text = "\u00a0"
+            changes[f"stray_{local}_to_span"] += 1
+    return dict(changes)
+
+
+def repair_epub_xhtml_structure(root: etree._Element) -> dict:
+    """Repair bounded TeX4ht HTML-parser spill without changing reading order."""
+    changes = Counter()
+
+    def append_before(parent: etree._Element, index: int, value: str) -> None:
+        if not value:
+            return
+        if index:
+            previous = parent[index - 1]
+            previous.tail = (previous.tail or "") + value
+        else:
+            parent.text = (parent.text or "") + value
+
+    # An HTML5 parser treats self-closing orphan <mspace/> as a container.
+    # Some of those containers swallowed hundreds of later paragraphs.
+    for node in reversed(list(root.xpath(".//x:span[starts-with(@class, 'tex4ht-mspace')]", namespaces={"x": XHTML}))):
+        parent = node.getparent()
+        if parent is None:
+            continue
+        position = parent.index(node)
+        append_before(parent, position, node.text or "")
+        for child in list(node):
+            node.remove(child)
+            parent.insert(position, child)
+            position += 1
+        append_before(parent, position, node.tail or "")
+        parent.remove(node)
+        changes["orphan_mspace_containers_unwrapped"] += 1
+
+    for node in list(root.iter()):
+        if not isinstance(node.tag, str):
+            continue
+        qname = etree.QName(node)
+        local = qname.localname
+        if qname.namespace == XHTML:
+            if local in MATHML_ELEMENTS:
+                if local == "mtable" and not len(node) and not (node.text or "").strip():
+                    parent = node.getparent()
+                    position = parent.index(node)
+                    append_before(parent, position, node.tail or "")
+                    parent.remove(node)
+                    changes["empty_orphan_math_tables_removed"] += 1
+                    continue
+                node.tag = f"{{{MATHML}}}{local}"
+                changes["orphan_math_elements_restored"] += 1
+            elif local in {"td", "div"} and "columnalign" in node.attrib:
+                value = node.attrib.pop("columnalign")
+                if value in {"left", "right", "center"}:
+                    node.set("style", ((node.get("style") or "").rstrip("; ") + f"; text-align:{value};").lstrip("; "))
+                changes["html_columnalign_to_css"] += 1
+            elif local == "table" and "rules" in node.attrib:
+                del node.attrib["rules"]
+                changes["obsolete_html_table_rules_removed"] += 1
+            elif local == "span" and node.get("class", "").startswith(("tex4ht-mtd", "tex4ht-mtr")):
+                if any(
+                    isinstance(child.tag, str) and etree.QName(child).namespace == XHTML
+                    and etree.QName(child).localname in {"p", "div", "table", "ol", "ul", "h1", "h2", "h3", "figure", "figcaption"}
+                    for child in node.iterdescendants()
+                ):
+                    node.tag = f"{{{XHTML}}}div"
+                    changes["block_math_cell_containers_retyped"] += 1
+
+    # Keep the rendered vector glyph in its mathematical position.
+    for image in list(root.xpath(".//*[local-name()='img']")):
+        parent = image.getparent()
+        if parent is None or etree.QName(parent).namespace != MATHML:
+            continue
+        replacement = etree.Element(f"{{{MATHML}}}mo")
+        glyph = etree.SubElement(replacement, f"{{{MATHML}}}mglyph")
+        glyph.set("src", image.get("src", ""))
+        glyph.set("alt", image.get("alt", ""))
+        replacement.tail = image.tail
+        parent.replace(image, replacement)
+        changes["math_images_to_mglyph"] += 1
+
+    # Wrap each contiguous run of HTML-ejected MathML nodes in a math root.
+    for parent in list(root.iter()):
+        if not isinstance(parent.tag, str) or etree.QName(parent).namespace != XHTML:
+            continue
+        children = list(parent)
+        index = 0
+        while index < len(children):
+            node = children[index]
+            if not isinstance(node.tag, str) or etree.QName(node).namespace != MATHML or local_name(node) == "math":
+                index += 1
+                continue
+            previous = node.getprevious()
+            if (previous is not None and isinstance(previous.tag, str)
+                    and etree.QName(previous).namespace == MATHML and local_name(previous) == "math"
+                    and not (previous.tail or "").strip()):
+                formula = previous
+                formula.tail = None
+            else:
+                formula = etree.Element(f"{{{MATHML}}}math", display="inline")
+                parent.insert(parent.index(node), formula)
+                changes["orphan_math_runs_wrapped"] += 1
+            while index < len(children):
+                piece = children[index]
+                if not isinstance(piece.tag, str) or etree.QName(piece).namespace != MATHML or local_name(piece) == "math":
+                    break
+                next_tail = piece.tail or ""
+                piece.tail = None
+                parent.remove(piece)
+                formula.append(piece)
+                index += 1
+                if next_tail.strip():
+                    formula.tail = (formula.tail or "") + next_tail
+                    break
+                if next_tail:
+                    piece.tail = next_tail
+            changes["orphan_math_elements_wrapped"] += len(formula)
+
+    # HTML5 requires column groups before the table body.
+    for table in root.xpath(".//x:table", namespaces={"x": XHTML}):
+        misplaced = [child for child in table if local_name(child) == "colgroup"]
+        for column_group in reversed(misplaced):
+            table.remove(column_group)
+            table.insert(0, column_group)
+            changes["html_column_groups_reordered"] += 1
+
+    # A handful of TeX4ht foreign-content rows retain HTML wrappers even
+    # after their surrounding mathematical table has been restored.
+    for node in list(root.iter()):
+        if not isinstance(node.tag, str) or etree.QName(node).namespace != XHTML:
+            continue
+        parent = node.getparent()
+        if parent is None or etree.QName(parent).namespace != MATHML:
+            continue
+        if local_name(node) == "strong" and len(node) == 1 and local_name(node[0]) == "math":
+            nested = node[0]
+            position = parent.index(node)
+            for child in list(nested):
+                nested.remove(child)
+                parent.insert(position, child)
+                position += 1
+            append_before(parent, position, node.tail or "")
+            parent.remove(node)
+            changes["bold_math_html_wrappers_flattened"] += 1
+        elif local_name(node) == "span" and node.get("class", "").startswith("tex4ht-mtr"):
+            node.tag = f"{{{MATHML}}}mtr"
+            node.attrib.clear()
+            for cell in list(node):
+                if local_name(cell) != "span" or not cell.get("class", "").startswith("tex4ht-mtd"):
+                    fail("An orphan mathematical table row contains a non-cell element")
+                cell.tag = f"{{{MATHML}}}mtd"
+                cell.attrib.clear()
+                for nested in list(cell):
+                    if local_name(nested) != "math":
+                        fail("An orphan mathematical table cell contains non-math content")
+                    position = cell.index(nested)
+                    for child in list(nested):
+                        nested.remove(child)
+                        cell.insert(position, child)
+                        position += 1
+                    append_before(cell, position, nested.tail or "")
+                    cell.remove(nested)
+            changes["orphan_math_table_rows_restored"] += 1
+
+    for caption in list(root.xpath(".//x:figcaption", namespaces={"x": XHTML})):
+        center = caption.getparent()
+        figure = center.getparent() if center is not None else None
+        if local_name(center) == "div" and local_name(figure) == "figure":
+            center.remove(caption)
+            figure.insert(figure.index(center) + 1, caption)
+            changes["figure_captions_raised"] += 1
+
+    for node in list(root.iter()):
+        if not isinstance(node.tag, str) or etree.QName(node).namespace != MATHML:
+            continue
+        local = local_name(node)
+        if local == "mspace" and (node.text or "").strip():
+            value = node.text or ""
+            spacing = etree.Element(f"{{{MATHML}}}mspace", attrib=dict(node.attrib))
+            spacing.tail = None
+            node.tag = f"{{{MATHML}}}mrow"
+            node.attrib.clear()
+            node.text = None
+            node.insert(0, spacing)
+            symbol = etree.Element(f"{{{MATHML}}}mo")
+            symbol.text = value
+            node.insert(1, symbol)
+            changes["mspace_glyphs_separated"] += 1
+        elif local == "mfrac" and len(node) > 2:
+            denominator = etree.Element(f"{{{MATHML}}}mrow")
+            for child in list(node)[1:]:
+                node.remove(child)
+                denominator.append(child)
+            node.append(denominator)
+            changes["compound_fraction_denominators_grouped"] += 1
+        elif local == "msup" and len(node) == 1 and not "".join(node.itertext()).strip():
+            parent = node.getparent()
+            position = parent.index(node)
+            append_before(parent, position, node.tail or "")
+            parent.remove(node)
+            changes["empty_superscript_layout_artifacts_removed"] += 1
+        if node.text and not node.text.strip() and "\u00a0" in node.text:
+            node.text = node.text.replace("\u00a0", " ")
+            changes["math_nonbreaking_whitespace_normalized"] += 1
+        for child in node:
+            if child.tail and not child.tail.strip() and "\u00a0" in child.tail:
+                child.tail = child.tail.replace("\u00a0", " ")
+                changes["math_nonbreaking_whitespace_normalized"] += 1
+    changes.update(normalize_generated_math(root))
+    return dict(changes)
 
 
 def rewrite_reference(value: str, source_rel: PurePosixPath, path_map: dict[PurePosixPath, PurePosixPath]) -> str:
@@ -272,8 +815,12 @@ def make_xhtml(
     path_map: dict[PurePosixPath, PurePosixPath],
     reader: dict,
 ) -> dict:
-    root, parse_mode = parse_document(source)
+    root, parse_mode, repaired_alternatives, preparse_repairs = parse_document(source)
     root = ensure_root_namespaces(root)
+    repaired_less_than = repair_broken_less_than(root)
+    split_math = split_nested_math(root)
+    math_normalizations = normalize_generated_math(root)
+    structure_repairs = repair_epub_xhtml_structure(root)
     root.set("lang", "ta-IN")
     root.set(f"{{{XML}}}lang", "ta-IN")
     root.set("dir", "ltr")
@@ -309,20 +856,73 @@ def make_xhtml(
     for node in root.xpath(".//*[@href or @src]"):
         for attribute in ("href", "src"):
             if node.get(attribute):
+                if (reader["slug"] == "complete-main" and source_rel.as_posix() == "complete-main.html"
+                        and attribute == "href" and node.get(attribute) == "tamil-source-companion.pdf"):
+                    node.set(attribute, PUBLIC_COMPANION_PDF_URL)
+                    continue
                 split = urlsplit(node.get(attribute))
                 if attribute == "src" and (split.scheme or split.netloc or node.get(attribute).startswith("//")):
                     fail(f"Remote embedded resource in generated HTML: {source_rel} -> {node.get(attribute)}")
                 node.set(attribute, rewrite_reference(node.get(attribute), source_rel, path_map))
 
-    ids: set[str] = set()
-    duplicate_ids: list[str] = []
-    for node in root.xpath(".//*[@id]"):
+    id_nodes = root.xpath(".//*[@id]")
+    id_counts = Counter(node.get("id") for node in id_nodes)
+    duplicate_values = {value for value, count in id_counts.items() if count > 1}
+    linked_fragments = Counter(
+        urlsplit(node.get("href")).fragment
+        for node in root.xpath(".//*[@href]")
+        if node.get("href")
+    )
+    ambiguous = duplicate_values & set(linked_fragments)
+    disambiguated_linked_duplicates: list[str] = []
+    if ambiguous:
+        expected = {"x1-210003": "h2", "x1-230012": "figure"}
+        if source_rel.as_posix() != "complete-main.html" or ambiguous != set(expected):
+            fail(f"Linked duplicate IDs in {source_rel} cannot be disambiguated: {sorted(ambiguous)[:10]}")
+        for value, parent_name in expected.items():
+            occurrences = [node for node in id_nodes if node.get("id") == value]
+            if len(occurrences) != 2 or linked_fragments[value] != 1 or local_name(occurrences[0].getparent()) != parent_name:
+                fail(f"Linked duplicate ID context changed in {source_rel}: {value}")
+            disambiguated_linked_duplicates.append(value)
+    ids = set(id_counts)
+    seen: Counter[str] = Counter()
+    renamed_duplicate_ids: list[dict] = []
+    for node in id_nodes:
         value = node.get("id")
-        if value in ids:
-            duplicate_ids.append(value)
-        ids.add(value)
-    if duplicate_ids:
-        fail(f"Duplicate IDs in {source_rel}: {sorted(set(duplicate_ids))[:10]}")
+        seen[value] += 1
+        if seen[value] == 1:
+            continue
+        suffix = seen[value]
+        candidate = f"{value}-duplicate-{suffix}"
+        while candidate in ids:
+            suffix += 1
+            candidate = f"{value}-duplicate-{suffix}"
+        node.set("id", candidate)
+        ids.add(candidate)
+        renamed_duplicate_ids.append({"original": value, "replacement": candidate})
+
+    removed_orphan_footnote_mark_links = 0
+    for anchor in list(body.xpath(".//x:a[starts-with(@href, '#Hfootnote.')]", namespaces={"x": XHTML})):
+        target = anchor.get("href", "")[1:]
+        if target in ids:
+            continue
+        next_anchor = anchor.getnext()
+        children = list(anchor)
+        if (len(children) != 1 or local_name(children[0]) != "span"
+                or children[0].get("class") != "footnote-mark"
+                or "".join(anchor.itertext()).strip()
+                or next_anchor is None or local_name(next_anchor) != "a"
+                or not next_anchor.get("href", "").startswith("#fn")
+                or next_anchor.get("href")[1:] not in ids):
+            fail(f"Unresolved footnote link is not a redundant TeX4ht mark: {target}")
+        parent = anchor.getparent()
+        previous = anchor.getprevious()
+        if previous is None:
+            parent.text = (parent.text or "") + (anchor.tail or "")
+        else:
+            previous.tail = (previous.tail or "") + (anchor.tail or "")
+        parent.remove(anchor)
+        removed_orphan_footnote_mark_links += 1
 
     headings: list[dict] = []
     heading_counter = 0
@@ -362,11 +962,23 @@ def make_xhtml(
     destination.parent.mkdir(parents=True, exist_ok=True)
     payload = etree.tostring(root, encoding="utf-8", xml_declaration=True, pretty_print=False, doctype="<!DOCTYPE html>")
     destination.write_bytes(payload)
-    visible = " ".join(" ".join(body.itertext()).split())
+    # TeX4ht wraps some italic Tamil words one glyph per span. Adjacent text
+    # nodes are contiguous in reading order; inserting a space at each node
+    # falsely breaks those words and weakens the source-visibility check.
+    visible = visible_body_text(body)
     return {
         "source": source_rel.as_posix(),
         "output": destination.name,
         "parse_mode": parse_mode,
+        "repaired_tableau_alternatives": repaired_alternatives,
+        "preparse_repairs": preparse_repairs,
+        "repaired_less_than_relations": repaired_less_than,
+        "split_nested_math_blocks": split_math,
+        "math_normalizations": math_normalizations,
+        "structure_repairs": structure_repairs,
+        "renamed_duplicate_ids": renamed_duplicate_ids,
+        "disambiguated_linked_duplicates": disambiguated_linked_duplicates,
+        "removed_orphan_footnote_mark_links": removed_orphan_footnote_mark_links,
         "headings": headings,
         "mathml_roots": len(math_nodes),
         "svg_roots": len(svg_nodes),
@@ -571,7 +1183,7 @@ def write_opf(
             properties.append("nav")
         if resource in math_paths:
             properties.append("mathml")
-        if resource.suffix.lower() == ".svg" or resource in svg_paths:
+        if resource in svg_paths:
             properties.append("svg")
         if properties:
             item.set("properties", " ".join(properties))
@@ -681,7 +1293,10 @@ def main() -> int:
     crosswalk = segment_inventory(repo, reader, " ".join(visible_text))
     if not crosswalk["unit_ids_complete"]:
         fail("Source crosswalk is incomplete")
-    if not crosswalk["literal_tamil_visible_coverage_pass"]:
+    crosswalk["reference_pdf_vocabulary"] = reference_pdf_vocabulary(repo, reader, " ".join(visible_text))
+    if crosswalk["reference_pdf_vocabulary"] is not None and not crosswalk["reference_pdf_vocabulary"]["pass"]:
+        fail(f"EPUB omits Tamil vocabulary visible in the validated PDF: {crosswalk['reference_pdf_vocabulary']['pdf_tokens_missing_from_epub'][:10]}")
+    if not crosswalk["literal_tamil_visible_coverage_pass"] and crosswalk["reference_pdf_vocabulary"] is None:
         sample = crosswalk["literal_tamil_failing_units"][:10]
         fail(f"Generated XHTML omits literal Tamil tokens from source units: {sample}")
 

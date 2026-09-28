@@ -5,13 +5,22 @@ For the reader-facing Tamil edition information, see [தமிழ் முக�
 India-standard Tamil translation of the [Open Logic Text](https://openlogicproject.org/).
 Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/OpenLogic-translations).
 
-All **722 frozen content units** are translated and aligned in 2,242 source/target segments. The complete main reader contains 695 units and the source companion contains the other 27, covering each unit once. EPUB validation and public release of the complete edition are in progress.
+All **722 frozen content units** are translated and aligned in 2,242 source/target segments. One complete reader contains 695 main units followed by a labelled appendix with the other 27 source units. Its PDF and reflowable EPUB 3.3 editions are validated.
+
+- [Complete 722-unit Tamil PDF](readers/openlogic-ta-Taml-IN-complete-722.pdf): 1,227 A4 pages with internal links between the main text and appendix.
+- [Complete 722-unit Tamil EPUB](readers/openlogic-ta-Taml-IN-complete-722.epub): reflowable text, native MathML, navigation and appendix.
+- [Complete editable source archive](https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v1.1.0-complete-722/03-openlogic-ta-Taml-IN-complete-source.zip): both full-text LaTeX files, modular Tamil and frozen English sources, figures, bibliography, build scripts and evidence.
+
+The separately downloadable component volumes remain available:
 
 - [Complete main Tamil PDF](readers/tamil-complete.pdf): 1,171 A4 pages.
+- [Main Tamil EPUB](readers/openlogic-ta-Taml-IN-complete-main.epub): 695 units.
 - [Full-text editable main LaTeX](build/tamil-complete-direct.tex).
-- [Complete editable source archive](https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v1.0.0-complete/03-openlogic-ta-Taml-IN-complete-source.zip): both full-text LaTeX files, modular Tamil and frozen English sources, figures, bibliography, build scripts, and evidence.
-- [Tamil source companion PDF](readers/tamil-source-companion.pdf): 56 A4 pages of alternate source sections and explanatory material. Keep the PDFs in the same directory for the companion's links to the main volume.
+- [Tamil source companion PDF](readers/tamil-source-companion.pdf): 56 A4 pages of alternate source sections and explanatory material.
+- [Companion Tamil EPUB](readers/openlogic-ta-Taml-IN-complete-companion.epub): the remaining 27 units.
 - [Full-text editable companion LaTeX](build/tamil-source-companion-direct.tex). The complete source archive carries both files' build dependencies.
+
+For cross-volume links to work in the separate PDFs, save them together under the exact filenames `tamil-complete.pdf` and `tamil-source-companion.pdf`. The 722-unit PDF uses internal links.
 
 ## Earlier component readers
 
@@ -53,7 +62,7 @@ Fourteen verified component readers cover 257 distinct units. Each component pas
 
 Machine translation and corrections of the first 570 units were performed with OpenAI Codex — GPT-5.6 Sol, Ultra effort. Translation of the remaining 152 units, later corrections, complete-edition assembly and automated checks were performed with OpenAI Codex — GPT-6 Sol, Ultra effort. The split is verified against this task's session metadata. Independent human or native-speaker approval is not claimed. All 722 units have source/target segment coverage across 2,242 segments, and 1,457 semantic reverse samples were checked. The 1,227 pages of the two complete PDFs passed a low-resolution scan for empty pages, edge clipping, and very low ink coverage; contact sheets and selected full pages were visually inspected. This is not individual human review of every glyph. Source corrections are documented in [the source-correction ledger](evidence/source-corrections.json).
 
-PDF text reuse has measured limitations. Poppler finds seven tested Tamil phrases and the companion's 18 cross-reader links. One visible nonmembership symbol extracts out of formula order, and other PDF engines may duplicate Tamil syllables or lose spacing. Use the editable formulas for exact mathematical reuse. These PDFs are not claimed to be tagged or universally accessible to screen readers.
+PDF text reuse has measured limitations. Poppler finds seven tested Tamil phrases; all 26 cross-volume links became local links in the combined PDF. One visible nonmembership symbol extracts out of formula order, and other PDF engines may duplicate Tamil syllables or lose spacing. Use the editable formulas for exact mathematical reuse. These PDFs are not claimed to be tagged or universally accessible to screen readers.
 
 ## Build
 
@@ -61,6 +70,7 @@ Use a Unicode-capable TeX distribution with XeLaTeX, memoir, the upstream depend
 Run build/build-tamil.ps1 on Windows. It holds Global\InterlanguageTeXSlotV1 over the captured TeX process tree, every pass, optional BibTeX and log checks. A busy slot returns without starting an engine. The default master produces build/tamil-batch001.pdf. For the combined Sets-through-Infinite-Sets reader, run `build/build-tamil.ps1 -Master tamil-sfr.tex -Passes 3 -BibTeX -ReceiptName TEX-SFR-RECEIPT`. For the proof-systems reader, run `build/build-tamil.ps1 -Master tamil-proof-systems-sequent.tex -Passes 2 -ReceiptName TEX-PROOF-SYSTEMS-TABLEAUX-RECEIPT`. For the iterative-conception chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-story.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-STORY-RECEIPT`. For the Zermelo-axioms chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-z.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-Z-RECEIPT`. For the ordinals chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-ordinals.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-ORDINALS-RECEIPT`. For the stages-and-ranks chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-spine.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-SPINE-RECEIPT`. For the Replacement-and-Reflection chapter, run `build/build-tamil.ps1 -Master tamil-set-theory-replacement.tex -Passes 3 -BibTeX -ReceiptName TEX-SET-THEORY-REPLACEMENT-RECEIPT`.
 
 For the complete edition, use `build/build-tamil.ps1 -Master tamil-complete.tex -Passes 3 -BibTeX -ReceiptName TEX-COMPLETE-RECEIPT`, then `build/build-tamil.ps1 -Master tamil-source-companion.tex -Passes 3 -ReceiptName TEX-COMPANION-RECEIPT` from the unpacked archive root. The companion imports the main volume's references and should be built second.
+After both guarded component builds and their page audits, `python build/assemble-complete-722-reader.py` binds them into one PDF and rewrites their cross-volume links internally. `build/build-epub-html.ps1` generates the TeX4ht HTML for each volume under the global TeX mutex. `epub/package_epub.py` and `epub/audit_epub.py` package and independently audit each EPUB; `python build/assemble-complete-722-epub.py` then binds their content into one 722-unit EPUB.
 
 For the Reference alphabets reader, run `build/build-tamil.ps1 -Master tamil-reference-alphabets.tex -Passes 3 -ReceiptName TEX-REFERENCE-ALPHABETS-RECEIPT`.
 
@@ -75,7 +85,7 @@ The evidence folder contains the source manifest, actual per-segment canon-use r
 
 OpenLogic's natural numbers include zero. The source convention is retained and explained in a separate Tamil edition note, because the consulted school text uses a different convention. New editorial or learner material is kept separate from the faithful source.
 
-The source translation and two complete PDFs are prepared. Reflowable EPUB3 validation and public release remain in progress. Terminology can be refined through later independent review.
+The complete PDF and EPUB, the two component volumes, and the editable source package are prepared. EPUBCheck 5.3.0 reported zero errors and warnings for all three EPUBs. Terminology can be refined through later independent review.
 
 ## Attribution and license
 

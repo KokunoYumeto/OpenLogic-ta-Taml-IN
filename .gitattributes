@@ -5,3 +5,6 @@ translation/** -text
 evidence/** -text
 README.md -text
 build/** -text
+*.pdf binary
+*.epub binary
+*.zip binary
