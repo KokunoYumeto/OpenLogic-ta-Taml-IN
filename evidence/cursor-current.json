@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-tamil-cursor/4",
-  "phase": "v0.4.0-cumulative-203-published-working-tree-722-units-textually-and-semantically-verified-continuing-corpus",
+  "phase": "complete-pdf-and-source-public-epub-in-progress",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "source_verified_units": 722,
   "total_units": 722,
@@ -730,7 +730,7 @@
   ],
   "translated_units": 722,
   "semantic_reviewed_units": 722,
-  "reader_verified_distinct_units": 257,
+  "reader_verified_distinct_units": 722,
   "combined_reader_verified_units": 51,
   "proof_systems_reader_verified_units": 49,
   "axiomatic_deduction_reader_verified_units": 14,
@@ -744,30 +744,28 @@
   "set_theory_spine_reader_verified_units": 7,
   "set_theory_replacement_reader_verified_units": 9,
   "set_theory_ord_arithmetic_reader_verified_units": 6,
-  "release_verified_units": 203,
-  "published_source_units": 639,
-  "public_source_commit": "c335f4c3943711dcee5eb9ab19a47f141b456619",
-  "source_publication_readback": "publication-readback-reference-alphabets-639-257.json",
-  "current_source_published": false,
+  "release_verified_units": 722,
+  "published_source_units": 722,
+  "public_source_commit": "fb5de0ed004498712b961b2f247cd2e82e46c950",
+  "source_publication_readback": "publication-readback-complete-source-722.json",
+  "current_source_published": true,
   "checkpoint": "CHECKPOINT-CURRENT.json",
-  "public_release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v0.4.0-cumulative-203",
+  "public_release": "https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/tag/v1.0.0-complete",
   "live_build_handle": null,
   "next_contiguous_unit": null,
   "next_actions": [
     "Run final complete-edition verification",
     "Continue full-reader visible-text/reference review; static assembly accounts for 695 main and 27 companion source units",
-    "Finish detailed formula copy-order and cross-PDF link review after the all-page gross-layout scan",
+    "Preserve the audited main and companion PDF readers while checking EPUB conversion",
     "Finish, audit, render and publish reflowable EPUB3 editions of the complete main and companion readers",
-    "Verify public hub link and suitable Zenodo lineage for the complete edition",
-    "Preserve existing release tags and assets while verifying and publishing the complete edition"
+    "Record the manager-owned hub's stale 561/722 row; keep the Tamil repository and releases current",
+    "Preserve the published complete PDF/source release and anonymously verify any EPUB follow-up assets"
   ],
   "unresolved": [
-    "All 722 frozen source units pass batch textual and author semantic QA; final complete-edition verification remains",
-    "Historical all-page reader checks cover 257 distinct source units; they do not verify the current complete-reader bytes",
-    "The 14 verified readers are interim checkpoints, not the full edition",
+    "All 722 frozen source units pass batch textual and author semantic QA",
     "Reflowable EPUB3 production, validation and publication remain in progress for the exact bounded readers",
     "Advanced provisional terminology requires ongoing contextual canon consultation",
-    "The 722-unit main/companion PDFs and direct-source render equivalence are audited; complete EPUB validation and public-byte publication remain",
-    "Manager reciprocal hub link and suitable Zenodo lineage verification remain"
+    "The 722-unit main/companion PDFs, direct-source render equivalence, source ZIP, GitHub and Zenodo assets pass public-byte checks; EPUB publication remains",
+    "Manager-owned hub links to the Tamil repository but its public row still reports 561/722 units and the 203-unit reader"
   ]
 }

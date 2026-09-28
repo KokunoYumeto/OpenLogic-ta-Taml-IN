@@ -1,10 +1,10 @@
 {
   "schema": "openlogic-tamil-complete-source-package-receipt/1",
-  "built_utc": "2026-09-28T14:39:40.034034+00:00",
+  "built_utc": "2026-09-28T14:41:15.230202+00:00",
   "source_revision": "9620cc73f9c8e0ad003c514a5d3748f29611c4c0",
   "path": "release/openlogic-ta-Taml-IN-complete-source.zip",
-  "bytes": 18666293,
-  "sha256": "fc9f05361e84853baeb784336137aaa3a090d3b294976116a4491942874e4881",
+  "bytes": 18666340,
+  "sha256": "882cd9f2d4ab3e44c18b21fb80157fe27de8f3b0613bf473282bfc0359709867",
   "file_count": 1560,
   "editable_masters_present": true,
   "zip_readback_pass": true,
