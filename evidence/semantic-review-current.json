@@ -2961,7 +2961,7 @@
     {
       "unit_id": "OLP-0595",
       "source_sha256": "ffe4c3f0a800bd7893a39e68d109ca1eb9662b5f29cda42393cbc5777cf557c4",
-      "translation_sha256": "7895c511b1215cf6493562676b1c02227f9181bd9b845d77008cf9b0424d77da"
+      "translation_sha256": "d778884aed1b4d718fa29f91b31b4b85b91e7afadfd325ef2107d956f022cade"
     },
     {
       "unit_id": "OLP-0596",
@@ -8742,8 +8742,8 @@
     {
       "segment_id": "OLP-0595-S05",
       "reverse_paraphrase": "If Well-Ordering fails, some set sizes are incomparable, so a larger of two infinite carriers need not exist.",
-      "assessment": "TA-STH-041 replaces the ill-typed nested equinumerosity with separate sum/product claims.",
-      "translation_segment_sha256": "2ffb3f9da4544966f6d0445e57bced2ef696d2ef15b0d4dcdbd33ba5013c5eef",
+      "assessment": "TA-STH-041 explicitly unpacks a valid chained equinumerosity into two equivalent claims; its earlier source-error classification is retracted.",
+      "translation_segment_sha256": "951d5d06954868e8d26a68542d58d6251e9f286fa62770945504ba0ef3037cf3",
       "status": "author-reviewed"
     },
     {
@@ -14728,7 +14728,7 @@
     },
     {
       "unit_id": "OLP-0595",
-      "issue": "The Hartogs proof places the well-order carrier inside its relation, reuses the fixed ordinal as a variable outside its own domain, and nests an equinumerosity proposition where a set is required. Tamil repairs the carrier, transported order and separate sum/product claims under TA-STH-039 through TA-STH-041."
+      "issue": "The Hartogs proof places the well-order carrier inside its relation and reuses the fixed ordinal as a variable outside its own domain; Tamil repairs those under TA-STH-039 and TA-STH-040. TA-STH-041 is only an editorial unpacking of the source's valid equinumerosity chain. The prior claim that its nested macro is ill-typed is retracted."
     },
     {
       "unit_id": "OLP-0596",
@@ -16091,7 +16091,7 @@
       "checks": {
         "eight_sections_in_frozen_order": true,
         "tarski_scott_least_rank_and_ordinal_variant": true,
-        "hartogs_carrier_relation_and_typed_comparison_repairs": true,
+        "hartogs_carrier_and_transported_order_repairs_with_valid_chain_unpacked": true,
         "well_ordering_empty_and_prestop_scope": true,
         "countable_choice_twice_and_indexed_union": true,
         "intrinsic_stage_choice_set": true,

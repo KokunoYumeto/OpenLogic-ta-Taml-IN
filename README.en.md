@@ -7,6 +7,8 @@ Programme catalogue: [OpenLogic translations](https://github.com/KokunoYumeto/Op
 
 All **722 frozen content units** are translated and aligned in 2,242 source/target segments. One complete reader contains 695 main units followed by a labelled appendix with the other 27 source units. Its PDF and reflowable EPUB 3.3 editions are validated.
 
+**Editorial correction (TA-STH-041, September 2026):** The Hartogs passage's nested `\cardeq` macros render a valid chain of equinumerosities. Earlier evidence incorrectly called that source formula ill-typed. The Tamil edition's two-claim wording is an equivalent editorial presentation; its mathematical content and the published reader files are unchanged. See the [supersession note](evidence/TA-STH-041-SUPERSESSION.md). The distinct carrier and transported-order corrections TA-STH-039 and TA-STH-040 remain valid.
+
 - [Complete 722-unit Tamil PDF](readers/openlogic-ta-Taml-IN-complete-722.pdf): 1,227 A4 pages with audited internal links between the main text and appendix.
 - [Single full-text editable LaTeX for all 722 units](https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v1.1.1-complete-722/02-openlogic-ta-Taml-IN-complete-722.tex): every translated unit body is present directly in this file; a [repository copy](build/tamil-complete-722-direct.tex) is also available.
 - [Complete editable source archive](https://github.com/KokunoYumeto/OpenLogic-ta-Taml-IN/releases/download/v1.1.1-complete-722/03-openlogic-ta-Taml-IN-complete-source.zip): the single full-text LaTeX, both component full-text files, modular Tamil and frozen English sources, figures, bibliography, build scripts and evidence.

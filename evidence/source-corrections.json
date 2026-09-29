@@ -6274,18 +6274,21 @@
     {
       "audit_id": "TA-STH-041",
       "unit_id": "OLP-0595",
-      "kind": "cardinal-sum-product-comparison-typing",
-      "action": "Replaced a nested equinumerosity expression between a proposition and M with the two intended equinumerosity claims for disjoint union and Cartesian product.",
+      "kind": "editorial-equinumerosity-chain-unpacking",
+      "classification_status": "prior source-error claim retracted; editorial presentation retained",
+      "action": "Rendered the valid chained equinumerosity as two equivalent comparisons with M for readability; no mathematical source defect is asserted.",
       "expected_missing_math": ["$\\cardeq{\\cardeq{A\\disjointsumB}{A\\timesB}}{M}$"],
       "expected_extra_math": ["$\\cardeq{A\\disjointsumB}{M}$", "$\\cardeq{A\\timesB}{M}$"],
       "expected_missing_commands": [],
       "expected_extra_commands": [],
-      "source_issue_or_choice": "The closing example nests cardeq(A disjoint-sum B,A times B) as the first argument of another cardeq with M. The inner expression is a proposition, not a set whose size can be compared with M, and the intended AC statement concerns each operation separately.",
+      "source_issue_or_choice": "The frozen macro defines cardeq(X,Y) as X approximately equals Y. The nested source therefore prints the valid chain A disjoint-sum B approximately equals A times B approximately equals M. Tamil states the equivalent two comparisons with M explicitly.",
       "chosen_treatment": "வெட்டாக் கூட்டுத்தொகையும் பெருக்கற்கணமும் ஒவ்வொன்றாக பெரிய கணம் M உடன் சமஎண்ணிக்கையுடையவை என்ற இரண்டு கூற்றுகளாகக் கூறுகிறது.",
-      "alternatives_considered": "Keeping the ill-typed nested expression or only claiming that sum and product are equinumerous to each other.",
-      "rationale": "When A and B are infinite and comparable under Choice, both their disjoint union and their product have the size of the larger carrier, as the referenced theorem states.",
-      "precise_review_question": "Are both sum and product separately compared with the larger set M, with no proposition passed as a set argument?",
-      "location_needle": "SOURCE CORRECTION TA-STH-041"
+      "alternatives_considered": "Retain the valid chained notation verbatim; both presentations express the same equinumerosity relations.",
+      "rationale": "The macro expansion is a standard chain S approximately equals P approximately equals M. Equinumerosity is transitive and symmetric, so this entails and is entailed by S approximately equals M and P approximately equals M.",
+      "precise_review_question": "Does the two-claim Tamil presentation preserve the valid equinumerosity chain?",
+      "historical_claim": "The previous TA-STH-041 record called the nested macro ill-typed and treated the Tamil wording as a source repair. That claim is superseded, not erased from released historical evidence.",
+      "macro_evidence": "upstream/open-logic-config.sty:956; frozen revision 9620cc73f9c8e0ad003c514a5d3748f29611c4c0; SHA256 76af3674c68139572b71de9908d690700cd7e324d221d649930ecda020935724",
+      "location_needle": "EDITORIAL PRESENTATION TA-STH-041"
     },
     {
       "audit_id": "TA-STH-042",

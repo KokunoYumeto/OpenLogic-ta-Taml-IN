@@ -6,6 +6,8 @@
 
 இன்னும் பொருத்தப்படாத ஒவ்வொரு பக்க எண்ணும் `pending` என்று வெளிப்படையாகக் குறிக்கப்பட்டுள்ளது. துல்லியமான TeX வரி மற்றும் பைட் எல்லைகள் பதிவிறக்கத்தக்க `DECISIONS.json.gz` கோப்பை விரித்தால் கிடைக்கும் `DECISIONS.json` மற்றும் `DECISION_OCCURRENCES.csv` கோப்புகளில் உள்ளன.
 
+TA-STH-041 இன் முந்தைய மூலப் பிழை வகைப்படுத்தல் மறுக்கப்பட்டது; மூலம் செல்லுபடியாகும் சமஎண்ணிக்கைச் சங்கிலி. [திருத்த விளக்கம்](../TA-STH-041-SUPERSESSION.md) பார்க்கவும்.
+
 ## TA-AML-001 — The file declares the chapter subfiles class and opens an olchapter, but ends with OLEndPartHook; every other chapter driver in the surrounding modal material uses OLEndChapterHook.
 
 தேர்ந்தெடுத்த தமிழாக்கம்: **தமிழ் காலத் தருக்க அதிகார இயக்கி அதிகார முடிவுக் கொக்கியைப் பயன்படுத்துகிறது.**
@@ -6561,22 +6563,6 @@
 மூல மதிப்புரைக் கேள்வி: **is R now a well-defined relation on ran(f) isomorphic to membership on the whole fixed ordinal alpha?**
 
 - `TA-OCC-595d708423370593` — OLP-0595 / `OLP-0595-S01`; மூலம் `content/set-theory/choice/hartogs.tex:1`; தமிழ் `translation/content/set-theory/choice/hartogs.tex:45`; PDF பக்கம் pending.
-
-## TA-STH-041 — The closing example nests cardeq(A disjoint-sum B,A times B) as the first argument of another cardeq with M. The inner expression is a proposition, not a set whose size can be compared with M, and the intended AC statement concerns each operation separately.
-
-தேர்ந்தெடுத்த தமிழாக்கம்: **வெட்டாக் கூட்டுத்தொகையும் பெருக்கற்கணமும் ஒவ்வொன்றாக பெரிய கணம் M உடன் சமஎண்ணிக்கையுடையவை என்ற இரண்டு கூற்றுகளாகக் கூறுகிறது.**
-
-வகை: `source_correction`; நம்பிக்கை நிலை: `medium`; தற்காலிகத் தேர்வு: `true`; மதிப்புரை முன்னுரிமை: `high`.
-
-பதியப்பட்ட பொருள் மற்றும் காரணம்: When A and B are infinite and comparable under Choice, both their disjoint union and their product have the size of the larger carrier, as the referenced theorem states.
-
-ஆதாரங்கள்: OPENLOGIC-FROZEN-OLP-0595 (checked_supports)
-
-மாற்றுத் தேர்வுகள்: Keeping the ill-typed nested expression or only claiming that sum and product are equinumerous to each other.
-
-மூல மதிப்புரைக் கேள்வி: **are both sum and product separately compared with the larger set M, with no proposition passed as a set argument?**
-
-- `TA-OCC-dd1d4583e76ac975` — OLP-0595 / `OLP-0595-S05`; மூலம் `content/set-theory/choice/hartogs.tex:76`; தமிழ் `translation/content/set-theory/choice/hartogs.tex:105`; PDF பக்கம் pending.
 
 ## TA-STH-042 — The construction begins with g(0)=f(A), but if A is empty then f is defined only on nonempty subsets of A and f(A) is undefined. The empty set is already well-ordered.
 

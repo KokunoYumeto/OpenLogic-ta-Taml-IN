@@ -1,6 +1,6 @@
 {
   "schema": "openlogic-translation-decision-qa/1.0.0",
-  "generated_utc": "2026-09-28T14:38:48.619509+00:00",
+  "generated_utc": "2026-09-29T22:55:13.191630+00:00",
   "status": "PASS",
   "edition_id": "openlogic-ta-Taml-IN",
   "coverage_state": "complete",
@@ -9,7 +9,7 @@
     "occurrences": 38855,
     "source_units": 722,
     "decision_occurrence_units": 701,
-    "localized_decisions": 12,
+    "localized_decisions": 13,
     "reader_units_with_mapped_pages": 49,
     "available_reader_occurrences": 3291,
     "pending_reader_occurrences": 35564
@@ -46,32 +46,32 @@
   "schema_errors": [],
   "surfaces": {
     "START_HERE.md": {
-      "bytes": 4321,
-      "sha256": "d61482a21b923e2ff9f633e0292d24cb3e750f681c5294e711af19316d79ba7c"
+      "bytes": 5392,
+      "sha256": "4076d17c050244a7e278fd4a45ff060192b0f8c5e158bb0c19541253f289c9cf"
     },
     "TRANSLATION_DECISIONS_TAMIL.md": {
-      "bytes": 1258600,
-      "sha256": "75fa03caf72fb547852dfc41bb6d74961e3747e3853173b4b22df0eb753abe42"
+      "bytes": 1259045,
+      "sha256": "fc4c731c7050e2dd5e6e1a04fee3b2549f4ac257bd439f1a144345b1fc109adc"
     },
     "TRANSLATION_DECISIONS_FULL.md": {
-      "bytes": 11406130,
-      "sha256": "fa46faf8f5468d442f0b1862d0d10a5840c867641978b78e673bbc9332edd737"
+      "bytes": 11406558,
+      "sha256": "0a6cb35e950a4662295382703a514347c5747966b067504f4335d96241a6cfc0"
     },
     "PRIORITY_REVIEW.md": {
-      "bytes": 7382615,
-      "sha256": "4bb274280ae7fec8692da8f466a03a1837b84febeeb70cadfe4ba7bc832c9287"
+      "bytes": 7381186,
+      "sha256": "227dc6ee218a43d5df61d0da2ca82bfdf1cbd53bfe25456c9af5f5682613386a"
     },
     "DECISION_OCCURRENCES.csv": {
-      "bytes": 32000478,
-      "sha256": "934215cd847eb9e97927e42909d52242b0f109500ee2296fd066be5fcfdf7a3b"
+      "bytes": 32000646,
+      "sha256": "0f548a545daf433e2dbb765642e1d6861b59573716e4e150076b3e95a129eb17"
     },
     "DECISIONS.json": {
-      "bytes": 129582098,
-      "sha256": "bcf13b882f32bd95cb9fa48c658453240a3a9f532eb9dcd1eb0d24be51301a88"
+      "bytes": 129577024,
+      "sha256": "f435b5ee2a457fc70aba07c7cb61e6bd3bc4d5b8fec4f511dd8e6f0efc775442"
     },
     "DECISIONS.json.gz": {
-      "bytes": 4351038,
-      "sha256": "1c1332b62d9ac5df9329fe4dbdcfc5e70219807649fac5b2b92ead65133ed140"
+      "bytes": 4351243,
+      "sha256": "5a26e8f83880ef1c570644ab116b113f120a93917dc4ba7b96ac7e4c021f2971"
     },
     "translation-decision.schema.json": {
       "bytes": 10787,
@@ -88,9 +88,10 @@
   },
   "limitations": [
     "The translation corpus is complete; distinct decision occurrences are recorded in 701 of its 722 units, since a separate decision is not required for every unit.",
-    "Tamil explanations and review questions have been individually localized for 12 decisions; the other 730 remain explicitly marked pending in the Tamil-first view.",
+    "Tamil explanations and review questions have been individually localized for 13 decisions; the other 729 remain explicitly marked pending in the Tamil-first view.",
     "Pending reader pages are explicitly recorded rather than inferred from other PDFs.",
     "Source spans marked as a segment-boundary fallback identify the exact audited semantic segment when a source lexeme cannot be paired mechanically.",
+    "Historical batch QA snapshots retain the superseded TA-STH-041 source-error rationale; the current decision and supersession note retract that one classification without changing the Tamil mathematics.",
     "No independent Tamil specialist review is claimed."
   ]
 }
