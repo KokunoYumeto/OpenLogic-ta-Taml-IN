@@ -84,15 +84,17 @@ $[w] = [u]$ என்பது மட்டுமே உறுதிசெய்
       கருதுகோளின்படி $p \in \Gamma$ என்பதாலும்
       $\mSat{M}{p}[v]$ என்பதாலும், $\mSat{M}{\indfrm}[w]$.}
 
-    \tagitem{prvNot}{\iftag{probNot}{பயிற்சி.}{\indcase{!A}{\lnot
-          !B}{$\mSat{M}{\indfrm}[w]$ என்பது $\mSat/{M}{!B}[w]$ என்பதற்கு
+    \tagitem{prvNot}{\indcase{!A}{\lnot !B}
+         {\iftag{probNot}{பயிற்சி.}
+         {$\mSat{M}{\indfrm}[w]$ என்பது $\mSat/{M}{!B}[w]$ என்பதற்கு
           நிகரானது. தொகுத்தறிதல் கருதுகோளின்படி,
           $\mSat/{M}{!B}[w]$ என்பது $\mSat/{M^*}{!B}[{[w]}]$ என்பதற்கு
           நிகரானது. இறுதியாக, $\mSat/{M^*}{!B}[{[w]}]$ என்பது
           $\mSat{M^*}{\indfrm}[{[w]}]$ என்பதற்கு நிகரானது.}}}{}
 
-    \tagitem{prvAnd}{\iftag{probAnd}{பயிற்சி.}{\indcase{!A}{(!B \land
-          !C)}{$\mSat{M}{\indfrm}[w]$ என்பது $\mSat{M}{!B}[w]$ மற்றும்
+    \tagitem{prvAnd}{\indcase{!A}{(!B \land !C)}
+          {\iftag{probAnd}{பயிற்சி.}
+          {$\mSat{M}{\indfrm}[w]$ என்பது $\mSat{M}{!B}[w]$ மற்றும்
           $\mSat{M}{!C}[w]$ என்பதற்கு நிகரானது. தொகுத்தறிதல் கருதுகோளின்படி,
           $\mSat{M}{!B}[w]$ என்பது $\mSat{M^*}{!B}[{[w]}]$ என்பதற்கு
           நிகரானது; மேலும் $\mSat{M}{!C}[w]$ என்பது
@@ -101,8 +103,9 @@ $[w] = [u]$ என்பது மட்டுமே உறுதிசெய்
           $\mSat{M^*}{!B}[{[w]}]$ மற்றும்
           $\mSat{M^*}{!C}[{[w]}]$ என்பதற்கு நிகரானது.}}}{}
 
-    \tagitem{prvOr}{\iftag{probOr}{பயிற்சி.}{\indcase{!A}{(!B \lor
-          !C)}{$\mSat{M}{\indfrm}[w]$ என்பது $\mSat{M}{!B}[w]$ அல்லது
+    \tagitem{prvOr}{\indcase{!A}{(!B \lor !C)}
+          {\iftag{probOr}{பயிற்சி.}
+          {$\mSat{M}{\indfrm}[w]$ என்பது $\mSat{M}{!B}[w]$ அல்லது
           $\mSat{M}{!C}[w]$ என்பதற்கு நிகரானது. தொகுத்தறிதல் கருதுகோளின்படி,
           $\mSat{M}{!B}[w]$ என்பது $\mSat{M^*}{!B}[{[w]}]$ என்பதற்கு
           நிகரானது; மேலும் $\mSat{M}{!C}[w]$ என்பது
@@ -111,8 +114,9 @@ $[w] = [u]$ என்பது மட்டுமே உறுதிசெய்
           $\mSat{M^*}{!B}[{[w]}]$ அல்லது
           $\mSat{M^*}{!C}[{[w]}]$ என்பதற்கு நிகரானது.}}}{}
 
-    \tagitem{prvIf}{\iftag{probIf}{பயிற்சி.}{\indcase{!A}{(!B \lif
-          !C)}{$\mSat{M}{\indfrm}[w]$ என்பது $\mSat/{M}{!B}[w]$ அல்லது
+    \tagitem{prvIf}{\indcase{!A}{(!B \lif !C)}
+          {\iftag{probIf}{பயிற்சி.}
+          {$\mSat{M}{\indfrm}[w]$ என்பது $\mSat/{M}{!B}[w]$ அல்லது
           $\mSat{M}{!C}[w]$ என்பதற்கு நிகரானது. தொகுத்தறிதல் கருதுகோளின்படி,
           $\mSat{M}{!B}[w]$ என்பது $\mSat{M^*}{!B}[{[w]}]$ என்பதற்கு
           நிகரானது; மேலும் $\mSat{M}{!C}[w]$ என்பது
@@ -121,8 +125,9 @@ $[w] = [u]$ என்பது மட்டுமே உறுதிசெய்
           $\mSat/{M^*}{!B}[{[w]}]$ அல்லது
           $\mSat{M^*}{!C}[{[w]}]$ என்பதற்கு நிகரானது.}}}{}
 
-    \tagitem{prvIff}{\iftag{probIff}{பயிற்சி.}{\indcase{!A}{(!B \liff
-          !C)}{$\mSat{M}{\indfrm}[w]$ என்பது $\mSat{M}{!B}[w]$ மற்றும்
+    \tagitem{prvIff}{\indcase{!A}{(!B \liff !C)}
+          {\iftag{probIff}{பயிற்சி.}
+          {$\mSat{M}{\indfrm}[w]$ என்பது $\mSat{M}{!B}[w]$ மற்றும்
           $\mSat{M}{!C}[w]$, அல்லது $\mSat/{M}{!B}[w]$ மற்றும்
           $\mSat/{M}{!C}[w]$ என்பதற்கு நிகரானது. தொகுத்தறிதல் கருதுகோளின்படி,
           $\mSat{M}{!B}[w]$ என்பது $\mSat{M^*}{!B}[{[w]}]$ என்பதற்கு
@@ -134,8 +139,9 @@ $[w] = [u]$ என்பது மட்டுமே உறுதிசெய்
           $\mSat/{M^*}{!B}[{[w]}]$ மற்றும்
           $\mSat/{M^*}{!C}[{[w]}]$ என்பதற்கு நிகரானது.}}}{}
 
-    \tagitem{prvBox}{\iftag{probBox}{பயிற்சி.}{\indcase{!A}{\Box
-          !B}{$\mSat{M}{\indfrm}[w]$ எனக் கொள்க;
+    \tagitem{prvBox}{\indcase{!A}{\Box !B}
+          {\iftag{probBox}{பயிற்சி.}
+          {$\mSat{M}{\indfrm}[w]$ எனக் கொள்க;
           $\mSat{M^*}{\indfrm}[{[w]}]$ என்பதைக் காட்ட, $R^*[w][v]$
           ஆகுமாறு $v$ ஐ எடுத்துக்கொள்க.
           \olref{defn:filtration}\olref{defn:filtration-R2} இலிருந்து
@@ -150,8 +156,9 @@ $[w] = [u]$ என்பது மட்டுமே உறுதிசெய்
           தொகுத்தறிதல் கருதுகோளின்படி $\mSat{M}{!B}[v]$; மேலும் $v$
           தன்னிச்சையானது என்பதால் $\mSat{M}{\indfrm}[w]$.}}}{}
 
-    \tagitem{prvDiamond}{\iftag{probDiamond}{பயிற்சி.}{\indcase{!A}{\Diamond
-          !B}{$\mSat{M}{\indfrm}[w]$ எனக் கொள்க. அப்போது ஏதோ ஒரு
+    \tagitem{prvDiamond}{\indcase{!A}{\Diamond !B}
+          {\iftag{probDiamond}{பயிற்சி.}
+          {$\mSat{M}{\indfrm}[w]$ எனக் கொள்க. அப்போது ஏதோ ஒரு
           $v \in W$ க்கு $Rwv$ மற்றும் $\mSat{M}{!B}[v]$. தொகுத்தறிதல்
           கருதுகோளின்படி $\mSat{M^*}{!B}[{[v]}]$; மேலும்
           \olref{defn:filtration}\olref{defn:filtration-R1} இலிருந்து

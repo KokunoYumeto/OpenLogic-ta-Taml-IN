@@ -161,10 +161,10 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
   $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனுமாறு $!C \in \Delta$ உள்ளது;
   $\Xi = \Delta$ என்பதால் $!C \in \Xi$ உம் ஆகும். ஆகவே ஒவ்வொரு நேர்விலும்,
   \iftag{FOL}{$\Struct M$}{$\pAssign{v}$} ஆனது $!A \land !B, \Gamma
-  \Sequent \Delta$ ஐ நிறைவுறுத்துகிறது. \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
+  \Sequent \Delta$ ஐ, அதாவது $\Theta \Sequent \Xi$ ஐ, நிறைவுறுத்துகிறது. \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
   தன்னிச்சையாகத் தேர்ந்தெடுக்கப்பட்டதால், $!A \land !B, \Gamma \Sequent
   \Delta$ செல்லுபடியாகும். $!B$ இலிருந்து $!A \land !B$ அனுமானிக்கப்படும் நேர்வும்
-  இதேபோல் கையாளப்படுகிறது; $!A$ க்குப் பதிலாக $!B$ வருகிறது.
+  இதேபோல் கையாளப்படுகிறது; $!A$ க்குப் பதிலாக~$!B$ வருகிறது.
 % SEGMENT OLP-0081-S07
 \item கடைசி அனுமானம் \RightR{\lor}: இதில் இரண்டு வடிவங்கள் உள்ளன. முன்கோளின்
   வலப்புறத்திலுள்ள $!A$ இலிருந்தோ $!B$ இலிருந்தோ வலப்புறத்தில் $!A \lor !B$
@@ -191,7 +191,7 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} தன்னிச்சையாகத்
   தேர்ந்தெடுக்கப்பட்டதால், $\Theta \Sequent \Xi$ செல்லுபடியாகும். $!B$
   இலிருந்து $!A \lor !B$ அனுமானிக்கப்படும் நேர்வும் இதேபோல் கையாளப்படுகிறது;
-  $!A$ க்குப் பதிலாக $!B$ வருகிறது.
+  $!A$ க்குப் பதிலாக~$!B$ வருகிறது.
 % SEGMENT OLP-0081-S08
 \item கடைசி அனுமானம் \RightR{\lif}: அப்போது $\pi$ பின்வருமாறு முடியும்:
   \begin{prooftree}
@@ -204,19 +204,19 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
   முடிவும் செல்லுபடியாகும் என்று காட்ட வேண்டும். தன்னிச்சையான
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஒன்றைக் கொள்க. $!A, \Gamma
   \Sequent \Delta, !B$ செல்லுபடியாகும் என்பதால், பின்வரும் நேர்வுகளில்
-  குறைந்தது ஒன்று நிலவும்: (a) $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$,
-  (b) $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$, (c) ஏதோவொரு~$~!C \in
-  \Gamma$ க்கு $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$, அல்லது (d)
-  ஏதோவொரு $!C \in \Delta$ க்கு $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$.
-  (a), (b) நேர்வுகளில் $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$;
+  குறைந்தது ஒன்று நிலவும்: (a)~$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$,
+  (b)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$, (c)~ஏதோவொரு~$~!C \in
+  \Gamma$ க்கு $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$, அல்லது
+  (d)~ஏதோவொரு $!C \in \Delta$ க்கு $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$.
+  (a),~(b) நேர்வுகளில் $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \lif !B}$;
   ஆகவே $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$ எனுமாறு $!C \in \Delta,
-  !A \lif !B$ உள்ளது. (c) நேர்வில் ஏதோவொரு $!C \in \Gamma$ க்கு
-  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$. (d) நேர்வில் ஏதோவொரு $!C \in
+  !A \lif !B$ உள்ளது. (c)~நேர்வில் ஏதோவொரு $!C \in \Gamma$ க்கு
+  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!C}$. (d)~நேர்வில் ஏதோவொரு $!C \in
   \Delta$ க்கு $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!C}$. ஒவ்வொரு நேர்விலும்,
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஆனது $\Gamma \Sequent \Delta,
-  !A \lif !B$ ஐ நிறைவுறுத்துகிறது. \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
-  தன்னிச்சையாகத் தேர்ந்தெடுக்கப்பட்டதால், $\Gamma \Sequent \Delta, !A \lif
-  !B$ செல்லுபடியாகும். \iftag{FOL}{%
+  !A \lif !B$ ஐ, அதாவது $\Theta \Sequent \Xi$ ஐ, நிறைவுறுத்துகிறது. \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$}
+  தன்னிச்சையாகத் தேர்ந்தெடுக்கப்பட்டதால், $\Theta \Sequent
+  \Xi$ செல்லுபடியாகும். \iftag{FOL}{%
 % SEGMENT OLP-0081-S09
 \item கடைசி அனுமானம் \LeftR{\lforall}: அப்போது !!a{formula}~$!A(x)$ உம்
   மூடிய சொல்~$t$ உம் இருந்து, $\pi$ பின்வருமாறு முடியும்:
@@ -228,19 +228,19 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
   \end{prooftree}
   $\lforall[x][!A(x)], \Gamma \Sequent \Delta$ என்ற முடிவு செல்லுபடியாகும்
   என்று காட்ட வேண்டும். !!a{structure}~$\Struct M$ ஒன்றைக் கருதுக. முன்கோள்
-  $!A(t), \Gamma \Sequent \Delta$ செல்லுபடியாகும் என்பதால், (a)
-  $\Sat/{M}{!A(t)}$, அல்லது (b) ஏதோவொரு $!C \in \Gamma$ க்கு
+  $!A(t), \Gamma \Sequent \Delta$ செல்லுபடியாகும் என்பதால்,
+  (a)~$\Sat/{M}{!A(t)}$, அல்லது (b)~ஏதோவொரு $!C \in \Gamma$ க்கு
   $\Sat/{M}{!C}$, அல்லது (c)~ஏதோவொரு $!C \in \Delta$ க்கு
-  $\Sat{M}{!C}$. (a) நேர்வில்
+  $\Sat{M}{!C}$. (a)~நேர்வில்
   % READER FALLBACK TA-READER-REF-004; absent semantics results get descriptive text.
   \oliflabeldef{syn:sem:prop:quant-terms}{\olref[syn][sem]{prop:quant-terms}}{மூடிய
   சொல் இடைநிறுத்தலுக்கான அளவையடை மெய்ப்பொருளியல் விதி} படி,
   $\Sat{M}{\lforall[x][!A(x)]}$ எனில் $\Sat{M}{!A(t)}$. ஆனால்
-  $\Sat/{M}{!A(t)}$ என்பதால், $\Sat/{M}{\lforall[x][!A(x)]}$ . (b), (c)
+  $\Sat/{M}{!A(t)}$ என்பதால், $\Sat/{M}{\lforall[x][!A(x)]}$ . (b),~(c)
   நேர்வுகளிலும் $\Struct{M}$ ஆனது $\lforall[x][!A(x)], \Gamma \Sequent
   \Delta$ ஐ நிறைவுறுத்துகிறது. $\Struct M$ தன்னிச்சையாகத்
-  தேர்ந்தெடுக்கப்பட்டதால், $\lforall[x][!A(x)], \Gamma \Sequent \Delta$
-  செல்லுபடியாகும்.
+  தேர்ந்தெடுக்கப்பட்டதால், $\lforall[x][!A(x)], \Gamma \Sequent \Delta$,
+  அதாவது $\Theta \Sequent \Xi$, செல்லுபடியாகும்.
 \item கடைசி அனுமானம் \RightR{\lexists}: பயிற்சி.
 % SEGMENT OLP-0081-S10
 \item கடைசி அனுமானம் \RightR{\lforall}: அப்போது !!a{formula}~$!A(x)$ உம்
@@ -254,12 +254,12 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
   இங்கு தனிமாறி நிபந்தனை நிறைவுறுகிறது; அதாவது $a$ ஆனது $!A(x)$,
   $\Gamma$, $\Delta$ ஆகியவற்றில் இடம்பெறாது. தொகுத்தறிதல் கருதுகோளால் கடைசி
   அனுமானத்தின் முன்கோள் செல்லுபடியாகும். முடிவும் செல்லுபடியாகும் என்று காட்ட
-  வேண்டும். அதாவது எந்த !!{structure}~$\Struct M$ க்கும், (a)
-  $\Sat{M}{\lforall[x][!A(x)]}$, அல்லது (b) ஏதோவொரு $!C \in \Gamma$ க்கு
+  வேண்டும். அதாவது எந்த !!{structure}~$\Struct M$ க்கும்,
+  (a)~$\Sat{M}{\lforall[x][!A(x)]}$, அல்லது (b)~ஏதோவொரு $!C \in \Gamma$ க்கு
   $\Sat/{M}{!C}$, அல்லது (c)~ஏதோவொரு $!C \in \Delta$ க்கு
   $\Sat{M}{!C}$ என்று காட்ட வேண்டும்.
 
-  $\Struct{M}$ தன்னிச்சையான !!{structure} என்க. (b) அல்லது (c) நிலவினால்
+  $\Struct{M}$ தன்னிச்சையான !!{structure} என்க. (b) அல்லது~(c) நிலவினால்
   முடிந்தது. இரண்டும் நிலவவில்லை என்க: ஒவ்வொரு $!C \in \Gamma$ க்கும்
   $\Sat{M}{!C}$; ஒவ்வொரு $!C \in \Delta$ க்கும் $\Sat/{M}{!C}$. (a),
   அதாவது $\Sat{M}{\lforall[x][!A(x)]}$, நிலவுகிறது என்று காட்ட வேண்டும்.
@@ -307,12 +307,12 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
   \iftag{FOL}{$\Struct{M}$ என்ற !!a{structure}}{$\pAssign{v}$ என்ற
     !!a{valuation}} ஒன்றைக் கொள்க. தொகுத்தறிதல் கருதுகோளால் முன்கோள்கள்
   செல்லுபடியாகும்; ஆகவே \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} அவை
-  இரண்டையும் நிறைவுறுத்துகிறது. இரண்டு நேர்வுகளைப் பிரிக்கிறோம்: (a)
-  $\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$, (b)
-  $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. (a) நேர்வில், இடது முன்கோளை
+  இரண்டையும் நிறைவுறுத்துகிறது. இரண்டு நேர்வுகளைப் பிரிக்கிறோம்:
+  (a)~$\iftag{FOL}{\Sat/{M}}{\pSat/{v}}{!A}$,
+  (b)~$\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. (a)~நேர்வில், இடது முன்கோளை
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} நிறைவுறுத்த வேண்டுமெனில் அது
   $\Gamma \Sequent \Delta$ ஐ நிறைவுறுத்த வேண்டும். அப்போது அது முடிவையும்
-  நிறைவுறுத்துகிறது. (b) நேர்வில், வலது முன்கோளை
+  நிறைவுறுத்துகிறது. (b)~நேர்வில், வலது முன்கோளை
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} நிறைவுறுத்த வேண்டுமெனில் அது
   $\Pi \Sequent \Lambda$ ஐ நிறைவுறுத்த வேண்டும். மீண்டும்,
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} முடிவை நிறைவுறுத்துகிறது.
@@ -330,7 +330,7 @@ $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$.
     M$}{!!a{valuation}~$\pAssign{v}$} ஒன்றைக் கருதுக.
   \iftag{FOL}{$\Struct{M}$}{$\pAssign{v}$} ஆனது $\Gamma \Sequent \Delta$
   ஐ நிறைவுறுத்தினால் முடிந்தது. அது நிறைவுறுத்தவில்லை என்க. தொகுத்தறிதல்
-  கருதுகோளால் $\Gamma \fCenter \Delta, !A$ செல்லுபடியாகும் என்பதால்,
+  கருதுகோளால் $\Gamma \Sequent \Delta, !A$ செல்லுபடியாகும் என்பதால்,
   $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A}$. அதேபோல் $\Gamma \Sequent \Delta,
   !B$ செல்லுபடியாகும் என்பதால் $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!B}$. எனவே
   $\iftag{FOL}{\Sat{M}}{\pSat{v}}{!A \land !B}$.

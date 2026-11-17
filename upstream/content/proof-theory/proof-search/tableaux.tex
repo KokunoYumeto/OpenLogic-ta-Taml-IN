@@ -24,9 +24,9 @@ of the form $\sFmla{\True}{!A}$ or $\sFmla{\False}{!A}$. Trees grow
 downwards. They begin with !!{formula}s that specify what we want to
 !!{prove}. E.g., to !!{prove} a sequent $!A, !B \Sequent !C, !D$ it
 would begin with $\sFmla{\True}{!A}, \sFmla{\True}{!B},
-\sFmla{\False}{!C}, \sFmla{\True}{!D}$. !!^a{structure} that makes
-$!A$ and $!B$ true and $!C$ and $!D$ false is !!a{structure} that
-shows that would show that $!A, !B \Sequent !C, !D$ is not valid. 
+\sFmla{\False}{!C}, \sFmla{\False}{!D}$. !!^a{structure} that makes
+$!A$ and~$!B$ true and $!C$ and~$!D$ false is !!a{structure} that
+shows that $!A, !B \Sequent !C, !D$ is not valid. 
 
 A leaf (bottommost) node of the tableau can be extended by branch
 extension rules which add additional nodes to the same branch or add
@@ -42,12 +42,13 @@ the signs $\True$ and $\False$ indicate whether !!a{formula} is
 principal on the left or right side of a sequent, respectively.
 
 A branch of a tableau is \emph{closed} if it contains both
-$\sFmla{\True}{!A}$ and $\sFmla{\False}{!A}$. If every branch is
-closed, we say the entire tableaux is closed. For instance, here is a
-clause tableau for $!A \lor (!B \land !C) \Sequent (!A \lor !B) \land
+$\sFmla{\True}{!A}$ and $\sFmla{\False}{!A}$, or contains $\sFmla{\True}{\lfalse}$. If every branch is
+closed, we say the entire tableau is closed. For instance, here is a
+closed tableau for $!A \lor (!B \land !C) \Sequent (!A \lor !B) \land
 (!A \lor !C)$, i.e., starting with $\sFmla{\True}{!A \lor (!B \land
 !C)}$ and $\sFmla{\False}{(!A \lor !B) \land (!A \lor !C)}$:
-\begin{oltableau}
+\begin{maxwidth}
+  \begin{tableau}{}
   [\sFmla{\True}{\formula{A} \lor (\formula{B} \land \formula{C})},
     just=\TAss, checked
     [\sFmla{\False}{(\formula{A} \lor \formula{B}) \land
@@ -105,7 +106,8 @@ clause tableau for $!A \lor (!B \land !C) \Sequent (!A \lor !B) \land
       ]
     ]
   ]
-\end{oltableau}
+\end{tableau}
+\end{maxwidth}
 
 The checkmarks indicate that the corresponding rule has been applied
 to !!a{formula} on all branches below it. The $\otimes$ symbol
@@ -116,7 +118,7 @@ serve as indications which signed !!{formula}s the rule is applied to
 Proof search is easy in tableaux. We generate a tableau in stages. At
 stage $0$, simply write down the starting !!{formula}s at the top. At
 stage $n+1$, do the following for each leaf node: Find the first
-(top-most) signed formula not yet checked off. Apply the branch
+(top-most) non-atomic signed formula not yet checked off that is not of the form $\sFmla{\True}{\lforall}$ or $\sFmla{\False}{\lexists}$. Apply the branch
 extension rule to that formula. Once the rule has been applied in
 every branch that includes the signed formula in question, check it
 off. (The example above is generated using this algorithm.)
@@ -137,7 +139,8 @@ already occur on the branch.
 
 If this proof search does not produce a closed tableau, it either
 contains a finite open branch where all non-atomic !!{formula}s are
-checked off, or the search produces an infinite, finitely branching
+checked off, except those of the form $\sFmla{\True}{\lforall}$ and
+$\sFmla{\False}{\lexists}$, which have been applied to every available term, or the search produces an infinite, finitely branching
 tree, which must contain an infinite branch. Just like in
 \olref[cpl]{sec}, we can define !!a{structure}~$\Struct{M}$ such that
 if $\sFmla{\True}{!A}$ occurs on the branch, then $\Sat{M}{!A}$ and if
@@ -163,7 +166,9 @@ leaf node will be a sequent of the form $!A, \Pi \Sequent \Lambda,
 !A$. Some successive nodes in the tableau will be assigned the same
 sequent; delete duplicates. For instance, the tableau above translates
 into the !!{proof}:
-\[\small
+
+\begin{maxwidth}
+$
 \Axiom$!A \fCenter !A, !B$
 \RightLabel{\RightR{\lor}}
 \UnaryInf$!A \fCenter !A \lor !B$
@@ -188,7 +193,7 @@ into the !!{proof}:
 \RightLabel{\LeftR{\lor}}
 \BinaryInf$!A \lor (!B \land !C) \fCenter (!A \lor !B) \land
 (!A \lor !C)$
-\DisplayProof
-\]
+\DisplayProof$
+\end{maxwidth}
 
 \end{document}
